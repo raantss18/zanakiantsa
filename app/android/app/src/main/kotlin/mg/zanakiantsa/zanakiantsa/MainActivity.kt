@@ -30,7 +30,10 @@ class MainActivity : FlutterActivity() {
                     }
                     val file = File(call.argument<String>("path")!!)
                     val uri = FileProvider.getUriForFile(this, "$packageName.updates", file)
-                    startActivity(Intent(Intent.ACTION_VIEW).apply {
+                    // ACTION_INSTALL_PACKAGE n'est traité que par l'installateur du système ; ACTION_VIEW proposait aussi
+                    // d'autres applis (PictoBlox…) dans une fenêtre « Ouvrir avec » (vu sur la SM-X135G, 2026-11-02).
+                    @Suppress("DEPRECATION")
+                    startActivity(Intent(Intent.ACTION_INSTALL_PACKAGE).apply {
                         setDataAndType(uri, "application/vnd.android.package-archive")
                         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK)
                     })
