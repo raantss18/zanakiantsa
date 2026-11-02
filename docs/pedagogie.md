@@ -58,7 +58,7 @@
 
 1. **Après 3 essais manqués** : démonstration pour les moins de 6 ans, indice seul pour les 6 ans et plus — ADR 0006.
    Aucune étude lue ne compare les deux chez 5–7 ans : à observer à l'essai.
-2. **Maîtrise** : 80 %, 3 essais — ADR 0007 (calcul exact à préciser).
+2. **Maîtrise** : ≥ 80 % sur les 5 dernières questions (4 sur 5), 3 essais par question — ADR 0007.
 3. **Révisions** : boîtes de Leitner (choix délégué à Claude), FSRS réévalué plus tard — ADR 0007.
 4. **Langue** : français seulement ; anglais comme thème — ADR 0005.
 5. **Retour positif** : descriptif + encouragement — ADR 0008.
