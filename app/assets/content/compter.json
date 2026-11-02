@@ -1,0 +1,195 @@
+{
+  "schema": 1,
+  "id": "compter",
+  "titre": "Compter et calculer",
+  "ages": [
+    5,
+    7
+  ],
+  "sources": {
+    "cycle1": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
+    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
+  },
+  "competences": [
+    {
+      "id": "denombrer-6",
+      "titre": "Compter jusqu'à 6",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "cycle1",
+        "texte": "Dénombrer une collection d’objets (jusqu’à six)."
+      },
+      "activite": "denombrer",
+      "parametres": {
+        "min": 2,
+        "max": 6,
+        "objet": "pomme"
+      },
+      "phrases": {
+        "consigne": "Touche chaque pomme pour la compter. Puis dis-moi combien il y en a.",
+        "question": "Combien de pommes ?",
+        "indice": "Touche les pommes une par une, sans en oublier.",
+        "exemple": "Quand tu touches la dernière pomme, le nombre que tu dis, c'est combien il y en a.",
+        "demonstration": "Regarde : je compte avec toi. Il y a {n} pommes.",
+        "bravo": "Oui, il y a {n} pommes."
+      }
+    },
+    {
+      "id": "denombrer-10",
+      "titre": "Compter jusqu'à 10",
+      "niveau": "GS",
+      "prerequis": [
+        "denombrer-6"
+      ],
+      "programme": {
+        "source": "cycle1",
+        "texte": "Dénombrer une collection d’objets (jusqu’à dix, voire au-delà)."
+      },
+      "activite": "denombrer",
+      "parametres": {
+        "min": 6,
+        "max": 10,
+        "objet": "etoile"
+      },
+      "phrases": {
+        "consigne": "Touche chaque étoile pour la compter. Puis dis-moi combien il y en a.",
+        "question": "Combien d'étoiles ?",
+        "indice": "Touche les étoiles une par une. Une étoile touchée ne compte qu'une fois.",
+        "exemple": "Le dernier nombre que tu dis, c'est combien il y a d'étoiles.",
+        "demonstration": "Regarde : je compte avec toi. Il y a {n} étoiles.",
+        "bravo": "Oui, il y a {n} étoiles."
+      }
+    },
+    {
+      "id": "constituer-10",
+      "titre": "Mettre le bon nombre",
+      "niveau": "GS",
+      "prerequis": [
+        "denombrer-6"
+      ],
+      "programme": {
+        "source": "cycle1",
+        "texte": "Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà)."
+      },
+      "activite": "composer",
+      "parametres": {
+        "cible_min": 3,
+        "cible_max": 10,
+        "depart_min": 0,
+        "depart_max": 0
+      },
+      "phrases": {
+        "consigne": "Mets {n} jetons dans le panier.",
+        "question": "As-tu mis {n} jetons ? Touche le panier quand tu as fini.",
+        "indice": "Compte les jetons du panier, un par un.",
+        "exemple": "Si tu en as mis trop, tu peux en enlever : touche un jeton du panier.",
+        "demonstration": "Regarde : un, deux… jusqu'à {n}. Il y a {n} jetons dans le panier.",
+        "bravo": "Oui, il y a {n} jetons dans le panier."
+      }
+    },
+    {
+      "id": "composer-10",
+      "titre": "Compléter jusqu'à un nombre",
+      "niveau": "GS",
+      "prerequis": [
+        "constituer-10"
+      ],
+      "programme": {
+        "source": "cycle1",
+        "texte": "Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà."
+      },
+      "activite": "composer",
+      "parametres": {
+        "cible_min": 4,
+        "cible_max": 10,
+        "depart_min": 1,
+        "depart_max": 6
+      },
+      "phrases": {
+        "consigne": "Il y a déjà {a} jetons dans le panier. Ajoute des jetons pour en avoir {n}.",
+        "question": "As-tu {n} jetons ? Touche le panier quand tu as fini.",
+        "indice": "Compte à partir de {a} : {a}, puis le jeton suivant…",
+        "exemple": "{a} et combien font {n} ? Ajoute un jeton à la fois en comptant.",
+        "demonstration": "Regarde : {a}, puis j'ajoute {b}. {a} et {b} font {n}.",
+        "bravo": "Oui ! {a} et {b} font {n}."
+      }
+    },
+    {
+      "id": "additionner-5",
+      "titre": "Additions jusqu'à 5",
+      "niveau": "CP",
+      "prerequis": [
+        "composer-10"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables d’addition (A + B = C, A et B entre 0 et 10)."
+      },
+      "activite": "calcul",
+      "parametres": {
+        "forme": "somme",
+        "total_max": 5
+      },
+      "phrases": {
+        "consigne": "Écris le résultat avec ton doigt.",
+        "question": "{a} plus {b}, combien ça fait ?",
+        "indice": "Tu peux compter sur tes doigts : {a}, puis {b} de plus.",
+        "exemple": "Pense aux jetons : {a} jetons et encore {b} jetons.",
+        "demonstration": "Regarde : {a} et {b} font {n}.",
+        "bravo": "Oui, {a} plus {b} égale {n}."
+      }
+    },
+    {
+      "id": "additionner-10",
+      "titre": "Additions jusqu'à 10",
+      "niveau": "CP",
+      "prerequis": [
+        "additionner-5"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables d’addition (A + B = C, A et B entre 0 et 10)."
+      },
+      "activite": "calcul",
+      "parametres": {
+        "forme": "somme",
+        "total_max": 10
+      },
+      "phrases": {
+        "consigne": "Écris le résultat avec ton doigt.",
+        "question": "{a} plus {b}, combien ça fait ?",
+        "indice": "Pars du plus grand nombre et compte le petit en plus.",
+        "exemple": "Pour {a} plus {b} : pars de {a} et avance de {b}.",
+        "demonstration": "Regarde : {a} et {b} font {n}.",
+        "bravo": "Oui, {a} plus {b} égale {n}."
+      }
+    },
+    {
+      "id": "complement-10",
+      "titre": "Compléments à 10",
+      "niveau": "CP",
+      "prerequis": [
+        "additionner-10"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Égalités à trou du type : 10 = 7 + …"
+      },
+      "activite": "calcul",
+      "parametres": {
+        "forme": "complement",
+        "total_max": 10,
+        "total_fixe": 10
+      },
+      "phrases": {
+        "consigne": "Écris le nombre qui manque avec ton doigt.",
+        "question": "{a} plus combien font {n} ?",
+        "indice": "Compte à partir de {a} jusqu'à {n}.",
+        "exemple": "Tes deux mains ont dix doigts : montre {a} doigts, combien en reste-t-il ?",
+        "demonstration": "Regarde : {a} et {b} font {n}.",
+        "bravo": "Oui, {a} plus {b} égale {n}."
+      }
+    }
+  ]
+}

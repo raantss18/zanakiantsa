@@ -1,0 +1,14 @@
+id: additionner-10
+titre: Additions jusqu'à 10
+niveau: CP
+prerequis: [additionner-5]
+programme: { source: cycle2, texte: "Connaitre dans les deux sens les tables d’addition (A + B = C, A et B entre 0 et 10)." }
+activite: calcul
+parametres: { forme: somme, total_max: 10 }
+phrases:
+  consigne: "Écris le résultat avec ton doigt."
+  question: "{a} plus {b}, combien ça fait ?"
+  indice: "Pars du plus grand nombre et compte le petit en plus."
+  exemple: "Pour {a} plus {b} : pars de {a} et avance de {b}."
+  demonstration: "Regarde : {a} et {b} font {n}."
+  bravo: "Oui, {a} plus {b} égale {n}."

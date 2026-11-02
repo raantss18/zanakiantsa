@@ -1,0 +1,14 @@
+id: additionner-5
+titre: Additions jusqu'à 5
+niveau: CP
+prerequis: [composer-10]
+programme: { source: cycle2, texte: "Connaitre dans les deux sens les tables d’addition (A + B = C, A et B entre 0 et 10)." }
+activite: calcul
+parametres: { forme: somme, total_max: 5 }
+phrases:
+  consigne: "Écris le résultat avec ton doigt."
+  question: "{a} plus {b}, combien ça fait ?"
+  indice: "Tu peux compter sur tes doigts : {a}, puis {b} de plus."
+  exemple: "Pense aux jetons : {a} jetons et encore {b} jetons."
+  demonstration: "Regarde : {a} et {b} font {n}."
+  bravo: "Oui, {a} plus {b} égale {n}."

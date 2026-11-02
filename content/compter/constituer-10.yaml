@@ -1,0 +1,14 @@
+id: constituer-10
+titre: Mettre le bon nombre
+niveau: GS
+prerequis: [denombrer-6]
+programme: { source: cycle1, texte: "Constituer une collection d’un cardinal donné (jusqu’à dix, voire au-delà)." }
+activite: composer
+parametres: { cible_min: 3, cible_max: 10, depart_min: 0, depart_max: 0 }
+phrases:
+  consigne: "Mets {n} jetons dans le panier."
+  question: "As-tu mis {n} jetons ? Touche le panier quand tu as fini."
+  indice: "Compte les jetons du panier, un par un."
+  exemple: "Si tu en as mis trop, tu peux en enlever : touche un jeton du panier."
+  demonstration: "Regarde : un, deux… jusqu'à {n}. Il y a {n} jetons dans le panier."
+  bravo: "Oui, il y a {n} jetons dans le panier."

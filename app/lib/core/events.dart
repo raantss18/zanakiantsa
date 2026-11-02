@@ -1,0 +1,48 @@
+/// Journal d'événements en ajout seul (repris d'academik D-007). Rien n'est modifié ni envoyé.
+library;
+
+/// Une question terminée.
+class Answer {
+  const Answer({
+    required this.skill,
+    required this.attempts,
+    required this.correct,
+    required this.demonstrated,
+    required this.millis,
+    required this.at,
+  });
+
+  final String skill;
+
+  /// Essais utilisés (1 à 3).
+  final int attempts;
+
+  /// Trouvée dans les 3 essais.
+  final bool correct;
+
+  /// La démonstration a été montrée (moins de 6 ans, 3 essais manqués).
+  final bool demonstrated;
+  final int millis;
+  final DateTime at;
+
+  /// Réussite au sens de la maîtrise : trouvée dans les 3 essais, sans démonstration (ADR 0007, choix provisoire).
+  bool get success => correct && !demonstrated;
+
+  Map<String, Object> toMap() => {
+        'skill': skill,
+        'attempts': attempts,
+        'correct': correct ? 1 : 0,
+        'demonstrated': demonstrated ? 1 : 0,
+        'millis': millis,
+        'at': at.millisecondsSinceEpoch,
+      };
+
+  factory Answer.fromMap(Map<String, Object?> m) => Answer(
+        skill: m['skill']! as String,
+        attempts: m['attempts']! as int,
+        correct: m['correct'] == 1,
+        demonstrated: m['demonstrated'] == 1,
+        millis: m['millis']! as int,
+        at: DateTime.fromMillisecondsSinceEpoch(m['at']! as int),
+      );
+}

@@ -1,0 +1,14 @@
+id: denombrer-6
+titre: Compter jusqu'à 6
+niveau: GS
+prerequis: []
+programme: { source: cycle1, texte: "Dénombrer une collection d’objets (jusqu’à six)." }
+activite: denombrer
+parametres: { min: 2, max: 6, objet: pomme }
+phrases:
+  consigne: "Touche chaque pomme pour la compter. Puis dis-moi combien il y en a."
+  question: "Combien de pommes ?"
+  indice: "Touche les pommes une par une, sans en oublier."
+  exemple: "Quand tu touches la dernière pomme, le nombre que tu dis, c'est combien il y en a."
+  demonstration: "Regarde : je compte avec toi. Il y a {n} pommes."
+  bravo: "Oui, il y a {n} pommes."

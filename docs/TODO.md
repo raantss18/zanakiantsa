@@ -36,22 +36,29 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Restriction « sources inconnues » absente du profil supervisé (vérifié par `dumpsys`, deux tablettes)
 - ⏳ Mise à jour réelle de bout en bout sous Family Link (étape 4, tâche 10)
 
-## Étape 4 — Tranche verticale « Compter & calculer » (5–7 ans) ⏳
+## Étape 4 — Tranche verticale « Compter & calculer » (5–7 ans) 🔄
 
-1. ⏳ Squelette Flutter : thème, navigation (← retour ≠ Accueil), espace parent avec porte
-2. ⏳ `core/` : maîtrise 4/5, Leitner, règle des 3 essais selon l'âge, journal — tests unitaires
-3. ⏳ Format de contenu YAML + `tool/build_content.dart` (validation, graphe, script de voix)
-4. ⏳ Écran d'accueil à voix off + fil rouge
-5. ⏳ Activité 1 : dénombrer
-6. ⏳ Activité 2 : composer des nombres (manipulation)
-7. ⏳ Activité 3 : calcul mental, chiffres tracés à la main
-8. ⏳ Échelle d'aides + retour audio
-9. ⏳ Rapport hebdomadaire local (espace parent)
-10. ⏳ Mise à jour depuis l'app (`release.json` signé, test sur tablette)
-11. ⏳ CI : analyze, tests, contenu, taille d'APK < 60 Mo
-12. ⏳ Mesures sur les deux tablettes (mémoire, premier rendu, parcours complet)
-13. ⏳ Voix enregistrées avant l'essai enfants (ADR 0002)
-14. ⏳ Essai avec 3–5 enfants (accord parental) → `docs/essai-01.md`
+1. ✅ Squelette Flutter (`app/`) : thème, navigation (← retour ≠ Accueil), espace parent derrière une multiplication
+2. ✅ `core/` : maîtrise 4/5, Leitner, 3 essais selon l'âge, journal, rapport — 12 tests unitaires
+3. ✅ Contenu YAML (7 compétences sourcées sur les programmes officiels) + `tool/build_content.dart` (validation,
+   graphe, `docs/voix/script.csv`, 51 phrases)
+4. ✅ Accueil à voix off + fil rouge (pierre étoilée par séance finie, testé sur tablette)
+5. ✅ Activité 1 : dénombrer (Flame) — testée sur tablette, y compris la démonstration après 3 erreurs (5 ans)
+6. ✅ Activité 2 : composer (jetons carrés = déjà là, ronds = ajoutés) — testée sur tablette
+7. ✅ Activité 3 : calcul, chiffres tracés au doigt reconnus par ML Kit (3 sur 3 sur tablette) ; trois choix sans modèle
+8. ✅ Aide qui monte (indice → exemple → démonstration/indice) + retour descriptif + encouragement
+9. ✅ Rapport des 7 derniers jours (espace parent), testé sur tablette
+10. 🔄 Mise à jour depuis l'app : chaîne de signature vérifiée (`tool/release.sh` → test Dart) ; **pas encore testée de
+    bout en bout** (première publication GitHub à faire par Antsa, `docs/RELEASING.md`)
+11. ✅ CI GitHub Actions : contenu à jour, analyse, tests, APK < 60 Mo (`.github/workflows/app.yml`) — pas encore
+    exécutée sur GitHub
+12. ✅ Mesures (2026-11-02) : APK arm64 26,4 Mo ; démarrage à froid 471 / 473 ms ; mémoire 108–119 Mo à l'accueil,
+    119–133 Mo en séance (tablettes A / B)
+13. ✅ Écrans adaptatifs portrait/paysage (ADR 0013), testés sur la tablette B en paysage
+14. ⏳ Activité 3 en paysage et composer en paysage : vérifier sur tablette (seul dénombrer l'a été)
+15. ⏳ Voix enregistrées avant l'essai enfants (ADR 0002) — script : `docs/voix/script.csv`
+16. ⏳ Essai avec 3–5 enfants (accord parental) → `docs/essai-01.md`
+17. ⏳ Objets plus grands en paysage ; durée réelle d'une séance de 8 questions à mesurer
 
 ## Étape 5 — Thèmes suivants ⏳
 

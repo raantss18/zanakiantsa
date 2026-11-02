@@ -1,0 +1,14 @@
+id: denombrer-10
+titre: Compter jusqu'à 10
+niveau: GS
+prerequis: [denombrer-6]
+programme: { source: cycle1, texte: "Dénombrer une collection d’objets (jusqu’à dix, voire au-delà)." }
+activite: denombrer
+parametres: { min: 6, max: 10, objet: etoile }
+phrases:
+  consigne: "Touche chaque étoile pour la compter. Puis dis-moi combien il y en a."
+  question: "Combien d'étoiles ?"
+  indice: "Touche les étoiles une par une. Une étoile touchée ne compte qu'une fois."
+  exemple: "Le dernier nombre que tu dis, c'est combien il y a d'étoiles."
+  demonstration: "Regarde : je compte avec toi. Il y a {n} étoiles."
+  bravo: "Oui, il y a {n} étoiles."

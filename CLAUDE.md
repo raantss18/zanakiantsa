@@ -50,11 +50,17 @@ Outillage présent : Flutter 3.47.7 / Dart 3.13.5, SDK Android 36, JDK 17.
 ## Commandes
 
 ```bash
-adb devices -l                    # la tablette doit apparaître en « device »
-adb shell dumpsys meminfo <pkg>   # mémoire réelle de l'app
+cd app
+dart run tool/build_content.dart          # content/*.yaml → assets/content/*.json + docs/voix/script.csv
+flutter analyze && flutter test           # avant tout commit
+flutter build apk --release --split-per-abi --target-platform android-arm64
+adb -s <série> install -r build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+flutter build apk … --dart-define=DEV_SKILL=<id>   # essai d'une compétence précise (jamais publié)
+adb shell dumpsys meminfo mg.zanakiantsa.app       # mémoire réelle
+tool/release.sh "notes"                   # version signée (voir docs/RELEASING.md)
 ```
 
-Les commandes de build et de test seront ajoutées ici quand la stack sera tranchée.
+Paquet Android : `mg.zanakiantsa.app`, activité `mg.zanakiantsa.zanakiantsa.MainActivity`.
 
 ## Organisation
 

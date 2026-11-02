@@ -12,6 +12,8 @@
 | audioplayers | 6.8.1 | MIT | oui | voix enregistrées, sons | https://pub.dev/packages/audioplayers |
 | sqflite | 2.4.5 | BSD-2-Clause | oui | journal local | https://pub.dev/packages/sqflite |
 | path_provider | 2.1.6 | BSD-3-Clause | oui | dossier de la base | https://pub.dev/packages/path_provider |
+| path | 1.9.1 | BSD-3-Clause | oui | chemin de la base | https://pub.dev/packages/path |
+| http | 1.6.0 | BSD-3-Clause | oui | mises à jour (ADR 0011) | https://pub.dev/packages/http |
 | cryptography | 2.9.0 | Apache-2.0 | oui | signature des mises à jour (ADR 0011) | https://pub.dev/packages/cryptography |
 | yaml (outil de build seulement) | 3.1.4 | MIT | oui | lecture du contenu | https://pub.dev/packages/yaml |
 | flutter_lints (dév.) | 6.0.0 | BSD-3-Clause | oui | analyse | https://pub.dev/packages/flutter_lints |

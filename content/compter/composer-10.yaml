@@ -1,0 +1,14 @@
+id: composer-10
+titre: Compléter jusqu'à un nombre
+niveau: GS
+prerequis: [constituer-10]
+programme: { source: cycle1, texte: "Composer et décomposer des nombres inférieurs ou égaux à dix, voire au-delà." }
+activite: composer
+parametres: { cible_min: 4, cible_max: 10, depart_min: 1, depart_max: 6 }
+phrases:
+  consigne: "Il y a déjà {a} jetons dans le panier. Ajoute des jetons pour en avoir {n}."
+  question: "As-tu {n} jetons ? Touche le panier quand tu as fini."
+  indice: "Compte à partir de {a} : {a}, puis le jeton suivant…"
+  exemple: "{a} et combien font {n} ? Ajoute un jeton à la fois en comptant."
+  demonstration: "Regarde : {a}, puis j'ajoute {b}. {a} et {b} font {n}."
+  bravo: "Oui ! {a} et {b} font {n}."

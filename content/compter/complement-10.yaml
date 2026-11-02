@@ -1,0 +1,14 @@
+id: complement-10
+titre: Compléments à 10
+niveau: CP
+prerequis: [additionner-10]
+programme: { source: cycle2, texte: "Égalités à trou du type : 10 = 7 + …" }
+activite: calcul
+parametres: { forme: complement, total_max: 10, total_fixe: 10 }
+phrases:
+  consigne: "Écris le nombre qui manque avec ton doigt."
+  question: "{a} plus combien font {n} ?"
+  indice: "Compte à partir de {a} jusqu'à {n}."
+  exemple: "Tes deux mains ont dix doigts : montre {a} doigts, combien en reste-t-il ?"
+  demonstration: "Regarde : {a} et {b} font {n}."
+  bravo: "Oui, {a} plus {b} égale {n}."
