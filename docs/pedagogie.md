@@ -16,9 +16,9 @@
 | Récompenses | 128 études : récompenses **tangibles attendues** sapent la motivation intrinsèque (libre choix, d = −0,40 à −0,28 selon le type), **plus chez les enfants** ; retour positif verbal l'augmente chez les étudiants (d = 0,43) mais **pas significativement chez les enfants** (d = 0,11, 7 études). Débat ouvert (Cameron & Pierce). | Pas de monnaie, pub, achat ni minuteur ; récompense = suite du monde/histoire liée au contenu ; retour **informatif** (« tu as compté jusqu'à 7 ») plutôt que louange générique. | [9] |
 | Séries (« streaks ») | Non vérifié. Un essai au Pérou (CM1–6e, ≈ 60 000 élèves) est signalé, mais je n'ai pas pu lire le texte ni ses effets sur l'apprentissage ; rien de lu sur l'aversion à la perte chez les 5–10 ans. | « Fil rouge » qui avance et ne recule jamais : **choix de design**, pas un résultat. | — |
 | Écriture manuscrite | 3–5 ans (2 × 38) : copier des lettres à la main → meilleure reconnaissance des lettres que les taper, **chez les plus âgés seulement** [10]. EEG : écrire (stylet sur écran tactile) > taper en connectivité cérébrale, mais **36 étudiants**, pas d'effet d'apprentissage mesuré [11]. | Tracer au doigt/stylet les lettres et chiffres (thème 3) plutôt que les choisir sur un clavier ; ne pas promettre d'effet chez les 7–10 ans. | [10, 11] |
-| Reconnaissance hors ligne | ML Kit Digital Ink : « fully offline » sur Android, 300+ langues ; `fr` (et `fr-002` Afrique) et **`mg` (malgache)** listés. Packs **téléchargés à la demande** : taille non indiquée. | Spike : télécharger les packs `fr`/`mg` à l'installation (Family Link ⚠), mesurer taille/RAM/précision sur écriture d'enfant. | [12] |
+| Reconnaissance hors ligne | ML Kit Digital Ink : « fully offline » sur Android, 300+ langues ; `fr` (et `fr-002` Afrique) et **`mg` (malgache)** listés. Packs **téléchargés à la demande** : taille non indiquée. | Packs `fr` puis `en` téléchargés une fois (ADR 0009) ; spike : mesurer taille/RAM/précision sur écriture d'enfant. | [12] |
 | Aide graduée | Échafaudage (tuteur adulte, jeunes enfants) : Wood, Bruner & Ross 1976 — notice lue, **contenu non vérifié**. | 3 niveaux : indice → exemple voisin → démonstration (⚠ décision § 3). | [13] |
-| Langue | UNESCO : enseigner dans une langue que l'enfant comprend ; ≥ 6 ans de langue maternelle pour réduire les écarts (exemples Mali, Éthiopie ; Madagascar non cité). Madagascar parmi les plus faibles au PASEC2019 (< 1 élève sur 3 au seuil en fin de primaire). Étude qualitative (Toliara) : acteurs favorables au malgache d'abord — **perceptions**, pas un effet mesuré. | Malgache et français au même niveau de qualité ; consignes vocales dans la langue choisie ; pas de bascule forcée. | [14–16] |
+| Langue | UNESCO : enseigner dans une langue que l'enfant comprend ; ≥ 6 ans de langue maternelle pour réduire les écarts (exemples Mali, Éthiopie ; Madagascar non cité). Madagascar parmi les plus faibles au PASEC2019 (< 1 élève sur 3 au seuil en fin de primaire). Étude qualitative (Toliara) : acteurs favorables au malgache d'abord — **perceptions**, pas un effet mesuré. | **Décidé (ADR 0005)** : interface en français seulement ; l'anglais est un thème d'apprentissage. ⚠ Les sources ci-contre plaident pour la langue maternelle : à garder en tête si l'app sert à des enfants malgachophones. | [14–16] |
 | Sans parent, pré-lecteurs | Non vérifié (aucune étude lue). | Écran enfant 100 % pictogrammes + voix off, zéro texte obligatoire pour 5–6 ans ; espace parent derrière un petit calcul. | — |
 
 ## 2. Checklist de revue d'une activité (à cocher, observable sur l'écran)
@@ -37,7 +37,7 @@
 - [ ] Une enfant de 5 ans peut finir l'activité **sans lire** : consigne vocale, rejouable par un bouton haut-parleur.
 - [ ] Tout bouton a un pictogramme ; cibles ≥ 48 dp ; ← retour ≠ Accueil.
 - [ ] Rien n'exige un adulte ; l'invitation à « montrer à quelqu'un » est facultative et se ferme d'un geste.
-- [ ] Version malgache et version française vérifiées par un locuteur (voix et texte).
+- [ ] Texte et voix en français relus (thème anglais : prononciation anglaise vérifiée).
 
 **Rappel, espacement, maîtrise**
 - [ ] L'activité déclare ses prérequis et son seuil de maîtrise (valeur ⚠ produit).
@@ -46,26 +46,23 @@
 
 **Erreur = information**
 - [ ] Aucune croix rouge, buzzer, vie perdue, mot « faux »/« échec » affiché ou dit.
-- [ ] Aide en 3 niveaux présente et ordonnée (indice → exemple → démonstration ou indice seul : § 3).
-- [ ] Le retour dit **quoi** (« il en manque 2 ») plutôt qu'une louange générique.
+- [ ] 3 essais avec aide croissante ; après le 3e : démonstration (< 6 ans) ou indice seul (≥ 6 ans) — ADR 0006.
+- [ ] Le retour dit **quoi** (« il en manque 2 », « tu as compté jusqu'à 7 »), puis un encouragement court (ADR 0008).
 - [ ] Le journal local enregistre : réponse, niveau d'aide utilisé, durée — sur l'appareil seulement.
 
 **Boucle quotidienne**
 - [ ] L'activité tient dans le défi du jour (durée mesurée ⚠ ≤ 5 min) et se termine par un écran de fin clair.
 - [ ] La progression ne recule jamais (pas de série à perdre).
 
-## 3. Décisions ouvertes pour Antsa
+## 3. Décisions d'Antsa (2026-11-02)
 
-1. **Démonstration finale ou indice seulement ?** Règle COMIMa/academik : une tentative, jamais la réponse quand
-   c'est faux. Pour : l'enfant de 5–7 ans, seul, peut rester bloqué ; la correction rapide limite le renforcement de
-   l'erreur [2] ; l'échafaudage des jeunes enfants est plus directif (non vérifié [13]). Contre : montrer la réponse
-   réduit l'effort de rappel ; aucune étude lue ne compare les deux chez 5–7 ans. Option : démonstration en GS–CP, indice
-   seul à partir du CE1 — **à trancher par Antsa**.
-2. **Seuil de maîtrise** (80 % ? sur combien d'essais ?) : produit, pas recherche [8].
-3. **Leitner ou FSRS** : benchmark local avant choix [5, 6].
-4. **Langue par défaut et passage au français écrit** pour les 5–6 ans malgachophones [14–16].
-5. **Forme du retour positif** : informatif seulement, ou aussi des encouragements (effet nul chez l'enfant [9]) ?
-6. **Packs ML Kit** : téléchargement unique acceptable sous Family Link, ou écriture sans reconnaissance [12] ?
+1. **Après 3 essais manqués** : démonstration pour les moins de 6 ans, indice seul pour les 6 ans et plus — ADR 0006.
+   Aucune étude lue ne compare les deux chez 5–7 ans : à observer à l'essai.
+2. **Maîtrise** : 80 %, 3 essais — ADR 0007 (calcul exact à préciser).
+3. **Révisions** : boîtes de Leitner (choix délégué à Claude), FSRS réévalué plus tard — ADR 0007.
+4. **Langue** : français seulement ; anglais comme thème — ADR 0005.
+5. **Retour positif** : descriptif + encouragement — ADR 0008.
+6. **Packs ML Kit** : téléchargement unique — ADR 0009.
 
 ## 4. Sources (consultées le 2026-11-02)
 

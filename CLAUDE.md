@@ -1,7 +1,7 @@
 # CLAUDE.md — Zanak'i Antsa
 
 > Application éducative hors ligne pour enfants de **5 à 10 ans** (GS → CM2, cycles 1-3 du programme français),
-> en **français et malgache**. Relire ce fichier au début de chaque étape et après chaque `/compact`.
+> interface **en français**, avec l'**anglais** comme thème d'apprentissage (ADR 0005). Relire ce fichier au début de chaque étape et après chaque `/compact`.
 > Ordre en cas de conflit : ce fichier > `docs/adr/` > le reste.
 
 ## Règles qui ne se discutent pas

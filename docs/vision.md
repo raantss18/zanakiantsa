@@ -3,7 +3,7 @@
 ## En une phrase
 
 Une application hors ligne où un enfant de 5 à 10 ans apprend **seul**, chaque jour, 10 à 15 minutes ⚠, en
-français ou en malgache, en jouant à des activités courtes qui le font réfléchir.
+français, en jouant à des activités courtes qui le font réfléchir.
 
 ## Pour qui
 
@@ -18,15 +18,16 @@ français ou en malgache, en jouant à des activités courtes qui le font réfl�
 - **Fil rouge sans perte** ⚠ : une piste qui avance à chaque visite et ne revient jamais à zéro (choix de design : pas
   de série qu'on perd).
 - **Thèmes progressifs**, chacun avec un graphe de compétences, un seuil de maîtrise et des révisions espacées.
-- **Erreur = information** : aide en 3 niveaux (indice → exemple → démonstration), jamais de buzzer ni d'« échec »
-  affiché.
+- **Erreur = information** : 3 essais avec une aide qui monte ; ensuite démonstration avant 6 ans, indice seul après
+  (ADR 0006). Jamais de buzzer ni d'« échec » affiché.
+- **Maîtrise** à 80 % (ADR 0007), révisions en boîtes de Leitner ; retour descriptif + encouragement (ADR 0008).
 - **Récompenses intrinsèques** (mondes et personnages liés au contenu) ; ni monnaie, ni pub, ni achat, ni minuteur.
 
 ## Thèmes (ordre prévu)
 
 1. Compter & calculer (5–7 ans) — **tranche verticale**
 2. Lecture et phonologie (micro) · 3. Écriture manuscrite · 4. Algorithmique (blocs) · 5. Échecs ⚠ et sudoku ·
-6. Photo d'objet · 7. Corps humain et nature · 8. Création et dessin.
+6. Photo d'objet · 7. Corps humain et nature · 8. Création et dessin · 9. Anglais (ADR 0005, place à fixer).
 Musique (piano par le micro) : à placer après la tranche verticale.
 
 ## Ce qu'on ne fera pas

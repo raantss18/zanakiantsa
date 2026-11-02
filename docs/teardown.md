@@ -256,6 +256,7 @@ Li Lichess · 1B onebillion · WW Writing Wizard · SJ ScratchJr · Se Seek. `ou
 ## Opportunités de différenciation
 
 Chaque point est relié à une observation sourcée (V) ou marqué supposé (S).
+Note du 2026-11-02 : le point 1 (malgache) n'est plus suivi, l'interface est en français seulement (ADR 0005).
 
 ### Contenu
 1. **Malgache natif**, pas une traduction après coup. V : absent de GCompris 26.1 [33], ABC anglais seul [10],
