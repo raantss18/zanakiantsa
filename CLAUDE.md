@@ -41,7 +41,7 @@ Profil supervisé par **Family Link** (propriétaire du profil) : ne jamais le m
 
 ## Stack
 
-**Proposée : Flutter + Flame** (`docs/adr/0010`, à valider), après le spike comparatif mesuré sur les deux
+**Flutter + Flame** (`docs/adr/0010`, accepté), choisi après le spike comparatif mesuré sur les deux
 tablettes (`spikes/RESULTATS.md`). **Rendu GPU** : Vulkan (Mali-G57 MC2) ; vérifier le moteur dans le journal à chaque
 version, ne jamais forcer le rendu logiciel. Écran 90 Hz. Voix : TTS pour prototyper, voix enregistrées avant tout essai avec des enfants (`docs/adr/0002`).
 Outillage présent : Flutter 3.47.7 / Dart 3.13.5, SDK Android 36, JDK 17.
