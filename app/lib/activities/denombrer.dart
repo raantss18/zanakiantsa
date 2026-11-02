@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui' as ui;
 
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
@@ -7,9 +8,10 @@ import 'package:flutter/material.dart';
 
 import '../ui/session.dart';
 import '../ui/theme.dart';
+import '../ui/universe.dart';
 import 'shapes.dart';
 
-/// Dénombrer : toucher chaque objet (il reçoit son numéro, la voix le dit), puis choisir le nombre.
+/// Dénombrer : toucher chaque objet de l'univers (il reçoit son numéro, la voix le dit), puis choisir le nombre.
 class CountActivity extends StatefulWidget {
   const CountActivity({super.key, required this.attempt});
   final Attempt attempt;
@@ -20,9 +22,11 @@ class CountActivity extends StatefulWidget {
 class _CountActivityState extends State<CountActivity> {
   Attempt get a => widget.attempt;
   late final int n = a.question.n;
-  late final CountGame game = CountGame(n, a.skill.params['objet'] as String, _counted);
+  late final CountGame game;
   late final List<int> choices = _choices();
   int counted = 0;
+  bool _demoStarted = false;
+  int _lastMisses = 0;
 
   List<int> _choices() {
     final lo = max(1, n - 1);
@@ -32,8 +36,10 @@ class _CountActivityState extends State<CountActivity> {
   @override
   void initState() {
     super.initState();
+    final u = a.app.universe;
+    game = CountGame(n, a.app.objectArt(a.skill), u.onCard, _counted);
     a.addListener(_onAttempt);
-    a.say('consigne');
+    a.show('consigne');
   }
 
   @override
@@ -41,9 +47,6 @@ class _CountActivityState extends State<CountActivity> {
     a.removeListener(_onAttempt);
     super.dispose();
   }
-
-  bool _demoStarted = false;
-  int _lastMisses = 0;
 
   void _onAttempt() {
     if (a.demonstrate && !_demoStarted) {
@@ -61,8 +64,9 @@ class _CountActivityState extends State<CountActivity> {
 
   void _counted(int k) {
     setState(() => counted = k);
-    if (!a.demonstrate) a.app.voice.say('$k');
-    if (k == n && !a.demonstrate) Future.delayed(const Duration(milliseconds: 700), () => a.say('question'));
+    if (a.demonstrate) return;
+    a.app.voice.say('$k');
+    if (k == n) Future.delayed(const Duration(milliseconds: 700), () => a.show('question'));
   }
 
   @override
@@ -71,66 +75,64 @@ class _CountActivityState extends State<CountActivity> {
     return split(
       main: GameWidget(game: game),
       side: (axis) => showChoices
-            ? Flex(direction: axis, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                for (final v in choices)
-                  SizedBox(
-                    width: 104,
-                    height: 104,
-                    child: FilledButton(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: a.demonstrate && v == n ? gold : green,
-                        // Pendant la démonstration, la bonne réponse reste visible en couleur (bouton inactif).
-                        disabledBackgroundColor: a.demonstrate && v == n ? gold : const Color(0xFFBFC7C1),
-                        padding: EdgeInsets.zero,
-                      ),
-                      onPressed: a.busy || a.finished ? null : () => a.submit(v == n),
-                      child: Text('$v', style: const TextStyle(fontSize: 48, color: Colors.white)),
-                    ),
-                  ),
-              ])
-            : const SizedBox(),
+          ? Flex(direction: axis, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+              for (final v in choices)
+                NumberButton(
+                  value: v,
+                  highlight: a.demonstrate && v == n,
+                  onPressed: a.busy || a.finished ? null : () => a.submit(v == n),
+                ),
+            ])
+          : const SizedBox(),
     );
   }
 }
 
 class CountGame extends FlameGame {
-  CountGame(this.n, this.kind, this.onCount);
+  CountGame(this.n, this.art, this.badge, this.onCount);
   final int n;
-  final String kind;
+  final String art;
+
+  /// Couleur de la pastille du numéro (lisible sur carte, docs/design.md).
+  final Color badge;
   final void Function(int) onCount;
   int counted = 0;
   final _rand = Random();
+  ui.Image? _image;
 
   @override
-  Color backgroundColor() => bg;
+  Color backgroundColor() => const Color(0x00000000);
 
-  /// Positions en fraction de la zone libre : elles survivent à une rotation de l'écran.
-  late final List<Offset> _spots = [
-    for (final p in scatter(n, const Size(1000, 1000), 1000 / 9, _rand)) Offset(p.dx / 1000, p.dy / 1000),
-  ];
+  /// Positions en fraction de la zone : elles survivent à une rotation de l'écran.
+  late final Scatter _scatter = Scatter(n, _rand);
   List<Thing> _things = [];
 
   void _layout() {
     final numbers = [for (final t in _things) t.number];
     removeAll(_things);
-    final r = min(size.x, max(size.y - helpBand, size.y * 0.5)) / 8;
-    final area = Size(size.x - 2 * r, max(size.y - helpBand, r * 6) - 2 * r);
+    // Rayon : jamais plus que la case (pas de chevauchement), plafonné pour garder de l'air.
+    const margin = 8.0;
+    final area = Size(size.x - 2 * margin, size.y - 2 * margin);
+    final r = min(_scatter.radius(area), 64.0);
     _things = [
-      for (final (i, p) in _spots.indexed)
-        Thing(kind, r, i)
+      for (final (i, p) in _scatter.spots.indexed)
+        Thing(_image!, badge, r, i)
           ..number = i < numbers.length ? numbers[i] : null
-          ..position = Vector2(r + p.dx * area.width, size.y - area.height - r + p.dy * area.height),
+          ..position = Vector2(margin + p.dx * area.width, margin + p.dy * area.height),
     ];
     addAll(_things);
   }
 
   @override
-  Future<void> onLoad() async => _layout();
+  Future<void> onLoad() async {
+    _image = await artImage(art, 160);
+    _layout();
+  }
 
   @override
   void onGameResize(Vector2 size) {
     super.onGameResize(size);
-    if (isLoaded) _layout();
+    if (isLoaded && _image != null) _layout();
   }
 
   void tap(Thing t) {
@@ -157,45 +159,54 @@ class CountGame extends FlameGame {
   }
 }
 
-class Thing extends PositionComponent with TapCallbacks, HasGameReference<CountGame> {
-  Thing(this.kind, this.r, this.index) : super(size: Vector2.all(r * 2), anchor: Anchor.center);
-  final String kind;
+class Thing extends PositionComponent with TapCallbacks {
+  Thing(this.image, this.badge, this.r, this.index) : super(size: Vector2.all(r * 2), anchor: Anchor.center);
+  final ui.Image image;
+  final Color badge;
   final double r;
   final int index;
   int? number;
   double t = 0;
-  late final double _baseY = position.y;
-
-  static final _ring = Paint()
-    ..color = green
-    ..style = PaintingStyle.stroke
-    ..strokeWidth = 6;
+  double? _baseY;
 
   @override
   void update(double dt) {
     t += dt;
-    position.y = _baseY + sin(t * 2 + index) * 4;
+    _baseY ??= position.y;
+    position.y = _baseY! + sin(t * 2 + index) * 4;
   }
 
   @override
   void render(Canvas canvas) {
-    final o = Offset(r, r);
-    drawObject(kind, canvas, o, r);
+    final box = Rect.fromLTWH(0, 0, r * 2, r * 2);
     if (number != null) {
-      canvas.drawCircle(o, r, _ring);
+      // Objet compté : halo + pastille numérotée (forme et nombre, pas seulement la couleur).
+      canvas.drawCircle(box.center, r, Paint()..color = const Color(0xCCFFFFFF));
+      canvas.drawCircle(box.center, r, Paint()
+        ..color = badge
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 5);
+    }
+    canvas.drawImageRect(
+      image,
+      Rect.fromLTWH(0, 0, image.width.toDouble(), image.height.toDouble()),
+      box.deflate(r * 0.18),
+      Paint()..filterQuality = FilterQuality.medium,
+    );
+    if (number != null) {
+      final c = Offset(r * 1.65, r * 0.35);
+      canvas.drawCircle(c, r * 0.42, Paint()..color = badge);
       final tp = TextPainter(
         text: TextSpan(
           text: '$number',
-          style: TextStyle(fontSize: r * 0.8, color: Colors.white, fontWeight: FontWeight.w800, shadows: const [
-            Shadow(blurRadius: 3, color: Colors.black54),
-          ]),
+          style: TextStyle(fontFamily: 'Andika', fontSize: r * 0.55, color: Colors.white, fontWeight: FontWeight.w700),
         ),
         textDirection: TextDirection.ltr,
       )..layout();
-      tp.paint(canvas, o - Offset(tp.width / 2, tp.height / 2));
+      tp.paint(canvas, c - Offset(tp.width / 2, tp.height / 2));
     }
   }
 
   @override
-  void onTapDown(TapDownEvent event) => game.tap(this);
+  void onTapDown(TapDownEvent event) => (findGame() as CountGame).tap(this);
 }

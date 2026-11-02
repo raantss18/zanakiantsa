@@ -33,7 +33,7 @@ class _CalcActivityState extends State<CalcActivity> {
     super.initState();
     a.addListener(_refresh);
     _checkModel();
-    a.say('question').then((_) => a.say('consigne'));
+    a.show('question').then((_) => a.say('consigne'));
   }
 
   Future<void> _checkModel() async {
@@ -98,17 +98,28 @@ class _CalcActivityState extends State<CalcActivity> {
     final q = a.question;
     final big = Theme.of(context).textTheme.displayLarge!;
     final answerShown = a.demonstrate ? '$expected' : '?';
-    final equation = FittedBox(
-      child: Row(children: [
-        _Num(q.a, big),
-        Text(' + ', style: big),
-        complement ? Text(answerShown, style: big.copyWith(color: a.demonstrate ? gold : red)) : _Num(q.b, big),
-        Text(' = ', style: big),
-        complement ? _Num(q.n, big) : Text(answerShown, style: big.copyWith(color: a.demonstrate ? gold : red)),
-      ]),
+    final u = a.app.universe;
+    // La réponse attendue : « ? » dans une case ; pendant la démonstration, le nombre lui-même apparaît.
+    final answer = Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(border: Border.all(color: u.onCard, width: 4), borderRadius: BorderRadius.circular(16)),
+      child: Text(answerShown, style: big.copyWith(color: u.onCard)),
+    );
+    final equation = Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
+      child: FittedBox(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          _Num(q.a, big, u.onCard),
+          Text(' + ', style: big),
+          complement ? answer : _Num(q.b, big, u.onCard),
+          Text(' = ', style: big),
+          complement ? _Num(q.n, big, u.onCard) : answer,
+        ]),
+      ),
     );
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, helpBand, 16, 8),
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
       child: switch (inkReady) {
         null => const SizedBox(),
         false => Column(children: [equation, Expanded(child: _choices())]),
@@ -136,9 +147,9 @@ class _CalcActivityState extends State<CalcActivity> {
                 width: 104,
                 height: 104,
                 child: FilledButton(
-                  style: FilledButton.styleFrom(backgroundColor: green, padding: EdgeInsets.zero),
+                  style: FilledButton.styleFrom(padding: EdgeInsets.zero),
                   onPressed: locked ? null : _validate,
-                  child: const Icon(Icons.check_rounded, size: 72, color: Colors.white, semanticLabel: 'Valider'),
+                  child: const Icon(Icons.check_rounded, size: 72, semanticLabel: 'Valider'),
                 ),
               ),
             ]),
@@ -147,11 +158,11 @@ class _CalcActivityState extends State<CalcActivity> {
     );
   }
 
-  /// La zone où l'enfant écrit au doigt.
-  Widget _pad() => ClipRRect(
-        borderRadius: BorderRadius.circular(28),
-        child: Container(
-          color: surface,
+  /// La zone où l'enfant écrit au doigt (un repère « écris ici » tant qu'elle est vide).
+  Widget _pad() => Container(
+        decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(28),
           child: GestureDetector(
             onPanStart: locked
                 ? null
@@ -165,7 +176,17 @@ class _CalcActivityState extends State<CalcActivity> {
                       _strokes.last.add(d.localPosition);
                       _times.last.add(DateTime.now().millisecondsSinceEpoch);
                     }),
-            child: CustomPaint(painter: _InkPainter(_strokes), size: Size.infinite),
+            child: Stack(children: [
+              if (_strokes.isEmpty)
+                const Center(
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Icon(Icons.draw_rounded, size: 40, color: Color(0xFF9AA49D)),
+                    SizedBox(width: 8),
+                    Text('Écris ici', style: TextStyle(fontSize: 26, color: Color(0xFF5F6B63))),
+                  ]),
+                ),
+              CustomPaint(painter: _InkPainter(_strokes), size: Size.infinite),
+            ]),
           ),
         ),
       );
@@ -173,18 +194,10 @@ class _CalcActivityState extends State<CalcActivity> {
   Widget _choices() => Center(
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           for (final v in choices)
-            SizedBox(
-              width: 104,
-              height: 104,
-              child: FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: a.demonstrate && v == expected ? gold : green,
-                  disabledBackgroundColor: a.demonstrate && v == expected ? gold : const Color(0xFFBFC7C1),
-                  padding: EdgeInsets.zero,
-                ),
-                onPressed: locked ? null : () => a.submit(v == expected),
-                child: Text('$v', style: const TextStyle(fontSize: 48, color: Colors.white)),
-              ),
+            NumberButton(
+              value: v,
+              highlight: a.demonstrate && v == expected,
+              onPressed: locked ? null : () => a.submit(v == expected),
             ),
         ]),
       );
@@ -192,9 +205,10 @@ class _CalcActivityState extends State<CalcActivity> {
 
 /// Un nombre avec ses points en dessous (aide au dénombrement, pas seulement le chiffre).
 class _Num extends StatelessWidget {
-  const _Num(this.v, this.style);
+  const _Num(this.v, this.style, this.color);
   final int v;
   final TextStyle style;
+  final Color color;
   @override
   Widget build(BuildContext context) => Column(mainAxisSize: MainAxisSize.min, children: [
         Text('$v', style: style),
@@ -202,7 +216,7 @@ class _Num extends StatelessWidget {
           width: 90,
           child: Wrap(alignment: WrapAlignment.center, spacing: 4, runSpacing: 4, children: [
             for (var i = 0; i < v; i++)
-              Container(width: 12, height: 12, decoration: const BoxDecoration(color: green, shape: BoxShape.circle)),
+              Container(width: 12, height: 12, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
           ]),
         ),
       ]);

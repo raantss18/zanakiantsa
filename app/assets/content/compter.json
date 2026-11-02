@@ -24,15 +24,15 @@
       "parametres": {
         "min": 2,
         "max": 6,
-        "objet": "pomme"
+        "objet": 1
       },
       "phrases": {
-        "consigne": "Touche chaque pomme pour la compter. Puis dis-moi combien il y en a.",
-        "question": "Combien de pommes ?",
-        "indice": "Touche les pommes une par une, sans en oublier.",
-        "exemple": "Quand tu touches la dernière pomme, le nombre que tu dis, c'est combien il y en a.",
-        "demonstration": "Regarde : je compte avec toi. Il y a {n} pommes.",
-        "bravo": "Oui, il y a {n} pommes."
+        "consigne": "Touche chaque {objet} pour compter.",
+        "question": "Combien de {objets} ?",
+        "indice": "Touche les {objets} {un} par {un}, sans en oublier.",
+        "exemple": "Le dernier nombre dit, c'est le nombre de {objets}.",
+        "demonstration": "Regarde : je compte avec toi. Il y a {n} {objets}.",
+        "bravo": "Oui, il y a {n} {objets}."
       }
     },
     {
@@ -50,15 +50,15 @@
       "parametres": {
         "min": 6,
         "max": 10,
-        "objet": "etoile"
+        "objet": 2
       },
       "phrases": {
-        "consigne": "Touche chaque étoile pour la compter. Puis dis-moi combien il y en a.",
-        "question": "Combien d'étoiles ?",
-        "indice": "Touche les étoiles une par une. Une étoile touchée ne compte qu'une fois.",
-        "exemple": "Le dernier nombre que tu dis, c'est combien il y a d'étoiles.",
-        "demonstration": "Regarde : je compte avec toi. Il y a {n} étoiles.",
-        "bravo": "Oui, il y a {n} étoiles."
+        "consigne": "Touche chaque {objet} pour compter.",
+        "question": "Combien de {objets} ?",
+        "indice": "Touche les {objets} {un} par {un}, sans en oublier.",
+        "exemple": "Le dernier nombre dit, c'est le nombre de {objets}.",
+        "demonstration": "Regarde : je compte avec toi. Il y a {n} {objets}.",
+        "bravo": "Oui, il y a {n} {objets}."
       }
     },
     {
@@ -80,12 +80,12 @@
         "depart_max": 0
       },
       "phrases": {
-        "consigne": "Mets {n} jetons dans le panier.",
-        "question": "As-tu mis {n} jetons ? Touche le panier quand tu as fini.",
-        "indice": "Compte les jetons du panier, un par un.",
-        "exemple": "Si tu en as mis trop, tu peux en enlever : touche un jeton du panier.",
-        "demonstration": "Regarde : un, deux… jusqu'à {n}. Il y a {n} jetons dans le panier.",
-        "bravo": "Oui, il y a {n} jetons dans le panier."
+        "consigne": "Mets {n} {objets} dans {contenant}.",
+        "question": "As-tu mis {n} {objets} ? Appuie sur ✔.",
+        "indice": "Compte les {objets} dans {contenant}, {un} par {un}.",
+        "exemple": "Trop ? Touche {contenant} pour en enlever.",
+        "demonstration": "Regarde : un, deux… jusqu'à {n}. Voilà {n} {objets}.",
+        "bravo": "Oui, il y a {n} {objets} dans {contenant}."
       }
     },
     {
@@ -107,10 +107,10 @@
         "depart_max": 6
       },
       "phrases": {
-        "consigne": "Il y a déjà {a} jetons dans le panier. Ajoute des jetons pour en avoir {n}.",
-        "question": "As-tu {n} jetons ? Touche le panier quand tu as fini.",
-        "indice": "Compte à partir de {a} : {a}, puis le jeton suivant…",
-        "exemple": "{a} et combien font {n} ? Ajoute un jeton à la fois en comptant.",
+        "consigne": "Il y a {a} {objets}. Ajoute-en pour en avoir {n}.",
+        "question": "As-tu {n} {objets} ? Appuie sur ✔.",
+        "indice": "Compte à partir de {a} : {a}, puis le suivant…",
+        "exemple": "Ajoute {un} {objet} à la fois et compte jusqu'à {n}.",
         "demonstration": "Regarde : {a}, puis j'ajoute {b}. {a} et {b} font {n}.",
         "bravo": "Oui ! {a} et {b} font {n}."
       }
@@ -135,7 +135,7 @@
         "consigne": "Écris le résultat avec ton doigt.",
         "question": "{a} plus {b}, combien ça fait ?",
         "indice": "Tu peux compter sur tes doigts : {a}, puis {b} de plus.",
-        "exemple": "Pense aux jetons : {a} jetons et encore {b} jetons.",
+        "exemple": "Pense à {a} {objets} et encore {b} {objets}.",
         "demonstration": "Regarde : {a} et {b} font {n}.",
         "bravo": "Oui, {a} plus {b} égale {n}."
       }
@@ -186,7 +186,7 @@
         "consigne": "Écris le nombre qui manque avec ton doigt.",
         "question": "{a} plus combien font {n} ?",
         "indice": "Compte à partir de {a} jusqu'à {n}.",
-        "exemple": "Tes deux mains ont dix doigts : montre {a} doigts, combien en reste-t-il ?",
+        "exemple": "Montre {a} doigts. Combien de doigts restent baissés ?",
         "demonstration": "Regarde : {a} et {b} font {n}.",
         "bravo": "Oui, {a} plus {b} égale {n}."
       }

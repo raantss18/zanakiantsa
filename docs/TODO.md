@@ -60,6 +60,21 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 16. ⏳ Essai avec 3–5 enfants (accord parental) → `docs/essai-01.md`
 17. ⏳ Objets plus grands en paysage ; durée réelle d'une séance de 8 questions à mesurer
 
+## Étape 4 bis — Univers visuels et contenu enrichi ✅ (2026-11-03)
+
+- ✅ Design system `docs/design.md` (skill design-system), contrastes AA vérifiés par `app/tool/contrast.py`
+- ✅ 6 univers selon le genre (ADR 0014) : robots, voitures, espace / fées, poupées & mode, princesses ; Twemoji + Andika
+- ✅ Énoncé écrit + dit dans un bandeau narrateur à hauteur fixe (ADR 0016) ; consignes raccourcies (≤ 60 car.)
+- ✅ Récompenses : étoiles, autocollants, album (ADR 0015), célébration aux objets de l'univers
+- ✅ Phrases accordées à l'univers : genre (un/une, chacun/chacune), élision (d'engrenages), singulier pour 0 et 1
+- ✅ Défauts corrigés et protégés par tests : grille de placement à 9 cases pour 10 objets, chevauchement possible
+  d'objets voisins, « 1 couronnes », chemin du fil rouge peu visible, bouton inactif invisible sur fond de nuit
+- ✅ Vérifié sur tablette : 6 univers (accueil + 1re question), choix du monde, album, composer (A portrait, B
+  paysage), calcul avec démonstration ; 25 tests ; APK 27,9 Mo ; démarrage 0,48–0,66 s ; mémoire 125–145 Mo
+- ⏳ Voix enregistrées : les phrases dépendent maintenant de l'univers et des nombres → la synthèse vocale reste
+  nécessaire pour elles ; à décider (ADR 0002)
+- ⏳ Essai avec les enfants : observer l'effet des autocollants sur l'intérêt pour l'activité (ADR 0015)
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →

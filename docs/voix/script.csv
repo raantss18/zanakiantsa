@@ -1,4 +1,10 @@
 id;texte
+univers.robots.intro;Bonjour ! Je suis Robi. Aide-moi à réparer mon atelier avec les nombres !
+univers.voitures.intro;Salut ! Je suis Vroum. On fait la course des nombres ?
+univers.espace.intro;Bonjour ! Je suis Nova. Prépare la fusée, on part compter les planètes !
+univers.fees.intro;Bonjour ! Je suis Lila. Viens dans mon jardin magique jouer avec les nombres !
+univers.mode.intro;Bonjour ! Je suis Zoé. Aide-moi à préparer mon défilé avec les nombres !
+univers.princesses.intro;Bonjour ! Je suis la princesse Mia. Viens au château compter les trésors !
 commun.encore;Pas encore. Essaie encore une fois.
 commun.encouragements.0;Tu as bien cherché !
 commun.encouragements.1;Bravo pour ton effort.
@@ -8,34 +14,37 @@ commun.apres_indice;Voici un petit indice.
 commun.pas_compris;Je n'ai pas bien vu ton chiffre. Écris-le encore, bien grand.
 commun.fin_seance;C'est fini pour aujourd'hui. Ton chemin a avancé !
 commun.bienvenue;Bonjour ! On joue avec les nombres ?
-denombrer-6.consigne;Touche chaque pomme pour la compter. Puis dis-moi combien il y en a.
-denombrer-6.question;Combien de pommes ?
-denombrer-6.indice;Touche les pommes une par une, sans en oublier.
-denombrer-6.exemple;Quand tu touches la dernière pomme, le nombre que tu dis, c'est combien il y en a.
-denombrer-6.demonstration;Regarde : je compte avec toi. Il y a {n} pommes.
-denombrer-6.bravo;Oui, il y a {n} pommes.
-denombrer-10.consigne;Touche chaque étoile pour la compter. Puis dis-moi combien il y en a.
-denombrer-10.question;Combien d'étoiles ?
-denombrer-10.indice;Touche les étoiles une par une. Une étoile touchée ne compte qu'une fois.
-denombrer-10.exemple;Le dernier nombre que tu dis, c'est combien il y a d'étoiles.
-denombrer-10.demonstration;Regarde : je compte avec toi. Il y a {n} étoiles.
-denombrer-10.bravo;Oui, il y a {n} étoiles.
-constituer-10.consigne;Mets {n} jetons dans le panier.
-constituer-10.question;As-tu mis {n} jetons ? Touche le panier quand tu as fini.
-constituer-10.indice;Compte les jetons du panier, un par un.
-constituer-10.exemple;Si tu en as mis trop, tu peux en enlever : touche un jeton du panier.
-constituer-10.demonstration;Regarde : un, deux… jusqu'à {n}. Il y a {n} jetons dans le panier.
-constituer-10.bravo;Oui, il y a {n} jetons dans le panier.
-composer-10.consigne;Il y a déjà {a} jetons dans le panier. Ajoute des jetons pour en avoir {n}.
-composer-10.question;As-tu {n} jetons ? Touche le panier quand tu as fini.
-composer-10.indice;Compte à partir de {a} : {a}, puis le jeton suivant…
-composer-10.exemple;{a} et combien font {n} ? Ajoute un jeton à la fois en comptant.
+commun.nouvel_autocollant;Bravo ! Tu as gagné un nouvel autocollant pour ton album.
+commun.demande_adulte;Demande à un adulte de préparer l'application.
+commun.choisis_univers;Choisis ton monde !
+denombrer-6.consigne;Touche chaque {objet} pour compter.
+denombrer-6.question;Combien de {objets} ?
+denombrer-6.indice;Touche les {objets} {un} par {un}, sans en oublier.
+denombrer-6.exemple;Le dernier nombre dit, c'est le nombre de {objets}.
+denombrer-6.demonstration;Regarde : je compte avec toi. Il y a {n} {objets}.
+denombrer-6.bravo;Oui, il y a {n} {objets}.
+denombrer-10.consigne;Touche chaque {objet} pour compter.
+denombrer-10.question;Combien de {objets} ?
+denombrer-10.indice;Touche les {objets} {un} par {un}, sans en oublier.
+denombrer-10.exemple;Le dernier nombre dit, c'est le nombre de {objets}.
+denombrer-10.demonstration;Regarde : je compte avec toi. Il y a {n} {objets}.
+denombrer-10.bravo;Oui, il y a {n} {objets}.
+constituer-10.consigne;Mets {n} {objets} dans {contenant}.
+constituer-10.question;As-tu mis {n} {objets} ? Appuie sur ✔.
+constituer-10.indice;Compte les {objets} dans {contenant}, {un} par {un}.
+constituer-10.exemple;Trop ? Touche {contenant} pour en enlever.
+constituer-10.demonstration;Regarde : un, deux… jusqu'à {n}. Voilà {n} {objets}.
+constituer-10.bravo;Oui, il y a {n} {objets} dans {contenant}.
+composer-10.consigne;Il y a {a} {objets}. Ajoute-en pour en avoir {n}.
+composer-10.question;As-tu {n} {objets} ? Appuie sur ✔.
+composer-10.indice;Compte à partir de {a} : {a}, puis le suivant…
+composer-10.exemple;Ajoute {un} {objet} à la fois et compte jusqu'à {n}.
 composer-10.demonstration;Regarde : {a}, puis j'ajoute {b}. {a} et {b} font {n}.
 composer-10.bravo;Oui ! {a} et {b} font {n}.
 additionner-5.consigne;Écris le résultat avec ton doigt.
 additionner-5.question;{a} plus {b}, combien ça fait ?
 additionner-5.indice;Tu peux compter sur tes doigts : {a}, puis {b} de plus.
-additionner-5.exemple;Pense aux jetons : {a} jetons et encore {b} jetons.
+additionner-5.exemple;Pense à {a} {objets} et encore {b} {objets}.
 additionner-5.demonstration;Regarde : {a} et {b} font {n}.
 additionner-5.bravo;Oui, {a} plus {b} égale {n}.
 additionner-10.consigne;Écris le résultat avec ton doigt.
@@ -47,6 +56,6 @@ additionner-10.bravo;Oui, {a} plus {b} égale {n}.
 complement-10.consigne;Écris le nombre qui manque avec ton doigt.
 complement-10.question;{a} plus combien font {n} ?
 complement-10.indice;Compte à partir de {a} jusqu'à {n}.
-complement-10.exemple;Tes deux mains ont dix doigts : montre {a} doigts, combien en reste-t-il ?
+complement-10.exemple;Montre {a} doigts. Combien de doigts restent baissés ?
 complement-10.demonstration;Regarde : {a} et {b} font {n}.
 complement-10.bravo;Oui, {a} plus {b} égale {n}.

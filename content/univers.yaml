@@ -1,0 +1,45 @@
+# Univers (ADR 0014) : les mots que les phrases utilisent. Les couleurs et les dessins sont dans app/lib/ui/universe.dart.
+# objets : [singulier, pluriel, genre m/f] ; « de » devant voyelle devient « d' » à l'affichage ; le 1er sert aux petits nombres, le 2e aux grands. contenant : avec son article.
+univers:
+  robots:
+    genre: garcon
+    nom: "Les robots"
+    mascotte: "Robi le robot"
+    objets: [["engrenage", "engrenages", m], ["pile", "piles", f]]
+    contenant: "la caisse à outils"
+    intro: "Bonjour ! Je suis Robi. Aide-moi à réparer mon atelier avec les nombres !"
+  voitures:
+    genre: garcon
+    nom: "Les voitures"
+    mascotte: "Vroum la voiture de course"
+    objets: [["voiture", "voitures", f], ["camion", "camions", m]]
+    contenant: "le garage"
+    intro: "Salut ! Je suis Vroum. On fait la course des nombres ?"
+  espace:
+    genre: garcon
+    nom: "L'espace"
+    mascotte: "Nova l'astronaute"
+    objets: [["planète", "planètes", f], ["satellite", "satellites", m]]
+    contenant: "la fusée"
+    intro: "Bonjour ! Je suis Nova. Prépare la fusée, on part compter les planètes !"
+  fees:
+    genre: fille
+    nom: "Les fées"
+    mascotte: "Lila la fée"
+    objets: [["papillon", "papillons", m], ["fleur", "fleurs", f]]
+    contenant: "le panier"
+    intro: "Bonjour ! Je suis Lila. Viens dans mon jardin magique jouer avec les nombres !"
+  mode:
+    genre: fille
+    nom: "Poupées et mode"
+    mascotte: "Zoé la styliste"
+    objets: [["robe", "robes", f], ["nœud", "nœuds", m]]
+    contenant: "la valise"
+    intro: "Bonjour ! Je suis Zoé. Aide-moi à préparer mon défilé avec les nombres !"
+  princesses:
+    genre: fille
+    nom: "Princesses et château"
+    mascotte: "la princesse Mia"
+    objets: [["couronne", "couronnes", f], ["diamant", "diamants", m]]
+    contenant: "le coffret"
+    intro: "Bonjour ! Je suis la princesse Mia. Viens au château compter les trésors !"

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../ui/session.dart';
 import '../ui/theme.dart';
+import '../ui/universe.dart';
 
-/// Composer : mettre des jetons dans le panier pour avoir le nombre demandé. Les jetons déjà là (départ) sont des
-/// carrés, ceux que l'enfant ajoute sont des ronds : la forme distingue, pas seulement la couleur.
+/// Composer : mettre des objets de l'univers dans le contenant pour avoir le nombre demandé. Les objets déjà là au
+/// départ sont posés sur une tuile carrée, ceux que l'enfant ajoute non : la forme distingue, pas seulement la couleur.
 class ComposeActivity extends StatefulWidget {
   const ComposeActivity({super.key, required this.attempt});
   final Attempt attempt;
@@ -15,14 +16,16 @@ class ComposeActivity extends StatefulWidget {
 class _ComposeActivityState extends State<ComposeActivity> {
   Attempt get a => widget.attempt;
   late final int n = a.question.n, start = a.question.a;
-  static const maxTokens = 12;
+  late final String art = a.app.objectArt(a.skill);
+  static const maxItems = 12;
   int added = 0;
+  bool _demo = false;
 
   @override
   void initState() {
     super.initState();
     a.addListener(_onAttempt);
-    a.say('consigne');
+    a.show('consigne');
   }
 
   @override
@@ -30,8 +33,6 @@ class _ComposeActivityState extends State<ComposeActivity> {
     a.removeListener(_onAttempt);
     super.dispose();
   }
-
-  bool _demo = false;
 
   Future<void> _onAttempt() async {
     if (a.demonstrate && !_demo) {
@@ -50,7 +51,7 @@ class _ComposeActivityState extends State<ComposeActivity> {
   bool get locked => a.busy || a.finished;
 
   void _add() {
-    if (locked || start + added >= maxTokens) return;
+    if (locked || start + added >= maxItems) return;
     setState(() => added++);
     a.app.voice.say('${start + added}');
   }
@@ -63,55 +64,85 @@ class _ComposeActivityState extends State<ComposeActivity> {
 
   @override
   Widget build(BuildContext context) {
+    final u = a.app.universe;
     final total = start + added;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, helpBand, 16, 8),
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
       child: split(
-        main: Column(children: [
-          Text('$n', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: 'Il en faut $n'),
-          const SizedBox(height: 8),
-          // Le panier.
-          Expanded(
-            child: GestureDetector(
-              onTap: _remove,
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF3E7D3),
-                  borderRadius: BorderRadius.circular(32),
-                  border: Border.all(color: const Color(0xFFB98B4E), width: 6),
+        main: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: surface,
+            borderRadius: BorderRadius.circular(28),
+            border: Border.all(color: u.onCard, width: 5),
+            boxShadow: cardShadow,
+          ),
+          child: Column(children: [
+            // En-tête du contenant : son dessin, le compte actuel et le nombre visé (écrits).
+            Row(children: [
+              Art(u.container, size: 52),
+              const Spacer(),
+              Text('$total', style: TextStyle(fontSize: 44, fontWeight: FontWeight.w700, color: u.onCard), semanticsLabel: 'Il y en a $total'),
+              Text(' / $n', style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink), semanticsLabel: 'Il en faut $n'),
+            ]),
+            const Divider(height: 16),
+            Expanded(
+              child: Semantics(
+                button: true,
+                label: 'Enlever un objet',
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: _remove,
+                  child: LayoutBuilder(
+                    builder: (_, k) {
+                      // Taille des objets : les 12 au maximum tiennent dans le contenant, sans se chevaucher.
+                      final perRow = (k.maxWidth / 72).floor().clamp(3, 6);
+                      final size = ((k.maxWidth - (perRow - 1) * 10) / perRow).clamp(36.0, 64.0);
+                      return Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
+                        for (var i = 0; i < start; i++) _Item(art: art, size: size, preset: true),
+                        for (var i = 0; i < added; i++) _Item(art: art, size: size, preset: false),
+                      ]);
+                    },
+                  ),
                 ),
-                child: Wrap(spacing: 12, runSpacing: 12, alignment: WrapAlignment.center, children: [
-                  for (var i = 0; i < start; i++) const _Token(square: true),
-                  for (var i = 0; i < added; i++) const _Token(square: false),
-                ]),
               ),
             ),
-          ),
-        ]),
+          ]),
+        ),
         side: (axis) => Flex(direction: axis, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          // La réserve : un jeton à toucher pour l'ajouter.
+          // La réserve : toucher pour ajouter un objet.
           Semantics(
             button: true,
-            label: 'Ajouter un jeton',
-            child: GestureDetector(
-              onTap: _add,
-              child: Container(
-                width: 120,
-                height: 120,
-                decoration: BoxDecoration(color: const Color(0xFFE6F3E9), borderRadius: BorderRadius.circular(28)),
-                child: const Center(child: _Token(square: false, size: 64)),
+            label: 'Ajouter un objet',
+            child: Material(
+              color: surface,
+              borderRadius: BorderRadius.circular(28),
+              elevation: 2,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(28),
+                onTap: _add,
+                child: SizedBox(
+                  width: 112,
+                  height: 112,
+                  child: Stack(alignment: Alignment.center, children: [
+                    Art(art, size: 64),
+                    Positioned(
+                      right: 8,
+                      bottom: 8,
+                      child: CircleAvatar(radius: 16, backgroundColor: u.onCard, child: const Icon(Icons.add, color: Colors.white, size: 22)),
+                    ),
+                  ]),
+                ),
               ),
             ),
           ),
           SizedBox(
-            width: 120,
-            height: 120,
+            width: 112,
+            height: 112,
             child: FilledButton(
-              style: FilledButton.styleFrom(backgroundColor: green, padding: EdgeInsets.zero),
+              style: FilledButton.styleFrom(padding: EdgeInsets.zero),
               onPressed: locked ? null : () => a.submit(total == n),
-              child: const Icon(Icons.check_rounded, size: 80, color: Colors.white, semanticLabel: "J'ai fini"),
+              child: const Icon(Icons.check_rounded, size: 72, semanticLabel: "J'ai fini"),
             ),
           ),
         ]),
@@ -120,17 +151,20 @@ class _ComposeActivityState extends State<ComposeActivity> {
   }
 }
 
-class _Token extends StatelessWidget {
-  const _Token({required this.square, this.size = 48});
-  final bool square;
+class _Item extends StatelessWidget {
+  const _Item({required this.art, required this.size, required this.preset});
+  final String art;
   final double size;
+
+  /// Déjà là au départ : posé sur une tuile carrée grise.
+  final bool preset;
+
   @override
   Widget build(BuildContext context) => Container(
         width: size,
         height: size,
-        decoration: BoxDecoration(
-          color: square ? const Color(0xFF3F51B5) : red,
-          borderRadius: BorderRadius.circular(square ? 8 : size / 2),
-        ),
+        padding: EdgeInsets.all(size * 0.08),
+        decoration: preset ? BoxDecoration(color: const Color(0xFFE4E7E5), borderRadius: BorderRadius.circular(10)) : null,
+        child: Art(art, size: size * 0.84),
       );
 }

@@ -14,7 +14,7 @@ const activities = {
 };
 const requiredPhrases = {'consigne', 'question', 'indice', 'exemple', 'demonstration', 'bravo'};
 final placeholder = RegExp(r'\{(\w+)\}');
-const allowedPlaceholders = {'n', 'a', 'b'};
+const allowedPlaceholders = {'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun'};
 
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');
@@ -83,6 +83,24 @@ Map<String, dynamic> buildTheme(Directory dir) {
   };
 }
 
+/// Univers (ADR 0014) : genre connu, deux objets [singulier, pluriel, m/f], contenant et intro présents.
+void checkUniverses(Map<String, dynamic> u) {
+  final all = Map<String, dynamic>.from(u['univers'] as Map);
+  for (final g in ['garcon', 'fille']) {
+    if (all.values.where((v) => (v as Map)['genre'] == g).length != 3) fail('univers.yaml', '3 univers attendus pour « $g »');
+  }
+  all.forEach((id, v) {
+    final m = Map<String, dynamic>.from(v as Map);
+    for (final k in ['genre', 'nom', 'mascotte', 'objets', 'contenant', 'intro']) {
+      if (!m.containsKey(k)) fail('univers.yaml/$id', 'champ « $k » manquant');
+    }
+    final objs = m['objets'] as List? ?? const [];
+    if (objs.length != 2 || objs.any((o) => (o as List).length != 3 || !['m', 'f'].contains(o[2]))) {
+      fail('univers.yaml/$id', 'objets : deux entrées [singulier, pluriel, m|f]');
+    }
+  });
+}
+
 void main(List<String> args) {
   final check = args.contains('--check');
   final root = Directory('../content');
@@ -92,6 +110,10 @@ void main(List<String> args) {
 
   final commun = load(File('${root.path}/commun.yaml'));
   outputs['assets/content/commun.json'] = '${json.convert(commun)}\n';
+  final univers = load(File('${root.path}/univers.yaml'));
+  checkUniverses(univers);
+  outputs['assets/content/univers.json'] = '${json.convert(univers)}\n';
+  (univers['univers'] as Map).forEach((id, u) => voice.add('univers.$id.intro;${(u as Map)['intro']}'));
   final cp = Map<String, dynamic>.from(commun['phrases'] as Map);
   cp.forEach((k, v) {
     if (v is List) {

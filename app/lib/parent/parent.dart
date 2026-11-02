@@ -99,13 +99,33 @@ class _ParentPageState extends State<ParentPage> {
     // Écran adulte : boutons de taille normale (le thème enfant les agrandit), marge sous la barre de navigation.
     final base = Theme.of(context);
     return Theme(
-      data: base.copyWith(filledButtonTheme: const FilledButtonThemeData()),
+      // Fond clair neutre quel que soit l'univers (l'univers « espace » est sombre).
+      data: base.copyWith(
+        filledButtonTheme: const FilledButtonThemeData(),
+        scaffoldBackgroundColor: const Color(0xFFF7F8F6),
+        appBarTheme: const AppBarTheme(backgroundColor: Color(0xFFF7F8F6), foregroundColor: Color(0xFF1B211D)),
+      ),
       child: Scaffold(
         appBar: AppBar(title: const Text('Espace parent')),
         body: SafeArea(
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 48),
             children: [
+              Text('L’enfant est', style: Theme.of(context).textTheme.titleLarge),
+              const Text('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.'),
+              const SizedBox(height: 8),
+              Wrap(spacing: 8, children: [
+                for (final (boy, label) in [(true, 'un garçon'), (false, 'une fille')])
+                  ChoiceChip(
+                    label: Text(label),
+                    selected: app.boy == boy,
+                    onSelected: (_) async {
+                      await app.setGender(boy);
+                      setState(() {});
+                    },
+                  ),
+              ]),
+              const Divider(height: 32),
               Text(
                 'Âge de l’enfant',
                 style: Theme.of(context).textTheme.titleLarge,
@@ -207,6 +227,13 @@ class _ParentPageState extends State<ParentPage> {
                     child: const Text('Installer'),
                   ),
               ],
+              const Divider(height: 32),
+              Text('Crédits', style: Theme.of(context).textTheme.titleLarge),
+              const Text(
+                'Illustrations : Twemoji v17.0.3 (CC BY 4.0, github.com/jdecked/twemoji). '
+                'Police : Andika 7.000 (SIL Open Font License, software.sil.org/andika). '
+                'Code : Apache-2.0, github.com/raantss18/zanakiantsa.',
+              ),
             ],
           ),
         ),

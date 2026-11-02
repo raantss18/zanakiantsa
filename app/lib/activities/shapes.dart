@@ -1,36 +1,28 @@
 import 'dart:math';
 import 'dart:ui';
 
-/// Objets dessinés par code (aucune image à embarquer, net sur tablette).
-void drawApple(Canvas c, Offset o, double r) {
-  c.drawCircle(o, r * 0.85, Paint()..color = const Color(0xFFD6362B));
-  c.drawOval(Rect.fromLTWH(o.dx, o.dy - r, r * 0.6, r * 0.35), Paint()..color = const Color(0xFF1D7A33));
-}
-
-void drawStar(Canvas c, Offset o, double r) {
-  final path = Path();
-  for (var k = 0; k < 10; k++) {
-    final rr = k.isEven ? r : r * 0.45;
-    final a = -pi / 2 + k * pi / 5;
-    final p = o + Offset(cos(a) * rr, sin(a) * rr);
-    k == 0 ? path.moveTo(p.dx, p.dy) : path.lineTo(p.dx, p.dy);
+/// Placement de [n] objets sans chevauchement : une grille d'au moins [n] cases (mélangées), un objet par case,
+/// légèrement décalé (±10 %) dans sa case. Positions en fraction (0–1) de la zone, avec la taille d'une case.
+class Scatter {
+  Scatter(int n, Random rand, {double aspect = 1}) {
+    cols = max(2, sqrt(n * aspect).ceil());
+    final r = max(2, (n / cols).ceil());
+    // Une rangée de plus quand la grille est presque pleine : de l'air entre les objets.
+    rows = cols * r < n + 2 ? r + 1 : r;
+    final cells = [for (var i = 0; i < cols * rows; i++) i]..shuffle(rand);
+    spots = [
+      for (final cell in cells.take(n))
+        Offset(
+          (cell % cols + 0.5 + (rand.nextDouble() - 0.5) * 0.2) / cols,
+          (cell ~/ cols + 0.5 + (rand.nextDouble() - 0.5) * 0.2) / rows,
+        ),
+    ];
   }
-  c.drawPath(path..close(), Paint()..color = const Color(0xFFE08A00));
-}
 
-void drawObject(String kind, Canvas c, Offset o, double r) => kind == 'etoile' ? drawStar(c, o, r) : drawApple(c, o, r);
+  late final int cols, rows;
+  late final List<Offset> spots;
 
-/// Positions sans chevauchement dans un rectangle (grille mélangée + petit décalage).
-List<Offset> scatter(int n, Size area, double r, Random rand) {
-  final cols = max(3, (area.width / (r * 2.6)).floor());
-  final rows = max(3, (area.height / (r * 2.6)).floor());
-  final cells = [for (var i = 0; i < cols * rows; i++) i]..shuffle(rand);
-  final cw = area.width / cols, ch = area.height / rows;
-  return [
-    for (final cell in cells.take(n))
-      Offset(
-        (cell % cols + 0.5) * cw + (rand.nextDouble() - 0.5) * (cw - 2 * r) * 0.5,
-        (cell ~/ cols + 0.5) * ch + (rand.nextDouble() - 0.5) * (ch - 2 * r) * 0.5,
-      ),
-  ];
+  /// Rayon maximal d'un objet pour une zone donnée : 38 % de la plus petite dimension d'une case. Avec un décalage de
+  /// ±10 %, deux voisins restent à ≥ 0,8 case l'un de l'autre > 2 × 0,38 : jamais de chevauchement (test).
+  double radius(Size area) => min(area.width / cols, area.height / rows) * 0.38;
 }

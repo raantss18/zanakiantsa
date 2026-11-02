@@ -19,7 +19,7 @@ class ZanakiAntsa extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: "Zanak'i Antsa",
         debugShowCheckedModeBanner: false,
-        theme: buildTheme(),
+        theme: buildTheme(AppScope.of(context).universe),
         home: const HomePage(),
       );
 }

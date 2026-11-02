@@ -12,6 +12,7 @@ dependencies:
   flame: ^1.38.2
   flutter:
     sdk: flutter
+  flutter_svg: ^2.3.2
   flutter_tts: ^4.2.5
   google_mlkit_digital_ink_recognition: ^0.16.1
   http: ^1.6.0
@@ -30,3 +31,10 @@ flutter:
   assets:
     - assets/content/
     - assets/audio/
+    - assets/art/
+  fonts:
+    - family: Andika
+      fonts:
+        - asset: assets/fonts/Andika-Regular.ttf
+        - asset: assets/fonts/Andika-Bold.ttf
+          weight: 700

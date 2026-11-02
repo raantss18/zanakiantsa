@@ -15,6 +15,7 @@
 | path | 1.9.1 | BSD-3-Clause | oui | chemin de la base | https://pub.dev/packages/path |
 | http | 1.6.0 | BSD-3-Clause | oui | mises à jour (ADR 0011) | https://pub.dev/packages/http |
 | cryptography | 2.9.0 | Apache-2.0 | oui | signature des mises à jour (ADR 0011) | https://pub.dev/packages/cryptography |
+| flutter_svg | 2.3.2 | MIT | oui | dessins des univers | https://pub.dev/packages/flutter_svg |
 | yaml (outil de build seulement) | 3.1.4 | MIT | oui | lecture du contenu | https://pub.dev/packages/yaml |
 | flutter_lints (dév.) | 6.0.0 | BSD-3-Clause | oui | analyse | https://pub.dev/packages/flutter_lints |
 | google_mlkit_digital_ink_recognition | 0.16.1 | MIT (plugin) | oui | écriture | https://pub.dev/packages/google_mlkit_digital_ink_recognition |
@@ -40,8 +41,9 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | --- | --- | --- |
 | Base de puzzles Lichess | CC0 (https://database.lichess.org/, lu le 2026-11-02) | réutilisable, thème échecs |
 | `ding.wav` du spike | créé par code (`spikes/make_ding.py`) | original |
+| Illustrations Twemoji v17.0.3 (77 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
 
 ## Polices
 
-Non choisie. Candidate pour l'app : Hanken Grotesk (SIL OFL 1.1, police d'academik/COMIMa) ; une police pensée pour
-l'apprentissage de la lecture serait à comparer (non vérifié).
+**Andika 7.000** (SIL, Open Font License ; « literacy font » pour les lecteurs débutants, https://software.sil.org/andika/,
+lu le 2026-11-02) : Regular et Bold dans `app/assets/fonts/`, avec `OFL.txt`.

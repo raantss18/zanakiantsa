@@ -8,6 +8,37 @@ import 'package:flutter/services.dart';
 
 import '../core/progress.dart';
 
+/// Les mots d'univers dont une phrase a besoin : l'objet compté et le contenant.
+class Words {
+  const Words({required this.singular, required this.plural, required this.feminine, required this.container});
+  final String singular, plural, container;
+  final bool feminine;
+
+  static const neutral = Words(singular: 'objet', plural: 'objets', feminine: false, container: 'la boîte');
+}
+
+final _elision = RegExp(r"\b([Dd])e ([aeiouyàâéèêëîïôûœAEIOUYÉ])");
+
+/// Remplit {n} {a} {b} {objet} {objets} {contenant} {un} {Chacun} ; « de » devant voyelle devient « d' ».
+String fill(String text, Question q, Words? words) {
+  final w = words ?? Words.neutral;
+  // « 1 couronne », « 4 couronnes » : en français, 0 et 1 restent au singulier.
+  String noun(int k) => k <= 1 ? w.singular : w.plural;
+  final s = text
+      .replaceAll('{n} {objets}', '${q.n} ${noun(q.n)}')
+      .replaceAll('{a} {objets}', '${q.a} ${noun(q.a)}')
+      .replaceAll('{b} {objets}', '${q.b} ${noun(q.b)}')
+      .replaceAll('{n}', '${q.n}')
+      .replaceAll('{a}', '${q.a}')
+      .replaceAll('{b}', '${q.b}')
+      .replaceAll('{objets}', w.plural)
+      .replaceAll('{objet}', w.singular)
+      .replaceAll('{contenant}', w.container)
+      .replaceAll('{un}', w.feminine ? 'une' : 'un')
+      .replaceAll('{Chacun}', w.feminine ? 'Chacune' : 'Chacun');
+  return s.replaceAllMapped(_elision, (m) => "${m[1]}'${m[2]}");
+}
+
 class Skill {
   Skill(Map<String, dynamic> j)
       : id = j['id'] as String,
@@ -27,11 +58,12 @@ class Skill {
 
   int p(String k) => (params[k] as num).toInt();
 
-  /// Une phrase, avec {n}, {a}, {b} remplacés.
-  String say(String key, Question q) => phrases[key]!
-      .replaceAll('{n}', '${q.n}')
-      .replaceAll('{a}', '${q.a}')
-      .replaceAll('{b}', '${q.b}');
+  /// Objet de l'univers utilisé (1 = petits nombres, 2 = grands), paramètre `objet` du contenu.
+  int get objectIndex => params.containsKey('objet') ? p('objet') - 1 : 0;
+
+  /// Une phrase, avec les nombres et les mots de l'univers (ADR 0014) remplacés et accordés.
+  String say(String key, Question q, {Words? words}) => fill(phrases[key]!, q, words);
+
 
   /// Identifiant de voix stable (`docs/voix/script.csv`).
   String voiceId(String key) => '$id.$key';
