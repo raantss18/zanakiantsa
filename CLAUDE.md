@@ -41,8 +41,9 @@ Profil supervisé par **Family Link** (propriétaire du profil) : ne jamais le m
 
 ## Stack
 
-**Non tranchée.** A priori Flutter (+ Flame pour les mini-jeux), comme l'app COMIMa ; à confirmer par un spike d'un
-jour sur la tablette (ADR à venir). Outillage présent : Flutter 3.47.7 / Dart 3.13.5, SDK Android 36, JDK 17.
+**Non tranchée.** Spike comparatif Flutter + Flame / Kotlin Compose / Godot mesuré sur la tablette
+(`docs/adr/0003`). Voix : TTS pour prototyper, voix enregistrées avant tout essai avec des enfants (`docs/adr/0002`).
+Outillage présent : Flutter 3.47.7 / Dart 3.13.5, SDK Android 36, JDK 17.
 
 ## Commandes
 
