@@ -23,6 +23,7 @@ jobs:
       - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2, même épinglage que COMIMa
         with:
           channel: stable
+          flutter-version: 3.47.7 # même version que le poste de développement (CLAUDE.md)
           cache: true
 
       - name: Contenu compilé à jour
