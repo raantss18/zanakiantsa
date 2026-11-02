@@ -12,8 +12,9 @@
 3. **Rien casser.** Une décision = un ADR ≤ 15 lignes (`docs/adr/NNNN-titre.md`). Commits courts en français
    (Conventional Commits), chemins explicites (jamais `git add -A`), `main` toujours vert.
 4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai réel sur la tablette (ci-dessous).
-5. **100 % hors ligne pour le cœur.** Aucun compte enfant, aucune pub, aucun achat intégré, aucune télémétrie :
-   le journal d'événements reste sur l'appareil.
+5. **100 % hors ligne pour le cœur.** Aucun compte enfant, aucune pub, aucun achat intégré, aucune télémétrie de
+   l'app : le journal d'événements reste sur l'appareil. Ni image, ni voix, ni tracé ne quitte l'appareil ;
+   **exception connue** : ML Kit envoie à Google des statistiques techniques d'usage (ADR 0012, `docs/conformite.md`).
 6. **Aucun secret dans Git** (clés de signature dans `release-keys/`, ignoré).
 7. **Pas de copie** : on analyse ce qui est publiquement observable (fiches, docs, code open source). Aucun APK
    décompilé, aucun asset, texte ou personnage repris. Code AGPL (GCompris, Lichess) : inspiration d'architecture

@@ -22,14 +22,16 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Décisions d'Antsa : ADR 0005 langue · 0006 trois essais · 0007 maîtrise 4/5 + Leitner · 0008 retour positif ·
   0009 ML Kit
 
-## Étape 3 — Choix techniques 🔄
+## Étape 3 — Choix techniques ✅
 
 - ✅ Spike Flutter / Compose / Godot mesuré sur les deux SM-X135G (`spikes/RESULTATS.md`)
 - ✅ ADR 0010 : Flutter + Flame
 - ✅ ADR 0011 : mises à jour faites par l'app elle-même
-- 🔄 `docs/architecture.md`
-- 🔄 `docs/licences.md`
-- 🔄 `docs/conformite.md` (recherche en cours)
+- ✅ `docs/architecture.md`
+- ✅ `docs/licences.md`
+- ✅ `docs/conformite.md` (YouTube III.E.1, CNIL, loi malgache 2014-038, Google Play, ML Kit, TTS)
+- ⏳ `docs/confidentialite.md` : seulement si l'app sort un jour de la famille (obligatoire sur Google Play)
+- ⏳ Vérifier les permissions ajoutées par les plugins `google_mlkit_*` au manifeste (au moment de les intégrer)
 - ✅ ADR 0012 : ML Kit accepté (usage familial) malgré sa licence non open source
 - ✅ Restriction « sources inconnues » absente du profil supervisé (vérifié par `dumpsys`, deux tablettes)
 - ⏳ Mise à jour réelle de bout en bout sous Family Link (étape 4, tâche 10)
