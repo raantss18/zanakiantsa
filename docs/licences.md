@@ -23,8 +23,7 @@
 Les plugins Flutter sont MIT, mais ils embarquent le **SDK ML Kit de Google**, régi par les « ML Kit Terms »
 qui « incorporate and are subject to the Google APIs Terms of Service » (https://developers.google.com/ml-kit/terms,
 lu le 2026-11-02) : **pas une licence open source**, et interdiction de rétro-ingénierie des modèles. Cela contredit
-la règle « aucune dépendance non OSI » de l'ADR 0001 ; décision à prendre par Antsa (ADR à écrire avant le thème
-« écriture manuscrite »).
+la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée par l'ADR 0012** (usage familial).
 
 ## Écartés
 

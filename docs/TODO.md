@@ -30,7 +30,7 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - 🔄 `docs/architecture.md`
 - 🔄 `docs/licences.md`
 - 🔄 `docs/conformite.md` (recherche en cours)
-- ❓ ML Kit n'est pas open source (Google APIs Terms) : l'accepter par ADR, ou faire écriture et photo sans ML Kit ?
+- ✅ ADR 0012 : ML Kit accepté (usage familial) malgré sa licence non open source
 - ✅ Restriction « sources inconnues » absente du profil supervisé (vérifié par `dumpsys`, deux tablettes)
 - ⏳ Mise à jour réelle de bout en bout sous Family Link (étape 4, tâche 10)
 
