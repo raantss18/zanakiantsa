@@ -10,8 +10,17 @@ import '../core/progress.dart';
 
 /// Les mots d'univers dont une phrase a besoin : l'objet compté et le contenant.
 class Words {
-  const Words({required this.singular, required this.plural, required this.feminine, required this.container});
+  const Words({
+    required this.singular,
+    required this.plural,
+    required this.feminine,
+    required this.container,
+    this.firstName = 'Zaza',
+  });
   final String singular, plural, container;
+
+  /// Prénom de la mascotte de l'univers (« Robi a 2 engrenages… »).
+  final String firstName;
   final bool feminine;
 
   static const neutral = Words(singular: 'objet', plural: 'objets', feminine: false, container: 'la boîte');
@@ -19,7 +28,7 @@ class Words {
 
 final _elision = RegExp(r"\b([Dd])e ([aeiouyàâéèêëîïôûœAEIOUYÉ])");
 
-/// Remplit {n} {a} {b} {objet} {objets} {contenant} {un} {Chacun} ; « de » devant voyelle devient « d' ».
+/// Remplit {n} {a} {b} {objet} {objets} {contenant} {prenom} {un} {Chacun} ; « de » devant voyelle devient « d' ».
 String fill(String text, Question q, Words? words) {
   final w = words ?? Words.neutral;
   // « 1 couronne », « 4 couronnes » : en français, 0 et 1 restent au singulier.
@@ -34,6 +43,7 @@ String fill(String text, Question q, Words? words) {
       .replaceAll('{objets}', w.plural)
       .replaceAll('{objet}', w.singular)
       .replaceAll('{contenant}', w.container)
+      .replaceAll('{prenom}', w.firstName)
       .replaceAll('{un}', w.feminine ? 'une' : 'un')
       .replaceAll('{Chacun}', w.feminine ? 'Chacune' : 'Chacun');
   return s.replaceAllMapped(_elision, (m) => "${m[1]}'${m[2]}");
@@ -88,7 +98,8 @@ class Skill {
         return Question(n: n, a: a, b: n - a);
       default: // calcul
         final total = params.containsKey('total_fixe') ? p('total_fixe') : between(2, p('total_max'));
-        final a = between(params['forme'] == 'complement' ? 1 : 0, total - (params['forme'] == 'complement' ? 1 : 0));
+        // a et b ≥ 1 : les énoncés racontent une petite histoire (« il en arrive {b} »), qui n'a pas de sens avec 0.
+        final a = between(1, total - 1);
         return Question(n: total, a: a, b: total - a);
     }
   }

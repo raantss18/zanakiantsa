@@ -38,7 +38,8 @@ void main() {
             default:
               expect(q.a + q.b, q.n);
               expect(q.n, lessThanOrEqualTo(s.p('total_max')));
-              expect(min(q.a, q.b), greaterThanOrEqualTo(0));
+              // a et b ≥ 1 : les énoncés sont de petites histoires (« il en arrive {b} »).
+              expect(min(q.a, q.b), greaterThanOrEqualTo(1));
               if (s.params['forme'] == 'complement') {
                 expect(q.n, 10);
                 expect(s.expected(q), q.b);

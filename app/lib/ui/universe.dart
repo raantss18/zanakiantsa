@@ -46,6 +46,32 @@ class Noun {
   final bool feminine;
 }
 
+/// Mouvement de la scène de réussite d'un monde.
+enum Motion {
+  /// Traverse l'écran de gauche à droite (voiture qui passe la ligne d'arrivée).
+  cross,
+
+  /// Monte du bas vers le haut (fusée qui décolle).
+  rise,
+
+  /// Tourne et grandit au centre (engrenage qui se met en marche, robe qui virevolte).
+  spin,
+
+  /// Vole en vague de gauche à droite (fée).
+  fly,
+
+  /// Tombe d'en haut et rebondit au centre (couronne posée).
+  drop,
+}
+
+/// Scène de réussite propre à un monde : un héros qui bouge, et des éclats qui jaillissent du centre.
+class Scene {
+  const Scene(this.hero, this.motion, this.burst);
+  final String hero;
+  final Motion motion;
+  final List<String> burst;
+}
+
 class Universe {
   const Universe({
     required this.id,
@@ -60,8 +86,12 @@ class Universe {
     required this.onCard,
     required this.stickers,
     required this.decor,
+    required this.scene,
     this.night = false,
   });
+
+  /// Ce qui se passe à l'écran à chaque bonne réponse.
+  final Scene scene;
 
   final String id;
   final bool boy;
@@ -82,6 +112,7 @@ class Universe {
 const universes = <Universe>[
   Universe(
     id: 'robots',
+    scene: Scene('2699', Motion.spin, ['1f4a1', '1f529', '1f50b']),
     boy: true,
     mascot: '1f916',
     objects: ['2699', '1f50b'],
@@ -96,6 +127,7 @@ const universes = <Universe>[
   ),
   Universe(
     id: 'voitures',
+    scene: Scene('1f3ce', Motion.cross, ['1f3c1', '1f3c6']),
     boy: true,
     mascot: '1f3ce',
     objects: ['1f697', '1f69a'],
@@ -110,6 +142,7 @@ const universes = <Universe>[
   ),
   Universe(
     id: 'espace',
+    scene: Scene('1f680', Motion.rise, ['1f320', '1fa90', '2728']),
     boy: true,
     mascot: '1f9d1-200d-1f680',
     objects: ['1fa90', '1f6f0'],
@@ -125,6 +158,7 @@ const universes = <Universe>[
   ),
   Universe(
     id: 'fees',
+    scene: Scene('1f9da-200d-2640-fe0f', Motion.fly, ['1f338', '2728', '1f337']),
     boy: false,
     mascot: '1f9da-200d-2640-fe0f',
     objects: ['1f98b', '1f338'],
@@ -139,6 +173,7 @@ const universes = <Universe>[
   ),
   Universe(
     id: 'mode',
+    scene: Scene('1f457', Motion.spin, ['1f380', '2728', '1f48d']),
     boy: false,
     mascot: '1f483',
     objects: ['1f457', '1f380'],
@@ -153,6 +188,7 @@ const universes = <Universe>[
   ),
   Universe(
     id: 'princesses',
+    scene: Scene('1f451', Motion.drop, ['1f48e', '2728', '1f339']),
     boy: false,
     mascot: '1f478',
     objects: ['1f451', '1f48e'],
@@ -173,13 +209,14 @@ Universe universeById(String? id) => universes.firstWhere((u) => u.id == id, orE
 class UniverseWords {
   UniverseWords(Map<String, dynamic> j)
       : name = j['nom'] as String,
+        firstName = j['prenom'] as String,
         mascotName = j['mascotte'] as String,
         container = j['contenant'] as String,
         intro = j['intro'] as String,
         objects = [
           for (final o in j['objets'] as List) Noun((o as List)[0] as String, o[1] as String, o[2] == 'f'),
         ];
-  final String name, mascotName, container, intro;
+  final String name, firstName, mascotName, container, intro;
   final List<Noun> objects;
 }
 

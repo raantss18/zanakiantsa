@@ -5,6 +5,7 @@ import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_re
 
 import '../ui/session.dart';
 import '../ui/theme.dart';
+import '../ui/universe.dart';
 
 /// Langue du modèle d'écriture ML Kit (ADR 0009, 0012). Les chiffres sont reconnus par le modèle français.
 const inkLanguage = 'fr';
@@ -97,8 +98,9 @@ class _CalcActivityState extends State<CalcActivity> {
   Widget build(BuildContext context) {
     final q = a.question;
     final big = Theme.of(context).textTheme.displayLarge!;
-    final answerShown = a.demonstrate ? '$expected' : '?';
+    final answerShown = a.demonstrate || a.solved ? '$expected' : '?';
     final u = a.app.universe;
+    final art = a.app.objectArt(a.skill);
     // La réponse attendue : « ? » dans une case ; pendant la démonstration, le nombre lui-même apparaît.
     final answer = Container(
       padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -110,11 +112,11 @@ class _CalcActivityState extends State<CalcActivity> {
       decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
       child: FittedBox(
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          _Num(q.a, big, u.onCard),
+          _Num(q.a, big, art),
           Text(' + ', style: big),
-          complement ? answer : _Num(q.b, big, u.onCard),
+          complement ? answer : _Num(q.b, big, art),
           Text(' = ', style: big),
-          complement ? _Num(q.n, big, u.onCard) : answer,
+          complement ? _Num(q.n, big, art) : answer,
         ]),
       ),
     );
@@ -205,18 +207,20 @@ class _CalcActivityState extends State<CalcActivity> {
 
 /// Un nombre avec ses points en dessous (aide au dénombrement, pas seulement le chiffre).
 class _Num extends StatelessWidget {
-  const _Num(this.v, this.style, this.color);
+  const _Num(this.v, this.style, this.art);
   final int v;
   final TextStyle style;
-  final Color color;
+
+  /// Objet de l'univers dessiné sous le nombre (autant d'objets que le nombre).
+  final String art;
   @override
   Widget build(BuildContext context) => Column(mainAxisSize: MainAxisSize.min, children: [
         Text('$v', style: style),
         SizedBox(
-          width: 90,
+          width: 140,
           child: Wrap(alignment: WrapAlignment.center, spacing: 4, runSpacing: 4, children: [
             for (var i = 0; i < v; i++)
-              Container(width: 12, height: 12, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
+              Art(art, size: v > 5 ? 22 : 28),
           ]),
         ),
       ]);

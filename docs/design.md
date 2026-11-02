@@ -39,7 +39,7 @@ fil rouge à son image, 12 autocollants à collectionner.
 | **Bandeau narrateur** | mascotte + bulle avec l'**énoncé écrit** (ADR 0016) | hauteur fixe (la zone de jeu ne change jamais de taille) ; texte ajusté sur 3 lignes max ; l'aide remplace l'énoncé dans la même bulle, avec une ampoule 💡 ; haut-parleur pour réécouter |
 | **Bouton-réponse** | nombre à choisir | 104 dp, primaire de l'univers ; pendant une démonstration la bonne réponse porte en plus un contour épais et une ✔ (pas seulement la couleur) |
 | **Compteur d'étoiles** | étoiles gagnées dans la séance | en haut à droite, nombre écrit à côté de ⭐ |
-| **Célébration** | bonne réponse | pluie de 12 objets de l'univers (1,2 s), mascotte qui saute ; aucun son négatif nulle part |
+| **Scène de réussite** | bonne réponse | propre au monde (1,4 s) : l'engrenage tourne, la voiture passe la ligne, la fusée décolle, la fée vole, la robe virevolte, la couronne tombe ; éclats d'objets du monde ; mascotte qui saute ; aucun son négatif nulle part |
 | **Album** | autocollants gagnés | grille 3 × 4 ; non gagnés = silhouette grise + cadenas (forme, pas seulement couleur) |
 | **Fil rouge** | progression | pierres = icône de l'univers ; mascotte posée sur la pierre courante |
 

@@ -64,7 +64,7 @@ class AppState extends ChangeNotifier {
   Words wordsFor(Skill skill) {
     final w = universeWords;
     final o = w.objects[skill.objectIndex.clamp(0, w.objects.length - 1)];
-    return Words(singular: o.singular, plural: o.plural, feminine: o.feminine, container: w.container);
+    return Words(singular: o.singular, plural: o.plural, feminine: o.feminine, container: w.container, firstName: w.firstName);
   }
 
   /// Code du dessin de l'objet d'une compétence.

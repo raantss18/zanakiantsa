@@ -40,7 +40,7 @@ void main() {
         expect(words.containsKey(u.id), isTrue, reason: u.id);
         expect((words[u.id] as Map)['genre'], u.boy ? 'garcon' : 'fille', reason: u.id);
         expect(u.stickers.length, stickersPerUniverse, reason: u.id);
-        for (final code in {u.mascot, u.container, ...u.objects, ...u.stickers, ...u.decor}) {
+        for (final code in {u.mascot, u.container, ...u.objects, ...u.stickers, ...u.decor, u.scene.hero, ...u.scene.burst}) {
           expect(File('assets/art/$code.svg').existsSync(), isTrue, reason: '${u.id} : $code.svg');
         }
       }
@@ -49,7 +49,7 @@ void main() {
       final topic = Topic(jsonDecode(File('assets/content/compter.json').readAsStringSync()) as Map<String, dynamic>);
       for (final w in words.values) {
         for (final o in (w as Map)['objets'] as List) {
-          final ws = Words(singular: o[0], plural: o[1], feminine: o[2] == 'f', container: w['contenant']);
+          final ws = Words(singular: o[0], plural: o[1], feminine: o[2] == 'f', container: w['contenant'], firstName: w['prenom']);
           for (final s in topic.skills) {
             for (final k in s.phrases.keys) {
               expect(s.say(k, const Question(n: 5, a: 2, b: 3), words: ws), isNot(contains('{')), reason: '${s.id}.$k');

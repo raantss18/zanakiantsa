@@ -37,6 +37,9 @@ class Attempt extends ChangeNotifier {
   /// Vrai quand l'activité doit montrer la bonne réponse (moins de 6 ans, 3 essais manqués).
   bool demonstrate = false;
 
+  /// Vrai quand l'enfant a trouvé : l'activité affiche sa réponse à la place du « ? ».
+  bool solved = false;
+
   /// Clé de la phrase affichée dans le bandeau (consigne, puis question).
   String statementKey = 'consigne';
 
@@ -79,6 +82,7 @@ class Attempt extends ChangeNotifier {
     notifyListeners();
     if (ok) {
       finished = true;
+      solved = true;
       helpText = null;
       statementKey = 'bravo';
       notifyListeners();
@@ -240,7 +244,7 @@ class _SessionPageState extends State<SessionPage> {
                           _ => CalcActivity(key: ValueKey(index), attempt: a),
                         },
                       ),
-                      Positioned.fill(child: Celebration(trigger: stars, arts: u.stickers)),
+                      Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
                     ]),
             ),
           ]),
