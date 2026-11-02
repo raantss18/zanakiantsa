@@ -57,6 +57,8 @@ Les commandes de build et de test seront ajoutées ici quand la stack sera tranc
 
 ## Organisation
 
+- **`docs/TODO.md`** : la liste des tâches, seule source d'avancement, mise à jour à chaque tâche.
+- **Mises à jour** : uniquement par l'app elle-même (ADR 0011), jamais par un store ni un APK copié à la main.
 - `docs/vision.md` : quoi et pour qui. `docs/adr/` : décisions. `docs/teardown.md`, `docs/pedagogie.md`,
   `docs/conformite.md`, `docs/licences.md` : livrables des étapes 1 à 3.
 - Format de compte rendu à chaque étape : résumé ≤ 5 lignes · fichiers créés · Vérifié / Supposé / Reste à tester ·
