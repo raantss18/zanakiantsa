@@ -1,0 +1,36 @@
+id: piece-gratuite
+titre: "Prendre une pièce que personne ne protège"
+niveau: CP
+prerequis: [en-passant]
+programme: { source: moteur, texte: "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (une seule prise sans danger)." }
+activite: probleme
+parametres: { theme: gratuite }
+idee: "Avant de prendre, regarde : si personne ne protège la pièce, tu la gagnes sans rien perdre. Si elle est protégée, l'adversaire reprendra ta pièce."
+phrases:
+  consigne: "Cherche la pièce noire que personne ne protège, puis prends-la : touche ta pièce, puis la sienne."
+  question: "{texte}"
+  indice: "Pour chaque pièce noire, demande-toi : si je la prends, qui peut me reprendre ?"
+  exemple: "Regarde quelles pièces noires sont protégées."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Une pièce noire n'est pas protégée. Prends-la !"
+    fen: "4k3/8/8/8/3r4/8/1B6/4K3 w - - 0 1"
+    coups: [b2d4]
+    explication: "Le fou prend la tour en d4 : personne ne peut le reprendre."
+  - texte: "Une pièce noire n'est pas protégée. Prends-la !"
+    fen: "4k3/8/2n5/8/8/8/8/2R1K3 w - - 0 1"
+    coups: [c1c6]
+    explication: "La tour prend le cavalier en c6 : personne ne peut la reprendre."
+  - texte: "Une pièce noire n'est pas protégée. Prends-la !"
+    fen: "4k3/8/8/5b2/8/8/8/1Q2K3 w - - 0 1"
+    coups: [b1f5]
+    explication: "La dame prend le fou en f5 : personne ne peut la reprendre."
+  - texte: "Deux pièces noires : une seule n'est pas protégée. Laquelle prendre ?"
+    fen: "4k3/8/8/1p6/n5b1/8/8/3QK3 w - - 0 1"
+    coups: [d1g4]
+    explication: "Le cavalier en a4 est protégé par le pion b5. Le fou en g4, lui, ne l'est pas : la dame le prend."
+  - texte: "La tour noire est protégée, mais pas une autre pièce. Trouve-la !"
+    fen: "n3k3/8/3p4/4r3/8/8/7B/R5K1 w - - 0 1"
+    coups: [a1a8]
+    explication: "Le pion d6 protège la tour. Le cavalier en a8, lui, est seul : ta tour le prend."

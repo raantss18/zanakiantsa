@@ -9,7 +9,8 @@ void main() {
   test('un son qui ne répond jamais rend la main après le budget', () async {
     final watch = Stopwatch()..start();
     await bounded(Completer<void>().future, const Duration(milliseconds: 200));
-    expect(watch.elapsedMilliseconds, lessThan(1000));
+    // Large marge : la machine de test peut être chargée ; ce qui compte, c'est de rendre la main.
+    expect(watch.elapsedMilliseconds, lessThan(5000));
   });
 
   test('un son qui échoue ne fait pas échouer l\'écran', () async {

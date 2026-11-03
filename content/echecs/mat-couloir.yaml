@@ -1,0 +1,36 @@
+id: mat-couloir
+titre: "Le mat du couloir"
+niveau: CE1
+prerequis: [fourchette]
+programme: { source: moteur, texte: "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (un seul coup qui fait mat)." }
+activite: probleme
+parametres: { theme: couloir }
+idee: "Quand le roi est au fond, derrière ses propres pions, il est enfermé dans un couloir. Une tour ou une dame sur la dernière rangée, et c'est mat !"
+phrases:
+  consigne: "Le roi noir est enfermé derrière ses pions. Trouve le coup qui fait échec et mat sur la dernière rangée."
+  question: "{texte}"
+  indice: "Va sur la rangée du roi noir avec ta tour ou ta dame : ses pions l'empêchent de fuir."
+  exemple: "Regarde la rangée du roi noir."
+  demonstration: "Regarde : {explication}"
+  bravo: "Échec et mat ! {explication}"
+items:
+  - texte: "Fais le mat du couloir !"
+    fen: "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1"
+    coups: [a1a8]
+    explication: "La tour va en a8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+  - texte: "Fais le mat du couloir !"
+    fen: "1k6/ppp5/8/8/8/8/8/4R1K1 w - - 0 1"
+    coups: [e1e8]
+    explication: "La tour va en e8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+  - texte: "Fais le mat du couloir avec ta dame !"
+    fen: "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1"
+    coups: [d1d8]
+    explication: "La dame va en d8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+  - texte: "Fais le mat du couloir !"
+    fen: "7k/6pp/8/8/8/8/6PP/1R4K1 w - - 0 1"
+    coups: [b1b8]
+    explication: "La tour va en b8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+  - texte: "Fais le mat du couloir !"
+    fen: "k7/pp6/8/8/8/8/6PP/2R3K1 w - - 0 1"
+    coups: [c1c8]
+    explication: "La tour va en c8 : le roi est attaqué, ses pions l'empêchent d'avancer."

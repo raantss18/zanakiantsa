@@ -28,7 +28,8 @@
     10
   ],
   "sources": {
-    "fide": "https://handbook.fide.com/chapter/E012023"
+    "fide": "https://handbook.fide.com/chapter/E012023",
+    "moteur": "https://github.com/raantss18/zanakiantsa/blob/main/app/test/problems_test.dart"
   },
   "competences": [
     {
@@ -379,6 +380,384 @@
         "demonstration": "Regarde le coup entouré d'or.",
         "bravo": "Échec et mat ! Bravo, tu as gagné la partie."
       }
+    },
+    {
+      "id": "roque",
+      "titre": "Le roque : mettre son roi à l'abri",
+      "niveau": "CP",
+      "prerequis": [
+        "mat-tour"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.8.2 : castling — a move of the king and either rook of the same colour along the player's first rank."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "roque"
+      },
+      "idee": "Le roque, c'est un coup spécial : le roi va de deux cases vers la tour, et la tour saute par-dessus lui. Interdit si le roi ou la tour a déjà bougé, si le roi est en échec, ou s'il traverse une case attaquée.",
+      "phrases": {
+        "consigne": "Touche ton roi, puis la case à deux pas de lui, vers la tour. La tour sautera toute seule.",
+        "question": "{texte}",
+        "indice": "Le roi va de deux cases vers la tour. Il ne traverse jamais une case attaquée.",
+        "exemple": "Regarde bien où le roi et la tour arrivent.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Bravo ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Fais le petit roque, du côté de la tour la plus proche.",
+          "fen": "4k3/8/8/8/8/8/5PPP/4K2R w K - 0 1",
+          "coups": [
+            "e1g1"
+          ],
+          "explication": "Le roi va en g1, la tour saute en f1 : le roi est à l'abri derrière ses pions."
+        },
+        {
+          "texte": "Fais le grand roque, du côté de la dame.",
+          "fen": "4k3/8/8/8/8/8/PPP5/R3K3 w Q - 0 1",
+          "coups": [
+            "e1c1"
+          ],
+          "explication": "Le roi va en c1, la tour saute en d1."
+        },
+        {
+          "texte": "Un seul roque est permis ici. Lequel ?",
+          "fen": "4k3/8/8/8/6b1/8/5PPP/R3K2R w KQ - 0 1",
+          "coups": [
+            "e1g1"
+          ],
+          "explication": "Le fou noir attaque d1 : le roi ne peut pas la traverser. Le petit roque, lui, est permis."
+        },
+        {
+          "texte": "Un seul roque est permis ici. Lequel ?",
+          "fen": "4k3/8/8/8/2b5/8/P4PPP/R3K2R w KQ - 0 1",
+          "coups": [
+            "e1c1"
+          ],
+          "explication": "Le fou noir attaque f1 : pas de petit roque. Le grand roque, lui, est permis."
+        }
+      ]
+    },
+    {
+      "id": "promotion",
+      "titre": "La promotion : le pion devient une dame",
+      "niveau": "CP",
+      "prerequis": [
+        "roque"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.7.5.1 : when a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn […] for a new queen, rook, bishop or knight of the same colour."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "promotion"
+      },
+      "idee": "Un pion qui arrive tout au bout de l'échiquier se transforme : on choisit presque toujours une dame, la pièce la plus forte.",
+      "phrases": {
+        "consigne": "Touche le pion, puis la case du bout. Choisis ensuite la dame.",
+        "question": "{texte}",
+        "indice": "Le pion avance jusqu'à la dernière rangée, puis on choisit la dame.",
+        "exemple": "Regarde bien la dernière rangée.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Bravo ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Ton pion arrive au bout. Fais-en une dame !",
+          "fen": "k7/4P3/8/8/8/8/8/4K3 w - - 0 1",
+          "coups": [
+            "e7e8q"
+          ],
+          "explication": "Le pion arrive en e8 et devient une dame."
+        },
+        {
+          "texte": "Amène ce pion au bout, et choisis la dame.",
+          "fen": "8/6P1/8/8/k7/8/8/K7 w - - 0 1",
+          "coups": [
+            "g7g8q"
+          ],
+          "explication": "Le pion arrive en g8 et devient une dame."
+        },
+        {
+          "texte": "Ton pion peut prendre la tour en arrivant au bout. Fais-le !",
+          "fen": "3r3k/2P5/8/8/8/8/8/K7 w - - 0 1",
+          "coups": [
+            "c7d8q"
+          ],
+          "explication": "Le pion prend la tour en d8 et devient une dame : deux bonnes affaires d'un coup."
+        },
+        {
+          "texte": "Fais une dame avec ce pion.",
+          "fen": "7k/1P6/8/8/8/8/8/K7 w - - 0 1",
+          "coups": [
+            "b7b8q"
+          ],
+          "explication": "Le pion arrive en b8 et devient une dame."
+        }
+      ]
+    },
+    {
+      "id": "en-passant",
+      "titre": "La prise en passant",
+      "niveau": "CE1",
+      "prerequis": [
+        "promotion"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.7.4.1 : a pawn occupying a square on the same rank as and on an adjacent file to an opponent's pawn which has just advanced two squares […] may capture this opponent's pawn as though the latter had been moved only one square."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "en-passant"
+      },
+      "idee": "Quand un pion adverse avance de deux cases et arrive juste à côté du tien, ton pion peut le prendre comme s'il n'avait avancé que d'une case : c'est la prise en passant. Seulement tout de suite !",
+      "phrases": {
+        "consigne": "Le pion noir vient d'avancer de deux cases, à côté du tien. Touche ton pion, puis la case juste derrière le pion noir.",
+        "question": "{texte}",
+        "indice": "Ton pion va en diagonale, sur la case que le pion noir a sautée.",
+        "exemple": "Regarde la case que le pion noir vient de sauter.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Bravo ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Le pion noir vient de sauter de d7 à d5. Prends-le en passant !",
+          "fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+          "coups": [
+            "e5d6"
+          ],
+          "explication": "Ton pion va en d6, et le pion noir de d5 est pris."
+        },
+        {
+          "texte": "Le pion noir vient de sauter de f7 à f5. Prends-le en passant !",
+          "fen": "4k3/8/8/5pP1/8/8/8/4K3 w - f6 0 1",
+          "coups": [
+            "g5f6"
+          ],
+          "explication": "Ton pion va en f6, et le pion noir de f5 est pris."
+        },
+        {
+          "texte": "Le pion noir vient de sauter de a7 à a5. Prends-le en passant !",
+          "fen": "4k3/8/8/pP6/8/8/8/4K3 w - a6 0 1",
+          "coups": [
+            "b5a6"
+          ],
+          "explication": "Ton pion va en a6, et le pion noir de a5 est pris."
+        },
+        {
+          "texte": "Le pion noir vient de sauter de h7 à h5. Prends-le en passant !",
+          "fen": "k7/8/8/6Pp/8/8/8/K7 w - h6 0 1",
+          "coups": [
+            "g5h6"
+          ],
+          "explication": "Ton pion va en h6, et le pion noir de h5 est pris."
+        }
+      ]
+    },
+    {
+      "id": "piece-gratuite",
+      "titre": "Prendre une pièce que personne ne protège",
+      "niveau": "CP",
+      "prerequis": [
+        "en-passant"
+      ],
+      "programme": {
+        "source": "moteur",
+        "texte": "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (une seule prise sans danger)."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "gratuite"
+      },
+      "idee": "Avant de prendre, regarde : si personne ne protège la pièce, tu la gagnes sans rien perdre. Si elle est protégée, l'adversaire reprendra ta pièce.",
+      "phrases": {
+        "consigne": "Cherche la pièce noire que personne ne protège, puis prends-la : touche ta pièce, puis la sienne.",
+        "question": "{texte}",
+        "indice": "Pour chaque pièce noire, demande-toi : si je la prends, qui peut me reprendre ?",
+        "exemple": "Regarde quelles pièces noires sont protégées.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Bravo ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une pièce noire n'est pas protégée. Prends-la !",
+          "fen": "4k3/8/8/8/3r4/8/1B6/4K3 w - - 0 1",
+          "coups": [
+            "b2d4"
+          ],
+          "explication": "Le fou prend la tour en d4 : personne ne peut le reprendre."
+        },
+        {
+          "texte": "Une pièce noire n'est pas protégée. Prends-la !",
+          "fen": "4k3/8/2n5/8/8/8/8/2R1K3 w - - 0 1",
+          "coups": [
+            "c1c6"
+          ],
+          "explication": "La tour prend le cavalier en c6 : personne ne peut la reprendre."
+        },
+        {
+          "texte": "Une pièce noire n'est pas protégée. Prends-la !",
+          "fen": "4k3/8/8/5b2/8/8/8/1Q2K3 w - - 0 1",
+          "coups": [
+            "b1f5"
+          ],
+          "explication": "La dame prend le fou en f5 : personne ne peut la reprendre."
+        },
+        {
+          "texte": "Deux pièces noires : une seule n'est pas protégée. Laquelle prendre ?",
+          "fen": "4k3/8/8/1p6/n5b1/8/8/3QK3 w - - 0 1",
+          "coups": [
+            "d1g4"
+          ],
+          "explication": "Le cavalier en a4 est protégé par le pion b5. Le fou en g4, lui, ne l'est pas : la dame le prend."
+        },
+        {
+          "texte": "La tour noire est protégée, mais pas une autre pièce. Trouve-la !",
+          "fen": "n3k3/8/3p4/4r3/8/8/7B/R5K1 w - - 0 1",
+          "coups": [
+            "a1a8"
+          ],
+          "explication": "Le pion d6 protège la tour. Le cavalier en a8, lui, est seul : ta tour le prend."
+        }
+      ]
+    },
+    {
+      "id": "fourchette",
+      "titre": "La fourchette du cavalier",
+      "niveau": "CE1",
+      "prerequis": [
+        "piece-gratuite"
+      ],
+      "programme": {
+        "source": "moteur",
+        "texte": "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (un seul coup qui attaque à la fois le roi et une grosse pièce, sur une case sûre)."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "fourchette"
+      },
+      "idee": "Une fourchette, c'est attaquer deux pièces à la fois. Le roi doit se sauver d'abord : l'autre pièce est perdue !",
+      "phrases": {
+        "consigne": "Trouve le saut du cavalier qui fait échec au roi noir et attaque en même temps une autre grosse pièce.",
+        "question": "{texte}",
+        "indice": "Cherche une case d'où le cavalier touche à la fois le roi et la tour ou la dame.",
+        "exemple": "Regarde toutes les cases où le cavalier peut sauter.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Bravo ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Fais une fourchette avec ton cavalier !",
+          "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1",
+          "coups": [
+            "b5c7"
+          ],
+          "explication": "En c7, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+        },
+        {
+          "texte": "Fais une fourchette avec ton cavalier !",
+          "fen": "2q3k1/8/8/3N4/8/8/8/6K1 w - - 0 1",
+          "coups": [
+            "d5e7"
+          ],
+          "explication": "En e7, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise."
+        },
+        {
+          "texte": "Fais une fourchette avec ton cavalier !",
+          "fen": "8/8/1k3r2/8/8/2N5/8/K7 w - - 0 1",
+          "coups": [
+            "c3d5"
+          ],
+          "explication": "En d5, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+        },
+        {
+          "texte": "Fais une fourchette avec ton cavalier !",
+          "fen": "8/8/8/1k3q2/8/8/2N5/6K1 w - - 0 1",
+          "coups": [
+            "c2d4"
+          ],
+          "explication": "En d4, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise."
+        },
+        {
+          "texte": "Fais une fourchette avec ton cavalier !",
+          "fen": "4r1k1/8/8/8/4N3/8/8/6K1 w - - 0 1",
+          "coups": [
+            "e4f6"
+          ],
+          "explication": "En f6, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+        }
+      ]
+    },
+    {
+      "id": "mat-couloir",
+      "titre": "Le mat du couloir",
+      "niveau": "CE1",
+      "prerequis": [
+        "fourchette"
+      ],
+      "programme": {
+        "source": "moteur",
+        "texte": "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (un seul coup qui fait mat)."
+      },
+      "activite": "probleme",
+      "parametres": {
+        "theme": "couloir"
+      },
+      "idee": "Quand le roi est au fond, derrière ses propres pions, il est enfermé dans un couloir. Une tour ou une dame sur la dernière rangée, et c'est mat !",
+      "phrases": {
+        "consigne": "Le roi noir est enfermé derrière ses pions. Trouve le coup qui fait échec et mat sur la dernière rangée.",
+        "question": "{texte}",
+        "indice": "Va sur la rangée du roi noir avec ta tour ou ta dame : ses pions l'empêchent de fuir.",
+        "exemple": "Regarde la rangée du roi noir.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Échec et mat ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Fais le mat du couloir !",
+          "fen": "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1",
+          "coups": [
+            "a1a8"
+          ],
+          "explication": "La tour va en a8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+        },
+        {
+          "texte": "Fais le mat du couloir !",
+          "fen": "1k6/ppp5/8/8/8/8/8/4R1K1 w - - 0 1",
+          "coups": [
+            "e1e8"
+          ],
+          "explication": "La tour va en e8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+        },
+        {
+          "texte": "Fais le mat du couloir avec ta dame !",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",
+          "coups": [
+            "d1d8"
+          ],
+          "explication": "La dame va en d8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+        },
+        {
+          "texte": "Fais le mat du couloir !",
+          "fen": "7k/6pp/8/8/8/8/6PP/1R4K1 w - - 0 1",
+          "coups": [
+            "b1b8"
+          ],
+          "explication": "La tour va en b8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+        },
+        {
+          "texte": "Fais le mat du couloir !",
+          "fen": "k7/pp6/8/8/8/8/6PP/2R3K1 w - - 0 1",
+          "coups": [
+            "c1c8"
+          ],
+          "explication": "La tour va en c8 : le roi est attaqué, ses pions l'empêchent d'avancer."
+        }
+      ]
     }
   ]
 }

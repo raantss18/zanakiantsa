@@ -1,0 +1,32 @@
+id: en-passant
+titre: "La prise en passant"
+niveau: CE1
+prerequis: [promotion]
+programme: { source: fide, texte: "3.7.4.1 : a pawn occupying a square on the same rank as and on an adjacent file to an opponent's pawn which has just advanced two squares […] may capture this opponent's pawn as though the latter had been moved only one square." }
+activite: probleme
+parametres: { theme: en-passant }
+idee: "Quand un pion adverse avance de deux cases et arrive juste à côté du tien, ton pion peut le prendre comme s'il n'avait avancé que d'une case : c'est la prise en passant. Seulement tout de suite !"
+phrases:
+  consigne: "Le pion noir vient d'avancer de deux cases, à côté du tien. Touche ton pion, puis la case juste derrière le pion noir."
+  question: "{texte}"
+  indice: "Ton pion va en diagonale, sur la case que le pion noir a sautée."
+  exemple: "Regarde la case que le pion noir vient de sauter."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Le pion noir vient de sauter de d7 à d5. Prends-le en passant !"
+    fen: "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1"
+    coups: [e5d6]
+    explication: "Ton pion va en d6, et le pion noir de d5 est pris."
+  - texte: "Le pion noir vient de sauter de f7 à f5. Prends-le en passant !"
+    fen: "4k3/8/8/5pP1/8/8/8/4K3 w - f6 0 1"
+    coups: [g5f6]
+    explication: "Ton pion va en f6, et le pion noir de f5 est pris."
+  - texte: "Le pion noir vient de sauter de a7 à a5. Prends-le en passant !"
+    fen: "4k3/8/8/pP6/8/8/8/4K3 w - a6 0 1"
+    coups: [b5a6]
+    explication: "Ton pion va en a6, et le pion noir de a5 est pris."
+  - texte: "Le pion noir vient de sauter de h7 à h5. Prends-le en passant !"
+    fen: "k7/8/8/6Pp/8/8/8/K7 w - h6 0 1"
+    coups: [g5h6]
+    explication: "Ton pion va en h6, et le pion noir de h5 est pris."

@@ -39,6 +39,8 @@ const activities = {
   'heure': {'minutes'},
   // ADR 0036 (suites de nombres)
   'suite': {'pas', 'max'},
+  // ADR 0040 (problèmes d'échecs sur de vraies positions)
+  'probleme': {'theme'},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
@@ -46,7 +48,7 @@ const sceneTargets = {
 };
 const solidIds = {'cube', 'pave', 'boule', 'cylindre', 'cone', 'pyramide'};
 /// Activités dont les questions sont écrites dans `items`.
-const withItems = {'choisir', 'dessin', 'planetes', 'corps', 'syllabes'};
+const withItems = {'choisir', 'dessin', 'planetes', 'corps', 'syllabes', 'probleme'};
 const letterModes = {'nom', 'casse', 'cursive', 'initiale', 'syllabe'};
 const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
 const pieces = {'r', 'b', 'q', 'k', 'n', 'p'};
@@ -85,6 +87,12 @@ void checkItems(String where, String act, List items) {
     }
     if (sceneTargets.containsKey(act)) {
       if (!sceneTargets[act]!.contains(it['cible'])) fail(w, 'cible inconnue « ${it['cible']} »');
+      if (it['explication'] is! String) fail(w, 'explication manquante');
+    }
+    if (act == 'probleme') {
+      // Positions et solutions vérifiées par le moteur dans app/test/problems_test.dart.
+      if (it['fen'] is! String) fail(w, 'fen manquante');
+      if ((it['coups'] as List? ?? const []).isEmpty) fail(w, 'coups : au moins une solution');
       if (it['explication'] is! String) fail(w, 'explication manquante');
     }
     if (act == 'dessin') {

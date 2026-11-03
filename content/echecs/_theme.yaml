@@ -8,7 +8,10 @@ ages: [5, 10]
 # https://lichess.org/learn (idée seulement, aucun code ni dessin repris, CLAUDE.md règle 7).
 sources:
   fide: "https://handbook.fide.com/chapter/E012023"
-ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour]
+  # Tactiques (fourchette, pièce non protégée, mat du couloir) : pas de programme officiel trouvé (FFE). Chaque
+  # position est vérifiée par le moteur de l'app : app/test/problems_test.dart (ADR 0040).
+  moteur: "https://github.com/raantss18/zanakiantsa/blob/main/app/test/problems_test.dart"
+ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

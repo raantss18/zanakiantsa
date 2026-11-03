@@ -940,6 +940,102 @@ mat-tour.exemple;Touche une case avec un point.
 mat-tour.demonstration;Regarde le coup entouré d'or.
 mat-tour.bravo;Échec et mat ! Bravo, tu as gagné la partie.
 mat-tour.idee;La tour attaque toute la rangée du bord. Ton roi garde les cases devant le roi noir : il ne peut plus s'échapper.
+roque.consigne;Touche ton roi, puis la case à deux pas de lui, vers la tour. La tour sautera toute seule.
+roque.question;{texte}
+roque.indice;Le roi va de deux cases vers la tour. Il ne traverse jamais une case attaquée.
+roque.exemple;Regarde bien où le roi et la tour arrivent.
+roque.demonstration;Regarde : {explication}
+roque.bravo;Bravo ! {explication}
+roque.idee;Le roque, c'est un coup spécial : le roi va de deux cases vers la tour, et la tour saute par-dessus lui. Interdit si le roi ou la tour a déjà bougé, si le roi est en échec, ou s'il traverse une case attaquée.
+roque.items.0;Fais le petit roque, du côté de la tour la plus proche.
+roque.items.0.explication;Le roi va en g1, la tour saute en f1 : le roi est à l'abri derrière ses pions.
+roque.items.1;Fais le grand roque, du côté de la dame.
+roque.items.1.explication;Le roi va en c1, la tour saute en d1.
+roque.items.2;Un seul roque est permis ici. Lequel ?
+roque.items.2.explication;Le fou noir attaque d1 : le roi ne peut pas la traverser. Le petit roque, lui, est permis.
+roque.items.3;Un seul roque est permis ici. Lequel ?
+roque.items.3.explication;Le fou noir attaque f1 : pas de petit roque. Le grand roque, lui, est permis.
+promotion.consigne;Touche le pion, puis la case du bout. Choisis ensuite la dame.
+promotion.question;{texte}
+promotion.indice;Le pion avance jusqu'à la dernière rangée, puis on choisit la dame.
+promotion.exemple;Regarde bien la dernière rangée.
+promotion.demonstration;Regarde : {explication}
+promotion.bravo;Bravo ! {explication}
+promotion.idee;Un pion qui arrive tout au bout de l'échiquier se transforme : on choisit presque toujours une dame, la pièce la plus forte.
+promotion.items.0;Ton pion arrive au bout. Fais-en une dame !
+promotion.items.0.explication;Le pion arrive en e8 et devient une dame.
+promotion.items.1;Amène ce pion au bout, et choisis la dame.
+promotion.items.1.explication;Le pion arrive en g8 et devient une dame.
+promotion.items.2;Ton pion peut prendre la tour en arrivant au bout. Fais-le !
+promotion.items.2.explication;Le pion prend la tour en d8 et devient une dame : deux bonnes affaires d'un coup.
+promotion.items.3;Fais une dame avec ce pion.
+promotion.items.3.explication;Le pion arrive en b8 et devient une dame.
+en-passant.consigne;Le pion noir vient d'avancer de deux cases, à côté du tien. Touche ton pion, puis la case juste derrière le pion noir.
+en-passant.question;{texte}
+en-passant.indice;Ton pion va en diagonale, sur la case que le pion noir a sautée.
+en-passant.exemple;Regarde la case que le pion noir vient de sauter.
+en-passant.demonstration;Regarde : {explication}
+en-passant.bravo;Bravo ! {explication}
+en-passant.idee;Quand un pion adverse avance de deux cases et arrive juste à côté du tien, ton pion peut le prendre comme s'il n'avait avancé que d'une case : c'est la prise en passant. Seulement tout de suite !
+en-passant.items.0;Le pion noir vient de sauter de d7 à d5. Prends-le en passant !
+en-passant.items.0.explication;Ton pion va en d6, et le pion noir de d5 est pris.
+en-passant.items.1;Le pion noir vient de sauter de f7 à f5. Prends-le en passant !
+en-passant.items.1.explication;Ton pion va en f6, et le pion noir de f5 est pris.
+en-passant.items.2;Le pion noir vient de sauter de a7 à a5. Prends-le en passant !
+en-passant.items.2.explication;Ton pion va en a6, et le pion noir de a5 est pris.
+en-passant.items.3;Le pion noir vient de sauter de h7 à h5. Prends-le en passant !
+en-passant.items.3.explication;Ton pion va en h6, et le pion noir de h5 est pris.
+piece-gratuite.consigne;Cherche la pièce noire que personne ne protège, puis prends-la : touche ta pièce, puis la sienne.
+piece-gratuite.question;{texte}
+piece-gratuite.indice;Pour chaque pièce noire, demande-toi : si je la prends, qui peut me reprendre ?
+piece-gratuite.exemple;Regarde quelles pièces noires sont protégées.
+piece-gratuite.demonstration;Regarde : {explication}
+piece-gratuite.bravo;Bravo ! {explication}
+piece-gratuite.idee;Avant de prendre, regarde : si personne ne protège la pièce, tu la gagnes sans rien perdre. Si elle est protégée, l'adversaire reprendra ta pièce.
+piece-gratuite.items.0;Une pièce noire n'est pas protégée. Prends-la !
+piece-gratuite.items.0.explication;Le fou prend la tour en d4 : personne ne peut le reprendre.
+piece-gratuite.items.1;Une pièce noire n'est pas protégée. Prends-la !
+piece-gratuite.items.1.explication;La tour prend le cavalier en c6 : personne ne peut la reprendre.
+piece-gratuite.items.2;Une pièce noire n'est pas protégée. Prends-la !
+piece-gratuite.items.2.explication;La dame prend le fou en f5 : personne ne peut la reprendre.
+piece-gratuite.items.3;Deux pièces noires : une seule n'est pas protégée. Laquelle prendre ?
+piece-gratuite.items.3.explication;Le cavalier en a4 est protégé par le pion b5. Le fou en g4, lui, ne l'est pas : la dame le prend.
+piece-gratuite.items.4;La tour noire est protégée, mais pas une autre pièce. Trouve-la !
+piece-gratuite.items.4.explication;Le pion d6 protège la tour. Le cavalier en a8, lui, est seul : ta tour le prend.
+fourchette.consigne;Trouve le saut du cavalier qui fait échec au roi noir et attaque en même temps une autre grosse pièce.
+fourchette.question;{texte}
+fourchette.indice;Cherche une case d'où le cavalier touche à la fois le roi et la tour ou la dame.
+fourchette.exemple;Regarde toutes les cases où le cavalier peut sauter.
+fourchette.demonstration;Regarde : {explication}
+fourchette.bravo;Bravo ! {explication}
+fourchette.idee;Une fourchette, c'est attaquer deux pièces à la fois. Le roi doit se sauver d'abord : l'autre pièce est perdue !
+fourchette.items.0;Fais une fourchette avec ton cavalier !
+fourchette.items.0.explication;En c7, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise.
+fourchette.items.1;Fais une fourchette avec ton cavalier !
+fourchette.items.1.explication;En e7, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise.
+fourchette.items.2;Fais une fourchette avec ton cavalier !
+fourchette.items.2.explication;En d5, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise.
+fourchette.items.3;Fais une fourchette avec ton cavalier !
+fourchette.items.3.explication;En d4, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise.
+fourchette.items.4;Fais une fourchette avec ton cavalier !
+fourchette.items.4.explication;En f6, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise.
+mat-couloir.consigne;Le roi noir est enfermé derrière ses pions. Trouve le coup qui fait échec et mat sur la dernière rangée.
+mat-couloir.question;{texte}
+mat-couloir.indice;Va sur la rangée du roi noir avec ta tour ou ta dame : ses pions l'empêchent de fuir.
+mat-couloir.exemple;Regarde la rangée du roi noir.
+mat-couloir.demonstration;Regarde : {explication}
+mat-couloir.bravo;Échec et mat ! {explication}
+mat-couloir.idee;Quand le roi est au fond, derrière ses propres pions, il est enfermé dans un couloir. Une tour ou une dame sur la dernière rangée, et c'est mat !
+mat-couloir.items.0;Fais le mat du couloir !
+mat-couloir.items.0.explication;La tour va en a8 : le roi est attaqué, ses pions l'empêchent d'avancer.
+mat-couloir.items.1;Fais le mat du couloir !
+mat-couloir.items.1.explication;La tour va en e8 : le roi est attaqué, ses pions l'empêchent d'avancer.
+mat-couloir.items.2;Fais le mat du couloir avec ta dame !
+mat-couloir.items.2.explication;La dame va en d8 : le roi est attaqué, ses pions l'empêchent d'avancer.
+mat-couloir.items.3;Fais le mat du couloir !
+mat-couloir.items.3.explication;La tour va en b8 : le roi est attaqué, ses pions l'empêchent d'avancer.
+mat-couloir.items.4;Fais le mat du couloir !
+mat-couloir.items.4.explication;La tour va en c8 : le roi est attaqué, ses pions l'empêchent d'avancer.
 anglais.intro.0;Écoute le mot en anglais.
 anglais.intro.1;Regarde bien les images.
 anglais.intro.2;Touche celle qui va avec le mot !

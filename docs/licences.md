@@ -45,7 +45,7 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | `assets/livres/` (livres illustrés) | African Storybook Initiative et auteurs cités dans chaque livre (`catalogue.json`, page « Fin ») | CC BY 4.0, livre par livre (ADR 0026) |
 | `assets/echecs/*.svg` (pièces d'échecs) | Cburnett, Wikimedia Commons | CC BY-SA 3.0 (`assets/echecs/LICENCE.txt`) |
 | `assets/audio/sfx/*.wav` (bruitages) | synthétisés par code (`lib/audio/sfx.dart`, `tool/build_sounds.dart`) | original |
-| Illustrations Twemoji v17.0.3 (145 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
+| Illustrations Twemoji v17.0.3 (146 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
 
 ## Polices
 

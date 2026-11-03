@@ -1,0 +1,36 @@
+id: fourchette
+titre: "La fourchette du cavalier"
+niveau: CE1
+prerequis: [piece-gratuite]
+programme: { source: moteur, texte: "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (un seul coup qui attaque à la fois le roi et une grosse pièce, sur une case sûre)." }
+activite: probleme
+parametres: { theme: fourchette }
+idee: "Une fourchette, c'est attaquer deux pièces à la fois. Le roi doit se sauver d'abord : l'autre pièce est perdue !"
+phrases:
+  consigne: "Trouve le saut du cavalier qui fait échec au roi noir et attaque en même temps une autre grosse pièce."
+  question: "{texte}"
+  indice: "Cherche une case d'où le cavalier touche à la fois le roi et la tour ou la dame."
+  exemple: "Regarde toutes les cases où le cavalier peut sauter."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Fais une fourchette avec ton cavalier !"
+    fen: "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1"
+    coups: [b5c7]
+    explication: "En c7, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+  - texte: "Fais une fourchette avec ton cavalier !"
+    fen: "2q3k1/8/8/3N4/8/8/8/6K1 w - - 0 1"
+    coups: [d5e7]
+    explication: "En e7, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise."
+  - texte: "Fais une fourchette avec ton cavalier !"
+    fen: "8/8/1k3r2/8/8/2N5/8/K7 w - - 0 1"
+    coups: [c3d5]
+    explication: "En d5, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+  - texte: "Fais une fourchette avec ton cavalier !"
+    fen: "8/8/8/1k3q2/8/8/2N5/6K1 w - - 0 1"
+    coups: [c2d4]
+    explication: "En d4, le cavalier attaque le roi et la dame : le roi se sauve, la dame est prise."
+  - texte: "Fais une fourchette avec ton cavalier !"
+    fen: "4r1k1/8/8/8/4N3/8/8/6K1 w - - 0 1"
+    coups: [e4f6]
+    explication: "En f6, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/core/engine.dart';
 import 'package:zanakiantsa/core/game.dart';
@@ -5,6 +7,12 @@ import 'package:zanakiantsa/core/game.dart';
 // Comptages de référence du générateur de coups (« perft »), publiés par la communauté des programmeurs d'échecs :
 // https://www.chessprogramming.org/Perft_Results (position de départ, « Kiwipete », position 3).
 void main() {
+  test('une image pour chacune des 12 pièces (les Noirs n\'avaient que roi et pion : pièces invisibles)', () {
+    for (final k in ['k', 'q', 'r', 'b', 'n', 'p']) {
+      expect(File('assets/echecs/$k.svg').existsSync(), isTrue, reason: k);
+      expect(File('assets/echecs/b$k.svg').existsSync(), isTrue, reason: 'b$k');
+    }
+  });
   test('perft position de départ : 20, 400, 8902', () {
     final p = Position.start();
     expect([1, 2, 3].map((d) => perft(p, d)), [20, 400, 8902]);

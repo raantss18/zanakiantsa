@@ -9,6 +9,7 @@ import '../activities/ce1.dart';
 import '../activities/chess.dart';
 import '../activities/code.dart';
 import '../activities/explore.dart';
+import '../activities/problem.dart';
 import '../activities/choose.dart';
 import '../activities/letters.dart';
 import '../activities/listen.dart';
@@ -427,6 +428,7 @@ class _SessionPageState extends State<SessionPage> {
                           'motif' => MotifActivity(key: ObjectKey(a), attempt: a),
                           'ecouter' => ListenActivity(key: ObjectKey(a), attempt: a),
                           'echecs' => ChessActivity(key: ObjectKey(a), attempt: a),
+                          'probleme' => ProblemActivity(key: ObjectKey(a), attempt: a),
                           'batonnets' when a.skill.params['mode'] == 'casser' => BreakTenActivity(key: ObjectKey(a), attempt: a),
                           'batonnets' => SticksActivity(key: ObjectKey(a), attempt: a),
                           'paquets' => PacketsActivity(key: ObjectKey(a), attempt: a),

@@ -103,7 +103,7 @@ class Skill {
   /// Ce qui rend deux questions « les mêmes » pour l'enfant (le tirage d'aléa interne des activités n'en fait pas
   /// partie, sauf quand il est la question elle-même : motifs, échecs, robot).
   String signature(Question q) => switch (activity) {
-        'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' => '${q.n}',
+        'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' || 'probleme' => '${q.n}',
         'ecouter' || 'lettre' || 'syllabes' || 'tracer' => '${q.n}/${q.b}',
         'motif' || 'echecs' || 'programmer' => '${q.a}',
         _ => '${q.n}/${q.a}/${q.b}',
@@ -111,7 +111,7 @@ class Skill {
 
   /// Variables d'activité d'une question.
   Map<String, String> vars(Question q) => switch (activity) {
-        'choisir' || 'dessin' || 'planetes' || 'corps' => items[q.n].vars,
+        'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme' => items[q.n].vars,
         'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
         'syllabes' => {
             ...items[q.n].vars,
@@ -169,7 +169,7 @@ class Skill {
         return Question(n: r.nextInt((params['lettres'] as List).length), a: r.nextInt(1 << 30));
       case 'solide':
         return Question(n: r.nextInt((params['solides'] as List).length), a: r.nextInt(1 << 30));
-      case 'choisir' || 'dessin' || 'planetes' || 'corps':
+      case 'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme':
         return Question(n: r.nextInt(items.length), a: r.nextInt(1 << 30));
       case 'ecouter':
         return Question(n: r.nextInt(2), a: r.nextInt(1 << 30), b: r.nextInt(2));
@@ -265,7 +265,13 @@ class Item {
         syllables = [for (final s in j['syllabes'] as List? ?? const []) s as String],
         letter = j['lettre'] as String?,
         name = j['nom'] as String?,
+        fen = j['fen'] as String?,
+        moves = [for (final m in j['coups'] as List? ?? const []) m as String],
         minStrokes = j['traits'] as int? ?? 1;
+
+  /// Problème d'échecs (ADR 0040) : la position (FEN) et les coups justes (UCI).
+  final String? fen;
+  final List<String> moves;
 
   /// Dessin (ADR 0038) : ce qu'on dessine (« un soleil »), et le nombre minimum de traits attendus.
   final String? name;

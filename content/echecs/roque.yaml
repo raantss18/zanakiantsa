@@ -1,0 +1,32 @@
+id: roque
+titre: "Le roque : mettre son roi à l'abri"
+niveau: CP
+prerequis: [mat-tour]
+programme: { source: fide, texte: "3.8.2 : castling — a move of the king and either rook of the same colour along the player's first rank." }
+activite: probleme
+parametres: { theme: roque }
+idee: "Le roque, c'est un coup spécial : le roi va de deux cases vers la tour, et la tour saute par-dessus lui. Interdit si le roi ou la tour a déjà bougé, si le roi est en échec, ou s'il traverse une case attaquée."
+phrases:
+  consigne: "Touche ton roi, puis la case à deux pas de lui, vers la tour. La tour sautera toute seule."
+  question: "{texte}"
+  indice: "Le roi va de deux cases vers la tour. Il ne traverse jamais une case attaquée."
+  exemple: "Regarde bien où le roi et la tour arrivent."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Fais le petit roque, du côté de la tour la plus proche."
+    fen: "4k3/8/8/8/8/8/5PPP/4K2R w K - 0 1"
+    coups: [e1g1]
+    explication: "Le roi va en g1, la tour saute en f1 : le roi est à l'abri derrière ses pions."
+  - texte: "Fais le grand roque, du côté de la dame."
+    fen: "4k3/8/8/8/8/8/PPP5/R3K3 w Q - 0 1"
+    coups: [e1c1]
+    explication: "Le roi va en c1, la tour saute en d1."
+  - texte: "Un seul roque est permis ici. Lequel ?"
+    fen: "4k3/8/8/8/6b1/8/5PPP/R3K2R w KQ - 0 1"
+    coups: [e1g1]
+    explication: "Le fou noir attaque d1 : le roi ne peut pas la traverser. Le petit roque, lui, est permis."
+  - texte: "Un seul roque est permis ici. Lequel ?"
+    fen: "4k3/8/8/8/2b5/8/P4PPP/R3K2R w KQ - 0 1"
+    coups: [e1c1]
+    explication: "Le fou noir attaque f1 : pas de petit roque. Le grand roque, lui, est permis."

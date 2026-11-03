@@ -1,0 +1,32 @@
+id: promotion
+titre: "La promotion : le pion devient une dame"
+niveau: CP
+prerequis: [roque]
+programme: { source: fide, texte: "3.7.5.1 : when a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn […] for a new queen, rook, bishop or knight of the same colour." }
+activite: probleme
+parametres: { theme: promotion }
+idee: "Un pion qui arrive tout au bout de l'échiquier se transforme : on choisit presque toujours une dame, la pièce la plus forte."
+phrases:
+  consigne: "Touche le pion, puis la case du bout. Choisis ensuite la dame."
+  question: "{texte}"
+  indice: "Le pion avance jusqu'à la dernière rangée, puis on choisit la dame."
+  exemple: "Regarde bien la dernière rangée."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Ton pion arrive au bout. Fais-en une dame !"
+    fen: "k7/4P3/8/8/8/8/8/4K3 w - - 0 1"
+    coups: [e7e8q]
+    explication: "Le pion arrive en e8 et devient une dame."
+  - texte: "Amène ce pion au bout, et choisis la dame."
+    fen: "8/6P1/8/8/k7/8/8/K7 w - - 0 1"
+    coups: [g7g8q]
+    explication: "Le pion arrive en g8 et devient une dame."
+  - texte: "Ton pion peut prendre la tour en arrivant au bout. Fais-le !"
+    fen: "3r3k/2P5/8/8/8/8/8/K7 w - - 0 1"
+    coups: [c7d8q]
+    explication: "Le pion prend la tour en d8 et devient une dame : deux bonnes affaires d'un coup."
+  - texte: "Fais une dame avec ce pion."
+    fen: "7k/1P6/8/8/8/8/8/K7 w - - 0 1"
+    coups: [b7b8q]
+    explication: "Le pion arrive en b8 et devient une dame."
