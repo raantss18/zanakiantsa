@@ -114,15 +114,22 @@ class Attempt extends ChangeNotifier {
       helpText = idea;
       notifyListeners();
       await (_english ? app.voice.sayMixed(idea) : app.voice.say(idea));
+      await _readingTime(idea);
     }
     demonstrate = true;
     helpText = phrase('demonstration');
     notifyListeners();
     await say('demonstration');
+    await _readingTime(helpText!);
     await Future<void>.delayed(const Duration(milliseconds: 1200));
     exampleDone = true;
     notifyListeners();
   }
+
+  /// Voix coupée : le temps de lire le texte affiché avant de passer à la suite (sinon l'idée de l'exemple défilait
+  /// sans pouvoir être lue).
+  Future<void> _readingTime(String text) =>
+      app.voice.voiceOn ? Future.value() : Future<void>.delayed(Duration(milliseconds: (1500 + 60 * text.length).clamp(1500, 8000)));
 
   /// [why] : ce que cette réponse-là montre (« 72, ce serait 7 paquets de dix… »), dit avant l'aide (ADR 0029).
   Future<void> submit(bool ok, {String? why}) async {
@@ -130,48 +137,52 @@ class Attempt extends ChangeNotifier {
     busy = true;
     _helpTimer?.cancel();
     notifyListeners();
-    if (ok) {
-      finished = true;
-      solved = true;
-      helpText = null;
-      statementKey = 'bravo';
-      notifyListeners();
-      await _record(correct: true, demonstrated: false);
-      onCorrect();
-      app.voice.success(app.universe.id);
-      await Future<void>.delayed(sfxLength);
-      await say('bravo');
-      final enc = app.common.list('encouragements');
-      final i = _rand.nextInt(enc.length);
-      await app.voice.say(enc[i], id: 'commun.encouragements.$i');
-    } else {
-      misses++;
-      switch (helpAfter(misses)) {
-        case Help.hint:
-          await _help('indice', why: why);
-        case Help.example:
-          await _help('exemple', why: why);
-        default:
-          finished = true;
-          if (afterLastMiss(app.age) == AfterLastMiss.demonstration) {
-            demonstrate = true;
-            helpText = phrase('demonstration');
-            notifyListeners();
-            await _record(correct: false, demonstrated: true);
-            await say('demonstration');
-            await Future<void>.delayed(const Duration(milliseconds: 800));
-          } else {
-            // 6 ans et plus : un indice, jamais la réponse (ADR 0006).
-            helpText = phrase('indice');
-            notifyListeners();
-            await _record(correct: false, demonstrated: false);
-            await app.voice.say(app.common.text('apres_indice'), id: 'commun.apres_indice');
-            await say('indice');
-          }
+    // try/finally : quoi qu'il arrive au son ou à l'enregistrement, l'écran redevient utilisable.
+    try {
+      if (ok) {
+        finished = true;
+        solved = true;
+        helpText = null;
+        statementKey = 'bravo';
+        notifyListeners();
+        await _record(correct: true, demonstrated: false);
+        onCorrect();
+        app.voice.success(app.universe.id);
+        await Future<void>.delayed(sfxLength);
+        await say('bravo');
+        final enc = app.common.list('encouragements');
+        final i = _rand.nextInt(enc.length);
+        await app.voice.say(enc[i], id: 'commun.encouragements.$i');
+      } else {
+        misses++;
+        switch (helpAfter(misses)) {
+          case Help.hint:
+            await _help('indice', why: why);
+          case Help.example:
+            await _help('exemple', why: why);
+          default:
+            finished = true;
+            if (afterLastMiss(app.age) == AfterLastMiss.demonstration) {
+              demonstrate = true;
+              helpText = phrase('demonstration');
+              notifyListeners();
+              await _record(correct: false, demonstrated: true);
+              await say('demonstration');
+              await Future<void>.delayed(const Duration(milliseconds: 800));
+            } else {
+              // 6 ans et plus : un indice, jamais la réponse (ADR 0006).
+              helpText = phrase('indice');
+              notifyListeners();
+              await _record(correct: false, demonstrated: false);
+              await app.voice.say(app.common.text('apres_indice'), id: 'commun.apres_indice');
+              await say('indice');
+            }
+        }
       }
+    } finally {
+      busy = false;
+      notifyListeners();
     }
-    busy = false;
-    notifyListeners();
     if (finished) onDone();
   }
 
@@ -186,7 +197,7 @@ class Attempt extends ChangeNotifier {
       notifyListeners();
       await (_english ? app.voice.sayMixed(why) : app.voice.say(why));
       // Voix coupée : on laisse le temps de lire l'explication avant l'aide.
-      if (!app.voice.voiceOn) await Future<void>.delayed(const Duration(seconds: 3));
+      await _readingTime(why);
       helpText = phrase(key);
       notifyListeners();
     }
@@ -388,7 +399,7 @@ class _SessionPageState extends State<SessionPage> {
                       ),
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
                       if (a.example) ...[
-                        Positioned(left: 12, top: 4, child: _NewBadge(title: a.skill.title)),
+                        Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: _NewBadge(title: a.skill.title))),
                         Positioned(
                           left: 0,
                           right: 0,
@@ -550,7 +561,8 @@ Future<void> sayDayStatus(AppState app, String theme) async {
 }
 
 /// Carte de fin d'une activité (ADR 0018) : ce qu'on a gagné ([child]), puis la suite de la journée. Domaine pas
-/// encore fini : « Encore » ou Accueil. Fini : une pause pour bouger, puis l'accueil propose l'activité suivante.
+/// encore fini : « Continuer » (une nouvelle série de questions, pas les mêmes : flèche vers l'avant, pas une flèche
+/// qui tourne, qui ferait croire qu'on rejoue la série) ou Accueil. Fini : une pause pour bouger, puis l'accueil propose l'activité suivante.
 /// Journée finie : bravo et à demain.
 class DayEnd extends StatelessWidget {
   const DayEnd({super.key, required this.theme, required this.again, required this.child});
@@ -564,7 +576,7 @@ class DayEnd extends StatelessWidget {
     final plan = app.dayPlan();
     final item = plan.items.where((i) => i.theme == theme).firstOrNull;
     final done = item?.finished ?? false;
-    Widget round(IconData icon, String label, VoidCallback onTap, {bool primary = true}) => Column(mainAxisSize: MainAxisSize.min, children: [
+    Widget round(IconData icon, String label, VoidCallback onTap, {bool primary = true, String? detail}) => Column(mainAxisSize: MainAxisSize.min, children: [
           SizedBox(
             width: 104,
             height: 104,
@@ -582,6 +594,7 @@ class DayEnd extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
+          if (detail != null) Text(detail, style: const TextStyle(fontSize: 15, color: Color(0xFF4A554E))),
         ]);
     return Center(
       child: SingleChildScrollView(
@@ -613,8 +626,8 @@ class DayEnd extends StatelessWidget {
             ],
             const SizedBox(height: 24),
             Wrap(spacing: 32, runSpacing: 16, alignment: WrapAlignment.center, children: [
-              if (!done) round(Icons.replay_rounded, 'Encore', again, primary: false),
-              round(Icons.home_rounded, 'Accueil', () => Navigator.of(context).pop()),
+              if (!done) round(Icons.arrow_forward_rounded, 'Continuer', again, detail: 'nouvelles questions'),
+              round(Icons.home_rounded, 'Accueil', () => Navigator.of(context).pop(), primary: done),
             ]),
           ]),
         ),
@@ -713,7 +726,7 @@ class _NewBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        constraints: const BoxConstraints(maxWidth: 420),
+        constraints: const BoxConstraints(maxWidth: 480),
         padding: const EdgeInsets.fromLTRB(10, 6, 14, 6),
         decoration: BoxDecoration(color: Brand.yellow, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
         child: Row(mainAxisSize: MainAxisSize.min, children: [

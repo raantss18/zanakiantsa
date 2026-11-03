@@ -54,11 +54,16 @@ class _ListenActivityState extends State<ListenActivity> {
   Future<void> _playBoth() async {
     if (_playingAll) return;
     _playingAll = true;
-    for (final i in [0, 1]) {
-      await _play(i);
-      await Future<void>.delayed(const Duration(milliseconds: 400));
+    try {
+      for (final i in [0, 1]) {
+        await _play(i);
+        await Future<void>.delayed(const Duration(milliseconds: 400));
+      }
+    } finally {
+      // Même si un son échoue, les cartes redeviennent touchables.
+      _playingAll = false;
+      if (mounted) setState(() => playing = null);
     }
-    _playingAll = false;
   }
 
   void _tap(int i) {
