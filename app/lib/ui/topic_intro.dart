@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../activities/draw.dart';
 import '../app_state.dart';
 import '../content/content.dart';
+import 'chess_play.dart';
 import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -24,6 +25,12 @@ Future<void> openTopic(BuildContext context, AppState app, String topicId) async
     if (!context.mounted) return;
     final go = await Navigator.of(context).push<bool>(MaterialPageRoute(builder: (_) => TopicIntro(topic: t)));
     if (go != true || !context.mounted) return;
+  }
+  // Les échecs ont leur accueil : leçons, robot, à deux, mes parties (ADR 0040).
+  if (topicId == 'echecs') {
+    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ChessHub()));
+    await app.refresh();
+    return;
   }
   // Séance laissée en cours : on la reprend où l'enfant s'était arrêté (ADR 0039).
   final resume = topicId == 'dessin' ? null : await SessionResume.load(app, topicId);
