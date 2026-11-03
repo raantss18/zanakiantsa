@@ -171,7 +171,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
     arrière-plan ; une erreur du moteur ne laisse plus de longs silences ; « La voix » dans l'espace parent (moteur,
     essai, conseil) — ADR 0043. ⏳ À confirmer à l'oreille sur le téléphone.
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
-    temps joué et réponses repris, base v4). Ancien texte de l'étape : : tests, émulateur tablette + téléphone, publication après accord d'Antsa.
+    temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
 ## Étape 5 — Thèmes suivants ⏳
 
