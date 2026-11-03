@@ -1,0 +1,56 @@
+id: milieux
+titre: "Où vivent les animaux ?"
+niveau: MS
+prerequis: [deplacements]
+programme: { source: c1, texte: "Observer et nommer le mode de déplacement de quelques animaux en relation avec leur milieu de vie." }
+activite: choisir
+parametres: {}
+idee: "Chaque animal vit dans un milieu : la mer, la ferme, la savane, la forêt… Son corps est fait pour y vivre."
+phrases:
+  consigne: "Écoute la question, puis touche le bon animal."
+  question: "{texte}"
+  indice: "Pense à l'endroit où tu as vu cet animal, dans un livre ou pour de vrai."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qui vit dans la mer ?"
+    bonne: ["1f988", "le requin"]
+    autres: [["1f404", "la vache"], ["1f414", "la poule"]]
+    explication: "Le requin vit dans la mer."
+  - texte: "Qui vit à la ferme ?"
+    bonne: ["1f404", "la vache"]
+    autres: [["1f988", "le requin"], ["1f992", "la girafe"]]
+    explication: "La vache vit à la ferme."
+  - texte: "Qui vit dans la savane ?"
+    bonne: ["1f992", "la girafe"]
+    autres: [["1f41f", "le poisson"], ["1f414", "la poule"]]
+    explication: "La girafe vit dans la savane, en Afrique."
+  - texte: "Qui vit sur la glace, près du pôle Sud ?"
+    bonne: ["1f427", "le manchot"]
+    autres: [["1f981", "le lion"], ["1f412", "le singe"]]
+    explication: "Le manchot vit sur la glace, près du pôle Sud."
+  - texte: "Qui vit dans une ruche ?"
+    bonne: ["1f41d", "l'abeille"]
+    autres: [["1f41f", "le poisson"], ["1f404", "la vache"]]
+    explication: "Les abeilles vivent dans une ruche."
+  - texte: "Qui vit dans une fourmilière ?"
+    bonne: ["1f41c", "la fourmi"]
+    autres: [["1f988", "le requin"], ["1f992", "la girafe"]]
+    explication: "Les fourmis vivent dans une fourmilière."
+  - texte: "Qui creuse un terrier pour y vivre ?"
+    bonne: ["1f407", "le lapin"]
+    autres: [["1f41f", "le poisson"], ["1f426", "l'oiseau"]]
+    explication: "Le lapin de garenne vit dans un terrier."
+  - texte: "Qui fait son nid dans un arbre ?"
+    bonne: ["1f426", "l'oiseau"]
+    autres: [["1f41f", "le poisson"], ["1f404", "la vache"]]
+    explication: "Beaucoup d'oiseaux font leur nid dans les arbres."
+  - texte: "Qui vit dans la savane et rugit ?"
+    bonne: ["1f981", "le lion"]
+    autres: [["1f427", "le manchot"], ["1f414", "la poule"]]
+    explication: "Le lion vit dans la savane."
+  - texte: "Qui vit dans la rivière et sur la berge ?"
+    bonne: ["1f40a", "le crocodile"]
+    autres: [["1f992", "la girafe"], ["1f414", "la poule"]]
+    explication: "Le crocodile vit dans l'eau et sur les berges."

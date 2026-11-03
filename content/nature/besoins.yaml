@@ -1,0 +1,52 @@
+id: besoins
+titre: "Ce dont les êtres vivants ont besoin"
+niveau: MS
+prerequis: [oeufs]
+programme: { source: c1, texte: "Identifier et décrire les besoins essentiels de quelques animaux et de végétaux à partir d'observations d'élevage, de cultures de plantes, et des soins prodigués." }
+activite: choisir
+parametres: {}
+idee: "Pour vivre et grandir, les plantes ont besoin d'eau et de lumière, et les animaux d'eau et de nourriture."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ce qu'on fait pour s'occuper d'une plante ou d'un animal."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "De quoi une plante a-t-elle besoin pour pousser ?"
+    bonne: ["1f4a7", "l'eau"]
+    autres: [["1f36c", "le bonbon"], ["26bd", "le ballon"]]
+    explication: "Une plante a besoin d'eau pour pousser."
+  - texte: "De quoi une plante a-t-elle aussi besoin ?"
+    bonne: ["2600", "la lumière du soleil"]
+    autres: [["1f4d6", "le livre"], ["1f36c", "le bonbon"]]
+    explication: "Une plante a besoin de lumière."
+  - texte: "Que mange la vache ?"
+    bonne: ["1f33f", "l'herbe"]
+    autres: [["1f356", "la viande"], ["1f36c", "le bonbon"]]
+    explication: "La vache mange de l'herbe."
+  - texte: "Que mange le lapin ?"
+    bonne: ["1f955", "la carotte"]
+    autres: [["1f356", "la viande"], ["1f36c", "le bonbon"]]
+    explication: "Le lapin mange des végétaux, comme les carottes et l'herbe."
+  - texte: "Que mange surtout le panda ?"
+    bonne: ["1f38d", "le bambou"]
+    autres: [["1f356", "la viande"], ["1f36c", "le bonbon"]]
+    explication: "Le panda mange surtout du bambou."
+  - texte: "Que mange le lion ?"
+    bonne: ["1f356", "la viande"]
+    autres: [["1f33f", "l'herbe"], ["1f38d", "le bambou"]]
+    explication: "Le lion mange de la viande : il chasse."
+  - texte: "Que boivent tous les animaux ?"
+    bonne: ["1f4a7", "l'eau"]
+    autres: [["1f36c", "le bonbon"], ["1f4d6", "le livre"]]
+    explication: "Tous les animaux ont besoin d'eau."
+  - texte: "Que mange la poule ?"
+    bonne: ["1fad8", "les graines"]
+    autres: [["1f356", "la viande"], ["1f36c", "le bonbon"]]
+    explication: "La poule mange des graines."
+  - texte: "Où l'abeille trouve-t-elle sa nourriture ?"
+    bonne: ["1f337", "la fleur"]
+    autres: [["1f356", "la viande"], ["26bd", "le ballon"]]
+    explication: "L'abeille butine les fleurs."
