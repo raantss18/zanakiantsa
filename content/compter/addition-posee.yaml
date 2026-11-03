@@ -1,0 +1,16 @@
+id: addition-posee
+titre: L'addition posée en colonnes
+niveau: CE1
+prerequis: [dizaines-lire]
+programme: { source: cycle2, texte: "Poser et effectuer des additions en colonnes : l’élève positionne les unités sous les unités, les dizaines sous les dizaines, et en calcule le résultat. Par exemple, 45 + 37." }
+activite: posee
+parametres: { op: "+", min: 12, max: 79, retenue: true }
+idee: "On pose les unités sous les unités, les dizaines sous les dizaines. On commence par les unités : si on dépasse dix, on retient une dizaine."
+variantes: ["Combien font {a} + {b} ?", "Calcule {a} plus {b}, en colonnes."]
+phrases:
+  consigne: "Commence par la colonne des unités, à droite."
+  question: "{a} + {b} = ?"
+  indice: "Additionne d'abord les unités. Si cela fait dix ou plus, mets la dizaine en retenue."
+  exemple: "N'oublie pas d'ajouter la retenue avec les dizaines."
+  demonstration: "Regarde : {a} + {b} = {n}."
+  bravo: "Oui ! {a} + {b} = {n}."

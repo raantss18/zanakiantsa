@@ -7,4 +7,15 @@ ages: [5, 8]
 sources:
   cycle1: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf"
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
-ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, tables-2-5-10, tables-3-4, tables-6-7, tables-8-9]
+ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, heure-entiere, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, tables-2-5-10, tables-3-4, centaines-lire, addition-posee, soustraction-posee, heure-demi-quart, tables-6-7, tables-8-9]
+
+# Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
+intro:
+  - texte: "Pour compter, on touche chaque objet une seule fois."
+    images: ["1f446", "1f34e", "1f34e", "1f34e"]
+  - texte: "Le dernier nombre qu'on dit, c'est combien il y en a."
+    images: ["1f34e", "1f34e", "1f34e"]
+    grand: "3"
+  - texte: "Ajouter, c'est mettre ensemble."
+    images: ["1f34e", "1f34e", "1f34c"]
+    grand: "2 + 1 = 3"

@@ -1,0 +1,16 @@
+id: centaines-lire
+titre: Lire un nombre jusqu'à 1000
+niveau: CE1
+prerequis: [dizaines-construire]
+programme: { source: cycle2, texte: "L’élève dénombre des collections en utilisant des groupes de dix ou de cent ; matériel multibase (plaques de cent cubes, barres de dix cubes, cubes unités)." }
+activite: multibase
+parametres: { min: 101, max: 999 }
+idee: "Une plaque, c'est cent cubes. Une barre, c'est dix cubes. On compte les plaques, puis les barres, puis les cubes seuls."
+variantes: ["Plaques, barres et cubes : quel nombre vois-tu ?", "Combien de cubes en tout ?"]
+phrases:
+  consigne: "Compte les plaques de cent, puis les barres de dix, puis les cubes."
+  question: "Quel nombre est représenté ?"
+  indice: "Compte de cent en cent pour les plaques, puis de dix en dix pour les barres."
+  exemple: "Il y a {centaines}, {dizaines} et {unites}."
+  demonstration: "Regarde : {centaines}, {dizaines} et {unites}, cela fait {n}."
+  bravo: "Oui ! {centaines}, {dizaines} et {unites}, cela fait {n}."

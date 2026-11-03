@@ -4,6 +4,35 @@
   "titre": "Compter et calculer",
   "nom": "Les nombres",
   "icone": "1f522",
+  "intro": [
+    {
+      "texte": "Pour compter, on touche chaque objet une seule fois.",
+      "images": [
+        "1f446",
+        "1f34e",
+        "1f34e",
+        "1f34e"
+      ]
+    },
+    {
+      "texte": "Le dernier nombre qu'on dit, c'est combien il y en a.",
+      "images": [
+        "1f34e",
+        "1f34e",
+        "1f34e"
+      ],
+      "grand": "3"
+    },
+    {
+      "texte": "Ajouter, c'est mettre ensemble.",
+      "images": [
+        "1f34e",
+        "1f34e",
+        "1f34c"
+      ],
+      "grand": "2 + 1 = 3"
+    }
+  ],
   "ages": [
     5,
     8
@@ -223,6 +252,33 @@
         "exemple": "Montre {a} doigts. Combien de doigts restent baissés ?",
         "demonstration": "Regarde : {a} et {b} font {n}.",
         "bravo": "Oui, {a} plus {b} égale {n}."
+      }
+    },
+    {
+      "id": "heure-entiere",
+      "titre": "Lire l'heure (heures entières)",
+      "niveau": "CP",
+      "prerequis": [
+        "denombrer-10"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Lire sur une horloge à aiguilles une heure donnée en heures entières (par exemple trois heures, neuf heures, mais aussi midi)."
+      },
+      "activite": "heure",
+      "parametres": {
+        "minutes": [
+          0
+        ]
+      },
+      "idee": "La petite aiguille montre les heures. Quand la grande aiguille est en haut, sur le 12, c'est une heure pile.",
+      "phrases": {
+        "consigne": "Regarde la petite aiguille : elle montre l'heure.",
+        "question": "Quelle heure est-il ?",
+        "indice": "La grande aiguille est sur le 12 : regarde seulement où pointe la petite.",
+        "exemple": "La petite aiguille est la plus courte et la plus épaisse.",
+        "demonstration": "Regarde : il est {heure}.",
+        "bravo": "Oui ! Il est {heure}."
       }
     },
     {
@@ -536,6 +592,132 @@
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
         "demonstration": "Regarde : {a} fois {b} égale {n}.",
         "bravo": "Oui ! {a} fois {b} égale {n}."
+      }
+    },
+    {
+      "id": "centaines-lire",
+      "titre": "Lire un nombre jusqu'à 1000",
+      "niveau": "CE1",
+      "prerequis": [
+        "dizaines-construire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "L’élève dénombre des collections en utilisant des groupes de dix ou de cent ; matériel multibase (plaques de cent cubes, barres de dix cubes, cubes unités)."
+      },
+      "activite": "multibase",
+      "parametres": {
+        "min": 101,
+        "max": 999
+      },
+      "idee": "Une plaque, c'est cent cubes. Une barre, c'est dix cubes. On compte les plaques, puis les barres, puis les cubes seuls.",
+      "variantes": [
+        "Plaques, barres et cubes : quel nombre vois-tu ?",
+        "Combien de cubes en tout ?"
+      ],
+      "phrases": {
+        "consigne": "Compte les plaques de cent, puis les barres de dix, puis les cubes.",
+        "question": "Quel nombre est représenté ?",
+        "indice": "Compte de cent en cent pour les plaques, puis de dix en dix pour les barres.",
+        "exemple": "Il y a {centaines}, {dizaines} et {unites}.",
+        "demonstration": "Regarde : {centaines}, {dizaines} et {unites}, cela fait {n}.",
+        "bravo": "Oui ! {centaines}, {dizaines} et {unites}, cela fait {n}."
+      }
+    },
+    {
+      "id": "addition-posee",
+      "titre": "L'addition posée en colonnes",
+      "niveau": "CE1",
+      "prerequis": [
+        "dizaines-lire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Poser et effectuer des additions en colonnes : l’élève positionne les unités sous les unités, les dizaines sous les dizaines, et en calcule le résultat. Par exemple, 45 + 37."
+      },
+      "activite": "posee",
+      "parametres": {
+        "op": "+",
+        "min": 12,
+        "max": 79,
+        "retenue": true
+      },
+      "idee": "On pose les unités sous les unités, les dizaines sous les dizaines. On commence par les unités : si on dépasse dix, on retient une dizaine.",
+      "variantes": [
+        "Combien font {a} + {b} ?",
+        "Calcule {a} plus {b}, en colonnes."
+      ],
+      "phrases": {
+        "consigne": "Commence par la colonne des unités, à droite.",
+        "question": "{a} + {b} = ?",
+        "indice": "Additionne d'abord les unités. Si cela fait dix ou plus, mets la dizaine en retenue.",
+        "exemple": "N'oublie pas d'ajouter la retenue avec les dizaines.",
+        "demonstration": "Regarde : {a} + {b} = {n}.",
+        "bravo": "Oui ! {a} + {b} = {n}."
+      }
+    },
+    {
+      "id": "soustraction-posee",
+      "titre": "La soustraction posée en colonnes",
+      "niveau": "CE1",
+      "prerequis": [
+        "addition-posee",
+        "casser-dizaine"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Un algorithme de la soustraction posée est introduit en période 3 au plus tard (« par cassage » ou « par compensation »)."
+      },
+      "activite": "posee",
+      "parametres": {
+        "op": "-",
+        "min": 21,
+        "max": 98,
+        "retenue": true
+      },
+      "idee": "On commence par les unités. Si on ne peut pas enlever, on casse une dizaine : elle devient dix unités.",
+      "variantes": [
+        "Combien font {a} − {b} ?",
+        "Calcule {a} moins {b}, en colonnes."
+      ],
+      "phrases": {
+        "consigne": "Commence par la colonne des unités, à droite.",
+        "question": "{a} − {b} = ?",
+        "indice": "Aux unités, si le chiffre du haut est plus petit, casse une dizaine.",
+        "exemple": "Après avoir cassé une dizaine, il en reste une de moins en haut.",
+        "demonstration": "Regarde : {a} − {b} = {n}.",
+        "bravo": "Oui ! {a} − {b} = {n}."
+      }
+    },
+    {
+      "id": "heure-demi-quart",
+      "titre": "Lire l'heure (demies et quarts)",
+      "niveau": "CE1",
+      "prerequis": [
+        "heure-entiere",
+        "moities"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Lire l’heure sur une horloge à aiguilles (lorsque l’heure est donnée en heures entières, en heures et demi-heure ou en heures et quarts d’heure)."
+      },
+      "activite": "heure",
+      "parametres": {
+        "minutes": [
+          0,
+          30,
+          15,
+          45
+        ]
+      },
+      "idee": "La grande aiguille fait le tour en une heure. Sur le 6, c'est la demie ; sur le 3, le quart ; sur le 9, moins le quart.",
+      "phrases": {
+        "consigne": "Regarde d'abord la petite aiguille, puis la grande.",
+        "question": "Quelle heure est-il ?",
+        "indice": "Grande aiguille sur le 6 : et demie. Sur le 3 : et quart. Sur le 9 : moins le quart.",
+        "exemple": "À la demie, la petite aiguille est entre deux nombres.",
+        "demonstration": "Regarde : il est {heure}.",
+        "bravo": "Oui ! Il est {heure}."
       }
     },
     {
