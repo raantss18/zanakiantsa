@@ -36,6 +36,8 @@ arm64 s'installe tel quel), écran 800 × 1340, densité 280 comme la SM-X135G. 
 `adb shell wm density 213` puis relancer l'app. Lancement :
 `ANDROID_SDK_ROOT=$HOME/Android/Sdk ~/Android/Sdk/emulator/emulator -avd zanakiantsa_tab -no-snapshot -gpu swiftshader_indirect`
 (le GPU de l'ordinateur via gfxstream fait planter l'émulateur au redémarrage de l'app, 2026-11-03).
+Format téléphone : `adb shell wm size 1080x2400 && adb shell wm density 440` (+ `settings put system font_scale
+1.15`), puis `wm size reset`, `wm density reset`.
 ⚠ L'émulateur ne mesure ni la mémoire, ni le démarrage, ni la fluidité de la SM-X135G (GPU et CPU différents).
 
 ## Budgets (⚠ hypothèses à recaler après la première mesure)

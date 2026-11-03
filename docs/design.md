@@ -76,3 +76,16 @@ dessin), entre ← et la barre de progression.
 **Règles.** Voix coupée : tout reste écrit (bandeau narrateur), « Réécouter » dit quand même la phrase (demande
 explicite). Musique coupée : ni trame, ni bruitages. Trame sonore : volume 0,15, baissée à 0,04 pendant que la voix
 parle, **arrêtée** pendant les exercices d'écoute (« Les sons ») et absente de l'accueil.
+
+## 6. Bibliothèque et liseuse (ADR 0026)
+
+**Bibliothèque** (bouton « Mes livres » de l'accueil, le plus grand de la rangée du bas) : en-tête ← + « Ma
+bibliothèque » + nombre de livres lus ; **étagères** en puces (Tout, Compter et apprendre, Animaux et nature, Ma vie,
+Contes et fables) avec icône et nom écrits ; **couvertures** en grille (≥ 160 dp), titre écrit dessous sur 2 lignes,
+« Niveau 1–3 » écrit + pastilles, ✔ « Lu » sur les livres finis (forme + texte, pas seulement la couleur).
+
+**Liseuse** : l'image en haut (jamais rognée), le texte dessous sur une carte blanche en Andika 28 sp (lisible à
+bout de bras), « 3 / 10 » écrit ; ◀ ▶ de 72 dp en bas et glisser du doigt ; bouton « Lis-moi » (lecture à voix
+haute de la page, puis page suivante tout seul, jusqu'à la fin ou un nouveau toucher) qui fonctionne même voix coupée
+(c'est une demande). Dernière page : « Fin », une étoile la première fois, et les **crédits du livre** (auteurs,
+illustrateurs, traducteurs, licence CC BY 4.0, source) — exigés par la licence, toujours visibles.

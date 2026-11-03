@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/widgets.dart';
 
 import 'audio/voice.dart';
+import 'books/books.dart';
 import 'content/content.dart';
 import 'core/day.dart';
 import 'core/events.dart';
@@ -11,7 +14,10 @@ import 'ui/universe.dart';
 
 /// État de l'app : contenu, stockage, voix, réglages. Un seul objet, transmis par [AppScope].
 class AppState extends ChangeNotifier {
-  AppState(this.topics, this.common, this.words, this.store, this.voice);
+  AppState(this.topics, this.common, this.words, this.store, this.voice, this.library);
+
+  /// Bibliothèque hors ligne (ADR 0026).
+  final Library library;
 
   /// Domaines, dans l'ordre de content/domaines.yaml (ADR 0018).
   final List<Topic> topics;
@@ -41,7 +47,7 @@ class AppState extends ChangeNotifier {
     final words = await loadUniverseWords();
     final store = await Store.open();
     final voice = Voice()..init();
-    final s = AppState(topics, common, words, store, voice);
+    final s = AppState(topics, common, words, store, voice, await Library.load());
     await s.refresh();
     return s;
   }
@@ -51,6 +57,9 @@ class AppState extends ChangeNotifier {
     sessions = await store.sessions();
     sessionsDone = sessions.where((s) => s.complete).length;
     dailyMinutes = int.tryParse(await store.get('minutes_jour') ?? '') ?? defaultDailyMinutes;
+    final marks = await store.get('marque_pages');
+    bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
+    lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
     voice
       ..voiceOn = await store.get('voix') != 'non'
       ..soundOn = await store.get('musique') != 'non';
@@ -83,6 +92,26 @@ class AppState extends ChangeNotifier {
 
   /// Code du dessin de l'objet d'une compétence.
   String objectArt(Skill skill) => universe.objects[skill.objectIndex.clamp(0, universe.objects.length - 1)];
+
+  /// Marque-pages (ADR 0026) : la page où chaque livre commencé a été laissé, et le dernier livre ouvert.
+  Map<int, int> bookmarks = {};
+  int? lastBook;
+
+  Future<void> setBookmark(int book, int page) async {
+    lastBook = book;
+    bookmarks[book] = page;
+    await store.set('marque_pages', jsonEncode({for (final e in bookmarks.entries) '${e.key}': e.value}));
+    await store.set('livre_dernier', '$book');
+  }
+
+  /// Livre fini : son marque-page est retiré (il reste « dernier livre lu »).
+  Future<void> clearBookmark(int book) async {
+    bookmarks.remove(book);
+    await store.set('marque_pages', jsonEncode({for (final e in bookmarks.entries) '${e.key}': e.value}));
+  }
+
+  /// Livres finis au moins une fois (une réponse `livre-<id>` dans le journal).
+  Set<String> get booksRead => {for (final a in journal) if (a.skill.startsWith('livre-')) a.skill};
 
   Topic topic(String id) => topics.firstWhere((t) => t.id == id);
 

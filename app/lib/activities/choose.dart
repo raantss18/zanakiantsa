@@ -47,7 +47,7 @@ class _ChooseActivityState extends State<ChooseActivity> {
   @override
   Widget build(BuildContext context) => LayoutBuilder(builder: (_, k) {
         // Trois cartes côte à côte (la largeur suffit en portrait comme en paysage) ; nom écrit sous chacune.
-        final size = min((k.maxWidth - 32) / 3 - 16, k.maxHeight - 90).clamp(110.0, 220.0);
+        final size = min((k.maxWidth - 32) / 3 - 16, k.maxHeight - 90).clamp(96.0, 220.0);
         final cards = [
           for (final p in pics)
             Column(mainAxisSize: MainAxisSize.min, children: [

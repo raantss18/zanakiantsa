@@ -252,6 +252,9 @@ class _ParentPageState extends State<ParentPage> {
               const Text(
                 'Illustrations : Twemoji v17.0.3 (CC BY 4.0, github.com/jdecked/twemoji). '
                 'Police : Andika 7.000 (SIL Open Font License, software.sil.org/andika). '
+                'Pièces d’échecs : Cburnett, Wikimedia Commons (CC BY-SA 3.0). '
+                'Livres : African Storybook Initiative et leurs auteurs, illustrateurs et traducteurs, cités à la fin de '
+                'chaque livre (CC BY 4.0, africanstorybook.org). '
                 'Code : Apache-2.0, github.com/raantss18/zanakiantsa.',
               ),
             ],

@@ -6,6 +6,7 @@ import '../content/content.dart';
 import '../core/day.dart';
 import '../parent/gate.dart';
 import 'album.dart';
+import 'library.dart';
 import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -107,16 +108,54 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                // Le bouton « Mes livres » prend la place du milieu et rétrécit sur téléphone : la rangée ne déborde jamais.
+                child: Row(children: [
                   _RoundButton(
-                    size: 80,
+                    size: 72,
                     color: surface,
                     tooltip: 'Mon album',
                     onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
-                    child: const Icon(Icons.collections_bookmark_rounded, size: 42, color: ink),
+                    child: const Icon(Icons.collections_bookmark_rounded, size: 38, color: ink),
                   ),
+                  const SizedBox(width: 12),
+                  // Mes livres : le plus grand bouton de la rangée, avec son nom écrit (ADR 0026).
+                  Expanded(
+                    child: Center(
+                      child: Semantics(
+                    button: true,
+                    label: 'Mes livres',
+                    excludeSemantics: true,
+                    child: Material(
+                      color: u.primary,
+                      elevation: 3,
+                      shape: const StadiumBorder(),
+                      child: InkWell(
+                        customBorder: const StadiumBorder(),
+                        onTap: () async {
+                          await s.voice.stop();
+                          if (!context.mounted) return;
+                          await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LibraryPage()));
+                          await s.refresh();
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(14, 10, 20, 10),
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Row(mainAxisSize: MainAxisSize.min, children: [
+                              const Art('1f4da', size: 48),
+                              const SizedBox(width: 10),
+                              Text('Mes livres', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.onPrimary)),
+                            ]),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
                   _RoundButton(
-                    size: 80,
+                    size: 72,
                     color: surface,
                     tooltip: 'Changer de monde',
                     onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
@@ -153,17 +192,22 @@ class DayCard extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => LayoutBuilder(builder: (context, k) => _build(context, compact: !wide && k.maxWidth < 440));
+
+  /// [compact] : téléphone en portrait (carte de moins de 440 dp) — icône et bouton plus petits, nom sur deux lignes,
+  /// pour que le nom du domaine ne soit jamais coupé.
+  Widget _build(BuildContext context, {required bool compact}) {
     final u = AppScope.of(context).universe;
+    final disc = compact ? 72.0 : 104.0;
     final accent = u.night ? u.primary : u.onCard;
     final done = item.finished;
     final icon = Stack(clipBehavior: Clip.none, children: [
       Container(
-        width: 104,
-        height: 104,
+        width: disc,
+        height: disc,
         decoration: BoxDecoration(color: accent.withValues(alpha: 0.12), shape: BoxShape.circle),
         alignment: Alignment.center,
-        child: Art(topic.icon, size: 68),
+        child: Art(topic.icon, size: disc * 0.65),
       ),
       Positioned(
         left: -4,
@@ -188,7 +232,7 @@ class DayCard extends StatelessWidget {
     );
     final action = done
         ? const Column(mainAxisSize: MainAxisSize.min, children: [
-            CircleAvatar(radius: 34, backgroundColor: green, child: Icon(Icons.check_rounded, size: 46, color: Colors.white)),
+            CircleAvatar(radius: 28, backgroundColor: green, child: Icon(Icons.check_rounded, size: 40, color: Colors.white)),
             SizedBox(height: 2),
             Text('Fini', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: green)),
           ])
@@ -196,12 +240,17 @@ class DayCard extends StatelessWidget {
             animation: pulse,
             builder: (_, child) => Transform.scale(scale: next ? 1 + 0.08 * pulse.value : 1, child: child),
             child: CircleAvatar(
-              radius: 38,
+              radius: compact ? 30 : 38,
               backgroundColor: next ? u.primary : const Color(0xFFE3E7E4),
-              child: Icon(Icons.play_arrow_rounded, size: 56, color: next ? u.onPrimary : ink),
+              child: Icon(Icons.play_arrow_rounded, size: compact ? 44 : 56, color: next ? u.onPrimary : ink),
             ),
           );
-    final name = Text(topic.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: ink));
+    // Nom jamais coupé : deux lignes au besoin, et il rétrécit plutôt que de finir en « … ».
+    final name = FittedBox(
+      fit: BoxFit.scaleDown,
+      alignment: wide ? Alignment.center : Alignment.centerLeft,
+      child: Text(topic.name, maxLines: 2, textAlign: wide ? TextAlign.center : TextAlign.start, style: TextStyle(fontSize: compact ? 24 : 28, fontWeight: FontWeight.w700, color: ink)),
+    );
     final minutes = item.done.inMinutes;
     return Semantics(
       button: true,
@@ -219,12 +268,12 @@ class DayCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(28),
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(compact ? 12 : 16),
             child: wide
                 ? Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [icon, name, bar, action])
                 : Row(children: [
                     icon,
-                    const SizedBox(width: 16),
+                    SizedBox(width: compact ? 10 : 16),
                     Expanded(
                       child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
                         name,
@@ -232,7 +281,7 @@ class DayCard extends StatelessWidget {
                         bar,
                       ]),
                     ),
-                    const SizedBox(width: 16),
+                    SizedBox(width: compact ? 8 : 16),
                     action,
                   ]),
           ),

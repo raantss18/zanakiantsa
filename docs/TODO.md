@@ -116,6 +116,14 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   réglages conservés)
 - ✅ Corrigé : une voix de synthèse muette bloquait la séance (attente sans fin de la fin de phrase) → chaque attente
   de voix est bornée (`speechBudget`)
+- ✅ Interrupteurs voix / musique dans chaque leçon, trame sonore douce par monde (ADR 0025)
+- ✅ Bibliothèque hors ligne (ADR 0026) : 55 livres African Storybook (CC BY 4.0), 6 étagères dont « Curiosité » et
+  « Pour les grands » (niveaux 4–5), liseuse avec « Lis-moi », marque-page par livre, « Mon livre en cours »
+- ✅ Corrigé (signalé par Antsa sur téléphone) : noms des cartes du jour coupés (« Les n… ») → carte compacte sous
+  440 dp ; rangée du bas, carte « livre en cours » et choix d'images revus ; vérifié au format téléphone
+  (1080 × 2400, densité 440, police 115 %)
+- ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
+- ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
 ## Étape 5 — Thèmes suivants ⏳
