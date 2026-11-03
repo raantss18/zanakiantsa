@@ -99,4 +99,23 @@ void main() {
       expect(Progress(three, List.generate(5, (_) => ans('a'))).adapt(plan, 5, 'b', Random(1)), plan);
     });
   });
+
+  group('ADR 0042 — défi et journal des erreurs', () {
+    const skills = [SkillRef('a', [], level: 2), SkillRef('b', ['a'], level: 2), SkillRef('m', [], level: 1), SkillRef('n', [], level: 0)];
+    test('pas de défi sans rien d\'acquis ; sinon 10 questions de ce qui est su', () {
+      expect(Progress(skills, []).challengePlan(Random(1)), isNull);
+      final p = Progress(skills, List.generate(5, (_) => ans('a')), startLevel: 2);
+      final plan = p.challengePlan(Random(1))!;
+      expect(plan.length, 10);
+      // a (acquise) et m (le niveau juste en dessous de l'âge) ; jamais b (pas apprise) ni n (trop facile).
+      expect(plan.toSet(), {'a', 'm'});
+    });
+    test('les erreurs expliquées passent par le journal sans se perdre', () {
+      final a = Answer(skill: 'x', attempts: 2, correct: true, demonstrated: false, millis: 1, at: t0, errors: const ['Tu as ajouté.', 'Presque !'], challenge: true);
+      final back = Answer.fromMap(a.toMap());
+      expect(back.errors, ['Tu as ajouté.', 'Presque !']);
+      expect(back.challenge, isTrue);
+      expect(Answer.fromMap({...ans('y').toMap(), 'errors': null, 'challenge': null}).errors, isEmpty);
+    });
+  });
 }

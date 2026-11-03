@@ -164,7 +164,9 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    les pièces noires autres que roi et pion étaient invisibles (images manquantes).
 10. ✅ **Programmation type Scratch** : blocs emboîtés « répéter n fois », « répéter jusqu'à l'objet », « si rocher
     devant » (ADR 0041). ⏳ variables (« compteur ») : plus tard.
-11. ⏳ Même profondeur pour chaque domaine (jeu libre, suivi des erreurs, niveau avancé) : plan à proposer à Antsa.
+11. ✅ Même profondeur pour chaque domaine (ADR 0042) : accueil de domaine (apprendre, défi avec record, mon
+    carnet), erreurs gardées au journal et montrées à l'enfant et au parent, anglais CE1. ⏳ Sons au-delà de la GS :
+    source à trouver.
 12. ⏳ Version 0.7.0 : tests, émulateur tablette + téléphone, publication après accord d'Antsa.
 
 ## Étape 5 — Thèmes suivants ⏳

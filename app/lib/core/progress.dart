@@ -80,6 +80,18 @@ class Progress {
     return [...reviews, for (var i = reviews.length; i < questionsPerSession; i++) (i % 3 == 2 ? practice(r, not: next.id) : null) ?? next.id];
   }
 
+  /// Défi (ADR 0042) : [n] questions mêlées de tout ce que l'enfant a acquis (et du niveau juste en dessous de son
+  /// âge), chaque compétence une fois par tour, dans le désordre. null : rien d'acquis encore, pas de défi.
+  List<String>? challengePlan(Random r, {int n = 10}) {
+    final pool = [for (final s in skills) if (earned(s.id) || (skipped(s.id) && s.level == startLevel - 1)) s.id];
+    if (pool.isEmpty) return null;
+    final out = <String>[];
+    while (out.length < n) {
+      out.addAll([...pool]..shuffle(r));
+    }
+    return out.take(n).toList();
+  }
+
   /// La compétence à apprendre en ce moment : la première ouverte et pas encore acquise.
   String? get newSkill => skills.where((s) => !mastered(s.id) && unlocked(s)).firstOrNull?.id;
 

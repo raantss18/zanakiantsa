@@ -87,8 +87,10 @@ class _MotifActivityState extends State<MotifActivity> {
           ),
           const SizedBox(height: 28),
           Wrap(spacing: 20, runSpacing: 20, alignment: WrapAlignment.center, children: [
-            for (final art in puzzle.choices)
+            for (final (i, art) in puzzle.choices.indexed)
               PicButton(
+                // Les images n'ont pas de nom dans l'app : au moins une étiquette par réponse pour le lecteur d'écran.
+                label: 'Réponse ${i + 1}',
                 size: pick,
                 tried: tried.contains(art),
                 highlight: shown && art == puzzle.answer,

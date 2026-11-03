@@ -23,10 +23,11 @@ class Store {
   static Future<Store> open() async {
     final db = await openDatabase(
       p.join(await getDatabasesPath(), 'zanakiantsa.db'),
-      version: 3,
+      version: 4,
       onCreate: (db, _) async {
         await db.execute('CREATE TABLE answers (id INTEGER PRIMARY KEY, skill TEXT, attempts INTEGER, correct INTEGER, '
-            'demonstrated INTEGER, millis INTEGER, at INTEGER, child INTEGER NOT NULL DEFAULT 1)');
+            "demonstrated INTEGER, millis INTEGER, at INTEGER, child INTEGER NOT NULL DEFAULT 1, errors TEXT NOT NULL DEFAULT '', "
+            'challenge INTEGER NOT NULL DEFAULT 0)');
         await db.execute("CREATE TABLE sessions (id INTEGER PRIMARY KEY, started INTEGER, ended INTEGER, "
             "theme TEXT NOT NULL DEFAULT 'compter', complete INTEGER NOT NULL DEFAULT 1, child INTEGER NOT NULL DEFAULT 1)");
         await db.execute('CREATE TABLE settings (k TEXT PRIMARY KEY, v TEXT)');
@@ -42,6 +43,11 @@ class Store {
           await db.execute('ALTER TABLE answers ADD COLUMN child INTEGER NOT NULL DEFAULT 1');
           await db.execute('ALTER TABLE sessions ADD COLUMN child INTEGER NOT NULL DEFAULT 1');
           await db.execute("UPDATE settings SET k = 'c1.' || k");
+        }
+        // v4 (ADR 0042) : les erreurs expliquées de chaque question, et les questions de défi.
+        if (from < 4) {
+          await db.execute("ALTER TABLE answers ADD COLUMN errors TEXT NOT NULL DEFAULT ''");
+          await db.execute('ALTER TABLE answers ADD COLUMN challenge INTEGER NOT NULL DEFAULT 0');
         }
       },
     );

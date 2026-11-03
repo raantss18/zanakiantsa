@@ -1,0 +1,37 @@
+id: weather
+titre: "Le temps qu'il fait, en anglais"
+niveau: CE1
+prerequis: [colours]
+programme: { source: lver, texte: "CE1, exemple de réussite : l'élève comprend les expressions très courantes indiquant le temps qu'il fait (How's the weather? It's sunny. It's rainy. It's windy. It's cloudy. It's snowy.) et peut désigner celle qui correspond parmi des images." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "En anglais, on demande « How's the weather? » : quel temps fait-il ? On répond « It's sunny », il fait soleil, ou « It's rainy », il pleut…"
+phrases:
+  consigne: "Écoute la phrase anglaise, puis touche l'image du temps qu'il fait."
+  question: "Touche : « {texte} »."
+  indice: "Écoute la fin du mot : sunny, le soleil ; rainy, la pluie ; snowy, la neige."
+  exemple: "Écoute encore la phrase anglaise, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "It's sunny"
+    bonne: ["2600", "le soleil"]
+    autres: [["1f327", "la pluie"], ["2744", "la neige"]]
+    explication: "« It's sunny » : il fait soleil."
+  - texte: "It's rainy"
+    bonne: ["1f327", "la pluie"]
+    autres: [["2600", "le soleil"], ["1f32c", "le vent"]]
+    explication: "« It's rainy » : il pleut."
+  - texte: "It's windy"
+    bonne: ["1f32c", "le vent"]
+    autres: [["2601", "les nuages"], ["2600", "le soleil"]]
+    explication: "« It's windy » : il y a du vent."
+  - texte: "It's cloudy"
+    bonne: ["2601", "les nuages"]
+    autres: [["2744", "la neige"], ["1f32c", "le vent"]]
+    explication: "« It's cloudy » : il y a des nuages."
+  - texte: "It's snowy"
+    bonne: ["2744", "la neige"]
+    autres: [["1f327", "la pluie"], ["2601", "les nuages"]]
+    explication: "« It's snowy » : il neige."

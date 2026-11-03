@@ -6,14 +6,16 @@ import 'package:flutter/material.dart';
 import '../activities/draw.dart';
 import '../app_state.dart';
 import '../content/content.dart';
-import 'chess_play.dart';
 import 'session.dart';
+import 'topic_hub.dart';
 import 'theme.dart';
 import 'universe.dart';
 
 /// Ouvre un domaine (accueil, « Tout explorer ») : l'animation de méthode d'abord, la première fois du jour (ADR 0033),
 /// puis l'activité.
-Future<void> openTopic(BuildContext context, AppState app, String topicId) async {
+/// [hub] : depuis « Tout explorer », l'accueil du domaine (apprendre, défi, carnet, ADR 0042) ; depuis les activités
+/// du jour, la séance directement (l'enfant seul n'a qu'un bouton à toucher). Les échecs ont toujours leur accueil.
+Future<void> openTopic(BuildContext context, AppState app, String topicId, {bool hub = false}) async {
   await app.voice.stop();
   if (!context.mounted) return;
   final t = app.topic(topicId);
@@ -26,9 +28,8 @@ Future<void> openTopic(BuildContext context, AppState app, String topicId) async
     final go = await Navigator.of(context).push<bool>(MaterialPageRoute(builder: (_) => TopicIntro(topic: t)));
     if (go != true || !context.mounted) return;
   }
-  // Les échecs ont leur accueil : leçons, robot, à deux, mes parties (ADR 0040).
-  if (topicId == 'echecs') {
-    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ChessHub()));
+  if (hub || topicId == 'echecs') {
+    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => TopicHub(topic: topicId)));
     await app.refresh();
     return;
   }

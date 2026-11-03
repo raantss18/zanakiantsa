@@ -29,7 +29,7 @@
   ],
   "ages": [
     5,
-    8
+    9
   ],
   "sources": {
     "lver": "https://www.education.gouv.fr/sites/default/files/document/le-projet-de-programmes-de-langues-vivantes-trang-res-et-r-gionales-lver-pour-le-cycle-2-477446.pdf"
@@ -758,6 +758,258 @@
             ]
           ],
           "explication": "« arm », c'est le bras."
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "titre": "Le temps qu'il fait, en anglais",
+      "niveau": "CE1",
+      "prerequis": [
+        "colours"
+      ],
+      "programme": {
+        "source": "lver",
+        "texte": "CE1, exemple de réussite : l'élève comprend les expressions très courantes indiquant le temps qu'il fait (How's the weather? It's sunny. It's rainy. It's windy. It's cloudy. It's snowy.) et peut désigner celle qui correspond parmi des images."
+      },
+      "activite": "choisir",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "En anglais, on demande « How's the weather? » : quel temps fait-il ? On répond « It's sunny », il fait soleil, ou « It's rainy », il pleut…",
+      "phrases": {
+        "consigne": "Écoute la phrase anglaise, puis touche l'image du temps qu'il fait.",
+        "question": "Touche : « {texte} ».",
+        "indice": "Écoute la fin du mot : sunny, le soleil ; rainy, la pluie ; snowy, la neige.",
+        "exemple": "Écoute encore la phrase anglaise, puis essaie une autre image.",
+        "demonstration": "Regarde : « {texte} », c'est {bonne}.",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "It's sunny",
+          "bonne": [
+            "2600",
+            "le soleil"
+          ],
+          "autres": [
+            [
+              "1f327",
+              "la pluie"
+            ],
+            [
+              "2744",
+              "la neige"
+            ]
+          ],
+          "explication": "« It's sunny » : il fait soleil."
+        },
+        {
+          "texte": "It's rainy",
+          "bonne": [
+            "1f327",
+            "la pluie"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le soleil"
+            ],
+            [
+              "1f32c",
+              "le vent"
+            ]
+          ],
+          "explication": "« It's rainy » : il pleut."
+        },
+        {
+          "texte": "It's windy",
+          "bonne": [
+            "1f32c",
+            "le vent"
+          ],
+          "autres": [
+            [
+              "2601",
+              "les nuages"
+            ],
+            [
+              "2600",
+              "le soleil"
+            ]
+          ],
+          "explication": "« It's windy » : il y a du vent."
+        },
+        {
+          "texte": "It's cloudy",
+          "bonne": [
+            "2601",
+            "les nuages"
+          ],
+          "autres": [
+            [
+              "2744",
+              "la neige"
+            ],
+            [
+              "1f32c",
+              "le vent"
+            ]
+          ],
+          "explication": "« It's cloudy » : il y a des nuages."
+        },
+        {
+          "texte": "It's snowy",
+          "bonne": [
+            "2744",
+            "la neige"
+          ],
+          "autres": [
+            [
+              "1f327",
+              "la pluie"
+            ],
+            [
+              "2601",
+              "les nuages"
+            ]
+          ],
+          "explication": "« It's snowy » : il neige."
+        }
+      ]
+    },
+    {
+      "id": "simon-says",
+      "titre": "Jacques a dit, en anglais",
+      "niveau": "CE1",
+      "prerequis": [
+        "body"
+      ],
+      "programme": {
+        "source": "lver",
+        "texte": "Agir en suivant les indications données par des verbes d'action (go, walk, take, sit, jump, etc.) ; exemples : Simon says: Touch your nose. Simon says: Clap your hands. Simon says: Go to the door."
+      },
+      "activite": "choisir",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "« Simon says », c'est « Jacques a dit ». Une phrase anglaise donne un ordre : « Clap your hands », tape dans tes mains. Tu peux faire le geste, puis toucher l'image.",
+      "phrases": {
+        "consigne": "Écoute l'ordre en anglais. Fais le geste si tu veux, puis touche l'image qui va avec.",
+        "question": "« Simon says: {texte} ».",
+        "indice": "Écoute le mot d'action : clap, taper ; touch, toucher ; wave, faire coucou ; sit, s'asseoir.",
+        "exemple": "Écoute encore l'ordre en anglais, puis essaie une autre image.",
+        "demonstration": "Regarde : « {texte} », c'est {bonne}.",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Clap your hands",
+          "bonne": [
+            "1f44f",
+            "taper dans les mains"
+          ],
+          "autres": [
+            [
+              "1f44b",
+              "faire coucou"
+            ],
+            [
+              "1fa91",
+              "s'asseoir"
+            ]
+          ],
+          "explication": "« Clap your hands » : tape dans tes mains."
+        },
+        {
+          "texte": "Touch your nose",
+          "bonne": [
+            "1f443",
+            "le nez"
+          ],
+          "autres": [
+            [
+              "1f442",
+              "l'oreille"
+            ],
+            [
+              "1f440",
+              "les yeux"
+            ]
+          ],
+          "explication": "« Touch your nose » : touche ton nez."
+        },
+        {
+          "texte": "Wave goodbye",
+          "bonne": [
+            "1f44b",
+            "faire coucou"
+          ],
+          "autres": [
+            [
+              "1f44f",
+              "taper dans les mains"
+            ],
+            [
+              "1f6aa",
+              "la porte"
+            ]
+          ],
+          "explication": "« Wave goodbye » : fais au revoir de la main."
+        },
+        {
+          "texte": "Sit down",
+          "bonne": [
+            "1fa91",
+            "s'asseoir"
+          ],
+          "autres": [
+            [
+              "1f6aa",
+              "la porte"
+            ],
+            [
+              "1f44f",
+              "taper dans les mains"
+            ]
+          ],
+          "explication": "« Sit down » : assieds-toi."
+        },
+        {
+          "texte": "Go to the door",
+          "bonne": [
+            "1f6aa",
+            "la porte"
+          ],
+          "autres": [
+            [
+              "1fa91",
+              "la chaise"
+            ],
+            [
+              "1f44b",
+              "faire coucou"
+            ]
+          ],
+          "explication": "« Go to the door » : va à la porte."
+        },
+        {
+          "texte": "Touch your ears",
+          "bonne": [
+            "1f442",
+            "les oreilles"
+          ],
+          "autres": [
+            [
+              "1f443",
+              "le nez"
+            ],
+            [
+              "1f440",
+              "les yeux"
+            ]
+          ],
+          "explication": "« Touch your ears » : touche tes oreilles."
         }
       ]
     }

@@ -11,7 +11,7 @@ import 'universe.dart';
 class AllTopicsPage extends StatelessWidget {
   const AllTopicsPage({super.key});
 
-  Future<void> open(BuildContext context, AppState app, Topic t) => openTopic(context, app, t.id);
+  Future<void> open(BuildContext context, AppState app, Topic t) => openTopic(context, app, t.id, hub: true);
 
   @override
   Widget build(BuildContext context) {

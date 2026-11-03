@@ -1,0 +1,40 @@
+id: simon-says
+titre: "Jacques a dit, en anglais"
+niveau: CE1
+prerequis: [body]
+programme: { source: lver, texte: "Agir en suivant les indications données par des verbes d'action (go, walk, take, sit, jump, etc.) ; exemples : Simon says: Touch your nose. Simon says: Clap your hands. Simon says: Go to the door." }
+activite: choisir
+parametres: { langue: en }
+idee: "« Simon says », c'est « Jacques a dit ». Une phrase anglaise donne un ordre : « Clap your hands », tape dans tes mains. Tu peux faire le geste, puis toucher l'image."
+phrases:
+  consigne: "Écoute l'ordre en anglais. Fais le geste si tu veux, puis touche l'image qui va avec."
+  question: "« Simon says: {texte} »."
+  indice: "Écoute le mot d'action : clap, taper ; touch, toucher ; wave, faire coucou ; sit, s'asseoir."
+  exemple: "Écoute encore l'ordre en anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Clap your hands"
+    bonne: ["1f44f", "taper dans les mains"]
+    autres: [["1f44b", "faire coucou"], ["1fa91", "s'asseoir"]]
+    explication: "« Clap your hands » : tape dans tes mains."
+  - texte: "Touch your nose"
+    bonne: ["1f443", "le nez"]
+    autres: [["1f442", "l'oreille"], ["1f440", "les yeux"]]
+    explication: "« Touch your nose » : touche ton nez."
+  - texte: "Wave goodbye"
+    bonne: ["1f44b", "faire coucou"]
+    autres: [["1f44f", "taper dans les mains"], ["1f6aa", "la porte"]]
+    explication: "« Wave goodbye » : fais au revoir de la main."
+  - texte: "Sit down"
+    bonne: ["1fa91", "s'asseoir"]
+    autres: [["1f6aa", "la porte"], ["1f44f", "taper dans les mains"]]
+    explication: "« Sit down » : assieds-toi."
+  - texte: "Go to the door"
+    bonne: ["1f6aa", "la porte"]
+    autres: [["1fa91", "la chaise"], ["1f44b", "faire coucou"]]
+    explication: "« Go to the door » : va à la porte."
+  - texte: "Touch your ears"
+    bonne: ["1f442", "les oreilles"]
+    autres: [["1f443", "le nez"], ["1f440", "les yeux"]]
+    explication: "« Touch your ears » : touche tes oreilles."

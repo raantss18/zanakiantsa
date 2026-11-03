@@ -84,6 +84,9 @@ class _DrawPageState extends State<DrawPage> {
   int misses = 0;
   bool _checking = false;
 
+  /// Ce que le modèle a vu à chaque essai manqué (journal, ADR 0042).
+  final _errors = <String>[];
+
   /// Retour sur le dessin (ce qui manque, à quoi il ressemble) : remplace le sujet dans la bulle.
   String? feedback;
 
@@ -178,6 +181,7 @@ class _DrawPageState extends State<DrawPage> {
       misses++;
       final guess = seen.map((l) => drawingNames[l]).nonNulls.where((n) => n != item.name).firstOrNull;
       final looks = guess == null ? 'Je ne reconnais pas encore ${item.name}.' : 'On dirait plutôt $guess !';
+      _errors.add('${item.name} : $looks');
       if (misses >= 3) return await _save(false, '$looks ${skill.phrases['demonstration']}');
       await _tell('$looks ${item.explanation} Ajoute ce qui manque, ou efface et recommence.');
     } finally {
@@ -202,6 +206,7 @@ class _DrawPageState extends State<DrawPage> {
       demonstrated: false,
       millis: DateTime.now().difference(_started).inMilliseconds,
       at: DateTime.now(),
+      errors: _errors,
     ));
     await app.logSession(SessionLog(theme: 'dessin', started: _started, ended: DateTime.now()));
     if (!mounted) return;

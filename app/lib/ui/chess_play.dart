@@ -8,7 +8,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../app_state.dart';
 import '../core/engine.dart';
 import '../core/game.dart';
-import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -194,7 +193,7 @@ String _colour(String p) {
 }
 
 /// Barre du haut des pages d'échecs : ← retour et un titre.
-Widget _header(BuildContext context, String title, {List<Widget> actions = const []}) => Padding(
+Widget pageHeader(BuildContext context, String title, {List<Widget> actions = const []}) => Padding(
       padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
       child: Row(children: [
         Material(
@@ -209,115 +208,52 @@ Widget _header(BuildContext context, String title, {List<Widget> actions = const
       ]),
     );
 
-/// Accueil des échecs : les leçons, jouer contre le robot, jouer à deux, mes parties.
-class ChessHub extends StatelessWidget {
-  const ChessHub({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final app = AppScope.of(context);
-    final u = app.universe;
-    Widget card(String art, String title, String text, VoidCallback onTap) => Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Material(
-            color: surface,
-            borderRadius: BorderRadius.circular(24),
-            elevation: 3,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(24),
-              onTap: onTap,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(children: [
-                  Art(art, size: 64),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(title, style: const TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700, color: ink)),
-                      Text(text, style: const TextStyle(fontSize: 18, color: Color(0xFF3D4741), height: 1.2)),
-                    ]),
-                  ),
-                  const Icon(Icons.arrow_forward_rounded, size: 36, color: ink),
-                ]),
-              ),
-            ),
+/// Choisir le niveau et la couleur, puis jouer contre le robot.
+Future<void> chooseRobotGame(BuildContext context) async {
+  var level = 1;
+  var color = 'blancs';
+  final go = await showDialog<bool>(
+    context: context,
+    builder: (ctx) => StatefulBuilder(
+      builder: (ctx, set) => AlertDialog(
+        title: const Text('Contre le robot'),
+        content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('Niveau', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+          const SizedBox(height: 8),
+          SegmentedButton<int>(
+            segments: const [
+              ButtonSegment(value: 1, label: Text('1')),
+              ButtonSegment(value: 2, label: Text('2')),
+              ButtonSegment(value: 3, label: Text('3')),
+            ],
+            selected: {level},
+            onSelectionChanged: (v) => set(() => level = v.first),
           ),
-        );
-    return Scaffold(
-      body: UniverseBackground(
-        universe: u,
-        child: SafeArea(
-          child: Column(children: [
-            _header(context, 'Les échecs'),
-            Expanded(
-              child: ListView(padding: const EdgeInsets.all(16), children: [
-                card('1f4d6', 'Les leçons', 'Apprendre chaque pièce, l\'échec et mat, puis les ruses des joueurs.', () async {
-                  final resume = await SessionResume.load(app, 'echecs');
-                  if (!context.mounted) return;
-                  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionPage(topic: 'echecs', resume: resume)));
-                  await app.refresh();
-                }),
-                card('1f916', 'Contre le robot', 'Une vraie partie. Choisis le niveau et ta couleur.', () => _robot(context)),
-                card('1f46b', 'À deux', 'Une partie avec quelqu\'un, sur la même tablette.', () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const GamePage(mode: 'deux', level: 0, childWhite: true)));
-                }),
-                card('1f4dc', 'Mes parties', 'Revoir mes parties coup par coup, avec des conseils.', () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const GamesPage()));
-                }),
-              ]),
-            ),
-          ]),
-        ),
+          const SizedBox(height: 4),
+          Text(const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
+          const SizedBox(height: 16),
+          const Text('Je joue avec', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+          const SizedBox(height: 8),
+          SegmentedButton<String>(
+            segments: const [
+              ButtonSegment(value: 'blancs', label: Text('les Blancs')),
+              ButtonSegment(value: 'noirs', label: Text('les Noirs')),
+            ],
+            selected: {color},
+            onSelectionChanged: (v) => set(() => color = v.first),
+          ),
+          const SizedBox(height: 8),
+          const Text('Les Blancs jouent en premier.'),
+        ]),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annuler')),
+          FilledButton(style: _button, onPressed: () => Navigator.pop(ctx, true), child: const Text('Jouer')),
+        ],
       ),
-    );
-  }
-
-  Future<void> _robot(BuildContext context) async {
-    var level = 1;
-    var color = 'blancs';
-    final go = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, set) => AlertDialog(
-          title: const Text('Contre le robot'),
-          content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Niveau', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
-            const SizedBox(height: 8),
-            SegmentedButton<int>(
-              segments: const [
-                ButtonSegment(value: 1, label: Text('1')),
-                ButtonSegment(value: 2, label: Text('2')),
-                ButtonSegment(value: 3, label: Text('3')),
-              ],
-              selected: {level},
-              onSelectionChanged: (v) => set(() => level = v.first),
-            ),
-            const SizedBox(height: 4),
-            Text(const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
-            const SizedBox(height: 16),
-            const Text('Je joue avec', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
-            const SizedBox(height: 8),
-            SegmentedButton<String>(
-              segments: const [
-                ButtonSegment(value: 'blancs', label: Text('les Blancs')),
-                ButtonSegment(value: 'noirs', label: Text('les Noirs')),
-              ],
-              selected: {color},
-              onSelectionChanged: (v) => set(() => color = v.first),
-            ),
-            const SizedBox(height: 8),
-            const Text('Les Blancs jouent en premier.'),
-          ]),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annuler')),
-            FilledButton(style: _button, onPressed: () => Navigator.pop(ctx, true), child: const Text('Jouer')),
-          ],
-        ),
-      ),
-    );
-    if (go == true && context.mounted) {
-      await Navigator.of(context).push(MaterialPageRoute(builder: (_) => GamePage(mode: 'robot', level: level, childWhite: color == 'blancs')));
-    }
+    ),
+  );
+  if (go == true && context.mounted) {
+    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => GamePage(mode: 'robot', level: level, childWhite: color == 'blancs')));
   }
 }
 
@@ -531,7 +467,7 @@ class _GamePageState extends State<GamePage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            _header(context, robot ? 'Robot · niveau ${widget.level}' : 'À deux'),
+            pageHeader(context, robot ? 'Robot · niveau ${widget.level}' : 'À deux'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               child: Container(
@@ -608,7 +544,7 @@ class _GamesPageState extends State<GamesPage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            _header(context, 'Mes parties'),
+            pageHeader(context, 'Mes parties'),
             Expanded(
               child: FutureBuilder<List<SavedGame>>(
                 future: games,
@@ -718,7 +654,7 @@ class _ReviewPageState extends State<ReviewPage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            _header(context, '${g.title} · ${g.outcome}'),
+            pageHeader(context, '${g.title} · ${g.outcome}'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),

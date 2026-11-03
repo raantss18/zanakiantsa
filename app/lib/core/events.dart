@@ -10,7 +10,16 @@ class Answer {
     required this.demonstrated,
     required this.millis,
     required this.at,
+    this.errors = const [],
+    this.challenge = false,
   });
+
+  /// Ce que montraient les essais manqués, tel que l'app l'a expliqué (« Tu as compté de un en un… »), pour le carnet
+  /// et le rapport : les erreurs fréquentes (ADR 0042).
+  final List<String> errors;
+
+  /// Question d'un défi (ADR 0042).
+  final bool challenge;
 
   final String skill;
 
@@ -35,6 +44,8 @@ class Answer {
         'demonstrated': demonstrated ? 1 : 0,
         'millis': millis,
         'at': at.millisecondsSinceEpoch,
+        'errors': errors.join('\n'),
+        'challenge': challenge ? 1 : 0,
       };
 
   factory Answer.fromMap(Map<String, Object?> m) => Answer(
@@ -44,6 +55,8 @@ class Answer {
         demonstrated: m['demonstrated'] == 1,
         millis: m['millis']! as int,
         at: DateTime.fromMillisecondsSinceEpoch(m['at']! as int),
+        errors: [for (final e in (m['errors'] as String? ?? '').split('\n')) if (e.isNotEmpty) e],
+        challenge: m['challenge'] == 1,
       );
 }
 

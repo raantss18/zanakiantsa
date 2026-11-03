@@ -52,6 +52,28 @@ class _ParentPageState extends State<ParentPage> {
     });
   }
 
+  /// Les 5 explications données le plus souvent ces 7 derniers jours, avec la compétence.
+  List<Widget> _frequentErrors(Map<String, String> titles) {
+    final since = DateTime.now().subtract(const Duration(days: 7));
+    final counts = <(String, String), int>{};
+    for (final a in app.journal.where((a) => a.at.isAfter(since))) {
+      for (final e in a.errors) {
+        counts[(a.skill, e)] = (counts[(a.skill, e)] ?? 0) + 1;
+      }
+    }
+    if (counts.isEmpty) return [const Text('Aucune erreur notée cette semaine.')];
+    final top = (counts.entries.toList()..sort((a, b) => b.value - a.value)).take(5);
+    return [
+      for (final e in top)
+        ListTile(
+          contentPadding: EdgeInsets.zero,
+          leading: Text('× ${e.value}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+          title: Text(e.key.$2),
+          subtitle: Text(titles[e.key.$1] ?? e.key.$1),
+        ),
+    ];
+  }
+
   Future<void> _downloadInk() async {
     setState(() => inkStatus = 'Téléchargement…');
     var ok = false;
@@ -270,6 +292,10 @@ class _ParentPageState extends State<ParentPage> {
                       '${l.mastered ? ' · maîtrisée' : ''}',
                     ),
                   ),
+                // ADR 0042 : ce que l'app a expliqué le plus souvent cette semaine (erreurs typiques ou conseils).
+                const SizedBox(height: 8),
+                Text('Les erreurs qui reviennent', style: Theme.of(context).textTheme.titleMedium),
+                ..._frequentErrors(titles),
               ],
               const Divider(height: 32),
               Text(

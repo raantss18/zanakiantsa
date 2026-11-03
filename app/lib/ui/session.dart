@@ -32,7 +32,14 @@ import 'universe.dart';
 /// Gère une question : essais, aide qui monte, démonstration ou indice final, retour, journal (ADR 0006–0008), et ce
 /// que le bandeau narrateur affiche (ADR 0016).
 class Attempt extends ChangeNotifier {
-  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect, {this.example = false}) : finished = example;
+  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect, {this.example = false, this.challenge = false})
+      : finished = example;
+
+  /// Question d'un défi (ADR 0042) : notée comme telle dans le journal.
+  final bool challenge;
+
+  /// Ce que montraient les essais manqués (gardé dans le journal, ADR 0042).
+  final errors = <String>[];
 
   /// Découverte guidée (ADR 0029) : l'idée, puis l'exemple résolu sous les yeux de l'enfant, sans réponse à donner
   /// ni journal ; « J'ai compris » mène aux vraies questions.
@@ -107,6 +114,8 @@ class Attempt extends ChangeNotifier {
         demonstrated: demonstrated,
         millis: DateTime.now().difference(_started).inMilliseconds,
         at: DateTime.now(),
+        errors: errors,
+        challenge: challenge,
       ));
 
   /// L'idée (si le contenu en a une), puis la démonstration jouée par l'activité, puis « J'ai compris ».
@@ -158,6 +167,8 @@ class Attempt extends ChangeNotifier {
         await app.voice.say(enc[i], id: 'commun.encouragements.$i');
       } else {
         misses++;
+        // Sans explication propre à cette erreur, on garde le conseil de la compétence : c'est ce qu'il y a à revoir.
+        errors.add(why ?? phrase('indice'));
         switch (helpAfter(misses)) {
           case Help.hint:
             await _help('indice', why: why);
@@ -252,14 +263,21 @@ class SessionResume {
   }
 }
 
+/// Record du défi d'un domaine (réussites du premier coup), null s'il n'y en a pas encore.
+Future<int?> challengeRecord(AppState app, String topic) async => int.tryParse(await app.store.get('defi_$topic') ?? '');
+
 /// Essais seulement : `--dart-define=DEV_SKILL=<id>,<id>…` fait jouer ces compétences, une question chacune. Vide en
 /// version publiée.
 const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key, required this.topic, this.resume});
+  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false});
   final String topic;
+
+  /// Défi (ADR 0042) : 10 questions mêlées de ce qui est acquis, sans exemple ; on compte les réussites du premier
+  /// coup et on garde le record.
+  final bool challenge;
 
   /// Séance laissée en cours dans ce domaine : on la reprend à la même question (voir [SessionResume]).
   final SessionResume? resume;
@@ -271,10 +289,16 @@ class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
   late List<String> plan = devSkill.isNotEmpty
       ? devSkill.split(",")
-      : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
+      : widget.challenge
+          ? app.progressOf(app.topic(widget.topic)).challengePlan(Random()) ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
+          : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
-  late String? _target = app.progressOf(app.topic(widget.topic)).newSkill;
+  late String? _target = widget.challenge ? null : app.progressOf(app.topic(widget.topic)).newSkill;
+
+  /// Défi : réussites du premier coup, et le record d'avant (pour dire « nouveau record ! »).
+  int firstTry = 0;
+  int? _record;
   late final Rewards before = app.rewards;
   final _rand = Random();
   final _started = DateTime.now();
@@ -290,6 +314,7 @@ class _SessionPageState extends State<SessionPage> {
     if (attempt == null) {
       attempt = _next();
       _music();
+      if (widget.challenge) challengeRecord(app, widget.topic).then((r) => _record = r);
     }
   }
 
@@ -319,8 +344,13 @@ class _SessionPageState extends State<SessionPage> {
     _last = q;
     app.remember(skill.id, skill.signature(q));
     // Première rencontre (rien au journal) : d'abord l'idée et un exemple résolu.
-    final example = _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id);
-    return Attempt(app, skill, q, _advance, () => setState(() => stars++), example: example);
+    final example = !widget.challenge && _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id);
+    late final Attempt a;
+    a = Attempt(app, skill, q, _advance, () => setState(() {
+          stars++;
+          if (a.misses == 0) firstTry++;
+        }), example: example, challenge: widget.challenge);
+    return a;
   }
 
   /// « J'ai compris » : l'exemple laisse la place à une vraie question de la même compétence.
@@ -335,12 +365,17 @@ class _SessionPageState extends State<SessionPage> {
     await Future<void>.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
     if (index + 1 >= plan.length) {
-      if (devSkill.isEmpty) SessionResume.clear(app, widget.topic);
+      if (devSkill.isEmpty && !widget.challenge) SessionResume.clear(app, widget.topic);
+      if (widget.challenge) await _endChallenge();
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
       app.voice.stopMusic();
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
+      if (widget.challenge) {
+        await app.voice.say(challengeText);
+        return;
+      }
       await app.voice.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
       final e = app.universeWords.episode(app.sessionsDone)!;
       await app.voice.say(app.universeWords.story[e], id: 'univers.${app.universe.id}.histoire.$e');
@@ -358,7 +393,19 @@ class _SessionPageState extends State<SessionPage> {
     old?.dispose();
     _music();
     // Le point de reprise : si l'enfant sort maintenant, il reviendra à cette question.
-    if (devSkill.isEmpty) SessionResume(plan, index, stars).save(app, widget.topic);
+    if (devSkill.isEmpty && !widget.challenge) SessionResume(plan, index, stars).save(app, widget.topic);
+  }
+
+  /// Fin de défi : le score, et le record s'il est battu.
+  Future<void> _endChallenge() async {
+    if (firstTry > (_record ?? -1)) await app.store.set('defi_${widget.topic}', '$firstTry');
+  }
+
+  String get challengeText {
+    final record = _record;
+    final beaten = record == null || firstTry > record;
+    return 'Défi : $firstTry sur ${plan.length} du premier coup. '
+        '${beaten ? (record == null ? 'C\'est ton premier record !' : 'Nouveau record !') : 'Ton record : $record.'}';
   }
 
   @override
@@ -406,9 +453,11 @@ class _SessionPageState extends State<SessionPage> {
               child: over
                   ? DayEnd(
                       theme: widget.topic,
-                      again: () => Navigator.of(context)
-                          .pushReplacement(MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic))),
-                      child: _End(
+                      again: () => Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic, challenge: widget.challenge))),
+                      child: widget.challenge
+                          ? Text(challengeText, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.25))
+                          : _End(
                         stars: stars,
                         universe: u,
                         words: app.universeWords,
