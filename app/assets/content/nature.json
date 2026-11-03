@@ -29,10 +29,11 @@
   ],
   "ages": [
     4,
-    7
+    8
   ],
   "sources": {
-    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "c2": "https://eduscol.education.fr/document/50261/download"
   },
   "competences": [
     {
@@ -1382,6 +1383,308 @@
             ]
           ],
           "explication": "On plante une graine de haricot."
+        }
+      ]
+    },
+    {
+      "id": "etats-eau",
+      "titre": "L'eau liquide et l'eau solide",
+      "niveau": "CP",
+      "prerequis": [
+        "besoins"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Reconnaître et nommer les trois états physiques de l'eau et leur manifestation dans divers phénomènes naturels et dans la vie courante."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "L'eau coule quand elle est liquide : la pluie, la mer, la douche. Quand il fait très froid, elle devient solide : la glace, la neige.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "L'eau liquide coule. L'eau solide est dure et froide : on peut la tenir dans la main.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Où l'eau est-elle solide ?",
+          "bonne": [
+            "1f9ca",
+            "le glaçon"
+          ],
+          "autres": [
+            [
+              "1f327",
+              "la pluie"
+            ],
+            [
+              "1f30a",
+              "la mer"
+            ]
+          ],
+          "explication": "Le glaçon, c'est de l'eau solide : de la glace."
+        },
+        {
+          "texte": "Où l'eau est-elle liquide ?",
+          "bonne": [
+            "1f327",
+            "la pluie"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "le glaçon"
+            ],
+            [
+              "2744",
+              "le flocon de neige"
+            ]
+          ],
+          "explication": "La pluie, c'est de l'eau liquide qui tombe des nuages."
+        },
+        {
+          "texte": "Qu'est-ce qui est de l'eau solide ?",
+          "bonne": [
+            "2744",
+            "le flocon de neige"
+          ],
+          "autres": [
+            [
+              "1f4a7",
+              "la goutte d'eau"
+            ],
+            [
+              "1f6bf",
+              "la douche"
+            ]
+          ],
+          "explication": "La neige, c'est de l'eau solide."
+        },
+        {
+          "texte": "Qu'est-ce qui est de l'eau liquide ?",
+          "bonne": [
+            "1f30a",
+            "la mer"
+          ],
+          "autres": [
+            [
+              "2603",
+              "le bonhomme de neige"
+            ],
+            [
+              "1f9ca",
+              "le glaçon"
+            ]
+          ],
+          "explication": "L'eau de la mer est liquide : elle bouge et fait des vagues."
+        },
+        {
+          "texte": "Qui est fait d'eau solide ?",
+          "bonne": [
+            "2603",
+            "le bonhomme de neige"
+          ],
+          "autres": [
+            [
+              "1f6bf",
+              "la douche"
+            ],
+            [
+              "1f4a7",
+              "la goutte d'eau"
+            ]
+          ],
+          "explication": "Le bonhomme de neige est fait de neige : de l'eau solide."
+        },
+        {
+          "texte": "Où trouve-t-on de la glace et de la neige, même l'été ?",
+          "bonne": [
+            "1f3d4",
+            "en haut des hautes montagnes"
+          ],
+          "autres": [
+            [
+              "1f6bf",
+              "dans la douche"
+            ],
+            [
+              "1f327",
+              "dans la pluie"
+            ]
+          ],
+          "explication": "En haut des hautes montagnes, il fait si froid que la glace reste toute l'année."
+        },
+        {
+          "texte": "D'où tombe la pluie ?",
+          "bonne": [
+            "2601",
+            "du nuage"
+          ],
+          "autres": [
+            [
+              "2600",
+              "du soleil"
+            ],
+            [
+              "1f3d4",
+              "de la montagne"
+            ]
+          ],
+          "explication": "La pluie tombe des nuages."
+        },
+        {
+          "texte": "Quelle eau coule pour te laver ?",
+          "bonne": [
+            "1f6bf",
+            "la douche"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "le glaçon"
+            ],
+            [
+              "2744",
+              "le flocon de neige"
+            ]
+          ],
+          "explication": "L'eau de la douche est liquide : elle coule."
+        }
+      ]
+    },
+    {
+      "id": "fondre-geler",
+      "titre": "La glace fond, l'eau gèle",
+      "niveau": "CE1",
+      "prerequis": [
+        "etats-eau"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Observer des processus de solidification et de fusion de l'eau."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Quand il fait chaud, la glace fond : elle redevient de l'eau liquide. Quand il fait très froid, l'eau gèle : elle devient de la glace.",
+      "phrases": {
+        "consigne": "Écoute l'histoire, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "La chaleur fait fondre la glace. Le grand froid fait geler l'eau.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "On laisse un glaçon au soleil. Que devient-il ?",
+          "bonne": [
+            "1f4a7",
+            "de l'eau liquide"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "un glaçon plus gros"
+            ],
+            [
+              "2744",
+              "de la neige"
+            ]
+          ],
+          "explication": "Au chaud, le glaçon fond : il devient de l'eau liquide."
+        },
+        {
+          "texte": "On met un verre d'eau au congélateur. Que devient l'eau ?",
+          "bonne": [
+            "1f9ca",
+            "de la glace"
+          ],
+          "autres": [
+            [
+              "1f4a7",
+              "toujours de l'eau liquide"
+            ],
+            [
+              "1f327",
+              "de la pluie"
+            ]
+          ],
+          "explication": "Dans le congélateur, il fait très froid : l'eau gèle, elle devient de la glace."
+        },
+        {
+          "texte": "Le soleil chauffe le bonhomme de neige. Que reste-t-il ?",
+          "bonne": [
+            "1f4a7",
+            "de l'eau"
+          ],
+          "autres": [
+            [
+              "2603",
+              "un bonhomme plus grand"
+            ],
+            [
+              "2601",
+              "un nuage"
+            ]
+          ],
+          "explication": "La neige fond au soleil : il reste de l'eau liquide."
+        },
+        {
+          "texte": "Il fait très très froid la nuit. Que devient la flaque d'eau ?",
+          "bonne": [
+            "1f9ca",
+            "de la glace"
+          ],
+          "autres": [
+            [
+              "1f30a",
+              "une vague"
+            ],
+            [
+              "2600",
+              "un soleil"
+            ]
+          ],
+          "explication": "Avec le grand froid, l'eau de la flaque gèle : elle devient de la glace."
+        },
+        {
+          "texte": "Qu'est-ce qui fait fondre la glace ?",
+          "bonne": [
+            "2600",
+            "la chaleur du soleil"
+          ],
+          "autres": [
+            [
+              "2744",
+              "la neige"
+            ],
+            [
+              "1f9ca",
+              "un autre glaçon"
+            ]
+          ],
+          "explication": "C'est la chaleur qui fait fondre la glace."
+        },
+        {
+          "texte": "Qu'est-ce qui fait geler l'eau ?",
+          "bonne": [
+            "2744",
+            "le grand froid"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le soleil"
+            ],
+            [
+              "1f6bf",
+              "la douche chaude"
+            ]
+          ],
+          "explication": "C'est le grand froid qui fait geler l'eau."
         }
       ]
     }

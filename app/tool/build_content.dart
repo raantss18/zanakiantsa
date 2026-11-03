@@ -37,6 +37,8 @@ const activities = {
   'multibase': {'min', 'max'},
   'posee': {'op', 'min', 'max'},
   'heure': {'minutes'},
+  // ADR 0036 (suites de nombres)
+  'suite': {'pas', 'max'},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
@@ -57,6 +59,7 @@ const allowedPlaceholders = {
   'dizaines', 'unites', 'reste', // bâtonnets (ADR 0021)
   'lettre', // lire et écrire (ADR 0031)
   'centaines', 'heure', // CE1 (ADR 0035)
+  'pas', // suites de nombres (ADR 0036)
 };
 
 /// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).

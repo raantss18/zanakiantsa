@@ -19,7 +19,7 @@ class Block extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const c = 7.0;
+    const c = 9.0;
     final (w, h) = switch (kind) { 100 => (10, 10), 10 => (1, 10), _ => (1, 1) };
     return CustomPaint(size: Size(w * c, h * c), painter: _BlockPainter(w, h, c));
   }
@@ -59,6 +59,13 @@ String? explainCe1(String activity, Question q, int right, int v) {
       if (v == d * 100 + c * 10 + u) return 'Tu as échangé les centaines et les dizaines : les plaques valent cent.';
       if ((v - right).abs() == 100) return 'Recompte les plaques : chacune vaut cent.';
       if ((v - right).abs() == 10) return 'Recompte les barres : chacune vaut dix.';
+    case 'suite':
+      final step = q.b, w = stepWords[step.abs()];
+      if (step.abs() != 1 && v == right - step + step.sign) return 'Tu as compté de un en un. Ici, on avance de $w en $w.';
+      if (v == right - 2 * step) {
+        return step < 0 ? "Cette suite descend : chaque nombre a $w de moins que celui d'avant." : "Cette suite monte : chaque nombre a $w de plus que celui d'avant.";
+      }
+      if ((v - right).abs() == step.abs()) return 'Regarde le nombre juste avant le trou, et fais un seul pas.';
     case 'posee':
       if (v == right - 10 && q.a + q.b == right) return "N'oublie pas la retenue : 1 dizaine de plus.";
       if (q.a - q.b == right) {
@@ -349,4 +356,91 @@ class _ClockPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_ClockPainter old) => old.h != h || old.m != m;
+}
+
+/// Une suite de nombres à compléter (ADR 0036) : cinq cases de [b] en [b], une vide. Après un essai manqué, ou dans la
+/// démonstration, les pas « +2 » (ou « −1 ») s'écrivent entre les cases : la règle devient visible.
+class SequenceActivity extends StatefulWidget {
+  const SequenceActivity({super.key, required this.attempt});
+  final Attempt attempt;
+  @override
+  State<SequenceActivity> createState() => _SequenceActivityState();
+}
+
+class _SequenceActivityState extends State<SequenceActivity> {
+  Attempt get a => widget.attempt;
+
+  @override
+  void initState() {
+    super.initState();
+    a.addListener(_changed);
+    a.show('question').then((_) => a.say('consigne'));
+  }
+
+  @override
+  void dispose() {
+    a.removeListener(_changed);
+    super.dispose();
+  }
+
+  void _changed() => setState(() {});
+
+  @override
+  Widget build(BuildContext context) {
+    final q = a.question;
+    final u = a.app.universe;
+    final shown = a.solved || a.demonstrate;
+    final steps = a.helpText != null || shown;
+    final label = q.b > 0 ? '+${q.b}' : '−${-q.b}';
+    Widget tile(int v) {
+      final hole = v == q.n;
+      return Container(
+        width: 112,
+        height: 96,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: hole && !shown ? const Color(0xFFFFF4D6) : surface,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: cardShadow,
+          // La case vide a un bord épais et pointillé à l'œil : pas seulement une autre couleur.
+          border: hole ? Border.all(color: shown ? green : ink, width: 4) : null,
+        ),
+        child: Text(hole && !shown ? '?' : '$v',
+            style: TextStyle(fontFamily: 'Andika', fontSize: 44, fontWeight: FontWeight.w700, color: hole && shown ? green : ink)),
+      );
+    }
+
+    final values = [for (var i = 0; i < 5; i++) q.a + i * q.b];
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(children: [
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+            for (final (i, v) in values.indexed) ...[
+              if (i > 0)
+                SizedBox(
+                  width: 52,
+                  child: Column(children: [
+                    Opacity(
+                      opacity: steps ? 1 : 0,
+                      child: Text(label, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.night ? u.primary : u.onCard)),
+                    ),
+                    Icon(Icons.arrow_forward_rounded, size: 32, color: u.night ? u.primary : u.onCard),
+                    const SizedBox(height: 28),
+                  ]),
+                ),
+              tile(v),
+            ],
+          ]),
+        ),
+        const SizedBox(height: 32),
+        CE1Choices(attempt: a, right: q.n, near: [
+          if (q.b.abs() != 1) q.n - q.b + q.b.sign,
+          q.n - 2 * q.b,
+          q.n + q.b,
+        ].where((v) => v >= 0).toList()),
+      ]),
+    );
+  }
 }

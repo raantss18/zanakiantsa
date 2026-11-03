@@ -1,0 +1,17 @@
+id: suite-rebours
+titre: "Compter à rebours"
+niveau: CP
+prerequis: [suite-nombres]
+programme: { source: c2, texte: "L'élève sait compter, à l'oral comme à l'écrit, à rebours, de un en un en partant de n'importe quel nombre." }
+activite: suite
+parametres: { pas: [-1], min: 0, max: 100 }
+idee: "Compter à rebours, c'est compter à l'envers, comme pour une fusée : chaque nombre a un de moins."
+phrases:
+  consigne: "Lis les nombres un par un. Quel nombre manque ?"
+  question: "On compte à rebours, de un en un. Quel nombre manque ?"
+  indice: "Chaque nombre a un de moins que celui d'avant : recule d'un pas."
+  exemple: "Dis la suite à voix haute, comme le compte à rebours d'une fusée."
+  demonstration: "Regarde : à rebours, le nombre qui manque, c'est {n}."
+  bravo: "Oui ! À rebours, c'est {n}."
+variantes:
+  - "Quel nombre se cache sous le point d'interrogation ?"

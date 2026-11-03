@@ -129,7 +129,8 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   « Lire et écrire » (ADR 0031) ; questions de sciences trop redondantes → 55 questions et 2 compétences de plus
   (milieux de vie, besoins) ; « Tout explorer » (ADR 0032) ; animation de méthode par domaine (ADR 0033) ; profils
   enfants et point de départ selon l'âge (ADR 0034) ; contenu CE1 (ADR 0035)
-- ⏳ Sens du tracé des lettres ; test de départ par domaine ; plus de contenu CE1-CE2 (sciences, anglais, problèmes)
+- ✅ Suites de nombres (de 1, 2, 10 en 10 ; à rebours ; bande jusqu'à 1000) et états de l'eau (CP, CE1), ADR 0036
+- ⏳ Sens du tracé des lettres ; test de départ par domaine ; plus de contenu CE1-CE2 (sons, anglais, problèmes)
 - ✅ Version 0.5.0 publiée (2026-11-03, build 2005) ; montée 0.4.0 → 0.5.0 vérifiée sur l'émulateur
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité

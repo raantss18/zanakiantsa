@@ -380,6 +380,7 @@ class _SessionPageState extends State<SessionPage> {
                           'multibase' => MultibaseActivity(key: ObjectKey(a), attempt: a),
                           'posee' => ColumnOpActivity(key: ObjectKey(a), attempt: a),
                           'heure' => ClockActivity(key: ObjectKey(a), attempt: a),
+                          'suite' => SequenceActivity(key: ObjectKey(a), attempt: a),
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),

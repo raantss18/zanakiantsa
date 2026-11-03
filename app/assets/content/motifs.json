@@ -33,10 +33,11 @@
   ],
   "ages": [
     4,
-    7
+    8
   ],
   "sources": {
-    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "c2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
   },
   "competences": [
     {
@@ -136,6 +137,105 @@
         "demonstration": "Regarde : c'est cette image qui continue la suite.",
         "bravo": "Oui ! Tu as trouvé la règle de la suite."
       }
+    },
+    {
+      "id": "suite-nombres",
+      "titre": "Compter de un en un, de deux en deux, de dix en dix",
+      "niveau": "CP",
+      "prerequis": [
+        "motif-evolutif"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "L'élève sait compter, à l'oral et à l'écrit, de un en un, de deux en deux et de dix en dix en partant de n'importe quel nombre."
+      },
+      "activite": "suite",
+      "parametres": {
+        "pas": [
+          1,
+          2,
+          10
+        ],
+        "max": 100
+      },
+      "idee": "Une suite de nombres a une règle, comme une suite d'images : on avance toujours du même pas.",
+      "phrases": {
+        "consigne": "Lis les nombres un par un. Quel nombre manque ?",
+        "question": "Ces nombres vont de {pas} en {pas}. Quel nombre manque ?",
+        "indice": "Compte de {pas} en {pas} à partir du premier nombre, en montrant chaque case.",
+        "exemple": "Dis la suite à voix haute, du premier au dernier nombre.",
+        "demonstration": "Regarde : de {pas} en {pas}, le nombre qui manque, c'est {n}.",
+        "bravo": "Oui ! De {pas} en {pas}, c'est {n}."
+      },
+      "variantes": [
+        "Quel nombre se cache sous le point d'interrogation ?"
+      ]
+    },
+    {
+      "id": "suite-rebours",
+      "titre": "Compter à rebours",
+      "niveau": "CP",
+      "prerequis": [
+        "suite-nombres"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "L'élève sait compter, à l'oral comme à l'écrit, à rebours, de un en un en partant de n'importe quel nombre."
+      },
+      "activite": "suite",
+      "parametres": {
+        "pas": [
+          -1
+        ],
+        "min": 0,
+        "max": 100
+      },
+      "idee": "Compter à rebours, c'est compter à l'envers, comme pour une fusée : chaque nombre a un de moins.",
+      "phrases": {
+        "consigne": "Lis les nombres un par un. Quel nombre manque ?",
+        "question": "On compte à rebours, de un en un. Quel nombre manque ?",
+        "indice": "Chaque nombre a un de moins que celui d'avant : recule d'un pas.",
+        "exemple": "Dis la suite à voix haute, comme le compte à rebours d'une fusée.",
+        "demonstration": "Regarde : à rebours, le nombre qui manque, c'est {n}.",
+        "bravo": "Oui ! À rebours, c'est {n}."
+      },
+      "variantes": [
+        "Quel nombre se cache sous le point d'interrogation ?"
+      ]
+    },
+    {
+      "id": "bande-numerique",
+      "titre": "Les grands nombres sur la bande",
+      "niveau": "CE1",
+      "prerequis": [
+        "suite-rebours"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Sur une bande numérique ou une demi-droite graduée de un en un, l'élève intercale et positionne des nombres manquants. […] L'élève sait placer un nombre […] sur une demi-droite graduée de un en un, ou de dix en dix, ou de cent en cent."
+      },
+      "activite": "suite",
+      "parametres": {
+        "pas": [
+          1,
+          10,
+          100
+        ],
+        "min": 100,
+        "max": 1000
+      },
+      "idee": "Avec les grands nombres, c'est pareil : un pas de un change les unités, un pas de dix les dizaines, un pas de cent les centaines.",
+      "phrases": {
+        "consigne": "Lis les nombres un par un. Quel nombre manque ?",
+        "question": "Ces nombres vont de {pas} en {pas}. Quel nombre manque ?",
+        "indice": "Regarde quel chiffre change d'une case à l'autre, et fais un pas de {pas}.",
+        "exemple": "Dis la suite à voix haute, du premier au dernier nombre.",
+        "demonstration": "Regarde : de {pas} en {pas}, le nombre qui manque, c'est {n}.",
+        "bravo": "Oui ! De {pas} en {pas}, c'est {n}."
+      },
+      "variantes": [
+        "Quel nombre se cache sous le point d'interrogation ?"
+      ]
     }
   ]
 }

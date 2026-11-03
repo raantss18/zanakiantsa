@@ -121,6 +121,7 @@ class Skill {
         'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
         'batonnets' when params['mode'] == 'casser' => {'reste': '${q.n - q.b}'},
         'heure' => {'heure': clockText(q.n, q.b)},
+        'suite' => {'pas': stepWords[q.b.abs()] ?? '${q.b.abs()}'},
         'multibase' => {
             'centaines': q.a <= 1 ? '${q.a} centaine' : '${q.a} centaines',
             'dizaines': q.b <= 1 ? '${q.b} dizaine' : '${q.b} dizaines',
@@ -222,6 +223,14 @@ class Skill {
         return Question(n: a * b, a: a, b: b);
       case 'motif' || 'programmer':
         return Question(n: 0, a: r.nextInt(1 << 30));
+      case 'suite':
+        // Cinq nombres de [b] en [b] à partir de [a] (n'importe quel nombre, programme du cycle 2), entre min et max ;
+        // [n] : celui qui manque, jamais le premier (il faut voir au moins deux nombres avant de deviner la règle).
+        final steps = List<int>.from(params['pas'] as List);
+        final b = steps[r.nextInt(steps.length)];
+        final lo = params.containsKey('min') ? p('min') : 0;
+        final a = b > 0 ? between(lo, p('max') - 4 * b) : between(lo - 4 * b, p('max'));
+        return Question(n: a + between(1, 4) * b, a: a, b: b);
       default: // calcul
         final total = params.containsKey('total_fixe') ? p('total_fixe') : between(2, p('total_max'));
         // a et b ≥ 1 : les énoncés racontent une petite histoire (« il en arrive {b} »), qui n'a pas de sens avec 0.
@@ -240,6 +249,9 @@ class Skill {
         _ => q.n,
       };
 }
+
+/// Le pas d'une suite de nombres, tel qu'on le dit (« de deux en deux »).
+const stepWords = {1: 'un', 2: 'deux', 5: 'cinq', 10: 'dix', 100: 'cent'};
 
 /// Une question écrite (`choisir`) : énoncé, bonne image, autres images, explication ; ou un sujet de dessin.
 class Item {

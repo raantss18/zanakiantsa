@@ -1,0 +1,48 @@
+id: etats-eau
+titre: "L'eau liquide et l'eau solide"
+niveau: CP
+prerequis: [besoins]
+programme: { source: c2, texte: "Reconnaître et nommer les trois états physiques de l'eau et leur manifestation dans divers phénomènes naturels et dans la vie courante." }
+activite: choisir
+parametres: {}
+idee: "L'eau coule quand elle est liquide : la pluie, la mer, la douche. Quand il fait très froid, elle devient solide : la glace, la neige."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "L'eau liquide coule. L'eau solide est dure et froide : on peut la tenir dans la main."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Où l'eau est-elle solide ?"
+    bonne: ["1f9ca", "le glaçon"]
+    autres: [["1f327", "la pluie"], ["1f30a", "la mer"]]
+    explication: "Le glaçon, c'est de l'eau solide : de la glace."
+  - texte: "Où l'eau est-elle liquide ?"
+    bonne: ["1f327", "la pluie"]
+    autres: [["1f9ca", "le glaçon"], ["2744", "le flocon de neige"]]
+    explication: "La pluie, c'est de l'eau liquide qui tombe des nuages."
+  - texte: "Qu'est-ce qui est de l'eau solide ?"
+    bonne: ["2744", "le flocon de neige"]
+    autres: [["1f4a7", "la goutte d'eau"], ["1f6bf", "la douche"]]
+    explication: "La neige, c'est de l'eau solide."
+  - texte: "Qu'est-ce qui est de l'eau liquide ?"
+    bonne: ["1f30a", "la mer"]
+    autres: [["2603", "le bonhomme de neige"], ["1f9ca", "le glaçon"]]
+    explication: "L'eau de la mer est liquide : elle bouge et fait des vagues."
+  - texte: "Qui est fait d'eau solide ?"
+    bonne: ["2603", "le bonhomme de neige"]
+    autres: [["1f6bf", "la douche"], ["1f4a7", "la goutte d'eau"]]
+    explication: "Le bonhomme de neige est fait de neige : de l'eau solide."
+  - texte: "Où trouve-t-on de la glace et de la neige, même l'été ?"
+    bonne: ["1f3d4", "en haut des hautes montagnes"]
+    autres: [["1f6bf", "dans la douche"], ["1f327", "dans la pluie"]]
+    explication: "En haut des hautes montagnes, il fait si froid que la glace reste toute l'année."
+  - texte: "D'où tombe la pluie ?"
+    bonne: ["2601", "du nuage"]
+    autres: [["2600", "du soleil"], ["1f3d4", "de la montagne"]]
+    explication: "La pluie tombe des nuages."
+  - texte: "Quelle eau coule pour te laver ?"
+    bonne: ["1f6bf", "la douche"]
+    autres: [["1f9ca", "le glaçon"], ["2744", "le flocon de neige"]]
+    explication: "L'eau de la douche est liquide : elle coule."

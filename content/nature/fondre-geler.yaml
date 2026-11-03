@@ -1,0 +1,40 @@
+id: fondre-geler
+titre: "La glace fond, l'eau gèle"
+niveau: CE1
+prerequis: [etats-eau]
+programme: { source: c2, texte: "Observer des processus de solidification et de fusion de l'eau." }
+activite: choisir
+parametres: {}
+idee: "Quand il fait chaud, la glace fond : elle redevient de l'eau liquide. Quand il fait très froid, l'eau gèle : elle devient de la glace."
+phrases:
+  consigne: "Écoute l'histoire, puis touche la bonne image."
+  question: "{texte}"
+  indice: "La chaleur fait fondre la glace. Le grand froid fait geler l'eau."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "On laisse un glaçon au soleil. Que devient-il ?"
+    bonne: ["1f4a7", "de l'eau liquide"]
+    autres: [["1f9ca", "un glaçon plus gros"], ["2744", "de la neige"]]
+    explication: "Au chaud, le glaçon fond : il devient de l'eau liquide."
+  - texte: "On met un verre d'eau au congélateur. Que devient l'eau ?"
+    bonne: ["1f9ca", "de la glace"]
+    autres: [["1f4a7", "toujours de l'eau liquide"], ["1f327", "de la pluie"]]
+    explication: "Dans le congélateur, il fait très froid : l'eau gèle, elle devient de la glace."
+  - texte: "Le soleil chauffe le bonhomme de neige. Que reste-t-il ?"
+    bonne: ["1f4a7", "de l'eau"]
+    autres: [["2603", "un bonhomme plus grand"], ["2601", "un nuage"]]
+    explication: "La neige fond au soleil : il reste de l'eau liquide."
+  - texte: "Il fait très très froid la nuit. Que devient la flaque d'eau ?"
+    bonne: ["1f9ca", "de la glace"]
+    autres: [["1f30a", "une vague"], ["2600", "un soleil"]]
+    explication: "Avec le grand froid, l'eau de la flaque gèle : elle devient de la glace."
+  - texte: "Qu'est-ce qui fait fondre la glace ?"
+    bonne: ["2600", "la chaleur du soleil"]
+    autres: [["2744", "la neige"], ["1f9ca", "un autre glaçon"]]
+    explication: "C'est la chaleur qui fait fondre la glace."
+  - texte: "Qu'est-ce qui fait geler l'eau ?"
+    bonne: ["2744", "le grand froid"]
+    autres: [["2600", "le soleil"], ["1f6bf", "la douche chaude"]]
+    explication: "C'est le grand froid qui fait geler l'eau."
