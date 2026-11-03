@@ -221,7 +221,7 @@ class _CodeActivityState extends State<CodeActivity> {
                       ? null
                       : () {
                           setState(() => program.add(op));
-                          a.app.voice.say(_name(op));
+                          a.speech.say(_name(op));
                         },
                   child: Icon(_icon(op), size: 44, semanticLabel: _name(op)),
                 ),

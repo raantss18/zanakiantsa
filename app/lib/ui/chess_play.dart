@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../app_state.dart';
+import '../audio/voice.dart';
 import '../core/engine.dart';
 import '../core/game.dart';
 import 'theme.dart';
@@ -270,6 +271,9 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   late final AppState app = AppScope.of(context);
   final game = Game();
+
+  /// La parole de la partie : coupée quand on la quitte.
+  late final Speech speech = app.voice.scope();
   int? selected;
   bool thinking = false, hints = true, flipped = false, _saved = false;
   String? message;
@@ -282,14 +286,14 @@ class _GamePageState extends State<GamePage> {
     super.initState();
     flipped = robot && !widget.childWhite;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      app.voice.say(robot ? 'C\'est parti ! Les Blancs commencent.' : 'Partie à deux. Les Blancs commencent.');
+      speech.say(robot ? 'C\'est parti ! Les Blancs commencent.' : 'Partie à deux. Les Blancs commencent.');
       if (!childTurn) _robotPlays();
     });
   }
 
   @override
   void dispose() {
-    app.voice.stop();
+    speech.close();
     if (!_saved && game.moves.length >= 2) _save();
     super.dispose();
   }
@@ -345,7 +349,7 @@ class _GamePageState extends State<GamePage> {
     final candidates = [for (final m in p.legalMoves()) if (m.from == from && m.to == s) m];
     if (candidates.isEmpty) {
       setState(() => message = _whyNot(p, from, s));
-      app.voice.say(message!);
+      speech.say(message!);
       return;
     }
     var move = candidates.first;
@@ -400,11 +404,11 @@ class _GamePageState extends State<GamePage> {
     });
     final end = game.end;
     if (end != null) {
-      await app.voice.say(_endText(end));
+      await speech.say(_endText(end));
       final saved = await _save();
       if (mounted) _endDialog(saved);
     } else if (san.endsWith('+')) {
-      app.voice.say('Échec !');
+      speech.say('Échec !');
     }
   }
 

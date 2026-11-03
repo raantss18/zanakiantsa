@@ -47,7 +47,9 @@ class AppState extends ChangeNotifier {
     final (topics, common) = await loadContent();
     final words = await loadUniverseWords();
     final store = await Store.open();
-    final voice = Voice()..init();
+    final voice = Voice()
+      ..engine = await store.get('moteur_voix')
+      ..init();
     final s = AppState(topics, common, words, store, voice, await Library.load());
     await s._loadProfiles();
     await s.refresh();

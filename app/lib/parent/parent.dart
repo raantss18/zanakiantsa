@@ -21,6 +21,10 @@ class _ParentPageState extends State<ParentPage> {
   WeekReport? report;
   bool? inkModel;
   String? inkStatus;
+
+  /// La voix (moteurs du téléphone, celui utilisé, français disponible) et le résultat de l'essai.
+  (List<String>, String?, bool)? voiceInfo;
+  String? voiceTest;
   final updater = Updater();
   String? updateStatus;
   Release? release;
@@ -29,7 +33,10 @@ class _ParentPageState extends State<ParentPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (report == null) _load();
+    if (report == null) {
+      _load();
+      _loadVoice();
+    }
   }
 
   Future<void> _load() async {
@@ -50,6 +57,32 @@ class _ParentPageState extends State<ParentPage> {
       );
       inkModel = ink;
     });
+  }
+
+  Future<void> _loadVoice() async {
+    final i = await app.voice.info();
+    if (mounted) setState(() => voiceInfo = i);
+  }
+
+  Future<void> _testVoice() async {
+    setState(() => voiceTest = 'Écoutez…');
+    final (signalled, took, error) = await app.voice.test();
+    if (!mounted) return;
+    setState(() => voiceTest = error != null
+        ? 'Le moteur signale une erreur (« $error ») : la voix française n’est sans doute pas installée. Dans les '
+            'réglages du téléphone, « Synthèse vocale » : installez les données vocales en français, ou choisissez un '
+            'autre moteur ci-dessus. Le texte reste toujours écrit à l’écran.'
+        : signalled
+            ? 'Phrase dite en ${(took.inMilliseconds / 1000).toStringAsFixed(1)} s : le moteur prévient bien quand il a fini.'
+            : 'Le moteur n’a pas prévenu la fin de la phrase : les phrases peuvent être coupées ou espacées. '
+                'Essayez un autre moteur ci-dessus (par exemple « com.google.android.tts », Synthèse vocale Google).');
+  }
+
+  Future<void> _chooseEngine(String e) async {
+    await app.voice.useEngine(e);
+    await app.store.set('moteur_voix', e);
+    await _loadVoice();
+    if (mounted) setState(() => voiceTest = null);
   }
 
   /// Les 5 explications données le plus souvent ces 7 derniers jours, avec la compétence.
@@ -297,6 +330,26 @@ class _ParentPageState extends State<ParentPage> {
                 Text('Les erreurs qui reviennent', style: Theme.of(context).textTheme.titleMedium),
                 ..._frequentErrors(titles),
               ],
+              const Divider(height: 32),
+              Text('La voix', style: Theme.of(context).textTheme.titleLarge),
+              const Text(
+                'La voix vient du moteur de synthèse vocale du téléphone. Si elle est coupée, hachée ou à l’accent '
+                'étrange, essayez-la, puis choisissez un autre moteur.',
+              ),
+              const SizedBox(height: 8),
+              if (voiceInfo == null)
+                const LinearProgressIndicator()
+              else ...[
+                Text('Moteur utilisé : ${voiceInfo!.$2 ?? 'inconnu'} · français : ${voiceInfo!.$3 ? 'disponible' : 'non disponible'}'),
+                if (voiceInfo!.$1.length > 1)
+                  Wrap(spacing: 8, children: [
+                    for (final e in voiceInfo!.$1)
+                      ChoiceChip(label: Text(e), selected: e == voiceInfo!.$2, onSelected: (_) => _chooseEngine(e)),
+                  ]),
+              ],
+              const SizedBox(height: 8),
+              FilledButton.tonal(onPressed: voiceTest == 'Écoutez…' ? null : _testVoice, child: const Text('Tester la voix')),
+              if (voiceTest != null) Text(voiceTest!),
               const Divider(height: 32),
               Text(
                 'Écriture et dessins au doigt',

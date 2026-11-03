@@ -65,7 +65,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
 
   void _add(BlockKind k) {
     if (programSize(program) >= limit) {
-      a.app.voice.say('Plus de place ! Utilise un bloc qui répète.', force: true);
+      a.speech.say('Plus de place ! Utilise un bloc qui répète.', force: true);
       return;
     }
     final b = Block(k, count: 3);
@@ -75,7 +75,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
       added.add((list, b));
       if (b.isContainer) open.add(b);
     });
-    a.app.voice.say(_name(b));
+    a.speech.say(_name(b));
   }
 
   void _undo() {

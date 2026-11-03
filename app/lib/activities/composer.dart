@@ -53,13 +53,13 @@ class _ComposeActivityState extends State<ComposeActivity> {
   void _add() {
     if (locked || start + added >= maxItems) return;
     setState(() => added++);
-    a.app.voice.say('${start + added}');
+    a.speech.say('${start + added}');
   }
 
   void _remove() {
     if (locked || added == 0) return;
     setState(() => added--);
-    a.app.voice.say('${start + added}');
+    a.speech.say('${start + added}');
   }
 
   @override

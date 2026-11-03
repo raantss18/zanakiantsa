@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../activities/draw.dart';
 import '../app_state.dart';
+import '../audio/voice.dart';
 import '../content/content.dart';
 import 'session.dart';
 import 'topic_hub.dart';
@@ -55,6 +56,9 @@ class _TopicIntroState extends State<TopicIntro> with TickerProviderStateMixin {
   late final _enter = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
   late final _float = AnimationController(vsync: this, duration: const Duration(seconds: 2))..repeat(reverse: true);
   int scene = 0;
+
+  /// La parole de l'animation : coupée quand on la quitte (« Passer », retour).
+  late final Speech speech = app.voice.scope();
   bool ended = false, _running = true;
 
   List<IntroScene> get scenes => widget.topic.intro;
@@ -68,7 +72,7 @@ class _TopicIntroState extends State<TopicIntro> with TickerProviderStateMixin {
   @override
   void dispose() {
     _running = false;
-    app.voice.stop();
+    speech.close();
     _enter.dispose();
     _float.dispose();
     super.dispose();
@@ -79,7 +83,7 @@ class _TopicIntroState extends State<TopicIntro> with TickerProviderStateMixin {
       setState(() => scene = i);
       _enter.forward(from: 0);
       // La phrase est dite même voix coupée : c'est la leçon elle-même (comme « Lis-moi »).
-      await Future.wait([app.voice.say(scenes[i].text, id: '${widget.topic.id}.intro.$i', force: true), Future<void>.delayed(const Duration(milliseconds: 2600))]);
+      await Future.wait([speech.say(scenes[i].text, id: '${widget.topic.id}.intro.$i', force: true), Future<void>.delayed(const Duration(milliseconds: 2600))]);
       await Future<void>.delayed(const Duration(milliseconds: 500));
     }
     if (mounted && _running) setState(() => ended = true);
@@ -87,7 +91,7 @@ class _TopicIntroState extends State<TopicIntro> with TickerProviderStateMixin {
 
   void _close(bool go) {
     _running = false;
-    app.voice.stop();
+    speech.close();
     Navigator.of(context).pop(go);
   }
 

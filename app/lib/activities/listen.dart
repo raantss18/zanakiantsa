@@ -47,7 +47,7 @@ class _ListenActivityState extends State<ListenActivity> {
   Future<void> _play(int i) async {
     if (!mounted) return;
     setState(() => playing = i);
-    await a.app.voice.playWav(sounds[i]);
+    await a.speech.playWav(sounds[i]);
     if (mounted) setState(() => playing = null);
   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../app_state.dart';
+import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/day.dart';
 import '../parent/gate.dart';
@@ -30,22 +31,28 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     WidgetsBinding.instance.addPostFrameCallback((_) => _welcome());
   }
 
+  /// La parole de l'accueil (bienvenue, histoire, activités du jour) : coupée dès que l'enfant touche l'écran, sinon
+  /// elle continuait par-dessus la page ouverte.
+  Speech? _greeting;
+
   Future<void> _welcome() async {
     final s = AppScope.of(context);
+    _greeting?.close();
+    final g = _greeting = s.voice.scope();
     if (!s.ready) {
-      await s.voice.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
+      await g.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
       return;
     }
     final e = s.universeWords.episode(s.sessionsDone);
     e == null
-        ? await s.voice.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro')
-        : await s.voice.say(s.universeWords.story[e], id: 'univers.${s.universe.id}.histoire.$e');
+        ? await g.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro')
+        : await g.say(s.universeWords.story[e], id: 'univers.${s.universe.id}.histoire.$e');
     final plan = s.dayPlan();
     if (plan.finished) {
-      await s.voice.say(s.common.text('journee_finie'), id: 'commun.journee_finie');
+      await g.say(s.common.text('journee_finie'), id: 'commun.journee_finie');
     } else {
       final names = [for (final i in plan.items) s.topic(i.theme).name.toLowerCase()];
-      await s.voice.say('${s.common.text('aujourdhui')} ${names.take(names.length - 1).join(', ')} et ${names.last}.');
+      await g.say('${s.common.text('aujourdhui')} ${names.take(names.length - 1).join(', ')} et ${names.last}.');
     }
   }
 
@@ -53,6 +60,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   @override
   void dispose() {
+    _greeting?.close();
     _pulse.dispose();
     super.dispose();
   }
@@ -64,7 +72,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     final u = s.universe;
     final plan = s.dayPlan();
     return Scaffold(
-      body: UniverseBackground(
+      // Un toucher n'importe où arrête le message d'accueil (« Réécouter » le relance).
+      body: Listener(
+        onPointerDown: (_) => _greeting?.close(),
+        child: UniverseBackground(
         universe: u,
         child: SafeArea(
           child: Column(children: [
@@ -184,6 +195,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ],
           ]),
         ),
+      ),
       ),
     );
   }

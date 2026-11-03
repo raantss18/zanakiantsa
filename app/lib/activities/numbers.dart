@@ -454,7 +454,7 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
       loose--;
       removed++;
     });
-    a.app.voice.say('$removed');
+    a.speech.say('$removed');
   }
 
   @override

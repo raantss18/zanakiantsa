@@ -59,7 +59,7 @@ class _SyllablesActivityState extends State<SyllablesActivity> {
     for (var i = 0; i < item.syllables.length; i++) {
       if (!mounted) return;
       setState(() => clap = i);
-      await a.app.voice.say(item.syllables[i], force: true);
+      await a.speech.say(item.syllables[i], force: true);
       await Future<void>.delayed(const Duration(milliseconds: 250));
     }
     if (mounted) setState(() => clap = item.syllables.length);

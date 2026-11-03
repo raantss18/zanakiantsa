@@ -16,7 +16,7 @@ class Store {
   int child = 1;
 
   /// Réglages communs à la famille (les autres sont rangés sous `c<n>.`).
-  static const globalKeys = {'profils', 'profil_actif'};
+  static const globalKeys = {'profils', 'profil_actif', 'moteur_voix'};
 
   String _k(String k) => globalKeys.contains(k) ? k : 'c$child.$k';
 

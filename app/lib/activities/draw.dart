@@ -7,6 +7,7 @@ import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_re
 import 'package:path_provider/path_provider.dart';
 
 import '../app_state.dart';
+import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/events.dart';
 import '../ui/narrator.dart';
@@ -79,6 +80,9 @@ class _DrawPageState extends State<DrawPage> {
   late final Question q = skill.draw(Random());
   late final String prompt = skill.say('question', q, words: app.wordsFor(skill));
   late final Item item = skill.items[q.n];
+
+  /// La parole de la page : coupée quand on la quitte.
+  late final Speech speech = app.voice.scope();
   final _started = DateTime.now();
   mlkit.DigitalInkRecognizer? _recognizer;
   int misses = 0;
@@ -120,14 +124,14 @@ class _DrawPageState extends State<DrawPage> {
 
   /// « Réécouter » ([force]) dit la phrase même voix coupée (ADR 0025).
   Future<void> _listen({bool force = true}) async {
-    if (feedback != null) return app.voice.say(feedback!, force: force);
-    await app.voice.say(prompt, id: '${skill.voiceId('question')}.${q.n}', force: force);
-    await app.voice.say(skill.phrases['consigne']!, id: skill.voiceId('consigne'), force: force);
+    if (feedback != null) return speech.say(feedback!, force: force);
+    await speech.say(prompt, id: '${skill.voiceId('question')}.${q.n}', force: force);
+    await speech.say(skill.phrases['consigne']!, id: skill.voiceId('consigne'), force: force);
   }
 
   @override
   void dispose() {
-    app.voice.stop();
+    speech.close();
     app.voice.stopMusic();
     _recognizer?.close();
     // Retour avant la fin : le temps passé compte quand même pour la journée, sans faire avancer l'histoire.
@@ -139,7 +143,7 @@ class _DrawPageState extends State<DrawPage> {
 
   Future<void> _tell(String text) async {
     setState(() => feedback = text);
-    await app.voice.say(text);
+    await speech.say(text);
   }
 
   /// Ce que le modèle voit dans le dessin : ses noms anglais, du plus probable au moins probable.
@@ -218,7 +222,7 @@ class _DrawPageState extends State<DrawPage> {
     });
     if (ok) app.voice.fanfare();
     await Future<void>.delayed(const Duration(milliseconds: 700));
-    await app.voice.say(text);
+    await speech.say(text);
   }
 
   @override
@@ -268,7 +272,7 @@ class _DrawPageState extends State<DrawPage> {
                           width: width,
                           onColor: (c, name) {
                             setState(() => color = c);
-                            app.voice.say(name);
+                            speech.say(name);
                           },
                           onWidth: (w) => setState(() => width = w),
                           onUndo: strokes.isEmpty ? null : () => setState(strokes.removeLast),

@@ -65,7 +65,7 @@ class _CountActivityState extends State<CountActivity> {
   void _counted(int k) {
     setState(() => counted = k);
     if (a.demonstrate) return;
-    a.app.voice.say('$k');
+    a.speech.say('$k');
     if (k == n) Future.delayed(const Duration(milliseconds: 700), () => a.show('question'));
   }
 

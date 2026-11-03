@@ -20,6 +20,7 @@ import '../activities/composer.dart';
 import '../activities/denombrer.dart';
 import '../app_state.dart';
 import '../audio/sfx.dart';
+import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/events.dart';
 import '../core/rewards.dart';
@@ -58,6 +59,9 @@ class Attempt extends ChangeNotifier {
   late final Words words = app.wordsFor(skill);
   Timer? _helpTimer;
 
+  /// La parole de cette question : coupée dès qu'on passe à la suivante ou qu'on quitte la séance.
+  late final Speech speech = app.voice.scope();
+
   int misses = 0;
   bool busy = false;
   bool finished;
@@ -87,7 +91,7 @@ class Attempt extends ChangeNotifier {
 
   Future<void> say(String key, {bool force = false}) => example && key == 'consigne'
       ? Future.value() // pendant l'exemple, la voix raconte l'idée et la démonstration, pas la consigne
-      : _english ? app.voice.sayMixed(phrase(key), force: force) : app.voice.say(phrase(key), id: voiceId(key), force: force);
+      : _english ? speech.sayMixed(phrase(key), force: force) : speech.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
   Future<void> show(String key) {
@@ -104,7 +108,7 @@ class Attempt extends ChangeNotifier {
 
   /// « Réécouter » : une demande explicite, dite même voix coupée (ADR 0025).
   Future<void> listen() => helpText != null
-      ? (_english ? app.voice.sayMixed(helpText!, force: true) : app.voice.say(helpText!, force: true))
+      ? (_english ? speech.sayMixed(helpText!, force: true) : speech.say(helpText!, force: true))
       : say(statementKey, force: true);
 
   Future<void> _record({required bool correct, required bool demonstrated}) => app.record(Answer(
@@ -125,7 +129,7 @@ class Attempt extends ChangeNotifier {
     if (idea != null) {
       helpText = idea;
       notifyListeners();
-      await (_english ? app.voice.sayMixed(idea) : app.voice.say(idea));
+      await (_english ? speech.sayMixed(idea) : speech.say(idea));
       await _readingTime(idea);
     }
     demonstrate = true;
@@ -164,7 +168,7 @@ class Attempt extends ChangeNotifier {
         await say('bravo');
         final enc = app.common.list('encouragements');
         final i = _rand.nextInt(enc.length);
-        await app.voice.say(enc[i], id: 'commun.encouragements.$i');
+        await speech.say(enc[i], id: 'commun.encouragements.$i');
       } else {
         misses++;
         // Sans explication propre à cette erreur, on garde le conseil de la compétence : c'est ce qu'il y a à revoir.
@@ -188,7 +192,7 @@ class Attempt extends ChangeNotifier {
               helpText = phrase('indice');
               notifyListeners();
               await _record(correct: false, demonstrated: false);
-              await app.voice.say(app.common.text('apres_indice'), id: 'commun.apres_indice');
+              await speech.say(app.common.text('apres_indice'), id: 'commun.apres_indice');
               await say('indice');
             }
         }
@@ -205,11 +209,11 @@ class Attempt extends ChangeNotifier {
     if (why == null) {
       helpText = phrase(key);
       notifyListeners();
-      await app.voice.say(app.common.text('encore'), id: 'commun.encore');
+      await speech.say(app.common.text('encore'), id: 'commun.encore');
     } else {
       helpText = why;
       notifyListeners();
-      await (_english ? app.voice.sayMixed(why) : app.voice.say(why));
+      await (_english ? speech.sayMixed(why) : speech.say(why));
       // Voix coupée : on laisse le temps de lire l'explication avant l'aide.
       await _readingTime(why);
       helpText = phrase(key);
@@ -229,6 +233,7 @@ class Attempt extends ChangeNotifier {
   @override
   void dispose() {
     _helpTimer?.cancel();
+    speech.close();
     super.dispose();
   }
 }
@@ -300,6 +305,9 @@ class _SessionPageState extends State<SessionPage> {
   int firstTry = 0;
   int? _record;
   late final Rewards before = app.rewards;
+
+  /// La parole de la séance (fin de séance, histoire…) : coupée quand on quitte la page.
+  late final Speech speech = app.voice.scope();
   final _rand = Random();
   final _started = DateTime.now();
   late int index = widget.resume?.index ?? 0;
@@ -373,16 +381,16 @@ class _SessionPageState extends State<SessionPage> {
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
       if (widget.challenge) {
-        await app.voice.say(challengeText);
+        await speech.say(challengeText);
         return;
       }
-      await app.voice.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
+      await speech.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
       final e = app.universeWords.episode(app.sessionsDone)!;
-      await app.voice.say(app.universeWords.story[e], id: 'univers.${app.universe.id}.histoire.$e');
+      await speech.say(app.universeWords.story[e], id: 'univers.${app.universe.id}.histoire.$e');
       if (app.rewards.unlockedSince(before)) {
-        await app.voice.say(app.common.text('nouvel_autocollant'), id: 'commun.nouvel_autocollant');
+        await speech.say(app.common.text('nouvel_autocollant'), id: 'commun.nouvel_autocollant');
       }
-      await sayDayStatus(app, widget.topic);
+      await sayDayStatus(app, widget.topic, speech);
       return;
     }
     final old = attempt;
@@ -410,7 +418,7 @@ class _SessionPageState extends State<SessionPage> {
 
   @override
   void dispose() {
-    app.voice.stop();
+    speech.close();
     app.voice.stopMusic();
     attempt?.dispose();
     // Retour en cours de séance : le temps compte pour la journée, sans faire avancer l'histoire (ADR 0018).
@@ -655,11 +663,11 @@ class _End extends StatelessWidget {
 }
 
 /// Dit où en est la journée après une activité : pause si ce domaine est fini, fin de journée si tout l'est.
-Future<void> sayDayStatus(AppState app, String theme) async {
+Future<void> sayDayStatus(AppState app, String theme, [Speech? speech]) async {
   final plan = app.dayPlan();
   if (!plan.items.any((i) => i.theme == theme) || !plan.item(theme).finished) return;
   final k = plan.finished ? 'journee_finie' : 'pause';
-  await app.voice.say(app.common.text(k), id: 'commun.$k');
+  await (speech?.say ?? app.voice.say)(app.common.text(k), id: 'commun.$k');
 }
 
 /// Carte de fin d'une activité (ADR 0018) : ce qu'on a gagné ([child]), puis la suite de la journée. Domaine pas

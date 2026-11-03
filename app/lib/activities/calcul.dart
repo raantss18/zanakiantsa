@@ -81,7 +81,7 @@ class _CalcActivityState extends State<CalcActivity> {
     });
     if (value == null) {
       // Pas lu : ce n'est pas un essai manqué.
-      await a.app.voice.say(a.app.common.text('pas_compris'), id: 'commun.pas_compris');
+      await a.speech.say(a.app.common.text('pas_compris'), id: 'commun.pas_compris');
       return;
     }
     await a.submit(value == expected);
