@@ -11,7 +11,8 @@
 2. **Plan d'abord**, puis une tranche verticale minimale, puis élargissement. Jamais toutes les activités d'un coup.
 3. **Rien casser.** Une décision = un ADR ≤ 15 lignes (`docs/adr/NNNN-titre.md`). Commits courts en français
    (Conventional Commits), chemins explicites (jamais `git add -A`), `main` toujours vert.
-4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai réel sur la tablette (ci-dessous).
+4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai sur l'émulateur `zanakiantsa_tab`
+   (ci-dessous) ; depuis le 2026-11-03, plus de tablette physique disponible pour les essais.
 5. **100 % hors ligne pour le cœur.** Aucun compte enfant, aucune pub, aucun achat intégré, aucune télémétrie de
    l'app : le journal d'événements reste sur l'appareil. Ni image, ni voix, ni tracé ne quitte l'appareil ;
    **exception connue** : ML Kit envoie à Google des statistiques techniques d'usage (ADR 0012, `docs/conformite.md`).
@@ -29,6 +30,12 @@
 Samsung Galaxy Tab A11 **SM-X135G** · Android 16 / One UI 8 · MediaTek MT8781 (8 cœurs) · RAM 3,7 Go
 (≈ 1,1–1,3 Go disponibles en usage) · écran 800 × 1340 px, densité 280 · GLES 3.2, Vulkan 1 · caméra, micro.
 Profil supervisé par **Family Link** (propriétaire du profil) : ne jamais le modifier ni le contourner.
+
+**Émulateur d'essai** (AVD `zanakiantsa_tab`) : Android 16 x86_64 avec traduction ARM (`libndk_translation`, l'APK
+arm64 s'installe tel quel), écran 800 × 1340, densité 280 comme la SM-X135G. Tablette B (paysage, sw601) :
+`adb shell wm density 213` puis relancer l'app. Lancement :
+`ANDROID_SDK_ROOT=$HOME/Android/Sdk ~/Android/Sdk/emulator/emulator -avd zanakiantsa_tab -no-snapshot`.
+⚠ L'émulateur ne mesure ni la mémoire, ni le démarrage, ni la fluidité de la SM-X135G (GPU et CPU différents).
 
 ## Budgets (⚠ hypothèses à recaler après la première mesure)
 

@@ -76,8 +76,12 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Scène de réussite propre à chaque monde, vérifiée en capture sur les 6 mondes (2026-11-03)
 - ✅ Fil d'histoire (8 épisodes par monde, un par séance finie) et bruitages par monde synthétisés par code (ADR 0017) ;
   vérifié sur tablette A (robots) : épisode en fin de séance et à l'accueil, son joué (lecteur à 22 050 Hz relevé) ; 27 tests
-- ⏳ Vérifier sur tablette l'écran de fin d'un monde de fille et le paysage (tablette B) : non fait, la tablette A est
-  passée en « temps de pause » Family Link pendant l'essai et la B n'était pas branchée
+- ✅ Vérifié sur l'émulateur `zanakiantsa_tab` (Android 16, 800 × 1340) : monde des fées, épisodes 1 à 3, sons joués,
+  fin de séance et accueil en paysage (densité de la tablette B)
+- ✅ Version 0.2.0 publiée (2026-11-03, `app-v0.2.0`, build 2002) ; sur l'émulateur, la 0.1.0 trouve, télécharge et
+  vérifie la 0.2.0 puis ouvre l'installateur Android ; la dernière étape (autoriser « sources inconnues ») reste à
+  faire par Antsa, réglage de sécurité
+- ⏳ Mesures mémoire / démarrage / fluidité de la 0.2.0 : impossibles sans tablette physique (l'émulateur ne les reproduit pas)
 - ⏳ Voix enregistrées : les phrases dépendent maintenant de l'univers et des nombres → la synthèse vocale reste
   nécessaire pour elles ; à décider (ADR 0002)
 - ⏳ Essai avec les enfants : observer l'effet des autocollants sur l'intérêt pour l'activité (ADR 0015)

@@ -7,7 +7,8 @@ ailleurs** — sans elle, plus aucune mise à jour ne peut être signée et les 
 2. `cd app && flutter test && tool/release.sh "Ce que la version permet de faire."`
    → `release-out/` : l'APK arm64, `release.json` (build = versionCode réel de l'APK, Flutter ajoute 2000 pour
    arm64), `release.json.sig`. `flutter test test/release_out_test.dart` vérifie la signature avec la clé de l'app.
-3. Essai sur les deux tablettes (`adb -s <série> install -r release-out/*.apk`).
+3. Essai sur l'émulateur `zanakiantsa_tab` (`adb -s <série> install -r release-out/*.apk`), en portrait et en
+   paysage (voir `CLAUDE.md`).
 4. Publication (action publique, à la main) :
    `gh release create app-vX.Y.Z release-out/* --title "Zanak'i Antsa X.Y.Z" --notes "…"`.
    L'app lit `https://github.com/raantss18/zanakiantsa/releases/latest/download/release.json`.
