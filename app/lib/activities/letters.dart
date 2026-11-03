@@ -274,7 +274,8 @@ class _TraceActivityState extends State<TraceActivity> {
   void _changed() => setState(() {});
 
   TextPainter _guide(Size box) => TextPainter(
-        text: TextSpan(text: letter, style: letterStyle(style, box.height * (style == 'cursive' ? 0.5 : 0.78), color: const Color(0xFFCBD3CE))),
+        // La cursive a des lettres basses (x-height) : on la dessine plus grande pour que le tracé reste ample.
+        text: TextSpan(text: letter, style: letterStyle(style, box.height * (style == 'cursive' ? 0.95 : 0.78), color: const Color(0xFFCBD3CE))),
         textDirection: TextDirection.ltr,
       )..layout();
 

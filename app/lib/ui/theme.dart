@@ -215,7 +215,9 @@ class PlayfulTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle base(Paint? fg) => TextStyle(fontFamily: 'Fredoka', fontWeight: FontWeight.w700, fontSize: size, height: 1.1, foreground: fg);
+    // Espaces élargis : sans eux, le contour blanc des lettres comble les blancs entre les mots (« Quijoue »).
+    TextStyle base(Paint? fg) =>
+        TextStyle(fontFamily: 'Fredoka', fontWeight: FontWeight.w700, fontSize: size, height: 1.1, letterSpacing: size * 0.02, wordSpacing: size * 0.35, foreground: fg);
     var n = 0;
     final colored = [
       for (final ch in text.characters)

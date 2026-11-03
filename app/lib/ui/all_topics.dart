@@ -46,7 +46,8 @@ class AllTopicsPage extends StatelessWidget {
                   for (final t in app.topics)
                     Builder(builder: (context) {
                       final p = app.progressOf(t);
-                      final done = t.skills.where((s) => p.mastered(s.id)).length;
+                      // Seules les compétences vraiment maîtrisées comptent (pas celles tenues pour acquises par l'âge).
+                      final done = t.skills.where((s) => p.earned(s.id)).length;
                       return Semantics(
                         button: true,
                         label: '${t.name}, $done compétences maîtrisées sur ${t.skills.length}',

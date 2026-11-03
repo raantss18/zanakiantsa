@@ -50,6 +50,9 @@ class Progress {
 
   bool mastered(String id) => skipped(id) || isMastered(answersOf(id));
 
+  /// Maîtrisée par l'enfant lui-même (pas seulement tenue pour acquise à cause de son âge).
+  bool earned(String id) => isMastered(answersOf(id));
+
   ReviewCard? card(String id) => cardFrom(answersOf(id), isMastered);
 
   bool unlocked(SkillRef s) => s.prerequisites.every(mastered);

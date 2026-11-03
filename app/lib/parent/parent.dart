@@ -121,7 +121,7 @@ class _ParentPageState extends State<ParentPage> {
           title: const Text('Ajouter un enfant'),
           content: SingleChildScrollView(
             child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TextField(controller: field, decoration: const InputDecoration(labelText: 'Prénom (facultatif)'), textCapitalization: TextCapitalization.words),
+              TextField(controller: field, autofocus: true, decoration: const InputDecoration(labelText: 'Prénom (facultatif)'), textCapitalization: TextCapitalization.words),
               const SizedBox(height: 12),
               const Text('Âge'),
               Wrap(spacing: 6, children: [
