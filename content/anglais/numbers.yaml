@@ -1,0 +1,56 @@
+id: numbers
+titre: "Les nombres de 1 à 10 en anglais"
+niveau: CP
+prerequis: []
+programme: { source: lver, texte: "Reconnaître certaines lettres de l’alphabet et les chiffres (comptine One, Two, Buckle My Shoe : l’élève comprend les nombres énoncés)." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le nombre en anglais et touche le bon chiffre."
+  question: "Touche : « {texte} »."
+  indice: "Compte en anglais sur tes doigts : « one, two, three »."
+  exemple: "Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "one"
+    bonne: ["31-20e3", "1"]
+    autres: [["38-20e3", "8"], ["1f51f", "10"]]
+    explication: "« one », c'est 1."
+  - texte: "two"
+    bonne: ["32-20e3", "2"]
+    autres: [["33-20e3", "3"], ["35-20e3", "5"]]
+    explication: "« two », c'est 2."
+  - texte: "three"
+    bonne: ["33-20e3", "3"]
+    autres: [["32-20e3", "2"], ["38-20e3", "8"]]
+    explication: "« three », c'est 3."
+  - texte: "four"
+    bonne: ["34-20e3", "4"]
+    autres: [["31-20e3", "1"], ["32-20e3", "2"]]
+    explication: "« four », c'est 4."
+  - texte: "five"
+    bonne: ["35-20e3", "5"]
+    autres: [["34-20e3", "4"], ["31-20e3", "1"]]
+    explication: "« five », c'est 5."
+  - texte: "six"
+    bonne: ["36-20e3", "6"]
+    autres: [["38-20e3", "8"], ["31-20e3", "1"]]
+    explication: "« six », c'est 6."
+  - texte: "seven"
+    bonne: ["37-20e3", "7"]
+    autres: [["34-20e3", "4"], ["31-20e3", "1"]]
+    explication: "« seven », c'est 7."
+  - texte: "eight"
+    bonne: ["38-20e3", "8"]
+    autres: [["1f51f", "10"], ["33-20e3", "3"]]
+    explication: "« eight », c'est 8."
+  - texte: "nine"
+    bonne: ["39-20e3", "9"]
+    autres: [["35-20e3", "5"], ["37-20e3", "7"]]
+    explication: "« nine », c'est 9."
+  - texte: "ten"
+    bonne: ["1f51f", "10"]
+    autres: [["33-20e3", "3"], ["32-20e3", "2"]]
+    explication: "« ten », c'est 10."

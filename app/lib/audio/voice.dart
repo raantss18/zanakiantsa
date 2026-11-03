@@ -7,6 +7,14 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class Voice {
   final _tts = FlutterTts();
+
+  /// Voix anglaise pour les mots d'anglais (ADR 0022) ; initialisée au premier besoin.
+  final _en = FlutterTts();
+  late final Future<void> _enReady = () async {
+    await _en.setLanguage('en-GB');
+    await _en.setSpeechRate(0.4);
+    await _en.awaitSpeakCompletion(true);
+  }();
   final _player = AudioPlayer();
   final _sfx = AudioPlayer();
   Set<String> _recorded = {};
@@ -39,7 +47,21 @@ class Voice {
     }
   }
 
+  /// Phrase en français dont les passages entre « » sont en anglais (« Touche : « red ». ») : chaque morceau est dit
+  /// par la bonne voix, l'un après l'autre.
+  Future<void> sayMixed(String text) async {
+    await _ready;
+    await _enReady;
+    await stop();
+    for (final (i, part) in text.split(RegExp('[«»]')).indexed) {
+      final t = part.trim();
+      if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
+      await (i.isOdd ? _en : _tts).speak(t);
+    }
+  }
+
   Future<void> stop() async {
+    await _en.stop();
     await _tts.stop();
     await _player.stop();
   }

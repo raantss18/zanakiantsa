@@ -1,0 +1,48 @@
+id: colours
+titre: "Les couleurs en anglais"
+niveau: CP
+prerequis: []
+programme: { source: lver, texte: "Reconnaître des mots simples en s’appuyant sur les indices visuels ; exemple cité : les goûts, couleurs préférées." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche la bonne couleur."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit une couleur."
+  exemple: "Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "red"
+    bonne: ["1f534", "rouge"]
+    autres: [["1f7e1", "jaune"], ["1f7e2", "vert"]]
+    explication: "« red », c'est rouge."
+  - texte: "blue"
+    bonne: ["1f535", "bleu"]
+    autres: [["1f7e0", "orange"], ["26ab", "noir"]]
+    explication: "« blue », c'est bleu."
+  - texte: "green"
+    bonne: ["1f7e2", "vert"]
+    autres: [["1f534", "rouge"], ["26aa", "blanc"]]
+    explication: "« green », c'est vert."
+  - texte: "yellow"
+    bonne: ["1f7e1", "jaune"]
+    autres: [["26aa", "blanc"], ["1f7e3", "violet"]]
+    explication: "« yellow », c'est jaune."
+  - texte: "orange"
+    bonne: ["1f7e0", "orange"]
+    autres: [["1f534", "rouge"], ["1f7e2", "vert"]]
+    explication: "« orange », c'est orange."
+  - texte: "purple"
+    bonne: ["1f7e3", "violet"]
+    autres: [["1f7e0", "orange"], ["1f534", "rouge"]]
+    explication: "« purple », c'est violet."
+  - texte: "black"
+    bonne: ["26ab", "noir"]
+    autres: [["1f7e0", "orange"], ["1f535", "bleu"]]
+    explication: "« black », c'est noir."
+  - texte: "white"
+    bonne: ["26aa", "blanc"]
+    autres: [["1f534", "rouge"], ["26ab", "noir"]]
+    explication: "« white », c'est blanc."

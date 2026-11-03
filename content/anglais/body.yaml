@@ -1,0 +1,48 @@
+id: body
+titre: "Le corps en anglais"
+niveau: CP
+prerequis: []
+programme: { source: lver, texte: "Lors de la découverte de la comptine Head, Shoulders, Knees and Toes, l'élève associe les mots aux parties du corps énoncées." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche la bonne partie du corps."
+  question: "Touche : « {texte} »."
+  indice: "Montre sur toi la partie du corps, puis touche l'image."
+  exemple: "Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "eye"
+    bonne: ["1f441", "l'œil"]
+    autres: [["1f9b6", "le pied"], ["270b", "la main"]]
+    explication: "« eye », c'est l'œil."
+  - texte: "ear"
+    bonne: ["1f442", "l'oreille"]
+    autres: [["1f444", "la bouche"], ["1f4aa", "le bras"]]
+    explication: "« ear », c'est l'oreille."
+  - texte: "nose"
+    bonne: ["1f443", "le nez"]
+    autres: [["1f442", "l'oreille"], ["1f4aa", "le bras"]]
+    explication: "« nose », c'est le nez."
+  - texte: "mouth"
+    bonne: ["1f444", "la bouche"]
+    autres: [["1f9b5", "la jambe"], ["1f442", "l'oreille"]]
+    explication: "« mouth », c'est la bouche."
+  - texte: "hand"
+    bonne: ["270b", "la main"]
+    autres: [["1f441", "l'œil"], ["1f9b6", "le pied"]]
+    explication: "« hand », c'est la main."
+  - texte: "foot"
+    bonne: ["1f9b6", "le pied"]
+    autres: [["1f443", "le nez"], ["270b", "la main"]]
+    explication: "« foot », c'est le pied."
+  - texte: "leg"
+    bonne: ["1f9b5", "la jambe"]
+    autres: [["1f444", "la bouche"], ["1f443", "le nez"]]
+    explication: "« leg », c'est la jambe."
+  - texte: "arm"
+    bonne: ["1f4aa", "le bras"]
+    autres: [["1f9b6", "le pied"], ["1f444", "la bouche"]]
+    explication: "« arm », c'est le bras."

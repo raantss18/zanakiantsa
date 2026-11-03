@@ -1,0 +1,52 @@
+id: animals
+titre: "Les animaux en anglais"
+niveau: CP
+prerequis: []
+programme: { source: lver, texte: "Reconnaître les mots familiers pour parler de soi, de sa sphère immédiate et des thématiques culturelles et disciplinaires travaillées en classe." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche le bon animal."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit un animal."
+  exemple: "Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "cat"
+    bonne: ["1f408", "le chat"]
+    autres: [["1f426", "l'oiseau"], ["1f986", "le canard"]]
+    explication: "« cat », c'est le chat."
+  - texte: "dog"
+    bonne: ["1f415", "le chien"]
+    autres: [["1f40e", "le cheval"], ["1f408", "le chat"]]
+    explication: "« dog », c'est le chien."
+  - texte: "cow"
+    bonne: ["1f404", "la vache"]
+    autres: [["1f41f", "le poisson"], ["1f40e", "le cheval"]]
+    explication: "« cow », c'est la vache."
+  - texte: "horse"
+    bonne: ["1f40e", "le cheval"]
+    autres: [["1f415", "le chien"], ["1f426", "l'oiseau"]]
+    explication: "« horse », c'est le cheval."
+  - texte: "fish"
+    bonne: ["1f41f", "le poisson"]
+    autres: [["1f415", "le chien"], ["1f426", "l'oiseau"]]
+    explication: "« fish », c'est le poisson."
+  - texte: "bird"
+    bonne: ["1f426", "l'oiseau"]
+    autres: [["1f408", "le chat"], ["1f41f", "le poisson"]]
+    explication: "« bird », c'est l'oiseau."
+  - texte: "rabbit"
+    bonne: ["1f407", "le lapin"]
+    autres: [["1f40e", "le cheval"], ["1f986", "le canard"]]
+    explication: "« rabbit », c'est le lapin."
+  - texte: "sheep"
+    bonne: ["1f411", "le mouton"]
+    autres: [["1f407", "le lapin"], ["1f986", "le canard"]]
+    explication: "« sheep », c'est le mouton."
+  - texte: "duck"
+    bonne: ["1f986", "le canard"]
+    autres: [["1f426", "l'oiseau"], ["1f40e", "le cheval"]]
+    explication: "« duck », c'est le canard."
