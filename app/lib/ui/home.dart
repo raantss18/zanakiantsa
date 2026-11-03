@@ -1,17 +1,18 @@
-import 'dart:math';
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 
+import '../activities/draw.dart';
 import '../app_state.dart';
+import '../content/content.dart';
+import '../core/day.dart';
 import '../parent/gate.dart';
 import 'album.dart';
 import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
 
-/// Accueil enfant : le fil rouge de l'univers (un chemin qui s'allume, jamais remis à zéro), la mascotte qui
-/// présente l'univers (écrit et dit), un gros bouton « Jouer ». Sans genre saisi, on demande un adulte (ADR 0014).
+/// Accueil enfant (ADR 0018) : l'épisode du fil d'histoire, puis les trois activités du jour en grandes cartes ; la
+/// suivante à faire est mise en avant, celles finies portent une ✔. L'enfant enchaîne seul. Sans genre saisi, on
+/// demande un adulte (ADR 0014).
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
   @override
@@ -19,8 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  late final _pulse = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400))..repeat(reverse: true);
-  final Map<String, ui.Image> _images = {};
+  late final _pulse = AnimationController(vsync: this, duration: const Duration(milliseconds: 1100))..repeat(reverse: true);
 
   @override
   void initState() {
@@ -28,19 +28,34 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     WidgetsBinding.instance.addPostFrameCallback((_) => _welcome());
   }
 
-  void _welcome() {
+  Future<void> _welcome() async {
     final s = AppScope.of(context);
     if (!s.ready) {
-      s.voice.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
+      await s.voice.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
+      return;
+    }
+    final e = s.universeWords.episode(s.sessionsDone);
+    e == null
+        ? await s.voice.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro')
+        : await s.voice.say(s.universeWords.story[e], id: 'univers.${s.universe.id}.histoire.$e');
+    final plan = s.dayPlan();
+    if (plan.finished) {
+      await s.voice.say(s.common.text('journee_finie'), id: 'commun.journee_finie');
     } else {
-      final e = s.universeWords.episode(s.sessionsDone);
-      e == null
-          ? s.voice.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro')
-          : s.voice.say(s.universeWords.story[e], id: 'univers.${s.universe.id}.histoire.$e');
+      final names = [for (final i in plan.items) s.topic(i.theme).name.toLowerCase()];
+      await s.voice.say('${s.common.text('aujourdhui')} ${names.take(names.length - 1).join(', ')} et ${names.last}.');
     }
   }
 
-  Future<ui.Image> _image(String code) async => _images[code] ??= await artImage(code, 96);
+  Future<void> _open(String theme) async {
+    final s = AppScope.of(context);
+    await s.voice.stop();
+    if (!mounted) return;
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => theme == 'dessin' ? const DrawPage() : SessionPage(topic: theme),
+    ));
+    await s.refresh();
+  }
 
   @override
   void dispose() {
@@ -52,6 +67,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     final s = AppScope.of(context);
     final u = s.universe;
+    final plan = s.dayPlan();
     return Scaffold(
       body: UniverseBackground(
         universe: u,
@@ -62,55 +78,51 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))
             else ...[
               _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+              if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
               Expanded(
-                child: split(
-                  sideSize: 210,
-                  main: FutureBuilder<List<ui.Image>>(
-                    future: Future.wait([_image(u.objects.first), _image(u.mascot)]),
-                    builder: (_, snap) => AnimatedBuilder(
-                      animation: _pulse,
-                      builder: (_, _) => CustomPaint(
-                        size: Size.infinite,
-                        painter: PathPainter(
-                          done: s.sessionsDone,
-                          pulse: _pulse.value,
-                          stone: snap.data?[0],
-                          mascot: snap.data?[1],
-                          road: u.night ? const Color(0x66FFFFFF) : u.onCard.withValues(alpha: 0.22),
-                          current: u.night ? u.primary : u.onCard,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                  child: LayoutBuilder(builder: (_, k) {
+                    final wide = k.maxWidth > k.maxHeight * 1.1;
+                    final cards = [
+                      for (final (n, item) in plan.items.indexed)
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: wide ? 0 : 12, right: wide && n < 2 ? 12 : 0),
+                            child: DayCard(
+                              topic: s.topic(item.theme),
+                              item: item,
+                              number: n + 1,
+                              next: plan.next == item,
+                              pulse: _pulse,
+                              wide: wide,
+                              onTap: () => _open(item.theme),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                  side: (axis) => Flex(direction: axis, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                    _RoundButton(
-                      size: 88,
-                      color: surface,
-                      tooltip: 'Mon album',
-                      onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
-                      child: const Icon(Icons.collections_bookmark_rounded, size: 46, color: ink),
-                    ),
-                    _RoundButton(
-                      size: 150,
-                      color: u.primary,
-                      tooltip: 'Jouer',
-                      onPressed: () async {
-                        await s.voice.stop();
-                        if (!context.mounted) return;
-                        await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SessionPage()));
-                        await s.refresh();
-                      },
-                      child: Icon(Icons.play_arrow_rounded, size: 110, color: u.onPrimary),
-                    ),
-                    _RoundButton(
-                      size: 88,
-                      color: surface,
-                      tooltip: 'Changer de monde',
-                      onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
-                      child: Art(u.mascot, size: 52),
-                    ),
-                  ]),
+                    ];
+                    return Flex(direction: wide ? Axis.horizontal : Axis.vertical, children: cards);
+                  }),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                  _RoundButton(
+                    size: 80,
+                    color: surface,
+                    tooltip: 'Mon album',
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
+                    child: const Icon(Icons.collections_bookmark_rounded, size: 42, color: ink),
+                  ),
+                  _RoundButton(
+                    size: 80,
+                    color: surface,
+                    tooltip: 'Changer de monde',
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
+                    child: Art(u.mascot, size: 48),
+                  ),
+                ]),
               ),
             ],
           ]),
@@ -118,6 +130,136 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ),
     );
   }
+}
+
+/// Une activité du jour : icône du domaine, nom écrit, barre du temps fait, et un rond d'action (▶ ou ✔ « Fini »).
+/// La carte suivante à faire a un contour épais et un ▶ qui pulse ; l'état ne repose jamais sur la couleur seule.
+class DayCard extends StatelessWidget {
+  const DayCard({
+    super.key,
+    required this.topic,
+    required this.item,
+    required this.number,
+    required this.next,
+    required this.pulse,
+    required this.wide,
+    required this.onTap,
+  });
+  final Topic topic;
+  final DayItem item;
+  final int number;
+  final bool next, wide;
+  final Animation<double> pulse;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final u = AppScope.of(context).universe;
+    final accent = u.night ? u.primary : u.onCard;
+    final done = item.finished;
+    final icon = Stack(clipBehavior: Clip.none, children: [
+      Container(
+        width: 104,
+        height: 104,
+        decoration: BoxDecoration(color: accent.withValues(alpha: 0.12), shape: BoxShape.circle),
+        alignment: Alignment.center,
+        child: Art(topic.icon, size: 68),
+      ),
+      Positioned(
+        left: -4,
+        top: -4,
+        child: CircleAvatar(
+          radius: 17,
+          backgroundColor: ink,
+          child: Text('$number', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white)),
+        ),
+      ),
+    ]);
+    final bar = Container(
+      height: 16,
+      decoration: BoxDecoration(color: const Color(0xFFE3E7E4), borderRadius: BorderRadius.circular(8)),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: FractionallySizedBox(widthFactor: item.ratio, heightFactor: 1, child: ColoredBox(color: done ? green : accent)),
+        ),
+      ),
+    );
+    final action = done
+        ? const Column(mainAxisSize: MainAxisSize.min, children: [
+            CircleAvatar(radius: 34, backgroundColor: green, child: Icon(Icons.check_rounded, size: 46, color: Colors.white)),
+            SizedBox(height: 2),
+            Text('Fini', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: green)),
+          ])
+        : AnimatedBuilder(
+            animation: pulse,
+            builder: (_, child) => Transform.scale(scale: next ? 1 + 0.08 * pulse.value : 1, child: child),
+            child: CircleAvatar(
+              radius: 38,
+              backgroundColor: next ? u.primary : const Color(0xFFE3E7E4),
+              child: Icon(Icons.play_arrow_rounded, size: 56, color: next ? u.onPrimary : ink),
+            ),
+          );
+    final name = Text(topic.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: ink));
+    final minutes = item.done.inMinutes;
+    return Semantics(
+      button: true,
+      label: '${topic.name}, $minutes minutes sur ${item.target.inMinutes}${done ? ', fini' : ''}',
+      excludeSemantics: true,
+      child: Material(
+        color: surface,
+        elevation: next ? 6 : 2,
+        shadowColor: const Color(0x55000000),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(28),
+          side: BorderSide(color: next ? u.primary : Colors.transparent, width: next ? 6 : 0),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(28),
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: wide
+                ? Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [icon, name, bar, action])
+                : Row(children: [
+                    icon,
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        name,
+                        const SizedBox(height: 12),
+                        bar,
+                      ]),
+                    ),
+                    const SizedBox(width: 16),
+                    action,
+                  ]),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Bandeau « journée finie » : coupe, texte écrit (les cartes restent jouables, le parent règle la durée).
+class _DayDone extends StatelessWidget {
+  const _DayDone({required this.text});
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(color: const Color(0xFFEAF5EC), borderRadius: BorderRadius.circular(24), border: Border.all(color: green, width: 3)),
+          child: Row(children: [
+            const Art('1f3c6', size: 52),
+            const SizedBox(width: 12),
+            Expanded(child: Text(text, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink))),
+          ]),
+        ),
+      );
 }
 
 class _Header extends StatelessWidget {
@@ -346,70 +488,4 @@ class _UniverseCard extends StatelessWidget {
           ),
         ),
       );
-}
-
-/// Le fil rouge : un chemin sinueux de pierres. Les pierres des séances finies portent l'objet de l'univers ; la
-/// mascotte se tient sur la pierre courante. Il ne recule jamais (`docs/vision.md`).
-class PathPainter extends CustomPainter {
-  PathPainter({required this.done, required this.pulse, this.stone, this.mascot, required this.road, required this.current});
-  final int done;
-  final double pulse;
-  final ui.Image? stone, mascot;
-  final Color road, current;
-
-  static const visible = 8;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final first = max(0, done - 2);
-    final stones = <Offset>[];
-    for (var i = 0; i < visible; i++) {
-      final t = i / (visible - 1);
-      stones.add(Offset(size.width * (0.5 + 0.3 * sin((first + i) * 0.9)), size.height * (0.9 - 0.8 * t)));
-    }
-    final roadPaint = Paint()
-      ..color = road
-      ..strokeWidth = 30
-      ..strokeCap = StrokeCap.round
-      ..style = PaintingStyle.stroke;
-    final path = Path()..moveTo(stones.first.dx, stones.first.dy);
-    for (var i = 1; i < stones.length; i++) {
-      final a = stones[i - 1], b = stones[i];
-      path.quadraticBezierTo(a.dx, (a.dy + b.dy) / 2, b.dx, b.dy);
-    }
-    canvas.drawPath(path, roadPaint);
-
-    for (var i = 0; i < stones.length; i++) {
-      final index = first + i;
-      final c = stones[i];
-      if (index < done) {
-        canvas.drawCircle(c, 26, Paint()..color = Colors.white);
-        canvas.drawCircle(c, 26, Paint()
-          ..color = current
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 4);
-        _img(canvas, stone, c, 36);
-      } else if (index == done) {
-        canvas.drawCircle(c, 32 + 6 * pulse, Paint()..color = current.withValues(alpha: 0.25));
-        canvas.drawCircle(c, 28, Paint()..color = current);
-        _img(canvas, mascot, c - const Offset(0, 34), 60);
-      } else {
-        // Pierre à venir : blanche avec un contour, visible sur fond clair comme sombre.
-        canvas.drawCircle(c, 20, Paint()..color = Colors.white);
-        canvas.drawCircle(c, 20, Paint()
-          ..color = current.withValues(alpha: 0.5)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 3);
-      }
-    }
-  }
-
-  void _img(Canvas canvas, ui.Image? img, Offset c, double s) {
-    if (img == null) return;
-    canvas.drawImageRect(img, Rect.fromLTWH(0, 0, img.width.toDouble(), img.height.toDouble()),
-        Rect.fromCenter(center: c, width: s, height: s), Paint()..filterQuality = FilterQuality.medium);
-  }
-
-  @override
-  bool shouldRepaint(PathPainter old) => old.done != done || old.pulse != pulse || old.stone != stone || old.mascot != mascot;
 }

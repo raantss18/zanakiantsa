@@ -1,0 +1,15 @@
+id: lent-rapide
+titre: "Un rythme lent ou rapide"
+niveau: GS
+prerequis: []
+programme: { source: c1, texte: "Après plusieurs écoutes d’un extrait musical, décrire le rythme (lent, rapide)." }
+activite: ecouter
+# mots : [propriété du son « A », propriété du son « B »] ; la question demande l'un ou l'autre.
+parametres: { dimension: tempo, mots: ["rapide", "lent"] }
+phrases:
+  consigne: "Écoute les deux sons."
+  question: "Quel son est le plus {mot} ?"
+  indice: "Un rythme rapide va vite, comme quand on court. Un rythme lent va doucement, comme quand on marche."
+  exemple: "Touche « Réécouter » pour entendre encore les deux sons."
+  demonstration: "Écoute : le son {rep} est le plus {mot}."
+  bravo: "Oui ! Le son {rep} est le plus {mot}."

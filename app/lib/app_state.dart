@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import 'audio/voice.dart';
 import 'content/content.dart';
+import 'core/day.dart';
 import 'core/events.dart';
 import 'core/progress.dart';
 import 'core/rewards.dart';
@@ -10,15 +11,23 @@ import 'ui/universe.dart';
 
 /// État de l'app : contenu, stockage, voix, réglages. Un seul objet, transmis par [AppScope].
 class AppState extends ChangeNotifier {
-  AppState(this.theme, this.common, this.words, this.store, this.voice);
-  final Topic theme;
+  AppState(this.topics, this.common, this.words, this.store, this.voice);
+
+  /// Domaines, dans l'ordre de content/domaines.yaml (ADR 0018).
+  final List<Topic> topics;
   final Common common;
   final Map<String, UniverseWords> words;
   final Store store;
   final Voice voice;
 
   List<Answer> journal = [];
+  List<SessionLog> sessions = [];
+
+  /// Séances finies (tous domaines) : font avancer le fil d'histoire (ADR 0017).
   int sessionsDone = 0;
+
+  /// Temps de jeu proposé par jour, réglé par le parent (ADR 0018).
+  int dailyMinutes = defaultDailyMinutes;
 
   /// Âge de l'enfant, réglé dans l'espace parent (ADR 0006). ⚠ 5 ans par défaut.
   int age = 5;
@@ -28,18 +37,20 @@ class AppState extends ChangeNotifier {
   String? universeId;
 
   static Future<AppState> load() async {
-    final (theme, common) = await loadContent();
+    final (topics, common) = await loadContent();
     final words = await loadUniverseWords();
     final store = await Store.open();
     final voice = Voice()..init();
-    final s = AppState(theme, common, words, store, voice);
+    final s = AppState(topics, common, words, store, voice);
     await s.refresh();
     return s;
   }
 
   Future<void> refresh() async {
     journal = await store.answers();
-    sessionsDone = (await store.sessions()).length;
+    sessions = await store.sessions();
+    sessionsDone = sessions.where((s) => s.complete).length;
+    dailyMinutes = int.tryParse(await store.get('minutes_jour') ?? '') ?? defaultDailyMinutes;
     age = int.tryParse(await store.get('age') ?? '') ?? 5;
     final g = await store.get('genre');
     boy = g == null ? null : g == 'garcon';
@@ -70,7 +81,27 @@ class AppState extends ChangeNotifier {
   /// Code du dessin de l'objet d'une compétence.
   String objectArt(Skill skill) => universe.objects[skill.objectIndex.clamp(0, universe.objects.length - 1)];
 
-  Progress get progress => Progress([for (final s in theme.skills) s.ref], journal, sessionsDone: sessionsDone);
+  Topic topic(String id) => topics.firstWhere((t) => t.id == id);
+
+  /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
+  Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
+
+  Progress progressOf(Topic t) => Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone);
+
+  DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes);
+
+  Future<void> logSession(SessionLog s) async {
+    await store.addSession(s);
+    sessions = [...sessions, s];
+    if (s.complete) sessionsDone++;
+    notifyListeners();
+  }
+
+  Future<void> setDailyMinutes(int m) async {
+    await store.set('minutes_jour', '$m');
+    dailyMinutes = m;
+    notifyListeners();
+  }
 
   Rewards get rewards => Rewards.from(journal);
 

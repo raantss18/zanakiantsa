@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "id": "sons",
+  "titre": "Les univers sonores",
+  "nom": "Les sons",
+  "icone": "1f3b5",
+  "ages": [
+    4,
+    7
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+  },
+  "competences": [
+    {
+      "id": "aigu-grave",
+      "titre": "Un son aigu ou grave",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Reproduire avec sa voix, par imitation, des sons brefs, tenus, graves, aigus et avec des variations de volume."
+      },
+      "activite": "ecouter",
+      "parametres": {
+        "dimension": "hauteur",
+        "mots": [
+          "aigu",
+          "grave"
+        ]
+      },
+      "phrases": {
+        "consigne": "Écoute les deux sons.",
+        "question": "Quel son est le plus {mot} ?",
+        "indice": "Un son aigu est fin, comme un petit oiseau. Un son grave est gros, comme un ours.",
+        "exemple": "Touche « Réécouter » pour entendre encore les deux sons.",
+        "demonstration": "Écoute : le son {rep} est le plus {mot}.",
+        "bravo": "Oui ! Le son {rep} est le plus {mot}."
+      }
+    },
+    {
+      "id": "fort-doux",
+      "titre": "Un son fort ou doux",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Produire le plus de sons différents avec un même instrument à percussion : doux avec la paume de la main, fort avec une mailloche."
+      },
+      "activite": "ecouter",
+      "parametres": {
+        "dimension": "intensite",
+        "mots": [
+          "fort",
+          "doux"
+        ]
+      },
+      "phrases": {
+        "consigne": "Écoute les deux sons.",
+        "question": "Quel son est le plus {mot} ?",
+        "indice": "Un son fort fait beaucoup de bruit. Un son doux est tout léger.",
+        "exemple": "Touche « Réécouter » pour entendre encore les deux sons.",
+        "demonstration": "Écoute : le son {rep} est le plus {mot}.",
+        "bravo": "Oui ! Le son {rep} est le plus {mot}."
+      }
+    },
+    {
+      "id": "long-court",
+      "titre": "Un son long ou court",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Reproduire avec sa voix, par imitation, des sons brefs, tenus."
+      },
+      "activite": "ecouter",
+      "parametres": {
+        "dimension": "duree",
+        "mots": [
+          "long",
+          "court"
+        ]
+      },
+      "phrases": {
+        "consigne": "Écoute les deux sons.",
+        "question": "Quel son est le plus {mot} ?",
+        "indice": "Un son long dure longtemps. Un son court s'arrête vite.",
+        "exemple": "Touche « Réécouter » pour entendre encore les deux sons.",
+        "demonstration": "Écoute : le son {rep} est le plus {mot}.",
+        "bravo": "Oui ! Le son {rep} est le plus {mot}."
+      }
+    },
+    {
+      "id": "lent-rapide",
+      "titre": "Un rythme lent ou rapide",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Après plusieurs écoutes d’un extrait musical, décrire le rythme (lent, rapide)."
+      },
+      "activite": "ecouter",
+      "parametres": {
+        "dimension": "tempo",
+        "mots": [
+          "rapide",
+          "lent"
+        ]
+      },
+      "phrases": {
+        "consigne": "Écoute les deux sons.",
+        "question": "Quel son est le plus {mot} ?",
+        "indice": "Un rythme rapide va vite, comme quand on court. Un rythme lent va doucement, comme quand on marche.",
+        "exemple": "Touche « Réécouter » pour entendre encore les deux sons.",
+        "demonstration": "Écoute : le son {rep} est le plus {mot}.",
+        "bravo": "Oui ! Le son {rep} est le plus {mot}."
+      }
+    }
+  ]
+}

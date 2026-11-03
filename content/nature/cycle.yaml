@@ -1,0 +1,35 @@
+id: cycle
+titre: Les étapes de la vie
+niveau: GS
+prerequis: [oeufs]
+programme: { source: c1, texte: "Nommer et ordonner les étapes du cycle de vie d’une plante ou d’un animal (naissance, éclosion, germination – larve, nymphe, métamorphose, etc.)." }
+activite: choisir
+parametres: {}
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ce qui se passe quand on grandit."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "D'où sort le poussin ?"
+    bonne: ["1f95a", "l'œuf"]
+    autres: [["1fad8", "la graine"], ["1f41b", "la chenille"]]
+    explication: "Le poussin sort de l'œuf : c'est l'éclosion."
+  - texte: "Que devient le poussin en grandissant ?"
+    bonne: ["1f414", "la poule"]
+    autres: [["1f98b", "le papillon"], ["1f41f", "le poisson"]]
+    explication: "Le poussin devient une poule ou un coq."
+  - texte: "Que devient la chenille ?"
+    bonne: ["1f98b", "le papillon"]
+    autres: [["1f40c", "l'escargot"], ["1f426", "l'oiseau"]]
+    explication: "La chenille se transforme en papillon : c'est la métamorphose."
+  - texte: "Qu'est-ce qui sort de la graine dans la terre ?"
+    bonne: ["1f331", "la pousse"]
+    autres: [["1f423", "le poussin"], ["1f41b", "la chenille"]]
+    explication: "La graine germe et une petite pousse sort."
+  - texte: "Que devient la petite pousse ?"
+    bonne: ["1fab4", "la plante"]
+    autres: [["1f95a", "l'œuf"], ["1f41b", "la chenille"]]
+    explication: "En grandissant, la pousse devient une plante."

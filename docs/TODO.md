@@ -86,6 +86,33 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   nécessaire pour elles ; à décider (ADR 0002)
 - ⏳ Essai avec les enfants : observer l'effet des autocollants sur l'intérêt pour l'activité (ADR 0015)
 
+## Étape 4 ter — Journée en 3 activités et nouveaux domaines 🔄 (2026-11-03)
+
+- ✅ Journée de 3 activités qui alternent (nombres / vivant / dessin, puis suites / sons / échecs), temps réglé par
+  le parent (90 min par défaut), pause entre deux, « À demain » (ADR 0018)
+- ✅ Nouveaux domaines (ADR 0019) sourcés sur le programme de maternelle consolidé 2026 et les règles FIDE :
+  vivant (4 compétences, 21 questions), suites (4), sons (4), dessin (8 sujets, « Mes dessins »), échecs (5 pièces)
+- ✅ Vérifié sur l'émulateur : accueil portrait et paysage, vivant (bonne/mauvaise réponse), dessin jusqu'à
+  l'album, suites, sons (lecture des deux sons), échecs (coup interdit → points) ; 38 tests
+- ⏳ Pas vérifié : passage de la pause et de « journée finie » en conditions réelles (il faut 30 min par activité ;
+  couvert par les tests unitaires du temps compté), cavalier et dame jusqu'au bout, sons en paysage
+- ⏳ Voix enregistrées pour les nouvelles phrases (`docs/voix/script.csv`)
+
+## Priorités demandées par Antsa (2026-11-03) ⏳
+
+Dans cet ordre, chacun en tranche verticale (`CLAUDE.md` règle 2), sources officielles à trouver avant le contenu :
+
+1. ⏳ **Cours d'échecs** progressif : déplacements des pièces (commencé dans 4 ter), puis prise, échec, mat, petits
+   problèmes
+2. ⏳ **Bâtonnets / matériel de numération** pour additionner, puis **multiplications**, **divisions**,
+   approfondissement (programmes cycle 2 et 3)
+3. ⏳ **Anglais** (pas encore fait ; place à fixer, ADR 0005) : vocabulaire imagé et dit, programme de langues vivantes
+4. ⏳ **Exploration interactive** sur GPU : système solaire / univers, corps humain (3D, Flame ou moteur 3D à évaluer
+   par un spike mesuré sur la SM-X135G ou l'émulateur)
+5. ⏳ **Programmation par blocs** type Scratch / ScratchJr (algorithmique, cycle 2) : seulement l'idée, aucun code
+   repris (règle 7)
+6. ⏳ **Géométrie 3D type GeoGebra** pour enfant : solides à manipuler (programme « Explorer les solides »)
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →

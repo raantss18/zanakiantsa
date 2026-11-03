@@ -1,0 +1,35 @@
+id: sens
+titre: Les cinq sens
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Associer les yeux et la vue, le nez et l’odorat, la langue et le gout, la peau et le toucher, l’oreille et l’audition." }
+activite: choisir
+parametres: {}
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ton corps : quelle partie fait cela ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Avec quoi voit-on ?"
+    bonne: ["1f441", "l'œil"]
+    autres: [["1f442", "l'oreille"], ["1f445", "la langue"]]
+    explication: "On voit avec les yeux."
+  - texte: "Avec quoi entend-on ?"
+    bonne: ["1f442", "l'oreille"]
+    autres: [["1f443", "le nez"], ["1f441", "l'œil"]]
+    explication: "On entend avec les oreilles."
+  - texte: "Avec quoi sent-on les odeurs ?"
+    bonne: ["1f443", "le nez"]
+    autres: [["270b", "la main"], ["1f442", "l'oreille"]]
+    explication: "On sent les odeurs avec le nez."
+  - texte: "Avec quoi goûte-t-on ?"
+    bonne: ["1f445", "la langue"]
+    autres: [["1f441", "l'œil"], ["1f443", "le nez"]]
+    explication: "On goûte avec la langue."
+  - texte: "Avec quoi touche-t-on ?"
+    bonne: ["270b", "la main"]
+    autres: [["1f442", "l'oreille"], ["1f441", "l'œil"]]
+    explication: "On touche avec la peau, par exemple celle des mains."

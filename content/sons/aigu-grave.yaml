@@ -1,0 +1,15 @@
+id: aigu-grave
+titre: "Un son aigu ou grave"
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Reproduire avec sa voix, par imitation, des sons brefs, tenus, graves, aigus et avec des variations de volume." }
+activite: ecouter
+# mots : [propriété du son « A », propriété du son « B »] ; la question demande l'un ou l'autre.
+parametres: { dimension: hauteur, mots: ["aigu", "grave"] }
+phrases:
+  consigne: "Écoute les deux sons."
+  question: "Quel son est le plus {mot} ?"
+  indice: "Un son aigu est fin, comme un petit oiseau. Un son grave est gros, comme un ours."
+  exemple: "Touche « Réécouter » pour entendre encore les deux sons."
+  demonstration: "Écoute : le son {rep} est le plus {mot}."
+  bravo: "Oui ! Le son {rep} est le plus {mot}."

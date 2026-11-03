@@ -47,6 +47,14 @@ class Voice {
   /// Bruitage de bonne réponse propre au monde (ADR 0017).
   Future<void> success(String universe) => _sfx.play(AssetSource('audio/sfx/$universe.wav'));
 
+  /// Joue un son fabriqué par l'app (WAV) et attend sa fin.
+  Future<void> playWav(Uint8List wav) async {
+    await stop();
+    await _sfx.stop();
+    await _sfx.play(BytesSource(wav, mimeType: 'audio/wav'));
+    await _sfx.onPlayerComplete.first;
+  }
+
   /// Fin de séance.
   Future<void> fanfare() => _sfx.play(AssetSource('audio/sfx/fanfare.wav'));
 }

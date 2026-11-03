@@ -55,8 +55,23 @@ final Map<String, List<_Note>> _sounds = {
 Iterable<String> get sfxNames => _sounds.keys;
 
 /// Échantillons normalisés à [_peak], avec 5 ms de fondu à chaque bout de note (pas de clic).
-Float64List samples(String name) {
-  final notes = _sounds[name]!;
+Float64List samples(String name) => _render(_sounds[name]!, _peak);
+
+/// Les deux sons à comparer (activité « écouter », ADR 0019) : le son A porte le 1er mot du contenu (aigu, fort, long,
+/// rapide), le son B le 2e (grave, doux, court, lent).
+(Float64List, Float64List) listenPair(String dimension) => switch (dimension) {
+      'hauteur' => (_render([const _Note(0, 0.9, 880, _triangle)], _peak), _render([const _Note(0, 0.9, 220, _triangle)], _peak)),
+      // Même note : seule la crête change (rapport 6, environ 16 dB).
+      'intensite' => (_render([const _Note(0, 0.9, 440, _triangle)], 0.6), _render([const _Note(0, 0.9, 440, _triangle)], 0.1)),
+      'duree' => (_render([const _Note(0, 1.5, 523.25, _triangle)], _peak), _render([const _Note(0, 0.25, 523.25, _triangle)], _peak)),
+      'tempo' => (
+          _render([for (var i = 0; i < 8; i++) _Note(i * 0.2, 0.08, 660, _pluck, decay: 20)], _peak),
+          _render([for (var i = 0; i < 3; i++) _Note(i * 0.7, 0.08, 660, _pluck, decay: 20)], _peak),
+        ),
+      _ => throw ArgumentError(dimension),
+    };
+
+Float64List _render(List<_Note> notes, double peak) {
   final end = notes.map((n) => n.start + n.duration).reduce(max);
   final out = Float64List((end * sampleRate).ceil());
   const fade = 0.005;
@@ -74,7 +89,7 @@ Float64List samples(String name) {
   }
   final top = out.map((v) => v.abs()).reduce(max);
   for (var i = 0; i < out.length; i++) {
-    out[i] *= _peak / top;
+    out[i] *= peak / top;
   }
   return out;
 }

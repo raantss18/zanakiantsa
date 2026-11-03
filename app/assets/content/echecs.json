@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "id": "echecs",
+  "titre": "Les échecs — déplacer les pièces",
+  "nom": "Les échecs",
+  "icone": "265f",
+  "ages": [
+    5,
+    10
+  ],
+  "sources": {
+    "fide": "https://handbook.fide.com/chapter/E012023"
+  },
+  "competences": [
+    {
+      "id": "tour",
+      "titre": "Déplacer la tour",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "fide",
+        "texte": "The rook may move to any square along the file or the rank on which it stands."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "piece": "r",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut.",
+        "question": "Attrape toutes les étoiles avec la tour.",
+        "indice": "La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les points : ce sont les cases où la tour peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "fou",
+      "titre": "Déplacer le fou",
+      "niveau": "GS",
+      "prerequis": [
+        "tour"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "The bishop may move to any square along a diagonal on which it stands."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "piece": "b",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le fou avance en diagonale, en biais, aussi loin qu'il veut.",
+        "question": "Attrape toutes les étoiles avec le fou.",
+        "indice": "Le fou avance en diagonale, en biais, aussi loin qu'il veut. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les points : ce sont les cases où le fou peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "dame",
+      "titre": "Déplacer la dame",
+      "niveau": "GS",
+      "prerequis": [
+        "fou"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "The queen may move to any square along the file, the rank or a diagonal on which it stands."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "piece": "q",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "La dame avance tout droit ou en diagonale, aussi loin qu'elle veut.",
+        "question": "Attrape toutes les étoiles avec la dame.",
+        "indice": "La dame avance tout droit ou en diagonale, aussi loin qu'elle veut. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les points : ce sont les cases où la dame peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "roi",
+      "titre": "Déplacer le roi",
+      "niveau": "GS",
+      "prerequis": [
+        "dame"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "The king may move by moving to an adjoining square."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "piece": "k",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le roi avance d'une seule case, dans toutes les directions.",
+        "question": "Attrape toutes les étoiles avec le roi.",
+        "indice": "Le roi avance d'une seule case, dans toutes les directions. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les points : ce sont les cases où le roi peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "cavalier",
+      "titre": "Déplacer le cavalier",
+      "niveau": "GS",
+      "prerequis": [
+        "roi"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "The knight may move to one of the squares nearest to that on which it stands but not on the same rank, file or diagonal."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "piece": "n",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté.",
+        "question": "Attrape toutes les étoiles avec le cavalier.",
+        "indice": "Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les points : ce sont les cases où le cavalier peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    }
+  ]
+}

@@ -19,12 +19,12 @@ class WeekReport {
 
 /// Les 7 derniers jours (jour courant compris). [skills] donne l'ordre d'affichage ; la maîtrise tient compte de tout
 /// le journal.
-WeekReport weekReport(List<String> skills, List<Answer> journal, List<(DateTime, DateTime)> sessions, DateTime now) {
+WeekReport weekReport(List<String> skills, List<Answer> journal, List<SessionLog> sessions, DateTime now) {
   final from = DateTime(now.year, now.month, now.day).subtract(const Duration(days: 6));
   final week = journal.where((a) => !a.at.isBefore(from)).toList();
-  final weekSessions = sessions.where((s) => !s.$1.isBefore(from)).toList();
-  final minutes = weekSessions.fold<int>(0, (m, s) => m + s.$2.difference(s.$1).inMinutes);
-  return WeekReport(weekSessions.length, minutes, [
+  final weekSessions = sessions.where((s) => !s.started.isBefore(from)).toList();
+  final minutes = weekSessions.fold<int>(0, (m, s) => m + s.length.inMinutes);
+  return WeekReport(weekSessions.where((s) => s.complete).length, minutes, [
     for (final id in skills)
       if (week.any((a) => a.skill == id))
         SkillLine(

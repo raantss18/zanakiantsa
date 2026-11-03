@@ -1,0 +1,15 @@
+id: fort-doux
+titre: "Un son fort ou doux"
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Produire le plus de sons différents avec un même instrument à percussion : doux avec la paume de la main, fort avec une mailloche." }
+activite: ecouter
+# mots : [propriété du son « A », propriété du son « B »] ; la question demande l'un ou l'autre.
+parametres: { dimension: intensite, mots: ["fort", "doux"] }
+phrases:
+  consigne: "Écoute les deux sons."
+  question: "Quel son est le plus {mot} ?"
+  indice: "Un son fort fait beaucoup de bruit. Un son doux est tout léger."
+  exemple: "Touche « Réécouter » pour entendre encore les deux sons."
+  demonstration: "Écoute : le son {rep} est le plus {mot}."
+  bravo: "Oui ! Le son {rep} est le plus {mot}."

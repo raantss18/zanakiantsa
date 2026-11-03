@@ -1,0 +1,35 @@
+id: oeufs
+titre: Pondre des œufs ou porter son petit
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Citer plusieurs espèces d’animaux qui pondent des œufs et d’autres espèces qui portent leur petit." }
+activite: choisir
+parametres: {}
+phrases:
+  consigne: "Écoute la question, puis touche le bon animal."
+  question: "{texte}"
+  indice: "Pense aux animaux de la ferme et à leurs bébés."
+  exemple: "Essaie un autre animal."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qui pond des œufs ?"
+    bonne: ["1f414", "la poule"]
+    autres: [["1f404", "la vache"], ["1f408", "le chat"]]
+    explication: "La poule pond des œufs."
+  - texte: "Qui pond des œufs ?"
+    bonne: ["1f422", "la tortue"]
+    autres: [["1f415", "le chien"], ["1f40e", "le cheval"]]
+    explication: "La tortue pond des œufs."
+  - texte: "Qui pond des œufs ?"
+    bonne: ["1f986", "le canard"]
+    autres: [["1f411", "le mouton"], ["1f407", "le lapin"]]
+    explication: "La cane, la maman canard, pond des œufs."
+  - texte: "Qui porte son petit dans son ventre ?"
+    bonne: ["1f404", "la vache"]
+    autres: [["1f414", "la poule"], ["1f422", "la tortue"]]
+    explication: "La vache porte son veau dans son ventre."
+  - texte: "Qui porte son petit dans son ventre ?"
+    bonne: ["1f408", "le chat"]
+    autres: [["1f986", "le canard"], ["1f40a", "le crocodile"]]
+    explication: "La chatte porte ses chatons dans son ventre."

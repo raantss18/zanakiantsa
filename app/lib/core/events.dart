@@ -46,3 +46,13 @@ class Answer {
         at: DateTime.fromMillisecondsSinceEpoch(m['at']! as int),
       );
 }
+
+/// Un temps de jeu dans un domaine (ADR 0018) : séance finie, ou interrompue par le retour (`complete` faux).
+class SessionLog {
+  const SessionLog({required this.theme, required this.started, required this.ended, this.complete = true});
+  final String theme;
+  final DateTime started, ended;
+  final bool complete;
+
+  Duration get length => ended.difference(started);
+}

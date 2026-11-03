@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "id": "motifs",
+  "titre": "Se familiariser avec les motifs organisés",
+  "nom": "Les suites",
+  "icone": "1f9e9",
+  "ages": [
+    4,
+    7
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+  },
+  "competences": [
+    {
+      "id": "motif-ab",
+      "titre": "Une suite qui alterne deux images",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Prolonger l’amorce d’un motif répétitif et verbaliser la règle de prolongement utilisée (exemple : ★⚫★⚫)."
+      },
+      "activite": "motif",
+      "parametres": {
+        "base": "AB"
+      },
+      "phrases": {
+        "consigne": "Regarde bien la suite d'images.",
+        "question": "Quelle image manque ?",
+        "indice": "Écoute : une image, puis l'autre, et on recommence.",
+        "exemple": "Dis la suite à voix haute, en montrant chaque image.",
+        "demonstration": "Regarde : c'est cette image qui continue la suite.",
+        "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      }
+    },
+    {
+      "id": "motif-abb",
+      "titre": "Une suite : une image, puis deux",
+      "niveau": "MS",
+      "prerequis": [
+        "motif-ab"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Prolonger l’amorce d’un motif répétitif (exemple : ★⚫⚫★⚫⚫)."
+      },
+      "activite": "motif",
+      "parametres": {
+        "base": "ABB"
+      },
+      "phrases": {
+        "consigne": "Regarde bien la suite d'images.",
+        "question": "Quelle image manque ?",
+        "indice": "Regarde : une image, puis deux fois l'autre, et on recommence.",
+        "exemple": "Dis la suite à voix haute, en montrant chaque image.",
+        "demonstration": "Regarde : c'est cette image qui continue la suite.",
+        "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      }
+    },
+    {
+      "id": "motif-abc",
+      "titre": "Une suite de trois images",
+      "niveau": "GS",
+      "prerequis": [
+        "motif-abb"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Identifier la structure d’un motif répétitif indépendamment des éléments physiques qui le composent."
+      },
+      "activite": "motif",
+      "parametres": {
+        "base": "ABC"
+      },
+      "phrases": {
+        "consigne": "Regarde bien la suite d'images.",
+        "question": "Quelle image manque ?",
+        "indice": "Regarde : trois images différentes, toujours dans le même ordre.",
+        "exemple": "Dis la suite à voix haute, en montrant chaque image.",
+        "demonstration": "Regarde : c'est cette image qui continue la suite.",
+        "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      }
+    },
+    {
+      "id": "motif-evolutif",
+      "titre": "Une suite qui grandit",
+      "niveau": "GS",
+      "prerequis": [
+        "motif-abc"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Repérer et décrire oralement la structure d’un motif évolutif (exemple : ABAABBAAABBB). Les motifs évolutifs ne seront travaillés qu’à partir de cinq ans."
+      },
+      "activite": "motif",
+      "parametres": {
+        "base": "AB+"
+      },
+      "phrases": {
+        "consigne": "Regarde bien la suite d'images.",
+        "question": "Quelle image manque ?",
+        "indice": "Regarde : à chaque tour, on en met un de plus.",
+        "exemple": "Dis la suite à voix haute, en montrant chaque image.",
+        "demonstration": "Regarde : c'est cette image qui continue la suite.",
+        "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      }
+    }
+  ]
+}

@@ -128,3 +128,66 @@ class EpisodeLabel extends StatelessWidget {
         ),
       );
 }
+
+/// Grande carte-image à toucher (≥ 120 dp). [highlight] : bonne réponse montrée (contour or + ✔, forme et couleur) ;
+/// [tried] : déjà essayée, grisée et barrée (jamais la couleur seule).
+class PicButton extends StatelessWidget {
+  const PicButton({
+    super.key,
+    required this.child,
+    required this.onPressed,
+    this.label,
+    this.size = 132,
+    this.highlight = false,
+    this.tried = false,
+    this.selected = false,
+  });
+  final Widget child;
+  final VoidCallback? onPressed;
+  final String? label;
+  final double size;
+  final bool highlight, tried, selected;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Semantics(
+      button: true,
+      label: label,
+      child: SizedBox(
+        width: size,
+        height: size,
+        child: Stack(clipBehavior: Clip.none, children: [
+          Positioned.fill(
+            child: Material(
+              color: tried ? const Color(0xFFE3E7E4) : surface,
+              elevation: tried ? 0 : 3,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24),
+                side: BorderSide(
+                  color: highlight ? gold : (selected ? cs.primary : const Color(0xFFD5DBD7)),
+                  width: highlight || selected ? 6 : 2,
+                ),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(24),
+                onTap: onPressed,
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Opacity(opacity: tried ? 0.35 : 1, child: Center(child: child)),
+                ),
+              ),
+            ),
+          ),
+          if (tried) const Center(child: Icon(Icons.close_rounded, size: 56, color: Color(0xFF5F6B63))),
+          if (highlight)
+            const Positioned(
+              right: -8,
+              top: -8,
+              child: CircleAvatar(radius: 18, backgroundColor: gold, child: Icon(Icons.check_rounded, color: Colors.white)),
+            ),
+        ]),
+      ),
+    );
+  }
+}

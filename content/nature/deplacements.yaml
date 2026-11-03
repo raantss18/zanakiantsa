@@ -1,0 +1,39 @@
+id: deplacements
+titre: Comment se déplacent les animaux
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Savoir dire si un animal vole, marche, rampe, saute, grimpe, court ou nage." }
+activite: choisir
+parametres: {}
+phrases:
+  consigne: "Écoute la question, puis touche le bon animal."
+  question: "{texte}"
+  indice: "Regarde bien : a-t-il des ailes, des nageoires, des pattes ?"
+  exemple: "Essaie un autre animal."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qui vole avec ses ailes ?"
+    bonne: ["1f426", "l'oiseau"]
+    autres: [["1f40c", "l'escargot"], ["1f41f", "le poisson"]]
+    explication: "L'oiseau vole avec ses ailes."
+  - texte: "Qui nage avec ses nageoires ?"
+    bonne: ["1f41f", "le poisson"]
+    autres: [["1f98b", "le papillon"], ["1f40c", "l'escargot"]]
+    explication: "Le poisson nage avec ses nageoires."
+  - texte: "Qui rampe sur le sol ?"
+    bonne: ["1f40c", "l'escargot"]
+    autres: [["1f426", "l'oiseau"], ["1f40e", "le cheval"]]
+    explication: "L'escargot rampe, il n'a pas de pattes."
+  - texte: "Qui fait de grands sauts ?"
+    bonne: ["1f998", "le kangourou"]
+    autres: [["1f40c", "l'escargot"], ["1f40d", "le serpent"]]
+    explication: "Le kangourou saute avec ses grandes pattes arrière."
+  - texte: "Qui grimpe aux arbres ?"
+    bonne: ["1f412", "le singe"]
+    autres: [["1f41f", "le poisson"], ["1f40e", "le cheval"]]
+    explication: "Le singe grimpe avec ses mains et ses pieds."
+  - texte: "Qui court vite sur ses quatre pattes ?"
+    bonne: ["1f40e", "le cheval"]
+    autres: [["1f41f", "le poisson"], ["1f40c", "l'escargot"]]
+    explication: "Le cheval court vite sur ses quatre pattes."

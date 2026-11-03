@@ -1,0 +1,76 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+import '../content/content.dart';
+import '../ui/session.dart';
+import '../ui/theme.dart';
+import '../ui/universe.dart';
+
+/// Choisir : une question écrite et dite, trois images ; on touche la bonne (ADR 0019). Une image essayée reste
+/// grisée et barrée ; la démonstration entoure la bonne.
+class ChooseActivity extends StatefulWidget {
+  const ChooseActivity({super.key, required this.attempt});
+  final Attempt attempt;
+  @override
+  State<ChooseActivity> createState() => _ChooseActivityState();
+}
+
+class _ChooseActivityState extends State<ChooseActivity> {
+  Attempt get a => widget.attempt;
+  late final Item item = a.skill.items[a.question.n];
+  late final List<Pic> pics = [item.right!, ...item.others]..shuffle(Random(a.question.a));
+  final tried = <String>{};
+
+  @override
+  void initState() {
+    super.initState();
+    a.addListener(_changed);
+    a.show('question').then((_) => a.say('consigne'));
+  }
+
+  @override
+  void dispose() {
+    a.removeListener(_changed);
+    super.dispose();
+  }
+
+  void _changed() => setState(() {});
+
+  void _tap(Pic p) {
+    if (a.busy || a.finished || tried.contains(p.art)) return;
+    final ok = p.art == item.right!.art;
+    if (!ok) setState(() => tried.add(p.art));
+    a.submit(ok);
+  }
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(builder: (_, k) {
+        // Trois cartes côte à côte (la largeur suffit en portrait comme en paysage) ; nom écrit sous chacune.
+        final size = min((k.maxWidth - 32) / 3 - 16, k.maxHeight - 90).clamp(110.0, 220.0);
+        final cards = [
+          for (final p in pics)
+            Column(mainAxisSize: MainAxisSize.min, children: [
+              PicButton(
+                size: size,
+                label: p.name,
+                tried: tried.contains(p.art),
+                highlight: (a.demonstrate || a.solved) && p.art == item.right!.art,
+                onPressed: a.busy || a.finished ? null : () => _tap(p),
+                child: Art(p.art, size: size * 0.62),
+              ),
+              const SizedBox(height: 6),
+              SizedBox(width: size, child: Text(p.name, textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink))),
+            ]),
+        ];
+        return Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              children: [for (final c in cards) Padding(padding: const EdgeInsets.all(8), child: c)],
+            ),
+          ),
+        );
+      });
+}

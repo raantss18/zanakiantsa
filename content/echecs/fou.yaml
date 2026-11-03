@@ -1,0 +1,14 @@
+id: fou
+titre: "Déplacer le fou"
+niveau: GS
+prerequis: [tour]
+programme: { source: fide, texte: "The bishop may move to any square along a diagonal on which it stands." }
+activite: echecs
+parametres: { piece: b, etoiles: 3 }
+phrases:
+  consigne: "Le fou avance en diagonale, en biais, aussi loin qu'il veut."
+  question: "Attrape toutes les étoiles avec le fou."
+  indice: "Le fou avance en diagonale, en biais, aussi loin qu'il veut. Les points montrent où aller."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde les points : ce sont les cases où le fou peut aller."
+  bravo: "Bravo ! Tu as attrapé toutes les étoiles."

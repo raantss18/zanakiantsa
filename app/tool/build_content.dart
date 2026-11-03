@@ -11,10 +11,50 @@ const activities = {
   'denombrer': {'min', 'max', 'objet'},
   'composer': {'cible_min', 'cible_max', 'depart_min', 'depart_max'},
   'calcul': {'forme', 'total_max'},
+  // ADR 0019
+  'choisir': <String>{},
+  'motif': {'base'},
+  'ecouter': {'dimension', 'mots'},
+  'echecs': {'piece', 'etoiles'},
+  'dessin': <String>{},
 };
+/// Activités dont les questions sont écrites dans `items`.
+const withItems = {'choisir', 'dessin'};
+const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
+const pieces = {'r', 'b', 'q', 'k', 'n'};
 const requiredPhrases = {'consigne', 'question', 'indice', 'exemple', 'demonstration', 'bravo'};
 final placeholder = RegExp(r'\{(\w+)\}');
-const allowedPlaceholders = {'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom'};
+const allowedPlaceholders = {
+  'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom', //
+  'texte', 'bonne', 'explication', 'mot', 'rep', // variables d'activité (ADR 0019)
+};
+
+/// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).
+void checkArt(String where, String code) {
+  if (!File('assets/art/$code.svg').existsSync()) fail(where, 'image absente : assets/art/$code.svg');
+}
+
+void checkItems(String where, String act, List items) {
+  if (items.isEmpty) fail(where, 'items : au moins une question');
+  for (final (i, raw) in items.indexed) {
+    final it = Map<String, dynamic>.from(raw as Map);
+    final w = '$where/items[$i]';
+    if (it['texte'] is! String) fail(w, 'texte manquant');
+    checkPhrase(w, it['texte'] as String? ?? '');
+    if (act != 'choisir') continue;
+    final pics = [it['bonne'], ...(it['autres'] as List? ?? const [])];
+    if ((it['autres'] as List? ?? const []).length < 2) fail(w, 'au moins deux autres images');
+    if (it['explication'] is! String) fail(w, 'explication manquante');
+    for (final p in pics) {
+      if (p is! List || p.length != 2) {
+        fail(w, 'image : [code, nom]');
+      } else {
+        checkArt(w, p[0] as String);
+      }
+    }
+    if (pics.whereType<List>().map((p) => p[0]).toSet().length != pics.length) fail(w, 'deux fois la même image');
+  }
+}
 
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');
@@ -36,6 +76,10 @@ void checkPhrase(String where, String text) {
 Map<String, dynamic> buildTheme(Directory dir) {
   final theme = load(File('${dir.path}/_theme.yaml'));
   final id = theme['id'] as String;
+  for (final k in ['nom', 'icone']) {
+    if (theme[k] is! String) fail('$id/_theme.yaml', 'champ « $k » manquant');
+  }
+  checkArt('$id/_theme.yaml', theme['icone'] as String? ?? '');
   final sources = Map<String, dynamic>.from(theme['sources'] as Map);
   final skills = <String, Map<String, dynamic>>{};
   for (final f in dir.listSync().whereType<File>().where((f) => f.path.endsWith('.yaml') && !f.path.endsWith('_theme.yaml'))) {
@@ -53,6 +97,14 @@ Map<String, dynamic> buildTheme(Directory dir) {
     } else {
       final missing = activities[act]!.difference(params.keys.toSet());
       if (missing.isNotEmpty) fail(where, 'paramètres manquants : ${missing.join(', ')}');
+      if (withItems.contains(act)) checkItems(where, act as String, s['items'] as List? ?? const []);
+      if (act == 'ecouter' && (!dimensions.contains(params['dimension']) || (params['mots'] as List?)?.length != 2)) {
+        fail(where, 'ecouter : dimension ${dimensions.join('|')} et deux mots');
+      }
+      if (act == 'echecs' && !pieces.contains(params['piece'])) fail(where, 'echecs : pièce ${pieces.join('|')}');
+      if (act == 'motif' && !RegExp(r'^(AB|ABB|AAB|ABC|AB\+)$').hasMatch('${params['base']}')) {
+        fail(where, 'motif : base AB, ABB, AAB, ABC ou AB+ (évolutif)');
+      }
     }
     final prog = Map<String, dynamic>.from(s['programme'] as Map);
     if (!sources.containsKey(prog['source'])) fail(where, 'source de programme inconnue « ${prog['source']} »');
@@ -77,6 +129,8 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'schema': schemaVersion,
     'id': id,
     'titre': theme['titre'],
+    'nom': theme['nom'],
+    'icone': theme['icone'],
     'ages': theme['ages'],
     'sources': sources,
     'competences': [for (final sid in order) if (skills[sid] != null) skills[sid]],
@@ -136,11 +190,24 @@ void main(List<String> args) {
     }
   });
 
-  for (final dir in root.listSync().whereType<Directory>().toList()..sort((a, b) => a.path.compareTo(b.path))) {
-    final theme = buildTheme(dir);
+  // Domaines : l'ordre de domaines.yaml ; chaque dossier doit y être, et inversement (ADR 0018).
+  final domains = load(File('${root.path}/domaines.yaml'));
+  final order = List<String>.from(domains['ordre'] as List);
+  final dirs = {for (final d in root.listSync().whereType<Directory>()) d.path.split('/').last: d};
+  if (order.toSet().length != order.length || !order.toSet().containsAll(dirs.keys) || !dirs.keys.toSet().containsAll(order)) {
+    fail('domaines.yaml', '« ordre » doit lister chaque dossier de content/ une fois');
+  }
+  outputs['assets/content/domaines.json'] = '${json.convert(domains)}\n';
+  for (final name in order.where(dirs.containsKey)) {
+    final theme = buildTheme(dirs[name]!);
+    if (theme['id'] != name) fail('$name/_theme.yaml', 'l’id doit être le nom du dossier');
     outputs['assets/content/${theme['id']}.json'] = '${json.convert(theme)}\n';
     for (final s in theme['competences'] as List) {
       (s['phrases'] as Map).forEach((k, v) => voice.add('${s['id']}.$k;$v'));
+      for (final (i, it) in (s['items'] as List? ?? const []).indexed) {
+        voice.add('${s['id']}.items.$i;${it['texte']}');
+        if (it['explication'] != null) voice.add('${s['id']}.items.$i.explication;${it['explication']}');
+      }
     }
   }
   outputs['../docs/voix/script.csv'] = '${voice.join('\n')}\n';

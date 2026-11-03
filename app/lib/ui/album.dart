@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../activities/draw.dart';
+
 import '../app_state.dart';
 import '../core/rewards.dart';
 import 'theme.dart';
@@ -37,6 +39,18 @@ class AlbumPage extends StatelessWidget {
                 const SizedBox(width: 12),
                 Text('Mon album', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
                 const Spacer(),
+                Material(
+                  color: surface,
+                  shape: const CircleBorder(),
+                  elevation: 2,
+                  child: IconButton(
+                    tooltip: 'Mes dessins',
+                    iconSize: 32,
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const DrawingsPage())),
+                    icon: const Art('1f3a8', size: 32),
+                  ),
+                ),
+                const SizedBox(width: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),

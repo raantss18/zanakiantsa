@@ -4,6 +4,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../activities/calcul.dart';
+import '../activities/chess.dart';
+import '../activities/choose.dart';
+import '../activities/listen.dart';
+import '../activities/motif.dart';
 import '../activities/composer.dart';
 import '../activities/denombrer.dart';
 import '../app_state.dart';
@@ -150,15 +154,18 @@ class Attempt extends ChangeNotifier {
 /// Essais sur tablette seulement : `--dart-define=DEV_SKILL=<id>` fait jouer cette compétence. Vide en version publiée.
 const devSkill = String.fromEnvironment('DEV_SKILL');
 
+/// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key});
+  const SessionPage({super.key, required this.topic});
+  final String topic;
   @override
   State<SessionPage> createState() => _SessionPageState();
 }
 
 class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
-  late final List<String> plan = devSkill.isEmpty ? app.progress.plan(DateTime.now()) : List.filled(3, devSkill);
+  late final List<String> plan =
+      devSkill.isEmpty ? app.progressOf(app.topic(widget.topic)).plan(DateTime.now()) : List.filled(3, devSkill);
   late final Rewards before = app.rewards;
   final _rand = Random();
   final _started = DateTime.now();
@@ -175,7 +182,7 @@ class _SessionPageState extends State<SessionPage> {
   }
 
   Attempt _next() {
-    final skill = app.theme.skill(plan[index]);
+    final skill = app.skill(plan[index]);
     final q = skill.draw(_rand, last: _last);
     _last = q;
     return Attempt(app, skill, q, _advance, () => setState(() => stars++));
@@ -185,16 +192,17 @@ class _SessionPageState extends State<SessionPage> {
     await Future<void>.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
     if (index + 1 >= plan.length) {
-      await app.store.sessionDone(_started, DateTime.now());
+      await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
       await app.voice.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
-      final e = app.universeWords.episode(app.sessionsDone + 1)!;
+      final e = app.universeWords.episode(app.sessionsDone)!;
       await app.voice.say(app.universeWords.story[e], id: 'univers.${app.universe.id}.histoire.$e');
       if (app.rewards.unlockedSince(before)) {
         await app.voice.say(app.common.text('nouvel_autocollant'), id: 'commun.nouvel_autocollant');
       }
+      await sayDayStatus(app, widget.topic);
       return;
     }
     final old = attempt;
@@ -209,6 +217,10 @@ class _SessionPageState extends State<SessionPage> {
   void dispose() {
     app.voice.stop();
     attempt?.dispose();
+    // Retour en cours de séance : le temps compte pour la journée, sans faire avancer l'histoire (ADR 0018).
+    if (!over && (index > 0 || DateTime.now().difference(_started) > const Duration(seconds: 20))) {
+      app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now(), complete: false));
+    }
     super.dispose();
   }
 
@@ -221,7 +233,7 @@ class _SessionPageState extends State<SessionPage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            _TopBar(
+            SessionTopBar(
               progress: over ? 1 : index / plan.length,
               stars: stars,
               universe: u,
@@ -240,18 +252,27 @@ class _SessionPageState extends State<SessionPage> {
               ),
             Expanded(
               child: over
-                  ? _End(
-                      stars: stars,
-                      universe: u,
-                      words: app.universeWords,
-                      // sessionsDone n'est relu qu'au retour à l'accueil : la séance qui vient de finir compte en plus.
-                      episode: app.universeWords.episode(app.sessionsDone + 1)!,
-                      newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null)
+                  ? DayEnd(
+                      theme: widget.topic,
+                      again: () => Navigator.of(context)
+                          .pushReplacement(MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic))),
+                      child: _End(
+                        stars: stars,
+                        universe: u,
+                        words: app.universeWords,
+                        episode: app.universeWords.episode(app.sessionsDone)!,
+                        newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null,
+                      ),
+                    )
                   : Stack(children: [
                       Positioned.fill(
                         child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ValueKey(index), attempt: a),
                           'composer' => ComposeActivity(key: ValueKey(index), attempt: a),
+                          'choisir' => ChooseActivity(key: ValueKey(index), attempt: a),
+                          'motif' => MotifActivity(key: ValueKey(index), attempt: a),
+                          'ecouter' => ListenActivity(key: ValueKey(index), attempt: a),
+                          'echecs' => ChessActivity(key: ValueKey(index), attempt: a),
                           _ => CalcActivity(key: ValueKey(index), attempt: a),
                         },
                       ),
@@ -266,8 +287,8 @@ class _SessionPageState extends State<SessionPage> {
 }
 
 /// ← retour (≠ Accueil), progression, étoiles de la séance (nombre écrit à côté de l'étoile).
-class _TopBar extends StatelessWidget {
-  const _TopBar({required this.progress, required this.stars, required this.universe, required this.onBack});
+class SessionTopBar extends StatelessWidget {
+  const SessionTopBar({super.key, required this.progress, required this.stars, required this.universe, required this.onBack});
   final double progress;
   final int stars;
   final Universe universe;
@@ -339,56 +360,117 @@ class _End extends StatelessWidget {
   final String? newSticker;
 
   @override
-  Widget build(BuildContext context) => Center(
-        child: SingleChildScrollView(
-          child: Container(
-            margin: const EdgeInsets.all(24),
-            padding: const EdgeInsets.all(24),
-            decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
-            child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Row(mainAxisSize: MainAxisSize.min, children: [
-                const Art('2b50', size: 64),
-                const SizedBox(width: 12),
-                Text('× $stars', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: stars > 1 ? '$stars étoiles' : '$stars étoile'),
+  Widget build(BuildContext context) => Column(mainAxisSize: MainAxisSize.min, children: [
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          const Art('2b50', size: 64),
+          const SizedBox(width: 12),
+          Text('× $stars', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: stars > 1 ? '$stars étoiles' : '$stars étoile'),
+        ]),
+        const SizedBox(height: 16),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 520),
+          child: Row(children: [
+            Art(universe.mascot, size: 64),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                EpisodeLabel(index: episode, count: words.story.length),
+                Text(words.story[episode], style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2)),
               ]),
-              const SizedBox(height: 16),
-              ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 520),
+            ),
+          ]),
+        ),
+        if (newSticker != null) ...[
+          const SizedBox(height: 16),
+          const Text('Nouvel autocollant !', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink)),
+          const SizedBox(height: 8),
+          TweenAnimationBuilder<double>(
+            tween: Tween(begin: 0.3, end: 1),
+            duration: const Duration(milliseconds: 700),
+            curve: Curves.elasticOut,
+            builder: (_, s, child) => Transform.scale(scale: s, child: child),
+            child: Art(newSticker!, size: 120, label: 'Nouvel autocollant'),
+          ),
+        ],
+      ]);
+}
+
+/// Dit où en est la journée après une activité : pause si ce domaine est fini, fin de journée si tout l'est.
+Future<void> sayDayStatus(AppState app, String theme) async {
+  final plan = app.dayPlan();
+  if (!plan.items.any((i) => i.theme == theme) || !plan.item(theme).finished) return;
+  final k = plan.finished ? 'journee_finie' : 'pause';
+  await app.voice.say(app.common.text(k), id: 'commun.$k');
+}
+
+/// Carte de fin d'une activité (ADR 0018) : ce qu'on a gagné ([child]), puis la suite de la journée. Domaine pas
+/// encore fini : « Encore » ou Accueil. Fini : une pause pour bouger, puis l'accueil propose l'activité suivante.
+/// Journée finie : bravo et à demain.
+class DayEnd extends StatelessWidget {
+  const DayEnd({super.key, required this.theme, required this.again, required this.child});
+  final String theme;
+  final VoidCallback again;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final plan = app.dayPlan();
+    final item = plan.items.where((i) => i.theme == theme).firstOrNull;
+    final done = item?.finished ?? false;
+    Widget round(IconData icon, String label, VoidCallback onTap, {bool primary = true}) => Column(mainAxisSize: MainAxisSize.min, children: [
+          SizedBox(
+            width: 104,
+            height: 104,
+            child: primary
+                ? FilledButton(
+                    style: FilledButton.styleFrom(shape: const CircleBorder(), padding: EdgeInsets.zero),
+                    onPressed: onTap,
+                    child: Icon(icon, size: 64, semanticLabel: label),
+                  )
+                : OutlinedButton(
+                    style: OutlinedButton.styleFrom(shape: const CircleBorder(), padding: EdgeInsets.zero, side: const BorderSide(color: ink, width: 3)),
+                    onPressed: onTap,
+                    child: Icon(icon, size: 56, color: ink, semanticLabel: label),
+                  ),
+          ),
+          const SizedBox(height: 4),
+          Text(label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
+        ]);
+    return Center(
+      child: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
+          constraints: const BoxConstraints(maxWidth: 640),
+          decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            child,
+            if (done) ...[
+              const SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(color: const Color(0xFFEAF5EC), borderRadius: BorderRadius.circular(20)),
                 child: Row(children: [
-                  Art(universe.mascot, size: 64),
+                  Art(plan.finished ? '1f3c6' : '1f938', size: 64),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      EpisodeLabel(index: episode, count: words.story.length),
-                      Text(words.story[episode], style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2)),
-                    ]),
+                    child: Text(
+                      app.common.text(plan.finished ? 'journee_finie' : 'pause'),
+                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2),
+                    ),
                   ),
                 ]),
               ),
-              if (newSticker != null) ...[
-                const SizedBox(height: 16),
-                const Text('Nouvel autocollant !', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink)),
-                const SizedBox(height: 8),
-                TweenAnimationBuilder<double>(
-                  tween: Tween(begin: 0.3, end: 1),
-                  duration: const Duration(milliseconds: 700),
-                  curve: Curves.elasticOut,
-                  builder: (_, s, child) => Transform.scale(scale: s, child: child),
-                  child: Art(newSticker!, size: 120, label: 'Nouvel autocollant'),
-                ),
-              ],
-              const SizedBox(height: 24),
-              SizedBox(
-                width: 120,
-                height: 120,
-                child: FilledButton(
-                  style: FilledButton.styleFrom(shape: const CircleBorder(), padding: EdgeInsets.zero),
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: const Icon(Icons.home_rounded, size: 72, semanticLabel: 'Accueil'),
-                ),
-              ),
+            ],
+            const SizedBox(height: 24),
+            Wrap(spacing: 32, runSpacing: 16, alignment: WrapAlignment.center, children: [
+              if (!done) round(Icons.replay_rounded, 'Encore', again, primary: false),
+              round(Icons.home_rounded, 'Accueil', () => Navigator.of(context).pop()),
             ]),
-          ),
+          ]),
         ),
-      );
+      ),
+    );
+  }
 }

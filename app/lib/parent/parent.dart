@@ -4,6 +4,7 @@ import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_re
 
 import '../activities/calcul.dart';
 import '../app_state.dart';
+import '../core/day.dart';
 import '../core/report.dart';
 import '../update/updater.dart';
 
@@ -41,7 +42,7 @@ class _ParentPageState extends State<ParentPage> {
     if (!mounted) return;
     setState(() {
       report = weekReport(
-        [for (final s in app.theme.skills) s.id],
+        [for (final t in app.topics) for (final s in t.skills) s.id],
         app.journal,
         sessions,
         DateTime.now(),
@@ -94,7 +95,7 @@ class _ParentPageState extends State<ParentPage> {
 
   @override
   Widget build(BuildContext context) {
-    final titles = {for (final s in app.theme.skills) s.id: s.title};
+    final titles = {for (final t in app.topics) for (final s in t.skills) s.id: '${t.name} — ${s.title}'};
     final r = report;
     // Écran adulte : boutons de taille normale (le thème enfant les agrandit), marge sous la barre de navigation.
     final base = Theme.of(context);
@@ -148,6 +149,25 @@ class _ParentPageState extends State<ParentPage> {
                     ),
                 ],
               ),
+              const Divider(height: 32),
+              Text('Temps de jeu proposé par jour', style: Theme.of(context).textTheme.titleLarge),
+              const Text(
+                'Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; puis suites, sons, '
+                'échecs), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
+                'par jour avant 5 ans, « moins, c’est mieux ».',
+              ),
+              const SizedBox(height: 8),
+              Wrap(spacing: 8, children: [
+                for (final m in dailyMinuteChoices)
+                  ChoiceChip(
+                    label: Text(m < 60 ? '$m min' : '${m ~/ 60} h${m % 60 == 0 ? '' : ' ${m % 60}'}'),
+                    selected: app.dailyMinutes == m,
+                    onSelected: (_) async {
+                      await app.setDailyMinutes(m);
+                      setState(() {});
+                    },
+                  ),
+              ]),
               const Divider(height: 32),
               Text(
                 'Les 7 derniers jours',

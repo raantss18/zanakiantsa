@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "id": "dessin",
+  "titre": "Dessiner",
+  "nom": "Le dessin",
+  "icone": "1f3a8",
+  "ages": [
+    3,
+    10
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+  },
+  "competences": [
+    {
+      "id": "dessin-libre",
+      "titre": "Dessiner avec une intention",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Dessiner pour représenter un personnage ou un évènement fictif ; les élèves bénéficient de temps au cours desquels ils peuvent dessiner librement."
+      },
+      "activite": "dessin",
+      "parametres": {},
+      "phrases": {
+        "consigne": "Choisis une couleur et dessine avec ton doigt.",
+        "question": "{texte}",
+        "indice": "Tu peux commencer par un grand rond.",
+        "exemple": "Ajoute des couleurs.",
+        "demonstration": "Quand tu as fini, touche le bouton vert.",
+        "bravo": "Bravo ! Ton dessin est rangé dans ton album."
+      },
+      "items": [
+        {
+          "texte": "Dessine {prenom}."
+        },
+        {
+          "texte": "Dessine {un} {objet}."
+        },
+        {
+          "texte": "Dessine ta famille."
+        },
+        {
+          "texte": "Dessine ta maison."
+        },
+        {
+          "texte": "Dessine un animal que tu aimes."
+        },
+        {
+          "texte": "Dessine ce que tu as fait aujourd'hui."
+        },
+        {
+          "texte": "Dessine un arbre et le soleil."
+        },
+        {
+          "texte": "Dessine ce que tu veux !"
+        }
+      ]
+    }
+  ]
+}

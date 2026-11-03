@@ -1,0 +1,11 @@
+id: echecs
+titre: Les échecs — déplacer les pièces
+nom: "Les échecs"
+icone: "265f"
+ages: [5, 10]
+# Règles officielles : FIDE Laws of Chess (1er janvier 2023), article 3 « The moves of the pieces ». Hors programme
+# scolaire : le cours suit l'ordre usuel des initiations (une pièce à la fois, attraper des étoiles), observé sur
+# https://lichess.org/learn (idée seulement, aucun code ni dessin repris, CLAUDE.md règle 7).
+sources:
+  fide: "https://handbook.fide.com/chapter/E012023"
+ordre: [tour, fou, dame, roi, cavalier]

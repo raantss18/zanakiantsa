@@ -79,8 +79,8 @@ void main() {
         a('x', DateTime(2026, 11, 9, 9), ok: false, attempts: 3),
       ];
       final sessions = [
-        (DateTime(2026, 11, 1, 9), DateTime(2026, 11, 1, 9, 10)),
-        (DateTime(2026, 11, 8, 9), DateTime(2026, 11, 8, 9, 12)),
+        SessionLog(theme: 'compter', started: DateTime(2026, 11, 1, 9), ended: DateTime(2026, 11, 1, 9, 10)),
+        SessionLog(theme: 'compter', started: DateTime(2026, 11, 8, 9), ended: DateTime(2026, 11, 8, 9, 12)),
       ];
       final r = weekReport(['x', 'y'], journal, sessions, now);
       expect((r.sessions, r.minutes), (1, 12));
