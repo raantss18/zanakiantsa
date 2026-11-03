@@ -189,6 +189,8 @@ class _SolidViewState extends State<SolidView> with SingleTickerProviderStateMix
       label: widget.label,
       child: GestureDetector(
         onPanUpdate: (d) => setState(() {
+          // Touché : il ne tourne plus tout seul, l'animation s'arrête (plus de dessin à chaque image, ADR 0028).
+          if (!touched) _spin.stop();
           touched = true;
           yaw += d.delta.dx * 0.012;
           pitch = (pitch - d.delta.dy * 0.012).clamp(-1.4, 1.4);

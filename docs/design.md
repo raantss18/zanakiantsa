@@ -89,3 +89,16 @@ bout de bras), « 3 / 10 » écrit ; ◀ ▶ de 72 dp en bas et glisser du doigt
 haute de la page, puis page suivante tout seul, jusqu'à la fin ou un nouveau toucher) qui fonctionne même voix coupée
 (c'est une demande). Dernière page : « Fin », une étoile la première fois, et les **crédits du livre** (auteurs,
 illustrateurs, traducteurs, licence CC BY 4.0, source) — exigés par la licence, toujours visibles.
+
+## 7. Identité visuelle (ADR 0027)
+
+| Jeton | Valeur | Usage |
+| --- | --- | --- |
+| `Brand.pink` / `purple` / `teal` / `maroon` | #D1246A / #5B4BA6 / #15808C / #8C2F57 | lettres des titres (≥ 4,5:1 sur le contour blanc) |
+| `Brand.yellow` / `tealLight` | #F7B42C / #1FA3B2 | décor, fond de l'icône, étoiles — jamais pour du texte |
+| `Brand.shadow` | #2A1F5C | ombre des lettres « autocollant » |
+| Police des titres | Fredoka Gras | logo, titres d'écran, noms des cartes du jour |
+| Police de lecture | Andika | tout le reste (consignes, livres, boutons) |
+
+`PlayfulTitle` : contour blanc = 22 % de la taille, ombre décalée de (5 %, 7 %). Logo-texte : `assets/logo/wordmark.svg`
+(en tête de l'accueil, 76 dp de haut) ; icône : `assets/logo/icone.svg`.

@@ -51,9 +51,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Expanded(
-                  child: Text('Ma bibliothèque', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
-                ),
+                const Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle('Ma bibliothèque'))),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
@@ -456,7 +454,8 @@ class _Page extends StatelessWidget {
           : Container(
               decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(24), boxShadow: cardShadow),
               clipBehavior: Clip.antiAlias,
-              child: Image.asset(img, fit: BoxFit.contain),
+              // Décodée à la largeur de l'écran, pas plus (ADR 0028).
+              child: Image.asset(img, fit: BoxFit.contain, cacheWidth: (k.maxWidth * MediaQuery.devicePixelRatioOf(context)).round().clamp(240, 720)),
             );
       final text = page.text.isEmpty
           ? const SizedBox.shrink()
@@ -496,7 +495,7 @@ class _End extends StatelessWidget {
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               const Art('1f4da', size: 80),
               const SizedBox(height: 8),
-              const Text('Fin', style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700, color: ink)),
+              const PlayfulTitle('Fin', size: 44),
               const SizedBox(height: 4),
               const Text('Bravo, tu as lu tout le livre !', textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
               const Divider(height: 32),

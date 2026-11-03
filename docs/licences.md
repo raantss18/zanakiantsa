@@ -40,6 +40,8 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | Élément | Licence | Statut |
 | --- | --- | --- |
 | Base de puzzles Lichess | CC0 (https://database.lichess.org/, lu le 2026-11-02) | réutilisable, thème échecs |
+| Police Fredoka (`assets/fonts/Fredoka-Bold.ttf`, sous-ensemble) | The Fredoka Project Authors | SIL OFL 1.1 (`assets/fonts/OFL-Fredoka.txt`) |
+| Logo et icône (`design/logo/`) | créés pour l'app (ADR 0027) | comme le contenu de l'app |
 | `assets/livres/` (livres illustrés) | African Storybook Initiative et auteurs cités dans chaque livre (`catalogue.json`, page « Fin ») | CC BY 4.0, livre par livre (ADR 0026) |
 | `assets/echecs/*.svg` (pièces d'échecs) | Cburnett, Wikimedia Commons | CC BY-SA 3.0 (`assets/echecs/LICENCE.txt`) |
 | `assets/audio/sfx/*.wav` (bruitages) | synthétisés par code (`lib/audio/sfx.dart`, `tool/build_sounds.dart`) | original |

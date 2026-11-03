@@ -35,10 +35,16 @@ flutter:
     - assets/art/
     - assets/echecs/
     - assets/livres/
+    - assets/logo/
     - assets/livres/images/
   fonts:
     - family: Andika
       fonts:
         - asset: assets/fonts/Andika-Regular.ttf
         - asset: assets/fonts/Andika-Bold.ttf
+          weight: 700
+    # Titres et logo seulement (ADR 0027) ; la lecture reste en Andika, faite pour les lecteurs débutants.
+    - family: Fredoka
+      fonts:
+        - asset: assets/fonts/Fredoka-Bold.ttf
           weight: 700

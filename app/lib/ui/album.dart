@@ -37,7 +37,7 @@ class AlbumPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text('Mon album', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
+                const PlayfulTitle('Mon album'),
                 const Spacer(),
                 Material(
                   color: surface,

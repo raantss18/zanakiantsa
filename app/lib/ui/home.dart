@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../activities/draw.dart';
 import '../app_state.dart';
@@ -249,7 +250,7 @@ class DayCard extends StatelessWidget {
     final name = FittedBox(
       fit: BoxFit.scaleDown,
       alignment: wide ? Alignment.center : Alignment.centerLeft,
-      child: Text(topic.name, maxLines: 2, textAlign: wide ? TextAlign.center : TextAlign.start, style: TextStyle(fontSize: compact ? 24 : 28, fontWeight: FontWeight.w700, color: ink)),
+      child: Text(topic.name, maxLines: 2, textAlign: wide ? TextAlign.center : TextAlign.start, style: TextStyle(fontFamily: 'Fredoka', fontSize: compact ? 25 : 29, fontWeight: FontWeight.w700, color: ink)),
     );
     final minutes = item.done.inMinutes;
     return Semantics(
@@ -321,7 +322,13 @@ class _Header extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 8, 0),
       child: Row(children: [
-        Text("Zanak'i Antsa", style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
+        // Logo-texte de l'app (ADR 0027) ; il rétrécit plutôt que de pousser les boutons hors de l'écran.
+        Flexible(
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: SvgPicture.asset('assets/logo/wordmark.svg', height: 76, semanticsLabel: "Zanak'i Antsa"),
+          ),
+        ),
         const Spacer(),
         _RoundButton(size: 56, color: surface, tooltip: 'Réécouter', onPressed: onListen, child: Icon(Icons.volume_up_rounded, color: u.onCard, size: 32)),
         const SizedBox(width: 8),
@@ -445,7 +452,7 @@ class UniversePicker extends StatelessWidget {
                 child: const Icon(Icons.arrow_back_rounded, color: ink, size: 32),
               ),
               const SizedBox(width: 12),
-              Text(s.common.text('choisis_univers'), style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
+              Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: PlayfulTitle(s.common.text('choisis_univers')))),
             ]),
             Expanded(
               child: LayoutBuilder(

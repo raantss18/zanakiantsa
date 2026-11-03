@@ -330,7 +330,7 @@ class DrawingsPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text('Mes dessins', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: u.onBackground)),
+                const PlayfulTitle('Mes dessins'),
               ]),
             ),
             Expanded(

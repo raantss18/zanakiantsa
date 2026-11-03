@@ -18,8 +18,10 @@ Future<void> _bounded(Future<void> f, Duration budget) => f.timeout(budget, onTi
 class Voice {
   final _tts = FlutterTts();
 
-  /// Voix anglaise pour les mots d'anglais (ADR 0022) ; initialisée au premier besoin.
-  final _en = FlutterTts();
+  /// Voix anglaise pour les mots d'anglais (ADR 0022) : créée seulement au premier mot anglais (une liaison au moteur
+  /// de synthèse en moins pour tous les autres domaines, ADR 0028).
+  FlutterTts? _enTts;
+  FlutterTts get _en => _enTts ??= FlutterTts();
   late final Future<void> _enReady = () async {
     await _en.setLanguage('en-GB');
     await _en.setSpeechRate(0.4);
@@ -80,11 +82,23 @@ class Voice {
     _musicWorld = world;
     if (!soundOn || _musicPlaying) return;
     _musicPlaying = true;
+    // Une seule trame gardée en mémoire (≈ 0,7 Mo) : celle du monde en cours.
+    _ambience.removeWhere((k, _) => k != world);
     final bytes = _ambience[world] ??= await compute(ambienceWav, world);
     if (!_musicPlaying || _musicWorld != world) return;
     await _music.setReleaseMode(ReleaseMode.loop);
     await _music.setVolume(musicVolume);
     await _music.play(BytesSource(bytes, mimeType: 'audio/wav'));
+  }
+
+  /// Appli cachée : on coupe la phrase en cours et on met la trame en pause (sans l'oublier).
+  Future<void> pauseAll() async {
+    await stop();
+    if (_musicPlaying) await _music.pause();
+  }
+
+  Future<void> resumeMusic() async {
+    if (_musicPlaying && soundOn) await _music.resume();
   }
 
   Future<void> stopMusic() async {
@@ -109,7 +123,7 @@ class Voice {
   }
 
   Future<void> stop() async {
-    await _en.stop();
+    await _enTts?.stop();
     await _tts.stop();
     await _player.stop();
   }

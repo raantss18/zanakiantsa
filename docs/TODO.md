@@ -122,6 +122,9 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Corrigé (signalé par Antsa sur téléphone) : noms des cartes du jour coupés (« Les n… ») → carte compacte sous
   440 dp ; rangée du bas, carte « livre en cours » et choix d'images revus ; vérifié au format téléphone
   (1080 × 2400, densité 440, police 115 %)
+- ✅ Version 0.4.0 publiée (2026-11-03, build 2004)
+- ✅ Identité visuelle « autocollant » : logo-texte, icône adaptative et monochrome, écran de démarrage, titres
+  (ADR 0027) ; ressources : pause du son en arrière-plan, polices réduites, caches bornés (ADR 0028)
 - ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
 - ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant

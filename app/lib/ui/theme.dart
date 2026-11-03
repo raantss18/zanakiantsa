@@ -191,3 +191,53 @@ class PicButton extends StatelessWidget {
     );
   }
 }
+
+/// Identité visuelle (ADR 0027, docs/design.md § 7) : couleurs du logo. Les lettres de titre n'utilisent que les
+/// teintes foncées (≥ 4,5:1 contre leur contour blanc) ; le jaune et le sarcelle clair restent des décors.
+abstract final class Brand {
+  static const pink = Color(0xFFD1246A), purple = Color(0xFF5B4BA6), teal = Color(0xFF15808C), maroon = Color(0xFF8C2F57);
+  static const yellow = Color(0xFFF7B42C), tealLight = Color(0xFF1FA3B2), shadow = Color(0xFF2A1F5C);
+  static const letters = [pink, purple, teal, maroon];
+}
+
+/// Titre « autocollant » des écrans de l'enfant : police Fredoka, lettres de couleurs alternées, contour blanc épais
+/// et ombre, comme le logo. Lisible sur tous les fonds d'univers (le contour blanc porte le contraste).
+class PlayfulTitle extends StatelessWidget {
+  const PlayfulTitle(this.text, {super.key, this.size = 30, this.maxLines = 1});
+  final String text;
+  final double size;
+  final int maxLines;
+
+  @override
+  Widget build(BuildContext context) {
+    TextStyle base(Paint? fg) => TextStyle(fontFamily: 'Fredoka', fontWeight: FontWeight.w700, fontSize: size, height: 1.1, foreground: fg);
+    var n = 0;
+    final colored = [
+      for (final ch in text.characters)
+        TextSpan(text: ch, style: TextStyle(color: ch.trim().isEmpty ? null : Brand.letters[n++ % Brand.letters.length])),
+    ];
+    final stroke = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size * 0.22
+      ..strokeJoin = StrokeJoin.round
+      ..color = Colors.white;
+    return Semantics(
+      header: true,
+      label: text,
+      excludeSemantics: true,
+      child: Stack(children: [
+        // Ombre décalée, puis contour blanc, puis les lettres de couleur.
+        Transform.translate(
+          offset: Offset(size * 0.05, size * 0.07),
+          child: Text(text, maxLines: maxLines, overflow: TextOverflow.ellipsis, style: base(Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = size * 0.22
+            ..strokeJoin = StrokeJoin.round
+            ..color = Brand.shadow)),
+        ),
+        Text(text, maxLines: maxLines, overflow: TextOverflow.ellipsis, style: base(stroke)),
+        Text.rich(TextSpan(children: colored), maxLines: maxLines, overflow: TextOverflow.ellipsis, style: base(null)),
+      ]),
+    );
+  }
+}

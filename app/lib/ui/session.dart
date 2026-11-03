@@ -489,6 +489,8 @@ class DayEnd extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 640),
           decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
+            const PlayfulTitle('Bravo !', size: 40),
+            const SizedBox(height: 12),
             child,
             if (done) ...[
               const SizedBox(height: 20),
