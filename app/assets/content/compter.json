@@ -6,7 +6,7 @@
   "icone": "1f522",
   "ages": [
     5,
-    7
+    8
   ],
   "sources": {
     "cycle1": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
@@ -191,6 +191,218 @@
         "exemple": "Montre {a} doigts. Combien de doigts restent baissés ?",
         "demonstration": "Regarde : {a} et {b} font {n}.",
         "bravo": "Oui, {a} plus {b} égale {n}."
+      }
+    },
+    {
+      "id": "dizaines-lire",
+      "titre": "Lire un nombre en dizaines et unités",
+      "niveau": "CP",
+      "prerequis": [
+        "complement-10"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Face à une collection composée de trois barres de dix cubes et quatre cubes isolés, l’élève reconnait qu’il y a trente-quatre cubes. Il verbalise sous la forme : « Trois dizaines et quatre unités, cela fait trente-quatre »."
+      },
+      "activite": "batonnets",
+      "parametres": {
+        "mode": "lire",
+        "min": 11,
+        "max": 59
+      },
+      "phrases": {
+        "consigne": "Un paquet, c'est dix bâtonnets. Compte les paquets, puis les bâtonnets seuls.",
+        "question": "Combien y a-t-il de bâtonnets ?",
+        "indice": "Compte de dix en dix pour les paquets : dix, vingt, trente… puis ajoute les bâtonnets seuls.",
+        "exemple": "Il y a {dizaines} et {unites}.",
+        "demonstration": "Regarde : {dizaines} et {unites}, cela fait {n}.",
+        "bravo": "Oui ! {dizaines} et {unites}, cela fait {n}."
+      }
+    },
+    {
+      "id": "dizaines-construire",
+      "titre": "Construire un nombre avec des dizaines",
+      "niveau": "CP",
+      "prerequis": [
+        "dizaines-lire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Construire des collections de cardinal donné. Les élèves utilisent des buchettes pouvant être facilement assemblées en groupes de dix."
+      },
+      "activite": "batonnets",
+      "parametres": {
+        "mode": "construire",
+        "min": 11,
+        "max": 59
+      },
+      "phrases": {
+        "consigne": "Ajoute des paquets de dix et des bâtonnets, puis touche le bouton vert.",
+        "question": "Fabrique le nombre {n} avec des bâtonnets.",
+        "indice": "Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.",
+        "exemple": "Pour {n}, il faut {dizaines} et {unites}.",
+        "demonstration": "Regarde : {n}, c'est {dizaines} et {unites}.",
+        "bravo": "Oui ! {n}, c'est {dizaines} et {unites}."
+      }
+    },
+    {
+      "id": "groupes",
+      "titre": "Des paquets pareils (sens de la multiplication)",
+      "niveau": "CP",
+      "prerequis": [
+        "dizaines-construire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Résoudre des problèmes multiplicatifs en une étape (champ numérique inférieur ou égal à 30) : rechercher la valeur d’un tout composé de plusieurs parties de même valeur ; l’élève peut aussi utiliser des additions itérées."
+      },
+      "activite": "groupes",
+      "parametres": {
+        "groupes_max": 5,
+        "par_min": 2,
+        "par_max": 6,
+        "total_max": 30
+      },
+      "phrases": {
+        "consigne": "Regarde les paquets : ils ont tous le même nombre.",
+        "question": "{prenom} a {a} paquets de {b} {objets}. Combien en tout ?",
+        "indice": "Compte un paquet, puis ajoute les autres : {b}, puis encore {b}…",
+        "exemple": "Tu peux compter tous les objets un par un.",
+        "demonstration": "Regarde : {a} paquets de {b}, cela fait {n}.",
+        "bravo": "Oui ! {a} fois {b}, cela fait {n}."
+      }
+    },
+    {
+      "id": "doubles",
+      "titre": "Les doubles",
+      "niveau": "CE1",
+      "prerequis": [
+        "groupes"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre des faits multiplicatifs usuels : l’élève sait donner oralement et par écrit les doubles des nombres de 1 à 15."
+      },
+      "activite": "groupes",
+      "parametres": {
+        "groupes_fixe": 2,
+        "par_min": 1,
+        "par_max": 15,
+        "total_max": 30
+      },
+      "phrases": {
+        "consigne": "Le double, c'est deux fois le même nombre.",
+        "question": "Quel est le double de {b} ?",
+        "indice": "Le double de {b}, c'est {b} plus {b}.",
+        "exemple": "Compte les objets des deux paquets.",
+        "demonstration": "Regarde : {b} plus {b}, cela fait {n}.",
+        "bravo": "Oui ! Le double de {b}, c'est {n}."
+      }
+    },
+    {
+      "id": "partager",
+      "titre": "Partager équitablement",
+      "niveau": "CP",
+      "prerequis": [
+        "groupes"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Rechercher la valeur d’une part dans un partage équitable, en s’appuyant sur des objets qu’il distribue un à un, équitablement, dans chacune des parts."
+      },
+      "activite": "partage",
+      "parametres": {
+        "parts_max": 4,
+        "par_max": 5
+      },
+      "phrases": {
+        "consigne": "Touche un enfant pour lui donner un objet. Chacun son tour !",
+        "question": "Partage les {n} {objets} entre {a} enfants : chacun doit en avoir autant.",
+        "indice": "Donne un objet à chaque enfant, puis recommence, jusqu'à ce qu'il n'en reste plus.",
+        "exemple": "Chacun son tour : le premier, le deuxième, puis encore le premier…",
+        "demonstration": "Regarde : un par un, chacun son tour. Chacun en a {b}.",
+        "bravo": "Oui ! C'est juste : chacun en a {b}."
+      }
+    },
+    {
+      "id": "moities",
+      "titre": "Les moitiés",
+      "niveau": "CE1",
+      "prerequis": [
+        "partager",
+        "doubles"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre des faits multiplicatifs usuels : les moitiés des nombres pairs de 2 à 30."
+      },
+      "activite": "partage",
+      "parametres": {
+        "parts_fixe": 2,
+        "par_max": 15
+      },
+      "phrases": {
+        "consigne": "La moitié, c'est partager en deux parts égales.",
+        "question": "Partage les {n} {objets} en deux parts égales.",
+        "indice": "Donne un objet à chaque enfant, chacun son tour.",
+        "exemple": "Les deux enfants doivent en avoir autant.",
+        "demonstration": "Regarde : la moitié de {n}, c'est {b}.",
+        "bravo": "Oui ! La moitié de {n}, c'est {b}."
+      }
+    },
+    {
+      "id": "tables-2-5-10",
+      "titre": "Tables de 2, 5 et 10",
+      "niveau": "CE1",
+      "prerequis": [
+        "moities"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables de multiplication : A × B = C, où A et B sont des nombres entiers compris entre 0 et 10. L’apprentissage des tables s’étale sur l’année, de manière progressive."
+      },
+      "activite": "tables",
+      "parametres": {
+        "tables": [
+          2,
+          5,
+          10
+        ]
+      },
+      "phrases": {
+        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "question": "{a} × {b} = ?",
+        "indice": "{a} rangées de {b} : compte de {b} en {b}.",
+        "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
+        "demonstration": "Regarde : {a} fois {b} égale {n}.",
+        "bravo": "Oui ! {a} fois {b} égale {n}."
+      }
+    },
+    {
+      "id": "tables-3-4",
+      "titre": "Tables de 3 et 4",
+      "niveau": "CE1",
+      "prerequis": [
+        "tables-2-5-10"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables de multiplication : A × B = C, où A et B sont des nombres entiers compris entre 0 et 10."
+      },
+      "activite": "tables",
+      "parametres": {
+        "tables": [
+          3,
+          4
+        ]
+      },
+      "phrases": {
+        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "question": "{a} × {b} = ?",
+        "indice": "{a} rangées de {b} : compte de {b} en {b}.",
+        "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
+        "demonstration": "Regarde : {a} fois {b} égale {n}.",
+        "bravo": "Oui ! {a} fois {b} égale {n}."
       }
     }
   ]

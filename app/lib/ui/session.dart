@@ -8,6 +8,7 @@ import '../activities/chess.dart';
 import '../activities/choose.dart';
 import '../activities/listen.dart';
 import '../activities/motif.dart';
+import '../activities/numbers.dart';
 import '../activities/composer.dart';
 import '../activities/denombrer.dart';
 import '../app_state.dart';
@@ -151,7 +152,8 @@ class Attempt extends ChangeNotifier {
   }
 }
 
-/// Essais sur tablette seulement : `--dart-define=DEV_SKILL=<id>` fait jouer cette compétence. Vide en version publiée.
+/// Essais seulement : `--dart-define=DEV_SKILL=<id>,<id>…` fait jouer ces compétences, une question chacune. Vide en
+/// version publiée.
 const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
@@ -165,7 +167,7 @@ class SessionPage extends StatefulWidget {
 class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
   late final List<String> plan =
-      devSkill.isEmpty ? app.progressOf(app.topic(widget.topic)).plan(DateTime.now()) : List.filled(3, devSkill);
+      devSkill.isEmpty ? app.progressOf(app.topic(widget.topic)).plan(DateTime.now()) : devSkill.split(",");
   late final Rewards before = app.rewards;
   final _rand = Random();
   final _started = DateTime.now();
@@ -273,6 +275,9 @@ class _SessionPageState extends State<SessionPage> {
                           'motif' => MotifActivity(key: ValueKey(index), attempt: a),
                           'ecouter' => ListenActivity(key: ValueKey(index), attempt: a),
                           'echecs' => ChessActivity(key: ValueKey(index), attempt: a),
+                          'batonnets' => SticksActivity(key: ValueKey(index), attempt: a),
+                          'groupes' || 'tables' => GroupsActivity(key: ValueKey(index), attempt: a),
+                          'partage' => ShareActivity(key: ValueKey(index), attempt: a),
                           _ => CalcActivity(key: ValueKey(index), attempt: a),
                         },
                       ),

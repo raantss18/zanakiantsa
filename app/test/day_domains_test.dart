@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:zanakiantsa/activities/numbers.dart';
 import 'package:zanakiantsa/audio/sfx.dart';
 import 'package:zanakiantsa/content/content.dart';
 import 'package:zanakiantsa/core/chess.dart';
@@ -185,6 +186,24 @@ void main() {
           expect(solutions(b, blackMated), isNotEmpty);
         }
       }
+    });
+  });
+
+  group('Calcul cycle 2 (ADR 0021)', () {
+    test('trois réponses différentes, positives, dont la bonne', () {
+      for (var n = 0; n <= 100; n++) {
+        for (var seed = 0; seed < 5; seed++) {
+          final c = numberChoices(n, seed, near: [n + 3, n]);
+          expect(c, contains(n));
+          expect(c.toSet().length, 3);
+          expect(c.every((v) => v >= 0), isTrue);
+        }
+      }
+    });
+    test('dizaines et unités accordées au singulier', () {
+      final s = topics().first.skills.firstWhere((s) => s.id == 'dizaines-lire');
+      expect(s.say('bravo', const Question(n: 14, a: 1, b: 4)), 'Oui ! 1 dizaine et 4 unités, cela fait 14.');
+      expect(s.say('bravo', const Question(n: 30, a: 3, b: 0)), 'Oui ! 3 dizaines et 0 unité, cela fait 30.');
     });
   });
 

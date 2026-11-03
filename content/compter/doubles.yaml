@@ -1,0 +1,14 @@
+id: doubles
+titre: Les doubles
+niveau: CE1
+prerequis: [groupes]
+programme: { source: cycle2, texte: "Connaitre des faits multiplicatifs usuels : l’élève sait donner oralement et par écrit les doubles des nombres de 1 à 15." }
+activite: groupes
+parametres: { groupes_fixe: 2, par_min: 1, par_max: 15, total_max: 30 }
+phrases:
+  consigne: "Le double, c'est deux fois le même nombre."
+  question: "Quel est le double de {b} ?"
+  indice: "Le double de {b}, c'est {b} plus {b}."
+  exemple: "Compte les objets des deux paquets."
+  demonstration: "Regarde : {b} plus {b}, cela fait {n}."
+  bravo: "Oui ! Le double de {b}, c'est {n}."

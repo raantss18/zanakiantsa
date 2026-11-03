@@ -87,6 +87,7 @@ class Skill {
   Map<String, String> vars(Question q) => switch (activity) {
         'choisir' || 'dessin' => items[q.n].vars,
         'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
+        'batonnets' => {'dizaines': q.a <= 1 ? '${q.a} dizaine' : '${q.a} dizaines', 'unites': q.b <= 1 ? '${q.b} unité' : '${q.b} unités'},
         _ => const {},
       };
 
@@ -120,6 +121,25 @@ class Skill {
         return Question(n: r.nextInt(2), a: r.nextInt(1 << 30), b: r.nextInt(2));
       case 'echecs':
         return Question(n: between(1, p('etoiles')), a: r.nextInt(1 << 30));
+      case 'batonnets':
+        final n = between(p('min'), p('max'));
+        return Question(n: n, a: n ~/ 10, b: n % 10);
+      case 'groupes':
+        // [a] groupes de [b] : le tout ne dépasse pas total_max (programme CP : champ numérique ≤ 30).
+        while (true) {
+          final a = params.containsKey('groupes_fixe') ? p('groupes_fixe') : between(2, p('groupes_max'));
+          final b = between(params.containsKey('par_min') ? p('par_min') : 1, p('par_max'));
+          if (a * b <= p('total_max')) return Question(n: a * b, a: a, b: b);
+        }
+      case 'tables':
+        final tables = List<int>.from(params['tables'] as List);
+        final a = tables[r.nextInt(tables.length)];
+        final b = between(1, 10);
+        return Question(n: a * b, a: a, b: b);
+      case 'partage':
+        final a = params.containsKey('parts_fixe') ? p('parts_fixe') : between(2, p('parts_max'));
+        final b = between(1, p('par_max'));
+        return Question(n: a * b, a: a, b: b);
       case 'motif':
         return Question(n: 0, a: r.nextInt(1 << 30));
       default: // calcul
@@ -131,7 +151,11 @@ class Skill {
   }
 
   /// Réponse attendue : le total (dénombrer, composer, somme) ou le nombre manquant (complément).
-  int expected(Question q) => activity == 'calcul' && params['forme'] == 'complement' ? q.b : q.n;
+  int expected(Question q) => switch (activity) {
+        'calcul' when params['forme'] == 'complement' => q.b,
+        'partage' => q.b,
+        _ => q.n,
+      };
 }
 
 /// Une question écrite (`choisir`) : énoncé, bonne image, autres images, explication ; ou un sujet de dessin.

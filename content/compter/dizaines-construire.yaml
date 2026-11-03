@@ -1,0 +1,14 @@
+id: dizaines-construire
+titre: Construire un nombre avec des dizaines
+niveau: CP
+prerequis: [dizaines-lire]
+programme: { source: cycle2, texte: "Construire des collections de cardinal donné. Les élèves utilisent des buchettes pouvant être facilement assemblées en groupes de dix." }
+activite: batonnets
+parametres: { mode: construire, min: 11, max: 59 }
+phrases:
+  consigne: "Ajoute des paquets de dix et des bâtonnets, puis touche le bouton vert."
+  question: "Fabrique le nombre {n} avec des bâtonnets."
+  indice: "Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls."
+  exemple: "Pour {n}, il faut {dizaines} et {unites}."
+  demonstration: "Regarde : {n}, c'est {dizaines} et {unites}."
+  bravo: "Oui ! {n}, c'est {dizaines} et {unites}."

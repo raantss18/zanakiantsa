@@ -1,0 +1,14 @@
+id: dizaines-lire
+titre: Lire un nombre en dizaines et unités
+niveau: CP
+prerequis: [complement-10]
+programme: { source: cycle2, texte: "Face à une collection composée de trois barres de dix cubes et quatre cubes isolés, l’élève reconnait qu’il y a trente-quatre cubes. Il verbalise sous la forme : « Trois dizaines et quatre unités, cela fait trente-quatre »." }
+activite: batonnets
+parametres: { mode: lire, min: 11, max: 59 }
+phrases:
+  consigne: "Un paquet, c'est dix bâtonnets. Compte les paquets, puis les bâtonnets seuls."
+  question: "Combien y a-t-il de bâtonnets ?"
+  indice: "Compte de dix en dix pour les paquets : dix, vingt, trente… puis ajoute les bâtonnets seuls."
+  exemple: "Il y a {dizaines} et {unites}."
+  demonstration: "Regarde : {dizaines} et {unites}, cela fait {n}."
+  bravo: "Oui ! {dizaines} et {unites}, cela fait {n}."

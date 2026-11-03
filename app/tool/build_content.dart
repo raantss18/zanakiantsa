@@ -17,6 +17,11 @@ const activities = {
   'ecouter': {'dimension', 'mots'},
   'echecs': {'piece', 'etoiles'},
   'dessin': <String>{},
+  // ADR 0021 (cycle 2)
+  'batonnets': {'mode', 'min', 'max'},
+  'groupes': {'par_max', 'total_max'},
+  'tables': {'tables'},
+  'partage': {'par_max'},
 };
 /// Activités dont les questions sont écrites dans `items`.
 const withItems = {'choisir', 'dessin'};
@@ -28,6 +33,7 @@ final placeholder = RegExp(r'\{(\w+)\}');
 const allowedPlaceholders = {
   'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom', //
   'texte', 'bonne', 'explication', 'mot', 'rep', // variables d'activité (ADR 0019)
+  'dizaines', 'unites', // bâtonnets (ADR 0021)
 };
 
 /// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).

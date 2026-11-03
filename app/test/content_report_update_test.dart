@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('7 compétences, prérequis connus et placés avant', () {
+    test('15 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 7);
+      expect(t.skills.length, 15);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -35,6 +35,13 @@ void main() {
               expect(q.n, inInclusiveRange(s.p('cible_min'), s.p('cible_max')));
               expect(q.a, lessThan(q.n));
               expect(q.a + q.b, q.n);
+            case 'batonnets':
+              expect(q.n, inInclusiveRange(s.p('min'), s.p('max')));
+              expect(q.a * 10 + q.b, q.n);
+            case 'groupes' || 'tables' || 'partage':
+              expect(q.a * q.b, q.n);
+              if (s.params.containsKey('total_max')) expect(q.n, lessThanOrEqualTo(s.p('total_max')));
+              if (s.activity == 'partage') expect(s.expected(q), q.b);
             default:
               expect(q.a + q.b, q.n);
               expect(q.n, lessThanOrEqualTo(s.p('total_max')));
