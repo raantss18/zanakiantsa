@@ -76,6 +76,8 @@ denombrer-6.exemple;Le dernier nombre dit, c'est le nombre de {objets}.
 denombrer-6.demonstration;Regarde : je compte avec toi. Il y a {n} {objets}.
 denombrer-6.bravo;Oui, il y a {n} {objets}.
 denombrer-6.idee;Pour compter, on touche chaque {objet} une seule fois en disant un nombre. Le dernier nombre dit, c'est combien il y en a.
+denombrer-6.variantes.0;Combien vois-tu de {objets} ?
+denombrer-6.variantes.1;Compte les {objets}, un par un.
 denombrer-10.consigne;Touche chaque {objet} pour compter.
 denombrer-10.question;Combien de {objets} ?
 denombrer-10.indice;Touche les {objets} {un} par {un}, sans en oublier.
@@ -83,6 +85,8 @@ denombrer-10.exemple;Le dernier nombre dit, c'est le nombre de {objets}.
 denombrer-10.demonstration;Regarde : je compte avec toi. Il y a {n} {objets}.
 denombrer-10.bravo;Oui, il y a {n} {objets}.
 denombrer-10.idee;On compte jusqu'à dix en touchant chaque {objet} une seule fois. Le dernier nombre dit combien il y en a en tout.
+denombrer-10.variantes.0;Combien vois-tu de {objets} ?
+denombrer-10.variantes.1;Compte les {objets}, un par un.
 constituer-10.consigne;Mets {n} {objets} dans {contenant}.
 constituer-10.question;As-tu mis {n} {objets} ? Appuie sur ✔.
 constituer-10.indice;Compte les {objets} dans {contenant}, {un} par {un}.
@@ -104,6 +108,10 @@ additionner-5.exemple;Pense à {a} {objets} et encore {b} {objets}.
 additionner-5.demonstration;Regarde : {a} et {b} font {n}.
 additionner-5.bravo;Oui, {a} plus {b} égale {n}.
 additionner-5.idee;Ajouter, c'est mettre ensemble. On compte ceux du début, puis on continue avec ceux qui arrivent.
+additionner-5.variantes.0;Combien font {a} et {b} ?
+additionner-5.variantes.1;{a} + {b} = ?
+additionner-5.variantes.2;{prenom} trouve {a} {objets}, puis encore {b}. Combien en tout ?
+additionner-5.variantes.3;Dans {contenant}, il y a {a} {objets}. On en ajoute {b}. Combien maintenant ?
 additionner-10.consigne;Écris le résultat avec ton doigt.
 additionner-10.question;{prenom} a {a} {objets}. Il en arrive {b}. Combien en tout ?
 additionner-10.indice;Pars du plus grand nombre et compte le petit en plus.
@@ -111,6 +119,10 @@ additionner-10.exemple;Pour {a} plus {b} : pars de {a} et avance de {b}.
 additionner-10.demonstration;Regarde : {a} et {b} font {n}.
 additionner-10.bravo;Oui, {a} plus {b} égale {n}.
 additionner-10.idee;Ajouter, c'est mettre ensemble. Pars du premier nombre et avance encore du deuxième.
+additionner-10.variantes.0;Combien font {a} et {b} ?
+additionner-10.variantes.1;{a} + {b} = ?
+additionner-10.variantes.2;{prenom} trouve {a} {objets}, puis encore {b}. Combien en tout ?
+additionner-10.variantes.3;Dans {contenant}, il y a {a} {objets}. On en ajoute {b}. Combien maintenant ?
 complement-10.consigne;Écris le nombre qui manque avec ton doigt.
 complement-10.question;{prenom} veut {n} {objets}. Il y en a {a}. Combien en manque-t-il ?
 complement-10.indice;Compte à partir de {a} jusqu'à {n}.
@@ -118,6 +130,9 @@ complement-10.exemple;Montre {a} doigts. Combien de doigts restent baissés ?
 complement-10.demonstration;Regarde : {a} et {b} font {n}.
 complement-10.bravo;Oui, {a} plus {b} égale {n}.
 complement-10.idee;Pour aller jusqu'à dix, on cherche combien il manque. On part de ce qu'on a et on compte jusqu'à dix.
+complement-10.variantes.0;{a} et combien font {n} ?
+complement-10.variantes.1;{a} + ? = {n}
+complement-10.variantes.2;Dans {contenant}, il y a {a} {objets}. Combien faut-il en ajouter pour en avoir {n} ?
 dizaines-lire.consigne;Un paquet, c'est dix bâtonnets. Compte les paquets, puis les bâtonnets seuls.
 dizaines-lire.question;Combien y a-t-il de bâtonnets ?
 dizaines-lire.indice;Compte de dix en dix pour les paquets : dix, vingt, trente… puis ajoute les bâtonnets seuls.
@@ -125,6 +140,8 @@ dizaines-lire.exemple;Il y a {dizaines} et {unites}.
 dizaines-lire.demonstration;Regarde : {dizaines} et {unites}, cela fait {n}.
 dizaines-lire.bravo;Oui ! {dizaines} et {unites}, cela fait {n}.
 dizaines-lire.idee;Un paquet, c'est dix bâtonnets attachés. On compte les paquets de dix en dix, puis les bâtonnets seuls.
+dizaines-lire.variantes.0;Compte les bâtonnets : combien en tout ?
+dizaines-lire.variantes.1;Paquets de dix et bâtonnets seuls : quel nombre vois-tu ?
 dizaines-construire.consigne;Ajoute des paquets de dix et des bâtonnets, puis touche le bouton vert.
 dizaines-construire.question;Fabrique le nombre {n} avec des bâtonnets.
 dizaines-construire.indice;Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.
@@ -132,6 +149,8 @@ dizaines-construire.exemple;Pour {n}, il faut {dizaines} et {unites}.
 dizaines-construire.demonstration;Regarde : {n}, c'est {dizaines} et {unites}.
 dizaines-construire.bravo;Oui ! {n}, c'est {dizaines} et {unites}.
 dizaines-construire.idee;Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.
+dizaines-construire.variantes.0;Montre {n} avec des paquets de dix et des bâtonnets.
+dizaines-construire.variantes.1;Fabrique le nombre {n}.
 casser-dizaine.consigne;Pour enlever des bâtonnets, défais d'abord un paquet de dix.
 casser-dizaine.question;Il y a {n} bâtonnets. Enlève-en {b}. Combien en reste-t-il ?
 casser-dizaine.indice;Touche un paquet : il devient dix bâtonnets. Puis enlève-en {b}, un par un.
@@ -139,6 +158,8 @@ casser-dizaine.exemple;Dix moins {b}, puis ajoute les autres paquets de dix.
 casser-dizaine.demonstration;Regarde : je défais un paquet et j'enlève {b} bâtonnets. Il en reste {reste}.
 casser-dizaine.bravo;Oui ! {n} moins {b}, il reste {reste}.
 casser-dizaine.idee;Pour enlever des bâtonnets quand il n'y a que des paquets, on défait un paquet : il devient dix bâtonnets.
+casser-dizaine.variantes.0;{n} bâtonnets, moins {b} : combien en reste-t-il ?
+casser-dizaine.variantes.1;Il y a {n} bâtonnets. Retire-en {b}. Combien en reste-t-il ?
 groupes.consigne;Regarde les paquets : ils ont tous le même nombre.
 groupes.question;{prenom} a {a} paquets de {b} {objets}. Combien en tout ?
 groupes.indice;Compte un paquet, puis ajoute les autres : {b}, puis encore {b}…
@@ -146,6 +167,8 @@ groupes.exemple;Tu peux compter tous les objets un par un.
 groupes.demonstration;Regarde : {a} paquets de {b}, cela fait {n}.
 groupes.bravo;Oui ! {a} fois {b}, cela fait {n}.
 groupes.idee;Quand tous les paquets ont le même nombre, on peut compter paquet par paquet : c'est la multiplication.
+groupes.variantes.0;{a} paquets de {b} {objets} : combien en tout ?
+groupes.variantes.1;Il y a {a} boîtes. Dans chaque boîte, {b} {objets}. Combien en tout ?
 doubles.consigne;Le double, c'est deux fois le même nombre.
 doubles.question;Quel est le double de {b} ?
 doubles.indice;Le double de {b}, c'est {b} plus {b}.
@@ -153,6 +176,8 @@ doubles.exemple;Compte les objets des deux paquets.
 doubles.demonstration;Regarde : {b} plus {b}, cela fait {n}.
 doubles.bravo;Oui ! Le double de {b}, c'est {n}.
 doubles.idee;Le double, c'est deux fois le même nombre : deux paquets pareils.
+doubles.variantes.0;Combien font {b} plus {b} ?
+doubles.variantes.1;{prenom} a {b} {objets}, puis encore autant. Combien en tout ?
 partager.consigne;Touche un enfant pour lui donner un objet. Chacun son tour !
 partager.question;Partage les {n} {objets} entre {a} enfants : chacun doit en avoir autant.
 partager.indice;Donne un objet à chaque enfant, puis recommence, jusqu'à ce qu'il n'en reste plus.
@@ -160,6 +185,7 @@ partager.exemple;Chacun son tour : le premier, le deuxième, puis encore le prem
 partager.demonstration;Regarde : un par un, chacun son tour. Chacun en a {b}.
 partager.bravo;Oui ! C'est juste : chacun en a {b}.
 partager.idee;Partager équitablement, c'est donner un objet à chacun, chacun son tour, jusqu'à ce qu'il n'en reste plus.
+partager.variantes.0;{a} enfants se partagent {n} {objets}. Combien chacun ?
 paquets.consigne;Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus.
 paquets.question;{prenom} range {n} {objets} par paquets de {b}. Combien de paquets ?
 paquets.indice;Fais les paquets un par un, puis compte-les.
@@ -167,6 +193,8 @@ paquets.exemple;Touche chaque paquet du doigt en comptant : un, deux, trois…
 paquets.demonstration;Regarde : {n} {objets} en paquets de {b}, cela fait {a} paquets.
 paquets.bravo;Oui ! Cela fait {a} paquets de {b}.
 paquets.idee;On range les objets par paquets pareils. Ensuite, on compte combien de paquets on a faits.
+paquets.variantes.0;Range {n} {objets} par paquets de {b}. Combien de paquets ?
+paquets.variantes.1;Avec {n} {objets}, combien de paquets de {b} peux-tu faire ?
 moities.consigne;La moitié, c'est partager en deux parts égales.
 moities.question;Partage les {n} {objets} en deux parts égales.
 moities.indice;Donne un objet à chaque enfant, chacun son tour.
@@ -174,6 +202,7 @@ moities.exemple;Les deux enfants doivent en avoir autant.
 moities.demonstration;Regarde : la moitié de {n}, c'est {b}.
 moities.bravo;Oui ! La moitié de {n}, c'est {b}.
 moities.idee;La moitié, c'est ce qu'a chacun quand on partage en deux parts égales.
+moities.variantes.0;Quelle est la moitié de {n} ? Partage pour trouver.
 tables-2-5-10.consigne;Chaque rangée a le même nombre d'objets.
 tables-2-5-10.question;{a} × {b} = ?
 tables-2-5-10.indice;{a} rangées de {b} : compte de {b} en {b}.
@@ -181,6 +210,8 @@ tables-2-5-10.exemple;{a} fois {b}, c'est {b} répété {a} fois.
 tables-2-5-10.demonstration;Regarde : {a} fois {b} égale {n}.
 tables-2-5-10.bravo;Oui ! {a} fois {b} égale {n}.
 tables-2-5-10.idee;{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.
+tables-2-5-10.variantes.0;Combien font {a} fois {b} ?
+tables-2-5-10.variantes.1;{a} rangées de {b} : combien en tout ?
 tables-3-4.consigne;Chaque rangée a le même nombre d'objets.
 tables-3-4.question;{a} × {b} = ?
 tables-3-4.indice;{a} rangées de {b} : compte de {b} en {b}.
@@ -188,6 +219,8 @@ tables-3-4.exemple;{a} fois {b}, c'est {b} répété {a} fois.
 tables-3-4.demonstration;Regarde : {a} fois {b} égale {n}.
 tables-3-4.bravo;Oui ! {a} fois {b} égale {n}.
 tables-3-4.idee;{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.
+tables-3-4.variantes.0;Combien font {a} fois {b} ?
+tables-3-4.variantes.1;{a} rangées de {b} : combien en tout ?
 tables-6-7.consigne;Chaque rangée a le même nombre d'objets.
 tables-6-7.question;{a} × {b} = ?
 tables-6-7.indice;{a} rangées de {b} : compte de {b} en {b}.
@@ -195,6 +228,8 @@ tables-6-7.exemple;{a} fois {b}, c'est {b} répété {a} fois.
 tables-6-7.demonstration;Regarde : {a} fois {b} égale {n}.
 tables-6-7.bravo;Oui ! {a} fois {b} égale {n}.
 tables-6-7.idee;{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.
+tables-6-7.variantes.0;Combien font {a} fois {b} ?
+tables-6-7.variantes.1;{a} rangées de {b} : combien en tout ?
 tables-8-9.consigne;Chaque rangée a le même nombre d'objets.
 tables-8-9.question;{a} × {b} = ?
 tables-8-9.indice;{a} rangées de {b} : compte de {b} en {b}.
@@ -202,6 +237,8 @@ tables-8-9.exemple;{a} fois {b}, c'est {b} répété {a} fois.
 tables-8-9.demonstration;Regarde : {a} fois {b} égale {n}.
 tables-8-9.bravo;Oui ! {a} fois {b} égale {n}.
 tables-8-9.idee;{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.
+tables-8-9.variantes.0;Combien font {a} fois {b} ?
+tables-8-9.variantes.1;{a} rangées de {b} : combien en tout ?
 sens.consigne;Écoute la question, puis touche la bonne image.
 sens.question;{texte}
 sens.indice;Pense à ton corps : quelle partie fait cela ?

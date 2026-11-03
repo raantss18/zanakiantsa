@@ -254,8 +254,9 @@ class _SessionPageState extends State<SessionPage> {
 
   Attempt _next() {
     final skill = app.skill(plan[index]);
-    final q = skill.draw(_rand, last: _last);
+    final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;
+    app.remember(skill.id, skill.signature(q));
     // Première rencontre (rien au journal) : d'abord l'idée et un exemple résolu.
     final example = _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id);
     return Attempt(app, skill, q, _advance, () => setState(() => stars++), example: example);

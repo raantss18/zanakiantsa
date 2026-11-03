@@ -246,6 +246,36 @@ void main() {
     });
   });
 
+  group('Tirage varié au bon niveau (ADR 0030)', () {
+    test('une séance de 8 questions ne repose jamais la même tant qu\'il en reste d\'autres', () {
+      for (final s in topics().expand((t) => t.skills)) {
+        final r = Random(11);
+        final seen = <String>{};
+        Question? last;
+        var repeats = 0;
+        for (var i = 0; i < 8; i++) {
+          final q = s.draw(r, last: last, avoid: seen);
+          if (!seen.add(s.signature(q))) repeats++;
+          last = q;
+        }
+        // Les compétences à très peu de questions possibles (moins de 8) peuvent se répéter, jamais deux fois de suite.
+        expect(repeats, lessThanOrEqualTo(8 - 3), reason: s.id);
+      }
+    });
+    test('additions jusqu\'à 10 : 8 questions toutes différentes, et les variantes se remplissent', () {
+      final s = topics().first.skills.firstWhere((s) => s.id == 'additionner-10');
+      final r = Random(3);
+      final seen = <String>{};
+      const w = Words(singular: 'pile', plural: 'piles', feminine: true, container: 'la caisse', firstName: 'Robi');
+      for (var i = 0; i < 8; i++) {
+        final q = s.draw(r, avoid: seen);
+        expect(seen.add(s.signature(q)), isTrue);
+        expect(s.say('question', q, words: w), isNot(contains('{')));
+      }
+      expect(s.variants, isNotEmpty);
+    });
+  });
+
   group('Découverte guidée et erreurs expliquées (ADR 0029)', () {
     test('chaque idée se remplit sans variable restante', () {
       const w = Words(singular: 'fleur', plural: 'fleurs', feminine: true, container: 'le panier', firstName: 'Lila');

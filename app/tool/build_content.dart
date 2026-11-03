@@ -145,6 +145,17 @@ Map<String, dynamic> buildTheme(Directory dir) {
     final missing = requiredPhrases.difference(phrases.keys.toSet());
     if (missing.isNotEmpty) fail(where, 'phrases manquantes : ${missing.join(', ')}');
     phrases.forEach((k, v) => checkPhrase('$where/$k', v as String));
+    // Autres énoncés de la même question (ADR 0030) : facultatifs, au plus 6.
+    final variantes = s['variantes'];
+    if (variantes != null) {
+      if (variantes is! List || variantes.length > 6 || variantes.any((v) => v is! String)) {
+        fail(where, 'variantes : une liste de 6 phrases au plus');
+      } else {
+        for (final (i, v) in variantes.indexed) {
+          checkPhrase('$where/variantes[$i]', v as String);
+        }
+      }
+    }
     // Idée de la découverte guidée (ADR 0029) : facultative, 2–3 phrases courtes.
     if (s.containsKey('idee')) {
       final idee = s['idee'];
@@ -244,6 +255,9 @@ void main(List<String> args) {
     for (final s in theme['competences'] as List) {
       (s['phrases'] as Map).forEach((k, v) => voice.add('${s['id']}.$k;$v'));
       if (s['idee'] != null) voice.add('${s['id']}.idee;${s['idee']}');
+      for (final (i, v) in (s['variantes'] as List? ?? const []).indexed) {
+        voice.add('${s['id']}.variantes.$i;$v');
+      }
       for (final (i, it) in (s['items'] as List? ?? const []).indexed) {
         voice.add('${s['id']}.items.$i;${it['texte']}');
         if (it['explication'] != null) voice.add('${s['id']}.items.$i.explication;${it['explication']}');

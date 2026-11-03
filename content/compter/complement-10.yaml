@@ -5,6 +5,7 @@ prerequis: [additionner-10]
 programme: { source: cycle2, texte: "Égalités à trou du type : 10 = 7 + …" }
 activite: calcul
 parametres: { forme: complement, total_max: 10, total_fixe: 10 }
+variantes: ["{a} et combien font {n} ?", "{a} + ? = {n}", "Dans {contenant}, il y a {a} {objets}. Combien faut-il en ajouter pour en avoir {n} ?"]
 idee: "Pour aller jusqu'à dix, on cherche combien il manque. On part de ce qu'on a et on compte jusqu'à dix."
 phrases:
   consigne: "Écris le nombre qui manque avec ton doigt."

@@ -28,6 +28,10 @@
         "max": 6,
         "objet": 1
       },
+      "variantes": [
+        "Combien vois-tu de {objets} ?",
+        "Compte les {objets}, un par un."
+      ],
       "idee": "Pour compter, on touche chaque {objet} une seule fois en disant un nombre. Le dernier nombre dit, c'est combien il y en a.",
       "phrases": {
         "consigne": "Touche chaque {objet} pour compter.",
@@ -55,6 +59,10 @@
         "max": 10,
         "objet": 2
       },
+      "variantes": [
+        "Combien vois-tu de {objets} ?",
+        "Compte les {objets}, un par un."
+      ],
       "idee": "On compte jusqu'à dix en touchant chaque {objet} une seule fois. Le dernier nombre dit combien il y en a en tout.",
       "phrases": {
         "consigne": "Touche chaque {objet} pour compter.",
@@ -137,6 +145,12 @@
         "forme": "somme",
         "total_max": 5
       },
+      "variantes": [
+        "Combien font {a} et {b} ?",
+        "{a} + {b} = ?",
+        "{prenom} trouve {a} {objets}, puis encore {b}. Combien en tout ?",
+        "Dans {contenant}, il y a {a} {objets}. On en ajoute {b}. Combien maintenant ?"
+      ],
       "idee": "Ajouter, c'est mettre ensemble. On compte ceux du début, puis on continue avec ceux qui arrivent.",
       "phrases": {
         "consigne": "Écris le résultat avec ton doigt.",
@@ -163,6 +177,12 @@
         "forme": "somme",
         "total_max": 10
       },
+      "variantes": [
+        "Combien font {a} et {b} ?",
+        "{a} + {b} = ?",
+        "{prenom} trouve {a} {objets}, puis encore {b}. Combien en tout ?",
+        "Dans {contenant}, il y a {a} {objets}. On en ajoute {b}. Combien maintenant ?"
+      ],
       "idee": "Ajouter, c'est mettre ensemble. Pars du premier nombre et avance encore du deuxième.",
       "phrases": {
         "consigne": "Écris le résultat avec ton doigt.",
@@ -190,6 +210,11 @@
         "total_max": 10,
         "total_fixe": 10
       },
+      "variantes": [
+        "{a} et combien font {n} ?",
+        "{a} + ? = {n}",
+        "Dans {contenant}, il y a {a} {objets}. Combien faut-il en ajouter pour en avoir {n} ?"
+      ],
       "idee": "Pour aller jusqu'à dix, on cherche combien il manque. On part de ce qu'on a et on compte jusqu'à dix.",
       "phrases": {
         "consigne": "Écris le nombre qui manque avec ton doigt.",
@@ -217,6 +242,10 @@
         "min": 11,
         "max": 59
       },
+      "variantes": [
+        "Compte les bâtonnets : combien en tout ?",
+        "Paquets de dix et bâtonnets seuls : quel nombre vois-tu ?"
+      ],
       "idee": "Un paquet, c'est dix bâtonnets attachés. On compte les paquets de dix en dix, puis les bâtonnets seuls.",
       "phrases": {
         "consigne": "Un paquet, c'est dix bâtonnets. Compte les paquets, puis les bâtonnets seuls.",
@@ -244,6 +273,10 @@
         "min": 11,
         "max": 59
       },
+      "variantes": [
+        "Montre {n} avec des paquets de dix et des bâtonnets.",
+        "Fabrique le nombre {n}."
+      ],
       "idee": "Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.",
       "phrases": {
         "consigne": "Ajoute des paquets de dix et des bâtonnets, puis touche le bouton vert.",
@@ -271,6 +304,10 @@
         "min": 10,
         "max": 50
       },
+      "variantes": [
+        "{n} bâtonnets, moins {b} : combien en reste-t-il ?",
+        "Il y a {n} bâtonnets. Retire-en {b}. Combien en reste-t-il ?"
+      ],
       "idee": "Pour enlever des bâtonnets quand il n'y a que des paquets, on défait un paquet : il devient dix bâtonnets.",
       "phrases": {
         "consigne": "Pour enlever des bâtonnets, défais d'abord un paquet de dix.",
@@ -299,6 +336,10 @@
         "par_max": 6,
         "total_max": 30
       },
+      "variantes": [
+        "{a} paquets de {b} {objets} : combien en tout ?",
+        "Il y a {a} boîtes. Dans chaque boîte, {b} {objets}. Combien en tout ?"
+      ],
       "idee": "Quand tous les paquets ont le même nombre, on peut compter paquet par paquet : c'est la multiplication.",
       "phrases": {
         "consigne": "Regarde les paquets : ils ont tous le même nombre.",
@@ -327,6 +368,10 @@
         "par_max": 15,
         "total_max": 30
       },
+      "variantes": [
+        "Combien font {b} plus {b} ?",
+        "{prenom} a {b} {objets}, puis encore autant. Combien en tout ?"
+      ],
       "idee": "Le double, c'est deux fois le même nombre : deux paquets pareils.",
       "phrases": {
         "consigne": "Le double, c'est deux fois le même nombre.",
@@ -353,6 +398,9 @@
         "parts_max": 4,
         "par_max": 5
       },
+      "variantes": [
+        "{a} enfants se partagent {n} {objets}. Combien chacun ?"
+      ],
       "idee": "Partager équitablement, c'est donner un objet à chacun, chacun son tour, jusqu'à ce qu'il n'en reste plus.",
       "phrases": {
         "consigne": "Touche un enfant pour lui donner un objet. Chacun son tour !",
@@ -381,6 +429,10 @@
         "paquets_max": 6,
         "total_max": 30
       },
+      "variantes": [
+        "Range {n} {objets} par paquets de {b}. Combien de paquets ?",
+        "Avec {n} {objets}, combien de paquets de {b} peux-tu faire ?"
+      ],
       "idee": "On range les objets par paquets pareils. Ensuite, on compte combien de paquets on a faits.",
       "phrases": {
         "consigne": "Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus.",
@@ -408,6 +460,9 @@
         "parts_fixe": 2,
         "par_max": 15
       },
+      "variantes": [
+        "Quelle est la moitié de {n} ? Partage pour trouver."
+      ],
       "idee": "La moitié, c'est ce qu'a chacun quand on partage en deux parts égales.",
       "phrases": {
         "consigne": "La moitié, c'est partager en deux parts égales.",
@@ -437,6 +492,10 @@
           10
         ]
       },
+      "variantes": [
+        "Combien font {a} fois {b} ?",
+        "{a} rangées de {b} : combien en tout ?"
+      ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
         "consigne": "Chaque rangée a le même nombre d'objets.",
@@ -465,6 +524,10 @@
           4
         ]
       },
+      "variantes": [
+        "Combien font {a} fois {b} ?",
+        "{a} rangées de {b} : combien en tout ?"
+      ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
         "consigne": "Chaque rangée a le même nombre d'objets.",
@@ -493,6 +556,10 @@
           7
         ]
       },
+      "variantes": [
+        "Combien font {a} fois {b} ?",
+        "{a} rangées de {b} : combien en tout ?"
+      ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
         "consigne": "Chaque rangée a le même nombre d'objets.",
@@ -521,6 +588,10 @@
           9
         ]
       },
+      "variantes": [
+        "Combien font {a} fois {b} ?",
+        "{a} rangées de {b} : combien en tout ?"
+      ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
         "consigne": "Chaque rangée a le même nombre d'objets.",

@@ -57,6 +57,10 @@ class AppState extends ChangeNotifier {
     sessions = await store.sessions();
     sessionsDone = sessions.where((s) => s.complete).length;
     dailyMinutes = int.tryParse(await store.get('minutes_jour') ?? '') ?? defaultDailyMinutes;
+    final rec = await store.get('recents');
+    recents = rec == null
+        ? {}
+        : {for (final e in (jsonDecode(rec) as Map).entries) e.key as String: List<String>.from(e.value as List)};
     final marks = await store.get('marque_pages');
     bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
     lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
@@ -92,6 +96,21 @@ class AppState extends ChangeNotifier {
 
   /// Code du dessin de l'objet d'une compétence.
   String objectArt(Skill skill) => universe.objects[skill.objectIndex.clamp(0, universe.objects.length - 1)];
+
+  /// Questions posées récemment, par compétence (signatures, ADR 0030) : on ne les repose pas tout de suite, même
+  /// d'une séance à l'autre.
+  Map<String, List<String>> recents = {};
+  static const recentPerSkill = 12;
+
+  Set<String> recentOf(String skill) => {...?recents[skill]};
+
+  Future<void> remember(String skill, String signature) async {
+    final l = recents.putIfAbsent(skill, () => [])
+      ..remove(signature)
+      ..add(signature);
+    if (l.length > recentPerSkill) l.removeAt(0);
+    await store.set('recents', jsonEncode(recents));
+  }
 
   /// Marque-pages (ADR 0026) : la page où chaque livre commencé a été laissé, et le dernier livre ouvert.
   Map<int, int> bookmarks = {};

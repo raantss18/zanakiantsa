@@ -64,7 +64,11 @@ class Skill {
         params = Map<String, dynamic>.from(j['parametres'] as Map),
         phrases = Map<String, String>.from(j['phrases'] as Map),
         items = [for (final i in j['items'] as List? ?? const []) Item(Map<String, dynamic>.from(i as Map))],
-        idea = j['idee'] as String?;
+        idea = j['idee'] as String?,
+        variants = [for (final v in j['variantes'] as List? ?? const []) v as String];
+
+  /// Autres façons de poser la même question (« {a} + {b} = ? », une petite histoire…), tirées au hasard (ADR 0030).
+  final List<String> variants;
 
   /// L'idée en 2–3 phrases, présentée avant l'exemple résolu à la découverte de la compétence (ADR 0029).
   final String? idea;
@@ -85,7 +89,17 @@ class Skill {
   int get objectIndex => params.containsKey('objet') ? p('objet') - 1 : 0;
 
   /// Une phrase, avec les nombres et les mots de l'univers (ADR 0014) remplacés et accordés.
-  String say(String key, Question q, {Words? words}) => fill(phrases[key]!, q, words, vars: vars(q));
+  String say(String key, Question q, {Words? words}) =>
+      fill(key == 'question' && q.v > 0 && q.v <= variants.length ? variants[q.v - 1] : phrases[key]!, q, words, vars: vars(q));
+
+  /// Ce qui rend deux questions « les mêmes » pour l'enfant (le tirage d'aléa interne des activités n'en fait pas
+  /// partie, sauf quand il est la question elle-même : motifs, échecs, robot).
+  String signature(Question q) => switch (activity) {
+        'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' => '${q.n}',
+        'ecouter' => '${q.n}${q.b}',
+        'motif' || 'echecs' || 'programmer' => '${q.a}',
+        _ => '${q.n}/${q.a}/${q.b}',
+      };
 
   /// Variables d'activité d'une question.
   Map<String, String> vars(Question q) => switch (activity) {
@@ -102,14 +116,18 @@ class Skill {
   String voiceId(String key) => '$id.$key';
 
   /// Tire une question selon les paramètres. [last] évite de reposer exactement la même.
-  Question draw(Random r, {Question? last}) {
-    for (var i = 0; i < 20; i++) {
+  /// Tire une question au niveau de la compétence, en évitant celles de [avoid] (signatures déjà posées dans la séance
+  /// ou les séances récentes, ADR 0030) et, à défaut, au moins la précédente [last].
+  Question draw(Random r, {Question? last, Set<String> avoid = const {}}) {
+    Question withVariant(Question q) => variants.isEmpty ? q : Question(n: q.n, a: q.a, b: q.b, v: r.nextInt(variants.length + 1));
+    Question? notLast;
+    for (var i = 0; i < 60; i++) {
       final q = _draw(r);
-      if (last == null) return q;
-      // Questions écrites : jamais deux fois la même de suite (le tirage aléatoire `a` changerait seul sinon).
-      if (items.length > 1 ? q.n != last.n : (q.n != last.n || q.a != last.a)) return q;
+      final fresh = last == null || signature(q) != signature(last);
+      if (fresh && !avoid.contains(signature(q))) return withVariant(q);
+      if (fresh) notLast ??= q;
     }
-    return _draw(r);
+    return withVariant(notLast ?? _draw(r));
   }
 
   Question _draw(Random r) {
@@ -208,8 +226,11 @@ const solidNames = {
 };
 
 class Question {
-  const Question({required this.n, this.a = 0, this.b = 0});
+  const Question({required this.n, this.a = 0, this.b = 0, this.v = 0});
   final int n, a, b;
+
+  /// Énoncé : 0 = la phrase `question`, k > 0 = la k-ième de `variantes` (ADR 0030).
+  final int v;
 }
 
 class Topic {

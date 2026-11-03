@@ -5,6 +5,7 @@ prerequis: [dizaines-construire]
 programme: { source: cycle2, texte: "Soustraire un nombre inférieur à 10 à un nombre entier de dizaines : l’élève sait qu’il peut « casser » une dizaine afin de lui retirer le nombre à soustraire." }
 activite: batonnets
 parametres: { mode: casser, min: 10, max: 50 }
+variantes: ["{n} bâtonnets, moins {b} : combien en reste-t-il ?", "Il y a {n} bâtonnets. Retire-en {b}. Combien en reste-t-il ?"]
 idee: "Pour enlever des bâtonnets quand il n'y a que des paquets, on défait un paquet : il devient dix bâtonnets."
 phrases:
   consigne: "Pour enlever des bâtonnets, défais d'abord un paquet de dix."

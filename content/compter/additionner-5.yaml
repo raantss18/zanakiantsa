@@ -5,6 +5,7 @@ prerequis: [composer-10]
 programme: { source: cycle2, texte: "Connaitre dans les deux sens les tables d’addition (A + B = C, A et B entre 0 et 10)." }
 activite: calcul
 parametres: { forme: somme, total_max: 5 }
+variantes: ["Combien font {a} et {b} ?", "{a} + {b} = ?", "{prenom} trouve {a} {objets}, puis encore {b}. Combien en tout ?", "Dans {contenant}, il y a {a} {objets}. On en ajoute {b}. Combien maintenant ?"]
 idee: "Ajouter, c'est mettre ensemble. On compte ceux du début, puis on continue avec ceux qui arrivent."
 phrases:
   consigne: "Écris le résultat avec ton doigt."
