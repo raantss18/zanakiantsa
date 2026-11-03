@@ -68,21 +68,30 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
                   // Le texte passe à la ligne sur toute la largeur de la bulle, puis ne rétrécit que s'il dépasse
                   // en hauteur (jamais coupé ni débordant).
                   child: LayoutBuilder(
-                    builder: (_, k) => AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 200),
-                      child: FittedBox(
-                        key: ValueKey(widget.text),
-                        fit: BoxFit.scaleDown,
-                        alignment: Alignment.centerLeft,
-                        child: SizedBox(
-                          width: k.maxWidth,
-                          child: Text(
-                            widget.text,
-                            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink, height: 1.2),
-                          ),
+                    builder: (_, k) {
+                      // Un texte long garde toute la largeur : on baisse la taille des lettres (jusqu'à 15) plutôt
+                      // que de réduire le bloc entier, qui laissait une colonne étroite au milieu de la bulle.
+                      final scaler = MediaQuery.textScalerOf(context);
+                      var style = DefaultTextStyle.of(context).style.merge(const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink, height: 1.2));
+                      while (style.fontSize! > 15) {
+                        final tp = TextPainter(text: TextSpan(text: widget.text, style: style), textDirection: TextDirection.ltr, textScaler: scaler)
+                          ..layout(maxWidth: k.maxWidth);
+                        final fits = tp.height <= k.maxHeight;
+                        tp.dispose();
+                        if (fits) break;
+                        style = style.copyWith(fontSize: style.fontSize! - 1);
+                      }
+                      return AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 200),
+                        layoutBuilder: (current, previous) => Stack(alignment: Alignment.centerLeft, children: [...previous, ?current]),
+                        child: FittedBox(
+                          key: ValueKey(widget.text),
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: SizedBox(width: k.maxWidth, child: Text(widget.text, style: style)),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
                 ),
                 IconButton(
