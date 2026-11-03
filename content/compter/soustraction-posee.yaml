@@ -8,7 +8,7 @@ parametres: { op: "-", min: 21, max: 98, retenue: true }
 idee: "On commence par les unités. Si on ne peut pas enlever, on casse une dizaine : elle devient dix unités."
 variantes: ["Combien font {a} − {b} ?", "Calcule {a} moins {b}, en colonnes."]
 phrases:
-  consigne: "Commence par la colonne des unités, à droite."
+  consigne: "Calcule d'abord les unités, à droite, puis les dizaines. Si tu ne peux pas enlever, casse une dizaine. Puis touche le résultat."
   question: "{a} − {b} = ?"
   indice: "Aux unités, si le chiffre du haut est plus petit, casse une dizaine."
   exemple: "Après avoir cassé une dizaine, il en reste une de moins en haut."

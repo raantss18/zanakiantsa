@@ -29,15 +29,19 @@ const _command = Duration(milliseconds: 1500);
 class Voice {
   final _tts = FlutterTts();
 
-  /// Voix anglaise pour les mots d'anglais (ADR 0022) : créée seulement au premier mot anglais (une liaison au moteur
-  /// de synthèse en moins pour tous les autres domaines, ADR 0028).
-  FlutterTts? _enTts;
-  FlutterTts get _en => _enTts ??= FlutterTts();
-  late final Future<void> _enReady = () async {
-    await _en.setLanguage('en-GB');
-    await _en.setSpeechRate(0.4);
-    await _en.awaitSpeakCompletion(true);
-  }();
+  /// Langue réglée en ce moment sur le moteur de synthèse. ⚠ flutter_tts n'a qu'un seul moteur natif pour toute
+  /// l'app (canal statique « flutter_tts ») : deux objets FlutterTts partagent la même langue. Une « voix anglaise »
+  /// à part faisait parler le français avec l'accent anglais après un exercice d'anglais (bug du 2026-11-03) ; on
+  /// règle donc la langue avant chaque phrase (ADR 0022).
+  String? _lang;
+
+  Future<void> _useLang(String lang) async {
+    if (_lang == lang) return;
+    await bounded(_tts.setLanguage(lang), _command);
+    await bounded(_tts.setSpeechRate(lang == 'fr-FR' ? 0.45 : 0.4), _command);
+    _lang = lang;
+  }
+
   final _player = AudioPlayer();
   final _sfx = AudioPlayer();
   final _music = AudioPlayer();
@@ -58,8 +62,8 @@ class Voice {
   void init() => _ready;
 
   Future<void> _init() async {
-    await _tts.setLanguage('fr-FR');
-    await _tts.setSpeechRate(0.45); // ⚠ un peu plus lent que la normale pour les 5–7 ans, à régler à l'essai
+    // Vitesse un peu plus lente que la normale pour les 5–7 ans (⚠ à régler à l'essai), fixée par [_useLang].
+    await _useLang('fr-FR');
     await _tts.awaitSpeakCompletion(true);
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
     _recorded = {
@@ -79,6 +83,7 @@ class Voice {
       await bounded(_player.play(AssetSource('audio/voix/$id.ogg')), _command);
       await bounded(_player.onPlayerComplete.first, speechBudget(text));
     } else {
+      await _useLang('fr-FR');
       await bounded(_tts.speak(text), speechBudget(text));
     }
     await _duck(false);
@@ -122,19 +127,18 @@ class Voice {
   Future<void> sayMixed(String text, {bool force = false}) async {
     if (!voiceOn && !force) return;
     await bounded(_ready, const Duration(seconds: 8));
-    await bounded(_enReady, const Duration(seconds: 8));
     await stop();
     for (final (i, part) in text.split(RegExp('[«»]')).indexed) {
       final t = part.trim();
       if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
       await _duck(true);
-      await bounded((i.isOdd ? _en : _tts).speak(t), speechBudget(t));
+      await _useLang(i.isOdd ? 'en-GB' : 'fr-FR');
+      await bounded(_tts.speak(t), speechBudget(t));
     }
     await _duck(false);
   }
 
   Future<void> stop() async {
-    if (_enTts != null) await bounded(_enTts!.stop(), _command);
     await bounded(_tts.stop(), _command);
     await bounded(_player.stop(), _command);
   }

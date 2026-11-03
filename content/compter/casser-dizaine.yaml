@@ -8,7 +8,7 @@ parametres: { mode: casser, min: 10, max: 50 }
 variantes: ["{n} bâtonnets, moins {b} : combien en reste-t-il ?", "Il y a {n} bâtonnets. Retire-en {b}. Combien en reste-t-il ?"]
 idee: "Pour enlever des bâtonnets quand il n'y a que des paquets, on défait un paquet : il devient dix bâtonnets."
 phrases:
-  consigne: "Pour enlever des bâtonnets, défais d'abord un paquet de dix."
+  consigne: "Pour enlever des bâtonnets, défais d'abord un paquet de dix. Puis touche le nombre de bâtonnets qui restent."
   question: "Il y a {n} bâtonnets. Enlève-en {b}. Combien en reste-t-il ?"
   indice: "Touche un paquet : il devient dix bâtonnets. Puis enlève-en {b}, un par un."
   exemple: "Dix moins {b}, puis ajoute les autres paquets de dix."

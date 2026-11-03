@@ -7,7 +7,7 @@ activite: composer
 parametres: { cible_min: 3, cible_max: 10, depart_min: 0, depart_max: 0 }
 idee: "Pour avoir un nombre de {objets}, on en ajoute un à la fois en comptant. On s'arrête quand on dit le bon nombre."
 phrases:
-  consigne: "Mets {n} {objets} dans {contenant}."
+  consigne: "Touche pour mettre des {objets} dans {contenant}, un par un, jusqu'à {n}. Puis touche ✔."
   question: "As-tu mis {n} {objets} ? Appuie sur ✔."
   indice: "Compte les {objets} dans {contenant}, {un} par {un}."
   exemple: "Trop ? Touche {contenant} pour en enlever."

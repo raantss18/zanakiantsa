@@ -233,8 +233,11 @@ class SessionPage extends StatefulWidget {
 
 class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
-  late final List<String> plan =
+  late List<String> plan =
       devSkill.isEmpty ? app.progressOf(app.topic(widget.topic)).plan(DateTime.now()) : devSkill.split(",");
+
+  /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
+  late String? _target = app.progressOf(app.topic(widget.topic)).newSkill;
   late final Rewards before = app.rewards;
   final _rand = Random();
   final _started = DateTime.now();
@@ -266,6 +269,14 @@ class _SessionPageState extends State<SessionPage> {
   final _introduced = <String>{};
 
   Attempt _next() {
+    final target = _target;
+    if (devSkill.isEmpty && target != null) {
+      final p = app.progressOf(app.topic(widget.topic));
+      if (p.earned(target)) {
+        plan = p.adapt(plan, index, target, _rand);
+        _target = p.newSkill;
+      }
+    }
     final skill = app.skill(plan[index]);
     final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;

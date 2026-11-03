@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/core/events.dart';
 import 'package:zanakiantsa/core/leitner.dart';
@@ -76,11 +78,25 @@ void main() {
     test('a maîtrisée : b ouverte ; révision de a due le lendemain, placée en premier', () {
       final p = Progress(skills, List.generate(5, (_) => ans('a')));
       expect(p.unlocked(skills[1]), isTrue);
-      expect(p.plan(t0).toSet(), {'b'});
+      // ADR 0037 : la nouvelle compétence, entrelacée d'une question sur trois de ce qui est acquis.
+      final today = p.plan(t0);
+      expect(today.where((x) => x == 'b').length, greaterThanOrEqualTo(questionsPerSession * 2 ~/ 3));
+      expect(today.contains('a'), isTrue);
+      for (var i = 1; i < today.length - 1; i++) {
+        expect(today[i - 1] == 'a' && today[i] == 'a', isFalse, reason: 'jamais deux révisions d\'affilée');
+      }
       final tomorrow = p.plan(DateTime(2026, 11, 3, 9));
       expect(tomorrow.first, 'a');
       expect(tomorrow.length, questionsPerSession);
-      expect(tomorrow.skip(1).toSet(), {'b'});
+      expect(tomorrow.skip(1).toSet(), {'a', 'b'});
+    });
+    test('ADR 0037 — acquise en cours de séance : la suite passe à la compétence suivante', () {
+      const three = [SkillRef('a', []), SkillRef('b', ['a']), SkillRef('c', ['b'])];
+      final p = Progress(three, [...List.generate(5, (_) => ans('a')), ...List.generate(5, (_) => ans('b'))]);
+      final plan = ['b', 'b', 'a', 'b', 'b', 'a', 'b', 'b'];
+      expect(p.adapt(plan, 5, 'b', Random(1)), ['b', 'b', 'a', 'b', 'b', 'a', 'c', 'c']);
+      // Pas encore acquise : rien ne change.
+      expect(Progress(three, List.generate(5, (_) => ans('a'))).adapt(plan, 5, 'b', Random(1)), plan);
     });
   });
 }

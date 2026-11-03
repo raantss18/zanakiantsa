@@ -7,7 +7,7 @@ activite: echecs
 parametres: { mode: mat, piece: r, etoiles: 3 }
 idee: "La tour attaque toute la rangée du bord. Ton roi garde les cases devant le roi noir : il ne peut plus s'échapper."
 phrases:
-  consigne: "Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !"
+  consigne: "Échec et mat : le roi noir est attaqué et ne peut aller sur aucune case. Touche ta pièce, puis la case du coup gagnant."
   question: "Trouve le coup qui fait échec et mat."
   indice: "Le roi noir est au bord. Ta tour attaque toute la rangée du bord ; ton roi garde les cases devant lui."
   exemple: "Touche une case avec un point."

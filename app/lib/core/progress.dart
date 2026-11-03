@@ -66,15 +66,39 @@ class Progress {
     }
     due.sort((a, b) => a.$2.compareTo(b.$2));
     final out = [for (final d in due) d.$1];
-    final next = skills.where((s) => !mastered(s.id) && unlocked(s)).firstOrNull;
+    final next = skills.where((s) => s.id == newSkill).firstOrNull;
     // Une révision = une question ; le reste de la séance va à la compétence nouvelle.
     final reviews = out.take(questionsPerSession ~/ 2).toList();
+    final r = Random(now.millisecondsSinceEpoch);
     if (next == null) {
       if (reviews.isNotEmpty) return reviews;
       // Tout est acquis : de l'entraînement varié sur tout le domaine (plus jamais la même suite fixe, ADR 0030).
-      final r = Random(now.millisecondsSinceEpoch);
       return [for (var i = 0; i < questionsPerSession; i++) skills[r.nextInt(skills.length)].id];
     }
-    return [...reviews, for (var i = reviews.length; i < questionsPerSession; i++) next.id];
+    // Entrelacé (ADR 0037) : une question sur trois revient sur une compétence déjà acquise, au lieu de huit fois la
+    // même d'affilée (Rohrer & Taylor 2007 : mélanger les types de problèmes améliore l'apprentissage).
+    return [...reviews, for (var i = reviews.length; i < questionsPerSession; i++) (i % 3 == 2 ? practice(r, not: next.id) : null) ?? next.id];
+  }
+
+  /// La compétence à apprendre en ce moment : la première ouverte et pas encore acquise.
+  String? get newSkill => skills.where((s) => !mastered(s.id) && unlocked(s)).firstOrNull?.id;
+
+  /// Une compétence que l'enfant a lui-même acquise, au hasard, autre que [not] ; null s'il n'y en a pas. Pas celles
+  /// tenues pour acquises à cause de l'âge : trop faciles, elles ennuieraient.
+  String? practice(Random r, {String? not}) {
+    final pool = [for (final s in skills) if (s.id != not && earned(s.id)) s.id];
+    return pool.isEmpty ? null : pool[r.nextInt(pool.length)];
+  }
+
+  /// En cours de séance (ADR 0037) : la suite du plan à partir de [index], une fois la réponse enregistrée. Si
+  /// [target] vient d'être acquise, ses questions restantes passent à la compétence suivante (ou à de l'entraînement) :
+  /// on ne fait pas répéter ce qui est su.
+  List<String> adapt(List<String> plan, int index, String target, Random r) {
+    if (!earned(target)) return plan;
+    final next = newSkill;
+    return [
+      for (final (i, id) in plan.indexed)
+        i >= index && id == target ? (next ?? practice(r, not: target) ?? target) : id,
+    ];
   }
 }

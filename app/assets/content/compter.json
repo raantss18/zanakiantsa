@@ -63,7 +63,7 @@
       ],
       "idee": "Pour compter, on touche chaque {objet} une seule fois en disant un nombre. Le dernier nombre dit, c'est combien il y en a.",
       "phrases": {
-        "consigne": "Touche chaque {objet} pour compter.",
+        "consigne": "Touche chaque {objet} une seule fois en comptant. Le dernier nombre dit, c'est combien il y en a : touche-le.",
         "question": "Combien de {objets} ?",
         "indice": "Touche les {objets} {un} par {un}, sans en oublier.",
         "exemple": "Le dernier nombre dit, c'est le nombre de {objets}.",
@@ -94,7 +94,7 @@
       ],
       "idee": "On compte jusqu'à dix en touchant chaque {objet} une seule fois. Le dernier nombre dit combien il y en a en tout.",
       "phrases": {
-        "consigne": "Touche chaque {objet} pour compter.",
+        "consigne": "Touche chaque {objet} une seule fois en comptant. Le dernier nombre dit, c'est combien il y en a : touche-le.",
         "question": "Combien de {objets} ?",
         "indice": "Touche les {objets} {un} par {un}, sans en oublier.",
         "exemple": "Le dernier nombre dit, c'est le nombre de {objets}.",
@@ -122,7 +122,7 @@
       },
       "idee": "Pour avoir un nombre de {objets}, on en ajoute un à la fois en comptant. On s'arrête quand on dit le bon nombre.",
       "phrases": {
-        "consigne": "Mets {n} {objets} dans {contenant}.",
+        "consigne": "Touche pour mettre des {objets} dans {contenant}, un par un, jusqu'à {n}. Puis touche ✔.",
         "question": "As-tu mis {n} {objets} ? Appuie sur ✔.",
         "indice": "Compte les {objets} dans {contenant}, {un} par {un}.",
         "exemple": "Trop ? Touche {contenant} pour en enlever.",
@@ -150,7 +150,7 @@
       },
       "idee": "Il y en a déjà quelques-uns. On compte ceux qui sont là, puis on continue à compter en ajoutant.",
       "phrases": {
-        "consigne": "Il y a {a} {objets}. Ajoute-en pour en avoir {n}.",
+        "consigne": "Il y a déjà {a} {objets}. Touche pour en ajouter jusqu'à en avoir {n}, puis touche ✔.",
         "question": "As-tu {n} {objets} ? Appuie sur ✔.",
         "indice": "Compte à partir de {a} : {a}, puis le suivant…",
         "exemple": "Ajoute {un} {objet} à la fois et compte jusqu'à {n}.",
@@ -182,7 +182,7 @@
       ],
       "idee": "Ajouter, c'est mettre ensemble. On compte ceux du début, puis on continue avec ceux qui arrivent.",
       "phrases": {
-        "consigne": "Écris le résultat avec ton doigt.",
+        "consigne": "Ajoute les deux nombres. Puis écris le résultat avec ton doigt, ou touche le bon nombre.",
         "question": "{prenom} a {a} {objets}. Il en arrive {b}. Combien en tout ?",
         "indice": "Tu peux compter sur tes doigts : {a}, puis {b} de plus.",
         "exemple": "Pense à {a} {objets} et encore {b} {objets}.",
@@ -214,7 +214,7 @@
       ],
       "idee": "Ajouter, c'est mettre ensemble. Pars du premier nombre et avance encore du deuxième.",
       "phrases": {
-        "consigne": "Écris le résultat avec ton doigt.",
+        "consigne": "Ajoute les deux nombres. Puis écris le résultat avec ton doigt, ou touche le bon nombre.",
         "question": "{prenom} a {a} {objets}. Il en arrive {b}. Combien en tout ?",
         "indice": "Pars du plus grand nombre et compte le petit en plus.",
         "exemple": "Pour {a} plus {b} : pars de {a} et avance de {b}.",
@@ -246,7 +246,7 @@
       ],
       "idee": "Pour aller jusqu'à dix, on cherche combien il manque. On part de ce qu'on a et on compte jusqu'à dix.",
       "phrases": {
-        "consigne": "Écris le nombre qui manque avec ton doigt.",
+        "consigne": "Compte combien il faut en ajouter pour arriver au nombre demandé. Puis écris-le avec ton doigt, ou touche-le.",
         "question": "{prenom} veut {n} {objets}. Il y en a {a}. Combien en manque-t-il ?",
         "indice": "Compte à partir de {a} jusqu'à {n}.",
         "exemple": "Montre {a} doigts. Combien de doigts restent baissés ?",
@@ -273,7 +273,7 @@
       },
       "idee": "La petite aiguille montre les heures. Quand la grande aiguille est en haut, sur le 12, c'est une heure pile.",
       "phrases": {
-        "consigne": "Regarde la petite aiguille : elle montre l'heure.",
+        "consigne": "Regarde la petite aiguille : elle montre l'heure. Puis touche l'heure écrite qui va avec.",
         "question": "Quelle heure est-il ?",
         "indice": "La grande aiguille est sur le 12 : regarde seulement où pointe la petite.",
         "exemple": "La petite aiguille est la plus courte et la plus épaisse.",
@@ -304,7 +304,7 @@
       ],
       "idee": "Un paquet, c'est dix bâtonnets attachés. On compte les paquets de dix en dix, puis les bâtonnets seuls.",
       "phrases": {
-        "consigne": "Un paquet, c'est dix bâtonnets. Compte les paquets, puis les bâtonnets seuls.",
+        "consigne": "Un paquet, c'est dix bâtonnets. Compte les paquets de dix en dix, puis les bâtonnets seuls. Puis touche le nombre.",
         "question": "Combien y a-t-il de bâtonnets ?",
         "indice": "Compte de dix en dix pour les paquets : dix, vingt, trente… puis ajoute les bâtonnets seuls.",
         "exemple": "Il y a {dizaines} et {unites}.",
@@ -335,7 +335,7 @@
       ],
       "idee": "Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.",
       "phrases": {
-        "consigne": "Ajoute des paquets de dix et des bâtonnets, puis touche le bouton vert.",
+        "consigne": "Ajoute des paquets de dix pour les dizaines, puis des bâtonnets seuls pour les unités. Touche le bouton vert quand tu as le nombre.",
         "question": "Fabrique le nombre {n} avec des bâtonnets.",
         "indice": "Le chiffre de gauche dit combien de paquets de dix. Le chiffre de droite dit combien de bâtonnets seuls.",
         "exemple": "Pour {n}, il faut {dizaines} et {unites}.",
@@ -366,7 +366,7 @@
       ],
       "idee": "Pour enlever des bâtonnets quand il n'y a que des paquets, on défait un paquet : il devient dix bâtonnets.",
       "phrases": {
-        "consigne": "Pour enlever des bâtonnets, défais d'abord un paquet de dix.",
+        "consigne": "Pour enlever des bâtonnets, défais d'abord un paquet de dix. Puis touche le nombre de bâtonnets qui restent.",
         "question": "Il y a {n} bâtonnets. Enlève-en {b}. Combien en reste-t-il ?",
         "indice": "Touche un paquet : il devient dix bâtonnets. Puis enlève-en {b}, un par un.",
         "exemple": "Dix moins {b}, puis ajoute les autres paquets de dix.",
@@ -398,7 +398,7 @@
       ],
       "idee": "Quand tous les paquets ont le même nombre, on peut compter paquet par paquet : c'est la multiplication.",
       "phrases": {
-        "consigne": "Regarde les paquets : ils ont tous le même nombre.",
+        "consigne": "Les paquets ont tous le même nombre d'objets. Compte-les tous, puis touche le résultat.",
         "question": "{prenom} a {a} paquets de {b} {objets}. Combien en tout ?",
         "indice": "Compte un paquet, puis ajoute les autres : {b}, puis encore {b}…",
         "exemple": "Tu peux compter tous les objets un par un.",
@@ -430,7 +430,7 @@
       ],
       "idee": "Le double, c'est deux fois le même nombre : deux paquets pareils.",
       "phrases": {
-        "consigne": "Le double, c'est deux fois le même nombre.",
+        "consigne": "Le double, c'est deux fois le même nombre : compte les deux paquets ensemble. Puis touche le résultat.",
         "question": "Quel est le double de {b} ?",
         "indice": "Le double de {b}, c'est {b} plus {b}.",
         "exemple": "Compte les objets des deux paquets.",
@@ -459,7 +459,7 @@
       ],
       "idee": "Partager équitablement, c'est donner un objet à chacun, chacun son tour, jusqu'à ce qu'il n'en reste plus.",
       "phrases": {
-        "consigne": "Touche un enfant pour lui donner un objet. Chacun son tour !",
+        "consigne": "Touche un enfant pour lui donner un objet, chacun son tour. C'est réussi quand tous en ont autant et qu'il n'en reste plus.",
         "question": "Partage les {n} {objets} entre {a} enfants : chacun doit en avoir autant.",
         "indice": "Donne un objet à chaque enfant, puis recommence, jusqu'à ce qu'il n'en reste plus.",
         "exemple": "Chacun son tour : le premier, le deuxième, puis encore le premier…",
@@ -491,7 +491,7 @@
       ],
       "idee": "On range les objets par paquets pareils. Ensuite, on compte combien de paquets on a faits.",
       "phrases": {
-        "consigne": "Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus.",
+        "consigne": "Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus. Puis touche le nombre de paquets.",
         "question": "{prenom} range {n} {objets} par paquets de {b}. Combien de paquets ?",
         "indice": "Fais les paquets un par un, puis compte-les.",
         "exemple": "Touche chaque paquet du doigt en comptant : un, deux, trois…",
@@ -521,7 +521,7 @@
       ],
       "idee": "La moitié, c'est ce qu'a chacun quand on partage en deux parts égales.",
       "phrases": {
-        "consigne": "La moitié, c'est partager en deux parts égales.",
+        "consigne": "La moitié, c'est deux parts égales. Touche un enfant pour lui donner un objet, chacun son tour. C'est réussi quand les deux ont autant.",
         "question": "Partage les {n} {objets} en deux parts égales.",
         "indice": "Donne un objet à chaque enfant, chacun son tour.",
         "exemple": "Les deux enfants doivent en avoir autant.",
@@ -554,7 +554,7 @@
       ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
-        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "consigne": "Chaque rangée a le même nombre d'objets : compte de rangée en rangée. Puis touche le résultat.",
         "question": "{a} × {b} = ?",
         "indice": "{a} rangées de {b} : compte de {b} en {b}.",
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
@@ -586,7 +586,7 @@
       ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
-        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "consigne": "Chaque rangée a le même nombre d'objets : compte de rangée en rangée. Puis touche le résultat.",
         "question": "{a} × {b} = ?",
         "indice": "{a} rangées de {b} : compte de {b} en {b}.",
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
@@ -616,7 +616,7 @@
         "Combien de cubes en tout ?"
       ],
       "phrases": {
-        "consigne": "Compte les plaques de cent, puis les barres de dix, puis les cubes.",
+        "consigne": "Compte les plaques de cent, puis les barres de dix, puis les cubes. Puis touche le nombre.",
         "question": "Quel nombre est représenté ?",
         "indice": "Compte de cent en cent pour les plaques, puis de dix en dix pour les barres.",
         "exemple": "Il y a {centaines}, {dizaines} et {unites}.",
@@ -648,7 +648,7 @@
         "Calcule {a} plus {b}, en colonnes."
       ],
       "phrases": {
-        "consigne": "Commence par la colonne des unités, à droite.",
+        "consigne": "Calcule d'abord les unités, à droite, puis les dizaines, sans oublier la retenue. Puis touche le résultat.",
         "question": "{a} + {b} = ?",
         "indice": "Additionne d'abord les unités. Si cela fait dix ou plus, mets la dizaine en retenue.",
         "exemple": "N'oublie pas d'ajouter la retenue avec les dizaines.",
@@ -681,7 +681,7 @@
         "Calcule {a} moins {b}, en colonnes."
       ],
       "phrases": {
-        "consigne": "Commence par la colonne des unités, à droite.",
+        "consigne": "Calcule d'abord les unités, à droite, puis les dizaines. Si tu ne peux pas enlever, casse une dizaine. Puis touche le résultat.",
         "question": "{a} − {b} = ?",
         "indice": "Aux unités, si le chiffre du haut est plus petit, casse une dizaine.",
         "exemple": "Après avoir cassé une dizaine, il en reste une de moins en haut.",
@@ -712,7 +712,7 @@
       },
       "idee": "La grande aiguille fait le tour en une heure. Sur le 6, c'est la demie ; sur le 3, le quart ; sur le 9, moins le quart.",
       "phrases": {
-        "consigne": "Regarde d'abord la petite aiguille, puis la grande.",
+        "consigne": "Regarde d'abord la petite aiguille pour l'heure, puis la grande pour les minutes. Puis touche la bonne heure.",
         "question": "Quelle heure est-il ?",
         "indice": "Grande aiguille sur le 6 : et demie. Sur le 3 : et quart. Sur le 9 : moins le quart.",
         "exemple": "À la demie, la petite aiguille est entre deux nombres.",
@@ -744,7 +744,7 @@
       ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
-        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "consigne": "Chaque rangée a le même nombre d'objets : compte de rangée en rangée. Puis touche le résultat.",
         "question": "{a} × {b} = ?",
         "indice": "{a} rangées de {b} : compte de {b} en {b}.",
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
@@ -776,7 +776,7 @@
       ],
       "idee": "{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.",
       "phrases": {
-        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "consigne": "Chaque rangée a le même nombre d'objets : compte de rangée en rangée. Puis touche le résultat.",
         "question": "{a} × {b} = ?",
         "indice": "{a} rangées de {b} : compte de {b} en {b}.",
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
