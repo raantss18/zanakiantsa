@@ -285,13 +285,15 @@ class ChessHub extends StatelessWidget {
             const SizedBox(height: 8),
             SegmentedButton<int>(
               segments: const [
-                ButtonSegment(value: 1, label: Text('1 · facile')),
+                ButtonSegment(value: 1, label: Text('1')),
                 ButtonSegment(value: 2, label: Text('2')),
-                ButtonSegment(value: 3, label: Text('3 · fort')),
+                ButtonSegment(value: 3, label: Text('3')),
               ],
               selected: {level},
               onSelectionChanged: (v) => set(() => level = v.first),
             ),
+            const SizedBox(height: 4),
+            Text(const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
             const SizedBox(height: 16),
             const Text('Je joue avec', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
             const SizedBox(height: 8),
