@@ -130,6 +130,8 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   (milieux de vie, besoins) ; « Tout explorer » (ADR 0032) ; animation de méthode par domaine (ADR 0033) ; profils
   enfants et point de départ selon l'âge (ADR 0034) ; contenu CE1 (ADR 0035)
 - ✅ Suites de nombres (de 1, 2, 10 en 10 ; à rebours ; bande jusqu'à 1000) et états de l'eau (CP, CE1), ADR 0036
+- ✅ Version 0.6.0 publiée (2026-11-03, build 2006) ; montée 0.5.0 → 0.6.0 vérifiée sur l'émulateur (réglages repris
+  dans le profil « Enfant 1 »)
 - ⏳ Sens du tracé des lettres ; test de départ par domaine ; plus de contenu CE1-CE2 (sons, anglais, problèmes)
 - ✅ Version 0.5.0 publiée (2026-11-03, build 2005) ; montée 0.4.0 → 0.5.0 vérifiée sur l'émulateur
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
