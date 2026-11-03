@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../activities/blocks.dart';
 import '../activities/calcul.dart';
 import '../activities/ce1.dart';
 import '../activities/chess.dart';
@@ -435,6 +436,7 @@ class _SessionPageState extends State<SessionPage> {
                           'groupes' || 'tables' => GroupsActivity(key: ObjectKey(a), attempt: a),
                           'partage' => ShareActivity(key: ObjectKey(a), attempt: a),
                           'programmer' => CodeActivity(key: ObjectKey(a), attempt: a),
+                          'blocs' => BlocksActivity(key: ObjectKey(a), attempt: a),
                           'solide' => SolidActivity(key: ObjectKey(a), attempt: a),
                           'syllabes' => SyllablesActivity(key: ObjectKey(a), attempt: a),
                           'lettre' => LetterActivity(key: ObjectKey(a), attempt: a),

@@ -1,0 +1,15 @@
+id: condition-si
+titre: "La condition : si… alors"
+niveau: CM1
+prerequis: [boucle-repeter]
+programme: { source: prog, texte: "Construire des algorithmes qui comprennent des instructions simples (action déclenchée par un évènement, séquence d'instructions, boucle, instructions conditionnelles, variable)." }
+activite: blocs
+parametres: { mode: condition }
+idee: "Un bloc « si » regarde d'abord : s'il y a un rocher devant, il fait ce qu'il y a dedans ; sinon, il ne fait rien. Dans « répéter jusqu'à l'objet », le robot regarde à chaque pas."
+phrases:
+  consigne: "Mets « répéter jusqu'à l'objet ». Dedans : « si rocher devant » avec un virage, puis « avancer ». Touche le bouton vert."
+  question: "Le robot doit contourner les rochers tout seul. Écris un programme qui regarde devant lui."
+  indice: "À chaque pas : s'il y a un rocher devant, le robot pivote ; puis il avance. De quel côté doit-il pivoter ?"
+  exemple: "Après « si rocher devant », mets un seul virage, puis « Fermer le bloc », puis « avancer »."
+  demonstration: "Regarde ce programme : le robot regarde devant lui à chaque pas."
+  bravo: "Bravo ! Ton robot sait contourner les rochers."

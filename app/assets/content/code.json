@@ -26,11 +26,12 @@
   ],
   "ages": [
     5,
-    8
+    10
   ],
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
-    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
+    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
+    "prog": "https://eduscol.education.fr/document/14773/download"
   },
   "competences": [
     {
@@ -115,6 +116,56 @@
         "exemple": "Pas plus de deux virages : va tout droit le plus longtemps possible.",
         "demonstration": "Regarde ce programme : il évite les rochers.",
         "bravo": "Bravo ! Le robot est arrivé sans se cogner."
+      }
+    },
+    {
+      "id": "boucle-repeter",
+      "titre": "La boucle : répéter",
+      "niveau": "CE2",
+      "prerequis": [
+        "robot-rochers"
+      ],
+      "programme": {
+        "source": "prog",
+        "texte": "Construire des algorithmes qui comprennent des instructions simples (action déclenchée par un évènement, séquence d'instructions, boucle, instructions conditionnelles, variable)."
+      },
+      "activite": "blocs",
+      "parametres": {
+        "mode": "boucle"
+      },
+      "idee": "Quand le robot doit refaire plusieurs fois la même chose, on ne l'écrit qu'une fois, dans un bloc « répéter » : il refait tout ce qu'il y a dedans, autant de fois que demandé.",
+      "phrases": {
+        "consigne": "Il y a peu de place : trouve ce qui se répète dans le chemin. Mets ces blocs dans « répéter », règle le nombre de tours, puis touche le bouton vert.",
+        "question": "Conduis le robot jusqu'à l'objet avec une boucle.",
+        "indice": "Regarde le chemin : quel petit morceau revient plusieurs fois ? Combien de fois ?",
+        "exemple": "Touche « répéter », puis les blocs qui vont dedans, puis « Fermer le bloc ».",
+        "demonstration": "Regarde ce programme : une seule boucle suffit.",
+        "bravo": "Bravo ! Ta boucle est juste."
+      }
+    },
+    {
+      "id": "condition-si",
+      "titre": "La condition : si… alors",
+      "niveau": "CM1",
+      "prerequis": [
+        "boucle-repeter"
+      ],
+      "programme": {
+        "source": "prog",
+        "texte": "Construire des algorithmes qui comprennent des instructions simples (action déclenchée par un évènement, séquence d'instructions, boucle, instructions conditionnelles, variable)."
+      },
+      "activite": "blocs",
+      "parametres": {
+        "mode": "condition"
+      },
+      "idee": "Un bloc « si » regarde d'abord : s'il y a un rocher devant, il fait ce qu'il y a dedans ; sinon, il ne fait rien. Dans « répéter jusqu'à l'objet », le robot regarde à chaque pas.",
+      "phrases": {
+        "consigne": "Mets « répéter jusqu'à l'objet ». Dedans : « si rocher devant » avec un virage, puis « avancer ». Touche le bouton vert.",
+        "question": "Le robot doit contourner les rochers tout seul. Écris un programme qui regarde devant lui.",
+        "indice": "À chaque pas : s'il y a un rocher devant, le robot pivote ; puis il avance. De quel côté doit-il pivoter ?",
+        "exemple": "Après « si rocher devant », mets un seul virage, puis « Fermer le bloc », puis « avancer ».",
+        "demonstration": "Regarde ce programme : le robot regarde devant lui à chaque pas.",
+        "bravo": "Bravo ! Ton robot sait contourner les rochers."
       }
     }
   ]

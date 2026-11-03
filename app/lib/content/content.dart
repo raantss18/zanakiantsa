@@ -105,7 +105,7 @@ class Skill {
   String signature(Question q) => switch (activity) {
         'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' || 'probleme' => '${q.n}',
         'ecouter' || 'lettre' || 'syllabes' || 'tracer' => '${q.n}/${q.b}',
-        'motif' || 'echecs' || 'programmer' => '${q.a}',
+        'motif' || 'echecs' || 'programmer' || 'blocs' => '${q.a}',
         _ => '${q.n}/${q.a}/${q.b}',
       };
 
@@ -221,7 +221,7 @@ class Skill {
         final a = params.containsKey('parts_fixe') ? p('parts_fixe') : between(2, p('parts_max'));
         final b = between(1, p('par_max'));
         return Question(n: a * b, a: a, b: b);
-      case 'motif' || 'programmer':
+      case 'motif' || 'programmer' || 'blocs':
         return Question(n: 0, a: r.nextInt(1 << 30));
       case 'suite':
         // Cinq nombres de [b] en [b] à partir de [a] (n'importe quel nombre, programme du cycle 2), entre min et max ;

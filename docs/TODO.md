@@ -162,7 +162,8 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    laissée en prise, mat manqué, prise gratuite manquée), ADR 0040 ; ✅ leçons avancées : roque, promotion, prise en passant,
    fourchette, pièce non protégée, mat du couloir (règles : FIDE ; tactiques : positions vérifiées par le moteur, `test/problems_test.dart`). Corrigé au passage :
    les pièces noires autres que roi et pion étaient invisibles (images manquantes).
-10. ⏳ **Programmation type Scratch** : blocs « répéter n fois », « si … alors », et plus.
+10. ✅ **Programmation type Scratch** : blocs emboîtés « répéter n fois », « répéter jusqu'à l'objet », « si rocher
+    devant » (ADR 0041). ⏳ variables (« compteur ») : plus tard.
 11. ⏳ Même profondeur pour chaque domaine (jeu libre, suivi des erreurs, niveau avancé) : plan à proposer à Antsa.
 12. ⏳ Version 0.7.0 : tests, émulateur tablette + téléphone, publication après accord d'Antsa.
 

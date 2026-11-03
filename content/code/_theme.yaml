@@ -2,14 +2,16 @@ id: code
 titre: Programmer un robot
 nom: "Le code"
 icone: "1f916"
-ages: [5, 8]
+ages: [5, 10]
 # Maternelle (version consolidée 2026) : « Se repérer dans l'espace » p. 54-57 et « Découvrir le monde des objets »
 # p. 61. CP (programme de mathématiques du cycle 2, annexe 4) : « Le repérage dans l'espace ». Consultés le 2026-11-03.
 # Blocs inspirés de l'idée de ScratchJr (aucun code ni dessin repris, CLAUDE.md règle 7).
 sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
-ordre: [fleches, robot-tourner, robot-rochers]
+  # Fiche éduscol « Programmer » (DNE, juillet 2016), cycles 3 et 4 : boucle, instructions conditionnelles.
+  prog: "https://eduscol.education.fr/document/14773/download"
+ordre: [fleches, robot-tourner, robot-rochers, boucle-repeter, condition-si]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

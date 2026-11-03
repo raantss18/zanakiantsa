@@ -41,6 +41,8 @@ const activities = {
   'suite': {'pas', 'max'},
   // ADR 0040 (problèmes d'échecs sur de vraies positions)
   'probleme': {'theme'},
+  // ADR 0041 (blocs : boucles et conditions)
+  'blocs': {'mode'},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
