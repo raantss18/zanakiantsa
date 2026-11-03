@@ -34,7 +34,8 @@ Profil supervisé par **Family Link** (propriétaire du profil) : ne jamais le m
 **Émulateur d'essai** (AVD `zanakiantsa_tab`) : Android 16 x86_64 avec traduction ARM (`libndk_translation`, l'APK
 arm64 s'installe tel quel), écran 800 × 1340, densité 280 comme la SM-X135G. Tablette B (paysage, sw601) :
 `adb shell wm density 213` puis relancer l'app. Lancement :
-`ANDROID_SDK_ROOT=$HOME/Android/Sdk ~/Android/Sdk/emulator/emulator -avd zanakiantsa_tab -no-snapshot`.
+`ANDROID_SDK_ROOT=$HOME/Android/Sdk ~/Android/Sdk/emulator/emulator -avd zanakiantsa_tab -no-snapshot -gpu swiftshader_indirect`
+(le GPU de l'ordinateur via gfxstream fait planter l'émulateur au redémarrage de l'app, 2026-11-03).
 ⚠ L'émulateur ne mesure ni la mémoire, ni le démarrage, ni la fluidité de la SM-X135G (GPU et CPU différents).
 
 ## Budgets (⚠ hypothèses à recaler après la première mesure)
