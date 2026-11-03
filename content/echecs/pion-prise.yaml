@@ -1,0 +1,14 @@
+id: pion-prise
+titre: "Le pion prend en diagonale"
+niveau: GS
+prerequis: [pion]
+programme: { source: fide, texte: "3.7.3 : the pawn may move to a square occupied by an opponent's piece diagonally in front of it." }
+activite: echecs
+parametres: { mode: prise, piece: p, etoiles: 3 }
+phrases:
+  consigne: "Le pion prend en diagonale, une case en avant sur le côté."
+  question: "Prends les pions noirs avec ton pion."
+  indice: "Le pion avance tout droit, mais il prend en biais, vers l'avant."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde les cases entourées d'or : c'est là que le pion peut aller."
+  bravo: "Bravo ! Tu as pris tous les pions noirs."

@@ -1,0 +1,14 @@
+id: mat-dame
+titre: "Échec et mat avec la dame"
+niveau: GS
+prerequis: [echec-cavalier]
+programme: { source: fide, texte: "5.1.1 : the game is won by the player who has checkmated his/her opponent's king." }
+activite: echecs
+parametres: { mode: mat, piece: q, etoiles: 3 }
+phrases:
+  consigne: "Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !"
+  question: "Trouve le coup qui fait échec et mat."
+  indice: "Mets le roi noir en échec, et vérifie que toutes les cases autour de lui sont attaquées. Ton roi peut aider la dame."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde le coup entouré d'or."
+  bravo: "Échec et mat ! Bravo, tu as gagné la partie."

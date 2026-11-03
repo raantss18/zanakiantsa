@@ -4,11 +4,11 @@ niveau: GS
 prerequis: [fou]
 programme: { source: fide, texte: "The queen may move to any square along the file, the rank or a diagonal on which it stands." }
 activite: echecs
-parametres: { piece: q, etoiles: 3 }
+parametres: { mode: etoiles, piece: q, etoiles: 3 }
 phrases:
   consigne: "La dame avance tout droit ou en diagonale, aussi loin qu'elle veut."
   question: "Attrape toutes les étoiles avec la dame."
   indice: "La dame avance tout droit ou en diagonale, aussi loin qu'elle veut. Les points montrent où aller."
   exemple: "Touche une case avec un point."
-  demonstration: "Regarde les points : ce sont les cases où la dame peut aller."
+  demonstration: "Regarde les cases entourées d'or : c'est là que la dame peut aller."
   bravo: "Bravo ! Tu as attrapé toutes les étoiles."

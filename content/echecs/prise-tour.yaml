@@ -1,0 +1,14 @@
+id: prise-tour
+titre: "Prendre avec la tour"
+niveau: GS
+prerequis: [pion-prise]
+programme: { source: fide, texte: "3.1.1 : if a piece moves to a square occupied by an opponent's piece the latter is captured and removed. 3.5 : the rook may not move over any intervening pieces." }
+activite: echecs
+parametres: { mode: prise, piece: r, etoiles: 3 }
+phrases:
+  consigne: "Pour prendre une pièce, on va sur sa case. La tour ne saute pas par-dessus les pièces."
+  question: "Prends tous les pions noirs avec la tour."
+  indice: "La tour avance tout droit et s'arrête sur la première pièce qu'elle rencontre."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde les cases entourées d'or : c'est là que la tour peut aller."
+  bravo: "Bravo ! Tu as pris tous les pions noirs."

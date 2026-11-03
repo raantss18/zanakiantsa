@@ -243,29 +243,77 @@ tour.consigne;La tour avance tout droit, en ligne ou en colonne, aussi loin qu'e
 tour.question;Attrape toutes les étoiles avec la tour.
 tour.indice;La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut. Les points montrent où aller.
 tour.exemple;Touche une case avec un point.
-tour.demonstration;Regarde les points : ce sont les cases où la tour peut aller.
+tour.demonstration;Regarde les cases entourées d'or : c'est là que la tour peut aller.
 tour.bravo;Bravo ! Tu as attrapé toutes les étoiles.
 fou.consigne;Le fou avance en diagonale, en biais, aussi loin qu'il veut.
 fou.question;Attrape toutes les étoiles avec le fou.
 fou.indice;Le fou avance en diagonale, en biais, aussi loin qu'il veut. Les points montrent où aller.
 fou.exemple;Touche une case avec un point.
-fou.demonstration;Regarde les points : ce sont les cases où le fou peut aller.
+fou.demonstration;Regarde les cases entourées d'or : c'est là que le fou peut aller.
 fou.bravo;Bravo ! Tu as attrapé toutes les étoiles.
 dame.consigne;La dame avance tout droit ou en diagonale, aussi loin qu'elle veut.
 dame.question;Attrape toutes les étoiles avec la dame.
 dame.indice;La dame avance tout droit ou en diagonale, aussi loin qu'elle veut. Les points montrent où aller.
 dame.exemple;Touche une case avec un point.
-dame.demonstration;Regarde les points : ce sont les cases où la dame peut aller.
+dame.demonstration;Regarde les cases entourées d'or : c'est là que la dame peut aller.
 dame.bravo;Bravo ! Tu as attrapé toutes les étoiles.
 roi.consigne;Le roi avance d'une seule case, dans toutes les directions.
 roi.question;Attrape toutes les étoiles avec le roi.
 roi.indice;Le roi avance d'une seule case, dans toutes les directions. Les points montrent où aller.
 roi.exemple;Touche une case avec un point.
-roi.demonstration;Regarde les points : ce sont les cases où le roi peut aller.
+roi.demonstration;Regarde les cases entourées d'or : c'est là que le roi peut aller.
 roi.bravo;Bravo ! Tu as attrapé toutes les étoiles.
 cavalier.consigne;Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté.
 cavalier.question;Attrape toutes les étoiles avec le cavalier.
 cavalier.indice;Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté. Les points montrent où aller.
 cavalier.exemple;Touche une case avec un point.
-cavalier.demonstration;Regarde les points : ce sont les cases où le cavalier peut aller.
+cavalier.demonstration;Regarde les cases entourées d'or : c'est là que le cavalier peut aller.
 cavalier.bravo;Bravo ! Tu as attrapé toutes les étoiles.
+pion.consigne;Le pion avance tout droit, d'une case. Au premier coup, il peut avancer de deux cases.
+pion.question;Attrape les étoiles avec le pion.
+pion.indice;Le pion avance seulement tout droit, jamais en arrière. Les points montrent où aller.
+pion.exemple;Touche une case avec un point.
+pion.demonstration;Regarde les cases entourées d'or : c'est là que le pion peut aller.
+pion.bravo;Bravo ! Tu as attrapé toutes les étoiles.
+pion-prise.consigne;Le pion prend en diagonale, une case en avant sur le côté.
+pion-prise.question;Prends les pions noirs avec ton pion.
+pion-prise.indice;Le pion avance tout droit, mais il prend en biais, vers l'avant.
+pion-prise.exemple;Touche une case avec un point.
+pion-prise.demonstration;Regarde les cases entourées d'or : c'est là que le pion peut aller.
+pion-prise.bravo;Bravo ! Tu as pris tous les pions noirs.
+prise-tour.consigne;Pour prendre une pièce, on va sur sa case. La tour ne saute pas par-dessus les pièces.
+prise-tour.question;Prends tous les pions noirs avec la tour.
+prise-tour.indice;La tour avance tout droit et s'arrête sur la première pièce qu'elle rencontre.
+prise-tour.exemple;Touche une case avec un point.
+prise-tour.demonstration;Regarde les cases entourées d'or : c'est là que la tour peut aller.
+prise-tour.bravo;Bravo ! Tu as pris tous les pions noirs.
+prise-cavalier.consigne;Le cavalier saute en forme de L, même par-dessus les pièces.
+prise-cavalier.question;Prends tous les pions noirs avec le cavalier.
+prise-cavalier.indice;Le cavalier fait un L : deux cases tout droit, puis une sur le côté.
+prise-cavalier.exemple;Touche une case avec un point.
+prise-cavalier.demonstration;Regarde les cases entourées d'or : c'est là que le cavalier peut aller.
+prise-cavalier.bravo;Bravo ! Tu as pris tous les pions noirs.
+echec-dame.consigne;Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant.
+echec-dame.question;Joue un coup de la dame qui met le roi noir en échec.
+echec-dame.indice;Place la dame sur la même ligne, la même colonne ou la même diagonale que le roi noir.
+echec-dame.exemple;Touche une case avec un point.
+echec-dame.demonstration;Regarde le coup entouré d'or.
+echec-dame.bravo;Bravo ! Le roi noir est en échec.
+echec-cavalier.consigne;Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant.
+echec-cavalier.question;Joue un coup du cavalier qui met le roi noir en échec.
+echec-cavalier.indice;Le cavalier attaque les cases où il pourrait sauter au coup suivant, en forme de L.
+echec-cavalier.exemple;Touche une case avec un point.
+echec-cavalier.demonstration;Regarde le coup entouré d'or.
+echec-cavalier.bravo;Bravo ! Le roi noir est en échec.
+mat-dame.consigne;Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !
+mat-dame.question;Trouve le coup qui fait échec et mat.
+mat-dame.indice;Mets le roi noir en échec, et vérifie que toutes les cases autour de lui sont attaquées. Ton roi peut aider la dame.
+mat-dame.exemple;Touche une case avec un point.
+mat-dame.demonstration;Regarde le coup entouré d'or.
+mat-dame.bravo;Échec et mat ! Bravo, tu as gagné la partie.
+mat-tour.consigne;Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !
+mat-tour.question;Trouve le coup qui fait échec et mat.
+mat-tour.indice;Le roi noir est au bord. Ta tour attaque toute la rangée du bord ; ton roi garde les cases devant lui.
+mat-tour.exemple;Touche une case avec un point.
+mat-tour.demonstration;Regarde le coup entouré d'or.
+mat-tour.bravo;Échec et mat ! Bravo, tu as gagné la partie.

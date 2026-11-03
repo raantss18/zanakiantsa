@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "id": "echecs",
-  "titre": "Les échecs — déplacer les pièces",
+  "titre": "Les échecs — un cours pas à pas",
   "nom": "Les échecs",
   "icone": "265f",
   "ages": [
@@ -23,6 +23,7 @@
       },
       "activite": "echecs",
       "parametres": {
+        "mode": "etoiles",
         "piece": "r",
         "etoiles": 3
       },
@@ -31,7 +32,7 @@
         "question": "Attrape toutes les étoiles avec la tour.",
         "indice": "La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut. Les points montrent où aller.",
         "exemple": "Touche une case avec un point.",
-        "demonstration": "Regarde les points : ce sont les cases où la tour peut aller.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que la tour peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
       }
     },
@@ -48,6 +49,7 @@
       },
       "activite": "echecs",
       "parametres": {
+        "mode": "etoiles",
         "piece": "b",
         "etoiles": 3
       },
@@ -56,7 +58,7 @@
         "question": "Attrape toutes les étoiles avec le fou.",
         "indice": "Le fou avance en diagonale, en biais, aussi loin qu'il veut. Les points montrent où aller.",
         "exemple": "Touche une case avec un point.",
-        "demonstration": "Regarde les points : ce sont les cases où le fou peut aller.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le fou peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
       }
     },
@@ -73,6 +75,7 @@
       },
       "activite": "echecs",
       "parametres": {
+        "mode": "etoiles",
         "piece": "q",
         "etoiles": 3
       },
@@ -81,7 +84,7 @@
         "question": "Attrape toutes les étoiles avec la dame.",
         "indice": "La dame avance tout droit ou en diagonale, aussi loin qu'elle veut. Les points montrent où aller.",
         "exemple": "Touche une case avec un point.",
-        "demonstration": "Regarde les points : ce sont les cases où la dame peut aller.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que la dame peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
       }
     },
@@ -98,6 +101,7 @@
       },
       "activite": "echecs",
       "parametres": {
+        "mode": "etoiles",
         "piece": "k",
         "etoiles": 3
       },
@@ -106,7 +110,7 @@
         "question": "Attrape toutes les étoiles avec le roi.",
         "indice": "Le roi avance d'une seule case, dans toutes les directions. Les points montrent où aller.",
         "exemple": "Touche une case avec un point.",
-        "demonstration": "Regarde les points : ce sont les cases où le roi peut aller.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le roi peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
       }
     },
@@ -123,6 +127,7 @@
       },
       "activite": "echecs",
       "parametres": {
+        "mode": "etoiles",
         "piece": "n",
         "etoiles": 3
       },
@@ -131,8 +136,216 @@
         "question": "Attrape toutes les étoiles avec le cavalier.",
         "indice": "Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté. Les points montrent où aller.",
         "exemple": "Touche une case avec un point.",
-        "demonstration": "Regarde les points : ce sont les cases où le cavalier peut aller.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le cavalier peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "pion",
+      "titre": "Déplacer le pion",
+      "niveau": "GS",
+      "prerequis": [
+        "cavalier"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.7.1–3.7.2 : the pawn may move forward to the square immediately in front of it on the same file ; on its first move it may advance two squares along the same file, provided that both squares are unoccupied."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "etoiles",
+        "piece": "p",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le pion avance tout droit, d'une case. Au premier coup, il peut avancer de deux cases.",
+        "question": "Attrape les étoiles avec le pion.",
+        "indice": "Le pion avance seulement tout droit, jamais en arrière. Les points montrent où aller.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le pion peut aller.",
+        "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      }
+    },
+    {
+      "id": "pion-prise",
+      "titre": "Le pion prend en diagonale",
+      "niveau": "GS",
+      "prerequis": [
+        "pion"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.7.3 : the pawn may move to a square occupied by an opponent's piece diagonally in front of it."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "prise",
+        "piece": "p",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le pion prend en diagonale, une case en avant sur le côté.",
+        "question": "Prends les pions noirs avec ton pion.",
+        "indice": "Le pion avance tout droit, mais il prend en biais, vers l'avant.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le pion peut aller.",
+        "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      }
+    },
+    {
+      "id": "prise-tour",
+      "titre": "Prendre avec la tour",
+      "niveau": "GS",
+      "prerequis": [
+        "pion-prise"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.1.1 : if a piece moves to a square occupied by an opponent's piece the latter is captured and removed. 3.5 : the rook may not move over any intervening pieces."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "prise",
+        "piece": "r",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Pour prendre une pièce, on va sur sa case. La tour ne saute pas par-dessus les pièces.",
+        "question": "Prends tous les pions noirs avec la tour.",
+        "indice": "La tour avance tout droit et s'arrête sur la première pièce qu'elle rencontre.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que la tour peut aller.",
+        "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      }
+    },
+    {
+      "id": "prise-cavalier",
+      "titre": "Prendre avec le cavalier",
+      "niveau": "GS",
+      "prerequis": [
+        "prise-tour"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.1.1 : if a piece moves to a square occupied by an opponent's piece the latter is captured and removed. 3.6 : the knight moves in an L."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "prise",
+        "piece": "n",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le cavalier saute en forme de L, même par-dessus les pièces.",
+        "question": "Prends tous les pions noirs avec le cavalier.",
+        "indice": "Le cavalier fait un L : deux cases tout droit, puis une sur le côté.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde les cases entourées d'or : c'est là que le cavalier peut aller.",
+        "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      }
+    },
+    {
+      "id": "echec-dame",
+      "titre": "Faire échec avec la dame",
+      "niveau": "GS",
+      "prerequis": [
+        "prise-cavalier"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.9.1 : the king is said to be 'in check' if it is attacked by one or more of the opponent's pieces."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "echec",
+        "piece": "q",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant.",
+        "question": "Joue un coup de la dame qui met le roi noir en échec.",
+        "indice": "Place la dame sur la même ligne, la même colonne ou la même diagonale que le roi noir.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde le coup entouré d'or.",
+        "bravo": "Bravo ! Le roi noir est en échec."
+      }
+    },
+    {
+      "id": "echec-cavalier",
+      "titre": "Faire échec avec le cavalier",
+      "niveau": "GS",
+      "prerequis": [
+        "echec-dame"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.9.1 : the king is said to be 'in check' if it is attacked by one or more of the opponent's pieces."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "echec",
+        "piece": "n",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant.",
+        "question": "Joue un coup du cavalier qui met le roi noir en échec.",
+        "indice": "Le cavalier attaque les cases où il pourrait sauter au coup suivant, en forme de L.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde le coup entouré d'or.",
+        "bravo": "Bravo ! Le roi noir est en échec."
+      }
+    },
+    {
+      "id": "mat-dame",
+      "titre": "Échec et mat avec la dame",
+      "niveau": "GS",
+      "prerequis": [
+        "echec-cavalier"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "5.1.1 : the game is won by the player who has checkmated his/her opponent's king."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "mat",
+        "piece": "q",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !",
+        "question": "Trouve le coup qui fait échec et mat.",
+        "indice": "Mets le roi noir en échec, et vérifie que toutes les cases autour de lui sont attaquées. Ton roi peut aider la dame.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde le coup entouré d'or.",
+        "bravo": "Échec et mat ! Bravo, tu as gagné la partie."
+      }
+    },
+    {
+      "id": "mat-tour",
+      "titre": "Échec et mat avec la tour",
+      "niveau": "GS",
+      "prerequis": [
+        "mat-dame"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "5.1.1 : the game is won by the player who has checkmated his/her opponent's king."
+      },
+      "activite": "echecs",
+      "parametres": {
+        "mode": "mat",
+        "piece": "r",
+        "etoiles": 3
+      },
+      "phrases": {
+        "consigne": "Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !",
+        "question": "Trouve le coup qui fait échec et mat.",
+        "indice": "Le roi noir est au bord. Ta tour attaque toute la rangée du bord ; ton roi garde les cases devant lui.",
+        "exemple": "Touche une case avec un point.",
+        "demonstration": "Regarde le coup entouré d'or.",
+        "bravo": "Échec et mat ! Bravo, tu as gagné la partie."
       }
     }
   ]

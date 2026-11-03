@@ -1,0 +1,14 @@
+id: echec-cavalier
+titre: "Faire échec avec le cavalier"
+niveau: GS
+prerequis: [echec-dame]
+programme: { source: fide, texte: "3.9.1 : the king is said to be 'in check' if it is attacked by one or more of the opponent's pieces." }
+activite: echecs
+parametres: { mode: echec, piece: n, etoiles: 3 }
+phrases:
+  consigne: "Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant."
+  question: "Joue un coup du cavalier qui met le roi noir en échec."
+  indice: "Le cavalier attaque les cases où il pourrait sauter au coup suivant, en forme de L."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde le coup entouré d'or."
+  bravo: "Bravo ! Le roi noir est en échec."

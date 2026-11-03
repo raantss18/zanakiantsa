@@ -1,0 +1,14 @@
+id: echec-dame
+titre: "Faire échec avec la dame"
+niveau: GS
+prerequis: [prise-cavalier]
+programme: { source: fide, texte: "3.9.1 : the king is said to be 'in check' if it is attacked by one or more of the opponent's pieces." }
+activite: echecs
+parametres: { mode: echec, piece: q, etoiles: 3 }
+phrases:
+  consigne: "Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant."
+  question: "Joue un coup de la dame qui met le roi noir en échec."
+  indice: "Place la dame sur la même ligne, la même colonne ou la même diagonale que le roi noir."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde le coup entouré d'or."
+  bravo: "Bravo ! Le roi noir est en échec."

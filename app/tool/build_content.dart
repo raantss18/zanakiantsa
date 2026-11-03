@@ -21,7 +21,8 @@ const activities = {
 /// Activités dont les questions sont écrites dans `items`.
 const withItems = {'choisir', 'dessin'};
 const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
-const pieces = {'r', 'b', 'q', 'k', 'n'};
+const pieces = {'r', 'b', 'q', 'k', 'n', 'p'};
+const chessModes = {'etoiles', 'prise', 'echec', 'mat'};
 const requiredPhrases = {'consigne', 'question', 'indice', 'exemple', 'demonstration', 'bravo'};
 final placeholder = RegExp(r'\{(\w+)\}');
 const allowedPlaceholders = {
@@ -101,7 +102,13 @@ Map<String, dynamic> buildTheme(Directory dir) {
       if (act == 'ecouter' && (!dimensions.contains(params['dimension']) || (params['mots'] as List?)?.length != 2)) {
         fail(where, 'ecouter : dimension ${dimensions.join('|')} et deux mots');
       }
-      if (act == 'echecs' && !pieces.contains(params['piece'])) fail(where, 'echecs : pièce ${pieces.join('|')}');
+      if (act == 'echecs') {
+        if (!pieces.contains(params['piece'])) fail(where, 'echecs : pièce ${pieces.join('|')}');
+        final mode = params['mode'] ?? 'etoiles';
+        if (!chessModes.contains(mode)) fail(where, 'echecs : mode ${chessModes.join('|')}');
+        if (mode == 'mat' && !{'r', 'q'}.contains(params['piece'])) fail(where, 'echecs : mat avec r ou q seulement');
+        if (mode == 'echec' && {'k', 'p'}.contains(params['piece'])) fail(where, 'echecs : échec avec r, b, q ou n');
+      }
       if (act == 'motif' && !RegExp(r'^(AB|ABB|AAB|ABC|AB\+)$').hasMatch('${params['base']}')) {
         fail(where, 'motif : base AB, ABB, AAB, ABC ou AB+ (évolutif)');
       }

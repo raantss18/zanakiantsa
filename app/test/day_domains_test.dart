@@ -137,6 +137,57 @@ void main() {
     });
   });
 
+  group('Cours d\'échecs (ADR 0020)', () {
+    test('le pion : une ou deux cases au départ, bloqué par une pièce, prise en diagonale avant seulement', () {
+      expect(pawnMoves((3, 1), const {}, const {}), {(3, 2), (3, 3)});
+      expect(pawnMoves((3, 2), const {}, const {}), {(3, 3)});
+      expect(pawnMoves((3, 1), {(3, 2)}, const {}), isEmpty);
+      expect(pawnMoves((3, 1), {(2, 2), (4, 0)}, {(2, 2), (4, 0)}), {(3, 2), (3, 3), (2, 2)});
+    });
+    test('une pièce qui glisse ne saute pas par-dessus une autre ; le cavalier si', () {
+      expect(attacks('r', (0, 0), {(0, 3)}).contains((0, 4)), isFalse);
+      expect(attacks('r', (0, 0), {(0, 3)}).contains((0, 3)), isTrue);
+      expect(attacks('n', (0, 0), {(0, 1), (1, 0), (1, 1)}), {(1, 2), (2, 1)});
+    });
+    test('mat du couloir : tour en 8e rangée, roi noir en h8 gardé par le roi blanc en h6', () {
+      final board = <Square, Piece>{(7, 7): const Piece('k', white: false), (7, 5): const Piece('k'), (0, 7): const Piece('r')};
+      expect(blackInCheck(board), isTrue);
+      expect(blackMated(board), isTrue);
+      final escape = <Square, Piece>{(7, 7): const Piece('k', white: false), (0, 0): const Piece('k'), (0, 7): const Piece('r')};
+      expect(blackMated(escape), isFalse, reason: 'le roi noir peut aller en g7 ou h7');
+    });
+    test('le roi noir peut prendre une tour non protégée qui le met en échec', () {
+      final board = <Square, Piece>{(7, 7): const Piece('k', white: false), (0, 0): const Piece('k'), (6, 7): const Piece('r')};
+      expect(blackInCheck(board), isTrue);
+      expect(blackKingMoves(board), contains((6, 7)));
+    });
+    test('générateurs : chaque leçon a toujours une solution', () {
+      for (var i = 0; i < 150; i++) {
+        final r = Random(i);
+        for (final p in ['p', 'r', 'n', 'b', 'q']) {
+          final (board, targets) = capturePuzzle(p, 3, r);
+          var cur = board;
+          for (final t in targets) {
+            final from = cur.entries.firstWhere((e) => e.value.white).key;
+            expect(legalMoves(cur, from), contains(t), reason: '$p prise');
+            cur = play(cur, from, t);
+          }
+        }
+        for (final p in ['r', 'b', 'q', 'n']) {
+          final b = checkPuzzle(p, r);
+          expect(blackInCheck(b), isFalse);
+          expect(solutions(b, blackInCheck), isNotEmpty);
+        }
+        for (final p in ['r', 'q']) {
+          final b = matePuzzle(p, r);
+          expect(blackInCheck(b), isFalse);
+          expect(blackKingMoves(b), isNotEmpty, reason: 'pas de pat au départ');
+          expect(solutions(b, blackMated), isNotEmpty);
+        }
+      }
+    });
+  });
+
   group('Sons à comparer', () {
     double peak(List<double> s) => s.map((v) => v.abs()).reduce(max);
     test('fort plus fort que doux, long plus long que court, sans saturation', () {

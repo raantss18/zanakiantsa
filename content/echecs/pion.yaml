@@ -1,0 +1,14 @@
+id: pion
+titre: "Déplacer le pion"
+niveau: GS
+prerequis: [cavalier]
+programme: { source: fide, texte: "3.7.1–3.7.2 : the pawn may move forward to the square immediately in front of it on the same file ; on its first move it may advance two squares along the same file, provided that both squares are unoccupied." }
+activite: echecs
+parametres: { mode: etoiles, piece: p, etoiles: 3 }
+phrases:
+  consigne: "Le pion avance tout droit, d'une case. Au premier coup, il peut avancer de deux cases."
+  question: "Attrape les étoiles avec le pion."
+  indice: "Le pion avance seulement tout droit, jamais en arrière. Les points montrent où aller."
+  exemple: "Touche une case avec un point."
+  demonstration: "Regarde les cases entourées d'or : c'est là que le pion peut aller."
+  bravo: "Bravo ! Tu as attrapé toutes les étoiles."

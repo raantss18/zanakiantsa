@@ -4,11 +4,11 @@ niveau: GS
 prerequis: []
 programme: { source: fide, texte: "The rook may move to any square along the file or the rank on which it stands." }
 activite: echecs
-parametres: { piece: r, etoiles: 3 }
+parametres: { mode: etoiles, piece: r, etoiles: 3 }
 phrases:
   consigne: "La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut."
   question: "Attrape toutes les étoiles avec la tour."
   indice: "La tour avance tout droit, en ligne ou en colonne, aussi loin qu'elle veut. Les points montrent où aller."
   exemple: "Touche une case avec un point."
-  demonstration: "Regarde les points : ce sont les cases où la tour peut aller."
+  demonstration: "Regarde les cases entourées d'or : c'est là que la tour peut aller."
   bravo: "Bravo ! Tu as attrapé toutes les étoiles."

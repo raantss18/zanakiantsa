@@ -4,11 +4,11 @@ niveau: GS
 prerequis: [dame]
 programme: { source: fide, texte: "The king may move by moving to an adjoining square." }
 activite: echecs
-parametres: { piece: k, etoiles: 3 }
+parametres: { mode: etoiles, piece: k, etoiles: 3 }
 phrases:
   consigne: "Le roi avance d'une seule case, dans toutes les directions."
   question: "Attrape toutes les étoiles avec le roi."
   indice: "Le roi avance d'une seule case, dans toutes les directions. Les points montrent où aller."
   exemple: "Touche une case avec un point."
-  demonstration: "Regarde les points : ce sont les cases où le roi peut aller."
+  demonstration: "Regarde les cases entourées d'or : c'est là que le roi peut aller."
   bravo: "Bravo ! Tu as attrapé toutes les étoiles."

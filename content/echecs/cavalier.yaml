@@ -4,11 +4,11 @@ niveau: GS
 prerequis: [roi]
 programme: { source: fide, texte: "The knight may move to one of the squares nearest to that on which it stands but not on the same rank, file or diagonal." }
 activite: echecs
-parametres: { piece: n, etoiles: 3 }
+parametres: { mode: etoiles, piece: n, etoiles: 3 }
 phrases:
   consigne: "Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté."
   question: "Attrape toutes les étoiles avec le cavalier."
   indice: "Le cavalier saute en forme de L : deux cases tout droit, puis une case sur le côté. Les points montrent où aller."
   exemple: "Touche une case avec un point."
-  demonstration: "Regarde les points : ce sont les cases où le cavalier peut aller."
+  demonstration: "Regarde les cases entourées d'or : c'est là que le cavalier peut aller."
   bravo: "Bravo ! Tu as attrapé toutes les étoiles."
