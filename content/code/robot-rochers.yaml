@@ -1,0 +1,14 @@
+id: robot-rochers
+titre: Contourner les rochers
+niveau: CP
+prerequis: [robot-tourner]
+programme: { source: cycle2, texte: "Pour coder ces déplacements, il utilise les instructions : « avancer d’une case », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche ». Les déplacements à programmer comprennent au maximum dix instructions, dont deux virages." }
+activite: programmer
+parametres: { mode: tourner, grille: 6, min: 4, max: 10, rochers: 6, virages_max: 2 }
+phrases:
+  consigne: "Les rochers bloquent le chemin : il faut les contourner."
+  question: "Programme le robot pour aller jusqu'à l'objet sans toucher les rochers."
+  indice: "Cherche d'abord le chemin avec ton doigt, puis écris-le avec les blocs."
+  exemple: "Pas plus de deux virages : va tout droit le plus longtemps possible."
+  demonstration: "Regarde ce programme : il évite les rochers."
+  bravo: "Bravo ! Le robot est arrivé sans se cogner."

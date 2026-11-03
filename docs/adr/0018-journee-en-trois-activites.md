@@ -3,7 +3,8 @@
 - **Date** : 2026-11-03 · **Statut** : accepté (demande d'Antsa : « trois activités différentes par jour… à peu près
   1 h 30 », pour que l'enfant soit autonome)
 - **Décision** : l'accueil propose chaque jour 3 domaines en grandes cartes ; deux journées alternent à minuit (date
-  locale) : nombres / vivant / dessin, puis suites / sons / échecs (`app/lib/core/day.dart`). La carte suivante est mise
+  locale) : nombres / vivant / dessin, puis suites / sons / échecs, puis anglais / code / explorer (ajoutée le
+  même jour, ADR 0022–0024 ; `app/lib/core/day.dart`). La carte suivante est mise
   en avant (contour + ▶ qui pulse), les cartes finies portent ✔ « Fini ». L'enfant peut en choisir une autre.
 - **Temps** : réglé par le parent (30, 45, 60 ou 90 min ; **90 par défaut**, demande d'Antsa), partagé en trois. Le
   temps compte les séances finies et interrompues (table `sessions`, colonnes `theme`, `complete`, base v2).

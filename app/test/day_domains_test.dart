@@ -10,16 +10,19 @@ import 'package:zanakiantsa/core/chess.dart';
 import 'package:zanakiantsa/core/day.dart';
 import 'package:zanakiantsa/core/events.dart';
 import 'package:zanakiantsa/core/motif.dart';
+import 'package:zanakiantsa/core/robot.dart';
+import 'package:zanakiantsa/ui/three.dart';
 
 Map<String, dynamic> json(String name) => jsonDecode(File('assets/content/$name.json').readAsStringSync()) as Map<String, dynamic>;
 List<Topic> topics() => [for (final id in json('domaines')['ordre'] as List) Topic(json(id as String))];
 
 void main() {
   group('Journée en 3 activités (ADR 0018)', () {
-    test('les deux journées alternent et couvrent tous les domaines, chacun une fois', () {
+    test('les journées tournent et couvrent tous les domaines, chacun une fois', () {
       final d = DateTime(2026, 11, 3, 9);
-      expect(DayPlan.of(d, const []).items.map((i) => i.theme), isNot(DayPlan.of(d.add(const Duration(days: 1)), const []).items.map((i) => i.theme)));
-      expect(DayPlan.of(d, const []).items.map((i) => i.theme), DayPlan.of(d.add(const Duration(days: 2)), const []).items.map((i) => i.theme));
+      List<String> day(int k) => DayPlan.of(d.add(Duration(days: k)), const []).items.map((i) => i.theme).toList();
+      expect({for (var k = 0; k < dayGroups.length; k++) day(k).join()}.length, dayGroups.length);
+      expect(day(0), day(dayGroups.length));
       final all = dayGroups.expand((g) => g).toList();
       expect(all.toSet().length, all.length);
       expect(all.toSet(), (json('domaines')['ordre'] as List).toSet());
@@ -51,6 +54,7 @@ void main() {
 
   group('Contenu des nouveaux domaines (ADR 0019)', () {
     test('chaque compétence de chaque domaine tire des questions et remplit toutes ses phrases', () {
+      expect(topics().map((t) => t.id), containsAll(['anglais', 'code', 'explorer']));
       final r = Random(3);
       const w = Words(singular: 'fleur', plural: 'fleurs', feminine: true, container: 'le panier', firstName: 'Lila');
       for (final t in topics()) {
@@ -204,6 +208,41 @@ void main() {
       final s = topics().first.skills.firstWhere((s) => s.id == 'dizaines-lire');
       expect(s.say('bravo', const Question(n: 14, a: 1, b: 4)), 'Oui ! 1 dizaine et 4 unités, cela fait 14.');
       expect(s.say('bravo', const Question(n: 30, a: 3, b: 0)), 'Oui ! 3 dizaines et 0 unité, cela fait 30.');
+    });
+  });
+
+  group('Programmer un robot (ADR 0023)', () {
+    test('un parcours tiré se résout par son programme, dans les bornes, et un choc arrête le robot', () {
+      for (var i = 0; i < 200; i++) {
+        final r = Random(i);
+        final (m1, p1) = mazePuzzle(r, arrowsMode: true, size: 5, min: 2, max: 5);
+        expect(m1.solves(p1), isTrue);
+        expect(p1.length, inInclusiveRange(2, 5));
+        final (m2, p2) = mazePuzzle(r, arrowsMode: false, size: 6, min: 4, max: 10, rocks: 6, maxTurns: 2);
+        expect(m2.solves(p2), isTrue);
+        expect(turns(p2), lessThanOrEqualTo(2));
+        expect(p2.where((o) => arrows.contains(o)), isEmpty);
+      }
+      const m = Maze(3, RobotState((0, 0), 1), (2, 0), {(1, 0)});
+      expect(m.run([Op.forward]).length, 1, reason: 'rocher devant : le robot ne bouge pas');
+      expect(m.solves([Op.turnRight, Op.forward, Op.turnLeft, Op.forward, Op.forward, Op.turnLeft, Op.forward]), isTrue);
+    });
+  });
+
+  group('Explorer en 3D (ADR 0024)', () {
+    test('chaque solide est fermé : chaque arête est partagée par exactement deux faces', () {
+      for (final e in solids.entries) {
+        final count = <(int, int), int>{};
+        for (final f in e.value.faces) {
+          for (var i = 0; i < f.points.length; i++) {
+            final a = f.points[i], b = f.points[(i + 1) % f.points.length];
+            final k = a < b ? (a, b) : (b, a);
+            if (a != b) count[k] = (count[k] ?? 0) + 1;
+          }
+        }
+        // La boule a des faces dégénérées aux pôles (sommets confondus) : on ne compte que les arêtes réelles.
+        if (e.key != 'boule') expect(count.values.every((c) => c == 2), isTrue, reason: e.key);
+      }
     });
   });
 

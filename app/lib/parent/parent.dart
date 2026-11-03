@@ -152,8 +152,8 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               Text('Temps de jeu proposé par jour', style: Theme.of(context).textTheme.titleLarge),
               const Text(
-                'Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; puis suites, sons, '
-                'échecs), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
+                'Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; suites, sons, échecs ; '
+                'anglais, code, explorer), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
                 'par jour avant 5 ans, « moins, c’est mieux ».',
               ),
               const SizedBox(height: 8),

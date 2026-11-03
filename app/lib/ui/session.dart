@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../activities/calcul.dart';
 import '../activities/chess.dart';
+import '../activities/code.dart';
+import '../activities/explore.dart';
 import '../activities/choose.dart';
 import '../activities/listen.dart';
 import '../activities/motif.dart';
@@ -60,7 +62,10 @@ class Attempt extends ChangeNotifier {
   /// Les phrases portent les mots de l'univers : l'identifiant de voix enregistrée en tient compte.
   String voiceId(String key) => '${skill.voiceId(key)}.${app.universe.id}';
 
-  Future<void> say(String key) => app.voice.say(phrase(key), id: voiceId(key));
+  /// Domaine d'anglais : les mots entre « » sont dits par la voix anglaise (ADR 0022).
+  bool get _english => skill.params['langue'] == 'en';
+
+  Future<void> say(String key) => _english ? app.voice.sayMixed(phrase(key)) : app.voice.say(phrase(key), id: voiceId(key));
 
   /// Affiche et dit une phrase de l'énoncé.
   Future<void> show(String key) {
@@ -70,7 +75,7 @@ class Attempt extends ChangeNotifier {
     return say(key);
   }
 
-  Future<void> listen() => helpText != null ? app.voice.say(helpText!) : say(statementKey);
+  Future<void> listen() => helpText != null ? (_english ? app.voice.sayMixed(helpText!) : app.voice.say(helpText!)) : say(statementKey);
 
   Future<void> _record({required bool correct, required bool demonstrated}) => app.record(Answer(
         skill: skill.id,
@@ -278,6 +283,10 @@ class _SessionPageState extends State<SessionPage> {
                           'batonnets' => SticksActivity(key: ValueKey(index), attempt: a),
                           'groupes' || 'tables' => GroupsActivity(key: ValueKey(index), attempt: a),
                           'partage' => ShareActivity(key: ValueKey(index), attempt: a),
+                          'programmer' => CodeActivity(key: ValueKey(index), attempt: a),
+                          'solide' => SolidActivity(key: ValueKey(index), attempt: a),
+                          'planetes' => PlanetsActivity(key: ValueKey(index), attempt: a),
+                          'corps' => BodyActivity(key: ValueKey(index), attempt: a),
                           _ => CalcActivity(key: ValueKey(index), attempt: a),
                         },
                       ),

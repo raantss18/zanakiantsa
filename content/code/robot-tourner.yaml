@@ -1,0 +1,14 @@
+id: robot-tourner
+titre: Avancer et pivoter
+niveau: GS
+prerequis: [fleches]
+programme: { source: c1, texte: "Choisir et organiser 3 à 5 instructions simples (avancer, tourner) dans le bon ordre pour conduire un objet ou un robot jusqu’à une case cible sur un quadrillage." }
+activite: programmer
+parametres: { mode: tourner, grille: 5, min: 3, max: 5 }
+phrases:
+  consigne: "Avancer va tout droit, là où regarde la flèche. Pivoter fait tourner sur place."
+  question: "Programme le robot pour aller jusqu'à l'objet."
+  indice: "Regarde où pointe la petite flèche. Faut-il pivoter avant d'avancer ?"
+  exemple: "Pivoter à droite, c'est un quart de tour du côté de ta main droite."
+  demonstration: "Regarde ce programme : il conduit jusqu'à l'objet."
+  bravo: "Bravo ! Ton programme est juste."

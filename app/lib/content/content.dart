@@ -85,7 +85,8 @@ class Skill {
 
   /// Variables d'activité d'une question.
   Map<String, String> vars(Question q) => switch (activity) {
-        'choisir' || 'dessin' => items[q.n].vars,
+        'choisir' || 'dessin' || 'planetes' || 'corps' => items[q.n].vars,
+        'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
         'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
         'batonnets' => {'dizaines': q.a <= 1 ? '${q.a} dizaine' : '${q.a} dizaines', 'unites': q.b <= 1 ? '${q.b} unité' : '${q.b} unités'},
         _ => const {},
@@ -115,7 +116,9 @@ class Skill {
         final n = between(p('cible_min'), p('cible_max'));
         final a = min(between(p('depart_min'), p('depart_max')), n - 1).clamp(0, n);
         return Question(n: n, a: a, b: n - a);
-      case 'choisir' || 'dessin':
+      case 'solide':
+        return Question(n: r.nextInt((params['solides'] as List).length), a: r.nextInt(1 << 30));
+      case 'choisir' || 'dessin' || 'planetes' || 'corps':
         return Question(n: r.nextInt(items.length), a: r.nextInt(1 << 30));
       case 'ecouter':
         return Question(n: r.nextInt(2), a: r.nextInt(1 << 30), b: r.nextInt(2));
@@ -140,7 +143,7 @@ class Skill {
         final a = params.containsKey('parts_fixe') ? p('parts_fixe') : between(2, p('parts_max'));
         final b = between(1, p('par_max'));
         return Question(n: a * b, a: a, b: b);
-      case 'motif':
+      case 'motif' || 'programmer':
         return Question(n: 0, a: r.nextInt(1 << 30));
       default: // calcul
         final total = params.containsKey('total_fixe') ? p('total_fixe') : between(2, p('total_max'));
@@ -164,8 +167,12 @@ class Item {
       : text = j['texte'] as String,
         right = j['bonne'] == null ? null : Pic.from(j['bonne'] as List),
         others = [for (final o in j['autres'] as List? ?? const []) Pic.from(o as List)],
-        explanation = j['explication'] as String? ?? '';
+        explanation = j['explication'] as String? ?? '',
+        target = j['cible'] as String?;
   final String text, explanation;
+
+  /// Ce qu'il faut toucher dans une scène (`planetes`, `corps`).
+  final String? target;
   final Pic? right;
   final List<Pic> others;
 
@@ -178,6 +185,11 @@ class Pic {
   Pic.from(List l) : this(l[0] as String, l[1] as String);
   final String art, name;
 }
+
+/// Noms des solides (activité `solide`, ADR 0024), avec leur article.
+const solidNames = {
+  'cube': 'le cube', 'pave': 'le pavé', 'boule': 'la boule', 'cylindre': 'le cylindre', 'cone': 'le cône', 'pyramide': 'la pyramide',
+};
 
 class Question {
   const Question({required this.n, this.a = 0, this.b = 0});

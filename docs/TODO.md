@@ -98,20 +98,21 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   couvert par les tests unitaires du temps compté), cavalier et dame jusqu'au bout, sons en paysage
 - ⏳ Voix enregistrées pour les nouvelles phrases (`docs/voix/script.csv`)
 
-## Priorités demandées par Antsa (2026-11-03) ⏳
+## Priorités demandées par Antsa (2026-11-03) ✅ première tranche de chacune
 
-Dans cet ordre, chacun en tranche verticale (`CLAUDE.md` règle 2), sources officielles à trouver avant le contenu :
-
-1. ⏳ **Cours d'échecs** progressif : déplacements des pièces (commencé dans 4 ter), puis prise, échec, mat, petits
-   problèmes
-2. ⏳ **Bâtonnets / matériel de numération** pour additionner, puis **multiplications**, **divisions**,
-   approfondissement (programmes cycle 2 et 3)
-3. ⏳ **Anglais** (pas encore fait ; place à fixer, ADR 0005) : vocabulaire imagé et dit, programme de langues vivantes
-4. ⏳ **Exploration interactive** sur GPU : système solaire / univers, corps humain (3D, Flame ou moteur 3D à évaluer
-   par un spike mesuré sur la SM-X135G ou l'émulateur)
-5. ⏳ **Programmation par blocs** type Scratch / ScratchJr (algorithmique, cycle 2) : seulement l'idée, aucun code
-   repris (règle 7)
-6. ⏳ **Géométrie 3D type GeoGebra** pour enfant : solides à manipuler (programme « Explorer les solides »)
+1. ✅ **Cours d'échecs** (ADR 0020) : 13 leçons, des déplacements au mat en un coup ; ⏳ parties contre l'app, roque,
+   promotion
+2. ✅ **Bâtonnets, multiplication, partage** (ADR 0021) : 8 compétences CP–CE1 ; ⏳ « combien de parts », tables de
+   6 à 9, soustraction par cassage de dizaine
+3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ⏳ recaler sur le programme publié au BO (source
+   actuelle : projet de juin 2025), voix anglaise hors ligne sur la tablette
+4. ✅ **Exploration 3D sur GPU** (ADR 0024) : système solaire et corps ; ⏳ organes, fluidité sur vraie tablette
+5. ✅ **Programmer un robot par blocs** (ADR 0023) ; ⏳ boucles, programmes libres type Scratch
+6. ✅ **Solides en 3D** (ADR 0024) ; ⏳ manipulation libre type GeoGebra
+- ✅ 3e journée : anglais / code / explorer (les journées tournent sur 3 jours, ADR 0018)
+- ✅ Vérifié sur l'émulateur : mat en un coup, bâtonnets (lire, construire), paquets, partage, tables, solide 3D,
+  planètes, corps, robot (programme faux puis juste), anglais (voix en-GB utilisée) ; 47 tests
+- ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
 ## Étape 5 — Thèmes suivants ⏳
 

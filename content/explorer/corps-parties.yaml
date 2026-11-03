@@ -1,0 +1,36 @@
+id: corps-parties
+titre: "Les parties du corps"
+niveau: MS
+prerequis: []
+programme: { source: c1, texte: "Identifier et nommer les parties du corps humain : placer les pièces d’un puzzle représentant le corps humain en nommant les bras, les mains, les jambes, la tête, le cou, le tronc, etc." }
+activite: corps
+parametres: {}
+phrases:
+  consigne: "Écoute, puis touche la bonne partie du corps."
+  question: "{texte}"
+  indice: "Montre-la d'abord sur ton propre corps."
+  exemple: "Essaie une autre partie."
+  demonstration: "Regarde : {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Touche la tête."
+    cible: tete
+    explication: "Voici la tête."
+  - texte: "Touche le cou."
+    cible: cou
+    explication: "Voici le cou."
+  - texte: "Touche le tronc."
+    cible: tronc
+    explication: "Voici le tronc."
+  - texte: "Touche les bras."
+    cible: bras
+    explication: "Voici les bras."
+  - texte: "Touche les mains."
+    cible: mains
+    explication: "Voici les mains."
+  - texte: "Touche les jambes."
+    cible: jambes
+    explication: "Voici les jambes."
+  - texte: "Touche les pieds."
+    cible: pieds
+    explication: "Voici les pieds."

@@ -4,10 +4,12 @@ library;
 
 import 'events.dart';
 
-/// Les deux journées qui alternent (choix d'Antsa : « maths/biologie/dessin puis algo/musique/échecs »).
+/// Les journées qui tournent (choix d'Antsa : « maths/biologie/dessin puis algo/musique/échecs », puis ses priorités
+/// du 2026-11-03 : anglais, programmation, exploration 3D).
 const dayGroups = [
   ['compter', 'nature', 'dessin'],
   ['motifs', 'sons', 'echecs'],
+  ['anglais', 'code', 'explorer'],
 ];
 
 /// Minutes par jour proposées au parent ; 90 = demande d'Antsa (voir ADR 0018 pour les repères de santé).

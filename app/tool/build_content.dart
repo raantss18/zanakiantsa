@@ -22,9 +22,20 @@ const activities = {
   'groupes': {'par_max', 'total_max'},
   'tables': {'tables'},
   'partage': {'par_max'},
+  // ADR 0023
+  'programmer': {'mode', 'grille', 'min', 'max'},
+  // ADR 0024
+  'solide': {'solides'},
+  'planetes': <String>{},
+  'corps': <String>{},
 };
+const sceneTargets = {
+  'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
+  'corps': {'tete', 'cou', 'tronc', 'bras', 'mains', 'jambes', 'pieds'},
+};
+const solidIds = {'cube', 'pave', 'boule', 'cylindre', 'cone', 'pyramide'};
 /// Activités dont les questions sont écrites dans `items`.
-const withItems = {'choisir', 'dessin'};
+const withItems = {'choisir', 'dessin', 'planetes', 'corps'};
 const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
 const pieces = {'r', 'b', 'q', 'k', 'n', 'p'};
 const chessModes = {'etoiles', 'prise', 'echec', 'mat'};
@@ -48,6 +59,10 @@ void checkItems(String where, String act, List items) {
     final w = '$where/items[$i]';
     if (it['texte'] is! String) fail(w, 'texte manquant');
     checkPhrase(w, it['texte'] as String? ?? '');
+    if (sceneTargets.containsKey(act)) {
+      if (!sceneTargets[act]!.contains(it['cible'])) fail(w, 'cible inconnue « ${it['cible']} »');
+      if (it['explication'] is! String) fail(w, 'explication manquante');
+    }
     if (act != 'choisir') continue;
     final pics = [it['bonne'], ...(it['autres'] as List? ?? const [])];
     if ((it['autres'] as List? ?? const []).length < 2) fail(w, 'au moins deux autres images');
@@ -107,6 +122,10 @@ Map<String, dynamic> buildTheme(Directory dir) {
       if (withItems.contains(act)) checkItems(where, act as String, s['items'] as List? ?? const []);
       if (act == 'ecouter' && (!dimensions.contains(params['dimension']) || (params['mots'] as List?)?.length != 2)) {
         fail(where, 'ecouter : dimension ${dimensions.join('|')} et deux mots');
+      }
+      if (act == 'solide') {
+        final l = List<String>.from(params['solides'] as List);
+        if (l.length < 3 || !solidIds.containsAll(l)) fail(where, 'solide : au moins trois parmi ${solidIds.join('|')}');
       }
       if (act == 'echecs') {
         if (!pieces.contains(params['piece'])) fail(where, 'echecs : pièce ${pieces.join('|')}');

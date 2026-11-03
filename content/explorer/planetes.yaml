@@ -1,0 +1,37 @@
+id: planetes
+titre: "Les planètes du système solaire"
+niveau: CE2
+prerequis: []
+programme: { source: nasa, texte: "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune (ordre depuis le Soleil). Jupiter is the largest planet in our solar system. Mercury is the planet nearest to the Sun, and the smallest planet in our solar system." }
+activite: planetes
+# Distances et tailles dessinées pas à l'échelle ; seul l'ordre des tailles est respecté (ADR 0024).
+parametres: {}
+phrases:
+  consigne: "Tourne le système solaire avec ton doigt. Le Soleil est au milieu."
+  question: "{texte}"
+  indice: "Compte les planètes en partant du Soleil : une, deux, trois…"
+  exemple: "Essaie une autre planète."
+  demonstration: "Regarde : {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Touche la planète la plus proche du Soleil."
+    cible: mercure
+    explication: "C'est Mercure, la planète la plus proche du Soleil."
+  - texte: "Touche la plus grande planète."
+    cible: jupiter
+    explication: "C'est Jupiter, la plus grande planète du système solaire."
+  - texte: "Touche la plus petite planète."
+    cible: mercure
+    explication: "C'est Mercure, la plus petite planète."
+  - texte: "Touche la Terre : c'est la troisième planète en partant du Soleil."
+    cible: terre
+    explication: "C'est la Terre, notre planète, la troisième en partant du Soleil."
+  - texte: "Touche la planète la plus loin du Soleil."
+    cible: neptune
+    explication: "C'est Neptune, la huitième planète en partant du Soleil."
+  - texte: "Touche Saturne : c'est la sixième planète en partant du Soleil."
+    cible: saturne
+    explication: "C'est Saturne, la sixième planète."
+  - texte: "Touche Mars : c'est la quatrième planète en partant du Soleil."
+    cible: mars
+    explication: "C'est Mars, la quatrième planète."

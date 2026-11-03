@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "id": "explorer",
+  "titre": "Explorer en 3D",
+  "nom": "Explorer",
+  "icone": "1f52d",
+  "ages": [
+    4,
+    9
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
+    "nasa": "https://science.nasa.gov/solar-system/planets/"
+  },
+  "competences": [
+    {
+      "id": "corps-parties",
+      "titre": "Les parties du corps",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Identifier et nommer les parties du corps humain : placer les pièces d’un puzzle représentant le corps humain en nommant les bras, les mains, les jambes, la tête, le cou, le tronc, etc."
+      },
+      "activite": "corps",
+      "parametres": {},
+      "phrases": {
+        "consigne": "Écoute, puis touche la bonne partie du corps.",
+        "question": "{texte}",
+        "indice": "Montre-la d'abord sur ton propre corps.",
+        "exemple": "Essaie une autre partie.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Touche la tête.",
+          "cible": "tete",
+          "explication": "Voici la tête."
+        },
+        {
+          "texte": "Touche le cou.",
+          "cible": "cou",
+          "explication": "Voici le cou."
+        },
+        {
+          "texte": "Touche le tronc.",
+          "cible": "tronc",
+          "explication": "Voici le tronc."
+        },
+        {
+          "texte": "Touche les bras.",
+          "cible": "bras",
+          "explication": "Voici les bras."
+        },
+        {
+          "texte": "Touche les mains.",
+          "cible": "mains",
+          "explication": "Voici les mains."
+        },
+        {
+          "texte": "Touche les jambes.",
+          "cible": "jambes",
+          "explication": "Voici les jambes."
+        },
+        {
+          "texte": "Touche les pieds.",
+          "cible": "pieds",
+          "explication": "Voici les pieds."
+        }
+      ]
+    },
+    {
+      "id": "solides-nommer",
+      "titre": "Nommer le cube, le pavé, la boule",
+      "niveau": "CP",
+      "prerequis": [
+        "corps-parties"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Nommer un cube, un pavé et une boule."
+      },
+      "activite": "solide",
+      "parametres": {
+        "solides": [
+          "cube",
+          "pave",
+          "boule"
+        ]
+      },
+      "phrases": {
+        "consigne": "Tourne le solide avec ton doigt pour bien le voir.",
+        "question": "Comment s'appelle ce solide ?",
+        "indice": "Regarde ses faces : sont-elles plates ? Y a-t-il une partie qui roule ?",
+        "exemple": "Une boule roule partout. Un cube a six faces carrées, toutes pareilles.",
+        "demonstration": "Regarde : c'est {bonne}.",
+        "bravo": "Oui ! C'est {bonne}."
+      }
+    },
+    {
+      "id": "solides-reconnaitre",
+      "titre": "Reconnaître les solides usuels",
+      "niveau": "CP",
+      "prerequis": [
+        "solides-nommer"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Reconnaitre les solides usuels suivants : cube, boule, cône, cylindre, pavé."
+      },
+      "activite": "solide",
+      "parametres": {
+        "solides": [
+          "cube",
+          "pave",
+          "boule",
+          "cylindre",
+          "cone"
+        ]
+      },
+      "phrases": {
+        "consigne": "Tourne le solide avec ton doigt pour bien le voir.",
+        "question": "Comment s'appelle ce solide ?",
+        "indice": "Regarde ses faces : sont-elles plates ? Y a-t-il une partie qui roule ?",
+        "exemple": "Une boule roule partout. Un cube a six faces carrées, toutes pareilles.",
+        "demonstration": "Regarde : c'est {bonne}.",
+        "bravo": "Oui ! C'est {bonne}."
+      }
+    },
+    {
+      "id": "planetes",
+      "titre": "Les planètes du système solaire",
+      "niveau": "CE2",
+      "prerequis": [],
+      "programme": {
+        "source": "nasa",
+        "texte": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune (ordre depuis le Soleil). Jupiter is the largest planet in our solar system. Mercury is the planet nearest to the Sun, and the smallest planet in our solar system."
+      },
+      "activite": "planetes",
+      "parametres": {},
+      "phrases": {
+        "consigne": "Tourne le système solaire avec ton doigt. Le Soleil est au milieu.",
+        "question": "{texte}",
+        "indice": "Compte les planètes en partant du Soleil : une, deux, trois…",
+        "exemple": "Essaie une autre planète.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Touche la planète la plus proche du Soleil.",
+          "cible": "mercure",
+          "explication": "C'est Mercure, la planète la plus proche du Soleil."
+        },
+        {
+          "texte": "Touche la plus grande planète.",
+          "cible": "jupiter",
+          "explication": "C'est Jupiter, la plus grande planète du système solaire."
+        },
+        {
+          "texte": "Touche la plus petite planète.",
+          "cible": "mercure",
+          "explication": "C'est Mercure, la plus petite planète."
+        },
+        {
+          "texte": "Touche la Terre : c'est la troisième planète en partant du Soleil.",
+          "cible": "terre",
+          "explication": "C'est la Terre, notre planète, la troisième en partant du Soleil."
+        },
+        {
+          "texte": "Touche la planète la plus loin du Soleil.",
+          "cible": "neptune",
+          "explication": "C'est Neptune, la huitième planète en partant du Soleil."
+        },
+        {
+          "texte": "Touche Saturne : c'est la sixième planète en partant du Soleil.",
+          "cible": "saturne",
+          "explication": "C'est Saturne, la sixième planète."
+        },
+        {
+          "texte": "Touche Mars : c'est la quatrième planète en partant du Soleil.",
+          "cible": "mars",
+          "explication": "C'est Mars, la quatrième planète."
+        }
+      ]
+    }
+  ]
+}

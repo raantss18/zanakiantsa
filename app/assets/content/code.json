@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "id": "code",
+  "titre": "Programmer un robot",
+  "nom": "Le code",
+  "icone": "1f916",
+  "ages": [
+    5,
+    8
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
+  },
+  "competences": [
+    {
+      "id": "fleches",
+      "titre": "Coder un trajet avec des flèches",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Coder à l’aide de flèches le déplacement effectué par un objet mobile sur un tableau à cases."
+      },
+      "activite": "programmer",
+      "parametres": {
+        "mode": "fleches",
+        "grille": 5,
+        "min": 2,
+        "max": 5
+      },
+      "phrases": {
+        "consigne": "Touche des flèches pour écrire le chemin, puis le bouton vert pour lancer.",
+        "question": "Écris le chemin pour aller jusqu'à l'objet.",
+        "indice": "Chaque flèche fait avancer d'une case. Compte les cases jusqu'à l'objet.",
+        "exemple": "Efface le dernier bloc avec la touche grise si tu t'es trompé.",
+        "demonstration": "Regarde ce programme : il conduit jusqu'à l'objet.",
+        "bravo": "Bravo ! Ton programme est juste."
+      }
+    },
+    {
+      "id": "robot-tourner",
+      "titre": "Avancer et pivoter",
+      "niveau": "GS",
+      "prerequis": [
+        "fleches"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Choisir et organiser 3 à 5 instructions simples (avancer, tourner) dans le bon ordre pour conduire un objet ou un robot jusqu’à une case cible sur un quadrillage."
+      },
+      "activite": "programmer",
+      "parametres": {
+        "mode": "tourner",
+        "grille": 5,
+        "min": 3,
+        "max": 5
+      },
+      "phrases": {
+        "consigne": "Avancer va tout droit, là où regarde la flèche. Pivoter fait tourner sur place.",
+        "question": "Programme le robot pour aller jusqu'à l'objet.",
+        "indice": "Regarde où pointe la petite flèche. Faut-il pivoter avant d'avancer ?",
+        "exemple": "Pivoter à droite, c'est un quart de tour du côté de ta main droite.",
+        "demonstration": "Regarde ce programme : il conduit jusqu'à l'objet.",
+        "bravo": "Bravo ! Ton programme est juste."
+      }
+    },
+    {
+      "id": "robot-rochers",
+      "titre": "Contourner les rochers",
+      "niveau": "CP",
+      "prerequis": [
+        "robot-tourner"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Pour coder ces déplacements, il utilise les instructions : « avancer d’une case », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche ». Les déplacements à programmer comprennent au maximum dix instructions, dont deux virages."
+      },
+      "activite": "programmer",
+      "parametres": {
+        "mode": "tourner",
+        "grille": 6,
+        "min": 4,
+        "max": 10,
+        "rochers": 6,
+        "virages_max": 2
+      },
+      "phrases": {
+        "consigne": "Les rochers bloquent le chemin : il faut les contourner.",
+        "question": "Programme le robot pour aller jusqu'à l'objet sans toucher les rochers.",
+        "indice": "Cherche d'abord le chemin avec ton doigt, puis écris-le avec les blocs.",
+        "exemple": "Pas plus de deux virages : va tout droit le plus longtemps possible.",
+        "demonstration": "Regarde ce programme : il évite les rochers.",
+        "bravo": "Bravo ! Le robot est arrivé sans se cogner."
+      }
+    }
+  ]
+}
