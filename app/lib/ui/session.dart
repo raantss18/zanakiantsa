@@ -4,10 +4,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../activities/calcul.dart';
+import '../activities/ce1.dart';
 import '../activities/chess.dart';
 import '../activities/code.dart';
 import '../activities/explore.dart';
 import '../activities/choose.dart';
+import '../activities/letters.dart';
 import '../activities/listen.dart';
 import '../activities/motif.dart';
 import '../activities/numbers.dart';
@@ -354,8 +356,10 @@ class _SessionPageState extends State<SessionPage> {
                     )
                   : Stack(children: [
                       Positioned.fill(
-                        // Pendant l'exemple, l'activité descend sous la pastille « Nouveau » (pas de chevauchement).
+                        // Pendant l'exemple, l'activité laisse la place à la pastille « Nouveau » en haut et au bouton
+                        // « J'ai compris » en bas (pas de chevauchement).
                         top: a.example ? 52 : 0,
+                        bottom: a.example ? 104 : 0,
                         child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
                           'composer' => ComposeActivity(key: ObjectKey(a), attempt: a),
@@ -370,6 +374,12 @@ class _SessionPageState extends State<SessionPage> {
                           'partage' => ShareActivity(key: ObjectKey(a), attempt: a),
                           'programmer' => CodeActivity(key: ObjectKey(a), attempt: a),
                           'solide' => SolidActivity(key: ObjectKey(a), attempt: a),
+                          'syllabes' => SyllablesActivity(key: ObjectKey(a), attempt: a),
+                          'lettre' => LetterActivity(key: ObjectKey(a), attempt: a),
+                          'tracer' => TraceActivity(key: ObjectKey(a), attempt: a),
+                          'multibase' => MultibaseActivity(key: ObjectKey(a), attempt: a),
+                          'posee' => ColumnOpActivity(key: ObjectKey(a), attempt: a),
+                          'heure' => ClockActivity(key: ObjectKey(a), attempt: a),
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/widgets.dart';
 
@@ -48,8 +49,62 @@ class AppState extends ChangeNotifier {
     final store = await Store.open();
     final voice = Voice()..init();
     final s = AppState(topics, common, words, store, voice, await Library.load());
+    await s._loadProfiles();
     await s.refresh();
     return s;
+  }
+
+  /// Enfants de la famille (ADR 0034) : prénom facultatif, rangé sur l'appareil seulement.
+  List<ChildProfile> profiles = [];
+
+  /// Plusieurs enfants : l'accueil demande d'abord « Qui joue ? » à chaque lancement.
+  bool chosen = true;
+
+  ChildProfile get current => profiles.firstWhere((p) => p.id == store.child, orElse: () => profiles.first);
+
+  Future<void> _loadProfiles() async {
+    final raw = await store.get('profils');
+    profiles = raw == null
+        ? [const ChildProfile(1, '')]
+        : [for (final p in jsonDecode(raw) as List) ChildProfile((p as Map)['id'] as int, p['nom'] as String)];
+    store.child = int.tryParse(await store.get('profil_actif') ?? '') ?? profiles.first.id;
+    if (!profiles.any((p) => p.id == store.child)) store.child = profiles.first.id;
+    chosen = profiles.length <= 1;
+  }
+
+  Future<void> _saveProfiles() =>
+      store.set('profils', jsonEncode([for (final p in profiles) {'id': p.id, 'nom': p.name}]));
+
+  /// Change d'enfant : tout (journal, réglages, mondes, livres) devient le sien.
+  Future<void> switchChild(int id) async {
+    await voice.stopMusic();
+    store.child = id;
+    await store.set('profil_actif', '$id');
+    chosen = true;
+    await refresh();
+  }
+
+  /// Ajoute un enfant (espace parent) et le rend actif, avec son âge et ses mondes.
+  Future<void> addChild(String name, int years, bool isBoy) async {
+    final id = profiles.map((p) => p.id).fold(0, max) + 1;
+    profiles = [...profiles, ChildProfile(id, name.trim())];
+    await _saveProfiles();
+    await switchChild(id);
+    await setAge(years);
+    await setGender(isBoy);
+  }
+
+  /// « Changer d'enfant » : l'accueil redemande « Qui joue ? ».
+  void askWhoPlays() {
+    voice.stop();
+    chosen = false;
+    notifyListeners();
+  }
+
+  Future<void> renameChild(int id, String name) async {
+    profiles = [for (final p in profiles) p.id == id ? ChildProfile(id, name.trim()) : p];
+    await _saveProfiles();
+    notifyListeners();
   }
 
   Future<void> refresh() async {
@@ -137,7 +192,8 @@ class AppState extends ChangeNotifier {
   /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
-  Progress progressOf(Topic t) => Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone);
+  Progress progressOf(Topic t) =>
+      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelForAge(age));
 
   DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes);
 
@@ -196,6 +252,14 @@ class AppState extends ChangeNotifier {
     universeId = id;
     notifyListeners();
   }
+}
+
+class ChildProfile {
+  const ChildProfile(this.id, this.name);
+  final int id;
+  final String name;
+
+  String get label => name.isEmpty ? 'Enfant $id' : name;
 }
 
 class AppScope extends InheritedNotifier<AppState> {

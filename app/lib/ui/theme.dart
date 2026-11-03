@@ -65,17 +65,20 @@ ThemeData buildTheme(Universe u) {
 
 /// Bouton-nombre de 104 dp. Pendant une démonstration, la bonne réponse porte un contour et une ✔ (forme + couleur).
 class NumberButton extends StatelessWidget {
-  const NumberButton({super.key, required this.value, required this.onPressed, this.highlight = false});
+  const NumberButton({super.key, required this.value, required this.onPressed, this.highlight = false, this.size = 104});
   final int value;
   final VoidCallback? onPressed;
   final bool highlight;
+
+  /// 104 dp par défaut ; 84 quand quatre boutons doivent tenir sur une rangée de téléphone (cible ≥ 48 dp).
+  final double size;
 
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
     return SizedBox(
-      width: 104,
-      height: 104,
+      width: size,
+      height: size,
       child: Stack(clipBehavior: Clip.none, children: [
         Positioned.fill(
           child: FilledButton(
@@ -151,9 +154,11 @@ class PicButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
+    // Le libellé remplace le contenu pour le lecteur d'écran (sinon « h h » : libellé + texte du bouton).
     return Semantics(
       button: true,
       label: label,
+      excludeSemantics: label != null,
       child: SizedBox(
         width: size,
         height: size,

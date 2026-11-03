@@ -9,3 +9,13 @@ ages: [5, 10]
 sources:
   fide: "https://handbook.fide.com/chapter/E012023"
 ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour]
+
+# Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
+intro:
+  - texte: "Chaque pièce a sa façon d'avancer."
+    images: ["265f"]
+  - texte: "La tour va tout droit, le fou va en biais."
+    images: []
+    grand: "↕ ↔   ↗"
+  - texte: "Les points te montrent où ta pièce peut aller."
+    images: ["2b50"]

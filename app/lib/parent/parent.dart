@@ -93,6 +93,61 @@ class _ParentPageState extends State<ParentPage> {
     });
   }
 
+  Future<void> _rename(ChildProfile p) async {
+    final field = TextEditingController(text: p.name);
+    final name = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Prénom'),
+        content: TextField(controller: field, autofocus: true, textCapitalization: TextCapitalization.words),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annuler')),
+          FilledButton(onPressed: () => Navigator.pop(ctx, field.text), child: const Text('Enregistrer')),
+        ],
+      ),
+    );
+    if (name != null) await app.renameChild(p.id, name);
+    if (mounted) setState(() {});
+  }
+
+  Future<void> _addChild() async {
+    final field = TextEditingController();
+    var years = 7;
+    bool? boy;
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, set) => AlertDialog(
+          title: const Text('Ajouter un enfant'),
+          content: SingleChildScrollView(
+            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              TextField(controller: field, decoration: const InputDecoration(labelText: 'Prénom (facultatif)'), textCapitalization: TextCapitalization.words),
+              const SizedBox(height: 12),
+              const Text('Âge'),
+              Wrap(spacing: 6, children: [
+                for (var y = 5; y <= 10; y++) ChoiceChip(label: Text('$y ans'), selected: years == y, onSelected: (_) => set(() => years = y)),
+              ]),
+              const SizedBox(height: 12),
+              const Text('C’est'),
+              Wrap(spacing: 6, children: [
+                for (final (b, l) in [(true, 'un garçon'), (false, 'une fille')]) ChoiceChip(label: Text(l), selected: boy == b, onSelected: (_) => set(() => boy = b)),
+              ]),
+            ]),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annuler')),
+            FilledButton(onPressed: boy == null ? null : () => Navigator.pop(ctx, true), child: const Text('Ajouter')),
+          ],
+        ),
+      ),
+    );
+    if (ok == true && boy != null) {
+      await app.addChild(field.text, years, boy!);
+      setState(() => report = null);
+      _load();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final titles = {for (final t in app.topics) for (final s in t.skills) s.id: '${t.name} — ${s.title}'};
@@ -112,7 +167,28 @@ class _ParentPageState extends State<ParentPage> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 48),
             children: [
-              Text('L’enfant est', style: Theme.of(context).textTheme.titleLarge),
+              // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
+              Text('Enfants', style: Theme.of(context).textTheme.titleLarge),
+              const Text('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.'),
+              const SizedBox(height: 8),
+              Wrap(spacing: 8, runSpacing: 8, children: [
+                for (final p in app.profiles)
+                  InputChip(
+                    label: Text(p.label),
+                    selected: p.id == app.current.id,
+                    onSelected: (_) async {
+                      await app.switchChild(p.id);
+                      setState(() => report = null);
+                      _load();
+                    },
+                    onDeleted: () => _rename(p),
+                    deleteIcon: const Icon(Icons.edit_rounded, size: 18),
+                    deleteButtonTooltipMessage: 'Renommer',
+                  ),
+                ActionChip(avatar: const Icon(Icons.person_add_alt_1_rounded), label: const Text('Ajouter un enfant'), onPressed: _addChild),
+              ]),
+              const Divider(height: 32),
+              Text('${app.current.label} est', style: Theme.of(context).textTheme.titleLarge),
               const Text('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.'),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [

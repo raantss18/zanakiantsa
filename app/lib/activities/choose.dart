@@ -44,6 +44,9 @@ class _ChooseActivityState extends State<ChooseActivity> {
     a.submit(ok);
   }
 
+  /// Lecture (ADR 0031) : le mot est écrit en grand et jamais dit ni étiqueté sous les images — c'est à l'enfant de le lire.
+  bool get reading => a.skill.params['lire'] == true;
+
   @override
   Widget build(BuildContext context) => LayoutBuilder(builder: (_, k) {
         // Trois cartes côte à côte (la largeur suffit en portrait comme en paysage) ; nom écrit sous chacune.
@@ -59,17 +62,26 @@ class _ChooseActivityState extends State<ChooseActivity> {
                 onPressed: a.busy || a.finished ? null : () => _tap(p),
                 child: Art(p.art, size: size * 0.62),
               ),
-              const SizedBox(height: 6),
-              SizedBox(width: size, child: Text(p.name, textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink))),
+              if (!reading) const SizedBox(height: 6),
+              if (!reading) SizedBox(width: size, child: Text(p.name, textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink))),
             ]),
         ];
         return Center(
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(16),
-            child: Wrap(
-              alignment: WrapAlignment.center,
-              children: [for (final c in cards) Padding(padding: const EdgeInsets.all(8), child: c)],
-            ),
+            child: Column(children: [
+              if (reading)
+                Container(
+                  margin: const EdgeInsets.only(bottom: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+                  decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
+                  child: Text(item.text, style: const TextStyle(fontFamily: 'Andika', fontSize: 64, fontWeight: FontWeight.w700, color: ink)),
+                ),
+              Wrap(
+                alignment: WrapAlignment.center,
+                children: [for (final c in cards) Padding(padding: const EdgeInsets.all(8), child: c)],
+              ),
+            ]),
           ),
         );
       });

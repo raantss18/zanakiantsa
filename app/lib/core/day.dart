@@ -4,11 +4,13 @@ library;
 
 import 'events.dart';
 
-/// Les journées qui tournent (choix d'Antsa : « maths/biologie/dessin puis algo/musique/échecs », puis ses priorités
-/// du 2026-11-03 : anglais, programmation, exploration 3D).
+/// Les journées qui tournent sur 4 jours (ADR 0018, 0031) : lire et écrire 3 jours sur 4 — c'est le cœur de la grande
+/// section et du CP —, chaque autre domaine au moins une fois. Tous les domaines restent ouverts à tout moment
+/// (« Tout explorer »).
 const dayGroups = [
-  ['compter', 'nature', 'dessin'],
-  ['motifs', 'sons', 'echecs'],
+  ['lire', 'compter', 'dessin'],
+  ['lire', 'nature', 'echecs'],
+  ['lire', 'motifs', 'sons'],
   ['anglais', 'code', 'explorer'],
 ];
 

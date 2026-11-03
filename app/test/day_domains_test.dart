@@ -3,7 +3,9 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:zanakiantsa/activities/ce1.dart';
 import 'package:zanakiantsa/activities/numbers.dart';
+import 'package:zanakiantsa/core/progress.dart';
 import 'package:zanakiantsa/audio/sfx.dart';
 import 'package:zanakiantsa/content/content.dart';
 import 'package:zanakiantsa/core/chess.dart';
@@ -24,7 +26,9 @@ void main() {
       expect({for (var k = 0; k < dayGroups.length; k++) day(k).join()}.length, dayGroups.length);
       expect(day(0), day(dayGroups.length));
       final all = dayGroups.expand((g) => g).toList();
-      expect(all.toSet().length, all.length);
+      for (final g in dayGroups) {
+        expect(g.toSet().length, g.length, reason: 'trois domaines différents par jour');
+      }
       expect(all.toSet(), (json('domaines')['ordre'] as List).toSet());
     });
 
@@ -205,7 +209,7 @@ void main() {
       }
     });
     test('dizaines et unités accordées au singulier', () {
-      final s = topics().first.skills.firstWhere((s) => s.id == 'dizaines-lire');
+      final s = topics().firstWhere((t) => t.id == 'compter').skills.firstWhere((s) => s.id == 'dizaines-lire');
       expect(s.say('bravo', const Question(n: 14, a: 1, b: 4)), 'Oui ! 1 dizaine et 4 unités, cela fait 14.');
       expect(s.say('bravo', const Question(n: 30, a: 3, b: 0)), 'Oui ! 3 dizaines et 0 unité, cela fait 30.');
     });
@@ -246,6 +250,64 @@ void main() {
     });
   });
 
+  group('CE1 et profils (ADR 0034, 0035)', () {
+    test("l'heure dite comme à l'école", () {
+      expect(clockText(3, 0), '3 heures');
+      expect(clockText(1, 15), '1 heure et quart');
+      expect(clockText(12, 0), 'midi');
+      expect(clockText(3, 30), '3 heures et demie');
+      expect(clockText(3, 45), '4 heures moins le quart');
+      expect(clockText(11, 45), 'midi moins le quart');
+    });
+    test('erreurs typiques des opérations posées et du matériel multibase', () {
+      expect(explainCe1('posee', const Question(n: 82, a: 45, b: 37), 82, 72), contains('retenue'));
+      expect(explainCe1('posee', const Question(n: 25, a: 52, b: 27), 25, 35), contains('casse une dizaine'));
+      expect(explainCe1('multibase', const Question(n: 205, a: 2, b: 0), 205, 25), contains('0 au chiffre des dizaines'));
+    });
+    test("point de départ selon l'âge : à 7 ans, maternelle tenue pour acquise, CP à faire", () {
+      const skills = [SkillRef('ms', [], level: 0), SkillRef('gs', ['ms'], level: 1), SkillRef('cp', ['gs'], level: 2)];
+      final p = Progress(skills, const [], startLevel: startLevelForAge(7));
+      expect(p.mastered('ms') && p.mastered('gs'), isTrue);
+      expect(p.plan(DateTime(2026, 11, 3)).toSet(), {'cp'});
+      expect(Progress(skills, const [], startLevel: startLevelForAge(5)).plan(DateTime(2026, 11, 3)).toSet(), {'ms'});
+    });
+  });
+
+  group('Lire et écrire (ADR 0031)', () {
+    final lire = topics().firstWhere((t) => t.id == 'lire');
+    Skill sk(String id) => lire.skills.firstWhere((s) => s.id == id);
+    test('les syllabes recomposent exactement le mot, et chaque image existe', () {
+      for (final it in sk('syllabes').items) {
+        expect(it.syllables.join(), it.text, reason: it.text);
+        expect(File('assets/art/${it.image}.svg').existsSync(), isTrue, reason: it.text);
+      }
+    });
+    test('la première lettre est bien celle du mot', () {
+      const noAccent = {'é': 'e', 'è': 'e'};
+      for (final it in sk('premiere-lettre').items) {
+        final first = it.text[0];
+        expect(it.letter, (noAccent[first] ?? first).toUpperCase(), reason: it.text);
+      }
+    });
+    test('rimes et débuts : la bonne image n\'est jamais une des autres', () {
+      for (final id in ['rimes', 'debut', 'lire-mots']) {
+        for (final it in sk(id).items) {
+          expect(it.others.map((p) => p.art), isNot(contains(it.right!.art)), reason: '$id ${it.text}');
+        }
+      }
+    });
+    test('lettres et syllabes tirées : la lettre dite existe dans les choix possibles', () {
+      final r = Random(4);
+      for (final id in ['lettres-capitales', 'lettres-minuscules', 'lettres-cursives', 'premiere-lettre', 'lire-syllabes', 'tracer-capitales', 'tracer-cursive']) {
+        for (var i = 0; i < 50; i++) {
+          final q = sk(id).draw(r);
+          expect(sk(id).letterOf(q), isNotEmpty);
+          expect(sk(id).say('question', q), isNot(contains('{')), reason: id);
+        }
+      }
+    });
+  });
+
   group('Tirage varié au bon niveau (ADR 0030)', () {
     test('une séance de 8 questions ne repose jamais la même tant qu\'il en reste d\'autres', () {
       for (final s in topics().expand((t) => t.skills)) {
@@ -263,7 +325,7 @@ void main() {
       }
     });
     test('additions jusqu\'à 10 : 8 questions toutes différentes, et les variantes se remplissent', () {
-      final s = topics().first.skills.firstWhere((s) => s.id == 'additionner-10');
+      final s = topics().firstWhere((t) => t.id == 'compter').skills.firstWhere((s) => s.id == 'additionner-10');
       final r = Random(3);
       final seen = <String>{};
       const w = Words(singular: 'pile', plural: 'piles', feminine: true, container: 'la caisse', firstName: 'Robi');

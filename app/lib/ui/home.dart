@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../activities/draw.dart';
 import '../app_state.dart';
 import '../content/content.dart';
 import '../core/day.dart';
 import '../parent/gate.dart';
 import 'album.dart';
+import 'topic_intro.dart';
+import 'all_topics.dart';
 import 'library.dart';
-import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -49,15 +49,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     }
   }
 
-  Future<void> _open(String theme) async {
-    final s = AppScope.of(context);
-    await s.voice.stop();
-    if (!mounted) return;
-    await Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => theme == 'dessin' ? const DrawPage() : SessionPage(topic: theme),
-    ));
-    await s.refresh();
-  }
+  Future<void> _open(String theme) => openTopic(context, AppScope.of(context), theme);
 
   @override
   void dispose() {
@@ -68,6 +60,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     final s = AppScope.of(context);
+    if (!s.chosen) return const ProfilePicker();
     final u = s.universe;
     final plan = s.dayPlan();
     return Scaffold(
@@ -105,6 +98,30 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     ];
                     return Flex(direction: wide ? Axis.horizontal : Axis.vertical, children: cards);
                   }),
+                ),
+              ),
+              // Les trois du jour sont proposées ; tout le reste reste ouvert (ADR 0032).
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 56,
+                  child: OutlinedButton.icon(
+                    style: OutlinedButton.styleFrom(
+                      backgroundColor: surface,
+                      side: BorderSide(color: u.night ? u.primary : u.onCard, width: 3),
+                      textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 22, fontWeight: FontWeight.w700),
+                      foregroundColor: ink,
+                    ),
+                    onPressed: () async {
+                      await s.voice.stop();
+                      if (!context.mounted) return;
+                      await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AllTopicsPage()));
+                      await s.refresh();
+                    },
+                    icon: const Art('1f9ed', size: 32),
+                    label: const Text('Tout explorer'),
+                  ),
                 ),
               ),
               Padding(
@@ -329,6 +346,17 @@ class _Header extends StatelessWidget {
             child: SvgPicture.asset('assets/logo/wordmark.svg', height: 76, semanticsLabel: "Zanak'i Antsa"),
           ),
         ),
+        // Plusieurs enfants : le prénom de celui qui joue, pour changer (ADR 0034).
+        if (AppScope.of(context).profiles.length > 1)
+          Padding(
+            padding: const EdgeInsets.only(left: 8),
+            child: ActionChip(
+              avatar: const Art('1f9d2', size: 24),
+              label: Text(AppScope.of(context).current.label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+              backgroundColor: surface,
+              onPressed: AppScope.of(context).askWhoPlays,
+            ),
+          ),
         const Spacer(),
         _RoundButton(size: 56, color: surface, tooltip: 'Réécouter', onPressed: onListen, child: Icon(Icons.volume_up_rounded, color: u.onCard, size: 32)),
         const SizedBox(width: 8),
@@ -544,4 +572,63 @@ class _UniverseCard extends StatelessWidget {
           ),
         ),
       );
+}
+
+/// « Qui joue ? » (ADR 0034) : un grand bouton par enfant, avec la mascotte de son monde et son prénom écrit.
+class ProfilePicker extends StatelessWidget {
+  const ProfilePicker({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final s = AppScope.of(context);
+    final u = s.universe;
+    return Scaffold(
+      body: UniverseBackground(
+        universe: u,
+        child: SafeArea(
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: SvgPicture.asset('assets/logo/wordmark.svg', height: 96, semanticsLabel: "Zanak'i Antsa"),
+            ),
+            const PlayfulTitle('Qui joue ?', size: 40),
+            const SizedBox(height: 16),
+            Expanded(
+              child: Center(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(16),
+                  child: Wrap(spacing: 20, runSpacing: 20, alignment: WrapAlignment.center, children: [
+                    for (final p in s.profiles)
+                      Semantics(
+                        button: true,
+                        label: p.label,
+                        excludeSemantics: true,
+                        child: Material(
+                          color: surface,
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32), side: BorderSide(color: u.night ? u.primary : u.onCard, width: 4)),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(32),
+                            onTap: () => s.switchChild(p.id),
+                            child: SizedBox(
+                              width: 200,
+                              height: 220,
+                              child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                                const Art('1f9d2', size: 96),
+                                const SizedBox(height: 12),
+                                Text(p.label, style: const TextStyle(fontFamily: 'Fredoka', fontSize: 30, fontWeight: FontWeight.w700, color: ink)),
+                              ]),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ]),
+                ),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
 }

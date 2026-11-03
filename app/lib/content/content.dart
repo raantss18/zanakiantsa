@@ -81,7 +81,7 @@ class Skill {
   /// Questions écrites dans le contenu (`choisir`) ou sujets (`dessin`).
   final List<Item> items;
 
-  SkillRef get ref => SkillRef(id, prerequisites);
+  SkillRef get ref => SkillRef(id, prerequisites, level: levelRank(level));
 
   int p(String k) => (params[k] as num).toInt();
 
@@ -92,11 +92,19 @@ class Skill {
   String say(String key, Question q, {Words? words}) =>
       fill(key == 'question' && q.v > 0 && q.v <= variants.length ? variants[q.v - 1] : phrases[key]!, q, words, vars: vars(q));
 
+  /// La lettre ou la syllabe en jeu (activités `lettre` et `tracer`, ADR 0031), telle qu'on la dit et l'écrit.
+  String letterOf(Question q) => switch (params['mode']) {
+        'initiale' => items[q.n].letter!,
+        'syllabe' => '${(params['consonnes'] as List)[q.n]}${(params['voyelles'] as List)[q.b]}',
+        'casse' => ((params['lettres'] as List)[q.n] as String).toUpperCase(),
+        _ => (params['lettres'] as List)[q.n] as String,
+      };
+
   /// Ce qui rend deux questions « les mêmes » pour l'enfant (le tirage d'aléa interne des activités n'en fait pas
   /// partie, sauf quand il est la question elle-même : motifs, échecs, robot).
   String signature(Question q) => switch (activity) {
         'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' => '${q.n}',
-        'ecouter' => '${q.n}${q.b}',
+        'ecouter' || 'lettre' || 'syllabes' || 'tracer' => '${q.n}/${q.b}',
         'motif' || 'echecs' || 'programmer' => '${q.a}',
         _ => '${q.n}/${q.a}/${q.b}',
       };
@@ -105,8 +113,19 @@ class Skill {
   Map<String, String> vars(Question q) => switch (activity) {
         'choisir' || 'dessin' || 'planetes' || 'corps' => items[q.n].vars,
         'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
+        'syllabes' => {
+            ...items[q.n].vars,
+            'rep': items[q.n].syllables.length <= 1 ? '1 syllabe' : '${items[q.n].syllables.length} syllabes',
+          },
+        'lettre' || 'tracer' => {...?(params['mode'] == 'initiale' ? items[q.n].vars : null), 'lettre': letterOf(q)},
         'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
         'batonnets' when params['mode'] == 'casser' => {'reste': '${q.n - q.b}'},
+        'heure' => {'heure': clockText(q.n, q.b)},
+        'multibase' => {
+            'centaines': q.a <= 1 ? '${q.a} centaine' : '${q.a} centaines',
+            'dizaines': q.b <= 1 ? '${q.b} dizaine' : '${q.b} dizaines',
+            'unites': q.n % 10 <= 1 ? '${q.n % 10} unité' : '${q.n % 10} unités',
+          },
         'batonnets' => {'dizaines': q.a <= 1 ? '${q.a} dizaine' : '${q.a} dizaines', 'unites': q.b <= 1 ? '${q.b} unité' : '${q.b} unités'},
         _ => const {},
       };
@@ -139,6 +158,14 @@ class Skill {
         final n = between(p('cible_min'), p('cible_max'));
         final a = min(between(p('depart_min'), p('depart_max')), n - 1).clamp(0, n);
         return Question(n: n, a: a, b: n - a);
+      case 'syllabes':
+        return Question(n: r.nextInt(items.length), a: r.nextInt(1 << 30));
+      case 'lettre' when params['mode'] == 'initiale':
+        return Question(n: r.nextInt(items.length), a: r.nextInt(1 << 30));
+      case 'lettre' when params['mode'] == 'syllabe':
+        return Question(n: r.nextInt((params['consonnes'] as List).length), b: r.nextInt((params['voyelles'] as List).length), a: r.nextInt(1 << 30));
+      case 'lettre' || 'tracer':
+        return Question(n: r.nextInt((params['lettres'] as List).length), a: r.nextInt(1 << 30));
       case 'solide':
         return Question(n: r.nextInt((params['solides'] as List).length), a: r.nextInt(1 << 30));
       case 'choisir' || 'dessin' || 'planetes' || 'corps':
@@ -154,6 +181,24 @@ class Skill {
       case 'batonnets':
         final n = between(p('min'), p('max'));
         return Question(n: n, a: n ~/ 10, b: n % 10);
+      case 'multibase':
+        final n = between(p('min'), p('max'));
+        return Question(n: n, a: n ~/ 100, b: (n ~/ 10) % 10);
+      case 'posee':
+        // Deux nombres à deux chiffres (CE1) ; [retenue] : au moins une retenue (addition) ou un emprunt (soustraction).
+        while (true) {
+          final x = between(p('min'), p('max')), y = between(p('min'), p('max'));
+          final sub = params['op'] == '-';
+          final (a, b) = sub ? (max(x, y), min(x, y)) : (x, y);
+          final carry = sub ? (a % 10) < (b % 10) : (a % 10) + (b % 10) >= 10;
+          if (sub && a == b) continue;
+          if (params['retenue'] == true && !carry) continue;
+          return Question(n: sub ? a - b : a + b, a: a, b: b);
+        }
+      case 'heure':
+        // [n] heure (1–12), [b] minutes : 0, ou 30 et 15/45 selon le niveau.
+        final mins = List<int>.from(params['minutes'] as List);
+        return Question(n: between(1, 12), b: mins[r.nextInt(mins.length)], a: r.nextInt(1 << 30));
       case 'paquets':
         // [n] objets en paquets de [b] : combien de paquets ([a]) ?
         final b = between(p('par_min'), p('par_max'));
@@ -190,6 +235,7 @@ class Skill {
         'calcul' when params['forme'] == 'complement' => q.b,
         'partage' => q.b,
         'paquets' => q.a,
+        'heure' => q.n * 100 + q.b,
         'batonnets' when params['mode'] == 'casser' => q.n - q.b,
         _ => q.n,
       };
@@ -202,7 +248,14 @@ class Item {
         right = j['bonne'] == null ? null : Pic.from(j['bonne'] as List),
         others = [for (final o in j['autres'] as List? ?? const []) Pic.from(o as List)],
         explanation = j['explication'] as String? ?? '',
-        target = j['cible'] as String?;
+        target = j['cible'] as String?,
+        image = j['image'] as String?,
+        syllables = [for (final s in j['syllabes'] as List? ?? const []) s as String],
+        letter = j['lettre'] as String?;
+
+  /// Lire et écrire (ADR 0031) : l'image du mot, ses syllabes orales, sa première lettre.
+  final String? image, letter;
+  final List<String> syllables;
   final String text, explanation;
 
   /// Ce qu'il faut toucher dans une scène (`planetes`, `corps`).
@@ -210,7 +263,13 @@ class Item {
   final Pic? right;
   final List<Pic> others;
 
-  Map<String, String> get vars => {'texte': text, 'bonne': right?.name ?? '', 'explication': explanation};
+  Map<String, String> get vars => {
+        'texte': text,
+        'bonne': right?.name ?? '',
+        // Syllabes séparées par des virgules : la voix marque la pause, l'écrit reste lisible (« la, pin »).
+        'explication': syllables.isNotEmpty ? syllables.join(', ') : explanation,
+        'lettre': ?letter,
+      };
 }
 
 /// Une image (code Twemoji) et son nom dit (« l'oreille »).
@@ -218,6 +277,18 @@ class Pic {
   const Pic(this.art, this.name);
   Pic.from(List l) : this(l[0] as String, l[1] as String);
   final String art, name;
+}
+
+/// L'heure dite comme à l'école : « 3 heures », « 3 heures et demie », « 3 heures et quart », « 4 heures moins le quart ».
+String clockText(int h, int m) {
+  String hours(int x) => x == 12 ? 'midi' : (x == 1 ? '1 heure' : '$x heures');
+  return switch (m) {
+    0 => hours(h),
+    30 => '${hours(h)} et demie',
+    15 => '${hours(h)} et quart',
+    45 => '${hours(h % 12 + 1)} moins le quart',
+    _ => '${hours(h)} $m',
+  };
 }
 
 /// Noms des solides (activité `solide`, ADR 0024), avec leur article.
@@ -239,13 +310,28 @@ class Topic {
         title = j['titre'] as String,
         name = j['nom'] as String,
         icon = j['icone'] as String,
+        intro = [for (final s in j['intro'] as List? ?? const []) IntroScene(Map<String, dynamic>.from(s as Map))],
         skills = [for (final s in j['competences'] as List) Skill(Map<String, dynamic>.from(s as Map))];
 
   /// [title] pour le parent, [name] pour l'enfant (« Les nombres »), [icon] : code Twemoji.
   final String id, title, name, icon;
+
+  /// Animation de méthode jouée à l'ouverture du domaine (ADR 0033).
+  final List<IntroScene> intro;
   final List<Skill> skills;
 
   Skill skill(String id) => skills.firstWhere((s) => s.id == id);
+}
+
+/// Une scène d'animation de méthode : une phrase dite et écrite, des images qui arrivent, un grand texte (« 2 + 1 = 3 »).
+class IntroScene {
+  IntroScene(Map<String, dynamic> j)
+      : text = j['texte'] as String,
+        images = [for (final i in j['images'] as List? ?? const []) i as String],
+        big = j['grand'] as String?;
+  final String text;
+  final List<String> images;
+  final String? big;
 }
 
 class Common {

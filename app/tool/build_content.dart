@@ -29,6 +29,14 @@ const activities = {
   'solide': {'solides'},
   'planetes': <String>{},
   'corps': <String>{},
+  // ADR 0031
+  'syllabes': <String>{},
+  'lettre': {'mode'},
+  'tracer': {'style', 'lettres'},
+  // ADR 0035 (CE1)
+  'multibase': {'min', 'max'},
+  'posee': {'op', 'min', 'max'},
+  'heure': {'minutes'},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
@@ -36,7 +44,8 @@ const sceneTargets = {
 };
 const solidIds = {'cube', 'pave', 'boule', 'cylindre', 'cone', 'pyramide'};
 /// Activités dont les questions sont écrites dans `items`.
-const withItems = {'choisir', 'dessin', 'planetes', 'corps'};
+const withItems = {'choisir', 'dessin', 'planetes', 'corps', 'syllabes'};
+const letterModes = {'nom', 'casse', 'cursive', 'initiale', 'syllabe'};
 const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
 const pieces = {'r', 'b', 'q', 'k', 'n', 'p'};
 const chessModes = {'etoiles', 'prise', 'echec', 'mat'};
@@ -46,6 +55,8 @@ const allowedPlaceholders = {
   'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom', //
   'texte', 'bonne', 'explication', 'mot', 'rep', // variables d'activité (ADR 0019)
   'dizaines', 'unites', 'reste', // bâtonnets (ADR 0021)
+  'lettre', // lire et écrire (ADR 0031)
+  'centaines', 'heure', // CE1 (ADR 0035)
 };
 
 /// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).
@@ -60,6 +71,15 @@ void checkItems(String where, String act, List items) {
     final w = '$where/items[$i]';
     if (it['texte'] is! String) fail(w, 'texte manquant');
     checkPhrase(w, it['texte'] as String? ?? '');
+    if (act == 'syllabes') {
+      if (it['image'] is! String) {
+        fail(w, 'image manquante');
+      } else {
+        checkArt(w, it['image'] as String);
+      }
+      final syl = it['syllabes'] as List? ?? const [];
+      if (syl.isEmpty || syl.length > 4) fail(w, 'syllabes : de 1 à 4');
+    }
     if (sceneTargets.containsKey(act)) {
       if (!sceneTargets[act]!.contains(it['cible'])) fail(w, 'cible inconnue « ${it['cible']} »');
       if (it['explication'] is! String) fail(w, 'explication manquante');
@@ -103,6 +123,16 @@ Map<String, dynamic> buildTheme(Directory dir) {
     if (theme[k] is! String) fail('$id/_theme.yaml', 'champ « $k » manquant');
   }
   checkArt('$id/_theme.yaml', theme['icone'] as String? ?? '');
+  // Animation de méthode (ADR 0033) : 2 à 4 scènes, texte court, images existantes.
+  final intro = theme['intro'] as List? ?? const [];
+  if (intro.length < 2 || intro.length > 4) fail('$id/_theme.yaml', 'intro : de 2 à 4 scènes');
+  for (final sc in intro) {
+    final m = Map<String, dynamic>.from(sc as Map);
+    if (m['texte'] is! String || (m['texte'] as String).length > 90) fail('$id/_theme.yaml', 'intro : texte de 90 caractères au plus');
+    for (final img in m['images'] as List? ?? const []) {
+      checkArt('$id/_theme.yaml', img as String);
+    }
+  }
   final sources = Map<String, dynamic>.from(theme['sources'] as Map);
   final skills = <String, Map<String, dynamic>>{};
   for (final f in dir.listSync().whereType<File>().where((f) => f.path.endsWith('.yaml') && !f.path.endsWith('_theme.yaml'))) {
@@ -123,6 +153,17 @@ Map<String, dynamic> buildTheme(Directory dir) {
       if (withItems.contains(act)) checkItems(where, act as String, s['items'] as List? ?? const []);
       if (act == 'ecouter' && (!dimensions.contains(params['dimension']) || (params['mots'] as List?)?.length != 2)) {
         fail(where, 'ecouter : dimension ${dimensions.join('|')} et deux mots');
+      }
+      if (act == 'lettre') {
+        if (!letterModes.contains(params['mode'])) fail(where, 'lettre : mode ${letterModes.join('|')}');
+        if (params['mode'] == 'initiale') {
+          for (final it in s['items'] as List? ?? const []) {
+            final m = Map<String, dynamic>.from(it as Map);
+            if (m['lettre'] is! String || m['image'] is! String) fail(where, 'initiale : texte, image et lettre');
+            if (m['image'] is String) checkArt(where, m['image'] as String);
+          }
+          if ((s['items'] as List? ?? const []).length < 4) fail(where, 'initiale : au moins 4 mots');
+        }
       }
       if (act == 'solide') {
         final l = List<String>.from(params['solides'] as List);
@@ -181,6 +222,7 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'titre': theme['titre'],
     'nom': theme['nom'],
     'icone': theme['icone'],
+    'intro': intro,
     'ages': theme['ages'],
     'sources': sources,
     'competences': [for (final sid in order) if (skills[sid] != null) skills[sid]],
@@ -252,6 +294,9 @@ void main(List<String> args) {
     final theme = buildTheme(dirs[name]!);
     if (theme['id'] != name) fail('$name/_theme.yaml', 'l’id doit être le nom du dossier');
     outputs['assets/content/${theme['id']}.json'] = '${json.convert(theme)}\n';
+    for (final (i, sc) in (theme['intro'] as List).indexed) {
+      voice.add('${theme['id']}.intro.$i;${sc['texte']}');
+    }
     for (final s in theme['competences'] as List) {
       (s['phrases'] as Map).forEach((k, v) => voice.add('${s['id']}.$k;$v'));
       if (s['idee'] != null) voice.add('${s['id']}.idee;${s['idee']}');

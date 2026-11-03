@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('19 compétences, prérequis connus et placés avant', () {
+    test('24 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 19);
+      expect(t.skills.length, 24);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -43,6 +43,19 @@ void main() {
             case 'batonnets':
               expect(q.n, inInclusiveRange(s.p('min'), s.p('max')));
               expect(q.a * 10 + q.b, q.n);
+            case 'multibase':
+              expect(q.n, inInclusiveRange(s.p('min'), s.p('max')));
+              expect(q.a * 100 + q.b * 10 + q.n % 10, q.n);
+            case 'posee':
+              final sub = s.params['op'] == '-';
+              expect(q.n, sub ? q.a - q.b : q.a + q.b);
+              expect(q.n, greaterThan(0));
+              // Toujours une retenue (addition) ou une dizaine à casser (soustraction), comme demandé.
+              expect(sub ? q.a % 10 < q.b % 10 : q.a % 10 + q.b % 10 >= 10, isTrue);
+            case 'heure':
+              expect(q.n, inInclusiveRange(1, 12));
+              expect(List<int>.from(s.params['minutes'] as List), contains(q.b));
+              expect(clockText(q.n, q.b), isNot(contains('{')));
             case 'paquets':
               expect(q.a * q.b, q.n);
               expect(q.a, inInclusiveRange(2, s.p('paquets_max')));

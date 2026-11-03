@@ -10,3 +10,13 @@ sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
 ordre: [fleches, robot-tourner, robot-rochers]
+
+# Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
+intro:
+  - texte: "Un programme, c'est une liste d'ordres."
+    images: ["1f916"]
+  - texte: "Mets les flèches dans le bon ordre."
+    images: []
+    grand: "↑ → →"
+  - texte: "Appuie sur le bouton vert pour lancer !"
+    images: ["1f916", "2b50"]
