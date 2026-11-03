@@ -120,3 +120,40 @@ Uint8List wav(Float64List s) {
   }
   return b.buffer.asUint8List();
 }
+
+/// Trame sonore d'ambiance d'un monde (ADR 0025) : une boucle de [ambienceSeconds] s, notes douces d'une gamme
+/// pentatonique (aucune fausse note possible entre elles) et une basse lente. Tirage fixe par monde : la même boucle à
+/// chaque fois. Chaque note s'éteint avant la fin de la boucle, qui se raccorde sans clic.
+const ambienceSeconds = 16.0;
+
+const _ambiences = <String, (List<double>, double, _Wave, double)>{
+  // gamme, pas en secondes, timbre, amortissement
+  'robots': ([523.25, 587.33, 659.25, 783.99, 880.0], 0.5, _triangle, 3.0),
+  'voitures': ([392.0, 440.0, 493.88, 587.33, 659.25], 0.4, _triangle, 3.5),
+  'espace': ([440.0, 523.25, 587.33, 659.25, 783.99], 1.0, _sine, 1.2),
+  'fees': ([1174.66, 1318.51, 1479.98, 1760.0, 1975.53], 0.5, _sine, 5.0),
+  'mode': ([349.23, 392.0, 440.0, 523.25, 587.33], 0.6, _triangle, 2.5),
+  'princesses': ([523.25, 587.33, 659.25, 783.99, 880.0], 0.5, _pluck, 3.5),
+};
+
+Iterable<String> get ambienceNames => _ambiences.keys;
+
+Float64List ambience(String world) {
+  final (scale, step, wave, decay) = _ambiences[world]!;
+  final r = Random(world.codeUnits.fold<int>(7, (h, c) => h * 31 + c) & 0x7fffffff);
+  final notes = <_Note>[];
+  final last = ambienceSeconds - 2.0;
+  for (var t = 0.0; t <= last; t += step) {
+    if (r.nextDouble() < 0.55) notes.add(_Note(t, 1.6, scale[r.nextInt(scale.length)], wave, decay: decay));
+  }
+  // Basse : la fondamentale une octave en dessous, toutes les 4 s.
+  for (var t = 0.0; t <= last; t += 4) {
+    notes.add(_Note(t, 1.9, scale.first / 2, _sine, decay: 1.5));
+  }
+  final out = _render(notes, 0.5);
+  // Boucle exacte de 16 s (le rendu s'arrête à la fin de la dernière note).
+  return Float64List(sampleRate * ambienceSeconds.toInt())..setRange(0, min(out.length, sampleRate * ambienceSeconds.toInt()), out);
+}
+
+/// Pour `compute` : le WAV de la trame d'un monde.
+Uint8List ambienceWav(String world) => wav(ambience(world));

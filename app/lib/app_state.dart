@@ -51,6 +51,9 @@ class AppState extends ChangeNotifier {
     sessions = await store.sessions();
     sessionsDone = sessions.where((s) => s.complete).length;
     dailyMinutes = int.tryParse(await store.get('minutes_jour') ?? '') ?? defaultDailyMinutes;
+    voice
+      ..voiceOn = await store.get('voix') != 'non'
+      ..soundOn = await store.get('musique') != 'non';
     age = int.tryParse(await store.get('age') ?? '') ?? 5;
     final g = await store.get('genre');
     boy = g == null ? null : g == 'garcon';
@@ -94,6 +97,20 @@ class AppState extends ChangeNotifier {
     await store.addSession(s);
     sessions = [...sessions, s];
     if (s.complete) sessionsDone++;
+    notifyListeners();
+  }
+
+  /// Interrupteurs de la barre des leçons (ADR 0025), mémorisés.
+  Future<void> setVoiceOn(bool on) async {
+    voice.voiceOn = on;
+    await store.set('voix', on ? 'oui' : 'non');
+    notifyListeners();
+  }
+
+  Future<void> setSoundOn(bool on) async {
+    voice.soundOn = on;
+    await store.set('musique', on ? 'oui' : 'non');
+    if (!on) await voice.stopMusic();
     notifyListeners();
   }
 

@@ -246,6 +246,20 @@ void main() {
     });
   });
 
+  group('Trames sonores (ADR 0025)', () {
+    test('une boucle de 16 s par monde, sans saturation, silencieuse au raccord, toujours la même', () {
+      for (final w in ['robots', 'voitures', 'espace', 'fees', 'mode', 'princesses']) {
+        expect(ambienceNames, contains(w));
+        final a = ambience(w);
+        expect(a.length, sampleRate * 16);
+        expect(a.map((v) => v.abs()).reduce(max), lessThanOrEqualTo(0.5 + 1e-9));
+        // Les 0,3 dernières secondes sont quasi muettes : pas de clic quand la boucle repart.
+        expect(a.sublist(a.length - (sampleRate * 0.3).round()).map((v) => v.abs()).reduce(max), lessThan(0.01), reason: w);
+        expect(ambience(w), a);
+      }
+    });
+  });
+
   group('Sons à comparer', () {
     double peak(List<double> s) => s.map((v) => v.abs()).reduce(max);
     test('fort plus fort que doux, long plus long que court, sans saturation', () {

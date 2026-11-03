@@ -2,8 +2,11 @@
 library;
 
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+
+import 'sfx.dart';
 
 /// Durée maximale qu'on attend une phrase : bien plus que le temps de la dire (≈ 12 caractères par seconde à la
 /// vitesse réglée), pour qu'un moteur de synthèse muet ou absent ne bloque jamais l'activité.
@@ -24,6 +27,16 @@ class Voice {
   }();
   final _player = AudioPlayer();
   final _sfx = AudioPlayer();
+  final _music = AudioPlayer();
+
+  /// Réglages de l'enfant (ADR 0025), mémorisés par l'app : voix ; musique et bruitages.
+  bool voiceOn = true, soundOn = true;
+
+  /// Trame sonore : volume bas, baissé pendant que la voix parle (elle ne couvre jamais une phrase).
+  static const musicVolume = 0.15, duckedVolume = 0.04;
+  final Map<String, Uint8List> _ambience = {};
+  String? _musicWorld;
+  bool _musicPlaying = false;
   Set<String> _recorded = {};
   late final Future<void> _ready = _init();
 
@@ -42,29 +55,57 @@ class Voice {
     };
   }
 
-  /// Dit une phrase ; attend la fin. [id] permet de jouer la voix enregistrée correspondante.
-  Future<void> say(String text, {String? id}) async {
+  /// Dit une phrase ; attend la fin. [id] permet de jouer la voix enregistrée correspondante. Voix coupée : rien,
+  /// sauf si [force] (l'enfant a touché « Réécouter »).
+  Future<void> say(String text, {String? id, bool force = false}) async {
+    if (!voiceOn && !force) return;
     await _bounded(_ready, const Duration(seconds: 8));
     await stop();
+    await _duck(true);
     if (id != null && _recorded.contains(id)) {
       await _player.play(AssetSource('audio/voix/$id.ogg'));
       await _bounded(_player.onPlayerComplete.first, speechBudget(text));
     } else {
       await _bounded(_tts.speak(text), speechBudget(text));
     }
+    await _duck(false);
+  }
+
+  Future<void> _duck(bool down) async {
+    if (_musicPlaying) await _music.setVolume(down ? duckedVolume : musicVolume);
+  }
+
+  /// Lance la trame du monde en boucle (si la musique est activée). La boucle est fabriquée hors du fil de l'interface.
+  Future<void> startMusic(String world) async {
+    _musicWorld = world;
+    if (!soundOn || _musicPlaying) return;
+    _musicPlaying = true;
+    final bytes = _ambience[world] ??= await compute(ambienceWav, world);
+    if (!_musicPlaying || _musicWorld != world) return;
+    await _music.setReleaseMode(ReleaseMode.loop);
+    await _music.setVolume(musicVolume);
+    await _music.play(BytesSource(bytes, mimeType: 'audio/wav'));
+  }
+
+  Future<void> stopMusic() async {
+    _musicPlaying = false;
+    await _music.stop();
   }
 
   /// Phrase en français dont les passages entre « » sont en anglais (« Touche : « red ». ») : chaque morceau est dit
   /// par la bonne voix, l'un après l'autre.
-  Future<void> sayMixed(String text) async {
+  Future<void> sayMixed(String text, {bool force = false}) async {
+    if (!voiceOn && !force) return;
     await _bounded(_ready, const Duration(seconds: 8));
     await _bounded(_enReady, const Duration(seconds: 8));
     await stop();
     for (final (i, part) in text.split(RegExp('[«»]')).indexed) {
       final t = part.trim();
       if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
+      await _duck(true);
       await _bounded((i.isOdd ? _en : _tts).speak(t), speechBudget(t));
     }
+    await _duck(false);
   }
 
   Future<void> stop() async {
@@ -74,9 +115,12 @@ class Voice {
   }
 
   /// Bruitage de bonne réponse propre au monde (ADR 0017).
-  Future<void> success(String universe) => _sfx.play(AssetSource('audio/sfx/$universe.wav'));
+  Future<void> success(String universe) async {
+    if (soundOn) await _sfx.play(AssetSource('audio/sfx/$universe.wav'));
+  }
 
-  /// Joue un son fabriqué par l'app (WAV) et attend sa fin.
+  /// Joue un son fabriqué par l'app (WAV) et attend sa fin. C'est le contenu d'un exercice d'écoute : il joue même
+  /// musique coupée.
   Future<void> playWav(Uint8List wav) async {
     await stop();
     await _sfx.stop();
@@ -86,5 +130,7 @@ class Voice {
   }
 
   /// Fin de séance.
-  Future<void> fanfare() => _sfx.play(AssetSource('audio/sfx/fanfare.wav'));
+  Future<void> fanfare() async {
+    if (soundOn) await _sfx.play(AssetSource('audio/sfx/fanfare.wav'));
+  }
 }

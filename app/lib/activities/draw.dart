@@ -61,17 +61,22 @@ class _DrawPageState extends State<DrawPage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _listen());
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      app.voice.startMusic(app.universe.id);
+      _listen(force: false);
+    });
   }
 
-  Future<void> _listen() async {
-    await app.voice.say(prompt, id: '${skill.voiceId('question')}.${q.n}');
-    await app.voice.say(skill.phrases['consigne']!, id: skill.voiceId('consigne'));
+  /// « Réécouter » ([force]) dit la phrase même voix coupée (ADR 0025).
+  Future<void> _listen({bool force = true}) async {
+    await app.voice.say(prompt, id: '${skill.voiceId('question')}.${q.n}', force: force);
+    await app.voice.say(skill.phrases['consigne']!, id: skill.voiceId('consigne'), force: force);
   }
 
   @override
   void dispose() {
     app.voice.stop();
+    app.voice.stopMusic();
     // Retour avant la fin : le temps passé compte quand même pour la journée, sans faire avancer l'histoire.
     if (!_logged && DateTime.now().difference(_started) > const Duration(seconds: 20)) {
       app.logSession(SessionLog(theme: 'dessin', started: _started, ended: DateTime.now(), complete: false));
@@ -109,12 +114,14 @@ class _DrawPageState extends State<DrawPage> {
   @override
   Widget build(BuildContext context) {
     final u = app.universe;
-    return Scaffold(
+    return MusicScope(
+      resume: () => app.voice.startMusic(u.id),
+      child: Scaffold(
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            SessionTopBar(progress: saved == null ? 0 : 1, stars: saved == null ? 0 : 1, universe: u, onBack: () => Navigator.of(context).maybePop()),
+            SessionTopBar(onVoiceOn: _listen, progress: saved == null ? 0 : 1, stars: saved == null ? 0 : 1, universe: u, onBack: () => Navigator.of(context).maybePop()),
             Narrator(universe: u, text: prompt, cheer: saved == null ? 0 : 1, onListen: _listen),
             Expanded(
               child: saved != null
@@ -159,6 +166,7 @@ class _DrawPageState extends State<DrawPage> {
           ]),
         ),
       ),
+    ),
     );
   }
 }

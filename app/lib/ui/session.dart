@@ -65,7 +65,8 @@ class Attempt extends ChangeNotifier {
   /// Domaine d'anglais : les mots entre « » sont dits par la voix anglaise (ADR 0022).
   bool get _english => skill.params['langue'] == 'en';
 
-  Future<void> say(String key) => _english ? app.voice.sayMixed(phrase(key)) : app.voice.say(phrase(key), id: voiceId(key));
+  Future<void> say(String key, {bool force = false}) =>
+      _english ? app.voice.sayMixed(phrase(key), force: force) : app.voice.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
   Future<void> show(String key) {
@@ -75,7 +76,10 @@ class Attempt extends ChangeNotifier {
     return say(key);
   }
 
-  Future<void> listen() => helpText != null ? (_english ? app.voice.sayMixed(helpText!) : app.voice.say(helpText!)) : say(statementKey);
+  /// « Réécouter » : une demande explicite, dite même voix coupée (ADR 0025).
+  Future<void> listen() => helpText != null
+      ? (_english ? app.voice.sayMixed(helpText!, force: true) : app.voice.say(helpText!, force: true))
+      : say(statementKey, force: true);
 
   Future<void> _record({required bool correct, required bool demonstrated}) => app.record(Answer(
         skill: skill.id,
@@ -185,7 +189,19 @@ class _SessionPageState extends State<SessionPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    attempt ??= _next();
+    if (attempt == null) {
+      attempt = _next();
+      _music();
+    }
+  }
+
+  /// Trame sonore : pas pendant un exercice d'écoute, où les sons sont la question (ADR 0025).
+  void _music() {
+    if (over || attempt?.skill.activity == 'ecouter') {
+      app.voice.stopMusic();
+    } else {
+      app.voice.startMusic(app.universe.id);
+    }
   }
 
   Attempt _next() {
@@ -201,6 +217,7 @@ class _SessionPageState extends State<SessionPage> {
     if (index + 1 >= plan.length) {
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
+      app.voice.stopMusic();
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
       await app.voice.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
@@ -218,11 +235,13 @@ class _SessionPageState extends State<SessionPage> {
       attempt = _next();
     });
     old?.dispose();
+    _music();
   }
 
   @override
   void dispose() {
     app.voice.stop();
+    app.voice.stopMusic();
     attempt?.dispose();
     // Retour en cours de séance : le temps compte pour la journée, sans faire avancer l'histoire (ADR 0018).
     if (!over && (index > 0 || DateTime.now().difference(_started) > const Duration(seconds: 20))) {
@@ -235,12 +254,15 @@ class _SessionPageState extends State<SessionPage> {
   Widget build(BuildContext context) {
     final u = app.universe;
     final a = attempt!;
-    return Scaffold(
+    return MusicScope(
+      resume: _music,
+      child: Scaffold(
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
           child: Column(children: [
             SessionTopBar(
+              onVoiceOn: () => attempt?.listen(),
               progress: over ? 1 : index / plan.length,
               stars: stars,
               universe: u,
@@ -298,14 +320,18 @@ class _SessionPageState extends State<SessionPage> {
           ]),
         ),
       ),
+    ),
     );
   }
 }
 
 /// ← retour (≠ Accueil), progression, étoiles de la séance (nombre écrit à côté de l'étoile).
 class SessionTopBar extends StatelessWidget {
-  const SessionTopBar({super.key, required this.progress, required this.stars, required this.universe, required this.onBack});
+  const SessionTopBar({super.key, required this.progress, required this.stars, required this.universe, required this.onBack, this.onVoiceOn});
   final double progress;
+
+  /// Appelé quand l'enfant rallume la voix (la consigne est redite).
+  final VoidCallback? onVoiceOn;
   final int stars;
   final Universe universe;
   final VoidCallback onBack;
@@ -325,7 +351,9 @@ class SessionTopBar extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_rounded, color: ink),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 8),
+          SoundToggles(onVoiceOn: onVoiceOn),
+          const SizedBox(width: 8),
           Expanded(
             child: Container(
               height: 18,
@@ -489,4 +517,87 @@ class DayEnd extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Interrupteurs « Voix » et « Musique » (docs/design.md § 5, ADR 0025) : ronds de 48 dp ; coupé = fond gris, icône
+/// barrée et contour (pas seulement la couleur) ; état lu par le lecteur d'écran.
+class SoundToggles extends StatelessWidget {
+  const SoundToggles({super.key, this.onVoiceOn});
+  final VoidCallback? onVoiceOn;
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final music = MusicScope.of(context);
+    return Row(mainAxisSize: MainAxisSize.min, children: [
+      _Toggle(
+        on: app.voice.voiceOn,
+        label: 'Voix',
+        onIcon: Icons.record_voice_over_rounded,
+        offIcon: Icons.voice_over_off_rounded,
+        onChanged: (v) async {
+          await app.setVoiceOn(v);
+          if (v) onVoiceOn?.call();
+        },
+      ),
+      const SizedBox(width: 6),
+      _Toggle(
+        on: app.voice.soundOn,
+        label: 'Musique',
+        onIcon: Icons.music_note_rounded,
+        offIcon: Icons.music_off_rounded,
+        onChanged: (v) async {
+          await app.setSoundOn(v);
+          if (v) music?.resume();
+        },
+      ),
+    ]);
+  }
+}
+
+class _Toggle extends StatelessWidget {
+  const _Toggle({required this.on, required this.label, required this.onIcon, required this.offIcon, required this.onChanged});
+  final bool on;
+  final String label;
+  final IconData onIcon, offIcon;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final u = AppScope.of(context).universe;
+    return Semantics(
+      toggled: on,
+      button: true,
+      label: '$label, ${on ? 'activée' : 'coupée'}',
+      excludeSemantics: true,
+      child: Tooltip(
+        message: '$label : ${on ? 'activée' : 'coupée'}',
+        child: Material(
+          color: on ? surface : const Color(0xFFBFC7C1),
+          shape: CircleBorder(side: on ? BorderSide.none : const BorderSide(color: ink, width: 2)),
+          elevation: on ? 2 : 0,
+          child: InkWell(
+            customBorder: const CircleBorder(),
+            onTap: () => onChanged(!on),
+            child: SizedBox(
+              width: 48,
+              height: 48,
+              child: Icon(on ? onIcon : offIcon, size: 28, color: on ? (u.night ? u.primary : u.onCard) : ink),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// La trame sonore d'une page de leçon : [resume] la relance quand l'enfant rallume la musique (si l'exercice le permet).
+class MusicScope extends InheritedWidget {
+  const MusicScope({super.key, required this.resume, required super.child});
+  final VoidCallback resume;
+
+  static MusicScope? of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<MusicScope>();
+
+  @override
+  bool updateShouldNotify(MusicScope old) => false;
 }

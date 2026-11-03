@@ -51,3 +51,28 @@ fil rouge à son image, 12 autocollants à collectionner.
 3. Aucun objet à compter sous le bandeau ni sous les boutons ; espacement ≥ 0,3 × rayon entre objets.
 4. Portrait et paysage vérifiés sur les deux SM-X135G (ADR 0013), capture à l'appui.
 5. Couleur jamais seule : forme, icône, texte ou voix avec.
+
+## 5. Composant : interrupteurs « Voix » et « Musique » (ADR 0025)
+
+**Problème.** Certains enfants (ou parents) veulent lire sans la voix, ou jouer sans musique ; la trame sonore ne doit
+jamais gêner l'écoute. Le bouton « Réécouter » existant dit la phrase, il ne règle rien.
+
+| Composant voisin | Point commun | Pourquoi il ne suffit pas |
+| --- | --- | --- |
+| Bouton « Réécouter » (bandeau) | icône haut-parleur | action ponctuelle, pas un état |
+| Réglages de l'espace parent | état mémorisé | caché derrière une multiplication : pas visible pendant la leçon |
+
+**Conception.** Deux interrupteurs ronds de 48 dp dans la barre du haut de **chaque** leçon et exercice (séances et
+dessin), entre ← et la barre de progression.
+
+| Propriété | Valeur |
+| --- | --- |
+| `SoundToggle(kind: voice / music, on, onChanged)` | état global mémorisé (`voix`, `musique` dans les réglages) |
+| Activé | fond blanc, icône `record_voice_over` / `music_note` couleur `onCard` de l'univers |
+| Coupé | fond gris `#BFC7C1`, icône barrée `voice_over_off` / `music_off` encre, contour pointillé : **la forme de l'icône change**, pas seulement la couleur |
+| Lecteur d'écran | « Voix, activée » / « Voix, coupée » (bouton à bascule) |
+| Retour | voix réactivée → la consigne est redite ; musique réactivée → la trame reprend en fondu |
+
+**Règles.** Voix coupée : tout reste écrit (bandeau narrateur), « Réécouter » dit quand même la phrase (demande
+explicite). Musique coupée : ni trame, ni bruitages. Trame sonore : volume 0,15, baissée à 0,04 pendant que la voix
+parle, **arrêtée** pendant les exercices d'écoute (« Les sons ») et absente de l'accueil.
