@@ -368,3 +368,194 @@ class _ShareActivityState extends State<ShareActivity> {
     );
   }
 }
+
+/// Soustraire en cassant une dizaine (CP) : on touche un paquet pour le défaire en dix bâtonnets, puis on enlève les
+/// bâtonnets demandés un par un ; enfin on dit combien il en reste.
+class BreakTenActivity extends StatefulWidget {
+  const BreakTenActivity({super.key, required this.attempt});
+  final Attempt attempt;
+  @override
+  State<BreakTenActivity> createState() => _BreakTenActivityState();
+}
+
+class _BreakTenActivityState extends State<BreakTenActivity> {
+  Attempt get a => widget.attempt;
+  late int bundles = a.question.a;
+  int loose = 0, removed = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    a.addListener(_changed);
+    a.show('question').then((_) => a.say('consigne'));
+  }
+
+  @override
+  void dispose() {
+    a.removeListener(_changed);
+    super.dispose();
+  }
+
+  Future<void> _changed() async {
+    if (a.demonstrate && removed < a.question.b) {
+      if (loose < a.question.b - removed && bundles > 0) _break();
+      while (removed < a.question.b && mounted) {
+        await Future<void>.delayed(const Duration(milliseconds: 300));
+        _take();
+      }
+    }
+    if (mounted) setState(() {});
+  }
+
+  bool get locked => a.busy || a.finished;
+
+  void _break() {
+    if (locked && !a.demonstrate || bundles == 0) return;
+    setState(() {
+      bundles--;
+      loose += 10;
+    });
+  }
+
+  void _take() {
+    if ((locked && !a.demonstrate) || loose == 0 || removed >= a.question.b) return;
+    setState(() {
+      loose--;
+      removed++;
+    });
+    a.app.voice.say('$removed');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final q = a.question;
+    final done = removed >= q.b;
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(children: [
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
+          child: Wrap(spacing: 14, runSpacing: 14, alignment: WrapAlignment.center, crossAxisAlignment: WrapCrossAlignment.center, children: [
+            for (var i = 0; i < bundles; i++)
+              Semantics(
+                button: true,
+                label: 'Défaire un paquet de dix',
+                child: GestureDetector(onTap: _break, child: const Sticks(bundle: true)),
+              ),
+            if (bundles > 0 && loose > 0) const SizedBox(width: 18),
+            for (var i = 0; i < loose; i++)
+              Semantics(
+                button: true,
+                label: 'Enlever un bâtonnet',
+                // Zone de toucher plus large que le bâtonnet (48 dp).
+                child: GestureDetector(onTap: _take, child: Container(width: 30, height: 80, alignment: Alignment.center, color: Colors.transparent, child: const Sticks())),
+              ),
+          ]),
+        ),
+        const SizedBox(height: 12),
+        // Les bâtonnets enlevés, à part et grisés : on voit ce qu'on a retiré.
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text('Enlevés : $removed / ${q.b}', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink)),
+          const SizedBox(width: 12),
+          for (var i = 0; i < removed; i++) const Opacity(opacity: 0.35, child: Padding(padding: EdgeInsets.all(2), child: Sticks(height: 48))),
+        ]),
+        const SizedBox(height: 24),
+        if (done)
+          NumberChoices(attempt: a, right: q.n - q.b, values: numberChoices(q.n - q.b, q.n * 13 + q.b, near: [q.n - 10 + q.b, q.n - q.b + 10]))
+        else
+          Text(bundles == q.a ? 'Touche un paquet pour le défaire.' : 'Touche les bâtonnets pour les enlever.',
+              textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+      ]),
+    );
+  }
+}
+
+/// Faire des paquets (CP, « chercher le nombre de parts ») : on fait des paquets de [b] avec le tas, puis on dit
+/// combien de paquets on a faits.
+class PacketsActivity extends StatefulWidget {
+  const PacketsActivity({super.key, required this.attempt});
+  final Attempt attempt;
+  @override
+  State<PacketsActivity> createState() => _PacketsActivityState();
+}
+
+class _PacketsActivityState extends State<PacketsActivity> {
+  Attempt get a => widget.attempt;
+  late int pile = a.question.n;
+  int packets = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    a.addListener(_changed);
+    a.show('question').then((_) => a.say('consigne'));
+  }
+
+  @override
+  void dispose() {
+    a.removeListener(_changed);
+    super.dispose();
+  }
+
+  Future<void> _changed() async {
+    while (a.demonstrate && pile > 0 && mounted) {
+      await Future<void>.delayed(const Duration(milliseconds: 450));
+      _pack(force: true);
+    }
+    if (mounted) setState(() {});
+  }
+
+  void _pack({bool force = false}) {
+    if ((!force && (a.busy || a.finished)) || pile < a.question.b) return;
+    setState(() {
+      pile -= a.question.b;
+      packets++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final q = a.question;
+    final art = a.app.objectArt(a.skill);
+    final u = a.app.universe;
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(children: [
+        Container(
+          width: double.infinity,
+          constraints: const BoxConstraints(minHeight: 80),
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(color: const Color(0xFFF1F3F2), borderRadius: BorderRadius.circular(24), border: Border.all(color: const Color(0xFFD5DBD7), width: 2)),
+          child: Wrap(alignment: WrapAlignment.center, children: [for (var i = 0; i < pile; i++) Padding(padding: const EdgeInsets.all(2), child: Art(art, size: 28))]),
+        ),
+        const SizedBox(height: 12),
+        if (pile > 0)
+          FilledButton.icon(
+            style: FilledButton.styleFrom(minimumSize: const Size(240, 72), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 24, fontWeight: FontWeight.w700)),
+            onPressed: a.busy || a.finished ? null : _pack,
+            icon: const Icon(Icons.inventory_2_rounded, size: 36),
+            label: Text('Un paquet de ${q.b}'),
+          ),
+        const SizedBox(height: 12),
+        Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
+          for (var i = 0; i < packets; i++)
+            Container(
+              padding: const EdgeInsets.all(6),
+              decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(16), boxShadow: cardShadow, border: Border.all(color: u.onCard, width: 3)),
+              // Pas de numéro sur les paquets : les compter, c'est la question.
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                SizedBox(
+                  width: 3 * 22.0 + 6,
+                  child: Wrap(alignment: WrapAlignment.center, children: [for (var j = 0; j < q.b; j++) Padding(padding: const EdgeInsets.all(1), child: Art(art, size: 20))]),
+                ),
+              ]),
+            ),
+        ]),
+        const SizedBox(height: 20),
+        if (pile == 0) NumberChoices(attempt: a, right: q.a, values: numberChoices(q.a, q.n * 3 + q.b, near: [q.b, q.a + 2])),
+      ]),
+    );
+  }
+}

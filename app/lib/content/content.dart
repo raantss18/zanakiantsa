@@ -88,6 +88,7 @@ class Skill {
         'choisir' || 'dessin' || 'planetes' || 'corps' => items[q.n].vars,
         'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
         'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
+        'batonnets' when params['mode'] == 'casser' => {'reste': '${q.n - q.b}'},
         'batonnets' => {'dizaines': q.a <= 1 ? '${q.a} dizaine' : '${q.a} dizaines', 'unites': q.b <= 1 ? '${q.b} unité' : '${q.b} unités'},
         _ => const {},
       };
@@ -124,9 +125,18 @@ class Skill {
         return Question(n: r.nextInt(2), a: r.nextInt(1 << 30), b: r.nextInt(2));
       case 'echecs':
         return Question(n: between(1, p('etoiles')), a: r.nextInt(1 << 30));
+      case 'batonnets' when params['mode'] == 'casser':
+        // Un nombre entier de dizaines, moins un nombre inférieur à 10 (programme de CP).
+        final tens = between(p('min') ~/ 10, p('max') ~/ 10);
+        return Question(n: tens * 10, a: tens, b: between(1, 9));
       case 'batonnets':
         final n = between(p('min'), p('max'));
         return Question(n: n, a: n ~/ 10, b: n % 10);
+      case 'paquets':
+        // [n] objets en paquets de [b] : combien de paquets ([a]) ?
+        final b = between(p('par_min'), p('par_max'));
+        final a = between(2, min(p('paquets_max'), p('total_max') ~/ b));
+        return Question(n: a * b, a: a, b: b);
       case 'groupes':
         // [a] groupes de [b] : le tout ne dépasse pas total_max (programme CP : champ numérique ≤ 30).
         while (true) {
@@ -157,6 +167,8 @@ class Skill {
   int expected(Question q) => switch (activity) {
         'calcul' when params['forme'] == 'complement' => q.b,
         'partage' => q.b,
+        'paquets' => q.a,
+        'batonnets' when params['mode'] == 'casser' => q.n - q.b,
         _ => q.n,
       };
 }

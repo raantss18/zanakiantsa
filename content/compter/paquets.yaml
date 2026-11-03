@@ -1,0 +1,14 @@
+id: paquets
+titre: Faire des paquets (combien de parts ?)
+niveau: CP
+prerequis: [partager]
+programme: { source: cycle2, texte: "Résoudre des problèmes consistant, dans un partage équitable, à chercher le nombre de parts à partir de la quantité totale d’objets et de la quantité de chaque part : l’élève entoure des groupes de cardinal égal à la valeur d’une part." }
+activite: paquets
+parametres: { par_min: 2, par_max: 5, paquets_max: 6, total_max: 30 }
+phrases:
+  consigne: "Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus."
+  question: "{prenom} range {n} {objets} par paquets de {b}. Combien de paquets ?"
+  indice: "Fais les paquets un par un, puis compte-les."
+  exemple: "Touche chaque paquet du doigt en comptant : un, deux, trois…"
+  demonstration: "Regarde : {n} {objets} en paquets de {b}, cela fait {a} paquets."
+  bravo: "Oui ! Cela fait {a} paquets de {b}."

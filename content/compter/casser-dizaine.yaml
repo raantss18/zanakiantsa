@@ -1,0 +1,14 @@
+id: casser-dizaine
+titre: Soustraire en cassant une dizaine
+niveau: CP
+prerequis: [dizaines-construire]
+programme: { source: cycle2, texte: "Soustraire un nombre inférieur à 10 à un nombre entier de dizaines : l’élève sait qu’il peut « casser » une dizaine afin de lui retirer le nombre à soustraire." }
+activite: batonnets
+parametres: { mode: casser, min: 10, max: 50 }
+phrases:
+  consigne: "Pour enlever des bâtonnets, défais d'abord un paquet de dix."
+  question: "Il y a {n} bâtonnets. Enlève-en {b}. Combien en reste-t-il ?"
+  indice: "Touche un paquet : il devient dix bâtonnets. Puis enlève-en {b}, un par un."
+  exemple: "Dix moins {b}, puis ajoute les autres paquets de dix."
+  demonstration: "Regarde : je défais un paquet et j'enlève {b} bâtonnets. Il en reste {reste}."
+  bravo: "Oui ! {n} moins {b}, il reste {reste}."

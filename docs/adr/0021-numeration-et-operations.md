@@ -12,4 +12,7 @@
   donner un objet ; parts inégales = essai manqué, on recommence).
 - **Progression** : chaque compétence s'ouvre quand la précédente est maîtrisée (ADR 0007) ; un enfant de 5 ans n'y
   arrive qu'après les compétences de maternelle.
-- **Reste à tester** : la division « combien de parts » (groupements) et les tables de 6 à 9, non faites.
+- **Ajout du 2026-11-03** : soustraire un nombre < 10 à un nombre entier de dizaines en **cassant une dizaine**
+  (on touche un paquet, il devient dix bâtonnets) ; **faire des paquets** (combien de parts ? au plus 6 paquets, sans
+  numéro : les compter est la question) ; tables de 6, 7, 8, 9.
+- **Reste à tester** : la compréhension à 6–7 ans ; addition et soustraction posées (fin de CP) non faites.

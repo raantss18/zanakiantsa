@@ -246,6 +246,32 @@
       }
     },
     {
+      "id": "casser-dizaine",
+      "titre": "Soustraire en cassant une dizaine",
+      "niveau": "CP",
+      "prerequis": [
+        "dizaines-construire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Soustraire un nombre inférieur à 10 à un nombre entier de dizaines : l’élève sait qu’il peut « casser » une dizaine afin de lui retirer le nombre à soustraire."
+      },
+      "activite": "batonnets",
+      "parametres": {
+        "mode": "casser",
+        "min": 10,
+        "max": 50
+      },
+      "phrases": {
+        "consigne": "Pour enlever des bâtonnets, défais d'abord un paquet de dix.",
+        "question": "Il y a {n} bâtonnets. Enlève-en {b}. Combien en reste-t-il ?",
+        "indice": "Touche un paquet : il devient dix bâtonnets. Puis enlève-en {b}, un par un.",
+        "exemple": "Dix moins {b}, puis ajoute les autres paquets de dix.",
+        "demonstration": "Regarde : je défais un paquet et j'enlève {b} bâtonnets. Il en reste {reste}.",
+        "bravo": "Oui ! {n} moins {b}, il reste {reste}."
+      }
+    },
+    {
       "id": "groupes",
       "titre": "Des paquets pareils (sens de la multiplication)",
       "niveau": "CP",
@@ -325,6 +351,33 @@
       }
     },
     {
+      "id": "paquets",
+      "titre": "Faire des paquets (combien de parts ?)",
+      "niveau": "CP",
+      "prerequis": [
+        "partager"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Résoudre des problèmes consistant, dans un partage équitable, à chercher le nombre de parts à partir de la quantité totale d’objets et de la quantité de chaque part : l’élève entoure des groupes de cardinal égal à la valeur d’une part."
+      },
+      "activite": "paquets",
+      "parametres": {
+        "par_min": 2,
+        "par_max": 5,
+        "paquets_max": 6,
+        "total_max": 30
+      },
+      "phrases": {
+        "consigne": "Touche le bouton pour faire un paquet, jusqu'à ce qu'il n'en reste plus.",
+        "question": "{prenom} range {n} {objets} par paquets de {b}. Combien de paquets ?",
+        "indice": "Fais les paquets un par un, puis compte-les.",
+        "exemple": "Touche chaque paquet du doigt en comptant : un, deux, trois…",
+        "demonstration": "Regarde : {n} {objets} en paquets de {b}, cela fait {a} paquets.",
+        "bravo": "Oui ! Cela fait {a} paquets de {b}."
+      }
+    },
+    {
       "id": "moities",
       "titre": "Les moitiés",
       "niveau": "CE1",
@@ -394,6 +447,60 @@
         "tables": [
           3,
           4
+        ]
+      },
+      "phrases": {
+        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "question": "{a} × {b} = ?",
+        "indice": "{a} rangées de {b} : compte de {b} en {b}.",
+        "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
+        "demonstration": "Regarde : {a} fois {b} égale {n}.",
+        "bravo": "Oui ! {a} fois {b} égale {n}."
+      }
+    },
+    {
+      "id": "tables-6-7",
+      "titre": "Tables de 6 et 7",
+      "niveau": "CE2",
+      "prerequis": [
+        "tables-3-4"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables de multiplication : A × B = C, où A et B sont des nombres entiers compris entre 0 et 10."
+      },
+      "activite": "tables",
+      "parametres": {
+        "tables": [
+          6,
+          7
+        ]
+      },
+      "phrases": {
+        "consigne": "Chaque rangée a le même nombre d'objets.",
+        "question": "{a} × {b} = ?",
+        "indice": "{a} rangées de {b} : compte de {b} en {b}.",
+        "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
+        "demonstration": "Regarde : {a} fois {b} égale {n}.",
+        "bravo": "Oui ! {a} fois {b} égale {n}."
+      }
+    },
+    {
+      "id": "tables-8-9",
+      "titre": "Tables de 8 et 9",
+      "niveau": "CE2",
+      "prerequis": [
+        "tables-6-7"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Connaitre dans les deux sens les tables de multiplication : A × B = C, où A et B sont des nombres entiers compris entre 0 et 10."
+      },
+      "activite": "tables",
+      "parametres": {
+        "tables": [
+          8,
+          9
         ]
       },
       "phrases": {

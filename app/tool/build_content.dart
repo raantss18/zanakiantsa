@@ -22,6 +22,7 @@ const activities = {
   'groupes': {'par_max', 'total_max'},
   'tables': {'tables'},
   'partage': {'par_max'},
+  'paquets': {'par_min', 'par_max', 'paquets_max', 'total_max'},
   // ADR 0023
   'programmer': {'mode', 'grille', 'min', 'max'},
   // ADR 0024
@@ -44,7 +45,7 @@ final placeholder = RegExp(r'\{(\w+)\}');
 const allowedPlaceholders = {
   'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom', //
   'texte', 'bonne', 'explication', 'mot', 'rep', // variables d'activité (ADR 0019)
-  'dizaines', 'unites', // bâtonnets (ADR 0021)
+  'dizaines', 'unites', 'reste', // bâtonnets (ADR 0021)
 };
 
 /// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).

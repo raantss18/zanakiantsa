@@ -102,8 +102,8 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 
 1. ✅ **Cours d'échecs** (ADR 0020) : 13 leçons, des déplacements au mat en un coup ; ⏳ parties contre l'app, roque,
    promotion
-2. ✅ **Bâtonnets, multiplication, partage** (ADR 0021) : 8 compétences CP–CE1 ; ⏳ « combien de parts », tables de
-   6 à 9, soustraction par cassage de dizaine
+2. ✅ **Bâtonnets, multiplication, partage** (ADR 0021) : 12 compétences CP–CE2, dont soustraire en cassant une
+   dizaine, faire des paquets (combien de parts ?), tables de 6 à 9 (2026-11-03) ; ⏳ addition et soustraction posées
 3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ⏳ recaler sur le programme publié au BO (source
    actuelle : projet de juin 2025), voix anglaise hors ligne sur la tablette
 4. ✅ **Exploration 3D sur GPU** (ADR 0024) : système solaire et corps ; ⏳ organes, fluidité sur vraie tablette
@@ -112,6 +112,10 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ 3e journée : anglais / code / explorer (les journées tournent sur 3 jours, ADR 0018)
 - ✅ Vérifié sur l'émulateur : mat en un coup, bâtonnets (lire, construire), paquets, partage, tables, solide 3D,
   planètes, corps, robot (programme faux puis juste), anglais (voix en-GB utilisée) ; 47 tests
+- ✅ Version 0.3.0 publiée (2026-11-03, build 2003) ; montée 0.2.0 → 0.3.0 vérifiée sur l'émulateur (base v1 → v2,
+  réglages conservés)
+- ✅ Corrigé : une voix de synthèse muette bloquait la séance (attente sans fin de la fin de phrase) → chaque attente
+  de voix est bornée (`speechBudget`)
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
 ## Étape 5 — Thèmes suivants ⏳

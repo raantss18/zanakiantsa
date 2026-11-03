@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('15 compétences, prérequis connus et placés avant', () {
+    test('19 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 15);
+      expect(t.skills.length, 19);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -35,9 +35,19 @@ void main() {
               expect(q.n, inInclusiveRange(s.p('cible_min'), s.p('cible_max')));
               expect(q.a, lessThan(q.n));
               expect(q.a + q.b, q.n);
+            case 'batonnets' when s.params['mode'] == 'casser':
+              expect(q.n, q.a * 10);
+              expect(q.b, inInclusiveRange(1, 9));
+              expect(s.expected(q), q.n - q.b);
+              expect(s.expected(q), greaterThanOrEqualTo(1));
             case 'batonnets':
               expect(q.n, inInclusiveRange(s.p('min'), s.p('max')));
               expect(q.a * 10 + q.b, q.n);
+            case 'paquets':
+              expect(q.a * q.b, q.n);
+              expect(q.a, inInclusiveRange(2, s.p('paquets_max')));
+              expect(q.n, lessThanOrEqualTo(s.p('total_max')));
+              expect(s.expected(q), q.a);
             case 'groupes' || 'tables' || 'partage':
               expect(q.a * q.b, q.n);
               if (s.params.containsKey('total_max')) expect(q.n, lessThanOrEqualTo(s.p('total_max')));
