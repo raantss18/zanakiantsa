@@ -40,7 +40,7 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | Élément | Licence | Statut |
 | --- | --- | --- |
 | Base de puzzles Lichess | CC0 (https://database.lichess.org/, lu le 2026-11-02) | réutilisable, thème échecs |
-| `ding.wav` du spike | créé par code (`spikes/make_ding.py`) | original |
+| `assets/audio/sfx/*.wav` (bruitages) | synthétisés par code (`lib/audio/sfx.dart`, `tool/build_sounds.dart`) | original |
 | Illustrations Twemoji v17.0.3 (77 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
 
 ## Polices

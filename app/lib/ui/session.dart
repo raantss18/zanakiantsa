@@ -7,6 +7,7 @@ import '../activities/calcul.dart';
 import '../activities/composer.dart';
 import '../activities/denombrer.dart';
 import '../app_state.dart';
+import '../audio/sfx.dart';
 import '../content/content.dart';
 import '../core/events.dart';
 import '../core/rewards.dart';
@@ -88,8 +89,8 @@ class Attempt extends ChangeNotifier {
       notifyListeners();
       await _record(correct: true, demonstrated: false);
       onCorrect();
-      app.voice.ding();
-      await Future<void>.delayed(const Duration(milliseconds: 350));
+      app.voice.success(app.universe.id);
+      await Future<void>.delayed(sfxLength);
       await say('bravo');
       final enc = app.common.list('encouragements');
       final i = _rand.nextInt(enc.length);
@@ -186,7 +187,11 @@ class _SessionPageState extends State<SessionPage> {
     if (index + 1 >= plan.length) {
       await app.store.sessionDone(_started, DateTime.now());
       setState(() => over = true);
+      app.voice.fanfare();
+      await Future<void>.delayed(sfxLength);
       await app.voice.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
+      final e = app.universeWords.episode(app.sessionsDone + 1)!;
+      await app.voice.say(app.universeWords.story[e], id: 'univers.${app.universe.id}.histoire.$e');
       if (app.rewards.unlockedSince(before)) {
         await app.voice.say(app.common.text('nouvel_autocollant'), id: 'commun.nouvel_autocollant');
       }
@@ -235,7 +240,13 @@ class _SessionPageState extends State<SessionPage> {
               ),
             Expanded(
               child: over
-                  ? _End(stars: stars, newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null)
+                  ? _End(
+                      stars: stars,
+                      universe: u,
+                      words: app.universeWords,
+                      // sessionsDone n'est relu qu'au retour à l'accueil : la séance qui vient de finir compte en plus.
+                      episode: app.universeWords.episode(app.sessionsDone + 1)!,
+                      newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null)
                   : Stack(children: [
                       Positioned.fill(
                         child: switch (a.skill.activity) {
@@ -318,9 +329,13 @@ class _TopBar extends StatelessWidget {
       );
 }
 
+/// Fin de séance : étoiles, épisode gagné du fil d'histoire (ADR 0017), nouvel autocollant éventuel, Accueil.
 class _End extends StatelessWidget {
-  const _End({required this.stars, this.newSticker});
+  const _End({required this.stars, required this.universe, required this.words, required this.episode, this.newSticker});
   final int stars;
+  final Universe universe;
+  final UniverseWords words;
+  final int episode;
   final String? newSticker;
 
   @override
@@ -336,6 +351,20 @@ class _End extends StatelessWidget {
                 const SizedBox(width: 12),
                 Text('× $stars', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: stars > 1 ? '$stars étoiles' : '$stars étoile'),
               ]),
+              const SizedBox(height: 16),
+              ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 520),
+                child: Row(children: [
+                  Art(universe.mascot, size: 64),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      EpisodeLabel(index: episode, count: words.story.length),
+                      Text(words.story[episode], style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2)),
+                    ]),
+                  ),
+                ]),
+              ),
               if (newSticker != null) ...[
                 const SizedBox(height: 16),
                 const Text('Nouvel autocollant !', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink)),

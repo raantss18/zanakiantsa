@@ -33,7 +33,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     if (!s.ready) {
       s.voice.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
     } else {
-      s.voice.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro');
+      final e = s.universeWords.episode(s.sessionsDone);
+      e == null
+          ? s.voice.say(s.universeWords.intro, id: 'univers.${s.universe.id}.intro')
+          : s.voice.say(s.universeWords.story[e], id: 'univers.${s.universe.id}.histoire.$e');
     }
   }
 
@@ -58,7 +61,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             if (!s.ready)
               Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))
             else ...[
-              _Intro(text: s.universeWords.intro, universe: u),
+              _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
               Expanded(
                 child: split(
                   sideSize: 210,
@@ -143,14 +146,18 @@ class _Header extends StatelessWidget {
   }
 }
 
-/// La mascotte se présente : texte écrit sur une carte (jamais directement sur le décor).
+/// La mascotte se présente, puis raconte l'épisode gagné (ADR 0017) : texte écrit sur une carte (jamais directement
+/// sur le décor).
 class _Intro extends StatelessWidget {
-  const _Intro({required this.text, required this.universe});
-  final String text;
+  const _Intro({required this.words, required this.sessions, required this.universe});
+  final UniverseWords words;
+  final int sessions;
   final Universe universe;
 
   @override
-  Widget build(BuildContext context) => Padding(
+  Widget build(BuildContext context) {
+    final e = words.episode(sessions);
+    return Padding(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
         child: Container(
           padding: const EdgeInsets.all(12),
@@ -158,10 +165,16 @@ class _Intro extends StatelessWidget {
           child: Row(children: [
             Art(universe.mascot, size: 56),
             const SizedBox(width: 12),
-            Expanded(child: Text(text, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2))),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                if (e != null) EpisodeLabel(index: e, count: words.story.length),
+                Text(e == null ? words.intro : words.story[e], style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2)),
+              ]),
+            ),
           ]),
         ),
       );
+  }
 }
 
 class _AskAdult extends StatelessWidget {

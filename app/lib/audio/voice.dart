@@ -44,5 +44,9 @@ class Voice {
     await _player.stop();
   }
 
-  Future<void> ding() => _sfx.play(AssetSource('audio/ding.wav'));
+  /// Bruitage de bonne réponse propre au monde (ADR 0017).
+  Future<void> success(String universe) => _sfx.play(AssetSource('audio/sfx/$universe.wav'));
+
+  /// Fin de séance.
+  Future<void> fanfare() => _sfx.play(AssetSource('audio/sfx/fanfare.wav'));
 }

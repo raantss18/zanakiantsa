@@ -99,3 +99,32 @@ class NumberButton extends StatelessWidget {
     );
   }
 }
+
+/// « Épisode 3 » + une pastille par épisode (pleine = gagné) : le numéro est écrit, la couleur n'est jamais seule.
+class EpisodeLabel extends StatelessWidget {
+  const EpisodeLabel({super.key, required this.index, required this.count});
+  final int index, count;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(bottom: 4),
+        child: Semantics(
+          label: 'Épisode ${index + 1} sur $count',
+          excludeSemantics: true,
+          child: Wrap(spacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
+            Text('Épisode ${index + 1}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+            const SizedBox(width: 4),
+            for (var i = 0; i < count; i++)
+              Container(
+                width: 10,
+                height: 10,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: i <= index ? green : null,
+                  border: Border.all(color: i <= index ? green : const Color(0xFF8A948E), width: 1.5),
+                ),
+              ),
+          ]),
+        ),
+      );
+}

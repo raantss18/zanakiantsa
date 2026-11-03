@@ -213,11 +213,18 @@ class UniverseWords {
         mascotName = j['mascotte'] as String,
         container = j['contenant'] as String,
         intro = j['intro'] as String,
+        story = [for (final e in j['histoire'] as List) e as String],
         objects = [
           for (final o in j['objets'] as List) Noun((o as List)[0] as String, o[1] as String, o[2] == 'f'),
         ];
   final String name, firstName, mascotName, container, intro;
   final List<Noun> objects;
+
+  /// Épisodes du fil d'histoire (ADR 0017) : un par séance finie ; le dernier reste affiché ensuite.
+  final List<String> story;
+
+  /// Épisode gagné après [sessions] séances (null avant la première : on montre l'intro).
+  int? episode(int sessions) => sessions <= 0 ? null : (sessions - 1).clamp(0, story.length - 1);
 }
 
 Future<Map<String, UniverseWords>> loadUniverseWords() async {

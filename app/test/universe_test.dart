@@ -5,6 +5,7 @@ import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/shapes.dart';
+import 'package:zanakiantsa/audio/sfx.dart';
 import 'package:zanakiantsa/content/content.dart';
 import 'package:zanakiantsa/core/events.dart';
 import 'package:zanakiantsa/core/rewards.dart';
@@ -88,6 +89,31 @@ void main() {
             }
           }
         }
+      }
+    });
+  });
+
+  group('Fil d\'histoire et bruitages (ADR 0017)', () {
+    final all = (jsonDecode(File('assets/content/univers.json').readAsStringSync())['univers'] as Map)
+        .map((k, v) => MapEntry(k as String, UniverseWords(Map<String, dynamic>.from(v as Map))));
+    test('intro avant la 1re séance, un épisode par séance, le dernier reste', () {
+      for (final w in all.values) {
+        expect(w.episode(0), isNull);
+        expect(w.episode(1), 0);
+        expect(w.episode(3), 2);
+        expect(w.episode(500), w.story.length - 1);
+      }
+    });
+    test('chaque monde a son bruitage, court, sans saturation, présent dans les assets', () {
+      for (final u in universes) {
+        expect(sfxNames, contains(u.id));
+      }
+      for (final name in sfxNames) {
+        final s = samples(name);
+        expect(s.length / sampleRate, lessThanOrEqualTo(sfxLength.inMilliseconds / 1000), reason: name);
+        expect(s.map((v) => v.abs()).reduce(max), closeTo(0.5, 1e-9), reason: name);
+        // les fichiers livrés sont bien ceux du code (sinon : dart run tool/build_sounds.dart)
+        expect(File('assets/audio/sfx/$name.wav').readAsBytesSync(), wav(s), reason: name);
       }
     });
   });
