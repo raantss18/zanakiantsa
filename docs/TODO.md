@@ -141,6 +141,30 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
+## Avant la version 0.7.0 — retours d'Antsa sur téléphone (2026-11-03), par ordre de priorité
+
+Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur l'émulateur (tablette et téléphone).
+
+1. ✅ **Blocage** : exercice d'écoute figé, voix coupée — tout appel au son est borné et ses erreurs rattrapées ;
+   l'état « occupé » est toujours libéré (`test/sound_bounded_test.dart`).
+2. ✅ **Voix** : le français dit avec l'accent anglais après l'anglais — un seul moteur de synthèse, langue réglée
+   avant chaque phrase (ADR 0037). ⏳ à confirmer à l'oreille sur le téléphone.
+3. ⏳ **Reprendre où l'enfant s'est arrêté** : sortir d'un domaine en cours de séance puis y revenir reprend à la même
+   question (même plan, mêmes étoiles), sans recommencer au début.
+4. ✅ **Ennui** : séance entrelacée (une question sur trois sur ce qui est acquis), compétence acquise = on passe à la
+   suivante (ADR 0037) ; corps humain posé par l'usage et les vêtements.
+5. ✅ **Consignes** : toutes réécrites — quoi faire, comment répondre, quand c'est réussi (ADR 0037).
+6. 🔄 **Dessin** : sujets précis avec critères ; vérifié (traits, taille, puis modèle de dessins sur l'appareil) ;
+   pas reconnu → « On dirait plutôt… » et ce qu'il manque ; plus de « Bravo » pour un gribouillis (ADR 0038).
+7. ✅ **Fin de série** : « Continuer » (flèche vers l'avant, « nouvelles questions ») au lieu de « Encore » ↻.
+8. ✅ **Bandeau « Nouveau »** qui débordait sur téléphone.
+9. ⏳ **Échecs** : jouer contre le robot (niveaux) ou à deux ; parties enregistrées ; analyse des parties (pièce
+   laissée en prise, mat manqué, prise gratuite manquée) ; leçons avancées : roque, promotion, prise en passant,
+   fourchette, pièce non protégée, mat du couloir (règles : FIDE ; tactiques : positions vérifiées par le moteur).
+10. ⏳ **Programmation type Scratch** : blocs « répéter n fois », « si … alors », et plus.
+11. ⏳ Même profondeur pour chaque domaine (jeu libre, suivi des erreurs, niveau avancé) : plan à proposer à Antsa.
+12. ⏳ Version 0.7.0 : tests, émulateur tablette + téléphone, publication après accord d'Antsa.
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →
