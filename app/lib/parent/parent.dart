@@ -3,6 +3,7 @@ import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_re
     as mlkit;
 
 import '../activities/calcul.dart';
+import '../activities/draw.dart';
 import '../app_state.dart';
 import '../core/day.dart';
 import '../core/report.dart';
@@ -35,9 +36,9 @@ class _ParentPageState extends State<ParentPage> {
     final sessions = await app.store.sessions();
     bool ink = false;
     try {
-      ink = await mlkit.DigitalInkRecognizerModelManager().isModelDownloaded(
-        inkLanguage,
-      );
+      // Les deux modèles : chiffres écrits (calcul) et dessins (ADR 0038).
+      final m = mlkit.DigitalInkRecognizerModelManager();
+      ink = await m.isModelDownloaded(inkLanguage) && await m.isModelDownloaded(drawModel);
     } catch (_) {}
     if (!mounted) return;
     setState(() {
@@ -55,16 +56,14 @@ class _ParentPageState extends State<ParentPage> {
     setState(() => inkStatus = 'Téléchargement…');
     var ok = false;
     try {
-      ok = await mlkit.DigitalInkRecognizerModelManager().downloadModel(
-        inkLanguage,
-        isWifiRequired: false,
-      );
+      final m = mlkit.DigitalInkRecognizerModelManager();
+      ok = await m.downloadModel(inkLanguage, isWifiRequired: false) && await m.downloadModel(drawModel, isWifiRequired: false);
     } catch (_) {}
     if (!mounted) return;
     setState(() {
       inkModel = ok;
       inkStatus = ok
-          ? 'Modèle installé : l’enfant peut écrire ses réponses.'
+          ? 'Modèles installés : l’enfant peut écrire ses réponses, et ses dessins sont reconnus.'
           : 'Échec : vérifiez la connexion.';
     });
   }
@@ -274,11 +273,12 @@ class _ParentPageState extends State<ParentPage> {
               ],
               const Divider(height: 32),
               Text(
-                'Écriture au doigt',
+                'Écriture et dessins au doigt',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const Text(
-                'Un téléchargement unique (connexion nécessaire) ; ensuite tout fonctionne hors ligne. '
+                'Un téléchargement unique (connexion nécessaire) ; ensuite tout fonctionne hors ligne. Sans le modèle '
+                'des dessins, un dessin est rangé sans être vérifié. '
                 'ML Kit envoie à Google des statistiques techniques d’usage, jamais les tracés.',
               ),
               const SizedBox(height: 8),
@@ -286,14 +286,14 @@ class _ParentPageState extends State<ParentPage> {
                 const ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(Icons.check_circle, color: Colors.green),
-                  title: Text('Modèle installé'),
+                  title: Text('Modèles installés'),
                 )
               else
                 FilledButton.tonal(
                   onPressed: inkStatus == 'Téléchargement…'
                       ? null
                       : _downloadInk,
-                  child: const Text('Télécharger le modèle'),
+                  child: const Text('Télécharger les modèles'),
                 ),
               if (inkStatus != null) Text(inkStatus!),
               const Divider(height: 32),

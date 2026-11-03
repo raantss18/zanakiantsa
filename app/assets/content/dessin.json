@@ -34,7 +34,7 @@
   "competences": [
     {
       "id": "dessin-libre",
-      "titre": "Dessiner avec une intention",
+      "titre": "Dessiner ce qui est demandé",
       "niveau": "GS",
       "prerequis": [],
       "programme": {
@@ -44,37 +44,97 @@
       "activite": "dessin",
       "parametres": {},
       "phrases": {
-        "consigne": "Choisis une couleur et dessine avec ton doigt.",
+        "consigne": "Dessine en grand, avec tous les morceaux demandés. Quand tu as fini, touche le bouton vert : je regarde si je reconnais ton dessin.",
         "question": "{texte}",
-        "indice": "Tu peux commencer par un grand rond.",
-        "exemple": "Ajoute des couleurs.",
-        "demonstration": "Quand tu as fini, touche le bouton vert.",
-        "bravo": "Bravo ! Ton dessin est rangé dans ton album."
+        "indice": "Regarde bien la liste des morceaux, et dessine-les en grand.",
+        "exemple": "Ajoute ce qui manque, puis touche encore le bouton vert.",
+        "demonstration": "Ton dessin est rangé dans ton album. On réessaiera une autre fois.",
+        "bravo": "Bravo ! Je reconnais {bonne}. Ton dessin est rangé dans ton album."
       },
       "items": [
         {
-          "texte": "Dessine {prenom}."
+          "texte": "Dessine un soleil : un rond, et des rayons tout autour.",
+          "nom": "un soleil",
+          "cible": "sun",
+          "explication": "Un soleil, c'est un rond, avec des rayons tout autour.",
+          "traits": 4
         },
         {
-          "texte": "Dessine {un} {objet}."
+          "texte": "Dessine une maison : un carré pour les murs, un triangle pour le toit, une porte.",
+          "nom": "une maison",
+          "cible": "house",
+          "explication": "Une maison, c'est un carré, un toit en triangle par-dessus, et une porte en bas.",
+          "traits": 3
         },
         {
-          "texte": "Dessine ta famille."
+          "texte": "Dessine un arbre : un tronc, et un grand feuillage en haut.",
+          "nom": "un arbre",
+          "cible": "tree|palm tree",
+          "explication": "Un arbre, c'est un tronc droit, avec un grand feuillage tout en haut.",
+          "traits": 2
         },
         {
-          "texte": "Dessine ta maison."
+          "texte": "Dessine une fleur : une tige, et des pétales autour d'un cœur rond.",
+          "nom": "une fleur",
+          "cible": "flower",
+          "explication": "Une fleur, c'est une tige, un petit rond au milieu, et des pétales tout autour.",
+          "traits": 3
         },
         {
-          "texte": "Dessine un animal que tu aimes."
+          "texte": "Dessine un poisson : un corps ovale, une queue en triangle, un œil.",
+          "nom": "un poisson",
+          "cible": "fish",
+          "explication": "Un poisson, c'est un ovale, une queue en triangle à l'arrière, et un œil.",
+          "traits": 2
         },
         {
-          "texte": "Dessine ce que tu as fait aujourd'hui."
+          "texte": "Dessine une étoile à cinq pointes.",
+          "nom": "une étoile",
+          "cible": "star",
+          "explication": "Une étoile a cinq pointes. Essaie sans lever le doigt : en haut, en bas, en haut…",
+          "traits": 1
         },
         {
-          "texte": "Dessine un arbre et le soleil."
+          "texte": "Dessine une pomme : un rond, une petite queue et une feuille.",
+          "nom": "une pomme",
+          "cible": "apple",
+          "explication": "Une pomme, c'est un rond, avec une petite queue et une feuille en haut.",
+          "traits": 2
         },
         {
-          "texte": "Dessine ce que tu veux !"
+          "texte": "Dessine un nuage : des bosses rondes, les unes à côté des autres.",
+          "nom": "un nuage",
+          "cible": "cloud",
+          "explication": "Un nuage, c'est une suite de bosses rondes, qui se ferme.",
+          "traits": 1
+        },
+        {
+          "texte": "Dessine une voiture : une caisse, deux roues rondes, des fenêtres.",
+          "nom": "une voiture",
+          "cible": "car|police car",
+          "explication": "Une voiture, c'est une caisse allongée, deux roues rondes en bas et des fenêtres.",
+          "traits": 3
+        },
+        {
+          "texte": "Dessine un chat : une tête ronde, deux oreilles pointues, des moustaches.",
+          "nom": "un chat",
+          "cible": "cat",
+          "explication": "Un chat, c'est une tête ronde, deux oreilles en triangle et des moustaches.",
+          "traits": 4
+        },
+        {
+          "texte": "Dessine un parapluie : un grand arrondi, et un manche avec un crochet.",
+          "nom": "un parapluie",
+          "cible": "umbrella",
+          "explication": "Un parapluie, c'est un grand arrondi, et un manche avec un crochet en bas.",
+          "traits": 2
+        },
+        {
+          "texte": "Dessine une lune en croissant.",
+          "nom": "une lune",
+          "cible": "moon",
+          "explication": "Le croissant de lune, c'est comme un rond grignoté sur un côté.",
+          "traits": 1
         }
       ]
     }

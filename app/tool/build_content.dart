@@ -87,6 +87,13 @@ void checkItems(String where, String act, List items) {
       if (!sceneTargets[act]!.contains(it['cible'])) fail(w, 'cible inconnue « ${it['cible']} »');
       if (it['explication'] is! String) fail(w, 'explication manquante');
     }
+    if (act == 'dessin') {
+      // ADR 0038 : chaque sujet dit ce qu'on attend, et le modèle de dessins doit pouvoir le vérifier.
+      for (final k in ['nom', 'cible', 'explication']) {
+        if (it[k] is! String) fail(w, '$k manquant');
+      }
+      if (it['traits'] is! int) fail(w, 'traits : nombre minimum de traits');
+    }
     if (act != 'choisir') continue;
     final pics = [it['bonne'], ...(it['autres'] as List? ?? const [])];
     if ((it['autres'] as List? ?? const []).length < 2) fail(w, 'au moins deux autres images');

@@ -263,7 +263,16 @@ class Item {
         target = j['cible'] as String?,
         image = j['image'] as String?,
         syllables = [for (final s in j['syllabes'] as List? ?? const []) s as String],
-        letter = j['lettre'] as String?;
+        letter = j['lettre'] as String?,
+        name = j['nom'] as String?,
+        minStrokes = j['traits'] as int? ?? 1;
+
+  /// Dessin (ADR 0038) : ce qu'on dessine (« un soleil »), et le nombre minimum de traits attendus.
+  final String? name;
+  final int minStrokes;
+
+  /// Dessin : noms anglais acceptés du modèle de dessins (champ `cible`, séparés par « | »).
+  List<String> get labels => (target ?? '').split('|').where((x) => x.isNotEmpty).toList();
 
   /// Lire et écrire (ADR 0031) : l'image du mot, ses syllabes orales, sa première lettre.
   final String? image, letter;
@@ -277,7 +286,7 @@ class Item {
 
   Map<String, String> get vars => {
         'texte': text,
-        'bonne': right?.name ?? '',
+        'bonne': right?.name ?? name ?? '',
         // Syllabes séparées par des virgules : la voix marque la pause, l'écrit reste lisible (« la, pin »).
         'explication': syllables.isNotEmpty ? syllables.join(', ') : explanation,
         'lettre': ?letter,
