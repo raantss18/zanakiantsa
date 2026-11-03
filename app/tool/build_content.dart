@@ -145,6 +145,12 @@ Map<String, dynamic> buildTheme(Directory dir) {
     final missing = requiredPhrases.difference(phrases.keys.toSet());
     if (missing.isNotEmpty) fail(where, 'phrases manquantes : ${missing.join(', ')}');
     phrases.forEach((k, v) => checkPhrase('$where/$k', v as String));
+    // Idée de la découverte guidée (ADR 0029) : facultative, 2–3 phrases courtes.
+    if (s.containsKey('idee')) {
+      final idee = s['idee'];
+      if (idee is! String || idee.length > 220) fail(where, 'idee : une chaîne de 220 caractères au plus');
+      checkPhrase('$where/idee', idee as String? ?? '');
+    }
     skills[s['id'] as String] = s;
   }
   final order = List<String>.from(theme['ordre'] as List);
@@ -237,6 +243,7 @@ void main(List<String> args) {
     outputs['assets/content/${theme['id']}.json'] = '${json.convert(theme)}\n';
     for (final s in theme['competences'] as List) {
       (s['phrases'] as Map).forEach((k, v) => voice.add('${s['id']}.$k;$v'));
+      if (s['idee'] != null) voice.add('${s['id']}.idee;${s['idee']}');
       for (final (i, it) in (s['items'] as List? ?? const []).indexed) {
         voice.add('${s['id']}.items.$i;${it['texte']}');
         if (it['explication'] != null) voice.add('${s['id']}.items.$i.explication;${it['explication']}');

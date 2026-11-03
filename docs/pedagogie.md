@@ -91,3 +91,14 @@
     https://www.allinschool.org/media/1986/file/%20Paper-OOSCI-if%20you-dont-understand-how-can-you-learn-2016-en.pdf (lu, partiel).
 15. Le Nestour (2021), CGD — https://www.cgdev.org/blog/new-pasec-results-show-modest-improvements-student-learning-francophone-africa (lu).
 16. Soameva et al. (2025), *J. Pendidikan Tambusai* 9(3) — https://jptam.org/index.php/jptam/article/view/33717 (lu : résumé).
+
+## Découverte guidée et erreurs expliquées (ADR 0029, 2026-11-03)
+
+- **Première rencontre d'une compétence** : l'idée (2–3 phrases, champ `idee`), puis un exemple résolu joué par
+  l'activité, puis « J'ai compris, à moi ! ». Source : effet de l'exemple résolu, Sweller & Cooper (1985), *The use
+  of worked examples as a substitute for problem solving in learning algebra*, Cognition and Instruction 2(1), 59–89.
+- **Réponse fausse** : on dit d'abord ce que la réponse montre, puis l'aide. Source : Hattie & Timperley (2007), *The
+  power of feedback*, Review of Educational Research 77(1), 81–112 (le retour efficace porte sur la tâche et la
+  démarche). Inspiration de forme : Brilliant (https://brilliant.org/help/why-brilliant), sans contenu repris.
+- **Checklist de revue d'une compétence** : a-t-elle une `idee` courte, juste et sans nouveau mot non expliqué ? Ses
+  erreurs typiques sont-elles proposées et expliquées ?

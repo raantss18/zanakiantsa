@@ -135,6 +135,29 @@ List<(Square, Square)> solutions(Board board, bool Function(Board) goal) => [
           if (goal(play(board, e.key, to))) (e.key, to),
     ];
 
+/// Pourquoi ce coup n'est pas permis (ADR 0029), en mots d'enfant ; null si on ne sait pas le dire.
+String? whyIllegal(Board board, Square from, Square to) {
+  final p = board[from]!;
+  final target = board[to];
+  if (target != null && target.white) return 'Cette case est déjà prise par une de tes pièces.';
+  if (target != null && target.kind == 'k') return 'On ne prend jamais le roi : on le met en échec.';
+  final dc = (to.$1 - from.$1).abs(), dr = (to.$2 - from.$2).abs();
+  final straight = dc == 0 || dr == 0, diagonal = dc == dr;
+  // Sur un échiquier vide le coup serait permis : une pièce barre le chemin.
+  if (p.kind != 'p' && attacks(p.kind, from, const {}).contains(to)) {
+    return p.kind == 'k' ? 'Le roi ne va pas à côté du roi noir.' : 'Une pièce barre le chemin : on ne saute pas par-dessus.';
+  }
+  return switch (p.kind) {
+    'r' => diagonal ? 'La tour va tout droit, jamais en biais.' : 'La tour va tout droit, sur sa ligne ou sa colonne.',
+    'b' => straight ? 'Le fou va en biais, jamais tout droit.' : 'Le fou reste sur sa diagonale.',
+    'q' => 'La dame va tout droit ou en biais, mais toujours en ligne.',
+    'k' => "Le roi n'avance que d'une case.",
+    'n' => 'Le cavalier saute en L : deux cases, puis une sur le côté.',
+    'p' => to.$2 < from.$2 ? 'Le pion ne recule jamais.' : 'Le pion avance tout droit et prend en biais.',
+    _ => null,
+  };
+}
+
 class StarPuzzle {
   const StarPuzzle(this.start, this.stars);
   final Square start;

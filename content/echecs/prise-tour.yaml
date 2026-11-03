@@ -5,6 +5,7 @@ prerequis: [pion-prise]
 programme: { source: fide, texte: "3.1.1 : if a piece moves to a square occupied by an opponent's piece the latter is captured and removed. 3.5 : the rook may not move over any intervening pieces." }
 activite: echecs
 parametres: { mode: prise, piece: r, etoiles: 3 }
+idee: "Pour prendre une pièce, on va sur sa case. La tour s'arrête sur la première pièce qu'elle rencontre."
 phrases:
   consigne: "Pour prendre une pièce, on va sur sa case. La tour ne saute pas par-dessus les pièces."
   question: "Prends tous les pions noirs avec la tour."

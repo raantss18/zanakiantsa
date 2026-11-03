@@ -27,7 +27,15 @@ import 'universe.dart';
 /// Gère une question : essais, aide qui monte, démonstration ou indice final, retour, journal (ADR 0006–0008), et ce
 /// que le bandeau narrateur affiche (ADR 0016).
 class Attempt extends ChangeNotifier {
-  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect);
+  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect, {this.example = false}) : finished = example;
+
+  /// Découverte guidée (ADR 0029) : l'idée, puis l'exemple résolu sous les yeux de l'enfant, sans réponse à donner
+  /// ni journal ; « J'ai compris » mène aux vraies questions.
+  final bool example;
+
+  /// L'exemple est montré jusqu'au bout : le bouton « J'ai compris » apparaît.
+  bool exampleDone = false;
+  bool _exampleStarted = false;
   final AppState app;
   final Skill skill;
   final Question question;
@@ -40,7 +48,7 @@ class Attempt extends ChangeNotifier {
 
   int misses = 0;
   bool busy = false;
-  bool finished = false;
+  bool finished;
 
   /// Vrai quand l'activité doit montrer la bonne réponse (moins de 6 ans, 3 essais manqués).
   bool demonstrate = false;
@@ -65,15 +73,21 @@ class Attempt extends ChangeNotifier {
   /// Domaine d'anglais : les mots entre « » sont dits par la voix anglaise (ADR 0022).
   bool get _english => skill.params['langue'] == 'en';
 
-  Future<void> say(String key, {bool force = false}) =>
-      _english ? app.voice.sayMixed(phrase(key), force: force) : app.voice.say(phrase(key), id: voiceId(key), force: force);
+  Future<void> say(String key, {bool force = false}) => example && key == 'consigne'
+      ? Future.value() // pendant l'exemple, la voix raconte l'idée et la démonstration, pas la consigne
+      : _english ? app.voice.sayMixed(phrase(key), force: force) : app.voice.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
   Future<void> show(String key) {
     statementKey = key;
     helpText = null;
     notifyListeners();
-    return say(key);
+    final spoken = say(key);
+    if (example && !_exampleStarted) {
+      _exampleStarted = true;
+      spoken.then((_) => _runExample());
+    }
+    return spoken;
   }
 
   /// « Réécouter » : une demande explicite, dite même voix coupée (ADR 0025).
@@ -90,7 +104,26 @@ class Attempt extends ChangeNotifier {
         at: DateTime.now(),
       ));
 
-  Future<void> submit(bool ok) async {
+  /// L'idée (si le contenu en a une), puis la démonstration jouée par l'activité, puis « J'ai compris ».
+  Future<void> _runExample() async {
+    await Future<void>.delayed(const Duration(milliseconds: 500));
+    final idea = skill.idea == null ? null : fill(skill.idea!, question, words, vars: skill.vars(question));
+    if (idea != null) {
+      helpText = idea;
+      notifyListeners();
+      await (_english ? app.voice.sayMixed(idea) : app.voice.say(idea));
+    }
+    demonstrate = true;
+    helpText = phrase('demonstration');
+    notifyListeners();
+    await say('demonstration');
+    await Future<void>.delayed(const Duration(milliseconds: 1200));
+    exampleDone = true;
+    notifyListeners();
+  }
+
+  /// [why] : ce que cette réponse-là montre (« 72, ce serait 7 paquets de dix… »), dit avant l'aide (ADR 0029).
+  Future<void> submit(bool ok, {String? why}) async {
     if (busy || finished) return;
     busy = true;
     _helpTimer?.cancel();
@@ -113,9 +146,9 @@ class Attempt extends ChangeNotifier {
       misses++;
       switch (helpAfter(misses)) {
         case Help.hint:
-          await _help('indice');
+          await _help('indice', why: why);
         case Help.example:
-          await _help('exemple');
+          await _help('exemple', why: why);
         default:
           finished = true;
           if (afterLastMiss(app.age) == AfterLastMiss.demonstration) {
@@ -140,10 +173,22 @@ class Attempt extends ChangeNotifier {
     if (finished) onDone();
   }
 
-  Future<void> _help(String key) async {
-    final text = helpText = phrase(key);
-    notifyListeners();
-    await app.voice.say(app.common.text('encore'), id: 'commun.encore');
+  Future<void> _help(String key, {String? why}) async {
+    // D'abord ce que montre la réponse (si on sait le dire), puis l'aide : une idée à la fois, en grand dans la bulle.
+    if (why == null) {
+      helpText = phrase(key);
+      notifyListeners();
+      await app.voice.say(app.common.text('encore'), id: 'commun.encore');
+    } else {
+      helpText = why;
+      notifyListeners();
+      await (_english ? app.voice.sayMixed(why) : app.voice.say(why));
+      // Voix coupée : on laisse le temps de lire l'explication avant l'aide.
+      if (!app.voice.voiceOn) await Future<void>.delayed(const Duration(seconds: 3));
+      helpText = phrase(key);
+      notifyListeners();
+    }
+    final text = helpText;
     await say(key);
     // L'aide reste quelques secondes après la voix, puis l'énoncé revient.
     _helpTimer = Timer(const Duration(seconds: 5), () {
@@ -204,11 +249,24 @@ class _SessionPageState extends State<SessionPage> {
     }
   }
 
+  /// Compétences déjà présentées dans cette séance (découverte guidée, ADR 0029).
+  final _introduced = <String>{};
+
   Attempt _next() {
     final skill = app.skill(plan[index]);
     final q = skill.draw(_rand, last: _last);
     _last = q;
-    return Attempt(app, skill, q, _advance, () => setState(() => stars++));
+    // Première rencontre (rien au journal) : d'abord l'idée et un exemple résolu.
+    final example = _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id);
+    return Attempt(app, skill, q, _advance, () => setState(() => stars++), example: example);
+  }
+
+  /// « J'ai compris » : l'exemple laisse la place à une vraie question de la même compétence.
+  void _understood() {
+    final old = attempt;
+    setState(() => attempt = _next());
+    old?.dispose();
+    _music();
   }
 
   Future<void> _advance() async {
@@ -295,26 +353,58 @@ class _SessionPageState extends State<SessionPage> {
                     )
                   : Stack(children: [
                       Positioned.fill(
+                        // Pendant l'exemple, l'activité descend sous la pastille « Nouveau » (pas de chevauchement).
+                        top: a.example ? 52 : 0,
                         child: switch (a.skill.activity) {
-                          'denombrer' => CountActivity(key: ValueKey(index), attempt: a),
-                          'composer' => ComposeActivity(key: ValueKey(index), attempt: a),
-                          'choisir' => ChooseActivity(key: ValueKey(index), attempt: a),
-                          'motif' => MotifActivity(key: ValueKey(index), attempt: a),
-                          'ecouter' => ListenActivity(key: ValueKey(index), attempt: a),
-                          'echecs' => ChessActivity(key: ValueKey(index), attempt: a),
-                          'batonnets' when a.skill.params['mode'] == 'casser' => BreakTenActivity(key: ValueKey(index), attempt: a),
-                          'batonnets' => SticksActivity(key: ValueKey(index), attempt: a),
-                          'paquets' => PacketsActivity(key: ValueKey(index), attempt: a),
-                          'groupes' || 'tables' => GroupsActivity(key: ValueKey(index), attempt: a),
-                          'partage' => ShareActivity(key: ValueKey(index), attempt: a),
-                          'programmer' => CodeActivity(key: ValueKey(index), attempt: a),
-                          'solide' => SolidActivity(key: ValueKey(index), attempt: a),
-                          'planetes' => PlanetsActivity(key: ValueKey(index), attempt: a),
-                          'corps' => BodyActivity(key: ValueKey(index), attempt: a),
-                          _ => CalcActivity(key: ValueKey(index), attempt: a),
+                          'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
+                          'composer' => ComposeActivity(key: ObjectKey(a), attempt: a),
+                          'choisir' => ChooseActivity(key: ObjectKey(a), attempt: a),
+                          'motif' => MotifActivity(key: ObjectKey(a), attempt: a),
+                          'ecouter' => ListenActivity(key: ObjectKey(a), attempt: a),
+                          'echecs' => ChessActivity(key: ObjectKey(a), attempt: a),
+                          'batonnets' when a.skill.params['mode'] == 'casser' => BreakTenActivity(key: ObjectKey(a), attempt: a),
+                          'batonnets' => SticksActivity(key: ObjectKey(a), attempt: a),
+                          'paquets' => PacketsActivity(key: ObjectKey(a), attempt: a),
+                          'groupes' || 'tables' => GroupsActivity(key: ObjectKey(a), attempt: a),
+                          'partage' => ShareActivity(key: ObjectKey(a), attempt: a),
+                          'programmer' => CodeActivity(key: ObjectKey(a), attempt: a),
+                          'solide' => SolidActivity(key: ObjectKey(a), attempt: a),
+                          'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
+                          'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
+                          _ => CalcActivity(key: ObjectKey(a), attempt: a),
                         },
                       ),
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
+                      if (a.example) ...[
+                        Positioned(left: 12, top: 4, child: _NewBadge(title: a.skill.title)),
+                        Positioned(
+                          left: 0,
+                          right: 0,
+                          bottom: 16,
+                          child: ListenableBuilder(
+                            listenable: a,
+                            builder: (_, _) => AnimatedOpacity(
+                              opacity: a.exampleDone ? 1 : 0,
+                              duration: const Duration(milliseconds: 300),
+                              child: IgnorePointer(
+                                ignoring: !a.exampleDone,
+                                child: Center(
+                                  child: FilledButton.icon(
+                                    style: FilledButton.styleFrom(
+                                      backgroundColor: green,
+                                      minimumSize: const Size(260, 76),
+                                      textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700),
+                                    ),
+                                    onPressed: _understood,
+                                    icon: const Icon(Icons.check_rounded, size: 40),
+                                    label: const Text("J'ai compris, à moi !"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ]),
             ),
           ]),
@@ -602,4 +692,25 @@ class MusicScope extends InheritedWidget {
 
   @override
   bool updateShouldNotify(MusicScope old) => false;
+}
+
+/// Pastille « Nouveau » au-dessus de l'exemple résolu : on voit qu'on découvre, pas qu'on est évalué.
+class _NewBadge extends StatelessWidget {
+  const _NewBadge({required this.title});
+  final String title;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        constraints: const BoxConstraints(maxWidth: 420),
+        padding: const EdgeInsets.fromLTRB(10, 6, 14, 6),
+        decoration: BoxDecoration(color: Brand.yellow, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.auto_awesome_rounded, color: ink, size: 24),
+          const SizedBox(width: 6),
+          Flexible(
+            child: Text('Nouveau : $title', maxLines: 1, overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
+          ),
+        ]),
+      );
 }

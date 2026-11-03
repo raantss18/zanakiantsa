@@ -5,6 +5,7 @@ prerequis: [mat-dame]
 programme: { source: fide, texte: "5.1.1 : the game is won by the player who has checkmated his/her opponent's king." }
 activite: echecs
 parametres: { mode: mat, piece: r, etoiles: 3 }
+idee: "La tour attaque toute la rangée du bord. Ton roi garde les cases devant le roi noir : il ne peut plus s'échapper."
 phrases:
   consigne: "Échec et mat : le roi est en échec et ne peut plus aller nulle part. La partie est gagnée !"
   question: "Trouve le coup qui fait échec et mat."

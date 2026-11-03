@@ -91,7 +91,7 @@ class _ChessActivityState extends State<ChessActivity> {
     if (from == null) return;
     if (!legalMoves(board, from).contains(s)) {
       setState(() => wrong = s);
-      a.submit(false);
+      a.submit(false, why: whyIllegal(board, from, s));
       return;
     }
     setState(() {
@@ -107,6 +107,12 @@ class _ChessActivityState extends State<ChessActivity> {
         if (!_blackPawnsLeft) a.submit(true);
       default:
         final ok = mode == 'echec' ? blackInCheck(board) : blackMated(board);
+        // Ce que montre ce coup (ADR 0029) : pas d'échec, ou un échec dont le roi noir peut sortir.
+        final why = ok
+            ? null
+            : blackInCheck(board)
+                ? 'Échec ! Mais le roi noir peut encore se sauver : regarde les cases autour de lui.'
+                : "Ce coup n'attaque pas le roi noir.";
         if (ok) {
           a.submit(true);
         } else {
@@ -118,7 +124,7 @@ class _ChessActivityState extends State<ChessActivity> {
             final whites = start.entries.where((e) => e.value.white).toList();
             selected = whites.length == 1 ? whites.single.key : null;
           });
-          a.submit(false);
+          a.submit(false, why: why);
         }
     }
   }

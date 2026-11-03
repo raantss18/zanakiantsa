@@ -5,6 +5,7 @@ prerequis: [echec-dame]
 programme: { source: fide, texte: "3.9.1 : the king is said to be 'in check' if it is attacked by one or more of the opponent's pieces." }
 activite: echecs
 parametres: { mode: echec, piece: n, etoiles: 3 }
+idee: "Le cavalier met en échec en attaquant le roi en forme de L."
 phrases:
   consigne: "Le roi est en échec quand une pièce adverse pourrait le prendre au coup suivant."
   question: "Joue un coup du cavalier qui met le roi noir en échec."

@@ -246,6 +246,33 @@ void main() {
     });
   });
 
+  group('Découverte guidée et erreurs expliquées (ADR 0029)', () {
+    test('chaque idée se remplit sans variable restante', () {
+      const w = Words(singular: 'fleur', plural: 'fleurs', feminine: true, container: 'le panier', firstName: 'Lila');
+      final r = Random(5);
+      for (final s in topics().expand((t) => t.skills).where((s) => s.idea != null)) {
+        final q = s.draw(r);
+        expect(fill(s.idea!, q, w, vars: s.vars(q)), isNot(contains('{')), reason: s.id);
+      }
+    });
+    test('les erreurs typiques sont nommées', () {
+      expect(explainNumber('batonnets', 'lire', 27, 2, 7, 27, 72), '72, ce serait 7 paquets de dix et 2 bâtonnets seuls.');
+      expect(explainNumber('batonnets', 'lire', 31, 3, 1, 31, 13), '13, ce serait 1 paquet de dix et 3 bâtonnets seuls.');
+      expect(explainNumber('groupes', null, 12, 3, 4, 12, 7), contains('Tu as ajouté 3 et 4'));
+      expect(explainNumber('paquets', null, 12, 3, 4, 3, 4), contains('dans chaque paquet'));
+      expect(explainNumber('batonnets', 'casser', 40, 4, 6, 34, 44), contains('paquets de dix'));
+      expect(explainNumber('tables', null, 30, 10, 3, 30, 31), startsWith('Presque'));
+    });
+    test('un coup interdit est expliqué selon la pièce', () {
+      Board one(String k) => {(3, 3): Piece(k), (7, 7): const Piece('k', white: false)};
+      expect(whyIllegal(one('r'), (3, 3), (5, 5)), contains('jamais en biais'));
+      expect(whyIllegal(one('b'), (3, 3), (3, 6)), contains('jamais tout droit'));
+      expect(whyIllegal(one('n'), (3, 3), (3, 5)), contains('en L'));
+      expect(whyIllegal({(0, 0): const Piece('r'), (0, 3): const Piece('p', white: false)}, (0, 0), (0, 5)), contains('barre le chemin'));
+      expect(whyIllegal({(3, 1): const Piece('p')}, (3, 1), (3, 0)), contains('ne recule jamais'));
+    });
+  });
+
   group('Trames sonores (ADR 0025)', () {
     test('une boucle de 16 s par monde, sans saturation, silencieuse au raccord, toujours la même', () {
       for (final w in ['robots', 'voitures', 'espace', 'fees', 'mode', 'princesses']) {

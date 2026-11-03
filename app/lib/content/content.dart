@@ -63,7 +63,11 @@ class Skill {
         activity = j['activite'] as String,
         params = Map<String, dynamic>.from(j['parametres'] as Map),
         phrases = Map<String, String>.from(j['phrases'] as Map),
-        items = [for (final i in j['items'] as List? ?? const []) Item(Map<String, dynamic>.from(i as Map))];
+        items = [for (final i in j['items'] as List? ?? const []) Item(Map<String, dynamic>.from(i as Map))],
+        idea = j['idee'] as String?;
+
+  /// L'idée en 2–3 phrases, présentée avant l'exemple résolu à la découverte de la compétence (ADR 0029).
+  final String? idea;
 
   final String id, title, level, activity;
   final List<String> prerequisites;

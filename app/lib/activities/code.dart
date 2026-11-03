@@ -82,11 +82,17 @@ class _CodeActivityState extends State<CodeActivity> {
       await Future<void>.delayed(const Duration(milliseconds: 700));
     }
     if (!mounted) return;
+    // Ce que montre l'essai (ADR 0029) : un choc, ou un arrêt ailleurs que sur l'objet.
+    final why = ok
+        ? null
+        : states.length < program.length + 1
+            ? "Le robot s'est cogné au bloc ${states.length} : regarde où il était juste avant."
+            : "Le robot s'arrête ailleurs que sur l'objet : il manque un bloc, ou il y en a un de trop.";
     setState(() {
       running = null;
       if (!ok) robot = maze.start;
     });
-    if (!demo) a.submit(ok);
+    if (!demo) a.submit(ok, why: why);
   }
 
   IconData _icon(Op op) => switch (op) {

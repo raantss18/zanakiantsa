@@ -11,11 +11,40 @@ import '../ui/universe.dart';
 /// programme : bâtonnets assemblés en paquets de dix, objets distribués un à un.
 
 /// Trois réponses : la bonne et deux nombres proches et plausibles (jamais négatifs, toujours différents).
+/// Les erreurs typiques de [near] (chiffres inversés, addition au lieu de multiplication…) passent en premier : ce
+/// sont elles qu'on veut voir et expliquer (ADR 0029).
 List<int> numberChoices(int right, int seed, {List<int> near = const []}) {
   final r = Random(seed);
-  final pool = <int>{...near, right + 1, right - 1, right + 10, right - 10, right + 2}..removeWhere((v) => v < 0 || v == right);
-  final others = pool.toList()..shuffle(r);
-  return [right, ...others.take(2)]..shuffle(r);
+  bool ok(int v) => v >= 0 && v != right;
+  final first = {for (final v in near) if (ok(v)) v}.toList();
+  final rest = ({right + 1, right - 1, right + 10, right - 10, right + 2}..removeWhere((v) => !ok(v) || first.contains(v))).toList()..shuffle(r);
+  return [right, ...[...first, ...rest].take(2)]..shuffle(r);
+}
+
+/// Ce que montre une réponse-nombre fausse (ADR 0029) : l'erreur probable, dite simplement, sans « faux ». null si on
+/// ne sait pas l'expliquer (l'aide habituelle suffit alors).
+String? explainNumber(String activity, String? mode, int n, int a, int b, int right, int v) {
+  String plural(int k, String one, String many) => k <= 1 ? '$k $one' : '$k $many';
+  switch (activity) {
+    case 'batonnets' when mode == 'casser':
+      if (v == right + 10 || v == right - 10) return 'Regarde bien les paquets de dix qui restent.';
+      if (v == n + b) return "Tu as ajouté $b. Ici, on en enlève $b.";
+    case 'batonnets':
+      if (b > 0 && v == b * 10 + a && v != n) {
+        return '$v, ce serait ${plural(b, 'paquet', 'paquets')} de dix et ${plural(a, 'bâtonnet seul', 'bâtonnets seuls')}.';
+      }
+      if ((v - n).abs() == 10) return 'Recompte les paquets : chacun vaut dix.';
+      if ((v - n).abs() <= 2) return 'Presque ! Recompte les bâtonnets seuls.';
+    case 'groupes' || 'tables':
+      if (v == a + b && v != n) return "Tu as ajouté $a et $b. Mais il y a $a fois $b : compte tous les objets.";
+      if (v == n + b || v == n - b) return 'Il y a une rangée de ${v > n ? 'trop' : 'moins'} : recompte les paquets.';
+      if ((v - n).abs() <= 2) return 'Presque ! Compte encore, un par un.';
+    case 'paquets':
+      if (v == b) return "$b, c'est ce qu'il y a dans chaque paquet. On cherche combien de paquets.";
+      if ((v - a).abs() == 1) return 'Presque ! Touche chaque paquet en comptant.';
+  }
+  if ((v - right).abs() == 1) return 'Presque ! Compte encore une fois.';
+  return null;
 }
 
 /// Rangée de trois boutons-nombres ; la bonne réponse est montrée en démonstration ou une fois trouvée.
@@ -45,7 +74,9 @@ class _NumberChoicesState extends State<NumberChoices> {
                 ? null
                 : () {
                     if (v != widget.right) setState(() => tried.add(v));
-                    a.submit(v == widget.right);
+                    final q = a.question;
+                    a.submit(v == widget.right,
+                        why: v == widget.right ? null : explainNumber(a.skill.activity, a.skill.params['mode'] as String?, q.n, q.a, q.b, widget.right, v));
                   },
           ),
       ]),
