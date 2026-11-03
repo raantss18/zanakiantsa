@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -219,30 +220,64 @@ class Attempt extends ChangeNotifier {
   }
 }
 
+/// Une séance laissée en cours (ADR 0039) : le plan, la question où reprendre, les étoiles déjà gagnées. Gardée par
+/// enfant et par domaine jusqu'à la fin de la séance, même si l'enfant sort, change de domaine ou ferme l'app.
+class SessionResume {
+  const SessionResume(this.plan, this.index, this.stars);
+  final List<String> plan;
+  final int index, stars;
+
+  static String _key(String topic) => 'reprise_$topic';
+
+  Future<void> save(AppState app, String topic) =>
+      app.store.set(_key(topic), jsonEncode({'plan': plan, 'index': index, 'stars': stars}));
+
+  static Future<void> clear(AppState app, String topic) => app.store.set(_key(topic), '');
+
+  /// La reprise de ce domaine, si elle est encore valable (toutes ses compétences existent toujours).
+  static Future<SessionResume?> load(AppState app, String topic) async {
+    final raw = await app.store.get(_key(topic));
+    if (raw == null || raw.isEmpty) return null;
+    try {
+      final j = jsonDecode(raw) as Map<String, dynamic>;
+      final r = SessionResume(List<String>.from(j['plan'] as List), j['index'] as int, j['stars'] as int);
+      final ids = {for (final s in app.topic(topic).skills) s.id};
+      if (r.index <= 0 || r.index >= r.plan.length || !r.plan.every(ids.contains)) return null;
+      return r;
+    } catch (_) {
+      return null;
+    }
+  }
+}
+
 /// Essais seulement : `--dart-define=DEV_SKILL=<id>,<id>…` fait jouer ces compétences, une question chacune. Vide en
 /// version publiée.
 const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key, required this.topic});
+  const SessionPage({super.key, required this.topic, this.resume});
   final String topic;
+
+  /// Séance laissée en cours dans ce domaine : on la reprend à la même question (voir [SessionResume]).
+  final SessionResume? resume;
   @override
   State<SessionPage> createState() => _SessionPageState();
 }
 
 class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
-  late List<String> plan =
-      devSkill.isEmpty ? app.progressOf(app.topic(widget.topic)).plan(DateTime.now()) : devSkill.split(",");
+  late List<String> plan = devSkill.isNotEmpty
+      ? devSkill.split(",")
+      : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
   late String? _target = app.progressOf(app.topic(widget.topic)).newSkill;
   late final Rewards before = app.rewards;
   final _rand = Random();
   final _started = DateTime.now();
-  int index = 0;
-  int stars = 0;
+  late int index = widget.resume?.index ?? 0;
+  late int stars = widget.resume?.stars ?? 0;
   Attempt? attempt;
   Question? _last;
   bool over = false;
@@ -298,6 +333,7 @@ class _SessionPageState extends State<SessionPage> {
     await Future<void>.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
     if (index + 1 >= plan.length) {
+      if (devSkill.isEmpty) SessionResume.clear(app, widget.topic);
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
       app.voice.stopMusic();
@@ -319,6 +355,8 @@ class _SessionPageState extends State<SessionPage> {
     });
     old?.dispose();
     _music();
+    // Le point de reprise : si l'enfant sort maintenant, il reviendra à cette question.
+    if (devSkill.isEmpty) SessionResume(plan, index, stars).save(app, widget.topic);
   }
 
   @override

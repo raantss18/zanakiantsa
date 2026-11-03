@@ -25,7 +25,10 @@ Future<void> openTopic(BuildContext context, AppState app, String topicId) async
     final go = await Navigator.of(context).push<bool>(MaterialPageRoute(builder: (_) => TopicIntro(topic: t)));
     if (go != true || !context.mounted) return;
   }
-  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => topicId == 'dessin' ? const DrawPage() : SessionPage(topic: topicId)));
+  // Séance laissée en cours : on la reprend où l'enfant s'était arrêté (ADR 0039).
+  final resume = topicId == 'dessin' ? null : await SessionResume.load(app, topicId);
+  if (!context.mounted) return;
+  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => topicId == 'dessin' ? const DrawPage() : SessionPage(topic: topicId, resume: resume)));
   await app.refresh();
 }
 

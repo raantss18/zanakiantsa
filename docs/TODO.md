@@ -149,12 +149,12 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    l'état « occupé » est toujours libéré (`test/sound_bounded_test.dart`).
 2. ✅ **Voix** : le français dit avec l'accent anglais après l'anglais — un seul moteur de synthèse, langue réglée
    avant chaque phrase (ADR 0037). ⏳ à confirmer à l'oreille sur le téléphone.
-3. ⏳ **Reprendre où l'enfant s'est arrêté** : sortir d'un domaine en cours de séance puis y revenir reprend à la même
+3. ✅ **Reprendre où l'enfant s'est arrêté** (ADR 0039) : sortir d'un domaine en cours de séance puis y revenir reprend à la même
    question (même plan, mêmes étoiles), sans recommencer au début.
 4. ✅ **Ennui** : séance entrelacée (une question sur trois sur ce qui est acquis), compétence acquise = on passe à la
    suivante (ADR 0037) ; corps humain posé par l'usage et les vêtements.
 5. ✅ **Consignes** : toutes réécrites — quoi faire, comment répondre, quand c'est réussi (ADR 0037).
-6. 🔄 **Dessin** : sujets précis avec critères ; vérifié (traits, taille, puis modèle de dessins sur l'appareil) ;
+6. ✅ **Dessin** : sujets précis avec critères ; vérifié (traits, taille, puis modèle de dessins sur l'appareil) ;
    pas reconnu → « On dirait plutôt… » et ce qu'il manque ; plus de « Bravo » pour un gribouillis (ADR 0038).
 7. ✅ **Fin de série** : « Continuer » (flèche vers l'avant, « nouvelles questions ») au lieu de « Encore » ↻.
 8. ✅ **Bandeau « Nouveau »** qui débordait sur téléphone.
