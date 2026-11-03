@@ -1,0 +1,56 @@
+id: lire-phrases
+titre: "Lire et comprendre une phrase"
+niveau: CE1
+prerequis: [lire-mots]
+programme: { source: cycle2, texte: "Il lit des consignes, des phrases et de courts textes déchiffrables avec exactitude." }
+activite: choisir
+parametres: { lire: true }
+idee: "Pour comprendre une phrase, on la lit jusqu'au point, puis on se demande : de qui ou de quoi parle-t-elle ?"
+phrases:
+  consigne: "Lis la phrase toute seule, puis touche l'image qui va avec."
+  question: "Lis cette phrase."
+  indice: "Relis la phrase en entier : quel mot dit ce qu'on voit sur l'image ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : la phrase parle de {bonne}."
+  bravo: "Oui ! Tu as lu : « {texte} »"
+items:
+  - texte: "Le chat dort sur le lit."
+    bonne: ["1f6cf", "le lit"]
+    autres: [["26f5", "le bateau"], ["1f680", "la fusée"]]
+    explication: ""
+  - texte: "La fusée part vers la lune."
+    bonne: ["1f680", "la fusée"]
+    autres: [["1f6b2", "le vélo"], ["1f3e0", "la maison"]]
+    explication: ""
+  - texte: "Le poisson nage dans l'eau."
+    bonne: ["1f41f", "le poisson"]
+    autres: [["1f426", "l'oiseau"], ["1f40c", "l'escargot"]]
+    explication: ""
+  - texte: "Le lapin mange une carotte."
+    bonne: ["1f955", "la carotte"]
+    autres: [["1f356", "la viande"], ["1f36c", "le bonbon"]]
+    explication: ""
+  - texte: "Papa a un chapeau sur la tête."
+    bonne: ["1f3a9", "le chapeau"]
+    autres: [["1f45f", "la chaussure"], ["1f9f3", "la valise"]]
+    explication: ""
+  - texte: "La tortue marche très lentement."
+    bonne: ["1f422", "la tortue"]
+    autres: [["1f40e", "le cheval"], ["1f998", "le kangourou"]]
+    explication: ""
+  - texte: "Il pleut : je prends mon parapluie."
+    bonne: ["2602", "le parapluie"]
+    autres: [["2600", "le soleil"], ["26bd", "le ballon"]]
+    explication: ""
+  - texte: "Le bateau flotte sur la mer."
+    bonne: ["26f5", "le bateau"]
+    autres: [["1f697", "la voiture"], ["1f681", "l'hélicoptère"]]
+    explication: ""
+  - texte: "Ma sœur lit un livre le soir."
+    bonne: ["1f4d6", "le livre"]
+    autres: [["1f4fa", "la télévision"], ["26bd", "le ballon"]]
+    explication: ""
+  - texte: "L'abeille vole vers la fleur."
+    bonne: ["1f337", "la fleur"]
+    autres: [["1f34e", "la pomme"], ["1f333", "l'arbre"]]
+    explication: ""

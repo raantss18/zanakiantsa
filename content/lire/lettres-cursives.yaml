@@ -1,0 +1,15 @@
+id: lettres-cursives
+titre: "Reconnaître les lettres attachées"
+niveau: GS
+prerequis: [lettres-minuscules]
+programme: { source: c1, texte: "Distinguer des lettres visuellement proches (b/d, c/e/o, p/q) grâce à leur écriture cursive et les nommer correctement." }
+activite: lettre
+parametres: { mode: cursive, lettres: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] }
+idee: "L'écriture attachée, ou cursive, est celle qu'on écrit à la main à l'école. Chaque lettre a sa forme attachée."
+phrases:
+  consigne: "Trouve la même lettre, en écriture attachée."
+  question: "Où est « {lettre} » en écriture attachée ?"
+  indice: "Regarde le début et la fin de la lettre : ronde, avec une boucle, avec une barre ?"
+  exemple: "Essaie une autre lettre."
+  demonstration: "Regarde : « {lettre} » en écriture attachée."
+  bravo: "Oui ! C'est « {lettre} » en écriture attachée."

@@ -1,0 +1,52 @@
+id: debut
+titre: "Entendre le premier son d'un mot"
+niveau: GS
+prerequis: [rimes]
+programme: { source: c1, texte: "Entendre, discriminer, manipuler des phonèmes : trouver l’intrus à l’initiale entre sac/Sacha/cartable." }
+activite: choisir
+parametres: {}
+idee: "Chaque mot commence par un son. Dis le mot doucement et écoute bien le tout début."
+phrases:
+  consigne: "Écoute bien le début des mots."
+  question: "Quel mot commence comme « {texte} » ?"
+  indice: "Dis le premier mot très doucement, en traînant le début."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "soleil"
+    bonne: ["1f332", "le sapin"]
+    autres: [["1f404", "la vache"], ["1f319", "la lune"]]
+    explication: "« soleil » et « sapin » commencent par le même son."
+  - texte: "vache"
+    bonne: ["1f6b2", "le vélo"]
+    autres: [["1f408", "le chat"], ["1f3e0", "la maison"]]
+    explication: "« vache » et « vélo » commencent par le même son."
+  - texte: "lune"
+    bonne: ["1f407", "le lapin"]
+    autres: [["1f916", "le robot"], ["1f680", "la fusée"]]
+    explication: "« lune » et « lapin » commencent par le même son."
+  - texte: "maison"
+    bonne: ["1f411", "le mouton"]
+    autres: [["1f407", "le lapin"], ["1f408", "le chat"]]
+    explication: "« maison » et « mouton » commencent par le même son."
+  - texte: "fusée"
+    bonne: ["1f41c", "la fourmi"]
+    autres: [["1f332", "le sapin"], ["1f43b", "l'ours"]]
+    explication: "« fusée » et « fourmi » commencent par le même son."
+  - texte: "robot"
+    bonne: ["1f98a", "le renard"]
+    autres: [["1f319", "la lune"], ["1f404", "la vache"]]
+    explication: "« robot » et « renard » commencent par le même son."
+  - texte: "chat"
+    bonne: ["1f3a9", "le chapeau"]
+    autres: [["1f45c", "le sac"], ["1f319", "la lune"]]
+    explication: "« chat » et « chapeau » commencent par le même son."
+  - texte: "papillon"
+    bonne: ["1f34e", "la pomme"]
+    autres: [["1f422", "la tortue"], ["1f319", "la lune"]]
+    explication: "« papillon » et « pomme » commencent par le même son."
+  - texte: "banane"
+    bonne: ["26f5", "le bateau"]
+    autres: [["1f34e", "la pomme"], ["1f404", "la vache"]]
+    explication: "« banane » et « bateau » commencent par le même son."

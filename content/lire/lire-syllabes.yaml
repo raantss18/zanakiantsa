@@ -1,0 +1,15 @@
+id: lire-syllabes
+titre: "Lire des syllabes"
+niveau: CP
+prerequis: [premiere-lettre]
+programme: { source: cycle2, texte: "Déchiffrer des syllabes, des mots puis des phrases en fonction de la progression de l’apprentissage des CGP." }
+activite: lettre
+parametres: { mode: syllabe, consonnes: [m, l, r, s, f, v, n], voyelles: [a, i, o, u, é] }
+idee: "Une consonne et une voyelle s'attachent pour faire une syllabe : m et a, ça fait « ma »."
+phrases:
+  consigne: "Écoute la syllabe, puis touche-la."
+  question: "Touche la syllabe « {lettre} »."
+  indice: "Regarde la première lettre, puis la voyelle qui suit."
+  exemple: "Essaie une autre syllabe."
+  demonstration: "Regarde : « {lettre} » s'écrit comme ça."
+  bravo: "Oui ! Tu as lu « {lettre} »."

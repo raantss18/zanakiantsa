@@ -1,0 +1,23 @@
+id: lire
+titre: Lire et écrire
+nom: "Lire et écrire"
+icone: "1f4d6"
+ages: [4, 8]
+# Maternelle (version consolidée 2026) : « Passer de l'oral à l'écrit : se préparer à apprendre à lire » p. 12-16 et
+# « … à apprendre à écrire » p. 17-20. CP-CE1 : programme de français du cycle 2 (BOENJS du 31 octobre 2024), annexe 3.
+# Syllabes comptées à l'oral ; mots ambigus écartés (lion, avion, camion). Consultés le 2026-11-03.
+sources:
+  c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+  cycle2: "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf"
+ordre: [syllabes, rimes, debut, lettres-capitales, lettres-minuscules, premiere-lettre, lettres-cursives, tracer-capitales, lire-syllabes, tracer-cursive, lire-mots, lire-phrases]
+
+# Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
+intro:
+  - texte: "Pour lire, on écoute les sons des mots."
+    images: ["1f442", "1f4d6"]
+  - texte: "Chaque lettre a un nom et un son : la lettre s fait « sss »."
+    images: ["1f40d"]
+    grand: "s"
+  - texte: "On attache les sons : m et a, ça fait « ma » !"
+    images: []
+    grand: "m a → ma"

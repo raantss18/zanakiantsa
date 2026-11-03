@@ -1,0 +1,48 @@
+id: rimes
+titre: "Trouver les mots qui riment"
+niveau: MS
+prerequis: [syllabes]
+programme: { source: c1, texte: "Repérer et produire des rimes et des assonances." }
+activite: choisir
+parametres: {}
+idee: "Deux mots riment quand ils finissent par le même son, comme chat et rat."
+phrases:
+  consigne: "Écoute bien la fin des mots."
+  question: "Quel mot rime avec « {texte} » ?"
+  indice: "Dis les mots à voix haute et écoute comment ils finissent."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "chat"
+    bonne: ["1f400", "le rat"]
+    autres: [["1f407", "le lapin"], ["1f34e", "la pomme"]]
+    explication: "« chat » et « rat » finissent pareil."
+  - texte: "bateau"
+    bonne: ["1f382", "le gâteau"]
+    autres: [["1f408", "le chat"], ["1f319", "la lune"]]
+    explication: "« bateau » et « gâteau » finissent pareil."
+  - texte: "lapin"
+    bonne: ["1f332", "le sapin"]
+    autres: [["1f404", "la vache"], ["1f916", "le robot"]]
+    explication: "« lapin » et « sapin » finissent pareil."
+  - texte: "maison"
+    bonne: ["1f41f", "le poisson"]
+    autres: [["1f319", "la lune"], ["1f408", "le chat"]]
+    explication: "« maison » et « poisson » finissent pareil."
+  - texte: "chapeau"
+    bonne: ["1f6b2", "le vélo"]
+    autres: [["1f407", "le lapin"], ["1f401", "la souris"]]
+    explication: "« chapeau » et « vélo » finissent pareil."
+  - texte: "souris"
+    bonne: ["1f41c", "la fourmi"]
+    autres: [["1f422", "la tortue"], ["1f34c", "la banane"]]
+    explication: "« souris » et « fourmi » finissent pareil."
+  - texte: "mouton"
+    bonne: ["1f416", "le cochon"]
+    autres: [["1f404", "la vache"], ["1f408", "le chat"]]
+    explication: "« mouton » et « cochon » finissent pareil."
+  - texte: "citron"
+    bonne: ["26bd", "le ballon"]
+    autres: [["1f345", "la tomate"], ["1f319", "la lune"]]
+    explication: "« citron » et « ballon » finissent pareil."

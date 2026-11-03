@@ -1,0 +1,1612 @@
+{
+  "schema": 1,
+  "id": "lire",
+  "titre": "Lire et écrire",
+  "nom": "Lire et écrire",
+  "icone": "1f4d6",
+  "intro": [
+    {
+      "texte": "Pour lire, on écoute les sons des mots.",
+      "images": [
+        "1f442",
+        "1f4d6"
+      ]
+    },
+    {
+      "texte": "Chaque lettre a un nom et un son : la lettre s fait « sss ».",
+      "images": [
+        "1f40d"
+      ],
+      "grand": "s"
+    },
+    {
+      "texte": "On attache les sons : m et a, ça fait « ma » !",
+      "images": [],
+      "grand": "m a → ma"
+    }
+  ],
+  "ages": [
+    4,
+    8
+  ],
+  "sources": {
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "cycle2": "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf"
+  },
+  "competences": [
+    {
+      "id": "syllabes",
+      "titre": "Compter les syllabes d'un mot",
+      "niveau": "MS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "À l’oral et sans support écrit, dénombrer les syllabes de mots familiers, comparer les mots selon le nombre de syllabes."
+      },
+      "activite": "syllabes",
+      "parametres": {},
+      "idee": "Une syllabe, c'est un morceau de mot qu'on dit d'un coup. On tape une fois dans les mains pour chaque morceau.",
+      "phrases": {
+        "consigne": "Tape dans tes mains pour chaque morceau du mot.",
+        "question": "Combien de syllabes dans « {texte} » ?",
+        "indice": "Écoute le mot en morceaux, et compte avec tes doigts.",
+        "exemple": "Touche le bouton des mains pour entendre les morceaux.",
+        "demonstration": "Écoute : {explication}. Cela fait {rep}.",
+        "bravo": "Oui ! {explication}."
+      },
+      "items": [
+        {
+          "texte": "chat",
+          "image": "1f408",
+          "syllabes": [
+            "chat"
+          ]
+        },
+        {
+          "texte": "rat",
+          "image": "1f400",
+          "syllabes": [
+            "rat"
+          ]
+        },
+        {
+          "texte": "ours",
+          "image": "1f43b",
+          "syllabes": [
+            "ours"
+          ]
+        },
+        {
+          "texte": "loup",
+          "image": "1f43a",
+          "syllabes": [
+            "loup"
+          ]
+        },
+        {
+          "texte": "coq",
+          "image": "1f413",
+          "syllabes": [
+            "coq"
+          ]
+        },
+        {
+          "texte": "sac",
+          "image": "1f45c",
+          "syllabes": [
+            "sac"
+          ]
+        },
+        {
+          "texte": "lit",
+          "image": "1f6cf",
+          "syllabes": [
+            "lit"
+          ]
+        },
+        {
+          "texte": "pomme",
+          "image": "1f34e",
+          "syllabes": [
+            "pomme"
+          ]
+        },
+        {
+          "texte": "vache",
+          "image": "1f404",
+          "syllabes": [
+            "vache"
+          ]
+        },
+        {
+          "texte": "lune",
+          "image": "1f319",
+          "syllabes": [
+            "lune"
+          ]
+        },
+        {
+          "texte": "lapin",
+          "image": "1f407",
+          "syllabes": [
+            "la",
+            "pin"
+          ]
+        },
+        {
+          "texte": "poisson",
+          "image": "1f41f",
+          "syllabes": [
+            "pois",
+            "son"
+          ]
+        },
+        {
+          "texte": "sapin",
+          "image": "1f332",
+          "syllabes": [
+            "sa",
+            "pin"
+          ]
+        },
+        {
+          "texte": "soleil",
+          "image": "2600",
+          "syllabes": [
+            "so",
+            "leil"
+          ]
+        },
+        {
+          "texte": "maison",
+          "image": "1f3e0",
+          "syllabes": [
+            "mai",
+            "son"
+          ]
+        },
+        {
+          "texte": "tortue",
+          "image": "1f422",
+          "syllabes": [
+            "tor",
+            "tue"
+          ]
+        },
+        {
+          "texte": "gâteau",
+          "image": "1f382",
+          "syllabes": [
+            "gâ",
+            "teau"
+          ]
+        },
+        {
+          "texte": "bateau",
+          "image": "26f5",
+          "syllabes": [
+            "ba",
+            "teau"
+          ]
+        },
+        {
+          "texte": "chapeau",
+          "image": "1f3a9",
+          "syllabes": [
+            "cha",
+            "peau"
+          ]
+        },
+        {
+          "texte": "robot",
+          "image": "1f916",
+          "syllabes": [
+            "ro",
+            "bot"
+          ]
+        },
+        {
+          "texte": "vélo",
+          "image": "1f6b2",
+          "syllabes": [
+            "vé",
+            "lo"
+          ]
+        },
+        {
+          "texte": "mouton",
+          "image": "1f411",
+          "syllabes": [
+            "mou",
+            "ton"
+          ]
+        },
+        {
+          "texte": "cochon",
+          "image": "1f416",
+          "syllabes": [
+            "co",
+            "chon"
+          ]
+        },
+        {
+          "texte": "souris",
+          "image": "1f401",
+          "syllabes": [
+            "sou",
+            "ris"
+          ]
+        },
+        {
+          "texte": "fourmi",
+          "image": "1f41c",
+          "syllabes": [
+            "four",
+            "mi"
+          ]
+        },
+        {
+          "texte": "citron",
+          "image": "1f34b",
+          "syllabes": [
+            "ci",
+            "tron"
+          ]
+        },
+        {
+          "texte": "valise",
+          "image": "1f9f3",
+          "syllabes": [
+            "va",
+            "lise"
+          ]
+        },
+        {
+          "texte": "hibou",
+          "image": "1f989",
+          "syllabes": [
+            "hi",
+            "bou"
+          ]
+        },
+        {
+          "texte": "renard",
+          "image": "1f98a",
+          "syllabes": [
+            "re",
+            "nard"
+          ]
+        },
+        {
+          "texte": "fusée",
+          "image": "1f680",
+          "syllabes": [
+            "fu",
+            "sée"
+          ]
+        },
+        {
+          "texte": "ballon",
+          "image": "26bd",
+          "syllabes": [
+            "bal",
+            "lon"
+          ]
+        },
+        {
+          "texte": "banane",
+          "image": "1f34c",
+          "syllabes": [
+            "ba",
+            "nane"
+          ]
+        },
+        {
+          "texte": "tomate",
+          "image": "1f345",
+          "syllabes": [
+            "to",
+            "mate"
+          ]
+        },
+        {
+          "texte": "moto",
+          "image": "1f3cd",
+          "syllabes": [
+            "mo",
+            "to"
+          ]
+        },
+        {
+          "texte": "lama",
+          "image": "1f999",
+          "syllabes": [
+            "la",
+            "ma"
+          ]
+        },
+        {
+          "texte": "éléphant",
+          "image": "1f418",
+          "syllabes": [
+            "é",
+            "lé",
+            "phant"
+          ]
+        },
+        {
+          "texte": "papillon",
+          "image": "1f98b",
+          "syllabes": [
+            "pa",
+            "pi",
+            "llon"
+          ]
+        },
+        {
+          "texte": "ananas",
+          "image": "1f34d",
+          "syllabes": [
+            "a",
+            "na",
+            "nas"
+          ]
+        },
+        {
+          "texte": "crocodile",
+          "image": "1f40a",
+          "syllabes": [
+            "cro",
+            "co",
+            "dile"
+          ]
+        },
+        {
+          "texte": "kangourou",
+          "image": "1f998",
+          "syllabes": [
+            "kan",
+            "gou",
+            "rou"
+          ]
+        },
+        {
+          "texte": "escargot",
+          "image": "1f40c",
+          "syllabes": [
+            "es",
+            "car",
+            "got"
+          ]
+        },
+        {
+          "texte": "ordinateur",
+          "image": "1f4bb",
+          "syllabes": [
+            "or",
+            "di",
+            "na",
+            "teur"
+          ]
+        },
+        {
+          "texte": "hélicoptère",
+          "image": "1f681",
+          "syllabes": [
+            "hé",
+            "li",
+            "cop",
+            "tère"
+          ]
+        },
+        {
+          "texte": "télévision",
+          "image": "1f4fa",
+          "syllabes": [
+            "té",
+            "lé",
+            "vi",
+            "sion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rimes",
+      "titre": "Trouver les mots qui riment",
+      "niveau": "MS",
+      "prerequis": [
+        "syllabes"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Repérer et produire des rimes et des assonances."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Deux mots riment quand ils finissent par le même son, comme chat et rat.",
+      "phrases": {
+        "consigne": "Écoute bien la fin des mots.",
+        "question": "Quel mot rime avec « {texte} » ?",
+        "indice": "Dis les mots à voix haute et écoute comment ils finissent.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "chat",
+          "bonne": [
+            "1f400",
+            "le rat"
+          ],
+          "autres": [
+            [
+              "1f407",
+              "le lapin"
+            ],
+            [
+              "1f34e",
+              "la pomme"
+            ]
+          ],
+          "explication": "« chat » et « rat » finissent pareil."
+        },
+        {
+          "texte": "bateau",
+          "bonne": [
+            "1f382",
+            "le gâteau"
+          ],
+          "autres": [
+            [
+              "1f408",
+              "le chat"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": "« bateau » et « gâteau » finissent pareil."
+        },
+        {
+          "texte": "lapin",
+          "bonne": [
+            "1f332",
+            "le sapin"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f916",
+              "le robot"
+            ]
+          ],
+          "explication": "« lapin » et « sapin » finissent pareil."
+        },
+        {
+          "texte": "maison",
+          "bonne": [
+            "1f41f",
+            "le poisson"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "la lune"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": "« maison » et « poisson » finissent pareil."
+        },
+        {
+          "texte": "chapeau",
+          "bonne": [
+            "1f6b2",
+            "le vélo"
+          ],
+          "autres": [
+            [
+              "1f407",
+              "le lapin"
+            ],
+            [
+              "1f401",
+              "la souris"
+            ]
+          ],
+          "explication": "« chapeau » et « vélo » finissent pareil."
+        },
+        {
+          "texte": "souris",
+          "bonne": [
+            "1f41c",
+            "la fourmi"
+          ],
+          "autres": [
+            [
+              "1f422",
+              "la tortue"
+            ],
+            [
+              "1f34c",
+              "la banane"
+            ]
+          ],
+          "explication": "« souris » et « fourmi » finissent pareil."
+        },
+        {
+          "texte": "mouton",
+          "bonne": [
+            "1f416",
+            "le cochon"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": "« mouton » et « cochon » finissent pareil."
+        },
+        {
+          "texte": "citron",
+          "bonne": [
+            "26bd",
+            "le ballon"
+          ],
+          "autres": [
+            [
+              "1f345",
+              "la tomate"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": "« citron » et « ballon » finissent pareil."
+        }
+      ]
+    },
+    {
+      "id": "debut",
+      "titre": "Entendre le premier son d'un mot",
+      "niveau": "GS",
+      "prerequis": [
+        "rimes"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Entendre, discriminer, manipuler des phonèmes : trouver l’intrus à l’initiale entre sac/Sacha/cartable."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Chaque mot commence par un son. Dis le mot doucement et écoute bien le tout début.",
+      "phrases": {
+        "consigne": "Écoute bien le début des mots.",
+        "question": "Quel mot commence comme « {texte} » ?",
+        "indice": "Dis le premier mot très doucement, en traînant le début.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "soleil",
+          "bonne": [
+            "1f332",
+            "le sapin"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": "« soleil » et « sapin » commencent par le même son."
+        },
+        {
+          "texte": "vache",
+          "bonne": [
+            "1f6b2",
+            "le vélo"
+          ],
+          "autres": [
+            [
+              "1f408",
+              "le chat"
+            ],
+            [
+              "1f3e0",
+              "la maison"
+            ]
+          ],
+          "explication": "« vache » et « vélo » commencent par le même son."
+        },
+        {
+          "texte": "lune",
+          "bonne": [
+            "1f407",
+            "le lapin"
+          ],
+          "autres": [
+            [
+              "1f916",
+              "le robot"
+            ],
+            [
+              "1f680",
+              "la fusée"
+            ]
+          ],
+          "explication": "« lune » et « lapin » commencent par le même son."
+        },
+        {
+          "texte": "maison",
+          "bonne": [
+            "1f411",
+            "le mouton"
+          ],
+          "autres": [
+            [
+              "1f407",
+              "le lapin"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": "« maison » et « mouton » commencent par le même son."
+        },
+        {
+          "texte": "fusée",
+          "bonne": [
+            "1f41c",
+            "la fourmi"
+          ],
+          "autres": [
+            [
+              "1f332",
+              "le sapin"
+            ],
+            [
+              "1f43b",
+              "l'ours"
+            ]
+          ],
+          "explication": "« fusée » et « fourmi » commencent par le même son."
+        },
+        {
+          "texte": "robot",
+          "bonne": [
+            "1f98a",
+            "le renard"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "la lune"
+            ],
+            [
+              "1f404",
+              "la vache"
+            ]
+          ],
+          "explication": "« robot » et « renard » commencent par le même son."
+        },
+        {
+          "texte": "chat",
+          "bonne": [
+            "1f3a9",
+            "le chapeau"
+          ],
+          "autres": [
+            [
+              "1f45c",
+              "le sac"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": "« chat » et « chapeau » commencent par le même son."
+        },
+        {
+          "texte": "papillon",
+          "bonne": [
+            "1f34e",
+            "la pomme"
+          ],
+          "autres": [
+            [
+              "1f422",
+              "la tortue"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": "« papillon » et « pomme » commencent par le même son."
+        },
+        {
+          "texte": "banane",
+          "bonne": [
+            "26f5",
+            "le bateau"
+          ],
+          "autres": [
+            [
+              "1f34e",
+              "la pomme"
+            ],
+            [
+              "1f404",
+              "la vache"
+            ]
+          ],
+          "explication": "« banane » et « bateau » commencent par le même son."
+        }
+      ]
+    },
+    {
+      "id": "lettres-capitales",
+      "titre": "Nommer les lettres capitales",
+      "niveau": "GS",
+      "prerequis": [
+        "syllabes"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Connaitre le nom des lettres de l’alphabet."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "nom",
+        "lettres": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      },
+      "idee": "Chaque lettre a un nom. Les capitales sont les grandes lettres droites, comme sur les affiches.",
+      "phrases": {
+        "consigne": "Écoute le nom de la lettre, puis touche-la.",
+        "question": "Touche la lettre « {lettre} ».",
+        "indice": "Regarde bien la forme de chaque lettre.",
+        "exemple": "Essaie une autre lettre.",
+        "demonstration": "Regarde : voici la lettre « {lettre} ».",
+        "bravo": "Oui ! C'est la lettre « {lettre} »."
+      }
+    },
+    {
+      "id": "lettres-minuscules",
+      "titre": "Associer capitales et minuscules",
+      "niveau": "GS",
+      "prerequis": [
+        "lettres-capitales"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Connaitre les différentes graphies d’une même lettre (majuscule lettre capitale ; minuscules scriptes ; cursives)."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "casse",
+        "lettres": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "v",
+          "w",
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      "idee": "Chaque lettre s'écrit de plusieurs façons : en grande capitale et en petite minuscule. Elles ont le même nom.",
+      "phrases": {
+        "consigne": "Trouve la même lettre, écrite en petit.",
+        "question": "Où est « {lettre} » en minuscule ?",
+        "indice": "Dis le nom de la grande lettre, puis cherche la petite qui a le même nom.",
+        "exemple": "Essaie une autre lettre.",
+        "demonstration": "Regarde : la petite lettre « {lettre} ».",
+        "bravo": "Oui ! C'est « {lettre} » en minuscule."
+      }
+    },
+    {
+      "id": "premiere-lettre",
+      "titre": "Avec quelle lettre commence le mot ?",
+      "niveau": "GS",
+      "prerequis": [
+        "lettres-capitales",
+        "debut"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Connaitre le nom des lettres de l’alphabet et leur valeur sonore hormis les occlusives."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "initiale"
+      },
+      "idee": "On peut faire durer le premier son d'un mot : fffusée, sssapin. Ce son, une lettre l'écrit.",
+      "phrases": {
+        "consigne": "Écoute le mot et fais durer son premier son.",
+        "question": "Par quelle lettre commence « {texte} » ?",
+        "indice": "Dis le mot en traînant le début : on entend le son de la lettre.",
+        "exemple": "Essaie une autre lettre.",
+        "demonstration": "Regarde : « {texte} » commence par « {lettre} ».",
+        "bravo": "Oui ! « {texte} » commence par « {lettre} »."
+      },
+      "items": [
+        {
+          "texte": "fusée",
+          "image": "1f680",
+          "lettre": "F"
+        },
+        {
+          "texte": "sapin",
+          "image": "1f332",
+          "lettre": "S"
+        },
+        {
+          "texte": "vache",
+          "image": "1f404",
+          "lettre": "V"
+        },
+        {
+          "texte": "lune",
+          "image": "1f319",
+          "lettre": "L"
+        },
+        {
+          "texte": "robot",
+          "image": "1f916",
+          "lettre": "R"
+        },
+        {
+          "texte": "maison",
+          "image": "1f3e0",
+          "lettre": "M"
+        },
+        {
+          "texte": "ours",
+          "image": "1f43b",
+          "lettre": "O"
+        },
+        {
+          "texte": "ananas",
+          "image": "1f34d",
+          "lettre": "A"
+        },
+        {
+          "texte": "mouton",
+          "image": "1f411",
+          "lettre": "M"
+        },
+        {
+          "texte": "valise",
+          "image": "1f9f3",
+          "lettre": "V"
+        },
+        {
+          "texte": "souris",
+          "image": "1f401",
+          "lettre": "S"
+        },
+        {
+          "texte": "lapin",
+          "image": "1f407",
+          "lettre": "L"
+        },
+        {
+          "texte": "fourmi",
+          "image": "1f41c",
+          "lettre": "F"
+        },
+        {
+          "texte": "renard",
+          "image": "1f98a",
+          "lettre": "R"
+        }
+      ]
+    },
+    {
+      "id": "lettres-cursives",
+      "titre": "Reconnaître les lettres attachées",
+      "niveau": "GS",
+      "prerequis": [
+        "lettres-minuscules"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Distinguer des lettres visuellement proches (b/d, c/e/o, p/q) grâce à leur écriture cursive et les nommer correctement."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "cursive",
+        "lettres": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "v",
+          "w",
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      "idee": "L'écriture attachée, ou cursive, est celle qu'on écrit à la main à l'école. Chaque lettre a sa forme attachée.",
+      "phrases": {
+        "consigne": "Trouve la même lettre, en écriture attachée.",
+        "question": "Où est « {lettre} » en écriture attachée ?",
+        "indice": "Regarde le début et la fin de la lettre : ronde, avec une boucle, avec une barre ?",
+        "exemple": "Essaie une autre lettre.",
+        "demonstration": "Regarde : « {lettre} » en écriture attachée.",
+        "bravo": "Oui ! C'est « {lettre} » en écriture attachée."
+      }
+    },
+    {
+      "id": "tracer-capitales",
+      "titre": "Tracer les lettres capitales",
+      "niveau": "MS",
+      "prerequis": [
+        "lettres-capitales"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Tracer des lettres capitales."
+      },
+      "activite": "tracer",
+      "parametres": {
+        "style": "capitale",
+        "lettres": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      },
+      "idee": "Pour écrire une lettre, on part du haut, et on suit son chemin sans se presser.",
+      "phrases": {
+        "consigne": "Repasse sur la lettre avec ton doigt.",
+        "question": "Écris la lettre « {lettre} ».",
+        "indice": "Commence par le haut, et suis bien la lettre grise.",
+        "exemple": "Tu peux effacer et recommencer.",
+        "demonstration": "Regarde la lettre « {lettre} » : on la trace en suivant sa forme.",
+        "bravo": "Bravo ! Tu as écrit « {lettre} »."
+      }
+    },
+    {
+      "id": "lire-syllabes",
+      "titre": "Lire des syllabes",
+      "niveau": "CP",
+      "prerequis": [
+        "premiere-lettre"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Déchiffrer des syllabes, des mots puis des phrases en fonction de la progression de l’apprentissage des CGP."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "syllabe",
+        "consonnes": [
+          "m",
+          "l",
+          "r",
+          "s",
+          "f",
+          "v",
+          "n"
+        ],
+        "voyelles": [
+          "a",
+          "i",
+          "o",
+          "u",
+          "é"
+        ]
+      },
+      "idee": "Une consonne et une voyelle s'attachent pour faire une syllabe : m et a, ça fait « ma ».",
+      "phrases": {
+        "consigne": "Écoute la syllabe, puis touche-la.",
+        "question": "Touche la syllabe « {lettre} ».",
+        "indice": "Regarde la première lettre, puis la voyelle qui suit.",
+        "exemple": "Essaie une autre syllabe.",
+        "demonstration": "Regarde : « {lettre} » s'écrit comme ça.",
+        "bravo": "Oui ! Tu as lu « {lettre} »."
+      }
+    },
+    {
+      "id": "tracer-cursive",
+      "titre": "Tracer les lettres attachées",
+      "niveau": "GS",
+      "prerequis": [
+        "tracer-capitales",
+        "lettres-cursives"
+      ],
+      "programme": {
+        "source": "c1",
+        "texte": "Tracer des lettres en écriture cursive, les enchainer."
+      },
+      "activite": "tracer",
+      "parametres": {
+        "style": "cursive",
+        "lettres": [
+          "a",
+          "c",
+          "e",
+          "i",
+          "l",
+          "m",
+          "n",
+          "o",
+          "r",
+          "s",
+          "t",
+          "u"
+        ]
+      },
+      "idee": "Les lettres attachées se tracent sans lever le doigt, d'un seul geste.",
+      "phrases": {
+        "consigne": "Repasse sur la lettre attachée, sans lever le doigt.",
+        "question": "Écris « {lettre} » en lettre attachée.",
+        "indice": "Suis bien la lettre grise, d'un seul geste.",
+        "exemple": "Tu peux effacer et recommencer.",
+        "demonstration": "Regarde la lettre « {lettre} » attachée.",
+        "bravo": "Bravo ! Tu as écrit « {lettre} » en lettre attachée."
+      }
+    },
+    {
+      "id": "lire-mots",
+      "titre": "Lire des mots simples",
+      "niveau": "CP",
+      "prerequis": [
+        "lire-syllabes"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Il automatise la lecture des mots fréquents et transparents comme le, la, ami, rire, lune, etc."
+      },
+      "activite": "choisir",
+      "parametres": {
+        "lire": true
+      },
+      "idee": "Lire un mot, c'est dire ses syllabes l'une après l'autre, puis les attacher.",
+      "phrases": {
+        "consigne": "Lis le mot tout seul, puis touche la bonne image.",
+        "question": "Lis ce mot.",
+        "indice": "Lis une syllabe à la fois, puis attache-les.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}.",
+        "bravo": "Oui ! Tu as lu « {texte} »."
+      },
+      "items": [
+        {
+          "texte": "lune",
+          "bonne": [
+            "1f319",
+            "la lune"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f916",
+              "le robot"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "vélo",
+          "bonne": [
+            "1f6b2",
+            "le vélo"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "la lune"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "robot",
+          "bonne": [
+            "1f916",
+            "le robot"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f34e",
+              "la pomme"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "tomate",
+          "bonne": [
+            "1f345",
+            "la tomate"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "la lune"
+            ],
+            [
+              "1f45c",
+              "le sac"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "banane",
+          "bonne": [
+            "1f34c",
+            "la banane"
+          ],
+          "autres": [
+            [
+              "1f3cd",
+              "la moto"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "moto",
+          "bonne": [
+            "1f3cd",
+            "la moto"
+          ],
+          "autres": [
+            [
+              "1f916",
+              "le robot"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "lama",
+          "bonne": [
+            "1f999",
+            "le lama"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f6b2",
+              "le vélo"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "rat",
+          "bonne": [
+            "1f400",
+            "le rat"
+          ],
+          "autres": [
+            [
+              "1f45c",
+              "le sac"
+            ],
+            [
+              "1f6cf",
+              "le lit"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "sac",
+          "bonne": [
+            "1f45c",
+            "le sac"
+          ],
+          "autres": [
+            [
+              "1f400",
+              "le rat"
+            ],
+            [
+              "1f6cf",
+              "le lit"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "lit",
+          "bonne": [
+            "1f6cf",
+            "le lit"
+          ],
+          "autres": [
+            [
+              "1f45c",
+              "le sac"
+            ],
+            [
+              "1f408",
+              "le chat"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "pomme",
+          "bonne": [
+            "1f34e",
+            "la pomme"
+          ],
+          "autres": [
+            [
+              "1f3cd",
+              "la moto"
+            ],
+            [
+              "1f319",
+              "la lune"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "sapin",
+          "bonne": [
+            "1f332",
+            "le sapin"
+          ],
+          "autres": [
+            [
+              "1f407",
+              "le lapin"
+            ],
+            [
+              "1f916",
+              "le robot"
+            ]
+          ],
+          "explication": ""
+        }
+      ]
+    },
+    {
+      "id": "lire-phrases",
+      "titre": "Lire et comprendre une phrase",
+      "niveau": "CE1",
+      "prerequis": [
+        "lire-mots"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Il lit des consignes, des phrases et de courts textes déchiffrables avec exactitude."
+      },
+      "activite": "choisir",
+      "parametres": {
+        "lire": true
+      },
+      "idee": "Pour comprendre une phrase, on la lit jusqu'au point, puis on se demande : de qui ou de quoi parle-t-elle ?",
+      "phrases": {
+        "consigne": "Lis la phrase toute seule, puis touche l'image qui va avec.",
+        "question": "Lis cette phrase.",
+        "indice": "Relis la phrase en entier : quel mot dit ce qu'on voit sur l'image ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : la phrase parle de {bonne}.",
+        "bravo": "Oui ! Tu as lu : « {texte} »"
+      },
+      "items": [
+        {
+          "texte": "Le chat dort sur le lit.",
+          "bonne": [
+            "1f6cf",
+            "le lit"
+          ],
+          "autres": [
+            [
+              "26f5",
+              "le bateau"
+            ],
+            [
+              "1f680",
+              "la fusée"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "La fusée part vers la lune.",
+          "bonne": [
+            "1f680",
+            "la fusée"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f3e0",
+              "la maison"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Le poisson nage dans l'eau.",
+          "bonne": [
+            "1f41f",
+            "le poisson"
+          ],
+          "autres": [
+            [
+              "1f426",
+              "l'oiseau"
+            ],
+            [
+              "1f40c",
+              "l'escargot"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Le lapin mange une carotte.",
+          "bonne": [
+            "1f955",
+            "la carotte"
+          ],
+          "autres": [
+            [
+              "1f356",
+              "la viande"
+            ],
+            [
+              "1f36c",
+              "le bonbon"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Papa a un chapeau sur la tête.",
+          "bonne": [
+            "1f3a9",
+            "le chapeau"
+          ],
+          "autres": [
+            [
+              "1f45f",
+              "la chaussure"
+            ],
+            [
+              "1f9f3",
+              "la valise"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "La tortue marche très lentement.",
+          "bonne": [
+            "1f422",
+            "la tortue"
+          ],
+          "autres": [
+            [
+              "1f40e",
+              "le cheval"
+            ],
+            [
+              "1f998",
+              "le kangourou"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Il pleut : je prends mon parapluie.",
+          "bonne": [
+            "2602",
+            "le parapluie"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le soleil"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Le bateau flotte sur la mer.",
+          "bonne": [
+            "26f5",
+            "le bateau"
+          ],
+          "autres": [
+            [
+              "1f697",
+              "la voiture"
+            ],
+            [
+              "1f681",
+              "l'hélicoptère"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Ma sœur lit un livre le soir.",
+          "bonne": [
+            "1f4d6",
+            "le livre"
+          ],
+          "autres": [
+            [
+              "1f4fa",
+              "la télévision"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "L'abeille vole vers la fleur.",
+          "bonne": [
+            "1f337",
+            "la fleur"
+          ],
+          "autres": [
+            [
+              "1f34e",
+              "la pomme"
+            ],
+            [
+              "1f333",
+              "l'arbre"
+            ]
+          ],
+          "explication": ""
+        }
+      ]
+    }
+  ]
+}

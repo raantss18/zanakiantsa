@@ -1,0 +1,64 @@
+id: lire-mots
+titre: "Lire des mots simples"
+niveau: CP
+prerequis: [lire-syllabes]
+programme: { source: cycle2, texte: "Il automatise la lecture des mots fréquents et transparents comme le, la, ami, rire, lune, etc." }
+activite: choisir
+parametres: { lire: true }
+idee: "Lire un mot, c'est dire ses syllabes l'une après l'autre, puis les attacher."
+phrases:
+  consigne: "Lis le mot tout seul, puis touche la bonne image."
+  question: "Lis ce mot."
+  indice: "Lis une syllabe à la fois, puis attache-les."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}."
+  bravo: "Oui ! Tu as lu « {texte} »."
+items:
+  - texte: "lune"
+    bonne: ["1f319", "la lune"]
+    autres: [["1f404", "la vache"], ["1f916", "le robot"]]
+    explication: ""
+  - texte: "vélo"
+    bonne: ["1f6b2", "le vélo"]
+    autres: [["1f319", "la lune"], ["1f408", "le chat"]]
+    explication: ""
+  - texte: "robot"
+    bonne: ["1f916", "le robot"]
+    autres: [["1f6b2", "le vélo"], ["1f34e", "la pomme"]]
+    explication: ""
+  - texte: "tomate"
+    bonne: ["1f345", "la tomate"]
+    autres: [["1f319", "la lune"], ["1f45c", "le sac"]]
+    explication: ""
+  - texte: "banane"
+    bonne: ["1f34c", "la banane"]
+    autres: [["1f3cd", "la moto"], ["1f408", "le chat"]]
+    explication: ""
+  - texte: "moto"
+    bonne: ["1f3cd", "la moto"]
+    autres: [["1f916", "le robot"], ["1f319", "la lune"]]
+    explication: ""
+  - texte: "lama"
+    bonne: ["1f999", "le lama"]
+    autres: [["1f404", "la vache"], ["1f6b2", "le vélo"]]
+    explication: ""
+  - texte: "rat"
+    bonne: ["1f400", "le rat"]
+    autres: [["1f45c", "le sac"], ["1f6cf", "le lit"]]
+    explication: ""
+  - texte: "sac"
+    bonne: ["1f45c", "le sac"]
+    autres: [["1f400", "le rat"], ["1f6cf", "le lit"]]
+    explication: ""
+  - texte: "lit"
+    bonne: ["1f6cf", "le lit"]
+    autres: [["1f45c", "le sac"], ["1f408", "le chat"]]
+    explication: ""
+  - texte: "pomme"
+    bonne: ["1f34e", "la pomme"]
+    autres: [["1f3cd", "la moto"], ["1f319", "la lune"]]
+    explication: ""
+  - texte: "sapin"
+    bonne: ["1f332", "le sapin"]
+    autres: [["1f407", "le lapin"], ["1f916", "le robot"]]
+    explication: ""
