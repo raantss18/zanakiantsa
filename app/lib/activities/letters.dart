@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 
+import '../core/ductus.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -274,8 +275,9 @@ class _TraceActivityState extends State<TraceActivity> {
   void _changed() => setState(() {});
 
   TextPainter _guide(Size box) => TextPainter(
-        // La cursive a des lettres basses (x-height) : on la dessine plus grande pour que le tracé reste ample.
-        text: TextSpan(text: letter, style: letterStyle(style, box.height * (style == 'cursive' ? 0.95 : 0.78), color: const Color(0xFFCBD3CE))),
+        // La cursive a des lettres basses (x-height), mais aussi des hampes (l, t) : assez grande pour que le tracé
+        // reste ample, assez petite pour que la hampe du « l » ne sorte pas du cadre (vu coupé sur l'émulateur).
+        text: TextSpan(text: letter, style: letterStyle(style, box.height * (style == 'cursive' ? 0.68 : 0.78), color: const Color(0xFFCBD3CE))),
         textDirection: TextDirection.ltr,
       )..layout();
 
@@ -331,14 +333,62 @@ class _TraceActivityState extends State<TraceActivity> {
       }
     }
     final coverage = g == 0 ? 0 : covered / g, spill = drawn == 0 ? 1 : outside / drawn;
-    final ok = coverage >= 0.6 && spill <= 0.35;
+    // Lettres attachées : le sens du tracé compte aussi (ADR 0049), dans les coordonnées de l'écran.
+    final ductus = style == 'cursive' ? ductusError(letter, [for (final s in strokes) s.points], _letterBox(guide, n, scale)) : null;
+    final ok = coverage >= 0.6 && spill <= 0.35 && ductus == null;
     a.submit(ok,
         why: ok
             ? null
             : coverage < 0.6
                 ? "Il manque un morceau de la lettre : suis-la jusqu'au bout."
-                : 'Ton tracé sort de la lettre : va plus doucement, sur le gris.');
+                : spill > 0.35
+                    ? 'Ton tracé sort de la lettre : va plus doucement, sur le gris.'
+                    : ductus);
     if (!ok && mounted) setState(strokes.clear);
+  }
+
+  /// Le rectangle de la lettre grise, à l'écran (d'après son masque de [n] × [n] points).
+  Rect _letterBox(Uint8List guide, int n, double scale) {
+    var l = n, t = n, r = 0, b = 0;
+    for (var y = 0; y < n; y++) {
+      for (var x = 0; x < n; x++) {
+        if (guide[(y * n + x) * 4 + 3] > 40) {
+          l = min(l, x);
+          t = min(t, y);
+          r = max(r, x + 1);
+          b = max(b, y + 1);
+        }
+      }
+    }
+    return Rect.fromLTRB(l / scale, t / scale, r / scale, b / scale);
+  }
+
+  /// Le point de départ montré sur une lettre attachée ronde (a, c, d, g, o, q) : en haut à droite du rond, « à 2 heures »
+  /// (ADR 0049) ; le point de la lettre grise le plus proche de ce repère.
+  Offset? _start;
+  Size _startFor = Size.zero;
+
+  Future<void> _findStart(Size box) async {
+    _startFor = box;
+    const n = 64;
+    final scale = n / max(box.width, box.height);
+    final rec = ui.PictureRecorder();
+    final c = Canvas(rec)..scale(scale);
+    final tp = _guide(box);
+    tp.paint(c, box.center(Offset.zero) - Offset(tp.width / 2, tp.height / 2));
+    final img = await rec.endRecording().toImage(n, n);
+    final guide = (await img.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List();
+    final r = _letterBox(guide, n, scale);
+    final target = Offset(r.left + 0.65 * r.width, r.top);
+    Offset? best;
+    for (var y = 0; y < n; y++) {
+      for (var x = 0; x < n; x++) {
+        if (guide[(y * n + x) * 4 + 3] <= 40) continue;
+        final p = Offset((x + 0.5) / scale, (y + 0.5) / scale);
+        if (best == null || (p - target).distance < (best - target).distance) best = p;
+      }
+    }
+    if (mounted && _startFor == box) setState(() => _start = best);
   }
 
   bool _inkNear(Uint8List ink, int x, int y, int n) {
@@ -368,10 +418,15 @@ class _TraceActivityState extends State<TraceActivity> {
                   borderRadius: BorderRadius.circular(24),
                   child: LayoutBuilder(builder: (_, k) {
                     _box = Size(k.maxWidth, k.maxHeight);
+                    if (style == 'cursive' && roundLetters.contains(letter) && _startFor != _box) {
+                      _startFor = _box;
+                      WidgetsBinding.instance.addPostFrameCallback((_) => _findStart(_box));
+                    }
                     return GestureDetector(
                       onPanStart: a.finished ? null : (d) => setState(() => strokes.add(Stroke(ink, 14)..points.add(d.localPosition))),
                       onPanUpdate: a.finished ? null : (d) => setState(() => strokes.last.points.add(d.localPosition)),
-                      child: CustomPaint(size: Size.infinite, painter: _TracePainter(_guide(_box), strokes, shown ? (u.night ? u.primary : u.onCard) : null)),
+                      child: CustomPaint(size: Size.infinite, painter: _TracePainter(_guide(_box), strokes, shown ? (u.night ? u.primary : u.onCard) : null,
+                          start: strokes.isEmpty && !shown ? _start : null)),
                     );
                   }),
                 ),
@@ -404,9 +459,12 @@ class _TraceActivityState extends State<TraceActivity> {
 }
 
 class _TracePainter extends CustomPainter {
-  _TracePainter(this.guide, this.strokes, this.reveal);
+  _TracePainter(this.guide, this.strokes, this.reveal, {this.start});
   final TextPainter guide;
   final List<Stroke> strokes;
+
+  /// Où commencer (lettres attachées) : un rond vert cerclé de blanc, avant le premier trait.
+  final Offset? start;
 
   /// Démonstration ou réussite : la lettre se colore.
   final Color? reveal;
@@ -419,6 +477,10 @@ class _TracePainter extends CustomPainter {
           .paint(canvas, at);
     } else {
       guide.paint(canvas, at);
+    }
+    if (start != null) {
+      canvas.drawCircle(start!, 15, Paint()..color = Colors.white);
+      canvas.drawCircle(start!, 11, Paint()..color = green);
     }
     for (final s in strokes) {
       canvas.drawPath(

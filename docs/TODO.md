@@ -132,7 +132,7 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Suites de nombres (de 1, 2, 10 en 10 ; à rebours ; bande jusqu'à 1000) et états de l'eau (CP, CE1), ADR 0036
 - ✅ Version 0.6.0 publiée (2026-11-03, build 2006) ; montée 0.5.0 → 0.6.0 vérifiée sur l'émulateur (réglages repris
   dans le profil « Enfant 1 »)
-- ⏳ Sens du tracé des lettres ; plus de contenu CE1-CE2 (sons, anglais, problèmes)
+- ✅ Sens du tracé des lettres attachées (ADR 0049) ; ⏳ plus de contenu CE1-CE2 (sons, anglais, problèmes)
 - ✅ Version 0.5.0 publiée (2026-11-03, build 2005) ; montée 0.4.0 → 0.5.0 vérifiée sur l'émulateur
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité
