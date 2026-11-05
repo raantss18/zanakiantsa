@@ -39,4 +39,73 @@ void main() {
     expect(execute(maze, [Block(BlockKind.untilGoal, body: [Block(BlockKind.ifRock)])]).tooLong, isTrue);
     expect(execute(maze, [Block(BlockKind.repeat, count: 5, body: [Block(BlockKind.forward)])]).bumped, isTrue);
   });
+
+  // Le compteur, une variable (ADR 0050).
+  group('compteur', () {
+    test('la solution marche sur les trois parcours, qui diffèrent', () {
+      final r = Random(7);
+      for (var i = 0; i < 200; i++) {
+        final (mazes, solution, _) = counterPuzzle(r);
+        expect(mazes, hasLength(3));
+        expect(solvesAll(mazes, solution), isTrue);
+        // Les objets sont à des distances toutes différentes.
+        expect({for (final m in mazes) m.goal.$1}, hasLength(3));
+        // Même rangée et même départ : seule la place des gemmes change.
+        expect({for (final m in mazes) m.start}, hasLength(1));
+      }
+    });
+
+    test('« avancer n fois » ne marche que sur un parcours : il faut compter', () {
+      final r = Random(8);
+      for (var i = 0; i < 200; i++) {
+        final (mazes, _, _) = counterPuzzle(r);
+        for (final m in mazes) {
+          final n = m.goal.$1;
+          final naive = [Block(BlockKind.repeat, count: n, body: [Block(BlockKind.forward)])];
+          expect(solvesAll(mazes, naive), isFalse);
+          expect(solves(m, naive), isTrue, reason: 'sur son propre parcours, il marche');
+        }
+      }
+    });
+
+    test('le compteur compte les gemmes rencontrées, et l\'animation le montre', () {
+      const row = 3;
+      final maze = Maze(7, const RobotState((0, row), 1), (4, row), const {}, gems: {(2, row), (3, row), (4, row)});
+      final program = [
+        Block(BlockKind.untilCounter, count: 2, body: [
+          Block(BlockKind.forward),
+          Block(BlockKind.ifGem, body: [Block(BlockKind.addCounter)]),
+        ]),
+      ];
+      final t = execute(maze, program);
+      expect(t.states.last.cell, (3, row));
+      expect(t.counts.last, 2);
+      expect(t.counts, [0, 0, 0, 1, 1, 2]);
+      expect(t.states, hasLength(t.counts.length));
+    });
+
+    test('oublier d\'ajouter 1 : le robot va jusqu\'au mur, le programme s\'arrête', () {
+      final (mazes, _, _) = counterPuzzle(Random(9));
+      final forgot = [
+        Block(BlockKind.untilCounter, count: 2, body: [Block(BlockKind.forward)]),
+      ];
+      final t = execute(mazes.first, forgot);
+      expect(t.bumped || t.tooLong, isTrue);
+      expect(solvesAll(mazes, forgot), isFalse);
+    });
+
+    test('une boucle qui ne fait rien ne tourne pas sans fin', () {
+      final (mazes, _, _) = counterPuzzle(Random(10));
+      final idle = [
+        Block(BlockKind.untilCounter, count: 3, body: [Block(BlockKind.ifGem, body: [Block(BlockKind.addCounter)])]),
+      ];
+      expect(execute(mazes.first, idle).tooLong, isTrue);
+    });
+
+    test('compter plus loin que le but : on dépasse l\'objet', () {
+      final (mazes, solution, _) = counterPuzzle(Random(11));
+      final tooFar = [for (final b in solution) b.copy()]..first.count += 1;
+      expect(solvesAll(mazes, tooFar), isFalse);
+    });
+  });
 }

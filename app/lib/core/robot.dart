@@ -29,11 +29,14 @@ class RobotState {
 }
 
 class Maze {
-  const Maze(this.size, this.start, this.goal, this.rocks);
+  const Maze(this.size, this.start, this.goal, this.rocks, {this.gems = const {}});
   final int size;
   final RobotState start;
   final Cell goal;
   final Set<Cell> rocks;
+
+  /// Gemmes à compter (programmer avec un compteur, ADR 0050).
+  final Set<Cell> gems;
 
   bool free(Cell c) => c.$1 >= 0 && c.$1 < size && c.$2 >= 0 && c.$2 < size && !rocks.contains(c);
 

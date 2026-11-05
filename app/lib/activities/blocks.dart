@@ -10,6 +10,7 @@ import '../ui/universe.dart';
 
 /// Programmer avec des blocs emboîtés, comme dans Scratch (ADR 0041). Mode `boucle` : peu de place, il faut
 /// « répéter ». Mode `condition` : « répéter jusqu'à l'objet » et « si rocher devant » pour contourner les rochers.
+/// Mode `compteur` (ADR 0050) : une variable. Le robot compte les gemmes ; le programme est essayé sur trois parcours.
 /// Un bloc « répéter » ou « si » s'ouvre : les blocs suivants vont dedans, jusqu'à « Fermer le bloc ».
 class BlocksActivity extends StatefulWidget {
   const BlocksActivity({super.key, required this.attempt});
@@ -20,11 +21,24 @@ class BlocksActivity extends StatefulWidget {
 
 class _BlocksActivityState extends State<BlocksActivity> {
   Attempt get a => widget.attempt;
-  late final bool loopMode = a.skill.params['mode'] == 'boucle';
-  late final (Maze, List<Block>, int) puzzle = loopMode
-      ? loopPuzzle(Random(a.question.a))
-      : conditionPuzzle(Random(a.question.a));
-  Maze get maze => puzzle.$1;
+  late final String mode = a.skill.params['mode'] as String;
+  late final bool loopMode = mode == 'boucle', counterMode = mode == 'compteur';
+
+  /// Les parcours (un seul, sauf en mode compteur : trois), la solution, sa taille.
+  late final (List<Maze>, List<Block>, int) puzzle = switch (mode) {
+    'boucle' => _single(loopPuzzle(Random(a.question.a))),
+    'compteur' => counterPuzzle(Random(a.question.a)),
+    _ => _single(conditionPuzzle(Random(a.question.a))),
+  };
+
+  static (List<Maze>, List<Block>, int) _single((Maze, List<Block>, int) p) => ([p.$1], p.$2, p.$3);
+
+  List<Maze> get mazes => puzzle.$1;
+  int mazeIndex = 0;
+  Maze get maze => mazes[mazeIndex];
+
+  /// Valeur du compteur affichée pendant l'essai.
+  int counter = 0;
 
   /// Place disponible : la solution plus un peu de marge, moins que le chemin bloc par bloc (il faut une boucle).
   late final int limit = puzzle.$3 + (loopMode ? 1 : 2);
@@ -65,7 +79,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
 
   void _add(BlockKind k) {
     if (programSize(program) >= limit) {
-      a.speech.say('Plus de place ! Utilise un bloc qui répète.', force: true);
+      a.speech.say(counterMode ? 'Plus de place ! Fais compter le robot.' : 'Plus de place ! Utilise un bloc qui répète.', force: true);
       return;
     }
     final b = Block(k, count: 3);
@@ -92,34 +106,66 @@ class _BlocksActivityState extends State<BlocksActivity> {
   bool _inside(Block container, Block b) => container.body.any((x) => identical(x, b) || _inside(x, b));
 
   Future<void> _run({bool demo = false}) async {
-    final t = execute(maze, program);
     setState(() {
       running = true;
       bumped = false;
       open.clear();
     });
-    for (final s in t.states.skip(1)) {
-      await Future<void>.delayed(const Duration(milliseconds: 380));
+    // En mode compteur, le même programme est essayé sur chaque parcours, l'un après l'autre.
+    var ok = true;
+    late Trace t;
+    for (var i = 0; i < mazes.length && ok; i++) {
+      setState(() {
+        mazeIndex = i;
+        robot = maze.start;
+        counter = 0;
+      });
+      if (i > 0) await Future<void>.delayed(const Duration(milliseconds: 400));
       if (!mounted) return;
-      setState(() => robot = s);
+      t = execute(maze, program);
+      for (final (j, s) in t.states.indexed.skip(1)) {
+        await Future<void>.delayed(const Duration(milliseconds: 380));
+        if (!mounted) return;
+        setState(() {
+          robot = s;
+          counter = t.counts[j];
+        });
+      }
+      ok = solves(maze, program);
+      if (ok && i < mazes.length - 1) await Future<void>.delayed(const Duration(milliseconds: 700));
     }
-    final ok = solves(maze, program);
     if (!ok) {
       setState(() => bumped = t.bumped);
       await Future<void>.delayed(const Duration(milliseconds: 700));
     }
     if (!mounted) return;
-    // Ce que montre l'essai (ADR 0029).
-    final why = ok
-        ? null
-        : t.bumped
-        ? "Le robot s'est cogné : regarde où il était juste avant le choc."
-        : t.tooLong
-        ? 'Le programme tourne en rond : il ne s\'arrête jamais. Que fait le robot à chaque tour ?'
-        : "Le robot s'arrête ailleurs que sur l'objet : change le nombre de tours, ou les blocs de la boucle.";
+    // Ce que montre l'essai (ADR 0029, 0050).
+    final String? why;
+    if (ok) {
+      why = null;
+    } else if (t.bumped) {
+      why = counterMode
+          ? "Le robot est arrivé au mur sans s'arrêter : le compteur n'a pas atteint le bon nombre."
+          : "Le robot s'est cogné : regarde où il était juste avant le choc.";
+    } else if (t.tooLong) {
+      why = counterMode
+          ? "Le compteur n'arrive jamais au bon nombre. Quand faut-il ajouter 1 au compteur ?"
+          : 'Le programme tourne en rond : il ne s\'arrête jamais. Que fait le robot à chaque tour ?';
+    } else if (counterMode) {
+      why = mazeIndex > 0
+          ? "Ça marchait sur le parcours d'avant, mais pas sur celui-ci : les gemmes ne sont pas aux mêmes endroits. "
+              "Ne dis pas au robot combien de pas : fais-lui compter les gemmes."
+          : "Le robot s'arrête ailleurs que sur le drapeau. Combien de gemmes faut-il compter ?";
+    } else {
+      why = "Le robot s'arrête ailleurs que sur l'objet : change le nombre de tours, ou les blocs de la boucle.";
+    }
     setState(() {
       running = false;
-      if (!ok) robot = maze.start;
+      if (!ok) {
+        mazeIndex = 0;
+        robot = maze.start;
+        counter = 0;
+      }
     });
     if (!demo) a.submit(ok, why: why);
   }
@@ -131,6 +177,9 @@ class _BlocksActivityState extends State<BlocksActivity> {
     BlockKind.repeat => 'répéter ${b.count} fois',
     BlockKind.untilGoal => "répéter jusqu'à l'objet",
     BlockKind.ifRock => 'si rocher devant',
+    BlockKind.addCounter => 'ajouter 1 au compteur',
+    BlockKind.untilCounter => "répéter jusqu'à compteur = ${b.count}",
+    BlockKind.ifGem => 'si gemme ici',
   };
 
   IconData _icon(BlockKind k) => switch (k) {
@@ -139,13 +188,16 @@ class _BlocksActivityState extends State<BlocksActivity> {
     BlockKind.turnRight => Icons.turn_right_rounded,
     BlockKind.repeat => Icons.repeat_rounded,
     BlockKind.untilGoal => Icons.flag_rounded,
-    BlockKind.ifRock => Icons.help_outline_rounded,
+    BlockKind.ifRock || BlockKind.ifGem => Icons.help_outline_rounded,
+    BlockKind.addCounter => Icons.exposure_plus_1_rounded,
+    BlockKind.untilCounter => Icons.repeat_on_rounded,
   };
 
   /// Couleur d'un bloc : mouvement, boucle, condition (toujours avec son nom écrit, jamais la couleur seule).
   Color _colour(BlockKind k) => switch (k) {
-    BlockKind.repeat || BlockKind.untilGoal => const Color(0xFFB45309),
-    BlockKind.ifRock => const Color(0xFF1D4ED8),
+    BlockKind.repeat || BlockKind.untilGoal || BlockKind.untilCounter => const Color(0xFFB45309),
+    BlockKind.ifRock || BlockKind.ifGem => const Color(0xFF1D4ED8),
+    BlockKind.addCounter => const Color(0xFF7E22CE),
     _ => const Color(0xFF15803D),
   };
 
@@ -155,7 +207,18 @@ class _BlocksActivityState extends State<BlocksActivity> {
     return LayoutBuilder(
       builder: (_, k) {
         final Widget body;
-        if (k.maxWidth > k.maxHeight * 1.4) {
+        if (counterMode) {
+          // Une seule rangée de gemmes : une bande en haut, et toute la hauteur au programme (tous formats).
+          body = Column(
+            children: [
+              _grid(u, min(k.maxWidth - 24, 7 * 64.0)),
+              const SizedBox(height: 8),
+              Expanded(child: _programPanel()),
+              const SizedBox(height: 8),
+              _palette(),
+            ],
+          );
+        } else if (k.maxWidth > k.maxHeight * 1.4) {
           // Paysage : la grille à gauche, le programme et les blocs à droite.
           final side = min(k.maxHeight - 24, k.maxWidth * 0.45);
           body = Row(
@@ -213,9 +276,12 @@ class _BlocksActivityState extends State<BlocksActivity> {
 
   Widget _grid(Universe u, double side) {
     final cell = side / maze.size;
+    // En mode compteur, seule la rangée du robot est dessinée : une bande.
+    final firstRow = counterMode ? maze.start.cell.$2 : 0;
+    final rows = counterMode ? 1 : maze.size;
     return Container(
       width: side,
-      height: side,
+      height: cell * rows + (counterMode ? 6 : 0),
       decoration: BoxDecoration(
         color: surface,
         borderRadius: BorderRadius.circular(16),
@@ -224,11 +290,11 @@ class _BlocksActivityState extends State<BlocksActivity> {
       ),
       child: Stack(
         children: [
-          for (var r = 0; r < maze.size; r++)
+          for (var r = firstRow; r < firstRow + rows; r++)
             for (var c = 0; c < maze.size; c++)
               Positioned(
                 left: c * cell,
-                top: r * cell,
+                top: (r - firstRow) * cell,
                 child: Container(
                   width: cell,
                   height: cell,
@@ -237,14 +303,16 @@ class _BlocksActivityState extends State<BlocksActivity> {
                   child: maze.rocks.contains((c, r))
                       ? Art('1faa8', size: cell * 0.7, label: 'rocher')
                       : (c, r) == maze.goal
-                      ? Art(u.objects.first, size: cell * 0.7, label: 'objectif')
+                      ? (counterMode ? _flaggedGem(cell) : Art(u.objects.first, size: cell * 0.7, label: 'objectif'))
+                      : maze.gems.contains((c, r))
+                      ? Art('1f48e', size: cell * 0.7, label: 'gemme')
                       : null,
                 ),
               ),
           AnimatedPositioned(
             duration: const Duration(milliseconds: 300),
             left: robot.cell.$1 * cell,
-            top: robot.cell.$2 * cell,
+            top: (robot.cell.$2 - firstRow) * cell,
             child: SizedBox(
               width: cell,
               height: cell,
@@ -276,6 +344,15 @@ class _BlocksActivityState extends State<BlocksActivity> {
     );
   }
 
+  /// La gemme où il faut s'arrêter : la gemme et un drapeau (la forme, pas seulement la couleur).
+  Widget _flaggedGem(double cell) => Stack(
+    alignment: Alignment.center,
+    children: [
+      Art('1f48e', size: cell * 0.7, label: 'gemme du drapeau'),
+      Positioned(top: 0, right: 0, child: Icon(Icons.flag_rounded, size: cell * 0.42, color: const Color(0xFFB91C1C))),
+    ],
+  );
+
   /// Le programme : chaque bloc sur sa ligne ; ce qui est dans une boucle ou un « si » est décalé à droite, dans une
   /// bande de la couleur du bloc, fermée par « fin ».
   List<Widget> _lines(List<Block> blocks, int depth) => [
@@ -298,16 +375,16 @@ class _BlocksActivityState extends State<BlocksActivity> {
                 _name(b),
                 style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
               ),
-              if (b.kind == BlockKind.repeat && !locked) ...[
+              if ((b.kind == BlockKind.repeat || b.kind == BlockKind.untilCounter) && !locked) ...[
                 const SizedBox(width: 4),
                 _countButton(
                   Icons.remove_rounded,
-                  'Un tour de moins',
-                  b.count > 2 ? () => setState(() => b.count--) : null,
+                  b.kind == BlockKind.repeat ? 'Un tour de moins' : 'Un de moins',
+                  b.count > (b.kind == BlockKind.repeat ? 2 : 1) ? () => setState(() => b.count--) : null,
                 ),
                 _countButton(
                   Icons.add_rounded,
-                  'Un tour de plus',
+                  b.kind == BlockKind.repeat ? 'Un tour de plus' : 'Un de plus',
                   b.count < 9 ? () => setState(() => b.count++) : null,
                 ),
               ],
@@ -360,9 +437,20 @@ class _BlocksActivityState extends State<BlocksActivity> {
           Row(
             children: [
               Expanded(
-                child: Text(
-                  'Blocs : $used sur $limit',
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Blocs : $used sur $limit',
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink),
+                    ),
+                    // Le compteur, écrit pendant l'essai ; le parcours en cours (ADR 0050).
+                    if (counterMode)
+                      Text(
+                        'Compteur : $counter · Parcours ${mazeIndex + 1} sur ${mazes.length}',
+                        style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: Color(0xFF7E22CE)),
+                      ),
+                  ],
                 ),
               ),
               IconButton.filledTonal(
@@ -412,6 +500,8 @@ class _BlocksActivityState extends State<BlocksActivity> {
   Widget _palette() {
     final kinds = loopMode
         ? [BlockKind.forward, BlockKind.turnLeft, BlockKind.turnRight, BlockKind.repeat]
+        : counterMode
+        ? [BlockKind.forward, BlockKind.untilCounter, BlockKind.ifGem, BlockKind.addCounter]
         : [BlockKind.forward, BlockKind.turnLeft, BlockKind.turnRight, BlockKind.untilGoal, BlockKind.ifRock];
     return Wrap(
       spacing: 8,
@@ -429,19 +519,20 @@ class _BlocksActivityState extends State<BlocksActivity> {
               ),
               onPressed: locked ? null : () => _add(k),
               icon: Icon(_icon(k), size: 26),
-              label: Text(_name(Block(k, count: 3)).replaceAll(' 3 fois', '…')),
+              label: Text(_name(Block(k, count: 3)).replaceAll(' 3 fois', '…').replaceAll('= 3', '= …')),
             ),
           ),
-        if (open.isNotEmpty)
-          SizedBox(
-            height: 56,
-            child: OutlinedButton.icon(
-              style: OutlinedButton.styleFrom(textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
-              onPressed: locked ? null : () => setState(open.removeLast),
-              icon: const Icon(Icons.keyboard_return_rounded),
-              label: const Text('Fermer le bloc'),
-            ),
+        // Toujours là (grisé quand aucun bloc n'est ouvert) : en apparaissant, il faisait sauter les autres boutons et
+        // l'enfant touchait à côté.
+        SizedBox(
+          height: 56,
+          child: OutlinedButton.icon(
+            style: OutlinedButton.styleFrom(textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
+            onPressed: locked || open.isEmpty ? null : () => setState(open.removeLast),
+            icon: const Icon(Icons.keyboard_return_rounded),
+            label: const Text('Fermer le bloc'),
           ),
+        ),
       ],
     );
   }

@@ -1,0 +1,17 @@
+id: compteur
+titre: "Le compteur : une variable"
+niveau: CM2
+prerequis: [condition-si]
+# Source : la fiche éduscol « Programmer » (cycles 3 et 4) cite « variable » parmi les instructions simples, sans
+# préciser sa forme. La forme choisie ici (un compteur qu'on augmente de 1) est un choix de l'app : non vérifié.
+programme: { source: prog, texte: "Construire des algorithmes qui comprennent des instructions simples (action déclenchée par un évènement, séquence d'instructions, boucle, instructions conditionnelles, variable)." }
+activite: blocs
+parametres: { mode: compteur }
+idee: "Un compteur est une petite boîte qui garde un nombre. Il commence à 0. Le bloc « ajouter 1 au compteur » le fait grimper. On peut demander au robot de s'arrêter quand le compteur atteint un nombre."
+phrases:
+  consigne: "Le robot doit s'arrêter sur la gemme au drapeau : toujours la même gemme en comptant depuis la gauche, mais les gemmes ne sont pas aux mêmes endroits. Fais-le compter, puis touche le bouton vert : ton programme est essayé sur trois parcours."
+  question: "Programme le robot avec un compteur : il doit s'arrêter sur la gemme au drapeau, sur les trois parcours."
+  indice: "Compte les gemmes jusqu'au drapeau. À chaque pas, si le robot est sur une gemme, ajoute 1 au compteur. Arrête-toi quand le compteur vaut ce nombre."
+  exemple: "Mets « répéter jusqu'à compteur = » et règle le nombre. Dedans : « avancer », puis « si gemme ici » avec « ajouter 1 au compteur » dedans."
+  demonstration: "Regarde ce programme : il compte les gemmes, et marche sur les trois parcours."
+  bravo: "Bravo ! Ton programme marche partout, parce que ton robot sait compter."

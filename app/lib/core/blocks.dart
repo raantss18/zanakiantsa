@@ -1,5 +1,6 @@
 /// Programmer avec des blocs, comme dans Scratch (ADR 0041) : avancer, pivoter, « répéter n fois », « répéter jusqu'à
-/// l'objet » et « si rocher devant ». Repère : la fiche éduscol « Programmer » (cycles 3 et 4) cite « séquence
+/// l'objet » et « si rocher devant ». Une variable, le compteur (ADR 0050) : « ajouter 1 au compteur », « si gemme
+/// ici », « répéter jusqu'à compteur = n ». Repère : la fiche éduscol « Programmer » (cycles 3 et 4) cite « séquence
 /// d'instructions, boucle, instructions conditionnelles » (https://eduscol.education.fr/document/14773/download).
 /// Idée des blocs emboîtés seulement (aucun code ni dessin de Scratch repris, CLAUDE.md règle 7).
 library;
@@ -8,7 +9,7 @@ import 'dart:math';
 
 import 'robot.dart';
 
-enum BlockKind { forward, turnLeft, turnRight, repeat, untilGoal, ifRock }
+enum BlockKind { forward, turnLeft, turnRight, repeat, untilGoal, ifRock, addCounter, untilCounter, ifGem }
 
 /// Un bloc ; les blocs « répéter », « jusqu'à l'objet » et « si rocher devant » contiennent d'autres blocs.
 class Block {
@@ -17,7 +18,12 @@ class Block {
   int count;
   final List<Block> body;
 
-  bool get isContainer => kind == BlockKind.repeat || kind == BlockKind.untilGoal || kind == BlockKind.ifRock;
+  bool get isContainer =>
+      kind == BlockKind.repeat ||
+      kind == BlockKind.untilGoal ||
+      kind == BlockKind.ifRock ||
+      kind == BlockKind.untilCounter ||
+      kind == BlockKind.ifGem;
 
   /// Nombre de blocs, ceux du dedans compris (c'est ce que compte la limite).
   int get size => 1 + body.fold(0, (n, b) => n + b.size);
@@ -30,17 +36,20 @@ int programSize(List<Block> p) => p.fold(0, (n, b) => n + b.size);
 /// Au-delà, le programme « tourne en rond » : on l'arrête.
 const maxSteps = 60;
 
-/// Ce qu'a fait le programme : les états du robot (un par pas), et comment il s'est arrêté.
+/// Ce qu'a fait le programme : les états du robot (un par pas), la valeur du compteur après chacun, et comment il s'est
+/// arrêté.
 class Trace {
-  Trace(this.states, this.bumped, this.tooLong);
+  Trace(this.states, this.counts, this.bumped, this.tooLong);
   final List<RobotState> states;
+  final List<int> counts;
   final bool bumped, tooLong;
 }
 
 /// Exécute un programme : un « pas » = avancer ou pivoter ; un choc arrête tout.
 Trace execute(Maze maze, List<Block> program) {
   final states = [maze.start];
-  var bumped = false, tooLong = false;
+  final counts = [0];
+  var counter = 0, bumped = false, tooLong = false;
 
   bool rockAhead() {
     final s = states.last;
@@ -65,6 +74,27 @@ Trace execute(Maze maze, List<Block> program) {
             return false;
           }
           states.add(next);
+          counts.add(counter);
+        case BlockKind.addCounter:
+          if (states.length > maxSteps) {
+            tooLong = true;
+            return false;
+          }
+          // Un « pas » sur place : l'animation montre le compteur qui change.
+          counter++;
+          states.add(states.last);
+          counts.add(counter);
+        case BlockKind.untilCounter:
+          while (counter != b.count) {
+            final before = states.length;
+            if (!run(b.body)) return false;
+            if (states.length == before) {
+              tooLong = true;
+              return false;
+            }
+          }
+        case BlockKind.ifGem:
+          if (maze.gems.contains(states.last.cell) && !run(b.body)) return false;
         case BlockKind.repeat:
           for (var i = 0; i < b.count; i++) {
             if (!run(b.body)) return false;
@@ -87,7 +117,7 @@ Trace execute(Maze maze, List<Block> program) {
   }
 
   run(program);
-  return Trace(states, bumped, tooLong);
+  return Trace(states, counts, bumped, tooLong);
 }
 
 bool solves(Maze maze, List<Block> program) {
@@ -160,3 +190,33 @@ bool solves(Maze maze, List<Block> program) {
     return (maze, good, programSize(good));
   }
 }
+
+/// Compteur : une rangée de gemmes, l'objet est sur la gemme marquée, la même (la k-ième depuis la gauche) sur chacun des
+/// trois parcours. Les gemmes ne sont pas aux mêmes endroits, et les gemmes marquées sont à des distances toutes
+/// différentes : « avancer n fois » ne marche donc que sur un parcours, il faut faire compter le robot. Rend les trois
+/// parcours, la solution, et sa taille.
+(List<Maze>, List<Block>, int) counterPuzzle(Random r, {int size = 7}) {
+  while (true) {
+    final k = 2 + r.nextInt(3);
+    final row = r.nextInt(size);
+    final start = RobotState((0, row), 1);
+    final mazes = <Maze>[];
+    final goals = <int>{};
+    for (var tries = 0; tries < 60 && mazes.length < 3; tries++) {
+      final cols = ([for (var c = 1; c < size; c++) c]..shuffle(r)).take(k + r.nextInt(3)).toList()..sort();
+      if (cols.length < k || !goals.add(cols[k - 1])) continue;
+      mazes.add(Maze(size, start, (cols[k - 1], row), const {}, gems: {for (final c in cols) (c, row)}));
+    }
+    if (mazes.length < 3) continue;
+    final solution = [
+      Block(BlockKind.untilCounter, count: k, body: [
+        Block(BlockKind.forward),
+        Block(BlockKind.ifGem, body: [Block(BlockKind.addCounter)]),
+      ]),
+    ];
+    return (mazes, solution, programSize(solution));
+  }
+}
+
+/// Le programme réussit sur tous les parcours.
+bool solvesAll(List<Maze> mazes, List<Block> program) => mazes.every((m) => solves(m, program));
