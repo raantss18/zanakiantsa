@@ -12,7 +12,7 @@ import 'theme.dart';
 import 'universe.dart';
 
 /// L'accueil d'un domaine (ADR 0042), la même profondeur partout : apprendre (la séance, reprise où l'enfant s'était
-/// arrêté), le défi (tout ce qui est acquis, mêlé, avec un record), et « Mon carnet » (ce qui est su, ce qui est à
+/// arrêté), « Je sais déjà » (test de départ, ADR 0045), le défi (tout ce qui est acquis, mêlé, avec un record), et « Mon carnet » (ce qui est su, ce qui est à
 /// revoir, les erreurs qui reviennent). Les échecs y ajoutent leurs parties, le dessin ses dessins.
 class TopicHub extends StatefulWidget {
   const TopicHub({super.key, required this.topic});
@@ -77,6 +77,14 @@ class _TopicHubState extends State<TopicHub> {
                         : 'Reprendre où tu t\'es arrêté : question ${resume!.index + 1} sur ${resume!.plan.length}.',
                     () => _go(SessionPage(topic: widget.topic, resume: resume)),
                   ),
+                  if (p.placementPlan() case final test?)
+                    hubCard(
+                      '1f50d',
+                      'Je sais déjà',
+                      'Un petit test pour sauter ce que tu sais : ${test.length ~/ placementPerSkill} compétences, deux questions chacune. '
+                          'Il s\'arrête dès que tu hésites.',
+                      () => _go(SessionPage(topic: widget.topic, placement: true)),
+                    ),
                   hubCard(
                     '1f3c5',
                     'Le défi',

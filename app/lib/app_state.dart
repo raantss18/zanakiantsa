@@ -33,6 +33,9 @@ class AppState extends ChangeNotifier {
   /// Séances finies (tous domaines) : font avancer le fil d'histoire (ADR 0017).
   int sessionsDone = 0;
 
+  /// Compétences réussies au test de départ (ADR 0045), pour l'enfant en cours.
+  Set<String> placed = {};
+
   /// Temps de jeu proposé par jour, réglé par le parent (ADR 0018).
   int dailyMinutes = defaultDailyMinutes;
 
@@ -121,6 +124,8 @@ class AppState extends ChangeNotifier {
     final marks = await store.get('marque_pages');
     bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
     lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
+    final known = await store.get('test_depart');
+    placed = known == null || known.isEmpty ? {} : Set<String>.from(jsonDecode(known) as List);
     voice
       ..voiceOn = await store.get('voix') != 'non'
       ..soundOn = await store.get('musique') != 'non';
@@ -195,7 +200,14 @@ class AppState extends ChangeNotifier {
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
   Progress progressOf(Topic t) =>
-      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelForAge(age));
+      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelForAge(age), placed: placed);
+
+  /// Note les compétences réussies au test de départ.
+  Future<void> place(Iterable<String> ids) async {
+    placed = {...placed, ...ids};
+    await store.set('test_depart', jsonEncode(placed.toList()));
+    notifyListeners();
+  }
 
   DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes);
 

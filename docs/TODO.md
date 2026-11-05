@@ -132,11 +132,11 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Suites de nombres (de 1, 2, 10 en 10 ; à rebours ; bande jusqu'à 1000) et états de l'eau (CP, CE1), ADR 0036
 - ✅ Version 0.6.0 publiée (2026-11-03, build 2006) ; montée 0.5.0 → 0.6.0 vérifiée sur l'émulateur (réglages repris
   dans le profil « Enfant 1 »)
-- ⏳ Sens du tracé des lettres ; test de départ par domaine ; plus de contenu CE1-CE2 (sons, anglais, problèmes)
+- ⏳ Sens du tracé des lettres ; plus de contenu CE1-CE2 (sons, anglais, problèmes)
 - ✅ Version 0.5.0 publiée (2026-11-03, build 2005) ; montée 0.4.0 → 0.5.0 vérifiée sur l'émulateur
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité
-- ⏳ Test de départ par domaine (sauter ce qui est déjà su) ; explications pour les réponses en images
+- ✅ Test de départ par domaine (ADR 0045) ; ⏳ explications pour les réponses en images
 - ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
 - ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
@@ -179,7 +179,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    revient à la langue du téléphone quand il redémarre, et l'app croyait le français toujours réglé. Langue réglée
    et vérifiée avant chaque phrase, plus aucune mémoire ; sans voix française, on se tait (ADR 0044,
    `test/voice_language_test.dart`). Vérifié sur l'émulateur en en-US. ⏳ à l'oreille sur l'appareil en question.
-2. ⏳ **Test de départ par domaine** : sauter ce que l'enfant sait déjà.
+2. ✅ **Test de départ par domaine** (ADR 0045) : « Je sais déjà » dans l'accueil de chaque domaine. Au plus 6
+   compétences, 2 questions chacune ; il s'arrête à la première hésitation. Les compétences sues au test redeviennent
+   à apprendre si l'enfant les rate ensuite. Vérifié sur l'émulateur (nombres, suites). ⏳ Pas vu sur un profil
+   neuf : l'exemple guidé de la compétence où le test s'arrête.
 3. ⏳ **Addition et soustraction posées** (CE1).
 
 ## Étape 5 — Thèmes suivants ⏳

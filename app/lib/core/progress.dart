@@ -27,8 +27,11 @@ int startLevelForAge(int age) => (age - 5).clamp(0, 6);
 /// Questions par séance (⚠ choix produit : vise ≈ 10–15 min, à mesurer).
 const questionsPerSession = 8;
 
+/// Test de départ (ADR 0045) : questions par compétence, et compétences testées au plus d'une fois.
+const placementPerSkill = 2, placementSkills = 6;
+
 class Progress {
-  Progress(this.skills, List<Answer> journal, {this.sessionsDone = 0, this.startLevel = 0}) {
+  Progress(this.skills, List<Answer> journal, {this.sessionsDone = 0, this.startLevel = 0, this.placed = const {}}) {
     for (final a in journal) {
       _bySkill.putIfAbsent(a.skill, () => []).add(a);
     }
@@ -48,10 +51,26 @@ class Progress {
 
   List<Answer> answersOf(String id) => _bySkill[id] ?? const [];
 
-  bool mastered(String id) => skipped(id) || isMastered(answersOf(id));
+  bool mastered(String id) => skipped(id) || earned(id);
 
-  /// Maîtrisée par l'enfant lui-même (pas seulement tenue pour acquise à cause de son âge).
-  bool earned(String id) => isMastered(answersOf(id));
+  /// Compétences réussies au test de départ (ADR 0045).
+  final Set<String> placed;
+
+  /// Maîtrisée par l'enfant lui-même (pas seulement tenue pour acquise à cause de son âge). Réussie au test de
+  /// départ : acquise, jusqu'à ce que l'enfant ait assez répondu pour que la règle habituelle décide seule.
+  bool earned(String id) {
+    final a = answersOf(id);
+    return isMastered(a) || (placed.contains(id) && a.length < masteryWindow);
+  }
+
+  /// Test de départ : les compétences pas encore acquises, dans l'ordre du domaine (sans attendre qu'elles soient
+  /// ouvertes : c'est le test qui le dira), [placementPerSkill] questions chacune. null s'il n'y a pas au moins deux
+  /// compétences à tester (sauter ne servirait à rien).
+  List<String>? placementPlan() {
+    final todo = [for (final s in skills) if (!mastered(s.id)) s.id].take(placementSkills).toList();
+    if (todo.length < 2) return null;
+    return [for (final id in todo) for (var i = 0; i < placementPerSkill; i++) id];
+  }
 
   ReviewCard? card(String id) => cardFrom(answersOf(id), isMastered);
 

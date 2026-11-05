@@ -36,7 +36,7 @@ class Attempt extends ChangeNotifier {
   Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect, {this.example = false, this.challenge = false})
       : finished = example;
 
-  /// Question d'un défi (ADR 0042) : notée comme telle dans le journal.
+  /// Question d'un défi (ADR 0042) ou du test de départ (ADR 0045) : notée comme telle dans le journal.
   final bool challenge;
 
   /// Ce que montraient les essais manqués (gardé dans le journal, ADR 0042).
@@ -277,8 +277,12 @@ const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false});
+  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false, this.placement = false});
   final String topic;
+
+  /// Test de départ (ADR 0045) : deux questions par compétence pas encore acquise, dans l'ordre ; réussies du premier
+  /// coup, elle est notée comme sue ; à la première hésitation, le test s'arrête et c'est là que l'enfant commence.
+  final bool placement;
 
   /// Défi (ADR 0042) : 10 questions mêlées de ce qui est acquis, sans exemple ; on compte les réussites du premier
   /// coup et on garde le record.
@@ -296,10 +300,19 @@ class _SessionPageState extends State<SessionPage> {
       ? devSkill.split(",")
       : widget.challenge
           ? app.progressOf(app.topic(widget.topic)).challengePlan(Random()) ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
-          : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
+          : widget.placement
+              ? app.progressOf(app.topic(widget.topic)).placementPlan() ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
+              : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
-  late String? _target = widget.challenge ? null : app.progressOf(app.topic(widget.topic)).newSkill;
+  late String? _target = widget.challenge || widget.placement ? null : app.progressOf(app.topic(widget.topic)).newSkill;
+
+  /// Test de départ : les compétences sues, et celle où il s'est arrêté (null : rien manqué).
+  final _known = <String>[];
+  String? _stoppedAt;
+
+  /// Ni reprise ni compétence cible : le défi et le test de départ se jouent d'une traite.
+  bool get _oneGo => widget.challenge || widget.placement;
 
   /// Défi : réussites du premier coup, et le record d'avant (pour dire « nouveau record ! »).
   int firstTry = 0;
@@ -351,13 +364,13 @@ class _SessionPageState extends State<SessionPage> {
     final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;
     app.remember(skill.id, skill.signature(q));
-    // Première rencontre (rien au journal) : d'abord l'idée et un exemple résolu.
-    final example = !widget.challenge && _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id);
+    // Première rencontre (rien au journal hors défi et test de départ) : d'abord l'idée et un exemple résolu.
+    final example = !_oneGo && _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id || x.challenge);
     late final Attempt a;
     a = Attempt(app, skill, q, _advance, () => setState(() {
           stars++;
           if (a.misses == 0) firstTry++;
-        }), example: example, challenge: widget.challenge);
+        }), example: example, challenge: _oneGo);
     return a;
   }
 
@@ -372,16 +385,17 @@ class _SessionPageState extends State<SessionPage> {
   Future<void> _advance() async {
     await Future<void>.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
-    if (index + 1 >= plan.length) {
-      if (devSkill.isEmpty && !widget.challenge) SessionResume.clear(app, widget.topic);
+    if (widget.placement) await _placementStep();
+    if (index + 1 >= plan.length || _stoppedAt != null) {
+      if (devSkill.isEmpty && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
       if (widget.challenge) await _endChallenge();
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
       app.voice.stopMusic();
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
-      if (widget.challenge) {
-        await speech.say(challengeText);
+      if (_oneGo) {
+        await speech.say(widget.challenge ? challengeText : placementText);
         return;
       }
       await speech.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
@@ -401,7 +415,29 @@ class _SessionPageState extends State<SessionPage> {
     old?.dispose();
     _music();
     // Le point de reprise : si l'enfant sort maintenant, il reviendra à cette question.
-    if (devSkill.isEmpty && !widget.challenge) SessionResume(plan, index, stars).save(app, widget.topic);
+    if (devSkill.isEmpty && !_oneGo) SessionResume(plan, index, stars).save(app, widget.topic);
+  }
+
+  /// Test de départ, après chaque question : hésitation (essai manqué) → on s'arrête là ; dernière question d'une
+  /// compétence réussie du premier coup → elle est sue.
+  Future<void> _placementStep() async {
+    final a = attempt!;
+    final id = plan[index];
+    if (!a.solved || a.misses > 0) {
+      _stoppedAt = id;
+    } else if (index + 1 >= plan.length || plan[index + 1] != id) {
+      _known.add(id);
+      await app.place([id]);
+    }
+  }
+
+  String get placementText {
+    final start = _stoppedAt ?? app.progressOf(app.topic(widget.topic)).newSkill;
+    final known = _known.length;
+    final head = known == 0
+        ? 'Pas de souci, on va l\'apprendre ensemble. '
+        : 'Bravo, tu sais déjà $known compétence${known > 1 ? 's' : ''} : ${[for (final id in _known) app.skill(id).title].join(', ')}. ';
+    return start == null ? '${head}Tu sais tout ce qu\'il y a ici !' : '${head}Tu commences à : ${app.skill(start).title}.';
   }
 
   /// Fin de défi : le score, et le record s'il est battu.
@@ -463,8 +499,8 @@ class _SessionPageState extends State<SessionPage> {
                       theme: widget.topic,
                       again: () => Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic, challenge: widget.challenge))),
-                      child: widget.challenge
-                          ? Text(challengeText, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.25))
+                      child: _oneGo
+                          ? Text(widget.challenge ? challengeText : placementText, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.25))
                           : _End(
                         stars: stars,
                         universe: u,
