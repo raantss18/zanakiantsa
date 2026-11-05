@@ -15,6 +15,9 @@ const kidTarget = 72.0;
 /// Hauteur fixe du bandeau narrateur : il ne change jamais la taille de la zone de jeu (ADR 0016).
 const narratorHeight = 132.0;
 
+/// Hauteur du narrateur quand il est dans une colonne à gauche d'un échiquier, en paysage (ADR 0052).
+const narratorSideHeight = 232.0;
+
 /// Une seule ombre douce, pour les cartes posées sur un décor.
 const cardShadow = [BoxShadow(blurRadius: 12, color: Color(0x2E000000), offset: Offset(0, 4))];
 

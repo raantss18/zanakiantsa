@@ -11,6 +11,7 @@ import '../core/engine.dart';
 import '../core/game.dart';
 import '../core/uci.dart';
 import '../engines/maia.dart';
+import 'adaptive.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -210,6 +211,19 @@ Widget pageHeader(BuildContext context, String title, {List<Widget> actions = co
         ...actions,
       ]),
     );
+
+/// Paysage (ADR 0052) : l'échiquier aussi grand que possible, le panneau de texte et de boutons juste à côté, le tout
+/// centré dans la place disponible.
+Widget boardBeside({required Widget board, required Widget panel, required double panelWidth}) => LayoutBuilder(builder: (_, a) {
+      final side = max(160.0, min(a.maxHeight - 24, a.maxWidth - panelWidth - 28));
+      return Center(
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          SizedBox(width: side, height: side, child: board),
+          const SizedBox(width: 16),
+          SizedBox(width: panelWidth, height: a.maxHeight, child: panel),
+        ]),
+      );
+    });
 
 /// Choisir le niveau et la couleur, puis jouer contre le robot.
 Future<void> chooseRobotGame(BuildContext context) async {
@@ -501,63 +515,74 @@ class _GamePageState extends State<GamePage> {
     final u = app.universe;
     final p = game.position;
     final targets = hints && selected != null ? {for (final m in p.legalMoves()) if (m.from == selected) m.to} : <int>{};
+    final statusCard = Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(20), boxShadow: cardShadow),
+      child: Row(children: [
+        if (thinking) const SizedBox(width: 28, height: 28, child: CircularProgressIndicator(strokeWidth: 4)) else Art(p.whiteToMove ? '26aa' : '26ab', size: 28),
+        const SizedBox(width: 12),
+        Expanded(child: Text(status, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2))),
+      ]),
+    );
+    final board = ChessBoardView(
+      position: p,
+      flipped: flipped,
+      selected: selected,
+      targets: targets,
+      last: game.moves.isEmpty ? null : game.moves.last,
+      onTap: _tap,
+    );
+    final controls = Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
+      FilledButton.tonalIcon(
+        style: _button,
+        onPressed: game.moves.isEmpty || thinking || game.end != null ? null : _undo,
+        icon: const Icon(Icons.undo_rounded),
+        label: Text(robot ? 'Reprendre mon coup' : 'Reprendre le coup'),
+      ),
+      FilterChip(
+        avatar: const Icon(Icons.lightbulb_outline_rounded),
+        label: const Text('Coups possibles'),
+        selected: hints,
+        onSelected: (v) => setState(() => hints = v),
+      ),
+      if (!robot)
+        IconButton.filledTonal(
+          tooltip: 'Tourner l\'échiquier',
+          iconSize: 32,
+          onPressed: () => setState(() => flipped = !flipped),
+          icon: const Icon(Icons.screen_rotation_alt_rounded),
+        ),
+    ]);
     return Scaffold(
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
-          child: Column(children: [
-            pageHeader(context, robot ? (isMaia(widget.level) ? 'Maia ${widget.level}' : 'Robot · niveau ${widget.level}') : 'À deux'),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(20), boxShadow: cardShadow),
-                child: Row(children: [
-                  if (thinking) const SizedBox(width: 28, height: 28, child: CircularProgressIndicator(strokeWidth: 4)) else Art(p.whiteToMove ? '26aa' : '26ab', size: 28),
-                  const SizedBox(width: 12),
-                  Expanded(child: Text(status, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink, height: 1.2))),
-                ]),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: ChessBoardView(
-                  position: p,
-                  flipped: flipped,
-                  selected: selected,
-                  targets: targets,
-                  last: game.moves.isEmpty ? null : game.moves.last,
-                  onTap: _tap,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-              child: Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 8, children: [
-                FilledButton.tonalIcon(
-                  style: _button,
-                  onPressed: game.moves.isEmpty || thinking || game.end != null ? null : _undo,
-                  icon: const Icon(Icons.undo_rounded),
-                  label: Text(robot ? 'Reprendre mon coup' : 'Reprendre le coup'),
-                ),
-                FilterChip(
-                  avatar: const Icon(Icons.lightbulb_outline_rounded),
-                  label: const Text('Coups possibles'),
-                  selected: hints,
-                  onSelected: (v) => setState(() => hints = v),
-                ),
-                if (!robot)
-                  IconButton.filledTonal(
-                    tooltip: 'Tourner l\'échiquier',
-                    iconSize: 32,
-                    onPressed: () => setState(() => flipped = !flipped),
-                    icon: const Icon(Icons.screen_rotation_alt_rounded),
+          child: LayoutBuilder(builder: (context, k) {
+            final header = pageHeader(context, robot ? (isMaia(widget.level) ? 'Maia ${widget.level}' : 'Robot · niveau ${widget.level}') : 'À deux');
+            // Paysage (ADR 0052) : l'échiquier prend toute la hauteur, le texte et les boutons sont dans une colonne à
+            // côté ; en une seule colonne, il restait un petit échiquier à côté de grandes écritures.
+            if (isLandscape(k.biggest)) {
+              return Column(children: [
+                header,
+                Expanded(
+                  child: boardBeside(
+                    board: board,
+                    panelWidth: sidePanelWidth(k.maxWidth),
+                    panel: Center(
+                      child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min, children: [statusCard, const SizedBox(height: 16), controls])),
+                    ),
                   ),
-              ]),
-            ),
-          ]),
+                ),
+              ]);
+            }
+            return Column(children: [
+              header,
+              Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4), child: statusCard),
+              Expanded(child: Padding(padding: const EdgeInsets.all(12), child: board)),
+              Padding(padding: const EdgeInsets.fromLTRB(12, 0, 12, 12), child: controls),
+            ]);
+          }),
         ),
       ),
     );
@@ -606,7 +631,7 @@ class _GamesPageState extends State<GamesPage> {
                           minTileHeight: 72,
                           leading: Art(g.outcome == 'Gagnée' ? '1f3c6' : g.outcome == 'Perdue' ? '1f4aa' : '265f', size: 44),
                           title: Text('${g.title} · ${g.outcome}', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
-                          subtitle: Text('${g.date.day}/${g.date.month}/${g.date.year} · ${(g.moves.length + 1) ~/ 2} coups'),
+                          subtitle: Text('${g.date.day}/${g.date.month}/${g.date.year} · ${(g.moves.length + 1) ~/ 2} coup${(g.moves.length + 1) ~/ 2 > 1 ? 's' : ''}'),
                           trailing: const Icon(Icons.play_arrow_rounded, size: 36),
                           onTap: () async {
                             await Navigator.of(context).push(MaterialPageRoute(builder: (_) => ReviewPage(game: g, index: i)));
@@ -688,73 +713,91 @@ class _ReviewPageState extends State<ReviewPage> {
         : '${count['mat']! + count['bien']!} bons coups · ${count['mat_manque']} mat manqué${count['mat_manque']! > 1 ? 's' : ''} · '
             '${count['gaffe']} pièce${count['gaffe']! > 1 ? 's' : ''} laissée${count['gaffe']! > 1 ? 's' : ''} en prise · '
             '${count['prise_manquee']} prise${count['prise_manquee']! > 1 ? 's' : ''} manquée${count['prise_manquee']! > 1 ? 's' : ''}';
+    final summaryText = Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 16),
+  child: Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),
+);
+    final board = ChessBoardView(
+    position: shown,
+    flipped: !_analysedSide,
+    last: advice == null && ply > 0 ? Move.parse(g.moves[ply - 1]) : null,
+    advice: advice,
+  );
+    final noteCard = Container(
+  margin: const EdgeInsets.symmetric(horizontal: 16),
+  padding: const EdgeInsets.all(12),
+  width: double.infinity,
+  decoration: BoxDecoration(
+    color: note == null ? surface : (note.kind == 'bien' || note.kind == 'mat' ? const Color(0xFFEAF5EC) : const Color(0xFFFFF4DE)),
+    borderRadius: BorderRadius.circular(20),
+    boxShadow: cardShadow,
+  ),
+  child: Text(
+    ply == 0
+        ? 'Touche ▶ pour avancer coup par coup.'
+        : 'Coup ${(ply + 1) ~/ 2}${ply.isOdd ? '' : '…'} ${positions[ply - 1].san(Move.parse(g.moves[ply - 1]))}'
+            '${note == null ? '' : '\n${note.text}'}',
+    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink, height: 1.25),
+  ),
+);
+    final controls = Padding(
+  padding: const EdgeInsets.all(12),
+  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+    IconButton.filledTonal(tooltip: 'Début', iconSize: 36, onPressed: ply == 0 ? null : () => setState(() => ply = 0), icon: const Icon(Icons.first_page_rounded)),
+    const SizedBox(width: 8),
+    IconButton.filled(tooltip: 'Coup précédent', iconSize: 44, onPressed: ply == 0 ? null : () => setState(() => ply--), icon: const Icon(Icons.chevron_left_rounded)),
+    const SizedBox(width: 8),
+    IconButton.filled(
+      tooltip: 'Coup suivant',
+      iconSize: 44,
+      onPressed: ply >= g.moves.length ? null : () => setState(() => ply++),
+      icon: const Icon(Icons.chevron_right_rounded),
+    ),
+    const SizedBox(width: 8),
+    IconButton.filledTonal(
+      tooltip: 'Prochain conseil',
+      iconSize: 36,
+      onPressed: notes == null
+          ? null
+          : () {
+              final next = notes!.where((n) => n.ply + 1 > ply).firstOrNull;
+              if (next != null) setState(() => ply = next.ply + 1);
+            },
+      icon: const Icon(Icons.tips_and_updates_rounded),
+    ),
+  ]),
+);
     return Scaffold(
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
-          child: Column(children: [
-            pageHeader(context, '${g.title} · ${g.outcome}'),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                // Un conseil : on montre la position d'avant le coup, avec le meilleur coup encadré d'or.
-                child: ChessBoardView(
-                  position: shown,
-                  flipped: !_analysedSide,
-                  last: advice == null && ply > 0 ? Move.parse(g.moves[ply - 1]) : null,
-                  advice: advice,
+          child: LayoutBuilder(builder: (context, k) {
+            final header = pageHeader(context, '${g.title} · ${g.outcome}');
+            // Paysage (ADR 0052) : l'échiquier à gauche en grand ; le résumé, le conseil et les boutons à droite.
+            if (isLandscape(k.biggest)) {
+              return Column(children: [
+                header,
+                Expanded(
+                  child: boardBeside(
+                    board: board,
+                    panelWidth: sidePanelWidth(k.maxWidth),
+                    panel: Center(
+                      child: SingleChildScrollView(
+                        child: Column(mainAxisSize: MainAxisSize.min, children: [summaryText, const SizedBox(height: 8), noteCard, controls]),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              padding: const EdgeInsets.all(12),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: note == null ? surface : (note.kind == 'bien' || note.kind == 'mat' ? const Color(0xFFEAF5EC) : const Color(0xFFFFF4DE)),
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: cardShadow,
-              ),
-              child: Text(
-                ply == 0
-                    ? 'Touche ▶ pour avancer coup par coup.'
-                    : 'Coup ${(ply + 1) ~/ 2}${ply.isOdd ? '' : '…'} ${positions[ply - 1].san(Move.parse(g.moves[ply - 1]))}'
-                        '${note == null ? '' : '\n${note.text}'}',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink, height: 1.25),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                IconButton.filledTonal(tooltip: 'Début', iconSize: 36, onPressed: ply == 0 ? null : () => setState(() => ply = 0), icon: const Icon(Icons.first_page_rounded)),
-                const SizedBox(width: 8),
-                IconButton.filled(tooltip: 'Coup précédent', iconSize: 44, onPressed: ply == 0 ? null : () => setState(() => ply--), icon: const Icon(Icons.chevron_left_rounded)),
-                const SizedBox(width: 8),
-                IconButton.filled(
-                  tooltip: 'Coup suivant',
-                  iconSize: 44,
-                  onPressed: ply >= g.moves.length ? null : () => setState(() => ply++),
-                  icon: const Icon(Icons.chevron_right_rounded),
-                ),
-                const SizedBox(width: 8),
-                IconButton.filledTonal(
-                  tooltip: 'Prochain conseil',
-                  iconSize: 36,
-                  onPressed: notes == null
-                      ? null
-                      : () {
-                          final next = notes!.where((n) => n.ply + 1 > ply).firstOrNull;
-                          if (next != null) setState(() => ply = next.ply + 1);
-                        },
-                  icon: const Icon(Icons.tips_and_updates_rounded),
-                ),
-              ]),
-            ),
-          ]),
+              ]);
+            }
+            return Column(children: [
+              header,
+              summaryText,
+              Expanded(child: Padding(padding: const EdgeInsets.all(12), child: board)),
+              noteCard,
+              controls,
+            ]);
+          }),
         ),
       ),
     );

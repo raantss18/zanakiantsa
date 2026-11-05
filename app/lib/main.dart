@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app_state.dart';
+import 'ui/adaptive.dart';
 import 'ui/home.dart';
 import 'ui/theme.dart';
 
@@ -27,6 +28,12 @@ class ZanakiAntsa extends StatelessWidget {
         title: "Zanak'i Antsa",
         debugShowCheckedModeBanner: false,
         theme: buildTheme(AppScope.of(context).universe),
+        // La police du système est suivie, mais plafonnée selon l'écran (ADR 0052) : les écrans d'enfants ont des boutons
+        // et des cartes à taille fixe, qu'une police à 200 % ferait déborder.
+        builder: (context, child) {
+          final screen = MediaQuery.sizeOf(context);
+          return MediaQuery.withClampedTextScaling(minScaleFactor: 1.0, maxScaleFactor: maxFontScale(screen), child: child!);
+        },
         home: const HomePage(),
       );
 }

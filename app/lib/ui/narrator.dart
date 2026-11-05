@@ -6,7 +6,7 @@ import 'universe.dart';
 /// Bandeau narrateur (ADR 0016) : la mascotte de l'univers et une bulle avec l'énoncé **écrit** (dit aussi à voix
 /// haute). Hauteur fixe [narratorHeight]. Une aide remplace l'énoncé dans la même bulle, avec une ampoule.
 class Narrator extends StatefulWidget {
-  const Narrator({super.key, required this.universe, required this.text, this.help = false, this.cheer = 0, this.onListen});
+  const Narrator({super.key, required this.universe, required this.text, this.help = false, this.cheer = 0, this.onListen, this.height = narratorHeight});
   final Universe universe;
   final String text;
   final bool help;
@@ -14,6 +14,9 @@ class Narrator extends StatefulWidget {
   /// Change à chaque bonne réponse : la mascotte saute.
   final int cheer;
   final VoidCallback? onListen;
+
+  /// Hauteur du bandeau : [narratorHeight], ou plus haute dans une colonne à côté d'un échiquier (ADR 0052).
+  final double height;
 
   @override
   State<Narrator> createState() => _NarratorState();
@@ -40,7 +43,7 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
     // Écran étroit (portrait) : mascotte plus petite, toute la largeur possible pour le texte.
     final narrow = MediaQuery.sizeOf(context).width < 600;
     return SizedBox(
-      height: narratorHeight,
+      height: widget.height,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
         child: Row(children: [

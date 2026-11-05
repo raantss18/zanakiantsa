@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -6,6 +8,7 @@ import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/day.dart';
 import '../parent/gate.dart';
+import 'adaptive.dart';
 import 'album.dart';
 import 'topic_intro.dart';
 import 'all_topics.dart';
@@ -76,129 +79,223 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       body: Listener(
         onPointerDown: (_) => _greeting?.close(),
         child: UniverseBackground(
-        universe: u,
-        child: SafeArea(
-          child: Column(children: [
-            _Header(onListen: _welcome),
-            if (!s.ready)
-              Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))
-            else ...[
-              _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
-              if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                  child: LayoutBuilder(builder: (_, k) {
-                    final wide = k.maxWidth > k.maxHeight * 1.1;
-                    final cards = [
-                      for (final (n, item) in plan.items.indexed)
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(bottom: wide ? 0 : 12, right: wide && n < 2 ? 12 : 0),
-                            child: DayCard(
-                              topic: s.topic(item.theme),
-                              item: item,
-                              number: n + 1,
-                              next: plan.next == item,
-                              pulse: _pulse,
-                              wide: wide,
-                              onTap: () => _open(item.theme),
-                            ),
-                          ),
-                        ),
-                    ];
-                    return Flex(direction: wide ? Axis.horizontal : Axis.vertical, children: cards);
-                  }),
-                ),
-              ),
-              // Les trois du jour sont proposées ; tout le reste reste ouvert (ADR 0032).
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: OutlinedButton.icon(
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: surface,
-                      side: BorderSide(color: u.night ? u.primary : u.onCard, width: 3),
-                      textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 22, fontWeight: FontWeight.w700),
-                      foregroundColor: ink,
-                    ),
-                    onPressed: () async {
-                      await s.voice.stop();
-                      if (!context.mounted) return;
-                      await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AllTopicsPage()));
-                      await s.refresh();
-                    },
-                    icon: const Art('1f9ed', size: 32),
-                    label: const Text('Tout explorer'),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                // Le bouton « Mes livres » prend la place du milieu et rétrécit sur téléphone : la rangée ne déborde jamais.
-                child: Row(children: [
-                  _RoundButton(
-                    size: 72,
-                    color: surface,
-                    tooltip: 'Mon album',
-                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
-                    child: const Icon(Icons.collections_bookmark_rounded, size: 38, color: ink),
-                  ),
-                  const SizedBox(width: 12),
-                  // Mes livres : le plus grand bouton de la rangée, avec son nom écrit (ADR 0026).
-                  Expanded(
-                    child: Center(
-                      child: Semantics(
-                    button: true,
-                    label: 'Mes livres',
-                    excludeSemantics: true,
-                    child: Material(
-                      color: u.primary,
-                      elevation: 3,
-                      shape: const StadiumBorder(),
-                      child: InkWell(
-                        customBorder: const StadiumBorder(),
-                        onTap: () async {
-                          await s.voice.stop();
-                          if (!context.mounted) return;
-                          await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LibraryPage()));
-                          await s.refresh();
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(14, 10, 20, 10),
-                          child: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Row(mainAxisSize: MainAxisSize.min, children: [
-                              const Art('1f4da', size: 48),
-                              const SizedBox(width: 10),
-                              Text('Mes livres', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.onPrimary)),
-                            ]),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  _RoundButton(
-                    size: 72,
-                    color: surface,
-                    tooltip: 'Changer de monde',
-                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
-                    child: Art(u.mascot, size: 48),
-                  ),
-                ]),
-              ),
-            ],
-          ]),
+          universe: u,
+          // La mise en page suit la place réellement disponible (ADR 0052) : deux colonnes en paysage, et un
+          // défilement plutôt que des cartes écrasées quand l'écran est bas ou la police grande.
+          child: SafeArea(
+            child: LayoutBuilder(builder: (context, k) {
+              if (!s.ready) {
+                return Column(children: [_Header(onListen: _welcome), Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))]);
+              }
+              return isLandscape(k.biggest) ? _landscape(context, s, u, plan, k) : _portrait(context, s, u, plan, k);
+            }),
+          ),
         ),
-      ),
       ),
     );
   }
+
+  Widget _card(AppState s, DayPlan plan, int n, {required bool wide, bool? compact}) {
+    final item = plan.items[n];
+    return DayCard(
+      topic: s.topic(item.theme),
+      item: item,
+      number: n + 1,
+      next: plan.next == item,
+      pulse: _pulse,
+      wide: wide,
+      compact: compact,
+      onTap: () => _open(item.theme),
+    );
+  }
+
+  /// Portrait : en-tête, texte d'accueil, les trois cartes qui prennent le reste, puis les boutons du bas. Si le reste
+  /// est trop petit pour les cartes, toute la page défile et elles gardent leur taille.
+  Widget _portrait(BuildContext context, AppState s, Universe u, DayPlan plan, BoxConstraints k) {
+    final scale = MediaQuery.textScalerOf(context).scale(1.0);
+    final layout = homeCardsFor(
+      width: k.maxWidth - 32,
+      cardsHeight: k.maxHeight - homeChrome(fontScale: scale, dayFinished: plan.finished),
+    );
+    final top = [
+      _Header(onListen: _welcome),
+      _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+      if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
+    ];
+    final bottom = [_exploreButton(context, s, u), _bottomRow(context, s, u)];
+    final count = plan.items.length;
+    if (!layout.scrolls) {
+      return Column(children: [
+        ...top,
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+            child: LayoutBuilder(builder: (_, kk) {
+              final wide = kk.maxWidth > kk.maxHeight * 1.1;
+              return Flex(direction: wide ? Axis.horizontal : Axis.vertical, children: [
+                for (var n = 0; n < count; n++)
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: wide ? 0 : 12, right: wide && n < 2 ? 12 : 0),
+                      child: _card(s, plan, n, wide: wide),
+                    ),
+                  ),
+              ]);
+            }),
+          ),
+        ),
+        ...bottom,
+      ]);
+    }
+    return SingleChildScrollView(
+      child: Column(children: [
+        ...top,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+          child: layout.sideBySide
+              ? SizedBox(
+                  height: layout.height,
+                  child: Row(children: [
+                    for (var n = 0; n < count; n++)
+                      Expanded(child: Padding(padding: EdgeInsets.only(right: n < count - 1 ? 12 : 0), child: _card(s, plan, n, wide: true))),
+                  ]),
+                )
+              : Column(children: [
+                  for (var n = 0; n < count; n++)
+                    Padding(
+                      padding: EdgeInsets.only(bottom: n < count - 1 ? homeCardGap : 0),
+                      child: SizedBox(height: layout.height, child: _card(s, plan, n, wide: false, compact: true)),
+                    ),
+                ]),
+        ),
+        ...bottom,
+      ]),
+    );
+  }
+
+  /// Paysage : à gauche, l'en-tête, le texte d'accueil et les boutons ; à droite, les trois cartes l'une sous l'autre,
+  /// chacune avec toute la hauteur dont elle a besoin (ce qui dépasse défile).
+  Widget _landscape(BuildContext context, AppState s, Universe u, DayPlan plan, BoxConstraints k) {
+    final cardH = max(landscapeCardHeight(k.maxHeight), homeCardMinRow);
+    final count = plan.items.length;
+    return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      SizedBox(
+        width: sidePanelWidth(k.maxWidth),
+        child: Column(children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(children: [
+                _Header(onListen: _welcome),
+                _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+                if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
+              ]),
+            ),
+          ),
+          _exploreButton(context, s, u),
+          _bottomRow(context, s, u),
+        ]),
+      ),
+      Expanded(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(4, 12, 16, 12),
+          child: Column(children: [
+            for (var n = 0; n < count; n++)
+              Padding(
+                padding: EdgeInsets.only(bottom: n < count - 1 ? homeCardGap : 0),
+                child: SizedBox(height: cardH, child: _card(s, plan, n, wide: false, compact: cardH < homeCardCompactBelow)),
+              ),
+          ]),
+        ),
+      ),
+    ]);
+  }
+
+  /// « Tout explorer » : les trois du jour sont proposées, tout le reste reste ouvert (ADR 0032).
+  Widget _exploreButton(BuildContext context, AppState s, Universe u) =>
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: SizedBox(
+            width: double.infinity,
+            height: 56,
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                backgroundColor: surface,
+                side: BorderSide(color: u.night ? u.primary : u.onCard, width: 3),
+                textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 22, fontWeight: FontWeight.w700),
+                foregroundColor: ink,
+              ),
+              onPressed: () async {
+                await s.voice.stop();
+                if (!context.mounted) return;
+                await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AllTopicsPage()));
+                await s.refresh();
+              },
+              icon: const Art('1f9ed', size: 32),
+              label: const Text('Tout explorer'),
+            ),
+          ),
+        );
+
+  /// Album, Mes livres (le plus grand bouton de la rangée, avec son nom écrit, ADR 0026) et le choix du monde. Le bouton
+  /// du milieu rétrécit sur téléphone : la rangée ne déborde jamais.
+  Widget _bottomRow(BuildContext context, AppState s, Universe u) =>
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+          // Le bouton « Mes livres » prend la place du milieu et rétrécit sur téléphone : la rangée ne déborde jamais.
+          child: Row(children: [
+            _RoundButton(
+              size: 72,
+              color: surface,
+              tooltip: 'Mon album',
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
+              child: const Icon(Icons.collections_bookmark_rounded, size: 38, color: ink),
+            ),
+            const SizedBox(width: 12),
+            // Mes livres : le plus grand bouton de la rangée, avec son nom écrit (ADR 0026).
+            Expanded(
+              child: Center(
+                child: Semantics(
+              button: true,
+              label: 'Mes livres',
+              excludeSemantics: true,
+              child: Material(
+                color: u.primary,
+                elevation: 3,
+                shape: const StadiumBorder(),
+                child: InkWell(
+                  customBorder: const StadiumBorder(),
+                  onTap: () async {
+                    await s.voice.stop();
+                    if (!context.mounted) return;
+                    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LibraryPage()));
+                    await s.refresh();
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(14, 10, 20, 10),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        const Art('1f4da', size: 48),
+                        const SizedBox(width: 10),
+                        Text('Mes livres', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.onPrimary)),
+                      ]),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            _RoundButton(
+              size: 72,
+              color: surface,
+              tooltip: 'Changer de monde',
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
+              child: Art(u.mascot, size: 48),
+            ),
+          ]),
+        );
 }
 
 /// Une activité du jour : icône du domaine, nom écrit, barre du temps fait, et un rond d'action (▶ ou ✔ « Fini »).
@@ -213,16 +310,21 @@ class DayCard extends StatelessWidget {
     required this.pulse,
     required this.wide,
     required this.onTap,
+    this.compact,
   });
   final Topic topic;
   final DayItem item;
   final int number;
   final bool next, wide;
+
+  /// Version compacte (disque et bouton plus petits) : null, c'est la largeur de la carte qui décide ; la mise en page
+  /// l'impose quand la hauteur manque (ADR 0052).
+  final bool? compact;
   final Animation<double> pulse;
   final VoidCallback onTap;
 
   @override
-  Widget build(BuildContext context) => LayoutBuilder(builder: (context, k) => _build(context, compact: !wide && k.maxWidth < 440));
+  Widget build(BuildContext context) => LayoutBuilder(builder: (context, k) => _build(context, compact: compact ?? (!wide && k.maxWidth < 440)));
 
   /// [compact] : téléphone en portrait (carte de moins de 440 dp) — icône et bouton plus petits, nom sur deux lignes,
   /// pour que le nom du domaine ne soit jamais coupé.

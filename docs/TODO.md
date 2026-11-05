@@ -175,6 +175,12 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 
 ## Avant la version 0.9.0 (2026-11-05, après la 0.8.0) : compteur (ADR 0050) et Maia (ADR 0051), faits ; non publiés
 
+- ✅ **Mise en page adaptative** (ADR 0052), retour d'Antsa : sur une tablette, l'accueil cachait les trois thèmes, la
+  police était trop grande et l'échiquier trop petit en paysage. L'accueil passe en deux colonnes en paysage et défile
+  au lieu d'écraser les cartes ; la partie, la revue et les leçons d'échecs ont un grand échiquier avec le texte à
+  côté ; la police système est plafonnée à 130 % (115 % sur écran bas). ⏳ À confirmer sur la vraie tablette ;
+  ⏳ les autres écrans (comptage, lecture, dessin…) n'ont pas encore de version paysage.
+
 ## Avant la version 0.8.0 (2026-11-05), par ordre de priorité
 
 1. ✅ **Voix** : sur un autre appareil (réglé en anglais), le français était lu en anglais. Cause : le moteur Android

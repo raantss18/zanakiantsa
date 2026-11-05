@@ -26,6 +26,7 @@ import '../core/events.dart';
 import '../core/rewards.dart';
 import '../core/rules.dart';
 import 'celebrate.dart';
+import 'adaptive.dart';
 import 'narrator.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -482,27 +483,50 @@ class _SessionPageState extends State<SessionPage> {
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
-          child: Column(children: [
-            SessionTopBar(
-              onVoiceOn: () => attempt?.listen(),
-              progress: over ? 1 : index / plan.length,
-              stars: stars,
-              universe: u,
-              onBack: () => Navigator.of(context).maybePop(),
-            ),
-            if (!over)
-              ListenableBuilder(
-                listenable: a,
-                builder: (_, _) => Narrator(
-                  universe: u,
-                  text: a.bandText,
-                  help: a.helpText != null,
-                  cheer: stars,
-                  onListen: a.listen,
-                ),
+          // Paysage (ADR 0052) : pour les activités à échiquier, le texte passe dans une colonne à gauche et l'échiquier
+          // prend toute la hauteur ; il était minuscule à côté des écritures.
+          child: LayoutBuilder(builder: (context, k) {
+            final side = !over && isLandscape(k.biggest) && const {'echecs', 'probleme'}.contains(a.skill.activity);
+            // Pendant un exemple, le badge « Nouveau » et le bouton « J'ai compris » : sur la page, ou dans la colonne de
+            // gauche quand l'échiquier a toute la hauteur.
+            final badge = a.example ? _NewBadge(title: a.skill.title) : null;
+            final understood = a.example
+                ? ListenableBuilder(
+                            listenable: a,
+                            builder: (_, _) => AnimatedOpacity(
+                              opacity: a.exampleDone ? 1 : 0,
+                              duration: const Duration(milliseconds: 300),
+                              child: IgnorePointer(
+                                ignoring: !a.exampleDone,
+                                child: Center(
+                                  child: FilledButton.icon(
+                                    style: FilledButton.styleFrom(
+                                      backgroundColor: green,
+                                      minimumSize: const Size(260, 76),
+                                      textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700),
+                                    ),
+                                    onPressed: _understood,
+                                    icon: const Icon(Icons.check_rounded, size: 40),
+                                    label: const Text("J'ai compris, à moi !"),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ) : null;
+            // Dans la colonne de gauche, le texte prend toute la hauteur que le badge et le bouton laissent.
+            final sideHeight = (k.maxHeight - 72 - (badge == null ? 0 : 56) - (understood == null ? 0 : 96)).clamp(narratorHeight, 420.0);
+            final narrator = ListenableBuilder(
+              listenable: a,
+              builder: (_, _) => Narrator(
+                universe: u,
+                text: a.bandText,
+                help: a.helpText != null,
+                cheer: stars,
+                onListen: a.listen,
+                height: side ? sideHeight : narratorHeight,
               ),
-            Expanded(
-              child: over
+            );
+            final content = over
                   ? DayEnd(
                       theme: widget.topic,
                       again: () => Navigator.of(context).pushReplacement(
@@ -521,8 +545,8 @@ class _SessionPageState extends State<SessionPage> {
                       Positioned.fill(
                         // Pendant l'exemple, l'activité laisse la place à la pastille « Nouveau » en haut et au bouton
                         // « J'ai compris » en bas (pas de chevauchement).
-                        top: a.example ? 52 : 0,
-                        bottom: a.example ? 104 : 0,
+                        top: a.example && !side ? 52 : 0,
+                        bottom: a.example && !side ? 104 : 0,
                         child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
                           'composer' => ComposeActivity(key: ObjectKey(a), attempt: a),
@@ -552,39 +576,47 @@ class _SessionPageState extends State<SessionPage> {
                         },
                       ),
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
-                      if (a.example) ...[
-                        Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: _NewBadge(title: a.skill.title))),
+                      if (a.example && !side) ...[
+                        Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
                         Positioned(
                           left: 0,
                           right: 0,
                           bottom: 16,
-                          child: ListenableBuilder(
-                            listenable: a,
-                            builder: (_, _) => AnimatedOpacity(
-                              opacity: a.exampleDone ? 1 : 0,
-                              duration: const Duration(milliseconds: 300),
-                              child: IgnorePointer(
-                                ignoring: !a.exampleDone,
-                                child: Center(
-                                  child: FilledButton.icon(
-                                    style: FilledButton.styleFrom(
-                                      backgroundColor: green,
-                                      minimumSize: const Size(260, 76),
-                                      textStyle: const TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700),
-                                    ),
-                                    onPressed: _understood,
-                                    icon: const Icon(Icons.check_rounded, size: 40),
-                                    label: const Text("J'ai compris, à moi !"),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          child: understood!,
                         ),
                       ],
-                    ]),
-            ),
-          ]),
+                    ]);
+            return Column(children: [
+              SessionTopBar(
+                onVoiceOn: () => attempt?.listen(),
+                progress: over ? 1 : index / plan.length,
+                stars: stars,
+                universe: u,
+                onBack: () => Navigator.of(context).maybePop(),
+              ),
+              if (side)
+                Expanded(
+                  child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    SizedBox(
+                      width: sidePanelWidth(k.maxWidth),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: Column(children: [
+                          if (badge != null) Padding(padding: const EdgeInsets.fromLTRB(12, 0, 12, 8), child: Align(alignment: Alignment.centerLeft, child: badge)),
+                          narrator,
+                          if (understood != null) Padding(padding: const EdgeInsets.only(top: 8), child: understood),
+                        ]),
+                      ),
+                    ),
+                    Expanded(child: content),
+                  ]),
+                )
+              else ...[
+                if (!over) narrator,
+                Expanded(child: content),
+              ],
+            ]);
+          }),
         ),
       ),
     ),
