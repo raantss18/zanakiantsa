@@ -173,7 +173,14 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
-## Avant la version 0.9.0 (2026-11-05, après la 0.8.0) : compteur (ADR 0050) et Maia (ADR 0051), faits ; non publiés
+## Version 0.9.0 (2026-11-05) : préparée, pas publiée
+
+- ✅ Préparée : `0.9.0+9`, APK signé `release-out/zanakiantsa-0.9.0-arm64-v8a.apk` (build 2009, 35,4 Mo), signature de
+  `release.json` vérifiée par `release_out_test`. Contenu : Maia (ADR 0051), compteur (ADR 0050), mise en page
+  adaptative (ADR 0052), images expliquées (ADR 0048), sens du tracé (ADR 0049), opérations posées (ADR 0046).
+- ✅ Vérifié sur l'émulateur : montée 0.8.0 → 0.9.0 (trois parties enregistrées conservées) ; Maia dans l'APK signé
+  (le moteur se lance, répond 1…e5). ⏳ Pas vu sur le téléphone ni sur la vraie tablette ; ⏳ durée d'un coup de Maia.
+- ⏳ Publication GitHub : à la demande d'Antsa seulement.
 
 - ✅ **Mise en page adaptative** (ADR 0052), retour d'Antsa : sur une tablette, l'accueil cachait les trois thèmes, la
   police était trop grande et l'échiquier trop petit en paysage. L'accueil passe en deux colonnes en paysage et défile
