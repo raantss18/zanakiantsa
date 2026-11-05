@@ -29,6 +29,14 @@ android {
         versionName = flutter.versionName
     }
 
+    // lc0 (moteur de Maia, ADR 0051) est livré comme « bibliothèque » jniLibs/arm64-v8a/liblc0.so : c'est le seul endroit
+    // d'où une appli peut lancer un programme (Android 10 et plus). Il faut donc qu'elle soit extraite sur le disque.
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

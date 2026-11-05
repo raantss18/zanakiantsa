@@ -9,6 +9,8 @@ import '../app_state.dart';
 import '../audio/voice.dart';
 import '../core/engine.dart';
 import '../core/game.dart';
+import '../core/uci.dart';
+import '../engines/maia.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -68,7 +70,7 @@ class SavedGame {
     return (result == '1-0') == childWhite ? 'Gagnée' : 'Perdue';
   }
 
-  String get title => mode == 'robot' ? 'Contre le robot, niveau $level' : 'À deux';
+  String get title => mode == 'robot' ? (isMaia(level) ? 'Contre Maia $level' : 'Contre le robot, niveau $level') : 'À deux';
 }
 
 /// Les parties de l'enfant (les 30 dernières), gardées dans ses réglages.
@@ -213,6 +215,9 @@ Widget pageHeader(BuildContext context, String title, {List<Widget> actions = co
 Future<void> chooseRobotGame(BuildContext context) async {
   var level = 1;
   var color = 'blancs';
+  // Maia (ADR 0051) n'est proposé que si le programme est dans l'app (arm64).
+  final maia = await Maia.available();
+  if (!context.mounted) return;
   final go = await showDialog<bool>(
     context: context,
     builder: (ctx) => StatefulBuilder(
@@ -222,16 +227,30 @@ Future<void> chooseRobotGame(BuildContext context) async {
           const Text('Niveau', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
           SegmentedButton<int>(
+            emptySelectionAllowed: true,
             segments: const [
               ButtonSegment(value: 1, label: Text('1')),
               ButtonSegment(value: 2, label: Text('2')),
               ButtonSegment(value: 3, label: Text('3')),
             ],
-            selected: {level},
-            onSelectionChanged: (v) => set(() => level = v.first),
+            selected: isMaia(level) ? <int>{} : {level},
+            onSelectionChanged: (v) => set(() => level = v.isEmpty ? level : v.first),
           ),
+          if (maia) ...[
+            const SizedBox(height: 12),
+            const Text('Ou un robot qui joue comme les humains', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 8),
+            SegmentedButton<int>(
+              emptySelectionAllowed: true,
+              segments: [for (final r in maiaRatings) ButtonSegment(value: r, label: Text('Maia $r'))],
+              selected: isMaia(level) ? {level} : <int>{},
+              onSelectionChanged: (v) => set(() => level = v.isEmpty ? level : v.first),
+            ),
+          ],
           const SizedBox(height: 4),
-          Text(const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
+          Text(isMaia(level)
+              ? 'Maia $level a appris sur des parties de joueurs de $level points (classement Lichess) : il joue et se trompe comme eux.'
+              : const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
           const SizedBox(height: 16),
           const Text('Je joue avec', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
@@ -272,6 +291,10 @@ class _GamePageState extends State<GamePage> {
   late final AppState app = AppScope.of(context);
   final game = Game();
 
+  /// Maia, quand on joue contre lui (ADR 0051) ; coupé quand on quitte la partie.
+  Maia? _maia;
+  bool _maiaFailed = false;
+
   /// La parole de la partie : coupée quand on la quitte.
   late final Speech speech = app.voice.scope();
   int? selected;
@@ -294,6 +317,7 @@ class _GamePageState extends State<GamePage> {
   @override
   void dispose() {
     speech.close();
+    _maia?.dispose();
     if (!_saved && game.moves.length >= 2) _save();
     super.dispose();
   }
@@ -415,7 +439,18 @@ class _GamePageState extends State<GamePage> {
   Future<void> _robotPlays() async {
     setState(() => thinking = true);
     final started = DateTime.now();
-    final uci = await compute(robotMove, (game.position.fen, widget.level, DateTime.now().millisecondsSinceEpoch));
+    final fen = game.position.fen;
+    final seed = DateTime.now().millisecondsSinceEpoch;
+    String? maiaMove;
+    if (isMaia(widget.level) && !_maiaFailed) {
+      _maia ??= await Maia.start(widget.level);
+      if (_maia == null) _maiaFailed = true;
+      final move = await _maia?.bestMove(fen);
+      // Un coup qui n'est pas permis ne doit jamais arriver sur l'échiquier : le robot de l'app joue à la place.
+      if (move != null && game.position.legalMoves().any((m) => m.uci == move)) maiaMove = move;
+    }
+    // (Type écrit : sous « ?? », Dart déduirait un type qui accepte null.)
+    final String uci = maiaMove ?? await compute<(String, int, int), String>(robotMove, (fen, isMaia(widget.level) ? 3 : widget.level, seed));
     // Un petit temps pour voir le coup arriver, même quand le robot calcule très vite.
     final wait = const Duration(milliseconds: 700) - DateTime.now().difference(started);
     if (wait > Duration.zero) await Future<void>.delayed(wait);
@@ -471,7 +506,7 @@ class _GamePageState extends State<GamePage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            pageHeader(context, robot ? 'Robot · niveau ${widget.level}' : 'À deux'),
+            pageHeader(context, robot ? (isMaia(widget.level) ? 'Maia ${widget.level}' : 'Robot · niveau ${widget.level}') : 'À deux'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               child: Container(

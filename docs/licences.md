@@ -21,6 +21,20 @@
 | google_mlkit_digital_ink_recognition | 0.16.1 | MIT (plugin) | oui | écriture | https://pub.dev/packages/google_mlkit_digital_ink_recognition |
 | google_mlkit_image_labeling | 0.16.1 | MIT (plugin) | oui | photo d'objet | https://pub.dev/packages/google_mlkit_image_labeling |
 
+## Programmes séparés sous GPL-3 (ADR 0051)
+
+| Élément | Version | Licence | Usage | Source |
+| --- | --- | --- | --- | --- |
+| lc0 (Leela Chess Zero), non modifié | v0.32.1, `fd71a2d921b689c5f479d3227c3806c8e272d9c5` | GPL-3 (texte : `docs/moteurs/lc0-COPYING.txt`) | moteur du robot Maia, `liblc0.so` | https://github.com/LeelaChessZero/lc0 |
+| Poids Maia-1 (1100, 1500, 1900) | v1.0 | GPL-3 | niveaux du robot Maia | https://github.com/CSSLab/maia-chess |
+
+Pourquoi l'app reste sous Apache-2.0 : l'app et lc0 sont deux programmes qui ne se parlent que par un processus et le
+protocole texte UCI, jamais dans le même programme ; la FSF dit que « pipes, sockets and command-line arguments are
+communication mechanisms normally used between two separate programs » et qu'un agrégat peut contenir un programme GPL
+avec d'autres (https://www.gnu.org/licenses/gpl-faq.html#MereAggregation). ⚠ Lecture de la FAQ, pas un avis
+juridique. Obligations GPL tenues : texte de la licence et sources cités ici et dans l'espace parent ; recette de
+compilation exacte dans `tool/build_lc0.sh`.
+
 ## ⚠ Cas à trancher : ML Kit
 
 Les plugins Flutter sont MIT, mais ils embarquent le **SDK ML Kit de Google**, régi par les « ML Kit Terms »

@@ -410,7 +410,11 @@ class _ParentPageState extends State<ParentPage> {
                 'Pièces d’échecs : Cburnett, Wikimedia Commons (CC BY-SA 3.0). '
                 'Livres : African Storybook Initiative et leurs auteurs, illustrateurs et traducteurs, cités à la fin de '
                 'chaque livre (CC BY 4.0, africanstorybook.org). '
-                'Code : Apache-2.0, github.com/raantss18/zanakiantsa.',
+                'Code : Apache-2.0, github.com/raantss18/zanakiantsa. '
+                'Robot « Maia » : le programme lc0 v0.32.1 (Leela Chess Zero) et les poids Maia-1 (équipe CSSLab), tous '
+                'deux sous licence GNU GPL v3. Ce sont des programmes séparés de l’appli, qui lui parlent par le protocole '
+                'UCI. Sources : github.com/LeelaChessZero/lc0 (étiquette v0.32.1) et github.com/CSSLab/maia-chess ; '
+                'recette de compilation : tool/build_lc0.sh dans github.com/raantss18/zanakiantsa.',
               ),
             ],
           ),

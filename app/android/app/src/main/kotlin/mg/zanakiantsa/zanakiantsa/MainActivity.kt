@@ -10,7 +10,8 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
 
-/// Canal « zanakiantsa/system » : numéro de version installé et lancement de l'installateur (ADR 0011).
+/// Canal « zanakiantsa/system » : numéro de version installé, lancement de l'installateur (ADR 0011), dossiers du moteur
+/// d'échecs (ADR 0051).
 class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -20,6 +21,8 @@ class MainActivity : FlutterActivity() {
                     val info = packageManager.getPackageInfo(packageName, 0)
                     result.success(if (Build.VERSION.SDK_INT >= 28) info.longVersionCode.toInt() else @Suppress("DEPRECATION") info.versionCode)
                 }
+                // Dossiers où lancer et nourrir le moteur lc0 (ADR 0051) : ses bibliothèques natives, et les fichiers de l'appli.
+                "engineDirs" -> result.success(mapOf("lib" to applicationInfo.nativeLibraryDir, "files" to filesDir.absolutePath))
                 "install" -> {
                     // Sans l'autorisation « installer des applis inconnues », on ouvre le réglage : le parent l'accorde
                     // puis relance la mise à jour.
