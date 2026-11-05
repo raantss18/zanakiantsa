@@ -190,6 +190,14 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
 
+## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 proposé, en attente d'Antsa
+
+1. ⏳ **Stockfish** : programme séparé dans l'APK. Son réseau de 79 Mo se télécharge depuis l'espace parent. Sert à
+   l'analyse fine des parties. Mesurer d'abord la taille du programme compilé sans réseau.
+2. ⏳ **Maia-1** : compiler lc0 pour Android comme programme séparé, avec maia-1100 et maia-1500 (2,6 Mo). Sert aux
+   robots « humains » pour les grands. Vérifier d'abord la faisabilité.
+3. ⏳ **Autres domaines** : quels outils ? À préciser avec Antsa ; licence et taille vérifiées avant tout choix.
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →
