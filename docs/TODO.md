@@ -187,6 +187,9 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    choisir le résultat. Maintenant il écrit chaque chiffre, de droite à gauche, avec la retenue ou la dizaine cassée.
    Vérifié sur l'émulateur, au format tablette et téléphone.
 
+4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
+   l'émulateur : réponses et test de départ conservés.
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →
