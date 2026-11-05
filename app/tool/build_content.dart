@@ -59,7 +59,7 @@ const requiredPhrases = {'consigne', 'question', 'indice', 'exemple', 'demonstra
 final placeholder = RegExp(r'\{(\w+)\}');
 const allowedPlaceholders = {
   'n', 'a', 'b', 'objet', 'objets', 'contenant', 'un', 'Chacun', 'prenom', //
-  'texte', 'bonne', 'explication', 'mot', 'rep', // variables d'activité (ADR 0019)
+  'texte', 'bonne', 'explication', 'mot', 'rep', 'choisi', // variables d'activité (ADR 0019, 0048)
   'dizaines', 'unites', 'reste', // bâtonnets (ADR 0021)
   'lettre', // lire et écrire (ADR 0031)
   'centaines', 'heure', // CE1 (ADR 0035)

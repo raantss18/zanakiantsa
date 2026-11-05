@@ -129,23 +129,32 @@ class Attempt extends ChangeNotifier {
     if (idea != null) {
       helpText = idea;
       notifyListeners();
-      await (_english ? speech.sayMixed(idea) : speech.say(idea));
-      await _readingTime(idea);
+      await _sayAndRead(idea);
     }
     demonstrate = true;
     helpText = phrase('demonstration');
     notifyListeners();
+    final watch = Stopwatch()..start();
     await say('demonstration');
-    await _readingTime(helpText!);
+    await _readingTime(helpText!, watch.elapsed);
     await Future<void>.delayed(const Duration(milliseconds: 1200));
     exampleDone = true;
     notifyListeners();
   }
 
-  /// Voix coupée : le temps de lire le texte affiché avant de passer à la suite (sinon l'idée de l'exemple défilait
-  /// sans pouvoir être lue).
-  Future<void> _readingTime(String text) =>
-      app.voice.voiceOn ? Future.value() : Future<void>.delayed(Duration(milliseconds: (1500 + 60 * text.length).clamp(1500, 8000)));
+  /// Le temps de lire le texte affiché avant de passer à la suite, moins ce que la voix a déjà pris ([spoken]). Sans
+  /// voix (coupée, ou pas de voix française sur l'appareil), l'idée ou l'explication défilait sans pouvoir être lue.
+  Future<void> _readingTime(String text, [Duration spoken = Duration.zero]) {
+    final left = Duration(milliseconds: (1500 + 60 * text.length).clamp(1500, 8000)) - spoken;
+    return left > Duration.zero ? Future<void>.delayed(left) : Future.value();
+  }
+
+  /// Dit [text] (voix anglaise pour les passages entre « » en anglais), puis laisse le temps de le lire.
+  Future<void> _sayAndRead(String text) async {
+    final watch = Stopwatch()..start();
+    await (_english ? speech.sayMixed(text) : speech.say(text));
+    await _readingTime(text, watch.elapsed);
+  }
 
   /// [why] : ce que cette réponse-là montre (« 72, ce serait 7 paquets de dix… »), dit avant l'aide (ADR 0029).
   Future<void> submit(bool ok, {String? why}) async {
@@ -213,9 +222,8 @@ class Attempt extends ChangeNotifier {
     } else {
       helpText = why;
       notifyListeners();
-      await (_english ? speech.sayMixed(why) : speech.say(why));
-      // Voix coupée : on laisse le temps de lire l'explication avant l'aide.
-      await _readingTime(why);
+      // On laisse le temps de lire l'explication avant l'aide.
+      await _sayAndRead(why);
       helpText = phrase(key);
       notifyListeners();
     }

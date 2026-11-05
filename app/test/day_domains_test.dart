@@ -70,7 +70,8 @@ void main() {
             final q = s.draw(r, last: last);
             if (s.items.length > 1 && last != null) expect(q.n, isNot(last.n), reason: '${s.id} : même question deux fois');
             last = q;
-            for (final k in s.phrases.keys) {
+            // « erreur » a {choisi}, rempli par l'image touchée (test/choice_error_test.dart).
+            for (final k in s.phrases.keys.where((k) => k != 'erreur')) {
               expect(s.say(k, q, words: w), isNot(contains('{')), reason: '${s.id}.$k');
             }
           }

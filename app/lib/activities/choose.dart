@@ -41,7 +41,7 @@ class _ChooseActivityState extends State<ChooseActivity> {
     if (a.busy || a.finished || tried.contains(p.art)) return;
     final ok = p.art == item.right!.art;
     if (!ok) setState(() => tried.add(p.art));
-    a.submit(ok);
+    a.submit(ok, why: ok ? null : choiceError(a.skill, a.phrase, p));
   }
 
   /// Lecture (ADR 0031) : le mot est écrit en grand et jamais dit ni étiqueté sous les images — c'est à l'enfant de le lire.
@@ -86,3 +86,15 @@ class _ChooseActivityState extends State<ChooseActivity> {
         );
       });
 }
+
+/// Ce que montre une image fausse (ADR 0048) : d'abord ce que l'enfant a touché, nommé (« Ça, c'est la vache. »),
+/// puis, si la compétence le dit (phrase « erreur »), pourquoi ce n'est pas la bonne.
+/// Entre guillemets, c'est le mot qu'on compare : sans son article (« tomate », pas « la tomate »).
+String choiceError(Skill skill, String Function(String) phrase, Pic chosen) => skill.phrases.containsKey('erreur')
+    ? phrase('erreur')
+        .replaceAll('« {choisi} »', '« ${chosen.name.replaceFirst(RegExp(r"^(le |la |les |l'|un |une )"), '')} »')
+        .replaceAll('{choisi}', chosen.name)
+    : thatIs(chosen.name);
+
+/// « Ça, c'est la tête. », « Ça, ce sont les bras. »
+String thatIs(String name) => name.startsWith('les ') ? 'Ça, ce sont $name.' : 'Ça, c\'est $name.';

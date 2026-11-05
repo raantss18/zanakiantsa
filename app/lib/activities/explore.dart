@@ -7,6 +7,7 @@ import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/three.dart';
 import '../ui/universe.dart';
+import 'choose.dart';
 
 /// Explorer (ADR 0024) : des scènes qu'on tourne et qu'on touche — un solide en 3D à nommer, le système solaire, le
 /// corps humain. Une question écrite et dite ; toucher la bonne chose = réussi.
@@ -149,7 +150,7 @@ class _PlanetsActivityState extends State<PlanetsActivity> with SingleTickerProv
     if (best == null || tried.contains(best.$1.id)) return;
     final ok = best.$1.id == item.target;
     if (!ok) setState(() => tried.add(best!.$1.id));
-    a.submit(ok);
+    a.submit(ok, why: ok ? null : thatIs(best.$1.name));
   }
 
   @override
@@ -329,7 +330,7 @@ class _BodyActivityState extends State<BodyActivity> {
     if (hit == null || tried.contains(hit)) return;
     final ok = hit == item.target;
     if (!ok) setState(() => tried.add(hit));
-    a.submit(ok);
+    a.submit(ok, why: ok ? null : thatIs(bodyParts[hit]!));
   }
 
   @override

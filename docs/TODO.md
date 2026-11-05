@@ -136,7 +136,7 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 - ✅ Version 0.5.0 publiée (2026-11-03, build 2005) ; montée 0.4.0 → 0.5.0 vérifiée sur l'émulateur
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité
-- ✅ Test de départ par domaine (ADR 0045) ; ⏳ explications pour les réponses en images
+- ✅ Test de départ par domaine (ADR 0045) ; ✅ explications pour les réponses en images (ADR 0048)
 - ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
 - ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
