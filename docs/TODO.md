@@ -163,7 +163,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    fourchette, pièce non protégée, mat du couloir (règles : FIDE ; tactiques : positions vérifiées par le moteur, `test/problems_test.dart`). Corrigé au passage :
    les pièces noires autres que roi et pion étaient invisibles (images manquantes).
 10. ✅ **Programmation type Scratch** : blocs emboîtés « répéter n fois », « répéter jusqu'à l'objet », « si rocher
-    devant » (ADR 0041). ⏳ variables (« compteur ») : plus tard.
+    devant » (ADR 0041) ; ✅ variable : un compteur, essayé sur trois parcours (ADR 0050, CM2).
 11. ✅ Même profondeur pour chaque domaine (ADR 0042) : accueil de domaine (apprendre, défi avec record, mon
     carnet), erreurs gardées au journal et montrées à l'enfant et au parent, anglais CE1. ⏳ Sons au-delà de la GS :
     source à trouver.
@@ -172,6 +172,8 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
     essai, conseil) — ADR 0043. ⏳ À confirmer à l'oreille sur le téléphone.
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
+
+## Avant la version 0.9.0 (2026-11-05, après la 0.8.0) : compteur (ADR 0050) et Maia (ADR 0051), faits ; non publiés
 
 ## Avant la version 0.8.0 (2026-11-05), par ordre de priorité
 
@@ -190,12 +192,14 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
 
-## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 proposé, en attente d'Antsa
+## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
-1. ⏳ **Stockfish** : programme séparé dans l'APK. Son réseau de 79 Mo se télécharge depuis l'espace parent. Sert à
-   l'analyse fine des parties. Mesurer d'abord la taille du programme compilé sans réseau.
-2. ⏳ **Maia-1** : compiler lc0 pour Android comme programme séparé, avec maia-1100 et maia-1500 (2,6 Mo). Sert aux
-   robots « humains » pour les grands. Vérifier d'abord la faisabilité.
+1. ✅ **Maia** (ADR 0051) : lc0 v0.32.1 compilé pour Android (2,5 Mo, `tool/build_lc0.sh`), poids Maia-1 1100 / 1500 /
+   1900, proposés dans « Contre le robot ». Vérifié sur l'émulateur : le moteur se lance, joue 1.e4 puis 2.Cc3 et
+   s'arrête quand on quitte la partie. ⏳ Durée d'un coup sur la SM-X135G ; essai avec un enfant ; installation sur le
+   téléphone avec ce moteur. L'APK d'essai pèse 35 Mo (bibliothèques extraites, donc stockées compressées).
+2. ⏳ **Stockfish** : programme séparé dans l'APK, réseau de 79 Mo téléchargé depuis l'espace parent, pour l'analyse fine
+   des parties. Mesurer d'abord la taille du programme compilé sans réseau. Même méthode que Maia (`liblc0.so`).
 3. ⏳ **Autres domaines** : quels outils ? À préciser avec Antsa ; licence et taille vérifiées avant tout choix.
 
 ## Étape 5 — Thèmes suivants ⏳
