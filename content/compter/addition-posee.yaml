@@ -8,9 +8,9 @@ parametres: { op: "+", min: 12, max: 79, retenue: true }
 idee: "On pose les unités sous les unités, les dizaines sous les dizaines. On commence par les unités : si on dépasse dix, on retient une dizaine."
 variantes: ["Combien font {a} + {b} ?", "Calcule {a} plus {b}, en colonnes."]
 phrases:
-  consigne: "Calcule d'abord les unités, à droite, puis les dizaines, sans oublier la retenue. Puis touche le résultat."
+  consigne: "Écris le résultat chiffre par chiffre avec les touches, en commençant par les unités, à droite. Si cela fait dix ou plus, écris la retenue en haut de la colonne suivante."
   question: "{a} + {b} = ?"
-  indice: "Additionne d'abord les unités. Si cela fait dix ou plus, mets la dizaine en retenue."
+  indice: "Une colonne à la fois, de droite à gauche. Si une colonne fait dix ou plus, la dizaine part en retenue sur la colonne suivante."
   exemple: "N'oublie pas d'ajouter la retenue avec les dizaines."
   demonstration: "Regarde : {a} + {b} = {n}."
   bravo: "Oui ! {a} + {b} = {n}."

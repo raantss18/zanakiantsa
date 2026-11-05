@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/ce1.dart';
 import 'package:zanakiantsa/activities/numbers.dart';
+import 'package:zanakiantsa/core/column.dart';
 import 'package:zanakiantsa/core/progress.dart';
 import 'package:zanakiantsa/audio/sfx.dart';
 import 'package:zanakiantsa/content/content.dart';
@@ -260,8 +261,10 @@ void main() {
       expect(clockText(11, 45), 'midi moins le quart');
     });
     test('erreurs typiques des opérations posées et du matériel multibase', () {
-      expect(explainCe1('posee', const Question(n: 82, a: 45, b: 37), 82, 72), contains('retenue'));
-      expect(explainCe1('posee', const Question(n: 25, a: 52, b: 27), 25, 35), contains('casse une dizaine'));
+      // Posées chiffre par chiffre (ADR 0046) : l'erreur aux dizaines rappelle la retenue, et la soustraction fait
+      // casser une dizaine.
+      expect(additionSteps(45, 37).last.why, contains('retenue'));
+      expect(subtractionSteps(52, 27).first.prompt, contains('casse une dizaine'));
       expect(explainCe1('multibase', const Question(n: 205, a: 2, b: 0), 205, 25), contains('0 au chiffre des dizaines'));
     });
     test("point de départ selon l'âge : à 7 ans, maternelle tenue pour acquise, CP à faire", () {

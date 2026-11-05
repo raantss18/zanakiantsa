@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../content/content.dart';
+import '../core/column.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import 'numbers.dart';
@@ -66,15 +67,6 @@ String? explainCe1(String activity, Question q, int right, int v) {
         return step < 0 ? "Cette suite descend : chaque nombre a $w de moins que celui d'avant." : "Cette suite monte : chaque nombre a $w de plus que celui d'avant.";
       }
       if ((v - right).abs() == step.abs()) return 'Regarde le nombre juste avant le trou, et fais un seul pas.';
-    case 'posee':
-      if (v == right - 10 && q.a + q.b == right) return "N'oublie pas la retenue : 1 dizaine de plus.";
-      if (q.a - q.b == right) {
-        final wrong = ((q.a ~/ 10) - (q.b ~/ 10)) * 10 + ((q.a % 10) - (q.b % 10)).abs();
-        if (v == wrong) return "Aux unités, on ne peut pas enlever ${q.b % 10} de ${q.a % 10} : on casse une dizaine.";
-        if (v == q.a + q.b) return 'Tu as ajouté. Ici, on enlève.';
-      } else if (v == (q.a - q.b).abs()) {
-        return 'Tu as enlevé. Ici, on ajoute.';
-      }
   }
   return null;
 }
@@ -166,14 +158,22 @@ class ColumnOpActivity extends StatefulWidget {
   State<ColumnOpActivity> createState() => _ColumnOpActivityState();
 }
 
+/// L'opération posée, effectuée chiffre par chiffre (ADR 0046) : l'enfant écrit chaque chiffre du résultat de droite à
+/// gauche, la retenue, ou la dizaine cassée. La case à remplir a un cadre épais et une flèche (pas seulement une
+/// couleur) ; ce qu'il faut faire est écrit sous l'opération et dit.
 class _ColumnOpActivityState extends State<ColumnOpActivity> {
   Attempt get a => widget.attempt;
+  late final bool sub = a.skill.params['op'] == '-';
+  late final List<ColumnStep> steps = columnSteps(a.question.a, a.question.b, subtract: sub);
+  int done = 0;
+
+  ColumnStep? get step => done < steps.length ? steps[done] : null;
 
   @override
   void initState() {
     super.initState();
     a.addListener(_changed);
-    a.show('question').then((_) => a.say('consigne'));
+    a.show('question').then((_) => a.say('consigne')).then((_) => _sayStep());
   }
 
   @override
@@ -184,42 +184,178 @@ class _ColumnOpActivityState extends State<ColumnOpActivity> {
 
   void _changed() => setState(() {});
 
+  Future<void> _sayStep() async {
+    final s = step;
+    if (s != null && !a.finished) await a.speech.say(s.prompt);
+  }
+
+  void _press(int v) {
+    final s = step;
+    if (s == null || a.busy || a.finished) return;
+    if (v != s.value) {
+      a.submit(false, why: s.why);
+      return;
+    }
+    setState(() => done++);
+    if (step == null) {
+      a.submit(true);
+    } else {
+      _sayStep();
+    }
+  }
+
+  /// La valeur affichée d'une case : écrite si l'étape est faite (ou montrée à la fin).
+  int? _shown(ColumnKind kind, int col) {
+    for (final (i, s) in steps.indexed) {
+      if (s.kind == kind && s.column == col && (i < done || a.demonstrate || a.solved)) return s.value;
+    }
+    return null;
+  }
+
+  bool _active(ColumnKind kind, int col) => !a.finished && step?.kind == kind && step?.column == col;
+
+  bool _has(ColumnKind kind, int col) => steps.any((s) => s.kind == kind && s.column == col);
+
   @override
   Widget build(BuildContext context) {
     final q = a.question;
-    final sub = a.skill.params['op'] == '-';
-    const style = TextStyle(fontFamily: 'Andika', fontSize: 56, fontWeight: FontWeight.w700, color: ink, height: 1.15);
     final u = a.app.universe;
-    String two(int x) => x.toString().padLeft(3);
-    // Colonnes fixes : chaque chiffre dans sa case (centaines, dizaines, unités).
-    Widget row(String sign, String digits, {Color? color}) => Row(mainAxisSize: MainAxisSize.min, children: [
-          SizedBox(width: 48, child: Text(sign, style: style.copyWith(color: u.night ? u.primary : u.onCard))),
-          for (final ch in digits.split('')) SizedBox(width: 44, child: Text(ch, textAlign: TextAlign.center, style: style.copyWith(color: color))),
-        ]);
-    final wrongNoCarry = sub ? ((q.a ~/ 10) - (q.b ~/ 10)) * 10 + ((q.a % 10) - (q.b % 10)).abs() : q.n - 10;
+    const big = TextStyle(fontFamily: 'Andika', fontSize: 44, fontWeight: FontWeight.w700, color: ink, height: 1.05);
+    const cell = 52.0;
+    Widget box(ColumnKind kind, int col, {bool small = false}) {
+      final v = _shown(kind, col);
+      final active = _active(kind, col);
+      final size = small ? 38.0 : cell;
+      return Column(mainAxisSize: MainAxisSize.min, children: [
+        // La flèche montre la case à remplir (en plus du cadre épais).
+        SizedBox(height: small ? 0 : 16, child: active && !small ? Icon(Icons.arrow_downward_rounded, size: 16, color: u.primary) : null),
+        Container(
+          width: size,
+          height: size,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: active ? u.primary.withValues(alpha: 0.08) : null,
+            border: Border.all(color: active ? u.primary : const Color(0xFFB8C1BB), width: active ? 4 : 1.5),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Text(v == null ? (active && small ? '?' : '') : '$v',
+              style: big.copyWith(fontSize: small ? 24 : 38, color: v != null && kind == ColumnKind.result ? green : ink)),
+        ),
+      ]);
+    }
+
+    // Le chiffre du haut d'une colonne : barré quand on y a cassé une dizaine (le nouveau chiffre est écrit au-dessus),
+    // et précédé d'un petit 1 aux unités qui ont reçu la dizaine cassée.
+    Widget top(int col) {
+      if (q.a < [1, 10, 100][col] && col > 0) return const SizedBox(width: cell);
+      final d = digit(q.a, col);
+      final crossed = _shown(ColumnKind.borrow, col) != null;
+      final gotTen = col + 1 < 3 && _shown(ColumnKind.borrow, col + 1) != null;
+      return SizedBox(
+        width: cell,
+        child: Text.rich(
+          TextSpan(children: [
+            if (gotTen) TextSpan(text: '1', style: big.copyWith(fontSize: 24, color: u.primary)),
+            TextSpan(text: '$d', style: crossed ? big.copyWith(decoration: TextDecoration.lineThrough, decorationThickness: 3, color: const Color(0xFF7A847E)) : big),
+          ]),
+          textAlign: TextAlign.center,
+        ),
+      );
+    }
+
+    Widget bottom(int col) => SizedBox(
+        width: cell, child: Text(q.b < [1, 10, 100][col] && col > 0 ? '' : '${digit(q.b, col)}', textAlign: TextAlign.center, style: big));
+    const cols = [2, 1, 0];
+    final s = step;
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
       child: Column(children: [
         Container(
-          padding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
           decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-            // Les têtes de colonnes, écrites.
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
             Row(mainAxisSize: MainAxisSize.min, children: [
-              const SizedBox(width: 48),
-              for (final h in ['c', 'd', 'u']) SizedBox(width: 44, child: Text(h, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63)))),
+              const SizedBox(width: 40),
+              for (final c in cols)
+                SizedBox(width: cell, child: Text('cdu'[2 - c], textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63)))),
             ]),
-            row('', two(q.a)),
-            row(sub ? '−' : '+', two(q.b)),
-            Container(width: 48 + 3 * 44, height: 4, color: ink),
-            row('', (a.solved || a.demonstrate) ? two(q.n) : '  ?', color: (a.solved || a.demonstrate) ? green : null),
+            // Retenues (addition) ou dizaines cassées (soustraction), au-dessus des colonnes, seulement où il en faut.
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              const SizedBox(width: 40),
+              for (final c in cols)
+                SizedBox(
+                  width: cell,
+                  height: 40,
+                  child: Center(
+                    child: _has(sub ? ColumnKind.borrow : ColumnKind.carry, c) &&
+                            (_shown(sub ? ColumnKind.borrow : ColumnKind.carry, c) != null || _active(sub ? ColumnKind.borrow : ColumnKind.carry, c))
+                        ? box(sub ? ColumnKind.borrow : ColumnKind.carry, c, small: true)
+                        : null,
+                  ),
+                ),
+            ]),
+            Row(mainAxisSize: MainAxisSize.min, children: [const SizedBox(width: 40), for (final c in cols) top(c)]),
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              SizedBox(width: 40, child: Text(sub ? '−' : '+', style: big.copyWith(color: u.night ? u.primary : u.onCard))),
+              for (final c in cols) bottom(c),
+            ]),
+            Container(width: 40 + 3 * cell, height: 4, color: ink),
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              const SizedBox(width: 40),
+              for (final c in cols) SizedBox(width: cell, child: Center(child: _has(ColumnKind.result, c) || c == 0 ? box(ColumnKind.result, c) : const SizedBox(height: 68))),
+            ]),
           ]),
         ),
-        const SizedBox(height: 24),
-        CE1Choices(attempt: a, right: q.n, near: [wrongNoCarry, if (sub) q.a + q.b else (q.a - q.b).abs()]),
+        const SizedBox(height: 8),
+        // Ce qu'il faut faire maintenant, écrit (la voix le dit aussi). Hauteur fixe de trois lignes : le clavier ne
+        // bouge pas d'une étape à l'autre (sinon le doigt tombe sur une autre touche).
+        SizedBox(
+          height: MediaQuery.textScalerOf(context).scale(20) * 1.2 * 3 + 4,
+          child: Center(
+            child: s != null && !a.finished
+                ? Text(s.prompt, textAlign: TextAlign.center, maxLines: 3, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink, height: 1.2))
+                : null,
+          ),
+        ),
+        const SizedBox(height: 8),
+        _Keypad(enabled: s != null && !a.busy && !a.finished, onDigit: _press),
       ]),
     );
   }
+}
+
+/// Dix chiffres, deux rangées de cinq ; touches de 60 dp (≥ 48).
+class _Keypad extends StatelessWidget {
+  const _Keypad({required this.enabled, required this.onDigit});
+  final bool enabled;
+  final ValueChanged<int> onDigit;
+
+  @override
+  Widget build(BuildContext context) => Column(mainAxisSize: MainAxisSize.min, children: [
+        for (final row in const [[1, 2, 3, 4, 5], [6, 7, 8, 9, 0]])
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 3),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              for (final d in row)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: SizedBox(
+                    width: 60,
+                    height: 60,
+                    child: FilledButton(
+                      style: FilledButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                        textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 32, fontWeight: FontWeight.w700),
+                      ),
+                      onPressed: enabled ? () => onDigit(d) : null,
+                      child: Text('$d'),
+                    ),
+                  ),
+                ),
+            ]),
+          ),
+      ]);
 }
 
 /// Lire l'heure sur une horloge à aiguilles : trois heures écrites, dont celle des aiguilles inversées.

@@ -103,7 +103,7 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
 1. ✅ **Cours d'échecs** (ADR 0020) : 13 leçons, des déplacements au mat en un coup ; ⏳ parties contre l'app, roque,
    promotion
 2. ✅ **Bâtonnets, multiplication, partage** (ADR 0021) : 12 compétences CP–CE2, dont soustraire en cassant une
-   dizaine, faire des paquets (combien de parts ?), tables de 6 à 9 (2026-11-03) ; ⏳ addition et soustraction posées
+   dizaine, faire des paquets (combien de parts ?), tables de 6 à 9 (2026-11-03) ; ✅ addition et soustraction posées, chiffre par chiffre (ADR 0046)
 3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ⏳ recaler sur le programme publié au BO (source
    actuelle : projet de juin 2025), voix anglaise hors ligne sur la tablette
 4. ✅ **Exploration 3D sur GPU** (ADR 0024) : système solaire et corps ; ⏳ organes, fluidité sur vraie tablette
@@ -183,7 +183,9 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    compétences, 2 questions chacune ; il s'arrête à la première hésitation. Les compétences sues au test redeviennent
    à apprendre si l'enfant les rate ensuite. Vérifié sur l'émulateur (nombres, suites). ⏳ Pas vu sur un profil
    neuf : l'exemple guidé de la compétence où le test s'arrête.
-3. ⏳ **Addition et soustraction posées** (CE1).
+3. ✅ **Addition et soustraction posées** (CE1, ADR 0046). Elles existaient déjà, mais l'enfant ne faisait que
+   choisir le résultat. Maintenant il écrit chaque chiffre, de droite à gauche, avec la retenue ou la dizaine cassée.
+   Vérifié sur l'émulateur, au format tablette et téléphone.
 
 ## Étape 5 — Thèmes suivants ⏳
 
