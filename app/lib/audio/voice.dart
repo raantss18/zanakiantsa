@@ -31,17 +31,37 @@ const _command = Duration(milliseconds: 1500);
 class Voice {
   final _tts = FlutterTts();
 
-  /// Langue réglée en ce moment sur le moteur de synthèse. ⚠ flutter_tts n'a qu'un seul moteur natif pour toute
-  /// l'app (canal statique « flutter_tts ») : deux objets FlutterTts partagent la même langue. Une « voix anglaise »
-  /// à part faisait parler le français avec l'accent anglais après un exercice d'anglais (bug du 2026-11-03) ; on
-  /// règle donc la langue avant chaque phrase (ADR 0022).
-  String? _lang;
+  /// Variantes acceptées pour chaque langue, de la préférée à la moins bonne.
+  static const _variants = {
+    'fr-FR': ['fr-FR', 'fr-CA', 'fr-BE', 'fr-CH'],
+    'en-GB': ['en-GB', 'en-US', 'en-AU'],
+  };
 
-  Future<void> _useLang(String lang) async {
-    if (_lang == lang) return;
-    await bounded(_tts.setLanguage(lang), _command);
-    await bounded(_tts.setSpeechRate(lang == 'fr-FR' ? 0.45 : 0.4), _command);
-    _lang = lang;
+  /// Règle la langue et la vitesse du moteur avant **chaque** phrase, sans jamais se fier à ce qui a été réglé avant.
+  /// ⚠ flutter_tts n'a qu'un seul moteur natif pour toute l'app, et son code Android (4.2.5,
+  /// `FlutterTtsPlugin.kt`, `onInitListener…`) remet la langue à celle du téléphone chaque fois que le moteur
+  /// démarre ou se reconnecte (aussi après un `speak` refusé). Une langue gardée en mémoire par l'app devenait donc
+  /// fausse : le français était lu par la voix anglaise sur un téléphone réglé en anglais (bugs du 2026-11-03 et du
+  /// 2026-11-05, ADR 0044). Rend false si le moteur n'a aucune voix de cette langue : on se tait alors plutôt que de
+  /// lire le texte avec une voix d'une autre langue (le texte reste écrit).
+  Future<bool> _useLang(String lang) async {
+    for (final tag in _variants[lang] ?? [lang]) {
+      Object? r;
+      try {
+        r = await _tts.setLanguage(tag).timeout(_command);
+      } on TimeoutException {
+        // Moteur en train de démarrer : l'ordre est gardé en file et passera avant la phrase.
+        r = 1;
+      } catch (e) {
+        debugPrint('langue ignorée : $e');
+      }
+      if (r == 1 || r == true) {
+        await bounded(_tts.setSpeechRate(lang == 'fr-FR' ? 0.45 : 0.4), _command);
+        return true;
+      }
+    }
+    lastError = lang == 'fr-FR' ? 'pas de voix française dans ce moteur' : 'pas de voix anglaise dans ce moteur';
+    return false;
   }
 
   final _player = AudioPlayer();
@@ -114,8 +134,7 @@ class Voice {
     if (id != null && _recorded.contains(id)) {
       await bounded(_player.play(AssetSource('audio/voix/$id.ogg')), _command);
       await bounded(_player.onPlayerComplete.first, speechBudget(text));
-    } else {
-      await _useLang('fr-FR');
+    } else if (await _useLang('fr-FR')) {
       await _speak(text);
     }
     await _duck(false);
@@ -170,8 +189,7 @@ class Voice {
       final t = part.trim();
       if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
       await _duck(true);
-      await _useLang(i.isOdd ? 'en-GB' : 'fr-FR');
-      await _speak(t);
+      if (await _useLang(i.isOdd ? 'en-GB' : 'fr-FR')) await _speak(t);
     }
     await _duck(false);
   }
@@ -225,7 +243,6 @@ class Voice {
     await stop();
     engine = name;
     await bounded(_tts.setEngine(name), const Duration(seconds: 4));
-    _lang = null;
     await _useLang('fr-FR');
     await bounded(_tts.awaitSpeakCompletion(true), _command);
   }
@@ -237,8 +254,8 @@ class Voice {
     const text = "Bonjour ! Je suis la voix de Zanak'i Antsa. Est-ce que tu m'entends bien ?";
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
-    await _useLang('fr-FR');
     lastError = null;
+    if (!await _useLang('fr-FR')) return (false, Duration.zero, lastError);
     final watch = Stopwatch()..start();
     await _speak(text);
     final took = watch.elapsed;

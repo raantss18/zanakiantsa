@@ -173,6 +173,15 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
+## Avant la version 0.8.0 (2026-11-05), par ordre de priorité
+
+1. ✅ **Voix** : sur un autre appareil (réglé en anglais), le français était lu en anglais. Cause : le moteur Android
+   revient à la langue du téléphone quand il redémarre, et l'app croyait le français toujours réglé. Langue réglée
+   et vérifiée avant chaque phrase, plus aucune mémoire ; sans voix française, on se tait (ADR 0044,
+   `test/voice_language_test.dart`). Vérifié sur l'émulateur en en-US. ⏳ à l'oreille sur l'appareil en question.
+2. ⏳ **Test de départ par domaine** : sauter ce que l'enfant sait déjà.
+3. ⏳ **Addition et soustraction posées** (CE1).
+
 ## Étape 5 — Thèmes suivants ⏳
 
 Lecture/phonologie → écriture manuscrite → algorithmique → échecs/sudoku → photo d'objet → corps humain/nature →
