@@ -7,10 +7,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../app_state.dart';
 import '../audio/voice.dart';
+import '../core/deep_analysis.dart';
 import '../core/engine.dart';
 import '../core/game.dart';
 import '../core/uci.dart';
 import '../engines/maia.dart';
+import '../engines/stockfish.dart';
 import 'adaptive.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -29,6 +31,7 @@ class SavedGame {
     required this.result,
     required this.moves,
     this.notes,
+    this.deep = false,
   });
 
   final DateTime date;
@@ -43,6 +46,9 @@ class SavedGame {
   /// Commentaires de l'analyse, calculés une fois puis gardés.
   List<MoveNote>? notes;
 
+  /// Stockfish a déjà regardé la partie (ADR 0053) : les parties plus anciennes le seront à leur prochaine ouverture.
+  bool deep;
+
   Map<String, Object?> toJson() => {
         'date': date.toIso8601String(),
         'mode': mode,
@@ -51,6 +57,7 @@ class SavedGame {
         'result': result,
         'moves': moves,
         if (notes != null) 'notes': [for (final n in notes!) n.toJson()],
+        if (deep) 'deep': true,
       };
 
   static SavedGame fromJson(Map<String, dynamic> j) => SavedGame(
@@ -61,6 +68,7 @@ class SavedGame {
         result: j['result'] as String,
         moves: List<String>.from(j['moves'] as List),
         notes: j['notes'] == null ? null : [for (final n in j['notes'] as List) MoveNote.fromJson(n as Map<String, dynamic>)],
+        deep: j['deep'] as bool? ?? false,
       );
 
   /// Ce que la partie a donné, du point de vue de l'enfant (contre le robot) ou des Blancs (à deux).
@@ -676,20 +684,77 @@ class _ReviewPageState extends State<ReviewPage> {
 
   bool get _analysedSide => widget.game.mode == 'deux' ? true : widget.game.childWhite;
 
+  /// La part de l'analyse fine déjà faite (0 à 1) ; null quand Stockfish ne travaille pas.
+  double? _deepDone;
+  Stockfish? _stockfish;
+
   @override
   void initState() {
     super.initState();
     notes = widget.game.notes;
-    if (notes == null) _analyse();
+    _analyse();
+  }
+
+  @override
+  void dispose() {
+    _stockfish?.dispose();
+    super.dispose();
   }
 
   Future<void> _analyse() async {
-    final raw = await compute(analyseGame, (startFen, widget.game.moves, _analysedSide));
-    final n = [for (final j in raw) MoveNote.fromJson(j)];
-    if (!mounted) return;
-    setState(() => notes = n);
-    // Gardée avec la partie : pas besoin de recalculer la prochaine fois.
-    widget.game.notes = n;
+    var base = notes;
+    if (base == null) {
+      final raw = await compute(analyseGame, (startFen, widget.game.moves, _analysedSide));
+      base = [for (final j in raw) MoveNote.fromJson(j)];
+      if (!mounted) return;
+      setState(() => notes = base);
+      widget.game.notes = base;
+      await _keep();
+    }
+    if (widget.game.deep || !mounted) return;
+    // Les commentaires de base sont déjà là : l'enfant lit la partie pendant que Stockfish travaille.
+    final engine = await Stockfish.start();
+    if (engine == null) return;
+    if (!mounted) {
+      engine.dispose();
+      return;
+    }
+    _stockfish = engine;
+    setState(() => _deepDone = 0);
+    try {
+      final fine = await deepAnalyse(
+        fen: startFen,
+        moves: widget.game.moves,
+        white: _analysedSide,
+        base: base,
+        search: engine.search,
+        cancelled: () => !mounted,
+        onProgress: (d) {
+          if (mounted) setState(() => _deepDone = d);
+        },
+      );
+      if (!mounted) return;
+      setState(() {
+        notes = fine;
+        _deepDone = null;
+      });
+      widget.game
+        ..notes = fine
+        ..deep = true;
+      await _keep();
+    } catch (e) {
+      // Le moteur a calé : les commentaires de base restent, on réessaiera à la prochaine ouverture.
+      debugPrint('Analyse fine interrompue : $e');
+      if (mounted) setState(() => _deepDone = null);
+    } finally {
+      // Fini ou non, le moteur s'arrête tout de suite : il ne doit pas occuper la mémoire pendant que l'enfant lit.
+      _stockfish?.dispose();
+      _stockfish = null;
+    }
+  }
+
+  /// Gardée avec la partie : pas besoin de recalculer la prochaine fois.
+  Future<void> _keep() async {
     final all = await loadGames(app);
     final i = widget.index ?? 0;
     if (i < all.length && all[i].date == widget.game.date) {
@@ -705,17 +770,31 @@ class _ReviewPageState extends State<ReviewPage> {
     final u = app.universe;
     final g = widget.game;
     final note = _note;
-    final count = {for (final k in ['bien', 'mat', 'mat_manque', 'gaffe', 'prise_manquee']) k: notes?.where((n) => n.kind == k).length ?? 0};
     final advice = note?.better == null ? null : Move.parse(note!.better!);
     final shown = advice != null ? positions[ply - 1] : positions[ply];
-    final summary = notes == null
-        ? 'J\'analyse la partie…'
-        : '${count['mat']! + count['bien']!} bons coups · ${count['mat_manque']} mat manqué${count['mat_manque']! > 1 ? 's' : ''} · '
-            '${count['gaffe']} pièce${count['gaffe']! > 1 ? 's' : ''} laissée${count['gaffe']! > 1 ? 's' : ''} en prise · '
-            '${count['prise_manquee']} prise${count['prise_manquee']! > 1 ? 's' : ''} manquée${count['prise_manquee']! > 1 ? 's' : ''}';
+    int n(String k) => notes?.where((x) => x.kind == k).length ?? 0;
+    String plural(int c, String one, String many) => '$c ${c > 1 ? many : one}';
+    // Seul ce qui a eu lieu est dit : une liste de zéros n'apprend rien à un enfant, et prend la place de l'échiquier.
+    final said = [
+      if (n('mat') + n('bien') > 0) plural(n('mat') + n('bien'), 'bon coup', 'bons coups'),
+      if (n('mat_manque') > 0) plural(n('mat_manque'), 'mat manqué', 'mats manqués'),
+      if (n('mat_permis') > 0) plural(n('mat_permis'), 'mat permis', 'mats permis'),
+      if (n('gaffe') > 0) plural(n('gaffe'), 'matériel perdu', 'matériels perdus'),
+      if (n('prise_manquee') > 0) plural(n('prise_manquee'), 'prise manquée', 'prises manquées'),
+      if (n('fort') > 0) plural(n('fort'), 'coup plus fort à voir', 'coups plus forts à voir'),
+    ];
+    final summary = notes == null ? 'J\'analyse la partie…' : (said.isEmpty ? 'Rien à signaler.' : said.join(' · '));
     final summaryText = Padding(
   padding: const EdgeInsets.symmetric(horizontal: 16),
-  child: Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),
+  child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+    Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),
+    if (_deepDone != null) ...[
+      const SizedBox(height: 4),
+      Text('Je regarde la partie de plus près… ${(_deepDone! * 100).round()} %', style: TextStyle(fontSize: 16, color: u.onBackground)),
+      const SizedBox(height: 4),
+      LinearProgressIndicator(value: _deepDone),
+    ],
+  ]),
 );
     final board = ChessBoardView(
     position: shown,

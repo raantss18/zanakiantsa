@@ -1,6 +1,6 @@
 # 0047 — Stockfish et Maia dans l'app (proposé, à valider par Antsa)
 
-- **Date** : 2026-11-05 · **Statut** : proposé (demande d'Antsa : « intégrer Maia et Stockfish et les outils
+- **Date** : 2026-11-05 · **Statut** : proposé, puis tranché par l'ADR 0051 (Maia) et l'ADR 0053 (Stockfish 11) (demande d'Antsa : « intégrer Maia et Stockfish et les outils
   nécessaires », priorité basse)
 - **Faits mesurés** (GitHub, 2026-11-05) :
   - **Stockfish 19** : GPL-3, son README demande de joindre la licence et les sources. Le paquet Android arm64 pèse

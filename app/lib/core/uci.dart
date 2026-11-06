@@ -18,6 +18,22 @@ String? parseBestMove(String line) =>
 
 bool isBestMoveLine(String line) => line.trimLeft().startsWith('bestmove');
 
+/// La valeur d'un mat, en centièmes de pion : plus grande que toute autre note.
+const mateScore = 10000;
+
+/// La note d'une ligne « info … score cp 35 … » ou « score mate -3 … », du point de vue de celui qui a le trait ; un mat
+/// en n coups vaut mateScore - n, « mate 0 » veut dire qu'il est déjà mat. Null si la ligne n'a pas de note.
+int? parseScore(String line) {
+  final m = RegExp(r'\bscore\s+(cp|mate)\s+(-?\d+)').firstMatch(line);
+  if (m == null) return null;
+  final v = int.parse(m[2]!);
+  if (m[1] == 'cp') return v;
+  return v > 0 ? mateScore - v : -mateScore - v;
+}
+
+/// Ce qu'une recherche a trouvé : le meilleur coup (null s'il n'y en a plus) et la note de la position.
+typedef SearchResult = ({String? best, int score});
+
 /// Une conversation avec un moteur : [lines] (flux à plusieurs écoutes) arrive du moteur, [send] lui écrit.
 class UciSession {
   UciSession(this._lines, this._send);
@@ -39,6 +55,28 @@ class UciSession {
     _send('position fen $fen');
     _send('go nodes 1');
     return parseBestMove(await reply.timeout(timeout));
+  }
+
+  /// Une vraie recherche de [nodes] positions (Stockfish, ADR 0053) : le même jugement sur tous les appareils, seule la durée
+  /// change. On garde la dernière note annoncée avant le coup.
+  Future<SearchResult> search(String fen, {int nodes = 50000, Duration timeout = const Duration(seconds: 20)}) async {
+    var score = 0;
+    final done = Completer<String>();
+    final sub = _lines.listen((l) {
+      if (isBestMoveLine(l)) {
+        if (!done.isCompleted) done.complete(l);
+      } else {
+        score = parseScore(l) ?? score;
+      }
+    });
+    try {
+      _send('position fen $fen');
+      _send('go nodes $nodes');
+      final line = await done.future.timeout(timeout);
+      return (best: parseBestMove(line), score: score);
+    } finally {
+      await sub.cancel();
+    }
   }
 
   void quit() => _send('quit');

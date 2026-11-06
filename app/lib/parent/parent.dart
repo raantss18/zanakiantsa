@@ -414,7 +414,9 @@ class _ParentPageState extends State<ParentPage> {
                 'Robot « Maia » : le programme lc0 v0.32.1 (Leela Chess Zero) et les poids Maia-1 (équipe CSSLab), tous '
                 'deux sous licence GNU GPL v3. Ce sont des programmes séparés de l’appli, qui lui parlent par le protocole '
                 'UCI. Sources : github.com/LeelaChessZero/lc0 (étiquette v0.32.1) et github.com/CSSLab/maia-chess ; '
-                'recette de compilation : tool/build_lc0.sh dans github.com/raantss18/zanakiantsa.',
+                'recette de compilation : tool/build_lc0.sh dans github.com/raantss18/zanakiantsa. '
+                'Analyse fine des parties : le programme Stockfish 11, sous licence GNU GPL v3, séparé de l’appli lui aussi. '
+                'Sources : github.com/official-stockfish/Stockfish (étiquette sf_11) ; recette : tool/build_stockfish.sh.',
               ),
             ],
           ),

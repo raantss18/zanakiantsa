@@ -212,8 +212,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
    1900, proposés dans « Contre le robot ». Vérifié sur l'émulateur : le moteur se lance, joue 1.e4 puis 2.Cc3 et
    s'arrête quand on quitte la partie. ⏳ Durée d'un coup sur la SM-X135G ; essai avec un enfant ; installation sur le
    téléphone avec ce moteur. L'APK d'essai pèse 35 Mo (bibliothèques extraites, donc stockées compressées).
-2. ⏳ **Stockfish** : programme séparé dans l'APK, réseau de 79 Mo téléchargé depuis l'espace parent, pour l'analyse fine
-   des parties. Mesurer d'abord la taille du programme compilé sans réseau. Même méthode que Maia (`liblc0.so`).
+2. ✅ **Stockfish** (ADR 0053) : Stockfish 11, programme de 993 Ko sans réseau, donc rien à télécharger (au lieu de
+   Stockfish 19 et ses 79 Mo). Analyse fine dans la revue des parties : mat permis, mat manqué, coup plus fort. Vérifié sur
+   l'émulateur (1.f3 e5 2.g4 Dh4#). ⏳ Durée sur une vraie tablette, partie longue, mémoire ; ❓ choix de la version à
+   confirmer par Antsa.
 3. ⏳ **Autres domaines** : quels outils ? À préciser avec Antsa ; licence et taille vérifiées avant tout choix.
 
 ## Étape 5 — Thèmes suivants ⏳
