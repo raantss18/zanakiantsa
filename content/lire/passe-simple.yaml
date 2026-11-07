@@ -1,0 +1,76 @@
+id: passe-simple
+titre: "Le passé simple"
+niveau: CM2
+prerequis: ["futur"]
+programme: { source: cycle3, texte: "Conjugaisons à mémoriser et à maîtriser : passé simple, plus-que-parfait des verbes être et avoir, des verbes des premier et deuxième groupes, des verbes irréguliers du troisième groupe : faire, aller, dire, venir, pouvoir, voir, vouloir, prendre." }
+activite: quiz
+parametres: {}
+idee: "Le passé simple est le temps des récits : il raconte une action brève du passé. Il fit, ils prirent, elle alla."
+phrases:
+  consigne: "Lis le verbe et la personne, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Le passé simple est en un seul mot, et ce n’est pas l’imparfait."
+  exemple: "Faire, avec « ils », au passé simple : ils firent."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Conjugue « aller » au passé simple, avec « elle »."
+    nom: "elle alla"
+    explication: "Au passé simple : elle alla."
+    pieges:
+      - { texte: "elle allait", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "elle est allée", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « faire » au passé simple, avec « ils »."
+    nom: "ils firent"
+    explication: "Au passé simple : ils firent."
+    pieges:
+      - { texte: "ils faisaient", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "ils ont fait", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « prendre » au passé simple, avec « il »."
+    nom: "il prit"
+    explication: "Au passé simple : il prit."
+    pieges:
+      - { texte: "il prenait", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "il a pris", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « dire » au passé simple, avec « elles »."
+    nom: "elles dirent"
+    explication: "Au passé simple : elles dirent."
+    pieges:
+      - { texte: "elles disaient", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "elles ont dit", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « venir » au passé simple, avec « il »."
+    nom: "il vint"
+    explication: "Au passé simple : il vint."
+    pieges:
+      - { texte: "il venait", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "il est venu", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « pouvoir » au passé simple, avec « ils »."
+    nom: "ils purent"
+    explication: "Au passé simple : ils purent."
+    pieges:
+      - { texte: "ils pouvaient", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "ils ont pu", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « voir » au passé simple, avec « elle »."
+    nom: "elle vit"
+    explication: "Au passé simple : elle vit."
+    pieges:
+      - { texte: "elle voyait", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "elle a vu", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « vouloir » au passé simple, avec « ils »."
+    nom: "ils voulurent"
+    explication: "Au passé simple : ils voulurent."
+    pieges:
+      - { texte: "ils voulaient", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "ils ont voulu", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « finir » au passé simple, avec « il »."
+    nom: "il finit"
+    explication: "Au passé simple : il finit."
+    pieges:
+      - { texte: "il finissait", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "il a fini", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }
+  - texte: "Conjugue « manger » au passé simple, avec « elles »."
+    nom: "elles mangèrent"
+    explication: "Au passé simple : elles mangèrent."
+    pieges:
+      - { texte: "elles mangeaient", pourquoi: "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit." }
+      - { texte: "elles ont mangé", pourquoi: "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé." }

@@ -1,0 +1,64 @@
+id: imperatif
+titre: "L’impératif"
+niveau: 6e
+prerequis: ["futur"]
+programme: { source: cycle3, texte: "Conjugaisons à mémoriser et à maîtriser : impératif présent, conditionnel présent [...] Identifier les marques de temps pour le conditionnel présent et l’impératif présent." }
+activite: quiz
+parametres: {}
+idee: "L’impératif sert à donner un ordre ou un conseil. Il n’a pas de sujet : « Prends ton sac ! », « Faites attention ! »."
+phrases:
+  consigne: "Lis le verbe et la personne, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "À l’impératif, pas de sujet. Et pas de s à « tu » pour les verbes en -er."
+  exemple: "Faire, avec « vous » : Faites attention !"
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Donne l’ordre avec « faire », à la personne « vous »."
+    nom: "Faites"
+    explication: "À l’impératif, on n’écrit pas le sujet : Faites !"
+    pieges:
+      - { texte: "Faisez", pourquoi: "Faire et dire sont irréguliers : faites, dites." }
+      - { texte: "Vous faites", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »." }
+  - texte: "Donne l’ordre avec « aller », à la personne « tu »."
+    nom: "Va"
+    explication: "À l’impératif, on n’écrit pas le sujet : Va !"
+    pieges:
+      - { texte: "Vas", pourquoi: "Aller et les verbes en -er n’ont pas de s à l’impératif, avec « tu » : va, mange." }
+      - { texte: "Tu vas", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »." }
+  - texte: "Donne l’ordre avec « prendre », à la personne « tu »."
+    nom: "Prends"
+    explication: "À l’impératif, on n’écrit pas le sujet : Prends !"
+    pieges:
+      - { texte: "Prend", pourquoi: "Avec « tu », prendre garde son s : prends." }
+      - { texte: "Tu prends", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »." }
+  - texte: "Donne l’ordre avec « dire », à la personne « vous »."
+    nom: "Dites"
+    explication: "À l’impératif, on n’écrit pas le sujet : Dites !"
+    pieges:
+      - { texte: "Disez", pourquoi: "Faire et dire sont irréguliers : faites, dites." }
+      - { texte: "Vous dites", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »." }
+  - texte: "Donne l’ordre avec « venir », à la personne « nous »."
+    nom: "Venons"
+    explication: "À l’impératif, on n’écrit pas le sujet : Venons !"
+    pieges:
+      - { texte: "Venont", pourquoi: "Avec « nous », la terminaison est -ons : venons." }
+      - { texte: "Nous venons", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « nous »." }
+  - texte: "Donne l’ordre avec « finir », à la personne « tu »."
+    nom: "Finis"
+    explication: "À l’impératif, on n’écrit pas le sujet : Finis !"
+    pieges:
+      - { texte: "Finit", pourquoi: "Avec « tu », la terminaison est -s : finis." }
+      - { texte: "Tu finis", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »." }
+  - texte: "Donne l’ordre avec « manger », à la personne « tu »."
+    nom: "Mange"
+    explication: "À l’impératif, on n’écrit pas le sujet : Mange !"
+    pieges:
+      - { texte: "Manges", pourquoi: "Aller et les verbes en -er n’ont pas de s à l’impératif, avec « tu » : va, mange." }
+      - { texte: "Tu manges", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »." }
+  - texte: "Donne l’ordre avec « voir », à la personne « vous »."
+    nom: "Voyez"
+    explication: "À l’impératif, on n’écrit pas le sujet : Voyez !"
+    pieges:
+      - { texte: "Voyiez", pourquoi: "Ça, c’est l’imparfait. À l’impératif : voyez." }
+      - { texte: "Vous voyez", pourquoi: "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »." }

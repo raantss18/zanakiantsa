@@ -1,0 +1,76 @@
+id: futur
+titre: "Le futur"
+niveau: CM1
+prerequis: ["imparfait"]
+programme: { source: cycle3, texte: "Savoir isoler et connaître les marques de temps de l’imparfait (-ai-, -i-) ; du futur (-r-)." }
+activite: quiz
+parametres: {}
+idee: "Le futur dit ce qui arrivera. On entend la marque -r- : je ferai, nous viendrons. Certains verbes changent de radical : aller donne j’irai."
+phrases:
+  consigne: "Lis le verbe et la personne, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Cherche la marque -r- du futur."
+  exemple: "Venir, avec « vous », au futur : vous viendrez."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Conjugue « aller » au futur, avec « je »."
+    nom: "j’irai"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : j’irai."
+    pieges:
+      - { texte: "j’irais", pourquoi: "Ça, c’est le conditionnel. Au futur, avec « je », la terminaison est -ai, sans s." }
+      - { texte: "je vais", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « faire » au futur, avec « nous »."
+    nom: "nous ferons"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : nous ferons."
+    pieges:
+      - { texte: "nous ferions", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "nous faisons", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « prendre » au futur, avec « ils »."
+    nom: "ils prendront"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : ils prendront."
+    pieges:
+      - { texte: "ils prendraient", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "ils prennent", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « dire » au futur, avec « tu »."
+    nom: "tu diras"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : tu diras."
+    pieges:
+      - { texte: "tu dirais", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "tu dis", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « venir » au futur, avec « vous »."
+    nom: "vous viendrez"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : vous viendrez."
+    pieges:
+      - { texte: "vous viendriez", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "vous venez", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « pouvoir » au futur, avec « elle »."
+    nom: "elle pourra"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : elle pourra."
+    pieges:
+      - { texte: "elle pourrait", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "elle peut", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « voir » au futur, avec « nous »."
+    nom: "nous verrons"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : nous verrons."
+    pieges:
+      - { texte: "nous verrions", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "nous voyons", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « vouloir » au futur, avec « je »."
+    nom: "je voudrai"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : je voudrai."
+    pieges:
+      - { texte: "je voudrais", pourquoi: "Ça, c’est le conditionnel. Au futur, avec « je », la terminaison est -ai, sans s." }
+      - { texte: "je veux", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « finir » au futur, avec « ils »."
+    nom: "ils finiront"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : ils finiront."
+    pieges:
+      - { texte: "ils finiraient", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "ils finissent", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }
+  - texte: "Conjugue « manger » au futur, avec « tu »."
+    nom: "tu mangeras"
+    explication: "Au futur, on entend la marque -r- avant la terminaison : tu mangeras."
+    pieges:
+      - { texte: "tu mangerais", pourquoi: "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient." }
+      - { texte: "tu manges", pourquoi: "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »." }

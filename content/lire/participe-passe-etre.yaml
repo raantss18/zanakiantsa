@@ -1,0 +1,64 @@
+id: participe-passe-etre
+titre: "Le participe passé avec être"
+niveau: CM1
+prerequis: ["imparfait"]
+programme: { source: cycle3, texte: "Accorder le participe passé avec le sujet dans le cas de l’emploi avec l’auxiliaire être." }
+activite: quiz
+parametres: {}
+idee: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet, comme un adjectif : elle est partie, ils sont partis."
+phrases:
+  consigne: "Trouve le sujet, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Qui est-ce qui « est » ? Le participe prend son genre et son nombre."
+  exemple: "Mes sœurs sont allées : féminin pluriel, -ées."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Accorde le participe passé : Elle est (venu) hier."
+    nom: "venue"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Elle » : venue."
+    pieges:
+      - { texte: "venus", pourquoi: "Regarde le sujet « Elle » : est-il masculin ou féminin ?" }
+      - { texte: "venu", pourquoi: "Avec être, le participe s’accorde avec le sujet « Elle »." }
+  - texte: "Accorde le participe passé : Ils sont (arrivé) à l’heure."
+    nom: "arrivés"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Ils » : arrivés."
+    pieges:
+      - { texte: "arrivées", pourquoi: "Regarde le sujet « Ils » : est-il masculin ou féminin ?" }
+      - { texte: "arrivé", pourquoi: "Avec être, le participe s’accorde avec le sujet « Ils »." }
+  - texte: "Accorde le participe passé : Mes sœurs sont (allé) au marché."
+    nom: "allées"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Mes sœurs » : allées."
+    pieges:
+      - { texte: "allés", pourquoi: "Regarde le sujet « Mes sœurs » : est-il masculin ou féminin ?" }
+      - { texte: "allé", pourquoi: "Avec être, le participe s’accorde avec le sujet « Mes sœurs »." }
+  - texte: "Accorde le participe passé : Le train est (parti)."
+    nom: "parti"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Le train » : parti."
+    pieges:
+      - { texte: "partie", pourquoi: "Regarde le sujet « Le train » : est-il masculin ou féminin ?" }
+      - { texte: "partis", pourquoi: "Avec être, le participe s’accorde avec le sujet « Le train »." }
+  - texte: "Accorde le participe passé : Les fleurs sont (tombé)."
+    nom: "tombées"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Les fleurs » : tombées."
+    pieges:
+      - { texte: "tombés", pourquoi: "Regarde le sujet « Les fleurs » : est-il masculin ou féminin ?" }
+      - { texte: "tombé", pourquoi: "Avec être, le participe s’accorde avec le sujet « Les fleurs »." }
+  - texte: "Accorde le participe passé : Paul et Léa sont (sorti)."
+    nom: "sortis"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Paul et Léa » : sortis. Un masculin et un féminin ensemble : masculin pluriel."
+    pieges:
+      - { texte: "sorties", pourquoi: "Regarde le sujet « Paul et Léa » : est-il masculin ou féminin ?" }
+      - { texte: "sorti", pourquoi: "Avec être, le participe s’accorde avec le sujet « Paul et Léa »." }
+  - texte: "Accorde le participe passé : La porte est (resté) ouverte."
+    nom: "restée"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « La porte » : restée."
+    pieges:
+      - { texte: "restés", pourquoi: "Regarde le sujet « La porte » : est-il masculin ou féminin ?" }
+      - { texte: "resté", pourquoi: "Avec être, le participe s’accorde avec le sujet « La porte »." }
+  - texte: "Accorde le participe passé : Les enfants sont (rentré)."
+    nom: "rentrés"
+    explication: "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Les enfants » : rentrés."
+    pieges:
+      - { texte: "rentrées", pourquoi: "Regarde le sujet « Les enfants » : est-il masculin ou féminin ?" }
+      - { texte: "rentré", pourquoi: "Avec être, le participe s’accorde avec le sujet « Les enfants »." }

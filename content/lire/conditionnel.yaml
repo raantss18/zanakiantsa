@@ -1,0 +1,76 @@
+id: conditionnel
+titre: "Le conditionnel présent"
+niveau: 6e
+prerequis: ["futur"]
+programme: { source: cycle3, texte: "Conjugaisons à mémoriser et à maîtriser : impératif présent, conditionnel présent des verbes être et avoir, des verbes des premier et deuxième groupes, des verbes irréguliers du troisième groupe." }
+activite: quiz
+parametres: {}
+idee: "Le conditionnel, c’est la marque -r- du futur avec les terminaisons de l’imparfait : je voudrais, nous pourrions."
+phrases:
+  consigne: "Lis le verbe et la personne, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Il faut à la fois la marque -r- et une terminaison de l’imparfait."
+  exemple: "Vouloir, avec « je », au conditionnel : je voudrais (au futur : je voudrai)."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Conjugue « aller » au conditionnel présent, avec « je »."
+    nom: "j’irais"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : j’irais."
+    pieges:
+      - { texte: "j’irai", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "j’allais", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « faire » au conditionnel présent, avec « nous »."
+    nom: "nous ferions"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : nous ferions."
+    pieges:
+      - { texte: "nous ferons", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "nous faisions", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « prendre » au conditionnel présent, avec « ils »."
+    nom: "ils prendraient"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : ils prendraient."
+    pieges:
+      - { texte: "ils prendront", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "ils prenaient", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « dire » au conditionnel présent, avec « tu »."
+    nom: "tu dirais"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : tu dirais."
+    pieges:
+      - { texte: "tu diras", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "tu disais", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « venir » au conditionnel présent, avec « vous »."
+    nom: "vous viendriez"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : vous viendriez."
+    pieges:
+      - { texte: "vous viendrez", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "vous veniez", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « pouvoir » au conditionnel présent, avec « elle »."
+    nom: "elle pourrait"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : elle pourrait."
+    pieges:
+      - { texte: "elle pourra", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "elle pouvait", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « voir » au conditionnel présent, avec « nous »."
+    nom: "nous verrions"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : nous verrions."
+    pieges:
+      - { texte: "nous verrons", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "nous voyions", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « vouloir » au conditionnel présent, avec « je »."
+    nom: "je voudrais"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : je voudrais."
+    pieges:
+      - { texte: "je voudrai", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "je voulais", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « finir » au conditionnel présent, avec « ils »."
+    nom: "ils finiraient"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : ils finiraient."
+    pieges:
+      - { texte: "ils finiront", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "ils finissaient", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }
+  - texte: "Conjugue « manger » au conditionnel présent, avec « tu »."
+    nom: "tu mangerais"
+    explication: "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : tu mangerais."
+    pieges:
+      - { texte: "tu mangeras", pourquoi: "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "tu mangeais", pourquoi: "Ça, c’est l’imparfait : il manque la marque -r-." }

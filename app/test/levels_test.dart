@@ -88,4 +88,16 @@ void main() {
     expect(answer('identites-remarquables', 'Développe (x + 3)²'), 'x² + 6x + 9');
     expect(answer('equation-produit-nul', 'Résous : (x − 2)(x + 5) = 0'), 'x = 2 ou x = −5');
   });
+
+  test('français : quelques formes vérifiées à la main (programme du cycle 3)', () {
+    final t = Topic(jsonDecode(File('assets/content/lire.json').readAsStringSync()) as Map<String, dynamic>);
+    String answer(String id, String text) => t.skills.firstWhere((s) => s.id == id).items.firstWhere((i) => i.text == text).name!;
+    expect(answer('imparfait', 'Conjugue « faire » à l’imparfait, avec « nous ».'), 'nous faisions');
+    expect(answer('futur', 'Conjugue « venir » au futur, avec « vous ».'), 'vous viendrez');
+    expect(answer('conditionnel', 'Conjugue « vouloir » au conditionnel présent, avec « je ».'), 'je voudrais');
+    expect(answer('passe-simple', 'Conjugue « faire » au passé simple, avec « ils ».'), 'ils firent');
+    expect(answer('imperatif', 'Donne l’ordre avec « aller », à la personne « tu ».'), 'Va');
+    expect(answer('participe-passe-etre', 'Accorde le participe passé : Paul et Léa sont (sorti).'), 'sortis');
+    expect(answer('attribut-ou-cod', 'Dans « Le chat semble fatigué. », quelle est la fonction de « fatigué » ?'), 'attribut du sujet');
+  });
 }

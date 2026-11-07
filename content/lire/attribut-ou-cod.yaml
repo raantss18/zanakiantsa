@@ -1,0 +1,76 @@
+id: attribut-ou-cod
+titre: "Attribut ou COD ?"
+niveau: 6e
+prerequis: ["participe-passe-etre"]
+programme: { source: cycle3, texte: "Opposer et distinguer attribut du sujet et complément d’objet direct (COD)." }
+activite: quiz
+parametres: {}
+idee: "Après un verbe d’état (être, sembler, paraître, devenir, rester), le mot dit comment est le sujet : c’est un attribut. Après un autre verbe, on demande « quoi ? » : c’est un COD."
+phrases:
+  consigne: "Repère le verbe, puis touche la fonction."
+  question: "{texte}"
+  indice: "Le verbe est-il un verbe d’état ? Sinon, demande « verbe + quoi ? »."
+  exemple: "« Le chat semble fatigué » : sembler est un verbe d’état, « fatigué » est attribut."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « Le chat semble fatigué. », quelle est la fonction de « fatigué » ?"
+    nom: "attribut du sujet"
+    explication: "« semble » est un verbe d’état : « fatigué » dit comment est le sujet. C’est un attribut du sujet."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« semble » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+      - { texte: "complément circonstanciel", pourquoi: "« semble » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+  - texte: "Dans « Le chat mange une souris. », quelle est la fonction de « une souris » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "« mange » n’est pas un verbe d’état : on peut demander « mange quoi ? » — réponse : « une souris ». C’est un COD."
+    pieges:
+      - { texte: "attribut du sujet", pourquoi: "Le verbe « mange » n’est pas un verbe d’état : demande « mange quoi ? »." }
+      - { texte: "complément circonstanciel", pourquoi: "Le verbe « mange » n’est pas un verbe d’état : demande « mange quoi ? »." }
+  - texte: "Dans « Mon frère est médecin. », quelle est la fonction de « médecin » ?"
+    nom: "attribut du sujet"
+    explication: "« est » est un verbe d’état : « médecin » dit comment est le sujet. C’est un attribut du sujet."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« est » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+      - { texte: "complément circonstanciel", pourquoi: "« est » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+  - texte: "Dans « Léa lit un livre. », quelle est la fonction de « un livre » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "« lit » n’est pas un verbe d’état : on peut demander « lit quoi ? » — réponse : « un livre ». C’est un COD."
+    pieges:
+      - { texte: "attribut du sujet", pourquoi: "Le verbe « lit » n’est pas un verbe d’état : demande « lit quoi ? »." }
+      - { texte: "complément circonstanciel", pourquoi: "Le verbe « lit » n’est pas un verbe d’état : demande « lit quoi ? »." }
+  - texte: "Dans « Ce gâteau paraît délicieux. », quelle est la fonction de « délicieux » ?"
+    nom: "attribut du sujet"
+    explication: "« paraît » est un verbe d’état : « délicieux » dit comment est le sujet. C’est un attribut du sujet."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« paraît » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+      - { texte: "complément circonstanciel", pourquoi: "« paraît » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+  - texte: "Dans « Nous regardons la mer. », quelle est la fonction de « la mer » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "« regardons » n’est pas un verbe d’état : on peut demander « regardons quoi ? » — réponse : « la mer ». C’est un COD."
+    pieges:
+      - { texte: "attribut du sujet", pourquoi: "Le verbe « regardons » n’est pas un verbe d’état : demande « regardons quoi ? »." }
+      - { texte: "complément circonstanciel", pourquoi: "Le verbe « regardons » n’est pas un verbe d’état : demande « regardons quoi ? »." }
+  - texte: "Dans « Les élèves deviennent calmes. », quelle est la fonction de « calmes » ?"
+    nom: "attribut du sujet"
+    explication: "« deviennent » est un verbe d’état : « calmes » dit comment est le sujet. C’est un attribut du sujet."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« deviennent » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+      - { texte: "complément circonstanciel", pourquoi: "« deviennent » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+  - texte: "Dans « Il range sa chambre. », quelle est la fonction de « sa chambre » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "« range » n’est pas un verbe d’état : on peut demander « range quoi ? » — réponse : « sa chambre ». C’est un COD."
+    pieges:
+      - { texte: "attribut du sujet", pourquoi: "Le verbe « range » n’est pas un verbe d’état : demande « range quoi ? »." }
+      - { texte: "complément circonstanciel", pourquoi: "Le verbe « range » n’est pas un verbe d’état : demande « range quoi ? »." }
+  - texte: "Dans « Le ciel reste gris. », quelle est la fonction de « gris » ?"
+    nom: "attribut du sujet"
+    explication: "« reste » est un verbe d’état : « gris » dit comment est le sujet. C’est un attribut du sujet."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« reste » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+      - { texte: "complément circonstanciel", pourquoi: "« reste » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut." }
+  - texte: "Dans « Elle joue dans le jardin. », quelle est la fonction de « dans le jardin » ?"
+    nom: "complément circonstanciel"
+    explication: "« dans le jardin » dit où se passe l’action ; on peut le déplacer ou l’enlever. C’est un complément circonstanciel."
+    pieges:
+      - { texte: "attribut du sujet", pourquoi: "« dans le jardin » ne répond pas à « quoi ? » mais à « où ? »." }
+      - { texte: "complément d’objet direct (COD)", pourquoi: "« dans le jardin » ne répond pas à « quoi ? » mais à « où ? »." }

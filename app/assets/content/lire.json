@@ -27,11 +27,12 @@
   ],
   "ages": [
     4,
-    8
+    12
   ],
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
-    "cycle2": "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf"
+    "cycle2": "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf",
+    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf"
   },
   "competences": [
     {
@@ -1608,6 +1609,1169 @@
             ]
           ],
           "explication": ""
+        }
+      ]
+    },
+    {
+      "id": "imparfait",
+      "titre": "L’imparfait",
+      "niveau": "CM1",
+      "prerequis": [],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Conjugaisons à mémoriser et à maîtriser : présent de l’indicatif, imparfait, futur [...] des verbes du premier et du deuxième groupe et des verbes irréguliers du troisième groupe (faire, aller, dire, venir, pouvoir, voir, vouloir, prendre)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L’imparfait raconte ce qui durait dans le passé. Sa marque de temps est -ai- ou -i- : je faisais, nous faisions.",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Cherche la marque de l’imparfait : -ai- ou -i-.",
+        "exemple": "Faire, avec « nous », à l’imparfait : nous faisions.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « aller » à l’imparfait, avec « je ».",
+          "nom": "j’allais",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : j’allais.",
+          "pieges": [
+            {
+              "texte": "je vais",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "j’irai",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » à l’imparfait, avec « nous ».",
+          "nom": "nous faisions",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : nous faisions.",
+          "pieges": [
+            {
+              "texte": "nous faisons",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "nous ferons",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » à l’imparfait, avec « ils ».",
+          "nom": "ils prenaient",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : ils prenaient.",
+          "pieges": [
+            {
+              "texte": "ils prennent",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "ils prendront",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « dire » à l’imparfait, avec « tu ».",
+          "nom": "tu disais",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : tu disais.",
+          "pieges": [
+            {
+              "texte": "tu dis",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "tu diras",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » à l’imparfait, avec « vous ».",
+          "nom": "vous veniez",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : vous veniez.",
+          "pieges": [
+            {
+              "texte": "vous venez",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "vous viendrez",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « pouvoir » à l’imparfait, avec « elle ».",
+          "nom": "elle pouvait",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : elle pouvait.",
+          "pieges": [
+            {
+              "texte": "elle peut",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "elle pourra",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » à l’imparfait, avec « nous ».",
+          "nom": "nous voyions",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : nous voyions.",
+          "pieges": [
+            {
+              "texte": "nous voyons",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "nous verrons",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « vouloir » à l’imparfait, avec « je ».",
+          "nom": "je voulais",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : je voulais.",
+          "pieges": [
+            {
+              "texte": "je veux",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "je voudrai",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « finir » à l’imparfait, avec « ils ».",
+          "nom": "ils finissaient",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : ils finissaient.",
+          "pieges": [
+            {
+              "texte": "ils finissent",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "ils finiront",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « manger » à l’imparfait, avec « tu ».",
+          "nom": "tu mangeais",
+          "explication": "À l’imparfait, la marque de temps est -ai- ou -i- : tu mangeais.",
+          "pieges": [
+            {
+              "texte": "tu manges",
+              "pourquoi": "Ça, c’est le présent. À l’imparfait, on entend -ai- ou -i- : « il faisait », « nous faisions »."
+            },
+            {
+              "texte": "tu mangeras",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "participe-passe-etre",
+      "titre": "Le participe passé avec être",
+      "niveau": "CM1",
+      "prerequis": [
+        "imparfait"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Accorder le participe passé avec le sujet dans le cas de l’emploi avec l’auxiliaire être."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet, comme un adjectif : elle est partie, ils sont partis.",
+      "phrases": {
+        "consigne": "Trouve le sujet, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Qui est-ce qui « est » ? Le participe prend son genre et son nombre.",
+        "exemple": "Mes sœurs sont allées : féminin pluriel, -ées.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Accorde le participe passé : Elle est (venu) hier.",
+          "nom": "venue",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Elle » : venue.",
+          "pieges": [
+            {
+              "texte": "venus",
+              "pourquoi": "Regarde le sujet « Elle » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "venu",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Elle »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Ils sont (arrivé) à l’heure.",
+          "nom": "arrivés",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Ils » : arrivés.",
+          "pieges": [
+            {
+              "texte": "arrivées",
+              "pourquoi": "Regarde le sujet « Ils » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "arrivé",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Ils »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Mes sœurs sont (allé) au marché.",
+          "nom": "allées",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Mes sœurs » : allées.",
+          "pieges": [
+            {
+              "texte": "allés",
+              "pourquoi": "Regarde le sujet « Mes sœurs » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "allé",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Mes sœurs »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Le train est (parti).",
+          "nom": "parti",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Le train » : parti.",
+          "pieges": [
+            {
+              "texte": "partie",
+              "pourquoi": "Regarde le sujet « Le train » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "partis",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Le train »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Les fleurs sont (tombé).",
+          "nom": "tombées",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Les fleurs » : tombées.",
+          "pieges": [
+            {
+              "texte": "tombés",
+              "pourquoi": "Regarde le sujet « Les fleurs » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "tombé",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Les fleurs »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Paul et Léa sont (sorti).",
+          "nom": "sortis",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Paul et Léa » : sortis. Un masculin et un féminin ensemble : masculin pluriel.",
+          "pieges": [
+            {
+              "texte": "sorties",
+              "pourquoi": "Regarde le sujet « Paul et Léa » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "sorti",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Paul et Léa »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : La porte est (resté) ouverte.",
+          "nom": "restée",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « La porte » : restée.",
+          "pieges": [
+            {
+              "texte": "restés",
+              "pourquoi": "Regarde le sujet « La porte » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "resté",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « La porte »."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le participe passé : Les enfants sont (rentré).",
+          "nom": "rentrés",
+          "explication": "Avec l’auxiliaire être, le participe passé s’accorde avec le sujet « Les enfants » : rentrés.",
+          "pieges": [
+            {
+              "texte": "rentrées",
+              "pourquoi": "Regarde le sujet « Les enfants » : est-il masculin ou féminin ?"
+            },
+            {
+              "texte": "rentré",
+              "pourquoi": "Avec être, le participe s’accorde avec le sujet « Les enfants »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futur",
+      "titre": "Le futur",
+      "niveau": "CM1",
+      "prerequis": [
+        "imparfait"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Savoir isoler et connaître les marques de temps de l’imparfait (-ai-, -i-) ; du futur (-r-)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le futur dit ce qui arrivera. On entend la marque -r- : je ferai, nous viendrons. Certains verbes changent de radical : aller donne j’irai.",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Cherche la marque -r- du futur.",
+        "exemple": "Venir, avec « vous », au futur : vous viendrez.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « aller » au futur, avec « je ».",
+          "nom": "j’irai",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : j’irai.",
+          "pieges": [
+            {
+              "texte": "j’irais",
+              "pourquoi": "Ça, c’est le conditionnel. Au futur, avec « je », la terminaison est -ai, sans s."
+            },
+            {
+              "texte": "je vais",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » au futur, avec « nous ».",
+          "nom": "nous ferons",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : nous ferons.",
+          "pieges": [
+            {
+              "texte": "nous ferions",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "nous faisons",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » au futur, avec « ils ».",
+          "nom": "ils prendront",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : ils prendront.",
+          "pieges": [
+            {
+              "texte": "ils prendraient",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "ils prennent",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « dire » au futur, avec « tu ».",
+          "nom": "tu diras",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : tu diras.",
+          "pieges": [
+            {
+              "texte": "tu dirais",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "tu dis",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » au futur, avec « vous ».",
+          "nom": "vous viendrez",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : vous viendrez.",
+          "pieges": [
+            {
+              "texte": "vous viendriez",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "vous venez",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « pouvoir » au futur, avec « elle ».",
+          "nom": "elle pourra",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : elle pourra.",
+          "pieges": [
+            {
+              "texte": "elle pourrait",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "elle peut",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » au futur, avec « nous ».",
+          "nom": "nous verrons",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : nous verrons.",
+          "pieges": [
+            {
+              "texte": "nous verrions",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "nous voyons",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « vouloir » au futur, avec « je ».",
+          "nom": "je voudrai",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : je voudrai.",
+          "pieges": [
+            {
+              "texte": "je voudrais",
+              "pourquoi": "Ça, c’est le conditionnel. Au futur, avec « je », la terminaison est -ai, sans s."
+            },
+            {
+              "texte": "je veux",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « finir » au futur, avec « ils ».",
+          "nom": "ils finiront",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : ils finiront.",
+          "pieges": [
+            {
+              "texte": "ils finiraient",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "ils finissent",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « manger » au futur, avec « tu ».",
+          "nom": "tu mangeras",
+          "explication": "Au futur, on entend la marque -r- avant la terminaison : tu mangeras.",
+          "pieges": [
+            {
+              "texte": "tu mangerais",
+              "pourquoi": "Ça, c’est le conditionnel : il finit par -ais, -ait, -ions, -iez, -aient."
+            },
+            {
+              "texte": "tu manges",
+              "pourquoi": "Ça, c’est le présent. Le futur a la marque -r- : « tu diras »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "passe-simple",
+      "titre": "Le passé simple",
+      "niveau": "CM2",
+      "prerequis": [
+        "futur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Conjugaisons à mémoriser et à maîtriser : passé simple, plus-que-parfait des verbes être et avoir, des verbes des premier et deuxième groupes, des verbes irréguliers du troisième groupe : faire, aller, dire, venir, pouvoir, voir, vouloir, prendre."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le passé simple est le temps des récits : il raconte une action brève du passé. Il fit, ils prirent, elle alla.",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Le passé simple est en un seul mot, et ce n’est pas l’imparfait.",
+        "exemple": "Faire, avec « ils », au passé simple : ils firent.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « aller » au passé simple, avec « elle ».",
+          "nom": "elle alla",
+          "explication": "Au passé simple : elle alla.",
+          "pieges": [
+            {
+              "texte": "elle allait",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "elle est allée",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » au passé simple, avec « ils ».",
+          "nom": "ils firent",
+          "explication": "Au passé simple : ils firent.",
+          "pieges": [
+            {
+              "texte": "ils faisaient",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "ils ont fait",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » au passé simple, avec « il ».",
+          "nom": "il prit",
+          "explication": "Au passé simple : il prit.",
+          "pieges": [
+            {
+              "texte": "il prenait",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "il a pris",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « dire » au passé simple, avec « elles ».",
+          "nom": "elles dirent",
+          "explication": "Au passé simple : elles dirent.",
+          "pieges": [
+            {
+              "texte": "elles disaient",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "elles ont dit",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » au passé simple, avec « il ».",
+          "nom": "il vint",
+          "explication": "Au passé simple : il vint.",
+          "pieges": [
+            {
+              "texte": "il venait",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "il est venu",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « pouvoir » au passé simple, avec « ils ».",
+          "nom": "ils purent",
+          "explication": "Au passé simple : ils purent.",
+          "pieges": [
+            {
+              "texte": "ils pouvaient",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "ils ont pu",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » au passé simple, avec « elle ».",
+          "nom": "elle vit",
+          "explication": "Au passé simple : elle vit.",
+          "pieges": [
+            {
+              "texte": "elle voyait",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "elle a vu",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « vouloir » au passé simple, avec « ils ».",
+          "nom": "ils voulurent",
+          "explication": "Au passé simple : ils voulurent.",
+          "pieges": [
+            {
+              "texte": "ils voulaient",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "ils ont voulu",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « finir » au passé simple, avec « il ».",
+          "nom": "il finit",
+          "explication": "Au passé simple : il finit.",
+          "pieges": [
+            {
+              "texte": "il finissait",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "il a fini",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « manger » au passé simple, avec « elles ».",
+          "nom": "elles mangèrent",
+          "explication": "Au passé simple : elles mangèrent.",
+          "pieges": [
+            {
+              "texte": "elles mangeaient",
+              "pourquoi": "Ça, c’est l’imparfait : il dit ce qui durait. Le passé simple dit une action d’un moment, dans un récit."
+            },
+            {
+              "texte": "elles ont mangé",
+              "pourquoi": "Ça, c’est le passé composé, en deux mots : auxiliaire + participe passé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditionnel",
+      "titre": "Le conditionnel présent",
+      "niveau": "6e",
+      "prerequis": [
+        "futur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Conjugaisons à mémoriser et à maîtriser : impératif présent, conditionnel présent des verbes être et avoir, des verbes des premier et deuxième groupes, des verbes irréguliers du troisième groupe."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le conditionnel, c’est la marque -r- du futur avec les terminaisons de l’imparfait : je voudrais, nous pourrions.",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Il faut à la fois la marque -r- et une terminaison de l’imparfait.",
+        "exemple": "Vouloir, avec « je », au conditionnel : je voudrais (au futur : je voudrai).",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « aller » au conditionnel présent, avec « je ».",
+          "nom": "j’irais",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : j’irais.",
+          "pieges": [
+            {
+              "texte": "j’irai",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "j’allais",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » au conditionnel présent, avec « nous ».",
+          "nom": "nous ferions",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : nous ferions.",
+          "pieges": [
+            {
+              "texte": "nous ferons",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "nous faisions",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » au conditionnel présent, avec « ils ».",
+          "nom": "ils prendraient",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : ils prendraient.",
+          "pieges": [
+            {
+              "texte": "ils prendront",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "ils prenaient",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « dire » au conditionnel présent, avec « tu ».",
+          "nom": "tu dirais",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : tu dirais.",
+          "pieges": [
+            {
+              "texte": "tu diras",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "tu disais",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » au conditionnel présent, avec « vous ».",
+          "nom": "vous viendriez",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : vous viendriez.",
+          "pieges": [
+            {
+              "texte": "vous viendrez",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "vous veniez",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « pouvoir » au conditionnel présent, avec « elle ».",
+          "nom": "elle pourrait",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : elle pourrait.",
+          "pieges": [
+            {
+              "texte": "elle pourra",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "elle pouvait",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » au conditionnel présent, avec « nous ».",
+          "nom": "nous verrions",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : nous verrions.",
+          "pieges": [
+            {
+              "texte": "nous verrons",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "nous voyions",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « vouloir » au conditionnel présent, avec « je ».",
+          "nom": "je voudrais",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : je voudrais.",
+          "pieges": [
+            {
+              "texte": "je voudrai",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "je voulais",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « finir » au conditionnel présent, avec « ils ».",
+          "nom": "ils finiraient",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : ils finiraient.",
+          "pieges": [
+            {
+              "texte": "ils finiront",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "ils finissaient",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « manger » au conditionnel présent, avec « tu ».",
+          "nom": "tu mangerais",
+          "explication": "Le conditionnel a la marque -r- du futur et les terminaisons de l’imparfait : tu mangerais.",
+          "pieges": [
+            {
+              "texte": "tu mangeras",
+              "pourquoi": "Ça, c’est le futur. Le conditionnel prend les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "tu mangeais",
+              "pourquoi": "Ça, c’est l’imparfait : il manque la marque -r-."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "imperatif",
+      "titre": "L’impératif",
+      "niveau": "6e",
+      "prerequis": [
+        "futur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Conjugaisons à mémoriser et à maîtriser : impératif présent, conditionnel présent [...] Identifier les marques de temps pour le conditionnel présent et l’impératif présent."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L’impératif sert à donner un ordre ou un conseil. Il n’a pas de sujet : « Prends ton sac ! », « Faites attention ! ».",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "À l’impératif, pas de sujet. Et pas de s à « tu » pour les verbes en -er.",
+        "exemple": "Faire, avec « vous » : Faites attention !",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Donne l’ordre avec « faire », à la personne « vous ».",
+          "nom": "Faites",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Faites !",
+          "pieges": [
+            {
+              "texte": "Faisez",
+              "pourquoi": "Faire et dire sont irréguliers : faites, dites."
+            },
+            {
+              "texte": "Vous faites",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « aller », à la personne « tu ».",
+          "nom": "Va",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Va !",
+          "pieges": [
+            {
+              "texte": "Vas",
+              "pourquoi": "Aller et les verbes en -er n’ont pas de s à l’impératif, avec « tu » : va, mange."
+            },
+            {
+              "texte": "Tu vas",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « prendre », à la personne « tu ».",
+          "nom": "Prends",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Prends !",
+          "pieges": [
+            {
+              "texte": "Prend",
+              "pourquoi": "Avec « tu », prendre garde son s : prends."
+            },
+            {
+              "texte": "Tu prends",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « dire », à la personne « vous ».",
+          "nom": "Dites",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Dites !",
+          "pieges": [
+            {
+              "texte": "Disez",
+              "pourquoi": "Faire et dire sont irréguliers : faites, dites."
+            },
+            {
+              "texte": "Vous dites",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « venir », à la personne « nous ».",
+          "nom": "Venons",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Venons !",
+          "pieges": [
+            {
+              "texte": "Venont",
+              "pourquoi": "Avec « nous », la terminaison est -ons : venons."
+            },
+            {
+              "texte": "Nous venons",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « nous »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « finir », à la personne « tu ».",
+          "nom": "Finis",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Finis !",
+          "pieges": [
+            {
+              "texte": "Finit",
+              "pourquoi": "Avec « tu », la terminaison est -s : finis."
+            },
+            {
+              "texte": "Tu finis",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « manger », à la personne « tu ».",
+          "nom": "Mange",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Mange !",
+          "pieges": [
+            {
+              "texte": "Manges",
+              "pourquoi": "Aller et les verbes en -er n’ont pas de s à l’impératif, avec « tu » : va, mange."
+            },
+            {
+              "texte": "Tu manges",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « tu »."
+            }
+          ]
+        },
+        {
+          "texte": "Donne l’ordre avec « voir », à la personne « vous ».",
+          "nom": "Voyez",
+          "explication": "À l’impératif, on n’écrit pas le sujet : Voyez !",
+          "pieges": [
+            {
+              "texte": "Voyiez",
+              "pourquoi": "Ça, c’est l’imparfait. À l’impératif : voyez."
+            },
+            {
+              "texte": "Vous voyez",
+              "pourquoi": "À l’impératif, il n’y a pas de sujet : on ne dit pas « vous »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribut-ou-cod",
+      "titre": "Attribut ou COD ?",
+      "niveau": "6e",
+      "prerequis": [
+        "participe-passe-etre"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Opposer et distinguer attribut du sujet et complément d’objet direct (COD)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Après un verbe d’état (être, sembler, paraître, devenir, rester), le mot dit comment est le sujet : c’est un attribut. Après un autre verbe, on demande « quoi ? » : c’est un COD.",
+      "phrases": {
+        "consigne": "Repère le verbe, puis touche la fonction.",
+        "question": "{texte}",
+        "indice": "Le verbe est-il un verbe d’état ? Sinon, demande « verbe + quoi ? ».",
+        "exemple": "« Le chat semble fatigué » : sembler est un verbe d’état, « fatigué » est attribut.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Dans « Le chat semble fatigué. », quelle est la fonction de « fatigué » ?",
+          "nom": "attribut du sujet",
+          "explication": "« semble » est un verbe d’état : « fatigué » dit comment est le sujet. C’est un attribut du sujet.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« semble » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "« semble » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Le chat mange une souris. », quelle est la fonction de « une souris » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "« mange » n’est pas un verbe d’état : on peut demander « mange quoi ? » — réponse : « une souris ». C’est un COD.",
+          "pieges": [
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "Le verbe « mange » n’est pas un verbe d’état : demande « mange quoi ? »."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "Le verbe « mange » n’est pas un verbe d’état : demande « mange quoi ? »."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Mon frère est médecin. », quelle est la fonction de « médecin » ?",
+          "nom": "attribut du sujet",
+          "explication": "« est » est un verbe d’état : « médecin » dit comment est le sujet. C’est un attribut du sujet.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« est » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "« est » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Léa lit un livre. », quelle est la fonction de « un livre » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "« lit » n’est pas un verbe d’état : on peut demander « lit quoi ? » — réponse : « un livre ». C’est un COD.",
+          "pieges": [
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "Le verbe « lit » n’est pas un verbe d’état : demande « lit quoi ? »."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "Le verbe « lit » n’est pas un verbe d’état : demande « lit quoi ? »."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Ce gâteau paraît délicieux. », quelle est la fonction de « délicieux » ?",
+          "nom": "attribut du sujet",
+          "explication": "« paraît » est un verbe d’état : « délicieux » dit comment est le sujet. C’est un attribut du sujet.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« paraît » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "« paraît » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Nous regardons la mer. », quelle est la fonction de « la mer » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "« regardons » n’est pas un verbe d’état : on peut demander « regardons quoi ? » — réponse : « la mer ». C’est un COD.",
+          "pieges": [
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "Le verbe « regardons » n’est pas un verbe d’état : demande « regardons quoi ? »."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "Le verbe « regardons » n’est pas un verbe d’état : demande « regardons quoi ? »."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Les élèves deviennent calmes. », quelle est la fonction de « calmes » ?",
+          "nom": "attribut du sujet",
+          "explication": "« deviennent » est un verbe d’état : « calmes » dit comment est le sujet. C’est un attribut du sujet.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« deviennent » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "« deviennent » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Il range sa chambre. », quelle est la fonction de « sa chambre » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "« range » n’est pas un verbe d’état : on peut demander « range quoi ? » — réponse : « sa chambre ». C’est un COD.",
+          "pieges": [
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "Le verbe « range » n’est pas un verbe d’état : demande « range quoi ? »."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "Le verbe « range » n’est pas un verbe d’état : demande « range quoi ? »."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Le ciel reste gris. », quelle est la fonction de « gris » ?",
+          "nom": "attribut du sujet",
+          "explication": "« reste » est un verbe d’état : « gris » dit comment est le sujet. C’est un attribut du sujet.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« reste » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            },
+            {
+              "texte": "complément circonstanciel",
+              "pourquoi": "« reste » est un verbe d’état (être, sembler, paraître, devenir, rester) : ce qui suit est un attribut."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Elle joue dans le jardin. », quelle est la fonction de « dans le jardin » ?",
+          "nom": "complément circonstanciel",
+          "explication": "« dans le jardin » dit où se passe l’action ; on peut le déplacer ou l’enlever. C’est un complément circonstanciel.",
+          "pieges": [
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "« dans le jardin » ne répond pas à « quoi ? » mais à « où ? »."
+            },
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "« dans le jardin » ne répond pas à « quoi ? » mais à « où ? »."
+            }
+          ]
         }
       ]
     }
