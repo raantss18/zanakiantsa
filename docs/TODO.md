@@ -242,6 +242,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ `0.11.0+11`, build 2011, 35,8 Mo, publiée par `tool/publish.sh`. Montée 0.10.0 → 0.11.0 vérifiée sur l'émulateur (données
   conservées, espace parent ouvert, leçon de 4e). ⏳ Pas vue sur le téléphone ni sur la vraie tablette.
 
+## Version 0.13.0 (2026-11-07) : publiée avec l'accord d'Antsa
+
+- ✅ Français CM1–6e, diagnostic des prérequis, tableau de bord parent ; montée 0.12.0 → 0.13.0 sur l'émulateur. ⏳ Pas vue sur la vraie tablette.
+
 ## Diagnostic et tableau de bord (2026-11-07) — ADR 0061
 
 - ✅ Diagnostic des prérequis directs avant chaque notion nouvelle, rappel si manqué. ✅ Tableau de bord parent (temps, réussite, progrès, à revoir).
