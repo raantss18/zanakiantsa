@@ -67,7 +67,7 @@ class _ChooseActivityState extends State<ChooseActivity> {
             ]),
         ];
         return Center(
-          child: SingleChildScrollView(
+          child: PlayScroll(
             padding: const EdgeInsets.all(16),
             child: Column(children: [
               if (reading)

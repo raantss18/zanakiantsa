@@ -526,10 +526,14 @@ class _SessionPageState extends State<SessionPage> {
               ),
             );
             // La zone de l'activité : sous la barre du haut, et sous le texte ou à côté de lui.
-            final scale = activitiesThatFill.contains(a.skill.activity) ? 1.0 : activityScale(Size(
+            final area = Size(
               k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0),
               k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : 0),
-            ));
+            );
+            final fills = activitiesThatFill.contains(a.skill.activity);
+            final scale = fills ? 1.0 : activityScale(area);
+            // Centrée en hauteur seulement là où elle est agrandie ou à côté du texte : ailleurs, rien ne change.
+            final room = !fills && (scale > 1 || side) ? (area.height - 8) / scale : null;
             final content = over
                   ? DayEnd(
                       theme: widget.topic,
@@ -551,7 +555,7 @@ class _SessionPageState extends State<SessionPage> {
                         // « J'ai compris » en bas (pas de chevauchement).
                         top: a.example && !side ? 52 : 0,
                         bottom: a.example && !side ? 104 : 0,
-                        child: ScaledActivity(scale: scale, child: switch (a.skill.activity) {
+                        child: ScaledActivity(scale: scale, child: ActivityRoom(height: room, child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
                           'composer' => ComposeActivity(key: ObjectKey(a), attempt: a),
                           'choisir' => ChooseActivity(key: ObjectKey(a), attempt: a),
@@ -577,7 +581,7 @@ class _SessionPageState extends State<SessionPage> {
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),
-                        }),
+                        })),
                       ),
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
                       // Essais seulement (jamais publié) : passer à la compétence suivante pour regarder chaque écran.

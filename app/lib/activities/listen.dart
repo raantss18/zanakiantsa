@@ -79,7 +79,7 @@ class _ListenActivityState extends State<ListenActivity> {
     final shown = a.demonstrate || a.solved;
     return LayoutBuilder(builder: (_, k) {
       final size = ((k.maxWidth - 96) / 2).clamp(140.0, 240.0);
-      return SingleChildScrollView(
+      return PlayScroll(
         padding: const EdgeInsets.all(16),
         child: Column(children: [
           Wrap(spacing: 32, runSpacing: 24, alignment: WrapAlignment.center, children: [

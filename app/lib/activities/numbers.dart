@@ -190,7 +190,7 @@ class _SticksActivityState extends State<SticksActivity> {
   Widget build(BuildContext context) {
     final q = a.question;
     if (!making) {
-      return SingleChildScrollView(
+      return PlayScroll(
         padding: const EdgeInsets.all(16),
         child: Column(children: [
           _collection(q.a, q.b),
@@ -199,7 +199,7 @@ class _SticksActivityState extends State<SticksActivity> {
         ]),
       );
     }
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         // Le nombre demandé, écrit en grand sur sa carte.
@@ -253,7 +253,7 @@ class _GroupsActivityState extends State<GroupsActivity> {
     final art = a.app.objectArt(a.skill);
     final table = a.skill.activity == 'tables';
     final size = q.b > 6 ? 26.0 : 34.0;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         if (table)
@@ -355,7 +355,7 @@ class _ShareActivityState extends State<ShareActivity> {
   Widget build(BuildContext context) {
     final art = a.app.objectArt(a.skill);
     final u = a.app.universe;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         // Le tas à partager.
@@ -461,7 +461,7 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
   Widget build(BuildContext context) {
     final q = a.question;
     final done = removed >= q.b;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         Container(
@@ -551,7 +551,7 @@ class _PacketsActivityState extends State<PacketsActivity> {
     final q = a.question;
     final art = a.app.objectArt(a.skill);
     final u = a.app.universe;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         Container(

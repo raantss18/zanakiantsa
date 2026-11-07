@@ -175,8 +175,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 
 - ✅ **Site vitrine** (ADR 0055) : https://raantss18.github.io/zanakiantsa/ — téléchargement de la dernière version, nouvelles
   (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée. ⏳ Lecteurs d'écran, Safari, Firefox ;
-  ⏳ une page « Nouvelles » dédiée et d'autres notes de lecture quand il y en aura ; ⏳ activités agrandies : trop de vide
-  en bas de l'écran en paysage.
+  ⏳ une page « Nouvelles » dédiée et d'autres notes de lecture quand il y en aura .
 
 ## Version 0.10.0 (2026-11-07) : publiée
 

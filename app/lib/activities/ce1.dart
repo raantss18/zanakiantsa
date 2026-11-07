@@ -92,7 +92,7 @@ class _MultibaseActivityState extends State<MultibaseActivity> {
   Widget build(BuildContext context) {
     final q = a.question;
     final c = q.a, d = q.b, u = q.n % 10;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         Container(
@@ -267,7 +267,7 @@ class _ColumnOpActivityState extends State<ColumnOpActivity> {
         width: cell, child: Text(q.b < [1, 10, 100][col] && col > 0 ? '' : '${digit(q.b, col)}', textAlign: TextAlign.center, style: big));
     const cols = [2, 1, 0];
     final s = step;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
       child: Column(children: [
         Container(
@@ -414,7 +414,7 @@ class _ClockActivityState extends State<ClockActivity> {
     final shown = a.demonstrate || a.solved;
     return LayoutBuilder(builder: (_, k) {
       final side = min(k.maxWidth - 64, k.maxHeight * 0.55).clamp(200.0, 360.0);
-      return SingleChildScrollView(
+      return PlayScroll(
         padding: const EdgeInsets.all(16),
         child: Column(children: [
           SizedBox(width: side, height: side, child: CustomPaint(painter: _ClockPainter(q.n, q.b, u.night ? u.primary : u.onCard))),
@@ -547,7 +547,7 @@ class _SequenceActivityState extends State<SequenceActivity> {
     }
 
     final values = [for (var i = 0; i < 5; i++) q.a + i * q.b];
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         FittedBox(

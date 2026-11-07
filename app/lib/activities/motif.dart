@@ -54,7 +54,7 @@ class _MotifActivityState extends State<MotifActivity> {
       final cell = ((k.maxWidth - 64) / 6.5).clamp(56.0, 96.0);
       // Les trois images proposées sur une seule rangée.
       final pick = ((k.maxWidth - 32) / 3 - 20).clamp(100.0, 160.0);
-      return SingleChildScrollView(
+      return PlayScroll(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
         child: Column(children: [
           // La suite, sur une carte (jamais à même le décor), qui passe à la ligne si besoin.

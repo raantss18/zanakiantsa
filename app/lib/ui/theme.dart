@@ -29,6 +29,42 @@ Widget split({required Widget main, required Widget Function(Axis) side, double 
           : Column(children: [Expanded(child: main), SizedBox(height: sideSize, child: side(Axis.horizontal))]),
     );
 
+/// La hauteur que peut occuper une activité agrandie sur une grande tablette (ADR 0054), donnée par la séance. Pas de
+/// `LayoutBuilder` ici : un `LayoutBuilder` autour de l'activité figeait l'écran en version publiée (ADR 0054).
+class ActivityRoom extends InheritedWidget {
+  const ActivityRoom({super.key, required this.height, required super.child});
+
+  /// Null sur les petits écrans : l'activité reste en haut, comme toujours.
+  final double? height;
+
+  static double? heightOf(BuildContext context) => context.dependOnInheritedWidgetOfExactType<ActivityRoom>()?.height;
+
+  @override
+  bool updateShouldNotify(ActivityRoom old) => old.height != height;
+}
+
+/// La zone de jeu d'une activité : elle défile si elle manque de place ; sur une grande tablette, elle se centre en hauteur
+/// au lieu de laisser le bas de l'écran vide.
+class PlayScroll extends StatelessWidget {
+  const PlayScroll({super.key, this.padding = EdgeInsets.zero, required this.child});
+  final EdgeInsets padding;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final room = ActivityRoom.heightOf(context);
+    return SingleChildScrollView(
+      padding: padding,
+      child: room == null
+          ? child
+          : ConstrainedBox(
+              constraints: BoxConstraints(minHeight: (room - padding.vertical).clamp(0.0, double.infinity)),
+              child: Center(child: SizedBox(width: double.infinity, child: child)),
+            ),
+    );
+  }
+}
+
 ThemeData buildTheme(Universe u) {
   final scheme = ColorScheme.fromSeed(
     seedColor: u.primary,

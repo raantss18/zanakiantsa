@@ -19,6 +19,7 @@
 - **Pages de listes** : accueil de domaine, carnet, espace parent et liste des parties restent dans une colonne centrée de 760 dp
   (`readablePadding`) ; en paysage les lignes couraient sur 1163 dp. Bibliothèque, liseuse, album, « Tout explorer » et le
   choix du monde étaient déjà corrects en paysage : inchangés.
+- **Hauteur** : les activités qui défilent se centrent en hauteur quand elles sont agrandies (`PlayScroll`, `ActivityRoom`), au lieu de laisser le bas vide.
 - **Aussi** : bouton d'essai ⏭ visible seulement avec `--dart-define=DEV_SKILL=…` (jamais publié) pour passer d'une compétence
   à l'autre sans jouer.
 - **Vérifié** : 158 tests (`test/adaptive_test.dart`) ; émulateur, les 25 compétences en paysage (Xiaomi Pad 7) et en

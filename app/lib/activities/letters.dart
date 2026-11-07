@@ -70,7 +70,7 @@ class _SyllablesActivityState extends State<SyllablesActivity> {
   Widget build(BuildContext context) {
     final right = item.syllables.length;
     final shown = a.demonstrate || a.solved;
-    return SingleChildScrollView(
+    return PlayScroll(
       padding: const EdgeInsets.all(16),
       child: Column(children: [
         Container(
@@ -203,7 +203,7 @@ class _LetterActivityState extends State<LetterActivity> {
     };
     return LayoutBuilder(builder: (_, k) {
       final size = min((k.maxWidth - 32) / 3 - 16, 160.0).clamp(96.0, 160.0);
-      return SingleChildScrollView(
+      return PlayScroll(
         padding: const EdgeInsets.all(16),
         child: Column(children: [
           if (model != null)
