@@ -40,6 +40,9 @@ class _ParentPageState extends State<ParentPage> {
     if (report == null) {
       _load();
       _loadVoice();
+      // À chaque entrée dans l'espace parent, l'app regarde seule s'il y a une nouvelle version (demande d'Antsa) :
+      // le parent n'a pas à y penser. Sans réseau, rien ne s'affiche.
+      _check(automatic: true);
     }
   }
 
@@ -127,17 +130,49 @@ class _ParentPageState extends State<ParentPage> {
     });
   }
 
-  Future<void> _check() async {
-    setState(() => updateStatus = 'Recherche…');
+  /// [automatic] : la recherche faite à l'entrée ; elle ne dit rien quand il n'y a rien de nouveau.
+  Future<void> _check({bool automatic = false}) async {
+    setState(() => updateStatus = automatic ? null : 'Recherche…');
     final r = await updater.check();
     if (!mounted) return;
     setState(() {
       release = r;
-      updateStatus = r == null
-          ? 'Pas de nouvelle version (ou pas de réseau).'
-          : 'Version ${r.version} disponible.';
+      updateStatus = r != null
+          ? 'Version ${r.version} disponible.'
+          : automatic
+              ? null
+              : 'Pas de nouvelle version (ou pas de réseau).';
     });
   }
+
+  /// En haut de l'espace parent, dès qu'une nouvelle version est trouvée : le bouton pour l'installer, sans chercher plus bas.
+  Widget _updateBanner() => Card(
+        color: Theme.of(context).colorScheme.primaryContainer,
+        margin: const EdgeInsets.only(bottom: 16),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Row(children: [
+              const Icon(Icons.system_update_rounded, size: 32),
+              const SizedBox(width: 12),
+              Expanded(child: Text('Nouvelle version ${release!.version} disponible', style: Theme.of(context).textTheme.titleLarge)),
+            ]),
+            const SizedBox(height: 8),
+            Text(release!.notes),
+            const SizedBox(height: 12),
+            if (progress != null)
+              LinearProgressIndicator(value: progress)
+            else
+              FilledButton.icon(
+                style: FilledButton.styleFrom(minimumSize: const Size(200, 52)),
+                onPressed: _install,
+                icon: const Icon(Icons.download_rounded),
+                label: const Text('Mettre à jour'),
+              ),
+            if (updateStatus != null && updateStatus!.startsWith('Installation')) Padding(padding: const EdgeInsets.only(top: 8), child: Text(updateStatus!)),
+          ]),
+        ),
+      );
 
   Future<void> _install() async {
     final ok = await updater.install(
@@ -232,6 +267,7 @@ class _ParentPageState extends State<ParentPage> {
           child: ListView(
             padding: readablePadding(context, bottom: 48),
             children: [
+              if (release != null) _updateBanner(),
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
               Text('Enfants', style: Theme.of(context).textTheme.titleLarge),
               const Text('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.'),

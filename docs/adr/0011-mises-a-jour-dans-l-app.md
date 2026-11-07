@@ -18,3 +18,4 @@
   `no_install_unknown_sources` n'est **pas** dans les restrictions effectives du profil supervisé (politique résolue
   `null`). **Reste à tester** : l'autorisation « installer des applis inconnues » de l'app, accordée à la main, puis
   une vraie mise à jour de bout en bout.
+- **2026-11-07 (Antsa)** : la recherche se fait seule à chaque entrée dans l'espace parent ; une nouvelle version s'affiche en haut de la page avec « Mettre à jour ». Sans réseau ou sans nouveauté, rien ne s'affiche.
