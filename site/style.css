@@ -67,6 +67,10 @@ p { margin: 0 0 var(--u); max-width: 62ch; }
 .entete nav ul { display: flex; flex-wrap: wrap; gap: 0 28px; list-style: none; margin: 0; padding: 0; }
 .entete nav a { display: inline-block; min-height: 48px; line-height: 48px; font-weight: 700; color: var(--encre); text-decoration: none; border-bottom: 3px solid transparent; }
 .entete nav a:hover { border-bottom-color: var(--marge); }
+.entete { flex-wrap: nowrap; }
+.entete nav ul { align-items: center; }
+.entete nav a.nav-bouton { min-height: 48px; line-height: 48px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--violet); color: #fff; }
+.entete nav a.nav-bouton:hover { background: var(--violet-fonce); }
 
 /* Titres : l'écriture d'école (cursive), sur les lignes du cahier. */
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--encre); margin: 0; }
@@ -239,7 +243,7 @@ h3 { font-size: 1.3rem; line-height: var(--u); margin-bottom: 0; }
   .entete { min-height: 0; padding-bottom: 8px; }
   .entete .logo { width: 128px; }
   .entete nav ul { gap: 0 16px; }
-  .entete nav a { min-height: 44px; line-height: 44px; font-size: .95rem; }
+  .nav-secondaire { display: none; } /* sur téléphone, un seul bouton : Télécharger */
   .bouton { width: 100%; font-size: 1.1rem; padding: 0 20px; }
   .fiche { grid-template-columns: 1fr; padding: 16px; }
   .fiche dd { margin-bottom: 8px; }
