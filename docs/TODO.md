@@ -173,6 +173,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
+- ✅ **Site vitrine** (ADR 0055) : https://raantss18.github.io/zanakiantsa/ — téléchargement de la dernière version, nouvelles
+  (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée. ⏳ Lecteurs d'écran, Safari, Firefox ;
+  ⏳ une page « Nouvelles » dédiée et d'autres notes de lecture quand il y en aura ; ⏳ activités agrandies : trop de vide
+  en bas de l'écran en paysage.
+
 ## Version 0.10.0 (2026-11-07) : publiée
 
 - ✅ Préparée : `0.10.0+10`, APK signé `release-out/zanakiantsa-0.10.0-arm64-v8a.apk` (build 2010, 35,8 Mo), signature de

@@ -1,6 +1,6 @@
 # 0055 — Un site vitrine sur GitHub Pages, en cahier d'écolier
 
-- **Date** : 2026-11-07 · **Statut** : proposé, dès que Pages est activé par Antsa (demande d'Antsa : « un site vitrine,
+- **Date** : 2026-11-07 · **Statut** : accepté, en ligne depuis le 2026-11-07 (demande d'Antsa : « un site vitrine,
   attractif et convivial, simple pour télécharger l'app et avoir les nouvelles sur l'éducation et l'app »).
 - **Décision** : `site/` (HTML, CSS, un script de 10 lignes pour copier l'empreinte), publié par `.github/workflows/site.yml`.
   `tool/build_site.py` écrit dans la page la dernière version (numéro, taille, empreinte SHA-256 donnée par GitHub, lien du
@@ -14,7 +14,5 @@
 - **Contenu** : chaque phrase vient de `docs/` (vision, pédagogie, ADR). Les « notes de lecture » (`site/notes.json`) ne
   reprennent que les résultats lus dans `docs/pedagogie.md`, avec leurs limites et leurs sources. Dit sans détour : pas sur
   Google Play, exception ML Kit, pas encore d'essai avec un groupe d'enfants, voix de synthèse.
-- **Vérifié** : rendu à 390, 768, 1360 et 1920 px, sans débordement horizontal ; polices chargées ; le flux Atom est du XML
-  valide. **Pas vérifié** : en ligne (Pages pas encore activé) ; lecteurs d'écran ; Safari et Firefox.
-- **Pour activer** : Réglages du dépôt → Pages → Source « GitHub Actions » (ou `gh api -X POST repos/raantss18/zanakiantsa/pages
-  -f build_type=workflow`), puis lancer le flux « Site vitrine ».
+- **Vérifié** : en ligne (https://raantss18.github.io/zanakiantsa/, déploiement réussi, page, flux et police servis) ; rendu à 390, 768, 1360 et 1920 px, sans débordement horizontal ; polices chargées ; le flux Atom est du XML
+  valide. **Pas vérifié** : lecteurs d'écran ; Safari et Firefox.
