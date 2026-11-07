@@ -6,10 +6,12 @@ import '../activities/calcul.dart';
 import '../activities/draw.dart';
 import '../app_state.dart';
 import '../core/day.dart';
+import '../core/events.dart';
 import '../core/progress.dart';
 import '../core/report.dart';
 import '../core/rules.dart';
 import '../ui/adaptive.dart';
+import 'dashboard.dart';
 import 'notebook_style.dart';
 import '../update/updater.dart';
 
@@ -23,6 +25,7 @@ class ParentPage extends StatefulWidget {
 class _ParentPageState extends State<ParentPage> {
   late final AppState app = AppScope.of(context);
   WeekReport? report;
+  List<SessionLog> sessions = const [];
   bool? inkModel;
   String? inkStatus;
 
@@ -56,6 +59,7 @@ class _ParentPageState extends State<ParentPage> {
     } catch (_) {}
     if (!mounted) return;
     setState(() {
+      this.sessions = sessions;
       report = weekReport(
         [for (final t in app.topics) for (final s in t.skills) s.id],
         app.journal,
@@ -93,27 +97,6 @@ class _ParentPageState extends State<ParentPage> {
   }
 
   /// Les 5 explications données le plus souvent ces 7 derniers jours, avec la compétence.
-  List<Widget> _frequentErrors(Map<String, String> titles) {
-    final since = DateTime.now().subtract(const Duration(days: 7));
-    final counts = <(String, String), int>{};
-    for (final a in app.journal.where((a) => a.at.isAfter(since))) {
-      for (final e in a.errors) {
-        counts[(a.skill, e)] = (counts[(a.skill, e)] ?? 0) + 1;
-      }
-    }
-    if (counts.isEmpty) return [const Text('Aucune erreur notée cette semaine.')];
-    final top = (counts.entries.toList()..sort((a, b) => b.value - a.value)).take(5);
-    return [
-      for (final e in top)
-        ListTile(
-          contentPadding: EdgeInsets.zero,
-          leading: Text('× ${e.value}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-          title: Text(e.key.$2),
-          subtitle: Text(titles[e.key.$1] ?? e.key.$1),
-        ),
-    ];
-  }
-
   Future<void> _downloadInk() async {
     setState(() => inkStatus = 'Téléchargement…');
     var ok = false;
@@ -250,7 +233,6 @@ class _ParentPageState extends State<ParentPage> {
 
   @override
   Widget build(BuildContext context) {
-    final titles = {for (final t in app.topics) for (final s in t.skills) s.id: '${t.name} — ${s.title}'};
     final r = report;
     // Écran adulte : boutons de taille normale (le thème enfant les agrandit), marge sous la barre de navigation.
     final base = Theme.of(context);
@@ -322,37 +304,9 @@ class _ParentPageState extends State<ParentPage> {
                   ),
               ]),
               const Divider(height: 32),
-              Text(
-                'Les 7 derniers jours',
-                style: notebookTitle,
-              ),
-              if (r == null)
-                const LinearProgressIndicator()
-              else ...[
-                Text('${r.sessions} séance(s), ${r.minutes} min'),
-                const SizedBox(height: 8),
-                if (r.lines.isEmpty)
-                  const Text('Aucune activité cette semaine.'),
-                for (final l in r.lines)
-                  ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      l.mastered
-                          ? Icons.verified_rounded
-                          : Icons.timelapse_rounded,
-                      color: l.mastered ? Colors.green : Colors.orange,
-                    ),
-                    title: Text(titles[l.skill] ?? l.skill),
-                    subtitle: Text(
-                      '${l.successes} réussies sur ${l.answers} · ${l.helped} avec aide'
-                      '${l.mastered ? ' · maîtrisée' : ''}',
-                    ),
-                  ),
-                // ADR 0042 : ce que l'app a expliqué le plus souvent cette semaine (erreurs typiques ou conseils).
-                const SizedBox(height: 8),
-                Text('Les erreurs qui reviennent', style: Theme.of(context).textTheme.titleMedium),
-                ..._frequentErrors(titles),
-              ],
+              // Tableau de bord (ADR 0061) : temps, réussite du premier coup, progrès par domaine, à revoir.
+              Text('En un coup d’œil', style: notebookTitle),
+              if (r == null) const LinearProgressIndicator() else Dashboard(app: app, sessions: sessions),
               const Divider(height: 32),
               Text('La voix', style: notebookTitle),
               const Text(

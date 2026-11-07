@@ -24,6 +24,7 @@ import '../app_state.dart';
 import '../audio/sfx.dart';
 import '../audio/voice.dart';
 import '../content/content.dart';
+import '../core/diagnostic.dart';
 import '../core/events.dart';
 import '../core/rewards.dart';
 import '../core/rules.dart';
@@ -36,8 +37,15 @@ import 'universe.dart';
 /// Gère une question : essais, aide qui monte, démonstration ou indice final, retour, journal (ADR 0006–0008), et ce
 /// que le bandeau narrateur affiche (ADR 0016).
 class Attempt extends ChangeNotifier {
-  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect, {this.example = false, this.challenge = false})
+  Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect,
+      {this.example = false, this.challenge = false, this.diagnostic = false, this.reminder = false})
       : finished = example;
+
+  /// Question de vérification d'un prérequis avant une notion nouvelle (ADR 0061) : une seule réponse, sans aide.
+  final bool diagnostic;
+
+  /// Rappel d'un prérequis manqué au diagnostic (ADR 0061) : l'idée et l'exemple résolu, comme une découverte.
+  final bool reminder;
 
   /// Question d'un défi (ADR 0042) ou du test de départ (ADR 0045) : notée comme telle dans le journal.
   final bool challenge;
@@ -181,6 +189,15 @@ class Attempt extends ChangeNotifier {
         final enc = app.common.list('encouragements');
         final i = _rand.nextInt(enc.length);
         await speech.say(enc[i], id: 'commun.encouragements.$i');
+      } else if (diagnostic) {
+        // Diagnostic : pas d'aide ni de nouvel essai ; le rappel vient juste après (ADR 0061).
+        misses++;
+        errors.add(why ?? phrase('indice'));
+        finished = true;
+        helpText = 'Pas encore : on revoit ça ensemble, juste après.';
+        notifyListeners();
+        await _record(correct: false, demonstrated: false);
+        await speech.say(helpText!);
       } else {
         misses++;
         // Sans explication propre à cette erreur, on garde le conseil de la compétence : c'est ce qu'il y a à revoir.
@@ -362,7 +379,28 @@ class _SessionPageState extends State<SessionPage> {
   /// Compétences déjà présentées dans cette séance (découverte guidée, ADR 0029).
   final _introduced = <String>{};
 
+  /// Diagnostic en cours avant une notion nouvelle (ADR 0061), et les notions déjà diagnostiquées dans la séance.
+  Diagnostic? _diagnostic;
+  final _diagnosed = <String>{};
+
+  /// Une étape du diagnostic : question de vérification, ou rappel (exemple résolu) d'un prérequis manqué.
+  Attempt _step(DiagStep st) {
+    final skill = app.skill(st.skill);
+    final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
+    _last = q;
+    late final Attempt a;
+    a = Attempt(app, skill, q, _advance, () => setState(() => stars++),
+        challenge: st.kind == StepKind.check, diagnostic: st.kind == StepKind.check, example: st.kind == StepKind.reminder, reminder: st.kind == StepKind.reminder);
+    return a;
+  }
+
   Attempt _next() {
+    final d = _diagnostic;
+    if (d != null) {
+      final st = d.next();
+      if (st != null) return _step(st);
+      _diagnostic = null;
+    }
     final target = _target;
     if (devSkill.isEmpty && target != null) {
       final p = app.progressOf(app.topic(widget.topic));
@@ -372,6 +410,16 @@ class _SessionPageState extends State<SessionPage> {
       }
     }
     final skill = app.skill(plan[index]);
+    // Notion nouvelle : d'abord ses prérequis (ADR 0061), une seule fois par séance, jamais pendant un défi ou un test.
+    final first = !_oneGo && !_introduced.contains(skill.id) && app.journal.every((x) => x.skill != skill.id || x.challenge);
+    if (first && _diagnosed.add(skill.id)) {
+      final topic = app.topic(widget.topic);
+      final pre = prerequisitesToCheck(skill.ref, [for (final s in topic.skills) s.ref]);
+      if (pre.isNotEmpty) {
+        _diagnostic = Diagnostic(pre);
+        return _step(_diagnostic!.next()!);
+      }
+    }
     final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;
     app.remember(skill.id, skill.signature(q));
@@ -396,6 +444,15 @@ class _SessionPageState extends State<SessionPage> {
   Future<void> _advance() async {
     await Future<void>.delayed(const Duration(milliseconds: 700));
     if (!mounted) return;
+    final done = attempt;
+    if (done != null && done.diagnostic) {
+      _diagnostic?.answered(done.skill.id, ok: done.solved);
+      final old = attempt;
+      setState(() => attempt = _next());
+      old?.dispose();
+      _music();
+      return;
+    }
     if (widget.placement) await _placementStep();
     if (index + 1 >= plan.length || _stoppedAt != null) {
       if (devSkill.isEmpty && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
@@ -490,7 +547,13 @@ class _SessionPageState extends State<SessionPage> {
             final side = !over && activityBesideText(k.biggest);
             // Pendant un exemple, le badge « Nouveau » et le bouton « J'ai compris » : sur la page, ou dans la colonne de
             // gauche quand l'échiquier a toute la hauteur.
-            final badge = a.example ? _NewBadge(title: a.skill.title) : null;
+            final badge = a.diagnostic
+                ? _NewBadge(title: a.skill.title, label: 'À vérifier d’abord', icon: Icons.fact_check_rounded)
+                : a.reminder
+                    ? _NewBadge(title: a.skill.title, label: 'Rappel', icon: Icons.lightbulb_rounded)
+                    : a.example
+                        ? _NewBadge(title: a.skill.title)
+                        : null;
             final understood = a.example
                 ? ListenableBuilder(
                             listenable: a,
@@ -530,7 +593,7 @@ class _SessionPageState extends State<SessionPage> {
             // La zone de l'activité : sous la barre du haut, et sous le texte ou à côté de lui.
             final area = Size(
               k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0),
-              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : 0),
+              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : a.diagnostic && !side ? 52 : 0),
             );
             final fills = activitiesThatFill.contains(a.skill.activity);
             final scale = fills ? 1.0 : activityScale(area);
@@ -555,7 +618,7 @@ class _SessionPageState extends State<SessionPage> {
                       Positioned.fill(
                         // Pendant l'exemple, l'activité laisse la place à la pastille « Nouveau » en haut et au bouton
                         // « J'ai compris » en bas (pas de chevauchement).
-                        top: a.example && !side ? 52 : 0,
+                        top: (a.example || a.diagnostic) && !side ? 52 : 0,
                         bottom: a.example && !side ? 104 : 0,
                         child: ScaledActivity(scale: scale, child: ActivityRoom(height: room, child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
@@ -590,6 +653,8 @@ class _SessionPageState extends State<SessionPage> {
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
                       // Essais seulement (jamais publié) : passer à la compétence suivante pour regarder chaque écran.
                       if (devSkill.isNotEmpty) Positioned(left: 4, bottom: 4, child: FloatingActionButton.small(heroTag: 'devSkip', onPressed: _advance, child: const Icon(Icons.skip_next))),
+                      if (a.diagnostic && !side)
+                        Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
                       if (a.example && !side) ...[
                         Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
                         Positioned(
@@ -921,8 +986,9 @@ class MusicScope extends InheritedWidget {
 
 /// Pastille « Nouveau » au-dessus de l'exemple résolu : on voit qu'on découvre, pas qu'on est évalué.
 class _NewBadge extends StatelessWidget {
-  const _NewBadge({required this.title});
-  final String title;
+  const _NewBadge({required this.title, this.label = 'Nouveau', this.icon = Icons.auto_awesome_rounded});
+  final String title, label;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -930,10 +996,10 @@ class _NewBadge extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 6, 14, 6),
         decoration: BoxDecoration(color: Brand.yellow, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.auto_awesome_rounded, color: ink, size: 24),
+          Icon(icon, color: ink, size: 24),
           const SizedBox(width: 6),
           Flexible(
-            child: Text('Nouveau : $title', maxLines: 1, overflow: TextOverflow.ellipsis,
+            child: Text('$label : $title', maxLines: 1, overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
           ),
         ]),

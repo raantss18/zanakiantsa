@@ -1613,10 +1613,187 @@
       ]
     },
     {
+      "id": "present",
+      "titre": "Le présent",
+      "niveau": "CM1",
+      "prerequis": [
+        "lire-phrases"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Conjugaisons à mémoriser et à maîtriser : présent de l’indicatif [...] des verbes du premier et du deuxième groupe et des verbes irréguliers du troisième groupe (faire, aller, dire, venir, pouvoir, voir, vouloir, prendre)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le présent dit ce qui se passe maintenant. Beaucoup de verbes très courants sont irréguliers : je vais, nous faisons, ils prennent.",
+      "phrases": {
+        "consigne": "Lis le verbe et la personne, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Au présent, il n’y a ni la marque -ai- de l’imparfait, ni la marque -r- du futur.",
+        "exemple": "Faire, avec « nous », au présent : nous faisons.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « aller » au présent, avec « je ».",
+          "nom": "je vais",
+          "explication": "Au présent : je vais.",
+          "pieges": [
+            {
+              "texte": "j’allais",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "j’irai",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » au présent, avec « nous ».",
+          "nom": "nous faisons",
+          "explication": "Au présent : nous faisons.",
+          "pieges": [
+            {
+              "texte": "nous faisions",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "nous ferons",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » au présent, avec « ils ».",
+          "nom": "ils prennent",
+          "explication": "Au présent : ils prennent.",
+          "pieges": [
+            {
+              "texte": "ils prenaient",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "ils prendront",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « dire » au présent, avec « tu ».",
+          "nom": "tu dis",
+          "explication": "Au présent : tu dis.",
+          "pieges": [
+            {
+              "texte": "tu disais",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "tu diras",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » au présent, avec « vous ».",
+          "nom": "vous venez",
+          "explication": "Au présent : vous venez.",
+          "pieges": [
+            {
+              "texte": "vous veniez",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "vous viendrez",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « pouvoir » au présent, avec « elle ».",
+          "nom": "elle peut",
+          "explication": "Au présent : elle peut.",
+          "pieges": [
+            {
+              "texte": "elle pouvait",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "elle pourra",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » au présent, avec « nous ».",
+          "nom": "nous voyons",
+          "explication": "Au présent : nous voyons.",
+          "pieges": [
+            {
+              "texte": "nous voyions",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "nous verrons",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « vouloir » au présent, avec « je ».",
+          "nom": "je veux",
+          "explication": "Au présent : je veux.",
+          "pieges": [
+            {
+              "texte": "je voulais",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "je voudrai",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « finir » au présent, avec « ils ».",
+          "nom": "ils finissent",
+          "explication": "Au présent : ils finissent.",
+          "pieges": [
+            {
+              "texte": "ils finissaient",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "ils finiront",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « manger » au présent, avec « tu ».",
+          "nom": "tu manges",
+          "explication": "Au présent : tu manges.",
+          "pieges": [
+            {
+              "texte": "tu mangeais",
+              "pourquoi": "Ça, c’est l’imparfait, avec sa marque -ai- ou -i-."
+            },
+            {
+              "texte": "tu mangeras",
+              "pourquoi": "Ça, c’est le futur, avec sa marque -r-."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "imparfait",
       "titre": "L’imparfait",
       "niveau": "CM1",
-      "prerequis": [],
+      "prerequis": [
+        "present"
+      ],
       "programme": {
         "source": "cycle3",
         "texte": "Conjugaisons à mémoriser et à maîtriser : présent de l’indicatif, imparfait, futur [...] des verbes du premier et du deuxième groupe et des verbes irréguliers du troisième groupe (faire, aller, dire, venir, pouvoir, voir, vouloir, prendre)."
@@ -1790,7 +1967,7 @@
       "titre": "Le participe passé avec être",
       "niveau": "CM1",
       "prerequis": [
-        "imparfait"
+        "present"
       ],
       "programme": {
         "source": "cycle3",
@@ -2110,7 +2287,7 @@
       "titre": "Le passé simple",
       "niveau": "CM2",
       "prerequis": [
-        "futur"
+        "imparfait"
       ],
       "programme": {
         "source": "cycle3",

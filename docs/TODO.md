@@ -242,6 +242,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ `0.11.0+11`, build 2011, 35,8 Mo, publiée par `tool/publish.sh`. Montée 0.10.0 → 0.11.0 vérifiée sur l'émulateur (données
   conservées, espace parent ouvert, leçon de 4e). ⏳ Pas vue sur le téléphone ni sur la vraie tablette.
 
+## Diagnostic et tableau de bord (2026-11-07) — ADR 0061
+
+- ✅ Diagnostic des prérequis directs avant chaque notion nouvelle, rappel si manqué. ✅ Tableau de bord parent (temps, réussite, progrès, à revoir).
+- ⏳ Voir avec un enfant si le diagnostic allonge trop la séance.
+
 ## Sans âge maximum (2026-11-07, demande d'Antsa) — ADR 0057
 
 - ✅ Réglage âge et classe dans l'espace parent, journée et point de départ adaptés, activité `quiz` (leçons écrites dans le contenu).
