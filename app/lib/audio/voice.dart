@@ -2,6 +2,7 @@
 /// l'app (ADR 0002, 0064).
 library;
 
+import 'spoken.dart';
 import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
@@ -57,6 +58,7 @@ class Voice {
         debugPrint('langue ignorée : $e');
       }
       if (r == 1 || r == true) {
+        _current = lang;
         await bounded(_tts.setSpeechRate(lang == 'fr-FR' ? 0.45 : 0.4), _command);
         return true;
       }
@@ -98,8 +100,13 @@ class Voice {
   /// Dit une phrase avec le moteur et attend sa fin : celle que le moteur signale, ou au plus la limite de temps.
   Future<void> _speak(String text) async {
     final done = _phrase = Completer<void>();
-    await bounded(Future.any([_tts.speak(text), done.future]), speechBudget(text));
+    // Les notations de maths dites en mots, dans la langue réglée pour cette phrase (ADR 0067).
+    final said = spoken(text, _current.startsWith('en') ? 'en' : 'fr');
+    await bounded(Future.any([_tts.speak(said), done.future]), speechBudget(said));
   }
+
+  /// Langue réglée pour la phrase en cours (voir [_useLang]).
+  String _current = 'fr-FR';
 
   /// Moteur de synthèse choisi dans l'espace parent (null : celui du téléphone). Certains moteurs livrés avec les
   /// téléphones parlent mal le français ou ne disent jamais quand une phrase est finie.

@@ -10,8 +10,9 @@
 
 ## ⭐ Priorité suivante (demande d'Antsa, 2026-11-07)
 
-- ⏳ **Ajouter du contenu pour tous les niveaux** (CP → lycée, ADR 0057) : maths, livres et tous les autres domaines.
-  À faire juste après la correction en cours (porte parent en paysage + essai FR/EN sur la tablette).
+- ✅ **Contenu pour tous les niveaux** (publié en 1.0.1, 2026-11-08) : ≈ 150 leçons du CE2 au lycée (maths, français,
+  anglais, sciences, histoire-géographie, code, échecs) et 38 livres, dont 27 classiques du domaine public.
+  ⏳ Relecture par un enseignant et par un anglophone.
 
 ## 0. Erreurs signalées
 
@@ -127,10 +128,10 @@
    promotion
 2. ✅ **Bâtonnets, multiplication, partage** (ADR 0021) : 12 compétences CP–CE2, dont soustraire en cassant une
    dizaine, faire des paquets (combien de parts ?), tables de 6 à 9 (2026-11-03) ; ✅ addition et soustraction posées, chiffre par chiffre (ADR 0046)
-3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ⏳ recaler sur le programme publié au BO (source
-   actuelle : projet de juin 2025), voix anglaise hors ligne sur la tablette
+3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ✅ CE2 → 3e calés sur les programmes publiés (BO 2025
+   et 2026, copies lues : URL officielles à substituer) ; ⏳ voix anglaise hors ligne sur la tablette
 4. ✅ **Exploration 3D sur GPU** (ADR 0024) : système solaire et corps ; ⏳ organes, fluidité sur vraie tablette
-5. ✅ **Programmer un robot par blocs** (ADR 0023) ; ⏳ boucles, programmes libres type Scratch
+5. ✅ **Programmer un robot par blocs** (ADR 0023) ; ✅ boucles, conditions, variables, Python (leçons 6e → 2de) ; ⏳ programmes libres type Scratch
 6. ✅ **Solides en 3D** (ADR 0024) ; ⏳ manipulation libre type GeoGebra
 - ✅ 3e journée : anglais / code / explorer (les journées tournent sur 3 jours, ADR 0018)
 - ✅ Vérifié sur l'émulateur : mat en un coup, bâtonnets (lire, construire), paquets, partage, tables, solide 3D,
@@ -160,8 +161,8 @@
 - ✅ Pédagogie inspirée de Brilliant (ADR 0029) : découverte guidée (idée + exemple résolu) à la première rencontre
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité
 - ✅ Test de départ par domaine (ADR 0045) ; ✅ explications pour les réponses en images (ADR 0048)
-- ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
-- 🔄 Contenu de cycle 3 pour les plus grands : ✅ fractions du CE1 au CM1 (ADR 0056) ; ⏳ fractions décimales et nombres décimaux, multiplication et division posées, grands nombres ; ⏳ français, histoire-géographie, sciences de cycle 3
+- ✅ APK 39,9 Mo en 1.0.2 avec 93 livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
+- ✅ Contenu de cycle 3 pour les plus grands : fractions (ADR 0056), décimaux, multiplication et division posées, grands nombres, français, histoire-géographie, sciences (1.0.1)
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
 ## Avant la version 0.7.0 — retours d'Antsa sur téléphone (2026-11-03), par ordre de priorité
@@ -284,8 +285,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ 4e–3e (2026-11-07) : équations ax + b = c, Pythagore, fractions irréductibles, notation scientifique, identités remarquables, équations produit nul (6 compétences, programme du cycle 4). « Les nombres » : 46 compétences.
 - ✅ Français CM1–6e (ADR 0060) : imparfait, futur, passé simple, conditionnel, impératif, participe passé avec être, attribut ou COD.
 - ✅ Français 5e–3e (ADR 0063) : accord sujet-verbe, temps, subjonctif, temps composés, voix passive, subordonnées.
-- ⏳ Lycée ; sciences et histoire-géographie, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
-- ⏳ Essayer avec un grand : les mondes (fées, robots…) sont gardés tels quels à sa demande ; la voix lit-elle bien « −5 » et « 3/4 » ?
+- ✅ Lycée (maths 2de → Terminale, français 2de–1re, Python), sciences, histoire-géographie, anglais au collège (1.0.1).
+- ✅ Mondes adaptés à l'âge (ADR 0066, 1.0.2). Grands : plus de leçons de petits, choix de la leçon (ADR 0065).
+- 🔄 Notations de maths dites en mots (ADR 0067, `lib/audio/spoken.dart`, testé) : « −5 » → « moins 5 », « 3/4 » → « 3 sur 4 »,
+  « x² » → « x au carré », intervalles, indices, f′(x). ⏳ À écouter sur la tablette avec `tool/ecoute.py` (elle a été
+  débranchée pendant l'essai, 2026-11-08).
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
