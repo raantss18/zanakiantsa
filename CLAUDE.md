@@ -46,14 +46,14 @@ Format téléphone : `adb shell wm size 1080x2400 && adb shell wm density 440` (
 ⚠ D'autres projets ont leurs émulateurs sur ce poste : avant toute commande, vérifier le nom avec `adb -s <série> emu avd name`.
 ⚠ L'émulateur ne mesure ni la mémoire, ni le démarrage, ni la fluidité de la SM-X135G (GPU et CPU différents).
 
-## Budgets (⚠ hypothèses à recaler après la première mesure)
+## Budgets (mesurés sur la SM-X135G le 2026-11-08, version 1.0.2)
 
 | Élément | Budget |
 | --- | --- |
 | APK de base | < 60 Mo |
-| Pic de mémoire (PSS) | < 250 Mo |
-| Démarrage à froid sur SM-X135G | < 3 s |
-| Animations simples | 60 i/s |
+| Pic de mémoire (PSS) | < 250 Mo visé ; mesuré 145 Mo à l'accueil, plafond ≈ 340 Mo (mémoire graphique) ⚠ |
+| Démarrage à froid sur SM-X135G | < 3 s ; mesuré 0,65 s |
+| Animations simples | 60 i/s ; mesuré 90 i/s au défilement (écran 90 Hz) |
 | Cœur de l'app | 100 % hors ligne |
 
 ## Stack

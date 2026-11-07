@@ -98,7 +98,8 @@ String spoken(String text, String lang) {
     (m) => w('${m[1]} prime de ${m[2]}', '${m[1]} prime of ${m[2]}'),
   );
   s = s.replaceAllMapped(
-    RegExp(r'\b([fgh])\(([a-z0-9]+)\)'),
+    // f(3), E(X), P(A), V(X) : « f de 3 », « E de X ».
+    RegExp(r'\b([fghEPV])\(([A-Za-z0-9]{1,3})\)'),
     (m) => w('${m[1]} de ${m[2]}', '${m[1]} of ${m[2]}'),
   );
   s = s.replaceAllMapped(

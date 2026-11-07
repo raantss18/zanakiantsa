@@ -28,6 +28,8 @@ void main() {
     expect(fr('uₙ₊₁ = uₙ + 3'), 'u indice n+1 = u indice n + 3');
     expect(fr("f′(x) = 2x"), 'f prime de x = 2x');
     expect(fr('f(3) = 7'), 'f de 3 = 7');
+    expect(fr('E(X) = n × p'), 'E de X = n fois p');
+    expect(en('P(A) = 0,3'), 'P of A = 0,3');
     expect(
       fr('x ∈ ]3 ; +∞['),
       "x appartient à l’intervalle de 3 à plus l'infini, 3 exclu",

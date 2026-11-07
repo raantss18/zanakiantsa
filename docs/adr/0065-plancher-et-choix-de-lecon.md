@@ -8,7 +8,8 @@
 - **Décision** :
   - **Plancher** = classe − 2. Une notion plus basse n'est jamais proposée : ni diagnostic, ni révision, ni entraînement,
     ni défi. Elle est tenue pour acquise. Un domaine entièrement sous le plancher n'est plus proposé (à 12 ans : les sons,
-    les suites de maternelle) ; le dessin libre (`sans_age`) reste pour tous.
+    les suites de maternelle) ; le dessin libre et les échecs (`sans_age`) restent pour tous :
+    un débutant de 15 ans apprend aussi la marche du pion.
   - **Les trois activités du jour** : seulement des domaines où il reste une leçon à apprendre à son niveau (les plus
     avancés d'abord) ; les autres seulement s'il en manque. L'animation de méthode d'un domaine (« compter des pommes »)
     n'est plus montrée quand ses premières leçons sont sous le plancher.

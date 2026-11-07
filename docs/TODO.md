@@ -105,7 +105,12 @@
 - ✅ Version 0.2.0 publiée (2026-11-03, `app-v0.2.0`, build 2002) ; sur l'émulateur, la 0.1.0 trouve, télécharge et
   vérifie la 0.2.0 puis ouvre l'installateur Android ; la dernière étape (autoriser « sources inconnues ») reste à
   faire par Antsa, réglage de sécurité
-- ⏳ Mesures mémoire / démarrage / fluidité de la 0.2.0 : impossibles sans tablette physique (l'émulateur ne les reproduit pas)
+- ✅ Mesuré sur la SM-X135G (1.0.2, 2026-11-08) : démarrage à froid 0,63–0,66 s (`am start -W`, 3 essais) ; mémoire
+  (PSS) 145–158 Mo à l'accueil, 179 Mo en séance, 231 Mo dans la liseuse, plafond ≈ 340 Mo après bibliothèque et
+  partie contre Maia (mémoire graphique du moteur de rendu, 30 → 185 Mo ; stable, pas de fuite) ; défilement de la
+  bibliothèque à 90 Hz : 278 images sur 279 en 10–11 ms, 0 perdue (`dumpsys SurfaceFlinger --timestats`).
+  ⏳ Mémoire graphique : vider le cache d'images en quittant la bibliothèque n'a rien changé ; piste suivante : couvertures
+  décodées plus petites, ou réglage du moteur de rendu.
 - ⏳ Voix enregistrées : les phrases dépendent maintenant de l'univers et des nombres → la synthèse vocale reste
   nécessaire pour elles ; à décider (ADR 0002)
 - ⏳ Essai avec les enfants : observer l'effet des autocollants sur l'intérêt pour l'activité (ADR 0015)
@@ -207,7 +212,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   `release.json` vérifiée par `release_out_test`. Contenu : analyse fine des parties avec Stockfish 11 (ADR 0053),
   activités agrandies et texte à côté en paysage, pages de listes centrées (ADR 0054).
 - ✅ Vérifié sur l'émulateur : montée 0.9.0 → 0.10.0 (partie enregistrée conservée, analyse affinée par Stockfish à
-  l'ouverture, moteur arrêté ensuite). ⏳ Pas vu sur le téléphone ni sur la vraie tablette ; ⏳ durée de l'analyse sur du
+  l'ouverture, moteur arrêté ensuite). ✅ Vue sur la SM-X135G : partie de 2 coups analysée en ≈ 3 s ; ⏳ durée de l'analyse sur du
   vrai matériel.
 - ✅ Publiée avec l'accord d'Antsa : https://github.com/raantss18/zanakiantsa/releases/tag/app-v0.10.0 ; `latest/release.json` annonce 0.10.0 (build 2010) et le fichier téléchargé a la même somme de contrôle que l'APK vérifié.
 
@@ -217,7 +222,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   `release.json` vérifiée par `release_out_test`. Contenu : Maia (ADR 0051), compteur (ADR 0050), mise en page
   adaptative (ADR 0052), images expliquées (ADR 0048), sens du tracé (ADR 0049), opérations posées (ADR 0046).
 - ✅ Vérifié sur l'émulateur : montée 0.8.0 → 0.9.0 (trois parties enregistrées conservées) ; Maia dans l'APK signé
-  (le moteur se lance, répond 1…e5). ⏳ Pas vu sur le téléphone ni sur la vraie tablette ; ⏳ durée d'un coup de Maia.
+  (le moteur se lance, répond 1…e5). ✅ Vu sur la SM-X135G : Maia 1900 joue son 1er coup ≈ 3 s après l'ouverture (chargement compris), puis répond en 1–2 s.
 - ✅ Publiée avec l'accord d'Antsa : https://github.com/raantss18/zanakiantsa/releases/tag/app-v0.9.0 ;
   `latest/release.json` annonce 0.9.0 (build 2009) et le fichier téléchargé a la même somme de contrôle que l'APK vérifié.
 
@@ -287,9 +292,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ Français 5e–3e (ADR 0063) : accord sujet-verbe, temps, subjonctif, temps composés, voix passive, subordonnées.
 - ✅ Lycée (maths 2de → Terminale, français 2de–1re, Python), sciences, histoire-géographie, anglais au collège (1.0.1).
 - ✅ Mondes adaptés à l'âge (ADR 0066, 1.0.2). Grands : plus de leçons de petits, choix de la leçon (ADR 0065).
-- 🔄 Notations de maths dites en mots (ADR 0067, `lib/audio/spoken.dart`, testé) : « −5 » → « moins 5 », « 3/4 » → « 3 sur 4 »,
+- ✅ Notations de maths dites en mots (ADR 0067, `lib/audio/spoken.dart`, testé) : « −5 » → « moins 5 », « 3/4 » → « 3 sur 4 »,
   « x² » → « x au carré », intervalles, indices, f′(x). ⏳ À écouter sur la tablette avec `tool/ecoute.py` (elle a été
-  débranchée pendant l'essai, 2026-11-08).
+  débranchée pendant l'essai, 2026-11-08). ✅ Écouté sur la SM-X135G (Whisper + journal du moteur) : « × » → fois,
+  « ÷ » → divisé par, « ≤ » → inférieur ou égal à, « f(2) » → f de 2, « u₁ » → u indice 1 ; E(X), P(A) ajoutés ensuite.
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
