@@ -26,6 +26,7 @@
   <a class="logo" href="./" aria-label="Zanak'i Antsa, accueil"><img src="img/wordmark.svg" width="168" height="101" alt="Zanak'i Antsa"></a>
   <nav aria-label="Principal">
     <ul>
+      <li><a href="#guide">Le guide vidéo</a></li>
       <li><a href="#journee">L'application</a></li>
       <li><a href="#parents">Pour les parents</a></li>
       <li><a href="#telecharger">Télécharger</a></li>
@@ -46,7 +47,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
         Télécharger pour Android
       </a>
-      <a class="lien-simple" href="#telecharger">Voir comment l'installer</a>
+      <a class="lien-simple" href="#guide">Voir le guide en vidéo</a>
     </div>
     <p class="sous-bouton">Version {{VERSION}}, {{TAILLE}}. Pour Android 7 ou plus récent.</p>
   </div>
@@ -57,6 +58,25 @@
     </div>
     <figcaption>L'accueil propose trois activités par jour. L'enfant choisit son monde (fées, robots, voitures…) une fois pour toutes.</figcaption>
   </figure>
+</section>
+
+<section class="bloc guide" id="guide" aria-labelledby="t-guide">
+  <h2 id="t-guide">Le guide en vidéo, pas à pas</h2>
+  <p>Quatre minutes sur une vraie tablette : télécharger, installer, préparer l'espace parent, jouer, explorer et mettre à jour. Un petit doigt montre chaque bouton à toucher. La vidéo se lit ici, sans rien télécharger.</p>
+  <figure class="ecran-video">
+    <video controls playsinline preload="metadata" poster="video/guide-affiche.jpg" width="1280" height="720">
+      <source src="video/guide-installation.mp4" type="video/mp4">
+      Votre navigateur ne sait pas lire cette vidéo : <a href="video/guide-installation.mp4">ouvrez-la directement</a>.
+    </video>
+  </figure>
+  <ol class="chapitres" aria-label="Chapitres de la vidéo">
+    <li><button type="button" data-t="5.5">Télécharger</button></li>
+    <li><button type="button" data-t="35.7">Installer</button></li>
+    <li><button type="button" data-t="96.8">L'espace parent</button></li>
+    <li><button type="button" data-t="131.9">Jouer</button></li>
+    <li><button type="button" data-t="167">Explorer</button></li>
+    <li><button type="button" data-t="198.6">Mettre à jour</button></li>
+  </ol>
 </section>
 
 <section class="bloc deux" id="journee" aria-labelledby="t-journee">
@@ -175,10 +195,11 @@
   <div>
     <h3>Installer en quatre gestes</h3>
     <ol class="etapes">
-      <li><strong>Télécharger le fichier</strong> avec le bouton ci-contre, depuis la tablette ou le téléphone.</li>
-      <li><strong>Ouvrir le fichier.</strong> Android demande d'autoriser ce navigateur à installer des applications : acceptez pour cette fois seulement.</li>
-      <li><strong>Ouvrir Zanak'i Antsa</strong>, toucher l'espace parent (le cadenas), résoudre le petit calcul, puis choisir l'âge et le monde de l'enfant.</li>
-      <li><strong>Mettre à jour</strong> plus tard depuis l'espace parent, avec « Rechercher une mise à jour ».</li>
+      <li><strong>Télécharger le fichier</strong> avec le bouton ci-contre, depuis la tablette ou le téléphone. Chrome prévient : touchez « Télécharger quand même ».</li>
+      <li><strong>Ouvrir « Mes fichiers »</strong>, puis « Téléchargements », et toucher le fichier « zanakiantsa… ». Sur notre tablette Samsung, l'ouvrir depuis Chrome ne lançait rien.</li>
+      <li><strong>Autoriser, une seule fois</strong> : « Paramètres », activer « Octroi d'autorisation », revenir, puis « Installer ». Si Google Play Protect s'affiche : « Plus de détails », puis « Installer sans analyser ».</li>
+      <li><strong>Ouvrir Zanak'i Antsa</strong>, toucher « Espace parent », faire le petit calcul, puis choisir l'âge et le monde de l'enfant.</li>
+      <li><strong>Mettre à jour</strong> : l'espace parent cherche seul les nouvelles versions et propose « Installer ».</li>
     </ol>
     <p>L'application n'est pas sur Google Play. Le fichier est signé par son auteur, et l'application vérifie cette signature avant d'installer une mise à jour.</p>
   </div>

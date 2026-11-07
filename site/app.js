@@ -11,3 +11,16 @@
     });
   });
 })();
+
+// Les chapitres du guide vidéo : un bouton par étape, qui lance la vidéo à cet endroit.
+(function () {
+  var video = document.querySelector('#guide video');
+  if (!video) return;
+  document.querySelectorAll('.chapitres button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      video.currentTime = parseFloat(b.dataset.t);
+      video.play();
+      video.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+})();
