@@ -176,7 +176,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
 - ✅ **Site vitrine** (ADR 0055) : https://raantss18.github.io/zanakiantsa/ — téléchargement de la dernière version, nouvelles
-  (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée ; sommaire et nombre de compétences lus dans la version publiée. ⏳ Déclencheur « version publiée » jamais encore vu en vrai : à vérifier à la 0.11 (`tool/publish.sh`). ⏳ Lecteurs d'écran, Safari, Firefox ;
+  (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée ; sommaire et nombre de compétences lus dans la version publiée. ⚠ Déclencheur « version publiée » : a échoué à la 0.11.0 (Pages n'accepte que `main`), corrigé ensuite ; le correctif ne s'appliquera qu'à partir de la prochaine version, à vérifier là (`tool/publish.sh`). Filet : reconstruction quotidienne. ⏳ Lecteurs d'écran, Safari, Firefox ;
   ⏳ une page « Nouvelles » dédiée et d'autres notes de lecture quand il y en aura .
 
 ## Version 0.10.0 (2026-11-07) : publiée
