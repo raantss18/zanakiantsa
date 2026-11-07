@@ -4,6 +4,8 @@
 /// leçons (`chess.dart`) reste tel quel. Écrit pour l'app (aucun code repris).
 library;
 
+import '../l10n/l10n.dart';
+
 /// Une case : 0 = a1, 7 = h1, 56 = a8, 63 = h8.
 String squareName(int s) => '${'abcdefgh'[s % 8]}${s ~/ 8 + 1}';
 int squareOf(String name) => (name.codeUnitAt(1) - 49) * 8 + name.codeUnitAt(0) - 97;
@@ -307,7 +309,7 @@ class Position {
     final cap = isCapture(m);
     final to = squareName(m.to);
     if (p == 'P') {
-      final promo = m.promo == null ? '' : '=${frenchLetter[m.promo!.toUpperCase()]}';
+      final promo = m.promo == null ? '' : '=${_letter[m.promo!.toUpperCase()]}';
       return '${cap ? '${squareName(m.from)[0]}x' : ''}$to$promo$suffix';
     }
     // Lever l'ambiguïté si une autre pièce pareille peut aller sur la même case.
@@ -317,22 +319,25 @@ class Position {
       final from = squareName(m.from);
       dis = others.any((o) => o.from % 8 == m.from % 8) ? (others.any((o) => o.from ~/ 8 == m.from ~/ 8) ? from : from[1]) : from[0];
     }
-    return '${frenchLetter[p]}$dis${cap ? 'x' : ''}$to$suffix';
+    return '${_letter[p]}$dis${cap ? 'x' : ''}$to$suffix';
   }
 }
 
 /// Lettres françaises des pièces (Roi, Dame, Tour, Fou, Cavalier).
 const frenchLetter = {'K': 'R', 'Q': 'D', 'R': 'T', 'B': 'F', 'N': 'C', 'P': ''};
 
+/// Les lettres de la notation dans la langue de l'app (en anglais : K Q R B N, ADR 0064).
+Map<String, String> get _letter => english ? const {'K': 'K', 'Q': 'Q', 'R': 'R', 'B': 'B', 'N': 'N', 'P': ''} : frenchLetter;
+
 /// Nom d'une pièce avec son article, pour les explications (« la tour », « le cavalier »).
-String pieceName(String p) => const {
+String pieceName(String p) => t(const {
       'P': 'le pion',
       'N': 'le cavalier',
       'B': 'le fou',
       'R': 'la tour',
       'Q': 'la dame',
       'K': 'le roi',
-    }[p.toUpperCase()]!;
+    }[p.toUpperCase()]!);
 
 /// Comment une partie s'arrête.
 enum GameEnd { checkmate, stalemate, insufficient, fiftyMoves, repetition }

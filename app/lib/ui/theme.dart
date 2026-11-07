@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/l10n.dart';
 import 'universe.dart';
 
 /// Jetons de docs/design.md. Les couleurs viennent de l'univers (ADR 0014) ; jamais la couleur seule pour porter un
@@ -151,10 +152,10 @@ class EpisodeLabel extends StatelessWidget {
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.only(bottom: 4),
         child: Semantics(
-          label: 'Épisode ${index + 1} sur $count',
+          label: tf('Épisode {n} sur {count}', {'n': index + 1, 'count': count}),
           excludeSemantics: true,
           child: Wrap(spacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
-            Text('Épisode ${index + 1}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+            Text(tf('Épisode {n}', {'n': index + 1}), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
             const SizedBox(width: 4),
             for (var i = 0; i < count; i++)
               Container(

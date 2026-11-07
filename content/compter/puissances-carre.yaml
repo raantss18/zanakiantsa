@@ -80,3 +80,81 @@ items:
     pieges:
       - { texte: "24", pourquoi: "24, c'est 12 × 2. Le carré, c'est 12 × 12." }
       - { texte: "156", pourquoi: "12², c'est 12 × 12, sans rien ajouter." }
+
+en:
+  titre: "Squares"
+  idee: "The square of a number is that number multiplied by itself: 5² = 5 × 5 = 25."
+  phrases:
+    consigne: "Multiply the number by itself, then touch the answer."
+    question: "{texte}"
+    indice: "The little 2 says: multiply the number by itself."
+    exemple: "7² = 7 × 7 = 49, not 7 × 2."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is 2²?"
+      nom: "4"
+      explication: "2² = 2 × 2 = 4."
+      pieges:
+        - { texte: "6", pourquoi: "2² is 2 × 2, with nothing added." }
+        - { texte: "5", pourquoi: "Work out the number multiplied by itself." }
+    - texte: "What is 3²?"
+      nom: "9"
+      explication: "3² = 3 × 3 = 9."
+      pieges:
+        - { texte: "6", pourquoi: "6 is 3 × 2. The square is 3 × 3." }
+        - { texte: "12", pourquoi: "3² is 3 × 3, with nothing added." }
+    - texte: "What is 4²?"
+      nom: "16"
+      explication: "4² = 4 × 4 = 16."
+      pieges:
+        - { texte: "8", pourquoi: "8 is 4 × 2. The square is 4 × 4." }
+        - { texte: "20", pourquoi: "4² is 4 × 4, with nothing added." }
+    - texte: "What is 5²?"
+      nom: "25"
+      explication: "5² = 5 × 5 = 25."
+      pieges:
+        - { texte: "10", pourquoi: "10 is 5 × 2. The square is 5 × 5." }
+        - { texte: "30", pourquoi: "5² is 5 × 5, with nothing added." }
+    - texte: "What is 6²?"
+      nom: "36"
+      explication: "6² = 6 × 6 = 36."
+      pieges:
+        - { texte: "12", pourquoi: "12 is 6 × 2. The square is 6 × 6." }
+        - { texte: "42", pourquoi: "6² is 6 × 6, with nothing added." }
+    - texte: "What is 7²?"
+      nom: "49"
+      explication: "7² = 7 × 7 = 49."
+      pieges:
+        - { texte: "14", pourquoi: "14 is 7 × 2. The square is 7 × 7." }
+        - { texte: "56", pourquoi: "7² is 7 × 7, with nothing added." }
+    - texte: "What is 8²?"
+      nom: "64"
+      explication: "8² = 8 × 8 = 64."
+      pieges:
+        - { texte: "16", pourquoi: "16 is 8 × 2. The square is 8 × 8." }
+        - { texte: "72", pourquoi: "8² is 8 × 8, with nothing added." }
+    - texte: "What is 9²?"
+      nom: "81"
+      explication: "9² = 9 × 9 = 81."
+      pieges:
+        - { texte: "18", pourquoi: "18 is 9 × 2. The square is 9 × 9." }
+        - { texte: "90", pourquoi: "9² is 9 × 9, with nothing added." }
+    - texte: "What is 10²?"
+      nom: "100"
+      explication: "10² = 10 × 10 = 100."
+      pieges:
+        - { texte: "20", pourquoi: "20 is 10 × 2. The square is 10 × 10." }
+        - { texte: "110", pourquoi: "10² is 10 × 10, with nothing added." }
+    - texte: "What is 11²?"
+      nom: "121"
+      explication: "11² = 11 × 11 = 121."
+      pieges:
+        - { texte: "22", pourquoi: "22 is 11 × 2. The square is 11 × 11." }
+        - { texte: "132", pourquoi: "11² is 11 × 11, with nothing added." }
+    - texte: "What is 12²?"
+      nom: "144"
+      explication: "12² = 12 × 12 = 144."
+      pieges:
+        - { texte: "24", pourquoi: "24 is 12 × 2. The square is 12 × 12." }
+        - { texte: "156", pourquoi: "12² is 12 × 12, with nothing added." }

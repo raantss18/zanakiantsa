@@ -13,6 +13,7 @@ import '../core/game.dart';
 import '../core/uci.dart';
 import '../engines/maia.dart';
 import '../engines/stockfish.dart';
+import '../l10n/l10n.dart';
 import 'adaptive.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -73,13 +74,21 @@ class SavedGame {
 
   /// Ce que la partie a donné, du point de vue de l'enfant (contre le robot) ou des Blancs (à deux).
   String get outcome {
-    if (result == '*') return 'Pas finie';
-    if (result == '1/2-1/2') return 'Partie nulle';
-    if (mode == 'deux') return result == '1-0' ? 'Les Blancs gagnent' : 'Les Noirs gagnent';
-    return (result == '1-0') == childWhite ? 'Gagnée' : 'Perdue';
+    if (result == '*') return t('Pas finie');
+    if (result == '1/2-1/2') return t('Partie nulle');
+    if (mode == 'deux') return result == '1-0' ? t('Les Blancs gagnent') : t('Les Noirs gagnent');
+    return (result == '1-0') == childWhite ? t('Gagnée') : t('Perdue');
   }
 
-  String get title => mode == 'robot' ? (isMaia(level) ? 'Contre Maia $level' : 'Contre le robot, niveau $level') : 'À deux';
+  String get title => mode == 'robot'
+      ? (isMaia(level) ? tf('Contre Maia {level}', {'level': level}) : tf('Contre le robot, niveau {level}', {'level': level}))
+      : t('À deux');
+}
+
+/// L'analyse de base tourne dans un autre isolat (`compute`) : la langue de l'app (ADR 0064) lui est passée avec la partie.
+List<Map<String, Object?>> _analyseIn((String, String, List<String>, bool) a) {
+  appLang = a.$1;
+  return analyseGame((a.$2, a.$3, a.$4));
 }
 
 /// Les parties de l'enfant (les 30 dernières), gardées dans ses réglages.
@@ -157,7 +166,7 @@ class ChessBoardView extends StatelessWidget {
     final bottomRow = flipped ? s ~/ 8 == 7 : s ~/ 8 == 0;
     final leftCol = flipped ? s % 8 == 7 : s % 8 == 0;
     return Semantics(
-      label: '${squareName(s)}${p == null ? '' : ', ${pieceName(p)} ${_colour(p)}'}',
+      label: '${squareName(s)}${p == null ? '' : ', ${english ? '${_colour(p)} ${pieceName(p).substring(4)}' : '${pieceName(p)} ${_colour(p)}'}'}',
       button: onTap != null,
       child: GestureDetector(
         onTap: onTap == null ? null : () => onTap!(s),
@@ -198,10 +207,11 @@ class ChessBoardView extends StatelessWidget {
 /// Boutons des pages d'échecs : texte normal (le thème grossit les boutons-réponses des leçons, pas ceux-ci).
 final _button = FilledButton.styleFrom(minimumSize: const Size(0, 56), textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700));
 
-/// « blanc », « blanche », « noir », « noire » : accordé avec la pièce (la tour, la dame).
+/// « blanc », « blanche », « noir », « noire » : accordé avec la pièce (la tour, la dame). En anglais, la couleur
+/// vient avant le nom, sans article (« white rook »).
 String _colour(String p) {
   final fem = 'RQ'.contains(p.toUpperCase());
-  return isWhitePiece(p) ? (fem ? 'blanche' : 'blanc') : (fem ? 'noire' : 'noir');
+  return t(isWhitePiece(p) ? (fem ? 'blanche' : 'blanc') : (fem ? 'noire' : 'noir'));
 }
 
 /// Barre du haut des pages d'échecs : ← retour et un titre.
@@ -212,7 +222,7 @@ Widget pageHeader(BuildContext context, String title, {List<Widget> actions = co
           color: surface,
           shape: const CircleBorder(),
           elevation: 2,
-          child: IconButton(tooltip: 'Retour', iconSize: 32, onPressed: () => Navigator.of(context).maybePop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
+          child: IconButton(tooltip: t('Retour'), iconSize: 32, onPressed: () => Navigator.of(context).maybePop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
         ),
         const SizedBox(width: 12),
         Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle(title))),
@@ -244,9 +254,9 @@ Future<void> chooseRobotGame(BuildContext context) async {
     context: context,
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, set) => AlertDialog(
-        title: const Text('Contre le robot'),
+        title: Text(t('Contre le robot')),
         content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text('Niveau', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+          Text(t('Niveau'), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
           SegmentedButton<int>(
             emptySelectionAllowed: true,
@@ -260,7 +270,7 @@ Future<void> chooseRobotGame(BuildContext context) async {
           ),
           if (maia) ...[
             const SizedBox(height: 12),
-            const Text('Ou un robot qui joue comme les humains', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+            Text(t('Ou un robot qui joue comme les humains'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
             const SizedBox(height: 8),
             SegmentedButton<int>(
               emptySelectionAllowed: true,
@@ -271,25 +281,25 @@ Future<void> chooseRobotGame(BuildContext context) async {
           ],
           const SizedBox(height: 4),
           Text(isMaia(level)
-              ? 'Maia $level a appris sur des parties de joueurs de $level points (classement Lichess) : il joue et se trompe comme eux.'
-              : const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!),
+              ? tf('Maia {level} a appris sur des parties de joueurs de {level} points (classement Lichess) : il joue et se trompe comme eux.', {'level': level})
+              : t(const {1: 'Facile : le robot se trompe souvent.', 2: 'Moyen.', 3: 'Fort : le robot ne laisse rien en prise.'}[level]!)),
           const SizedBox(height: 16),
-          const Text('Je joue avec', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+          Text(t('Je joue avec'), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
           SegmentedButton<String>(
-            segments: const [
-              ButtonSegment(value: 'blancs', label: Text('les Blancs')),
-              ButtonSegment(value: 'noirs', label: Text('les Noirs')),
+            segments: [
+              ButtonSegment(value: 'blancs', label: Text(t('les Blancs'))),
+              ButtonSegment(value: 'noirs', label: Text(t('les Noirs'))),
             ],
             selected: {color},
             onSelectionChanged: (v) => set(() => color = v.first),
           ),
           const SizedBox(height: 8),
-          const Text('Les Blancs jouent en premier.'),
+          Text(t('Les Blancs jouent en premier.')),
         ]),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annuler')),
-          FilledButton(style: _button, onPressed: () => Navigator.pop(ctx, true), child: const Text('Jouer')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t('Annuler'))),
+          FilledButton(style: _button, onPressed: () => Navigator.pop(ctx, true), child: Text(t('Jouer'))),
         ],
       ),
     ),
@@ -331,7 +341,7 @@ class _GamePageState extends State<GamePage> {
     super.initState();
     flipped = robot && !widget.childWhite;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      speech.say(robot ? 'C\'est parti ! Les Blancs commencent.' : 'Partie à deux. Les Blancs commencent.');
+      speech.say(robot ? t('C\'est parti ! Les Blancs commencent.') : t('Partie à deux. Les Blancs commencent.'));
       if (!childTurn) _robotPlays();
     });
   }
@@ -363,20 +373,20 @@ class _GamePageState extends State<GamePage> {
     if (message != null) return message!;
     final end = game.end;
     if (end != null) return _endText(end);
-    final side = game.position.whiteToMove ? 'les Blancs' : 'les Noirs';
-    if (thinking) return 'Le robot réfléchit…';
-    final check = game.position.inCheck ? 'Échec ! Protège ton roi. ' : '';
-    return robot ? '$checkÀ toi de jouer.' : '$checkÀ $side de jouer.';
+    if (thinking) return t('Le robot réfléchit…');
+    final check = game.position.inCheck ? '${t('Échec ! Protège ton roi.')} ' : '';
+    final turn = robot ? t('À toi de jouer.') : (game.position.whiteToMove ? t('À les Blancs de jouer.') : t('À les Noirs de jouer.'));
+    return '$check$turn';
   }
 
   String _endText(GameEnd e) => switch (e) {
         GameEnd.checkmate => robot
-            ? (game.result == (widget.childWhite ? '1-0' : '0-1') ? 'Échec et mat : tu as gagné, bravo !' : 'Échec et mat : le robot a gagné. Revois la partie pour comprendre.')
-            : 'Échec et mat : ${game.result == '1-0' ? 'les Blancs' : 'les Noirs'} gagnent !',
-        GameEnd.stalemate => 'Pat : le roi n\'est pas en échec mais ne peut plus bouger. Partie nulle.',
-        GameEnd.insufficient => 'Plus assez de pièces pour faire mat. Partie nulle.',
-        GameEnd.fiftyMoves => '50 coups sans prise ni pion avancé. Partie nulle.',
-        GameEnd.repetition => 'La même position trois fois. Partie nulle.',
+            ? (game.result == (widget.childWhite ? '1-0' : '0-1') ? t('Échec et mat : tu as gagné, bravo !') : t('Échec et mat : le robot a gagné. Revois la partie pour comprendre.'))
+            : (game.result == '1-0' ? t('Échec et mat : les Blancs gagnent !') : t('Échec et mat : les Noirs gagnent !')),
+        GameEnd.stalemate => t('Pat : le roi n\'est pas en échec mais ne peut plus bouger. Partie nulle.'),
+        GameEnd.insufficient => t('Plus assez de pièces pour faire mat. Partie nulle.'),
+        GameEnd.fiftyMoves => t('50 coups sans prise ni pion avancé. Partie nulle.'),
+        GameEnd.repetition => t('La même position trois fois. Partie nulle.'),
       };
 
   Future<void> _tap(int s) async {
@@ -414,18 +424,18 @@ class _GamePageState extends State<GamePage> {
     final piece = p.board[from]!;
     if (p.followsPieceRules(from, to)) {
       // La pièce peut aller là, mais son propre roi resterait (ou serait) en échec.
-      return p.inCheck ? 'Ton roi est en échec : ce coup ne le protège pas.' : 'Interdit : ton roi serait en échec.';
+      return p.inCheck ? t('Ton roi est en échec : ce coup ne le protège pas.') : t('Interdit : ton roi serait en échec.');
     }
     final name = pieceName(piece);
-    return '${name[0].toUpperCase()}${name.substring(1)} ne va pas là. Les points montrent où cette pièce peut aller.';
+    return tf('{piece} ne va pas là. Les points montrent où cette pièce peut aller.', {'piece': '${name[0].toUpperCase()}${name.substring(1)}'});
   }
 
   Future<String?> _choosePromotion(bool white) => showDialog<String>(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Ton pion devient…'),
+          title: Text(t('Ton pion devient…')),
           content: Wrap(spacing: 8, children: [
-            for (final (k, name) in [('q', 'une dame'), ('r', 'une tour'), ('b', 'un fou'), ('n', 'un cavalier')])
+            for (final (k, name) in [('q', t('une dame')), ('r', t('une tour')), ('b', t('un fou')), ('n', t('un cavalier'))])
               Semantics(
                 button: true,
                 label: name,
@@ -454,7 +464,7 @@ class _GamePageState extends State<GamePage> {
       final saved = await _save();
       if (mounted) _endDialog(saved);
     } else if (san.endsWith('+')) {
-      speech.say('Échec !');
+      speech.say(t('Échec !'));
     }
   }
 
@@ -503,7 +513,7 @@ class _GamePageState extends State<GamePage> {
                 Navigator.pop(ctx);
                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => ReviewPage(game: saved)));
               },
-              child: const Text('Revoir la partie'),
+              child: Text(t('Revoir la partie')),
             ),
             FilledButton(
               style: _button,
@@ -512,7 +522,7 @@ class _GamePageState extends State<GamePage> {
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (_) => GamePage(mode: widget.mode, level: widget.level, childWhite: widget.childWhite)));
               },
-              child: const Text('Nouvelle partie'),
+              child: Text(t('Nouvelle partie')),
             ),
           ],
         ),
@@ -546,17 +556,17 @@ class _GamePageState extends State<GamePage> {
         style: _button,
         onPressed: game.moves.isEmpty || thinking || game.end != null ? null : _undo,
         icon: const Icon(Icons.undo_rounded),
-        label: Text(robot ? 'Reprendre mon coup' : 'Reprendre le coup'),
+        label: Text(robot ? t('Reprendre mon coup') : t('Reprendre le coup')),
       ),
       FilterChip(
         avatar: const Icon(Icons.lightbulb_outline_rounded),
-        label: const Text('Coups possibles'),
+        label: Text(t('Coups possibles')),
         selected: hints,
         onSelected: (v) => setState(() => hints = v),
       ),
       if (!robot)
         IconButton.filledTonal(
-          tooltip: 'Tourner l\'échiquier',
+          tooltip: t('Tourner l\'échiquier'),
           iconSize: 32,
           onPressed: () => setState(() => flipped = !flipped),
           icon: const Icon(Icons.screen_rotation_alt_rounded),
@@ -567,7 +577,7 @@ class _GamePageState extends State<GamePage> {
         universe: u,
         child: SafeArea(
           child: LayoutBuilder(builder: (context, k) {
-            final header = pageHeader(context, robot ? (isMaia(widget.level) ? 'Maia ${widget.level}' : 'Robot · niveau ${widget.level}') : 'À deux');
+            final header = pageHeader(context, robot ? (isMaia(widget.level) ? 'Maia ${widget.level}' : tf('Robot · niveau {level}', {'level': widget.level})) : t('À deux'));
             // Paysage (ADR 0052) : l'échiquier prend toute la hauteur, le texte et les boutons sont dans une colonne à
             // côté ; en une seule colonne, il restait un petit échiquier à côté de grandes écritures.
             if (isLandscape(k.biggest)) {
@@ -616,18 +626,18 @@ class _GamesPageState extends State<GamesPage> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            pageHeader(context, 'Mes parties'),
+            pageHeader(context, t('Mes parties')),
             Expanded(
               child: FutureBuilder<List<SavedGame>>(
                 future: games,
                 builder: (_, snap) {
                   final list = snap.data ?? const <SavedGame>[];
                   if (snap.hasData && list.isEmpty) {
-                    return const Center(
+                    return Center(
                       child: Card(
                         child: Padding(
-                          padding: EdgeInsets.all(20),
-                          child: Text('Pas encore de partie. Joue contre le robot ou à deux !', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
+                          padding: const EdgeInsets.all(20),
+                          child: Text(t('Pas encore de partie. Joue contre le robot ou à deux !'), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
                         ),
                       ),
                     );
@@ -637,9 +647,9 @@ class _GamesPageState extends State<GamesPage> {
                       Card(
                         child: ListTile(
                           minTileHeight: 72,
-                          leading: Art(g.outcome == 'Gagnée' ? '1f3c6' : g.outcome == 'Perdue' ? '1f4aa' : '265f', size: 44),
+                          leading: Art(g.outcome == t('Gagnée') ? '1f3c6' : g.outcome == t('Perdue') ? '1f4aa' : '265f', size: 44),
                           title: Text('${g.title} · ${g.outcome}', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
-                          subtitle: Text('${g.date.day}/${g.date.month}/${g.date.year} · ${(g.moves.length + 1) ~/ 2} coup${(g.moves.length + 1) ~/ 2 > 1 ? 's' : ''}'),
+                          subtitle: Text('${g.date.day}/${g.date.month}/${g.date.year} · ${(g.moves.length + 1) ~/ 2 > 1 ? tf('{n} coups', {'n': (g.moves.length + 1) ~/ 2}) : tf('{n} coup', {'n': (g.moves.length + 1) ~/ 2})}'),
                           trailing: const Icon(Icons.play_arrow_rounded, size: 36),
                           onTap: () async {
                             await Navigator.of(context).push(MaterialPageRoute(builder: (_) => ReviewPage(game: g, index: i)));
@@ -704,7 +714,7 @@ class _ReviewPageState extends State<ReviewPage> {
   Future<void> _analyse() async {
     var base = notes;
     if (base == null) {
-      final raw = await compute(analyseGame, (startFen, widget.game.moves, _analysedSide));
+      final raw = await compute(_analyseIn, (appLang, startFen, widget.game.moves, _analysedSide));
       base = [for (final j in raw) MoveNote.fromJson(j)];
       if (!mounted) return;
       setState(() => notes = base);
@@ -773,24 +783,24 @@ class _ReviewPageState extends State<ReviewPage> {
     final advice = note?.better == null ? null : Move.parse(note!.better!);
     final shown = advice != null ? positions[ply - 1] : positions[ply];
     int n(String k) => notes?.where((x) => x.kind == k).length ?? 0;
-    String plural(int c, String one, String many) => '$c ${c > 1 ? many : one}';
+    String plural(int c, String one, String many) => tf(c > 1 ? many : one, {'n': c});
     // Seul ce qui a eu lieu est dit : une liste de zéros n'apprend rien à un enfant, et prend la place de l'échiquier.
     final said = [
-      if (n('mat') + n('bien') > 0) plural(n('mat') + n('bien'), 'bon coup', 'bons coups'),
-      if (n('mat_manque') > 0) plural(n('mat_manque'), 'mat manqué', 'mats manqués'),
-      if (n('mat_permis') > 0) plural(n('mat_permis'), 'mat permis', 'mats permis'),
-      if (n('gaffe') > 0) plural(n('gaffe'), 'matériel perdu', 'matériels perdus'),
-      if (n('prise_manquee') > 0) plural(n('prise_manquee'), 'prise manquée', 'prises manquées'),
-      if (n('fort') > 0) plural(n('fort'), 'coup plus fort à voir', 'coups plus forts à voir'),
+      if (n('mat') + n('bien') > 0) plural(n('mat') + n('bien'), '{n} bon coup', '{n} bons coups'),
+      if (n('mat_manque') > 0) plural(n('mat_manque'), '{n} mat manqué', '{n} mats manqués'),
+      if (n('mat_permis') > 0) plural(n('mat_permis'), '{n} mat permis', '{n} mats permis'),
+      if (n('gaffe') > 0) plural(n('gaffe'), '{n} matériel perdu', '{n} matériels perdus'),
+      if (n('prise_manquee') > 0) plural(n('prise_manquee'), '{n} prise manquée', '{n} prises manquées'),
+      if (n('fort') > 0) plural(n('fort'), '{n} coup plus fort à voir', '{n} coups plus forts à voir'),
     ];
-    final summary = notes == null ? 'J\'analyse la partie…' : (said.isEmpty ? 'Rien à signaler.' : said.join(' · '));
+    final summary = notes == null ? t('J\'analyse la partie…') : (said.isEmpty ? t('Rien à signaler.') : said.join(' · '));
     final summaryText = Padding(
   padding: const EdgeInsets.symmetric(horizontal: 16),
   child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
     Text(summary, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: u.onBackground)),
     if (_deepDone != null) ...[
       const SizedBox(height: 4),
-      Text('Je regarde la partie de plus près… ${(_deepDone! * 100).round()} %', style: TextStyle(fontSize: 16, color: u.onBackground)),
+      Text(tf('Je regarde la partie de plus près… {p} %', {'p': (_deepDone! * 100).round()}), style: TextStyle(fontSize: 16, color: u.onBackground)),
       const SizedBox(height: 4),
       LinearProgressIndicator(value: _deepDone),
     ],
@@ -813,8 +823,8 @@ class _ReviewPageState extends State<ReviewPage> {
   ),
   child: Text(
     ply == 0
-        ? 'Touche ▶ pour avancer coup par coup.'
-        : 'Coup ${(ply + 1) ~/ 2}${ply.isOdd ? '' : '…'} ${positions[ply - 1].san(Move.parse(g.moves[ply - 1]))}'
+        ? t('Touche ▶ pour avancer coup par coup.')
+        : '${tf('Coup {n}', {'n': (ply + 1) ~/ 2})}${ply.isOdd ? '' : '…'} ${positions[ply - 1].san(Move.parse(g.moves[ply - 1]))}'
             '${note == null ? '' : '\n${note.text}'}',
     style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink, height: 1.25),
   ),
@@ -822,19 +832,19 @@ class _ReviewPageState extends State<ReviewPage> {
     final controls = Padding(
   padding: const EdgeInsets.all(12),
   child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-    IconButton.filledTonal(tooltip: 'Début', iconSize: 36, onPressed: ply == 0 ? null : () => setState(() => ply = 0), icon: const Icon(Icons.first_page_rounded)),
+    IconButton.filledTonal(tooltip: t('Début'), iconSize: 36, onPressed: ply == 0 ? null : () => setState(() => ply = 0), icon: const Icon(Icons.first_page_rounded)),
     const SizedBox(width: 8),
-    IconButton.filled(tooltip: 'Coup précédent', iconSize: 44, onPressed: ply == 0 ? null : () => setState(() => ply--), icon: const Icon(Icons.chevron_left_rounded)),
+    IconButton.filled(tooltip: t('Coup précédent'), iconSize: 44, onPressed: ply == 0 ? null : () => setState(() => ply--), icon: const Icon(Icons.chevron_left_rounded)),
     const SizedBox(width: 8),
     IconButton.filled(
-      tooltip: 'Coup suivant',
+      tooltip: t('Coup suivant'),
       iconSize: 44,
       onPressed: ply >= g.moves.length ? null : () => setState(() => ply++),
       icon: const Icon(Icons.chevron_right_rounded),
     ),
     const SizedBox(width: 8),
     IconButton.filledTonal(
-      tooltip: 'Prochain conseil',
+      tooltip: t('Prochain conseil'),
       iconSize: 36,
       onPressed: notes == null
           ? null

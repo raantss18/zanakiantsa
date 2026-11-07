@@ -28,6 +28,31 @@
     5,
     10
   ],
+  "en": {
+    "titre": "Programming a robot",
+    "nom": "Coding",
+    "resume": "Program a robot with arrows, then with blocks: loops, conditions, a counter.",
+    "intro": [
+      {
+        "texte": "A program is a list of instructions.",
+        "images": [
+          "1f916"
+        ]
+      },
+      {
+        "texte": "Put the arrows in the right order.",
+        "images": [],
+        "grand": "↑ → →"
+      },
+      {
+        "texte": "Press the green button to start!",
+        "images": [
+          "1f916",
+          "2b50"
+        ]
+      }
+    ]
+  },
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
@@ -58,6 +83,18 @@
         "exemple": "Efface le dernier bloc avec la touche grise si tu t'es trompé.",
         "demonstration": "Regarde ce programme : il conduit jusqu'à l'objet.",
         "bravo": "Bravo ! Ton programme est juste."
+      },
+      "en": {
+        "titre": "Coding a route with arrows",
+        "idee": "Each arrow moves you one square in its direction. The program is the list of arrows, in order.",
+        "phrases": {
+          "consigne": "Touch the arrows in the order of the path, one arrow for each square, then the green button. You've done it when you reach the object.",
+          "question": "Write the path to get to the object.",
+          "indice": "Each arrow moves you one square. Count the squares up to the object.",
+          "exemple": "If you want to change something, rub out the last block with the grey key.",
+          "demonstration": "Look at this program: it leads to the object.",
+          "bravo": "Well done! Your program is right."
+        }
       }
     },
     {
@@ -86,6 +123,18 @@
         "exemple": "Pivoter à droite, c'est un quart de tour du côté de ta main droite.",
         "demonstration": "Regarde ce programme : il conduit jusqu'à l'objet.",
         "bravo": "Bravo ! Ton programme est juste."
+      },
+      "en": {
+        "titre": "Moving forward and turning",
+        "idee": "Move forward goes straight, the way the arrow is pointing. Turn makes the robot spin on the spot, without moving forward.",
+        "phrases": {
+          "consigne": "Move forward: one square straight ahead, the way the arrow is pointing. Turn: spin on the spot. Write the program, then touch the green button.",
+          "question": "Program the robot to get to the object.",
+          "indice": "Look where the little arrow is pointing. Do you need to turn before moving forward?",
+          "exemple": "Turning right is a quarter turn towards your right hand.",
+          "demonstration": "Look at this program: it leads to the object.",
+          "bravo": "Well done! Your program is right."
+        }
       }
     },
     {
@@ -116,6 +165,18 @@
         "exemple": "Pas plus de deux virages : va tout droit le plus longtemps possible.",
         "demonstration": "Regarde ce programme : il évite les rochers.",
         "bravo": "Bravo ! Le robot est arrivé sans se cogner."
+      },
+      "en": {
+        "titre": "Going round the rocks",
+        "idee": "First we find the path with our eyes, avoiding the rocks. Then we write it, block by block.",
+        "phrases": {
+          "consigne": "Touch the blocks in order, then the green button. You've done it when the robot reaches the object without going over a rock.",
+          "question": "Program the robot to get to the object without touching the rocks.",
+          "indice": "First find the path with your finger, then write it with the blocks.",
+          "exemple": "No more than two turns: go straight for as long as you can.",
+          "demonstration": "Look at this program: it avoids the rocks.",
+          "bravo": "Well done! The robot got there without bumping into anything."
+        }
       }
     },
     {
@@ -141,6 +202,18 @@
         "exemple": "Touche « répéter », puis les blocs qui vont dedans, puis « Fermer le bloc ».",
         "demonstration": "Regarde ce programme : une seule boucle suffit.",
         "bravo": "Bravo ! Ta boucle est juste."
+      },
+      "en": {
+        "titre": "The loop: repeat",
+        "idee": "When the robot has to do the same thing several times, we only write it once, inside a “repeat” block: it does everything inside again, as many times as we ask.",
+        "phrases": {
+          "consigne": "There isn't much room: find what repeats in the path. Put those blocks inside “repeat”, set the number of times, then touch the green button.",
+          "question": "Guide the robot to the object using a loop.",
+          "indice": "Look at the path: which little piece comes back several times? How many times?",
+          "exemple": "Touch “repeat”, then the blocks that go inside, then “Close the block”.",
+          "demonstration": "Look at this program: just one loop is enough.",
+          "bravo": "Well done! Your loop is right."
+        }
       }
     },
     {
@@ -166,6 +239,18 @@
         "exemple": "Après « si rocher devant », mets un seul virage, puis « Fermer le bloc », puis « avancer ».",
         "demonstration": "Regarde ce programme : le robot regarde devant lui à chaque pas.",
         "bravo": "Bravo ! Ton robot sait contourner les rochers."
+      },
+      "en": {
+        "titre": "The condition: if… then",
+        "idee": "An “if” block looks first: if there's a rock ahead, it does what's inside; if not, it does nothing. Inside “repeat until the object”, the robot looks at every step.",
+        "phrases": {
+          "consigne": "Put “repeat until the object”. Inside: “if rock ahead” with a turn, then “move forward”. Touch the green button.",
+          "question": "The robot must go round the rocks by itself. Write a program that looks ahead.",
+          "indice": "At each step: if there's a rock ahead, the robot turns; then it moves forward. Which way should it turn?",
+          "exemple": "After “if rock ahead”, put just one turn, then “Close the block”, then “move forward”.",
+          "demonstration": "Look at this program: the robot looks ahead at every step.",
+          "bravo": "Well done! Your robot knows how to go round the rocks."
+        }
       }
     },
     {
@@ -191,6 +276,18 @@
         "exemple": "Mets « répéter jusqu'à compteur = » et règle le nombre. Dedans : « avancer », puis « si gemme ici » avec « ajouter 1 au compteur » dedans.",
         "demonstration": "Regarde ce programme : il compte les gemmes, et marche sur les trois parcours.",
         "bravo": "Bravo ! Ton programme marche partout, parce que ton robot sait compter."
+      },
+      "en": {
+        "titre": "The counter: a variable",
+        "idee": "A counter is a little box that keeps a number. It starts at 0. The “add 1 to counter” block makes it go up. We can ask the robot to stop when the counter reaches a number.",
+        "phrases": {
+          "consigne": "The robot must stop on the gem with the flag: always the same gem counting from the left, but the gems are not in the same places. Make it count, then touch the green button: your program is tried on three paths.",
+          "question": "Program the robot with a counter: it must stop on the gem with the flag, on all three paths.",
+          "indice": "Count the gems up to the flag. At each step, if the robot is on a gem, add 1 to the counter. Stop when the counter reaches that number.",
+          "exemple": "Put “repeat until counter =” and set the number. Inside: “move forward”, then “if gem here” with “add 1 to counter” inside it.",
+          "demonstration": "Look at this program: it counts the gems, and works on all three paths.",
+          "bravo": "Well done! Your program works everywhere, because your robot knows how to count."
+        }
       }
     }
   ]

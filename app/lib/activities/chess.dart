@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../core/chess.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -111,8 +112,8 @@ class _ChessActivityState extends State<ChessActivity> {
         final why = ok
             ? null
             : blackInCheck(board)
-                ? 'Échec ! Mais le roi noir peut encore se sauver : regarde les cases autour de lui.'
-                : "Ce coup n'attaque pas le roi noir.";
+                ? t('Échec ! Mais le roi noir peut encore se sauver : regarde les cases autour de lui.')
+                : t("Ce coup n'attaque pas le roi noir.");
         if (ok) {
           a.submit(true);
         } else {
@@ -170,7 +171,7 @@ class _ChessActivityState extends State<ChessActivity> {
         ),
         child: Stack(alignment: Alignment.center, children: [
           if (s == wrong) Icon(Icons.close_rounded, size: cell * 0.7, color: const Color(0xAA5F1B1B)),
-          if (stars.contains(s)) Art('2b50', size: cell * 0.7, label: 'étoile'),
+          if (stars.contains(s)) Art('2b50', size: cell * 0.7, label: t('étoile')),
           if (p == null && legal.contains(s) && !stars.contains(s))
             Container(width: cell * 0.28, height: cell * 0.28, decoration: const BoxDecoration(color: Color(0x991B211D), shape: BoxShape.circle)),
           if (p != null)

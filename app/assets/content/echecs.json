@@ -27,6 +27,30 @@
     5,
     10
   ],
+  "en": {
+    "titre": "Chess — a step-by-step course",
+    "nom": "Chess",
+    "resume": "Step-by-step lessons, then real games against the robot or with a friend.",
+    "intro": [
+      {
+        "texte": "Each piece has its own way of moving.",
+        "images": [
+          "265f"
+        ]
+      },
+      {
+        "texte": "The rook goes straight, the bishop goes diagonally.",
+        "images": [],
+        "grand": "↕ ↔   ↗"
+      },
+      {
+        "texte": "The dots show you where your piece can go.",
+        "images": [
+          "2b50"
+        ]
+      }
+    ]
+  },
   "sources": {
     "fide": "https://handbook.fide.com/chapter/E012023",
     "moteur": "https://github.com/raantss18/zanakiantsa/blob/main/app/test/problems_test.dart"
@@ -55,6 +79,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que la tour peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the rook",
+        "idee": "The rook moves straight, along a row or a column, as far as it likes.",
+        "phrases": {
+          "consigne": "The rook goes straight, along a row or a column, as far as it likes. Touch the square where it goes. Catch all the stars.",
+          "question": "Catch all the stars with the rook.",
+          "indice": "The rook moves straight, along a row or a column, as far as it likes. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the rook can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -82,6 +118,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le fou peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the bishop",
+        "idee": "The bishop moves on a slant, along its diagonal, as far as it likes.",
+        "phrases": {
+          "consigne": "The bishop goes diagonally, as far as it likes. Touch the square where it goes. Catch all the stars.",
+          "question": "Catch all the stars with the bishop.",
+          "indice": "The bishop moves diagonally, on a slant, as far as it likes. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the bishop can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -109,6 +157,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que la dame peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the queen",
+        "idee": "The queen moves straight or on a slant: she moves like the rook and the bishop.",
+        "phrases": {
+          "consigne": "The queen goes straight or diagonally, as far as she likes. Touch the square where she goes. Catch all the stars.",
+          "question": "Catch all the stars with the queen.",
+          "indice": "The queen moves straight or diagonally, as far as she likes. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the queen can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -136,6 +196,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le roi peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the king",
+        "idee": "The king moves just one square, in any direction.",
+        "phrases": {
+          "consigne": "The king moves just one square, in any direction. Touch the square where he goes. Catch all the stars.",
+          "question": "Catch all the stars with the king.",
+          "indice": "The king moves just one square, in any direction. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the king can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -163,6 +235,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le cavalier peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the knight",
+        "idee": "The knight jumps in an L: two squares straight, then one to the side. It jumps over other pieces.",
+        "phrases": {
+          "consigne": "The knight jumps in an L: two squares straight, then one to the side. Touch the square where it goes. Catch all the stars.",
+          "question": "Catch all the stars with the knight.",
+          "indice": "The knight jumps in the shape of an L: two squares straight, then one square to the side. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the knight can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -190,6 +274,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le pion peut aller.",
         "bravo": "Bravo ! Tu as attrapé toutes les étoiles."
+      },
+      "en": {
+        "titre": "Moving the pawn",
+        "idee": "The pawn moves straight forward one square. On its first move, it can move forward two squares.",
+        "phrases": {
+          "consigne": "The pawn moves straight forward one square; on its first move, it can move forward two. Touch the square where it goes.",
+          "question": "Catch the stars with the pawn.",
+          "indice": "The pawn only moves straight forward, never backwards. The dots show where to go.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the pawn can go.",
+          "bravo": "Well done! You caught all the stars."
+        }
       }
     },
     {
@@ -217,6 +313,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le pion peut aller.",
         "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      },
+      "en": {
+        "titre": "The pawn captures diagonally",
+        "idee": "The pawn moves straight forward, but it captures on a slant, one square forward and to the side.",
+        "phrases": {
+          "consigne": "The pawn captures diagonally, one square forward and to the side. Touch the black pawn to capture.",
+          "question": "Capture the black pawns with your pawn.",
+          "indice": "The pawn moves straight forward, but it captures on a slant, going forwards.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the pawn can go.",
+          "bravo": "Well done! You took all the black pawns."
+        }
       }
     },
     {
@@ -244,6 +352,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que la tour peut aller.",
         "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      },
+      "en": {
+        "titre": "Capturing with the rook",
+        "idee": "To capture a piece, you move onto its square. The rook stops at the first piece it meets.",
+        "phrases": {
+          "consigne": "To capture a piece, you move onto its square. The rook can't jump over pieces. Capture all the black pawns.",
+          "question": "Capture all the black pawns with the rook.",
+          "indice": "The rook moves straight and stops at the first piece it meets.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the rook can go.",
+          "bravo": "Well done! You took all the black pawns."
+        }
       }
     },
     {
@@ -271,6 +391,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde les cases entourées d'or : c'est là que le cavalier peut aller.",
         "bravo": "Bravo ! Tu as pris tous les pions noirs."
+      },
+      "en": {
+        "titre": "Capturing with the knight",
+        "idee": "The knight captures by jumping in an L, even over other pieces.",
+        "phrases": {
+          "consigne": "The knight jumps in an L, even over pieces. Move onto a black pawn's square to capture it. Capture them all.",
+          "question": "Capture all the black pawns with the knight.",
+          "indice": "The knight makes an L: two squares straight, then one to the side.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the squares circled in gold: that's where the knight can go.",
+          "bravo": "Well done! You took all the black pawns."
+        }
       }
     },
     {
@@ -298,6 +430,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde le coup entouré d'or.",
         "bravo": "Bravo ! Le roi noir est en échec."
+      },
+      "en": {
+        "titre": "Giving check with the queen",
+        "idee": "The king is in check when a piece could capture him on the next move.",
+        "phrases": {
+          "consigne": "The king is in check when a piece could capture him on the next move. Touch the queen, then the square from where she attacks the black king.",
+          "question": "Play a queen move that puts the black king in check.",
+          "indice": "Put the queen on the same row, the same column or the same diagonal as the black king.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the move circled in gold.",
+          "bravo": "Well done! The black king is in check."
+        }
       }
     },
     {
@@ -325,6 +469,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde le coup entouré d'or.",
         "bravo": "Bravo ! Le roi noir est en échec."
+      },
+      "en": {
+        "titre": "Giving check with the knight",
+        "idee": "The knight gives check by attacking the king in the shape of an L.",
+        "phrases": {
+          "consigne": "The king is in check when a piece could capture him on the next move. Touch the knight, then the square from where it attacks the black king.",
+          "question": "Play a knight move that puts the black king in check.",
+          "indice": "The knight attacks the squares it could jump to on the next move, in the shape of an L.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the move circled in gold.",
+          "bravo": "Well done! The black king is in check."
+        }
       }
     },
     {
@@ -352,6 +508,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde le coup entouré d'or.",
         "bravo": "Échec et mat ! Bravo, tu as gagné la partie."
+      },
+      "en": {
+        "titre": "Checkmate with the queen",
+        "idee": "Checkmate: the king is in check and can't go anywhere. The game is won.",
+        "phrases": {
+          "consigne": "Checkmate: the black king is attacked and can't go to any square. Touch your piece, then the square for the winning move.",
+          "question": "Find the move that gives checkmate.",
+          "indice": "Put the black king in check, and make sure all the squares around him are attacked. Your king can help the queen.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the move circled in gold.",
+          "bravo": "Checkmate! Well done, you won the game."
+        }
       }
     },
     {
@@ -379,6 +547,18 @@
         "exemple": "Touche une case avec un point.",
         "demonstration": "Regarde le coup entouré d'or.",
         "bravo": "Échec et mat ! Bravo, tu as gagné la partie."
+      },
+      "en": {
+        "titre": "Checkmate with the rook",
+        "idee": "The rook attacks the whole edge row. Your king guards the squares in front of the black king: he can't escape any more.",
+        "phrases": {
+          "consigne": "Checkmate: the black king is attacked and can't go to any square. Touch your piece, then the square for the winning move.",
+          "question": "Find the move that gives checkmate.",
+          "indice": "The black king is on the edge. Your rook attacks the whole edge row; your king guards the squares in front of him.",
+          "exemple": "Touch a square with a dot.",
+          "demonstration": "Look at the move circled in gold.",
+          "bravo": "Checkmate! Well done, you won the game."
+        }
       }
     },
     {
@@ -438,7 +618,53 @@
           ],
           "explication": "Le fou noir attaque f1 : pas de petit roque. Le grand roque, lui, est permis."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Castling: keeping your king safe",
+        "idee": "Castling is a special move: the king moves two squares towards the rook, and the rook jumps over him. You can't castle if the king or the rook has already moved, if the king is in check, or if he crosses an attacked square.",
+        "phrases": {
+          "consigne": "Touch your king, then the square two steps away from him, towards the rook. The rook will jump by itself.",
+          "question": "{texte}",
+          "indice": "The king moves two squares towards the rook. He never crosses an attacked square.",
+          "exemple": "Look carefully at where the king and the rook end up.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Well done! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Castle kingside, on the side of the nearest rook.",
+            "fen": "4k3/8/8/8/8/8/5PPP/4K2R w K - 0 1",
+            "coups": [
+              "e1g1"
+            ],
+            "explication": "The king goes to g1, the rook jumps to f1: the king is safe behind his pawns."
+          },
+          {
+            "texte": "Castle queenside, on the queen's side.",
+            "fen": "4k3/8/8/8/8/8/PPP5/R3K3 w Q - 0 1",
+            "coups": [
+              "e1c1"
+            ],
+            "explication": "The king goes to c1, the rook jumps to d1."
+          },
+          {
+            "texte": "Only one way of castling is allowed here. Which one?",
+            "fen": "4k3/8/8/8/6b1/8/5PPP/R3K2R w KQ - 0 1",
+            "coups": [
+              "e1g1"
+            ],
+            "explication": "The black bishop attacks d1: the king can't cross it. But castling kingside is allowed."
+          },
+          {
+            "texte": "Only one way of castling is allowed here. Which one?",
+            "fen": "4k3/8/8/8/2b5/8/P4PPP/R3K2R w KQ - 0 1",
+            "coups": [
+              "e1c1"
+            ],
+            "explication": "The black bishop attacks f1: no castling kingside. But castling queenside is allowed."
+          }
+        ]
+      }
     },
     {
       "id": "promotion",
@@ -497,7 +723,53 @@
           ],
           "explication": "Le pion arrive en b8 et devient une dame."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Promotion: the pawn becomes a queen",
+        "idee": "A pawn that reaches the far end of the board changes into another piece: we nearly always choose a queen, the strongest piece.",
+        "phrases": {
+          "consigne": "Touch the pawn, then the square at the end. Then choose the queen.",
+          "question": "{texte}",
+          "indice": "The pawn moves up to the last row, then we choose the queen.",
+          "exemple": "Look carefully at the last row.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Well done! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Your pawn is reaching the end. Make it a queen!",
+            "fen": "k7/4P3/8/8/8/8/8/4K3 w - - 0 1",
+            "coups": [
+              "e7e8q"
+            ],
+            "explication": "The pawn reaches e8 and becomes a queen."
+          },
+          {
+            "texte": "Take this pawn to the end, and choose the queen.",
+            "fen": "8/6P1/8/8/k7/8/8/K7 w - - 0 1",
+            "coups": [
+              "g7g8q"
+            ],
+            "explication": "The pawn reaches g8 and becomes a queen."
+          },
+          {
+            "texte": "Your pawn can capture the rook as it reaches the end. Do it!",
+            "fen": "3r3k/2P5/8/8/8/8/8/K7 w - - 0 1",
+            "coups": [
+              "c7d8q"
+            ],
+            "explication": "The pawn captures the rook on d8 and becomes a queen: two good things in one move."
+          },
+          {
+            "texte": "Make a queen with this pawn.",
+            "fen": "7k/1P6/8/8/8/8/8/K7 w - - 0 1",
+            "coups": [
+              "b7b8q"
+            ],
+            "explication": "The pawn reaches b8 and becomes a queen."
+          }
+        ]
+      }
     },
     {
       "id": "en-passant",
@@ -556,7 +828,53 @@
           ],
           "explication": "Ton pion va en h6, et le pion noir de h5 est pris."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Capturing en passant",
+        "idee": "When an opponent's pawn moves two squares and lands right next to yours, your pawn can capture it as if it had only moved one square: that's en passant. Only straight away!",
+        "phrases": {
+          "consigne": "The black pawn has just moved two squares, next to yours. Touch your pawn, then the square just behind the black pawn.",
+          "question": "{texte}",
+          "indice": "Your pawn moves diagonally, onto the square the black pawn jumped over.",
+          "exemple": "Look at the square the black pawn has just jumped over.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Well done! {explication}"
+        },
+        "items": [
+          {
+            "texte": "The black pawn has just jumped from d7 to d5. Capture it en passant!",
+            "fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+            "coups": [
+              "e5d6"
+            ],
+            "explication": "Your pawn goes to d6, and the black pawn on d5 is captured."
+          },
+          {
+            "texte": "The black pawn has just jumped from f7 to f5. Capture it en passant!",
+            "fen": "4k3/8/8/5pP1/8/8/8/4K3 w - f6 0 1",
+            "coups": [
+              "g5f6"
+            ],
+            "explication": "Your pawn goes to f6, and the black pawn on f5 is captured."
+          },
+          {
+            "texte": "The black pawn has just jumped from a7 to a5. Capture it en passant!",
+            "fen": "4k3/8/8/pP6/8/8/8/4K3 w - a6 0 1",
+            "coups": [
+              "b5a6"
+            ],
+            "explication": "Your pawn goes to a6, and the black pawn on a5 is captured."
+          },
+          {
+            "texte": "The black pawn has just jumped from h7 to h5. Capture it en passant!",
+            "fen": "k7/8/8/6Pp/8/8/8/K7 w - h6 0 1",
+            "coups": [
+              "g5h6"
+            ],
+            "explication": "Your pawn goes to h6, and the black pawn on h5 is captured."
+          }
+        ]
+      }
     },
     {
       "id": "piece-gratuite",
@@ -623,7 +941,61 @@
           ],
           "explication": "Le pion d6 protège la tour. Le cavalier en a8, lui, est seul : ta tour le prend."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Capturing a piece that nobody protects",
+        "idee": "Before you capture, look: if nobody protects the piece, you win it without losing anything. If it is protected, your opponent will capture your piece back.",
+        "phrases": {
+          "consigne": "Look for the black piece that nobody protects, then capture it: touch your piece, then theirs.",
+          "question": "{texte}",
+          "indice": "For each black piece, ask yourself: if I capture it, who can capture me back?",
+          "exemple": "Look at which black pieces are protected.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Well done! {explication}"
+        },
+        "items": [
+          {
+            "texte": "One black piece is not protected. Capture it!",
+            "fen": "4k3/8/8/8/3r4/8/1B6/4K3 w - - 0 1",
+            "coups": [
+              "b2d4"
+            ],
+            "explication": "The bishop captures the rook on d4: nobody can capture it back."
+          },
+          {
+            "texte": "One black piece is not protected. Capture it!",
+            "fen": "4k3/8/2n5/8/8/8/8/2R1K3 w - - 0 1",
+            "coups": [
+              "c1c6"
+            ],
+            "explication": "The rook captures the knight on c6: nobody can capture it back."
+          },
+          {
+            "texte": "One black piece is not protected. Capture it!",
+            "fen": "4k3/8/8/5b2/8/8/8/1Q2K3 w - - 0 1",
+            "coups": [
+              "b1f5"
+            ],
+            "explication": "The queen captures the bishop on f5: nobody can capture her back."
+          },
+          {
+            "texte": "Two black pieces: only one is not protected. Which one should you capture?",
+            "fen": "4k3/8/8/1p6/n5b1/8/8/3QK3 w - - 0 1",
+            "coups": [
+              "d1g4"
+            ],
+            "explication": "The knight on a4 is protected by the pawn on b5. But the bishop on g4 isn't: the queen captures it."
+          },
+          {
+            "texte": "The black rook is protected, but another piece isn't. Find it!",
+            "fen": "n3k3/8/3p4/4r3/8/8/7B/R5K1 w - - 0 1",
+            "coups": [
+              "a1a8"
+            ],
+            "explication": "The pawn on d6 protects the rook. But the knight on a8 is all alone: your rook captures it."
+          }
+        ]
+      }
     },
     {
       "id": "fourchette",
@@ -690,7 +1062,61 @@
           ],
           "explication": "En f6, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
         }
-      ]
+      ],
+      "en": {
+        "titre": "The knight fork",
+        "idee": "A fork means attacking two pieces at once. The king has to escape first: the other piece is lost!",
+        "phrases": {
+          "consigne": "Find the knight jump that puts the black king in check and attacks another big piece at the same time.",
+          "question": "{texte}",
+          "indice": "Look for a square where the knight touches both the king and the rook or the queen.",
+          "exemple": "Look at all the squares the knight can jump to.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Well done! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Make a fork with your knight!",
+            "fen": "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1",
+            "coups": [
+              "b5c7"
+            ],
+            "explication": "On c7, the knight attacks the king and the rook: the king escapes, the rook is captured."
+          },
+          {
+            "texte": "Make a fork with your knight!",
+            "fen": "2q3k1/8/8/3N4/8/8/8/6K1 w - - 0 1",
+            "coups": [
+              "d5e7"
+            ],
+            "explication": "On e7, the knight attacks the king and the queen: the king escapes, the queen is captured."
+          },
+          {
+            "texte": "Make a fork with your knight!",
+            "fen": "8/8/1k3r2/8/8/2N5/8/K7 w - - 0 1",
+            "coups": [
+              "c3d5"
+            ],
+            "explication": "On d5, the knight attacks the king and the rook: the king escapes, the rook is captured."
+          },
+          {
+            "texte": "Make a fork with your knight!",
+            "fen": "8/8/8/1k3q2/8/8/2N5/6K1 w - - 0 1",
+            "coups": [
+              "c2d4"
+            ],
+            "explication": "On d4, the knight attacks the king and the queen: the king escapes, the queen is captured."
+          },
+          {
+            "texte": "Make a fork with your knight!",
+            "fen": "4r1k1/8/8/8/4N3/8/8/6K1 w - - 0 1",
+            "coups": [
+              "e4f6"
+            ],
+            "explication": "On f6, the knight attacks the king and the rook: the king escapes, the rook is captured."
+          }
+        ]
+      }
     },
     {
       "id": "mat-couloir",
@@ -757,7 +1183,61 @@
           ],
           "explication": "La tour va en c8 : le roi est attaqué, ses pions l'empêchent d'avancer."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Back-rank mate",
+        "idee": "When the king is at the back, behind his own pawns, he is shut in a corridor. A rook or a queen on the last row, and it's checkmate!",
+        "phrases": {
+          "consigne": "The black king is shut in behind his pawns. Find the move that gives checkmate on the last row.",
+          "question": "{texte}",
+          "indice": "Move onto the black king's row with your rook or your queen: his pawns stop him from running away.",
+          "exemple": "Look at the black king's row.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Checkmate! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Give back-rank mate!",
+            "fen": "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1",
+            "coups": [
+              "a1a8"
+            ],
+            "explication": "The rook goes to a8: the king is attacked, and his pawns stop him from moving forward."
+          },
+          {
+            "texte": "Give back-rank mate!",
+            "fen": "1k6/ppp5/8/8/8/8/8/4R1K1 w - - 0 1",
+            "coups": [
+              "e1e8"
+            ],
+            "explication": "The rook goes to e8: the king is attacked, and his pawns stop him from moving forward."
+          },
+          {
+            "texte": "Give back-rank mate with your queen!",
+            "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",
+            "coups": [
+              "d1d8"
+            ],
+            "explication": "The queen goes to d8: the king is attacked, and his pawns stop him from moving forward."
+          },
+          {
+            "texte": "Give back-rank mate!",
+            "fen": "7k/6pp/8/8/8/8/6PP/1R4K1 w - - 0 1",
+            "coups": [
+              "b1b8"
+            ],
+            "explication": "The rook goes to b8: the king is attacked, and his pawns stop him from moving forward."
+          },
+          {
+            "texte": "Give back-rank mate!",
+            "fen": "k7/pp6/8/8/8/8/6PP/2R3K1 w - - 0 1",
+            "coups": [
+              "c1c8"
+            ],
+            "explication": "The rook goes to c8: the king is attacked, and his pawns stop him from moving forward."
+          }
+        ]
+      }
     }
   ]
 }

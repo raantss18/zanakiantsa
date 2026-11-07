@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "34 cm", pourquoi: "10 + 24 : on additionne les carrés des côtés, pas les côtés." }
       - { texte: "676 cm", pourquoi: "676, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+
+en:
+  titre: "Pythagoras' theorem"
+  idee: "In a right-angled triangle, the square of the hypotenuse (the side opposite the right angle) equals the sum of the squares of the other two sides."
+  phrases:
+    consigne: "Work it out, then touch the length."
+    question: "{texte}"
+    indice: "Add the squares of the two sides next to the right angle, then take the square root."
+    exemple: "3 and 4: 9 + 16 = 25, so the hypotenuse is 5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "A right-angled triangle has sides of 3 cm and 4 cm next to the right angle. How long is the hypotenuse?"
+      nom: "5 cm"
+      explication: "3² + 4² = 9 + 16 = 25, and 5 × 5 = 25: the hypotenuse is 5 cm."
+      pieges:
+        - { texte: "7 cm", pourquoi: "3 + 4: add the squares of the sides, not the sides." }
+        - { texte: "25 cm", pourquoi: "25 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 6 cm and 8 cm next to the right angle. How long is the hypotenuse?"
+      nom: "10 cm"
+      explication: "6² + 8² = 36 + 64 = 100, and 10 × 10 = 100: the hypotenuse is 10 cm."
+      pieges:
+        - { texte: "14 cm", pourquoi: "6 + 8: add the squares of the sides, not the sides." }
+        - { texte: "100 cm", pourquoi: "100 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 5 cm and 12 cm next to the right angle. How long is the hypotenuse?"
+      nom: "13 cm"
+      explication: "5² + 12² = 25 + 144 = 169, and 13 × 13 = 169: the hypotenuse is 13 cm."
+      pieges:
+        - { texte: "17 cm", pourquoi: "5 + 12: add the squares of the sides, not the sides." }
+        - { texte: "169 cm", pourquoi: "169 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 9 cm and 12 cm next to the right angle. How long is the hypotenuse?"
+      nom: "15 cm"
+      explication: "9² + 12² = 81 + 144 = 225, and 15 × 15 = 225: the hypotenuse is 15 cm."
+      pieges:
+        - { texte: "21 cm", pourquoi: "9 + 12: add the squares of the sides, not the sides." }
+        - { texte: "225 cm", pourquoi: "225 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 8 cm and 15 cm next to the right angle. How long is the hypotenuse?"
+      nom: "17 cm"
+      explication: "8² + 15² = 64 + 225 = 289, and 17 × 17 = 289: the hypotenuse is 17 cm."
+      pieges:
+        - { texte: "23 cm", pourquoi: "8 + 15: add the squares of the sides, not the sides." }
+        - { texte: "289 cm", pourquoi: "289 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 12 cm and 16 cm next to the right angle. How long is the hypotenuse?"
+      nom: "20 cm"
+      explication: "12² + 16² = 144 + 256 = 400, and 20 × 20 = 400: the hypotenuse is 20 cm."
+      pieges:
+        - { texte: "28 cm", pourquoi: "12 + 16: add the squares of the sides, not the sides." }
+        - { texte: "400 cm", pourquoi: "400 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 7 cm and 24 cm next to the right angle. How long is the hypotenuse?"
+      nom: "25 cm"
+      explication: "7² + 24² = 49 + 576 = 625, and 25 × 25 = 625: the hypotenuse is 25 cm."
+      pieges:
+        - { texte: "31 cm", pourquoi: "7 + 24: add the squares of the sides, not the sides." }
+        - { texte: "625 cm", pourquoi: "625 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 15 cm and 20 cm next to the right angle. How long is the hypotenuse?"
+      nom: "25 cm"
+      explication: "15² + 20² = 225 + 400 = 625, and 25 × 25 = 625: the hypotenuse is 25 cm."
+      pieges:
+        - { texte: "35 cm", pourquoi: "15 + 20: add the squares of the sides, not the sides." }
+        - { texte: "625 cm", pourquoi: "625 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 20 cm and 21 cm next to the right angle. How long is the hypotenuse?"
+      nom: "29 cm"
+      explication: "20² + 21² = 400 + 441 = 841, and 29 × 29 = 841: the hypotenuse is 29 cm."
+      pieges:
+        - { texte: "41 cm", pourquoi: "20 + 21: add the squares of the sides, not the sides." }
+        - { texte: "841 cm", pourquoi: "841 is the square of the hypotenuse: now take the square root." }
+    - texte: "A right-angled triangle has sides of 10 cm and 24 cm next to the right angle. How long is the hypotenuse?"
+      nom: "26 cm"
+      explication: "10² + 24² = 100 + 576 = 676, and 26 × 26 = 676: the hypotenuse is 26 cm."
+      pieges:
+        - { texte: "34 cm", pourquoi: "10 + 24: add the squares of the sides, not the sides." }
+        - { texte: "676 cm", pourquoi: "676 is the square of the hypotenuse: now take the square root." }

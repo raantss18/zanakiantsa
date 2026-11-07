@@ -10,6 +10,7 @@ import 'core/day.dart';
 import 'core/events.dart';
 import 'core/progress.dart';
 import 'core/rewards.dart';
+import 'l10n/l10n.dart';
 import 'store/store.dart';
 import 'ui/universe.dart';
 
@@ -21,9 +22,9 @@ class AppState extends ChangeNotifier {
   final Library library;
 
   /// Domaines, dans l'ordre de content/domaines.yaml (ADR 0018).
-  final List<Topic> topics;
-  final Common common;
-  final Map<String, UniverseWords> words;
+  List<Topic> topics;
+  Common common;
+  Map<String, UniverseWords> words;
   final Store store;
   final Voice voice;
 
@@ -49,7 +50,22 @@ class AppState extends ChangeNotifier {
   int get schoolClass => chosenClass ?? classForAge(age);
 
   /// Le plus haut niveau de chaque domaine.
-  late final Map<String, int> topLevels = {for (final t in topics) t.id: t.skills.map((s) => s.ref.level).fold(0, max)};
+  Map<String, int> get topLevels => {for (final t in topics) t.id: t.skills.map((s) => s.ref.level).fold(0, max)};
+
+  /// Change la langue de toute l'app (ADR 0064) : textes, domaines proposés et voix. La progression de l'enfant ne bouge
+  /// pas : elle est rangée par notion, pas par langue.
+  Future<void> setLanguage(String lang) async {
+    if (lang == appLang) return;
+    await voice.stopAll();
+    await store.set('langue', lang);
+    appLang = lang;
+    voice.lang = lang;
+    final (t, c) = await loadContent();
+    topics = t;
+    common = c;
+    words = await loadUniverseWords();
+    notifyListeners();
+  }
 
   /// La classe la plus avancée pour laquelle l'app a des leçons.
   int get highestLevel => topLevels.values.fold(0, max);
@@ -59,11 +75,14 @@ class AppState extends ChangeNotifier {
   String? universeId;
 
   static Future<AppState> load() async {
+    final store = await Store.open();
+    // La langue d'abord : elle décide des textes et des domaines chargés (ADR 0064).
+    appLang = await store.get('langue') == 'en' ? 'en' : 'fr';
     final (topics, common) = await loadContent();
     final words = await loadUniverseWords();
-    final store = await Store.open();
     final voice = Voice()
       ..engine = await store.get('moteur_voix')
+      ..lang = appLang
       ..init();
     final s = AppState(topics, common, words, store, voice, await Library.load());
     await s._loadProfiles();
@@ -222,7 +241,8 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes, tops: topLevels, classe: schoolClass);
+  DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions,
+      minutes: dailyMinutes, tops: topLevels, classe: schoolClass, visible: [for (final t in topics) t.id]);
 
   Future<void> logSession(SessionLog s) async {
     await store.addSession(s);

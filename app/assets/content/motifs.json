@@ -35,6 +35,38 @@
     4,
     8
   ],
+  "en": {
+    "titre": "Getting to know patterns",
+    "nom": "Patterns",
+    "resume": "Picture patterns and number sequences: in ones, twos and tens, and counting backwards.",
+    "intro": [
+      {
+        "texte": "A pattern is a group of pictures that repeats.",
+        "images": [
+          "2b50",
+          "1f319",
+          "2b50",
+          "1f319"
+        ]
+      },
+      {
+        "texte": "Say it out loud: star, moon, star, moon…",
+        "images": [
+          "2b50",
+          "1f319"
+        ]
+      },
+      {
+        "texte": "Find what comes next!",
+        "images": [
+          "2b50",
+          "1f319",
+          "2b50"
+        ],
+        "grand": "?"
+      }
+    ]
+  },
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "c2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
@@ -61,6 +93,18 @@
         "exemple": "Dis la suite à voix haute, en montrant chaque image.",
         "demonstration": "Regarde : c'est cette image qui continue la suite.",
         "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      },
+      "en": {
+        "titre": "A pattern with two pictures taking turns",
+        "idee": "A pattern is a little group of pictures that always repeats in the same order.",
+        "phrases": {
+          "consigne": "Look carefully at the row of pictures and find what repeats. Then touch the missing picture.",
+          "question": "Which picture is missing?",
+          "indice": "Listen: one picture, then the other, and start again.",
+          "exemple": "Say the pattern out loud, pointing to each picture.",
+          "demonstration": "Look: this is the picture that carries on the pattern.",
+          "bravo": "Yes! You found the rule of the pattern."
+        }
       }
     },
     {
@@ -86,6 +130,18 @@
         "exemple": "Dis la suite à voix haute, en montrant chaque image.",
         "demonstration": "Regarde : c'est cette image qui continue la suite.",
         "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      },
+      "en": {
+        "titre": "A pattern: one picture, then two",
+        "idee": "Here, the group that repeats has three pictures: one, then the other one twice.",
+        "phrases": {
+          "consigne": "Look carefully at the row of pictures and find what repeats. Then touch the missing picture.",
+          "question": "Which picture is missing?",
+          "indice": "Look: one picture, then the other one twice, and start again.",
+          "exemple": "Say the pattern out loud, pointing to each picture.",
+          "demonstration": "Look: this is the picture that carries on the pattern.",
+          "bravo": "Yes! You found the rule of the pattern."
+        }
       }
     },
     {
@@ -111,6 +167,18 @@
         "exemple": "Dis la suite à voix haute, en montrant chaque image.",
         "demonstration": "Regarde : c'est cette image qui continue la suite.",
         "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      },
+      "en": {
+        "titre": "A pattern with three pictures",
+        "idee": "Three different pictures always come back in the same order.",
+        "phrases": {
+          "consigne": "Look carefully at the row of pictures and find what repeats. Then touch the missing picture.",
+          "question": "Which picture is missing?",
+          "indice": "Look: three different pictures, always in the same order.",
+          "exemple": "Say the pattern out loud, pointing to each picture.",
+          "demonstration": "Look: this is the picture that carries on the pattern.",
+          "bravo": "Yes! You found the rule of the pattern."
+        }
       }
     },
     {
@@ -136,6 +204,18 @@
         "exemple": "Dis la suite à voix haute, en montrant chaque image.",
         "demonstration": "Regarde : c'est cette image qui continue la suite.",
         "bravo": "Oui ! Tu as trouvé la règle de la suite."
+      },
+      "en": {
+        "titre": "A pattern that grows",
+        "idee": "This pattern grows: each time round, we add one more picture.",
+        "phrases": {
+          "consigne": "Look carefully at the row of pictures: it grows each time round. Then touch the missing picture.",
+          "question": "Which picture is missing?",
+          "indice": "Look: each time round, we add one more.",
+          "exemple": "Say the pattern out loud, pointing to each picture.",
+          "demonstration": "Look: this is the picture that carries on the pattern.",
+          "bravo": "Yes! You found the rule of the pattern."
+        }
       }
     },
     {
@@ -169,7 +249,22 @@
       },
       "variantes": [
         "Quel nombre se cache sous le point d'interrogation ?"
-      ]
+      ],
+      "en": {
+        "titre": "Counting in ones, twos and tens",
+        "idee": "A number sequence has a rule, just like a picture pattern: we always move on by the same step.",
+        "phrases": {
+          "consigne": "Read the numbers one by one and work out how much we move on each time. Then touch the missing number.",
+          "question": "These numbers go up in steps of {pas}. Which number is missing?",
+          "indice": "Count in steps of {pas} from the first number, pointing to each box.",
+          "exemple": "Say the numbers out loud, from the first to the last.",
+          "demonstration": "Look: in steps of {pas}, the missing number is {n}.",
+          "bravo": "Yes! In steps of {pas}, it's {n}."
+        },
+        "variantes": [
+          "Which number is hiding under the question mark?"
+        ]
+      }
     },
     {
       "id": "suite-rebours",
@@ -201,7 +296,22 @@
       },
       "variantes": [
         "Quel nombre se cache sous le point d'interrogation ?"
-      ]
+      ],
+      "en": {
+        "titre": "Counting backwards",
+        "idee": "Counting backwards is counting the other way round, like for a rocket launch: each number is one less.",
+        "phrases": {
+          "consigne": "Read the numbers one by one: they go down. Then touch the missing number.",
+          "question": "We're counting backwards, one at a time. Which number is missing?",
+          "indice": "Each number is one less than the one before: take one step back.",
+          "exemple": "Say the numbers out loud, like a rocket countdown.",
+          "demonstration": "Look: counting backwards, the missing number is {n}.",
+          "bravo": "Yes! Counting backwards, it's {n}."
+        },
+        "variantes": [
+          "Which number is hiding under the question mark?"
+        ]
+      }
     },
     {
       "id": "bande-numerique",
@@ -235,7 +345,22 @@
       },
       "variantes": [
         "Quel nombre se cache sous le point d'interrogation ?"
-      ]
+      ],
+      "en": {
+        "titre": "Big numbers on the number line",
+        "idee": "Big numbers work the same way: a step of one changes the ones, a step of ten the tens, a step of a hundred the hundreds.",
+        "phrases": {
+          "consigne": "Read the numbers one by one and look at which digit changes. Then touch the missing number.",
+          "question": "These numbers go up in steps of {pas}. Which number is missing?",
+          "indice": "Look at which digit changes from one box to the next, and take a step of {pas}.",
+          "exemple": "Say the numbers out loud, from the first to the last.",
+          "demonstration": "Look: in steps of {pas}, the missing number is {n}.",
+          "bravo": "Yes! In steps of {pas}, it's {n}."
+        },
+        "variantes": [
+          "Which number is hiding under the question mark?"
+        ]
+      }
     }
   ]
 }

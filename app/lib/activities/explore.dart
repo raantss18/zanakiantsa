@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../content/content.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/three.dart';
@@ -56,8 +57,8 @@ class _SolidActivityState extends State<SolidActivity> {
           child: Container(
             decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
             child: Stack(children: [
-              Positioned.fill(child: SolidView(mesh: solids[right]!, color: u.night ? u.primary : u.onCard, label: 'Un solide qui tourne')),
-              const Positioned(right: 12, bottom: 8, child: Icon(Icons.threesixty_rounded, size: 36, color: Color(0xFF8A948E), semanticLabel: 'Tourne-le avec ton doigt')),
+              Positioned.fill(child: SolidView(mesh: solids[right]!, color: u.night ? u.primary : u.onCard, label: t('Un solide qui tourne'))),
+              Positioned(right: 12, bottom: 8, child: Icon(Icons.threesixty_rounded, size: 36, color: const Color(0xFF8A948E), semanticLabel: t('Tourne-le avec ton doigt'))),
             ]),
           ),
         ),
@@ -150,7 +151,7 @@ class _PlanetsActivityState extends State<PlanetsActivity> with SingleTickerProv
     if (best == null || tried.contains(best.$1.id)) return;
     final ok = best.$1.id == item.target;
     if (!ok) setState(() => tried.add(best!.$1.id));
-    a.submit(ok, why: ok ? null : thatIs(best.$1.name));
+    a.submit(ok, why: ok ? null : thatIs(t(best.$1.name)));
   }
 
   @override
@@ -258,7 +259,7 @@ class _SolarPainter extends CustomPainter {
           ..style = PaintingStyle.stroke
           ..strokeWidth = 5);
         final tp = TextPainter(
-          text: TextSpan(text: pl.name, style: const TextStyle(fontFamily: 'Andika', fontSize: 22, fontWeight: FontWeight.w700, color: Colors.white)),
+          text: TextSpan(text: t(pl.name), style: const TextStyle(fontFamily: 'Andika', fontSize: 22, fontWeight: FontWeight.w700, color: Colors.white)),
           textDirection: TextDirection.ltr,
         )..layout();
         tp.paint(canvas, o + Offset(-tp.width / 2, rad + 10));
@@ -330,7 +331,7 @@ class _BodyActivityState extends State<BodyActivity> {
     if (hit == null || tried.contains(hit)) return;
     final ok = hit == item.target;
     if (!ok) setState(() => tried.add(hit));
-    a.submit(ok, why: ok ? null : thatIs(bodyParts[hit]!));
+    a.submit(ok, why: ok ? null : thatIs(t(bodyParts[hit]!)));
   }
 
   @override

@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 
 import '../audio/sfx.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -86,7 +87,7 @@ class _ListenActivityState extends State<ListenActivity> {
             for (final i in [0, 1])
               PicButton(
                 size: size,
-                label: 'Son ${i + 1}',
+                label: tf('Son {n}', {'n': i + 1}),
                 selected: playing == i,
                 tried: tried.contains(i),
                 highlight: shown && i == right,
@@ -111,7 +112,7 @@ class _ListenActivityState extends State<ListenActivity> {
             style: FilledButton.styleFrom(minimumSize: const Size(220, 72), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 24, fontWeight: FontWeight.w700)),
             onPressed: _playingAll ? null : _playBoth,
             icon: const Icon(Icons.replay_rounded, size: 36),
-            label: const Text('Réécouter'),
+            label: Text(t('Réécouter')),
           ),
         ]),
       );

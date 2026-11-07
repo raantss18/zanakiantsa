@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../content/content.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -92,9 +93,9 @@ class _ChooseActivityState extends State<ChooseActivity> {
 /// Entre guillemets, c'est le mot qu'on compare : sans son article (« tomate », pas « la tomate »).
 String choiceError(Skill skill, String Function(String) phrase, Pic chosen) => skill.phrases.containsKey('erreur')
     ? phrase('erreur')
-        .replaceAll('« {choisi} »', '« ${chosen.name.replaceFirst(RegExp(r"^(le |la |les |l'|un |une )"), '')} »')
+        .replaceAll('« {choisi} »', '« ${chosen.name.replaceFirst(RegExp(english ? r"^(the |a |an )" : r"^(le |la |les |l'|un |une )"), '')} »')
         .replaceAll('{choisi}', chosen.name)
     : thatIs(chosen.name);
 
 /// « Ça, c'est la tête. », « Ça, ce sont les bras. »
-String thatIs(String name) => name.startsWith('les ') ? 'Ça, ce sont $name.' : 'Ça, c\'est $name.';
+String thatIs(String name) => name.startsWith('les ') ? tf('Ça, ce sont {name}.', {'name': name}) : tf('Ça, c\'est {name}.', {'name': name});

@@ -62,3 +62,80 @@ items:
     pieges:
       - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
       - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+
+en:
+  langue: "fr"
+  titre: "French: subordinate clauses"
+  idee: "A relative clause adds to a noun that the relative pronoun stands for (« le livre que… »). A noun clause is the verb's object (« je pense que… »). An adverbial clause says when, why… (« quand il pleut »)."
+  phrases:
+    consigne: "Find the word that starts the clause, then touch what kind of clause it is."
+    question: "{texte}"
+    indice: "Does the word stand for a noun? Is the clause the verb's object? Or does it say when or why?"
+    exemple: "« Le livre que tu m’as prêté »: « que » stands for « le livre », so it's a relative clause."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "In « Le livre que tu m’as prêté est passionnant. », what kind of clause is « que tu m’as prêté »?"
+      nom: "relative clause"
+      explication: "« que » stands for « le livre » (its antecedent): it's a relative pronoun, so this is a relative clause."
+      pieges:
+        - texte: "noun clause (complétive)"
+          pourquoi: "A noun clause is the direct object of the verb, and its « que » doesn't stand for a noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."
+    - texte: "In « Je pense que tu as raison. », what kind of clause is « que tu as raison »?"
+      nom: "noun clause (complétive)"
+      explication: "« que » doesn't stand for any noun; the clause is the direct object of « pense »: it's a noun clause."
+      pieges:
+        - texte: "relative clause"
+          pourquoi: "A relative clause adds to a noun (its antecedent), and the pronoun stands for that noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."
+    - texte: "In « Nous sortirons quand la pluie cessera. », what kind of clause is « quand la pluie cessera »?"
+      nom: "adverbial clause"
+      explication: "It tells you when the action happens, and you can move it: it's an adverbial clause of time."
+      pieges:
+        - texte: "relative clause"
+          pourquoi: "A relative clause adds to a noun (its antecedent), and the pronoun stands for that noun."
+        - texte: "noun clause (complétive)"
+          pourquoi: "A noun clause is the direct object of the verb, and its « que » doesn't stand for a noun."
+    - texte: "In « La maison où j’habite est ancienne. », what kind of clause is « où j’habite »?"
+      nom: "relative clause"
+      explication: "« où » stands for « la maison »: it's a relative pronoun, so this is a relative clause."
+      pieges:
+        - texte: "noun clause (complétive)"
+          pourquoi: "A noun clause is the direct object of the verb, and its « que » doesn't stand for a noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."
+    - texte: "In « Il espère que le train arrivera à l’heure. », what kind of clause is « que le train arrivera à l’heure »?"
+      nom: "noun clause (complétive)"
+      explication: "The clause is the direct object of « espère »: it's a noun clause."
+      pieges:
+        - texte: "relative clause"
+          pourquoi: "A relative clause adds to a noun (its antecedent), and the pronoun stands for that noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."
+    - texte: "In « Je reste à la maison parce qu’il fait froid. », what kind of clause is « parce qu’il fait froid »?"
+      nom: "adverbial clause"
+      explication: "It gives the reason, and you can move it: it's an adverbial clause of cause."
+      pieges:
+        - texte: "relative clause"
+          pourquoi: "A relative clause adds to a noun (its antecedent), and the pronoun stands for that noun."
+        - texte: "noun clause (complétive)"
+          pourquoi: "A noun clause is the direct object of the verb, and its « que » doesn't stand for a noun."
+    - texte: "In « L’ami qui m’a aidé s’appelle Hery. », what kind of clause is « qui m’a aidé »?"
+      nom: "relative clause"
+      explication: "« qui » stands for « l’ami »: it's a relative pronoun, so this is a relative clause."
+      pieges:
+        - texte: "noun clause (complétive)"
+          pourquoi: "A noun clause is the direct object of the verb, and its « que » doesn't stand for a noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."
+    - texte: "In « Elle a dit qu’elle viendrait demain. », what kind of clause is « qu’elle viendrait demain »?"
+      nom: "noun clause (complétive)"
+      explication: "The clause is the direct object of « a dit »: it's a noun clause."
+      pieges:
+        - texte: "relative clause"
+          pourquoi: "A relative clause adds to a noun (its antecedent), and the pronoun stands for that noun."
+        - texte: "adverbial clause"
+          pourquoi: "An adverbial clause tells you when, why, how… and can be moved."

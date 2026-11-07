@@ -5,6 +5,8 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../l10n/l10n.dart';
+
 const papier = Color(0xFFFBFBFF);
 const encre = Color(0xFF2B1458);
 const texteCahier = Color(0xFF26213A);
@@ -148,28 +150,28 @@ class AboutCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(18),
             boxShadow: const [BoxShadow(blurRadius: 18, offset: Offset(0, 8), color: Color(0x332B1458))],
           ),
-          child: SvgPicture.asset('assets/logo/qr-site.svg', width: 140, height: 140, semanticsLabel: 'Code QR du site de l’application'),
+          child: SvgPicture.asset('assets/logo/qr-site.svg', width: 140, height: 140, semanticsLabel: t('Code QR du site de l’application')),
         ),
         const SizedBox(height: 8),
-        const Text(
-          'Le site : téléchargement,\nguide vidéo et nouvelles',
+        Text(
+          t('Le site : téléchargement,\nguide vidéo et nouvelles'),
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: 'Andika', fontSize: 14, color: Color(0xFF4A4560)),
+          style: const TextStyle(fontFamily: 'Andika', fontSize: 14, color: Color(0xFF4A4560)),
         ),
       ],
     );
     final contacts = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Une question ? Un souci ?',
-          style: TextStyle(fontFamily: 'PlaywriteFR', fontSize: 20, height: 1.8, color: encre),
+        Text(
+          t('Une question ? Un souci ?'),
+          style: const TextStyle(fontFamily: 'PlaywriteFR', fontSize: 20, height: 1.8, color: encre),
         ),
         const SizedBox(height: 6),
-        row(Icons.person_rounded, 'Conçue par', 'RANIRIAMANJAKA Antsa'),
-        row(Icons.mail_rounded, 'E-mail', 'antsa.raniriamanjaka@univ-antananarivo.mg'),
-        row(Icons.phone_rounded, 'Téléphone et WhatsApp', '+261 33 43 838 82'),
-        row(Icons.language_rounded, 'Site', 'raantss18.github.io/zanakiantsa'),
+        row(Icons.person_rounded, t('Conçue par'), 'RANIRIAMANJAKA Antsa'),
+        row(Icons.mail_rounded, t('E-mail'), 'antsa.raniriamanjaka@univ-antananarivo.mg'),
+        row(Icons.phone_rounded, t('Téléphone et WhatsApp'), '+261 33 43 838 82'),
+        row(Icons.language_rounded, t('Site'), 'raantss18.github.io/zanakiantsa'),
       ],
     );
     return Container(

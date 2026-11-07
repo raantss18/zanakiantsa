@@ -50,3 +50,64 @@ items:
     pieges:
       - { texte: "Un orage a été détruit par la cabane.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
       - { texte: "La cabane a été détruit par un orage.", pourquoi: "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être." }
+
+en:
+  langue: "fr"
+  titre: "French: the passive voice"
+  idee: "In the passive voice, the direct object becomes the subject and has the action done to it: « La souris est mangée par le chat. » « Être » takes the tense of the active verb, and the participle agrees."
+  phrases:
+    consigne: "Change the sentence in your head, then touch the right answer."
+    question: "{texte}"
+    indice: "The direct object becomes the subject; « être » in the same tense; the subject becomes « par… »."
+    exemple: "« Le chat mange la souris » → « La souris est mangée par le chat »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's: « {bonne} »"
+  items:
+    - texte: "Put into the passive voice: « Le chat mange la souris. »"
+      nom: "La souris est mangée par le chat."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « La souris est mangée par le chat. »"
+      pieges:
+        - texte: "Le chat est mangé par la souris."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "La souris est mangé par le chat."
+          pourquoi: "The past participle agrees with the new subject, just as it does with « être »."
+    - texte: "Put into the passive voice: « Le vent a renversé les chaises. »"
+      nom: "Les chaises ont été renversées par le vent."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « Les chaises ont été renversées par le vent. »"
+      pieges:
+        - texte: "Le vent a été renversé par les chaises."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "Les chaises ont été renversé par le vent."
+          pourquoi: "The past participle agrees with the new subject, just as it does with « être »."
+    - texte: "Put into the passive voice: « Les élèves admirent la maîtresse. »"
+      nom: "La maîtresse est admirée par les élèves."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « La maîtresse est admirée par les élèves. »"
+      pieges:
+        - texte: "Les élèves sont admirés par la maîtresse."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "La maîtresse est admiré par les élèves."
+          pourquoi: "The past participle agrees with the new subject, just as it does with « être »."
+    - texte: "Put into the passive voice: « Le facteur apportera le colis. »"
+      nom: "Le colis sera apporté par le facteur."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « Le colis sera apporté par le facteur. »"
+      pieges:
+        - texte: "Le facteur sera apporté par le colis."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "Le colis est apporté par le facteur."
+          pourquoi: "The tense has changed: keep the tense of the active sentence (« être » takes that tense)."
+    - texte: "Put into the passive voice: « Ma sœur écrivait des lettres. »"
+      nom: "Des lettres étaient écrites par ma sœur."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « Des lettres étaient écrites par ma sœur. »"
+      pieges:
+        - texte: "Ma sœur était écrite par des lettres."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "Des lettres sont écrites par ma sœur."
+          pourquoi: "The tense has changed: keep the tense of the active sentence (« être » takes that tense)."
+    - texte: "Put into the passive voice: « Un orage a détruit la cabane. »"
+      nom: "La cabane a été détruite par un orage."
+      explication: "The direct object becomes the subject, the subject becomes the agent (« par… »), and the verb uses « être » in the same tense: « La cabane a été détruite par un orage. »"
+      pieges:
+        - texte: "Un orage a été détruit par la cabane."
+          pourquoi: "That turns the meaning around: it's the direct object of the active sentence that becomes the subject."
+        - texte: "La cabane a été détruit par un orage."
+          pourquoi: "The past participle agrees with the new subject, just as it does with « être »."

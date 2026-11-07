@@ -34,3 +34,35 @@ items:
     fen: "4r1k1/8/8/8/4N3/8/8/6K1 w - - 0 1"
     coups: [e4f6]
     explication: "En f6, le cavalier attaque le roi et la tour : le roi se sauve, la tour est prise."
+
+en:
+  titre: "The knight fork"
+  idee: "A fork means attacking two pieces at once. The king has to escape first: the other piece is lost!"
+  phrases:
+    consigne: "Find the knight jump that puts the black king in check and attacks another big piece at the same time."
+    question: "{texte}"
+    indice: "Look for a square where the knight touches both the king and the rook or the queen."
+    exemple: "Look at all the squares the knight can jump to."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Make a fork with your knight!"
+      fen: "r3k3/8/8/1N6/8/8/8/4K3 w - - 0 1"
+      coups: [b5c7]
+      explication: "On c7, the knight attacks the king and the rook: the king escapes, the rook is captured."
+    - texte: "Make a fork with your knight!"
+      fen: "2q3k1/8/8/3N4/8/8/8/6K1 w - - 0 1"
+      coups: [d5e7]
+      explication: "On e7, the knight attacks the king and the queen: the king escapes, the queen is captured."
+    - texte: "Make a fork with your knight!"
+      fen: "8/8/1k3r2/8/8/2N5/8/K7 w - - 0 1"
+      coups: [c3d5]
+      explication: "On d5, the knight attacks the king and the rook: the king escapes, the rook is captured."
+    - texte: "Make a fork with your knight!"
+      fen: "8/8/8/1k3q2/8/8/2N5/6K1 w - - 0 1"
+      coups: [c2d4]
+      explication: "On d4, the knight attacks the king and the queen: the king escapes, the queen is captured."
+    - texte: "Make a fork with your knight!"
+      fen: "4r1k1/8/8/8/4N3/8/8/6K1 w - - 0 1"
+      coups: [e4f6]
+      explication: "On f6, the knight attacks the king and the rook: the king escapes, the rook is captured."

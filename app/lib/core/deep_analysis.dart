@@ -3,6 +3,7 @@
 /// coups ne voit pas, et retire les fausses alertes.
 library;
 
+import '../l10n/l10n.dart';
 import 'engine.dart';
 import 'game.dart';
 import 'uci.dart';
@@ -70,13 +71,20 @@ MoveNote? judgeFine(Position p, Move m, int ply, SearchResult before, SearchResu
   // Un mat permis passe avant tout : la petite recherche ne voit que le matériel et dirait « fait perdre du matériel ».
   if (now < -(mateScore - 100) && before.score > -(mateScore - 100)) {
     final n = mateScore + now;
-    return MoveNote(ply, 'mat_permis', 'Après $san, l\'adversaire peut faire échec et mat en $n coup${n > 1 ? 's' : ''}. Mieux : $bestSan.', better: best);
+    final v = {'move': san, 'n': n, 'best': bestSan};
+    return MoveNote(
+        ply,
+        'mat_permis',
+        n > 1
+            ? tf('Après {move}, l\'adversaire peut faire échec et mat en {n} coups. Mieux : {best}.', v)
+            : tf('Après {move}, l\'adversaire peut faire échec et mat en {n} coup. Mieux : {best}.', v),
+        better: best);
   }
   if (note != null) return note;
   final mateFor = before.score > mateScore - 100 ? mateScore - before.score : null;
   if (mateFor != null && mateFor <= fineMateShown && now <= mateScore - 100) {
-    return MoveNote(ply, 'fort', 'Il y avait un échec et mat en $mateFor coups, en commençant par $bestSan.', better: best);
+    return MoveNote(ply, 'fort', tf('Il y avait un échec et mat en {n} coups, en commençant par {best}.', {'n': mateFor, 'best': bestSan}), better: best);
   }
   if (loss < fineErrorLoss || now >= fineDecided || before.score <= -fineDecided) return null;
-  return MoveNote(ply, 'fort', 'Il y avait plus fort que $san : $bestSan.', better: best);
+  return MoveNote(ply, 'fort', tf('Il y avait plus fort que {move} : {best}.', {'move': san, 'best': bestSan}), better: best);
 }

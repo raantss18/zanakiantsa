@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "5", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
       - { texte: "17", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+
+en:
+  titre: "Adding positive and negative numbers"
+  idee: "Adding a positive number moves you forward on the number line, adding a negative moves you back. From −5, moving forward 3 takes you to −2."
+  phrases:
+    consigne: "Count along the number line in your head, then touch the answer."
+    question: "{texte}"
+    indice: "Start from the first number: a positive moves forward, a negative moves back."
+    exemple: "(−5) + 3: from −5, move forward 3, you get to −2."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "(−5) + 3 = ?"
+      nom: "−2"
+      explication: "On the number line: start at −5 and move forward 3. You get to −2."
+      pieges:
+        - { texte: "2", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "8", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "4 + (−9) = ?"
+      nom: "−5"
+      explication: "On the number line: start at 4 and move back 9. You get to −5."
+      pieges:
+        - { texte: "5", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "13", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "(−6) + (−2) = ?"
+      nom: "−8"
+      explication: "On the number line: start at −6 and move back 2. You get to −8."
+      pieges:
+        - { texte: "8", pourquoi: "Both numbers are negative: so is the answer." }
+        - { texte: "−4", pourquoi: "Both are negative: you move back twice, you don’t take the difference." }
+    - texte: "7 + (−3) = ?"
+      nom: "4"
+      explication: "On the number line: start at 7 and move back 3. You get to 4."
+      pieges:
+        - { texte: "−4", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "10", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "(−8) + 8 = ?"
+      nom: "0"
+      explication: "On the number line: start at −8 and move forward 8. You get to 0."
+      pieges:
+        - { texte: "16", pourquoi: "Two opposites cancel out: you come back to zero." }
+        - { texte: "−16", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "(−4) + (−7) = ?"
+      nom: "−11"
+      explication: "On the number line: start at −4 and move back 7. You get to −11."
+      pieges:
+        - { texte: "11", pourquoi: "Both numbers are negative: so is the answer." }
+        - { texte: "3", pourquoi: "Both are negative: you move back twice, you don’t take the difference." }
+    - texte: "(−12) + 5 = ?"
+      nom: "−7"
+      explication: "On the number line: start at −12 and move forward 5. You get to −7."
+      pieges:
+        - { texte: "7", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "17", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "9 + (−15) = ?"
+      nom: "−6"
+      explication: "On the number line: start at 9 and move back 15. You get to −6."
+      pieges:
+        - { texte: "6", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "24", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }
+    - texte: "(−3) + (−3) = ?"
+      nom: "−6"
+      explication: "On the number line: start at −3 and move back 3. You get to −6."
+      pieges:
+        - { texte: "6", pourquoi: "Both numbers are negative: so is the answer." }
+        - { texte: "0", pourquoi: "Both are negative: you move back twice, you don’t take the difference." }
+    - texte: "6 + (−11) = ?"
+      nom: "−5"
+      explication: "On the number line: start at 6 and move back 11. You get to −5."
+      pieges:
+        - { texte: "5", pourquoi: "The answer has the sign of the number furthest from zero." }
+        - { texte: "17", pourquoi: "The signs are different: you don’t move away, you come back towards zero." }

@@ -38,3 +38,39 @@ items:
     bonne: ["2744", "le grand froid"]
     autres: [["2600", "le soleil"], ["1f6bf", "la douche chaude"]]
     explication: "C'est le grand froid qui fait geler l'eau."
+
+en:
+  titre: "Ice melts, water freezes"
+  idee: "When it's warm, ice melts: it turns back into liquid water. When it's very cold, water freezes: it turns into ice."
+  phrases:
+    consigne: "Listen to the story, then touch the right picture."
+    question: "{texte}"
+    indice: "Heat makes ice melt. Great cold makes water freeze."
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "We leave an ice cube in the sun. What does it become?"
+      bonne: ["1f4a7", "liquid water"]
+      autres: [["1f9ca", "a bigger ice cube"], ["2744", "snow"]]
+      explication: "In the warmth, the ice cube melts: it turns into liquid water."
+    - texte: "We put a glass of water in the freezer. What does the water become?"
+      bonne: ["1f9ca", "ice"]
+      autres: [["1f4a7", "still liquid water"], ["1f327", "rain"]]
+      explication: "It's very cold in the freezer: the water freezes and turns into ice."
+    - texte: "The sun warms the snowman. What is left?"
+      bonne: ["1f4a7", "water"]
+      autres: [["2603", "a bigger snowman"], ["2601", "a cloud"]]
+      explication: "Snow melts in the sun: liquid water is left."
+    - texte: "It's very, very cold at night. What happens to the puddle?"
+      bonne: ["1f9ca", "it turns to ice"]
+      autres: [["1f30a", "it makes a wave"], ["2600", "it turns into a sun"]]
+      explication: "In the great cold, the puddle freezes: it turns into ice."
+    - texte: "What makes ice melt?"
+      bonne: ["2600", "the heat of the sun"]
+      autres: [["2744", "snow"], ["1f9ca", "another ice cube"]]
+      explication: "Heat is what makes ice melt."
+    - texte: "What makes water freeze?"
+      bonne: ["2744", "great cold"]
+      autres: [["2600", "the sun"], ["1f6bf", "a hot shower"]]
+      explication: "Great cold is what makes water freeze."

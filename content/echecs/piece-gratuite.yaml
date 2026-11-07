@@ -34,3 +34,35 @@ items:
     fen: "n3k3/8/3p4/4r3/8/8/7B/R5K1 w - - 0 1"
     coups: [a1a8]
     explication: "Le pion d6 protège la tour. Le cavalier en a8, lui, est seul : ta tour le prend."
+
+en:
+  titre: "Capturing a piece that nobody protects"
+  idee: "Before you capture, look: if nobody protects the piece, you win it without losing anything. If it is protected, your opponent will capture your piece back."
+  phrases:
+    consigne: "Look for the black piece that nobody protects, then capture it: touch your piece, then theirs."
+    question: "{texte}"
+    indice: "For each black piece, ask yourself: if I capture it, who can capture me back?"
+    exemple: "Look at which black pieces are protected."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "One black piece is not protected. Capture it!"
+      fen: "4k3/8/8/8/3r4/8/1B6/4K3 w - - 0 1"
+      coups: [b2d4]
+      explication: "The bishop captures the rook on d4: nobody can capture it back."
+    - texte: "One black piece is not protected. Capture it!"
+      fen: "4k3/8/2n5/8/8/8/8/2R1K3 w - - 0 1"
+      coups: [c1c6]
+      explication: "The rook captures the knight on c6: nobody can capture it back."
+    - texte: "One black piece is not protected. Capture it!"
+      fen: "4k3/8/8/5b2/8/8/8/1Q2K3 w - - 0 1"
+      coups: [b1f5]
+      explication: "The queen captures the bishop on f5: nobody can capture her back."
+    - texte: "Two black pieces: only one is not protected. Which one should you capture?"
+      fen: "4k3/8/8/1p6/n5b1/8/8/3QK3 w - - 0 1"
+      coups: [d1g4]
+      explication: "The knight on a4 is protected by the pawn on b5. But the bishop on g4 isn't: the queen captures it."
+    - texte: "The black rook is protected, but another piece isn't. Find it!"
+      fen: "n3k3/8/3p4/4r3/8/8/7B/R5K1 w - - 0 1"
+      coups: [a1a8]
+      explication: "The pawn on d6 protects the rook. But the knight on a8 is all alone: your rook captures it."

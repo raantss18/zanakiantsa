@@ -30,3 +30,31 @@ items:
     fen: "4k3/8/8/8/2b5/8/P4PPP/R3K2R w KQ - 0 1"
     coups: [e1c1]
     explication: "Le fou noir attaque f1 : pas de petit roque. Le grand roque, lui, est permis."
+
+en:
+  titre: "Castling: keeping your king safe"
+  idee: "Castling is a special move: the king moves two squares towards the rook, and the rook jumps over him. You can't castle if the king or the rook has already moved, if the king is in check, or if he crosses an attacked square."
+  phrases:
+    consigne: "Touch your king, then the square two steps away from him, towards the rook. The rook will jump by itself."
+    question: "{texte}"
+    indice: "The king moves two squares towards the rook. He never crosses an attacked square."
+    exemple: "Look carefully at where the king and the rook end up."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Castle kingside, on the side of the nearest rook."
+      fen: "4k3/8/8/8/8/8/5PPP/4K2R w K - 0 1"
+      coups: [e1g1]
+      explication: "The king goes to g1, the rook jumps to f1: the king is safe behind his pawns."
+    - texte: "Castle queenside, on the queen's side."
+      fen: "4k3/8/8/8/8/8/PPP5/R3K3 w Q - 0 1"
+      coups: [e1c1]
+      explication: "The king goes to c1, the rook jumps to d1."
+    - texte: "Only one way of castling is allowed here. Which one?"
+      fen: "4k3/8/8/8/6b1/8/5PPP/R3K2R w KQ - 0 1"
+      coups: [e1g1]
+      explication: "The black bishop attacks d1: the king can't cross it. But castling kingside is allowed."
+    - texte: "Only one way of castling is allowed here. Which one?"
+      fen: "4k3/8/8/8/2b5/8/P4PPP/R3K2R w KQ - 0 1"
+      coups: [e1c1]
+      explication: "The black bishop attacks f1: no castling kingside. But castling queenside is allowed."

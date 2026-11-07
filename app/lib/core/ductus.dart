@@ -13,6 +13,8 @@ library;
 
 import 'dart:ui';
 
+import '../l10n/l10n.dart';
+
 const roundLetters = {'a', 'c', 'd', 'g', 'o', 'q'};
 
 /// Lettres dont le modèle affiché finit à droite de son départ (vu sur l'émulateur, 2026-11-05).
@@ -29,18 +31,18 @@ String? ductusError(String letter, List<List<Offset>> strokes, Rect box) {
   final second = secondGesture[letter];
   if (drawn.length > (second == null ? 1 : 2)) {
     return second == null
-        ? "Une lettre attachée se trace d'un seul geste, sans lever le doigt."
-        : "Trace « $letter » d'un seul geste, sans lever le doigt ; $second vient à la fin.";
+        ? t("Une lettre attachée se trace d'un seul geste, sans lever le doigt.")
+        : tf("Trace « {letter} » d'un seul geste, sans lever le doigt ; {second} vient à la fin.", {'letter': letter, 'second': t(second)});
   }
   final first = drawn.first;
   final start = first.first;
   if (roundLetters.contains(letter)) {
     final startsTopRight = start.dx > box.left + 0.4 * box.width && start.dy < box.top + 0.5 * box.height;
     if (!startsTopRight || !turnsLeft(first)) {
-      return 'Le rond commence en haut, à droite, et tourne vers la gauche, comme pour écrire un c.';
+      return t('Le rond commence en haut, à droite, et tourne vers la gauche, comme pour écrire un c.');
     }
   } else if (leftToRight.contains(letter) && first.last.dx <= start.dx) {
-    return "Une lettre attachée avance de gauche à droite : commence à gauche, finis à droite.";
+    return t("Une lettre attachée avance de gauche à droite : commence à gauche, finis à droite.");
   }
   return null;
 }

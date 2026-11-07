@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../l10n/l10n.dart';
+
 /// Un dessin Twemoji embarqué (`assets/art/<code>.svg`).
 class Art extends StatelessWidget {
   const Art(this.code, {super.key, this.size = 48, this.label, this.opacity = 1});
@@ -207,7 +209,8 @@ Universe universeById(String? id) => universes.firstWhere((u) => u.id == id, orE
 
 /// Les mots d'un univers (content/univers.yaml).
 class UniverseWords {
-  UniverseWords(Map<String, dynamic> j)
+  UniverseWords(Map<String, dynamic> raw) : this._(localized(raw));
+  UniverseWords._(Map<String, dynamic> j)
       : name = j['nom'] as String,
         firstName = j['prenom'] as String,
         mascotName = j['mascotte'] as String,
@@ -215,7 +218,7 @@ class UniverseWords {
         intro = j['intro'] as String,
         story = [for (final e in j['histoire'] as List) e as String],
         objects = [
-          for (final o in j['objets'] as List) Noun((o as List)[0] as String, o[1] as String, o[2] == 'f'),
+          for (final o in j['objets'] as List) Noun((o as List)[0] as String, o[1] as String, o.length > 2 && o[2] == 'f'),
         ];
   final String name, firstName, mascotName, container, intro;
   final List<Noun> objects;

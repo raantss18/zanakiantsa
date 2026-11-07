@@ -7,6 +7,7 @@ import 'dart:math';
 import 'package:flutter/services.dart';
 
 import '../core/fractions.dart';
+import '../l10n/l10n.dart';
 import '../core/progress.dart';
 
 /// Les mots d'univers dont une phrase a besoin : l'objet compté et le contenant.
@@ -37,8 +38,8 @@ String fill(String text, Question q, Words? words, {Map<String, String> vars = c
   for (final e in vars.entries) {
     text = text.replaceAll('{${e.key}}', e.value);
   }
-  // « 1 couronne », « 4 couronnes » : en français, 0 et 1 restent au singulier.
-  String noun(int k) => k <= 1 ? w.singular : w.plural;
+  // « 1 couronne », « 4 couronnes » : en français, 0 et 1 restent au singulier ; en anglais, seul 1 (« 0 gears »).
+  String noun(int k) => (english ? k == 1 : k <= 1) ? w.singular : w.plural;
   final s = text
       .replaceAll('{n} {objets}', '${q.n} ${noun(q.n)}')
       .replaceAll('{a} {objets}', '${q.a} ${noun(q.a)}')
@@ -50,13 +51,14 @@ String fill(String text, Question q, Words? words, {Map<String, String> vars = c
       .replaceAll('{objet}', w.singular)
       .replaceAll('{contenant}', w.container)
       .replaceAll('{prenom}', w.firstName)
-      .replaceAll('{un}', w.feminine ? 'une' : 'un')
-      .replaceAll('{Chacun}', w.feminine ? 'Chacune' : 'Chacun');
-  return s.replaceAllMapped(_elision, (m) => "${m[1]}'${m[2]}");
+      .replaceAll('{un}', english ? 'a' : (w.feminine ? 'une' : 'un'))
+      .replaceAll('{Chacun}', english ? 'Each' : (w.feminine ? 'Chacune' : 'Chacun'));
+  return english ? s : s.replaceAllMapped(_elision, (m) => "${m[1]}'${m[2]}");
 }
 
 class Skill {
-  Skill(Map<String, dynamic> j)
+  Skill(Map<String, dynamic> raw) : this._(localized(raw));
+  Skill._(Map<String, dynamic> j)
       : id = j['id'] as String,
         title = j['titre'] as String,
         level = j['niveau'] as String,
@@ -66,10 +68,19 @@ class Skill {
         phrases = Map<String, String>.from(j['phrases'] as Map),
         items = [for (final i in j['items'] as List? ?? const []) Item(Map<String, dynamic>.from(i as Map))],
         idea = j['idee'] as String?,
+        localWords = j['mots'] as List?,
+        studied = j['langue'] as String? ?? (Map<String, dynamic>.from(j['parametres'] as Map))['langue'] as String?,
         variants = [for (final v in j['variantes'] as List? ?? const []) v as String];
 
   /// Autres façons de poser la même question (« {a} + {b} = ? », une petite histoire…), tirées au hasard (ADR 0030).
   final List<String> variants;
+
+  /// Langue étudiée dans cette leçon, si ce n'est pas seulement la langue de l'app (ADR 0064) : 'en' pour l'anglais,
+  /// 'fr' pour la lecture et la grammaire françaises vues depuis l'app en anglais.
+  final String? studied;
+
+  /// Les mots comparés (« aigu », « grave »…) dans la langue de l'app, si le bloc `en:` les donne (activité `ecouter`).
+  final List? localWords;
 
   /// L'idée en 2–3 phrases, présentée avant l'exemple résolu à la découverte de la compétence (ADR 0029).
   final String? idea;
@@ -116,20 +127,18 @@ class Skill {
         'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
         'syllabes' => {
             ...items[q.n].vars,
-            'rep': items[q.n].syllables.length <= 1 ? '1 syllabe' : '${items[q.n].syllables.length} syllabes',
+            'rep': english
+                ? (items[q.n].syllables.length == 1 ? '1 syllable' : '${items[q.n].syllables.length} syllables')
+                : (items[q.n].syllables.length <= 1 ? '1 syllabe' : '${items[q.n].syllables.length} syllabes'),
           },
         'lettre' || 'tracer' => {...?(params['mode'] == 'initiale' ? items[q.n].vars : null), 'lettre': letterOf(q)},
-        'ecouter' => {'mot': (params['mots'] as List)[q.b] as String, 'rep': '${q.n + 1}'},
+        'ecouter' => {'mot': ((localWords ?? params['mots']) as List)[q.b] as String, 'rep': '${q.n + 1}'},
         'batonnets' when params['mode'] == 'casser' => {'reste': '${q.n - q.b}'},
         'heure' => {'heure': clockText(q.n, q.b)},
         'suite' => {'pas': stepWords[q.b.abs()] ?? '${q.b.abs()}'},
         'fraction' => fractionVars(q, params['mode'] as String),
-        'multibase' => {
-            'centaines': q.a <= 1 ? '${q.a} centaine' : '${q.a} centaines',
-            'dizaines': q.b <= 1 ? '${q.b} dizaine' : '${q.b} dizaines',
-            'unites': q.n % 10 <= 1 ? '${q.n % 10} unité' : '${q.n % 10} unités',
-          },
-        'batonnets' => {'dizaines': q.a <= 1 ? '${q.a} dizaine' : '${q.a} dizaines', 'unites': q.b <= 1 ? '${q.b} unité' : '${q.b} unités'},
+        'multibase' => {'centaines': _count(q.a, 'centaine', 'hundred'), 'dizaines': _count(q.b, 'dizaine', 'ten'), 'unites': _count(q.n % 10, 'unité', 'one')},
+        'batonnets' => {'dizaines': _count(q.a, 'dizaine', 'ten'), 'unites': _count(q.b, 'unité', 'one')},
         _ => const {},
       };
 
@@ -296,8 +305,13 @@ Map<String, String> fractionVars(Question q, String mode) => switch (mode) {
       _ => {'frac': fracWords(q.n, q.b)},
     };
 
+/// « 3 dizaines », « 1 dizaine » ; en anglais « 3 tens », « 1 ten » (0 au pluriel, comme en anglais).
+String _count(int k, String fr, String en) => english ? (k == 1 ? '1 $en' : '$k ${en}s') : (k <= 1 ? '$k $fr' : '$k ${fr}s');
+
 /// Le pas d'une suite de nombres, tel qu'on le dit (« de deux en deux »).
-const stepWords = {1: 'un', 2: 'deux', 5: 'cinq', 10: 'dix', 100: 'cent'};
+const _stepWordsFr = {1: 'un', 2: 'deux', 5: 'cinq', 10: 'dix', 100: 'cent'};
+const _stepWordsEn = {1: 'one', 2: 'two', 5: 'five', 10: 'ten', 100: 'a hundred'};
+Map<int, String> get stepWords => english ? _stepWordsEn : _stepWordsFr;
 
 /// Une question écrite (`choisir`) : énoncé, bonne image, autres images, explication ; ou un sujet de dessin.
 class Item {
@@ -366,6 +380,17 @@ class Pic {
 
 /// L'heure dite comme à l'école : « 3 heures », « 3 heures et demie », « 3 heures et quart », « 4 heures moins le quart ».
 String clockText(int h, int m) {
+  if (english) {
+    // L'heure dite en anglais : « 3 o'clock », « half past 3 », « quarter past 3 », « quarter to 4 ».
+    String hh(int x) => x == 12 ? 'twelve' : '$x';
+    return switch (m) {
+      0 => h == 12 ? 'twelve o’clock' : '$h o’clock',
+      30 => 'half past ${hh(h)}',
+      15 => 'quarter past ${hh(h)}',
+      45 => 'quarter to ${hh(h % 12 + 1)}',
+      _ => '$m minutes past ${hh(h)}',
+    };
+  }
   String hours(int x) => x == 12 ? 'midi' : (x == 1 ? '1 heure' : '$x heures');
   return switch (m) {
     0 => hours(h),
@@ -377,9 +402,13 @@ String clockText(int h, int m) {
 }
 
 /// Noms des solides (activité `solide`, ADR 0024), avec leur article.
-const solidNames = {
+const _solidNamesFr = {
   'cube': 'le cube', 'pave': 'le pavé', 'boule': 'la boule', 'cylindre': 'le cylindre', 'cone': 'le cône', 'pyramide': 'la pyramide',
 };
+const _solidNamesEn = {
+  'cube': 'the cube', 'pave': 'the cuboid', 'boule': 'the sphere', 'cylindre': 'the cylinder', 'cone': 'the cone', 'pyramide': 'the pyramid',
+};
+Map<String, String> get solidNames => english ? _solidNamesEn : _solidNamesFr;
 
 class Question {
   const Question({required this.n, this.a = 0, this.b = 0, this.v = 0});
@@ -390,7 +419,8 @@ class Question {
 }
 
 class Topic {
-  Topic(Map<String, dynamic> j)
+  Topic(Map<String, dynamic> raw) : this._(localized(raw));
+  Topic._(Map<String, dynamic> j)
       : id = j['id'] as String,
         title = j['titre'] as String,
         name = j['nom'] as String,
@@ -427,9 +457,23 @@ class Common {
 }
 
 /// Domaines dans l'ordre de `content/domaines.yaml` (assets/content/domaines.json).
+/// Les domaines entièrement traduits en anglais (ADR 0064), pour le dire au parent.
+Future<(List<String>, int)> translatedTopics() async {
+  Future<Map<String, dynamic>> json(String name) async =>
+      jsonDecode(await rootBundle.loadString('assets/content/$name.json')) as Map<String, dynamic>;
+  final order = List<String>.from((await json('domaines'))['ordre'] as List);
+  return ([for (final id in order) if (translated(await json(id))) id], order.length);
+}
+
+/// En anglais (ADR 0064), seuls les domaines entièrement traduits sont proposés.
 Future<(List<Topic>, Common)> loadContent() async {
   Future<Map<String, dynamic>> json(String name) async =>
       jsonDecode(await rootBundle.loadString('assets/content/$name.json')) as Map<String, dynamic>;
   final order = List<String>.from((await json('domaines'))['ordre'] as List);
-  return ([for (final id in order) Topic(await json(id))], Common(await json('commun')));
+  final topics = <Topic>[];
+  for (final id in order) {
+    final j = await json(id);
+    if (!english || translated(j)) topics.add(Topic(j));
+  }
+  return (topics, Common(localized(await json('commun'))));
 }

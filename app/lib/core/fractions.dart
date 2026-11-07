@@ -5,6 +5,8 @@ library;
 
 import 'dart:math';
 
+import '../l10n/l10n.dart';
+
 class Frac {
   const Frac(this.n, this.d, {this.whole = 0});
 
@@ -26,15 +28,25 @@ const _denominators = {
 };
 const _numbers = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf', 'vingt'];
 
-/// « un demi », « trois huitièmes », « deux tiers » (« tiers » ne prend pas de marque du pluriel de plus).
+const _denEn = {2: 'half', 3: 'third', 4: 'quarter', 5: 'fifth', 6: 'sixth', 7: 'seventh', 8: 'eighth', 9: 'ninth', 10: 'tenth', 12: 'twelfth'};
+const _numEn = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+
+/// « un demi », « trois huitièmes », « deux tiers » (« tiers » ne prend pas de marque du pluriel de plus) ; en anglais
+/// « one half », « three eighths », « two thirds », « seven halves » (ADR 0064).
 String fracWords(int n, int d) {
+  if (english) {
+    final name = _denEn[d] ?? 'over $d';
+    final count = n < _numEn.length ? _numEn[n] : '$n';
+    final plural = name == 'half' ? 'halves' : '${name}s';
+    return n > 1 && _denEn.containsKey(d) ? '$count $plural' : '$count $name';
+  }
   final name = _denominators[d] ?? 'sur $d';
   final count = n < _numbers.length ? _numbers[n] : '$n';
   return n > 1 && !name.endsWith('s') ? '$count ${name}s' : '$count $name';
 }
 
 /// « 1 et trois quarts » se dit, « 1 + 3/4 » s'écrit.
-String fracSumWords(Frac f) => '${f.whole} plus ${fracWords(f.n, f.d)}';
+String fracSumWords(Frac f) => english ? '${f.whole} and ${fracWords(f.n, f.d)}' : '${f.whole} plus ${fracWords(f.n, f.d)}';
 
 /// Trois réponses (la bonne et deux erreurs typiques, sans doublon), mélangées.
 List<Frac> fracChoices(Frac right, List<Frac> typical, Random r, {required Frac Function(int) fill}) {
@@ -86,39 +98,43 @@ List<int> quantityChoices(int right, int total, int d, Random r) {
 
 /// Ce que montre une réponse fausse à la lecture d'une fraction ; null si on ne sait rien en dire.
 String? readWhy(Frac right, Frac chosen) {
-  if (chosen.d == right.n && chosen.n == right.d) return 'En bas, on écrit le nombre total de parts ; en haut, les parts coloriées.';
-  if (chosen.d == right.d && chosen.n == right.d - right.n) return 'Ça, ce sont les parts blanches. On compte les parts coloriées.';
+  if (chosen.d == right.n && chosen.n == right.d) return t('En bas, on écrit le nombre total de parts ; en haut, les parts coloriées.');
+  if (chosen.d == right.d && chosen.n == right.d - right.n) return t('Ça, ce sont les parts blanches. On compte les parts coloriées.');
   return null;
 }
 
 String? sumWhy(Frac right, Frac chosen) {
-  if (chosen.d == 2 * right.d) return 'Les parts gardent la même taille : le dénominateur ne change pas.';
-  if (chosen.d == right.d) return 'Le dénominateur ne change pas : on ajoute seulement les parts coloriées.';
+  if (chosen.d == 2 * right.d) return t('Les parts gardent la même taille : le dénominateur ne change pas.');
+  if (chosen.d == right.d) return t('Le dénominateur ne change pas : on ajoute seulement les parts coloriées.');
   return null;
 }
 
 String? wholeWhy(Frac right, Frac chosen) {
-  if (chosen.whole != right.whole) return 'Compte les bandes entièrement coloriées : ce nombre est l\'entier.';
-  if (chosen.n != right.n) return 'Regarde la dernière bande : compte seulement ses parts coloriées.';
+  if (chosen.whole != right.whole) return t('Compte les bandes entièrement coloriées : ce nombre est l\'entier.');
+  if (chosen.n != right.n) return t('Regarde la dernière bande : compte seulement ses parts coloriées.');
   return null;
 }
 
 String colorWhy(int colored, int wanted, int d) => colored < wanted
-    ? 'Tu as colorié $colored part${colored > 1 ? 's' : ''} sur $d. Il en faut plus.'
-    : 'Tu as colorié $colored parts sur $d. C\'est trop.';
+    ? colored > 1 || (english && colored == 0)
+        ? tf('Tu as colorié {n} parts sur {d}. Il en faut plus.', {'n': colored, 'd': d})
+        : tf('Tu as colorié {n} part sur {d}. Il en faut plus.', {'n': colored, 'd': d})
+    : tf('Tu as colorié {n} parts sur {d}. C\'est trop.', {'n': colored, 'd': d});
 
 /// Comparer deux fractions de numérateur 1 : plus on partage, plus les parts sont petites (c'est contre-intuitif, dit le
 /// programme, pour qui ne regarde que 3 < 6).
-String unitCompareWhy(int smallD, int bigD) =>
-    '${fracWords(1, bigD)[0].toUpperCase()}${fracWords(1, bigD).substring(1)}, c\'est plus petit que ${fracWords(1, smallD)} : plus on partage, plus les parts sont petites.';
+String unitCompareWhy(int smallD, int bigD) => tf('{big}, c\'est plus petit que {small} : plus on partage, plus les parts sont petites.',
+    {'big': '${fracWords(1, bigD)[0].toUpperCase()}${fracWords(1, bigD).substring(1)}', 'small': fracWords(1, smallD)});
 
 String sameCompareWhy(int more, int less, int d) =>
-    'Les parts ont la même taille : $more parts, c\'est plus que $less parts.';
+    tf('Les parts ont la même taille : {more} parts, c\'est plus que {less} parts.', {'more': more, 'less': less});
 
 String placeWhy(int tapped, int wanted, int d) => tapped == d && wanted < d
-    ? 'Tout au bout, c\'est la bande entière : $d parts sur $d.'
-    : 'Ici, ça fait $tapped part${tapped > 1 ? 's' : ''} depuis zéro. Il en faut $wanted.';
+    ? tf('Tout au bout, c\'est la bande entière : {d} parts sur {d}.', {'d': d})
+    : tapped > 1 || (english && tapped == 0)
+        ? tf('Ici, ça fait {n} parts depuis zéro. Il en faut {w}.', {'n': tapped, 'w': wanted})
+        : tf('Ici, ça fait {n} part depuis zéro. Il en faut {w}.', {'n': tapped, 'w': wanted});
 
 String quantityWhy(int chosen, int d) => chosen == d
-    ? '$d, c\'est le nombre de parts. On cherche combien il y en a dans une part.'
-    : 'Partage en $d parts égales, puis compte une seule part.';
+    ? tf('{d}, c\'est le nombre de parts. On cherche combien il y en a dans une part.', {'d': d})
+    : tf('Partage en {d} parts égales, puis compte une seule part.', {'d': d});

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../core/blocks.dart';
 import '../core/robot.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -79,7 +80,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
 
   void _add(BlockKind k) {
     if (programSize(program) >= limit) {
-      a.speech.say(counterMode ? 'Plus de place ! Fais compter le robot.' : 'Plus de place ! Utilise un bloc qui répète.', force: true);
+      a.speech.say(counterMode ? t('Plus de place ! Fais compter le robot.') : t('Plus de place ! Utilise un bloc qui répète.'), force: true);
       return;
     }
     final b = Block(k, count: 3);
@@ -113,7 +114,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
     });
     // En mode compteur, le même programme est essayé sur chaque parcours, l'un après l'autre.
     var ok = true;
-    late Trace t;
+    late Trace trace;
     for (var i = 0; i < mazes.length && ok; i++) {
       setState(() {
         mazeIndex = i;
@@ -122,20 +123,20 @@ class _BlocksActivityState extends State<BlocksActivity> {
       });
       if (i > 0) await Future<void>.delayed(const Duration(milliseconds: 400));
       if (!mounted) return;
-      t = execute(maze, program);
-      for (final (j, s) in t.states.indexed.skip(1)) {
+      trace = execute(maze, program);
+      for (final (j, s) in trace.states.indexed.skip(1)) {
         await Future<void>.delayed(const Duration(milliseconds: 380));
         if (!mounted) return;
         setState(() {
           robot = s;
-          counter = t.counts[j];
+          counter = trace.counts[j];
         });
       }
       ok = solves(maze, program);
       if (ok && i < mazes.length - 1) await Future<void>.delayed(const Duration(milliseconds: 700));
     }
     if (!ok) {
-      setState(() => bumped = t.bumped);
+      setState(() => bumped = trace.bumped);
       await Future<void>.delayed(const Duration(milliseconds: 700));
     }
     if (!mounted) return;
@@ -143,21 +144,21 @@ class _BlocksActivityState extends State<BlocksActivity> {
     final String? why;
     if (ok) {
       why = null;
-    } else if (t.bumped) {
+    } else if (trace.bumped) {
       why = counterMode
-          ? "Le robot est arrivé au mur sans s'arrêter : le compteur n'a pas atteint le bon nombre."
-          : "Le robot s'est cogné : regarde où il était juste avant le choc.";
-    } else if (t.tooLong) {
+          ? t("Le robot est arrivé au mur sans s'arrêter : le compteur n'a pas atteint le bon nombre.")
+          : t("Le robot s'est cogné : regarde où il était juste avant le choc.");
+    } else if (trace.tooLong) {
       why = counterMode
-          ? "Le compteur n'arrive jamais au bon nombre. Quand faut-il ajouter 1 au compteur ?"
-          : 'Le programme tourne en rond : il ne s\'arrête jamais. Que fait le robot à chaque tour ?';
+          ? t("Le compteur n'arrive jamais au bon nombre. Quand faut-il ajouter 1 au compteur ?")
+          : t('Le programme tourne en rond : il ne s\'arrête jamais. Que fait le robot à chaque tour ?');
     } else if (counterMode) {
       why = mazeIndex > 0
-          ? "Ça marchait sur le parcours d'avant, mais pas sur celui-ci : les gemmes ne sont pas aux mêmes endroits. "
-              "Ne dis pas au robot combien de pas : fais-lui compter les gemmes."
-          : "Le robot s'arrête ailleurs que sur le drapeau. Combien de gemmes faut-il compter ?";
+          ? t("Ça marchait sur le parcours d'avant, mais pas sur celui-ci : les gemmes ne sont pas aux mêmes endroits. "
+              "Ne dis pas au robot combien de pas : fais-lui compter les gemmes.")
+          : t("Le robot s'arrête ailleurs que sur le drapeau. Combien de gemmes faut-il compter ?");
     } else {
-      why = "Le robot s'arrête ailleurs que sur l'objet : change le nombre de tours, ou les blocs de la boucle.";
+      why = t("Le robot s'arrête ailleurs que sur l'objet : change le nombre de tours, ou les blocs de la boucle.");
     }
     setState(() {
       running = false;
@@ -170,16 +171,17 @@ class _BlocksActivityState extends State<BlocksActivity> {
     if (!demo) a.submit(ok, why: why);
   }
 
-  String _name(Block b) => switch (b.kind) {
-    BlockKind.forward => 'avancer',
-    BlockKind.turnLeft => 'pivoter à gauche',
-    BlockKind.turnRight => 'pivoter à droite',
-    BlockKind.repeat => 'répéter ${b.count} fois',
-    BlockKind.untilGoal => "répéter jusqu'à l'objet",
-    BlockKind.ifRock => 'si rocher devant',
-    BlockKind.addCounter => 'ajouter 1 au compteur',
-    BlockKind.untilCounter => "répéter jusqu'à compteur = ${b.count}",
-    BlockKind.ifGem => 'si gemme ici',
+  /// [n] : ce qu'on écrit à la place du nombre (« … » sur les boutons de la palette).
+  String _name(Block b, {String? n}) => switch (b.kind) {
+    BlockKind.forward => t('avancer'),
+    BlockKind.turnLeft => t('pivoter à gauche'),
+    BlockKind.turnRight => t('pivoter à droite'),
+    BlockKind.repeat => tf('répéter {n} fois', {'n': n ?? b.count}),
+    BlockKind.untilGoal => t("répéter jusqu'à l'objet"),
+    BlockKind.ifRock => t('si rocher devant'),
+    BlockKind.addCounter => t('ajouter 1 au compteur'),
+    BlockKind.untilCounter => tf("répéter jusqu'à compteur = {n}", {'n': n ?? b.count}),
+    BlockKind.ifGem => t('si gemme ici'),
   };
 
   IconData _icon(BlockKind k) => switch (k) {
@@ -348,7 +350,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
   Widget _flaggedGem(double cell) => Stack(
     alignment: Alignment.center,
     children: [
-      Art('1f48e', size: cell * 0.7, label: 'gemme du drapeau'),
+      Art('1f48e', size: cell * 0.7, label: t('gemme du drapeau')),
       Positioned(top: 0, right: 0, child: Icon(Icons.flag_rounded, size: cell * 0.42, color: const Color(0xFFB91C1C))),
     ],
   );
@@ -379,12 +381,12 @@ class _BlocksActivityState extends State<BlocksActivity> {
                 const SizedBox(width: 4),
                 _countButton(
                   Icons.remove_rounded,
-                  b.kind == BlockKind.repeat ? 'Un tour de moins' : 'Un de moins',
+                  b.kind == BlockKind.repeat ? t('Un tour de moins') : t('Un de moins'),
                   b.count > (b.kind == BlockKind.repeat ? 2 : 1) ? () => setState(() => b.count--) : null,
                 ),
                 _countButton(
                   Icons.add_rounded,
-                  b.kind == BlockKind.repeat ? 'Un tour de plus' : 'Un de plus',
+                  b.kind == BlockKind.repeat ? t('Un tour de plus') : t('Un de plus'),
                   b.count < 9 ? () => setState(() => b.count++) : null,
                 ),
               ],
@@ -397,15 +399,15 @@ class _BlocksActivityState extends State<BlocksActivity> {
         if (open.contains(b))
           Padding(
             padding: EdgeInsets.only(left: (depth + 1) * 22.0, bottom: 4),
-            child: const Text(
-              '… les blocs suivants vont ici',
-              style: TextStyle(fontSize: 16, color: Color(0xFF4A554E)),
+            child: Text(
+              t('… les blocs suivants vont ici'),
+              style: const TextStyle(fontSize: 16, color: Color(0xFF4A554E)),
             ),
           ),
         Padding(
           padding: EdgeInsets.only(left: depth * 22.0, bottom: 6),
           child: Text(
-            'fin de « ${_name(b)} »',
+            tf('fin de « {name} »', {'name': _name(b)}),
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: _colour(b.kind)),
           ),
         ),
@@ -441,13 +443,13 @@ class _BlocksActivityState extends State<BlocksActivity> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Blocs : $used sur $limit',
+                      tf('Blocs : {used} sur {limit}', {'used': used, 'limit': limit}),
                       style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink),
                     ),
                     // Le compteur, écrit pendant l'essai ; le parcours en cours (ADR 0050).
                     if (counterMode)
                       Text(
-                        'Compteur : $counter · Parcours ${mazeIndex + 1} sur ${mazes.length}',
+                        tf('Compteur : {counter} · Parcours {i} sur {n}', {'counter': counter, 'i': mazeIndex + 1, 'n': mazes.length}),
                         style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: Color(0xFF7E22CE)),
                       ),
                   ],
@@ -455,7 +457,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
               ),
               IconButton.filledTonal(
                 iconSize: 32,
-                tooltip: 'Effacer le dernier bloc',
+                tooltip: t('Effacer le dernier bloc'),
                 onPressed: locked || added.isEmpty ? null : _undo,
                 icon: const Icon(Icons.backspace_rounded),
               ),
@@ -469,11 +471,11 @@ class _BlocksActivityState extends State<BlocksActivity> {
                     disabledBackgroundColor: const Color(0xFFBFC7C1),
                   ),
                   onPressed: locked || program.isEmpty ? null : _run,
-                  child: const Icon(
+                  child: Icon(
                     Icons.play_arrow_rounded,
                     size: 44,
                     color: Colors.white,
-                    semanticLabel: 'Lancer le programme',
+                    semanticLabel: t('Lancer le programme'),
                   ),
                 ),
               ),
@@ -486,7 +488,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (program.isEmpty)
-                    const Text('Touche les blocs en dessous pour écrire le programme.', style: TextStyle(fontSize: 17)),
+                    Text(t('Touche les blocs en dessous pour écrire le programme.'), style: const TextStyle(fontSize: 17)),
                   ..._lines(program, 0),
                 ],
               ),
@@ -519,7 +521,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
               ),
               onPressed: locked ? null : () => _add(k),
               icon: Icon(_icon(k), size: 26),
-              label: Text(_name(Block(k, count: 3)).replaceAll(' 3 fois', '…').replaceAll('= 3', '= …')),
+              label: Text(k == BlockKind.repeat ? t('répéter…') : _name(Block(k, count: 3), n: '…')),
             ),
           ),
         // Toujours là (grisé quand aucun bloc n'est ouvert) : en apparaissant, il faisait sauter les autres boutons et
@@ -530,7 +532,7 @@ class _BlocksActivityState extends State<BlocksActivity> {
             style: OutlinedButton.styleFrom(textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
             onPressed: locked || open.isEmpty ? null : () => setState(open.removeLast),
             icon: const Icon(Icons.keyboard_return_rounded),
-            label: const Text('Fermer le bloc'),
+            label: Text(t('Fermer le bloc')),
           ),
         ),
       ],

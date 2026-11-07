@@ -38,3 +38,38 @@ items:
     bonne: ["1f442", "les oreilles"]
     autres: [["1f443", "le nez"], ["1f440", "les yeux"]]
     explication: "« Touch your ears » : touche tes oreilles."
+en:
+  titre: "Simon says, in English"
+  idee: "In “Simon says”, a sentence gives an order: “Clap your hands”. You can do the action, then touch the picture."
+  phrases:
+    consigne: "Listen to the order. Do the action if you like, then touch the picture that goes with it."
+    question: "Simon says: {texte}."
+    indice: "Listen to the action word: clap, touch, wave, sit."
+    exemple: "Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Clap your hands"
+      bonne: ["1f44f", "clapping"]
+      autres: [["1f44b", "waving"], ["1fa91", "sitting down"]]
+      explication: "Clap your hands — well done!"
+    - texte: "Touch your nose"
+      bonne: ["1f443", "the nose"]
+      autres: [["1f442", "the ear"], ["1f440", "the eyes"]]
+      explication: "Touch your nose — well done!"
+    - texte: "Wave goodbye"
+      bonne: ["1f44b", "waving"]
+      autres: [["1f44f", "clapping"], ["1f6aa", "the door"]]
+      explication: "Wave goodbye — well done!"
+    - texte: "Sit down"
+      bonne: ["1fa91", "sitting down"]
+      autres: [["1f6aa", "the door"], ["1f44f", "clapping"]]
+      explication: "Sit down — well done!"
+    - texte: "Go to the door"
+      bonne: ["1f6aa", "the door"]
+      autres: [["1fa91", "the chair"], ["1f44b", "waving"]]
+      explication: "Go to the door — well done!"
+    - texte: "Touch your ears"
+      bonne: ["1f442", "the ears"]
+      autres: [["1f443", "the nose"], ["1f440", "the eyes"]]
+      explication: "Touch your ears — well done!"

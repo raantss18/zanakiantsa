@@ -6,6 +6,7 @@ import '../activities/draw.dart';
 import '../app_state.dart';
 import '../content/content.dart';
 import '../core/progress.dart';
+import '../l10n/l10n.dart';
 import 'adaptive.dart';
 import 'chess_play.dart';
 import 'session.dart';
@@ -24,7 +25,7 @@ class TopicHub extends StatefulWidget {
 
 class _TopicHubState extends State<TopicHub> {
   late final AppState app = AppScope.of(context);
-  late final Topic t = app.topic(widget.topic);
+  late final Topic topic = app.topic(widget.topic);
   SessionResume? resume;
   int? record;
 
@@ -54,7 +55,7 @@ class _TopicHubState extends State<TopicHub> {
   @override
   Widget build(BuildContext context) {
     final u = app.universe;
-    final p = app.progressOf(t);
+    final p = app.progressOf(topic);
     final canChallenge = p.challengePlan(Random(1)) != null;
     final dessin = widget.topic == 'dessin';
     final echecs = widget.topic == 'echecs';
@@ -63,45 +64,44 @@ class _TopicHubState extends State<TopicHub> {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            pageHeader(context, t.name),
+            pageHeader(context, topic.name),
             Expanded(
               child: ListView(padding: readablePadding(context), children: [
                 if (dessin) ...[
-                  hubCard('1f3a8', 'Dessiner', 'Un sujet précis, et je regarde si je reconnais ton dessin.', () => _go(const DrawPage())),
-                  hubCard('1f5bc', 'Mes dessins', 'Tous tes dessins, avec leur date.', () => _go(const DrawingsPage())),
+                  hubCard('1f3a8', t('Dessiner'), t('Un sujet précis, et je regarde si je reconnais ton dessin.'), () => _go(const DrawPage())),
+                  hubCard('1f5bc', t('Mes dessins'), t('Tous tes dessins, avec leur date.'), () => _go(const DrawingsPage())),
                 ] else ...[
                   hubCard(
                     '1f4d6',
-                    echecs ? 'Les leçons' : 'Apprendre',
+                    echecs ? t('Les leçons') : t('Apprendre'),
                     resume == null
-                        ? 'La suite de ce que tu apprends.'
-                        : 'Reprendre où tu t\'es arrêté : question ${resume!.index + 1} sur ${resume!.plan.length}.',
+                        ? t('La suite de ce que tu apprends.')
+                        : tf('Reprendre où tu t\'es arrêté : question {n} sur {total}.', {'n': resume!.index + 1, 'total': resume!.plan.length}),
                     () => _go(SessionPage(topic: widget.topic, resume: resume)),
                   ),
                   if (p.placementPlan() case final test?)
                     hubCard(
                       '1f50d',
-                      'Je sais déjà',
-                      'Un petit test pour sauter ce que tu sais : ${test.length ~/ placementPerSkill} compétences, deux questions chacune. '
-                          'Il s\'arrête dès que tu hésites.',
+                      t('Je sais déjà'),
+                      tf('Un petit test pour sauter ce que tu sais : {n} compétences, deux questions chacune. Il s\'arrête dès que tu hésites.', {'n': test.length ~/ placementPerSkill}),
                       () => _go(SessionPage(topic: widget.topic, placement: true)),
                     ),
                   hubCard(
                     '1f3c5',
-                    'Le défi',
+                    t('Le défi'),
                     canChallenge
-                        ? 'Dix questions mêlées de tout ce que tu sais.${record == null ? '' : ' Ton record : $record sur 10.'}'
-                        : 'Il s\'ouvre quand tu as appris ta première compétence ici.',
+                        ? t('Dix questions mêlées de tout ce que tu sais.') + (record == null ? '' : tf(' Ton record : {record} sur 10.', {'record': record!}))
+                        : t('Il s\'ouvre quand tu as appris ta première compétence ici.'),
                     canChallenge ? () => _go(SessionPage(topic: widget.topic, challenge: true)) : null,
                   ),
                 ],
                 if (echecs) ...[
-                  hubCard('1f916', 'Contre le robot', 'Une vraie partie. Choisis le niveau et ta couleur.', () => chooseRobotGame(context)),
-                  hubCard('1f46b', 'À deux', 'Une partie avec quelqu\'un, sur la même tablette.',
+                  hubCard('1f916', t('Contre le robot'), t('Une vraie partie. Choisis le niveau et ta couleur.'), () => chooseRobotGame(context)),
+                  hubCard('1f46b', t('À deux'), t('Une partie avec quelqu\'un, sur la même tablette.'),
                       () => _go(const GamePage(mode: 'deux', level: 0, childWhite: true))),
-                  hubCard('1f4dc', 'Mes parties', 'Revoir mes parties coup par coup, avec des conseils.', () => _go(const GamesPage())),
+                  hubCard('1f4dc', t('Mes parties'), t('Revoir mes parties coup par coup, avec des conseils.'), () => _go(const GamesPage())),
                 ],
-                hubCard('1f4d2', 'Mon carnet', 'Ce que tu sais, ce qui est à revoir, et les erreurs qui reviennent.',
+                hubCard('1f4d2', t('Mon carnet'), t('Ce que tu sais, ce qui est à revoir, et les erreurs qui reviennent.'),
                     () => _go(NotebookPage(topic: widget.topic))),
               ]),
             ),
@@ -155,9 +155,9 @@ class NotebookPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final app = AppScope.of(context);
     final u = app.universe;
-    final t = app.topic(topic);
-    final p = app.progressOf(t);
-    final ids = {for (final s in t.skills) s.id};
+    final tp = app.topic(topic);
+    final p = app.progressOf(tp);
+    final ids = {for (final s in tp.skills) s.id};
     final answers = [for (final a in app.journal) if (ids.contains(a.skill)) a];
     final counts = <String, int>{};
     for (final a in answers) {
@@ -171,19 +171,19 @@ class NotebookPage extends StatelessWidget {
         universe: u,
         child: SafeArea(
           child: Column(children: [
-            pageHeader(context, 'Mon carnet'),
+            pageHeader(context, t('Mon carnet')),
             Expanded(
               child: ListView(padding: readablePadding(context), children: [
-                _section('Mes compétences : ${t.name}'),
-                for (final s in t.skills) _skillRow(s, p),
+                _section(tf('Mes compétences : {name}', {'name': tp.name})),
+                for (final s in tp.skills) _skillRow(s, p),
                 const SizedBox(height: 16),
-                _section('Les erreurs qui reviennent'),
+                _section(t('Les erreurs qui reviennent')),
                 if (frequent.isEmpty)
-                  const Card(
+                  Card(
                     child: Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Text('Pas encore d\'erreur notée ici. Chaque erreur expliquée pendant les questions viendra s\'écrire ici.',
-                          style: TextStyle(fontSize: 18)),
+                      padding: const EdgeInsets.all(16),
+                      child: Text(t('Pas encore d\'erreur notée ici. Chaque erreur expliquée pendant les questions viendra s\'écrire ici.'),
+                          style: const TextStyle(fontSize: 18)),
                     ),
                   )
                 else
@@ -214,12 +214,12 @@ class NotebookPage extends StatelessWidget {
     final recent = last.length > 10 ? last.sublist(last.length - 10) : last;
     final ok = recent.where((a) => a.success).length;
     final (icon, state) = p.earned(s.id)
-        ? (recent.length >= 5 && ok * 2 < recent.length ? ('1f501', 'À revoir') : ('2705', 'Acquise'))
+        ? (recent.length >= 5 && ok * 2 < recent.length ? ('1f501', t('À revoir')) : ('2705', t('Acquise')))
         : p.skipped(s.id)
-            ? ('1f393', 'Déjà de ton âge')
+            ? ('1f393', t('Déjà de ton âge'))
             : recent.isEmpty
-                ? (p.unlocked(s.ref) ? ('1f195', 'Pas commencée') : ('1f512', 'Plus tard'))
-                : ('1f331', 'En cours');
+                ? (p.unlocked(s.ref) ? ('1f195', t('Pas commencée')) : ('1f512', t('Plus tard')))
+                : ('1f331', t('En cours'));
     return Card(
       child: ListTile(
         minTileHeight: 64,
@@ -229,8 +229,10 @@ class NotebookPage extends StatelessWidget {
             recent.isEmpty
                 ? state
                 : recent.length == 1
-                    ? '$state · ${ok == 1 ? 'réussie' : 'pas encore réussie'} la dernière fois'
-                    : '$state · $ok réussie${ok > 1 ? 's' : ''} sur les ${recent.length} dernières',
+                    ? (ok == 1 ? tf('{state} · réussie la dernière fois', {'state': state}) : tf('{state} · pas encore réussie la dernière fois', {'state': state}))
+                    : ok > 1
+                        ? tf('{state} · {ok} réussies sur les {n} dernières', {'state': state, 'ok': ok, 'n': recent.length})
+                        : tf('{state} · {ok} réussie sur les {n} dernières', {'state': state, 'ok': ok, 'n': recent.length}),
             style: const TextStyle(fontSize: 16)),
       ),
     );

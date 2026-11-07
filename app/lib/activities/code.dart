@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../core/robot.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -86,8 +87,8 @@ class _CodeActivityState extends State<CodeActivity> {
     final why = ok
         ? null
         : states.length < program.length + 1
-            ? "Le robot s'est cogné au bloc ${states.length} : regarde où il était juste avant."
-            : "Le robot s'arrête ailleurs que sur l'objet : il manque un bloc, ou il y en a un de trop.";
+            ? tf("Le robot s'est cogné au bloc {n} : regarde où il était juste avant.", {'n': states.length})
+            : t("Le robot s'arrête ailleurs que sur l'objet : il manque un bloc, ou il y en a un de trop.");
     setState(() {
       running = null;
       if (!ok) robot = maze.start;
@@ -106,13 +107,13 @@ class _CodeActivityState extends State<CodeActivity> {
       };
 
   String _name(Op op) => switch (op) {
-        Op.up => 'en haut',
-        Op.down => 'en bas',
-        Op.left => 'à gauche',
-        Op.right => 'à droite',
-        Op.forward => 'avancer',
-        Op.turnLeft => 'pivoter à gauche',
-        Op.turnRight => 'pivoter à droite',
+        Op.up => t('en haut'),
+        Op.down => t('en bas'),
+        Op.left => t('à gauche'),
+        Op.right => t('à droite'),
+        Op.forward => t('avancer'),
+        Op.turnLeft => t('pivoter à gauche'),
+        Op.turnRight => t('pivoter à droite'),
       };
 
   @override
@@ -229,7 +230,7 @@ class _CodeActivityState extends State<CodeActivity> {
             ),
           IconButton.filledTonal(
             iconSize: 36,
-            tooltip: 'Effacer le dernier bloc',
+            tooltip: t('Effacer le dernier bloc'),
             onPressed: locked || program.isEmpty ? null : () => setState(program.removeLast),
             icon: const Icon(Icons.backspace_rounded),
           ),
@@ -239,7 +240,7 @@ class _CodeActivityState extends State<CodeActivity> {
             child: FilledButton(
               style: FilledButton.styleFrom(padding: EdgeInsets.zero, backgroundColor: green, disabledBackgroundColor: const Color(0xFFBFC7C1)),
               onPressed: locked || program.isEmpty ? null : _run,
-              child: const Icon(Icons.play_arrow_rounded, size: 52, color: Colors.white, semanticLabel: 'Lancer le programme'),
+              child: Icon(Icons.play_arrow_rounded, size: 52, color: Colors.white, semanticLabel: t('Lancer le programme')),
             ),
           ),
         ]),

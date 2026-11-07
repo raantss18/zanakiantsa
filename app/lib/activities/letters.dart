@@ -5,6 +5,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
 import '../core/ductus.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -101,7 +102,7 @@ class _SyllablesActivityState extends State<SyllablesActivity> {
             _claps();
           },
           icon: const Art('1f44f', size: 30),
-          label: const Text('Écoute en syllabes'),
+          label: Text(t('Écoute en syllabes')),
         ),
         const SizedBox(height: 16),
         Wrap(spacing: 12, runSpacing: 12, alignment: WrapAlignment.center, children: [
@@ -115,7 +116,7 @@ class _SyllablesActivityState extends State<SyllablesActivity> {
                   : () {
                       if (k != right) setState(() => tried.add(k));
                       a.submit(k == right,
-                          why: k == right ? null : (k > right ? 'Il y a moins de morceaux : écoute-le en syllabes.' : 'Il y a plus de morceaux : écoute-le en syllabes.'));
+                          why: k == right ? null : (k > right ? t('Il y a moins de morceaux : écoute-le en syllabes.') : t('Il y a plus de morceaux : écoute-le en syllabes.')));
                     },
             ),
         ]),
@@ -236,9 +237,9 @@ class _LetterActivityState extends State<LetterActivity> {
 
   /// Ce que montre le choix (ADR 0029) : une lettre qui se ressemble, une syllabe à l'envers.
   String? _why(String chosen, String right) {
-    if (mode == 'syllabe' && chosen.split('').reversed.join() == right) return '« $chosen » commence par la voyelle : on lit de gauche à droite.';
+    if (mode == 'syllabe' && chosen.split('').reversed.join() == right) return tf('« {chosen} » commence par la voyelle : on lit de gauche à droite.', {'chosen': chosen});
     final l = right.toLowerCase(), c = chosen.toLowerCase();
-    if ((confusable[l] ?? '').contains(c)) return '« $chosen » ressemble à « $right », mais regarde bien : la boucle ou la barre n\'est pas du même côté.';
+    if ((confusable[l] ?? '').contains(c)) return tf('« {chosen} » ressemble à « {right} », mais regarde bien : la boucle ou la barre n\'est pas du même côté.', {'chosen': chosen, 'right': right});
     return null;
   }
 }
@@ -340,9 +341,9 @@ class _TraceActivityState extends State<TraceActivity> {
         why: ok
             ? null
             : coverage < 0.6
-                ? "Il manque un morceau de la lettre : suis-la jusqu'au bout."
+                ? t("Il manque un morceau de la lettre : suis-la jusqu'au bout.")
                 : spill > 0.35
-                    ? 'Ton tracé sort de la lettre : va plus doucement, sur le gris.'
+                    ? t('Ton tracé sort de la lettre : va plus doucement, sur le gris.')
                     : ductus);
     if (!ok && mounted) setState(strokes.clear);
   }
@@ -438,7 +439,7 @@ class _TraceActivityState extends State<TraceActivity> {
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           IconButton.filledTonal(
             iconSize: 40,
-            tooltip: 'Effacer',
+            tooltip: t('Effacer'),
             onPressed: a.finished || strokes.isEmpty ? null : () => setState(strokes.clear),
             icon: const Icon(Icons.delete_sweep_rounded),
           ),
@@ -449,7 +450,7 @@ class _TraceActivityState extends State<TraceActivity> {
             child: FilledButton(
               style: FilledButton.styleFrom(backgroundColor: green, disabledBackgroundColor: const Color(0xFFBFC7C1)),
               onPressed: a.busy || a.finished || strokes.isEmpty ? null : _check,
-              child: const Icon(Icons.check_rounded, size: 48, color: Colors.white, semanticLabel: "J'ai fini"),
+              child: Icon(Icons.check_rounded, size: 48, color: Colors.white, semanticLabel: t("J'ai fini")),
             ),
           ),
         ]),

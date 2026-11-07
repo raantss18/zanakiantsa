@@ -4,6 +4,8 @@ library;
 
 import 'dart:math';
 
+import '../l10n/l10n.dart';
+
 typedef Square = (int, int); // (colonne, rangée), 0 à 7 ; rangée 0 = première rangée des Blancs
 
 bool onBoard(Square s) => s.$1 >= 0 && s.$1 < 8 && s.$2 >= 0 && s.$2 < 8;
@@ -139,21 +141,21 @@ List<(Square, Square)> solutions(Board board, bool Function(Board) goal) => [
 String? whyIllegal(Board board, Square from, Square to) {
   final p = board[from]!;
   final target = board[to];
-  if (target != null && target.white) return 'Cette case est déjà prise par une de tes pièces.';
-  if (target != null && target.kind == 'k') return 'On ne prend jamais le roi : on le met en échec.';
+  if (target != null && target.white) return t('Cette case est déjà prise par une de tes pièces.');
+  if (target != null && target.kind == 'k') return t('On ne prend jamais le roi : on le met en échec.');
   final dc = (to.$1 - from.$1).abs(), dr = (to.$2 - from.$2).abs();
   final straight = dc == 0 || dr == 0, diagonal = dc == dr;
   // Sur un échiquier vide le coup serait permis : une pièce barre le chemin.
   if (p.kind != 'p' && attacks(p.kind, from, const {}).contains(to)) {
-    return p.kind == 'k' ? 'Le roi ne va pas à côté du roi noir.' : 'Une pièce barre le chemin : on ne saute pas par-dessus.';
+    return p.kind == 'k' ? t('Le roi ne va pas à côté du roi noir.') : t('Une pièce barre le chemin : on ne saute pas par-dessus.');
   }
   return switch (p.kind) {
-    'r' => diagonal ? 'La tour va tout droit, jamais en biais.' : 'La tour va tout droit, sur sa ligne ou sa colonne.',
-    'b' => straight ? 'Le fou va en biais, jamais tout droit.' : 'Le fou reste sur sa diagonale.',
-    'q' => 'La dame va tout droit ou en biais, mais toujours en ligne.',
-    'k' => "Le roi n'avance que d'une case.",
-    'n' => 'Le cavalier saute en L : deux cases, puis une sur le côté.',
-    'p' => to.$2 < from.$2 ? 'Le pion ne recule jamais.' : 'Le pion avance tout droit et prend en biais.',
+    'r' => diagonal ? t('La tour va tout droit, jamais en biais.') : t('La tour va tout droit, sur sa ligne ou sa colonne.'),
+    'b' => straight ? t('Le fou va en biais, jamais tout droit.') : t('Le fou reste sur sa diagonale.'),
+    'q' => t('La dame va tout droit ou en biais, mais toujours en ligne.'),
+    'k' => t("Le roi n'avance que d'une case."),
+    'n' => t('Le cavalier saute en L : deux cases, puis une sur le côté.'),
+    'p' => to.$2 < from.$2 ? t('Le pion ne recule jamais.') : t('Le pion avance tout droit et prend en biais.'),
     _ => null,
   };
 }

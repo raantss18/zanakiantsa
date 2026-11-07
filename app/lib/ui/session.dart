@@ -28,6 +28,7 @@ import '../core/diagnostic.dart';
 import '../core/events.dart';
 import '../core/rewards.dart';
 import '../core/rules.dart';
+import '../l10n/l10n.dart';
 import 'celebrate.dart';
 import 'adaptive.dart';
 import 'narrator.dart';
@@ -98,11 +99,14 @@ class Attempt extends ChangeNotifier {
   String voiceId(String key) => '${skill.voiceId(key)}.${app.universe.id}';
 
   /// Domaine d'anglais : les mots entre « » sont dits par la voix anglaise (ADR 0022).
-  bool get _english => skill.params['langue'] == 'en';
+  /// La langue étudiée (ADR 0022, 0064) : l'anglais du domaine « L'anglais », ou le français des leçons de lecture et de
+  /// grammaire quand l'app est en anglais. Si elle n'est pas celle de l'app, ses mots entre « » sont dits par sa voix.
+  String? get _studied => skill.studied;
+  bool get _english => _studied != null && _studied != appLang;
 
   Future<void> say(String key, {bool force = false}) => example && key == 'consigne'
       ? Future.value() // pendant l'exemple, la voix raconte l'idée et la démonstration, pas la consigne
-      : _english ? speech.sayMixed(phrase(key), force: force) : speech.say(phrase(key), id: voiceId(key), force: force);
+      : _english ? speech.sayMixed(phrase(key), force: force, quoted: _studied!) : speech.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
   Future<void> show(String key) {
@@ -119,7 +123,7 @@ class Attempt extends ChangeNotifier {
 
   /// « Réécouter » : une demande explicite, dite même voix coupée (ADR 0025).
   Future<void> listen() => helpText != null
-      ? (_english ? speech.sayMixed(helpText!, force: true) : speech.say(helpText!, force: true))
+      ? (_english ? speech.sayMixed(helpText!, force: true, quoted: _studied!) : speech.say(helpText!, force: true))
       : say(statementKey, force: true);
 
   Future<void> _record({required bool correct, required bool demonstrated}) => app.record(Answer(
@@ -163,7 +167,7 @@ class Attempt extends ChangeNotifier {
   /// Dit [text] (voix anglaise pour les passages entre « » en anglais), puis laisse le temps de le lire.
   Future<void> _sayAndRead(String text) async {
     final watch = Stopwatch()..start();
-    await (_english ? speech.sayMixed(text) : speech.say(text));
+    await (_english ? speech.sayMixed(text, quoted: _studied!) : speech.say(text));
     await _readingTime(text, watch.elapsed);
   }
 
@@ -194,7 +198,7 @@ class Attempt extends ChangeNotifier {
         misses++;
         errors.add(why ?? phrase('indice'));
         finished = true;
-        helpText = 'Pas encore : on revoit ça ensemble, juste après.';
+        helpText = t('Pas encore : on revoit ça ensemble, juste après.');
         notifyListeners();
         await _record(correct: false, demonstrated: false);
         await speech.say(helpText!);
@@ -503,9 +507,11 @@ class _SessionPageState extends State<SessionPage> {
     final start = _stoppedAt ?? app.progressOf(app.topic(widget.topic)).newSkill;
     final known = _known.length;
     final head = known == 0
-        ? 'Pas de souci, on va l\'apprendre ensemble. '
-        : 'Bravo, tu sais déjà $known compétence${known > 1 ? 's' : ''} : ${[for (final id in _known) app.skill(id).title].join(', ')}. ';
-    return start == null ? '${head}Tu sais tout ce qu\'il y a ici !' : '${head}Tu commences à : ${app.skill(start).title}.';
+        ? t('Pas de souci, on va l\'apprendre ensemble. ')
+        : known > 1
+            ? tf('Bravo, tu sais déjà {n} compétences : {list}. ', {'n': known, 'list': [for (final id in _known) app.skill(id).title].join(', ')})
+            : tf('Bravo, tu sais déjà {n} compétence : {list}. ', {'n': known, 'list': [for (final id in _known) app.skill(id).title].join(', ')});
+    return start == null ? head + t('Tu sais tout ce qu\'il y a ici !') : head + tf('Tu commences à : {skill}.', {'skill': app.skill(start).title});
   }
 
   /// Fin de défi : le score, et le record s'il est battu.
@@ -516,8 +522,8 @@ class _SessionPageState extends State<SessionPage> {
   String get challengeText {
     final record = _record;
     final beaten = record == null || firstTry > record;
-    return 'Défi : $firstTry sur ${plan.length} du premier coup. '
-        '${beaten ? (record == null ? 'C\'est ton premier record !' : 'Nouveau record !') : 'Ton record : $record.'}';
+    return tf('Défi : {score} sur {total} du premier coup. ', {'score': firstTry, 'total': plan.length}) +
+        (beaten ? (record == null ? t('C\'est ton premier record !') : t('Nouveau record !')) : tf('Ton record : {record}.', {'record': record}));
   }
 
   @override
@@ -548,11 +554,11 @@ class _SessionPageState extends State<SessionPage> {
             // Pendant un exemple, le badge « Nouveau » et le bouton « J'ai compris » : sur la page, ou dans la colonne de
             // gauche quand l'échiquier a toute la hauteur.
             final badge = a.diagnostic
-                ? _NewBadge(title: a.skill.title, label: 'À vérifier d’abord', icon: Icons.fact_check_rounded)
+                ? _NewBadge(title: a.skill.title, label: t('À vérifier d’abord'), icon: Icons.fact_check_rounded)
                 : a.reminder
-                    ? _NewBadge(title: a.skill.title, label: 'Rappel', icon: Icons.lightbulb_rounded)
+                    ? _NewBadge(title: a.skill.title, label: t('Rappel'), icon: Icons.lightbulb_rounded)
                     : a.example
-                        ? _NewBadge(title: a.skill.title)
+                        ? _NewBadge(title: a.skill.title, label: t('Nouveau'))
                         : null;
             final understood = a.example
                 ? ListenableBuilder(
@@ -571,7 +577,7 @@ class _SessionPageState extends State<SessionPage> {
                                     ),
                                     onPressed: _understood,
                                     icon: const Icon(Icons.check_rounded, size: 40),
-                                    label: const Text("J'ai compris, à moi !"),
+                                    label: Text(t("J'ai compris, à moi !")),
                                   ),
                                 ),
                               ),
@@ -723,7 +729,7 @@ class SessionTopBar extends StatelessWidget {
             shape: const CircleBorder(),
             elevation: 2,
             child: IconButton(
-              tooltip: 'Retour',
+              tooltip: t('Retour'),
               iconSize: 32,
               onPressed: onBack,
               icon: const Icon(Icons.arrow_back_rounded, color: ink),
@@ -752,7 +758,7 @@ class SessionTopBar extends StatelessWidget {
           ),
           const SizedBox(width: 12),
           Semantics(
-            label: stars > 1 ? '$stars étoiles' : '$stars étoile',
+            label: stars > 1 ? tf('{n} étoiles', {'n': stars}) : tf('{n} étoile', {'n': stars}),
             excludeSemantics: true,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -786,7 +792,7 @@ class _End extends StatelessWidget {
         Row(mainAxisSize: MainAxisSize.min, children: [
           const Art('2b50', size: 64),
           const SizedBox(width: 12),
-          Text('× $stars', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: stars > 1 ? '$stars étoiles' : '$stars étoile'),
+          Text('× $stars', style: Theme.of(context).textTheme.displayLarge, semanticsLabel: stars > 1 ? tf('{n} étoiles', {'n': stars}) : tf('{n} étoile', {'n': stars})),
         ]),
         const SizedBox(height: 16),
         ConstrainedBox(
@@ -804,14 +810,14 @@ class _End extends StatelessWidget {
         ),
         if (newSticker != null) ...[
           const SizedBox(height: 16),
-          const Text('Nouvel autocollant !', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink)),
+          Text(t('Nouvel autocollant !'), style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink)),
           const SizedBox(height: 8),
           TweenAnimationBuilder<double>(
             tween: Tween(begin: 0.3, end: 1),
             duration: const Duration(milliseconds: 700),
             curve: Curves.elasticOut,
             builder: (_, s, child) => Transform.scale(scale: s, child: child),
-            child: Art(newSticker!, size: 120, label: 'Nouvel autocollant'),
+            child: Art(newSticker!, size: 120, label: t('Nouvel autocollant')),
           ),
         ],
       ]);
@@ -869,7 +875,7 @@ class DayEnd extends StatelessWidget {
           constraints: const BoxConstraints(maxWidth: 640),
           decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            const PlayfulTitle('Bravo !', size: 40),
+            PlayfulTitle(t('Bravo !'), size: 40),
             const SizedBox(height: 12),
             child,
             if (done) ...[
@@ -891,8 +897,8 @@ class DayEnd extends StatelessWidget {
             ],
             const SizedBox(height: 24),
             Wrap(spacing: 32, runSpacing: 16, alignment: WrapAlignment.center, children: [
-              if (!done) round(Icons.arrow_forward_rounded, 'Continuer', again, detail: 'nouvelles questions'),
-              round(Icons.home_rounded, 'Accueil', () => Navigator.of(context).pop(), primary: done),
+              if (!done) round(Icons.arrow_forward_rounded, t('Continuer'), again, detail: t('nouvelles questions')),
+              round(Icons.home_rounded, t('Accueil'), () => Navigator.of(context).pop(), primary: done),
             ]),
           ]),
         ),
@@ -914,7 +920,7 @@ class SoundToggles extends StatelessWidget {
     return Row(mainAxisSize: MainAxisSize.min, children: [
       _Toggle(
         on: app.voice.voiceOn,
-        label: 'Voix',
+        label: t('Voix'),
         onIcon: Icons.record_voice_over_rounded,
         offIcon: Icons.voice_over_off_rounded,
         onChanged: (v) async {
@@ -925,7 +931,7 @@ class SoundToggles extends StatelessWidget {
       const SizedBox(width: 6),
       _Toggle(
         on: app.voice.soundOn,
-        label: 'Musique',
+        label: t('Musique'),
         onIcon: Icons.music_note_rounded,
         offIcon: Icons.music_off_rounded,
         onChanged: (v) async {
@@ -950,10 +956,10 @@ class _Toggle extends StatelessWidget {
     return Semantics(
       toggled: on,
       button: true,
-      label: '$label, ${on ? 'activée' : 'coupée'}',
+      label: on ? tf('{label}, activée', {'label': label}) : tf('{label}, coupée', {'label': label}),
       excludeSemantics: true,
       child: Tooltip(
-        message: '$label : ${on ? 'activée' : 'coupée'}',
+        message: on ? tf('{label} : activée', {'label': label}) : tf('{label} : coupée', {'label': label}),
         child: Material(
           color: on ? surface : const Color(0xFFBFC7C1),
           shape: CircleBorder(side: on ? BorderSide.none : const BorderSide(color: ink, width: 2)),
@@ -999,7 +1005,7 @@ class _NewBadge extends StatelessWidget {
           Icon(icon, color: ink, size: 24),
           const SizedBox(width: 6),
           Flexible(
-            child: Text('$label : $title', maxLines: 1, overflow: TextOverflow.ellipsis,
+            child: Text(tf('{label} : {title}', {'label': label, 'title': title}), maxLines: 1, overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
           ),
         ]),

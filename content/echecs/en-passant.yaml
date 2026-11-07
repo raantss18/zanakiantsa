@@ -30,3 +30,31 @@ items:
     fen: "k7/8/8/6Pp/8/8/8/K7 w - h6 0 1"
     coups: [g5h6]
     explication: "Ton pion va en h6, et le pion noir de h5 est pris."
+
+en:
+  titre: "Capturing en passant"
+  idee: "When an opponent's pawn moves two squares and lands right next to yours, your pawn can capture it as if it had only moved one square: that's en passant. Only straight away!"
+  phrases:
+    consigne: "The black pawn has just moved two squares, next to yours. Touch your pawn, then the square just behind the black pawn."
+    question: "{texte}"
+    indice: "Your pawn moves diagonally, onto the square the black pawn jumped over."
+    exemple: "Look at the square the black pawn has just jumped over."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "The black pawn has just jumped from d7 to d5. Capture it en passant!"
+      fen: "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1"
+      coups: [e5d6]
+      explication: "Your pawn goes to d6, and the black pawn on d5 is captured."
+    - texte: "The black pawn has just jumped from f7 to f5. Capture it en passant!"
+      fen: "4k3/8/8/5pP1/8/8/8/4K3 w - f6 0 1"
+      coups: [g5f6]
+      explication: "Your pawn goes to f6, and the black pawn on f5 is captured."
+    - texte: "The black pawn has just jumped from a7 to a5. Capture it en passant!"
+      fen: "4k3/8/8/pP6/8/8/8/4K3 w - a6 0 1"
+      coups: [b5a6]
+      explication: "Your pawn goes to a6, and the black pawn on a5 is captured."
+    - texte: "The black pawn has just jumped from h7 to h5. Capture it en passant!"
+      fen: "k7/8/8/6Pp/8/8/8/K7 w - h6 0 1"
+      coups: [g5h6]
+      explication: "Your pawn goes to h6, and the black pawn on h5 is captured."

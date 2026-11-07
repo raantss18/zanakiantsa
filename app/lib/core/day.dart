@@ -37,6 +37,18 @@ List<String> adaptGroup(List<String> group, Map<String, int> tops, int classe) {
   return out;
 }
 
+/// En anglais, seuls les domaines traduits existent (ADR 0064) : ceux de la journée qui manquent sont remplacés par les
+/// premiers domaines proposés qui n'y sont pas déjà. Sans liste (toutes les langues traduites), rien ne change.
+List<String> onlyVisible(List<String> group, List<String>? visible) {
+  if (visible == null) return group;
+  final out = [for (final g in group) if (visible.contains(g)) g];
+  for (final v in visible) {
+    if (out.length >= group.length) break;
+    if (!out.contains(v)) out.add(v);
+  }
+  return out;
+}
+
 class DayItem {
   const DayItem(this.theme, this.done, this.target);
   final String theme;
@@ -58,8 +70,9 @@ class DayPlan {
 
   /// [sessions] : tout le journal des séances ; seules celles commencées aujourd'hui comptent.
   /// [tops] : le plus haut niveau de chaque domaine ; [classe] : celle de l'enfant (voir [adaptGroup]).
-  factory DayPlan.of(DateTime now, List<SessionLog> sessions, {int minutes = defaultDailyMinutes, Map<String, int> tops = const {}, int classe = 0}) {
-    final group = adaptGroup(dayGroups[(dayNumber(now) + devDayShift) % dayGroups.length], tops, classe);
+  factory DayPlan.of(DateTime now, List<SessionLog> sessions,
+      {int minutes = defaultDailyMinutes, Map<String, int> tops = const {}, int classe = 0, List<String>? visible}) {
+    final group = adaptGroup(onlyVisible(dayGroups[(dayNumber(now) + devDayShift) % dayGroups.length], visible), tops, classe);
     final today = DateTime(now.year, now.month, now.day);
     final target = Duration(minutes: minutes ~/ group.length);
     Duration spent(String theme) => sessions

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../app_state.dart';
 import '../books/books.dart';
 import '../core/events.dart';
+import '../l10n/l10n.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -44,18 +45,18 @@ class _LibraryPageState extends State<LibraryPage> {
                   shape: const CircleBorder(),
                   elevation: 2,
                   child: IconButton(
-                    tooltip: 'Retour',
+                    tooltip: t('Retour'),
                     iconSize: 32,
                     onPressed: () => Navigator.of(context).pop(),
                     icon: const Icon(Icons.arrow_back_rounded, color: ink),
                   ),
                 ),
                 const SizedBox(width: 12),
-                const Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle('Ma bibliothèque'))),
+                Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle(t('Ma bibliothèque')))),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
-                  child: Text('${read.length} lu${read.length > 1 ? 's' : ''} / ${lib.books.length}',
+                  child: Text(read.length > 1 ? tf('{n} lus / {total}', {'n': read.length, 'total': lib.books.length}) : tf('{n} lu / {total}', {'n': read.length, 'total': lib.books.length}),
                       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink)),
                 ),
               ]),
@@ -68,7 +69,7 @@ class _LibraryPageState extends State<LibraryPage> {
                 spacing: 6,
                 runSpacing: 2,
                 children: [
-                  for (final (id, name) in [('tout', 'Tout'), ...lib.shelves.entries.map((e) => (e.key, e.value))])
+                  for (final (id, name) in [('tout', t('Tout')), ...lib.shelves.entries.map((e) => (e.key, e.value))])
                     ChoiceChip(
                       selected: shelf == id,
                       showCheckmark: true,
@@ -114,7 +115,7 @@ class _Ribbon extends StatelessWidget {
           color: const Color(0xFFD62828),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             const Icon(Icons.bookmark_rounded, color: Colors.white, size: 18),
-            Text('p. $page', style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Colors.white)),
+            Text(tf('p. {page}', {'page': page}), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: Colors.white)),
           ]),
         ),
       );
@@ -141,7 +142,7 @@ class LevelLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Row(mainAxisSize: MainAxisSize.min, children: [
-        Text('Niveau $level', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+        Text(tf('Niveau {level}', {'level': level}), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
         const SizedBox(width: 4),
         for (var i = 1; i <= 5; i++)
           Container(
@@ -173,7 +174,7 @@ class _Continue extends StatelessWidget {
   Widget _build(BuildContext context, {required bool compact}) {
     final u = AppScope.of(context).universe;
     final cover = book.cover;
-    final resume = page == null ? 'Relire' : 'Reprendre';
+    final resume = page == null ? t('Relire') : t('Reprendre');
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
       child: Material(
@@ -196,10 +197,10 @@ class _Continue extends StatelessWidget {
                   Row(children: [
                     Icon(Icons.bookmark_rounded, color: u.night ? u.primary : u.onCard, size: 22),
                     const SizedBox(width: 4),
-                    const Text('Mon livre en cours', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+                    Text(t('Mon livre en cours'), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
                   ]),
                   Text(book.title, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: compact ? 19 : 22, fontWeight: FontWeight.w700, color: ink, height: 1.15)),
-                  Text(page == null ? 'Fini — tu peux le relire' : 'Page ${page! + 1} sur ${book.pages.length}',
+                  Text(page == null ? t('Fini — tu peux le relire') : tf('Page {page} sur {total}', {'page': page! + 1, 'total': book.pages.length}),
                       style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
                 ]),
               ),
@@ -240,7 +241,7 @@ class _BookCover extends StatelessWidget {
     final cover = book.cover;
     return Semantics(
       button: true,
-      label: '${book.title}, niveau ${book.level}${read ? ', lu' : ''}${mark != null ? ', marque-page page ${mark! + 1}' : ''}',
+      label: tf('{title}, niveau {level}', {'title': book.title, 'level': book.level}) + (read ? t(', lu') : '') + (mark != null ? tf(', marque-page page {page}', {'page': mark! + 1}) : ''),
       excludeSemantics: true,
       child: Material(
         color: surface,
@@ -260,12 +261,12 @@ class _BookCover extends StatelessWidget {
                     child: _Ribbon(page: mark! + 1),
                   ),
                 if (read)
-                  const Positioned(
+                  Positioned(
                     right: 6,
                     top: 6,
                     child: Chip(
-                      avatar: Icon(Icons.check_rounded, color: Colors.white, size: 20),
-                      label: Text('Lu', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
+                      avatar: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
+                      label: Text(t('Lu'), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
                       backgroundColor: green,
                       side: BorderSide.none,
                       visualDensity: VisualDensity.compact,
@@ -356,9 +357,9 @@ class _ReaderPageState extends State<ReaderPage> {
       return;
     }
     setState(() => reading = true);
-    if (page == 0) await app.voice.say(book.title, force: true);
+    if (page == 0) await app.voice.say(book.title, force: true, lang: 'fr');
     while (reading && mounted && page < count - 1) {
-      await app.voice.say(book.pages[page].text, force: true);
+      await app.voice.say(book.pages[page].text, force: true, lang: 'fr');
       if (!reading || !mounted) break;
       await Future<void>.delayed(const Duration(milliseconds: 700));
       if (!reading || !mounted) break;
@@ -382,7 +383,7 @@ class _ReaderPageState extends State<ReaderPage> {
                   color: surface,
                   shape: const CircleBorder(),
                   elevation: 2,
-                  child: IconButton(tooltip: 'Retour', iconSize: 32, onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
+                  child: IconButton(tooltip: t('Retour'), iconSize: 32, onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
                 ),
                 const SizedBox(width: 12),
                 Expanded(child: Text(book.title, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: u.onBackground, height: 1.1))),
@@ -391,7 +392,7 @@ class _ReaderPageState extends State<ReaderPage> {
                   style: FilledButton.styleFrom(minimumSize: const Size(0, 56), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 20, fontWeight: FontWeight.w700)),
                   onPressed: _readAloud,
                   icon: Icon(reading ? Icons.stop_rounded : Icons.record_voice_over_rounded, size: 30),
-                  label: Text(reading ? 'Stop' : 'Lis-moi'),
+                  label: Text(reading ? t('Stop') : t('Lis-moi')),
                 ),
               ]),
             ),
@@ -406,12 +407,12 @@ class _ReaderPageState extends State<ReaderPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
               child: Row(children: [
-                _NavButton(icon: Icons.arrow_back_ios_new_rounded, label: 'Page précédente', onTap: page == 0 ? null : () => _go(page - 1)),
+                _NavButton(icon: Icons.arrow_back_ios_new_rounded, label: t('Page précédente'), onTap: page == 0 ? null : () => _go(page - 1)),
                 Expanded(
-                  child: Text(page < count - 1 ? '${page + 1} / ${book.pages.length}' : 'Fin',
+                  child: Text(page < count - 1 ? '${page + 1} / ${book.pages.length}' : t('Fin'),
                       textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.onBackground)),
                 ),
-                _NavButton(icon: Icons.arrow_forward_ios_rounded, label: 'Page suivante', onTap: page >= count - 1 ? null : () => _go(page + 1)),
+                _NavButton(icon: Icons.arrow_forward_ios_rounded, label: t('Page suivante'), onTap: page >= count - 1 ? null : () => _go(page + 1)),
               ]),
             ),
           ]),
@@ -495,13 +496,13 @@ class _End extends StatelessWidget {
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               const Art('1f4da', size: 80),
               const SizedBox(height: 8),
-              const PlayfulTitle('Fin', size: 44),
+              PlayfulTitle(t('Fin'), size: 44),
               const SizedBox(height: 4),
-              const Text('Bravo, tu as lu tout le livre !', textAlign: TextAlign.center, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
+              Text(t('Bravo, tu as lu tout le livre !'), textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
               const Divider(height: 32),
               Text(book.credits, style: const TextStyle(fontSize: 15, color: Color(0xFF5F6B63), height: 1.35)),
               const SizedBox(height: 6),
-              Text('Licence ${book.licence} — ${book.source}', style: const TextStyle(fontSize: 14, color: Color(0xFF5F6B63))),
+              Text(tf('Licence {licence} — {source}', {'licence': book.licence, 'source': book.source}), style: const TextStyle(fontSize: 14, color: Color(0xFF5F6B63))),
             ]),
           ),
         ),

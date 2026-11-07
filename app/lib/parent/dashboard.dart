@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import '../app_state.dart';
 import '../core/events.dart';
 import '../core/report.dart';
+import '../l10n/l10n.dart';
 import 'notebook_style.dart';
 
 class Dashboard extends StatelessWidget {
@@ -23,21 +24,21 @@ class Dashboard extends StatelessWidget {
     final titles = {for (final t in app.topics) for (final s in t.skills) s.id: s.title};
     final name = app.current.label;
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      _Card(title: 'Temps de jeu, 7 derniers jours', child: _Days(minutes: st.minutesPerDay, target: app.dailyMinutes)),
-      _Card(title: 'Réussi du premier coup', child: _FirstTry(now: st.firstTryThisWeek, before: st.firstTryLastWeek)),
+      _Card(title: t('Temps de jeu, 7 derniers jours'), child: _Days(minutes: st.minutesPerDay, target: app.dailyMinutes)),
+      _Card(title: t('Réussi du premier coup'), child: _FirstTry(now: st.firstTryThisWeek, before: st.firstTryLastWeek)),
       _Card(
-        title: 'Progrès par domaine',
+        title: t('Progrès par domaine'),
         child: Column(children: [
           for (final t in app.topics)
             if (t.skills.isNotEmpty) _Bar(label: t.name, done: [for (final s in t.skills) if (app.progressOf(t).mastered(s.id)) s].length, total: t.skills.length),
           const SizedBox(height: 4),
-          Text('Les notions d’avant la classe de $name comptent comme acquises ; « Je sais déjà » les vérifie.', style: _small),
+          Text(tf('Les notions d’avant la classe de {name} comptent comme acquises ; « Je sais déjà » les vérifie.', {'name': name}), style: _small),
         ]),
       ),
       _Card(
-        title: 'À revoir',
+        title: t('À revoir'),
         child: st.toReview.isEmpty
-            ? Text('Rien de bloquant cette semaine.', style: _body)
+            ? Text(t('Rien de bloquant cette semaine.'), style: _body)
             : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 for (final r in st.toReview)
                   Padding(
@@ -48,8 +49,8 @@ class Dashboard extends StatelessWidget {
                       Expanded(
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                           Text(titles[r.skill] ?? r.skill, style: _strong),
-                          Text('Difficile ${r.failures} fois sur ${r.answers} cette semaine.', style: _small),
-                          if (r.error != null) Text('L’app a expliqué : « ${r.error} »', style: _body),
+                          Text(tf('Difficile {failures} fois sur {answers} cette semaine.', {'failures': r.failures, 'answers': r.answers}), style: _small),
+                          if (r.error != null) Text(tf('L’app a expliqué : « {error} »', {'error': r.error!}), style: _body),
                         ]),
                       ),
                     ]),
@@ -89,6 +90,7 @@ class _Days extends StatelessWidget {
   final int target;
 
   static const _letters = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+  static const _lettersEn = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
   @override
   Widget build(BuildContext context) {
@@ -118,14 +120,14 @@ class _Days extends StatelessWidget {
                     decoration: BoxDecoration(color: minutes[i] >= target ? violet : violet.withValues(alpha: .55), borderRadius: const BorderRadius.vertical(top: Radius.circular(8))),
                   ),
                   const SizedBox(height: 4),
-                  Text(_letters[today.subtract(Duration(days: 6 - i)).weekday - 1], style: i == 6 ? _strong : _small),
+                  Text((english ? _lettersEn : _letters)[today.subtract(Duration(days: 6 - i)).weekday - 1], style: i == 6 ? _strong : _small),
                 ]),
               ),
           ]),
         ]),
       ),
       const SizedBox(height: 6),
-      Text('$total min en tout. Le pointillé : $target min par jour, le temps que vous avez réglé.', style: _small),
+      Text(tf('{total} min en tout. Le pointillé : {target} min par jour, le temps que vous avez réglé.', {'total': total, 'target': target}), style: _small),
     ]);
   }
 }
@@ -152,14 +154,14 @@ class _FirstTry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final n = now;
-    if (n == null) return const Text('Pas encore de réponse cette semaine.', style: _body);
+    if (n == null) return Text(t('Pas encore de réponse cette semaine.'), style: _body);
     final pct = (n * 100).round();
     final b = before;
-    String trend = 'Pas de comparaison : pas de réponse la semaine d’avant.';
+    String trend = t('Pas de comparaison : pas de réponse la semaine d’avant.');
     IconData icon = Icons.horizontal_rule_rounded;
     if (b != null) {
       final d = pct - (b * 100).round();
-      trend = d == 0 ? 'Comme la semaine d’avant.' : '${d > 0 ? '+' : '−'}${d.abs()} points par rapport à la semaine d’avant (${(b * 100).round()} %).';
+      trend = d == 0 ? t('Comme la semaine d’avant.') : tf('{sign}{d} points par rapport à la semaine d’avant ({before} %).', {'sign': d > 0 ? '+' : '−', 'd': d.abs(), 'before': (b * 100).round()});
       icon = d > 0 ? Icons.trending_up_rounded : d < 0 ? Icons.trending_down_rounded : Icons.trending_flat_rounded;
     }
     return Row(children: [
@@ -167,7 +169,7 @@ class _FirstTry extends StatelessWidget {
       const SizedBox(width: 14),
       Icon(icon, color: encre, size: 30),
       const SizedBox(width: 8),
-      Expanded(child: Text('des réponses trouvées sans aide. $trend', style: _body)),
+      Expanded(child: Text(tf('des réponses trouvées sans aide. {trend}', {'trend': trend}), style: _body)),
     ]);
   }
 }

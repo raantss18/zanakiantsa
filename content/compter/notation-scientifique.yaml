@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "3,7 × 10²", pourquoi: "La virgule a bougé de 1 rang seulement : compte-les un par un." }
       - { texte: "37 × 10⁰", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+
+en:
+  titre: "Scientific notation"
+  idee: "In scientific notation, a number is written a × 10ⁿ, with a between 1 and 10 (just one digit before the decimal point). 45,000 = 4.5 × 10⁴."
+  phrases:
+    consigne: "Place the decimal point, count the places, then touch the answer."
+    question: "{texte}"
+    indice: "Just one non-zero digit before the decimal point, then the power of 10."
+    exemple: "45,000: 4.5, the point moved 4 places, so 4.5 × 10⁴."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Write 45,000 in scientific notation."
+      nom: "4.5 × 10⁴"
+      explication: "Put the decimal point after the first digit: 4.5, then count how many places it moved: 4."
+      pieges:
+        - { texte: "4.5 × 10⁵", pourquoi: "The point moved only 4 places: count them one by one." }
+        - { texte: "45 × 10³", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 320,000 in scientific notation."
+      nom: "3.2 × 10⁵"
+      explication: "Put the decimal point after the first digit: 3.2, then count how many places it moved: 5."
+      pieges:
+        - { texte: "3.2 × 10⁶", pourquoi: "The point moved only 5 places: count them one by one." }
+        - { texte: "32 × 10⁴", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 7,000 in scientific notation."
+      nom: "7 × 10³"
+      explication: "Put the decimal point after the first digit: 7, then count how many places it moved: 3."
+      pieges:
+        - { texte: "7 × 10⁴", pourquoi: "The point moved only 3 places: count them one by one." }
+        - { texte: "70 × 10²", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 1,250,000 in scientific notation."
+      nom: "1.25 × 10⁶"
+      explication: "Put the decimal point after the first digit: 1.25, then count how many places it moved: 6."
+      pieges:
+        - { texte: "1.25 × 10⁷", pourquoi: "The point moved only 6 places: count them one by one." }
+        - { texte: "12.5 × 10⁵", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 608 in scientific notation."
+      nom: "6.08 × 10²"
+      explication: "Put the decimal point after the first digit: 6.08, then count how many places it moved: 2."
+      pieges:
+        - { texte: "6.08 × 10³", pourquoi: "The point moved only 2 places: count them one by one." }
+        - { texte: "60.8 × 10¹", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 99,000,000 in scientific notation."
+      nom: "9.9 × 10⁷"
+      explication: "Put the decimal point after the first digit: 9.9, then count how many places it moved: 7."
+      pieges:
+        - { texte: "9.9 × 10⁸", pourquoi: "The point moved only 7 places: count them one by one." }
+        - { texte: "99 × 10⁶", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 2,400 in scientific notation."
+      nom: "2.4 × 10³"
+      explication: "Put the decimal point after the first digit: 2.4, then count how many places it moved: 3."
+      pieges:
+        - { texte: "2.4 × 10⁴", pourquoi: "The point moved only 3 places: count them one by one." }
+        - { texte: "24 × 10²", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 50,100 in scientific notation."
+      nom: "5.01 × 10⁴"
+      explication: "Put the decimal point after the first digit: 5.01, then count how many places it moved: 4."
+      pieges:
+        - { texte: "5.01 × 10⁵", pourquoi: "The point moved only 4 places: count them one by one." }
+        - { texte: "50.1 × 10³", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 8,000,000 in scientific notation."
+      nom: "8 × 10⁶"
+      explication: "Put the decimal point after the first digit: 8, then count how many places it moved: 6."
+      pieges:
+        - { texte: "8 × 10⁷", pourquoi: "The point moved only 6 places: count them one by one." }
+        - { texte: "80 × 10⁵", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }
+    - texte: "Write 37 in scientific notation."
+      nom: "3.7 × 10¹"
+      explication: "Put the decimal point after the first digit: 3.7, then count how many places it moved: 1."
+      pieges:
+        - { texte: "3.7 × 10²", pourquoi: "The point moved only 1 place: count them one by one." }
+        - { texte: "37 × 10⁰", pourquoi: "The first number must be between 1 and 10: just one digit before the point." }

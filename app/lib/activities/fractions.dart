@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../core/fractions.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -78,7 +79,7 @@ class _FractionActivityState extends State<FractionActivity> {
 
   String? _why(Frac f) => switch (mode) {
         'lire' => readWhy(_right, f),
-        'unitaire' => 'Compte toutes les parts de la figure : il y en a $d.',
+        'unitaire' => tf('Compte toutes les parts de la figure : il y en a {d}.', {'d': d}),
         'additionner' => sumWhy(_right, f),
         'superieure' => wholeWhy(_right, f),
         _ => null,
@@ -155,7 +156,7 @@ class _FractionActivityState extends State<FractionActivity> {
               style: FilledButton.styleFrom(minimumSize: const Size(220, 72), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 24, fontWeight: FontWeight.w700)),
               onPressed: _locked ? null : _check,
               icon: const Icon(Icons.check_rounded, size: 36),
-              label: const Text('J\'ai fini'),
+              label: Text(t('J\'ai fini')),
             ),
           ],
         'comparer' || 'comparer_unitaires' => [
@@ -393,7 +394,7 @@ class _Strip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        label: 'Bande graduée de zéro à un, en $parts parts',
+        label: tf('Bande graduée de zéro à un, en {n} parts', {'n': parts}),
         child: GestureDetector(
           onTapUp: onTick == null ? null : (e) => onTick!((e.localPosition.dx / width * parts).round().clamp(1, parts)),
           child: CustomPaint(size: Size(width, 140), painter: _StripPainter(parts, color, mark, tried)),

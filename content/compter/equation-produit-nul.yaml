@@ -62,3 +62,63 @@ items:
     pieges:
       - { texte: "x = 1 ou x = 9", pourquoi: "Attention au signe : x + 1 = 0 donne x = −1." }
       - { texte: "x = −1", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+
+en:
+  titre: "Zero-product equations"
+  idee: "A product is zero if and only if one of its factors is zero. (x − 2)(x + 5) = 0 gives x = 2 or x = −5."
+  phrases:
+    consigne: "Set each factor to zero, then touch the solutions."
+    question: "{texte}"
+    indice: "Write “first factor = 0” and “second factor = 0”."
+    exemple: "(x − 2)(x + 5) = 0: x = 2 or x = −5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Solve: (x − 2)(x + 5) = 0"
+      nom: "x = 2 or x = −5"
+      explication: "A product is zero if one of the factors is zero: x − 2 = 0 or x + 5 = 0, so x = 2 or x = −5."
+      pieges:
+        - { texte: "x = −2 or x = 5", pourquoi: "Watch the sign: x − 2 = 0 gives x = 2." }
+        - { texte: "x = 2", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x + 3)(x − 4) = 0"
+      nom: "x = −3 or x = 4"
+      explication: "A product is zero if one of the factors is zero: x + 3 = 0 or x − 4 = 0, so x = −3 or x = 4."
+      pieges:
+        - { texte: "x = 3 or x = −4", pourquoi: "Watch the sign: x + 3 = 0 gives x = −3." }
+        - { texte: "x = −3", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x − 1)(x − 6) = 0"
+      nom: "x = 1 or x = 6"
+      explication: "A product is zero if one of the factors is zero: x − 1 = 0 or x − 6 = 0, so x = 1 or x = 6."
+      pieges:
+        - { texte: "x = −1 or x = −6", pourquoi: "Watch the sign: x − 1 = 0 gives x = 1." }
+        - { texte: "x = 1", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x + 7)(x + 2) = 0"
+      nom: "x = −7 or x = −2"
+      explication: "A product is zero if one of the factors is zero: x + 7 = 0 or x + 2 = 0, so x = −7 or x = −2."
+      pieges:
+        - { texte: "x = 7 or x = 2", pourquoi: "Watch the sign: x + 7 = 0 gives x = −7." }
+        - { texte: "x = −7", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x − 5)(x − 3) = 0"
+      nom: "x = 5 or x = 3"
+      explication: "A product is zero if one of the factors is zero: x − 5 = 0 or x − 3 = 0, so x = 5 or x = 3."
+      pieges:
+        - { texte: "x = −5 or x = −3", pourquoi: "Watch the sign: x − 5 = 0 gives x = 5." }
+        - { texte: "x = 5", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x + 4)(x − 1) = 0"
+      nom: "x = −4 or x = 1"
+      explication: "A product is zero if one of the factors is zero: x + 4 = 0 or x − 1 = 0, so x = −4 or x = 1."
+      pieges:
+        - { texte: "x = 4 or x = −1", pourquoi: "Watch the sign: x + 4 = 0 gives x = −4." }
+        - { texte: "x = −4", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x − 8)(x + 6) = 0"
+      nom: "x = 8 or x = −6"
+      explication: "A product is zero if one of the factors is zero: x − 8 = 0 or x + 6 = 0, so x = 8 or x = −6."
+      pieges:
+        - { texte: "x = −8 or x = 6", pourquoi: "Watch the sign: x − 8 = 0 gives x = 8." }
+        - { texte: "x = 8", pourquoi: "There are two solutions: either factor can be zero." }
+    - texte: "Solve: (x + 1)(x + 9) = 0"
+      nom: "x = −1 or x = −9"
+      explication: "A product is zero if one of the factors is zero: x + 1 = 0 or x + 9 = 0, so x = −1 or x = −9."
+      pieges:
+        - { texte: "x = 1 or x = 9", pourquoi: "Watch the sign: x + 1 = 0 gives x = −1." }
+        - { texte: "x = −1", pourquoi: "There are two solutions: either factor can be zero." }

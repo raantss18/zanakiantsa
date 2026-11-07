@@ -62,3 +62,80 @@ items:
     pieges:
       - { texte: "calment", pourquoi: "Le sujet est « le bruit », singulier." }
       - { texte: "calmes", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+
+en:
+  langue: "fr"
+  titre: "French: making the verb agree with its subject"
+  idee: "The verb agrees with its subject, even when other words come in between: « Les fleurs du jardin poussent. » Two nouns joined by « et » make a plural."
+  phrases:
+    consigne: "Find the real subject, then touch the right form."
+    question: "{texte}"
+    indice: "Ask « qui est-ce qui … ? » in front of the verb: who or what is doing it?"
+    exemple: "« Le chat des voisins dort »: it's « le chat » that is sleeping."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Make the verb agree, in the present tense: « Les fleurs du jardin (pousser) vite. »"
+      nom: "poussent"
+      explication: "The subject is « les fleurs », not « jardin »: the complement « du jardin » doesn't change the verb."
+      pieges:
+        - texte: "pousse"
+          pourquoi: "The subject is « les fleurs », not « jardin »: the complement « du jardin » doesn't change the verb."
+        - texte: "pousses"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."
+    - texte: "Make the verb agree, in the present tense: « Le chat des voisins (dormir) au soleil. »"
+      nom: "dort"
+      explication: "The subject is « le chat »: « des voisins » just adds to the noun."
+      pieges:
+        - texte: "dorment"
+          pourquoi: "The subject is « le chat »: « des voisins » just adds to the noun."
+        - texte: "dors"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."
+    - texte: "Make the verb agree, in the present tense: « Paul et sa sœur (jouer) dehors. »"
+      nom: "jouent"
+      explication: "Two subject nouns joined by « et »: the verb goes into the plural."
+      pieges:
+        - texte: "joue"
+          pourquoi: "Two subject nouns joined by « et »: the verb goes into the plural."
+        - texte: "joues"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."
+    - texte: "Make the verb agree, in the present tense: « Les élèves de la classe (écouter) la maîtresse. »"
+      nom: "écoutent"
+      explication: "The subject is « les élèves », not « la classe »."
+      pieges:
+        - texte: "écoute"
+          pourquoi: "The subject is « les élèves », not « la classe »."
+        - texte: "écoutes"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."
+    - texte: "Make the verb agree, in the present tense: « La couleur de ces fruits (changer) en été. »"
+      nom: "change"
+      explication: "The subject is « la couleur », singular: « de ces fruits » is a complement."
+      pieges:
+        - texte: "changent"
+          pourquoi: "The subject is « la couleur », singular: « de ces fruits » is a complement."
+        - texte: "changes"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."
+    - texte: "Make the verb agree, in the present tense: « Toi et moi (partir) demain. »"
+      nom: "partons"
+      explication: "« Toi et moi » means « nous »: the verb goes into the first person plural."
+      pieges:
+        - texte: "partent"
+          pourquoi: "« Toi et moi » means « nous »: the verb goes into the first person plural."
+        - texte: "partez"
+          pourquoi: "That's the form for « vous »: the subject isn't « vous »."
+    - texte: "Make the verb agree, in the present tense: « Les livres que je lis (être) passionnants. »"
+      nom: "sont"
+      explication: "The subject is « les livres », plural."
+      pieges:
+        - texte: "est"
+          pourquoi: "The subject is « les livres », plural."
+        - texte: "êtes"
+          pourquoi: "That's the form for « vous »: the subject isn't « vous »."
+    - texte: "Make the verb agree, in the present tense: « Le bruit des vagues (calmer) les enfants. »"
+      nom: "calme"
+      explication: "The subject is « le bruit », singular."
+      pieges:
+        - texte: "calment"
+          pourquoi: "The subject is « le bruit », singular."
+        - texte: "calmes"
+          pourquoi: "That's the form for « tu »: the subject isn't « tu »."

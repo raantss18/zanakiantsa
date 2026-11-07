@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "125", pourquoi: "200 − 75 : on n'enlève pas 75, on prend 75 parts sur 100." }
       - { texte: "75", pourquoi: "75, c'est le pourcentage, pas le résultat." }
+
+en:
+  titre: "Percentages"
+  idee: "A percentage is a part out of 100. 25% is 25 parts out of 100: a quarter."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Multiply by the percentage, then divide by 100."
+    exemple: "25% of 80: 80 × 25 ÷ 100 = 20."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is 50% of 80?"
+      nom: "40"
+      explication: "50% means 50 out of 100: 80 × 50 ÷ 100 = 40."
+      pieges:
+        - { texte: "30", pourquoi: "80 − 50: don’t take 50 away, take 50 parts out of 100." }
+        - { texte: "50", pourquoi: "50 is the percentage, not the answer." }
+    - texte: "What is 25% of 80?"
+      nom: "20"
+      explication: "25% means 25 out of 100: 80 × 25 ÷ 100 = 20."
+      pieges:
+        - { texte: "55", pourquoi: "80 − 25: don’t take 25 away, take 25 parts out of 100." }
+        - { texte: "25", pourquoi: "25 is the percentage, not the answer." }
+    - texte: "What is 10% of 70?"
+      nom: "7"
+      explication: "10% means 10 out of 100: 70 × 10 ÷ 100 = 7."
+      pieges:
+        - { texte: "60", pourquoi: "70 − 10: don’t take 10 away, take 10 parts out of 100." }
+        - { texte: "10", pourquoi: "10 is the percentage, not the answer." }
+    - texte: "What is 20% of 50?"
+      nom: "10"
+      explication: "20% means 20 out of 100: 50 × 20 ÷ 100 = 10."
+      pieges:
+        - { texte: "30", pourquoi: "50 − 20: don’t take 20 away, take 20 parts out of 100." }
+        - { texte: "20", pourquoi: "20 is the percentage, not the answer." }
+    - texte: "What is 75% of 40?"
+      nom: "30"
+      explication: "75% means 75 out of 100: 40 × 75 ÷ 100 = 30."
+      pieges:
+        - { texte: "-35", pourquoi: "40 − 75: don’t take 75 away, take 75 parts out of 100." }
+        - { texte: "75", pourquoi: "75 is the percentage, not the answer." }
+    - texte: "What is 10% of 300?"
+      nom: "30"
+      explication: "10% means 10 out of 100: 300 × 10 ÷ 100 = 30."
+      pieges:
+        - { texte: "290", pourquoi: "300 − 10: don’t take 10 away, take 10 parts out of 100." }
+        - { texte: "10", pourquoi: "10 is the percentage, not the answer." }
+    - texte: "What is 50% of 36?"
+      nom: "18"
+      explication: "50% means 50 out of 100: 36 × 50 ÷ 100 = 18."
+      pieges:
+        - { texte: "-14", pourquoi: "36 − 50: don’t take 50 away, take 50 parts out of 100." }
+        - { texte: "50", pourquoi: "50 is the percentage, not the answer." }
+    - texte: "What is 25% of 60?"
+      nom: "15"
+      explication: "25% means 25 out of 100: 60 × 25 ÷ 100 = 15."
+      pieges:
+        - { texte: "35", pourquoi: "60 − 25: don’t take 25 away, take 25 parts out of 100." }
+        - { texte: "25", pourquoi: "25 is the percentage, not the answer." }
+    - texte: "What is 20% of 150?"
+      nom: "30"
+      explication: "20% means 20 out of 100: 150 × 20 ÷ 100 = 30."
+      pieges:
+        - { texte: "130", pourquoi: "150 − 20: don’t take 20 away, take 20 parts out of 100." }
+        - { texte: "20", pourquoi: "20 is the percentage, not the answer." }
+    - texte: "What is 75% of 200?"
+      nom: "150"
+      explication: "75% means 75 out of 100: 200 × 75 ÷ 100 = 150."
+      pieges:
+        - { texte: "125", pourquoi: "200 − 75: don’t take 75 away, take 75 parts out of 100." }
+        - { texte: "75", pourquoi: "75 is the percentage, not the answer." }

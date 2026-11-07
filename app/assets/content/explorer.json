@@ -29,6 +29,32 @@
     4,
     9
   ],
+  "en": {
+    "titre": "Exploring in 3D",
+    "nom": "Explore",
+    "resume": "The solar system, the human body and solid shapes, in 3D.",
+    "intro": [
+      {
+        "texte": "Turn the objects with your finger.",
+        "images": [
+          "1f446",
+          "1f30d"
+        ]
+      },
+      {
+        "texte": "Look at them carefully from every side.",
+        "images": [
+          "1f52d"
+        ]
+      },
+      {
+        "texte": "Then touch the right answer!",
+        "images": [
+          "2b50"
+        ]
+      }
+    ]
+  },
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
@@ -151,7 +177,116 @@
           "cible": "tronc",
           "explication": "Le tee-shirt couvre le tronc."
         }
-      ]
+      ],
+      "en": {
+        "titre": "Parts of the body",
+        "idee": "Our body has a head, a neck, a trunk, arms, hands, legs and feet.",
+        "phrases": {
+          "consigne": "Listen carefully, then touch the part of the body I ask for on the drawing.",
+          "question": "{texte}",
+          "indice": "Point to it on your own body first.",
+          "exemple": "Try another part.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Touch the head.",
+            "cible": "tete",
+            "explication": "Here is the head."
+          },
+          {
+            "texte": "Touch the neck.",
+            "cible": "cou",
+            "explication": "Here is the neck."
+          },
+          {
+            "texte": "Touch the trunk.",
+            "cible": "tronc",
+            "explication": "Here is the trunk: the middle part of the body."
+          },
+          {
+            "texte": "Touch the arms.",
+            "cible": "bras",
+            "explication": "Here are the arms."
+          },
+          {
+            "texte": "Touch the hands.",
+            "cible": "mains",
+            "explication": "Here are the hands."
+          },
+          {
+            "texte": "Touch the legs.",
+            "cible": "jambes",
+            "explication": "Here are the legs."
+          },
+          {
+            "texte": "Touch the feet.",
+            "cible": "pieds",
+            "explication": "Here are the feet."
+          },
+          {
+            "texte": "What do you walk with? Touch them.",
+            "cible": "jambes",
+            "explication": "We walk with our legs, and our feet go on the ground."
+          },
+          {
+            "texte": "Where do you put your shoes?",
+            "cible": "pieds",
+            "explication": "Shoes go on your feet."
+          },
+          {
+            "texte": "Where do you put your woolly hat?",
+            "cible": "tete",
+            "explication": "A woolly hat goes on your head."
+          },
+          {
+            "texte": "Where do you put your scarf?",
+            "cible": "cou",
+            "explication": "A scarf wraps around your neck."
+          },
+          {
+            "texte": "Where do you put your gloves?",
+            "cible": "mains",
+            "explication": "Gloves go on your hands."
+          },
+          {
+            "texte": "What do you catch a ball with? Touch them.",
+            "cible": "mains",
+            "explication": "We catch a ball with our hands."
+          },
+          {
+            "texte": "What joins the head to the trunk?",
+            "cible": "cou",
+            "explication": "The neck joins the head to the trunk."
+          },
+          {
+            "texte": "Which part of the body are the arms and legs joined to?",
+            "cible": "tronc",
+            "explication": "The arms and legs are joined to the trunk."
+          },
+          {
+            "texte": "What do you kick a ball with?",
+            "cible": "pieds",
+            "explication": "We kick with our foot."
+          },
+          {
+            "texte": "Where are your eyes, nose and mouth?",
+            "cible": "tete",
+            "explication": "The eyes, nose and mouth are on your face, on your head."
+          },
+          {
+            "texte": "Where do the sleeves of your jumper go?",
+            "cible": "bras",
+            "explication": "Sleeves cover your arms."
+          },
+          {
+            "texte": "Where do you put your T-shirt?",
+            "cible": "tronc",
+            "explication": "A T-shirt covers your trunk."
+          }
+        ]
+      }
     },
     {
       "id": "solides-nommer",
@@ -180,6 +315,18 @@
         "exemple": "Une boule roule partout. Un cube a six faces carrées, toutes pareilles.",
         "demonstration": "Regarde : c'est {bonne}.",
         "bravo": "Oui ! C'est {bonne}."
+      },
+      "en": {
+        "titre": "Naming the cube, the cuboid and the sphere",
+        "idee": "A cube has six square faces. A cuboid has rectangular faces. A sphere rolls in every direction.",
+        "phrases": {
+          "consigne": "Turn the shape with your finger to see all its faces. Then touch its name.",
+          "question": "What is this shape called?",
+          "indice": "Look at its faces: are they flat? Is there a part that rolls?",
+          "exemple": "A sphere rolls in every direction. A cube has six square faces, all the same.",
+          "demonstration": "Look: this is {bonne}.",
+          "bravo": "Yes! This is {bonne}."
+        }
       }
     },
     {
@@ -211,6 +358,18 @@
         "exemple": "Une boule roule partout. Un cube a six faces carrées, toutes pareilles.",
         "demonstration": "Regarde : c'est {bonne}.",
         "bravo": "Oui ! C'est {bonne}."
+      },
+      "en": {
+        "titre": "Recognising common solid shapes",
+        "idee": "A cylinder and a cone have a flat circle and a part that rolls. The cone has a point.",
+        "phrases": {
+          "consigne": "Turn the shape with your finger to see all its faces. Then touch its name.",
+          "question": "What is this shape called?",
+          "indice": "Look at its faces: are they flat? Is there a part that rolls?",
+          "exemple": "A sphere rolls in every direction. A cube has six square faces, all the same.",
+          "demonstration": "Look: this is {bonne}.",
+          "bravo": "Yes! This is {bonne}."
+        }
       }
     },
     {
@@ -269,7 +428,56 @@
           "cible": "mars",
           "explication": "C'est Mars, la quatrième planète."
         }
-      ]
+      ],
+      "en": {
+        "titre": "The planets of the solar system",
+        "idee": "Eight planets go round the Sun. In order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+        "phrases": {
+          "consigne": "Turn the solar system with your finger: the Sun is in the middle. Then touch the planet I ask for.",
+          "question": "{texte}",
+          "indice": "Count the planets starting from the Sun: one, two, three…",
+          "exemple": "Try another planet.",
+          "demonstration": "Look: {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Touch the planet closest to the Sun.",
+            "cible": "mercure",
+            "explication": "It's Mercury, the planet closest to the Sun."
+          },
+          {
+            "texte": "Touch the biggest planet.",
+            "cible": "jupiter",
+            "explication": "It's Jupiter, the biggest planet in the solar system."
+          },
+          {
+            "texte": "Touch the smallest planet.",
+            "cible": "mercure",
+            "explication": "It's Mercury, the smallest planet."
+          },
+          {
+            "texte": "Touch the Earth: it's the third planet from the Sun.",
+            "cible": "terre",
+            "explication": "It's the Earth, our planet, the third one from the Sun."
+          },
+          {
+            "texte": "Touch the planet furthest from the Sun.",
+            "cible": "neptune",
+            "explication": "It's Neptune, the eighth planet from the Sun."
+          },
+          {
+            "texte": "Touch Saturn: it's the sixth planet from the Sun.",
+            "cible": "saturne",
+            "explication": "It's Saturn, the sixth planet."
+          },
+          {
+            "texte": "Touch Mars: it's the fourth planet from the Sun.",
+            "cible": "mars",
+            "explication": "It's Mars, the fourth planet."
+          }
+        ]
+      }
     }
   ]
 }

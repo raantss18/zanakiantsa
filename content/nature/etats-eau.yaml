@@ -46,3 +46,47 @@ items:
     bonne: ["1f6bf", "la douche"]
     autres: [["1f9ca", "le glaçon"], ["2744", "le flocon de neige"]]
     explication: "L'eau de la douche est liquide : elle coule."
+
+en:
+  titre: "Liquid water and solid water"
+  idee: "When water is liquid, it flows: rain, the sea, the shower. When it is very cold, water turns solid: ice, snow."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Liquid water flows. Solid water is hard and cold: you can hold it in your hand."
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Where is the water solid?"
+      bonne: ["1f9ca", "the ice cube"]
+      autres: [["1f327", "the rain"], ["1f30a", "the sea"]]
+      explication: "An ice cube is solid water: ice."
+    - texte: "Where is the water liquid?"
+      bonne: ["1f327", "the rain"]
+      autres: [["1f9ca", "the ice cube"], ["2744", "the snowflake"]]
+      explication: "Rain is liquid water falling from the clouds."
+    - texte: "Which one is solid water?"
+      bonne: ["2744", "the snowflake"]
+      autres: [["1f4a7", "the drop of water"], ["1f6bf", "the shower"]]
+      explication: "Snow is solid water."
+    - texte: "Which one is liquid water?"
+      bonne: ["1f30a", "the sea"]
+      autres: [["2603", "the snowman"], ["1f9ca", "the ice cube"]]
+      explication: "Sea water is liquid: it moves and makes waves."
+    - texte: "Which one is made of solid water?"
+      bonne: ["2603", "the snowman"]
+      autres: [["1f6bf", "the shower"], ["1f4a7", "the drop of water"]]
+      explication: "A snowman is made of snow: solid water."
+    - texte: "Where can you find ice and snow, even in summer?"
+      bonne: ["1f3d4", "at the top of high mountains"]
+      autres: [["1f6bf", "in the shower"], ["1f327", "in the rain"]]
+      explication: "Up there, it's so cold that the ice stays all year round."
+    - texte: "Where does rain fall from?"
+      bonne: ["2601", "the cloud"]
+      autres: [["2600", "the sun"], ["1f3d4", "the mountain"]]
+      explication: "Rain falls from the clouds."
+    - texte: "Which water flows to wash you?"
+      bonne: ["1f6bf", "the shower"]
+      autres: [["1f9ca", "the ice cube"], ["2744", "the snowflake"]]
+      explication: "Shower water is liquid: it flows."

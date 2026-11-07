@@ -47,3 +47,46 @@ items:
     bonne: ["1f4aa", "le bras"]
     autres: [["1f9b6", "le pied"], ["1f444", "la bouche"]]
     explication: "« arm », c'est le bras."
+en:
+  titre: "The body in English"
+  phrases:
+    consigne: "Listen to the word and touch the right part of the body."
+    question: "Touch: {texte}."
+    indice: "Point to that part of your body, then touch the picture."
+    exemple: "Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "eye"
+      bonne: ["1f441", "the eye"]
+      autres: [["1f9b6", "the foot"], ["270b", "the hand"]]
+      explication: "eye — well done!"
+    - texte: "ear"
+      bonne: ["1f442", "the ear"]
+      autres: [["1f444", "the mouth"], ["1f4aa", "the arm"]]
+      explication: "ear — well done!"
+    - texte: "nose"
+      bonne: ["1f443", "the nose"]
+      autres: [["1f442", "the ear"], ["1f4aa", "the arm"]]
+      explication: "nose — well done!"
+    - texte: "mouth"
+      bonne: ["1f444", "the mouth"]
+      autres: [["1f9b5", "the leg"], ["1f442", "the ear"]]
+      explication: "mouth — well done!"
+    - texte: "hand"
+      bonne: ["270b", "the hand"]
+      autres: [["1f441", "the eye"], ["1f9b6", "the foot"]]
+      explication: "hand — well done!"
+    - texte: "foot"
+      bonne: ["1f9b6", "the foot"]
+      autres: [["1f443", "the nose"], ["270b", "the hand"]]
+      explication: "foot — well done!"
+    - texte: "leg"
+      bonne: ["1f9b5", "the leg"]
+      autres: [["1f444", "the mouth"], ["1f443", "the nose"]]
+      explication: "leg — well done!"
+    - texte: "arm"
+      bonne: ["1f4aa", "the arm"]
+      autres: [["1f9b6", "the foot"], ["1f444", "the mouth"]]
+      explication: "arm — well done!"

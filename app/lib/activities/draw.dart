@@ -10,6 +10,7 @@ import '../app_state.dart';
 import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/events.dart';
+import '../l10n/l10n.dart';
 import '../ui/narrator.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
@@ -172,10 +173,10 @@ class _DrawPageState extends State<DrawPage> {
       final pts = [for (final s in strokes) ...s.points];
       final box = pts.skip(1).fold(Rect.fromPoints(pts.first, pts.first), (r, p) => r.expandToInclude(Rect.fromPoints(p, p)));
       final big = max(box.width, box.height) >= _canvas.shortestSide * 0.35;
-      if (!big) return await _tell('Dessine plus grand, pour qu’on voie bien tous les morceaux. ${item.explanation}');
-      if (strokes.length < item.minStrokes) return await _tell('Il manque des morceaux. ${item.explanation}');
+      if (!big) return await _tell('${t('Dessine plus grand, pour qu’on voie bien tous les morceaux.')} ${item.explanation}');
+      if (strokes.length < item.minStrokes) return await _tell('${t('Il manque des morceaux.')} ${item.explanation}');
       // 2. Sans modèle (pas encore installé par un adulte) : on range le dessin, sans dire qu'on l'a reconnu.
-      if (_recognizer == null) return await _save(true, 'Ton dessin est rangé dans ton album.');
+      if (_recognizer == null) return await _save(true, t('Ton dessin est rangé dans ton album.'));
       // 3. Reconnu parmi les premières propositions du modèle : réussi.
       final seen = await _recognize();
       debugPrint('dessin « ${item.name} » : $seen');
@@ -183,11 +184,11 @@ class _DrawPageState extends State<DrawPage> {
         return await _save(true, skill.say('bravo', q, words: app.wordsFor(skill)));
       }
       misses++;
-      final guess = seen.map((l) => drawingNames[l]).nonNulls.where((n) => n != item.name).firstOrNull;
-      final looks = guess == null ? 'Je ne reconnais pas encore ${item.name}.' : 'On dirait plutôt $guess !';
+      final guess = seen.map((l) => drawingNames[l]).nonNulls.map(t).where((n) => n != item.name).firstOrNull;
+      final looks = guess == null ? tf('Je ne reconnais pas encore {name}.', {'name': '${item.name}'}) : tf('On dirait plutôt {guess} !', {'guess': guess});
       _errors.add('${item.name} : $looks');
       if (misses >= 3) return await _save(false, '$looks ${skill.phrases['demonstration']}');
-      await _tell('$looks ${item.explanation} Ajoute ce qui manque, ou efface et recommence.');
+      await _tell('$looks ${item.explanation} ${t('Ajoute ce qui manque, ou efface et recommence.')}');
     } finally {
       _checking = false;
     }
@@ -361,11 +362,11 @@ class _Tools extends StatelessWidget {
           onPressed: () => onWidth(w),
           icon: Container(width: dot, height: dot, decoration: const BoxDecoration(color: ink, shape: BoxShape.circle)),
         );
-    final colors = [for (final (c, name) in paints) swatch(c, name)];
+    final colors = [for (final (c, name) in paints) swatch(c, t(name))];
     final actions = [
-      sizeButton(6, 10, 'Trait fin'),
-      sizeButton(18, 22, 'Trait épais'),
-      IconButton.filledTonal(tooltip: 'Annuler le dernier trait', iconSize: 40, onPressed: onUndo, icon: const Icon(Icons.undo_rounded)),
+      sizeButton(6, 10, t('Trait fin')),
+      sizeButton(18, 22, t('Trait épais')),
+      IconButton.filledTonal(tooltip: t('Annuler le dernier trait'), iconSize: 40, onPressed: onUndo, icon: const Icon(Icons.undo_rounded)),
     ];
     final done = SizedBox(
       width: 120,
@@ -373,7 +374,7 @@ class _Tools extends StatelessWidget {
       child: FilledButton(
         style: FilledButton.styleFrom(backgroundColor: green, foregroundColor: Colors.white, disabledBackgroundColor: const Color(0xFFBFC7C1)),
         onPressed: onDone,
-        child: const Icon(Icons.check_rounded, size: 44, semanticLabel: "J'ai fini"),
+        child: Icon(Icons.check_rounded, size: 44, semanticLabel: t("J'ai fini")),
       ),
     );
     // Portrait : deux rangées sous la feuille. Paysage : une colonne à droite.
@@ -414,7 +415,7 @@ class _Saved extends StatelessWidget {
           decoration: BoxDecoration(border: Border.all(color: const Color(0xFFD5DBD7), width: 2), borderRadius: BorderRadius.circular(16)),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(14),
-            child: Image.file(file, height: 220, fit: BoxFit.contain, semanticLabel: 'Ton dessin'),
+            child: Image.file(file, height: 220, fit: BoxFit.contain, semanticLabel: t('Ton dessin')),
           ),
         ),
         const SizedBox(height: 12),
@@ -443,14 +444,14 @@ class DrawingsPage extends StatelessWidget {
                   shape: const CircleBorder(),
                   elevation: 2,
                   child: IconButton(
-                    tooltip: 'Retour',
+                    tooltip: t('Retour'),
                     iconSize: 32,
                     onPressed: () => Navigator.of(context).pop(),
                     icon: const Icon(Icons.arrow_back_rounded, color: ink),
                   ),
                 ),
                 const SizedBox(width: 12),
-                const PlayfulTitle('Mes dessins'),
+                PlayfulTitle(t('Mes dessins')),
               ]),
             ),
             Expanded(
@@ -464,10 +465,10 @@ class DrawingsPage extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(24), boxShadow: cardShadow),
-                        child: const Row(mainAxisSize: MainAxisSize.min, children: [
-                          Art('1f3a8', size: 56),
-                          SizedBox(width: 12),
-                          Text('Pas encore de dessin.', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
+                        child: Row(mainAxisSize: MainAxisSize.min, children: [
+                          const Art('1f3a8', size: 56),
+                          const SizedBox(width: 12),
+                          Text(t('Pas encore de dessin.'), style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
                         ]),
                       ),
                     );

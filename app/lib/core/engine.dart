@@ -6,6 +6,7 @@ library;
 
 import 'dart:math';
 
+import '../l10n/l10n.dart';
 import 'game.dart';
 
 const pieceValue = {'P': 100, 'N': 300, 'B': 310, 'R': 500, 'Q': 900, 'K': 0};
@@ -128,12 +129,12 @@ List<Map<String, Object?>> analyseGame((String, List<String>, bool) a) {
 MoveNote? _judge(Position p, Move m, int ply) {
   final next = p.play(m);
   final san = p.san(m);
-  if (next.legalMoves().isEmpty && next.inCheck) return MoveNote(ply, 'mat', '$san : échec et mat, bravo !');
+  if (next.legalMoves().isEmpty && next.inCheck) return MoveNote(ply, 'mat', tf('{move} : échec et mat, bravo !', {'move': san}));
   // Un mat en un coup existait ?
   for (final o in p.legalMoves()) {
     final q = p.play(o);
     if (q.inCheck && q.legalMoves().isEmpty) {
-      return MoveNote(ply, 'mat_manque', 'Tu pouvais faire échec et mat avec ${p.san(o)} !', better: o.uci);
+      return MoveNote(ply, 'mat_manque', tf('Tu pouvais faire échec et mat avec {move} !', {'move': p.san(o)}), better: o.uci);
     }
   }
   final scores = scoreMoves(p, 2);
@@ -146,16 +147,22 @@ MoveNote? _judge(Position p, Move m, int ply) {
     final reply = replies.entries.reduce((x, y) => y.value > x.value ? y : x).key;
     final taken = next.board[reply.to];
     if (taken != null && next.isCapture(reply)) {
-      return MoveNote(ply, 'gaffe', 'Après $san, ${pieceName(taken)} en ${squareName(reply.to)} peut être pris${taken.toUpperCase() == 'R' || taken.toUpperCase() == 'Q' ? 'e' : ''} : '
-          'regarde toujours ce que l\'adversaire attaque. Mieux : ${p.san(best.key)}.', better: best.key.uci);
+      final v = {'move': san, 'piece': pieceName(taken), 'square': squareName(reply.to), 'best': p.san(best.key)};
+      return MoveNote(
+          ply,
+          'gaffe',
+          taken.toUpperCase() == 'R' || taken.toUpperCase() == 'Q'
+              ? tf('Après {move}, {piece} en {square} peut être prise : regarde toujours ce que l\'adversaire attaque. Mieux : {best}.', v)
+              : tf('Après {move}, {piece} en {square} peut être pris : regarde toujours ce que l\'adversaire attaque. Mieux : {best}.', v),
+          better: best.key.uci);
     }
     if (p.isCapture(best.key) && p.board[best.key.to] != null) {
       final prize = p.board[best.key.to]!;
-      return MoveNote(ply, 'prise_manquee', 'Tu pouvais prendre ${pieceName(prize)} en ${squareName(best.key.to)} avec ${p.san(best.key)}.',
+      return MoveNote(ply, 'prise_manquee', tf('Tu pouvais prendre {piece} en {square} avec {move}.', {'piece': pieceName(prize), 'square': squareName(best.key.to), 'move': p.san(best.key)}),
           better: best.key.uci);
     }
-    return MoveNote(ply, 'gaffe', '$san fait perdre du matériel. Mieux : ${p.san(best.key)}.', better: best.key.uci);
+    return MoveNote(ply, 'gaffe', tf('{move} fait perdre du matériel. Mieux : {best}.', {'move': san, 'best': p.san(best.key)}), better: best.key.uci);
   }
-  if (next.inCheck && loss <= 30 && p.isCapture(m)) return MoveNote(ply, 'bien', '$san : une prise avec échec, très bien !');
+  if (next.inCheck && loss <= 30 && p.isCapture(m)) return MoveNote(ply, 'bien', tf('{move} : une prise avec échec, très bien !', {'move': san}));
   return null;
 }

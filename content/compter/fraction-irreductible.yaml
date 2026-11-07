@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "8/20", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 4." }
       - { texte: "5/2", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+
+en:
+  titre: "Simplest form of a fraction"
+  idee: "A fraction is in its simplest form when you can no longer divide the numerator and denominator by the same number. 12/18 = 2/3, because 12 and 18 can both be divided by 6."
+  phrases:
+    consigne: "Simplify all the way, then touch the answer."
+    question: "{texte}"
+    indice: "Find the biggest number that divides the top and the bottom."
+    exemple: "24/36: divide by 12, and you get 2/3."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Write 12/18 in its simplest form."
+      nom: "2/3"
+      explication: "12 and 18 can both be divided by 6: 12/18 = 2/3."
+      pieges:
+        - { texte: "6/9", pourquoi: "That is simpler, but you can simplify more: divide by 3." }
+        - { texte: "3/2", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 15/35 in its simplest form."
+      nom: "3/7"
+      explication: "15 and 35 can both be divided by 5: 15/35 = 3/7."
+      pieges:
+        - { texte: "7/3", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+        - { texte: "10/30", pourquoi: "Divide the top and the bottom by the same number; don’t subtract." }
+    - texte: "Write 24/36 in its simplest form."
+      nom: "2/3"
+      explication: "24 and 36 can both be divided by 12: 24/36 = 2/3."
+      pieges:
+        - { texte: "12/18", pourquoi: "That is simpler, but you can simplify more: divide by 6." }
+        - { texte: "3/2", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 63/14 in its simplest form."
+      nom: "9/2"
+      explication: "63 and 14 can both be divided by 7: 63/14 = 9/2."
+      pieges:
+        - { texte: "2/9", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+        - { texte: "56/7", pourquoi: "Divide the top and the bottom by the same number; don’t subtract." }
+    - texte: "Write 20/45 in its simplest form."
+      nom: "4/9"
+      explication: "20 and 45 can both be divided by 5: 20/45 = 4/9."
+      pieges:
+        - { texte: "9/4", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+        - { texte: "15/40", pourquoi: "Divide the top and the bottom by the same number; don’t subtract." }
+    - texte: "Write 18/42 in its simplest form."
+      nom: "3/7"
+      explication: "18 and 42 can both be divided by 6: 18/42 = 3/7."
+      pieges:
+        - { texte: "9/21", pourquoi: "That is simpler, but you can simplify more: divide by 3." }
+        - { texte: "7/3", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 30/48 in its simplest form."
+      nom: "5/8"
+      explication: "30 and 48 can both be divided by 6: 30/48 = 5/8."
+      pieges:
+        - { texte: "15/24", pourquoi: "That is simpler, but you can simplify more: divide by 3." }
+        - { texte: "8/5", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 28/70 in its simplest form."
+      nom: "2/5"
+      explication: "28 and 70 can both be divided by 14: 28/70 = 2/5."
+      pieges:
+        - { texte: "14/35", pourquoi: "That is simpler, but you can simplify more: divide by 7." }
+        - { texte: "5/2", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 45/60 in its simplest form."
+      nom: "3/4"
+      explication: "45 and 60 can both be divided by 15: 45/60 = 3/4."
+      pieges:
+        - { texte: "15/20", pourquoi: "That is simpler, but you can simplify more: divide by 5." }
+        - { texte: "4/3", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }
+    - texte: "Write 16/40 in its simplest form."
+      nom: "2/5"
+      explication: "16 and 40 can both be divided by 8: 16/40 = 2/5."
+      pieges:
+        - { texte: "8/20", pourquoi: "That is simpler, but you can simplify more: divide by 4." }
+        - { texte: "5/2", pourquoi: "The numerator stays on top: only the denominator goes at the bottom." }

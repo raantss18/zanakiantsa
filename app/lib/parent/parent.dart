@@ -11,6 +11,8 @@ import '../core/progress.dart';
 import '../core/report.dart';
 import '../core/rules.dart';
 import '../ui/adaptive.dart';
+import '../content/content.dart';
+import '../l10n/l10n.dart';
 import 'dashboard.dart';
 import 'notebook_style.dart';
 import '../update/updater.dart';
@@ -76,17 +78,17 @@ class _ParentPageState extends State<ParentPage> {
   }
 
   Future<void> _testVoice() async {
-    setState(() => voiceTest = 'Écoutez…');
+    setState(() => voiceTest = t('Écoutez…'));
     final (signalled, took, error) = await app.voice.test();
     if (!mounted) return;
     setState(() => voiceTest = error != null
-        ? 'Le moteur signale une erreur (« $error ») : la voix française n’est sans doute pas installée. Dans les '
+        ? tf('Le moteur signale une erreur (« {error} ») : la voix française n’est sans doute pas installée. Dans les '
             'réglages du téléphone, « Synthèse vocale » : installez les données vocales en français, ou choisissez un '
-            'autre moteur ci-dessus. Le texte reste toujours écrit à l’écran.'
+            'autre moteur ci-dessus. Le texte reste toujours écrit à l’écran.', {'error': error})
         : signalled
-            ? 'Phrase dite en ${(took.inMilliseconds / 1000).toStringAsFixed(1)} s : le moteur prévient bien quand il a fini.'
-            : 'Le moteur n’a pas prévenu la fin de la phrase : les phrases peuvent être coupées ou espacées. '
-                'Essayez un autre moteur ci-dessus (par exemple « com.google.android.tts », Synthèse vocale Google).');
+            ? tf('Phrase dite en {s} s : le moteur prévient bien quand il a fini.', {'s': (took.inMilliseconds / 1000).toStringAsFixed(1)})
+            : t('Le moteur n’a pas prévenu la fin de la phrase : les phrases peuvent être coupées ou espacées. '
+                'Essayez un autre moteur ci-dessus (par exemple « com.google.android.tts », Synthèse vocale Google).'));
   }
 
   Future<void> _chooseEngine(String e) async {
@@ -98,7 +100,7 @@ class _ParentPageState extends State<ParentPage> {
 
   /// Les 5 explications données le plus souvent ces 7 derniers jours, avec la compétence.
   Future<void> _downloadInk() async {
-    setState(() => inkStatus = 'Téléchargement…');
+    setState(() => inkStatus = t('Téléchargement…'));
     var ok = false;
     try {
       final m = mlkit.DigitalInkRecognizerModelManager();
@@ -108,23 +110,23 @@ class _ParentPageState extends State<ParentPage> {
     setState(() {
       inkModel = ok;
       inkStatus = ok
-          ? 'Modèles installés : l’enfant peut écrire ses réponses, et ses dessins sont reconnus.'
-          : 'Échec : vérifiez la connexion.';
+          ? t('Modèles installés : l’enfant peut écrire ses réponses, et ses dessins sont reconnus.')
+          : t('Échec : vérifiez la connexion.');
     });
   }
 
   /// [automatic] : la recherche faite à l'entrée ; elle ne dit rien quand il n'y a rien de nouveau.
   Future<void> _check({bool automatic = false}) async {
-    setState(() => updateStatus = automatic ? null : 'Recherche…');
+    setState(() => updateStatus = automatic ? null : t('Recherche…'));
     final r = await updater.check();
     if (!mounted) return;
     setState(() {
       release = r;
       updateStatus = r != null
-          ? 'Version ${r.version} disponible.'
+          ? tf('Version {v} disponible.', {'v': r.version})
           : automatic
               ? null
-              : 'Pas de nouvelle version (ou pas de réseau).';
+              : t('Pas de nouvelle version (ou pas de réseau).');
     });
   }
 
@@ -138,7 +140,7 @@ class _ParentPageState extends State<ParentPage> {
             Row(children: [
               const Icon(Icons.system_update_rounded, size: 32),
               const SizedBox(width: 12),
-              Expanded(child: Text('Nouvelle version ${release!.version} disponible', style: notebookTitle)),
+              Expanded(child: Text(tf('Nouvelle version {v} disponible', {'v': release!.version}), style: notebookTitle)),
             ]),
             const SizedBox(height: 8),
             Text(release!.notes),
@@ -150,9 +152,9 @@ class _ParentPageState extends State<ParentPage> {
                 style: FilledButton.styleFrom(minimumSize: const Size(200, 52)),
                 onPressed: _install,
                 icon: const Icon(Icons.download_rounded),
-                label: const Text('Mettre à jour'),
+                label: Text(t('Mettre à jour')),
               ),
-            if (updateStatus != null && updateStatus!.startsWith('Installation')) Padding(padding: const EdgeInsets.only(top: 8), child: Text(updateStatus!)),
+            if (updateStatus != null && updateStatus!.startsWith(t('Installation'))) Padding(padding: const EdgeInsets.only(top: 8), child: Text(updateStatus!)),
           ]),
         ),
       );
@@ -165,7 +167,7 @@ class _ParentPageState extends State<ParentPage> {
     if (!mounted) return;
     setState(() {
       progress = null;
-      updateStatus = ok ? 'Installation lancée.' : 'Installation non lancée : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis réessayez.';
+      updateStatus = ok ? t('Installation lancée.') : t('Installation non lancée : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis réessayez.');
     });
   }
 
@@ -174,11 +176,11 @@ class _ParentPageState extends State<ParentPage> {
     final name = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Prénom'),
+        title: Text(t('Prénom')),
         content: TextField(controller: field, autofocus: true, textCapitalization: TextCapitalization.words),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annuler')),
-          FilledButton(onPressed: () => Navigator.pop(ctx, field.text), child: const Text('Enregistrer')),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(t('Annuler'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, field.text), child: Text(t('Enregistrer'))),
         ],
       ),
     );
@@ -194,32 +196,32 @@ class _ParentPageState extends State<ParentPage> {
       context: context,
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, set) => AlertDialog(
-          title: const Text('Ajouter un enfant'),
+          title: Text(t('Ajouter un enfant')),
           content: SingleChildScrollView(
             child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TextField(controller: field, autofocus: true, decoration: const InputDecoration(labelText: 'Prénom (facultatif)'), textCapitalization: TextCapitalization.words),
+              TextField(controller: field, autofocus: true, decoration: InputDecoration(labelText: t('Prénom (facultatif)')), textCapitalization: TextCapitalization.words),
               const SizedBox(height: 12),
-              const Text('Âge'),
+              Text(t('Âge')),
               Wrap(spacing: 6, children: [
                 ValueStepper(
-                  label: 'Âge',
-                  value: '$years ans',
-                  minusLabel: 'Un an de moins',
-                  plusLabel: 'Un an de plus',
+                  label: t('Âge'),
+                  value: tf('{n} ans', {'n': years}),
+                  minusLabel: t('Un an de moins'),
+                  plusLabel: t('Un an de plus'),
                   onMinus: years <= 4 ? null : () => set(() => years--),
                   onPlus: years >= 99 ? null : () => set(() => years++),
                 ),
               ]),
               const SizedBox(height: 12),
-              const Text('C’est'),
+              Text(t('C’est')),
               Wrap(spacing: 6, children: [
-                for (final (b, l) in [(true, 'un garçon'), (false, 'une fille')]) ChoiceChip(label: Text(l), selected: boy == b, onSelected: (_) => set(() => boy = b)),
+                for (final (b, l) in [(true, t('un garçon')), (false, t('une fille'))]) ChoiceChip(label: Text(l), selected: boy == b, onSelected: (_) => set(() => boy = b)),
               ]),
             ]),
           ),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annuler')),
-            FilledButton(onPressed: boy == null ? null : () => Navigator.pop(ctx, true), child: const Text('Ajouter')),
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t('Annuler'))),
+            FilledButton(onPressed: boy == null ? null : () => Navigator.pop(ctx, true), child: Text(t('Ajouter'))),
           ],
         ),
       ),
@@ -240,16 +242,18 @@ class _ParentPageState extends State<ParentPage> {
       // Le visuel du site (ADR 0059), quel que soit l'univers de l'enfant.
       data: notebookTheme(base),
       child: Scaffold(
-        appBar: AppBar(title: const Text('Espace parent')),
+        appBar: AppBar(title: Text(t('Espace parent'))),
         body: SeyesPaper(
           child: SafeArea(
           child: ListView(
             padding: readablePadding(context, side: 36, bottom: 48),
             children: [
               if (release != null) _updateBanner(),
+              _LanguageSwitch(app: app),
+              const Divider(height: 32),
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
-              Text('Enfants', style: notebookTitle),
-              const Text('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.'),
+              Text(t('Enfants'), style: notebookTitle),
+              Text(t('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.')),
               const SizedBox(height: 8),
               Wrap(spacing: 8, runSpacing: 8, children: [
                 for (final p in app.profiles)
@@ -263,16 +267,16 @@ class _ParentPageState extends State<ParentPage> {
                     },
                     onDeleted: () => _rename(p),
                     deleteIcon: const Icon(Icons.edit_rounded, size: 18),
-                    deleteButtonTooltipMessage: 'Renommer',
+                    deleteButtonTooltipMessage: t('Renommer'),
                   ),
-                ActionChip(avatar: const Icon(Icons.person_add_alt_1_rounded), label: const Text('Ajouter un enfant'), onPressed: _addChild),
+                ActionChip(avatar: const Icon(Icons.person_add_alt_1_rounded), label: Text(t('Ajouter un enfant')), onPressed: _addChild),
               ]),
               const Divider(height: 32),
-              Text('${app.current.label} est', style: notebookTitle),
-              const Text('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.'),
+              Text(tf('{name} est', {'name': app.current.label}), style: notebookTitle),
+              Text(t('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.')),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [
-                for (final (boy, label) in [(true, 'un garçon'), (false, 'une fille')])
+                for (final (boy, label) in [(true, t('un garçon')), (false, t('une fille'))])
                   ChoiceChip(
                     label: Text(label),
                     selected: app.boy == boy,
@@ -285,11 +289,11 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               _AgeAndClass(app: app),
               const Divider(height: 32),
-              Text('Temps de jeu proposé par jour', style: notebookTitle),
-              const Text(
-                'Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; suites, sons, échecs ; '
+              Text(t('Temps de jeu proposé par jour'), style: notebookTitle),
+              Text(
+                t('Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; suites, sons, échecs ; '
                 'anglais, code, explorer), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
-                'par jour avant 5 ans, « moins, c’est mieux ».',
+                'par jour avant 5 ans, « moins, c’est mieux ».'),
               ),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [
@@ -305,19 +309,19 @@ class _ParentPageState extends State<ParentPage> {
               ]),
               const Divider(height: 32),
               // Tableau de bord (ADR 0061) : temps, réussite du premier coup, progrès par domaine, à revoir.
-              Text('En un coup d’œil', style: notebookTitle),
+              Text(t('En un coup d’œil'), style: notebookTitle),
               if (r == null) const LinearProgressIndicator() else Dashboard(app: app, sessions: sessions),
               const Divider(height: 32),
-              Text('La voix', style: notebookTitle),
-              const Text(
-                'La voix vient du moteur de synthèse vocale du téléphone. Si elle est coupée, hachée ou à l’accent '
-                'étrange, essayez-la, puis choisissez un autre moteur.',
+              Text(t('La voix'), style: notebookTitle),
+              Text(
+                t('La voix vient du moteur de synthèse vocale du téléphone. Si elle est coupée, hachée ou à l’accent '
+                'étrange, essayez-la, puis choisissez un autre moteur.'),
               ),
               const SizedBox(height: 8),
               if (voiceInfo == null)
                 const LinearProgressIndicator()
               else ...[
-                Text('Moteur utilisé : ${voiceInfo!.$2 ?? 'inconnu'} · français : ${voiceInfo!.$3 ? 'disponible' : 'non disponible'}'),
+                Text(tf('Moteur utilisé : {engine} · français : {fr}', {'engine': voiceInfo!.$2 ?? t('inconnu'), 'fr': voiceInfo!.$3 ? t('disponible') : t('non disponible')})),
                 if (voiceInfo!.$1.length > 1)
                   Wrap(spacing: 8, children: [
                     for (final e in voiceInfo!.$1)
@@ -325,42 +329,42 @@ class _ParentPageState extends State<ParentPage> {
                   ]),
               ],
               const SizedBox(height: 8),
-              FilledButton.tonal(onPressed: voiceTest == 'Écoutez…' ? null : _testVoice, child: const Text('Tester la voix')),
+              FilledButton.tonal(onPressed: voiceTest == t('Écoutez…') ? null : _testVoice, child: Text(t('Tester la voix'))),
               if (voiceTest != null) Text(voiceTest!),
               const Divider(height: 32),
               Text(
-                'Écriture et dessins au doigt',
+                t('Écriture et dessins au doigt'),
                 style: notebookTitle,
               ),
-              const Text(
-                'Un téléchargement unique (connexion nécessaire) ; ensuite tout fonctionne hors ligne. Sans le modèle '
+              Text(
+                t('Un téléchargement unique (connexion nécessaire) ; ensuite tout fonctionne hors ligne. Sans le modèle '
                 'des dessins, un dessin est rangé sans être vérifié. '
-                'ML Kit envoie à Google des statistiques techniques d’usage, jamais les tracés.',
+                'ML Kit envoie à Google des statistiques techniques d’usage, jamais les tracés.'),
               ),
               const SizedBox(height: 8),
               if (inkModel == true)
-                const ListTile(
+                ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: Icon(Icons.check_circle, color: Colors.green),
-                  title: Text('Modèles installés'),
+                  leading: const Icon(Icons.check_circle, color: Colors.green),
+                  title: Text(t('Modèles installés')),
                 )
               else
                 FilledButton.tonal(
-                  onPressed: inkStatus == 'Téléchargement…'
+                  onPressed: inkStatus == t('Téléchargement…')
                       ? null
                       : _downloadInk,
-                  child: const Text('Télécharger les modèles'),
+                  child: Text(t('Télécharger les modèles')),
                 ),
               if (inkStatus != null) Text(inkStatus!),
               const Divider(height: 32),
               Text(
-                'Mises à jour',
+                t('Mises à jour'),
                 style: notebookTitle,
               ),
               const SizedBox(height: 8),
               FilledButton.tonal(
                 onPressed: _check,
-                child: const Text('Rechercher une mise à jour'),
+                child: Text(t('Rechercher une mise à jour')),
               ),
               if (updateStatus != null)
                 Padding(
@@ -376,19 +380,19 @@ class _ParentPageState extends State<ParentPage> {
                 else
                   FilledButton(
                     onPressed: _install,
-                    child: const Text('Installer'),
+                    child: Text(t('Installer')),
                   ),
               ],
               const Divider(height: 32),
               // À propos : une question, un souci d'installation (demande d'Antsa, vidéo d'aide).
-              Text('À propos', style: notebookTitle),
+              Text(t('À propos'), style: notebookTitle),
               const SizedBox(height: 4),
               const SizedBox(height: 4),
               const AboutCard(),
               const Divider(height: 32),
-              Text('Crédits', style: notebookTitle),
-              const Text(
-                'Illustrations : Twemoji v17.0.3 (CC BY 4.0, github.com/jdecked/twemoji). '
+              Text(t('Crédits'), style: notebookTitle),
+              Text(
+                t('Illustrations : Twemoji v17.0.3 (CC BY 4.0, github.com/jdecked/twemoji). '
                 'Polices : Andika 7.000 et Fredoka (SIL Open Font License). '
                 'Pièces d’échecs : Cburnett, Wikimedia Commons (CC BY-SA 3.0). '
                 'Livres : African Storybook Initiative et leurs auteurs, illustrateurs et traducteurs, cités à la fin de '
@@ -399,7 +403,7 @@ class _ParentPageState extends State<ParentPage> {
                 'UCI. Sources : github.com/LeelaChessZero/lc0 (étiquette v0.32.1) et github.com/CSSLab/maia-chess ; '
                 'recette de compilation : tool/build_lc0.sh dans github.com/raantss18/zanakiantsa. '
                 'Analyse fine des parties : le programme Stockfish 11, sous licence GNU GPL v3, séparé de l’appli lui aussi. '
-                'Sources : github.com/official-stockfish/Stockfish (étiquette sf_11) ; recette : tool/build_stockfish.sh.',
+                'Sources : github.com/official-stockfish/Stockfish (étiquette sf_11) ; recette : tool/build_stockfish.sh.'),
               ),
             ],
           ),
@@ -444,39 +448,87 @@ class _AgeAndClass extends StatelessWidget {
     final start = schoolLevels[startLevelForClass(classe)];
     final top = app.highestLevel;
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Âge et classe', style: notebookTitle),
+      Text(t('Âge et classe'), style: notebookTitle),
       const SizedBox(height: 12),
       Wrap(spacing: 32, runSpacing: 16, children: [
         ValueStepper(
-          label: 'Âge',
-          value: '${app.age} ans',
-          minusLabel: 'Un an de moins',
-          plusLabel: 'Un an de plus',
+          label: t('Âge'),
+          value: tf('{n} ans', {'n': app.age}),
+          minusLabel: t('Un an de moins'),
+          plusLabel: t('Un an de plus'),
           onMinus: app.age <= 4 ? null : () => app.setAge(app.age - 1),
           onPlus: app.age >= 99 ? null : () => app.setAge(app.age + 1),
         ),
         ValueStepper(
-          label: app.chosenClass == null ? 'Classe, d’après son âge' : 'Classe, choisie par vous',
-          value: schoolLevels[classe],
-          minusLabel: 'Classe plus facile',
-          plusLabel: 'Classe plus avancée',
+          label: app.chosenClass == null ? t('Classe, d’après son âge') : t('Classe, choisie par vous'),
+          value: t(schoolLevels[classe]),
+          minusLabel: t('Classe plus facile'),
+          plusLabel: t('Classe plus avancée'),
           onMinus: classe <= 0 ? null : () => app.chooseClass(classe - 1),
           onPlus: classe >= schoolLevels.length - 1 ? null : () => app.chooseClass(classe + 1),
         ),
       ]),
       if (app.chosenClass != null)
-        TextButton(onPressed: () => app.chooseClass(null), child: const Text('Revenir à la classe de son âge')),
+        TextButton(onPressed: () => app.chooseClass(null), child: Text(t('Revenir à la classe de son âge'))),
       const SizedBox(height: 8),
       Text(
         classe - 1 > top
-            ? 'Les leçons vont pour l’instant jusqu’à la classe de ${schoolLevels[top]} : $name commence par les plus avancées. D’autres arrivent à chaque mise à jour.'
-            : 'Les leçons commencent au niveau $start. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que $name connaît.',
+            ? tf('Les leçons vont pour l’instant jusqu’à la classe de {level} : {name} commence par les plus avancées. D’autres arrivent à chaque mise à jour.', {'level': t(schoolLevels[top]), 'name': name})
+            : tf('Les leçons commencent au niveau {start}. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que {name} connaît.', {'start': t(start), 'name': name}),
       ),
       const SizedBox(height: 4),
       Text(
         afterLastMiss(app.age) == AfterLastMiss.demonstration
-            ? 'Après trois essais, l’app montre la réponse.'
-            : 'Après trois essais, l’app donne un dernier indice plutôt que la réponse.',
+            ? t('Après trois essais, l’app montre la réponse.')
+            : t('Après trois essais, l’app donne un dernier indice plutôt que la réponse.'),
+      ),
+    ]);
+  }
+}
+
+/// Français ou anglais pour toute l'app (ADR 0064). Le changement coupe la voix en cours ; ensuite chaque phrase est dite
+/// dans la nouvelle langue, et les mots étudiés (l'anglais, ou le français quand l'app est en anglais) par leur propre voix.
+class _LanguageSwitch extends StatefulWidget {
+  const _LanguageSwitch({required this.app});
+  final AppState app;
+  @override
+  State<_LanguageSwitch> createState() => _LanguageSwitchState();
+}
+
+class _LanguageSwitchState extends State<_LanguageSwitch> {
+  (List<String>, int)? ready;
+  bool busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    translatedTopics().then((l) {
+      if (mounted) setState(() => ready = l);
+    });
+  }
+
+  Future<void> _set(String lang) async {
+    setState(() => busy = true);
+    await widget.app.setLanguage(lang);
+    if (mounted) setState(() => busy = false);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final r = ready;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(t('Langue de l’application'), style: notebookTitle),
+      const SizedBox(height: 4),
+      Wrap(spacing: 10, children: [
+        for (final (code, label) in [('fr', 'Français'), ('en', 'English')])
+          ChoiceChip(label: Text(label), selected: appLang == code, onSelected: busy ? null : (_) => _set(code)),
+      ]),
+      const SizedBox(height: 6),
+      Text(
+        r == null
+            ? ''
+            : tf('En anglais : {n} domaines sur {total} sont traduits ; les autres apparaîtront à chaque mise à jour. La voix parle la langue choisie ; les mots étudiés en langue étrangère gardent leur propre voix.',
+                {'n': r.$1.length, 'total': r.$2}),
       ),
     ]);
   }

@@ -36,3 +36,35 @@ items:
     bonne: ["2744", "la neige"]
     autres: [["1f327", "la pluie"], ["2601", "les nuages"]]
     explication: "« It's snowy » : il neige."
+en:
+  titre: "The weather in English"
+  idee: "We ask “How's the weather?” and answer “It's sunny”, “It's rainy”…"
+  phrases:
+    consigne: "Listen to the sentence, then touch the picture of the weather."
+    question: "Touch: {texte}."
+    indice: "Listen to the end of the word: sunny, rainy, snowy."
+    exemple: "Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "It's sunny"
+      bonne: ["2600", "the sun"]
+      autres: [["1f327", "the rain"], ["2744", "the snow"]]
+      explication: "It's sunny — well done!"
+    - texte: "It's rainy"
+      bonne: ["1f327", "the rain"]
+      autres: [["2600", "the sun"], ["1f32c", "the wind"]]
+      explication: "It's rainy — well done!"
+    - texte: "It's windy"
+      bonne: ["1f32c", "the wind"]
+      autres: [["2601", "the clouds"], ["2600", "the sun"]]
+      explication: "It's windy — well done!"
+    - texte: "It's cloudy"
+      bonne: ["2601", "the clouds"]
+      autres: [["2744", "the snow"], ["1f32c", "the wind"]]
+      explication: "It's cloudy — well done!"
+    - texte: "It's snowy"
+      bonne: ["2744", "the snow"]
+      autres: [["1f327", "the rain"], ["2601", "the clouds"]]
+      explication: "It's snowy — well done!"

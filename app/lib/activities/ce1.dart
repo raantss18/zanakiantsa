@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../content/content.dart';
 import '../core/column.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import 'numbers.dart';
@@ -56,17 +57,17 @@ String? explainCe1(String activity, Question q, int right, int v) {
   switch (activity) {
     case 'multibase':
       final c = q.a, d = q.b, u = q.n % 10;
-      if (d == 0 && v == c * 10 + u) return "Il n'y a pas de barre de dix : on écrit 0 au chiffre des dizaines.";
-      if (v == d * 100 + c * 10 + u) return 'Tu as échangé les centaines et les dizaines : les plaques valent cent.';
-      if ((v - right).abs() == 100) return 'Recompte les plaques : chacune vaut cent.';
-      if ((v - right).abs() == 10) return 'Recompte les barres : chacune vaut dix.';
+      if (d == 0 && v == c * 10 + u) return t("Il n'y a pas de barre de dix : on écrit 0 au chiffre des dizaines.");
+      if (v == d * 100 + c * 10 + u) return t('Tu as échangé les centaines et les dizaines : les plaques valent cent.');
+      if ((v - right).abs() == 100) return t('Recompte les plaques : chacune vaut cent.');
+      if ((v - right).abs() == 10) return t('Recompte les barres : chacune vaut dix.');
     case 'suite':
       final step = q.b, w = stepWords[step.abs()];
-      if (step.abs() != 1 && v == right - step + step.sign) return 'Tu as compté de un en un. Ici, on avance de $w en $w.';
+      if (step.abs() != 1 && v == right - step + step.sign) return tf('Tu as compté de un en un. Ici, on avance de {w} en {w}.', {'w': '$w'});
       if (v == right - 2 * step) {
-        return step < 0 ? "Cette suite descend : chaque nombre a $w de moins que celui d'avant." : "Cette suite monte : chaque nombre a $w de plus que celui d'avant.";
+        return step < 0 ? tf("Cette suite descend : chaque nombre a {w} de moins que celui d'avant.", {'w': '$w'}) : tf("Cette suite monte : chaque nombre a {w} de plus que celui d'avant.", {'w': '$w'});
       }
-      if ((v - right).abs() == step.abs()) return 'Regarde le nombre juste avant le trou, et fais un seul pas.';
+      if ((v - right).abs() == step.abs()) return t('Regarde le nombre juste avant le trou, et fais un seul pas.');
   }
   return null;
 }
@@ -277,7 +278,7 @@ class _ColumnOpActivityState extends State<ColumnOpActivity> {
             Row(mainAxisSize: MainAxisSize.min, children: [
               const SizedBox(width: 40),
               for (final c in cols)
-                SizedBox(width: cell, child: Text('cdu'[2 - c], textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63)))),
+                SizedBox(width: cell, child: Text((english ? 'hto' : 'cdu')[2 - c], textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63)))),
             ]),
             // Retenues (addition) ou dizaines cassées (soustraction), au-dessus des colonnes, seulement où il en faut.
             Row(mainAxisSize: MainAxisSize.min, children: [
@@ -401,9 +402,9 @@ class _ClockActivityState extends State<ClockActivity> {
 
   String? _why((int, int) o) {
     final q = a.question;
-    if (o.$2 == (q.n % 12) * 5) return "Tu as lu les aiguilles à l'envers : la petite montre les heures, la grande les minutes.";
-    if (o.$1 == q.n % 12 + 1 && o.$2 == q.b) return "La petite aiguille n'a pas encore atteint ce nombre : regarde où elle est.";
-    if (o.$1 == q.n && o.$2 != q.b) return 'Regarde bien la grande aiguille : elle montre les minutes.';
+    if (o.$2 == (q.n % 12) * 5) return t("Tu as lu les aiguilles à l'envers : la petite montre les heures, la grande les minutes.");
+    if (o.$1 == q.n % 12 + 1 && o.$2 == q.b) return t("La petite aiguille n'a pas encore atteint ce nombre : regarde où elle est.");
+    if (o.$1 == q.n && o.$2 != q.b) return t('Regarde bien la grande aiguille : elle montre les minutes.');
     return null;
   }
 
@@ -434,7 +435,7 @@ class _ClockActivityState extends State<ClockActivity> {
                         a.submit(ok, why: ok ? null : _why(o));
                       },
                 child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Text('${o.$1} h ${o.$2.toString().padLeft(2, '0')}', style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink)),
+                  Text('${o.$1}${english ? ':' : ' h '}${o.$2.toString().padLeft(2, '0')}', style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink)),
                   Text(clockText(o.$1, o.$2), textAlign: TextAlign.center, style: const TextStyle(fontSize: 14, color: Color(0xFF5F6B63))),
                 ]),
               ),

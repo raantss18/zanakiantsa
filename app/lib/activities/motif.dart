@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../core/motif.dart';
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -90,7 +91,7 @@ class _MotifActivityState extends State<MotifActivity> {
             for (final (i, art) in puzzle.choices.indexed)
               PicButton(
                 // Les images n'ont pas de nom dans l'app : au moins une étiquette par réponse pour le lecteur d'écran.
-                label: 'Réponse ${i + 1}',
+                label: tf('Réponse {n}', {'n': i + 1}),
                 size: pick,
                 tried: tried.contains(art),
                 highlight: shown && art == puzzle.answer,

@@ -4,6 +4,7 @@ import '../activities/draw.dart';
 
 import '../app_state.dart';
 import '../core/rewards.dart';
+import '../l10n/l10n.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -30,21 +31,21 @@ class AlbumPage extends StatelessWidget {
                   shape: const CircleBorder(),
                   elevation: 2,
                   child: IconButton(
-                    tooltip: 'Retour',
+                    tooltip: t('Retour'),
                     iconSize: 32,
                     onPressed: () => Navigator.of(context).pop(),
                     icon: const Icon(Icons.arrow_back_rounded, color: ink),
                   ),
                 ),
                 const SizedBox(width: 12),
-                const PlayfulTitle('Mon album'),
+                PlayfulTitle(t('Mon album')),
                 const Spacer(),
                 Material(
                   color: surface,
                   shape: const CircleBorder(),
                   elevation: 2,
                   child: IconButton(
-                    tooltip: 'Mes dessins',
+                    tooltip: t('Mes dessins'),
                     iconSize: 32,
                     onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const DrawingsPage())),
                     icon: const Art('1f3a8', size: 32),
@@ -70,7 +71,7 @@ class AlbumPage extends StatelessWidget {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(20)),
                   child: Text(
-                    'Encore ${r.toNext} étoile${r.toNext > 1 ? 's' : ''} pour le prochain autocollant !',
+                    r.toNext > 1 ? tf('Encore {n} étoiles pour le prochain autocollant !', {'n': r.toNext}) : tf('Encore {n} étoile pour le prochain autocollant !', {'n': r.toNext}),
                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink),
                   ),
                 ),
@@ -113,12 +114,12 @@ class _Sticker extends StatelessWidget {
         ),
         child: Stack(alignment: Alignment.center, children: [
           won
-              ? Art(code, size: 72, label: 'Autocollant gagné')
+              ? Art(code, size: 72, label: t('Autocollant gagné'))
               : ColorFiltered(
                   colorFilter: const ColorFilter.mode(Color(0xFF9AA49D), BlendMode.srcIn),
                   child: Art(code, size: 64, opacity: 0.5),
                 ),
-          if (!won) const Icon(Icons.lock_rounded, size: 34, color: Color(0xFF5F6B63), semanticLabel: 'À gagner'),
+          if (!won) Icon(Icons.lock_rounded, size: 34, color: const Color(0xFF5F6B63), semanticLabel: t('À gagner')),
         ]),
       );
 }

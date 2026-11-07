@@ -80,3 +80,81 @@ items:
     pieges:
       - { texte: "72", pourquoi: "72, c'est environ la moitié de 144. On cherche le nombre qui, multiplié par lui-même, donne 144." }
       - { texte: "13", pourquoi: "13 × 13 = 169, pas 144." }
+
+en:
+  titre: "Square roots"
+  idee: "The square root of 49 is the positive number that, multiplied by itself, gives 49: it's 7. A square with area 49 has a side of 7."
+  phrases:
+    consigne: "Find the number that, multiplied by itself, gives this answer."
+    question: "{texte}"
+    indice: "Say your squares: which one lands on this number?"
+    exemple: "The square root of 49 is 7, because 7 × 7 = 49."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is the square root of 4?"
+      nom: "2"
+      explication: "2 × 2 = 4: the square root of 4 is 2."
+      pieges:
+        - { texte: "3", pourquoi: "3 × 3 = 9, not 4." }
+        - { texte: "1", pourquoi: "1 × 1 = 1, not 4." }
+    - texte: "What is the square root of 9?"
+      nom: "3"
+      explication: "3 × 3 = 9: the square root of 9 is 3."
+      pieges:
+        - { texte: "4", pourquoi: "4 is about half of 9. We want the number that, multiplied by itself, gives 9." }
+        - { texte: "2", pourquoi: "2 × 2 = 4, not 9." }
+    - texte: "What is the square root of 16?"
+      nom: "4"
+      explication: "4 × 4 = 16: the square root of 16 is 4."
+      pieges:
+        - { texte: "8", pourquoi: "8 is about half of 16. We want the number that, multiplied by itself, gives 16." }
+        - { texte: "5", pourquoi: "5 × 5 = 25, not 16." }
+    - texte: "What is the square root of 25?"
+      nom: "5"
+      explication: "5 × 5 = 25: the square root of 25 is 5."
+      pieges:
+        - { texte: "12", pourquoi: "12 is about half of 25. We want the number that, multiplied by itself, gives 25." }
+        - { texte: "6", pourquoi: "6 × 6 = 36, not 25." }
+    - texte: "What is the square root of 36?"
+      nom: "6"
+      explication: "6 × 6 = 36: the square root of 36 is 6."
+      pieges:
+        - { texte: "18", pourquoi: "18 is about half of 36. We want the number that, multiplied by itself, gives 36." }
+        - { texte: "7", pourquoi: "7 × 7 = 49, not 36." }
+    - texte: "What is the square root of 49?"
+      nom: "7"
+      explication: "7 × 7 = 49: the square root of 49 is 7."
+      pieges:
+        - { texte: "24", pourquoi: "24 is about half of 49. We want the number that, multiplied by itself, gives 49." }
+        - { texte: "8", pourquoi: "8 × 8 = 64, not 49." }
+    - texte: "What is the square root of 64?"
+      nom: "8"
+      explication: "8 × 8 = 64: the square root of 64 is 8."
+      pieges:
+        - { texte: "32", pourquoi: "32 is about half of 64. We want the number that, multiplied by itself, gives 64." }
+        - { texte: "9", pourquoi: "9 × 9 = 81, not 64." }
+    - texte: "What is the square root of 81?"
+      nom: "9"
+      explication: "9 × 9 = 81: the square root of 81 is 9."
+      pieges:
+        - { texte: "40", pourquoi: "40 is about half of 81. We want the number that, multiplied by itself, gives 81." }
+        - { texte: "10", pourquoi: "10 × 10 = 100, not 81." }
+    - texte: "What is the square root of 100?"
+      nom: "10"
+      explication: "10 × 10 = 100: the square root of 100 is 10."
+      pieges:
+        - { texte: "50", pourquoi: "50 is about half of 100. We want the number that, multiplied by itself, gives 100." }
+        - { texte: "11", pourquoi: "11 × 11 = 121, not 100." }
+    - texte: "What is the square root of 121?"
+      nom: "11"
+      explication: "11 × 11 = 121: the square root of 121 is 11."
+      pieges:
+        - { texte: "60", pourquoi: "60 is about half of 121. We want the number that, multiplied by itself, gives 121." }
+        - { texte: "12", pourquoi: "12 × 12 = 144, not 121." }
+    - texte: "What is the square root of 144?"
+      nom: "12"
+      explication: "12 × 12 = 144: the square root of 144 is 12."
+      pieges:
+        - { texte: "72", pourquoi: "72 is about half of 144. We want the number that, multiplied by itself, gives 144." }
+        - { texte: "13", pourquoi: "13 × 13 = 169, not 144." }

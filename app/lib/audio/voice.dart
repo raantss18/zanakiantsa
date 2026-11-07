@@ -1,4 +1,5 @@
-/// Voix off : fichier enregistré `assets/audio/voix/<id>.ogg` s'il existe, sinon synthèse fr-FR (ADR 0002).
+/// Voix off : fichier enregistré `assets/audio/voix/<id>.ogg` s'il existe (français), sinon synthèse dans la langue de
+/// l'app (ADR 0002, 0064).
 library;
 
 import 'dart:async';
@@ -104,10 +105,21 @@ class Voice {
   /// téléphones parlent mal le français ou ne disent jamais quand une phrase est finie.
   String? engine;
 
+  /// Langue de l'app (ADR 0064) : 'fr' ou 'en'. Chaque phrase est dite dans cette langue ; les voix enregistrées n'existent
+  /// qu'en français, on ne les joue donc qu'en français.
+  String lang = 'fr';
+  String get _base => lang == 'en' ? 'en-GB' : 'fr-FR';
+
+  /// Tout se tait : voix et musique (changement de langue).
+  Future<void> stopAll() async {
+    await stop();
+    await stopMusic();
+  }
+
   Future<void> _init() async {
     if (engine != null) await bounded(_tts.setEngine(engine!), const Duration(seconds: 4));
     // Vitesse un peu plus lente que la normale pour les 5–7 ans (⚠ à régler à l'essai), fixée par [_useLang].
-    await _useLang('fr-FR');
+    await _useLang(_base);
     await _tts.awaitSpeakCompletion(true);
     // Le moteur peut échouer (voix française pas installée…) : flutter_tts ne termine alors jamais l'attente de fin de
     // phrase (vu dans son code Android, 4.2.5). On écoute aussi l'erreur pour ne pas rester muet
@@ -126,15 +138,17 @@ class Voice {
 
   /// Dit une phrase ; attend la fin. [id] permet de jouer la voix enregistrée correspondante. Voix coupée : rien,
   /// sauf si [force] (l'enfant a touché « Réécouter »).
-  Future<void> say(String text, {String? id, bool force = false}) async {
+  /// [lang] : langue du texte quand ce n'est pas celle de l'app (un livre en français lu depuis l'app en anglais).
+  Future<void> say(String text, {String? id, bool force = false, String? lang}) async {
     if (_hidden || (!voiceOn && !force)) return;
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
     await _duck(true);
-    if (id != null && _recorded.contains(id)) {
+    final tag = lang == null ? _base : (lang == 'en' ? 'en-GB' : 'fr-FR');
+    if (this.lang == 'fr' && lang != 'en' && id != null && _recorded.contains(id)) {
       await bounded(_player.play(AssetSource('audio/voix/$id.ogg')), _command);
       await bounded(_player.onPlayerComplete.first, speechBudget(text));
-    } else if (await _useLang('fr-FR')) {
+    } else if (await _useLang(tag)) {
       await _speak(text);
     }
     await _duck(false);
@@ -181,7 +195,10 @@ class Voice {
 
   /// Phrase en français dont les passages entre « » sont en anglais (« Touche : « red ». ») : chaque morceau est dit
   /// par la bonne voix, l'un après l'autre.
-  Future<void> sayMixed(String text, {bool force = false}) async {
+  /// Une phrase dans la langue de l'app, dont les passages entre « » sont dans la langue étudiée [quoted] (ADR 0022,
+  /// 0064) : l'anglais pour un enfant qui utilise l'app en français, le français pour la lecture et la grammaire françaises
+  /// quand l'app est en anglais.
+  Future<void> sayMixed(String text, {bool force = false, String quoted = 'en'}) async {
     if (_hidden || (!voiceOn && !force)) return;
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
@@ -189,7 +206,7 @@ class Voice {
       final t = part.trim();
       if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
       await _duck(true);
-      if (await _useLang(i.isOdd ? 'en-GB' : 'fr-FR')) await _speak(t);
+      if (await _useLang(i.isOdd ? (quoted == 'en' ? 'en-GB' : 'fr-FR') : _base)) await _speak(t);
     }
     await _duck(false);
   }
@@ -233,7 +250,7 @@ class Voice {
     try {
       engines = [for (final e in await _tts.getEngines as List) '$e'];
       current = engine ?? '${await _tts.getDefaultEngine}';
-      fr = await _tts.isLanguageAvailable('fr-FR') == true;
+      fr = await _tts.isLanguageAvailable(_base) == true;
     } catch (_) {}
     return (engines, current, fr);
   }
@@ -243,7 +260,7 @@ class Voice {
     await stop();
     engine = name;
     await bounded(_tts.setEngine(name), const Duration(seconds: 4));
-    await _useLang('fr-FR');
+    await _useLang(_base);
     await bounded(_tts.awaitSpeakCompletion(true), _command);
   }
 
@@ -251,11 +268,13 @@ class Voice {
   /// quand il a fini (bon signe). Au bout de la limite : il ne prévient pas, les phrases risquent d'être coupées ou
   /// espacées.
   Future<(bool, Duration, String?)> test() async {
-    const text = "Bonjour ! Je suis la voix de Zanak'i Antsa. Est-ce que tu m'entends bien ?";
+    final text = lang == 'en'
+        ? "Hello! I am the voice of Zanak'i Antsa. Can you hear me well?"
+        : "Bonjour ! Je suis la voix de Zanak'i Antsa. Est-ce que tu m'entends bien ?";
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
     lastError = null;
-    if (!await _useLang('fr-FR')) return (false, Duration.zero, lastError);
+    if (!await _useLang(_base)) return (false, Duration.zero, lastError);
     final watch = Stopwatch()..start();
     await _speak(text);
     final took = watch.elapsed;
@@ -279,7 +298,8 @@ class Speech {
   Future<void> say(String text, {String? id, bool force = false}) =>
       _closed ? Future.value() : _voice.say(text, id: id, force: force);
 
-  Future<void> sayMixed(String text, {bool force = false}) => _closed ? Future.value() : _voice.sayMixed(text, force: force);
+  Future<void> sayMixed(String text, {bool force = false, String quoted = 'en'}) =>
+      _closed ? Future.value() : _voice.sayMixed(text, force: force, quoted: quoted);
 
   Future<void> playWav(Uint8List wav) => _closed ? Future.value() : _voice.playWav(wav);
 

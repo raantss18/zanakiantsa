@@ -50,3 +50,64 @@ items:
     pieges:
       - { texte: "vous aurez pris", pourquoi: "Ça, c’est le futur antérieur : auxiliaire au futur." }
       - { texte: "vous aviez pris", pourquoi: "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait." }
+
+en:
+  langue: "fr"
+  titre: "French: compound tenses"
+  idee: "A compound tense is a helping verb (« avoir » or « être ») + the past participle. The helping verb's tense gives the name: future → future perfect, imperfect → pluperfect, conditional → past conditional."
+  phrases:
+    consigne: "Choose the tense of the helping verb, then touch the right form."
+    question: "{texte}"
+    indice: "Which tense for the helping verb?"
+    exemple: "« Finir » with « nous », in the future perfect: « nous aurons fini »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Conjugate « finir » in the future perfect, with « nous »."
+      nom: "nous aurons fini"
+      explication: "The future perfect is the helping verb in the future + the past participle: « nous aurons fini »."
+      pieges:
+        - texte: "nous avions fini"
+          pourquoi: "That's the pluperfect: helping verb in the imperfect."
+        - texte: "nous aurions fini"
+          pourquoi: "That's the past conditional: helping verb in the conditional."
+    - texte: "Conjugate « partir » in the pluperfect, with « elle »."
+      nom: "elle était partie"
+      explication: "The pluperfect is the helping verb in the imperfect + the past participle: « elle était partie »."
+      pieges:
+        - texte: "elle sera partie"
+          pourquoi: "That's the future perfect: helping verb in the future."
+        - texte: "elle est partie"
+          pourquoi: "That's the passé composé: helping verb in the present."
+    - texte: "Conjugate « voir » in the past conditional, with « tu »."
+      nom: "tu aurais vu"
+      explication: "The past conditional is the helping verb in the present conditional + the past participle: « tu aurais vu »."
+      pieges:
+        - texte: "tu auras vu"
+          pourquoi: "That's the future perfect: helping verb in the future."
+        - texte: "tu avais vu"
+          pourquoi: "That's the pluperfect: helping verb in the imperfect."
+    - texte: "Conjugate « faire » in the future perfect, with « ils »."
+      nom: "ils auront fait"
+      explication: "The future perfect is the helping verb in the future + the past participle: « ils auront fait »."
+      pieges:
+        - texte: "ils auraient fait"
+          pourquoi: "That's the past conditional: helping verb in the conditional."
+        - texte: "ils avaient fait"
+          pourquoi: "That's the pluperfect: helping verb in the imperfect."
+    - texte: "Conjugate « venir » in the pluperfect, with « je »."
+      nom: "j’étais venu"
+      explication: "The pluperfect is the helping verb in the imperfect + the past participle: « j’étais venu »."
+      pieges:
+        - texte: "je serai venu"
+          pourquoi: "That's the future perfect: helping verb in the future."
+        - texte: "je suis venu"
+          pourquoi: "That's the passé composé: helping verb in the present."
+    - texte: "Conjugate « prendre » in the past conditional, with « vous »."
+      nom: "vous auriez pris"
+      explication: "The past conditional is the helping verb in the present conditional + the past participle: « vous auriez pris »."
+      pieges:
+        - texte: "vous aurez pris"
+          pourquoi: "That's the future perfect: helping verb in the future."
+        - texte: "vous aviez pris"
+          pourquoi: "That's the pluperfect: helping verb in the imperfect."

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/l10n.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -66,7 +67,7 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
                 boxShadow: cardShadow,
               ),
               child: Row(children: [
-                if (widget.help) const Padding(padding: EdgeInsets.only(right: 8), child: Art('1f4a1', size: 34, label: 'Aide')),
+                if (widget.help) Padding(padding: const EdgeInsets.only(right: 8), child: Art('1f4a1', size: 34, label: t('Aide'))),
                 Expanded(
                   // Le texte passe à la ligne sur toute la largeur de la bulle, puis ne rétrécit que s'il dépasse
                   // en hauteur (jamais coupé ni débordant).
@@ -98,7 +99,7 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
                   ),
                 ),
                 IconButton(
-                  tooltip: 'Réécouter',
+                  tooltip: t('Réécouter'),
                   iconSize: narrow ? 30 : 36,
                   onPressed: widget.onListen,
                   icon: Icon(Icons.volume_up_rounded, color: u.onCard),

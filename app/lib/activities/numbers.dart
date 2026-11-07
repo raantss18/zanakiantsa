@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -24,26 +25,30 @@ List<int> numberChoices(int right, int seed, {List<int> near = const []}) {
 /// Ce que montre une réponse-nombre fausse (ADR 0029) : l'erreur probable, dite simplement, sans « faux ». null si on
 /// ne sait pas l'expliquer (l'aide habituelle suffit alors).
 String? explainNumber(String activity, String? mode, int n, int a, int b, int right, int v) {
-  String plural(int k, String one, String many) => k <= 1 ? '$k $one' : '$k $many';
+  // Singulier : 0 et 1 en français, 1 seulement en anglais.
+  bool one(int k) => english ? k == 1 : k <= 1;
   switch (activity) {
     case 'batonnets' when mode == 'casser':
-      if (v == right + 10 || v == right - 10) return 'Regarde bien les paquets de dix qui restent.';
-      if (v == n + b) return "Tu as ajouté $b. Ici, on en enlève $b.";
+      if (v == right + 10 || v == right - 10) return t('Regarde bien les paquets de dix qui restent.');
+      if (v == n + b) return tf("Tu as ajouté {b}. Ici, on en enlève {b}.", {'b': b});
     case 'batonnets':
       if (b > 0 && v == b * 10 + a && v != n) {
-        return '$v, ce serait ${plural(b, 'paquet', 'paquets')} de dix et ${plural(a, 'bâtonnet seul', 'bâtonnets seuls')}.';
+        final w = {'v': v, 'b': b, 'a': a};
+        return one(b)
+            ? (one(a) ? tf('{v}, ce serait {b} paquet de dix et {a} bâtonnet seul.', w) : tf('{v}, ce serait {b} paquet de dix et {a} bâtonnets seuls.', w))
+            : (one(a) ? tf('{v}, ce serait {b} paquets de dix et {a} bâtonnet seul.', w) : tf('{v}, ce serait {b} paquets de dix et {a} bâtonnets seuls.', w));
       }
-      if ((v - n).abs() == 10) return 'Recompte les paquets : chacun vaut dix.';
-      if ((v - n).abs() <= 2) return 'Presque ! Recompte les bâtonnets seuls.';
+      if ((v - n).abs() == 10) return t('Recompte les paquets : chacun vaut dix.');
+      if ((v - n).abs() <= 2) return t('Presque ! Recompte les bâtonnets seuls.');
     case 'groupes' || 'tables':
-      if (v == a + b && v != n) return "Tu as ajouté $a et $b. Mais il y a $a fois $b : compte tous les objets.";
-      if (v == n + b || v == n - b) return 'Il y a une rangée de ${v > n ? 'trop' : 'moins'} : recompte les paquets.';
-      if ((v - n).abs() <= 2) return 'Presque ! Compte encore, un par un.';
+      if (v == a + b && v != n) return tf("Tu as ajouté {a} et {b}. Mais il y a {a} fois {b} : compte tous les objets.", {'a': a, 'b': b});
+      if (v == n + b || v == n - b) return v > n ? t('Il y a une rangée de trop : recompte les paquets.') : t('Il y a une rangée de moins : recompte les paquets.');
+      if ((v - n).abs() <= 2) return t('Presque ! Compte encore, un par un.');
     case 'paquets':
-      if (v == b) return "$b, c'est ce qu'il y a dans chaque paquet. On cherche combien de paquets.";
-      if ((v - a).abs() == 1) return 'Presque ! Touche chaque paquet en comptant.';
+      if (v == b) return tf("{b}, c'est ce qu'il y a dans chaque paquet. On cherche combien de paquets.", {'b': b});
+      if ((v - a).abs() == 1) return t('Presque ! Touche chaque paquet en comptant.');
   }
-  if ((v - right).abs() == 1) return 'Presque ! Compte encore une fois.';
+  if ((v - right).abs() == 1) return t('Presque ! Compte encore une fois.');
   return null;
 }
 
@@ -179,9 +184,9 @@ class _SticksActivityState extends State<SticksActivity> {
       Text(label, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
       const SizedBox(height: 6),
       Row(mainAxisSize: MainAxisSize.min, children: [
-        IconButton.filledTonal(iconSize: 36, tooltip: 'Enlever', onPressed: locked || value == 0 ? null : () => setState(() => set(value - 1)), icon: const Icon(Icons.remove_rounded)),
+        IconButton.filledTonal(iconSize: 36, tooltip: t('Enlever'), onPressed: locked || value == 0 ? null : () => setState(() => set(value - 1)), icon: const Icon(Icons.remove_rounded)),
         const SizedBox(width: 4),
-        IconButton.filled(iconSize: 36, tooltip: 'Ajouter', onPressed: locked || value >= max ? null : () => setState(() => set(value + 1)), icon: const Icon(Icons.add_rounded)),
+        IconButton.filled(iconSize: 36, tooltip: t('Ajouter'), onPressed: locked || value >= max ? null : () => setState(() => set(value + 1)), icon: const Icon(Icons.add_rounded)),
       ]),
     ]);
   }
@@ -213,15 +218,15 @@ class _SticksActivityState extends State<SticksActivity> {
         const SizedBox(height: 12),
         // Les deux compteurs et le bouton vert sur une seule rangée : rien à faire défiler.
         Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-          Expanded(child: _stepper('paquets de dix', const Sticks(bundle: true, height: 64), tens, (v) => tens = v)),
-          Expanded(child: _stepper('bâtonnets', const Sticks(height: 64), units, (v) => units = v, max: 19)),
+          Expanded(child: _stepper(t('paquets de dix'), const Sticks(bundle: true, height: 64), tens, (v) => tens = v)),
+          Expanded(child: _stepper(t('bâtonnets'), const Sticks(height: 64), units, (v) => units = v, max: 19)),
           SizedBox(
             width: 104,
             height: 104,
             child: FilledButton(
               style: FilledButton.styleFrom(shape: const CircleBorder(), padding: EdgeInsets.zero, backgroundColor: green, disabledBackgroundColor: const Color(0xFFBFC7C1)),
               onPressed: a.busy || a.finished || tens + units == 0 ? null : () => a.submit(tens * 10 + units == q.n),
-              child: const Icon(Icons.check_rounded, size: 56, color: Colors.white, semanticLabel: "C'est fait"),
+              child: Icon(Icons.check_rounded, size: 56, color: Colors.white, semanticLabel: t("C'est fait")),
             ),
           ),
         ]),
@@ -371,7 +376,7 @@ class _ShareActivityState extends State<ShareActivity> {
           for (var i = 0; i < parts.length; i++)
             Semantics(
               button: true,
-              label: 'Part ${i + 1} : ${parts[i]}',
+              label: tf('Part {i} : {n}', {'i': i + 1, 'n': parts[i]}),
               child: Material(
                 color: surface,
                 elevation: 3,
@@ -472,14 +477,14 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
             for (var i = 0; i < bundles; i++)
               Semantics(
                 button: true,
-                label: 'Défaire un paquet de dix',
+                label: t('Défaire un paquet de dix'),
                 child: GestureDetector(onTap: _break, child: const Sticks(bundle: true)),
               ),
             if (bundles > 0 && loose > 0) const SizedBox(width: 18),
             for (var i = 0; i < loose; i++)
               Semantics(
                 button: true,
-                label: 'Enlever un bâtonnet',
+                label: t('Enlever un bâtonnet'),
                 // Zone de toucher plus large que le bâtonnet (48 dp).
                 child: GestureDetector(onTap: _take, child: Container(width: 30, height: 80, alignment: Alignment.center, color: Colors.transparent, child: const Sticks())),
               ),
@@ -488,7 +493,7 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
         const SizedBox(height: 12),
         // Les bâtonnets enlevés, à part et grisés : on voit ce qu'on a retiré.
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text('Enlevés : $removed / ${q.b}', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink)),
+          Text(tf('Enlevés : {r} / {b}', {'r': removed, 'b': q.b}), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink)),
           const SizedBox(width: 12),
           for (var i = 0; i < removed; i++) const Opacity(opacity: 0.35, child: Padding(padding: EdgeInsets.all(2), child: Sticks(height: 48))),
         ]),
@@ -496,7 +501,7 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
         if (done)
           NumberChoices(attempt: a, right: q.n - q.b, values: numberChoices(q.n - q.b, q.n * 13 + q.b, near: [q.n - 10 + q.b, q.n - q.b + 10]))
         else
-          Text(bundles == q.a ? 'Touche un paquet pour le défaire.' : 'Touche les bâtonnets pour les enlever.',
+          Text(bundles == q.a ? t('Touche un paquet pour le défaire.') : t('Touche les bâtonnets pour les enlever.'),
               textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
       ]),
     );
@@ -567,7 +572,7 @@ class _PacketsActivityState extends State<PacketsActivity> {
             style: FilledButton.styleFrom(minimumSize: const Size(240, 72), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 24, fontWeight: FontWeight.w700)),
             onPressed: a.busy || a.finished ? null : _pack,
             icon: const Icon(Icons.inventory_2_rounded, size: 36),
-            label: Text('Un paquet de ${q.b}'),
+            label: Text(tf('Un paquet de {b}', {'b': q.b})),
           ),
         const SizedBox(height: 12),
         Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [

@@ -30,3 +30,31 @@ items:
     fen: "7k/1P6/8/8/8/8/8/K7 w - - 0 1"
     coups: [b7b8q]
     explication: "Le pion arrive en b8 et devient une dame."
+
+en:
+  titre: "Promotion: the pawn becomes a queen"
+  idee: "A pawn that reaches the far end of the board changes into another piece: we nearly always choose a queen, the strongest piece."
+  phrases:
+    consigne: "Touch the pawn, then the square at the end. Then choose the queen."
+    question: "{texte}"
+    indice: "The pawn moves up to the last row, then we choose the queen."
+    exemple: "Look carefully at the last row."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Your pawn is reaching the end. Make it a queen!"
+      fen: "k7/4P3/8/8/8/8/8/4K3 w - - 0 1"
+      coups: [e7e8q]
+      explication: "The pawn reaches e8 and becomes a queen."
+    - texte: "Take this pawn to the end, and choose the queen."
+      fen: "8/6P1/8/8/k7/8/8/K7 w - - 0 1"
+      coups: [g7g8q]
+      explication: "The pawn reaches g8 and becomes a queen."
+    - texte: "Your pawn can capture the rook as it reaches the end. Do it!"
+      fen: "3r3k/2P5/8/8/8/8/8/K7 w - - 0 1"
+      coups: [c7d8q]
+      explication: "The pawn captures the rook on d8 and becomes a queen: two good things in one move."
+    - texte: "Make a queen with this pawn."
+      fen: "7k/1P6/8/8/8/8/8/K7 w - - 0 1"
+      coups: [b7b8q]
+      explication: "The pawn reaches b8 and becomes a queen."

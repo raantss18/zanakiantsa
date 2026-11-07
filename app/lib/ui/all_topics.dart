@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_state.dart';
 import '../content/content.dart';
+import '../l10n/l10n.dart';
 import 'topic_intro.dart';
 import 'theme.dart';
 import 'universe.dart';
@@ -29,10 +30,10 @@ class AllTopicsPage extends StatelessWidget {
                   color: surface,
                   shape: const CircleBorder(),
                   elevation: 2,
-                  child: IconButton(tooltip: 'Retour', iconSize: 32, onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
+                  child: IconButton(tooltip: t('Retour'), iconSize: 32, onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_rounded, color: ink)),
                 ),
                 const SizedBox(width: 12),
-                const Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle('Tout explorer'))),
+                Expanded(child: FittedBox(fit: BoxFit.scaleDown, alignment: Alignment.centerLeft, child: PlayfulTitle(t('Tout explorer')))),
               ]),
             ),
             Expanded(
@@ -50,7 +51,7 @@ class AllTopicsPage extends StatelessWidget {
                       final done = t.skills.where((s) => p.earned(s.id)).length;
                       return Semantics(
                         button: true,
-                        label: '${t.name}, $done compétences maîtrisées sur ${t.skills.length}',
+                        label: tf('{name}, {done} compétences maîtrisées sur {total}', {'name': t.name, 'done': done, 'total': t.skills.length}),
                         excludeSemantics: true,
                         child: Material(
                           color: surface,

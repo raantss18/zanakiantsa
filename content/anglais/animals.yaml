@@ -51,3 +51,50 @@ items:
     bonne: ["1f986", "le canard"]
     autres: [["1f426", "l'oiseau"], ["1f40e", "le cheval"]]
     explication: "« duck », c'est le canard."
+en:
+  titre: "Animals in English"
+  phrases:
+    consigne: "Listen to the word and touch the right animal."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is an animal."
+    exemple: "Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "cat"
+      bonne: ["1f408", "the cat"]
+      autres: [["1f426", "the bird"], ["1f986", "the duck"]]
+      explication: "cat — well done!"
+    - texte: "dog"
+      bonne: ["1f415", "the dog"]
+      autres: [["1f40e", "the horse"], ["1f408", "the cat"]]
+      explication: "dog — well done!"
+    - texte: "cow"
+      bonne: ["1f404", "the cow"]
+      autres: [["1f41f", "the fish"], ["1f40e", "the horse"]]
+      explication: "cow — well done!"
+    - texte: "horse"
+      bonne: ["1f40e", "the horse"]
+      autres: [["1f415", "the dog"], ["1f426", "the bird"]]
+      explication: "horse — well done!"
+    - texte: "fish"
+      bonne: ["1f41f", "the fish"]
+      autres: [["1f415", "the dog"], ["1f426", "the bird"]]
+      explication: "fish — well done!"
+    - texte: "bird"
+      bonne: ["1f426", "the bird"]
+      autres: [["1f408", "the cat"], ["1f41f", "the fish"]]
+      explication: "bird — well done!"
+    - texte: "rabbit"
+      bonne: ["1f407", "the rabbit"]
+      autres: [["1f40e", "the horse"], ["1f986", "the duck"]]
+      explication: "rabbit — well done!"
+    - texte: "sheep"
+      bonne: ["1f411", "the sheep"]
+      autres: [["1f407", "the rabbit"], ["1f986", "the duck"]]
+      explication: "sheep — well done!"
+    - texte: "duck"
+      bonne: ["1f986", "the duck"]
+      autres: [["1f426", "the bird"], ["1f40e", "the horse"]]
+      explication: "duck — well done!"

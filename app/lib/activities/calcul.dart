@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart' as mlkit;
 
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -142,7 +143,7 @@ class _CalcActivityState extends State<CalcActivity> {
                     _strokes.clear();
                     _times.clear();
                   }),
-                  child: const Icon(Icons.backspace_rounded, size: 56, color: Colors.white, semanticLabel: 'Effacer'),
+                  child: Icon(Icons.backspace_rounded, size: 56, color: Colors.white, semanticLabel: t('Effacer')),
                 ),
               ),
               SizedBox(
@@ -151,7 +152,7 @@ class _CalcActivityState extends State<CalcActivity> {
                 child: FilledButton(
                   style: FilledButton.styleFrom(padding: EdgeInsets.zero),
                   onPressed: locked ? null : _validate,
-                  child: const Icon(Icons.check_rounded, size: 72, semanticLabel: 'Valider'),
+                  child: Icon(Icons.check_rounded, size: 72, semanticLabel: t('Valider')),
                 ),
               ),
             ]),
@@ -180,11 +181,11 @@ class _CalcActivityState extends State<CalcActivity> {
                     }),
             child: Stack(children: [
               if (_strokes.isEmpty)
-                const Center(
+                Center(
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Icon(Icons.draw_rounded, size: 40, color: Color(0xFF9AA49D)),
-                    SizedBox(width: 8),
-                    Text('Écris ici', style: TextStyle(fontSize: 26, color: Color(0xFF5F6B63))),
+                    const Icon(Icons.draw_rounded, size: 40, color: Color(0xFF9AA49D)),
+                    const SizedBox(width: 8),
+                    Text(t('Écris ici'), style: const TextStyle(fontSize: 26, color: Color(0xFF5F6B63))),
                   ]),
                 ),
               CustomPaint(painter: _InkPainter(_strokes), size: Size.infinite),

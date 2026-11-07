@@ -47,3 +47,46 @@ items:
     bonne: ["26aa", "blanc"]
     autres: [["1f534", "rouge"], ["26ab", "noir"]]
     explication: "« white », c'est blanc."
+en:
+  titre: "Colours in English"
+  phrases:
+    consigne: "Listen to the word and touch the right colour."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is a colour."
+    exemple: "Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "red"
+      bonne: ["1f534", "red"]
+      autres: [["1f7e1", "yellow"], ["1f7e2", "green"]]
+      explication: "red — well done!"
+    - texte: "blue"
+      bonne: ["1f535", "blue"]
+      autres: [["1f7e0", "orange"], ["26ab", "black"]]
+      explication: "blue — well done!"
+    - texte: "green"
+      bonne: ["1f7e2", "green"]
+      autres: [["1f534", "red"], ["26aa", "white"]]
+      explication: "green — well done!"
+    - texte: "yellow"
+      bonne: ["1f7e1", "yellow"]
+      autres: [["26aa", "white"], ["1f7e3", "purple"]]
+      explication: "yellow — well done!"
+    - texte: "orange"
+      bonne: ["1f7e0", "orange"]
+      autres: [["1f534", "red"], ["1f7e2", "green"]]
+      explication: "orange — well done!"
+    - texte: "purple"
+      bonne: ["1f7e3", "purple"]
+      autres: [["1f7e0", "orange"], ["1f534", "red"]]
+      explication: "purple — well done!"
+    - texte: "black"
+      bonne: ["26ab", "black"]
+      autres: [["1f7e0", "orange"], ["1f535", "blue"]]
+      explication: "black — well done!"
+    - texte: "white"
+      bonne: ["26aa", "white"]
+      autres: [["1f534", "red"], ["26ab", "black"]]
+      explication: "white — well done!"

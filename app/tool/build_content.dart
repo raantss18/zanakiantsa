@@ -138,6 +138,38 @@ void checkItems(String where, String act, List items) {
   }
 }
 
+/// Bloc `en:` d'une compétence (ADR 0064) : mêmes phrases que le français, mêmes questions dans le même ordre, mêmes
+/// images ; seules les variables connues. Un bloc partiel mélangerait les langues à l'écran.
+void checkEnglish(String where, Map<String, dynamic> s) {
+  final e = s['en'];
+  if (e == null) return;
+  if (e is! Map) return fail(where, 'en : un bloc');
+  final en = Map<String, dynamic>.from(e);
+  for (final k in en.keys) {
+    if (!{'titre', 'idee', 'phrases', 'variantes', 'items', 'langue', 'mots'}.contains(k)) fail(where, 'en : champ inconnu « $k »');
+  }
+  if (en['titre'] is! String) fail(where, 'en : titre manquant');
+  final fr = Map<String, dynamic>.from(s['phrases'] as Map);
+  final ph = Map<String, dynamic>.from(en['phrases'] as Map? ?? const {});
+  if (!ph.keys.toSet().containsAll(fr.keys) || !fr.keys.toSet().containsAll(ph.keys)) fail(where, 'en : mêmes phrases que le français');
+  for (final p in ph.values) {
+    checkPhrase('$where/en', '$p');
+  }
+  if (s['idee'] != null && en['idee'] is! String) fail(where, 'en : idee manquante');
+  if (en['idee'] != null) checkPhrase('$where/en/idee', en['idee'] as String);
+  if ((s['variantes'] as List?)?.length != (en['variantes'] as List?)?.length) fail(where, 'en : autant de variantes');
+  final items = s['items'] as List? ?? const [];
+  final eitems = en['items'] as List? ?? const [];
+  if (items.length != eitems.length) fail(where, 'en : autant de questions (${items.length})');
+  for (var i = 0; i < items.length && i < eitems.length; i++) {
+    final a = Map<String, dynamic>.from(items[i] as Map), b = Map<String, dynamic>.from(eitems[i] as Map);
+    if (!a.keys.toSet().containsAll(b.keys) || !b.keys.toSet().containsAll(a.keys)) fail(where, 'en : question ${i + 1}, mêmes champs');
+    String art(Object? x) => x is List ? '${x[0]}' : '';
+    if (art(a['bonne']) != art(b['bonne'])) fail(where, 'en : question ${i + 1}, même image');
+    if (a['image'] != b['image'] || a['fen'] != b['fen'] || '${a['coups']}' != '${b['coups']}') fail(where, 'en : question ${i + 1}, même image ou position');
+  }
+}
+
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');
 
@@ -242,6 +274,7 @@ Map<String, dynamic> buildTheme(Directory dir) {
       if (idee is! String || idee.length > 220) fail(where, 'idee : une chaîne de 220 caractères au plus');
       checkPhrase('$where/idee', idee as String? ?? '');
     }
+    checkEnglish(where, s);
     skills[s['id'] as String] = s;
   }
   final order = List<String>.from(theme['ordre'] as List);
@@ -263,6 +296,7 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'icone': theme['icone'],
     'intro': intro,
     'ages': theme['ages'],
+    if (theme['en'] != null) 'en': theme['en'],
     'sources': sources,
     'competences': [for (final sid in order) if (skills[sid] != null) skills[sid]],
   };

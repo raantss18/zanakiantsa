@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../core/game.dart';
+import '../l10n/l10n.dart';
 import '../ui/chess_play.dart';
 import '../ui/session.dart';
 
@@ -54,8 +55,8 @@ class _ProblemActivityState extends State<ProblemActivity> {
       final name = pieceName(p.board[from]!);
       a.submit(false,
           why: p.followsPieceRules(from, s)
-              ? 'Interdit : ton roi serait en échec.'
-              : '${name[0].toUpperCase()}${name.substring(1)} ne va pas là.');
+              ? t('Interdit : ton roi serait en échec.')
+              : tf('{piece} ne va pas là.', {'piece': '${name[0].toUpperCase()}${name.substring(1)}'}));
       return;
     }
     var move = candidates.first;
@@ -82,15 +83,15 @@ class _ProblemActivityState extends State<ProblemActivity> {
       played = null;
     });
     final promoWrong = move.promo != null && item.moves.any((m) => m.length > 4 && m.substring(0, 4) == move.uci.substring(0, 4));
-    a.submit(false, why: promoWrong ? 'Choisis plutôt la dame : c\'est la pièce la plus forte.' : null);
+    a.submit(false, why: promoWrong ? t('Choisis plutôt la dame : c\'est la pièce la plus forte.') : null);
   }
 
   Future<String?> _choosePromotion() => showDialog<String>(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Ton pion devient…'),
+          title: Text(t('Ton pion devient…')),
           content: Wrap(spacing: 8, children: [
-            for (final (k, name) in [('q', 'une dame'), ('r', 'une tour'), ('b', 'un fou'), ('n', 'un cavalier')])
+            for (final (k, name) in [('q', t('une dame')), ('r', t('une tour')), ('b', t('un fou')), ('n', t('un cavalier'))])
               Semantics(
                 button: true,
                 label: name,

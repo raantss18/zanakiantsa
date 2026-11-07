@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "−24", pourquoi: "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif." }
       - { texte: "−14", pourquoi: "Ça, c'est la somme. Ici, on multiplie." }
+
+en:
+  titre: "Multiplying positive and negative numbers"
+  idee: "Multiply the two numbers without their signs, then find the sign: one negative factor gives a negative, two negative factors give a positive."
+  phrases:
+    consigne: "Multiply without the signs, find the sign, then touch the answer."
+    question: "{texte}"
+    indice: "Count the minus signs: one means negative; two means positive."
+    exemple: "(−4) × 3 = −12, and (−4) × (−3) = 12."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "(−4) × 3 = ?"
+      nom: "−12"
+      explication: "4 × 3 = 12. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "12", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−1", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "5 × (−6) = ?"
+      nom: "−30"
+      explication: "5 × 6 = 30. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "30", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−1", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−7) × (−2) = ?"
+      nom: "14"
+      explication: "7 × 2 = 14. Two minus signs give a positive answer."
+      pieges:
+        - { texte: "−14", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−9", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−3) × (−9) = ?"
+      nom: "27"
+      explication: "3 × 9 = 27. Two minus signs give a positive answer."
+      pieges:
+        - { texte: "−27", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−12", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "8 × (−4) = ?"
+      nom: "−32"
+      explication: "8 × 4 = 32. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "32", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "4", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−6) × 7 = ?"
+      nom: "−42"
+      explication: "6 × 7 = 42. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "42", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "1", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−5) × (−5) = ?"
+      nom: "25"
+      explication: "5 × 5 = 25. Two minus signs give a positive answer."
+      pieges:
+        - { texte: "−25", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−10", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "9 × (−3) = ?"
+      nom: "−27"
+      explication: "9 × 3 = 27. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "27", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "6", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−8) × 6 = ?"
+      nom: "−48"
+      explication: "8 × 6 = 48. Just one minus sign gives a negative answer."
+      pieges:
+        - { texte: "48", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−2", pourquoi: "That is the sum. Here, we multiply." }
+    - texte: "(−2) × (−12) = ?"
+      nom: "24"
+      explication: "2 × 12 = 24. Two minus signs give a positive answer."
+      pieges:
+        - { texte: "−24", pourquoi: "Look at the sign: two negative factors give a positive, just one gives a negative." }
+        - { texte: "−14", pourquoi: "That is the sum. Here, we multiply." }

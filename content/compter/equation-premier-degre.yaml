@@ -74,3 +74,75 @@ items:
     pieges:
       - { texte: "x = 2", pourquoi: "On ajoute 6 des deux côtés, on ne l’enlève pas." }
       - { texte: "x = 20", pourquoi: "20, c’est 4x : il faut encore diviser par 4." }
+
+en:
+  titre: "Solving an equation"
+  idee: "To find x, undo the operations in reverse order: first take away the number that was added, then divide."
+  phrases:
+    consigne: "Undo the operations one by one, then touch the solution."
+    question: "{texte}"
+    indice: "First take the added number away from both sides, then divide."
+    exemple: "3x + 4 = 19: 3x = 15, so x = 5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Solve: 3x + 4 = 19"
+      nom: "x = 5"
+      explication: "3x = 19 − 4 = 15, then x = 15 ÷ 3 = 5."
+      pieges:
+        - { texte: "x = 23/3", pourquoi: "Take 4 away from both sides, don’t add it." }
+        - { texte: "x = 15", pourquoi: "15 is 3x: you still need to divide by 3." }
+    - texte: "Solve: 2x + 7 = 19"
+      nom: "x = 6"
+      explication: "2x = 19 − 7 = 12, then x = 12 ÷ 2 = 6."
+      pieges:
+        - { texte: "x = 13", pourquoi: "Take 7 away from both sides, don’t add it." }
+        - { texte: "x = 12", pourquoi: "12 is 2x: you still need to divide by 2." }
+    - texte: "Solve: 5x − 3 = 17"
+      nom: "x = 4"
+      explication: "5x = 17 − (−3) = 20, then x = 20 ÷ 5 = 4."
+      pieges:
+        - { texte: "x = 14/5", pourquoi: "Add 3 to both sides, don’t take it away." }
+        - { texte: "x = 20", pourquoi: "20 is 5x: you still need to divide by 5." }
+    - texte: "Solve: 4x + 9 = 1"
+      nom: "x = −2"
+      explication: "4x = 1 − 9 = −8, then x = −8 ÷ 4 = −2."
+      pieges:
+        - { texte: "x = 5/2", pourquoi: "Take 9 away from both sides, don’t add it." }
+        - { texte: "x = −8", pourquoi: "−8 is 4x: you still need to divide by 4." }
+    - texte: "Solve: 6x + 1 = 19"
+      nom: "x = 3"
+      explication: "6x = 19 − 1 = 18, then x = 18 ÷ 6 = 3."
+      pieges:
+        - { texte: "x = 10/3", pourquoi: "Take 1 away from both sides, don’t add it." }
+        - { texte: "x = 18", pourquoi: "18 is 6x: you still need to divide by 6." }
+    - texte: "Solve: 7x − 5 = 9"
+      nom: "x = 2"
+      explication: "7x = 9 − (−5) = 14, then x = 14 ÷ 7 = 2."
+      pieges:
+        - { texte: "x = 4/7", pourquoi: "Add 5 to both sides, don’t take it away." }
+        - { texte: "x = 14", pourquoi: "14 is 7x: you still need to divide by 7." }
+    - texte: "Solve: 2x − 8 = 10"
+      nom: "x = 9"
+      explication: "2x = 10 − (−8) = 18, then x = 18 ÷ 2 = 9."
+      pieges:
+        - { texte: "x = 1", pourquoi: "Add 8 to both sides, don’t take it away." }
+        - { texte: "x = 18", pourquoi: "18 is 2x: you still need to divide by 2." }
+    - texte: "Solve: 3x + 12 = 0"
+      nom: "x = −4"
+      explication: "3x = 0 − 12 = −12, then x = −12 ÷ 3 = −4."
+      pieges:
+        - { texte: "x = 4", pourquoi: "Take 12 away from both sides, don’t add it." }
+        - { texte: "x = −12", pourquoi: "−12 is 3x: you still need to divide by 3." }
+    - texte: "Solve: 9x + 2 = 11"
+      nom: "x = 1"
+      explication: "9x = 11 − 2 = 9, then x = 9 ÷ 9 = 1."
+      pieges:
+        - { texte: "x = 13/9", pourquoi: "Take 2 away from both sides, don’t add it." }
+        - { texte: "x = 9", pourquoi: "9 is 9x: you still need to divide by 9." }
+    - texte: "Solve: 4x − 6 = 14"
+      nom: "x = 5"
+      explication: "4x = 14 − (−6) = 20, then x = 20 ÷ 4 = 5."
+      pieges:
+        - { texte: "x = 2", pourquoi: "Add 6 to both sides, don’t take it away." }
+        - { texte: "x = 20", pourquoi: "20 is 4x: you still need to divide by 4." }

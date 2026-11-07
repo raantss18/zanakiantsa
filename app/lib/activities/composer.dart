@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/l10n.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
 import '../ui/universe.dart';
@@ -82,14 +83,14 @@ class _ComposeActivityState extends State<ComposeActivity> {
             Row(children: [
               Art(u.container, size: 52),
               const Spacer(),
-              Text('$total', style: TextStyle(fontSize: 44, fontWeight: FontWeight.w700, color: u.onCard), semanticsLabel: 'Il y en a $total'),
-              Text(' / $n', style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink), semanticsLabel: 'Il en faut $n'),
+              Text('$total', style: TextStyle(fontSize: 44, fontWeight: FontWeight.w700, color: u.onCard), semanticsLabel: tf('Il y en a {n}', {'n': total})),
+              Text(' / $n', style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink), semanticsLabel: tf('Il en faut {n}', {'n': n})),
             ]),
             const Divider(height: 16),
             Expanded(
               child: Semantics(
                 button: true,
-                label: 'Enlever un objet',
+                label: t('Enlever un objet'),
                 child: GestureDetector(
                   behavior: HitTestBehavior.opaque,
                   onTap: _remove,
@@ -113,7 +114,7 @@ class _ComposeActivityState extends State<ComposeActivity> {
           // La réserve : toucher pour ajouter un objet.
           Semantics(
             button: true,
-            label: 'Ajouter un objet',
+            label: t('Ajouter un objet'),
             child: Material(
               color: surface,
               borderRadius: BorderRadius.circular(28),
@@ -142,7 +143,7 @@ class _ComposeActivityState extends State<ComposeActivity> {
             child: FilledButton(
               style: FilledButton.styleFrom(padding: EdgeInsets.zero),
               onPressed: locked ? null : () => a.submit(total == n),
-              child: const Icon(Icons.check_rounded, size: 72, semanticLabel: "J'ai fini"),
+              child: Icon(Icons.check_rounded, size: 72, semanticLabel: t("J'ai fini")),
             ),
           ),
         ]),

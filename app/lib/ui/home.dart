@@ -7,6 +7,7 @@ import '../app_state.dart';
 import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/day.dart';
+import '../l10n/l10n.dart';
 import '../parent/gate.dart';
 import 'adaptive.dart';
 import 'album.dart';
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       await g.say(s.common.text('journee_finie'), id: 'commun.journee_finie');
     } else {
       final names = [for (final i in plan.items) s.topic(i.theme).name.toLowerCase()];
-      await g.say('${s.common.text('aujourdhui')} ${names.take(names.length - 1).join(', ')} et ${names.last}.');
+      await g.say(tf('{today} {list} et {last}.', {'today': s.common.text('aujourdhui'), 'list': names.take(names.length - 1).join(', '), 'last': names.last}));
     }
   }
 
@@ -182,13 +183,22 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       SizedBox(
         width: sidePanelWidth(k.maxWidth),
         child: Column(children: [
+          // Le texte de Robi doit se lire en entier : la zone défilait, et avec un texte agrandi (150 % sur la SM-X135G) la
+          // fin de la bulle restait cachée sans que rien ne le montre (signalé par Antsa, 2026-11-07). Elle rétrécit à la place.
+          _Header(onListen: _welcome), // hors de la zone qui rétrécit : ses boutons gardent leurs 48 dp
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(children: [
-                _Header(onListen: _welcome),
-                _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
-                if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
-              ]),
+            child: LayoutBuilder(
+              builder: (_, box) => FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.topCenter,
+                child: SizedBox(
+                  width: box.maxWidth,
+                  child: Column(mainAxisSize: MainAxisSize.min, children: [
+                    _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+                    if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
+                  ]),
+                ),
+              ),
             ),
           ),
           _exploreButton(context, s, u),
@@ -231,71 +241,87 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 await s.refresh();
               },
               icon: const Art('1f9ed', size: 32),
-              label: const Text('Tout explorer'),
+              // « Explore everything » est plus long : il rétrécit plutôt que de passer sur deux lignes coupées.
+              label: FittedBox(fit: BoxFit.scaleDown, child: Text(t('Tout explorer'), maxLines: 1)),
             ),
           ),
         );
 
   /// Album, Mes livres (le plus grand bouton de la rangée, avec son nom écrit, ADR 0026) et le choix du monde. Le bouton
   /// du milieu rétrécit sur téléphone : la rangée ne déborde jamais.
-  Widget _bottomRow(BuildContext context, AppState s, Universe u) =>
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-          // Le bouton « Mes livres » prend la place du milieu et rétrécit sur téléphone : la rangée ne déborde jamais.
-          child: Row(children: [
+  Widget _bottomRow(BuildContext context, AppState s, Universe u) => Padding(
+        padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+        // Le bouton « Mes livres » prend la place du milieu. Dans la colonne de 300 dp du paysage, il ne restait que
+        // ~100 dp : le texte tombait à moins de la moitié de sa taille (signalé par Antsa, 2026-11-07). Quand la rangée est
+        // étroite, les ronds passent à 60 dp (toujours ≥ 48) et « Mes livres » s'écrit sur deux lignes au lieu de rétrécir.
+        child: LayoutBuilder(builder: (context, k) {
+          final narrow = k.maxWidth < 360;
+          final round = narrow ? 60.0 : 72.0;
+          final gap = narrow ? 8.0 : 12.0;
+          return Row(children: [
             _RoundButton(
-              size: 72,
+              size: round,
               color: surface,
-              tooltip: 'Mon album',
+              tooltip: t('Mon album'),
               onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlbumPage())),
-              child: const Icon(Icons.collections_bookmark_rounded, size: 38, color: ink),
+              child: Icon(Icons.collections_bookmark_rounded, size: narrow ? 32 : 38, color: ink),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: gap),
             // Mes livres : le plus grand bouton de la rangée, avec son nom écrit (ADR 0026).
             Expanded(
               child: Center(
                 child: Semantics(
-              button: true,
-              label: 'Mes livres',
-              excludeSemantics: true,
-              child: Material(
-                color: u.primary,
-                elevation: 3,
-                shape: const StadiumBorder(),
-                child: InkWell(
-                  customBorder: const StadiumBorder(),
-                  onTap: () async {
-                    await s.voice.stop();
-                    if (!context.mounted) return;
-                    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LibraryPage()));
-                    await s.refresh();
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(14, 10, 20, 10),
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Row(mainAxisSize: MainAxisSize.min, children: [
-                        const Art('1f4da', size: 48),
-                        const SizedBox(width: 10),
-                        Text('Mes livres', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: u.onPrimary)),
-                      ]),
+                  button: true,
+                  label: t('Mes livres'),
+                  excludeSemantics: true,
+                  child: Material(
+                    color: u.primary,
+                    elevation: 3,
+                    shape: const StadiumBorder(),
+                    child: InkWell(
+                      customBorder: const StadiumBorder(),
+                      onTap: () async {
+                        await s.voice.stop();
+                        if (!context.mounted) return;
+                        await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LibraryPage()));
+                        await s.refresh();
+                      },
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(minHeight: round),
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(narrow ? 10 : 14, 6, narrow ? 12 : 20, 6),
+                          child: Row(mainAxisSize: MainAxisSize.min, children: [
+                            Art('1f4da', size: narrow ? 36 : 48),
+                            SizedBox(width: narrow ? 6 : 10),
+                            Flexible(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  narrow ? t('Mes livres').replaceFirst(' ', '\n') : t('Mes livres'),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: narrow ? 20 : 24, fontWeight: FontWeight.w700, color: u.onPrimary, height: 1.05),
+                                ),
+                              ),
+                            ),
+                          ]),
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-              ),
-            ),
-            const SizedBox(width: 12),
+            SizedBox(width: gap),
             _RoundButton(
-              size: 72,
+              size: round,
               color: surface,
-              tooltip: 'Changer de monde',
+              tooltip: t('Changer de monde'),
               onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const UniversePicker())),
-              child: Art(u.mascot, size: 48),
+              child: Art(u.mascot, size: narrow ? 40 : 48),
             ),
-          ]),
-        );
+          ]);
+        }),
+      );
 }
 
 /// Une activité du jour : icône du domaine, nom écrit, barre du temps fait, et un rond d'action (▶ ou ✔ « Fini »).
@@ -363,10 +389,10 @@ class DayCard extends StatelessWidget {
       ),
     );
     final action = done
-        ? const Column(mainAxisSize: MainAxisSize.min, children: [
-            CircleAvatar(radius: 28, backgroundColor: green, child: Icon(Icons.check_rounded, size: 40, color: Colors.white)),
-            SizedBox(height: 2),
-            Text('Fini', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: green)),
+        ? Column(mainAxisSize: MainAxisSize.min, children: [
+            const CircleAvatar(radius: 28, backgroundColor: green, child: Icon(Icons.check_rounded, size: 40, color: Colors.white)),
+            const SizedBox(height: 2),
+            Text(t('Fini'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: green)),
           ])
         : AnimatedBuilder(
             animation: pulse,
@@ -386,7 +412,7 @@ class DayCard extends StatelessWidget {
     final minutes = item.done.inMinutes;
     return Semantics(
       button: true,
-      label: '${topic.name}, $minutes minutes sur ${item.target.inMinutes}${done ? ', fini' : ''}',
+      label: tf('{name}, {minutes} minutes sur {target}', {'name': topic.name, 'minutes': minutes, 'target': item.target.inMinutes}) + (done ? t(', fini') : ''),
       excludeSemantics: true,
       child: Material(
         color: surface,
@@ -472,12 +498,12 @@ class _Header extends StatelessWidget {
             ),
           ),
         const Spacer(),
-        _RoundButton(size: 56, color: surface, tooltip: 'Réécouter', onPressed: onListen, child: Icon(Icons.volume_up_rounded, color: u.onCard, size: 32)),
+        _RoundButton(size: 56, color: surface, tooltip: t('Réécouter'), onPressed: onListen, child: Icon(Icons.volume_up_rounded, color: u.onCard, size: 32)),
         const SizedBox(width: 8),
         _RoundButton(
           size: 48,
           color: surface,
-          tooltip: 'Espace parent',
+          tooltip: t('Espace parent'),
           onPressed: () => openParentSpace(context),
           child: const Icon(Icons.lock_outline, color: Color(0xFF5F6B63), size: 24),
         ),
@@ -536,7 +562,7 @@ class _AskAdult extends StatelessWidget {
               style: FilledButton.styleFrom(textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 22)),
               onPressed: () => openParentSpace(context),
               icon: const Icon(Icons.lock_outline),
-              label: const Text('Espace parent'),
+              label: Text(t('Espace parent')),
             ),
           ]),
         ),
@@ -589,7 +615,7 @@ class UniversePicker extends StatelessWidget {
               _RoundButton(
                 size: 56,
                 color: surface,
-                tooltip: 'Retour',
+                tooltip: t('Retour'),
                 onPressed: () => Navigator.of(context).pop(),
                 child: const Icon(Icons.arrow_back_rounded, color: ink, size: 32),
               ),
@@ -705,7 +731,7 @@ class ProfilePicker extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: SvgPicture.asset('assets/logo/wordmark.svg', height: 96, semanticsLabel: "Zanak'i Antsa"),
             ),
-            const PlayfulTitle('Qui joue ?', size: 40),
+            PlayfulTitle(t('Qui joue ?'), size: 40),
             const SizedBox(height: 16),
             Expanded(
               child: Center(
