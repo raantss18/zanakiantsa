@@ -43,6 +43,8 @@ const activities = {
   'probleme': {'theme'},
   // ADR 0041 (blocs : boucles et conditions)
   'blocs': {'mode'},
+  // ADR 0056 (fractions)
+  'fraction': {'mode', 'denominateurs'},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
@@ -64,6 +66,7 @@ const allowedPlaceholders = {
   'lettre', // lire et écrire (ADR 0031)
   'centaines', 'heure', // CE1 (ADR 0035)
   'pas', // suites de nombres (ADR 0036)
+  'frac', 'frac2', 'plus', // fractions (ADR 0056)
 };
 
 /// Une image doit exister dans assets/art (Twemoji, licence dans assets/art/LICENCE.txt).

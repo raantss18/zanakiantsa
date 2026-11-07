@@ -35,11 +35,12 @@
   ],
   "ages": [
     5,
-    8
+    10
   ],
   "sources": {
     "cycle1": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
-    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
+    "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
+    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
   },
   "competences": [
     {
@@ -530,6 +531,206 @@
       }
     },
     {
+      "id": "fractions-unitaires",
+      "titre": "Une part : un demi, un tiers, un quart",
+      "niveau": "CE1",
+      "prerequis": [
+        "moities"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Savoir interpréter, représenter, écrire et lire les fractions unitaires (de numérateur égal à 1), de dénominateur 2, 3, 4, 5, 6, 8 ou 10."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "unitaire",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "idee": "Une fraction dit une part d'un tout partagé en parts égales. Un quart, c'est une part quand on a partagé en quatre.",
+      "phrases": {
+        "consigne": "Compte toutes les parts de la figure, puis touche la fraction qui correspond à la part coloriée.",
+        "question": "Quelle fraction de la figure est coloriée ?",
+        "indice": "Compte toutes les parts : ce nombre s'écrit en bas de la fraction.",
+        "exemple": "Une part sur quatre parts égales, c'est un quart. Il s'écrit 1 sur 4.",
+        "demonstration": "Regarde : la figure a {b} parts égales, une est coloriée. C'est {frac}.",
+        "bravo": "Oui ! C'est {frac}."
+      }
+    },
+    {
+      "id": "fractions-lire",
+      "titre": "Lire une fraction",
+      "niveau": "CE1",
+      "prerequis": [
+        "fractions-unitaires"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Savoir interpréter, représenter, écrire et lire des fractions inférieures ou égales à 1."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "lire",
+        "denominateurs": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "idee": "En bas, le nombre de parts égales : c'est le dénominateur. En haut, le nombre de parts coloriées : c'est le numérateur.",
+      "phrases": {
+        "consigne": "Compte les parts coloriées, puis toutes les parts. Touche la fraction qui correspond.",
+        "question": "Quelle fraction de la figure est coloriée ?",
+        "indice": "En haut, les parts coloriées. En bas, toutes les parts.",
+        "exemple": "Trois parts coloriées sur huit parts, c'est trois huitièmes.",
+        "demonstration": "Regarde : {n} parts coloriées sur {b}. C'est {frac}.",
+        "bravo": "Oui ! C'est {frac}."
+      }
+    },
+    {
+      "id": "fractions-colorier",
+      "titre": "Colorier une fraction",
+      "niveau": "CE1",
+      "prerequis": [
+        "fractions-lire"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "L'élève sait qu'il peut représenter la fraction 2/5 par un tout partagé en 5 parts égales dont il colorie 2 parts."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "colorier",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "idee": "Le numérateur dit combien de parts colorier. N'importe lesquelles : ça reste la même fraction.",
+      "phrases": {
+        "consigne": "Touche des parts pour les colorier, touche encore pour effacer. Puis touche « J'ai fini ».",
+        "question": "Colorie {frac} de la figure.",
+        "indice": "Le nombre du haut dit combien de parts colorier : ici, {n}.",
+        "exemple": "Pour trois huitièmes, on colorie trois parts sur les huit.",
+        "demonstration": "Regarde : {frac}, c'est {n} parts coloriées sur {b}.",
+        "bravo": "Oui ! Tu as colorié {frac}."
+      }
+    },
+    {
+      "id": "fractions-comparer",
+      "titre": "Comparer : même dénominateur",
+      "niveau": "CE1",
+      "prerequis": [
+        "fractions-colorier"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Comparer des fractions ayant le même dénominateur."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "comparer",
+        "denominateurs": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "idee": "Quand les parts ont la même taille, la plus grande fraction est celle qui a le plus de parts.",
+      "phrases": {
+        "consigne": "Regarde les deux bandes, puis touche celle qui a la plus grande fraction coloriée.",
+        "question": "Laquelle est la plus grande : {frac} ou {frac2} ?",
+        "indice": "Les parts ont la même taille : compte les parts coloriées.",
+        "exemple": "Trois cinquièmes, c'est plus que deux cinquièmes : trois parts, c'est plus que deux.",
+        "demonstration": "Regarde : {plus}, c'est la plus grande.",
+        "bravo": "Oui ! La plus grande, c'est {plus}."
+      }
+    },
+    {
+      "id": "fractions-comparer-unitaires",
+      "titre": "Comparer : un tiers ou un sixième ?",
+      "niveau": "CE1",
+      "prerequis": [
+        "fractions-comparer"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Comparer des fractions dont le numérateur est 1."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "comparer_unitaires",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "idee": "Plus on partage un tout, plus les parts sont petites. Un tiers est donc plus grand qu'un sixième, même si 3 est plus petit que 6.",
+      "phrases": {
+        "consigne": "Regarde la taille des parts sur les deux bandes, puis touche la plus grande fraction.",
+        "question": "Laquelle est la plus grande : {frac} ou {frac2} ?",
+        "indice": "Regarde la taille de la part, pas le nombre écrit en bas.",
+        "exemple": "Partage une tablette de chocolat en 2, puis en 6 : la part de 2 est la plus grosse.",
+        "demonstration": "Regarde : la part de {plus} est la plus grande.",
+        "bravo": "Oui ! La plus grande, c'est {plus}."
+      }
+    },
+    {
+      "id": "fractions-additionner",
+      "titre": "Ajouter des fractions de même dénominateur",
+      "niveau": "CE1",
+      "prerequis": [
+        "fractions-comparer-unitaires"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Additionner et soustraire des fractions de même dénominateur (ici, additionner)."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "additionner",
+        "denominateurs": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "idee": "Un cinquième plus deux cinquièmes, cela fait trois cinquièmes : on compte les parts, leur taille ne change pas.",
+      "phrases": {
+        "consigne": "Compte toutes les parts coloriées sur la bande, puis touche le résultat.",
+        "question": "Combien font {frac} plus {frac2} ?",
+        "indice": "Les parts gardent la même taille : compte-les toutes.",
+        "exemple": "Deux cinquièmes plus trois cinquièmes, cela fait cinq cinquièmes : le tout.",
+        "demonstration": "Regarde : {frac} plus {frac2}, cela fait {plus}.",
+        "bravo": "Oui ! Cela fait {plus}."
+      }
+    },
+    {
       "id": "tables-2-5-10",
       "titre": "Tables de 2, 5 et 10",
       "niveau": "CE1",
@@ -782,6 +983,105 @@
         "exemple": "{a} fois {b}, c'est {b} répété {a} fois.",
         "demonstration": "Regarde : {a} fois {b} égale {n}.",
         "bravo": "Oui ! {a} fois {b} égale {n}."
+      }
+    },
+    {
+      "id": "fractions-bande",
+      "titre": "Placer une fraction sur une bande",
+      "niveau": "CE2",
+      "prerequis": [
+        "fractions-additionner"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Le partage d'une unité de longueur en fractions de cette unité permet de positionner des fractions sur une bande-unité graduée."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "placer",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "idee": "La bande va de 0 à 1. Elle est partagée en parts égales. Pour placer trois quarts, on avance de trois parts depuis 0.",
+      "phrases": {
+        "consigne": "Compte les parts depuis 0, puis touche la graduation où s'arrête la fraction.",
+        "question": "Place {frac} sur la bande.",
+        "indice": "Le nombre du haut dit de combien de parts avancer depuis 0 : ici, {n}.",
+        "exemple": "Pour trois quarts, on avance de trois parts depuis 0.",
+        "demonstration": "Regarde : {frac}, c'est {n} parts depuis 0.",
+        "bravo": "Oui ! C'est bien {frac}."
+      }
+    },
+    {
+      "id": "fractions-superieures",
+      "titre": "Les fractions plus grandes que 1",
+      "niveau": "CM1",
+      "prerequis": [
+        "fractions-bande"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Savoir écrire une fraction supérieure à 1 comme la somme d'un entier et d'une fraction inférieure à 1."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "superieure",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "idee": "Sept quarts, c'est quatre quarts, donc une bande entière, plus trois quarts : 1 plus trois quarts.",
+      "phrases": {
+        "consigne": "Compte les bandes pleines, puis les parts de la dernière bande. Touche l'écriture qui correspond.",
+        "question": "Comment écrire {frac} avec un entier ?",
+        "indice": "Chaque bande pleine vaut 1. Il reste les parts de la dernière bande.",
+        "exemple": "Sept quarts, c'est une bande pleine et trois quarts.",
+        "demonstration": "Regarde : {frac}, c'est {plus}.",
+        "bravo": "Oui ! Cela s'écrit {plus}."
+      }
+    },
+    {
+      "id": "fractions-quantite",
+      "titre": "Une fraction d'une quantité",
+      "niveau": "CM1",
+      "prerequis": [
+        "fractions-unitaires",
+        "tables-6-7"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Déterminer une fraction d'une quantité ou d'une grandeur : les élèves apprennent à calculer des fractions de quantités comme un tiers de 12 billes."
+      },
+      "activite": "fraction",
+      "parametres": {
+        "mode": "quantite",
+        "denominateurs": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "par_max": 6
+      },
+      "idee": "Un tiers de 12, c'est une part quand on partage 12 en 3 parts égales : 12 divisé par 3.",
+      "phrases": {
+        "consigne": "Partage dans ta tête en parts égales, puis touche le nombre qu'il y a dans une part.",
+        "question": "Combien font {frac} de {a} {objets} ?",
+        "indice": "Partage en {b} parts égales. Combien dans une part ?",
+        "exemple": "Un tiers de 12 : on partage 12 en 3 parts, chaque part a 4.",
+        "demonstration": "Regarde : {a} en {b} parts égales, cela fait {n} dans chaque part.",
+        "bravo": "Oui ! Cela fait {n}."
       }
     }
   ]

@@ -1,0 +1,15 @@
+id: fractions-bande
+titre: Placer une fraction sur une bande
+niveau: CE2
+prerequis: [fractions-additionner]
+programme: { source: cycle2, texte: "Le partage d'une unité de longueur en fractions de cette unité permet de positionner des fractions sur une bande-unité graduée." }
+activite: fraction
+parametres: { mode: placer, denominateurs: [2, 3, 4, 5, 6, 8] }
+idee: "La bande va de 0 à 1. Elle est partagée en parts égales. Pour placer trois quarts, on avance de trois parts depuis 0."
+phrases:
+  consigne: "Compte les parts depuis 0, puis touche la graduation où s'arrête la fraction."
+  question: "Place {frac} sur la bande."
+  indice: "Le nombre du haut dit de combien de parts avancer depuis 0 : ici, {n}."
+  exemple: "Pour trois quarts, on avance de trois parts depuis 0."
+  demonstration: "Regarde : {frac}, c'est {n} parts depuis 0."
+  bravo: "Oui ! C'est bien {frac}."

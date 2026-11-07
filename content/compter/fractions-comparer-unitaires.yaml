@@ -1,0 +1,15 @@
+id: fractions-comparer-unitaires
+titre: "Comparer : un tiers ou un sixième ?"
+niveau: CE1
+prerequis: [fractions-comparer]
+programme: { source: cycle2, texte: "Comparer des fractions dont le numérateur est 1." }
+activite: fraction
+parametres: { mode: comparer_unitaires, denominateurs: [2, 3, 4, 5, 6, 8, 10] }
+idee: "Plus on partage un tout, plus les parts sont petites. Un tiers est donc plus grand qu'un sixième, même si 3 est plus petit que 6."
+phrases:
+  consigne: "Regarde la taille des parts sur les deux bandes, puis touche la plus grande fraction."
+  question: "Laquelle est la plus grande : {frac} ou {frac2} ?"
+  indice: "Regarde la taille de la part, pas le nombre écrit en bas."
+  exemple: "Partage une tablette de chocolat en 2, puis en 6 : la part de 2 est la plus grosse."
+  demonstration: "Regarde : la part de {plus} est la plus grande."
+  bravo: "Oui ! La plus grande, c'est {plus}."

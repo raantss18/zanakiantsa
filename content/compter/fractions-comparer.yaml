@@ -1,0 +1,15 @@
+id: fractions-comparer
+titre: "Comparer : même dénominateur"
+niveau: CE1
+prerequis: [fractions-colorier]
+programme: { source: cycle2, texte: "Comparer des fractions ayant le même dénominateur." }
+activite: fraction
+parametres: { mode: comparer, denominateurs: [3, 4, 5, 6, 8, 10] }
+idee: "Quand les parts ont la même taille, la plus grande fraction est celle qui a le plus de parts."
+phrases:
+  consigne: "Regarde les deux bandes, puis touche celle qui a la plus grande fraction coloriée."
+  question: "Laquelle est la plus grande : {frac} ou {frac2} ?"
+  indice: "Les parts ont la même taille : compte les parts coloriées."
+  exemple: "Trois cinquièmes, c'est plus que deux cinquièmes : trois parts, c'est plus que deux."
+  demonstration: "Regarde : {plus}, c'est la plus grande."
+  bravo: "Oui ! La plus grande, c'est {plus}."

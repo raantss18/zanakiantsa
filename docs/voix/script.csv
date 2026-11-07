@@ -439,6 +439,48 @@ moities.demonstration;Regarde : la moitié de {n}, c'est {b}.
 moities.bravo;Oui ! La moitié de {n}, c'est {b}.
 moities.idee;La moitié, c'est ce qu'a chacun quand on partage en deux parts égales.
 moities.variantes.0;Quelle est la moitié de {n} ? Partage pour trouver.
+fractions-unitaires.consigne;Compte toutes les parts de la figure, puis touche la fraction qui correspond à la part coloriée.
+fractions-unitaires.question;Quelle fraction de la figure est coloriée ?
+fractions-unitaires.indice;Compte toutes les parts : ce nombre s'écrit en bas de la fraction.
+fractions-unitaires.exemple;Une part sur quatre parts égales, c'est un quart. Il s'écrit 1 sur 4.
+fractions-unitaires.demonstration;Regarde : la figure a {b} parts égales, une est coloriée. C'est {frac}.
+fractions-unitaires.bravo;Oui ! C'est {frac}.
+fractions-unitaires.idee;Une fraction dit une part d'un tout partagé en parts égales. Un quart, c'est une part quand on a partagé en quatre.
+fractions-lire.consigne;Compte les parts coloriées, puis toutes les parts. Touche la fraction qui correspond.
+fractions-lire.question;Quelle fraction de la figure est coloriée ?
+fractions-lire.indice;En haut, les parts coloriées. En bas, toutes les parts.
+fractions-lire.exemple;Trois parts coloriées sur huit parts, c'est trois huitièmes.
+fractions-lire.demonstration;Regarde : {n} parts coloriées sur {b}. C'est {frac}.
+fractions-lire.bravo;Oui ! C'est {frac}.
+fractions-lire.idee;En bas, le nombre de parts égales : c'est le dénominateur. En haut, le nombre de parts coloriées : c'est le numérateur.
+fractions-colorier.consigne;Touche des parts pour les colorier, touche encore pour effacer. Puis touche « J'ai fini ».
+fractions-colorier.question;Colorie {frac} de la figure.
+fractions-colorier.indice;Le nombre du haut dit combien de parts colorier : ici, {n}.
+fractions-colorier.exemple;Pour trois huitièmes, on colorie trois parts sur les huit.
+fractions-colorier.demonstration;Regarde : {frac}, c'est {n} parts coloriées sur {b}.
+fractions-colorier.bravo;Oui ! Tu as colorié {frac}.
+fractions-colorier.idee;Le numérateur dit combien de parts colorier. N'importe lesquelles : ça reste la même fraction.
+fractions-comparer.consigne;Regarde les deux bandes, puis touche celle qui a la plus grande fraction coloriée.
+fractions-comparer.question;Laquelle est la plus grande : {frac} ou {frac2} ?
+fractions-comparer.indice;Les parts ont la même taille : compte les parts coloriées.
+fractions-comparer.exemple;Trois cinquièmes, c'est plus que deux cinquièmes : trois parts, c'est plus que deux.
+fractions-comparer.demonstration;Regarde : {plus}, c'est la plus grande.
+fractions-comparer.bravo;Oui ! La plus grande, c'est {plus}.
+fractions-comparer.idee;Quand les parts ont la même taille, la plus grande fraction est celle qui a le plus de parts.
+fractions-comparer-unitaires.consigne;Regarde la taille des parts sur les deux bandes, puis touche la plus grande fraction.
+fractions-comparer-unitaires.question;Laquelle est la plus grande : {frac} ou {frac2} ?
+fractions-comparer-unitaires.indice;Regarde la taille de la part, pas le nombre écrit en bas.
+fractions-comparer-unitaires.exemple;Partage une tablette de chocolat en 2, puis en 6 : la part de 2 est la plus grosse.
+fractions-comparer-unitaires.demonstration;Regarde : la part de {plus} est la plus grande.
+fractions-comparer-unitaires.bravo;Oui ! La plus grande, c'est {plus}.
+fractions-comparer-unitaires.idee;Plus on partage un tout, plus les parts sont petites. Un tiers est donc plus grand qu'un sixième, même si 3 est plus petit que 6.
+fractions-additionner.consigne;Compte toutes les parts coloriées sur la bande, puis touche le résultat.
+fractions-additionner.question;Combien font {frac} plus {frac2} ?
+fractions-additionner.indice;Les parts gardent la même taille : compte-les toutes.
+fractions-additionner.exemple;Deux cinquièmes plus trois cinquièmes, cela fait cinq cinquièmes : le tout.
+fractions-additionner.demonstration;Regarde : {frac} plus {frac2}, cela fait {plus}.
+fractions-additionner.bravo;Oui ! Cela fait {plus}.
+fractions-additionner.idee;Un cinquième plus deux cinquièmes, cela fait trois cinquièmes : on compte les parts, leur taille ne change pas.
 tables-2-5-10.consigne;Chaque rangée a le même nombre d'objets : compte de rangée en rangée. Puis touche le résultat.
 tables-2-5-10.question;{a} × {b} = ?
 tables-2-5-10.indice;{a} rangées de {b} : compte de {b} en {b}.
@@ -509,6 +551,27 @@ tables-8-9.bravo;Oui ! {a} fois {b} égale {n}.
 tables-8-9.idee;{a} fois {b}, ce sont {a} rangées de {b}. On peut compter de {b} en {b}.
 tables-8-9.variantes.0;Combien font {a} fois {b} ?
 tables-8-9.variantes.1;{a} rangées de {b} : combien en tout ?
+fractions-bande.consigne;Compte les parts depuis 0, puis touche la graduation où s'arrête la fraction.
+fractions-bande.question;Place {frac} sur la bande.
+fractions-bande.indice;Le nombre du haut dit de combien de parts avancer depuis 0 : ici, {n}.
+fractions-bande.exemple;Pour trois quarts, on avance de trois parts depuis 0.
+fractions-bande.demonstration;Regarde : {frac}, c'est {n} parts depuis 0.
+fractions-bande.bravo;Oui ! C'est bien {frac}.
+fractions-bande.idee;La bande va de 0 à 1. Elle est partagée en parts égales. Pour placer trois quarts, on avance de trois parts depuis 0.
+fractions-superieures.consigne;Compte les bandes pleines, puis les parts de la dernière bande. Touche l'écriture qui correspond.
+fractions-superieures.question;Comment écrire {frac} avec un entier ?
+fractions-superieures.indice;Chaque bande pleine vaut 1. Il reste les parts de la dernière bande.
+fractions-superieures.exemple;Sept quarts, c'est une bande pleine et trois quarts.
+fractions-superieures.demonstration;Regarde : {frac}, c'est {plus}.
+fractions-superieures.bravo;Oui ! Cela s'écrit {plus}.
+fractions-superieures.idee;Sept quarts, c'est quatre quarts, donc une bande entière, plus trois quarts : 1 plus trois quarts.
+fractions-quantite.consigne;Partage dans ta tête en parts égales, puis touche le nombre qu'il y a dans une part.
+fractions-quantite.question;Combien font {frac} de {a} {objets} ?
+fractions-quantite.indice;Partage en {b} parts égales. Combien dans une part ?
+fractions-quantite.exemple;Un tiers de 12 : on partage 12 en 3 parts, chaque part a 4.
+fractions-quantite.demonstration;Regarde : {a} en {b} parts égales, cela fait {n} dans chaque part.
+fractions-quantite.bravo;Oui ! Cela fait {n}.
+fractions-quantite.idee;Un tiers de 12, c'est une part quand on partage 12 en 3 parts égales : 12 divisé par 3.
 nature.intro.0;Les êtres vivants naissent, grandissent et changent.
 nature.intro.1;Ils ont besoin d'eau et de nourriture.
 nature.intro.2;Observe bien chaque image avant de répondre.

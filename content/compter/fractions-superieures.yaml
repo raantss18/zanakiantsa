@@ -1,0 +1,15 @@
+id: fractions-superieures
+titre: Les fractions plus grandes que 1
+niveau: CM1
+prerequis: [fractions-bande]
+programme: { source: cycle3, texte: "Savoir écrire une fraction supérieure à 1 comme la somme d'un entier et d'une fraction inférieure à 1." }
+activite: fraction
+parametres: { mode: superieure, denominateurs: [2, 3, 4, 5, 6, 8] }
+idee: "Sept quarts, c'est quatre quarts, donc une bande entière, plus trois quarts : 1 plus trois quarts."
+phrases:
+  consigne: "Compte les bandes pleines, puis les parts de la dernière bande. Touche l'écriture qui correspond."
+  question: "Comment écrire {frac} avec un entier ?"
+  indice: "Chaque bande pleine vaut 1. Il reste les parts de la dernière bande."
+  exemple: "Sept quarts, c'est une bande pleine et trois quarts."
+  demonstration: "Regarde : {frac}, c'est {plus}."
+  bravo: "Oui ! Cela s'écrit {plus}."

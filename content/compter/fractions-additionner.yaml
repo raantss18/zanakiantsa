@@ -1,0 +1,15 @@
+id: fractions-additionner
+titre: Ajouter des fractions de même dénominateur
+niveau: CE1
+prerequis: [fractions-comparer-unitaires]
+programme: { source: cycle2, texte: "Additionner et soustraire des fractions de même dénominateur (ici, additionner)." }
+activite: fraction
+parametres: { mode: additionner, denominateurs: [3, 4, 5, 6, 8, 10] }
+idee: "Un cinquième plus deux cinquièmes, cela fait trois cinquièmes : on compte les parts, leur taille ne change pas."
+phrases:
+  consigne: "Compte toutes les parts coloriées sur la bande, puis touche le résultat."
+  question: "Combien font {frac} plus {frac2} ?"
+  indice: "Les parts gardent la même taille : compte-les toutes."
+  exemple: "Deux cinquièmes plus trois cinquièmes, cela fait cinq cinquièmes : le tout."
+  demonstration: "Regarde : {frac} plus {frac2}, cela fait {plus}."
+  bravo: "Oui ! Cela fait {plus}."

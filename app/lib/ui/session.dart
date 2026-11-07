@@ -10,6 +10,7 @@ import '../activities/ce1.dart';
 import '../activities/chess.dart';
 import '../activities/code.dart';
 import '../activities/explore.dart';
+import '../activities/fractions.dart';
 import '../activities/problem.dart';
 import '../activities/choose.dart';
 import '../activities/letters.dart';
@@ -578,6 +579,7 @@ class _SessionPageState extends State<SessionPage> {
                           'posee' => ColumnOpActivity(key: ObjectKey(a), attempt: a),
                           'heure' => ClockActivity(key: ObjectKey(a), attempt: a),
                           'suite' => SequenceActivity(key: ObjectKey(a), attempt: a),
+                          'fraction' => FractionActivity(key: ObjectKey(a), attempt: a),
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),

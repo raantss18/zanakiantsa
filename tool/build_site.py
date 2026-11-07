@@ -2,15 +2,17 @@
 """Construit le site vitrine (dossier site/) dans un dossier de sortie, prêt pour GitHub Pages.
 
 Le site est du HTML statique. Ce script y écrit ce qui change à chaque version, à partir de la liste des versions publiées
-sur GitHub (JSON de `gh api repos/<dépôt>/releases`) : numéro, taille, empreinte, lien de téléchargement, notes de version ;
-et il écrit les notes de lecture (site/notes.json) et le flux Atom. Aucune bibliothèque : Python 3 seulement.
+sur GitHub (JSON de `gh api repos/<dépôt>/releases`) : numéro, taille, empreinte, lien de téléchargement, notes de version,
+et les domaines de cette version (noms, nombre de compétences, résumés, lus dans son étiquette Git) ; il écrit les notes de lecture (site/notes.json) et le flux Atom. Aucune bibliothèque : Python 3 seulement.
 
 Usage : python3 tool/build_site.py --releases releases.json --out _site
 """
 import argparse
 import html
 import json
+import re
 import shutil
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -41,6 +43,7 @@ def versions(releases):
         if r.get('draft') or r.get('prerelease') or not apk:
             continue
         out.append({
+            'tag': r['tag_name'],
             'version': r['tag_name'].removeprefix('app-v'),
             'date': r['published_at'],
             'notes': (r.get('body') or '').strip(),
@@ -50,6 +53,50 @@ def versions(releases):
             'sha256': (apk.get('digest') or '').removeprefix('sha256:'),
         })
     return out
+
+
+# Résumés pour les versions publiées avant l'ajout de `resume` dans content/*/_theme.yaml.
+RESUMES_ANCIENS = {
+    'lire': "Syllabes, lettres capitales et cursives, tracé des lettres au doigt avec le bon sens du geste.",
+    'compter': "Dénombrer, composer, additionner, soustraire, tables, partage, heure, opérations posées chiffre par chiffre.",
+    'nature': "Les êtres vivants, leurs besoins, leur corps, leurs milieux de vie.",
+    'dessin': "Dessiner un sujet précis. L'application regarde si elle le reconnaît et dit ce qu'il manque.",
+    'motifs': "Suites d'images et de nombres : de 1 en 1, de 2 en 2, de 10 en 10, à rebours.",
+    'sons': "Écouter, comparer, reconnaître.",
+    'echecs': "Les leçons pas à pas, puis de vraies parties contre le robot ou à deux.",
+    'anglais': "Couleurs, nombres, animaux, le corps : écouter le mot et toucher l'image.",
+    'code': "Programmer un robot avec des flèches, puis des blocs : boucles, conditions, compteur.",
+    'explorer': "Le système solaire, le corps humain et les solides, en 3D.",
+}
+CHIFFRES = {10: 'Dix', 11: 'Onze', 12: 'Douze', 13: 'Treize', 14: 'Quatorze', 15: 'Quinze'}
+
+
+def git(*args):
+    return subprocess.run(['git', *args], cwd=RACINE, check=True, capture_output=True, text=True).stdout
+
+
+def domaines(tag):
+    """Les domaines tels qu'ils sont DANS la version publiée [tag] : le site n'annonce jamais ce qui n'est pas encore sorti."""
+    fichiers = git('ls-tree', '-r', '--name-only', tag, 'content/').splitlines()
+    ordre = re.search(r'^ordre:\s*\[(.*)\]', git('show', f'{tag}:content/domaines.yaml'), re.M)[1]
+    out = []
+    for d in [x.strip() for x in ordre.split(',')]:
+        theme = git('show', f'{tag}:content/{d}/_theme.yaml')
+        champ = lambda c: (m := re.search(rf'^{c}:\s*"?(.*?)"?\s*$', theme, re.M)) and m[1]
+        nb = sum(1 for f in fichiers if f.startswith(f'content/{d}/') and f.endswith('.yaml') and not f.rsplit('/', 1)[1].startswith('_'))
+        out.append({'id': d, 'nom': champ('nom'), 'icone': champ('icone'), 'nb': nb, 'resume': champ('resume') or RESUMES_ANCIENS[d]})
+    return out
+
+
+def html_sommaire(ds):
+    lignes = []
+    for d in ds:
+        unite = 'compétence' if d['nb'] <= 1 else 'compétences'
+        lignes.append(
+            f"<li><img src=\"img/{e(d['icone'])}.svg\" alt=\"\" width=\"32\" height=\"32\">"
+            f"<span class=\"ligne-pointillee\"><span class=\"nom\">{e(d['nom'])}</span></span>"
+            f"<span class=\"nb\">{d['nb']} {unite}</span><p class=\"detail\">{e(d['resume'])}</p></li>")
+    return '\n    '.join(lignes)
 
 
 def html_versions(vs, combien=3):
@@ -111,7 +158,13 @@ def main():
         shutil.rmtree(out)
     shutil.copytree(SITE, out, ignore=shutil.ignore_patterns('notes.json'))
 
+    ds = domaines(dernier['tag'])
+    for d in ds:
+        shutil.copy(RACINE / 'app/assets/art' / f"{d['icone']}.svg", out / 'img')
+
     valeurs = {
+        'SOMMAIRE': html_sommaire(ds), 'N_DOMAINES': CHIFFRES.get(len(ds), str(len(ds))),
+        'N_COMPETENCES': str(sum(d['nb'] for d in ds)),
         'VERSION': e(dernier['version']), 'VERSION_DATE': date_fr(dernier['date']), 'TAILLE': taille_fr(dernier['taille']),
         'APK_URL': e(dernier['apk']), 'SHA256': e(dernier['sha256'] or 'non fournie'), 'RELEASE_URL': e(dernier['url']),
         'VERSIONS': html_versions(vs), 'NOTES': html_notes(notes),

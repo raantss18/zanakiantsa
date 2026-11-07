@@ -1,13 +1,16 @@
 id: compter
 titre: Compter et calculer
 nom: "Les nombres"
+# Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
+resume: "Dénombrer, composer, additionner, soustraire, tables, partage, heure, opérations posées chiffre par chiffre, fractions."
 icone: "1f522"
-ages: [5, 8]
+ages: [5, 10]
 # Sources (consultées le 2026-11-02) : programmes officiels, citations dans chaque compétence.
 sources:
   cycle1: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf"
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
-ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, heure-entiere, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, tables-2-5-10, tables-3-4, centaines-lire, addition-posee, soustraction-posee, heure-demi-quart, tables-6-7, tables-8-9]
+  cycle3: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
+ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, heure-entiere, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, fractions-unitaires, fractions-lire, fractions-colorier, fractions-comparer, fractions-comparer-unitaires, fractions-additionner, tables-2-5-10, tables-3-4, centaines-lire, addition-posee, soustraction-posee, heure-demi-quart, tables-6-7, tables-8-9, fractions-bande, fractions-superieures, fractions-quantite]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

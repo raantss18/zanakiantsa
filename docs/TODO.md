@@ -138,7 +138,7 @@ Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrig�
   de 51 compétences ; erreurs expliquées (nombres, échecs, robot) ; erreurs typiques proposées en priorité
 - ✅ Test de départ par domaine (ADR 0045) ; ✅ explications pour les réponses en images (ADR 0048)
 - ⏳ APK 45 Mo avec les livres (budget 60 Mo) : au-delà, proposer des livres en téléchargement depuis l'app
-- ⏳ Contenu de cycle 3 pour les plus grands (au-delà des livres) : à planifier
+- 🔄 Contenu de cycle 3 pour les plus grands : ✅ fractions du CE1 au CM1 (ADR 0056) ; ⏳ fractions décimales et nombres décimaux, multiplication et division posées, grands nombres ; ⏳ français, histoire-géographie, sciences de cycle 3
 - ⏳ Voix enregistrées pour toutes les nouvelles phrases ; essai avec l'enfant
 
 ## Avant la version 0.7.0 — retours d'Antsa sur téléphone (2026-11-03), par ordre de priorité
@@ -174,7 +174,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
 - ✅ **Site vitrine** (ADR 0055) : https://raantss18.github.io/zanakiantsa/ — téléchargement de la dernière version, nouvelles
-  (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée. ⏳ Lecteurs d'écran, Safari, Firefox ;
+  (versions et notes de lecture), flux Atom ; reconstruit à chaque version publiée ; sommaire et nombre de compétences lus dans la version publiée. ⏳ Déclencheur « version publiée » jamais encore vu en vrai : à vérifier à la 0.11 (`tool/publish.sh`). ⏳ Lecteurs d'écran, Safari, Firefox ;
   ⏳ une page « Nouvelles » dédiée et d'autres notes de lecture quand il y en aura .
 
 ## Version 0.10.0 (2026-11-07) : publiée

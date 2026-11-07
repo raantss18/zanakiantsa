@@ -6,6 +6,7 @@ import 'dart:math';
 
 import 'package:flutter/services.dart';
 
+import '../core/fractions.dart';
 import '../core/progress.dart';
 
 /// Les mots d'univers dont une phrase a besoin : l'objet compté et le contenant.
@@ -122,6 +123,7 @@ class Skill {
         'batonnets' when params['mode'] == 'casser' => {'reste': '${q.n - q.b}'},
         'heure' => {'heure': clockText(q.n, q.b)},
         'suite' => {'pas': stepWords[q.b.abs()] ?? '${q.b.abs()}'},
+        'fraction' => fractionVars(q, params['mode'] as String),
         'multibase' => {
             'centaines': q.a <= 1 ? '${q.a} centaine' : '${q.a} centaines',
             'dizaines': q.b <= 1 ? '${q.b} dizaine' : '${q.b} dizaines',
@@ -231,6 +233,40 @@ class Skill {
         final lo = params.containsKey('min') ? p('min') : 0;
         final a = b > 0 ? between(lo, p('max') - 4 * b) : between(lo - 4 * b, p('max'));
         return Question(n: a + between(1, 4) * b, a: a, b: b);
+      case 'fraction':
+        // Voir fractionVars : [b] le dénominateur, [n] la réponse, [a] selon le mode.
+        final ds = List<int>.from(params['denominateurs'] as List);
+        final d = ds[r.nextInt(ds.length)];
+        switch (params['mode']) {
+          case 'comparer_unitaires': // 1/a contre 1/b
+            final others = ds.where((x) => x != d).toList();
+            return Question(n: 1, a: others[r.nextInt(others.length)], b: d);
+          case 'comparer': // a/b contre n/b
+            final x = between(1, d - 1);
+            var y = between(1, d - 1);
+            while (y == x && d > 2) {
+              y = between(1, d - 1);
+            }
+            if (x == y) return Question(n: 1, a: 1, b: 3);
+            return Question(n: x, a: y, b: d);
+          case 'additionner': // a/b + (n-a)/b = n/b, sans dépasser 1
+            final dd = d < 3 ? 3 : d;
+            final sum = between(2, dd);
+            return Question(n: sum, a: between(1, sum - 1), b: dd);
+          case 'superieure': // n/b > 1, sans multiple de b
+            var n = between(d + 1, 3 * d - 1);
+            while (n % d == 0) {
+              n = between(d + 1, 3 * d - 1);
+            }
+            return Question(n: n, a: 0, b: d);
+          case 'quantite': // un b-ième de a = n
+            final k = between(2, p('par_max'));
+            return Question(n: k, a: k * d, b: d);
+          case 'unitaire':
+            return Question(n: 1, a: r.nextInt(2), b: d);
+          default: // lire, colorier, placer ; [a] : la forme (bande ou disque)
+            return Question(n: between(1, d - 1), a: r.nextInt(2), b: d);
+        }
       default: // calcul
         final total = params.containsKey('total_fixe') ? p('total_fixe') : between(2, p('total_max'));
         // a et b ≥ 1 : les énoncés racontent une petite histoire (« il en arrive {b} »), qui n'a pas de sens avec 0.
@@ -249,6 +285,16 @@ class Skill {
         _ => q.n,
       };
 }
+
+/// Les mots d'une question de fractions (ADR 0056).
+Map<String, String> fractionVars(Question q, String mode) => switch (mode) {
+      'comparer_unitaires' => {'frac': fracWords(1, q.b), 'frac2': fracWords(1, q.a), 'plus': fracWords(1, min(q.a, q.b))},
+      'comparer' => {'frac': fracWords(q.n, q.b), 'frac2': fracWords(q.a, q.b), 'plus': fracWords(max(q.n, q.a), q.b)},
+      'additionner' => {'frac': fracWords(q.a, q.b), 'frac2': fracWords(q.n - q.a, q.b), 'plus': fracWords(q.n, q.b)},
+      'superieure' => {'frac': fracWords(q.n, q.b), 'plus': fracSumWords(Frac(q.n % q.b, q.b, whole: q.n ~/ q.b))},
+      'quantite' => {'frac': fracWords(1, q.b)},
+      _ => {'frac': fracWords(q.n, q.b)},
+    };
 
 /// Le pas d'une suite de nombres, tel qu'on le dit (« de deux en deux »).
 const stepWords = {1: 'un', 2: 'deux', 5: 'cinq', 10: 'dix', 100: 'cent'};

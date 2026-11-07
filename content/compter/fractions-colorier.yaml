@@ -1,0 +1,15 @@
+id: fractions-colorier
+titre: Colorier une fraction
+niveau: CE1
+prerequis: [fractions-lire]
+programme: { source: cycle2, texte: "L'élève sait qu'il peut représenter la fraction 2/5 par un tout partagé en 5 parts égales dont il colorie 2 parts." }
+activite: fraction
+parametres: { mode: colorier, denominateurs: [2, 3, 4, 5, 6, 8] }
+idee: "Le numérateur dit combien de parts colorier. N'importe lesquelles : ça reste la même fraction."
+phrases:
+  consigne: "Touche des parts pour les colorier, touche encore pour effacer. Puis touche « J'ai fini »."
+  question: "Colorie {frac} de la figure."
+  indice: "Le nombre du haut dit combien de parts colorier : ici, {n}."
+  exemple: "Pour trois huitièmes, on colorie trois parts sur les huit."
+  demonstration: "Regarde : {frac}, c'est {n} parts coloriées sur {b}."
+  bravo: "Oui ! Tu as colorié {frac}."

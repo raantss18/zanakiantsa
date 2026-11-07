@@ -1,0 +1,15 @@
+id: fractions-lire
+titre: Lire une fraction
+niveau: CE1
+prerequis: [fractions-unitaires]
+programme: { source: cycle2, texte: "Savoir interpréter, représenter, écrire et lire des fractions inférieures ou égales à 1." }
+activite: fraction
+parametres: { mode: lire, denominateurs: [3, 4, 5, 6, 8, 10] }
+idee: "En bas, le nombre de parts égales : c'est le dénominateur. En haut, le nombre de parts coloriées : c'est le numérateur."
+phrases:
+  consigne: "Compte les parts coloriées, puis toutes les parts. Touche la fraction qui correspond."
+  question: "Quelle fraction de la figure est coloriée ?"
+  indice: "En haut, les parts coloriées. En bas, toutes les parts."
+  exemple: "Trois parts coloriées sur huit parts, c'est trois huitièmes."
+  demonstration: "Regarde : {n} parts coloriées sur {b}. C'est {frac}."
+  bravo: "Oui ! C'est {frac}."

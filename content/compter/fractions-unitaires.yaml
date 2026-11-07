@@ -1,0 +1,15 @@
+id: fractions-unitaires
+titre: "Une part : un demi, un tiers, un quart"
+niveau: CE1
+prerequis: [moities]
+programme: { source: cycle2, texte: "Savoir interpréter, représenter, écrire et lire les fractions unitaires (de numérateur égal à 1), de dénominateur 2, 3, 4, 5, 6, 8 ou 10." }
+activite: fraction
+parametres: { mode: unitaire, denominateurs: [2, 3, 4, 5, 6, 8, 10] }
+idee: "Une fraction dit une part d'un tout partagé en parts égales. Un quart, c'est une part quand on a partagé en quatre."
+phrases:
+  consigne: "Compte toutes les parts de la figure, puis touche la fraction qui correspond à la part coloriée."
+  question: "Quelle fraction de la figure est coloriée ?"
+  indice: "Compte toutes les parts : ce nombre s'écrit en bas de la fraction."
+  exemple: "Une part sur quatre parts égales, c'est un quart. Il s'écrit 1 sur 4."
+  demonstration: "Regarde : la figure a {b} parts égales, une est coloriée. C'est {frac}."
+  bravo: "Oui ! C'est {frac}."

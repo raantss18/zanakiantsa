@@ -1,0 +1,15 @@
+id: fractions-quantite
+titre: Une fraction d'une quantité
+niveau: CM1
+prerequis: [fractions-unitaires, tables-6-7]
+programme: { source: cycle3, texte: "Déterminer une fraction d'une quantité ou d'une grandeur : les élèves apprennent à calculer des fractions de quantités comme un tiers de 12 billes." }
+activite: fraction
+parametres: { mode: quantite, denominateurs: [2, 3, 4, 5], par_max: 6 }
+idee: "Un tiers de 12, c'est une part quand on partage 12 en 3 parts égales : 12 divisé par 3."
+phrases:
+  consigne: "Partage dans ta tête en parts égales, puis touche le nombre qu'il y a dans une part."
+  question: "Combien font {frac} de {a} {objets} ?"
+  indice: "Partage en {b} parts égales. Combien dans une part ?"
+  exemple: "Un tiers de 12 : on partage 12 en 3 parts, chaque part a 4."
+  demonstration: "Regarde : {a} en {b} parts égales, cela fait {n} dans chaque part."
+  bravo: "Oui ! Cela fait {n}."
