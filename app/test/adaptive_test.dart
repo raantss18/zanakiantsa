@@ -1,5 +1,5 @@
-import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/ui/adaptive.dart';
 
@@ -130,6 +130,32 @@ void main() {
       expect(activityBesideText(const Size(690, 600)), isFalse, reason: 'tout juste 1,15 fois plus large que haut : pas encore paysage');
       expect(activityBesideText(const Size(776, 1163)), isFalse);
       expect(activityBesideText(const Size(620, 400)), isFalse, reason: 'il ne resterait que 320 dp');
+    });
+  });
+
+  group('pages de listes (ADR 0054)', () {
+    Future<EdgeInsets> padding(WidgetTester t, Size size) async {
+      late EdgeInsets e;
+      t.view.physicalSize = size;
+      t.view.devicePixelRatio = 1;
+      addTearDown(t.view.reset);
+      await t.pumpWidget(MaterialApp(home: Builder(builder: (c) {
+        e = readablePadding(c, bottom: 48);
+        return const SizedBox();
+      })));
+      return e;
+    }
+
+    testWidgets('petit écran : marges habituelles', (t) async {
+      final e = await padding(t, const Size(393, 800));
+      expect((e.left, e.right, e.top, e.bottom), (16.0, 16.0, 16.0, 48.0));
+    });
+
+    testWidgets('grande tablette : colonne centrée de 760 dp', (t) async {
+      final e = await padding(t, const Size(1163, 776));
+      expect(e.left, closeTo((1163 - readableWidth) / 2, 0.01));
+      expect(e.left, e.right);
+      expect(1163 - e.left - e.right, readableWidth);
     });
   });
 }

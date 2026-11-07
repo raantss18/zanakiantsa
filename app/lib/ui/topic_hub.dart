@@ -6,6 +6,7 @@ import '../activities/draw.dart';
 import '../app_state.dart';
 import '../content/content.dart';
 import '../core/progress.dart';
+import 'adaptive.dart';
 import 'chess_play.dart';
 import 'session.dart';
 import 'theme.dart';
@@ -64,7 +65,7 @@ class _TopicHubState extends State<TopicHub> {
           child: Column(children: [
             pageHeader(context, t.name),
             Expanded(
-              child: ListView(padding: const EdgeInsets.all(16), children: [
+              child: ListView(padding: readablePadding(context), children: [
                 if (dessin) ...[
                   hubCard('1f3a8', 'Dessiner', 'Un sujet précis, et je regarde si je reconnais ton dessin.', () => _go(const DrawPage())),
                   hubCard('1f5bc', 'Mes dessins', 'Tous tes dessins, avec leur date.', () => _go(const DrawingsPage())),
@@ -172,7 +173,7 @@ class NotebookPage extends StatelessWidget {
           child: Column(children: [
             pageHeader(context, 'Mon carnet'),
             Expanded(
-              child: ListView(padding: const EdgeInsets.all(16), children: [
+              child: ListView(padding: readablePadding(context), children: [
                 _section('Mes compétences : ${t.name}'),
                 for (final s in t.skills) _skillRow(s, p),
                 const SizedBox(height: 16),

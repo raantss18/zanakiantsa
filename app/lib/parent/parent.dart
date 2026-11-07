@@ -7,6 +7,7 @@ import '../activities/draw.dart';
 import '../app_state.dart';
 import '../core/day.dart';
 import '../core/report.dart';
+import '../ui/adaptive.dart';
 import '../update/updater.dart';
 
 /// Espace parent : âge de l'enfant, rapport de la semaine, modèle d'écriture, mises à jour.
@@ -219,7 +220,7 @@ class _ParentPageState extends State<ParentPage> {
         appBar: AppBar(title: const Text('Espace parent')),
         body: SafeArea(
           child: ListView(
-            padding: const EdgeInsets.fromLTRB(16, 16, 16, 48),
+            padding: readablePadding(context, bottom: 48),
             children: [
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
               Text('Enfants', style: Theme.of(context).textTheme.titleLarge),

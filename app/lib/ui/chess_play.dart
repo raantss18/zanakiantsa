@@ -632,7 +632,7 @@ class _GamesPageState extends State<GamesPage> {
                       ),
                     );
                   }
-                  return ListView(padding: const EdgeInsets.all(16), children: [
+                  return ListView(padding: readablePadding(context), children: [
                     for (final (i, g) in list.indexed)
                       Card(
                         child: ListTile(

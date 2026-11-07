@@ -117,3 +117,14 @@ class ScaledActivity extends StatelessWidget {
           child: FractionallySizedBox(alignment: Alignment.topLeft, widthFactor: 1 / scale, heightFactor: 1 / scale, child: child),
         );
 }
+
+/// Largeur d'une page de texte ou de listes (accueil de domaine, carnet, espace parent) : au-delà, les lignes courent sur toute
+/// la tablette et deviennent pénibles à lire (ADR 0054).
+const readableWidth = 760.0;
+
+/// Marge à donner à une liste pour qu'elle reste dans [readableWidth], centrée ; [side] et [top]/[bottom] sont les marges
+/// habituelles sur un petit écran.
+EdgeInsets readablePadding(BuildContext context, {double side = 16, double top = 16, double bottom = 16}) {
+  final extra = (MediaQuery.sizeOf(context).width - readableWidth) / 2;
+  return EdgeInsets.fromLTRB(extra > side ? extra : side, top, extra > side ? extra : side, bottom);
+}

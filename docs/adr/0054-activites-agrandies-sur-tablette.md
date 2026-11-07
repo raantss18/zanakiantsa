@@ -16,8 +16,11 @@
 - **Piège relevé** : un `LayoutBuilder` imbriqué dans la zone agrandie figeait l'écran (le bouton d'essai faisait avancer
   l'état mais rien ne se redessinait en version publiée). Le facteur est donc calculé dans `SessionPage`, où la taille est
   déjà connue, et `ScaledActivity` n'est plus qu'un `Transform.scale`.
+- **Pages de listes** : accueil de domaine, carnet, espace parent et liste des parties restent dans une colonne centrée de 760 dp
+  (`readablePadding`) ; en paysage les lignes couraient sur 1163 dp. Bibliothèque, liseuse, album, « Tout explorer » et le
+  choix du monde étaient déjà corrects en paysage : inchangés.
 - **Aussi** : bouton d'essai ⏭ visible seulement avec `--dart-define=DEV_SKILL=…` (jamais publié) pour passer d'une compétence
   à l'autre sans jouer.
 - **Vérifié** : 158 tests (`test/adaptive_test.dart`) ; émulateur, les 25 compétences en paysage (Xiaomi Pad 7) et en
-  portrait. **Pas vérifié** : une vraie Pad 7 ; les écrans hors séance (accueil de domaine, test de départ, album, bibliothèque) ;
+  portrait. **Pas vérifié** : une vraie Pad 7 ; le test de départ et la fin de séance en paysage ;
   le panneau de blocs reste petit en portrait.
