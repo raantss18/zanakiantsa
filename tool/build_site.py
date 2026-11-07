@@ -172,6 +172,12 @@ def main():
     page = (SITE / 'index.html').read_text(encoding='utf-8')
     for cle, val in valeurs.items():
         page = page.replace('{{' + cle + '}}', val)
+    # Chaque version du style et du script a son adresse : un téléphone ne garde jamais l'ancien style en cache (vu le
+    # 2026-11-07 : vieux style.css + nouvelle page = vidéo à 1280 px de large, page minuscule et collée à gauche).
+    import hashlib
+    for f in ['style.css', 'app.js']:
+        h = hashlib.sha256((SITE / f).read_bytes()).hexdigest()[:10]
+        page = page.replace(f'"{f}"', f'"{f}?v={h}"')
     if '{{' in page:
         raise SystemExit('Un champ du modèle n\'a pas de valeur : ' + page[page.index('{{'):][:40])
     (out / 'index.html').write_text(page, encoding='utf-8')

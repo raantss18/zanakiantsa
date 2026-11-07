@@ -42,7 +42,7 @@ body {
 a { color: var(--violet-fonce); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 a:hover { color: var(--encre); }
 :focus-visible { outline: 4px solid var(--encre); outline-offset: 4px; border-radius: 6px; }
-img { max-width: 100%; height: auto; display: block; }
+img, video { max-width: 100%; height: auto; display: block; }
 p { margin: 0 0 var(--u); max-width: 62ch; }
 
 .lien-evitement { position: absolute; left: 12px; top: -80px; background: var(--encre); color: #fff; padding: 0 20px; z-index: 10; border-radius: 0 0 12px 12px; }
