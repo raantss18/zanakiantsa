@@ -483,10 +483,9 @@ class _SessionPageState extends State<SessionPage> {
       body: UniverseBackground(
         universe: u,
         child: SafeArea(
-          // Paysage (ADR 0052) : pour les activités à échiquier, le texte passe dans une colonne à gauche et l'échiquier
-          // prend toute la hauteur ; il était minuscule à côté des écritures.
+          // Paysage (ADR 0052, 0054) : le texte passe dans une colonne à gauche et l'activité prend toute la hauteur.
           child: LayoutBuilder(builder: (context, k) {
-            final side = !over && isLandscape(k.biggest) && const {'echecs', 'probleme'}.contains(a.skill.activity);
+            final side = !over && activityBesideText(k.biggest);
             // Pendant un exemple, le badge « Nouveau » et le bouton « J'ai compris » : sur la page, ou dans la colonne de
             // gauche quand l'échiquier a toute la hauteur.
             final badge = a.example ? _NewBadge(title: a.skill.title) : null;
@@ -526,6 +525,11 @@ class _SessionPageState extends State<SessionPage> {
                 height: side ? sideHeight : narratorHeight,
               ),
             );
+            // La zone de l'activité : sous la barre du haut, et sous le texte ou à côté de lui.
+            final scale = activitiesThatFill.contains(a.skill.activity) ? 1.0 : activityScale(Size(
+              k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0),
+              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : 0),
+            ));
             final content = over
                   ? DayEnd(
                       theme: widget.topic,
@@ -547,7 +551,7 @@ class _SessionPageState extends State<SessionPage> {
                         // « J'ai compris » en bas (pas de chevauchement).
                         top: a.example && !side ? 52 : 0,
                         bottom: a.example && !side ? 104 : 0,
-                        child: switch (a.skill.activity) {
+                        child: ScaledActivity(scale: scale, child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
                           'composer' => ComposeActivity(key: ObjectKey(a), attempt: a),
                           'choisir' => ChooseActivity(key: ObjectKey(a), attempt: a),
@@ -573,9 +577,11 @@ class _SessionPageState extends State<SessionPage> {
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),
-                        },
+                        }),
                       ),
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
+                      // Essais seulement (jamais publié) : passer à la compétence suivante pour regarder chaque écran.
+                      if (devSkill.isNotEmpty) Positioned(left: 4, bottom: 4, child: FloatingActionButton.small(heroTag: 'devSkip', onPressed: _advance, child: const Icon(Icons.skip_next))),
                       if (a.example && !side) ...[
                         Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
                         Positioned(

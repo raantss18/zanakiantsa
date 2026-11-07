@@ -105,4 +105,31 @@ void main() {
     expect(squareSide(const Size(700, 450)), 450);
     expect(squareSide(const Size(300, 450)), 300);
   });
+
+  group('activités sur grande tablette (ADR 0054)', () {
+    test('petits écrans : aucun changement', () {
+      expect(activityScale(const Size(393, 600)), 1.0, reason: 'téléphone');
+      expect(activityScale(const Size(457, 550)), 1.0, reason: 'SM-X135G');
+      expect(activityScale(const Size(800, 300)), 1.0, reason: 'large mais basse');
+    });
+
+    test('grandes tablettes : plus grand, sans dépasser le plafond ni la zone', () {
+      for (final area in const [Size(745, 680), Size(646, 530), Size(776, 900), Size(1000, 1200), Size(500, 2000)]) {
+        final s = activityScale(area);
+        expect(s, greaterThanOrEqualTo(1.0));
+        expect(s, lessThanOrEqualTo(activityMaxScale));
+        expect(area.width / s, greaterThanOrEqualTo(activityDesignSize.width), reason: '$area');
+        expect(area.height / s, greaterThanOrEqualTo(activityDesignSize.height), reason: '$area');
+      }
+      expect(activityScale(const Size(745, 680)), greaterThan(1.25), reason: 'Xiaomi Pad 7 en paysage');
+    });
+
+    test('colonne de texte : en paysage, et seulement s\'il reste assez de largeur', () {
+      expect(activityBesideText(const Size(1163, 776)), isTrue);
+      expect(activityBesideText(const Size(1006, 603)), isTrue);
+      expect(activityBesideText(const Size(690, 600)), isFalse, reason: 'tout juste 1,15 fois plus large que haut : pas encore paysage');
+      expect(activityBesideText(const Size(776, 1163)), isFalse);
+      expect(activityBesideText(const Size(620, 400)), isFalse, reason: 'il ne resterait que 320 dp');
+    });
+  });
 }

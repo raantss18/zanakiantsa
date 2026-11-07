@@ -189,6 +189,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   côté ; la police système est plafonnée à 130 % (115 % sur écran bas). ⏳ À confirmer sur la vraie tablette ;
   ⏳ les autres écrans (comptage, lecture, dessin…) n'ont pas encore de version paysage.
 
+- ✅ **Activités agrandies sur grande tablette** (ADR 0054) : en paysage, le texte passe à gauche et l'activité remplit la
+  place (jusqu'à 1,6 fois plus grande) ; sous 460 × 520 dp rien ne change. Vérifié sur l'émulateur au format Xiaomi Pad 7,
+  les 25 compétences. ⏳ Vraie tablette ; ⏳ accueil de domaine, test de départ, album, bibliothèque en paysage.
+
 ## Avant la version 0.8.0 (2026-11-05), par ordre de priorité
 
 1. ✅ **Voix** : sur un autre appareil (réglé en anglais), le français était lu en anglais. Cause : le moteur Android

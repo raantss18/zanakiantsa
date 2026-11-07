@@ -4,7 +4,7 @@
 library;
 
 import 'dart:math';
-import 'dart:ui';
+import 'package:flutter/widgets.dart';
 
 /// Paysage : au moins 15 % plus large que haut, et assez large pour deux colonnes. Sur une tablette (≥ 600 dp), Android
 /// 16 ignore le verrou « portrait » du manifeste : l'app doit donc savoir tourner.
@@ -80,3 +80,40 @@ double landscapeCardHeight(double height) =>
 
 /// En dessous de cette hauteur, la carte passe en version compacte (disque et bouton plus petits).
 const homeCardCompactBelow = 140.0;
+
+/// Taille à partir de laquelle une activité a de la place à revendre : elles sont dessinées pour un téléphone ou une petite
+/// tablette (ADR 0054). En dessous, rien ne change. La hauteur est celle de la plus haute (opération posée et son clavier,
+/// grille de 10 × 10 et ses réponses : mesurée à 475 dp).
+const activityDesignSize = Size(460, 520);
+
+/// Agrandissement le plus fort : au-delà, les boutons deviennent plus gros que la main d'un enfant.
+const activityMaxScale = 1.6;
+
+/// De combien agrandir une activité dans une zone [area] : tout (objets, textes, boutons, cibles tactiles) dans la même
+/// proportion. Jamais moins de 1 : sur un petit écran, l'activité reste telle quelle.
+double activityScale(Size area) => min(area.width / activityDesignSize.width, area.height / activityDesignSize.height).clamp(1.0, activityMaxScale);
+
+/// Ces activités remplissent déjà leur zone (échiquier, grille, scène, zone de tracé) : les agrandir réduirait au contraire leur
+/// élément principal, qui prendrait moins de place à côté de boutons plus gros.
+const activitiesThatFill = {'echecs', 'probleme', 'programmer', 'blocs', 'planetes', 'corps', 'solide', 'tracer', 'denombrer', 'composer'};
+
+/// Paysage : le texte passe-t-il dans une colonne à gauche de l'activité ? Oui s'il reste assez de largeur à côté.
+bool activityBesideText(Size screen) => isLandscape(screen) && screen.width - sidePanelWidth(screen.width) >= 380;
+
+/// Une activité agrandie de [scale] (voir [activityScale]) pour remplir sa zone sur une grande tablette (ADR 0054). Elle se
+/// dessine à sa taille habituelle puis tout est mis à l'échelle : ses mises en page et ses touchers restent justes, sans rien
+/// changer dans ses 25 écrans.
+class ScaledActivity extends StatelessWidget {
+  const ScaledActivity({super.key, required this.scale, required this.child});
+  final double scale;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => scale == 1
+      ? child
+      : Transform.scale(
+          scale: scale,
+          alignment: Alignment.topLeft,
+          child: FractionallySizedBox(alignment: Alignment.topLeft, widthFactor: 1 / scale, heightFactor: 1 / scale, child: child),
+        );
+}
