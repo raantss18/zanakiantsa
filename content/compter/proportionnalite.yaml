@@ -1,0 +1,136 @@
+id: proportionnalite
+titre: "Problèmes de proportionnalité"
+niveau: CM2
+prerequis: ["problemes-comparaison"]
+programme: { source: cycle3, texte: "Savoir résoudre un problème de proportionnalité" }
+activite: quiz
+parametres: {}
+idee: "Deux grandeurs sont proportionnelles quand, si l'une est multipliée par 3, l'autre l'est aussi. Si j'achète 3 fois plus de pains, je paie 3 fois plus."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Cherche par combien on multiplie la première quantité, puis multiplie l'autre par le même nombre."
+  exemple: "4 pains coûtent 7 €. Prix de 12 pains ? 12 pains, c'est 3 fois plus que 4 pains. Je paie donc 3 fois plus : 3 × 7 € = 21 €."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "3 cahiers coûtent 6 €. Combien coûtent 9 cahiers ?"
+    nom: "18 €"
+    explication: "9 cahiers, c'est 3 fois plus que 3 cahiers : on paie 3 fois plus, 3 × 6 € = 18 €."
+    pieges:
+      - { texte: "12 €", pourquoi: "On a ajouté 6 cahiers et 6 € : les quantités se multiplient, elles ne s'ajoutent pas." }
+      - { texte: "54 €", pourquoi: "9 × 6 € : 6 € est le prix de 3 cahiers, pas d'un seul." }
+  - texte: "4 pains coûtent 7 €. Combien coûtent 8 pains ?"
+    nom: "14 €"
+    explication: "8 pains, c'est 2 fois plus que 4 pains : 2 × 7 € = 14 €."
+    pieges:
+      - { texte: "11 €", pourquoi: "7 + 4 : 8 pains, c'est 2 fois plus que 4 pains, on multiplie le prix par 2." }
+      - { texte: "56 €", pourquoi: "8 × 7 € : 7 € est le prix de 4 pains, pas d'un seul." }
+  - texte: "Une recette pour 6 personnes demande 300 g de farine. Combien faut-il de farine pour 2 personnes ?"
+    nom: "100 g"
+    explication: "2 personnes, c'est 3 fois moins que 6 personnes : 300 g ÷ 3 = 100 g."
+    pieges:
+      - { texte: "900 g", pourquoi: "2 personnes, c'est moins que 6 : il faut moins de farine, on divise par 3." }
+      - { texte: "150 g", pourquoi: "150 g, c'est pour 3 personnes, la moitié de 6 : pour 2, on divise par 3." }
+  - texte: "Un robinet verse 10 L d'eau en 2 minutes. Combien de litres verse-t-il en 10 minutes, au même débit ?"
+    nom: "50 L"
+    explication: "10 minutes, c'est 5 fois plus que 2 minutes : 5 × 10 L = 50 L."
+    pieges:
+      - { texte: "18 L", pourquoi: "On a ajouté 8 minutes et 8 litres : il faut multiplier par 5." }
+      - { texte: "100 L", pourquoi: "10 × 10 L : 10 L, c'est pour 2 minutes, pas pour 1 minute." }
+  - texte: "2 kg de pommes coûtent 5 € et 3 kg coûtent 7,50 €. Combien coûtent 5 kg ?"
+    nom: "12,50 €"
+    explication: "5 kg = 2 kg + 3 kg, donc on paie 5 € + 7,50 € = 12,50 €."
+    pieges:
+      - { texte: "10 €", pourquoi: "10 €, c'est le prix de 4 kg, 2 fois 2 kg : 5 kg, c'est 2 kg + 3 kg." }
+      - { texte: "37,50 €", pourquoi: "5 × 7,50 € : 7,50 € est le prix de 3 kg, pas d'un seul kilo." }
+  - texte: "Quelle situation est une situation de proportionnalité ?"
+    nom: "Le prix payé et le nombre de baguettes"
+    explication: "Chaque baguette coûte le même prix : 2 fois plus de baguettes, 2 fois plus cher."
+    pieges:
+      - { texte: "L'âge et la taille d'un enfant", pourquoi: "À 10 ans, on n'est pas 2 fois plus grand qu'à 5 ans : ce n'est pas proportionnel." }
+      - { texte: "Le numéro d'une maison et le nombre d'habitants", pourquoi: "Le numéro ne dit pas combien de personnes y habitent." }
+  - texte: "5 tickets de bus coûtent 8 €. Combien coûtent 15 tickets ?"
+    nom: "24 €"
+    explication: "15 tickets, c'est 3 fois plus que 5 tickets : 3 × 8 € = 24 €."
+    pieges:
+      - { texte: "18 €", pourquoi: "On a ajouté 10 tickets et 10 € : 15 tickets, c'est 3 fois 5 tickets." }
+      - { texte: "120 €", pourquoi: "15 × 8 € : 8 € est le prix de 5 tickets, pas d'un seul." }
+  - texte: "6 œufs pèsent 360 g. 18 œufs, c'est … fois plus que 6 œufs, donc ils pèsent 1 080 g. Quel nombre manque ?"
+    nom: "3"
+    explication: "6 × 3 = 18 : 18 œufs, c'est 3 fois plus. 3 × 360 g = 1 080 g."
+    pieges:
+      - { texte: "12", pourquoi: "18 − 6 = 12 : on cherche combien de fois 6 tient dans 18." }
+      - { texte: "6", pourquoi: "6 est le nombre d'œufs de départ : 6 × 3 = 18, donc 3 fois plus." }
+  - texte: "8 crayons coûtent 4 €. Pourquoi 4 crayons coûtent-ils 2 € ?"
+    nom: "Il y a 2 fois moins de crayons, donc on paie 2 fois moins."
+    explication: "4 crayons, c'est la moitié de 8 crayons : le prix est la moitié de 4 €, soit 2 €."
+    pieges:
+      - { texte: "Parce qu'on enlève 4 crayons et 2 €.", pourquoi: "Ce n'est pas une soustraction : on garde le même rapport, on divise par 2." }
+      - { texte: "Parce que 4 − 2 = 2.", pourquoi: "Soustraire ne dit rien sur le prix : 4 crayons, c'est la moitié de 8." }
+
+en:
+  titre: "Proportion problems"
+  idee: "Two quantities are proportional when, if one is multiplied by 3, so is the other. If I buy 3 times as many loaves, I pay 3 times as much."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Find what the first quantity is multiplied by, then multiply the other one by the same number."
+    exemple: "4 loaves cost €7. Price of 12 loaves? 12 loaves is 3 times as many as 4 loaves. So I pay 3 times as much: 3 × €7 = €21."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "3 exercise books cost €6. How much do 9 exercise books cost?"
+      nom: "€18"
+      explication: "9 books is 3 times as many as 3 books: you pay 3 times as much, 3 × €6 = €18."
+      pieges:
+        - { texte: "€12", pourquoi: "6 books and €6 were added: the amounts multiply, they don't add." }
+        - { texte: "€54", pourquoi: "9 × €6: €6 is the price of 3 books, not of one." }
+    - texte: "4 loaves cost €7. How much do 8 loaves cost?"
+      nom: "€14"
+      explication: "8 loaves is twice as many as 4 loaves: 2 × €7 = €14."
+      pieges:
+        - { texte: "€11", pourquoi: "7 + 4: 8 loaves is twice as many as 4, so multiply the price by 2." }
+        - { texte: "€56", pourquoi: "8 × €7: €7 is the price of 4 loaves, not of one." }
+    - texte: "A recipe for 6 people needs 300 g of flour. How much flour is needed for 2 people?"
+      nom: "100 g"
+      explication: "2 people is 3 times fewer than 6 people: 300 g ÷ 3 = 100 g."
+      pieges:
+        - { texte: "900 g", pourquoi: "2 people is fewer than 6: less flour is needed, so divide by 3." }
+        - { texte: "150 g", pourquoi: "150 g is for 3 people, half of 6: for 2, divide by 3." }
+    - texte: "A tap pours 10 L of water in 2 minutes. How many litres does it pour in 10 minutes at the same rate?"
+      nom: "50 L"
+      explication: "10 minutes is 5 times as long as 2 minutes: 5 × 10 L = 50 L."
+      pieges:
+        - { texte: "18 L", pourquoi: "8 minutes and 8 litres were added: multiply by 5 instead." }
+        - { texte: "100 L", pourquoi: "10 × 10 L: 10 L is for 2 minutes, not for 1 minute." }
+    - texte: "2 kg of apples cost €5 and 3 kg cost €7.50. How much do 5 kg cost?"
+      nom: "€12.50"
+      explication: "5 kg = 2 kg + 3 kg, so you pay €5 + €7.50 = €12.50."
+      pieges:
+        - { texte: "€10", pourquoi: "€10 is the price of 4 kg, twice 2 kg: 5 kg is 2 kg + 3 kg." }
+        - { texte: "€37.50", pourquoi: "5 × €7.50: €7.50 is the price of 3 kg, not of one kilo." }
+    - texte: "Which situation shows proportion?"
+      nom: "The price paid and the number of baguettes"
+      explication: "Each baguette costs the same: twice as many baguettes, twice the price."
+      pieges:
+        - { texte: "A child's age and height", pourquoi: "At 10 you are not twice as tall as at 5: it is not proportional." }
+        - { texte: "A house number and how many people live there", pourquoi: "The number doesn't tell you how many people live there." }
+    - texte: "5 bus tickets cost €8. How much do 15 tickets cost?"
+      nom: "€24"
+      explication: "15 tickets is 3 times as many as 5 tickets: 3 × €8 = €24."
+      pieges:
+        - { texte: "€18", pourquoi: "10 tickets and €10 were added: 15 tickets is 3 times 5 tickets." }
+        - { texte: "€120", pourquoi: "15 × €8: €8 is the price of 5 tickets, not of one." }
+    - texte: "6 eggs weigh 360 g. 18 eggs is … times as many as 6 eggs, so they weigh 1,080 g. Which number is missing?"
+      nom: "3"
+      explication: "6 × 3 = 18: 18 eggs is 3 times as many. 3 × 360 g = 1,080 g."
+      pieges:
+        - { texte: "12", pourquoi: "18 − 6 = 12: we want how many times 6 fits into 18." }
+        - { texte: "6", pourquoi: "6 is the starting number of eggs: 6 × 3 = 18, so 3 times as many." }
+    - texte: "8 pencils cost €4. Why do 4 pencils cost €2?"
+      nom: "There are half as many pencils, so you pay half as much."
+      explication: "4 pencils is half of 8 pencils: the price is half of €4, which is €2."
+      pieges:
+        - { texte: "Because you take away 4 pencils and €2.", pourquoi: "It is not a subtraction: keep the same ratio, divide by 2." }
+        - { texte: "Because 4 − 2 = 2.", pourquoi: "Subtracting says nothing about the price: 4 pencils is half of 8." }

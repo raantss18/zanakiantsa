@@ -1,0 +1,136 @@
+id: digestion
+titre: "Le trajet des aliments : la digestion"
+niveau: 5e
+prerequis: [cellule]
+programme: { source: c4, texte: "Expliquer le devenir des aliments dans le tube digestif." }
+activite: quiz
+parametres: {}
+idee: "Les aliments traversent le tube digestif : bouche, œsophage, estomac, intestin grêle, gros intestin. Ils y sont transformés en nutriments, qui passent dans le sang."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Suis le trajet dans l'ordre : bouche, œsophage, estomac, intestin grêle, gros intestin, anus."
+  exemple: "Exemple : une bouchée de pain est mâchée dans la bouche, avalée par l'œsophage, brassée dans l'estomac, puis digérée dans l'intestin grêle."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans quel ordre les aliments traversent-ils le tube digestif ?"
+    nom: "Bouche, œsophage, estomac, intestin grêle, gros intestin."
+    explication: "Le tube digestif est un long tuyau continu, de la bouche à l'anus."
+    pieges:
+      - { texte: "Bouche, estomac, œsophage, intestin.", pourquoi: "L'œsophage relie la bouche à l'estomac : il vient avant." }
+      - { texte: "Bouche, estomac, foie, intestin.", pourquoi: "Le foie participe à la digestion, mais les aliments ne passent pas dedans." }
+  - texte: "Où la plupart des nutriments passent-ils dans le sang ?"
+    nom: "Dans l'intestin grêle."
+    explication: "La paroi de l'intestin grêle est très fine et très étendue : les nutriments la traversent pour passer dans le sang. C'est l'absorption."
+    pieges:
+      - { texte: "Dans l'estomac.", pourquoi: "L'estomac brasse et commence à digérer, mais l'essentiel de l'absorption se fait dans l'intestin grêle." }
+      - { texte: "Dans la bouche.", pourquoi: "La bouche découpe et mélange avec la salive ; les nutriments ne passent pas encore dans le sang." }
+  - texte: "L'eau que tu bois passe-t-elle par un autre tuyau que la nourriture ?"
+    nom: "Non, elle suit le même tube digestif."
+    explication: "Boissons et aliments descendent par l'œsophage jusqu'à l'estomac, puis l'intestin."
+    pieges:
+      - { texte: "Oui, l'eau va directement dans la vessie.", pourquoi: "C'est une idée courante, mais il n'y a pas de tuyau direct : l'eau passe par l'intestin, puis par le sang, avant d'être filtrée par les reins." }
+      - { texte: "Oui, elle va dans les poumons.", pourquoi: "Les poumons reçoivent l'air. Si une boisson y entre, on tousse : c'est une fausse route." }
+  - texte: "Mâche longtemps un morceau de pain sans l'avaler. Il devient un peu sucré. Pourquoi ?"
+    nom: "La salive commence à transformer l'amidon du pain en sucre."
+    explication: "La digestion commence dans la bouche : la salive contient une substance qui découpe l'amidon en sucres. Fais l'essai !"
+    pieges:
+      - { texte: "Parce qu'il y a du sucre caché dans la salive.", pourquoi: "La salive n'est pas sucrée : elle transforme l'amidon du pain en sucre." }
+      - { texte: "Parce que les dents fabriquent du sucre.", pourquoi: "Les dents découpent les aliments, elles ne produisent aucune substance." }
+  - texte: "À quoi servent les dents dans la digestion ?"
+    nom: "À couper et broyer les aliments en petits morceaux."
+    explication: "Les dents fragmentent les aliments : les sucs digestifs agissent alors plus facilement sur ces petits morceaux."
+    pieges:
+      - { texte: "À faire passer les nutriments dans le sang.", pourquoi: "Ce passage se fait dans l'intestin grêle." }
+      - { texte: "Seulement à sourire.", pourquoi: "Elles ont un vrai rôle dans la digestion : mâcher." }
+  - texte: "Que font les sucs digestifs ?"
+    nom: "Ils transforment les aliments en nutriments."
+    explication: "Salive, suc gastrique et sucs de l'intestin découpent chimiquement les aliments en nutriments assez petits pour passer dans le sang."
+    pieges:
+      - { texte: "Ils colorent les aliments.", pourquoi: "Leur rôle est chimique : découper les aliments, pas les colorer." }
+      - { texte: "Ils rendent les aliments plus gros.", pourquoi: "C'est l'inverse : ils les découpent en éléments très petits." }
+  - texte: "Que devient la partie des aliments qui n'est pas absorbée ?"
+    nom: "Elle passe dans le gros intestin et forme les excréments."
+    explication: "Les déchets non digérés traversent le gros intestin, où de l'eau est récupérée, puis sont rejetés par l'anus."
+    pieges:
+      - { texte: "Elle reste pour toujours dans l'estomac.", pourquoi: "L'estomac se vide : rien n'y reste pour toujours." }
+      - { texte: "Elle passe aussi dans le sang.", pourquoi: "Seuls les nutriments passent dans le sang ; le reste est éliminé." }
+  - texte: "Une fois dans le sang, où vont les nutriments ?"
+    nom: "Vers tous les organes du corps."
+    explication: "Le sang transporte les nutriments jusqu'aux cellules de tous les organes, comme les muscles et le cerveau."
+    pieges:
+      - { texte: "Ils restent dans l'intestin.", pourquoi: "Ils quittent l'intestin par le sang, qui circule dans tout le corps." }
+      - { texte: "Seulement vers l'estomac.", pourquoi: "Ils vont partout où il y a des cellules à nourrir." }
+  - texte: "Pourquoi les nutriments doivent-ils être très petits ?"
+    nom: "Pour traverser la paroi de l'intestin et passer dans le sang."
+    explication: "Un morceau de pain ne peut pas traverser la paroi de l'intestin. Les nutriments, eux, sont assez petits pour le faire."
+    pieges:
+      - { texte: "Pour tenir dans l'estomac.", pourquoi: "L'estomac reçoit des bouchées entières : la taille compte surtout pour traverser l'intestin." }
+      - { texte: "Pour être plus faciles à goûter.", pourquoi: "Le goût se joue dans la bouche, bien avant la fin de la digestion." }
+
+en:
+  titre: "Where food goes: digestion"
+  idee: "Food travels through the digestive tract: mouth, oesophagus, stomach, small intestine, large intestine. There it is turned into nutrients, which pass into the blood."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Follow the route in order: mouth, oesophagus, stomach, small intestine, large intestine, anus."
+    exemple: "Example: a mouthful of bread is chewed in the mouth, swallowed down the oesophagus, churned in the stomach, then digested in the small intestine."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In what order does food go through the digestive tract?"
+      nom: "Mouth, oesophagus, stomach, small intestine, large intestine."
+      explication: "The digestive tract is one long continuous tube, from the mouth to the anus."
+      pieges:
+        - { texte: "Mouth, stomach, oesophagus, intestine.", pourquoi: "The oesophagus links the mouth to the stomach: it comes first." }
+        - { texte: "Mouth, stomach, liver, intestine.", pourquoi: "The liver helps digestion, but food doesn't pass through it." }
+    - texte: "Where do most nutrients pass into the blood?"
+      nom: "In the small intestine."
+      explication: "The wall of the small intestine is very thin and very large: nutrients cross it into the blood. That's absorption."
+      pieges:
+        - { texte: "In the stomach.", pourquoi: "The stomach churns and starts digesting, but most absorption happens in the small intestine." }
+        - { texte: "In the mouth.", pourquoi: "The mouth cuts food up and mixes it with saliva; nutrients don't pass into the blood yet." }
+    - texte: "Does the water you drink go down a different tube from food?"
+      nom: "No, it follows the same digestive tract."
+      explication: "Drinks and food go down the oesophagus to the stomach, then the intestine."
+      pieges:
+        - { texte: "Yes, water goes straight to the bladder.", pourquoi: "That's a common idea, but there's no direct tube: water goes through the intestine, then the blood, before the kidneys filter it." }
+        - { texte: "Yes, it goes to the lungs.", pourquoi: "The lungs take in air. If a drink goes in there, you cough: it's gone down the wrong way." }
+    - texte: "Chew a piece of bread for a long time without swallowing. It turns a little sweet. Why?"
+      nom: "Saliva starts turning the starch in bread into sugar."
+      explication: "Digestion starts in the mouth: saliva contains a substance that breaks starch into sugars. Try it!"
+      pieges:
+        - { texte: "Because there's hidden sugar in saliva.", pourquoi: "Saliva isn't sweet: it turns the bread's starch into sugar." }
+        - { texte: "Because teeth make sugar.", pourquoi: "Teeth cut food up; they don't make any substance." }
+    - texte: "What do teeth do in digestion?"
+      nom: "They cut and grind food into small pieces."
+      explication: "Teeth break food up: digestive juices then work more easily on the small pieces."
+      pieges:
+        - { texte: "They pass nutrients into the blood.", pourquoi: "That happens in the small intestine." }
+        - { texte: "They're only for smiling.", pourquoi: "They have a real job in digestion: chewing." }
+    - texte: "What do digestive juices do?"
+      nom: "They turn food into nutrients."
+      explication: "Saliva, stomach juice and intestinal juices break food down chemically into nutrients small enough to pass into the blood."
+      pieges:
+        - { texte: "They colour the food.", pourquoi: "Their job is chemical: breaking food down, not colouring it." }
+        - { texte: "They make food bigger.", pourquoi: "It's the opposite: they break it into very small pieces." }
+    - texte: "What happens to the part of food that isn't absorbed?"
+      nom: "It goes into the large intestine and becomes faeces."
+      explication: "Undigested waste goes through the large intestine, where water is taken back, then leaves through the anus."
+      pieges:
+        - { texte: "It stays in the stomach for ever.", pourquoi: "The stomach empties: nothing stays there for ever." }
+        - { texte: "It goes into the blood as well.", pourquoi: "Only nutrients pass into the blood; the rest is got rid of." }
+    - texte: "Once in the blood, where do nutrients go?"
+      nom: "To all the organs of the body."
+      explication: "Blood carries nutrients to the cells of every organ, such as the muscles and the brain."
+      pieges:
+        - { texte: "They stay in the intestine.", pourquoi: "They leave the intestine in the blood, which flows all round the body." }
+        - { texte: "Only to the stomach.", pourquoi: "They go wherever there are cells to feed." }
+    - texte: "Why must nutrients be very small?"
+      nom: "To cross the wall of the intestine and pass into the blood."
+      explication: "A piece of bread can't cross the intestine wall. Nutrients are small enough to do so."
+      pieges:
+        - { texte: "To fit in the stomach.", pourquoi: "The stomach takes whole mouthfuls: size matters mostly for crossing the intestine." }
+        - { texte: "To be easier to taste.", pourquoi: "Taste happens in the mouth, long before digestion ends." }

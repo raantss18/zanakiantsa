@@ -1,0 +1,154 @@
+id: telling-time
+titre: "Dire l'heure en anglais"
+niveau: 6e
+prerequis: [days-months]
+programme: { source: college, texte: "6e, exprimer l’heure (A1) : les heures entières, demi-heures et quarts d’heure." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« o'clock » : l'heure pile. « half past » : et demie. « quarter past » : et quart. « quarter to » : moins le quart, avant l'heure suivante."
+phrases:
+  consigne: "Lis l'heure en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "« past » veut dire « après » l'heure ; « to » veut dire « avant » l'heure suivante."
+  exemple: "« It's quarter past nine. » « quarter », un quart d'heure ; « past », après 9 heures : il est 9 h 15."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« It's seven o'clock. » Quelle heure est-il ?"
+    nom: "7 h 00"
+    explication: "« o'clock » veut dire l'heure pile : 7 h 00."
+    pieges:
+      - { texte: "7 h 30", pourquoi: "Et demie se dit « half past » : « half past seven ». « o'clock », c'est l'heure pile." }
+      - { texte: "11 h 00", pourquoi: "Onze, c'est « eleven ». Ici, « seven », 7." }
+  - texte: "« It's half past three. » Quelle heure est-il ?"
+    nom: "3 h 30"
+    explication: "« half past three » : une demi-heure après 3 heures, 3 h 30."
+    pieges:
+      - { texte: "2 h 30", pourquoi: "« past » veut dire « après » : 30 minutes après 3 heures, pas avant." }
+      - { texte: "3 h 15", pourquoi: "Le quart, c'est « quarter ». « half », la moitié : 30 minutes." }
+  - texte: "« It's quarter past nine. » Quelle heure est-il ?"
+    nom: "9 h 15"
+    explication: "« quarter past nine » : un quart d'heure après 9 heures, 9 h 15."
+    pieges:
+      - { texte: "8 h 45", pourquoi: "8 h 45, c'est « quarter to nine » : « to », avant. Ici, « past », après." }
+      - { texte: "9 h 30", pourquoi: "9 h 30, c'est « half past nine ». « quarter », c'est un quart d'heure." }
+  - texte: "« It's quarter to six. » Quelle heure est-il ?"
+    nom: "5 h 45"
+    explication: "« quarter to six » : un quart d'heure avant 6 heures, 5 h 45."
+    pieges:
+      - { texte: "6 h 15", pourquoi: "6 h 15, c'est « quarter past six ». « to » veut dire « avant »." }
+      - { texte: "6 h 45", pourquoi: "« quarter to six » : un quart d'heure avant 6 heures, donc 5 h 45." }
+  - texte: "Comment dit-on 10 h 30 ?"
+    nom: "It's half past ten."
+    explication: "10 h 30, c'est une demi-heure après 10 heures : « It's half past ten. »"
+    pieges:
+      - { texte: "It's quarter past ten.", pourquoi: "Ça, c'est 10 h 15 : un quart d'heure seulement." }
+      - { texte: "It's ten o'clock.", pourquoi: "Ça, c'est 10 h pile." }
+  - texte: "Comment dit-on 4 h 45 ?"
+    nom: "It's quarter to five."
+    explication: "4 h 45, c'est un quart d'heure avant 5 heures : « It's quarter to five. »"
+    pieges:
+      - { texte: "It's quarter past four.", pourquoi: "Ça, c'est 4 h 15 : un quart d'heure après 4 heures." }
+      - { texte: "It's quarter to four.", pourquoi: "Ça, c'est 3 h 45 : un quart d'heure avant 4 heures." }
+  - texte: "Comment demande-t-on l'heure ?"
+    nom: "What time is it?"
+    explication: "« What time is it? » veut dire : quelle heure est-il ?"
+    pieges:
+      - { texte: "How old are you?", pourquoi: "« How old are you? » demande l'âge." }
+      - { texte: "What day is it?", pourquoi: "« What day is it? » demande le jour." }
+  - texte: "« School starts at half past eight. » À quelle heure commence l'école ?"
+    nom: "8 h 30"
+    explication: "« half past eight » : une demi-heure après 8 heures, 8 h 30."
+    pieges:
+      - { texte: "7 h 30", pourquoi: "« half past eight » : 30 minutes après 8 heures, pas avant." }
+      - { texte: "8 h 15", pourquoi: "8 h 15, ce serait « quarter past eight »." }
+  - texte: "Pourquoi dit-on « quarter to six » pour 5 h 45 ?"
+    nom: "« to » veut dire « avant » : il manque un quart d'heure pour arriver à 6 heures."
+    explication: "Avec « to », on compte jusqu'à l'heure suivante : un quart d'heure avant 6 heures."
+    pieges:
+      - { texte: "Parce que « to » veut dire « après ».", pourquoi: "Non : « après », c'est « past ». « to », c'est « avant »." }
+      - { texte: "Parce qu'on compte les minutes après 5 heures.", pourquoi: "Non : avec « to », on compte jusqu'à l'heure suivante, 6 heures." }
+en:
+  titre: "Telling the time"
+  idee: "o'clock: exactly on the hour. half past: thirty minutes after. quarter past: fifteen minutes after. quarter to: fifteen minutes before the next hour."
+  phrases:
+    consigne: "Read the time, then touch the right answer."
+    question: "{texte}"
+    indice: "Past means after the hour; to means before the next hour."
+    exemple: "“It's quarter past nine.” Quarter is fifteen minutes; past means after nine: it's 9:15."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“It's seven o'clock.” What time is it?"
+      nom: "7:00"
+      explication: "O'clock means exactly on the hour: 7:00."
+      pieges:
+        - texte: "7:30"
+          pourquoi: "7:30 is half past seven. O'clock means exactly on the hour."
+        - texte: "11:00"
+          pourquoi: "11 is eleven. Here, it's seven."
+    - texte: "“It's half past three.” What time is it?"
+      nom: "3:30"
+      explication: "Half past three: thirty minutes after 3 o'clock, 3:30."
+      pieges:
+        - texte: "2:30"
+          pourquoi: "Past means after: thirty minutes after three, not before."
+        - texte: "3:15"
+          pourquoi: "Fifteen minutes is a quarter. Half is thirty minutes."
+    - texte: "“It's quarter past nine.” What time is it?"
+      nom: "9:15"
+      explication: "Quarter past nine: fifteen minutes after 9 o'clock, 9:15."
+      pieges:
+        - texte: "8:45"
+          pourquoi: "8:45 is quarter to nine: to means before. Here it's past, after."
+        - texte: "9:30"
+          pourquoi: "9:30 is half past nine. A quarter is fifteen minutes."
+    - texte: "“It's quarter to six.” What time is it?"
+      nom: "5:45"
+      explication: "Quarter to six: fifteen minutes before 6 o'clock, 5:45."
+      pieges:
+        - texte: "6:15"
+          pourquoi: "6:15 is quarter past six. To means before."
+        - texte: "6:45"
+          pourquoi: "Quarter to six is fifteen minutes before six, so 5:45."
+    - texte: "How do you say 10:30?"
+      nom: "It's half past ten."
+      explication: "10:30 is thirty minutes after ten: “It's half past ten.”"
+      pieges:
+        - texte: "It's quarter past ten."
+          pourquoi: "That's 10:15: only fifteen minutes."
+        - texte: "It's ten o'clock."
+          pourquoi: "That's exactly 10:00."
+    - texte: "How do you say 4:45?"
+      nom: "It's quarter to five."
+      explication: "4:45 is fifteen minutes before five: “It's quarter to five.”"
+      pieges:
+        - texte: "It's quarter past four."
+          pourquoi: "That's 4:15: fifteen minutes after four."
+        - texte: "It's quarter to four."
+          pourquoi: "That's 3:45: fifteen minutes before four."
+    - texte: "How do you ask for the time?"
+      nom: "What time is it?"
+      explication: "“What time is it?” asks for the time."
+      pieges:
+        - texte: "How old are you?"
+          pourquoi: "“How old are you?” asks for someone's age."
+        - texte: "What day is it?"
+          pourquoi: "“What day is it?” asks for the day."
+    - texte: "“School starts at half past eight.” When does school start?"
+      nom: "8:30"
+      explication: "Half past eight: thirty minutes after 8 o'clock, 8:30."
+      pieges:
+        - texte: "7:30"
+          pourquoi: "Half past eight is thirty minutes after eight, not before."
+        - texte: "8:15"
+          pourquoi: "8:15 would be quarter past eight."
+    - texte: "Why do we say “quarter to six” for 5:45?"
+      nom: "To means before: fifteen minutes are missing to reach six o'clock."
+      explication: "With to, we count up to the next hour: fifteen minutes before six."
+      pieges:
+        - texte: "Because to means after."
+          pourquoi: "No: after is past. To means before."
+        - texte: "Because we count the minutes after five."
+          pourquoi: "No: with to, we count up to the next hour, six."

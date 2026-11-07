@@ -1,0 +1,124 @@
+id: republique-xixe
+titre: "Voter et faire la République au XIXe siècle"
+niveau: 4e
+prerequis: [revolution-empire]
+programme: { source: c4, texte: "Une difficile conquête : voter de 1815 à 1870." }
+activite: quiz
+parametres: {}
+idee: "Au XIXe siècle, le droit de vote s'élargit : réservé aux plus riches, il devient universel pour les hommes en 1848. La IIIe République, née en 1870, s'enracine par l'école."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1848 suffrage universel masculin et abolition de l'esclavage, 1870 IIIe République, 1881-1882 lois Ferry, 1905 séparation des Églises et de l'État."
+  exemple: "Exemple : avant 1848, seuls les hommes qui payaient assez d'impôts votaient : c'est le suffrage censitaire. En 1848, tous les hommes adultes peuvent voter."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce que le suffrage censitaire ?"
+    nom: "Un vote réservé aux hommes qui paient assez d'impôts."
+    explication: "Le cens est un montant d'impôt minimum : seuls les plus riches votent. C'est le cas en France de 1815 à 1848."
+    pieges:
+      - { texte: "Un vote ouvert à tous, hommes et femmes.", pourquoi: "C'est le suffrage universel, qui ne s'étend aux femmes qu'en 1944." }
+      - { texte: "Un vote où l'on compte la population.", pourquoi: "« Cens » ne veut pas dire recensement ici : c'est un seuil d'impôt." }
+  - texte: "En quelle année le suffrage universel masculin est-il établi en France ?"
+    nom: "En 1848."
+    explication: "En 1848, avec la Deuxième République, tous les hommes adultes peuvent voter."
+    pieges:
+      - { texte: "En 1789.", pourquoi: "La Révolution n'a pas établi durablement le vote de tous les hommes." }
+      - { texte: "En 1944.", pourquoi: "1944, c'est le droit de vote des femmes." }
+  - texte: "Quelle grande décision est prise aussi en 1848 ?"
+    nom: "L'abolition définitive de l'esclavage dans les colonies françaises."
+    explication: "En 1848, la Deuxième République abolit l'esclavage. Une première abolition, en 1794, avait été annulée par Bonaparte en 1802."
+    pieges:
+      - { texte: "La création de l'Union européenne.", pourquoi: "La construction européenne commence après 1945." }
+      - { texte: "Le droit de vote des femmes.", pourquoi: "Il faudra attendre 1944." }
+  - texte: "En quelle année la Troisième République est-elle proclamée ?"
+    nom: "En 1870."
+    explication: "Le 4 septembre 1870, après la défaite de Napoléon III face à la Prusse, la République est proclamée."
+    pieges:
+      - { texte: "En 1792.", pourquoi: "1792 est la Première République." }
+      - { texte: "En 1958.", pourquoi: "1958 est la naissance de la Cinquième République." }
+  - texte: "Que rendent les lois Ferry de 1881 et 1882 ?"
+    nom: "L'école primaire gratuite, laïque et obligatoire."
+    explication: "Jules Ferry fait voter ces lois : l'école devient un lieu où se construit l'adhésion à la République."
+    pieges:
+      - { texte: "L'école payante et réservée aux garçons.", pourquoi: "C'est l'inverse : l'école devient gratuite et obligatoire pour les filles comme pour les garçons." }
+      - { texte: "Le collège obligatoire jusqu'à 16 ans.", pourquoi: "Les lois Ferry concernent l'école primaire." }
+  - texte: "Que décide la loi de 1905 ?"
+    nom: "La séparation des Églises et de l'État."
+    explication: "L'État ne reconnaît ni ne finance aucun culte, et garantit la liberté de conscience : c'est un pilier de la laïcité."
+    pieges:
+      - { texte: "L'interdiction de toutes les religions.", pourquoi: "La loi garantit au contraire le libre exercice des cultes." }
+      - { texte: "Le retour du roi.", pourquoi: "La République est alors installée : la loi de 1905 concerne les cultes." }
+  - texte: "Au XIXe siècle, les femmes peuvent-elles voter en France ?"
+    nom: "Non, elles sont exclues du vote."
+    explication: "Le suffrage de 1848 est universel pour les hommes seulement. Les femmes votent pour la première fois en 1945."
+    pieges:
+      - { texte: "Oui, depuis 1848.", pourquoi: "En 1848, le vote devient universel pour les hommes, pas pour les femmes." }
+      - { texte: "Oui, si elles paient assez d'impôts.", pourquoi: "Même riches, les femmes ne votent pas au XIXe siècle." }
+  - texte: "Pourquoi dit-on que le droit de vote a été une « difficile conquête » ?"
+    nom: "Parce qu'il s'est élargi peu à peu, au fil de luttes et de changements de régime."
+    explication: "Du vote des plus riches au suffrage universel masculin, puis au vote des femmes, il a fallu plus d'un siècle."
+    pieges:
+      - { texte: "Parce qu'il a été donné à tous dès 1789.", pourquoi: "Ni les pauvres ni les femmes ne votaient en 1789." }
+      - { texte: "Parce que les bureaux de vote étaient difficiles à trouver.", pourquoi: "« Conquête » parle d'un droit obtenu en luttant, pas d'un trajet." }
+
+en:
+  titre: "Voting and building the Republic in the 19th century"
+  idee: "In the 19th century, the vote widens: kept for the richest, it becomes universal for men in 1848. The Third Republic, born in 1870, takes root through schools."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1848 votes for all men and the abolition of slavery, 1870 Third Republic, 1881-1882 Ferry laws, 1905 separation of Churches and State."
+    exemple: "Example: before 1848, only men who paid enough tax could vote: that's property-based voting. In 1848, all adult men can vote."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is property-based (censitary) voting?"
+      nom: "A vote kept for men who pay enough tax."
+      explication: "The « cens » is a minimum amount of tax: only the richest vote. That's the case in France from 1815 to 1848."
+      pieges:
+        - { texte: "A vote open to everyone, men and women.", pourquoi: "That's universal suffrage, which only extends to women in 1944." }
+        - { texte: "A vote where the population is counted.", pourquoi: "« Cens » doesn't mean census here: it's a tax threshold." }
+    - texte: "In which year is the vote for all men set up in France?"
+      nom: "In 1848."
+      explication: "In 1848, with the Second Republic, all adult men can vote."
+      pieges:
+        - { texte: "In 1789.", pourquoi: "The Revolution didn't set up a lasting vote for all men." }
+        - { texte: "In 1944.", pourquoi: "1944 is women's right to vote." }
+    - texte: "What other great decision is taken in 1848?"
+      nom: "The final abolition of slavery in the French colonies."
+      explication: "In 1848, the Second Republic abolishes slavery. A first abolition, in 1794, had been cancelled by Bonaparte in 1802."
+      pieges:
+        - { texte: "The creation of the European Union.", pourquoi: "European integration begins after 1945." }
+        - { texte: "Votes for women.", pourquoi: "That has to wait until 1944." }
+    - texte: "In which year is the Third Republic proclaimed?"
+      nom: "In 1870."
+      explication: "On 4 September 1870, after Napoleon III's defeat by Prussia, the Republic is proclaimed."
+      pieges:
+        - { texte: "In 1792.", pourquoi: "1792 is the First Republic." }
+        - { texte: "In 1958.", pourquoi: "1958 is the birth of the Fifth Republic." }
+    - texte: "What do the Ferry laws of 1881 and 1882 make primary school?"
+      nom: "Free, secular and compulsory."
+      explication: "Jules Ferry has these laws passed: school becomes a place where support for the Republic is built."
+      pieges:
+        - { texte: "Fee-paying and for boys only.", pourquoi: "It's the opposite: school becomes free and compulsory for girls as well as boys." }
+        - { texte: "Secondary school compulsory until 16.", pourquoi: "The Ferry laws are about primary school." }
+    - texte: "What does the 1905 law decide?"
+      nom: "The separation of the Churches and the State."
+      explication: "The State neither recognises nor funds any religion, and guarantees freedom of conscience: it's a pillar of « laïcité »."
+      pieges:
+        - { texte: "Banning all religions.", pourquoi: "On the contrary, the law guarantees the free practice of religion." }
+        - { texte: "The return of the king.", pourquoi: "The Republic is in place by then: the 1905 law is about religion." }
+    - texte: "In the 19th century, can women vote in France?"
+      nom: "No, they are shut out of voting."
+      explication: "The 1848 vote is universal for men only. Women vote for the first time in 1945."
+      pieges:
+        - { texte: "Yes, since 1848.", pourquoi: "In 1848, voting becomes universal for men, not for women." }
+        - { texte: "Yes, if they pay enough tax.", pourquoi: "Even rich women can't vote in the 19th century." }
+    - texte: "Why do we say the vote was a « hard-won conquest »?"
+      nom: "Because it widened step by step, through struggles and changes of regime."
+      explication: "From votes for the richest to votes for all men, then votes for women, it took more than a century."
+      pieges:
+        - { texte: "Because it was given to everyone in 1789.", pourquoi: "Neither the poor nor women voted in 1789." }
+        - { texte: "Because polling stations were hard to find.", pourquoi: "« Conquest » means a right won by struggle, not a journey." }

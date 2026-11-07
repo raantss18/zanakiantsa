@@ -1,0 +1,148 @@
+id: limites-fonctions
+titre: "Limites de fonctions"
+niveau: Terminale
+prerequis: ["suites-geometriques", "derivee-polynome"]
+programme: { source: terminale, texte: "Limites faisant intervenir les fonctions de référence étudiées en classe de première : puissances entières, racine carrée, fonction exponentielle." }
+activite: quiz
+parametres: {}
+idee: "La limite dit de quoi f(x) se rapproche quand x devient très grand (+∞) ou s’approche d’un nombre. En +∞, 1/x tend vers 0 ; x² et exp(x) tendent vers +∞."
+phrases:
+  consigne: "Imagine x très grand, puis touche la limite."
+  question: "{texte}"
+  indice: "Remplace x par 1 000, puis par 1 000 000 : de quoi le résultat se rapproche-t-il ?"
+  exemple: "f(x) = 3 + 1/x. Quand x tend vers +∞, 1/x tend vers 0, donc f(x) tend vers 3 : la droite y = 3 est une asymptote horizontale."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quelle est la limite de x² quand x tend vers +∞ ?"
+    nom: "+∞"
+    explication: "Plus x est grand, plus x² est grand, sans limite : 1 000² = 1 000 000."
+    pieges:
+      - { texte: "0", pourquoi: "x² grandit avec x : il ne se rapproche pas de 0." }
+      - { texte: "−∞", pourquoi: "Un carré est toujours positif ou nul : x² ne peut pas tendre vers −∞." }
+  - texte: "Quelle est la limite de 1/x quand x tend vers +∞ ?"
+    nom: "0"
+    explication: "1 divisé par un très grand nombre donne un très petit nombre : 1/1 000 000 = 0,000 001."
+    pieges:
+      - { texte: "+∞", pourquoi: "On divise 1 par un nombre de plus en plus grand : le résultat devient de plus en plus petit." }
+      - { texte: "1", pourquoi: "1/x vaut 1 seulement pour x = 1." }
+  - texte: "Quelle est la limite de exp(x) quand x tend vers −∞ ?"
+    nom: "0"
+    explication: "exp(−x) = 1/exp(x) : quand x tend vers −∞, exp(x) devient un très petit nombre positif."
+    pieges:
+      - { texte: "−∞", pourquoi: "exp(x) est toujours strictement positif : il ne peut pas tendre vers −∞." }
+      - { texte: "1", pourquoi: "exp(0) = 1 : c’est la valeur en 0, pas la limite en −∞." }
+  - texte: "Quelle est la limite de 5 − 2/x quand x tend vers +∞ ?"
+    nom: "5"
+    explication: "2/x tend vers 0, donc 5 − 2/x tend vers 5 − 0 = 5."
+    pieges:
+      - { texte: "3", pourquoi: "5 − 2/1 = 3 : c’est la valeur en x = 1, pas la limite." }
+      - { texte: "−∞", pourquoi: "2/x tend vers 0, pas vers l’infini : il ne reste que 5." }
+  - texte: "Quelle est la limite de x³ quand x tend vers −∞ ?"
+    nom: "−∞"
+    explication: "Le cube d’un nombre négatif est négatif : (−1 000)³ = −1 000 000 000."
+    pieges:
+      - { texte: "+∞", pourquoi: "Un cube garde le signe : (−10)³ = −1 000." }
+      - { texte: "0", pourquoi: "x³ ne se rapproche pas de 0 : sa valeur absolue grandit sans limite." }
+  - texte: "Quelle est la limite de x² + 3x quand x tend vers +∞ ?"
+    nom: "+∞"
+    explication: "x² et 3x tendent tous les deux vers +∞ : leur somme aussi."
+    pieges:
+      - { texte: "On ne peut pas savoir", pourquoi: "+∞ plus +∞ donne +∞ : ce n’est pas une forme indéterminée." }
+      - { texte: "3", pourquoi: "Le 3 est un coefficient, pas une limite : les deux termes grandissent." }
+  - texte: "Complète : quand x tend vers +∞, 1/x tend vers 0, donc 4 + 1/x tend vers …"
+    nom: "4"
+    explication: "4 + 1/x tend vers 4 + 0 = 4."
+    pieges:
+      - { texte: "+∞", pourquoi: "1/x tend vers 0, pas vers +∞ : il ne reste que 4." }
+      - { texte: "5", pourquoi: "4 + 1/1 = 5 est la valeur en x = 1, pas la limite." }
+  - texte: "La limite de f en +∞ vaut 2. Que dit-on de la droite y = 2 ?"
+    nom: "C’est une asymptote horizontale à la courbe."
+    explication: "Une limite finie en +∞ veut dire que la courbe se rapproche de la droite horizontale y = 2."
+    pieges:
+      - { texte: "C’est une asymptote verticale.", pourquoi: "Une asymptote verticale vient d’une limite infinie en un nombre, pas d’une limite finie en +∞." }
+      - { texte: "La courbe coupe forcément cette droite.", pourquoi: "La courbe s’en rapproche : elle peut ne jamais la toucher, comme 2 + 1/x." }
+  - texte: "Pourquoi exp(x) − x tend-il vers +∞ quand x tend vers +∞ ?"
+    nom: "L’exponentielle grandit beaucoup plus vite que x."
+    explication: "C’est une croissance comparée : exp(x) l’emporte sur x en +∞. Par exemple exp(20) est environ 485 millions."
+    pieges:
+      - { texte: "Parce que +∞ − ∞ = 0.", pourquoi: "+∞ − ∞ est une forme indéterminée : il faut comparer les vitesses de croissance." }
+      - { texte: "Parce que x est négatif.", pourquoi: "x tend vers +∞, il est positif : c’est exp(x) qui l’emporte." }
+  - texte: "Quelle est la limite de 1/x² quand x tend vers 0 ?"
+    nom: "+∞"
+    explication: "x² est un très petit nombre positif, et 1 divisé par un très petit nombre positif est très grand : 1/0,001² = 1 000 000."
+    pieges:
+      - { texte: "0", pourquoi: "On divise 1 par un nombre de plus en plus petit : le résultat devient très grand." }
+      - { texte: "−∞", pourquoi: "x² est positif, même si x est négatif : 1/x² est toujours positif." }
+
+en:
+  titre: "Limits of functions"
+  idee: "The limit tells you what f(x) gets close to when x gets very large (+∞) or close to a number. At +∞, 1/x tends to 0; x² and exp(x) tend to +∞."
+  phrases:
+    consigne: "Picture x as very large, then touch the limit."
+    question: "{texte}"
+    indice: "Replace x with 1,000, then 1,000,000: what does the result get close to?"
+    exemple: "f(x) = 3 + 1/x. As x tends to +∞, 1/x tends to 0, so f(x) tends to 3: the line y = 3 is a horizontal asymptote."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is the limit of x² as x tends to +∞?"
+      nom: "+∞"
+      explication: "The larger x is, the larger x² is, without any bound: 1,000² = 1,000,000."
+      pieges:
+        - { texte: "0", pourquoi: "x² grows with x: it does not get close to 0." }
+        - { texte: "−∞", pourquoi: "A square is always positive or zero: x² cannot tend to −∞." }
+    - texte: "What is the limit of 1/x as x tends to +∞?"
+      nom: "0"
+      explication: "1 divided by a very large number gives a very small number: 1/1,000,000 = 0.000001."
+      pieges:
+        - { texte: "+∞", pourquoi: "You divide 1 by a larger and larger number: the result gets smaller and smaller." }
+        - { texte: "1", pourquoi: "1/x equals 1 only when x = 1." }
+    - texte: "What is the limit of exp(x) as x tends to −∞?"
+      nom: "0"
+      explication: "exp(−x) = 1/exp(x): as x tends to −∞, exp(x) becomes a very small positive number."
+      pieges:
+        - { texte: "−∞", pourquoi: "exp(x) is always strictly positive: it cannot tend to −∞." }
+        - { texte: "1", pourquoi: "exp(0) = 1: that is the value at 0, not the limit at −∞." }
+    - texte: "What is the limit of 5 − 2/x as x tends to +∞?"
+      nom: "5"
+      explication: "2/x tends to 0, so 5 − 2/x tends to 5 − 0 = 5."
+      pieges:
+        - { texte: "3", pourquoi: "5 − 2/1 = 3: that is the value at x = 1, not the limit." }
+        - { texte: "−∞", pourquoi: "2/x tends to 0, not to infinity: only 5 is left." }
+    - texte: "What is the limit of x³ as x tends to −∞?"
+      nom: "−∞"
+      explication: "The cube of a negative number is negative: (−1,000)³ = −1,000,000,000."
+      pieges:
+        - { texte: "+∞", pourquoi: "A cube keeps the sign: (−10)³ = −1,000." }
+        - { texte: "0", pourquoi: "x³ does not get close to 0: its size grows without bound." }
+    - texte: "What is the limit of x² + 3x as x tends to +∞?"
+      nom: "+∞"
+      explication: "x² and 3x both tend to +∞: so does their sum."
+      pieges:
+        - { texte: "We cannot tell", pourquoi: "+∞ plus +∞ gives +∞: it is not an indeterminate form." }
+        - { texte: "3", pourquoi: "The 3 is a coefficient, not a limit: both terms grow." }
+    - texte: "Fill in the step: as x tends to +∞, 1/x tends to 0, so 4 + 1/x tends to …"
+      nom: "4"
+      explication: "4 + 1/x tends to 4 + 0 = 4."
+      pieges:
+        - { texte: "+∞", pourquoi: "1/x tends to 0, not to +∞: only 4 is left." }
+        - { texte: "5", pourquoi: "4 + 1/1 = 5 is the value at x = 1, not the limit." }
+    - texte: "The limit of f at +∞ is 2. What can we say about the line y = 2?"
+      nom: "It is a horizontal asymptote to the curve."
+      explication: "A finite limit at +∞ means the curve gets closer and closer to the horizontal line y = 2."
+      pieges:
+        - { texte: "It is a vertical asymptote.", pourquoi: "A vertical asymptote comes from an infinite limit at a number, not a finite limit at +∞." }
+        - { texte: "The curve must cross this line.", pourquoi: "The curve gets close to it: it may never touch it, like 2 + 1/x." }
+    - texte: "Why does exp(x) − x tend to +∞ as x tends to +∞?"
+      nom: "The exponential grows much faster than x."
+      explication: "This is a comparison of growth rates: exp(x) wins over x at +∞. For example, exp(20) is about 485 million."
+      pieges:
+        - { texte: "Because +∞ − ∞ = 0.", pourquoi: "+∞ − ∞ is an indeterminate form: you have to compare how fast each part grows." }
+        - { texte: "Because x is negative.", pourquoi: "x tends to +∞, so it is positive: exp(x) is the part that wins." }
+    - texte: "What is the limit of 1/x² as x tends to 0?"
+      nom: "+∞"
+      explication: "x² is a very small positive number, and 1 divided by a very small positive number is very large: 1/0.001² = 1,000,000."
+      pieges:
+        - { texte: "0", pourquoi: "You divide 1 by a smaller and smaller number: the result becomes very large." }
+        - { texte: "−∞", pourquoi: "x² is positive even when x is negative: 1/x² is always positive." }

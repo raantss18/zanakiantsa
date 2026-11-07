@@ -1,0 +1,136 @@
+id: durees
+titre: "Calculer des durées"
+niveau: CM2
+prerequis: ["heure-demi-quart"]
+programme: { source: cycle3, texte: "Résoudre des problèmes à une ou plusieurs étapes impliquant des durées" }
+activite: quiz
+parametres: {}
+idee: "1 h = 60 min et 1 min = 60 s. Pour calculer une durée, on avance jusqu'à l'heure ronde, puis jusqu'à l'heure d'arrivée, et on ajoute les morceaux."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Passe par l'heure ronde : une heure, c'est 60 minutes, pas 100."
+  exemple: "Départ 9 h 40, arrivée 11 h 15. De 9 h 40 à 10 h : 20 min. De 10 h à 11 h : 1 h. De 11 h à 11 h 15 : 15 min. Durée : 1 h 35 min."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien y a-t-il de minutes dans 2 h ?"
+    nom: "120 min"
+    explication: "1 h = 60 min, donc 2 h = 2 × 60 = 120 min."
+    pieges:
+      - { texte: "200 min", pourquoi: "1 h = 60 min, pas 100 min." }
+      - { texte: "20 min", pourquoi: "20 minutes, c'est bien moins qu'une heure : 2 h = 2 × 60 min." }
+  - texte: "Combien y a-t-il de secondes dans 3 min ?"
+    nom: "180 s"
+    explication: "1 min = 60 s, donc 3 min = 3 × 60 = 180 s."
+    pieges:
+      - { texte: "300 s", pourquoi: "1 min = 60 s, pas 100 s." }
+      - { texte: "63 s", pourquoi: "60 + 3 : il y a 3 fois 60 secondes, c'est une multiplication." }
+  - texte: "Un film commence à 14 h 30 et dure 1 h 45 min. À quelle heure finit-il ?"
+    nom: "16 h 15"
+    explication: "14 h 30 + 1 h = 15 h 30. Puis 15 h 30 + 30 min = 16 h, et encore 15 min : 16 h 15."
+    pieges:
+      - { texte: "15 h 75", pourquoi: "75 minutes, c'est 1 h 15 min : on passe à l'heure suivante, 16 h 15." }
+      - { texte: "15 h 15", pourquoi: "14 h 30 + 45 min = 15 h 15 : il faut encore ajouter 1 h." }
+  - texte: "Départ à 8 h 50, arrivée à 10 h 10. Combien de temps dure le trajet ?"
+    nom: "1 h 20 min"
+    explication: "De 8 h 50 à 9 h : 10 min. De 9 h à 10 h : 1 h. De 10 h à 10 h 10 : 10 min. Durée : 1 h 20 min."
+    pieges:
+      - { texte: "1 h 60 min", pourquoi: "On a soustrait comme si 1 h valait 100 min : passe par 9 h." }
+      - { texte: "2 h 40 min", pourquoi: "De 8 h 50 à 10 h 50, il y a 2 h : on arrive avant 10 h 50." }
+  - texte: "Combien de minutes dure une heure et demie ?"
+    nom: "90 min"
+    explication: "Une heure, c'est 60 min ; une demi-heure, 30 min. 60 + 30 = 90 min."
+    pieges:
+      - { texte: "150 min", pourquoi: "Une demi-heure, ce n'est pas 50 min : c'est 30 min." }
+      - { texte: "130 min", pourquoi: "1 h 30 min n'est pas 130 min : 60 + 30 = 90 min." }
+  - texte: "Combien de minutes dure trois quarts d'heure ?"
+    nom: "45 min"
+    explication: "Un quart d'heure, c'est 15 min : 3 × 15 = 45 min."
+    pieges:
+      - { texte: "75 min", pourquoi: "Un quart d'heure, c'est 15 min, pas 25 : 3 × 15 = 45." }
+      - { texte: "30 min", pourquoi: "30 min, c'est une demi-heure : deux quarts d'heure." }
+  - texte: "Léa lit 25 min le matin et 40 min le soir. Combien de temps lit-elle en tout ?"
+    nom: "1 h 5 min"
+    explication: "25 + 40 = 65 min. 65 min = 60 min + 5 min = 1 h 5 min."
+    pieges:
+      - { texte: "1 h 15 min", pourquoi: "65 min = 60 min + 5 min : il reste 5 min, pas 15." }
+      - { texte: "15 min", pourquoi: "40 − 25 : on cherche le temps en tout, on ajoute." }
+  - texte: "De 9 h 40 à 10 h : 20 min. De 10 h à 11 h 15 : 1 h 15 min. Quelle est la durée totale de 9 h 40 à 11 h 15 ?"
+    nom: "1 h 35 min"
+    explication: "20 min + 1 h 15 min = 1 h 35 min."
+    pieges:
+      - { texte: "1 h 15 min", pourquoi: "Il faut ajouter les 20 premières minutes." }
+      - { texte: "2 h 35 min", pourquoi: "Il n'y a qu'une heure entière, de 10 h à 11 h." }
+  - texte: "Pourquoi 70 minutes font-elles 1 h 10 min ?"
+    nom: "Parce que 70 = 60 + 10, et 60 min = 1 h."
+    explication: "On regroupe 60 minutes pour faire 1 heure : il reste 10 minutes."
+    pieges:
+      - { texte: "Parce que 1 h = 70 min.", pourquoi: "1 h = 60 min : les 10 minutes en plus restent des minutes." }
+      - { texte: "Parce qu'on lit le 7 comme 1 h.", pourquoi: "On ne lit pas les chiffres : on retire 60 min, il reste 10 min." }
+
+en:
+  titre: "Working out durations"
+  idee: "1 hour = 60 minutes and 1 minute = 60 seconds. To find a duration, count on to the next o'clock, then to the end time, and add the pieces."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Go through the o'clock: an hour is 60 minutes, not 100."
+    exemple: "Start 09:40, end 11:15. From 09:40 to 10:00: 20 minutes. From 10:00 to 11:00: 1 hour. From 11:00 to 11:15: 15 minutes. Duration: 1 hour 35 minutes."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "How many minutes are there in 2 hours?"
+      nom: "120 minutes"
+      explication: "1 hour = 60 minutes, so 2 hours = 2 × 60 = 120 minutes."
+      pieges:
+        - { texte: "200 minutes", pourquoi: "1 hour = 60 minutes, not 100 minutes." }
+        - { texte: "20 minutes", pourquoi: "20 minutes is much less than an hour: 2 hours = 2 × 60 minutes." }
+    - texte: "How many seconds are there in 3 minutes?"
+      nom: "180 seconds"
+      explication: "1 minute = 60 seconds, so 3 minutes = 3 × 60 = 180 seconds."
+      pieges:
+        - { texte: "300 seconds", pourquoi: "1 minute = 60 seconds, not 100 seconds." }
+        - { texte: "63 seconds", pourquoi: "60 + 3: there are 3 lots of 60 seconds, so multiply." }
+    - texte: "A film starts at 14:30 and lasts 1 hour 45 minutes. What time does it end?"
+      nom: "16:15"
+      explication: "14:30 + 1 hour = 15:30. Then 15:30 + 30 minutes = 16:00, and 15 more minutes: 16:15."
+      pieges:
+        - { texte: "15:75", pourquoi: "75 minutes is 1 hour 15 minutes: move on to the next hour, 16:15." }
+        - { texte: "15:15", pourquoi: "14:30 + 45 minutes = 15:15: you still have to add 1 hour." }
+    - texte: "Leave at 08:50, arrive at 10:10. How long is the journey?"
+      nom: "1 hour 20 minutes"
+      explication: "From 08:50 to 09:00: 10 minutes. From 09:00 to 10:00: 1 hour. From 10:00 to 10:10: 10 minutes. Duration: 1 hour 20 minutes."
+      pieges:
+        - { texte: "1 hour 60 minutes", pourquoi: "That subtraction treats an hour as 100 minutes: go through 09:00." }
+        - { texte: "2 hours 40 minutes", pourquoi: "From 08:50 to 10:50 is 2 hours: the arrival is before 10:50." }
+    - texte: "How many minutes are there in an hour and a half?"
+      nom: "90 minutes"
+      explication: "An hour is 60 minutes; half an hour, 30 minutes. 60 + 30 = 90 minutes."
+      pieges:
+        - { texte: "150 minutes", pourquoi: "Half an hour is not 50 minutes: it is 30 minutes." }
+        - { texte: "130 minutes", pourquoi: "1 hour 30 minutes is not 130 minutes: 60 + 30 = 90 minutes." }
+    - texte: "How many minutes are there in three quarters of an hour?"
+      nom: "45 minutes"
+      explication: "A quarter of an hour is 15 minutes: 3 × 15 = 45 minutes."
+      pieges:
+        - { texte: "75 minutes", pourquoi: "A quarter of an hour is 15 minutes, not 25: 3 × 15 = 45." }
+        - { texte: "30 minutes", pourquoi: "30 minutes is half an hour: two quarters." }
+    - texte: "Lea reads for 25 minutes in the morning and 40 minutes in the evening. How long does she read altogether?"
+      nom: "1 hour 5 minutes"
+      explication: "25 + 40 = 65 minutes. 65 minutes = 60 minutes + 5 minutes = 1 hour 5 minutes."
+      pieges:
+        - { texte: "1 hour 15 minutes", pourquoi: "65 minutes = 60 minutes + 5 minutes: 5 minutes are left, not 15." }
+        - { texte: "15 minutes", pourquoi: "40 − 25: we want the total time, so add." }
+    - texte: "From 09:40 to 10:00: 20 minutes. From 10:00 to 11:15: 1 hour 15 minutes. What is the total time from 09:40 to 11:15?"
+      nom: "1 hour 35 minutes"
+      explication: "20 minutes + 1 hour 15 minutes = 1 hour 35 minutes."
+      pieges:
+        - { texte: "1 hour 15 minutes", pourquoi: "The first 20 minutes must be added." }
+        - { texte: "2 hours 35 minutes", pourquoi: "There is only one whole hour, from 10:00 to 11:00." }
+    - texte: "Why are 70 minutes equal to 1 hour 10 minutes?"
+      nom: "Because 70 = 60 + 10, and 60 minutes = 1 hour."
+      explication: "Group 60 minutes to make 1 hour: 10 minutes are left."
+      pieges:
+        - { texte: "Because 1 hour = 70 minutes.", pourquoi: "1 hour = 60 minutes: the extra 10 minutes stay as minutes." }
+        - { texte: "Because you read the 7 as 1 hour.", pourquoi: "Don't read the digits: take away 60 minutes, 10 minutes are left." }

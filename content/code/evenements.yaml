@@ -1,0 +1,124 @@
+id: evenements
+titre: "Les événements : quand…"
+niveau: 3e
+prerequis: [boucle-conditionnelle]
+programme: { source: prog, texte: "Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs." }
+activite: quiz
+parametres: {}
+idee: "Un script commence par un bloc « quand … » : il attend un événement (clic sur le drapeau vert, touche pressée, message reçu). À chaque fois que l’événement arrive, le script s’exécute."
+phrases:
+  consigne: "Regarde quels événements arrivent, et dans quel ordre, puis touche la réponse."
+  question: "{texte}"
+  indice: "Pour chaque script, demande-toi : son événement est-il arrivé ? Combien de fois ?"
+  exemple: "quand la touche espace est pressée [ ajouter 1 à x ] : on appuie 3 fois sur espace, le script s’exécute 3 fois, x augmente de 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Script 1 : quand le drapeau vert est cliqué [ mettre score à 0 ]\nScript 2 : quand la touche espace est pressée [ ajouter 1 à score ]\nOn clique sur le drapeau, puis on appuie 3 fois sur espace. Que vaut score ?"
+    nom: "3"
+    explication: "Le drapeau met score à 0. Puis 3 appuis, 3 exécutions du script 2 : score vaut 3."
+    pieges:
+      - { texte: "0", pourquoi: "Chaque appui sur espace est un événement : le script 2 s’exécute à chaque fois." }
+      - { texte: "1", pourquoi: "Le script 2 ne s’exécute pas qu’une fois : il recommence à chaque appui." }
+  - texte: "Script 1 : quand le drapeau vert est cliqué [ dire Bonjour ]\nScript 2 : quand ce sprite est cliqué [ dire Aïe ]\nOn clique seulement sur le drapeau vert. Que dit le lutin ?"
+    nom: "Bonjour"
+    explication: "Seul le drapeau vert a été cliqué : seul le script 1 s’exécute."
+    pieges:
+      - { texte: "Aïe", pourquoi: "Personne n’a cliqué sur le lutin : l’événement du script 2 n’est pas arrivé." }
+      - { texte: "Bonjour, puis Aïe", pourquoi: "Le script 2 attend un clic sur le lutin ; sans ce clic, il ne s’exécute pas." }
+  - texte: "quand la touche flèche droite est pressée [ avancer de 10 pas ]\nDans ce script, quel est l’événement ?"
+    nom: "Appuyer sur la flèche droite"
+    explication: "L’événement est écrit dans le bloc « quand … » : la touche flèche droite. Avancer est l’action qu’il déclenche."
+    pieges:
+      - { texte: "Avancer de 10 pas", pourquoi: "C’est l’action, déclenchée par l’événement." }
+      - { texte: "Cliquer sur le drapeau vert", pourquoi: "Ce script ne parle pas du drapeau : il attend la flèche droite." }
+  - texte: "x est une variable pour tous les sprites.\nLutin A : quand le drapeau vert est cliqué [ mettre x à 5, envoyer à tous calcul ]\nLutin B : quand je reçois calcul [ mettre x à x * 2 ]\nOn clique sur le drapeau. Que vaut x à la fin ?"
+    nom: "10"
+    explication: "A met x à 5 et envoie calcul. B reçoit le message et calcule 5 × 2 = 10."
+    pieges:
+      - { texte: "5", pourquoi: "Le message calcul est un événement pour le lutin B : son script s’exécute et double x." }
+      - { texte: "2", pourquoi: "Le lutin B calcule x × 2 avec x = 5 : il ne remplace pas x par 2." }
+  - texte: "Script 1 : quand le drapeau vert est cliqué [ … ]\nScript 2 : quand la touche a est pressée [ … ]\nScript 3 : quand le drapeau vert est cliqué [ … ]\nOn clique sur le drapeau vert. Combien de scripts démarrent ?"
+    nom: "2"
+    explication: "Les scripts 1 et 3 attendent le drapeau vert : les deux démarrent. Le script 2 attend toujours."
+    pieges:
+      - { texte: "1", pourquoi: "Plusieurs scripts peuvent attendre le même événement : ils démarrent tous." }
+      - { texte: "3", pourquoi: "Le script 2 attend la touche a, pas le drapeau." }
+  - texte: "x vaut 0.\nquand la touche espace est pressée [ répéter 2 fois [ ajouter 5 à x ] ]\nOn appuie 2 fois sur espace. Que vaut x ?"
+    nom: "20"
+    explication: "Un appui : la boucle ajoute 5 + 5 = 10. Deux appuis : 10 + 10 = 20."
+    pieges:
+      - { texte: "10", pourquoi: "Ça, c’est après un seul appui. Chaque appui relance tout le script : 2 × 10." }
+      - { texte: "5", pourquoi: "La boucle ajoute 5 deux fois, et le script s’exécute deux fois." }
+  - texte: "Lutin A : quand je reçois fin [ dire Bravo ]\nAucun script n’envoie le message fin. Que dit le lutin A ?"
+    nom: "Rien"
+    explication: "Sans « envoyer à tous fin » quelque part, l’événement n’arrive pas : le lutin A ne dit rien."
+    pieges:
+      - { texte: "Bravo", pourquoi: "Le script attend le message fin, qui n’arrive jamais : il ne s’exécute pas." }
+      - { texte: "fin", pourquoi: "fin est le nom du message, pas ce que dit le lutin." }
+  - texte: "Pourquoi un jeu place-t-il « mettre score à 0 » sous « quand le drapeau vert est cliqué » ?"
+    nom: "Pour repartir de 0 à chaque nouvelle partie"
+    explication: "Le drapeau vert lance une nouvelle partie. Sans cette remise à 0, le score de la partie précédente resterait."
+    pieges:
+      - { texte: "Pour que le score monte tout seul", pourquoi: "Ce bloc remet le score à 0 : il ne le fait pas monter." }
+      - { texte: "Sinon, Scratch refuse la variable", pourquoi: "La variable existe sans ce bloc ; elle garderait simplement le score de la partie d’avant." }
+
+en:
+  titre: "Events: when…"
+  idee: "A script starts with a “when …” block: it waits for an event (green flag clicked, key pressed, message received). Every time the event happens, the script runs."
+  phrases:
+    consigne: "Look at which events happen, and in what order, then touch the answer."
+    question: "{texte}"
+    indice: "For each script, ask yourself: has its event happened? How many times?"
+    exemple: "when space key pressed [ change x by 1 ]: you press space 3 times, the script runs 3 times, x goes up by 3."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Script 1: when green flag clicked [ set score to 0 ]\nScript 2: when space key pressed [ change score by 1 ]\nYou click the flag, then press space 3 times. What is score?"
+      nom: "3"
+      explication: "The flag sets score to 0. Then 3 presses, 3 runs of script 2: score is 3."
+      pieges:
+        - { texte: "0", pourquoi: "Each press of space is an event: script 2 runs every time." }
+        - { texte: "1", pourquoi: "Script 2 does not run only once: it runs again on every press." }
+    - texte: "Script 1: when green flag clicked [ say Hello ]\nScript 2: when this sprite clicked [ say Ouch ]\nYou only click the green flag. What does the sprite say?"
+      nom: "Hello"
+      explication: "Only the green flag was clicked: only script 1 runs."
+      pieges:
+        - { texte: "Ouch", pourquoi: "Nobody clicked the sprite: the event of script 2 did not happen." }
+        - { texte: "Hello, then Ouch", pourquoi: "Script 2 waits for a click on the sprite; without that click, it does not run." }
+    - texte: "when right arrow key pressed [ move 10 steps ]\nIn this script, what is the event?"
+      nom: "Pressing the right arrow"
+      explication: "The event is written in the “when …” block: the right arrow key. Moving is the action it triggers."
+      pieges:
+        - { texte: "Moving 10 steps", pourquoi: "That is the action, triggered by the event." }
+        - { texte: "Clicking the green flag", pourquoi: "This script says nothing about the flag: it waits for the right arrow." }
+    - texte: "x is a variable for all sprites.\nSprite A: when green flag clicked [ set x to 5, broadcast calc ]\nSprite B: when I receive calc [ set x to x * 2 ]\nYou click the flag. What is x at the end?"
+      nom: "10"
+      explication: "A sets x to 5 and broadcasts calc. B receives the message and works out 5 × 2 = 10."
+      pieges:
+        - { texte: "5", pourquoi: "The message calc is an event for sprite B: its script runs and doubles x." }
+        - { texte: "2", pourquoi: "Sprite B works out x × 2 with x = 5: it does not replace x with 2." }
+    - texte: "Script 1: when green flag clicked [ … ]\nScript 2: when a key pressed [ … ]\nScript 3: when green flag clicked [ … ]\nYou click the green flag. How many scripts start?"
+      nom: "2"
+      explication: "Scripts 1 and 3 wait for the green flag: both start. Script 2 is still waiting."
+      pieges:
+        - { texte: "1", pourquoi: "Several scripts can wait for the same event: they all start." }
+        - { texte: "3", pourquoi: "Script 2 waits for the a key, not for the flag." }
+    - texte: "x is 0.\nwhen space key pressed [ repeat 2 [ change x by 5 ] ]\nYou press space 2 times. What is x?"
+      nom: "20"
+      explication: "One press: the loop adds 5 + 5 = 10. Two presses: 10 + 10 = 20."
+      pieges:
+        - { texte: "10", pourquoi: "That is after one press only. Each press runs the whole script again: 2 × 10." }
+        - { texte: "5", pourquoi: "The loop adds 5 twice, and the script runs twice." }
+    - texte: "Sprite A: when I receive end [ say Well done ]\nNo script broadcasts the message end. What does sprite A say?"
+      nom: "Nothing"
+      explication: "Without “broadcast end” somewhere, the event does not happen: sprite A says nothing."
+      pieges:
+        - { texte: "Well done", pourquoi: "The script waits for the message end, which never comes: it does not run." }
+        - { texte: "end", pourquoi: "end is the name of the message, not what the sprite says." }
+    - texte: "Why does a game put “set score to 0” under “when green flag clicked”?"
+      nom: "To start again from 0 at every new game"
+      explication: "The green flag starts a new game. Without this reset, the score of the previous game would stay."
+      pieges:
+        - { texte: "So that the score goes up by itself", pourquoi: "This block sets the score back to 0: it does not make it go up." }
+        - { texte: "Otherwise Scratch refuses the variable", pourquoi: "The variable exists without this block; it would simply keep the score of the game before." }

@@ -1,0 +1,137 @@
+id: argumentation
+titre: "Thèse, arguments, exemples et connecteurs"
+niveau: 1re
+prerequis: ["phrase-complexe"]
+programme: { source: lycee1re, texte: "Les textes d’idées sont étudiés dans leur développement logique et le mouvement de leur argumentation ; une attention particulière est portée aux nuances qu’ils peuvent receler." }
+activite: quiz
+parametres: {}
+idee: "La thèse est l’opinion défendue. L’argument la justifie. L’exemple est un cas concret qui illustre l’argument. Les connecteurs (en effet, donc, pourtant, certes…) montrent la logique."
+phrases:
+  consigne: "Lis l’extrait, repère le rôle de chaque phrase ou de chaque connecteur, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Est-ce l’opinion défendue, une raison générale, ou un cas concret ? Le connecteur annonce-t-il une cause, une conséquence, une opposition ?"
+  exemple: "« Il faut lire chaque jour. En effet, la lecture enrichit le vocabulaire. » : la 1re phrase est la thèse, la 2e un argument annoncé par « en effet »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Il faut lire chaque jour. En effet, la lecture enrichit le vocabulaire. Par exemple, en lisant des romans, on découvre des mots qu’on n’entend jamais en classe. » Quel est le rôle de la 1re phrase ?"
+    nom: "la thèse"
+    explication: "C’est l’opinion que tout le paragraphe défend : la thèse."
+    pieges:
+      - { texte: "un argument", pourquoi: "L’argument justifie la thèse ; cette phrase affirme l’opinion défendue." }
+      - { texte: "un exemple", pourquoi: "Un exemple est un cas concret ; cette phrase est une opinion générale." }
+  - texte: "Dans le même paragraphe, quel est le rôle de « En effet, la lecture enrichit le vocabulaire » ?"
+    nom: "un argument"
+    explication: "Cette phrase donne une raison générale de lire : c’est un argument, annoncé par « en effet »."
+    pieges:
+      - { texte: "la thèse", pourquoi: "La thèse est l’opinion défendue (« Il faut lire ») ; cette phrase la justifie." }
+      - { texte: "un exemple", pourquoi: "Un exemple est un cas concret ; ici, c’est une idée générale." }
+  - texte: "Dans le même paragraphe, quel est le rôle de « Par exemple, en lisant des romans, on découvre des mots qu’on n’entend jamais en classe » ?"
+    nom: "un exemple"
+    explication: "C’est un cas concret qui illustre l’argument : un exemple, annoncé par « par exemple »."
+    pieges:
+      - { texte: "la thèse", pourquoi: "La thèse est l’opinion défendue ; cette phrase illustre un argument." }
+      - { texte: "un argument", pourquoi: "L’argument est une raison générale ; cette phrase en donne un cas concret." }
+  - texte: "Que marque le connecteur « en effet » ?"
+    nom: "une justification (la cause)"
+    explication: "« en effet » introduit la raison de ce qui précède."
+    pieges:
+      - { texte: "une conséquence", pourquoi: "La conséquence s’annonce par « donc », « ainsi », « par conséquent »." }
+      - { texte: "une opposition", pourquoi: "L’opposition s’annonce par « mais », « pourtant », « cependant »." }
+  - texte: "Quel connecteur marque une opposition ?"
+    nom: "pourtant"
+    explication: "« pourtant » oppose deux idées."
+    pieges:
+      - { texte: "donc", pourquoi: "« donc » marque une conséquence." }
+      - { texte: "car", pourquoi: "« car » marque une cause." }
+  - texte: "Quel connecteur annonce une conséquence ?"
+    nom: "par conséquent"
+    explication: "« par conséquent » introduit ce qui découle de ce qui précède."
+    pieges:
+      - { texte: "cependant", pourquoi: "« cependant » marque une opposition." }
+      - { texte: "en effet", pourquoi: "« en effet » introduit une justification, une cause." }
+  - texte: "« Certes, les écrans divertissent ; cependant, ils fatiguent les yeux. » Que fait « certes » ?"
+    nom: "Il concède un point avant de le nuancer."
+    explication: "« certes » admet une idée adverse ; « cependant » revient à sa propre position : c’est une concession."
+    pieges:
+      - { texte: "Il annonce un exemple.", pourquoi: "Un exemple s’annonce par « par exemple », « ainsi » ; « certes » concède." }
+      - { texte: "Il conclut le raisonnement.", pourquoi: "La conclusion s’annonce par « donc », « en conclusion » ; « certes » concède un point." }
+  - texte: "Qu’est-ce que réfuter une thèse ?"
+    nom: "montrer qu’elle est fausse ou mal fondée"
+    explication: "Réfuter, c’est s’opposer à une thèse en montrant ses faiblesses."
+    pieges:
+      - { texte: "donner un exemple personnel", pourquoi: "Un exemple illustre ; réfuter, c’est montrer qu’une thèse est fausse." }
+      - { texte: "résumer sa propre thèse", pourquoi: "Résumer sa thèse, c’est conclure ; réfuter vise la thèse adverse." }
+  - texte: "« Les écrans rendent paresseux : mon voisin regarde des séries et il est paresseux. » Pourquoi cet argument est-il faible ?"
+    nom: "Un seul cas ne suffit pas à prouver une idée générale."
+    explication: "On généralise à partir d’un seul exemple : le raisonnement n’est pas solide."
+    pieges:
+      - { texte: "Parce qu’il n’y a pas de connecteur.", pourquoi: "Il y a les deux-points, et le problème est ailleurs : on généralise à partir d’un seul cas." }
+      - { texte: "Parce que la thèse est trop courte.", pourquoi: "La longueur ne compte pas : c’est le passage d’un cas à une règle générale qui est faible." }
+
+en:
+  langue: "fr"
+  titre: "French: thesis, arguments, examples and connectives"
+  idee: "The thesis is the opinion being defended. An argument justifies it. An example is a concrete case that illustrates the argument. Connectives (« en effet », « donc », « pourtant », « certes »…) show the logic."
+  phrases:
+    consigne: "Read the French extract, find the role of each sentence or connective, then touch the right answer."
+    question: "{texte}"
+    indice: "Is it the opinion defended, a general reason, or a concrete case? Does the connective announce a cause, a consequence, an opposition?"
+    exemple: "« Il faut lire chaque jour. En effet, la lecture enrichit le vocabulaire. »: the first sentence is the thesis, the second an argument introduced by « en effet »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Il faut lire chaque jour. En effet, la lecture enrichit le vocabulaire. Par exemple, en lisant des romans, on découvre des mots qu’on n’entend jamais en classe. » What is the role of the first sentence?"
+      nom: "the thesis"
+      explication: "It's the opinion the whole paragraph defends: the thesis."
+      pieges:
+        - { texte: "an argument", pourquoi: "An argument justifies the thesis; this sentence states the opinion being defended." }
+        - { texte: "an example", pourquoi: "An example is a concrete case; this sentence is a general opinion." }
+    - texte: "In the same paragraph, what is the role of « En effet, la lecture enrichit le vocabulaire »?"
+      nom: "an argument"
+      explication: "This sentence gives a general reason to read: it's an argument, introduced by « en effet »."
+      pieges:
+        - { texte: "the thesis", pourquoi: "The thesis is the opinion defended (« Il faut lire »); this sentence justifies it." }
+        - { texte: "an example", pourquoi: "An example is a concrete case; here it's a general idea." }
+    - texte: "In the same paragraph, what is the role of « Par exemple, en lisant des romans, on découvre des mots qu’on n’entend jamais en classe »?"
+      nom: "an example"
+      explication: "It's a concrete case illustrating the argument: an example, introduced by « par exemple »."
+      pieges:
+        - { texte: "the thesis", pourquoi: "The thesis is the opinion defended; this sentence illustrates an argument." }
+        - { texte: "an argument", pourquoi: "An argument is a general reason; this sentence gives a concrete case of it." }
+    - texte: "What does the connective « en effet » mark?"
+      nom: "a justification (cause)"
+      explication: "« en effet » introduces the reason for what comes before."
+      pieges:
+        - { texte: "a consequence", pourquoi: "A consequence is introduced by « donc », « ainsi », « par conséquent »." }
+        - { texte: "an opposition", pourquoi: "An opposition is introduced by « mais », « pourtant », « cependant »." }
+    - texte: "Which connective marks an opposition?"
+      nom: "pourtant"
+      explication: "« pourtant » (yet) sets two ideas against each other."
+      pieges:
+        - { texte: "donc", pourquoi: "« donc » marks a consequence." }
+        - { texte: "car", pourquoi: "« car » marks a cause." }
+    - texte: "Which connective introduces a consequence?"
+      nom: "par conséquent"
+      explication: "« par conséquent » (consequently) introduces what follows from what came before."
+      pieges:
+        - { texte: "cependant", pourquoi: "« cependant » marks an opposition." }
+        - { texte: "en effet", pourquoi: "« en effet » introduces a justification, a cause." }
+    - texte: "« Certes, les écrans divertissent ; cependant, ils fatiguent les yeux. » What does « certes » do?"
+      nom: "It concedes a point before qualifying it."
+      explication: "« certes » grants an opposing idea; « cependant » returns to the writer's own view: it's a concession."
+      pieges:
+        - { texte: "It introduces an example.", pourquoi: "An example is introduced by « par exemple », « ainsi »; « certes » concedes." }
+        - { texte: "It concludes the reasoning.", pourquoi: "A conclusion is introduced by « donc », « en conclusion »; « certes » concedes a point." }
+    - texte: "What does it mean to refute a thesis?"
+      nom: "to show that it's wrong or badly founded"
+      explication: "Refuting means opposing a thesis by showing its weaknesses."
+      pieges:
+        - { texte: "to give a personal example", pourquoi: "An example illustrates; refuting means showing a thesis is wrong." }
+        - { texte: "to sum up your own thesis", pourquoi: "Summing up your thesis is concluding; refuting targets the opposing thesis." }
+    - texte: "« Les écrans rendent paresseux : mon voisin regarde des séries et il est paresseux. » Why is this argument weak?"
+      nom: "One case isn't enough to prove a general idea."
+      explication: "It generalises from a single example: the reasoning isn't sound."
+      pieges:
+        - { texte: "Because there's no connective.", pourquoi: "There's a colon, and the problem lies elsewhere: it generalises from a single case." }
+        - { texte: "Because the thesis is too short.", pourquoi: "Length doesn't matter: what's weak is going from one case to a general rule." }

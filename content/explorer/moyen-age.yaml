@@ -1,0 +1,124 @@
+id: moyen-age
+titre: "Repères du Moyen Âge à Louis XIV"
+niveau: 5e
+prerequis: [grandes-periodes]
+programme: { source: c4, texte: "Situer un fait dans une époque ou une période donnée." }
+activite: quiz
+parametres: {}
+idee: "La classe de 5e va du VIe au XVIIe siècle : Byzance et Charlemagne, la naissance de l'islam, la société féodale, puis les grandes découvertes et la Renaissance."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pour trouver le siècle, prends le nombre de centaines et ajoute 1. Puis compare avec 476, 1492 et 1789."
+  exemple: "Exemple : la prise de Bagdad par les Mongols, en 1258. 12 centaines plus 1 : XIIIe siècle. 1258 est entre 476 et 1492 : c'est le Moyen Âge."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "En 622, Mahomet quitte La Mecque pour Médine : c'est l'Hégire, début du calendrier musulman. En quel siècle ?"
+    nom: "Le VIIe siècle."
+    explication: "622 : 6 centaines plus 1, donc VIIe siècle. C'est au Moyen Âge."
+    pieges:
+      - { texte: "Le VIe siècle.", pourquoi: "On lit 6, mais il faut ajouter 1 : les années 601 à 700 forment le VIIe siècle." }
+      - { texte: "Le XXIIe siècle.", pourquoi: "On ne lit pas les deux derniers chiffres : on compte les centaines." }
+  - texte: "Charlemagne est couronné empereur en 800. Dans quelle période ?"
+    nom: "Le Moyen Âge."
+    explication: "800 est entre 476 et 1492 : c'est le Moyen Âge."
+    pieges:
+      - { texte: "L'Antiquité.", pourquoi: "L'Antiquité se termine en 476, plus de trois siècles avant." }
+      - { texte: "Les Temps modernes.", pourquoi: "Les Temps modernes commencent vers 1492." }
+  - texte: "Quelle était la capitale de l'Empire byzantin ?"
+    nom: "Constantinople."
+    explication: "Constantinople, l'ancienne Byzance, était la capitale de l'Empire romain d'Orient, appelé Empire byzantin."
+    pieges:
+      - { texte: "Rome.", pourquoi: "Rome était la capitale de l'Empire romain d'Occident, disparu en 476." }
+      - { texte: "Bagdad.", pourquoi: "Bagdad était la capitale du califat abbasside, pas de l'Empire byzantin." }
+  - texte: "En 1453, les Ottomans prennent Constantinople. Range : prise de Bagdad par les Mongols, prise de Constantinople, arrivée de Colomb en Amérique."
+    nom: "Bagdad (1258), Constantinople (1453), Colomb (1492)."
+    explication: "1258, puis 1453, puis 1492 : on range les années de la plus petite à la plus grande."
+    pieges:
+      - { texte: "Constantinople, Bagdad, Colomb.", pourquoi: "1453 est après 1258 : Bagdad vient d'abord." }
+      - { texte: "Colomb, Constantinople, Bagdad.", pourquoi: "C'est l'ordre du plus récent au plus ancien." }
+  - texte: "Dans la société féodale, qui protège les paysans et domine les campagnes ?"
+    nom: "Le seigneur."
+    explication: "Le seigneur domine une seigneurie : les paysans travaillent ses terres et lui doivent des redevances en échange de sa protection."
+    pieges:
+      - { texte: "Le maire élu.", pourquoi: "Il n'y a pas de maires élus dans les campagnes féodales." }
+      - { texte: "Le président de la République.", pourquoi: "La République n'existe pas encore : la France est un royaume." }
+  - texte: "François Ier, roi de la Renaissance, remporte la bataille de Marignan en 1515. En quel siècle ?"
+    nom: "Le XVIe siècle."
+    explication: "1515 : 15 centaines plus 1, donc XVIe siècle, au début des Temps modernes."
+    pieges:
+      - { texte: "Le XVe siècle.", pourquoi: "Il faut ajouter 1 aux centaines : 1515 est au XVIe siècle." }
+      - { texte: "Le Moyen Âge.", pourquoi: "1515 est après 1492 : on est dans les Temps modernes." }
+  - texte: "En 1598, Henri IV signe l'édit de Nantes. Que permet-il ?"
+    nom: "Aux protestants de pratiquer leur religion, sous conditions."
+    explication: "L'édit de Nantes met fin aux guerres de Religion en accordant aux protestants une liberté de culte limitée."
+    pieges:
+      - { texte: "D'interdire le protestantisme.", pourquoi: "C'est l'inverse : il le tolère. Louis XIV le révoquera en 1685." }
+      - { texte: "De donner le droit de vote à tous.", pourquoi: "Le droit de vote n'est pas en jeu : c'est un édit sur la religion." }
+  - texte: "Pourquoi appelle-t-on Louis XIV un roi absolu ?"
+    nom: "Parce qu'il concentre tous les pouvoirs entre ses mains."
+    explication: "Le roi absolu fait les lois, rend la justice et commande l'armée, sans partager son pouvoir avec une assemblée élue."
+    pieges:
+      - { texte: "Parce qu'il est élu par tous les Français.", pourquoi: "Le roi n'est pas élu : il hérite du trône." }
+      - { texte: "Parce qu'il a régné absolument partout dans le monde.", pourquoi: "« Absolu » parle de son pouvoir en France, pas d'un territoire mondial." }
+
+en:
+  titre: "Landmarks from the Middle Ages to Louis XIV"
+  idee: "Year 8 history in France runs from the 6th to the 17th century: Byzantium and Charlemagne, the birth of Islam, feudal society, then the great discoveries and the Renaissance."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "To find the century, take the number of hundreds and add 1. Then compare with 476, 1492 and 1789."
+    exemple: "Example: the Mongols take Baghdad in 1258. 12 hundreds plus 1: 13th century. 1258 is between 476 and 1492: it's the Middle Ages."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In 622, Muhammad leaves Mecca for Medina: this is the Hijra, the start of the Islamic calendar. Which century?"
+      nom: "The 7th century."
+      explication: "622: 6 hundreds plus 1, so the 7th century. It's in the Middle Ages."
+      pieges:
+        - { texte: "The 6th century.", pourquoi: "You read 6, but you must add 1: the years 601 to 700 make the 7th century." }
+        - { texte: "The 22nd century.", pourquoi: "Don't read the last two digits: count the hundreds." }
+    - texte: "Charlemagne is crowned emperor in 800. Which period?"
+      nom: "The Middle Ages."
+      explication: "800 is between 476 and 1492: it's the Middle Ages."
+      pieges:
+        - { texte: "Antiquity.", pourquoi: "Antiquity ends in 476, more than three centuries earlier." }
+        - { texte: "The Early Modern period.", pourquoi: "The Early Modern period starts around 1492." }
+    - texte: "What was the capital of the Byzantine Empire?"
+      nom: "Constantinople."
+      explication: "Constantinople, formerly Byzantium, was the capital of the Eastern Roman Empire, called the Byzantine Empire."
+      pieges:
+        - { texte: "Rome.", pourquoi: "Rome was the capital of the Western Roman Empire, which ended in 476." }
+        - { texte: "Baghdad.", pourquoi: "Baghdad was the capital of the Abbasid caliphate, not the Byzantine Empire." }
+    - texte: "In 1453, the Ottomans take Constantinople. Put in order: the Mongols take Baghdad, the fall of Constantinople, Columbus reaches America."
+      nom: "Baghdad (1258), Constantinople (1453), Columbus (1492)."
+      explication: "1258, then 1453, then 1492: put the years from smallest to biggest."
+      pieges:
+        - { texte: "Constantinople, Baghdad, Columbus.", pourquoi: "1453 is after 1258: Baghdad comes first." }
+        - { texte: "Columbus, Constantinople, Baghdad.", pourquoi: "That's the order from most recent to oldest." }
+    - texte: "In feudal society, who protects the peasants and rules the countryside?"
+      nom: "The lord."
+      explication: "The lord rules a lordship: peasants work his land and owe him dues in return for his protection."
+      pieges:
+        - { texte: "The elected mayor.", pourquoi: "There are no elected mayors in the feudal countryside." }
+        - { texte: "The President of the Republic.", pourquoi: "There's no Republic yet: France is a kingdom." }
+    - texte: "Francis I, a Renaissance king, wins the battle of Marignano in 1515. Which century?"
+      nom: "The 16th century."
+      explication: "1515: 15 hundreds plus 1, so the 16th century, at the start of the Early Modern period."
+      pieges:
+        - { texte: "The 15th century.", pourquoi: "You must add 1 to the hundreds: 1515 is in the 16th century." }
+        - { texte: "The Middle Ages.", pourquoi: "1515 is after 1492: we're in the Early Modern period." }
+    - texte: "In 1598, Henry IV signs the Edict of Nantes. What does it allow?"
+      nom: "Protestants to practise their religion, within limits."
+      explication: "The Edict of Nantes ends the Wars of Religion by giving Protestants limited freedom of worship."
+      pieges:
+        - { texte: "Banning Protestantism.", pourquoi: "It's the opposite: it tolerates it. Louis XIV will revoke it in 1685." }
+        - { texte: "Giving everyone the vote.", pourquoi: "Voting isn't the point: it's an edict about religion." }
+    - texte: "Why is Louis XIV called an absolute monarch?"
+      nom: "Because he holds all the powers in his own hands."
+      explication: "The absolute monarch makes the laws, judges and commands the army, without sharing power with an elected assembly."
+      pieges:
+        - { texte: "Because he's elected by all the French.", pourquoi: "The king isn't elected: he inherits the throne." }
+        - { texte: "Because he ruled absolutely everywhere in the world.", pourquoi: "« Absolute » is about his power in France, not a worldwide territory." }

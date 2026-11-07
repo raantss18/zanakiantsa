@@ -1,0 +1,154 @@
+id: to-be
+titre: "Le verbe « be » : I am, you are, she is"
+niveau: CM1
+prerequis: [reading-hello]
+programme: { source: lver_c3, texte: "CM1 : exprimer simplement des informations sur soi et sur les autres." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« be » veut dire « être ». Il change avec le sujet : « I am », « you are », « he is », « she is », « it is », « we are », « they are »."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme de « be »."
+  question: "{texte}"
+  indice: "Regarde le sujet : « I », c'est « am » ; he, she, it, c'est « is » ; you, we, they, c'est « are »."
+  exemple: "« She … my sister. » Le sujet est « she » : avec she, on dit « is ». « She is my sister. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … ten. »"
+    nom: "am"
+    explication: "Avec « I », on dit « am » : « I am ten. »"
+    pieges:
+      - { texte: "is", pourquoi: "« is » va avec he, she, it. Avec « I », on dit « am »." }
+      - { texte: "are", pourquoi: "« are » va avec you, we, they. Avec « I », on dit « am »." }
+  - texte: "Complète : « She … my sister. »"
+    nom: "is"
+    explication: "Avec « she », on dit « is » : « She is my sister. »"
+    pieges:
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Avec « she », on dit « is »." }
+      - { texte: "are", pourquoi: "« are » va avec you, we, they. « she » est une seule personne : « is »." }
+  - texte: "Complète : « They … happy. »"
+    nom: "are"
+    explication: "Avec « they », on dit « are » : « They are happy. »"
+    pieges:
+      - { texte: "is", pourquoi: "« they », ce sont plusieurs personnes : on dit « are »." }
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Avec « they », on dit « are »." }
+  - texte: "Complète : « You … my friend. »"
+    nom: "are"
+    explication: "Avec « you », on dit toujours « are » : « You are my friend. »"
+    pieges:
+      - { texte: "is", pourquoi: "Avec « you », même pour une seule personne, on dit « are »." }
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Avec « you », on dit « are »." }
+  - texte: "Complète : « It … a cat. »"
+    nom: "is"
+    explication: "Avec « it », on dit « is » : « It is a cat. »"
+    pieges:
+      - { texte: "are", pourquoi: "« it » est une seule chose : on dit « is »." }
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Avec « it », on dit « is »." }
+  - texte: "Complète : « We … in the garden. »"
+    nom: "are"
+    explication: "Avec « we », on dit « are » : « We are in the garden. »"
+    pieges:
+      - { texte: "is", pourquoi: "« we », c'est plusieurs personnes : on dit « are »." }
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Avec « we », on dit « are »." }
+  - texte: "Complète : « Tom and Lucy … friends. »"
+    nom: "are"
+    explication: "Tom et Lucy, c'est « they » : on dit « are ». « Tom and Lucy are friends. »"
+    pieges:
+      - { texte: "is", pourquoi: "Tom et Lucy, ce sont deux personnes : « they ». Avec they, on dit « are »." }
+      - { texte: "am", pourquoi: "« am » va seulement avec « I ». Tom et Lucy, c'est « they » : « are »." }
+  - texte: "Quelle est la forme courte de « they are » ?"
+    nom: "they're"
+    explication: "« they are » devient « they're » : l'apostrophe remplace la lettre a."
+    pieges:
+      - { texte: "there", pourquoi: "« there » veut dire « là ». Il se prononce presque pareil, mais ce n'est pas « they are »." }
+      - { texte: "their", pourquoi: "« their » veut dire « leur » : il dit à qui est quelque chose." }
+  - texte: "Pourquoi dit-on « Tom is eight », avec « is » ?"
+    nom: "Tom est une seule personne, c'est « he » : avec he, on dit « is »."
+    explication: "Tom, c'est « he » : avec he, on dit « is ». « Tom is eight. »"
+    pieges:
+      - { texte: "Parce que « is » va avec tous les prénoms.", pourquoi: "Non : « Tom and Lucy are friends ». Deux personnes, c'est « they », donc « are »." }
+      - { texte: "Parce que « are » ne va qu'avec « you ».", pourquoi: "Non : « are » va aussi avec « we » et « they ». Tom est seul : « is »." }
+en:
+  titre: "The verb “be”: I am, you are, she is"
+  idee: "The verb “be” changes with the subject: I am, you are, he is, she is, it is, we are, they are."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of “be”."
+    question: "{texte}"
+    indice: "Look at the subject: with I, am; with he, she, it, is; with you, we, they, are."
+    exemple: "“She … my sister.” The subject is she: with she, we say is. “She is my sister.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … ten.”"
+      nom: "am"
+      explication: "With I, we say am: “I am ten.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "“is” goes with he, she and it. With I, we say am."
+        - texte: "are"
+          pourquoi: "“are” goes with you, we and they. With I, we say am."
+    - texte: "Complete: “She … my sister.”"
+      nom: "is"
+      explication: "With she, we say is: “She is my sister.”"
+      pieges:
+        - texte: "am"
+          pourquoi: "“am” only goes with I. With she, we say is."
+        - texte: "are"
+          pourquoi: "“are” goes with you, we and they. She is one person: is."
+    - texte: "Complete: “They … happy.”"
+      nom: "are"
+      explication: "With they, we say are: “They are happy.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "They means several people: we say are."
+        - texte: "am"
+          pourquoi: "“am” only goes with I. With they, we say are."
+    - texte: "Complete: “You … my friend.”"
+      nom: "are"
+      explication: "With you, we always say are: “You are my friend.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "With you, even for one person, we say are."
+        - texte: "am"
+          pourquoi: "“am” only goes with I. With you, we say are."
+    - texte: "Complete: “It … a cat.”"
+      nom: "is"
+      explication: "With it, we say is: “It is a cat.”"
+      pieges:
+        - texte: "are"
+          pourquoi: "It is one thing: we say is."
+        - texte: "am"
+          pourquoi: "“am” only goes with I. With it, we say is."
+    - texte: "Complete: “We … in the garden.”"
+      nom: "are"
+      explication: "With we, we say are: “We are in the garden.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "We means several people: we say are."
+        - texte: "am"
+          pourquoi: "“am” only goes with I. With we, we say are."
+    - texte: "Complete: “Tom and Lucy … friends.”"
+      nom: "are"
+      explication: "Tom and Lucy are they: we say are. “Tom and Lucy are friends.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "Tom and Lucy are two people, they: we say are."
+        - texte: "am"
+          pourquoi: "“am” only goes with I. Tom and Lucy are they: are."
+    - texte: "What is the short form of “they are”?"
+      nom: "they're"
+      explication: "“they are” becomes “they're”: the apostrophe replaces the letter a."
+      pieges:
+        - texte: "there"
+          pourquoi: "“there” means in that place. It sounds almost the same, but it is not “they are”."
+        - texte: "their"
+          pourquoi: "“their” tells us who something belongs to."
+    - texte: "Why do we say “Tom is eight”, with is?"
+      nom: "Tom is one person, he: with he, we say is."
+      explication: "Tom is he: with he, we say is. “Tom is eight.”"
+      pieges:
+        - texte: "Because is goes with all names."
+          pourquoi: "No: “Tom and Lucy are friends”. Two people are they, so are."
+        - texte: "Because are only goes with you."
+          pourquoi: "No: are also goes with we and they. Tom is alone: is."

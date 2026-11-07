@@ -1,0 +1,136 @@
+id: boucle-conditionnelle
+titre: "Répéter jusqu’à ce que"
+niveau: 3e
+prerequis: [si-sinon]
+programme: { source: cycle4, texte: "Utiliser une boucle conditionnelle." }
+activite: quiz
+parametres: {}
+idee: "« répéter jusqu’à ce que condition » teste la condition avant chaque tour. Fausse : un tour de plus. Vraie : la boucle s’arrête. On ne sait pas d’avance combien de tours il y aura."
+phrases:
+  consigne: "Teste la condition avant chaque tour, puis touche la réponse."
+  question: "{texte}"
+  indice: "Avant chaque tour, demande-toi : la condition est-elle vraie ? Si oui, on sort de la boucle."
+  exemple: "mettre x à 1, puis répéter jusqu’à ce que x > 5 [ mettre x à x * 2 ] : 1, 2, 4, 8. 8 > 5 est vrai : la boucle s’arrête, x vaut 8."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre x à 1\nrépéter jusqu’à ce que x > 20 [ mettre x à x * 2 ]\ndire x\nQue dit le lutin ?"
+    nom: "32"
+    explication: "1, 2, 4, 8, 16 : la condition est fausse. 32 > 20 est vrai : la boucle s’arrête."
+    pieges:
+      - { texte: "16", pourquoi: "16 > 20 est faux : la boucle fait encore un tour." }
+      - { texte: "20", pourquoi: "x ne prend que les valeurs 1, 2, 4, 8, 16, 32 : il ne vaut jamais 20." }
+  - texte: "mettre x à 0\nmettre n à 0\nrépéter jusqu’à ce que x > 10 [ ajouter 3 à x, ajouter 1 à n ]\ndire n\nQue dit le lutin ?"
+    nom: "4"
+    explication: "x vaut 3, 6, 9, 12. Il faut 4 tours pour dépasser 10 : n vaut 4."
+    pieges:
+      - { texte: "3", pourquoi: "Après 3 tours, x vaut 9, et 9 > 10 est faux : il faut un 4e tour." }
+      - { texte: "12", pourquoi: "12, c’est la valeur de x. Le lutin dit n, le nombre de tours." }
+  - texte: "mettre x à 5\nrépéter jusqu’à ce que x = 5 [ ajouter 1 à x ]\ndire x\nQue dit le lutin ?"
+    nom: "5"
+    explication: "Avant le premier tour, x = 5 est vrai : on sort sans rien faire. Le lutin dit 5."
+    pieges:
+      - { texte: "6", pourquoi: "La condition est testée avant le premier tour : x = 5 est déjà vrai, la boucle ne tourne pas." }
+      - { texte: "Rien : le programme ne s’arrête jamais", pourquoi: "La boucle s’arrête tout de suite, puisque x = 5 dès le départ." }
+  - texte: "mettre x à 1\nrépéter jusqu’à ce que x = 10 [ ajouter 2 à x ]\ndire x\nQue se passe-t-il ?"
+    nom: "La boucle ne s’arrête jamais"
+    explication: "x reste impair : 1, 3, 5, 7, 9, 11, 13… La condition x = 10 n’est jamais vraie. Il aurait fallu écrire x > 9."
+    pieges:
+      - { texte: "Le lutin dit 10", pourquoi: "x prend les valeurs 1, 3, 5, 7, 9, 11… : il ne vaut jamais 10." }
+      - { texte: "Le lutin dit 11", pourquoi: "À 11, la condition x = 10 est fausse : la boucle continue." }
+  - texte: "mettre a à 4\nsi ( a > 2 ) et ( a < 6 ) alors [ dire oui ] sinon [ dire non ]\nQue dit le lutin ?"
+    nom: "oui"
+    explication: "4 > 2 : vrai. 4 < 6 : vrai. Vrai et vrai donne vrai : le lutin dit oui."
+    pieges:
+      - { texte: "non", pourquoi: "4 > 2 est vrai et 4 < 6 est vrai : avec « et », les deux sont vraies, donc la condition aussi." }
+      - { texte: "oui, puis non", pourquoi: "Une seule branche s’exécute." }
+  - texte: "mettre a à 8\nsi ( a < 2 ) ou ( a > 6 ) alors [ dire oui ] sinon [ dire non ]\nQue dit le lutin ?"
+    nom: "oui"
+    explication: "8 < 2 est faux, mais 8 > 6 est vrai. Faux ou vrai donne vrai."
+    pieges:
+      - { texte: "non", pourquoi: "Avec « ou », il suffit qu’une des deux soit vraie : 8 > 6 est vrai." }
+      - { texte: "Rien", pourquoi: "La condition est vraie : la branche « alors » s’exécute." }
+  - texte: "Pour quelles valeurs de x la condition ( x > 3 ) et ( x < 3 ) est-elle vraie ?"
+    nom: "Aucune"
+    explication: "Un nombre ne peut pas être à la fois plus grand que 3 et plus petit que 3 : la condition est toujours fausse."
+    pieges:
+      - { texte: "3", pourquoi: "Avec x = 3, 3 > 3 est faux et 3 < 3 aussi." }
+      - { texte: "Toutes", pourquoi: "Avec « et », il faut les deux à la fois : un nombre ne peut pas être plus grand et plus petit que 3." }
+  - texte: "mettre n à 100\nmettre c à 0\nrépéter jusqu’à ce que n < 1 [ mettre n à n / 10, ajouter 1 à c ]\ndire c\nQue dit le lutin ?"
+    nom: "3"
+    explication: "n vaut 10, puis 1, puis 0.1. Seul 0.1 < 1 est vrai : c vaut 3."
+    pieges:
+      - { texte: "2", pourquoi: "Après 2 tours, n vaut 1, et 1 < 1 est faux : il faut un 3e tour." }
+      - { texte: "100", pourquoi: "100 est la valeur de départ de n. Le lutin dit c, le nombre de tours." }
+  - texte: "Pourquoi utiliser « répéter jusqu’à ce que » plutôt que « répéter 10 fois » pour faire avancer un lutin jusqu’au bord ?"
+    nom: "On ne sait pas d’avance combien de pas il faudra"
+    explication: "La distance au bord dépend de l’endroit où se trouve le lutin. La boucle conditionnelle s’arrête quand la condition devient vraie, quel que soit le nombre de tours."
+    pieges:
+      - { texte: "C’est plus rapide", pourquoi: "La vitesse ne change pas : c’est le nombre de tours qui n’est pas connu." }
+      - { texte: "« répéter 10 fois » ne peut pas faire avancer", pourquoi: "Il peut, mais il s’arrête après 10 tours, même loin du bord ou trop tard." }
+
+en:
+  titre: "Repeat until"
+  idee: "“repeat until condition” tests the condition before each turn. False: one more turn. True: the loop stops. You don’t know in advance how many turns there will be."
+  phrases:
+    consigne: "Test the condition before each turn, then touch the answer."
+    question: "{texte}"
+    indice: "Before each turn, ask yourself: is the condition true? If so, the loop ends."
+    exemple: "set x to 1, then repeat until x > 5 [ set x to x * 2 ]: 1, 2, 4, 8. 8 > 5 is true: the loop stops, x is 8."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set x to 1\nrepeat until x > 20 [ set x to x * 2 ]\nsay x\nWhat does the sprite say?"
+      nom: "32"
+      explication: "1, 2, 4, 8, 16: the condition is false. 32 > 20 is true: the loop stops."
+      pieges:
+        - { texte: "16", pourquoi: "16 > 20 is false: the loop does one more turn." }
+        - { texte: "20", pourquoi: "x only takes the values 1, 2, 4, 8, 16, 32: it is never 20." }
+    - texte: "set x to 0\nset n to 0\nrepeat until x > 10 [ change x by 3, change n by 1 ]\nsay n\nWhat does the sprite say?"
+      nom: "4"
+      explication: "x is 3, 6, 9, 12. It takes 4 turns to go past 10: n is 4."
+      pieges:
+        - { texte: "3", pourquoi: "After 3 turns, x is 9, and 9 > 10 is false: a 4th turn is needed." }
+        - { texte: "12", pourquoi: "12 is the value of x. The sprite says n, the number of turns." }
+    - texte: "set x to 5\nrepeat until x = 5 [ change x by 1 ]\nsay x\nWhat does the sprite say?"
+      nom: "5"
+      explication: "Before the first turn, x = 5 is true: the loop ends without doing anything. The sprite says 5."
+      pieges:
+        - { texte: "6", pourquoi: "The condition is tested before the first turn: x = 5 is already true, the loop does not run." }
+        - { texte: "Nothing: the program never stops", pourquoi: "The loop stops straight away, since x = 5 from the start." }
+    - texte: "set x to 1\nrepeat until x = 10 [ change x by 2 ]\nsay x\nWhat happens?"
+      nom: "The loop never stops"
+      explication: "x stays odd: 1, 3, 5, 7, 9, 11, 13… The condition x = 10 is never true. It should have been x > 9."
+      pieges:
+        - { texte: "The sprite says 10", pourquoi: "x takes the values 1, 3, 5, 7, 9, 11…: it is never 10." }
+        - { texte: "The sprite says 11", pourquoi: "At 11, the condition x = 10 is false: the loop goes on." }
+    - texte: "set a to 4\nif ( a > 2 ) and ( a < 6 ) then [ say yes ] else [ say no ]\nWhat does the sprite say?"
+      nom: "yes"
+      explication: "4 > 2: true. 4 < 6: true. True and true gives true: the sprite says yes."
+      pieges:
+        - { texte: "no", pourquoi: "4 > 2 is true and 4 < 6 is true: with “and”, both are true, so the condition is too." }
+        - { texte: "yes, then no", pourquoi: "Only one branch runs." }
+    - texte: "set a to 8\nif ( a < 2 ) or ( a > 6 ) then [ say yes ] else [ say no ]\nWhat does the sprite say?"
+      nom: "yes"
+      explication: "8 < 2 is false, but 8 > 6 is true. False or true gives true."
+      pieges:
+        - { texte: "no", pourquoi: "With “or”, one true part is enough: 8 > 6 is true." }
+        - { texte: "Nothing", pourquoi: "The condition is true: the “then” branch runs." }
+    - texte: "For which values of x is the condition ( x > 3 ) and ( x < 3 ) true?"
+      nom: "None"
+      explication: "A number cannot be both greater than 3 and smaller than 3: the condition is always false."
+      pieges:
+        - { texte: "3", pourquoi: "With x = 3, 3 > 3 is false and so is 3 < 3." }
+        - { texte: "All of them", pourquoi: "With “and”, both must hold at once: a number cannot be greater and smaller than 3." }
+    - texte: "set n to 100\nset c to 0\nrepeat until n < 1 [ set n to n / 10, change c by 1 ]\nsay c\nWhat does the sprite say?"
+      nom: "3"
+      explication: "n is 10, then 1, then 0.1. Only 0.1 < 1 is true: c is 3."
+      pieges:
+        - { texte: "2", pourquoi: "After 2 turns, n is 1, and 1 < 1 is false: a 3rd turn is needed." }
+        - { texte: "100", pourquoi: "100 is the starting value of n. The sprite says c, the number of turns." }
+    - texte: "Why use “repeat until” rather than “repeat 10” to move a sprite to the edge?"
+      nom: "You don’t know in advance how many steps it will take"
+      explication: "The distance to the edge depends on where the sprite is. The conditional loop stops when the condition becomes true, whatever the number of turns."
+      pieges:
+        - { texte: "It is faster", pourquoi: "Speed does not change: it is the number of turns that is unknown." }
+        - { texte: "“repeat 10” cannot move the sprite", pourquoi: "It can, but it stops after 10 turns, even far from the edge or too late." }

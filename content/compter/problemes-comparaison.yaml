@@ -1,0 +1,136 @@
+id: problemes-comparaison
+titre: "Problèmes : « de plus » ou « fois plus » ?"
+niveau: CE2
+prerequis: ["soustraction-posee", "tables-8-9"]
+programme: { source: cycle2, texte: "Résoudre des problèmes de comparaison multiplicative en une étape." }
+activite: quiz
+parametres: {}
+idee: "« 4 de plus », c'est ajouter 4. « 4 fois plus », c'est multiplier par 4. Le schéma en barres le montre : une barre un peu plus longue, ou 4 barres pareilles."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "« Fois plus » : multiplie. « De plus » : ajoute. « Fois moins » : divise. « De moins » : soustrais."
+  exemple: "Le casque coûte 32 €. La trottinette coûte 4 fois plus cher. Schéma : la barre du casque, et 4 barres pareilles pour la trottinette. 4 × 32 = 128 : la trottinette coûte 128 €."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Léo a 12 billes. Lucie en a 3 fois plus. Combien Lucie a-t-elle de billes ?"
+    nom: "36"
+    explication: "Schéma : 3 barres de 12 pour Lucie. 3 × 12 = 36 billes."
+    pieges:
+      - { texte: "15", pourquoi: "12 + 3 : « 3 fois plus », c'est multiplier par 3, pas ajouter 3." }
+      - { texte: "4", pourquoi: "12 ÷ 3 : « fois plus » donne un nombre plus grand." }
+  - texte: "Léo a 12 billes. Lucie en a 3 de plus. Combien Lucie a-t-elle de billes ?"
+    nom: "15"
+    explication: "Schéma : la barre de Léo, 12, et un petit morceau de 3 en plus pour Lucie. 12 + 3 = 15 billes."
+    pieges:
+      - { texte: "36", pourquoi: "« 3 de plus », c'est ajouter 3, pas multiplier par 3." }
+      - { texte: "9", pourquoi: "12 − 3 : « de plus » veut dire que Lucie en a davantage." }
+  - texte: "Un pull coûte 40 €. Un tee-shirt coûte 4 fois moins cher. Combien coûte le tee-shirt ?"
+    nom: "10 €"
+    explication: "Schéma : la barre du pull coupée en 4 parts égales. 40 ÷ 4 = 10 : le tee-shirt coûte 10 €."
+    pieges:
+      - { texte: "36 €", pourquoi: "40 − 4 : « 4 fois moins », c'est diviser par 4." }
+      - { texte: "160 €", pourquoi: "40 × 4 : « fois moins » donne un nombre plus petit." }
+  - texte: "Une corde mesure 50 m. Une autre corde mesure 8 m de moins. Combien mesure-t-elle ?"
+    nom: "42 m"
+    explication: "« 8 m de moins » : on enlève 8. 50 − 8 = 42 m."
+    pieges:
+      - { texte: "58 m", pourquoi: "50 + 8 : « de moins » veut dire que la corde est plus courte." }
+      - { texte: "400 m", pourquoi: "50 × 8 : « de moins » demande une soustraction." }
+  - texte: "Léo a 146 billes. Lucie en a 58 de plus que Léo. Combien les deux enfants ont-ils de billes en tout ?"
+    nom: "350"
+    explication: "Étape 1 : Lucie a 146 + 58 = 204 billes. Étape 2 : en tout, 146 + 204 = 350 billes."
+    pieges:
+      - { texte: "204", pourquoi: "204, ce sont les billes de Lucie seule : il faut ajouter celles de Léo." }
+      - { texte: "88", pourquoi: "146 − 58 : « de plus » veut dire que Lucie en a davantage, on ajoute." }
+  - texte: "Le casque coûte 15 €. Le vélo coûte 6 fois plus cher. Quel schéma convient pour le vélo ?"
+    nom: "6 barres de 15 € mises bout à bout"
+    explication: "« 6 fois plus » : la barre du vélo est faite de 6 barres de 15 €. 6 × 15 = 90 €."
+    pieges:
+      - { texte: "Une barre de 15 € et 6 € en plus", pourquoi: "Ce schéma montre « 6 € de plus », pas « 6 fois plus »." }
+      - { texte: "Une barre de 15 € coupée en 6", pourquoi: "Ce schéma montre « 6 fois moins » : le vélo serait moins cher." }
+  - texte: "Sami a 9 ans. Son père a 4 fois plus. Schéma : 4 barres de 9. Calcul : … × 9 = 36. Quel nombre manque ?"
+    nom: "4"
+    explication: "Il y a 4 barres de 9 : 4 × 9 = 36. Le père de Sami a 36 ans."
+    pieges:
+      - { texte: "9", pourquoi: "9 est déjà écrit : il manque le nombre de barres, 4." }
+      - { texte: "27", pourquoi: "36 − 9 : on cherche combien de barres de 9, c'est 4." }
+  - texte: "Une école a 120 livres. La médiathèque en a 5 fois plus. Combien de livres a la médiathèque ?"
+    nom: "600"
+    explication: "5 barres de 120 : 5 × 120 = 600 livres."
+    pieges:
+      - { texte: "125", pourquoi: "120 + 5 : « 5 fois plus », c'est multiplier par 5." }
+      - { texte: "24", pourquoi: "120 ÷ 5 : « fois plus » donne un nombre plus grand." }
+  - texte: "« Lou a 6 ans de plus que Max. » Pourquoi ajoute-t-on 6 à l'âge de Max pour trouver l'âge de Lou ?"
+    nom: "Parce que Lou a l'âge de Max, et encore 6 ans."
+    explication: "Schéma : la barre de Lou est celle de Max, plus un morceau de 6 ans."
+    pieges:
+      - { texte: "Parce qu'il y a le mot « plus ».", pourquoi: "Le mot « plus » ne suffit pas : « 6 fois plus » demanderait une multiplication." }
+      - { texte: "Parce que Lou est plus jeune.", pourquoi: "Si Lou était plus jeune, on soustrairait : ici, Lou est plus âgé." }
+
+en:
+  titre: "Problems: \"more\" or \"times as many\"?"
+  idee: "\"4 more\" means add 4. \"4 times as many\" means multiply by 4. The bar model shows it: a slightly longer bar, or 4 equal bars."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "\"Times as many\": multiply. \"More\": add. \"Times fewer\": divide. \"Fewer\" or \"less\": subtract."
+    exemple: "The helmet costs €32. The scooter costs 4 times as much. Bar model: the helmet bar, and 4 equal bars for the scooter. 4 × 32 = 128: the scooter costs €128."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Leo has 12 marbles. Lucy has 3 times as many. How many marbles does Lucy have?"
+      nom: "36"
+      explication: "Bar model: 3 bars of 12 for Lucy. 3 × 12 = 36 marbles."
+      pieges:
+        - { texte: "15", pourquoi: "12 + 3: \"3 times as many\" means multiply by 3, not add 3." }
+        - { texte: "4", pourquoi: "12 ÷ 3: \"times as many\" gives a bigger number." }
+    - texte: "Leo has 12 marbles. Lucy has 3 more. How many marbles does Lucy have?"
+      nom: "15"
+      explication: "Bar model: Leo's bar, 12, and a small extra piece of 3 for Lucy. 12 + 3 = 15 marbles."
+      pieges:
+        - { texte: "36", pourquoi: "\"3 more\" means add 3, not multiply by 3." }
+        - { texte: "9", pourquoi: "12 − 3: \"more\" means Lucy has more." }
+    - texte: "A jumper costs €40. A T-shirt costs 4 times less. How much is the T-shirt?"
+      nom: "€10"
+      explication: "Bar model: the jumper bar cut into 4 equal parts. 40 ÷ 4 = 10: the T-shirt costs €10."
+      pieges:
+        - { texte: "€36", pourquoi: "40 − 4: \"4 times less\" means divide by 4." }
+        - { texte: "€160", pourquoi: "40 × 4: \"times less\" gives a smaller number." }
+    - texte: "A rope is 50 m long. Another rope is 8 m shorter. How long is it?"
+      nom: "42 m"
+      explication: "\"8 m shorter\": take away 8. 50 − 8 = 42 m."
+      pieges:
+        - { texte: "58 m", pourquoi: "50 + 8: \"shorter\" means the rope is less long." }
+        - { texte: "400 m", pourquoi: "50 × 8: \"shorter\" needs a subtraction." }
+    - texte: "Leo has 146 marbles. Lucy has 58 more than Leo. How many marbles do the two children have altogether?"
+      nom: "350"
+      explication: "Step 1: Lucy has 146 + 58 = 204 marbles. Step 2: altogether, 146 + 204 = 350 marbles."
+      pieges:
+        - { texte: "204", pourquoi: "204 is Lucy's marbles only: add Leo's too." }
+        - { texte: "88", pourquoi: "146 − 58: \"more\" means Lucy has more, so add." }
+    - texte: "The helmet costs €15. The bike costs 6 times as much. Which bar model fits the bike?"
+      nom: "6 bars of €15 end to end"
+      explication: "\"6 times as much\": the bike bar is made of 6 bars of €15. 6 × 15 = €90."
+      pieges:
+        - { texte: "One bar of €15 plus €6", pourquoi: "This model shows \"€6 more\", not \"6 times as much\"." }
+        - { texte: "One bar of €15 cut into 6", pourquoi: "This model shows \"6 times less\": the bike would be cheaper." }
+    - texte: "Sami is 9. His dad is 4 times as old. Bar model: 4 bars of 9. Calculation: … × 9 = 36. Which number is missing?"
+      nom: "4"
+      explication: "There are 4 bars of 9: 4 × 9 = 36. Sami's dad is 36."
+      pieges:
+        - { texte: "9", pourquoi: "9 is already written: the number of bars, 4, is missing." }
+        - { texte: "27", pourquoi: "36 − 9: we want how many bars of 9, which is 4." }
+    - texte: "A school has 120 books. The library has 5 times as many. How many books does the library have?"
+      nom: "600"
+      explication: "5 bars of 120: 5 × 120 = 600 books."
+      pieges:
+        - { texte: "125", pourquoi: "120 + 5: \"5 times as many\" means multiply by 5." }
+        - { texte: "24", pourquoi: "120 ÷ 5: \"times as many\" gives a bigger number." }
+    - texte: "\"Lou is 6 years older than Max.\" Why do we add 6 to Max's age to find Lou's age?"
+      nom: "Because Lou is Max's age, plus 6 more years."
+      explication: "Bar model: Lou's bar is Max's bar plus a piece of 6 years."
+      pieges:
+        - { texte: "Because of the word \"older\".", pourquoi: "A word is not enough: \"6 times as old\" would need a multiplication." }
+        - { texte: "Because Lou is younger.", pourquoi: "If Lou were younger, we would subtract: here Lou is older." }

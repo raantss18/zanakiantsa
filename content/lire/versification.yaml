@@ -1,0 +1,137 @@
+id: versification
+titre: "Vers, rimes et strophes"
+niveau: 2de
+prerequis: ["rimes"]
+programme: { source: lycee2de, texte: "la lecture expressive, associée notamment au travail de mémorisation, en portant une attention particulière à la restitution des valeurs rythmiques et sonores du vers" }
+activite: quiz
+parametres: {}
+idee: "On compte les syllabes d’un vers : 12, c’est un alexandrin. Le « e » muet compte devant une consonne, pas en fin de vers. Rimes suivies AABB, croisées ABAB, embrassées ABBA."
+phrases:
+  consigne: "Compte, compare ou nomme, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pour compter, prononce chaque syllabe ; le « e » muet en fin de vers ne compte pas. Pour les rimes, note A, B… les sons de fin."
+  exemple: "« Ma jeunesse ne fut qu’un ténébreux orage » : Ma-jeu-nes-se-ne-fut-qu’un-té-né-breux-o-ra(ge), 12 syllabes, un alexandrin."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Ma jeunesse ne fut qu’un ténébreux orage » (Baudelaire). Combien de syllabes ?"
+    nom: "12 syllabes : un alexandrin"
+    explication: "Ma-jeu-nes-se-ne-fut-qu’un-té-né-breux-o-ra(ge) : 12 syllabes, le « e » final ne compte pas."
+    pieges:
+      - { texte: "13 syllabes", pourquoi: "Le « e » final de « orage », en fin de vers, ne se compte pas : 12 syllabes." }
+      - { texte: "10 syllabes : un décasyllabe", pourquoi: "Le « e » de « jeunesse » compte devant la consonne de « ne » : Ma-jeu-nes-se-ne… on arrive à 12." }
+  - texte: "« Maître Corbeau sur un arbre perché » (La Fontaine). Combien de syllabes ?"
+    nom: "10 syllabes : un décasyllabe"
+    explication: "Maî-tre-Cor-beau-sur-un-ar-bre-per-ché : 10 syllabes."
+    pieges:
+      - { texte: "8 syllabes : un octosyllabe", pourquoi: "Les « e » de « Maître » et « arbre » comptent devant une consonne : Maî-tre-Cor-beau-sur-un-ar-bre-per-ché, 10." }
+      - { texte: "12 syllabes : un alexandrin", pourquoi: "Compte une syllabe par voyelle prononcée : Maî-tre-Cor-beau-sur-un-ar-bre-per-ché, 10." }
+  - texte: "Quatre vers finissent par : soleil, pareil, rivière, lumière (AABB). Comment sont les rimes ?"
+    nom: "suivies (ou plates)"
+    explication: "Deux rimes A, puis deux rimes B : AABB, ce sont des rimes suivies."
+    pieges:
+      - { texte: "croisées", pourquoi: "Les rimes croisées alternent : ABAB." }
+      - { texte: "embrassées", pourquoi: "Dans des rimes embrassées, les rimes B sont entourées par les A : ABBA." }
+  - texte: "Quatre vers finissent par : chemin, rose, matin, pose (ABAB). Comment sont les rimes ?"
+    nom: "croisées"
+    explication: "chemin/matin (A) et rose/pose (B) alternent : ABAB, ce sont des rimes croisées."
+    pieges:
+      - { texte: "suivies (ou plates)", pourquoi: "Les rimes suivies vont par deux : AABB ; ici elles alternent." }
+      - { texte: "embrassées", pourquoi: "Embrassées, c’est ABBA ; ici, c’est ABAB." }
+  - texte: "Quatre vers finissent par : jour, ciel, miel, amour (ABBA). Comment sont les rimes ?"
+    nom: "embrassées"
+    explication: "jour/amour (A) entourent ciel/miel (B) : ABBA, ce sont des rimes embrassées."
+    pieges:
+      - { texte: "croisées", pourquoi: "Croisées, c’est ABAB ; ici, les A entourent les B." }
+      - { texte: "suivies (ou plates)", pourquoi: "Suivies, c’est AABB ; ici, les A entourent les B." }
+  - texte: "Une strophe de quatre vers s’appelle…"
+    nom: "un quatrain"
+    explication: "Quatre vers forment un quatrain."
+    pieges:
+      - { texte: "un tercet", pourquoi: "Un tercet a trois vers." }
+      - { texte: "un distique", pourquoi: "Un distique a deux vers." }
+  - texte: "Un sonnet est formé de…"
+    nom: "deux quatrains et deux tercets"
+    explication: "Le sonnet a 14 vers : deux quatrains puis deux tercets."
+    pieges:
+      - { texte: "trois quatrains", pourquoi: "Trois quatrains font 12 vers ; le sonnet en a 14 : deux quatrains et deux tercets." }
+      - { texte: "quatre tercets", pourquoi: "Quatre tercets font 12 vers ; le sonnet a deux quatrains et deux tercets." }
+  - texte: "Qu’est-ce qu’une rime féminine ?"
+    nom: "une rime qui finit par un « e » muet"
+    explication: "« orage », « rose » : la rime finit par un « e » muet, elle est féminine."
+    pieges:
+      - { texte: "une rime qui parle d’une femme", pourquoi: "Le sens ne compte pas : seul le « e » muet final rend une rime féminine." }
+      - { texte: "une rime faite avec un nom féminin", pourquoi: "« la mer » est féminin, mais « mer » finit sans « e » muet : c’est une rime masculine." }
+  - texte: "Dans « Ma jeunesse ne fut qu’un ténébreux orage », pourquoi compte-t-on le « e » de « jeunesse » mais pas celui de « orage » ?"
+    nom: "Le « e » muet compte devant une consonne, pas en fin de vers."
+    explication: "« jeunesse » est suivi de « ne » (une consonne) : le « e » se prononce. « orage » est en fin de vers : le « e » ne compte pas."
+    pieges:
+      - { texte: "Parce que « jeunesse » est un mot plus long.", pourquoi: "La longueur du mot ne compte pas : c’est la place du « e » qui décide." }
+      - { texte: "On ne compte jamais le « e » muet.", pourquoi: "Devant une consonne, à l’intérieur du vers, il se prononce et se compte : jeu-nes-se-ne." }
+
+en:
+  langue: "fr"
+  titre: "French: lines, rhymes and stanzas"
+  idee: "Count the syllables in a line: 12 is an alexandrine. A silent « e » counts before a consonant, not at the end of a line. Rhymes: couplets AABB, alternate ABAB, enclosed ABBA."
+  phrases:
+    consigne: "Count, compare or name, then touch the right answer."
+    question: "{texte}"
+    indice: "To count, say each syllable; a silent « e » at the end of a line doesn't count. For rhymes, label the end sounds A, B…"
+    exemple: "« Ma jeunesse ne fut qu’un ténébreux orage »: « Ma-jeu-nes-se-ne-fut-qu’un-té-né-breux-o-ra(ge) », 12 syllables, an alexandrine."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Ma jeunesse ne fut qu’un ténébreux orage » (Baudelaire). How many syllables?"
+      nom: "12 syllables: an alexandrine"
+      explication: "« Ma-jeu-nes-se-ne-fut-qu’un-té-né-breux-o-ra(ge) »: 12 syllables, the final « e » doesn't count."
+      pieges:
+        - { texte: "13 syllables", pourquoi: "The final « e » of « orage », at the end of the line, doesn't count: 12 syllables." }
+        - { texte: "10 syllables: a decasyllable", pourquoi: "The « e » of « jeunesse » counts before the consonant of « ne »: « Ma-jeu-nes-se-ne… » adds up to 12." }
+    - texte: "« Maître Corbeau sur un arbre perché » (La Fontaine). How many syllables?"
+      nom: "10 syllables: a decasyllable"
+      explication: "« Maî-tre-Cor-beau-sur-un-ar-bre-per-ché »: 10 syllables."
+      pieges:
+        - { texte: "8 syllables: an octosyllable", pourquoi: "The « e » in « Maître » and « arbre » counts before a consonant: « Maî-tre-Cor-beau-sur-un-ar-bre-per-ché », 10." }
+        - { texte: "12 syllables: an alexandrine", pourquoi: "Count one syllable per spoken vowel: « Maî-tre-Cor-beau-sur-un-ar-bre-per-ché », 10." }
+    - texte: "Four lines end with: « soleil, pareil, rivière, lumière » (AABB). What kind of rhymes?"
+      nom: "couplets (rimes suivies)"
+      explication: "Two A rhymes, then two B rhymes: AABB, rhyming couplets."
+      pieges:
+        - { texte: "alternate (croisées)", pourquoi: "Alternate rhymes take turns: ABAB." }
+        - { texte: "enclosed (embrassées)", pourquoi: "In enclosed rhymes, the B rhymes are wrapped by the A rhymes: ABBA." }
+    - texte: "Four lines end with: « chemin, rose, matin, pose » (ABAB). What kind of rhymes?"
+      nom: "alternate (croisées)"
+      explication: "« chemin/matin » (A) and « rose/pose » (B) take turns: ABAB, alternate rhymes."
+      pieges:
+        - { texte: "couplets (rimes suivies)", pourquoi: "Couplets go in pairs: AABB; here they take turns." }
+        - { texte: "enclosed (embrassées)", pourquoi: "Enclosed is ABBA; here it's ABAB." }
+    - texte: "Four lines end with: « jour, ciel, miel, amour » (ABBA). What kind of rhymes?"
+      nom: "enclosed (embrassées)"
+      explication: "« jour/amour » (A) wrap round « ciel/miel » (B): ABBA, enclosed rhymes."
+      pieges:
+        - { texte: "alternate (croisées)", pourquoi: "Alternate is ABAB; here the A rhymes wrap round the B rhymes." }
+        - { texte: "couplets (rimes suivies)", pourquoi: "Couplets are AABB; here the A rhymes wrap round the B rhymes." }
+    - texte: "A four-line stanza is called…"
+      nom: "a quatrain"
+      explication: "Four lines make a quatrain."
+      pieges:
+        - { texte: "a tercet", pourquoi: "A tercet has three lines." }
+        - { texte: "a distich", pourquoi: "A distich has two lines." }
+    - texte: "A sonnet is made of…"
+      nom: "two quatrains and two tercets"
+      explication: "A sonnet has 14 lines: two quatrains, then two tercets."
+      pieges:
+        - { texte: "three quatrains", pourquoi: "Three quatrains make 12 lines; a sonnet has 14: two quatrains and two tercets." }
+        - { texte: "four tercets", pourquoi: "Four tercets make 12 lines; a sonnet has two quatrains and two tercets." }
+    - texte: "What is a feminine rhyme (« rime féminine »)?"
+      nom: "a rhyme ending in a silent « e »"
+      explication: "« orage », « rose »: the rhyme ends in a silent « e », so it's feminine."
+      pieges:
+        - { texte: "a rhyme about a woman", pourquoi: "Meaning doesn't matter: only the final silent « e » makes a rhyme feminine." }
+        - { texte: "a rhyme made with a feminine noun", pourquoi: "« la mer » is feminine, but « mer » has no silent « e »: it's a masculine rhyme." }
+    - texte: "In « Ma jeunesse ne fut qu’un ténébreux orage », why does the « e » of « jeunesse » count but not the one in « orage »?"
+      nom: "A silent « e » counts before a consonant, not at the end of a line."
+      explication: "« jeunesse » is followed by « ne » (a consonant): the « e » is spoken. « orage » ends the line: its « e » doesn't count."
+      pieges:
+        - { texte: "Because « jeunesse » is a longer word.", pourquoi: "Word length doesn't matter: the position of the « e » decides." }
+        - { texte: "A silent « e » never counts.", pourquoi: "Before a consonant, inside the line, it's spoken and counted: « jeu-nes-se-ne »." }

@@ -1,0 +1,137 @@
+id: present-er
+titre: "Le présent des verbes en -er"
+niveau: CE1
+prerequis: ["sujet-et-verbe"]
+programme: { source: cycle2, texte: "Apprendre à conjuguer au présent, à l’imparfait, au futur puis au passé composé de l’indicatif être et avoir et les verbes du premier groupe." }
+activite: quiz
+parametres: {}
+idee: "Au présent, les verbes en -er finissent par -e, -es, -e, -ons, -ez, -ent : je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent."
+phrases:
+  consigne: "Lis le sujet et le verbe, puis touche la bonne forme au présent."
+  question: "{texte}"
+  indice: "Regarde le sujet : je, tu, il, nous, vous ou ils ? Chacun a sa terminaison."
+  exemple: "Chanter avec « nous » : nous chantons. Avec « vous » : vous chantez. Avec « ils » : ils chantent."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète au présent : nous (chanter)"
+    nom: "chantons"
+    explication: "Avec « nous », le verbe finit par -ons : nous chantons."
+    pieges:
+      - { texte: "chantez", pourquoi: "Ça va avec « vous ». Avec « nous », on écrit -ons : nous chantons." }
+      - { texte: "chantent", pourquoi: "Ça va avec « ils » ou « elles ». Avec « nous », on écrit -ons : nous chantons." }
+  - texte: "Complète au présent : tu (jouer)"
+    nom: "joues"
+    explication: "Avec « tu », le verbe finit par -es : tu joues."
+    pieges:
+      - { texte: "joue", pourquoi: "Ça va avec « je », « il » ou « elle ». Avec « tu », on ajoute un -s : tu joues." }
+      - { texte: "jouez", pourquoi: "Ça va avec « vous ». Avec « tu », on écrit -es : tu joues." }
+  - texte: "Complète au présent : ils (parler)"
+    nom: "parlent"
+    explication: "Avec « ils », le verbe finit par -ent : ils parlent."
+    pieges:
+      - { texte: "parle", pourquoi: "Ça va avec « je », « il » ou « elle ». Avec « ils », on écrit -ent : ils parlent." }
+      - { texte: "parlons", pourquoi: "Ça va avec « nous ». Avec « ils », on écrit -ent : ils parlent." }
+  - texte: "Complète au présent : je (danser)"
+    nom: "danse"
+    explication: "Avec « je », le verbe finit par -e : je danse."
+    pieges:
+      - { texte: "danses", pourquoi: "Ça va avec « tu ». Avec « je », on écrit -e : je danse." }
+      - { texte: "dansent", pourquoi: "Ça va avec « ils » ou « elles ». Avec « je », on écrit -e : je danse." }
+  - texte: "Complète au présent : vous (regarder)"
+    nom: "regardez"
+    explication: "Avec « vous », le verbe finit par -ez : vous regardez."
+    pieges:
+      - { texte: "regardons", pourquoi: "Ça va avec « nous ». Avec « vous », on écrit -ez : vous regardez." }
+      - { texte: "regardent", pourquoi: "Ça va avec « ils » ou « elles ». Avec « vous », on écrit -ez : vous regardez." }
+  - texte: "Complète au présent : elle (marcher)"
+    nom: "marche"
+    explication: "Avec « elle », le verbe finit par -e : elle marche."
+    pieges:
+      - { texte: "marches", pourquoi: "Ça va avec « tu ». Avec « elle », on écrit -e : elle marche." }
+      - { texte: "marchent", pourquoi: "Ça va avec « ils » ou « elles », au pluriel. Avec « elle », on écrit -e : elle marche." }
+  - texte: "Complète au présent : les enfants (sauter)"
+    nom: "sautent"
+    explication: "« Les enfants », c’est « ils » : le verbe finit par -ent."
+    pieges:
+      - { texte: "saute", pourquoi: "Le sujet « les enfants » est au pluriel, comme « ils » : on écrit -ent." }
+      - { texte: "sautez", pourquoi: "Ça va avec « vous ». « Les enfants », c’est « ils » : on écrit -ent." }
+  - texte: "Pourquoi écrit-on « tu manges » avec un -s ?"
+    nom: "Avec « tu », le verbe finit par -s."
+    explication: "Au présent, la terminaison avec « tu » est -es : tu manges."
+    pieges:
+      - { texte: "Parce qu’on mange plusieurs choses.", pourquoi: "Le -s du verbe ne dépend pas de ce qu’on mange : il vient du sujet « tu »." }
+      - { texte: "Parce que le verbe est au futur.", pourquoi: "« tu manges » est au présent ; au futur, on écrirait « tu mangeras »." }
+  - texte: "« vous pliez » : quel est l’infinitif de ce verbe ?"
+    nom: "plier"
+    explication: "On garde le radical « pli- » et on ajoute -er : plier."
+    pieges:
+      - { texte: "pliez", pourquoi: "C’est la forme conjuguée avec « vous ». L’infinitif finit par -er : plier." }
+      - { texte: "plié", pourquoi: "C’est le participe passé, comme dans « j’ai plié ». L’infinitif est « plier »." }
+
+en:
+  langue: "fr"
+  titre: "French: the present tense of « -er » verbs"
+  idee: "In the present, « -er » verbs end in « -e, -es, -e, -ons, -ez, -ent »: « je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent »."
+  phrases:
+    consigne: "Read the subject and the verb, then touch the right form in the present tense."
+    question: "{texte}"
+    indice: "Look at the subject: « je », « tu », « il », « nous », « vous » or « ils »? Each one has its own ending."
+    exemple: "« Chanter » with « nous »: « nous chantons ». With « vous »: « vous chantez ». With « ils »: « ils chantent »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Fill in, in the present tense: « nous (chanter) »"
+      nom: "chantons"
+      explication: "With « nous », the verb ends in « -ons »: « nous chantons »."
+      pieges:
+        - { texte: "chantez", pourquoi: "That goes with « vous ». With « nous », write « -ons »: « nous chantons »." }
+        - { texte: "chantent", pourquoi: "That goes with « ils » or « elles ». With « nous », write « -ons »: « nous chantons »." }
+    - texte: "Fill in, in the present tense: « tu (jouer) »"
+      nom: "joues"
+      explication: "With « tu », the verb ends in « -es »: « tu joues »."
+      pieges:
+        - { texte: "joue", pourquoi: "That goes with « je », « il » or « elle ». With « tu », add an « s »: « tu joues »." }
+        - { texte: "jouez", pourquoi: "That goes with « vous ». With « tu », write « -es »: « tu joues »." }
+    - texte: "Fill in, in the present tense: « ils (parler) »"
+      nom: "parlent"
+      explication: "With « ils », the verb ends in « -ent »: « ils parlent »."
+      pieges:
+        - { texte: "parle", pourquoi: "That goes with « je », « il » or « elle ». With « ils », write « -ent »: « ils parlent »." }
+        - { texte: "parlons", pourquoi: "That goes with « nous ». With « ils », write « -ent »: « ils parlent »." }
+    - texte: "Fill in, in the present tense: « je (danser) »"
+      nom: "danse"
+      explication: "With « je », the verb ends in « -e »: « je danse »."
+      pieges:
+        - { texte: "danses", pourquoi: "That goes with « tu ». With « je », write « -e »: « je danse »." }
+        - { texte: "dansent", pourquoi: "That goes with « ils » or « elles ». With « je », write « -e »: « je danse »." }
+    - texte: "Fill in, in the present tense: « vous (regarder) »"
+      nom: "regardez"
+      explication: "With « vous », the verb ends in « -ez »: « vous regardez »."
+      pieges:
+        - { texte: "regardons", pourquoi: "That goes with « nous ». With « vous », write « -ez »: « vous regardez »." }
+        - { texte: "regardent", pourquoi: "That goes with « ils » or « elles ». With « vous », write « -ez »: « vous regardez »." }
+    - texte: "Fill in, in the present tense: « elle (marcher) »"
+      nom: "marche"
+      explication: "With « elle », the verb ends in « -e »: « elle marche »."
+      pieges:
+        - { texte: "marches", pourquoi: "That goes with « tu ». With « elle », write « -e »: « elle marche »." }
+        - { texte: "marchent", pourquoi: "That goes with « ils » or « elles », in the plural. With « elle », write « -e »: « elle marche »." }
+    - texte: "Fill in, in the present tense: « les enfants (sauter) »"
+      nom: "sautent"
+      explication: "« Les enfants » means « ils »: the verb ends in « -ent »."
+      pieges:
+        - { texte: "saute", pourquoi: "The subject « les enfants » is plural, like « ils »: write « -ent »." }
+        - { texte: "sautez", pourquoi: "That goes with « vous ». « Les enfants » means « ils »: write « -ent »." }
+    - texte: "Why do we write « tu manges » with an « s »?"
+      nom: "With « tu », the verb ends in « s »."
+      explication: "In the present, the ending with « tu » is « -es »: « tu manges »."
+      pieges:
+        - { texte: "Because you eat several things.", pourquoi: "The « s » on the verb doesn't depend on what you eat: it comes from the subject « tu »." }
+        - { texte: "Because the verb is in the future tense.", pourquoi: "« tu manges » is in the present; in the future you would write « tu mangeras »." }
+    - texte: "« vous pliez »: what is the infinitive of this verb?"
+      nom: "plier"
+      explication: "Keep the stem « pli- » and add « -er »: « plier »."
+      pieges:
+        - { texte: "pliez", pourquoi: "That's the form conjugated with « vous ». The infinitive ends in « -er »: « plier »." }
+        - { texte: "plié", pourquoi: "That's the past participle, as in « j’ai plié ». The infinitive is « plier »." }

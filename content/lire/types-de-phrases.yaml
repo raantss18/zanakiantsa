@@ -1,0 +1,137 @@
+id: types-de-phrases
+titre: "Les types de phrases et la ponctuation"
+niveau: CE1
+prerequis: ["lire-phrases"]
+programme: { source: cycle2, texte: "Reconnaitre et utiliser les trois types de phrases, en lien avec la ponctuation : déclarative, interrogative et impérative." }
+activite: quiz
+parametres: {}
+idee: "Une phrase déclarative donne une information. Une phrase interrogative pose une question et finit par « ? ». Une phrase impérative donne un ordre ou un conseil."
+phrases:
+  consigne: "Lis la phrase, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "La phrase donne-t-elle une information, pose-t-elle une question, ou donne-t-elle un ordre ?"
+  exemple: "« Ferme la porte. » donne un ordre : c’est une phrase impérative."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Ferme la porte. » Quel est le type de cette phrase ?"
+    nom: "impérative"
+    explication: "On donne un ordre : c’est une phrase impérative."
+    pieges:
+      - { texte: "déclarative", pourquoi: "Une phrase déclarative donne une information ; ici, on donne un ordre." }
+      - { texte: "interrogative", pourquoi: "Il n’y a pas de point d’interrogation : on ne pose pas de question." }
+  - texte: "« Où est mon sac ? » Quel est le type de cette phrase ?"
+    nom: "interrogative"
+    explication: "On pose une question et la phrase finit par un point d’interrogation : elle est interrogative."
+    pieges:
+      - { texte: "déclarative", pourquoi: "Une phrase déclarative finit par un point ; ici, il y a « ? » : c’est une question." }
+      - { texte: "impérative", pourquoi: "On ne donne pas d’ordre : on demande où est le sac." }
+  - texte: "« Le train arrive à midi. » Quel est le type de cette phrase ?"
+    nom: "déclarative"
+    explication: "On donne une information : c’est une phrase déclarative."
+    pieges:
+      - { texte: "interrogative", pourquoi: "On ne pose pas de question : il n’y a pas de « ? »." }
+      - { texte: "impérative", pourquoi: "On ne donne pas d’ordre : on dit à quelle heure arrive le train." }
+  - texte: "« Mange ta soupe. » Quel est le type de cette phrase ?"
+    nom: "impérative"
+    explication: "On donne un ordre : c’est une phrase impérative."
+    pieges:
+      - { texte: "déclarative", pourquoi: "Elle finit par un point, mais elle donne un ordre : elle est impérative." }
+      - { texte: "interrogative", pourquoi: "On ne pose pas de question : il n’y a pas de « ? »." }
+  - texte: "« Est-ce que tu viens ? » Quel est le type de cette phrase ?"
+    nom: "interrogative"
+    explication: "« Est-ce que » et le point d’interrogation montrent une question."
+    pieges:
+      - { texte: "déclarative", pourquoi: "Une phrase déclarative ne pose pas de question ; ici, il y a « Est-ce que » et « ? »." }
+      - { texte: "impérative", pourquoi: "On ne donne pas d’ordre : on demande quelque chose." }
+  - texte: "Quel signe faut-il à la fin de « Quel âge as-tu » ?"
+    nom: "un point d’interrogation (?)"
+    explication: "La phrase pose une question : elle finit par un point d’interrogation."
+    pieges:
+      - { texte: "un point (.)", pourquoi: "Le point termine une information ou un ordre ; ici, on pose une question." }
+      - { texte: "un point d’exclamation (!)", pourquoi: "Le point d’exclamation montre une émotion ; ici, on pose une question." }
+  - texte: "Quel signe faut-il à la fin de « Nous allons à la plage » ?"
+    nom: "un point (.)"
+    explication: "La phrase donne une information : elle finit par un point."
+    pieges:
+      - { texte: "un point d’interrogation (?)", pourquoi: "On ne pose pas de question : on dit où l’on va." }
+      - { texte: "un point d’exclamation (!)", pourquoi: "Rien ne montre une émotion forte : c’est une simple information." }
+  - texte: "Quel signe faut-il à la fin de « Quelle belle surprise » ?"
+    nom: "un point d’exclamation (!)"
+    explication: "La phrase montre une émotion forte : elle est exclamative et finit par un point d’exclamation."
+    pieges:
+      - { texte: "un point d’interrogation (?)", pourquoi: "On ne pose pas de question : on montre sa joie." }
+      - { texte: "un point (.)", pourquoi: "« Quelle belle surprise » montre une émotion : il faut un point d’exclamation." }
+  - texte: "« Range ta chambre. » est une phrase impérative. Pourquoi ?"
+    nom: "Elle donne un ordre."
+    explication: "Une phrase impérative donne un ordre ou un conseil."
+    pieges:
+      - { texte: "Elle pose une question.", pourquoi: "Il n’y a pas de « ? » : on ne pose pas de question." }
+      - { texte: "Elle finit par un point.", pourquoi: "Une phrase déclarative finit aussi par un point : c’est l’ordre donné qui la rend impérative." }
+
+en:
+  langue: "fr"
+  titre: "French: types of sentence and punctuation"
+  idee: "A declarative sentence gives information. An interrogative sentence asks a question and ends with « ? ». An imperative sentence gives an order or advice."
+  phrases:
+    consigne: "Read the French sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Does the sentence give information, ask a question, or give an order?"
+    exemple: "« Ferme la porte. » gives an order: it's an imperative sentence."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Ferme la porte. » What type of sentence is it?"
+      nom: "imperative"
+      explication: "It gives an order: it's an imperative sentence."
+      pieges:
+        - { texte: "declarative", pourquoi: "A declarative sentence gives information; this one gives an order." }
+        - { texte: "interrogative", pourquoi: "There's no question mark: it doesn't ask a question." }
+    - texte: "« Où est mon sac ? » What type of sentence is it?"
+      nom: "interrogative"
+      explication: "It asks a question and ends with a question mark: it's interrogative."
+      pieges:
+        - { texte: "declarative", pourquoi: "A declarative sentence ends with a full stop; this one has « ? »: it's a question." }
+        - { texte: "imperative", pourquoi: "It doesn't give an order: it asks where the bag is." }
+    - texte: "« Le train arrive à midi. » What type of sentence is it?"
+      nom: "declarative"
+      explication: "It gives information: it's a declarative sentence."
+      pieges:
+        - { texte: "interrogative", pourquoi: "It doesn't ask a question: there's no « ? »." }
+        - { texte: "imperative", pourquoi: "It doesn't give an order: it says when the train arrives." }
+    - texte: "« Mange ta soupe. » What type of sentence is it?"
+      nom: "imperative"
+      explication: "It gives an order: it's an imperative sentence."
+      pieges:
+        - { texte: "declarative", pourquoi: "It ends with a full stop, but it gives an order: it's imperative." }
+        - { texte: "interrogative", pourquoi: "It doesn't ask a question: there's no « ? »." }
+    - texte: "« Est-ce que tu viens ? » What type of sentence is it?"
+      nom: "interrogative"
+      explication: "« Est-ce que » and the question mark show a question."
+      pieges:
+        - { texte: "declarative", pourquoi: "A declarative sentence doesn't ask anything; this one has « Est-ce que » and « ? »." }
+        - { texte: "imperative", pourquoi: "It doesn't give an order: it asks something." }
+    - texte: "Which mark goes at the end of « Quel âge as-tu »?"
+      nom: "a question mark (?)"
+      explication: "The sentence asks a question: it ends with a question mark."
+      pieges:
+        - { texte: "a full stop (.)", pourquoi: "A full stop ends a piece of information or an order; this one asks a question." }
+        - { texte: "an exclamation mark (!)", pourquoi: "An exclamation mark shows a feeling; this one asks a question." }
+    - texte: "Which mark goes at the end of « Nous allons à la plage »?"
+      nom: "a full stop (.)"
+      explication: "The sentence gives information: it ends with a full stop."
+      pieges:
+        - { texte: "a question mark (?)", pourquoi: "It doesn't ask a question: it says where we're going." }
+        - { texte: "an exclamation mark (!)", pourquoi: "Nothing shows a strong feeling: it's just information." }
+    - texte: "Which mark goes at the end of « Quelle belle surprise »?"
+      nom: "an exclamation mark (!)"
+      explication: "The sentence shows a strong feeling: it's an exclamation and ends with an exclamation mark."
+      pieges:
+        - { texte: "a question mark (?)", pourquoi: "It doesn't ask a question: it shows joy." }
+        - { texte: "a full stop (.)", pourquoi: "« Quelle belle surprise » shows a feeling: it needs an exclamation mark." }
+    - texte: "« Range ta chambre. » is an imperative sentence. Why?"
+      nom: "It gives an order."
+      explication: "An imperative sentence gives an order or advice."
+      pieges:
+        - { texte: "It asks a question.", pourquoi: "There's no « ? »: it doesn't ask a question." }
+        - { texte: "It ends with a full stop.", pourquoi: "A declarative sentence ends with a full stop too: it's the order that makes it imperative." }

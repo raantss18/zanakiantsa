@@ -2,16 +2,21 @@ id: compter
 titre: Compter et calculer
 nom: "Les nombres"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Dénombrer, composer, additionner, soustraire, tables, partage, heure, opérations posées chiffre par chiffre, fractions, pourcentages, nombres relatifs, carrés et racines, équations, Pythagore, notation scientifique."
+resume: "Dénombrer, composer, additionner, soustraire, tables, partage, heure, opérations posées chiffre par chiffre, grands nombres, division, fractions, nombres décimaux, mesures et durées, aire, proportionnalité, pourcentages, nombres relatifs, carrés et racines, équations, Pythagore, notation scientifique ; au lycée, fonctions, vecteurs, statistiques, probabilités, second degré, suites, dérivées, logarithme, loi binomiale."
 icone: "1f522"
-ages: [5, 15]
+ages: [5, 18]
 # Sources (consultées le 2026-11-02) : programmes officiels, citations dans chaque compétence.
+# Cycles 2 et 3 relus le 2026-11-07 pour les leçons du CE2 à la 6e (nombres, décimaux, mesures, proportionnalité).
 sources:
   cycle1: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf"
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
   cycle3: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
   cycle4: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf"
-ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, heure-entiere, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, fractions-unitaires, fractions-lire, fractions-colorier, fractions-comparer, fractions-comparer-unitaires, fractions-additionner, tables-2-5-10, tables-3-4, centaines-lire, addition-posee, soustraction-posee, heure-demi-quart, tables-6-7, tables-8-9, fractions-bande, fractions-superieures, fractions-quantite, pourcentages, fraction-entier, relatifs-comparer, relatifs-additionner, puissances-carre, relatifs-multiplier, racine-carree, equation-premier-degre, pythagore, fraction-irreductible, notation-scientifique, identites-remarquables, equation-produit-nul]
+  lycee2de: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%93%20Programme%20d%26%23039%3Benseignement%20de%20math%C3%A9matiques%20de%20la%20classe%20de%20seconde%20g%C3%A9n%C3%A9rale%20et%20technologique-515402.pdf"
+  lycee1re: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%93%20Programme%20d%26%23039%3Benseignement%20de%20sp%C3%A9cialit%C3%A9%20de%20math%C3%A9matiques%20de%20la%20classe%20de%20premi%C3%A8re%20de%20la%20voie%20g%C3%A9n%C3%A9rale-515408.pdf"
+  # Terminale : programme de 2019 (BO spécial n° 8 du 25 juillet 2019), en vigueur jusqu'à la rentrée 2027 ; 2de et 1re : BO n° 14 du 2 avril 2026.
+  terminale: "https://eduscol.education.fr/document/24568/download"
+ordre: [denombrer-6, denombrer-10, constituer-10, composer-10, additionner-5, additionner-10, complement-10, heure-entiere, dizaines-lire, dizaines-construire, casser-dizaine, groupes, doubles, partager, paquets, moities, fractions-unitaires, fractions-lire, fractions-colorier, fractions-comparer, fractions-comparer-unitaires, fractions-additionner, tables-2-5-10, tables-3-4, centaines-lire, addition-posee, soustraction-posee, heure-demi-quart, tables-6-7, tables-8-9, fractions-bande, nombres-10000, comparer-10000, multiplier-10-100, multiplication-posee, division-sens, problemes-comparaison, fractions-superieures, fractions-quantite, grands-nombres, fractions-decimales, decimaux-ecriture, decimaux-droite, division-posee, longueurs-convertir, decimaux-comparer, decimaux-10-100-1000, decimal-fois-entier, proportionnalite, aire-rectangle, durees, pourcentages, fraction-entier, decimaux-additionner, decimaux-multiplier, arrondir, fraction-quotient, proportionnalite-6e, perimetre-disque, relatifs-comparer, relatifs-additionner, puissances-carre, relatifs-multiplier, racine-carree, equation-premier-degre, pythagore, fraction-irreductible, notation-scientifique, identites-remarquables, equation-produit-nul, inequations-intervalles, fonction-affine, vecteurs-coordonnees, moyenne-mediane, evolutions-pourcentages, probabilites-conditionnelles, second-degre, suites-arithmetiques, suites-geometriques, derivee-polynome, produit-scalaire, probabilites-totales, limites-fonctions, logarithme-neperien, denombrement, loi-binomiale, primitives]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -27,7 +32,7 @@ intro:
 en:
   titre: "Counting and calculating"
   nom: "Numbers"
-  resume: "Counting, making numbers, adding, subtracting, times tables, sharing, telling the time, column methods digit by digit, fractions, percentages, negative numbers, squares and roots, equations, Pythagoras, scientific notation."
+  resume: "Counting, making numbers, adding, subtracting, times tables, sharing, telling the time, column methods digit by digit, large numbers, division, fractions, decimals, measures and time, area, proportion, percentages, negative numbers, squares and roots, equations, Pythagoras, scientific notation; at sixth-form level, functions, vectors, statistics, probability, quadratics, sequences, derivatives, logarithms, the binomial distribution."
   intro:
     - texte: "To count, touch each thing only once."
       images: ["1f446", "1f34e", "1f34e", "1f34e"]

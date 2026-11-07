@@ -1,0 +1,136 @@
+id: continents-oceans
+titre: "Continents et océans"
+niveau: CM1
+prerequis: []
+programme: { source: c3hg, texte: "Nommer et localiser les grands repères géographiques." }
+activite: quiz
+parametres: {}
+idee: "Les terres forment des continents : Afrique, Amérique, Antarctique, Asie, Europe, Océanie. Les océans couvrent la plus grande partie de la Terre : Pacifique, Atlantique, Indien, Arctique, Austral."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Imagine un planisphère : l'Amérique à gauche, l'Europe et l'Afrique au milieu, l'Asie à droite, l'Océanie en bas à droite."
+  exemple: "Exemple : pour aller de France en Amérique en bateau, on traverse l'océan Atlantique, qui sépare l'Europe et l'Afrique de l'Amérique."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel est le plus grand océan du monde ?"
+    nom: "L'océan Pacifique."
+    explication: "Le Pacifique est le plus vaste des océans : il s'étend entre l'Asie et l'Océanie d'un côté, l'Amérique de l'autre."
+    pieges:
+      - { texte: "L'océan Atlantique.", pourquoi: "L'Atlantique est grand, mais le Pacifique l'est bien davantage." }
+      - { texte: "La mer Méditerranée.", pourquoi: "La Méditerranée est une mer, bien plus petite qu'un océan." }
+  - texte: "Quel océan sépare l'Europe et l'Afrique de l'Amérique ?"
+    nom: "L'océan Atlantique."
+    explication: "L'Atlantique s'étend entre l'Europe et l'Afrique à l'est, l'Amérique à l'ouest."
+    pieges:
+      - { texte: "L'océan Indien.", pourquoi: "L'océan Indien est entre l'Afrique, l'Asie et l'Océanie." }
+      - { texte: "L'océan Arctique.", pourquoi: "L'Arctique entoure le pôle Nord." }
+  - texte: "Dans quel océan se trouve Madagascar ?"
+    nom: "L'océan Indien."
+    explication: "Madagascar est une grande île de l'océan Indien, à l'est de l'Afrique."
+    pieges:
+      - { texte: "L'océan Atlantique.", pourquoi: "L'Atlantique borde l'ouest de l'Afrique ; Madagascar est à l'est." }
+      - { texte: "L'océan Pacifique.", pourquoi: "Le Pacifique est beaucoup plus à l'est, au-delà de l'Asie et de l'Océanie." }
+  - texte: "Quel continent entoure le pôle Sud et est couvert de glace ?"
+    nom: "L'Antarctique."
+    explication: "L'Antarctique est un continent presque entièrement couvert de glace, autour du pôle Sud."
+    pieges:
+      - { texte: "L'Arctique.", pourquoi: "Au pôle Nord, l'Arctique est un océan, en partie couvert de glace de mer : ce n'est pas un continent." }
+      - { texte: "L'Océanie.", pourquoi: "L'Océanie comprend l'Australie et les îles du Pacifique, pas le pôle Sud." }
+  - texte: "Quel est le plus grand continent ?"
+    nom: "L'Asie."
+    explication: "L'Asie est le continent le plus vaste et le plus peuplé."
+    pieges:
+      - { texte: "L'Afrique.", pourquoi: "L'Afrique est très grande, mais l'Asie l'est davantage." }
+      - { texte: "L'Europe.", pourquoi: "L'Europe est l'un des plus petits continents." }
+  - texte: "Sur quel continent se trouve l'Australie ?"
+    nom: "L'Océanie."
+    explication: "L'Océanie regroupe l'Australie, la Nouvelle-Zélande et de nombreuses îles du Pacifique."
+    pieges:
+      - { texte: "L'Asie.", pourquoi: "L'Australie est proche de l'Asie, mais elle fait partie de l'Océanie." }
+      - { texte: "L'Amérique.", pourquoi: "L'Amérique est de l'autre côté du Pacifique." }
+  - texte: "Qu'est-ce que l'équateur ?"
+    nom: "Une ligne imaginaire qui partage la Terre en deux hémisphères, nord et sud."
+    explication: "L'équateur fait le tour de la Terre à égale distance des deux pôles. Il n'est pas tracé sur le sol : on le dessine sur les cartes."
+    pieges:
+      - { texte: "Une grande muraille autour de la Terre.", pourquoi: "L'équateur n'existe pas sur le terrain : c'est une ligne imaginaire." }
+      - { texte: "La ligne qui sépare l'Europe et l'Afrique.", pourquoi: "C'est la mer Méditerranée qui sépare l'Europe et l'Afrique ; l'équateur passe plus au sud." }
+  - texte: "Sur Terre, qu'est-ce qui occupe la plus grande surface ?"
+    nom: "Les océans."
+    explication: "Les océans couvrent plus des deux tiers de la surface de la Terre. Vue de l'espace, elle paraît bleue."
+    pieges:
+      - { texte: "Les continents.", pourquoi: "Les terres émergées occupent moins d'un tiers de la surface." }
+      - { texte: "Autant de terre que d'eau.", pourquoi: "L'eau domine largement : plus des deux tiers de la surface." }
+  - texte: "Sur quel continent se trouve la France métropolitaine ?"
+    nom: "L'Europe."
+    explication: "La France métropolitaine est en Europe, au bord de l'Atlantique et de la Méditerranée."
+    pieges:
+      - { texte: "L'Afrique.", pourquoi: "L'Afrique est au sud, de l'autre côté de la Méditerranée." }
+      - { texte: "L'Amérique.", pourquoi: "L'Amérique est de l'autre côté de l'Atlantique. Une région française, la Guyane, y est située, mais pas la métropole." }
+
+en:
+  titre: "Continents and oceans"
+  idee: "Land makes up continents: Africa, America, Antarctica, Asia, Europe, Oceania. Oceans cover most of the Earth: Pacific, Atlantic, Indian, Arctic, Southern."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Picture a world map: America on the left, Europe and Africa in the middle, Asia on the right, Oceania at the bottom right."
+    exemple: "Example: to sail from France to America, you cross the Atlantic Ocean, which separates Europe and Africa from America."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the biggest ocean in the world?"
+      nom: "The Pacific Ocean."
+      explication: "The Pacific is the largest ocean: it lies between Asia and Oceania on one side, and America on the other."
+      pieges:
+        - { texte: "The Atlantic Ocean.", pourquoi: "The Atlantic is big, but the Pacific is much bigger." }
+        - { texte: "The Mediterranean Sea.", pourquoi: "The Mediterranean is a sea, much smaller than an ocean." }
+    - texte: "Which ocean separates Europe and Africa from America?"
+      nom: "The Atlantic Ocean."
+      explication: "The Atlantic lies between Europe and Africa to the east, and America to the west."
+      pieges:
+        - { texte: "The Indian Ocean.", pourquoi: "The Indian Ocean lies between Africa, Asia and Oceania." }
+        - { texte: "The Arctic Ocean.", pourquoi: "The Arctic surrounds the North Pole." }
+    - texte: "Which ocean is Madagascar in?"
+      nom: "The Indian Ocean."
+      explication: "Madagascar is a large island in the Indian Ocean, east of Africa."
+      pieges:
+        - { texte: "The Atlantic Ocean.", pourquoi: "The Atlantic is on Africa's west side; Madagascar is to the east." }
+        - { texte: "The Pacific Ocean.", pourquoi: "The Pacific is much further east, beyond Asia and Oceania." }
+    - texte: "Which continent surrounds the South Pole and is covered in ice?"
+      nom: "Antarctica."
+      explication: "Antarctica is a continent almost entirely covered in ice, around the South Pole."
+      pieges:
+        - { texte: "The Arctic.", pourquoi: "At the North Pole, the Arctic is an ocean, partly covered in sea ice: it isn't a continent." }
+        - { texte: "Oceania.", pourquoi: "Oceania includes Australia and the Pacific islands, not the South Pole." }
+    - texte: "What is the biggest continent?"
+      nom: "Asia."
+      explication: "Asia is the largest and most populated continent."
+      pieges:
+        - { texte: "Africa.", pourquoi: "Africa is very big, but Asia is bigger." }
+        - { texte: "Europe.", pourquoi: "Europe is one of the smallest continents." }
+    - texte: "Which continent is Australia on?"
+      nom: "Oceania."
+      explication: "Oceania includes Australia, New Zealand and many Pacific islands."
+      pieges:
+        - { texte: "Asia.", pourquoi: "Australia is near Asia, but it belongs to Oceania." }
+        - { texte: "America.", pourquoi: "America is on the other side of the Pacific." }
+    - texte: "What is the equator?"
+      nom: "An imaginary line that splits the Earth into two hemispheres, north and south."
+      explication: "The equator goes round the Earth halfway between the two poles. It isn't drawn on the ground: we draw it on maps."
+      pieges:
+        - { texte: "A great wall round the Earth.", pourquoi: "The equator doesn't exist on the ground: it's an imaginary line." }
+        - { texte: "The line between Europe and Africa.", pourquoi: "The Mediterranean Sea separates Europe and Africa; the equator is further south." }
+    - texte: "On Earth, what covers the biggest area?"
+      nom: "The oceans."
+      explication: "Oceans cover more than two thirds of the Earth's surface. Seen from space, it looks blue."
+      pieges:
+        - { texte: "The continents.", pourquoi: "Land covers less than a third of the surface." }
+        - { texte: "As much land as water.", pourquoi: "Water covers far more: over two thirds of the surface." }
+    - texte: "Which continent is mainland France on?"
+      nom: "Europe."
+      explication: "Mainland France is in Europe, on the Atlantic and the Mediterranean."
+      pieges:
+        - { texte: "Africa.", pourquoi: "Africa is to the south, across the Mediterranean." }
+        - { texte: "America.", pourquoi: "America is across the Atlantic. One French region, French Guiana, is there, but not mainland France." }

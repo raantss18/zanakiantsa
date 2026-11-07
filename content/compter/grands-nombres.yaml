@@ -1,0 +1,136 @@
+id: grands-nombres
+titre: "Les nombres jusqu'à 999 999"
+niveau: CM1
+prerequis: ["comparer-10000"]
+programme: { source: cycle3, texte: "Connaître la suite écrite et la suite orale des nombres jusqu’à 999 999" }
+activite: quiz
+parametres: {}
+idee: "Au-delà de 9 999, on lit par classes de trois chiffres : d'abord la classe des mille, puis celle des unités. 352 418 se lit trois-cent-cinquante-deux-mille-quatre-cent-dix-huit."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Sépare le nombre en groupes de trois chiffres, en partant de la droite."
+  exemple: "407 015 : la classe des mille est 407, la classe des unités est 015. On lit quatre-cent-sept-mille-quinze."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Comment s'écrit en chiffres deux-cent-mille-cinquante ?"
+    nom: "200 050"
+    explication: "Deux-cent-mille, c'est 200 000. Cinquante, c'est 50. 200 000 + 50 = 200 050."
+    pieges:
+      - { texte: "2 050", pourquoi: "Deux-cent-mille s'écrit 200 000 : il faut six chiffres." }
+      - { texte: "200 500", pourquoi: "Cinquante s'écrit 50 : 5 dizaines, pas 5 centaines." }
+  - texte: "Dans 352 418, quel est le chiffre des dizaines de mille ?"
+    nom: "5"
+    explication: "352 418 : 3 centaines de mille, 5 dizaines de mille, 2 unités de mille, puis 4 centaines, 1 dizaine, 8 unités."
+    pieges:
+      - { texte: "3", pourquoi: "3 est le chiffre des centaines de mille." }
+      - { texte: "1", pourquoi: "1 est le chiffre des dizaines, dans la classe des unités, pas dans celle des mille." }
+  - texte: "Comment se lit 60 708 ?"
+    nom: "soixante-mille-sept-cent-huit"
+    explication: "Classe des mille : 60. Classe des unités : 708. On lit soixante-mille-sept-cent-huit."
+    pieges:
+      - { texte: "six-mille-sept-cent-huit", pourquoi: "6 000 n'a que quatre chiffres : 60 708 en a cinq, c'est soixante-mille." }
+      - { texte: "soixante-mille-soixante-dix-huit", pourquoi: "Le 7 est au rang des centaines : il vaut 700, pas 70." }
+  - texte: "Quel nombre vient juste après 99 999 ?"
+    nom: "100 000"
+    explication: "99 999 + 1 : toutes les retenues s'enchaînent, on obtient 1 centaine de mille, 100 000."
+    pieges:
+      - { texte: "10 000", pourquoi: "10 000 est plus petit que 99 999 : on cherche le nombre suivant." }
+      - { texte: "1 000 000", pourquoi: "C'est un million : on n'ajoute que 1 à 99 999." }
+  - texte: "245 300, c'est combien de milliers en tout ?"
+    nom: "245"
+    explication: "La classe des mille est 245 : 245 300 contient 245 milliers, et encore 300."
+    pieges:
+      - { texte: "5", pourquoi: "5 est le chiffre des milliers, mais 245 300 contient 245 milliers en tout." }
+      - { texte: "2 453", pourquoi: "2 453, c'est le nombre de centaines en tout." }
+  - texte: "Quel nombre est le plus grand : 98 760, 102 300 ou 99 999 ?"
+    nom: "102 300"
+    explication: "102 300 a six chiffres, les deux autres en ont cinq : c'est le plus grand."
+    pieges:
+      - { texte: "99 999", pourquoi: "99 999 n'a que cinq chiffres : 102 300 en a six." }
+      - { texte: "98 760", pourquoi: "98 760 n'a que cinq chiffres, et 98 milliers, c'est moins que 102 milliers." }
+  - texte: "Quel nombre s'écrit 300 000 + 4 000 + 20 + 6 ?"
+    nom: "304 026"
+    explication: "3 centaines de mille, 0 dizaine de mille, 4 unités de mille, 0 centaine, 2 dizaines, 6 unités : 304 026."
+    pieges:
+      - { texte: "3 426", pourquoi: "Il manque les zéros : 300 000 a six chiffres. Les rangs vides prennent un 0." }
+      - { texte: "340 026", pourquoi: "4 000, ce sont 4 unités de mille, pas 4 dizaines de mille." }
+  - texte: "Une demi-droite est graduée de 10 000 en 10 000 : 0 ; 10 000 ; 20 000 ; … ; 40 000. Quel nombre manque ?"
+    nom: "30 000"
+    explication: "Chaque graduation ajoute 10 000 : 20 000 + 10 000 = 30 000."
+    pieges:
+      - { texte: "21 000", pourquoi: "On avance de 10 000 à chaque graduation, pas de 1 000." }
+      - { texte: "3 000", pourquoi: "3 000 est trop petit : chaque graduation ajoute 10 000." }
+  - texte: "Pourquoi 507 000 s'écrit-il avec trois zéros à la fin ?"
+    nom: "Il n'y a ni centaines, ni dizaines, ni unités."
+    explication: "507 000 : la classe des mille est 507, la classe des unités est vide, 000."
+    pieges:
+      - { texte: "Tous les nombres en mille finissent par 000.", pourquoi: "507 250 se lit aussi avec « mille » et ne finit pas par 000." }
+      - { texte: "Parce que le 7 vaut zéro.", pourquoi: "Le 7 vaut 7 milliers : les zéros marquent les rangs vides." }
+
+en:
+  titre: "Numbers up to 999,999"
+  idee: "Beyond 9,999, read in groups of three digits: first the thousands group, then the ones group. 352,418 is three hundred and fifty-two thousand, four hundred and eighteen."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Split the number into groups of three digits, starting from the right."
+    exemple: "407,015: the thousands group is 407, the ones group is 015. We read four hundred and seven thousand and fifteen."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "How do you write two hundred thousand and fifty in figures?"
+      nom: "200,050"
+      explication: "Two hundred thousand is 200,000. Fifty is 50. 200,000 + 50 = 200,050."
+      pieges:
+        - { texte: "2,050", pourquoi: "Two hundred thousand is 200,000: you need six digits." }
+        - { texte: "200,500", pourquoi: "Fifty is 50: 5 tens, not 5 hundreds." }
+    - texte: "In 352,418, what is the ten-thousands digit?"
+      nom: "5"
+      explication: "352,418: 3 hundred thousands, 5 ten thousands, 2 thousands, then 4 hundreds, 1 ten, 8 ones."
+      pieges:
+        - { texte: "3", pourquoi: "3 is the hundred-thousands digit." }
+        - { texte: "1", pourquoi: "1 is the tens digit, in the ones group, not in the thousands group." }
+    - texte: "How do you read 60,708?"
+      nom: "sixty thousand, seven hundred and eight"
+      explication: "Thousands group: 60. Ones group: 708. We read sixty thousand, seven hundred and eight."
+      pieges:
+        - { texte: "six thousand, seven hundred and eight", pourquoi: "6,000 has only four digits: 60,708 has five, so it is sixty thousand." }
+        - { texte: "sixty thousand and seventy-eight", pourquoi: "The 7 is in the hundreds place: it is worth 700, not 70." }
+    - texte: "Which number comes just after 99,999?"
+      nom: "100,000"
+      explication: "99,999 + 1: all the carries follow on, and we get 1 hundred thousand, 100,000."
+      pieges:
+        - { texte: "10,000", pourquoi: "10,000 is smaller than 99,999: we want the next number." }
+        - { texte: "1,000,000", pourquoi: "That is a million: we only add 1 to 99,999." }
+    - texte: "How many thousands are there in 245,300 altogether?"
+      nom: "245"
+      explication: "The thousands group is 245: 245,300 contains 245 thousands, plus 300."
+      pieges:
+        - { texte: "5", pourquoi: "5 is the thousands digit, but 245,300 contains 245 thousands altogether." }
+        - { texte: "2,453", pourquoi: "2,453 is the number of hundreds altogether." }
+    - texte: "Which number is the biggest: 98,760, 102,300 or 99,999?"
+      nom: "102,300"
+      explication: "102,300 has six digits, the other two have five: it is the biggest."
+      pieges:
+        - { texte: "99,999", pourquoi: "99,999 has only five digits: 102,300 has six." }
+        - { texte: "98,760", pourquoi: "98,760 has only five digits, and 98 thousands is less than 102 thousands." }
+    - texte: "Which number is 300,000 + 4,000 + 20 + 6?"
+      nom: "304,026"
+      explication: "3 hundred thousands, 0 ten thousands, 4 thousands, 0 hundreds, 2 tens, 6 ones: 304,026."
+      pieges:
+        - { texte: "3,426", pourquoi: "The zeros are missing: 300,000 has six digits. Empty places get a 0." }
+        - { texte: "340,026", pourquoi: "4,000 is 4 thousands, not 4 ten thousands." }
+    - texte: "A number line is marked in steps of 10,000: 0; 10,000; 20,000; …; 40,000. Which number is missing?"
+      nom: "30,000"
+      explication: "Each mark adds 10,000: 20,000 + 10,000 = 30,000."
+      pieges:
+        - { texte: "21,000", pourquoi: "Each mark moves on by 10,000, not 1,000." }
+        - { texte: "3,000", pourquoi: "3,000 is too small: each mark adds 10,000." }
+    - texte: "Why is 507,000 written with three zeros at the end?"
+      nom: "There are no hundreds, no tens and no ones."
+      explication: "507,000: the thousands group is 507, the ones group is empty, 000."
+      pieges:
+        - { texte: "All numbers with thousand end in 000.", pourquoi: "507,250 is also read with \"thousand\" and doesn't end in 000." }
+        - { texte: "Because the 7 is worth zero.", pourquoi: "The 7 is worth 7 thousands: the zeros mark the empty places." }

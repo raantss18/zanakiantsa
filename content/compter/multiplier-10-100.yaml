@@ -1,0 +1,136 @@
+id: multiplier-10-100
+titre: "Multiplier par 10 et par 100"
+niveau: CE2
+prerequis: ["nombres-10000"]
+programme: { source: cycle2, texte: "Multiplier un nombre entier par 10 ou 100." }
+activite: quiz
+parametres: {}
+idee: "Quand on multiplie par 10, chaque unité devient une dizaine, chaque dizaine une centaine : chaque chiffre prend une valeur 10 fois plus grande."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Par 10, chaque chiffre glisse d'un rang vers la gauche ; par 100, de deux rangs."
+  exemple: "10 × 724 : 4 unités deviennent 4 dizaines, 2 dizaines deviennent 2 centaines, 7 centaines deviennent 7 milliers. 10 × 724 = 7 240."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 10 × 36 ?"
+    nom: "360"
+    explication: "3 dizaines deviennent 3 centaines, 6 unités deviennent 6 dizaines : 360."
+    pieges:
+      - { texte: "46", pourquoi: "36 + 10 : multiplier par 10, ce n'est pas ajouter 10." }
+      - { texte: "3 600", pourquoi: "3 600 = 100 × 36 : par 10, chaque chiffre glisse d'un seul rang." }
+  - texte: "Combien font 100 × 45 ?"
+    nom: "4 500"
+    explication: "Par 100, chaque chiffre glisse de deux rangs : 4 dizaines deviennent 4 milliers, 5 unités deviennent 5 centaines."
+    pieges:
+      - { texte: "450", pourquoi: "450 = 10 × 45 : par 100, chaque chiffre glisse de deux rangs." }
+      - { texte: "145", pourquoi: "45 + 100 : multiplier par 100, ce n'est pas ajouter 100." }
+  - texte: "Combien font 10 × 508 ?"
+    nom: "5 080"
+    explication: "5 centaines deviennent 5 milliers, 0 dizaine devient 0 centaine, 8 unités deviennent 8 dizaines : 5 080."
+    pieges:
+      - { texte: "5 800", pourquoi: "Le 0 des dizaines garde sa place : il devient 0 centaine." }
+      - { texte: "5 008", pourquoi: "Le 0 nouveau se met au rang des unités, pas au milieu du nombre." }
+  - texte: "Combien font 100 × 70 ?"
+    nom: "7 000"
+    explication: "7 dizaines, multipliées par 100, deviennent 7 milliers : 7 000."
+    pieges:
+      - { texte: "700", pourquoi: "700 = 10 × 70 : par 100, on glisse de deux rangs." }
+      - { texte: "70 000", pourquoi: "70 000 = 1 000 × 70 : par 100, deux rangs seulement." }
+  - texte: "Combien font 37 × 100 ?"
+    nom: "3 700"
+    explication: "37 × 100 = 100 × 37 : 3 dizaines deviennent 3 milliers, 7 unités deviennent 7 centaines."
+    pieges:
+      - { texte: "370", pourquoi: "370 = 37 × 10 : par 100, deux rangs." }
+      - { texte: "137", pourquoi: "37 + 100 : c'est une multiplication, pas une addition." }
+  - texte: "Complète : 10 × … = 2 490. Quel nombre manque ?"
+    nom: "249"
+    explication: "10 × 249 = 2 490 : chaque chiffre de 249 glisse d'un rang."
+    pieges:
+      - { texte: "24 900", pourquoi: "24 900 = 10 × 2 490 : on cherche le nombre qui, multiplié par 10, donne 2 490." }
+      - { texte: "2 480", pourquoi: "2 490 − 10 : on cherche un facteur, pas une différence." }
+  - texte: "Complète : 6 × 40 = 6 × 4 × 10 = … × 10 = 240. Quel nombre manque ?"
+    nom: "24"
+    explication: "On calcule d'abord 6 × 4 = 24, puis 24 × 10 = 240."
+    pieges:
+      - { texte: "10", pourquoi: "10 est déjà écrit : il manque le produit 6 × 4." }
+      - { texte: "64", pourquoi: "On n'écrit pas 6 et 4 côte à côte : le produit 6 × 4 est 24." }
+  - texte: "Une boîte contient 100 crayons. Combien de crayons y a-t-il dans 26 boîtes ?"
+    nom: "2 600"
+    explication: "26 boîtes de 100 crayons : 26 × 100 = 2 600 crayons."
+    pieges:
+      - { texte: "126", pourquoi: "26 + 100 : il y a 26 boîtes de 100, c'est une multiplication." }
+      - { texte: "260", pourquoi: "260, ce serait 26 boîtes de 10 crayons : ici, chaque boîte en a 100." }
+  - texte: "Pourquoi 10 × 53 = 530 ?"
+    nom: "Chaque chiffre vaut 10 fois plus : 5 centaines et 3 dizaines."
+    explication: "Les 5 dizaines deviennent 5 centaines, les 3 unités deviennent 3 dizaines : 530."
+    pieges:
+      - { texte: "Parce qu'on ajoute un 0 au bout.", pourquoi: "Le 0 apparaît, mais ce n'est pas la raison : chaque unité devient une dizaine." }
+      - { texte: "Parce que 53 + 10 = 530.", pourquoi: "53 + 10 = 63 : multiplier par 10, ce n'est pas ajouter 10." }
+
+en:
+  titre: "Multiplying by 10 and by 100"
+  idee: "When you multiply by 10, each one becomes a ten and each ten becomes a hundred: every digit becomes worth 10 times more."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Times 10, each digit moves one place to the left; times 100, two places."
+    exemple: "10 × 724: 4 ones become 4 tens, 2 tens become 2 hundreds, 7 hundreds become 7 thousands. 10 × 724 = 7,240."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 10 × 36?"
+      nom: "360"
+      explication: "3 tens become 3 hundreds, 6 ones become 6 tens: 360."
+      pieges:
+        - { texte: "46", pourquoi: "36 + 10: multiplying by 10 is not adding 10." }
+        - { texte: "3,600", pourquoi: "3,600 = 100 × 36: times 10, each digit moves only one place." }
+    - texte: "What is 100 × 45?"
+      nom: "4,500"
+      explication: "Times 100, each digit moves two places: 4 tens become 4 thousands, 5 ones become 5 hundreds."
+      pieges:
+        - { texte: "450", pourquoi: "450 = 10 × 45: times 100, each digit moves two places." }
+        - { texte: "145", pourquoi: "45 + 100: multiplying by 100 is not adding 100." }
+    - texte: "What is 10 × 508?"
+      nom: "5,080"
+      explication: "5 hundreds become 5 thousands, 0 tens become 0 hundreds, 8 ones become 8 tens: 5,080."
+      pieges:
+        - { texte: "5,800", pourquoi: "The 0 in the tens place keeps its place: it becomes 0 hundreds." }
+        - { texte: "5,008", pourquoi: "The new 0 goes in the ones place, not in the middle of the number." }
+    - texte: "What is 100 × 70?"
+      nom: "7,000"
+      explication: "7 tens, times 100, become 7 thousands: 7,000."
+      pieges:
+        - { texte: "700", pourquoi: "700 = 10 × 70: times 100, move two places." }
+        - { texte: "70,000", pourquoi: "70,000 = 1,000 × 70: times 100, only two places." }
+    - texte: "What is 37 × 100?"
+      nom: "3,700"
+      explication: "37 × 100 = 100 × 37: 3 tens become 3 thousands, 7 ones become 7 hundreds."
+      pieges:
+        - { texte: "370", pourquoi: "370 = 37 × 10: times 100, two places." }
+        - { texte: "137", pourquoi: "37 + 100: this is a multiplication, not an addition." }
+    - texte: "Fill the gap: 10 × … = 2,490. Which number is missing?"
+      nom: "249"
+      explication: "10 × 249 = 2,490: each digit of 249 moves one place."
+      pieges:
+        - { texte: "24,900", pourquoi: "24,900 = 10 × 2,490: we want the number that, times 10, gives 2,490." }
+        - { texte: "2,480", pourquoi: "2,490 − 10: we want a factor, not a difference." }
+    - texte: "Fill the gap: 6 × 40 = 6 × 4 × 10 = … × 10 = 240. Which number is missing?"
+      nom: "24"
+      explication: "First work out 6 × 4 = 24, then 24 × 10 = 240."
+      pieges:
+        - { texte: "10", pourquoi: "10 is already written: the product 6 × 4 is missing." }
+        - { texte: "64", pourquoi: "Don't write 6 and 4 side by side: the product 6 × 4 is 24." }
+    - texte: "A box holds 100 pencils. How many pencils are there in 26 boxes?"
+      nom: "2,600"
+      explication: "26 boxes of 100 pencils: 26 × 100 = 2,600 pencils."
+      pieges:
+        - { texte: "126", pourquoi: "26 + 100: there are 26 boxes of 100, so it is a multiplication." }
+        - { texte: "260", pourquoi: "260 would be 26 boxes of 10 pencils: here each box holds 100." }
+    - texte: "Why is 10 × 53 = 530?"
+      nom: "Each digit is worth 10 times more: 5 hundreds and 3 tens."
+      explication: "The 5 tens become 5 hundreds, the 3 ones become 3 tens: 530."
+      pieges:
+        - { texte: "Because you put a 0 on the end.", pourquoi: "A 0 appears, but that's not the reason: each one becomes a ten." }
+        - { texte: "Because 53 + 10 = 530.", pourquoi: "53 + 10 = 63: multiplying by 10 is not adding 10." }

@@ -382,7 +382,8 @@ void main(List<String> args) {
       }
     }
   }
-  outputs['../docs/voix/script.csv'] = '${voice.join('\n')}\n';
+  // Une ligne par phrase : les retours à la ligne (programmes affichés ligne à ligne) deviennent « / ».
+  outputs['../docs/voix/script.csv'] = '${voice.map((l) => l.replaceAll('\n', ' / ')).join('\n')}\n';
 
   if (errors.isNotEmpty) {
     stderr.writeln('Contenu invalide :\n${errors.map((e) => '  - $e').join('\n')}');

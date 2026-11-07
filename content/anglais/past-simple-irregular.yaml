@@ -1,0 +1,168 @@
+id: past-simple-irregular
+titre: "Le prétérit des verbes irréguliers : went, saw, ate"
+niveau: 4e
+prerequis: [past-simple-regular]
+programme: { source: college, texte: "4e : l’expression du passé : reconnaitre quelques verbes les plus courants du prétérit was/were, verbes réguliers et irréguliers, I watched a documentary, I discovered artists, I went to the museum, etc." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Les verbes irréguliers ont leur propre forme au prétérit : « go », « went » ; « see », « saw » ; « eat », « ate ». On les apprend par cœur. Après « did », on reprend la base."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme du verbe."
+  question: "{texte}"
+  indice: "Le prétérit d'un irrégulier ne prend pas -ed. Et après « didn't » ou « Did », le verbe reste à la base."
+  exemple: "« Last summer, we … to Ireland. » (go) : « go » est irrégulier, son prétérit est « went ». « We went to Ireland. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … a fox in the garden yesterday. » (see)"
+    nom: "saw"
+    explication: "Le prétérit de « see » est « saw » : « I saw a fox. »"
+    pieges:
+      - { texte: "see", pourquoi: "« see » est le présent. « yesterday » demande le prétérit : « saw »." }
+      - { texte: "seen", pourquoi: "« seen » est le participe passé, pour « have seen ». Au prétérit : « saw »." }
+  - texte: "Complète : « She … a sandwich for lunch. » (eat, au passé)"
+    nom: "ate"
+    explication: "Le prétérit de « eat » est « ate » : « She ate a sandwich. »"
+    pieges:
+      - { texte: "eats", pourquoi: "« eats » est le présent. Au passé : « ate »." }
+      - { texte: "eaten", pourquoi: "« eaten » est le participe passé, pour « has eaten ». Au prétérit : « ate »." }
+  - texte: "Complète : « He … a new bike for his birthday. » (get, au passé)"
+    nom: "got"
+    explication: "Le prétérit de « get » est « got » : « He got a new bike. »"
+    pieges:
+      - { texte: "gets", pourquoi: "« gets » est le présent. Au passé : « got »." }
+      - { texte: "get", pourquoi: "« get » est la base, sans marque du passé. Au prétérit : « got »." }
+  - texte: "Complète : « They … a cake for Mum. » (make, au passé)"
+    nom: "made"
+    explication: "Le prétérit de « make » est « made » : « They made a cake. »"
+    pieges:
+      - { texte: "make", pourquoi: "« make » est le présent. Au passé : « made »." }
+      - { texte: "makes", pourquoi: "« makes » est le présent avec he, she, it. Au passé : « made »." }
+  - texte: "Complète : « We … a lot of photos on holiday. » (take, au passé)"
+    nom: "took"
+    explication: "Le prétérit de « take » est « took » : « We took a lot of photos. »"
+    pieges:
+      - { texte: "taken", pourquoi: "« taken » est le participe passé, pour « have taken ». Au prétérit : « took »." }
+      - { texte: "take", pourquoi: "« take » est le présent. Au passé : « took »." }
+  - texte: "Complète : « Tom … his homework after dinner. » (do, au passé)"
+    nom: "did"
+    explication: "Le prétérit de « do » est « did » : « Tom did his homework. »"
+    pieges:
+      - { texte: "done", pourquoi: "« done » est le participe passé, pour « has done ». Au prétérit : « did »." }
+      - { texte: "does", pourquoi: "« does » est le présent. Au passé : « did »." }
+  - texte: "Complète : « We didn't … to the cinema. » (go)"
+    nom: "go"
+    explication: "Après « didn't », le verbe reste à la base : « We didn't go to the cinema. »"
+    pieges:
+      - { texte: "went", pourquoi: "Après « didn't », le verbe reste à la base : le passé est déjà dans « did »." }
+      - { texte: "gone", pourquoi: "« gone » est le participe passé. Après « didn't », la base : « go »." }
+  - texte: "Complète : « Did she … the letter? » (write)"
+    nom: "write"
+    explication: "Après « Did », le verbe reste à la base : « Did she write the letter? »"
+    pieges:
+      - { texte: "wrote", pourquoi: "Après « Did », le verbe reste à la base : le passé est déjà dans « Did »." }
+      - { texte: "written", pourquoi: "« written » est le participe passé. Après « Did », la base : « write »." }
+  - texte: "Complète : « Last summer, we … to Ireland. » (go)"
+    nom: "went"
+    explication: "Le prétérit de « go » est « went » : « We went to Ireland. »"
+    pieges:
+      - { texte: "go", pourquoi: "« go » est le présent. « Last summer » demande le passé : « went »." }
+      - { texte: "gone", pourquoi: "« gone » est le participe passé, pour « have gone ». Au prétérit : « went »." }
+  - texte: "Pourquoi « went » ne ressemble-t-il pas à « go » ?"
+    nom: "« go » est irrégulier : son prétérit a une autre forme, qu'on apprend par cœur."
+    explication: "Les verbes irréguliers ne prennent pas -ed : « go », « went » ; « see », « saw »."
+    pieges:
+      - { texte: "Parce que « went » est le futur de « go ».", pourquoi: "Non : le futur serait « will go ». « went » est le passé." }
+      - { texte: "Parce que « went » est le présent avec « he ».", pourquoi: "Non : avec « he », au présent, on dit « goes »." }
+en:
+  titre: "Irregular verbs in the past simple: went, saw, ate"
+  idee: "Irregular verbs have their own past simple form: go, went; see, saw; eat, ate. We learn them by heart. After did, we use the base form again."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of the verb."
+    question: "{texte}"
+    indice: "The past of an irregular verb doesn't take -ed. And after didn't or Did, the verb stays in its base form."
+    exemple: "“Last summer, we … to Ireland.” (go): go is irregular, its past is went. “We went to Ireland.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … a fox in the garden yesterday.” (see)"
+      nom: "saw"
+      explication: "The past of see is saw: “I saw a fox.”"
+      pieges:
+        - texte: "see"
+          pourquoi: "“see” is the present. Yesterday needs the past simple: saw."
+        - texte: "seen"
+          pourquoi: "“seen” is the past participle, for have seen. In the past simple: saw."
+    - texte: "Complete: “She … a sandwich for lunch.” (eat, past)"
+      nom: "ate"
+      explication: "The past of eat is ate: “She ate a sandwich.”"
+      pieges:
+        - texte: "eats"
+          pourquoi: "“eats” is the present. In the past: ate."
+        - texte: "eaten"
+          pourquoi: "“eaten” is the past participle, for has eaten. In the past simple: ate."
+    - texte: "Complete: “He … a new bike for his birthday.” (get, past)"
+      nom: "got"
+      explication: "The past of get is got: “He got a new bike.”"
+      pieges:
+        - texte: "gets"
+          pourquoi: "“gets” is the present. In the past: got."
+        - texte: "get"
+          pourquoi: "“get” is the base form, with no past. In the past simple: got."
+    - texte: "Complete: “They … a cake for Mum.” (make, past)"
+      nom: "made"
+      explication: "The past of make is made: “They made a cake.”"
+      pieges:
+        - texte: "make"
+          pourquoi: "“make” is the present. In the past: made."
+        - texte: "makes"
+          pourquoi: "“makes” is the present with he, she, it. In the past: made."
+    - texte: "Complete: “We … a lot of photos on holiday.” (take, past)"
+      nom: "took"
+      explication: "The past of take is took: “We took a lot of photos.”"
+      pieges:
+        - texte: "taken"
+          pourquoi: "“taken” is the past participle, for have taken. In the past simple: took."
+        - texte: "take"
+          pourquoi: "“take” is the present. In the past: took."
+    - texte: "Complete: “Tom … his homework after dinner.” (do, past)"
+      nom: "did"
+      explication: "The past of do is did: “Tom did his homework.”"
+      pieges:
+        - texte: "done"
+          pourquoi: "“done” is the past participle, for has done. In the past simple: did."
+        - texte: "does"
+          pourquoi: "“does” is the present. In the past: did."
+    - texte: "Complete: “We didn't … to the cinema.” (go)"
+      nom: "go"
+      explication: "After didn't, the verb stays in its base form: “We didn't go to the cinema.”"
+      pieges:
+        - texte: "went"
+          pourquoi: "After didn't, the verb stays in its base form: the past is already in did."
+        - texte: "gone"
+          pourquoi: "“gone” is the past participle. After didn't, the base form: go."
+    - texte: "Complete: “Did she … the letter?” (write)"
+      nom: "write"
+      explication: "After Did, the verb stays in its base form: “Did she write the letter?”"
+      pieges:
+        - texte: "wrote"
+          pourquoi: "After Did, the verb stays in its base form: the past is already in Did."
+        - texte: "written"
+          pourquoi: "“written” is the past participle. After Did, the base form: write."
+    - texte: "Complete: “Last summer, we … to Ireland.” (go)"
+      nom: "went"
+      explication: "The past of go is went: “We went to Ireland.”"
+      pieges:
+        - texte: "go"
+          pourquoi: "“go” is the present. Last summer needs the past: went."
+        - texte: "gone"
+          pourquoi: "“gone” is the past participle, for have gone. In the past simple: went."
+    - texte: "Why doesn't went look like go?"
+      nom: "Go is irregular: its past has a different form, which we learn by heart."
+      explication: "Irregular verbs don't take -ed: go, went; see, saw."
+      pieges:
+        - texte: "Because went is the future of go."
+          pourquoi: "No: the future would be will go. Went is the past."
+        - texte: "Because went is the present with he."
+          pourquoi: "No: with he, in the present, we say goes."

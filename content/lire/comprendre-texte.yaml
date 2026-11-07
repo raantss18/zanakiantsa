@@ -1,0 +1,125 @@
+id: comprendre-texte
+titre: "Comprendre un petit texte : qui, où, pourquoi ?"
+niveau: CE1
+prerequis: ["lire-phrases"]
+programme: { source: cycle2, texte: "Justifier ses réponses par un retour au texte." }
+activite: quiz
+parametres: {}
+idee: "Pour comprendre un texte, on se demande : qui ? où ? quand ? pourquoi ? La réponse est dans le texte : on relit la bonne phrase."
+phrases:
+  consigne: "Lis le petit texte, puis la question. Touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis le texte : quelle phrase parle de ce qu’on te demande ?"
+  exemple: "« Léo mange une pomme. » Qui mange ? Léo. Que mange-t-il ? Une pomme."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « Léa va au parc avec son chien. Il fait beau. Elle lance une balle. » Où va Léa ?"
+    nom: "au parc"
+    explication: "La première phrase le dit : « Léa va au parc »."
+    pieges:
+      - { texte: "à l’école", pourquoi: "Le texte ne parle pas d’école. Relis la première phrase : Léa va au parc." }
+      - { texte: "à la plage", pourquoi: "Le texte ne parle pas de plage. Relis la première phrase : Léa va au parc." }
+  - texte: "Lis : « Papa fait un gâteau. Sami casse les œufs. Le gâteau sent bon. » Qui casse les œufs ?"
+    nom: "Sami"
+    explication: "La deuxième phrase le dit : « Sami casse les œufs »."
+    pieges:
+      - { texte: "Papa", pourquoi: "Papa fait le gâteau, mais la deuxième phrase dit que c’est Sami qui casse les œufs." }
+      - { texte: "le gâteau", pourquoi: "Le gâteau ne casse rien : c’est ce qu’on prépare." }
+  - texte: "Lis : « Le soir, Noé a froid. Il met son pull. Puis il se couche. » Pourquoi Noé met-il son pull ?"
+    nom: "parce qu’il a froid"
+    explication: "Le texte dit : « Noé a froid. Il met son pull. »"
+    pieges:
+      - { texte: "parce qu’il va à l’école", pourquoi: "C’est le soir et Noé se couche : il ne part pas à l’école." }
+      - { texte: "parce que son pull est neuf", pourquoi: "Le texte ne dit rien d’un pull neuf. Il dit : « Noé a froid »." }
+  - texte: "Lis : « Au marché, Mia achète des mangues. Elle les met dans son panier. » Qu’achète Mia ?"
+    nom: "des mangues"
+    explication: "La première phrase le dit : « Mia achète des mangues »."
+    pieges:
+      - { texte: "un panier", pourquoi: "Le panier sert à ranger les mangues : Mia ne l’achète pas." }
+      - { texte: "du pain", pourquoi: "Le texte ne parle pas de pain." }
+  - texte: "Lis : « Le chat grimpe dans l’arbre. Le chien aboie en bas. Le chat ne descend pas. » Où est le chat ?"
+    nom: "dans l’arbre"
+    explication: "La première phrase le dit : « Le chat grimpe dans l’arbre »."
+    pieges:
+      - { texte: "en bas", pourquoi: "C’est le chien qui est en bas. Le chat, lui, ne descend pas." }
+      - { texte: "dans la maison", pourquoi: "Le texte ne parle pas de maison." }
+  - texte: "Lis : « Ce matin, Tina a perdu une dent. Elle la met sous son oreiller. » Quand Tina a-t-elle perdu sa dent ?"
+    nom: "ce matin"
+    explication: "Le texte commence par « Ce matin » : c’est le moment de l’histoire."
+    pieges:
+      - { texte: "hier soir", pourquoi: "Le texte ne dit pas « hier soir ». Il commence par « Ce matin »." }
+      - { texte: "à midi", pourquoi: "Le texte ne dit pas « à midi ». Il commence par « Ce matin »." }
+  - texte: "Lis : « Zoé court vite. Elle gagne la course. » Zoé gagne la course. Pourquoi peut-on le dire ?"
+    nom: "La deuxième phrase le dit."
+    explication: "On retrouve la réponse dans le texte : « Elle gagne la course »."
+    pieges:
+      - { texte: "On le devine avec une image.", pourquoi: "Il n’y a pas d’image : on retrouve la réponse dans le texte." }
+      - { texte: "Zoé est grande.", pourquoi: "Le texte ne dit pas que Zoé est grande. Il dit qu’elle court vite et qu’elle gagne." }
+  - texte: "Lis : « Le bébé pleure. Maman lui donne son biberon. Le bébé sourit. » Pourquoi le bébé sourit-il, à la fin ?"
+    nom: "Il a eu son biberon."
+    explication: "Le bébé pleure, maman lui donne son biberon, alors il sourit."
+    pieges:
+      - { texte: "Il pleure.", pourquoi: "Au début, il pleure ; à la fin, il sourit, après le biberon." }
+      - { texte: "Maman pleure.", pourquoi: "C’est le bébé qui pleure, pas maman." }
+
+en:
+  langue: "fr"
+  titre: "French: understanding a short text"
+  idee: "To understand a text, ask: who? where? when? why? The answer is in the text: read the right sentence again."
+  phrases:
+    consigne: "Read the short French text, then the question. Touch the right answer."
+    question: "{texte}"
+    indice: "Read the text again: which sentence talks about what you're asked?"
+    exemple: "« Léo mange une pomme. » Who is eating? « Léo ». What is he eating? « une pomme », an apple."
+    demonstration: "{explication}"
+    bravo: "Yes! That's right."
+  items:
+    - texte: "Read: « Léa va au parc avec son chien. Il fait beau. Elle lance une balle. » Where is Léa going?"
+      nom: "au parc"
+      explication: "The first sentence says so: « Léa va au parc »."
+      pieges:
+        - { texte: "à l’école", pourquoi: "The text doesn't mention a school. Read the first sentence again: Léa is going « au parc »." }
+        - { texte: "à la plage", pourquoi: "The text doesn't mention a beach. Read the first sentence again: Léa is going « au parc »." }
+    - texte: "Read: « Papa fait un gâteau. Sami casse les œufs. Le gâteau sent bon. » Who breaks the eggs?"
+      nom: "Sami"
+      explication: "The second sentence says so: « Sami casse les œufs »."
+      pieges:
+        - { texte: "Papa", pourquoi: "Dad is making the cake, but the second sentence says that Sami breaks the eggs." }
+        - { texte: "le gâteau", pourquoi: "The cake doesn't break anything: it's what they are making." }
+    - texte: "Read: « Le soir, Noé a froid. Il met son pull. Puis il se couche. » Why does Noé put on his jumper?"
+      nom: "parce qu’il a froid"
+      explication: "The text says: « Noé a froid. Il met son pull. » He is cold."
+      pieges:
+        - { texte: "parce qu’il va à l’école", pourquoi: "It's evening and Noé goes to bed: he isn't going to school." }
+        - { texte: "parce que son pull est neuf", pourquoi: "The text says nothing about a new jumper. It says: « Noé a froid »." }
+    - texte: "Read: « Au marché, Mia achète des mangues. Elle les met dans son panier. » What does Mia buy?"
+      nom: "des mangues"
+      explication: "The first sentence says so: « Mia achète des mangues »."
+      pieges:
+        - { texte: "un panier", pourquoi: "The basket is for carrying the mangoes: Mia doesn't buy it." }
+        - { texte: "du pain", pourquoi: "The text doesn't mention bread." }
+    - texte: "Read: « Le chat grimpe dans l’arbre. Le chien aboie en bas. Le chat ne descend pas. » Where is the cat?"
+      nom: "dans l’arbre"
+      explication: "The first sentence says so: « Le chat grimpe dans l’arbre »."
+      pieges:
+        - { texte: "en bas", pourquoi: "It's the dog that is down below. The cat doesn't come down." }
+        - { texte: "dans la maison", pourquoi: "The text doesn't mention a house." }
+    - texte: "Read: « Ce matin, Tina a perdu une dent. Elle la met sous son oreiller. » When did Tina lose her tooth?"
+      nom: "ce matin"
+      explication: "The text begins with « Ce matin », this morning: that's when it happens."
+      pieges:
+        - { texte: "hier soir", pourquoi: "The text doesn't say « hier soir ». It begins with « Ce matin »." }
+        - { texte: "à midi", pourquoi: "The text doesn't say « à midi ». It begins with « Ce matin »." }
+    - texte: "Read: « Zoé court vite. Elle gagne la course. » Zoé wins the race. How do we know?"
+      nom: "The second sentence says so."
+      explication: "We find the answer in the text: « Elle gagne la course »."
+      pieges:
+        - { texte: "We guess from a picture.", pourquoi: "There's no picture: we find the answer in the text." }
+        - { texte: "Zoé is tall.", pourquoi: "The text doesn't say Zoé is tall. It says she runs fast and wins." }
+    - texte: "Read: « Le bébé pleure. Maman lui donne son biberon. Le bébé sourit. » Why is the baby smiling at the end?"
+      nom: "He got his bottle."
+      explication: "The baby cries, Mum gives him his bottle, « son biberon », so he smiles."
+      pieges:
+        - { texte: "He is crying.", pourquoi: "At the start he cries; at the end he smiles, after the bottle." }
+        - { texte: "Mum is crying.", pourquoi: "It's the baby who cries, not Mum." }

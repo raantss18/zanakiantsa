@@ -1,0 +1,148 @@
+id: python-si
+titre: "Python : if, elif, else"
+niveau: 2de
+prerequis: [python-for]
+programme: { source: seconde, texte: "Instruction conditionnelle." }
+activite: quiz
+parametres: {}
+idee: "if teste une condition. Vraie : Python exécute la suite de la ligne. Fausse : il passe à elif ou à else. == compare, = range une valeur."
+phrases:
+  consigne: "Teste chaque condition avec les valeurs du moment, puis prédis l’affichage."
+  question: "{texte}"
+  indice: "Remplace chaque variable par sa valeur et dis vrai ou faux, dans l’ordre des lignes."
+  exemple: "x = 12, puis if x > 10: print(\"grand\"), sinon print(\"petit\"). 12 > 10 est vrai : le programme affiche grand."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\nx = 12\nif x > 10: print(\"grand\")\nelse: print(\"petit\")"
+    nom: "grand"
+    explication: "12 > 10 est vrai : le programme affiche grand, et seulement grand."
+    pieges:
+      - { texte: "petit", pourquoi: "12 > 10 est vrai : c’est la ligne du if qui s’exécute." }
+      - { texte: "grand, puis petit", pourquoi: "Une seule branche s’exécute : else ne sert que si la condition est fausse." }
+  - texte: "Que va afficher ce programme ?\nx = 10\nif x >= 10: print(\"A\")\nelse: print(\"B\")"
+    nom: "A"
+    explication: "10 >= 10 est vrai, car 10 est égal à 10. Le programme affiche A."
+    pieges:
+      - { texte: "B", pourquoi: ">= veut dire « supérieur ou égal » : 10 >= 10 est vrai." }
+      - { texte: "Une erreur", pourquoi: ">= est un opérateur de Python : le programme est correct." }
+  - texte: "Que va afficher ce programme ?\nn = 7\nif n % 2 == 0: print(\"pair\")\nelse: print(\"impair\")"
+    nom: "impair"
+    explication: "7 = 2 × 3 + 1 : le reste vaut 1, la condition est fausse, le programme affiche impair."
+    pieges:
+      - { texte: "pair", pourquoi: "7 % 2 est le reste de 7 ÷ 2 : 1. 1 == 0 est faux." }
+      - { texte: "1", pourquoi: "1 est le reste calculé dans la condition ; le programme affiche le mot de la branche choisie." }
+  - texte: "Que va afficher ce programme ?\nx = 5\nif x == 5: x = x + 1\nif x == 5: x = x + 10\nprint(x)"
+    nom: "6"
+    explication: "Premier if : vrai, x passe à 6. Deuxième if : 6 == 5 est faux, x reste 6."
+    pieges:
+      - { texte: "16", pourquoi: "Au deuxième if, x vaut déjà 6 : 6 == 5 est faux." }
+      - { texte: "5", pourquoi: "5 == 5 est vrai : le premier if ajoute 1." }
+  - texte: "Que va afficher ce programme ?\na = 3\nb = 8\nif a > b: m = a\nelse: m = b\nprint(m)"
+    nom: "8"
+    explication: "3 > 8 est faux, donc m = b = 8. Ce programme garde le plus grand des deux."
+    pieges:
+      - { texte: "3", pourquoi: "3 > 8 est faux : m reçoit b." }
+      - { texte: "11", pourquoi: "Le programme choisit un des deux nombres, il ne les additionne pas." }
+  - texte: "Que va afficher ce programme ?\nx = 4\nif x > 0 and x < 3: print(\"oui\")\nelse: print(\"non\")"
+    nom: "non"
+    explication: "4 > 0 est vrai, mais 4 < 3 est faux. Vrai and faux donne faux : le programme affiche non."
+    pieges:
+      - { texte: "oui", pourquoi: "Avec and, il faut que les deux soient vraies : 4 < 3 est faux." }
+      - { texte: "oui, puis non", pourquoi: "Une seule branche s’exécute." }
+  - texte: "Que va afficher ce programme ?\nx = 4\nif x < 0 or x > 3: print(\"oui\")\nelse: print(\"non\")"
+    nom: "oui"
+    explication: "4 < 0 est faux, 4 > 3 est vrai. Faux or vrai donne vrai : le programme affiche oui."
+    pieges:
+      - { texte: "non", pourquoi: "Avec or, une seule condition vraie suffit : 4 > 3 est vrai." }
+      - { texte: "Une erreur", pourquoi: "or est un mot de Python : le programme est correct." }
+  - texte: "Que va afficher ce programme ?\nt = 18\nif t > 25: print(\"chaud\")\nelif t > 15: print(\"doux\")\nelse: print(\"froid\")"
+    nom: "doux"
+    explication: "18 > 25 : faux. 18 > 15 : vrai. Le programme affiche doux et s’arrête là."
+    pieges:
+      - { texte: "chaud", pourquoi: "18 > 25 est faux : on passe à elif." }
+      - { texte: "froid", pourquoi: "elif teste encore : 18 > 15 est vrai, donc on n’arrive pas au else." }
+  - texte: "Que se passe-t-il ?\nx = 3\nif x = 3: print(\"ok\")"
+    nom: "Python signale une erreur de syntaxe"
+    explication: "= range une valeur, == compare. if x = 3 n’a pas de sens pour Python : c’est une erreur de syntaxe (SyntaxError)."
+    pieges:
+      - { texte: "Le programme affiche ok", pourquoi: "Dans un if, il faut ==. Avec un seul =, Python refuse la ligne avant même de l’exécuter." }
+      - { texte: "Rien ne s’affiche", pourquoi: "Ce n’est pas un test faux : Python ne lance pas le programme et signale une erreur." }
+  - texte: "Pourquoi écrit-on x == 5 dans un if, et pas x = 5 ?"
+    nom: "== compare deux valeurs ; = range une valeur dans x"
+    explication: "x = 5 est une affectation : x reçoit 5. x == 5 est une comparaison : vrai si x vaut 5, faux sinon. Un if a besoin d’une comparaison."
+    pieges:
+      - { texte: "Les deux veulent dire la même chose", pourquoi: "Non : x = 5 change x, x == 5 demande seulement si x vaut 5." }
+      - { texte: "== veut dire « à peu près égal »", pourquoi: "== teste l’égalité exacte : vrai ou faux." }
+
+en:
+  titre: "Python: if, elif, else"
+  idee: "if tests a condition. True: Python runs the rest of the line. False: it moves on to elif or else. == compares, = stores a value."
+  phrases:
+    consigne: "Test each condition with the current values, then predict the output."
+    question: "{texte}"
+    indice: "Replace each variable with its value and say true or false, in the order of the lines."
+    exemple: "x = 12, then if x > 10: print(\"big\"), else print(\"small\"). 12 > 10 is true: the program displays big."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\nx = 12\nif x > 10: print(\"big\")\nelse: print(\"small\")"
+      nom: "big"
+      explication: "12 > 10 is true: the program displays big, and only big."
+      pieges:
+        - { texte: "small", pourquoi: "12 > 10 is true: the if line runs." }
+        - { texte: "big, then small", pourquoi: "Only one branch runs: else is only used when the condition is false." }
+    - texte: "What will this program display?\nx = 10\nif x >= 10: print(\"A\")\nelse: print(\"B\")"
+      nom: "A"
+      explication: "10 >= 10 is true, because 10 equals 10. The program displays A."
+      pieges:
+        - { texte: "B", pourquoi: ">= means “greater than or equal to”: 10 >= 10 is true." }
+        - { texte: "An error", pourquoi: ">= is a Python operator: the program is correct." }
+    - texte: "What will this program display?\nn = 7\nif n % 2 == 0: print(\"even\")\nelse: print(\"odd\")"
+      nom: "odd"
+      explication: "7 = 2 × 3 + 1: the remainder is 1, the condition is false, the program displays odd."
+      pieges:
+        - { texte: "even", pourquoi: "7 % 2 is the remainder of 7 ÷ 2: 1. 1 == 0 is false." }
+        - { texte: "1", pourquoi: "1 is the remainder worked out in the condition; the program displays the word of the chosen branch." }
+    - texte: "What will this program display?\nx = 5\nif x == 5: x = x + 1\nif x == 5: x = x + 10\nprint(x)"
+      nom: "6"
+      explication: "First if: true, x becomes 6. Second if: 6 == 5 is false, x stays 6."
+      pieges:
+        - { texte: "16", pourquoi: "At the second if, x is already 6: 6 == 5 is false." }
+        - { texte: "5", pourquoi: "5 == 5 is true: the first if adds 1." }
+    - texte: "What will this program display?\na = 3\nb = 8\nif a > b: m = a\nelse: m = b\nprint(m)"
+      nom: "8"
+      explication: "3 > 8 is false, so m = b = 8. This program keeps the larger of the two."
+      pieges:
+        - { texte: "3", pourquoi: "3 > 8 is false: m gets b." }
+        - { texte: "11", pourquoi: "The program chooses one of the two numbers, it does not add them." }
+    - texte: "What will this program display?\nx = 4\nif x > 0 and x < 3: print(\"yes\")\nelse: print(\"no\")"
+      nom: "no"
+      explication: "4 > 0 is true, but 4 < 3 is false. True and false gives false: the program displays no."
+      pieges:
+        - { texte: "yes", pourquoi: "With and, both must be true: 4 < 3 is false." }
+        - { texte: "yes, then no", pourquoi: "Only one branch runs." }
+    - texte: "What will this program display?\nx = 4\nif x < 0 or x > 3: print(\"yes\")\nelse: print(\"no\")"
+      nom: "yes"
+      explication: "4 < 0 is false, 4 > 3 is true. False or true gives true: the program displays yes."
+      pieges:
+        - { texte: "no", pourquoi: "With or, one true condition is enough: 4 > 3 is true." }
+        - { texte: "An error", pourquoi: "or is a Python keyword: the program is correct." }
+    - texte: "What will this program display?\nt = 18\nif t > 25: print(\"hot\")\nelif t > 15: print(\"mild\")\nelse: print(\"cold\")"
+      nom: "mild"
+      explication: "18 > 25: false. 18 > 15: true. The program displays mild and stops there."
+      pieges:
+        - { texte: "hot", pourquoi: "18 > 25 is false: the program moves on to elif." }
+        - { texte: "cold", pourquoi: "elif tests again: 18 > 15 is true, so the else is never reached." }
+    - texte: "What happens?\nx = 3\nif x = 3: print(\"ok\")"
+      nom: "Python reports a syntax error"
+      explication: "= stores a value, == compares. if x = 3 makes no sense to Python: it is a syntax error (SyntaxError)."
+      pieges:
+        - { texte: "The program displays ok", pourquoi: "In an if, you need ==. With a single =, Python rejects the line before even running it." }
+        - { texte: "Nothing is displayed", pourquoi: "It is not a false test: Python does not run the program and reports an error." }
+    - texte: "Why do we write x == 5 in an if, and not x = 5?"
+      nom: "== compares two values; = stores a value in x"
+      explication: "x = 5 is an assignment: x gets 5. x == 5 is a comparison: true if x is 5, false otherwise. An if needs a comparison."
+      pieges:
+        - { texte: "They both mean the same thing", pourquoi: "No: x = 5 changes x, x == 5 only asks whether x is 5." }
+        - { texte: "== means “roughly equal”", pourquoi: "== tests exact equality: true or false." }

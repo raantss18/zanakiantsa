@@ -1,0 +1,125 @@
+id: implicite-texte
+titre: "Comprendre ce que le texte ne dit pas"
+niveau: CE2
+prerequis: ["comprendre-texte"]
+programme: { source: cycle2, texte: "Comprendre ce qui est implicite (inférences) en s’appuyant sur des indices explicites et sur ses propres connaissances." }
+activite: quiz
+parametres: {}
+idee: "Un texte ne dit pas tout. On devine le reste avec des indices du texte et ce qu’on sait déjà : un parapluie et des flaques, c’est qu’il pleut."
+phrases:
+  consigne: "Lis le petit texte. La réponse n’est pas écrite : cherche les indices."
+  question: "{texte}"
+  indice: "Quels mots du texte t’aident ? Que sais-tu déjà sur ces choses ?"
+  exemple: "« Nina prend son parapluie. Elle saute dans les flaques. » Le texte ne dit pas qu’il pleut, mais le parapluie et les flaques le montrent."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « Nina prend son parapluie et met ses bottes. Elle saute dans les flaques. » Quel temps fait-il ?"
+    nom: "Il pleut."
+    explication: "Le parapluie, les bottes et les flaques sont des indices de pluie."
+    pieges:
+      - { texte: "Il fait très chaud.", pourquoi: "Avec un parapluie, des bottes et des flaques, ce n’est pas la chaleur : c’est la pluie." }
+      - { texte: "Il neige.", pourquoi: "Le texte parle de flaques d’eau, pas de neige." }
+  - texte: "Lis : « Hugo souffle les bougies. Tout le monde chante et applaudit. » Que fête-t-on ?"
+    nom: "l’anniversaire de Hugo"
+    explication: "Souffler des bougies pendant qu’on chante, c’est un anniversaire, et c’est Hugo qui souffle."
+    pieges:
+      - { texte: "la rentrée des classes", pourquoi: "À la rentrée, on ne souffle pas de bougies." }
+      - { texte: "l’anniversaire de la maîtresse", pourquoi: "C’est Hugo qui souffle les bougies : c’est donc sa fête." }
+  - texte: "Lis : « Le boulanger sort les baguettes du four. Il est quatre heures. La rue est noire et vide. » Est-ce le jour ou la nuit ?"
+    nom: "la nuit"
+    explication: "La rue est noire et vide à quatre heures : c’est la nuit, avant le lever du jour."
+    pieges:
+      - { texte: "l’après-midi", pourquoi: "À quatre heures de l’après-midi, la rue ne serait pas noire." }
+      - { texte: "midi", pourquoi: "Le texte dit « quatre heures » et « la rue est noire » : ce n’est pas midi." }
+  - texte: "Lis : « Ivo bâille et se frotte les yeux. Il pose sa tête sur la table. » Comment se sent Ivo ?"
+    nom: "fatigué"
+    explication: "Bâiller, se frotter les yeux, poser sa tête : ce sont des signes de fatigue."
+    pieges:
+      - { texte: "en colère", pourquoi: "Bâiller et se frotter les yeux sont des signes de fatigue, pas de colère." }
+      - { texte: "très joyeux", pourquoi: "Rien ne montre de la joie : Ivo bâille et pose sa tête." }
+  - texte: "Lis : « Léna a cassé le vase. Elle a les joues rouges. Elle baisse la tête et ne dit rien. » Comment se sent Léna ?"
+    nom: "gênée"
+    explication: "Elle a cassé le vase, rougit et baisse la tête : elle est gênée."
+    pieges:
+      - { texte: "fière", pourquoi: "On ne baisse pas la tête quand on est fier : Léna vient de casser le vase." }
+      - { texte: "joyeuse", pourquoi: "Une personne joyeuse sourit ; Léna baisse la tête après avoir cassé le vase." }
+  - texte: "Lis : « Le chien remue la queue et court vers la porte. On entend une clé dans la serrure. » Qui arrive, sans doute ?"
+    nom: "quelqu’un de la maison"
+    explication: "La personne a la clé, et le chien est content : c’est quelqu’un qu’il connaît, qui habite là."
+    pieges:
+      - { texte: "un voleur", pourquoi: "Le chien remue la queue : il est content. Et la personne ouvre avec une clé." }
+      - { texte: "le facteur", pourquoi: "Le facteur n’a pas la clé de la maison." }
+  - texte: "Lis : « Sam enlève son manteau et ouvre la fenêtre. Il s’évente avec un cahier. » Sam a chaud. Quel indice le montre le mieux ?"
+    nom: "Il s’évente avec un cahier."
+    explication: "On s’évente pour se rafraîchir : c’est un indice de chaleur."
+    pieges:
+      - { texte: "Il a un cahier.", pourquoi: "Avoir un cahier ne dit rien de la chaleur : c’est le fait de s’éventer qui compte." }
+      - { texte: "Le texte dit « Sam a chaud ».", pourquoi: "Le texte ne le dit pas : on le devine grâce aux indices." }
+  - texte: "Lis : « Mia regarde par la fenêtre. Les arbres sont blancs. Les enfants font un bonhomme. » C’est l’hiver. Pourquoi peut-on le dire ?"
+    nom: "Les arbres sont blancs et les enfants font un bonhomme."
+    explication: "On sait que la neige blanchit les arbres et qu’on fait des bonshommes de neige en hiver."
+    pieges:
+      - { texte: "Mia regarde par la fenêtre.", pourquoi: "On peut regarder par la fenêtre en toute saison : ce n’est pas un indice." }
+      - { texte: "Le texte dit « hiver ».", pourquoi: "Le mot « hiver » n’est pas dans le texte : on le devine avec les indices." }
+
+en:
+  langue: "fr"
+  titre: "French: reading between the lines"
+  idee: "A text doesn't say everything. We work out the rest from clues in the text and what we already know: an umbrella and puddles mean it's raining."
+  phrases:
+    consigne: "Read the short French text. The answer isn't written: look for clues."
+    question: "{texte}"
+    indice: "Which words in the text help you? What do you already know about these things?"
+    exemple: "« Nina prend son parapluie. Elle saute dans les flaques. » The text doesn't say it's raining, but the umbrella and the puddles show it."
+    demonstration: "{explication}"
+    bravo: "Yes! That's right."
+  items:
+    - texte: "Read: « Nina prend son parapluie et met ses bottes. Elle saute dans les flaques. » What's the weather like?"
+      nom: "It's raining."
+      explication: "The umbrella, the boots and the puddles are clues that it's raining."
+      pieges:
+        - { texte: "It's very hot.", pourquoi: "An umbrella, boots and puddles don't mean heat: they mean rain." }
+        - { texte: "It's snowing.", pourquoi: "The text talks about puddles of water, not snow." }
+    - texte: "Read: « Hugo souffle les bougies. Tout le monde chante et applaudit. » What are they celebrating?"
+      nom: "Hugo's birthday"
+      explication: "Blowing out candles while everyone sings means a birthday, and Hugo is the one blowing."
+      pieges:
+        - { texte: "the first day of school", pourquoi: "You don't blow out candles on the first day of school." }
+        - { texte: "the teacher's birthday", pourquoi: "Hugo is the one blowing out the candles: so it's his party." }
+    - texte: "Read: « Le boulanger sort les baguettes du four. Il est quatre heures. La rue est noire et vide. » Is it day or night?"
+      nom: "night"
+      explication: "The street is dark and empty at four o'clock: it's night, before sunrise."
+      pieges:
+        - { texte: "the afternoon", pourquoi: "At four in the afternoon, the street wouldn't be dark." }
+        - { texte: "midday", pourquoi: "The text says « quatre heures » and « la rue est noire »: it isn't midday." }
+    - texte: "Read: « Ivo bâille et se frotte les yeux. Il pose sa tête sur la table. » How does Ivo feel?"
+      nom: "tired"
+      explication: "Yawning, rubbing your eyes, laying your head down: these are signs of tiredness."
+      pieges:
+        - { texte: "angry", pourquoi: "Yawning and rubbing your eyes are signs of tiredness, not anger." }
+        - { texte: "very happy", pourquoi: "Nothing shows joy: Ivo yawns and lays his head down." }
+    - texte: "Read: « Léna a cassé le vase. Elle a les joues rouges. Elle baisse la tête et ne dit rien. » How does Léna feel?"
+      nom: "embarrassed"
+      explication: "She broke the vase, blushes and looks down: she's embarrassed."
+      pieges:
+        - { texte: "proud", pourquoi: "You don't look down when you're proud: Léna has just broken the vase." }
+        - { texte: "happy", pourquoi: "A happy person smiles; Léna looks down after breaking the vase." }
+    - texte: "Read: « Le chien remue la queue et court vers la porte. On entend une clé dans la serrure. » Who is probably arriving?"
+      nom: "someone who lives there"
+      explication: "The person has the key, and the dog is happy: it's someone it knows, who lives there."
+      pieges:
+        - { texte: "a burglar", pourquoi: "The dog is wagging its tail: it's happy. And the person opens the door with a key." }
+        - { texte: "the postman", pourquoi: "The postman doesn't have the key to the house." }
+    - texte: "Read: « Sam enlève son manteau et ouvre la fenêtre. Il s’évente avec un cahier. » Sam is hot. Which clue shows it best?"
+      nom: "He fans himself with an exercise book."
+      explication: "You fan yourself to cool down: it's a clue that he's hot."
+      pieges:
+        - { texte: "He has an exercise book.", pourquoi: "Having an exercise book says nothing about heat: what counts is that he fans himself." }
+        - { texte: "The text says « Sam a chaud ».", pourquoi: "The text doesn't say it: we work it out from the clues." }
+    - texte: "Read: « Mia regarde par la fenêtre. Les arbres sont blancs. Les enfants font un bonhomme. » It's winter. How can we tell?"
+      nom: "The trees are white and the children are making a snowman."
+      explication: "We know snow makes trees white and that people make snowmen in winter."
+      pieges:
+        - { texte: "Mia is looking out of the window.", pourquoi: "You can look out of the window in any season: it isn't a clue." }
+        - { texte: "The text says « hiver ».", pourquoi: "The word « hiver » isn't in the text: we work it out from the clues." }

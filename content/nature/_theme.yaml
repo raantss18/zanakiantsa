@@ -2,16 +2,25 @@ id: nature
 titre: Découvrir le monde du vivant
 nom: "Le vivant"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Les êtres vivants, leurs besoins, leur corps, leurs milieux de vie."
+resume: "Le vivant, la matière et l'énergie, de la maternelle à la 3e."
 icone: "1f331"
-ages: [4, 8]
+ages: [4, 15]
 # Programme d'enseignement de l'école maternelle, version consolidée (BO n° 41 du 31 octobre 2024 et n° 19 du
 # 7 mai 2026), « Découvrir le monde du vivant », p. 58-60. Consulté le 2026-11-03.
 sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
   # Éduscol, « Questionner le monde », cycle 2, progression « La matière » (mai 2023). Lu le 2026-11-03.
   c2: "https://eduscol.education.fr/document/50261/download"
-ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, etats-eau, fondre-geler]
+  # Programme de sciences et technologie du cycle 2 (BO n° 24 du 11 juin 2026, annexe 1), CE2. Lu le 2026-11-07.
+  # Arrêté du 5-6-2026, art. 3 : en application au CE2 à la rentrée 2027-2028 (le programme de 2020 reste en 2026-2027).
+  c2s: "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf"
+  # Programme de sciences et technologie du cycle 3 (BO n° 24 du 11 juin 2026, annexe 2), CM1, CM2, 6e. Lu le 2026-11-07.
+  # En application au CM1 à la rentrée 2026-2027, au CM2 et en 6e à la rentrée 2027-2028 (même arrêté, art. 3).
+  c3s: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-519023.pdf"
+  # Programme du cycle 4 en vigueur à la rentrée 2020 (BOEN n° 31 du 30 juillet 2020), Éduscol : physique-chimie p. 98-104,
+  # SVT. Le programme ne répartit pas ces notions par classe : la classe choisie suit ses « repères de progressivité ». Lu le 2026-11-07.
+  c4: "https://eduscol.education.fr/document/621/download"
+ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, etats-eau, fondre-geler, chaine-alimentaire, solide-liquide, reseau-alimentaire, melanges, changements-etat, circuit-electrique, temperatures-etat, cellule, vegetaux-producteurs, digestion, seismes-volcans, transformation-chimique, reproduction, energie]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -25,7 +34,7 @@ intro:
 en:
   titre: "Discovering living things"
   nom: "Living things"
-  resume: "Living things, what they need, their bodies and where they live."
+  resume: "Living things, matter and energy, from nursery school to Year 10."
   intro:
     - texte: "Living things are born, grow up and change."
       images: ["1f95a", "1f423", "1f414"]

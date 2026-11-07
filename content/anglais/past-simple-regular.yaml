@@ -1,0 +1,154 @@
+id: past-simple-regular
+titre: "Le prétérit : I played, I was"
+niveau: 5e
+prerequis: [present-simple]
+programme: { source: college, texte: "5e : l’expression du passé : reconnaitre quelques verbes les plus courants du prétérit : was/were, verbes réguliers et irréguliers, I watched a documentary, I discovered artists, I went to the museum, etc." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Au prétérit, les verbes réguliers prennent -ed à toutes les personnes : « I played », « she played ». « be » devient « was » (I, he, she, it) ou « were » (you, we, they)."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme du verbe."
+  question: "{texte}"
+  indice: "Cherche le mot qui dit le passé : yesterday, last week, last night… Puis ajoute -ed, ou prends « was » ou « were »."
+  exemple: "« Last week, she … her grandma. » (visit) : « last week » dit le passé. On ajoute -ed : « she visited her grandma »."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « Yesterday, I … football. » (play)"
+    nom: "played"
+    explication: "« Yesterday » demande le prétérit : « I played football. »"
+    pieges:
+      - { texte: "play", pourquoi: "« play » est le présent. « Yesterday », hier, demande le passé : -ed." }
+      - { texte: "plays", pourquoi: "« plays » est le présent avec he, she, it. « Yesterday » demande le passé : « played »." }
+  - texte: "Complète : « We … a film last night. » (watch)"
+    nom: "watched"
+    explication: "« last night » demande le prétérit : « We watched a film. »"
+    pieges:
+      - { texte: "watch", pourquoi: "« watch » est le présent. « last night » demande le passé : « watched »." }
+      - { texte: "watches", pourquoi: "« watches » est le présent avec he, she, it. Au passé : « watched »." }
+  - texte: "Complète : « He … to music after school yesterday. » (listen)"
+    nom: "listened"
+    explication: "Au prétérit, -ed à toutes les personnes : « He listened to music. »"
+    pieges:
+      - { texte: "listens", pourquoi: "« listens » est le présent. « yesterday » demande le passé : « listened »." }
+      - { texte: "listen", pourquoi: "« listen » est la base, sans marque du passé. Il faut -ed : « listened »." }
+  - texte: "Complète : « I … tired yesterday. » (be)"
+    nom: "was"
+    explication: "Au prétérit, « be » devient « was » avec « I » : « I was tired yesterday. »"
+    pieges:
+      - { texte: "were", pourquoi: "« were » va avec you, we, they. Avec « I » : « was »." }
+      - { texte: "am", pourquoi: "« am » est le présent. « yesterday » demande le passé : « was »." }
+  - texte: "Complète : « They … at the beach last Sunday. » (be)"
+    nom: "were"
+    explication: "Au prétérit, « be » devient « were » avec « they » : « They were at the beach. »"
+    pieges:
+      - { texte: "was", pourquoi: "« was » va avec I, he, she, it. Avec « they » : « were »." }
+      - { texte: "are", pourquoi: "« are » est le présent. « last Sunday » demande le passé : « were »." }
+  - texte: "Complète : « I … like the film. » (ne pas aimer, au passé)"
+    nom: "didn't"
+    explication: "Au passé, la négation est « didn't » : « I didn't like the film. »"
+    pieges:
+      - { texte: "don't", pourquoi: "« don't » est le présent. Au passé : « didn't »." }
+      - { texte: "wasn't", pourquoi: "« wasn't » vient de « be ». Avec « like », la négation au passé est « didn't »." }
+  - texte: "Complète : « She didn't … her homework. » (finish)"
+    nom: "finish"
+    explication: "Après « didn't », le verbe reste à la base : « She didn't finish her homework. »"
+    pieges:
+      - { texte: "finished", pourquoi: "Après « didn't », le verbe reste à la base : le passé est déjà dans « did »." }
+      - { texte: "finishes", pourquoi: "Après « didn't », le verbe reste à la base, sans -es." }
+  - texte: "Complète : « … you watch TV yesterday? »"
+    nom: "Did"
+    explication: "Au passé, la question commence par « Did » : « Did you watch TV yesterday? »"
+    pieges:
+      - { texte: "Do", pourquoi: "« Do » pose une question au présent. « yesterday » demande « Did »." }
+      - { texte: "Were", pourquoi: "« Were » vient de « be ». Avec « watch », la question au passé commence par « Did »." }
+  - texte: "Pourquoi écrit-on « She didn't play », sans -ed ?"
+    nom: "Le passé est déjà marqué par « did » : le verbe qui suit reste à la base."
+    explication: "« did » porte déjà le passé : « play » reste à la base. « She didn't play »."
+    pieges:
+      - { texte: "Parce que « play » est irrégulier.", pourquoi: "Non : « play » est régulier, « played ». C'est « did » qui porte le passé." }
+      - { texte: "Parce qu'on ne met jamais -ed avec « she ».", pourquoi: "Non : « She played tennis » est juste. C'est seulement après « didn't » qu'on n'en met pas." }
+en:
+  titre: "The past simple: I played, I was"
+  idee: "In the past simple, regular verbs take -ed with every person: I played, she played. Be becomes was (I, he, she, it) or were (you, we, they)."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of the verb."
+    question: "{texte}"
+    indice: "Find the word that shows the past: yesterday, last week, last night… Then add -ed, or use was or were."
+    exemple: "“Last week, she … her grandma.” (visit): last week shows the past. We add -ed: “she visited her grandma”."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “Yesterday, I … football.” (play)"
+      nom: "played"
+      explication: "Yesterday needs the past simple: “I played football.”"
+      pieges:
+        - texte: "play"
+          pourquoi: "“play” is the present. Yesterday needs the past: -ed."
+        - texte: "plays"
+          pourquoi: "“plays” is the present with he, she, it. Yesterday needs the past: played."
+    - texte: "Complete: “We … a film last night.” (watch)"
+      nom: "watched"
+      explication: "Last night needs the past simple: “We watched a film.”"
+      pieges:
+        - texte: "watch"
+          pourquoi: "“watch” is the present. Last night needs the past: watched."
+        - texte: "watches"
+          pourquoi: "“watches” is the present with he, she, it. In the past: watched."
+    - texte: "Complete: “He … to music after school yesterday.” (listen)"
+      nom: "listened"
+      explication: "In the past simple, -ed with every person: “He listened to music.”"
+      pieges:
+        - texte: "listens"
+          pourquoi: "“listens” is the present. Yesterday needs the past: listened."
+        - texte: "listen"
+          pourquoi: "“listen” is the base form, with no past ending. It needs -ed: listened."
+    - texte: "Complete: “I … tired yesterday.” (be)"
+      nom: "was"
+      explication: "In the past, be becomes was with I: “I was tired yesterday.”"
+      pieges:
+        - texte: "were"
+          pourquoi: "“were” goes with you, we and they. With I: was."
+        - texte: "am"
+          pourquoi: "“am” is the present. Yesterday needs the past: was."
+    - texte: "Complete: “They … at the beach last Sunday.” (be)"
+      nom: "were"
+      explication: "In the past, be becomes were with they: “They were at the beach.”"
+      pieges:
+        - texte: "was"
+          pourquoi: "“was” goes with I, he, she and it. With they: were."
+        - texte: "are"
+          pourquoi: "“are” is the present. Last Sunday needs the past: were."
+    - texte: "Complete: “I … like the film.” (negative, past)"
+      nom: "didn't"
+      explication: "In the past, the negative is didn't: “I didn't like the film.”"
+      pieges:
+        - texte: "don't"
+          pourquoi: "“don't” is the present. In the past: didn't."
+        - texte: "wasn't"
+          pourquoi: "“wasn't” comes from be. With like, the past negative is didn't."
+    - texte: "Complete: “She didn't … her homework.” (finish)"
+      nom: "finish"
+      explication: "After didn't, the verb stays in its base form: “She didn't finish her homework.”"
+      pieges:
+        - texte: "finished"
+          pourquoi: "After didn't, the verb stays in its base form: the past is already in did."
+        - texte: "finishes"
+          pourquoi: "After didn't, the verb stays in its base form, without -es."
+    - texte: "Complete: “… you watch TV yesterday?”"
+      nom: "Did"
+      explication: "In the past, the question starts with Did: “Did you watch TV yesterday?”"
+      pieges:
+        - texte: "Do"
+          pourquoi: "“Do” asks questions in the present. Yesterday needs Did."
+        - texte: "Were"
+          pourquoi: "“Were” comes from be. With watch, the past question starts with Did."
+    - texte: "Why do we write “She didn't play”, without -ed?"
+      nom: "The past is already shown by did: the verb after it stays in its base form."
+      explication: "Did already carries the past: play stays in its base form. “She didn't play.”"
+      pieges:
+        - texte: "Because play is irregular."
+          pourquoi: "No: play is regular, played. Did is what carries the past."
+        - texte: "Because we never add -ed with she."
+          pourquoi: "No: “She played tennis” is correct. Only after didn't do we leave it out."

@@ -1,0 +1,136 @@
+id: loi-binomiale
+titre: "La loi binomiale"
+niveau: Terminale
+prerequis: ["denombrement"]
+programme: { source: terminale, texte: "Modéliser une situation par un schéma de Bernoulli, par une loi binomiale." }
+activite: quiz
+parametres: {}
+idee: "On répète n fois, de façon indépendante, une épreuve à deux issues : succès de probabilité p. Le nombre X de succès suit la loi binomiale B(n ; p), d’espérance n × p."
+phrases:
+  consigne: "Repère n et p, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "P(X = k) : nombre de chemins avec k succès, fois pᵏ, fois (1 − p) pour chaque échec."
+  exemple: "Une pièce lancée 3 fois, p = 0,5. P(X = 2) = 3 × 0,5² × 0,5 = 0,375 : 3 chemins de l’arbre ont 2 Pile."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "On lance 4 fois un dé ; succès : obtenir 6. Quels sont les paramètres de la loi binomiale ?"
+    nom: "n = 4 et p = 1/6"
+    explication: "4 lancers indépendants, donc n = 4 ; à chaque lancer, la probabilité d’obtenir 6 est 1/6."
+    pieges:
+      - { texte: "n = 6 et p = 1/4", pourquoi: "n et p sont inversés : n est le nombre de lancers, 4, et p la probabilité de 6, 1/6." }
+      - { texte: "n = 4 et p = 1/2", pourquoi: "Deux issues, succès ou échec, ne veulent pas dire une chance sur deux : 6 sort une fois sur 6." }
+  - texte: "X suit la loi binomiale B(10 ; 0,3). Quelle est son espérance ?"
+    nom: "3"
+    explication: "E(X) = n × p = 10 × 0,3 = 3 : en moyenne, 3 succès sur 10 épreuves."
+    pieges:
+      - { texte: "0,3", pourquoi: "0,3 est la probabilité d’un succès : l’espérance est n × p." }
+      - { texte: "7", pourquoi: "10 × 0,7 = 7 est le nombre moyen d’échecs, pas de succès." }
+  - texte: "X suit B(3 ; 0,5). Combien vaut P(X = 3) ?"
+    nom: "0,125"
+    explication: "Trois succès de suite : 0,5 × 0,5 × 0,5 = 0,125, un seul chemin de l’arbre."
+    pieges:
+      - { texte: "1,5", pourquoi: "1,5 est l’espérance, 3 × 0,5 : une probabilité ne dépasse pas 1." }
+      - { texte: "0,5", pourquoi: "0,5 compte un seul succès : il en faut trois." }
+  - texte: "X suit B(4 ; 0,5). Combien vaut P(X = 2) ?"
+    nom: "0,375"
+    explication: "6 chemins ont 2 succès parmi 4 épreuves ; chacun a la probabilité 0,5⁴ = 0,0625. 6 × 0,0625 = 0,375."
+    pieges:
+      - { texte: "0,0625", pourquoi: "0,0625 est la probabilité d’un seul chemin : 6 chemins ont 2 succès." }
+      - { texte: "0,5", pourquoi: "2 succès sur 4 ne veut pas dire probabilité 1/2 : on compte les chemins." }
+  - texte: "X suit B(5 ; 0,2). Combien vaut P(X = 0), arrondi au millième ?"
+    nom: "0,328"
+    explication: "Aucun succès : 5 échecs de probabilité 0,8. 0,8⁵ = 0,32768, environ 0,328."
+    pieges:
+      - { texte: "0", pourquoi: "Aucun succès est tout à fait possible : il faut 5 échecs, 0,8⁵." }
+      - { texte: "0,000 32", pourquoi: "0,2⁵ est la probabilité de 5 succès : pour aucun succès, on prend 0,8⁵." }
+  - texte: "X suit B(5 ; 0,2). Combien vaut P(X ≥ 1), arrondi au millième ?"
+    nom: "0,672"
+    explication: "« Au moins un succès » est le contraire de « aucun succès » : 1 − 0,8⁵ = 1 − 0,32768 = 0,67232."
+    pieges:
+      - { texte: "0,328", pourquoi: "0,328 est P(X = 0) : on prend le contraire, 1 − 0,328." }
+      - { texte: "1", pourquoi: "Au moins un succès n’est pas certain : il reste le cas « aucun succès »." }
+  - texte: "Complète : X suit B(3 ; 0,4). P(X = 1) = 3 × 0,4 × …"
+    nom: "0,6²"
+    explication: "1 succès et 2 échecs ; chaque échec a la probabilité 1 − 0,4 = 0,6. P(X = 1) = 3 × 0,4 × 0,36 = 0,432."
+    pieges:
+      - { texte: "0,4²", pourquoi: "Les deux autres épreuves sont des échecs, de probabilité 1 − 0,4 = 0,6." }
+      - { texte: "0,6", pourquoi: "Il y a deux échecs : 0,6 × 0,6 = 0,6²." }
+  - texte: "Une urne a 2 boules rouges et 3 bleues. Pourquoi 3 tirages sans remise ne suivent-ils pas une loi binomiale ?"
+    nom: "Les tirages ne sont pas indépendants : l’urne change après chaque tirage."
+    explication: "Sans remise, la probabilité de rouge passe de 2/5 à 1/4 ou 2/4 selon le 1er tirage : p ne reste pas le même."
+    pieges:
+      - { texte: "Parce que n = 3 est trop petit.", pourquoi: "Une loi binomiale peut avoir n = 3 : le problème est l’indépendance." }
+      - { texte: "Parce que la probabilité de succès n’est pas 0,5.", pourquoi: "p peut valoir n’importe quel nombre entre 0 et 1." }
+  - texte: "Un QCM a 4 questions, 3 réponses chacune, dont une seule juste. On répond au hasard. Probabilité d’avoir les 4 bonnes ?"
+    nom: "1/81"
+    explication: "Chaque bonne réponse a la probabilité 1/3, de façon indépendante : (1/3)⁴ = 1/81."
+    pieges:
+      - { texte: "1/12", pourquoi: "1/3 × 4 : on multiplie les 4 probabilités entre elles, (1/3)⁴." }
+      - { texte: "1/3", pourquoi: "1/3 vaut pour une seule question : il en faut quatre justes." }
+
+en:
+  titre: "The binomial distribution"
+  idee: "Repeat a trial with two outcomes n times, independently: success has probability p. The number X of successes follows the binomial distribution B(n, p), with mean n × p."
+  phrases:
+    consigne: "Find n and p, then touch the right answer."
+    question: "{texte}"
+    indice: "P(X = k): number of paths with k successes, times pᵏ, times (1 − p) for each failure."
+    exemple: "A coin tossed 3 times, p = 0.5. P(X = 2) = 3 × 0.5² × 0.5 = 0.375: 3 paths of the tree have 2 heads."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "A dice is rolled 4 times; success: getting a 6. What are the parameters of the binomial distribution?"
+      nom: "n = 4 and p = 1/6"
+      explication: "4 independent rolls, so n = 4; on each roll, the probability of a 6 is 1/6."
+      pieges:
+        - { texte: "n = 6 and p = 1/4", pourquoi: "n and p are swapped: n is the number of rolls, 4, and p the probability of a 6, 1/6." }
+        - { texte: "n = 4 and p = 1/2", pourquoi: "Two outcomes, success or failure, do not mean a one-in-two chance: a 6 comes up once in 6." }
+    - texte: "X follows the binomial distribution B(10, 0.3). What is its mean (expected value)?"
+      nom: "3"
+      explication: "E(X) = n × p = 10 × 0.3 = 3: on average, 3 successes in 10 trials."
+      pieges:
+        - { texte: "0.3", pourquoi: "0.3 is the probability of one success: the mean is n × p." }
+        - { texte: "7", pourquoi: "10 × 0.7 = 7 is the mean number of failures, not successes." }
+    - texte: "X follows B(3, 0.5). What is P(X = 3)?"
+      nom: "0.125"
+      explication: "Three successes in a row: 0.5 × 0.5 × 0.5 = 0.125, just one path of the tree."
+      pieges:
+        - { texte: "1.5", pourquoi: "1.5 is the mean, 3 × 0.5: a probability is never more than 1." }
+        - { texte: "0.5", pourquoi: "0.5 counts one success: you need three." }
+    - texte: "X follows B(4, 0.5). What is P(X = 2)?"
+      nom: "0.375"
+      explication: "6 paths have 2 successes out of 4 trials; each has probability 0.5⁴ = 0.0625. 6 × 0.0625 = 0.375."
+      pieges:
+        - { texte: "0.0625", pourquoi: "0.0625 is the probability of one path: 6 paths have 2 successes." }
+        - { texte: "0.5", pourquoi: "2 successes out of 4 does not mean probability 1/2: count the paths." }
+    - texte: "X follows B(5, 0.2). What is P(X = 0), to 3 decimal places?"
+      nom: "0.328"
+      explication: "No success: 5 failures, each with probability 0.8. 0.8⁵ = 0.32768, about 0.328."
+      pieges:
+        - { texte: "0", pourquoi: "No success is quite possible: you need 5 failures, 0.8⁵." }
+        - { texte: "0.00032", pourquoi: "0.2⁵ is the probability of 5 successes: for no success, use 0.8⁵." }
+    - texte: "X follows B(5, 0.2). What is P(X ≥ 1), to 3 decimal places?"
+      nom: "0.672"
+      explication: "“At least one success” is the complement of “no success”: 1 − 0.8⁵ = 1 − 0.32768 = 0.67232."
+      pieges:
+        - { texte: "0.328", pourquoi: "0.328 is P(X = 0): take the complement, 1 − 0.328." }
+        - { texte: "1", pourquoi: "At least one success is not certain: “no success” can still happen." }
+    - texte: "Fill in the step: X follows B(3, 0.4). P(X = 1) = 3 × 0.4 × …"
+      nom: "0.6²"
+      explication: "1 success and 2 failures; each failure has probability 1 − 0.4 = 0.6. P(X = 1) = 3 × 0.4 × 0.36 = 0.432."
+      pieges:
+        - { texte: "0.4²", pourquoi: "The other two trials are failures, with probability 1 − 0.4 = 0.6." }
+        - { texte: "0.6", pourquoi: "There are two failures: 0.6 × 0.6 = 0.6²." }
+    - texte: "A bag has 2 red balls and 3 blue ones. Why do 3 draws without replacement not follow a binomial distribution?"
+      nom: "The draws are not independent: the bag changes after each draw."
+      explication: "Without replacement, the probability of red goes from 2/5 to 1/4 or 2/4 depending on the 1st draw: p does not stay the same."
+      pieges:
+        - { texte: "Because n = 3 is too small.", pourquoi: "A binomial distribution can have n = 3: the problem is independence." }
+        - { texte: "Because the probability of success is not 0.5.", pourquoi: "p can be any number between 0 and 1." }
+    - texte: "A quiz has 4 questions with 3 answers each, only one right. You answer at random. Probability of getting all 4 right?"
+      nom: "1/81"
+      explication: "Each right answer has probability 1/3, independently: (1/3)⁴ = 1/81."
+      pieges:
+        - { texte: "1/12", pourquoi: "1/3 × 4: multiply the 4 probabilities together, (1/3)⁴." }
+        - { texte: "1/3", pourquoi: "1/3 is for one question: you need all four right." }

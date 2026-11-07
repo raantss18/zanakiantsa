@@ -1,0 +1,136 @@
+id: fraction-quotient
+titre: "Une fraction est un quotient"
+niveau: 6e
+prerequis: ["division-posee", "decimaux-ecriture"]
+programme: { source: cycle3, texte: "Relier une fraction au résultat exact de la division de son numérateur par son dénominateur" }
+activite: quiz
+parametres: {}
+idee: "3/4, ce sont 3 quarts de l'unité, mais aussi le quart de 3 : 3 ÷ 4 = 0,75. La fraction a/b est le nombre qui, multiplié par b, donne a."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Divise le numérateur par le dénominateur."
+  exemple: "On partage 3 bandes de 1 m en 4 parts égales. Chaque part mesure 3 ÷ 4 = 0,75 m, c'est-à-dire 3/4 m. Vérification : 4 × 0,75 = 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Quelle est l'écriture décimale de 3/4 ?"
+    nom: "0,75"
+    explication: "3/4 = 3 ÷ 4 = 0,75. Vérification : 4 × 0,75 = 3."
+    pieges:
+      - { texte: "3,4", pourquoi: "La barre de fraction n'est pas une virgule : 3 ÷ 4 = 0,75." }
+      - { texte: "1,33", pourquoi: "C'est environ 4 ÷ 3 : on divise le numérateur par le dénominateur." }
+  - texte: "Quelle est l'écriture décimale de 7/2 ?"
+    nom: "3,5"
+    explication: "7/2 = 7 ÷ 2 = 3,5. Vérification : 2 × 3,5 = 7."
+    pieges:
+      - { texte: "7,2", pourquoi: "La barre de fraction n'est pas une virgule : 7 ÷ 2 = 3,5." }
+      - { texte: "14", pourquoi: "7 × 2 : la barre de fraction est une division." }
+  - texte: "Quel nombre est égal à 12/4 ?"
+    nom: "3"
+    explication: "12/4 = 12 ÷ 4 = 3 : une fraction peut être un nombre entier."
+    pieges:
+      - { texte: "48", pourquoi: "12 × 4 : la barre de fraction est une division." }
+      - { texte: "0,33", pourquoi: "C'est environ 4 ÷ 12 : on divise le numérateur par le dénominateur." }
+  - texte: "Quelle fraction est égale au quotient 5 ÷ 8 ?"
+    nom: "5/8"
+    explication: "Le quotient de 5 par 8 s'écrit 5/8 : le dividende en haut, le diviseur en bas."
+    pieges:
+      - { texte: "8/5", pourquoi: "8/5 = 8 ÷ 5 : le nombre partagé, 5, va en haut." }
+      - { texte: "5,8", pourquoi: "5,8, c'est 5 unités et 8 dixièmes : ce n'est pas 5 ÷ 8." }
+  - texte: "Complète : 7 × … = 2. Quel nombre manque ?"
+    nom: "2/7"
+    explication: "Le nombre qui, multiplié par 7, donne 2, est le quotient 2 ÷ 7, qui s'écrit 2/7."
+    pieges:
+      - { texte: "7/2", pourquoi: "7 × 7/2 = 49/2, pas 2 : le nombre cherché est 2 ÷ 7." }
+      - { texte: "14", pourquoi: "7 × 2 = 14 : on cherche le nombre qui, multiplié par 7, donne 2." }
+  - texte: "4 amis se partagent 3 pizzas identiques à parts égales. Quelle part de pizza reçoit chacun ?"
+    nom: "3/4 de pizza"
+    explication: "3 pizzas partagées en 4 : 3 ÷ 4 = 3/4. Chacun reçoit 3/4 de pizza."
+    pieges:
+      - { texte: "4/3 de pizza", pourquoi: "4/3, c'est plus d'une pizza chacun : il n'y a que 3 pizzas pour 4." }
+      - { texte: "1/4 de pizza", pourquoi: "Chacun reçoit 1/4 de chacune des 3 pizzas : 3 × 1/4 = 3/4." }
+  - texte: "1/3 a-t-il une écriture décimale exacte ?"
+    nom: "Non : 1 ÷ 3 = 0,333… ne s'arrête jamais."
+    explication: "Dans 1 ÷ 3, il reste toujours 1 : les 3 continuent sans fin. 1/3 n'est pas un nombre décimal."
+    pieges:
+      - { texte: "Oui : 0,3", pourquoi: "3 × 0,3 = 0,9, pas 1 : 0,3 n'est qu'une valeur approchée." }
+      - { texte: "Oui : 1,3", pourquoi: "1,3 n'est pas 1 ÷ 3 : la barre de fraction n'est pas une virgule." }
+  - texte: "9/4 : 9 ÷ 4 = 2, reste 1. Puis 1 ÷ 4 = 0,25. Donc 9/4 = … Quel nombre ?"
+    nom: "2,25"
+    explication: "9/4 = 2 + 1/4 = 2 + 0,25 = 2,25. Vérification : 4 × 2,25 = 9."
+    pieges:
+      - { texte: "2,1", pourquoi: "Le reste 1 n'est pas 1 dixième : il faut encore diviser, 1 ÷ 4 = 0,25." }
+      - { texte: "2,4", pourquoi: "9 ÷ 4 ne s'écrit pas en collant 2 et 4 : 2 + 0,25." }
+  - texte: "Pourquoi 3/5 = 0,6 ?"
+    nom: "Parce que 5 × 0,6 = 3."
+    explication: "3/5 est le nombre qui, multiplié par 5, donne 3. Or 5 × 0,6 = 3."
+    pieges:
+      - { texte: "Parce qu'on remplace la barre par une virgule.", pourquoi: "Ce serait 3,5 : la barre de fraction est une division." }
+      - { texte: "Parce que 0,6 = 6/100.", pourquoi: "6/100 = 0,06 : en fait, 0,6 = 6/10." }
+
+en:
+  titre: "A fraction is a division"
+  idee: "3/4 is 3 quarters of one whole, but also a quarter of 3: 3 ÷ 4 = 0.75. The fraction a/b is the number which, times b, gives a."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Divide the numerator by the denominator."
+    exemple: "Share 3 strips of 1 m into 4 equal parts. Each part is 3 ÷ 4 = 0.75 m, that is 3/4 m. Check: 4 × 0.75 = 3."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 3/4 as a decimal?"
+      nom: "0.75"
+      explication: "3/4 = 3 ÷ 4 = 0.75. Check: 4 × 0.75 = 3."
+      pieges:
+        - { texte: "3.4", pourquoi: "The fraction bar is not a decimal point: 3 ÷ 4 = 0.75." }
+        - { texte: "1.33", pourquoi: "That is about 4 ÷ 3: divide the numerator by the denominator." }
+    - texte: "What is 7/2 as a decimal?"
+      nom: "3.5"
+      explication: "7/2 = 7 ÷ 2 = 3.5. Check: 2 × 3.5 = 7."
+      pieges:
+        - { texte: "7.2", pourquoi: "The fraction bar is not a decimal point: 7 ÷ 2 = 3.5." }
+        - { texte: "14", pourquoi: "7 × 2: the fraction bar means divide." }
+    - texte: "Which number is equal to 12/4?"
+      nom: "3"
+      explication: "12/4 = 12 ÷ 4 = 3: a fraction can be a whole number."
+      pieges:
+        - { texte: "48", pourquoi: "12 × 4: the fraction bar means divide." }
+        - { texte: "0.33", pourquoi: "That is about 4 ÷ 12: divide the numerator by the denominator." }
+    - texte: "Which fraction is equal to the quotient 5 ÷ 8?"
+      nom: "5/8"
+      explication: "The quotient of 5 by 8 is written 5/8: the dividend on top, the divisor below."
+      pieges:
+        - { texte: "8/5", pourquoi: "8/5 = 8 ÷ 5: the number being shared, 5, goes on top." }
+        - { texte: "5.8", pourquoi: "5.8 is 5 ones and 8 tenths: it is not 5 ÷ 8." }
+    - texte: "Fill the gap: 7 × … = 2. Which number is missing?"
+      nom: "2/7"
+      explication: "The number which, times 7, gives 2 is the quotient 2 ÷ 7, written 2/7."
+      pieges:
+        - { texte: "7/2", pourquoi: "7 × 7/2 = 49/2, not 2: the number we want is 2 ÷ 7." }
+        - { texte: "14", pourquoi: "7 × 2 = 14: we want the number which, times 7, gives 2." }
+    - texte: "4 friends share 3 identical pizzas equally. What part of a pizza does each one get?"
+      nom: "3/4 of a pizza"
+      explication: "3 pizzas shared by 4: 3 ÷ 4 = 3/4. Each gets 3/4 of a pizza."
+      pieges:
+        - { texte: "4/3 of a pizza", pourquoi: "4/3 is more than one pizza each: there are only 3 pizzas for 4." }
+        - { texte: "1/4 of a pizza", pourquoi: "Each gets 1/4 of each of the 3 pizzas: 3 × 1/4 = 3/4." }
+    - texte: "Can 1/3 be written exactly as a decimal?"
+      nom: "No: 1 ÷ 3 = 0.333… never stops."
+      explication: "In 1 ÷ 3 there is always 1 left over: the 3s go on for ever. 1/3 is not a decimal number."
+      pieges:
+        - { texte: "Yes: 0.3", pourquoi: "3 × 0.3 = 0.9, not 1: 0.3 is only an approximation." }
+        - { texte: "Yes: 1.3", pourquoi: "1.3 is not 1 ÷ 3: the fraction bar is not a decimal point." }
+    - texte: "9/4: 9 ÷ 4 = 2, remainder 1. Then 1 ÷ 4 = 0.25. So 9/4 = … Which number?"
+      nom: "2.25"
+      explication: "9/4 = 2 + 1/4 = 2 + 0.25 = 2.25. Check: 4 × 2.25 = 9."
+      pieges:
+        - { texte: "2.1", pourquoi: "The remainder 1 is not 1 tenth: keep dividing, 1 ÷ 4 = 0.25." }
+        - { texte: "2.4", pourquoi: "Don't write 9 ÷ 4 by sticking 2 and 4 together: 2 + 0.25." }
+    - texte: "Why is 3/5 = 0.6?"
+      nom: "Because 5 × 0.6 = 3."
+      explication: "3/5 is the number which, times 5, gives 3. And 5 × 0.6 = 3."
+      pieges:
+        - { texte: "Because you swap the bar for a point.", pourquoi: "That would be 3.5: the fraction bar means divide." }
+        - { texte: "Because 0.6 = 6/100.", pourquoi: "6/100 = 0.06: in fact, 0.6 = 6/10." }

@@ -1,0 +1,148 @@
+id: primitives
+titre: "Primitives"
+niveau: Terminale
+prerequis: ["derivee-polynome"]
+programme: { source: terminale, texte: "Deux primitives d’une même fonction continue sur un intervalle diffèrent d’une constante." }
+activite: quiz
+parametres: {}
+idee: "F est une primitive de f si F′ = f : on lit le tableau des dérivées à l’envers. Une primitive de xⁿ est xⁿ⁺¹ ÷ (n + 1). Deux primitives de f diffèrent d’une constante."
+phrases:
+  consigne: "Cherche une fonction dont la dérivée est f, puis touche-la."
+  question: "{texte}"
+  indice: "Vérifie ta réponse en la dérivant : tu dois retrouver f."
+  exemple: "f(x) = 6x² : F(x) = 2x³ convient, car la dérivée de 2x³ est 6x². F(x) = 2x³ + 5 convient aussi."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quelle est une primitive de f(x) = 2x ?"
+    nom: "x²"
+    explication: "La dérivée de x² est 2x : x² est une primitive de 2x."
+    pieges:
+      - { texte: "2", pourquoi: "2 est la dérivée de 2x : on cherche l’inverse, une fonction dont la dérivée est 2x." }
+      - { texte: "2x²", pourquoi: "La dérivée de 2x² est 4x, pas 2x." }
+  - texte: "Quelle est une primitive de f(x) = 3x² ?"
+    nom: "x³"
+    explication: "La dérivée de x³ est 3x²."
+    pieges:
+      - { texte: "6x", pourquoi: "6x est la dérivée de 3x² : on cherche une primitive, pas une dérivée." }
+      - { texte: "3x³", pourquoi: "La dérivée de 3x³ est 9x², pas 3x²." }
+  - texte: "Quelle est une primitive de f(x) = 5 ?"
+    nom: "5x"
+    explication: "La dérivée de 5x est 5."
+    pieges:
+      - { texte: "0", pourquoi: "0 est la dérivée de 5 : on cherche une fonction dont la dérivée est 5." }
+      - { texte: "5", pourquoi: "La dérivée de la constante 5 est 0, pas 5." }
+  - texte: "Quelle est une primitive de f(x) = x³ ?"
+    nom: "x⁴ ÷ 4"
+    explication: "xⁿ⁺¹ ÷ (n + 1) avec n = 3 : x⁴ ÷ 4. Sa dérivée est 4x³ ÷ 4 = x³."
+    pieges:
+      - { texte: "x⁴", pourquoi: "La dérivée de x⁴ est 4x³ : il faut diviser par 4." }
+      - { texte: "3x²", pourquoi: "3x² est la dérivée de x³, pas une primitive." }
+  - texte: "Quelle est une primitive de f(x) = 4x + 1 ?"
+    nom: "2x² + x"
+    explication: "La dérivée de 2x² est 4x, celle de x est 1 : (2x² + x)′ = 4x + 1."
+    pieges:
+      - { texte: "4", pourquoi: "4 est la dérivée de 4x + 1, pas une primitive." }
+      - { texte: "4x² + x", pourquoi: "La dérivée de 4x² est 8x : il faut 2x²." }
+  - texte: "Quelle est une primitive de f(x) = exp(x) ?"
+    nom: "exp(x)"
+    explication: "exp est sa propre dérivée, donc aussi sa propre primitive."
+    pieges:
+      - { texte: "x exp(x)", pourquoi: "La dérivée de x exp(x) est exp(x) + x exp(x), pas exp(x)." }
+      - { texte: "exp(x) ÷ x", pourquoi: "Diviser par x ne défait pas une dérivée : exp(x) est déjà sa propre dérivée." }
+  - texte: "Quelle est une primitive de f(x) = 1/x sur ]0 ; +∞[ ?"
+    nom: "ln(x)"
+    explication: "La dérivée de ln(x) est 1/x."
+    pieges:
+      - { texte: "−1/x²", pourquoi: "−1/x² est la dérivée de 1/x, pas une primitive." }
+      - { texte: "x² ÷ 2", pourquoi: "x² ÷ 2 est une primitive de x, pas de 1/x." }
+  - texte: "Complète : les primitives de 2x sont F(x) = x² + C. Si F(0) = 3, alors C = …"
+    nom: "3"
+    explication: "F(0) = 0² + C = C, donc C = 3 et F(x) = x² + 3."
+    pieges:
+      - { texte: "0", pourquoi: "F(0) = 0 + C = C : la condition F(0) = 3 donne C = 3." }
+      - { texte: "−3", pourquoi: "F(0) = C, donc C = 3, sans changer de signe." }
+  - texte: "Pourquoi x² et x² + 7 sont-elles toutes deux des primitives de 2x ?"
+    nom: "Leurs dérivées valent toutes deux 2x, car la constante 7 a pour dérivée 0."
+    explication: "Deux primitives d’une même fonction diffèrent d’une constante : x² + C convient pour tout nombre C."
+    pieges:
+      - { texte: "Parce que 7 est petit devant x².", pourquoi: "Même avec 1 000 à la place de 7, la dérivée reste 2x : la taille ne compte pas." }
+      - { texte: "Parce qu’une fonction n’a qu’une seule primitive.", pourquoi: "Une fonction a une infinité de primitives, qui diffèrent d’une constante." }
+  - texte: "Quelle est la primitive de f(x) = 6x² − 2x qui vaut 0 en 0 ?"
+    nom: "2x³ − x²"
+    explication: "(2x³ − x²)′ = 6x² − 2x, et 2 × 0³ − 0² = 0."
+    pieges:
+      - { texte: "12x − 2", pourquoi: "12x − 2 est la dérivée de 6x² − 2x, pas une primitive." }
+      - { texte: "2x³ − x² + 1", pourquoi: "Sa dérivée convient, mais elle vaut 1 en 0, pas 0." }
+
+en:
+  titre: "Antiderivatives"
+  idee: "F is an antiderivative of f if F′ = f: read the table of derivatives backwards. An antiderivative of xⁿ is xⁿ⁺¹ ÷ (n + 1). Two antiderivatives of f differ by a constant."
+  phrases:
+    consigne: "Find a function whose derivative is f, then touch it."
+    question: "{texte}"
+    indice: "Check your answer by differentiating it: you must get f back."
+    exemple: "f(x) = 6x²: F(x) = 2x³ works, because the derivative of 2x³ is 6x². F(x) = 2x³ + 5 works too."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is an antiderivative of f(x) = 2x?"
+      nom: "x²"
+      explication: "The derivative of x² is 2x: x² is an antiderivative of 2x."
+      pieges:
+        - { texte: "2", pourquoi: "2 is the derivative of 2x: we want the reverse, a function whose derivative is 2x." }
+        - { texte: "2x²", pourquoi: "The derivative of 2x² is 4x, not 2x." }
+    - texte: "What is an antiderivative of f(x) = 3x²?"
+      nom: "x³"
+      explication: "The derivative of x³ is 3x²."
+      pieges:
+        - { texte: "6x", pourquoi: "6x is the derivative of 3x²: we want an antiderivative, not a derivative." }
+        - { texte: "3x³", pourquoi: "The derivative of 3x³ is 9x², not 3x²." }
+    - texte: "What is an antiderivative of f(x) = 5?"
+      nom: "5x"
+      explication: "The derivative of 5x is 5."
+      pieges:
+        - { texte: "0", pourquoi: "0 is the derivative of 5: we want a function whose derivative is 5." }
+        - { texte: "5", pourquoi: "The derivative of the constant 5 is 0, not 5." }
+    - texte: "What is an antiderivative of f(x) = x³?"
+      nom: "x⁴ ÷ 4"
+      explication: "xⁿ⁺¹ ÷ (n + 1) with n = 3: x⁴ ÷ 4. Its derivative is 4x³ ÷ 4 = x³."
+      pieges:
+        - { texte: "x⁴", pourquoi: "The derivative of x⁴ is 4x³: divide by 4." }
+        - { texte: "3x²", pourquoi: "3x² is the derivative of x³, not an antiderivative." }
+    - texte: "What is an antiderivative of f(x) = 4x + 1?"
+      nom: "2x² + x"
+      explication: "The derivative of 2x² is 4x, and of x it is 1: (2x² + x)′ = 4x + 1."
+      pieges:
+        - { texte: "4", pourquoi: "4 is the derivative of 4x + 1, not an antiderivative." }
+        - { texte: "4x² + x", pourquoi: "The derivative of 4x² is 8x: you need 2x²." }
+    - texte: "What is an antiderivative of f(x) = exp(x)?"
+      nom: "exp(x)"
+      explication: "exp is its own derivative, so it is also its own antiderivative."
+      pieges:
+        - { texte: "x exp(x)", pourquoi: "The derivative of x exp(x) is exp(x) + x exp(x), not exp(x)." }
+        - { texte: "exp(x) ÷ x", pourquoi: "Dividing by x does not undo a derivative: exp(x) is already its own derivative." }
+    - texte: "What is an antiderivative of f(x) = 1/x on (0, +∞)?"
+      nom: "ln(x)"
+      explication: "The derivative of ln(x) is 1/x."
+      pieges:
+        - { texte: "−1/x²", pourquoi: "−1/x² is the derivative of 1/x, not an antiderivative." }
+        - { texte: "x² ÷ 2", pourquoi: "x² ÷ 2 is an antiderivative of x, not of 1/x." }
+    - texte: "Fill in the step: the antiderivatives of 2x are F(x) = x² + C. If F(0) = 3, then C = …"
+      nom: "3"
+      explication: "F(0) = 0² + C = C, so C = 3 and F(x) = x² + 3."
+      pieges:
+        - { texte: "0", pourquoi: "F(0) = 0 + C = C: the condition F(0) = 3 gives C = 3." }
+        - { texte: "−3", pourquoi: "F(0) = C, so C = 3, with no change of sign." }
+    - texte: "Why are x² and x² + 7 both antiderivatives of 2x?"
+      nom: "Both have derivative 2x, because the constant 7 has derivative 0."
+      explication: "Two antiderivatives of the same function differ by a constant: x² + C works for any number C."
+      pieges:
+        - { texte: "Because 7 is small compared with x².", pourquoi: "Even with 1,000 instead of 7, the derivative is still 2x: the size does not matter." }
+        - { texte: "Because a function has only one antiderivative.", pourquoi: "A function has infinitely many antiderivatives, which differ by a constant." }
+    - texte: "What is the antiderivative of f(x) = 6x² − 2x that equals 0 at 0?"
+      nom: "2x³ − x²"
+      explication: "(2x³ − x²)′ = 6x² − 2x, and 2 × 0³ − 0² = 0."
+      pieges:
+        - { texte: "12x − 2", pourquoi: "12x − 2 is the derivative of 6x² − 2x, not an antiderivative." }
+        - { texte: "2x³ − x² + 1", pourquoi: "Its derivative is right, but it equals 1 at 0, not 0." }

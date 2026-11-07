@@ -1,0 +1,148 @@
+id: suites-geometriques
+titre: "Suites géométriques"
+niveau: 1re
+prerequis: ["suites-arithmetiques", "evolutions-pourcentages"]
+programme: { source: lycee1re, texte: "Modéliser un phénomène discret à croissance linéaire par une suite arithmétique, un phénomène discret à croissance exponentielle par une suite géométrique." }
+activite: quiz
+parametres: {}
+idee: "Une suite géométrique multiplie toujours par le même nombre, la raison q : uₙ₊₁ = q × uₙ. Terme général : uₙ = u₀ × qⁿ. Une hausse de t % par an donne q = 1 + t/100."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "De u₀ à uₙ, on multiplie n fois par la raison : qⁿ."
+  exemple: "u₀ = 3 et q = 2 : u₁ = 6, u₂ = 12, u₃ = 24, et u₅ = 3 × 2⁵ = 3 × 32 = 96."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Suite géométrique : u₀ = 5 et q = 3. Combien vaut u₁ ?"
+    nom: "15"
+    explication: "On multiplie par la raison : u₁ = 5 × 3 = 15."
+    pieges:
+      - { texte: "8", pourquoi: "Ajouter 3, c’est une suite arithmétique : ici on multiplie par 3." }
+      - { texte: "125", pourquoi: "5³ élève 5 à la puissance 3 : on multiplie u₀ par la raison, une fois." }
+  - texte: "Suite géométrique : u₀ = 2 et q = 3. Combien vaut u₄ ?"
+    nom: "162"
+    explication: "u₄ = 2 × 3⁴ = 2 × 81 = 162."
+    pieges:
+      - { texte: "14", pourquoi: "2 + 4 × 3 serait une suite arithmétique : ici on multiplie." }
+      - { texte: "1 296", pourquoi: "(2 × 3)⁴ met aussi u₀ à la puissance 4 : seul q l’est, 2 × 3⁴." }
+  - texte: "u₀ = 4, u₁ = 12, u₂ = 36 : la suite est géométrique. Quelle est sa raison ?"
+    nom: "3"
+    explication: "On divise deux termes qui se suivent : 12 ÷ 4 = 3 et 36 ÷ 12 = 3."
+    pieges:
+      - { texte: "8", pourquoi: "12 − 4 serait la raison d’une suite arithmétique : ici on divise." }
+      - { texte: "4", pourquoi: "4 est u₀, le premier terme, pas la raison." }
+  - texte: "Suite géométrique : u₀ = 100 et q = 0,5. La suite est …"
+    nom: "décroissante"
+    explication: "u₀ est positif et on multiplie par 0,5, un nombre entre 0 et 1 : 100, 50, 25… La suite diminue."
+    pieges:
+      - { texte: "croissante", pourquoi: "Multiplier par 0,5, c’est diviser par 2 : les termes diminuent." }
+      - { texte: "constante", pourquoi: "Une suite géométrique de premier terme non nul est constante seulement si q = 1." }
+  - texte: "Un capital de 1 000 € est placé à 2 % par an. Quelle est la raison de la suite des capitaux ?"
+    nom: "1,02"
+    explication: "Chaque année, le capital augmente de 2 % : on le multiplie par 1 + 0,02 = 1,02."
+    pieges:
+      - { texte: "2", pourquoi: "Multiplier par 2, c’est doubler, +100 % : une hausse de 2 % multiplie par 1,02." }
+      - { texte: "0,02", pourquoi: "0,02 donne seulement les intérêts : on garde aussi le capital, 1 + 0,02." }
+  - texte: "Même placement : 1 000 € à 2 % par an. Quel est le capital après 2 ans ?"
+    nom: "1 040,40 €"
+    explication: "1 000 × 1,02² = 1 000 × 1,0404 = 1 040,40 €."
+    pieges:
+      - { texte: "1 040 €", pourquoi: "Les intérêts de la 1re année rapportent aussi la 2e année : 1 020 × 1,02." }
+      - { texte: "1 020 €", pourquoi: "1 020 €, c’est après une seule année." }
+  - texte: "Complète : u₀ = 5 et q = 2, donc uₙ = 5 × …"
+    nom: "2ⁿ"
+    explication: "On multiplie n fois par 2 : 2 × 2 × … × 2 = 2ⁿ. Donc uₙ = 5 × 2ⁿ."
+    pieges:
+      - { texte: "2n", pourquoi: "Multiplier n fois par 2 donne 2ⁿ ; 2n, c’est ajouter n fois 2." }
+      - { texte: "n²", pourquoi: "C’est la raison qui est à la puissance n, pas n qui est au carré." }
+  - texte: "Pourquoi une hausse de 10 % par an donne-t-elle une suite géométrique ?"
+    nom: "Chaque année, on multiplie par le même nombre, 1,1."
+    explication: "Augmenter de 10 %, c’est multiplier par 1,1 : la raison est q = 1,1, la même chaque année."
+    pieges:
+      - { texte: "Parce que chaque année, on ajoute le même nombre, 10.", pourquoi: "On ajoute 10 % de la valeur, qui change chaque année : ce n’est pas toujours le même nombre." }
+      - { texte: "Parce que la suite est croissante.", pourquoi: "Une suite arithmétique peut aussi être croissante : ce qui compte, c’est le même multiplicateur." }
+  - texte: "Combien vaut 1 + 2 + 4 + … + 2⁹ (10 termes) ?"
+    nom: "1 023"
+    explication: "1 + q + … + qⁿ = (qⁿ⁺¹ − 1) ÷ (q − 1) : (2¹⁰ − 1) ÷ (2 − 1) = 1 024 − 1 = 1 023."
+    pieges:
+      - { texte: "1 024", pourquoi: "1 024 = 2¹⁰ : la formule retranche 1, (2¹⁰ − 1) ÷ 1." }
+      - { texte: "512", pourquoi: "512 = 2⁹ est seulement le dernier terme : il faut la somme des 10 termes." }
+  - texte: "Suite géométrique : u₀ = 64 et q = 0,5. Combien vaut u₃ ?"
+    nom: "8"
+    explication: "u₃ = 64 × 0,5³ = 64 × 0,125 = 8 : on divise trois fois par 2, 64, 32, 16, 8."
+    pieges:
+      - { texte: "62,5", pourquoi: "64 − 3 × 0,5 serait une suite arithmétique : ici on multiplie par 0,5." }
+      - { texte: "32", pourquoi: "32 est u₁ : il faut diviser trois fois par 2." }
+
+en:
+  titre: "Geometric sequences"
+  idee: "A geometric sequence always multiplies by the same number, the common ratio q: uₙ₊₁ = q × uₙ. General term: uₙ = u₀ × qⁿ. A rise of t % a year gives q = 1 + t/100."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "From u₀ to uₙ, you multiply by the ratio n times: qⁿ."
+    exemple: "u₀ = 3 and q = 2: u₁ = 6, u₂ = 12, u₃ = 24, and u₅ = 3 × 2⁵ = 3 × 32 = 96."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Geometric sequence: u₀ = 5 and q = 3. What is u₁?"
+      nom: "15"
+      explication: "Multiply by the ratio: u₁ = 5 × 3 = 15."
+      pieges:
+        - { texte: "8", pourquoi: "Adding 3 is an arithmetic sequence: here we multiply by 3." }
+        - { texte: "125", pourquoi: "5³ raises 5 to the power 3: multiply u₀ by the ratio once." }
+    - texte: "Geometric sequence: u₀ = 2 and q = 3. What is u₄?"
+      nom: "162"
+      explication: "u₄ = 2 × 3⁴ = 2 × 81 = 162."
+      pieges:
+        - { texte: "14", pourquoi: "2 + 4 × 3 would be an arithmetic sequence: here we multiply." }
+        - { texte: "1,296", pourquoi: "(2 × 3)⁴ also raises u₀ to the power 4: only q is, 2 × 3⁴." }
+    - texte: "u₀ = 4, u₁ = 12, u₂ = 36: the sequence is geometric. What is its common ratio?"
+      nom: "3"
+      explication: "Divide two consecutive terms: 12 ÷ 4 = 3 and 36 ÷ 12 = 3."
+      pieges:
+        - { texte: "8", pourquoi: "12 − 4 would be the difference of an arithmetic sequence: here we divide." }
+        - { texte: "4", pourquoi: "4 is u₀, the first term, not the ratio." }
+    - texte: "Geometric sequence: u₀ = 100 and q = 0.5. The sequence is …"
+      nom: "decreasing"
+      explication: "u₀ is positive and we multiply by 0.5, a number between 0 and 1: 100, 50, 25… The sequence goes down."
+      pieges:
+        - { texte: "increasing", pourquoi: "Multiplying by 0.5 means dividing by 2: the terms go down." }
+        - { texte: "constant", pourquoi: "A geometric sequence with a non-zero first term is constant only if q = 1." }
+    - texte: "€1,000 is invested at 2 % a year. What is the common ratio of the sequence of amounts?"
+      nom: "1.02"
+      explication: "Each year the amount goes up by 2 %: it is multiplied by 1 + 0.02 = 1.02."
+      pieges:
+        - { texte: "2", pourquoi: "Multiplying by 2 doubles it, +100 %: a 2 % rise multiplies by 1.02." }
+        - { texte: "0.02", pourquoi: "0.02 gives only the interest: you keep the amount as well, 1 + 0.02." }
+    - texte: "Same investment: €1,000 at 2 % a year. How much is there after 2 years?"
+      nom: "€1,040.40"
+      explication: "1,000 × 1.02² = 1,000 × 1.0404 = €1,040.40."
+      pieges:
+        - { texte: "€1,040", pourquoi: "The 1st year’s interest also earns interest in the 2nd year: 1,020 × 1.02." }
+        - { texte: "€1,020", pourquoi: "€1,020 is after just one year." }
+    - texte: "Fill in the step: u₀ = 5 and q = 2, so uₙ = 5 × …"
+      nom: "2ⁿ"
+      explication: "Multiply by 2, n times: 2 × 2 × … × 2 = 2ⁿ. So uₙ = 5 × 2ⁿ."
+      pieges:
+        - { texte: "2n", pourquoi: "Multiplying by 2, n times, gives 2ⁿ; 2n means adding 2, n times." }
+        - { texte: "n²", pourquoi: "The ratio is raised to the power n; n is not squared." }
+    - texte: "Why does a 10 % rise every year give a geometric sequence?"
+      nom: "Each year you multiply by the same number, 1.1."
+      explication: "Increasing by 10 % means multiplying by 1.1: the ratio is q = 1.1, the same every year."
+      pieges:
+        - { texte: "Because each year you add the same number, 10.", pourquoi: "You add 10 % of the value, which changes every year: it is not always the same number." }
+        - { texte: "Because the sequence is increasing.", pourquoi: "An arithmetic sequence can be increasing too: what counts is the same multiplier." }
+    - texte: "What is 1 + 2 + 4 + … + 2⁹ (10 terms)?"
+      nom: "1,023"
+      explication: "1 + q + … + qⁿ = (qⁿ⁺¹ − 1) ÷ (q − 1): (2¹⁰ − 1) ÷ (2 − 1) = 1,024 − 1 = 1,023."
+      pieges:
+        - { texte: "1,024", pourquoi: "1,024 = 2¹⁰: the formula subtracts 1, (2¹⁰ − 1) ÷ 1." }
+        - { texte: "512", pourquoi: "512 = 2⁹ is only the last term: you need the sum of all 10 terms." }
+    - texte: "Geometric sequence: u₀ = 64 and q = 0.5. What is u₃?"
+      nom: "8"
+      explication: "u₃ = 64 × 0.5³ = 64 × 0.125 = 8: divide by 2 three times, 64, 32, 16, 8."
+      pieges:
+        - { texte: "62.5", pourquoi: "64 − 3 × 0.5 would be an arithmetic sequence: here we multiply by 0.5." }
+        - { texte: "32", pourquoi: "32 is u₁: divide by 2 three times." }

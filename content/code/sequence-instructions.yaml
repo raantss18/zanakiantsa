@@ -1,0 +1,124 @@
+id: sequence-instructions
+titre: "Exécuter une suite d’instructions"
+niveau: 6e
+prerequis: [compteur]
+programme: { source: cycle3, texte: "Identifier une instruction ou une séquence d’instructions" }
+activite: quiz
+parametres: {}
+idee: "Un programme est une suite d’instructions. L’ordinateur les exécute une par une, dans l’ordre, de haut en bas."
+phrases:
+  consigne: "Exécute le programme dans ta tête, ligne par ligne, puis touche la réponse."
+  question: "{texte}"
+  indice: "Écris la valeur de x après chaque ligne, avant de lire la suivante."
+  exemple: "mettre x à 4, puis ajouter 3 à x, puis dire x : x vaut 4, puis 7. Le lutin dit 7."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre x à 5\najouter 3 à x\ndire x\nQue dit le lutin ?"
+    nom: "8"
+    explication: "x vaut 5, puis 5 + 3 = 8. Le lutin dit 8."
+    pieges:
+      - { texte: "5", pourquoi: "L’instruction « ajouter 3 à x » est exécutée avant « dire x » : x vaut déjà 8." }
+      - { texte: "x", pourquoi: "« dire x » dit la valeur rangée dans x, pas la lettre x." }
+  - texte: "mettre x à 2\najouter 4 à x\nmettre x à x * 3\ndire x\nQue dit le lutin ?"
+    nom: "18"
+    explication: "x vaut 2, puis 2 + 4 = 6, puis 6 × 3 = 18."
+    pieges:
+      - { texte: "14", pourquoi: "Tu as calculé 2 + 4 × 3 d’un coup. Les lignes s’exécutent dans l’ordre : x vaut déjà 6 quand on le multiplie." }
+      - { texte: "10", pourquoi: "Tu as multiplié avant d’ajouter : l’ordre des lignes compte." }
+  - texte: "Programme de calcul :\nchoisir le nombre 5\najouter 2\nmultiplier le résultat par 4\nretirer 3\nQuel nombre obtient-on ?"
+    nom: "25"
+    explication: "5 + 2 = 7, puis 7 × 4 = 28, puis 28 − 3 = 25."
+    pieges:
+      - { texte: "10", pourquoi: "Tu as fait 5 + 2 × 4 − 3. Chaque étape part du résultat de l’étape d’avant : (5 + 2) × 4." }
+      - { texte: "28", pourquoi: "Tu as oublié la dernière instruction : il faut encore retirer 3." }
+  - texte: "mettre x à 10\ndire x\najouter 5 à x\nQue dit le lutin ?"
+    nom: "10"
+    explication: "À la ligne « dire x », x vaut 10. L’ajout vient après : le lutin a déjà parlé."
+    pieges:
+      - { texte: "15", pourquoi: "Le lutin parle avant l’ajout : à la ligne « dire x », x vaut encore 10." }
+      - { texte: "5", pourquoi: "« ajouter 5 à x » ne remplace pas x par 5, et il arrive après « dire x »." }
+  - texte: "mettre a à 3\nmettre b à 4\nmettre a à a + b\ndire a\nQue dit le lutin ?"
+    nom: "7"
+    explication: "a vaut 3, b vaut 4, puis a reçoit 3 + 4 = 7."
+    pieges:
+      - { texte: "3", pourquoi: "La 3e ligne range a + b dans a : a ne vaut plus 3." }
+      - { texte: "4", pourquoi: "On dit a, pas b." }
+  - texte: "mettre x à 7\nmettre x à 2\ndire x\nQue dit le lutin ?"
+    nom: "2"
+    explication: "x vaut 7, puis la 2e ligne remplace 7 par 2."
+    pieges:
+      - { texte: "7", pourquoi: "Une nouvelle valeur remplace l’ancienne : après la 2e ligne, x vaut 2." }
+      - { texte: "9", pourquoi: "« mettre x à 2 » remplace la valeur, il n’ajoute pas 2." }
+  - texte: "Combien d’instructions compte ce programme ?\nmettre x à 1\najouter 2 à x\najouter 2 à x\ndire x"
+    nom: "4"
+    explication: "Quatre lignes, quatre instructions, exécutées l’une après l’autre."
+    pieges:
+      - { texte: "3", pourquoi: "Deux lignes identiques sont deux instructions : chacune est exécutée." }
+      - { texte: "5", pourquoi: "5, c’est ce que dit le lutin (1 + 2 + 2), pas le nombre d’instructions." }
+  - texte: "Pourquoi ? x vaut 3 au départ.\nA : ajouter 1 à x, puis mettre x à x * 2\nB : mettre x à x * 2, puis ajouter 1 à x\nPourquoi A et B ne donnent-ils pas le même x ?"
+    nom: "L’ordre change le calcul : A donne 8, B donne 7"
+    explication: "A : (3 + 1) × 2 = 8. B : 3 × 2 + 1 = 7. Mêmes instructions, ordre différent, résultat différent."
+    pieges:
+      - { texte: "Les mêmes instructions donnent toujours le même résultat", pourquoi: "Pas si l’ordre change : chaque instruction part de la valeur laissée par la précédente." }
+      - { texte: "Il y a une erreur dans B", pourquoi: "B est juste : (3 × 2) + 1 = 7. Il fait seulement un autre calcul que A." }
+
+en:
+  titre: "Running a sequence of instructions"
+  idee: "A program is a sequence of instructions. The computer runs them one at a time, in order, from top to bottom."
+  phrases:
+    consigne: "Run the program in your head, line by line, then touch the answer."
+    question: "{texte}"
+    indice: "Write down the value of x after each line, before you read the next one."
+    exemple: "set x to 4, then change x by 3, then say x: x is 4, then 7. The sprite says 7."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set x to 5\nchange x by 3\nsay x\nWhat does the sprite say?"
+      nom: "8"
+      explication: "x is 5, then 5 + 3 = 8. The sprite says 8."
+      pieges:
+        - { texte: "5", pourquoi: "“change x by 3” runs before “say x”: x is already 8." }
+        - { texte: "x", pourquoi: "“say x” says the value stored in x, not the letter x." }
+    - texte: "set x to 2\nchange x by 4\nset x to x * 3\nsay x\nWhat does the sprite say?"
+      nom: "18"
+      explication: "x is 2, then 2 + 4 = 6, then 6 × 3 = 18."
+      pieges:
+        - { texte: "14", pourquoi: "You worked out 2 + 4 × 3 in one go. The lines run in order: x is already 6 when it is multiplied." }
+        - { texte: "10", pourquoi: "You multiplied before adding: the order of the lines matters." }
+    - texte: "Calculation program:\nchoose the number 5\nadd 2\nmultiply the result by 4\nsubtract 3\nWhich number do you get?"
+      nom: "25"
+      explication: "5 + 2 = 7, then 7 × 4 = 28, then 28 − 3 = 25."
+      pieges:
+        - { texte: "10", pourquoi: "You did 5 + 2 × 4 − 3. Each step starts from the result of the step before: (5 + 2) × 4." }
+        - { texte: "28", pourquoi: "You forgot the last instruction: you still have to subtract 3." }
+    - texte: "set x to 10\nsay x\nchange x by 5\nWhat does the sprite say?"
+      nom: "10"
+      explication: "On the line “say x”, x is 10. The change comes afterwards: the sprite has already spoken."
+      pieges:
+        - { texte: "15", pourquoi: "The sprite speaks before the change: on the line “say x”, x is still 10." }
+        - { texte: "5", pourquoi: "“change x by 5” does not replace x with 5, and it comes after “say x”." }
+    - texte: "set a to 3\nset b to 4\nset a to a + b\nsay a\nWhat does the sprite say?"
+      nom: "7"
+      explication: "a is 3, b is 4, then a gets 3 + 4 = 7."
+      pieges:
+        - { texte: "3", pourquoi: "The 3rd line stores a + b in a: a is no longer 3." }
+        - { texte: "4", pourquoi: "The sprite says a, not b." }
+    - texte: "set x to 7\nset x to 2\nsay x\nWhat does the sprite say?"
+      nom: "2"
+      explication: "x is 7, then the 2nd line replaces 7 with 2."
+      pieges:
+        - { texte: "7", pourquoi: "A new value replaces the old one: after the 2nd line, x is 2." }
+        - { texte: "9", pourquoi: "“set x to 2” replaces the value, it does not add 2." }
+    - texte: "How many instructions are there in this program?\nset x to 1\nchange x by 2\nchange x by 2\nsay x"
+      nom: "4"
+      explication: "Four lines, four instructions, run one after the other."
+      pieges:
+        - { texte: "3", pourquoi: "Two identical lines are two instructions: each one is run." }
+        - { texte: "5", pourquoi: "5 is what the sprite says (1 + 2 + 2), not the number of instructions." }
+    - texte: "Why? x is 3 at the start.\nA: change x by 1, then set x to x * 2\nB: set x to x * 2, then change x by 1\nWhy don’t A and B give the same x?"
+      nom: "The order changes the calculation: A gives 8, B gives 7"
+      explication: "A: (3 + 1) × 2 = 8. B: 3 × 2 + 1 = 7. Same instructions, different order, different result."
+      pieges:
+        - { texte: "The same instructions always give the same result", pourquoi: "Not if the order changes: each instruction starts from the value left by the one before." }
+        - { texte: "There is a mistake in B", pourquoi: "B is correct: (3 × 2) + 1 = 7. It just does a different calculation from A." }

@@ -1,0 +1,136 @@
+id: longueurs-convertir
+titre: "Convertir des longueurs"
+niveau: CM1
+prerequis: ["multiplier-10-100", "decimaux-ecriture"]
+programme: { source: cycle3, texte: "Connaître les relations entre les unités de longueur" }
+activite: quiz
+parametres: {}
+idee: "1 km = 1 000 m ; 1 m = 100 cm ; 1 cm = 10 mm. Pour convertir, on s'appuie sur ces relations : 3,5 m = 350 cm, car 1 m = 100 cm."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Dans une unité plus petite, le nombre est plus grand."
+  exemple: "4 km en mètres : 1 km = 1 000 m, donc 4 km = 4 × 1 000 m = 4 000 m."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "3 m, c'est combien de centimètres ?"
+    nom: "300 cm"
+    explication: "1 m = 100 cm, donc 3 m = 3 × 100 cm = 300 cm."
+    pieges:
+      - { texte: "30 cm", pourquoi: "1 m = 100 cm, pas 10 cm." }
+      - { texte: "3 000 cm", pourquoi: "3 000, ce serait des millimètres : 1 m = 100 cm." }
+  - texte: "2 km, c'est combien de mètres ?"
+    nom: "2 000 m"
+    explication: "1 km = 1 000 m, donc 2 km = 2 000 m."
+    pieges:
+      - { texte: "200 m", pourquoi: "1 km = 1 000 m, pas 100 m." }
+      - { texte: "20 m", pourquoi: "1 km = 1 000 m : 20 m, c'est la longueur d'une piscine." }
+  - texte: "7 cm, c'est combien de millimètres ?"
+    nom: "70 mm"
+    explication: "1 cm = 10 mm, donc 7 cm = 70 mm."
+    pieges:
+      - { texte: "700 mm", pourquoi: "1 cm = 10 mm, pas 100 mm." }
+      - { texte: "0,7 mm", pourquoi: "Le millimètre est plus petit : le nombre doit grandir." }
+  - texte: "500 cm, c'est combien de mètres ?"
+    nom: "5 m"
+    explication: "100 cm = 1 m, donc 500 cm = 5 m."
+    pieges:
+      - { texte: "50 m", pourquoi: "1 m = 100 cm : 500 cm, c'est 5 fois 100 cm." }
+      - { texte: "50 000 m", pourquoi: "Le mètre est plus grand que le centimètre : le nombre doit diminuer." }
+  - texte: "3,5 m, c'est combien de centimètres ?"
+    nom: "350 cm"
+    explication: "3,5 m = 3 m et 5 dixièmes de mètre. 3 m = 300 cm et 0,5 m = 50 cm : 350 cm."
+    pieges:
+      - { texte: "35 cm", pourquoi: "3,5 m, c'est plus de 3 m, donc plus de 300 cm." }
+      - { texte: "305 cm", pourquoi: "0,5 m, c'est la moitié d'un mètre : 50 cm, pas 5 cm." }
+  - texte: "1 m 20 cm, c'est combien de centimètres ?"
+    nom: "120 cm"
+    explication: "1 m = 100 cm, plus 20 cm : 120 cm."
+    pieges:
+      - { texte: "21 cm", pourquoi: "1 m vaut 100 cm, pas 1 cm." }
+      - { texte: "1 200 cm", pourquoi: "1 200 cm = 12 m : 1 m 20 cm, c'est 100 cm + 20 cm." }
+  - texte: "Quelle unité choisir pour la longueur d'une voiture ?"
+    nom: "le mètre"
+    explication: "Une voiture mesure environ 4 m : le mètre convient."
+    pieges:
+      - { texte: "le kilomètre", pourquoi: "Le kilomètre sert aux distances entre villes : une voiture mesure environ 4 m." }
+      - { texte: "le millimètre", pourquoi: "Le millimètre sert aux très petites longueurs, comme une vis ou une fourmi." }
+  - texte: "2,4 km en mètres : 2 km = 2 000 m, et 0,4 km = … m. Donc 2,4 km = 2 400 m. Quel nombre manque ?"
+    nom: "400"
+    explication: "1 km = 1 000 m, donc 1 dixième de kilomètre = 100 m, et 4 dixièmes = 400 m."
+    pieges:
+      - { texte: "4", pourquoi: "0,4 km, ce sont 4 dixièmes de 1 000 m : 400 m." }
+      - { texte: "40", pourquoi: "1 dixième de kilomètre vaut 100 m, donc 4 dixièmes valent 400 m." }
+  - texte: "Pourquoi 2 m s'écrit-il 200 cm, avec un nombre plus grand ?"
+    nom: "Le centimètre est plus petit : il en faut plus."
+    explication: "Il faut 100 cm pour faire 1 m : dans 2 m, il y a 2 × 100 = 200 cm. La longueur est la même."
+    pieges:
+      - { texte: "Parce qu'on ajoute toujours deux 0.", pourquoi: "Ce n'est pas la raison : on ajoute deux 0 parce que 1 m = 100 cm." }
+      - { texte: "Parce que 200 cm est plus long que 2 m.", pourquoi: "Les deux longueurs sont égales : seule l'unité change." }
+
+en:
+  titre: "Converting lengths"
+  idee: "1 km = 1,000 m; 1 m = 100 cm; 1 cm = 10 mm. To convert, use these facts: 3.5 m = 350 cm, because 1 m = 100 cm."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "In a smaller unit, the number is bigger."
+    exemple: "4 km in metres: 1 km = 1,000 m, so 4 km = 4 × 1,000 m = 4,000 m."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "How many centimetres are there in 3 m?"
+      nom: "300 cm"
+      explication: "1 m = 100 cm, so 3 m = 3 × 100 cm = 300 cm."
+      pieges:
+        - { texte: "30 cm", pourquoi: "1 m = 100 cm, not 10 cm." }
+        - { texte: "3,000 cm", pourquoi: "3,000 would be millimetres: 1 m = 100 cm." }
+    - texte: "How many metres are there in 2 km?"
+      nom: "2,000 m"
+      explication: "1 km = 1,000 m, so 2 km = 2,000 m."
+      pieges:
+        - { texte: "200 m", pourquoi: "1 km = 1,000 m, not 100 m." }
+        - { texte: "20 m", pourquoi: "1 km = 1,000 m: 20 m is about the length of a swimming pool." }
+    - texte: "How many millimetres are there in 7 cm?"
+      nom: "70 mm"
+      explication: "1 cm = 10 mm, so 7 cm = 70 mm."
+      pieges:
+        - { texte: "700 mm", pourquoi: "1 cm = 10 mm, not 100 mm." }
+        - { texte: "0.7 mm", pourquoi: "The millimetre is smaller: the number must get bigger." }
+    - texte: "How many metres are there in 500 cm?"
+      nom: "5 m"
+      explication: "100 cm = 1 m, so 500 cm = 5 m."
+      pieges:
+        - { texte: "50 m", pourquoi: "1 m = 100 cm: 500 cm is 5 lots of 100 cm." }
+        - { texte: "50,000 m", pourquoi: "The metre is bigger than the centimetre: the number must get smaller." }
+    - texte: "How many centimetres are there in 3.5 m?"
+      nom: "350 cm"
+      explication: "3.5 m = 3 m and 5 tenths of a metre. 3 m = 300 cm and 0.5 m = 50 cm: 350 cm."
+      pieges:
+        - { texte: "35 cm", pourquoi: "3.5 m is more than 3 m, so more than 300 cm." }
+        - { texte: "305 cm", pourquoi: "0.5 m is half a metre: 50 cm, not 5 cm." }
+    - texte: "How many centimetres are there in 1 m 20 cm?"
+      nom: "120 cm"
+      explication: "1 m = 100 cm, plus 20 cm: 120 cm."
+      pieges:
+        - { texte: "21 cm", pourquoi: "1 m is worth 100 cm, not 1 cm." }
+        - { texte: "1,200 cm", pourquoi: "1,200 cm = 12 m: 1 m 20 cm is 100 cm + 20 cm." }
+    - texte: "Which unit should you use for the length of a car?"
+      nom: "the metre"
+      explication: "A car is about 4 m long: the metre is right."
+      pieges:
+        - { texte: "the kilometre", pourquoi: "Kilometres are for distances between towns: a car is about 4 m long." }
+        - { texte: "the millimetre", pourquoi: "Millimetres are for very small lengths, like a screw or an ant." }
+    - texte: "2.4 km in metres: 2 km = 2,000 m, and 0.4 km = … m. So 2.4 km = 2,400 m. Which number is missing?"
+      nom: "400"
+      explication: "1 km = 1,000 m, so 1 tenth of a kilometre = 100 m, and 4 tenths = 400 m."
+      pieges:
+        - { texte: "4", pourquoi: "0.4 km is 4 tenths of 1,000 m: 400 m." }
+        - { texte: "40", pourquoi: "1 tenth of a kilometre is 100 m, so 4 tenths are 400 m." }
+    - texte: "Why is 2 m written as 200 cm, with a bigger number?"
+      nom: "A centimetre is smaller, so you need more of them."
+      explication: "It takes 100 cm to make 1 m: in 2 m there are 2 × 100 = 200 cm. The length is the same."
+      pieges:
+        - { texte: "Because you always add two 0s.", pourquoi: "That's not the reason: you add two 0s because 1 m = 100 cm." }
+        - { texte: "Because 200 cm is longer than 2 m.", pourquoi: "Both lengths are equal: only the unit changes." }

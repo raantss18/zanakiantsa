@@ -1,0 +1,148 @@
+id: suites-arithmetiques
+titre: "Suites arithmétiques"
+niveau: 1re
+prerequis: ["fonction-affine"]
+programme: { source: lycee1re, texte: "Pour une suite arithmétique ou géométrique, calculer le terme général, la somme de termes consécutifs, déterminer le sens de variation." }
+activite: quiz
+parametres: {}
+idee: "Une suite arithmétique ajoute toujours le même nombre, la raison r : uₙ₊₁ = uₙ + r. Terme général : uₙ = u₀ + n × r. Ses points sont alignés, comme pour une fonction affine."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "De u₀ à uₙ, on ajoute n fois la raison."
+  exemple: "u₀ = 3 et r = 4 : u₁ = 7, u₂ = 11, et u₁₀ = 3 + 10 × 4 = 43."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Suite arithmétique : u₀ = 5 et r = 3. Combien vaut u₁ ?"
+    nom: "8"
+    explication: "On ajoute la raison : u₁ = u₀ + r = 5 + 3 = 8."
+    pieges:
+      - { texte: "15", pourquoi: "Multiplier par 3, c’est une suite géométrique : ici on ajoute 3." }
+      - { texte: "2", pourquoi: "On ajoute la raison, on ne la retranche pas : 5 + 3." }
+  - texte: "Suite arithmétique : u₀ = 2 et r = 5. Combien vaut u₁₀ ?"
+    nom: "52"
+    explication: "u₁₀ = u₀ + 10 × r = 2 + 10 × 5 = 52."
+    pieges:
+      - { texte: "57", pourquoi: "De u₀ à u₁₀, on ajoute la raison 10 fois, pas 11 : 2 + 50." }
+      - { texte: "12", pourquoi: "On ajoute 10 fois la raison : 10 × 5 = 50, pas 10." }
+  - texte: "u₁ = 4, u₂ = 9, u₃ = 14 : la suite est arithmétique. Quelle est sa raison ?"
+    nom: "5"
+    explication: "On soustrait deux termes qui se suivent : 9 − 4 = 5 et 14 − 9 = 5."
+    pieges:
+      - { texte: "4", pourquoi: "4 est le terme u₁ : la raison est l’écart entre deux termes." }
+      - { texte: "2,25", pourquoi: "9 ÷ 4 serait la raison d’une suite géométrique : ici on soustrait." }
+  - texte: "Suite arithmétique : u₀ = 20 et r = −3. La suite est …"
+    nom: "décroissante"
+    explication: "La raison est négative : chaque terme est 3 de moins que le précédent, 20, 17, 14…"
+    pieges:
+      - { texte: "croissante", pourquoi: "u₀ = 20 est positif, mais c’est le signe de la raison qui compte : r = −3 < 0." }
+      - { texte: "constante", pourquoi: "Une suite arithmétique est constante seulement si r = 0." }
+  - texte: "Suite arithmétique : u₀ = 7 et r = −2. Combien vaut u₅ ?"
+    nom: "−3"
+    explication: "u₅ = 7 + 5 × (−2) = 7 − 10 = −3."
+    pieges:
+      - { texte: "17", pourquoi: "La raison est −2 : on retranche 2 à chaque pas." }
+      - { texte: "−5", pourquoi: "De u₀ à u₅, il y a 5 pas, pas 6 : 7 − 10." }
+  - texte: "uₙ = 3n + 1. Quelle est la raison de cette suite arithmétique ?"
+    nom: "3"
+    explication: "uₙ = 1 + n × 3 : u₀ = 1 et on ajoute 3 à chaque pas (u₁ = 4, u₂ = 7)."
+    pieges:
+      - { texte: "1", pourquoi: "1 est u₀, le premier terme, pas la raison." }
+      - { texte: "4", pourquoi: "4 est u₁ : la raison est l’écart u₁ − u₀ = 3." }
+  - texte: "Complète : u₀ = 1 et r = 6, donc uₙ = 1 + …"
+    nom: "6n"
+    explication: "On ajoute n fois la raison 6 : uₙ = 1 + 6n."
+    pieges:
+      - { texte: "n + 6", pourquoi: "On ajoute n fois la raison : n × 6, pas n + 6." }
+      - { texte: "6ⁿ", pourquoi: "Une puissance, c’est une suite géométrique : ici on ajoute 6 à chaque pas." }
+  - texte: "Combien vaut 1 + 2 + 3 + … + 100 ?"
+    nom: "5 050"
+    explication: "1 + 2 + … + n = n(n + 1) ÷ 2 : 100 × 101 ÷ 2 = 5 050."
+    pieges:
+      - { texte: "10 100", pourquoi: "100 × 101 compte chaque terme deux fois : il faut diviser par 2." }
+      - { texte: "5 000", pourquoi: "100 × 100 ÷ 2 : la formule est n(n + 1) ÷ 2, avec 101." }
+  - texte: "Pourquoi les points (n ; uₙ) d’une suite arithmétique sont-ils alignés ?"
+    nom: "uₙ = u₀ + n × r a la forme d’une fonction affine de n."
+    explication: "uₙ = r × n + u₀ : comme f(x) = mx + p, avec m = r et p = u₀. Les points sont sur une droite de coefficient directeur r."
+    pieges:
+      - { texte: "Parce que tous les termes sont positifs.", pourquoi: "Le signe des termes ne joue pas : u₀ = 2, r = −5 donne aussi des points alignés." }
+      - { texte: "Parce que la raison est un nombre entier.", pourquoi: "Avec r = 0,5, les points sont aussi alignés." }
+  - texte: "Un abonnement coûte 30 € le 1er mois, puis 2 € de plus chaque mois. Combien coûte le 12e mois ?"
+    nom: "52 €"
+    explication: "Du 1er au 12e mois, il y a 11 hausses de 2 € : 30 + 11 × 2 = 52 €."
+    pieges:
+      - { texte: "54 €", pourquoi: "Du 1er au 12e mois, il y a 11 hausses, pas 12 : 30 + 22." }
+      - { texte: "360 €", pourquoi: "30 × 12 ne tient pas compte des hausses, et c’est un total, pas le prix d’un mois." }
+
+en:
+  titre: "Arithmetic sequences"
+  idee: "An arithmetic sequence always adds the same number, the common difference r: uₙ₊₁ = uₙ + r. General term: uₙ = u₀ + n × r. Its points lie on a straight line, like a linear function."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "From u₀ to uₙ, you add the common difference n times."
+    exemple: "u₀ = 3 and r = 4: u₁ = 7, u₂ = 11, and u₁₀ = 3 + 10 × 4 = 43."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Arithmetic sequence: u₀ = 5 and r = 3. What is u₁?"
+      nom: "8"
+      explication: "Add the common difference: u₁ = u₀ + r = 5 + 3 = 8."
+      pieges:
+        - { texte: "15", pourquoi: "Multiplying by 3 is a geometric sequence: here we add 3." }
+        - { texte: "2", pourquoi: "Add the common difference, do not subtract it: 5 + 3." }
+    - texte: "Arithmetic sequence: u₀ = 2 and r = 5. What is u₁₀?"
+      nom: "52"
+      explication: "u₁₀ = u₀ + 10 × r = 2 + 10 × 5 = 52."
+      pieges:
+        - { texte: "57", pourquoi: "From u₀ to u₁₀ you add the difference 10 times, not 11: 2 + 50." }
+        - { texte: "12", pourquoi: "Add the difference 10 times: 10 × 5 = 50, not 10." }
+    - texte: "u₁ = 4, u₂ = 9, u₃ = 14: the sequence is arithmetic. What is its common difference?"
+      nom: "5"
+      explication: "Subtract two consecutive terms: 9 − 4 = 5 and 14 − 9 = 5."
+      pieges:
+        - { texte: "4", pourquoi: "4 is the term u₁: the difference is the gap between two terms." }
+        - { texte: "2.25", pourquoi: "9 ÷ 4 would be the ratio of a geometric sequence: here we subtract." }
+    - texte: "Arithmetic sequence: u₀ = 20 and r = −3. The sequence is …"
+      nom: "decreasing"
+      explication: "The difference is negative: each term is 3 less than the one before, 20, 17, 14…"
+      pieges:
+        - { texte: "increasing", pourquoi: "u₀ = 20 is positive, but what matters is the sign of the difference: r = −3 < 0." }
+        - { texte: "constant", pourquoi: "An arithmetic sequence is constant only if r = 0." }
+    - texte: "Arithmetic sequence: u₀ = 7 and r = −2. What is u₅?"
+      nom: "−3"
+      explication: "u₅ = 7 + 5 × (−2) = 7 − 10 = −3."
+      pieges:
+        - { texte: "17", pourquoi: "The difference is −2: subtract 2 at each step." }
+        - { texte: "−5", pourquoi: "From u₀ to u₅ there are 5 steps, not 6: 7 − 10." }
+    - texte: "uₙ = 3n + 1. What is the common difference of this arithmetic sequence?"
+      nom: "3"
+      explication: "uₙ = 1 + n × 3: u₀ = 1 and you add 3 at each step (u₁ = 4, u₂ = 7)."
+      pieges:
+        - { texte: "1", pourquoi: "1 is u₀, the first term, not the difference." }
+        - { texte: "4", pourquoi: "4 is u₁: the difference is u₁ − u₀ = 3." }
+    - texte: "Fill in the step: u₀ = 1 and r = 6, so uₙ = 1 + …"
+      nom: "6n"
+      explication: "Add the difference 6, n times: uₙ = 1 + 6n."
+      pieges:
+        - { texte: "n + 6", pourquoi: "Add the difference n times: n × 6, not n + 6." }
+        - { texte: "6ⁿ", pourquoi: "A power is a geometric sequence: here you add 6 at each step." }
+    - texte: "What is 1 + 2 + 3 + … + 100?"
+      nom: "5,050"
+      explication: "1 + 2 + … + n = n(n + 1) ÷ 2: 100 × 101 ÷ 2 = 5,050."
+      pieges:
+        - { texte: "10,100", pourquoi: "100 × 101 counts every term twice: divide by 2." }
+        - { texte: "5,000", pourquoi: "100 × 100 ÷ 2: the formula is n(n + 1) ÷ 2, with 101." }
+    - texte: "Why do the points (n, uₙ) of an arithmetic sequence lie on a straight line?"
+      nom: "uₙ = u₀ + n × r has the form of a linear function of n."
+      explication: "uₙ = r × n + u₀: like f(x) = mx + p, with m = r and p = u₀. The points lie on a line with gradient r."
+      pieges:
+        - { texte: "Because all the terms are positive.", pourquoi: "The sign of the terms does not matter: u₀ = 2, r = −5 also gives points on a line." }
+        - { texte: "Because the difference is a whole number.", pourquoi: "With r = 0.5, the points also lie on a line." }
+    - texte: "A subscription costs €30 in the 1st month, then €2 more each month. How much is the 12th month?"
+      nom: "€52"
+      explication: "From the 1st to the 12th month there are 11 rises of €2: 30 + 11 × 2 = €52."
+      pieges:
+        - { texte: "€54", pourquoi: "From the 1st to the 12th month there are 11 rises, not 12: 30 + 22." }
+        - { texte: "€360", pourquoi: "30 × 12 ignores the rises, and it is a total, not one month’s price." }

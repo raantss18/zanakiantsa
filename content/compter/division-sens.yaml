@@ -1,0 +1,136 @@
+id: division-sens
+titre: "Le sens de la division"
+niveau: CE2
+prerequis: ["paquets", "tables-8-9"]
+programme: { source: cycle2, texte: "Comprendre le sens de la division et utiliser le symbole « ÷ »." }
+activite: quiz
+parametres: {}
+idee: "Diviser, c'est partager en parts égales, ou chercher combien de fois un nombre tient dans un autre. La division est l'inverse de la multiplication."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Cherche dans les tables : quel nombre, multiplié par le diviseur, donne le nombre partagé ?"
+  exemple: "6 dictionnaires coûtent 72 €. Schéma en barre : une barre de 72 € coupée en 6 parts égales. 6 × 12 = 72, donc 72 ÷ 6 = 12. Un dictionnaire coûte 12 €."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 56 ÷ 7 ?"
+    nom: "8"
+    explication: "7 × 8 = 56, donc 56 ÷ 7 = 8."
+    pieges:
+      - { texte: "49", pourquoi: "56 − 7 : diviser, ce n'est pas soustraire une seule fois." }
+      - { texte: "9", pourquoi: "7 × 9 = 63, pas 56 : dans la table de 7, 7 × 8 = 56." }
+  - texte: "On sait que 7 × 13 = 91. Combien font 91 ÷ 13 ?"
+    nom: "7"
+    explication: "7 × 13 = 91, donc 91 ÷ 13 = 7 et 91 ÷ 7 = 13."
+    pieges:
+      - { texte: "13", pourquoi: "91 ÷ 7 = 13 : ici, on divise par 13, le quotient est l'autre facteur, 7." }
+      - { texte: "78", pourquoi: "91 − 13 : diviser, ce n'est pas soustraire une seule fois." }
+  - texte: "Lina partage 48 billes en 6 parts égales. Combien de billes y a-t-il dans chaque part ?"
+    nom: "8"
+    explication: "Schéma : une barre de 48 coupée en 6 parts égales. 6 × 8 = 48, donc chaque part a 8 billes."
+    pieges:
+      - { texte: "42", pourquoi: "48 − 6 : on partage en 6 parts, c'est une division." }
+      - { texte: "288", pourquoi: "48 × 6 : en partageant, chaque part est plus petite que le tout." }
+  - texte: "Un fleuriste fait des bouquets de 5 roses avec 45 roses. Combien de bouquets fait-il ?"
+    nom: "9"
+    explication: "On cherche combien de fois 5 tient dans 45 : 5 × 9 = 45, donc 9 bouquets."
+    pieges:
+      - { texte: "40", pourquoi: "45 − 5 : on cherche combien de bouquets de 5, c'est une division." }
+      - { texte: "225", pourquoi: "45 × 5 : le nombre de bouquets est plus petit que le nombre de roses." }
+  - texte: "Dans un schéma en barre, une barre de 63 est coupée en 9 parts égales. Combien vaut une part ?"
+    nom: "7"
+    explication: "9 × 7 = 63, donc 63 ÷ 9 = 7 : chaque part vaut 7."
+    pieges:
+      - { texte: "54", pourquoi: "63 − 9 : on coupe la barre en 9 parts égales, c'est une division." }
+      - { texte: "6", pourquoi: "9 × 6 = 54, pas 63 : 9 × 7 = 63." }
+  - texte: "Quelle multiplication permet de trouver 42 ÷ 6 ?"
+    nom: "6 × 7 = 42"
+    explication: "On cherche le nombre qui, multiplié par 6, donne 42 : 6 × 7 = 42, donc 42 ÷ 6 = 7."
+    pieges:
+      - { texte: "42 × 6 = 252", pourquoi: "On ne multiplie pas 42 : on cherche le facteur qui donne 42." }
+      - { texte: "6 + 36 = 42", pourquoi: "C'est une addition : une division se vérifie avec une multiplication." }
+  - texte: "30 élèves forment des équipes de 5. On écrit 5 × … = 30, donc 30 ÷ 5 = … Combien d'équipes ?"
+    nom: "6"
+    explication: "5 × 6 = 30, donc 30 ÷ 5 = 6 : il y a 6 équipes."
+    pieges:
+      - { texte: "25", pourquoi: "30 − 5 : on cherche combien d'équipes de 5, c'est une division." }
+      - { texte: "150", pourquoi: "30 × 5 : le nombre d'équipes est plus petit que le nombre d'élèves." }
+  - texte: "Combien font 81 ÷ 9 ?"
+    nom: "9"
+    explication: "9 × 9 = 81, donc 81 ÷ 9 = 9."
+    pieges:
+      - { texte: "72", pourquoi: "81 − 9 : diviser, ce n'est pas soustraire une seule fois." }
+      - { texte: "8", pourquoi: "9 × 8 = 72, pas 81 : 9 × 9 = 81." }
+  - texte: "Pourquoi 35 ÷ 5 = 7 ?"
+    nom: "Parce que 5 × 7 = 35."
+    explication: "La division est l'inverse de la multiplication : 5 × 7 = 35, donc 35 ÷ 5 = 7."
+    pieges:
+      - { texte: "Parce que 35 − 5 = 30.", pourquoi: "Une soustraction ne vérifie pas un partage : on vérifie avec 5 × 7 = 35." }
+      - { texte: "Parce que 35 est dans la table de 5.", pourquoi: "C'est vrai, mais cela ne dit pas pourquoi le quotient est 7 : 5 × 7 = 35." }
+
+en:
+  titre: "What division means"
+  idee: "Dividing means sharing into equal parts, or finding how many times one number fits into another. Division is the inverse of multiplication."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Use your tables: which number, times the divisor, gives the number being shared?"
+    exemple: "6 dictionaries cost €72. Bar model: a bar of €72 cut into 6 equal parts. 6 × 12 = 72, so 72 ÷ 6 = 12. One dictionary costs €12."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 56 ÷ 7?"
+      nom: "8"
+      explication: "7 × 8 = 56, so 56 ÷ 7 = 8."
+      pieges:
+        - { texte: "49", pourquoi: "56 − 7: dividing is not subtracting just once." }
+        - { texte: "9", pourquoi: "7 × 9 = 63, not 56: in the 7 times table, 7 × 8 = 56." }
+    - texte: "We know that 7 × 13 = 91. What is 91 ÷ 13?"
+      nom: "7"
+      explication: "7 × 13 = 91, so 91 ÷ 13 = 7 and 91 ÷ 7 = 13."
+      pieges:
+        - { texte: "13", pourquoi: "91 ÷ 7 = 13: here we divide by 13, so the answer is the other factor, 7." }
+        - { texte: "78", pourquoi: "91 − 13: dividing is not subtracting just once." }
+    - texte: "Lina shares 48 marbles into 6 equal parts. How many marbles are in each part?"
+      nom: "8"
+      explication: "Bar model: a bar of 48 cut into 6 equal parts. 6 × 8 = 48, so each part has 8 marbles."
+      pieges:
+        - { texte: "42", pourquoi: "48 − 6: sharing into 6 parts is a division." }
+        - { texte: "288", pourquoi: "48 × 6: when you share, each part is smaller than the whole." }
+    - texte: "A florist makes bunches of 5 roses from 45 roses. How many bunches does she make?"
+      nom: "9"
+      explication: "How many times does 5 fit into 45? 5 × 9 = 45, so 9 bunches."
+      pieges:
+        - { texte: "40", pourquoi: "45 − 5: we want how many bunches of 5, so it is a division." }
+        - { texte: "225", pourquoi: "45 × 5: the number of bunches is smaller than the number of roses." }
+    - texte: "In a bar model, a bar of 63 is cut into 9 equal parts. What is one part worth?"
+      nom: "7"
+      explication: "9 × 7 = 63, so 63 ÷ 9 = 7: each part is worth 7."
+      pieges:
+        - { texte: "54", pourquoi: "63 − 9: the bar is cut into 9 equal parts, so it is a division." }
+        - { texte: "6", pourquoi: "9 × 6 = 54, not 63: 9 × 7 = 63." }
+    - texte: "Which multiplication helps you find 42 ÷ 6?"
+      nom: "6 × 7 = 42"
+      explication: "Find the number that, times 6, gives 42: 6 × 7 = 42, so 42 ÷ 6 = 7."
+      pieges:
+        - { texte: "42 × 6 = 252", pourquoi: "Don't multiply 42: look for the factor that gives 42." }
+        - { texte: "6 + 36 = 42", pourquoi: "That is an addition: you check a division with a multiplication." }
+    - texte: "30 pupils make teams of 5. We write 5 × … = 30, so 30 ÷ 5 = … How many teams?"
+      nom: "6"
+      explication: "5 × 6 = 30, so 30 ÷ 5 = 6: there are 6 teams."
+      pieges:
+        - { texte: "25", pourquoi: "30 − 5: we want how many teams of 5, so it is a division." }
+        - { texte: "150", pourquoi: "30 × 5: the number of teams is smaller than the number of pupils." }
+    - texte: "What is 81 ÷ 9?"
+      nom: "9"
+      explication: "9 × 9 = 81, so 81 ÷ 9 = 9."
+      pieges:
+        - { texte: "72", pourquoi: "81 − 9: dividing is not subtracting just once." }
+        - { texte: "8", pourquoi: "9 × 8 = 72, not 81: 9 × 9 = 81." }
+    - texte: "Why is 35 ÷ 5 = 7?"
+      nom: "Because 5 × 7 = 35."
+      explication: "Division is the inverse of multiplication: 5 × 7 = 35, so 35 ÷ 5 = 7."
+      pieges:
+        - { texte: "Because 35 − 5 = 30.", pourquoi: "A subtraction doesn't check a sharing: check with 5 × 7 = 35." }
+        - { texte: "Because 35 is in the 5 times table.", pourquoi: "True, but it doesn't say why the answer is 7: 5 × 7 = 35." }

@@ -1,5 +1,6 @@
 /// Livres de la bibliothèque (ADR 0026) : importés d'African Storybook par `tool/import_livres.py`, sous licence
-/// CC BY 4.0, rangés dans assets/livres/ (catalogue.json, images/). Rien n'est téléchargé par l'app.
+/// CC BY 4.0, et classiques du domaine public en texte seul (Wikisource, `tool/import_classiques.py`, niveaux 5 à 7),
+/// rangés dans assets/livres/ (catalogue.json, images/). Rien n'est téléchargé par l'app.
 library;
 
 import 'dart:convert';
@@ -23,8 +24,12 @@ class Book {
         pages = [for (final p in j['pages'] as List) BookPage(Map<String, dynamic>.from(p as Map))],
         credits = j['credits'] as String,
         licence = j['licence'] as String,
-        source = j['source'] as String;
+        source = j['source'] as String,
+        author = j['auteur'] as String?;
   final int id, level;
+
+  /// Auteur, pour les classiques du domaine public (les crédits d'African Storybook le donnent déjà).
+  final String? author;
   final String title, shelf, credits, licence, source;
   final List<BookPage> pages;
 

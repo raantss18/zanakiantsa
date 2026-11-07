@@ -27,12 +27,12 @@
   ],
   "ages": [
     4,
-    9
+    15
   ],
   "en": {
     "titre": "Exploring in 3D",
     "nom": "Explore",
-    "resume": "The solar system, the human body and solid shapes, in 3D.",
+    "resume": "The human body, the Earth and space, solid shapes, then history and geography up to Year 10.",
     "intro": [
       {
         "texte": "Turn the objects with your finger.",
@@ -58,7 +58,11 @@
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
-    "nasa": "https://science.nasa.gov/solar-system/planets/"
+    "nasa": "https://science.nasa.gov/solar-system/planets/",
+    "c2s": "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf",
+    "c3s": "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-519023.pdf",
+    "c3hg": "https://eduscol.education.fr/document/50990/download",
+    "c4": "https://eduscol.education.fr/document/621/download"
   },
   "competences": [
     {
@@ -475,6 +479,3998 @@
             "texte": "Touch Mars: it's the fourth planet from the Sun.",
             "cible": "mars",
             "explication": "It's Mars, the fourth planet."
+          }
+        ]
+      }
+    },
+    {
+      "id": "muscles-articulations",
+      "titre": "Muscles et articulations",
+      "niveau": "CE2",
+      "prerequis": [
+        "corps-parties"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Modéliser un mouvement de flexion/extension pour identifier le rôle des muscles et des articulations."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour bouger, un muscle se contracte : il raccourcit et tire sur un os. L'os tourne au niveau d'une articulation, comme le coude ou le genou.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Un muscle ne sait que tirer. Pour plier le bras, c'est le biceps qui tire ; pour le tendre, c'est le triceps.",
+        "exemple": "Exemple : pose ta main sur le haut de ton bras et plie le coude. Tu sens le biceps se gonfler et durcir : il se contracte.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Plie ton bras. Quel muscle se contracte, sur le devant du bras ?",
+          "nom": "Le biceps.",
+          "explication": "Le biceps se contracte, raccourcit et tire l'avant-bras vers le haut : le bras se plie.",
+          "pieges": [
+            {
+              "texte": "Le triceps.",
+              "pourquoi": "Le triceps est derrière le bras : il sert à tendre le bras, pas à le plier."
+            },
+            {
+              "texte": "Aucun, c'est l'os qui se plie.",
+              "pourquoi": "Les os sont rigides : ils ne se plient pas. C'est un muscle qui les fait bouger."
+            }
+          ]
+        },
+        {
+          "texte": "Quel muscle tend le bras ?",
+          "nom": "Le triceps, à l'arrière du bras.",
+          "explication": "Pour tendre le bras, le triceps se contracte et tire l'avant-bras vers le bas.",
+          "pieges": [
+            {
+              "texte": "Le biceps, en poussant.",
+              "pourquoi": "Un muscle ne peut pas pousser : il ne peut que tirer. C'est le triceps qui tend le bras."
+            },
+            {
+              "texte": "Le cœur.",
+              "pourquoi": "Le cœur est un muscle, mais il fait circuler le sang ; il ne bouge pas le bras."
+            }
+          ]
+        },
+        {
+          "texte": "Où le bras se plie-t-il ?",
+          "nom": "Au coude, une articulation.",
+          "explication": "Une articulation est l'endroit où deux os se rejoignent et peuvent bouger l'un par rapport à l'autre.",
+          "pieges": [
+            {
+              "texte": "Au milieu de l'os du bras.",
+              "pourquoi": "Un os ne se plie pas : le mouvement se fait aux articulations."
+            },
+            {
+              "texte": "Au poignet seulement.",
+              "pourquoi": "Le poignet est une articulation aussi, mais c'est au coude que le bras se plie."
+            }
+          ]
+        },
+        {
+          "texte": "Quand un muscle se contracte, que se passe-t-il ?",
+          "nom": "Il raccourcit et devient plus épais.",
+          "explication": "En se contractant, le muscle raccourcit et gonfle : c'est ce que tu sens sous ta main.",
+          "pieges": [
+            {
+              "texte": "Il s'allonge.",
+              "pourquoi": "C'est l'inverse : un muscle qui se contracte raccourcit."
+            },
+            {
+              "texte": "Il ne change pas.",
+              "pourquoi": "Pose ta main sur ton biceps et plie le bras : tu le sens changer."
+            }
+          ]
+        },
+        {
+          "texte": "Comment un muscle est-il attaché à l'os ?",
+          "nom": "Par un tendon.",
+          "explication": "Les tendons relient les muscles aux os. Quand le muscle tire, le tendon transmet le mouvement à l'os.",
+          "pieges": [
+            {
+              "texte": "Par la peau.",
+              "pourquoi": "La peau recouvre le corps, mais ce sont les tendons qui attachent les muscles aux os."
+            },
+            {
+              "texte": "Il n'est pas attaché.",
+              "pourquoi": "S'il n'était pas attaché, le muscle ne pourrait pas faire bouger l'os."
+            }
+          ]
+        },
+        {
+          "texte": "Laquelle de ces parties du corps est une articulation ?",
+          "nom": "Le genou.",
+          "explication": "Le genou relie l'os de la cuisse aux os de la jambe : il permet de plier et de tendre la jambe.",
+          "pieges": [
+            {
+              "texte": "Le mollet.",
+              "pourquoi": "Le mollet est un muscle, à l'arrière de la jambe."
+            },
+            {
+              "texte": "Le tibia.",
+              "pourquoi": "Le tibia est un os de la jambe."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi faut-il deux muscles pour plier puis tendre le bras ?",
+          "nom": "Parce qu'un muscle ne peut que tirer, pas pousser.",
+          "explication": "Le biceps tire pour plier, le triceps tire dans l'autre sens pour tendre. Ils travaillent en équipe.",
+          "pieges": [
+            {
+              "texte": "Pour que le bras soit plus fort.",
+              "pourquoi": "La raison, c'est qu'un muscle ne tire que dans un seul sens."
+            },
+            {
+              "texte": "Un seul muscle suffit, il pousse et il tire.",
+              "pourquoi": "Un muscle ne pousse jamais : il lui faut un partenaire qui tire dans l'autre sens."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le rôle des os dans un mouvement ?",
+          "nom": "Ils sont rigides et servent de leviers que les muscles font bouger.",
+          "explication": "Les os forment le squelette : solides et rigides, ils sont déplacés par les muscles autour des articulations.",
+          "pieges": [
+            {
+              "texte": "Ils se contractent comme les muscles.",
+              "pourquoi": "Seuls les muscles se contractent ; les os sont rigides."
+            },
+            {
+              "texte": "Ils n'ont aucun rôle.",
+              "pourquoi": "Sans os, les muscles n'auraient rien à tirer."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Muscles and joints",
+        "idee": "To move, a muscle contracts: it shortens and pulls on a bone. The bone turns at a joint, like the elbow or the knee.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A muscle can only pull. To bend the arm, the biceps pulls; to straighten it, the triceps pulls.",
+          "exemple": "Example: put your hand on your upper arm and bend your elbow. You feel the biceps swell and get hard: it's contracting.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Bend your arm. Which muscle contracts, on the front of the arm?",
+            "nom": "The biceps.",
+            "explication": "The biceps contracts, shortens and pulls the forearm up: the arm bends.",
+            "pieges": [
+              {
+                "texte": "The triceps.",
+                "pourquoi": "The triceps is at the back of the arm: it straightens the arm, it doesn't bend it."
+              },
+              {
+                "texte": "None, the bone bends.",
+                "pourquoi": "Bones are stiff: they don't bend. A muscle makes them move."
+              }
+            ]
+          },
+          {
+            "texte": "Which muscle straightens the arm?",
+            "nom": "The triceps, at the back of the arm.",
+            "explication": "To straighten the arm, the triceps contracts and pulls the forearm down.",
+            "pieges": [
+              {
+                "texte": "The biceps, by pushing.",
+                "pourquoi": "A muscle can't push: it can only pull. The triceps straightens the arm."
+              },
+              {
+                "texte": "The heart.",
+                "pourquoi": "The heart is a muscle, but it pumps blood; it doesn't move the arm."
+              }
+            ]
+          },
+          {
+            "texte": "Where does the arm bend?",
+            "nom": "At the elbow, a joint.",
+            "explication": "A joint is where two bones meet and can move against each other.",
+            "pieges": [
+              {
+                "texte": "In the middle of the arm bone.",
+                "pourquoi": "A bone doesn't bend: movement happens at the joints."
+              },
+              {
+                "texte": "Only at the wrist.",
+                "pourquoi": "The wrist is a joint too, but the arm bends at the elbow."
+              }
+            ]
+          },
+          {
+            "texte": "When a muscle contracts, what happens?",
+            "nom": "It gets shorter and thicker.",
+            "explication": "As it contracts, the muscle shortens and swells: that's what you feel under your hand.",
+            "pieges": [
+              {
+                "texte": "It gets longer.",
+                "pourquoi": "It's the opposite: a contracting muscle gets shorter."
+              },
+              {
+                "texte": "It doesn't change.",
+                "pourquoi": "Put your hand on your biceps and bend your arm: you can feel it change."
+              }
+            ]
+          },
+          {
+            "texte": "How is a muscle attached to a bone?",
+            "nom": "By a tendon.",
+            "explication": "Tendons join muscles to bones. When the muscle pulls, the tendon passes the movement on to the bone.",
+            "pieges": [
+              {
+                "texte": "By the skin.",
+                "pourquoi": "Skin covers the body, but tendons attach muscles to bones."
+              },
+              {
+                "texte": "It isn't attached.",
+                "pourquoi": "If it weren't attached, the muscle couldn't move the bone."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these body parts is a joint?",
+            "nom": "The knee.",
+            "explication": "The knee links the thigh bone to the lower leg bones: it lets you bend and straighten your leg.",
+            "pieges": [
+              {
+                "texte": "The calf.",
+                "pourquoi": "The calf is a muscle, at the back of the leg."
+              },
+              {
+                "texte": "The shin bone.",
+                "pourquoi": "The shin bone is a bone of the leg."
+              }
+            ]
+          },
+          {
+            "texte": "Why do you need two muscles to bend and then straighten your arm?",
+            "nom": "Because a muscle can only pull, not push.",
+            "explication": "The biceps pulls to bend, the triceps pulls the other way to straighten. They work as a team.",
+            "pieges": [
+              {
+                "texte": "To make the arm stronger.",
+                "pourquoi": "The reason is that a muscle only pulls one way."
+              },
+              {
+                "texte": "One muscle is enough, it pushes and pulls.",
+                "pourquoi": "A muscle never pushes: it needs a partner pulling the other way."
+              }
+            ]
+          },
+          {
+            "texte": "What do bones do in a movement?",
+            "nom": "They are stiff and act as levers that muscles move.",
+            "explication": "Bones make up the skeleton: strong and stiff, they are moved by muscles around the joints.",
+            "pieges": [
+              {
+                "texte": "They contract like muscles.",
+                "pourquoi": "Only muscles contract; bones are stiff."
+              },
+              {
+                "texte": "They do nothing.",
+                "pourquoi": "Without bones, muscles would have nothing to pull."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "coeur-souffle",
+      "titre": "Le cœur et la respiration pendant l'effort",
+      "niveau": "CE2",
+      "prerequis": [
+        "corps-parties"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Relier l’activité physique avec la variation du rythme respiratoire (inspiration, expiration) et du rythme cardiaque par la mesure du pouls."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Quand on court, on respire plus vite et le cœur bat plus vite. On sent les battements du cœur au poignet ou au cou : c'est le pouls.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense à ce que tu ressens après avoir couru : souffle rapide, cœur qui bat fort.",
+        "exemple": "Exemple : assis, Léa compte ses battements au poignet pendant une minute. Après avoir sauté à la corde, elle recommence : elle en compte beaucoup plus.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Après une course, comment respires-tu ?",
+          "nom": "Plus vite et plus fort.",
+          "explication": "Pendant et après l'effort, le nombre de respirations par minute augmente.",
+          "pieges": [
+            {
+              "texte": "Plus lentement.",
+              "pourquoi": "C'est au repos que la respiration est lente. Après une course, on est essoufflé."
+            },
+            {
+              "texte": "Exactement comme au repos.",
+              "pourquoi": "Fais l'essai : compte tes respirations avant et après avoir couru."
+            }
+          ]
+        },
+        {
+          "texte": "Que fait ton cœur quand tu cours ?",
+          "nom": "Il bat plus vite.",
+          "explication": "Pendant l'effort, le rythme cardiaque augmente : le cœur envoie plus de sang aux muscles.",
+          "pieges": [
+            {
+              "texte": "Il s'arrête de battre un moment.",
+              "pourquoi": "Le cœur ne s'arrête jamais : il accélère pendant l'effort."
+            },
+            {
+              "texte": "Il bat moins vite pour se reposer.",
+              "pourquoi": "C'est après l'effort, au repos, que le rythme redescend petit à petit."
+            }
+          ]
+        },
+        {
+          "texte": "Où peux-tu sentir ton pouls avec deux doigts ?",
+          "nom": "Au poignet, du côté du pouce.",
+          "explication": "Au poignet, on sent les battements du sang dans une artère : chaque battement correspond à un battement du cœur.",
+          "pieges": [
+            {
+              "texte": "Au bout du nez.",
+              "pourquoi": "On ne sent pas le pouls à cet endroit."
+            },
+            {
+              "texte": "Sur le genou.",
+              "pourquoi": "On le cherche au poignet ou sur le côté du cou."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle le moment où l'air entre dans tes poumons ?",
+          "nom": "L'inspiration.",
+          "explication": "À l'inspiration, l'air entre ; à l'expiration, il ressort.",
+          "pieges": [
+            {
+              "texte": "L'expiration.",
+              "pourquoi": "L'expiration, c'est quand l'air ressort des poumons."
+            },
+            {
+              "texte": "La digestion.",
+              "pourquoi": "La digestion concerne les aliments, pas l'air."
+            }
+          ]
+        },
+        {
+          "texte": "Où va l'air que tu respires ?",
+          "nom": "Dans les poumons.",
+          "explication": "L'air passe par le nez ou la bouche, descend par la trachée et arrive dans les poumons.",
+          "pieges": [
+            {
+              "texte": "Dans le ventre.",
+              "pourquoi": "Le ventre se soulève quand on respire, mais l'air va dans les poumons, dans la poitrine."
+            },
+            {
+              "texte": "Dans le cœur.",
+              "pourquoi": "Le cœur fait circuler le sang ; l'air va dans les poumons."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le cœur et la respiration accélèrent-ils pendant l'effort ?",
+          "nom": "Parce que les muscles qui travaillent ont besoin de plus d'air et de nourriture apportés par le sang.",
+          "explication": "Le sang transporte vers les muscles ce dont ils ont besoin pour travailler. Plus ils travaillent, plus il leur en faut.",
+          "pieges": [
+            {
+              "texte": "Parce qu'on a peur.",
+              "pourquoi": "L'émotion peut accélérer le cœur, mais pendant le sport, c'est le travail des muscles qui compte."
+            },
+            {
+              "texte": "Parce que le cœur veut courir lui aussi.",
+              "pourquoi": "Le cœur ne court pas : il pompe plus vite le sang vers les muscles."
+            }
+          ]
+        },
+        {
+          "texte": "Après l'effort, tu t'assois et tu te reposes. Que font ton souffle et ton cœur ?",
+          "nom": "Ils ralentissent peu à peu.",
+          "explication": "Au repos, les muscles ont moins de besoins : le rythme cardiaque et le rythme respiratoire redescendent.",
+          "pieges": [
+            {
+              "texte": "Ils restent rapides toute la journée.",
+              "pourquoi": "Ils ralentissent après quelques minutes de repos."
+            },
+            {
+              "texte": "Ils s'arrêtent.",
+              "pourquoi": "Ils ralentissent, mais ne s'arrêtent jamais."
+            }
+          ]
+        },
+        {
+          "texte": "Quels signes montrent que ton corps fait un effort ?",
+          "nom": "Essoufflement, cœur rapide, transpiration, peau rouge.",
+          "explication": "Pendant l'effort, on respire plus vite, le cœur accélère, on transpire et la peau rougit.",
+          "pieges": [
+            {
+              "texte": "On a froid et on frissonne.",
+              "pourquoi": "Pendant l'effort, on a plutôt chaud et on transpire."
+            },
+            {
+              "texte": "Aucun signe, le corps ne change pas.",
+              "pourquoi": "Plusieurs signes se voient et se sentent : essoufflement, transpiration…"
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Heart and breathing during exercise",
+        "idee": "When you run, you breathe faster and your heart beats faster. You can feel your heartbeat at your wrist or neck: that's your pulse.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think about how you feel after running: fast breathing, heart beating hard.",
+          "exemple": "Example: sitting down, Léa counts the beats at her wrist for one minute. After skipping, she counts again: there are many more.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "After a race, how do you breathe?",
+            "nom": "Faster and harder.",
+            "explication": "During and after exercise, the number of breaths per minute goes up.",
+            "pieges": [
+              {
+                "texte": "More slowly.",
+                "pourquoi": "Breathing is slow when you're resting. After a race, you're out of breath."
+              },
+              {
+                "texte": "Just as when resting.",
+                "pourquoi": "Try it: count your breaths before and after running."
+              }
+            ]
+          },
+          {
+            "texte": "What does your heart do when you run?",
+            "nom": "It beats faster.",
+            "explication": "During exercise, the heart rate goes up: the heart sends more blood to the muscles.",
+            "pieges": [
+              {
+                "texte": "It stops beating for a while.",
+                "pourquoi": "The heart never stops: it speeds up during exercise."
+              },
+              {
+                "texte": "It beats more slowly to rest.",
+                "pourquoi": "It's after exercise, when resting, that it slowly comes back down."
+              }
+            ]
+          },
+          {
+            "texte": "Where can you feel your pulse with two fingers?",
+            "nom": "At your wrist, on the thumb side.",
+            "explication": "At the wrist, you feel the blood beating in an artery: each beat matches one heartbeat.",
+            "pieges": [
+              {
+                "texte": "On the tip of your nose.",
+                "pourquoi": "You can't feel your pulse there."
+              },
+              {
+                "texte": "On your knee.",
+                "pourquoi": "Look for it at the wrist or the side of the neck."
+              }
+            ]
+          },
+          {
+            "texte": "What do we call the moment when air goes into your lungs?",
+            "nom": "Breathing in.",
+            "explication": "When you breathe in, air goes in; when you breathe out, it comes back out.",
+            "pieges": [
+              {
+                "texte": "Breathing out.",
+                "pourquoi": "Breathing out is when air leaves the lungs."
+              },
+              {
+                "texte": "Digestion.",
+                "pourquoi": "Digestion is about food, not air."
+              }
+            ]
+          },
+          {
+            "texte": "Where does the air you breathe go?",
+            "nom": "Into the lungs.",
+            "explication": "Air goes in through the nose or mouth, down the windpipe and into the lungs.",
+            "pieges": [
+              {
+                "texte": "Into the tummy.",
+                "pourquoi": "Your tummy rises when you breathe, but the air goes into the lungs, in your chest."
+              },
+              {
+                "texte": "Into the heart.",
+                "pourquoi": "The heart pumps blood; air goes into the lungs."
+              }
+            ]
+          },
+          {
+            "texte": "Why do your heart and breathing speed up during exercise?",
+            "nom": "Because working muscles need more air and food brought by the blood.",
+            "explication": "Blood carries what muscles need to work. The harder they work, the more they need.",
+            "pieges": [
+              {
+                "texte": "Because you're scared.",
+                "pourquoi": "Feelings can speed up the heart, but during sport it's the muscles' work that matters."
+              },
+              {
+                "texte": "Because the heart wants to run too.",
+                "pourquoi": "The heart doesn't run: it pumps blood to the muscles faster."
+              }
+            ]
+          },
+          {
+            "texte": "After exercise, you sit down and rest. What do your breathing and heart do?",
+            "nom": "They slow down little by little.",
+            "explication": "At rest, the muscles need less: heart rate and breathing rate come back down.",
+            "pieges": [
+              {
+                "texte": "They stay fast all day.",
+                "pourquoi": "They slow down after a few minutes' rest."
+              },
+              {
+                "texte": "They stop.",
+                "pourquoi": "They slow down, but they never stop."
+              }
+            ]
+          },
+          {
+            "texte": "Which signs show your body is working hard?",
+            "nom": "Being out of breath, a fast heart, sweating, red skin.",
+            "explication": "During exercise, you breathe faster, your heart speeds up, you sweat and your skin goes red.",
+            "pieges": [
+              {
+                "texte": "Feeling cold and shivering.",
+                "pourquoi": "During exercise, you usually feel hot and sweat."
+              },
+              {
+                "texte": "No signs, the body doesn't change.",
+                "pourquoi": "Several signs can be seen and felt: breathlessness, sweating…"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "grandes-periodes",
+      "titre": "Les grandes périodes de l'histoire",
+      "niveau": "CM1",
+      "prerequis": [],
+      "programme": {
+        "source": "c3hg",
+        "texte": "Situer chronologiquement des grandes périodes historiques."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "On découpe l'histoire en grandes périodes : Préhistoire, Antiquité, Moyen Âge, Temps modernes, époque contemporaine. Des événements marquants servent de limites.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : l'écriture (vers 3300 avant J.-C.), 476, 1492, 1789. Pour le siècle, ajoute 1 aux centaines : 1515, c'est le XVIe siècle.",
+        "exemple": "Exemple : Charlemagne est couronné empereur en 800. 800 est entre 476 et 1492 : c'est le Moyen Âge.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle période commence avec l'apparition des premiers humains et s'achève avec l'invention de l'écriture ?",
+          "nom": "La Préhistoire.",
+          "explication": "La Préhistoire est la plus longue période : elle s'arrête quand apparaît l'écriture, vers 3300 avant J.-C.",
+          "pieges": [
+            {
+              "texte": "Le Moyen Âge.",
+              "pourquoi": "Le Moyen Âge est bien plus récent : il commence en 476 après J.-C."
+            },
+            {
+              "texte": "L'Antiquité.",
+              "pourquoi": "L'Antiquité commence justement avec l'écriture, à la fin de la Préhistoire."
+            }
+          ]
+        },
+        {
+          "texte": "Quel événement marque, en 476, la fin de l'Antiquité ?",
+          "nom": "La fin de l'Empire romain d'Occident.",
+          "explication": "En 476, le dernier empereur romain d'Occident est déposé : on fait commencer le Moyen Âge à cette date.",
+          "pieges": [
+            {
+              "texte": "La Révolution française.",
+              "pourquoi": "La Révolution date de 1789 : elle ouvre l'époque contemporaine."
+            },
+            {
+              "texte": "L'invention de l'écriture.",
+              "pourquoi": "L'écriture marque le début de l'Antiquité, pas sa fin."
+            }
+          ]
+        },
+        {
+          "texte": "Christophe Colomb atteint l'Amérique en 1492. Quelle période commence alors, selon le découpage habituel ?",
+          "nom": "Les Temps modernes.",
+          "explication": "On fait souvent commencer les Temps modernes en 1492. Ils durent jusqu'à la Révolution française, en 1789.",
+          "pieges": [
+            {
+              "texte": "L'époque contemporaine.",
+              "pourquoi": "L'époque contemporaine commence en 1789."
+            },
+            {
+              "texte": "Le Moyen Âge.",
+              "pourquoi": "1492 marque au contraire la fin du Moyen Âge."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quelle période vivons-nous aujourd'hui ?",
+          "nom": "L'époque contemporaine.",
+          "explication": "L'époque contemporaine commence avec la Révolution française, en 1789, et dure jusqu'à aujourd'hui.",
+          "pieges": [
+            {
+              "texte": "Les Temps modernes.",
+              "pourquoi": "Les Temps modernes s'arrêtent en 1789."
+            },
+            {
+              "texte": "Les temps récents n'ont pas de nom.",
+              "pourquoi": "Les historiens appellent cette période l'époque contemporaine."
+            }
+          ]
+        },
+        {
+          "texte": "En quel siècle se trouve l'année 1515 ?",
+          "nom": "Le XVIe siècle.",
+          "explication": "Le XVIe siècle va de 1501 à 1600. On prend les centaines, 15, et on ajoute 1 : 16.",
+          "pieges": [
+            {
+              "texte": "Le XVe siècle.",
+              "pourquoi": "C'est l'erreur la plus fréquente : on lit 15, mais il faut ajouter 1. 1515 est dans le XVIe siècle."
+            },
+            {
+              "texte": "Le XIVe siècle.",
+              "pourquoi": "Le XIVe siècle, ce sont les années 1301 à 1400."
+            }
+          ]
+        },
+        {
+          "texte": "En quel siècle a eu lieu la Révolution française, en 1789 ?",
+          "nom": "Le XVIIIe siècle.",
+          "explication": "1789 : 17 centaines, plus 1, donne 18. C'est le XVIIIe siècle.",
+          "pieges": [
+            {
+              "texte": "Le XVIIe siècle.",
+              "pourquoi": "N'oublie pas d'ajouter 1 aux centaines."
+            },
+            {
+              "texte": "Le XIXe siècle.",
+              "pourquoi": "Le XIXe siècle va de 1801 à 1900."
+            }
+          ]
+        },
+        {
+          "texte": "César prend la ville gauloise d'Alésia en 52 avant J.-C. Dans quelle période est-ce ?",
+          "nom": "L'Antiquité.",
+          "explication": "Avant J.-C., on compte les années à rebours. 52 avant J.-C. se situe après l'invention de l'écriture et avant 476 : c'est l'Antiquité.",
+          "pieges": [
+            {
+              "texte": "La Préhistoire.",
+              "pourquoi": "On écrivait déjà à cette époque : César a même raconté cette guerre."
+            },
+            {
+              "texte": "Le Moyen Âge.",
+              "pourquoi": "Le Moyen Âge commence plus de cinq siècles plus tard, en 476."
+            }
+          ]
+        },
+        {
+          "texte": "Range ces repères du plus ancien au plus récent.",
+          "nom": "Alésia, Charlemagne empereur, Révolution française.",
+          "explication": "52 avant J.-C., puis 800, puis 1789. Les années avant J.-C. sont les plus anciennes.",
+          "pieges": [
+            {
+              "texte": "Charlemagne empereur, Alésia, Révolution française.",
+              "pourquoi": "Alésia est avant J.-C. : elle est plus ancienne que l'an 800."
+            },
+            {
+              "texte": "Révolution française, Charlemagne empereur, Alésia.",
+              "pourquoi": "C'est l'ordre inverse : du plus récent au plus ancien."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l'invention de l'écriture sert-elle de limite entre la Préhistoire et l'Antiquité ?",
+          "nom": "Parce qu'avec l'écriture, on dispose de textes qui racontent le passé.",
+          "explication": "Pour la Préhistoire, on n'a que des traces matérielles : outils, os, peintures. Avec l'écriture apparaissent des documents écrits.",
+          "pieges": [
+            {
+              "texte": "Parce que les humains apparaissent à ce moment-là.",
+              "pourquoi": "Les humains existaient depuis très longtemps avant l'écriture."
+            },
+            {
+              "texte": "Parce qu'elle a été inventée partout en même temps.",
+              "pourquoi": "L'écriture est apparue à des moments différents selon les régions du monde."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The great periods of history",
+        "idee": "History is divided into great periods: Prehistory, Antiquity, the Middle Ages, the Early Modern period, the Contemporary period. Key events mark the boundaries.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: writing (around 3300 BC), 476, 1492, 1789. For the century, add 1 to the hundreds: 1515 is in the 16th century.",
+          "exemple": "Example: Charlemagne is crowned emperor in 800. 800 is between 476 and 1492: it's the Middle Ages.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which period starts with the first humans and ends with the invention of writing?",
+            "nom": "Prehistory.",
+            "explication": "Prehistory is the longest period: it ends when writing appears, around 3300 BC.",
+            "pieges": [
+              {
+                "texte": "The Middle Ages.",
+                "pourquoi": "The Middle Ages are much more recent: they start in AD 476."
+              },
+              {
+                "texte": "Antiquity.",
+                "pourquoi": "Antiquity starts with writing, at the end of Prehistory."
+              }
+            ]
+          },
+          {
+            "texte": "What event in 476 marks the end of Antiquity?",
+            "nom": "The end of the Western Roman Empire.",
+            "explication": "In 476, the last Western Roman emperor was removed: the Middle Ages are said to start then.",
+            "pieges": [
+              {
+                "texte": "The French Revolution.",
+                "pourquoi": "The Revolution was in 1789: it opens the Contemporary period."
+              },
+              {
+                "texte": "The invention of writing.",
+                "pourquoi": "Writing marks the start of Antiquity, not its end."
+              }
+            ]
+          },
+          {
+            "texte": "Christopher Columbus reaches America in 1492. Which period begins then, in the usual division?",
+            "nom": "The Early Modern period.",
+            "explication": "The Early Modern period is often said to begin in 1492. It lasts until the French Revolution, in 1789.",
+            "pieges": [
+              {
+                "texte": "The Contemporary period.",
+                "pourquoi": "The Contemporary period starts in 1789."
+              },
+              {
+                "texte": "The Middle Ages.",
+                "pourquoi": "1492 marks the end of the Middle Ages, not the start."
+              }
+            ]
+          },
+          {
+            "texte": "Which period do we live in today?",
+            "nom": "The Contemporary period.",
+            "explication": "The Contemporary period starts with the French Revolution, in 1789, and lasts until today.",
+            "pieges": [
+              {
+                "texte": "The Early Modern period.",
+                "pourquoi": "The Early Modern period ends in 1789."
+              },
+              {
+                "texte": "Recent times have no name.",
+                "pourquoi": "French historians call this period the Contemporary period."
+              }
+            ]
+          },
+          {
+            "texte": "Which century is the year 1515 in?",
+            "nom": "The 16th century.",
+            "explication": "The 16th century runs from 1501 to 1600. Take the hundreds, 15, and add 1: 16.",
+            "pieges": [
+              {
+                "texte": "The 15th century.",
+                "pourquoi": "That's the most common mistake: you read 15, but you must add 1. 1515 is in the 16th century."
+              },
+              {
+                "texte": "The 14th century.",
+                "pourquoi": "The 14th century is the years 1301 to 1400."
+              }
+            ]
+          },
+          {
+            "texte": "Which century was the French Revolution, in 1789, in?",
+            "nom": "The 18th century.",
+            "explication": "1789: 17 hundreds, plus 1, makes 18. It's the 18th century.",
+            "pieges": [
+              {
+                "texte": "The 17th century.",
+                "pourquoi": "Don't forget to add 1 to the hundreds."
+              },
+              {
+                "texte": "The 19th century.",
+                "pourquoi": "The 19th century runs from 1801 to 1900."
+              }
+            ]
+          },
+          {
+            "texte": "Caesar takes the Gallic town of Alesia in 52 BC. Which period is that?",
+            "nom": "Antiquity.",
+            "explication": "Before Christ, years are counted backwards. 52 BC is after the invention of writing and before 476: it's Antiquity.",
+            "pieges": [
+              {
+                "texte": "Prehistory.",
+                "pourquoi": "People already wrote then: Caesar even wrote about this war."
+              },
+              {
+                "texte": "The Middle Ages.",
+                "pourquoi": "The Middle Ages start over five centuries later, in 476."
+              }
+            ]
+          },
+          {
+            "texte": "Put these landmarks in order, from oldest to most recent.",
+            "nom": "Alesia, Charlemagne emperor, French Revolution.",
+            "explication": "52 BC, then 800, then 1789. Years BC are the oldest.",
+            "pieges": [
+              {
+                "texte": "Charlemagne emperor, Alesia, French Revolution.",
+                "pourquoi": "Alesia is BC: it's older than the year 800."
+              },
+              {
+                "texte": "French Revolution, Charlemagne emperor, Alesia.",
+                "pourquoi": "That's the reverse order: from most recent to oldest."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the invention of writing used as the boundary between Prehistory and Antiquity?",
+            "nom": "Because with writing, we have texts that tell us about the past.",
+            "explication": "For Prehistory, we only have physical traces: tools, bones, paintings. With writing come written documents.",
+            "pieges": [
+              {
+                "texte": "Because humans appeared then.",
+                "pourquoi": "Humans existed for a very long time before writing."
+              },
+              {
+                "texte": "Because it was invented everywhere at the same time.",
+                "pourquoi": "Writing appeared at different times in different parts of the world."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "continents-oceans",
+      "titre": "Continents et océans",
+      "niveau": "CM1",
+      "prerequis": [],
+      "programme": {
+        "source": "c3hg",
+        "texte": "Nommer et localiser les grands repères géographiques."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Les terres forment des continents : Afrique, Amérique, Antarctique, Asie, Europe, Océanie. Les océans couvrent la plus grande partie de la Terre : Pacifique, Atlantique, Indien, Arctique, Austral.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Imagine un planisphère : l'Amérique à gauche, l'Europe et l'Afrique au milieu, l'Asie à droite, l'Océanie en bas à droite.",
+        "exemple": "Exemple : pour aller de France en Amérique en bateau, on traverse l'océan Atlantique, qui sépare l'Europe et l'Afrique de l'Amérique.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel est le plus grand océan du monde ?",
+          "nom": "L'océan Pacifique.",
+          "explication": "Le Pacifique est le plus vaste des océans : il s'étend entre l'Asie et l'Océanie d'un côté, l'Amérique de l'autre.",
+          "pieges": [
+            {
+              "texte": "L'océan Atlantique.",
+              "pourquoi": "L'Atlantique est grand, mais le Pacifique l'est bien davantage."
+            },
+            {
+              "texte": "La mer Méditerranée.",
+              "pourquoi": "La Méditerranée est une mer, bien plus petite qu'un océan."
+            }
+          ]
+        },
+        {
+          "texte": "Quel océan sépare l'Europe et l'Afrique de l'Amérique ?",
+          "nom": "L'océan Atlantique.",
+          "explication": "L'Atlantique s'étend entre l'Europe et l'Afrique à l'est, l'Amérique à l'ouest.",
+          "pieges": [
+            {
+              "texte": "L'océan Indien.",
+              "pourquoi": "L'océan Indien est entre l'Afrique, l'Asie et l'Océanie."
+            },
+            {
+              "texte": "L'océan Arctique.",
+              "pourquoi": "L'Arctique entoure le pôle Nord."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quel océan se trouve Madagascar ?",
+          "nom": "L'océan Indien.",
+          "explication": "Madagascar est une grande île de l'océan Indien, à l'est de l'Afrique.",
+          "pieges": [
+            {
+              "texte": "L'océan Atlantique.",
+              "pourquoi": "L'Atlantique borde l'ouest de l'Afrique ; Madagascar est à l'est."
+            },
+            {
+              "texte": "L'océan Pacifique.",
+              "pourquoi": "Le Pacifique est beaucoup plus à l'est, au-delà de l'Asie et de l'Océanie."
+            }
+          ]
+        },
+        {
+          "texte": "Quel continent entoure le pôle Sud et est couvert de glace ?",
+          "nom": "L'Antarctique.",
+          "explication": "L'Antarctique est un continent presque entièrement couvert de glace, autour du pôle Sud.",
+          "pieges": [
+            {
+              "texte": "L'Arctique.",
+              "pourquoi": "Au pôle Nord, l'Arctique est un océan, en partie couvert de glace de mer : ce n'est pas un continent."
+            },
+            {
+              "texte": "L'Océanie.",
+              "pourquoi": "L'Océanie comprend l'Australie et les îles du Pacifique, pas le pôle Sud."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le plus grand continent ?",
+          "nom": "L'Asie.",
+          "explication": "L'Asie est le continent le plus vaste et le plus peuplé.",
+          "pieges": [
+            {
+              "texte": "L'Afrique.",
+              "pourquoi": "L'Afrique est très grande, mais l'Asie l'est davantage."
+            },
+            {
+              "texte": "L'Europe.",
+              "pourquoi": "L'Europe est l'un des plus petits continents."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quel continent se trouve l'Australie ?",
+          "nom": "L'Océanie.",
+          "explication": "L'Océanie regroupe l'Australie, la Nouvelle-Zélande et de nombreuses îles du Pacifique.",
+          "pieges": [
+            {
+              "texte": "L'Asie.",
+              "pourquoi": "L'Australie est proche de l'Asie, mais elle fait partie de l'Océanie."
+            },
+            {
+              "texte": "L'Amérique.",
+              "pourquoi": "L'Amérique est de l'autre côté du Pacifique."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que l'équateur ?",
+          "nom": "Une ligne imaginaire qui partage la Terre en deux hémisphères, nord et sud.",
+          "explication": "L'équateur fait le tour de la Terre à égale distance des deux pôles. Il n'est pas tracé sur le sol : on le dessine sur les cartes.",
+          "pieges": [
+            {
+              "texte": "Une grande muraille autour de la Terre.",
+              "pourquoi": "L'équateur n'existe pas sur le terrain : c'est une ligne imaginaire."
+            },
+            {
+              "texte": "La ligne qui sépare l'Europe et l'Afrique.",
+              "pourquoi": "C'est la mer Méditerranée qui sépare l'Europe et l'Afrique ; l'équateur passe plus au sud."
+            }
+          ]
+        },
+        {
+          "texte": "Sur Terre, qu'est-ce qui occupe la plus grande surface ?",
+          "nom": "Les océans.",
+          "explication": "Les océans couvrent plus des deux tiers de la surface de la Terre. Vue de l'espace, elle paraît bleue.",
+          "pieges": [
+            {
+              "texte": "Les continents.",
+              "pourquoi": "Les terres émergées occupent moins d'un tiers de la surface."
+            },
+            {
+              "texte": "Autant de terre que d'eau.",
+              "pourquoi": "L'eau domine largement : plus des deux tiers de la surface."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quel continent se trouve la France métropolitaine ?",
+          "nom": "L'Europe.",
+          "explication": "La France métropolitaine est en Europe, au bord de l'Atlantique et de la Méditerranée.",
+          "pieges": [
+            {
+              "texte": "L'Afrique.",
+              "pourquoi": "L'Afrique est au sud, de l'autre côté de la Méditerranée."
+            },
+            {
+              "texte": "L'Amérique.",
+              "pourquoi": "L'Amérique est de l'autre côté de l'Atlantique. Une région française, la Guyane, y est située, mais pas la métropole."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Continents and oceans",
+        "idee": "Land makes up continents: Africa, America, Antarctica, Asia, Europe, Oceania. Oceans cover most of the Earth: Pacific, Atlantic, Indian, Arctic, Southern.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Picture a world map: America on the left, Europe and Africa in the middle, Asia on the right, Oceania at the bottom right.",
+          "exemple": "Example: to sail from France to America, you cross the Atlantic Ocean, which separates Europe and Africa from America.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the biggest ocean in the world?",
+            "nom": "The Pacific Ocean.",
+            "explication": "The Pacific is the largest ocean: it lies between Asia and Oceania on one side, and America on the other.",
+            "pieges": [
+              {
+                "texte": "The Atlantic Ocean.",
+                "pourquoi": "The Atlantic is big, but the Pacific is much bigger."
+              },
+              {
+                "texte": "The Mediterranean Sea.",
+                "pourquoi": "The Mediterranean is a sea, much smaller than an ocean."
+              }
+            ]
+          },
+          {
+            "texte": "Which ocean separates Europe and Africa from America?",
+            "nom": "The Atlantic Ocean.",
+            "explication": "The Atlantic lies between Europe and Africa to the east, and America to the west.",
+            "pieges": [
+              {
+                "texte": "The Indian Ocean.",
+                "pourquoi": "The Indian Ocean lies between Africa, Asia and Oceania."
+              },
+              {
+                "texte": "The Arctic Ocean.",
+                "pourquoi": "The Arctic surrounds the North Pole."
+              }
+            ]
+          },
+          {
+            "texte": "Which ocean is Madagascar in?",
+            "nom": "The Indian Ocean.",
+            "explication": "Madagascar is a large island in the Indian Ocean, east of Africa.",
+            "pieges": [
+              {
+                "texte": "The Atlantic Ocean.",
+                "pourquoi": "The Atlantic is on Africa's west side; Madagascar is to the east."
+              },
+              {
+                "texte": "The Pacific Ocean.",
+                "pourquoi": "The Pacific is much further east, beyond Asia and Oceania."
+              }
+            ]
+          },
+          {
+            "texte": "Which continent surrounds the South Pole and is covered in ice?",
+            "nom": "Antarctica.",
+            "explication": "Antarctica is a continent almost entirely covered in ice, around the South Pole.",
+            "pieges": [
+              {
+                "texte": "The Arctic.",
+                "pourquoi": "At the North Pole, the Arctic is an ocean, partly covered in sea ice: it isn't a continent."
+              },
+              {
+                "texte": "Oceania.",
+                "pourquoi": "Oceania includes Australia and the Pacific islands, not the South Pole."
+              }
+            ]
+          },
+          {
+            "texte": "What is the biggest continent?",
+            "nom": "Asia.",
+            "explication": "Asia is the largest and most populated continent.",
+            "pieges": [
+              {
+                "texte": "Africa.",
+                "pourquoi": "Africa is very big, but Asia is bigger."
+              },
+              {
+                "texte": "Europe.",
+                "pourquoi": "Europe is one of the smallest continents."
+              }
+            ]
+          },
+          {
+            "texte": "Which continent is Australia on?",
+            "nom": "Oceania.",
+            "explication": "Oceania includes Australia, New Zealand and many Pacific islands.",
+            "pieges": [
+              {
+                "texte": "Asia.",
+                "pourquoi": "Australia is near Asia, but it belongs to Oceania."
+              },
+              {
+                "texte": "America.",
+                "pourquoi": "America is on the other side of the Pacific."
+              }
+            ]
+          },
+          {
+            "texte": "What is the equator?",
+            "nom": "An imaginary line that splits the Earth into two hemispheres, north and south.",
+            "explication": "The equator goes round the Earth halfway between the two poles. It isn't drawn on the ground: we draw it on maps.",
+            "pieges": [
+              {
+                "texte": "A great wall round the Earth.",
+                "pourquoi": "The equator doesn't exist on the ground: it's an imaginary line."
+              },
+              {
+                "texte": "The line between Europe and Africa.",
+                "pourquoi": "The Mediterranean Sea separates Europe and Africa; the equator is further south."
+              }
+            ]
+          },
+          {
+            "texte": "On Earth, what covers the biggest area?",
+            "nom": "The oceans.",
+            "explication": "Oceans cover more than two thirds of the Earth's surface. Seen from space, it looks blue.",
+            "pieges": [
+              {
+                "texte": "The continents.",
+                "pourquoi": "Land covers less than a third of the surface."
+              },
+              {
+                "texte": "As much land as water.",
+                "pourquoi": "Water covers far more: over two thirds of the surface."
+              }
+            ]
+          },
+          {
+            "texte": "Which continent is mainland France on?",
+            "nom": "Europe.",
+            "explication": "Mainland France is in Europe, on the Atlantic and the Mediterranean.",
+            "pieges": [
+              {
+                "texte": "Africa.",
+                "pourquoi": "Africa is to the south, across the Mediterranean."
+              },
+              {
+                "texte": "America.",
+                "pourquoi": "America is across the Atlantic. One French region, French Guiana, is there, but not mainland France."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lire-carte",
+      "titre": "Lire une carte",
+      "niveau": "CM2",
+      "prerequis": [
+        "continents-oceans"
+      ],
+      "programme": {
+        "source": "c3hg",
+        "texte": "Utiliser des cartes analogiques et numériques à différentes échelles, des photographies de paysages ou de lieux."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour lire une carte, on regarde son titre, sa légende (le sens des couleurs et des symboles), son échelle (les distances réelles) et son orientation (où est le nord).",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Titre, légende, échelle, orientation : ces quatre éléments aident à lire toute carte.",
+        "exemple": "Exemple : l'échelle dit 1 cm pour 2 km. Deux villages sont à 3 cm sur la carte : 3 fois 2 km, ils sont à 6 km l'un de l'autre.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "À quoi sert la légende d'une carte ?",
+          "nom": "À expliquer ce que veulent dire les couleurs et les symboles.",
+          "explication": "La légende donne le sens de chaque couleur et de chaque symbole : forêt, route, ville, rivière…",
+          "pieges": [
+            {
+              "texte": "À raconter une histoire sur le lieu.",
+              "pourquoi": "Ici, « légende » ne veut pas dire « conte » : c'est la clé pour lire la carte."
+            },
+            {
+              "texte": "À indiquer les distances.",
+              "pourquoi": "Les distances se calculent avec l'échelle."
+            }
+          ]
+        },
+        {
+          "texte": "L'échelle indique 1 cm pour 1 km. Deux villes sont à 5 cm sur la carte. Quelle est la distance réelle ?",
+          "nom": "5 km.",
+          "explication": "Chaque centimètre représente 1 km : 5 cm représentent 5 km.",
+          "pieges": [
+            {
+              "texte": "5 cm.",
+              "pourquoi": "5 cm, c'est la distance sur la carte, pas sur le terrain."
+            },
+            {
+              "texte": "1 km.",
+              "pourquoi": "1 km correspond à 1 cm seulement : il faut multiplier par 5."
+            }
+          ]
+        },
+        {
+          "texte": "L'échelle indique 1 cm pour 10 km. Un lac mesure 3 cm de long sur la carte. Quelle est sa longueur réelle ?",
+          "nom": "30 km.",
+          "explication": "3 fois 10 km font 30 km.",
+          "pieges": [
+            {
+              "texte": "13 km.",
+              "pourquoi": "On a additionné 3 et 10 : il faut multiplier."
+            },
+            {
+              "texte": "3 km.",
+              "pourquoi": "Chaque centimètre vaut 10 km, pas 1 km."
+            }
+          ]
+        },
+        {
+          "texte": "Sur la plupart des cartes, le nord est en haut. Où est l'est ?",
+          "nom": "À droite.",
+          "explication": "Nord en haut, sud en bas, est à droite, ouest à gauche. La rose des vents le rappelle.",
+          "pieges": [
+            {
+              "texte": "À gauche.",
+              "pourquoi": "À gauche, c'est l'ouest quand le nord est en haut."
+            },
+            {
+              "texte": "En bas.",
+              "pourquoi": "En bas, c'est le sud."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle carte montre le plus de détails sur ta rue ?",
+          "nom": "Le plan de ta ville.",
+          "explication": "Plus la carte représente un petit espace, plus elle peut montrer de détails : rues, écoles, parcs.",
+          "pieges": [
+            {
+              "texte": "La carte de France.",
+              "pourquoi": "Elle montre un très grand espace : on n'y voit pas les rues."
+            },
+            {
+              "texte": "Le planisphère.",
+              "pourquoi": "Le planisphère représente le monde entier : ta rue y est invisible."
+            }
+          ]
+        },
+        {
+          "texte": "Sur une carte de relief, le vert foncé est en bas de la légende et le marron en haut. Où sont les montagnes ?",
+          "nom": "Dans les zones marron.",
+          "explication": "Sur ce type de carte, la légende associe le marron aux altitudes élevées et le vert aux plaines basses.",
+          "pieges": [
+            {
+              "texte": "Dans les zones vertes, car il y a des forêts.",
+              "pourquoi": "Sur une carte de relief, le vert indique les basses altitudes, pas les forêts : c'est la légende qui le dit."
+            },
+            {
+              "texte": "Dans les zones bleues.",
+              "pourquoi": "Le bleu représente l'eau : mers, lacs, rivières."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi faut-il toujours lire la légende avant d'interpréter une carte ?",
+          "nom": "Parce que chaque carte choisit ses propres couleurs et symboles.",
+          "explication": "Une même couleur peut vouloir dire des choses différentes selon les cartes : la légende évite les erreurs.",
+          "pieges": [
+            {
+              "texte": "Parce que toutes les cartes utilisent les mêmes couleurs.",
+              "pourquoi": "Au contraire : les couleurs changent d'une carte à l'autre."
+            },
+            {
+              "texte": "Ce n'est pas utile, le titre suffit.",
+              "pourquoi": "Le titre dit le sujet, mais pas le sens des couleurs et des symboles."
+            }
+          ]
+        },
+        {
+          "texte": "Sur un plan, l'école est au-dessus de la mairie. Le nord est en haut. Où est l'école par rapport à la mairie ?",
+          "nom": "Au nord.",
+          "explication": "Quand le nord est en haut du plan, ce qui est au-dessus se trouve au nord.",
+          "pieges": [
+            {
+              "texte": "Au sud.",
+              "pourquoi": "Le sud est en bas du plan."
+            },
+            {
+              "texte": "On ne peut pas savoir.",
+              "pourquoi": "On le sait grâce à l'orientation : le nord est en haut."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Reading a map",
+        "idee": "To read a map, look at its title, its key (what colours and symbols mean), its scale (real distances) and its orientation (where north is).",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Title, key, scale, orientation: these four help you read any map.",
+          "exemple": "Example: the scale says 1 cm for 2 km. Two villages are 3 cm apart on the map: 3 times 2 km, they are 6 km apart.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a map's key for?",
+            "nom": "To explain what the colours and symbols mean.",
+            "explication": "The key gives the meaning of each colour and symbol: forest, road, town, river…",
+            "pieges": [
+              {
+                "texte": "To tell a story about the place.",
+                "pourquoi": "In French, the key is called a « légende », but it isn't a tale: it's what unlocks the map."
+              },
+              {
+                "texte": "To show distances.",
+                "pourquoi": "Distances are worked out with the scale."
+              }
+            ]
+          },
+          {
+            "texte": "The scale says 1 cm for 1 km. Two towns are 5 cm apart on the map. What is the real distance?",
+            "nom": "5 km.",
+            "explication": "Each centimetre stands for 1 km: 5 cm stand for 5 km.",
+            "pieges": [
+              {
+                "texte": "5 cm.",
+                "pourquoi": "5 cm is the distance on the map, not on the ground."
+              },
+              {
+                "texte": "1 km.",
+                "pourquoi": "1 km is only 1 cm: you must multiply by 5."
+              }
+            ]
+          },
+          {
+            "texte": "The scale says 1 cm for 10 km. A lake is 3 cm long on the map. How long is it really?",
+            "nom": "30 km.",
+            "explication": "3 times 10 km makes 30 km.",
+            "pieges": [
+              {
+                "texte": "13 km.",
+                "pourquoi": "That adds 3 and 10: you must multiply."
+              },
+              {
+                "texte": "3 km.",
+                "pourquoi": "Each centimetre is worth 10 km, not 1 km."
+              }
+            ]
+          },
+          {
+            "texte": "On most maps, north is at the top. Where is east?",
+            "nom": "On the right.",
+            "explication": "North at the top, south at the bottom, east on the right, west on the left. The compass rose reminds you.",
+            "pieges": [
+              {
+                "texte": "On the left.",
+                "pourquoi": "On the left is west when north is at the top."
+              },
+              {
+                "texte": "At the bottom.",
+                "pourquoi": "At the bottom is south."
+              }
+            ]
+          },
+          {
+            "texte": "Which map shows the most detail about your street?",
+            "nom": "The plan of your town.",
+            "explication": "The smaller the area a map shows, the more detail it can show: streets, schools, parks.",
+            "pieges": [
+              {
+                "texte": "The map of France.",
+                "pourquoi": "It shows a very large area: you can't see streets on it."
+              },
+              {
+                "texte": "The world map.",
+                "pourquoi": "A world map shows the whole world: your street is invisible on it."
+              }
+            ]
+          },
+          {
+            "texte": "On a relief map, dark green is at the bottom of the key and brown at the top. Where are the mountains?",
+            "nom": "In the brown areas.",
+            "explication": "On this kind of map, the key matches brown to high ground and green to low plains.",
+            "pieges": [
+              {
+                "texte": "In the green areas, because there are forests.",
+                "pourquoi": "On a relief map, green shows low ground, not forests: the key says so."
+              },
+              {
+                "texte": "In the blue areas.",
+                "pourquoi": "Blue stands for water: seas, lakes, rivers."
+              }
+            ]
+          },
+          {
+            "texte": "Why should you always read the key before making sense of a map?",
+            "nom": "Because each map chooses its own colours and symbols.",
+            "explication": "The same colour can mean different things on different maps: the key avoids mistakes.",
+            "pieges": [
+              {
+                "texte": "Because all maps use the same colours.",
+                "pourquoi": "Quite the opposite: colours change from one map to another."
+              },
+              {
+                "texte": "There's no need, the title is enough.",
+                "pourquoi": "The title gives the subject, but not what the colours and symbols mean."
+              }
+            ]
+          },
+          {
+            "texte": "On a plan, the school is above the town hall. North is at the top. Where is the school compared with the town hall?",
+            "nom": "To the north.",
+            "explication": "When north is at the top of the plan, whatever is above is to the north.",
+            "pieges": [
+              {
+                "texte": "To the south.",
+                "pourquoi": "South is at the bottom of the plan."
+              },
+              {
+                "texte": "You can't tell.",
+                "pourquoi": "You can tell from the orientation: north is at the top."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "terre-soleil",
+      "titre": "La Terre tourne autour du Soleil",
+      "niveau": "CM2",
+      "prerequis": [
+        "planetes"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Décrire le mouvement de la Terre par rapport au Soleil et la situer dans le système solaire."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La Terre est la troisième planète du système solaire. Elle fait le tour du Soleil en un an, à environ 150 millions de kilomètres. Le Soleil est une étoile.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Le Soleil est au centre : la Terre tourne autour de lui en une année.",
+        "exemple": "Exemple : en maquette, si le Soleil est une balle de 10 cm, la Terre est un grain de semoule d'1 mm placé à 10 m.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qui tourne autour de qui ?",
+          "nom": "La Terre tourne autour du Soleil.",
+          "explication": "Le Soleil semble traverser le ciel, mais c'est la Terre qui tourne autour du Soleil, et sur elle-même.",
+          "pieges": [
+            {
+              "texte": "Le Soleil tourne autour de la Terre.",
+              "pourquoi": "C'est ce qu'on croit voir depuis la Terre, et ce qu'on a longtemps pensé. Mais c'est la Terre qui tourne autour du Soleil."
+            },
+            {
+              "texte": "Ils ne bougent ni l'un ni l'autre.",
+              "pourquoi": "La Terre se déplace sans cesse autour du Soleil."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de temps la Terre met-elle pour faire un tour complet autour du Soleil ?",
+          "nom": "Environ 365 jours, soit une année.",
+          "explication": "Un tour complet dure environ 365 jours et un quart : c'est pour cela qu'il y a une année bissextile tous les quatre ans.",
+          "pieges": [
+            {
+              "texte": "Un jour.",
+              "pourquoi": "En un jour, la Terre fait un tour sur elle-même, pas autour du Soleil."
+            },
+            {
+              "texte": "Un mois.",
+              "pourquoi": "Environ un mois, c'est le temps que met la Lune pour tourner autour de la Terre."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que le Soleil ?",
+          "nom": "Une étoile.",
+          "explication": "Le Soleil est une étoile : une énorme boule de gaz très chaud qui produit sa propre lumière.",
+          "pieges": [
+            {
+              "texte": "Une planète.",
+              "pourquoi": "Une planète ne produit pas de lumière ; elle tourne autour d'une étoile."
+            },
+            {
+              "texte": "Une boule de feu qui brûle du bois.",
+              "pourquoi": "Le Soleil ne brûle pas comme un feu de bois : c'est du gaz très chaud."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle distance moyenne du Soleil se trouve la Terre ?",
+          "nom": "Environ 150 millions de kilomètres.",
+          "explication": "La Terre est en moyenne à environ 150 millions de kilomètres du Soleil. Sa lumière met environ 8 minutes pour nous arriver.",
+          "pieges": [
+            {
+              "texte": "Environ 150 kilomètres.",
+              "pourquoi": "C'est à peine la distance entre deux villes : le Soleil est un million de fois plus loin."
+            },
+            {
+              "texte": "Environ 384 000 kilomètres.",
+              "pourquoi": "C'est à peu près la distance de la Terre à la Lune."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une maquette à l'échelle, le Soleil est une balle de 10 cm. Quelle taille a la Terre ?",
+          "nom": "Un grain d'environ 1 mm.",
+          "explication": "Le Soleil est environ cent fois plus large que la Terre : à cette échelle, la Terre est un grain de semoule d'1 mm, placé à 10 m.",
+          "pieges": [
+            {
+              "texte": "Une balle de 5 cm, la moitié du Soleil.",
+              "pourquoi": "Le Soleil est bien plus grand que ça : environ cent fois plus large que la Terre."
+            },
+            {
+              "texte": "Une balle de 10 cm aussi.",
+              "pourquoi": "Les dessins montrent souvent des planètes trop grosses ; en réalité, le Soleil est immense à côté de la Terre."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la place de la Terre en partant du Soleil ?",
+          "nom": "La troisième.",
+          "explication": "Mercure, Vénus, puis la Terre : c'est la troisième planète.",
+          "pieges": [
+            {
+              "texte": "La première.",
+              "pourquoi": "La première, la plus proche du Soleil, est Mercure."
+            },
+            {
+              "texte": "La quatrième.",
+              "pourquoi": "La quatrième est Mars."
+            }
+          ]
+        },
+        {
+          "texte": "Que fait la Lune ?",
+          "nom": "Elle tourne autour de la Terre.",
+          "explication": "La Lune est le satellite naturel de la Terre : elle tourne autour d'elle en environ un mois.",
+          "pieges": [
+            {
+              "texte": "Elle tourne autour de Mars.",
+              "pourquoi": "Mars a ses propres petits satellites ; la Lune tourne autour de la Terre."
+            },
+            {
+              "texte": "Elle produit sa propre lumière.",
+              "pourquoi": "La Lune ne fait que renvoyer la lumière du Soleil."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi a-t-on longtemps cru que le Soleil tournait autour de la Terre ?",
+          "nom": "Parce que, vu de la Terre, le Soleil semble traverser le ciel.",
+          "explication": "Le mouvement dépend de l'observateur : pour nous, sur la Terre, c'est le Soleil qui paraît bouger.",
+          "pieges": [
+            {
+              "texte": "Parce que c'est vrai.",
+              "pourquoi": "Les observations et les mesures montrent que la Terre tourne autour du Soleil."
+            },
+            {
+              "texte": "Parce que le Soleil est plus petit que la Terre.",
+              "pourquoi": "C'est l'inverse : le Soleil est beaucoup plus grand."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The Earth goes round the Sun",
+        "idee": "The Earth is the third planet in the solar system. It goes round the Sun in one year, about 150 million kilometres away. The Sun is a star.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The Sun is in the middle: the Earth goes round it in a year.",
+          "exemple": "Example: in a model, if the Sun is a 10 cm ball, the Earth is a 1 mm grain of semolina placed 10 m away.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What goes round what?",
+            "nom": "The Earth goes round the Sun.",
+            "explication": "The Sun seems to cross the sky, but it's the Earth that goes round the Sun, and spins on itself.",
+            "pieges": [
+              {
+                "texte": "The Sun goes round the Earth.",
+                "pourquoi": "That's what we seem to see from Earth, and what people thought for a long time. But the Earth goes round the Sun."
+              },
+              {
+                "texte": "Neither of them moves.",
+                "pourquoi": "The Earth is always moving round the Sun."
+              }
+            ]
+          },
+          {
+            "texte": "How long does the Earth take to go all the way round the Sun?",
+            "nom": "About 365 days, one year.",
+            "explication": "One full trip takes about 365 and a quarter days: that's why there's a leap year every four years.",
+            "pieges": [
+              {
+                "texte": "One day.",
+                "pourquoi": "In one day, the Earth spins once on itself, not round the Sun."
+              },
+              {
+                "texte": "One month.",
+                "pourquoi": "About a month is how long the Moon takes to go round the Earth."
+              }
+            ]
+          },
+          {
+            "texte": "What is the Sun?",
+            "nom": "A star.",
+            "explication": "The Sun is a star: a huge ball of very hot gas that makes its own light.",
+            "pieges": [
+              {
+                "texte": "A planet.",
+                "pourquoi": "A planet doesn't make light; it goes round a star."
+              },
+              {
+                "texte": "A ball of fire burning wood.",
+                "pourquoi": "The Sun doesn't burn like a wood fire: it's very hot gas."
+              }
+            ]
+          },
+          {
+            "texte": "How far from the Sun is the Earth, on average?",
+            "nom": "About 150 million kilometres.",
+            "explication": "The Earth is on average about 150 million kilometres from the Sun. Its light takes about 8 minutes to reach us.",
+            "pieges": [
+              {
+                "texte": "About 150 kilometres.",
+                "pourquoi": "That's barely the distance between two towns: the Sun is a million times further."
+              },
+              {
+                "texte": "About 384,000 kilometres.",
+                "pourquoi": "That's roughly the distance from the Earth to the Moon."
+              }
+            ]
+          },
+          {
+            "texte": "In a scale model, the Sun is a 10 cm ball. How big is the Earth?",
+            "nom": "A grain about 1 mm across.",
+            "explication": "The Sun is about a hundred times wider than the Earth: at this scale, the Earth is a 1 mm grain of semolina, 10 m away.",
+            "pieges": [
+              {
+                "texte": "A 5 cm ball, half the Sun.",
+                "pourquoi": "The Sun is far bigger than that: about a hundred times wider than the Earth."
+              },
+              {
+                "texte": "A 10 cm ball too.",
+                "pourquoi": "Pictures often show planets far too big; really, the Sun is huge next to the Earth."
+              }
+            ]
+          },
+          {
+            "texte": "Where is the Earth, counting from the Sun?",
+            "nom": "Third.",
+            "explication": "Mercury, Venus, then the Earth: it's the third planet.",
+            "pieges": [
+              {
+                "texte": "First.",
+                "pourquoi": "The first, closest to the Sun, is Mercury."
+              },
+              {
+                "texte": "Fourth.",
+                "pourquoi": "The fourth is Mars."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Moon do?",
+            "nom": "It goes round the Earth.",
+            "explication": "The Moon is the Earth's natural satellite: it goes round it in about a month.",
+            "pieges": [
+              {
+                "texte": "It goes round Mars.",
+                "pourquoi": "Mars has its own small moons; the Moon goes round the Earth."
+              },
+              {
+                "texte": "It makes its own light.",
+                "pourquoi": "The Moon only reflects the Sun's light."
+              }
+            ]
+          },
+          {
+            "texte": "Why did people believe for so long that the Sun went round the Earth?",
+            "nom": "Because, seen from Earth, the Sun seems to cross the sky.",
+            "explication": "Movement depends on who is watching: for us, on Earth, it's the Sun that seems to move.",
+            "pieges": [
+              {
+                "texte": "Because it's true.",
+                "pourquoi": "Observations and measurements show the Earth goes round the Sun."
+              },
+              {
+                "texte": "Because the Sun is smaller than the Earth.",
+                "pourquoi": "It's the opposite: the Sun is much bigger."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "jour-nuit",
+      "titre": "Le jour, la nuit et l'année",
+      "niveau": "6e",
+      "prerequis": [
+        "terre-soleil"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Associer la durée d’une année au mouvement de révolution de la Terre autour du Soleil, du point de vue héliocentrique, et associer la durée d’un jour au mouvement de rotation de la Terre autour de l’axe des pôles."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La Terre tourne sur elle-même autour de l'axe des pôles en un jour : c'est la rotation. Elle tourne autour du Soleil en un an : c'est la révolution.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Rotation : un tour sur soi-même, un jour. Révolution : un tour autour du Soleil, une année.",
+        "exemple": "Exemple : éclaire une balle avec une lampe et fais-la tourner sur elle-même. Une moitié est toujours éclairée : c'est le jour ; l'autre est dans l'ombre : c'est la nuit.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Pourquoi y a-t-il des jours et des nuits ?",
+          "nom": "Parce que la Terre tourne sur elle-même.",
+          "explication": "Une moitié de la Terre est éclairée par le Soleil. En tournant, chaque endroit passe du côté éclairé (le jour) au côté dans l'ombre (la nuit).",
+          "pieges": [
+            {
+              "texte": "Parce que le Soleil s'éteint le soir.",
+              "pourquoi": "Le Soleil brille sans arrêt : quand il fait nuit chez nous, il fait jour de l'autre côté de la Terre."
+            },
+            {
+              "texte": "Parce que la Lune cache le Soleil la nuit.",
+              "pourquoi": "La Lune ne cache le Soleil que pendant une éclipse, très rarement. La nuit, c'est la Terre elle-même qui nous cache le Soleil."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de temps dure un tour de la Terre sur elle-même ?",
+          "nom": "Environ 24 heures.",
+          "explication": "Un tour sur elle-même autour de l'axe des pôles dure environ 24 heures : c'est la durée d'un jour.",
+          "pieges": [
+            {
+              "texte": "365 jours.",
+              "pourquoi": "365 jours, c'est la durée d'un tour autour du Soleil."
+            },
+            {
+              "texte": "12 heures.",
+              "pourquoi": "12 heures, c'est à peu près la durée du jour seul ou de la nuit seule, pas d'une rotation complète."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle le mouvement de la Terre autour du Soleil ?",
+          "nom": "La révolution.",
+          "explication": "La révolution est le tour de la Terre autour du Soleil. Elle dure environ un an.",
+          "pieges": [
+            {
+              "texte": "La rotation.",
+              "pourquoi": "La rotation est le tour de la Terre sur elle-même."
+            },
+            {
+              "texte": "L'éclipse.",
+              "pourquoi": "Une éclipse, c'est quand un astre en cache un autre."
+            }
+          ]
+        },
+        {
+          "texte": "Où le Soleil se lève-t-il chaque matin ?",
+          "nom": "Du côté de l'est.",
+          "explication": "La Terre tourne d'ouest en est : le Soleil semble donc se lever à l'est et se coucher à l'ouest.",
+          "pieges": [
+            {
+              "texte": "Du côté de l'ouest.",
+              "pourquoi": "Le Soleil se couche du côté de l'ouest."
+            },
+            {
+              "texte": "Toujours exactement au nord.",
+              "pourquoi": "En France, on ne voit jamais le Soleil au nord."
+            }
+          ]
+        },
+        {
+          "texte": "Il est midi en France. En Polynésie française, de l'autre côté de la Terre, fait-il jour ?",
+          "nom": "Non, il fait nuit.",
+          "explication": "La Polynésie est sur la moitié de la Terre qui n'est pas éclairée à ce moment-là. C'est pour cela que l'heure change selon les pays.",
+          "pieges": [
+            {
+              "texte": "Oui, il est midi partout sur Terre.",
+              "pourquoi": "La moitié de la Terre seulement est éclairée : l'heure n'est pas la même partout."
+            },
+            {
+              "texte": "On ne peut pas savoir.",
+              "pourquoi": "On peut le prévoir : de l'autre côté de la Terre, c'est la nuit quand il est midi chez nous."
+            }
+          ]
+        },
+        {
+          "texte": "La Terre est découpée en 24 fuseaux horaires. Pourquoi 24 ?",
+          "nom": "Parce qu'un tour de la Terre sur elle-même dure 24 heures.",
+          "explication": "En une heure, la Terre tourne de 360 divisé par 24, soit 15 degrés : chaque fuseau horaire est large de 15 degrés environ.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il y a 24 pays dans le monde.",
+              "pourquoi": "Il y a bien plus de 24 pays : les fuseaux suivent la rotation de la Terre."
+            },
+            {
+              "texte": "Au hasard.",
+              "pourquoi": "Le nombre vient de la durée de la rotation : 24 heures."
+            }
+          ]
+        },
+        {
+          "texte": "Vu de la Terre, le Soleil semble traverser le ciel. Que se passe-t-il vraiment ?",
+          "nom": "C'est la Terre qui tourne sur elle-même.",
+          "explication": "Comme dans un manège : quand on tourne, c'est le paysage qui semble défiler.",
+          "pieges": [
+            {
+              "texte": "Le Soleil fait le tour de la Terre chaque jour.",
+              "pourquoi": "C'est le modèle qu'on a longtemps cru, mais c'est la rotation de la Terre qui produit ce mouvement apparent."
+            },
+            {
+              "texte": "Le Soleil monte et descend sur place.",
+              "pourquoi": "Le Soleil ne monte ni ne descend : c'est notre point de vue qui change avec la rotation."
+            }
+          ]
+        },
+        {
+          "texte": "Plante un bâton au soleil. Que fait son ombre au cours de la journée ?",
+          "nom": "Elle tourne et change de longueur.",
+          "explication": "Le Soleil semble se déplacer dans le ciel : l'ombre change de direction et elle est la plus courte vers le milieu de la journée.",
+          "pieges": [
+            {
+              "texte": "Elle ne bouge pas.",
+              "pourquoi": "Observe-la toutes les heures : elle tourne."
+            },
+            {
+              "texte": "Elle est toujours la plus longue à midi.",
+              "pourquoi": "C'est l'inverse : vers le milieu de la journée, le Soleil est le plus haut et l'ombre est la plus courte."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Day, night and the year",
+        "idee": "The Earth spins on itself around the axis through the poles in one day: that's rotation. It goes round the Sun in a year: that's revolution.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Rotation: one spin on itself, one day. Revolution: one trip round the Sun, one year.",
+          "exemple": "Example: shine a torch on a ball and spin it. One half is always lit: that's day; the other is in shadow: that's night.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Why are there days and nights?",
+            "nom": "Because the Earth spins on itself.",
+            "explication": "One half of the Earth is lit by the Sun. As it spins, each place moves from the lit side (day) to the shadow side (night).",
+            "pieges": [
+              {
+                "texte": "Because the Sun switches off in the evening.",
+                "pourquoi": "The Sun shines all the time: when it's night here, it's day on the other side of the Earth."
+              },
+              {
+                "texte": "Because the Moon hides the Sun at night.",
+                "pourquoi": "The Moon only hides the Sun during an eclipse, very rarely. At night, it's the Earth itself that hides the Sun from us."
+              }
+            ]
+          },
+          {
+            "texte": "How long does the Earth take to spin once on itself?",
+            "nom": "About 24 hours.",
+            "explication": "One spin around the axis through the poles takes about 24 hours: that's the length of a day.",
+            "pieges": [
+              {
+                "texte": "365 days.",
+                "pourquoi": "365 days is how long a trip round the Sun takes."
+              },
+              {
+                "texte": "12 hours.",
+                "pourquoi": "12 hours is roughly daytime alone or night-time alone, not a full spin."
+              }
+            ]
+          },
+          {
+            "texte": "What is the Earth's movement round the Sun called?",
+            "nom": "Revolution.",
+            "explication": "Revolution is the Earth's trip round the Sun. It takes about a year.",
+            "pieges": [
+              {
+                "texte": "Rotation.",
+                "pourquoi": "Rotation is the Earth spinning on itself."
+              },
+              {
+                "texte": "An eclipse.",
+                "pourquoi": "An eclipse is when one body hides another."
+              }
+            ]
+          },
+          {
+            "texte": "Where does the Sun rise each morning?",
+            "nom": "In the east.",
+            "explication": "The Earth spins from west to east: so the Sun seems to rise in the east and set in the west.",
+            "pieges": [
+              {
+                "texte": "In the west.",
+                "pourquoi": "The Sun sets in the west."
+              },
+              {
+                "texte": "Always exactly in the north.",
+                "pourquoi": "In France, you never see the Sun in the north."
+              }
+            ]
+          },
+          {
+            "texte": "It's midday in France. In French Polynesia, on the other side of the Earth, is it daytime?",
+            "nom": "No, it's night.",
+            "explication": "Polynesia is on the half of the Earth that isn't lit at that moment. That's why the time changes from country to country.",
+            "pieges": [
+              {
+                "texte": "Yes, it's midday everywhere on Earth.",
+                "pourquoi": "Only half the Earth is lit: the time isn't the same everywhere."
+              },
+              {
+                "texte": "You can't tell.",
+                "pourquoi": "You can work it out: on the other side of the Earth, it's night when it's midday here."
+              }
+            ]
+          },
+          {
+            "texte": "The Earth is divided into 24 time zones. Why 24?",
+            "nom": "Because one spin of the Earth takes 24 hours.",
+            "explication": "In one hour, the Earth turns 360 divided by 24, that is 15 degrees: each time zone is about 15 degrees wide.",
+            "pieges": [
+              {
+                "texte": "Because there are 24 countries in the world.",
+                "pourquoi": "There are far more than 24 countries: time zones follow the Earth's spin."
+              },
+              {
+                "texte": "By chance.",
+                "pourquoi": "The number comes from how long the spin takes: 24 hours."
+              }
+            ]
+          },
+          {
+            "texte": "Seen from Earth, the Sun seems to cross the sky. What is really happening?",
+            "nom": "The Earth is spinning on itself.",
+            "explication": "Like on a merry-go-round: when you turn, it's the scenery that seems to go past.",
+            "pieges": [
+              {
+                "texte": "The Sun goes round the Earth every day.",
+                "pourquoi": "People believed that for a long time, but it's the Earth's spin that makes this apparent movement."
+              },
+              {
+                "texte": "The Sun goes up and down on the spot.",
+                "pourquoi": "The Sun doesn't go up or down: our point of view changes as the Earth spins."
+              }
+            ]
+          },
+          {
+            "texte": "Stand a stick in the sunshine. What does its shadow do during the day?",
+            "nom": "It turns and changes length.",
+            "explication": "The Sun seems to move across the sky: the shadow changes direction and is shortest around the middle of the day.",
+            "pieges": [
+              {
+                "texte": "It doesn't move.",
+                "pourquoi": "Look at it every hour: it turns."
+              },
+              {
+                "texte": "It's always longest at midday.",
+                "pourquoi": "It's the opposite: around the middle of the day, the Sun is highest and the shadow is shortest."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "saisons",
+      "titre": "Pourquoi y a-t-il des saisons ?",
+      "niveau": "6e",
+      "prerequis": [
+        "jour-nuit"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Associer l’alternance des saisons à l’inclinaison du Soleil et à la durée du jour pour un observateur sur la Terre (modèle géocentrique)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'axe de la Terre est penché. En été, le Soleil monte plus haut dans le ciel et les journées sont plus longues : il fait plus chaud. Ce n'est pas une question de distance au Soleil.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense à deux choses : la hauteur du Soleil dans le ciel à midi, et la durée de la journée.",
+        "exemple": "Exemple : en France, fin juin, le Soleil est haut à midi et la journée dure longtemps : c'est l'été. Fin décembre, il reste bas et les journées sont courtes : c'est l'hiver.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Pourquoi fait-il plus chaud en été qu'en hiver, en France ?",
+          "nom": "Parce que le Soleil monte plus haut et que les journées sont plus longues.",
+          "explication": "Un Soleil haut chauffe davantage le sol, et plus longtemps. C'est dû à l'inclinaison de l'axe de la Terre.",
+          "pieges": [
+            {
+              "texte": "Parce que la Terre est plus près du Soleil en été.",
+              "pourquoi": "C'est l'idée fausse la plus répandue : la Terre est au plus près du Soleil début janvier, en plein hiver chez nous."
+            },
+            {
+              "texte": "Parce que le Soleil brille plus fort en été.",
+              "pourquoi": "Le Soleil brille de la même façon toute l'année : c'est sa hauteur dans notre ciel qui change."
+            }
+          ]
+        },
+        {
+          "texte": "À quel moment de l'année la Terre est-elle au plus près du Soleil ?",
+          "nom": "Début janvier.",
+          "explication": "Début janvier, la Terre est à environ 147 millions de kilomètres du Soleil, et c'est l'hiver en France. La distance n'explique donc pas les saisons.",
+          "pieges": [
+            {
+              "texte": "Début juillet.",
+              "pourquoi": "Début juillet, la Terre est au contraire au plus loin, à environ 152 millions de kilomètres."
+            },
+            {
+              "texte": "Elle est toujours à la même distance.",
+              "pourquoi": "La distance varie un peu au cours de l'année, mais pas assez pour faire les saisons."
+            }
+          ]
+        },
+        {
+          "texte": "Quand c'est l'été en France, quelle saison est-ce en Australie ?",
+          "nom": "L'hiver.",
+          "explication": "Les saisons sont inversées entre l'hémisphère Nord et l'hémisphère Sud : quand l'un penche vers le Soleil, l'autre s'en détourne.",
+          "pieges": [
+            {
+              "texte": "L'été aussi.",
+              "pourquoi": "Si la distance au Soleil faisait les saisons, ce serait vrai. Mais les deux hémisphères ont des saisons inversées."
+            },
+            {
+              "texte": "Il n'y a pas de saisons en Australie.",
+              "pourquoi": "L'Australie a bien des saisons, mais inversées par rapport aux nôtres."
+            }
+          ]
+        },
+        {
+          "texte": "À La Réunion, dans l'hémisphère Sud, en quelle saison tombe Noël ?",
+          "nom": "En été.",
+          "explication": "À La Réunion, décembre et janvier sont les mois les plus chauds : Noël tombe en été.",
+          "pieges": [
+            {
+              "texte": "En hiver, comme en métropole.",
+              "pourquoi": "La Réunion est dans l'hémisphère Sud : les saisons y sont inversées."
+            },
+            {
+              "texte": "Au printemps.",
+              "pourquoi": "Fin décembre, c'est le début de l'été dans l'hémisphère Sud."
+            }
+          ]
+        },
+        {
+          "texte": "Vers le 21 juin, en France, comment est la journée ?",
+          "nom": "C'est la plus longue de l'année.",
+          "explication": "Vers le 21 juin, c'est le solstice d'été dans l'hémisphère Nord : la journée est la plus longue, la nuit la plus courte.",
+          "pieges": [
+            {
+              "texte": "C'est la plus courte de l'année.",
+              "pourquoi": "La journée la plus courte est vers le 21 décembre, au solstice d'hiver."
+            },
+            {
+              "texte": "Le jour et la nuit durent autant.",
+              "pourquoi": "C'est le cas aux équinoxes, vers le 20 mars et le 22 septembre."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il aux équinoxes de printemps et d'automne ?",
+          "nom": "Le jour et la nuit durent à peu près autant.",
+          "explication": "Aux équinoxes, vers le 20 mars et le 22 septembre, le jour et la nuit durent environ 12 heures partout sur Terre.",
+          "pieges": [
+            {
+              "texte": "C'est le jour le plus long.",
+              "pourquoi": "Le jour le plus long est au solstice d'été."
+            },
+            {
+              "texte": "Le Soleil ne se couche pas.",
+              "pourquoi": "Cela arrive près des pôles en été, pas aux équinoxes."
+            }
+          ]
+        },
+        {
+          "texte": "Mesure l'ombre d'un bâton à midi en juin, puis en décembre. Quand est-elle la plus longue ?",
+          "nom": "En décembre.",
+          "explication": "En décembre, le Soleil reste bas dans le ciel : les ombres sont longues. En juin, il est haut : elles sont courtes.",
+          "pieges": [
+            {
+              "texte": "En juin.",
+              "pourquoi": "En juin, le Soleil est haut à midi : l'ombre est courte."
+            },
+            {
+              "texte": "Elle a toujours la même longueur.",
+              "pourquoi": "La hauteur du Soleil change avec les saisons, donc la longueur des ombres aussi."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un Soleil haut dans le ciel chauffe-t-il davantage le sol ?",
+          "nom": "Parce que sa lumière arrive plus droit et se concentre sur une plus petite surface.",
+          "explication": "Une lampe tenue bien au-dessus d'une feuille fait une petite tache très éclairée ; penchée, la tache s'étale et éclaire moins chaque endroit.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il est alors plus près de nous.",
+              "pourquoi": "La hauteur dans le ciel ne change presque rien à la distance au Soleil."
+            },
+            {
+              "texte": "Parce qu'il est plus gros en été.",
+              "pourquoi": "Le Soleil a la même taille toute l'année."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Why are there seasons?",
+        "idee": "The Earth's axis is tilted. In summer, the Sun climbs higher in the sky and days are longer: it's warmer. It isn't about the distance from the Sun.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of two things: how high the Sun is in the sky at midday, and how long the day lasts.",
+          "exemple": "Example: in France, at the end of June, the Sun is high at midday and the day is long: it's summer. At the end of December, it stays low and days are short: it's winter.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Why is it warmer in summer than in winter, in France?",
+            "nom": "Because the Sun climbs higher and days are longer.",
+            "explication": "A high Sun warms the ground more, and for longer. It's because the Earth's axis is tilted.",
+            "pieges": [
+              {
+                "texte": "Because the Earth is closer to the Sun in summer.",
+                "pourquoi": "That's the most common wrong idea: the Earth is closest to the Sun in early January, in the middle of our winter."
+              },
+              {
+                "texte": "Because the Sun shines harder in summer.",
+                "pourquoi": "The Sun shines the same all year: it's its height in our sky that changes."
+              }
+            ]
+          },
+          {
+            "texte": "When in the year is the Earth closest to the Sun?",
+            "nom": "Early January.",
+            "explication": "In early January, the Earth is about 147 million kilometres from the Sun, and it's winter in France. So distance doesn't explain the seasons.",
+            "pieges": [
+              {
+                "texte": "Early July.",
+                "pourquoi": "In early July, the Earth is actually furthest away, about 152 million kilometres."
+              },
+              {
+                "texte": "It's always the same distance.",
+                "pourquoi": "The distance changes a little during the year, but not enough to make the seasons."
+              }
+            ]
+          },
+          {
+            "texte": "When it's summer in France, what season is it in Australia?",
+            "nom": "Winter.",
+            "explication": "Seasons are reversed between the Northern and Southern Hemispheres: when one leans towards the Sun, the other leans away.",
+            "pieges": [
+              {
+                "texte": "Summer too.",
+                "pourquoi": "If distance from the Sun made the seasons, that would be true. But the two hemispheres have opposite seasons."
+              },
+              {
+                "texte": "Australia has no seasons.",
+                "pourquoi": "Australia does have seasons, but the other way round from ours."
+              }
+            ]
+          },
+          {
+            "texte": "On Réunion Island, in the Southern Hemisphere, what season is Christmas in?",
+            "nom": "Summer.",
+            "explication": "On Réunion, December and January are the hottest months: Christmas is in summer.",
+            "pieges": [
+              {
+                "texte": "Winter, as in mainland France.",
+                "pourquoi": "Réunion is in the Southern Hemisphere: its seasons are reversed."
+              },
+              {
+                "texte": "Spring.",
+                "pourquoi": "Late December is the start of summer in the Southern Hemisphere."
+              }
+            ]
+          },
+          {
+            "texte": "Around 21 June, in France, what is the day like?",
+            "nom": "It's the longest of the year.",
+            "explication": "Around 21 June is the summer solstice in the Northern Hemisphere: the longest day and the shortest night.",
+            "pieges": [
+              {
+                "texte": "It's the shortest of the year.",
+                "pourquoi": "The shortest day is around 21 December, at the winter solstice."
+              },
+              {
+                "texte": "Day and night are the same length.",
+                "pourquoi": "That happens at the equinoxes, around 20 March and 22 September."
+              }
+            ]
+          },
+          {
+            "texte": "What happens at the spring and autumn equinoxes?",
+            "nom": "Day and night last about the same time.",
+            "explication": "At the equinoxes, around 20 March and 22 September, day and night each last about 12 hours all over the Earth.",
+            "pieges": [
+              {
+                "texte": "It's the longest day.",
+                "pourquoi": "The longest day is at the summer solstice."
+              },
+              {
+                "texte": "The Sun doesn't set.",
+                "pourquoi": "That happens near the poles in summer, not at the equinoxes."
+              }
+            ]
+          },
+          {
+            "texte": "Measure a stick's shadow at midday in June, then in December. When is it longest?",
+            "nom": "In December.",
+            "explication": "In December, the Sun stays low in the sky: shadows are long. In June, it's high: they are short.",
+            "pieges": [
+              {
+                "texte": "In June.",
+                "pourquoi": "In June, the Sun is high at midday: the shadow is short."
+              },
+              {
+                "texte": "It's always the same length.",
+                "pourquoi": "The Sun's height changes with the seasons, so shadow length does too."
+              }
+            ]
+          },
+          {
+            "texte": "Why does a Sun high in the sky warm the ground more?",
+            "nom": "Because its light arrives more directly and is concentrated on a smaller area.",
+            "explication": "A torch held straight above a sheet of paper makes a small, very bright patch; tilted, the patch spreads out and lights each spot less.",
+            "pieges": [
+              {
+                "texte": "Because it's closer to us then.",
+                "pourquoi": "Its height in the sky makes almost no difference to the distance from the Sun."
+              },
+              {
+                "texte": "Because it's bigger in summer.",
+                "pourquoi": "The Sun is the same size all year."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "moyen-age",
+      "titre": "Repères du Moyen Âge à Louis XIV",
+      "niveau": "5e",
+      "prerequis": [
+        "grandes-periodes"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Situer un fait dans une époque ou une période donnée."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La classe de 5e va du VIe au XVIIe siècle : Byzance et Charlemagne, la naissance de l'islam, la société féodale, puis les grandes découvertes et la Renaissance.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pour trouver le siècle, prends le nombre de centaines et ajoute 1. Puis compare avec 476, 1492 et 1789.",
+        "exemple": "Exemple : la prise de Bagdad par les Mongols, en 1258. 12 centaines plus 1 : XIIIe siècle. 1258 est entre 476 et 1492 : c'est le Moyen Âge.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "En 622, Mahomet quitte La Mecque pour Médine : c'est l'Hégire, début du calendrier musulman. En quel siècle ?",
+          "nom": "Le VIIe siècle.",
+          "explication": "622 : 6 centaines plus 1, donc VIIe siècle. C'est au Moyen Âge.",
+          "pieges": [
+            {
+              "texte": "Le VIe siècle.",
+              "pourquoi": "On lit 6, mais il faut ajouter 1 : les années 601 à 700 forment le VIIe siècle."
+            },
+            {
+              "texte": "Le XXIIe siècle.",
+              "pourquoi": "On ne lit pas les deux derniers chiffres : on compte les centaines."
+            }
+          ]
+        },
+        {
+          "texte": "Charlemagne est couronné empereur en 800. Dans quelle période ?",
+          "nom": "Le Moyen Âge.",
+          "explication": "800 est entre 476 et 1492 : c'est le Moyen Âge.",
+          "pieges": [
+            {
+              "texte": "L'Antiquité.",
+              "pourquoi": "L'Antiquité se termine en 476, plus de trois siècles avant."
+            },
+            {
+              "texte": "Les Temps modernes.",
+              "pourquoi": "Les Temps modernes commencent vers 1492."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle était la capitale de l'Empire byzantin ?",
+          "nom": "Constantinople.",
+          "explication": "Constantinople, l'ancienne Byzance, était la capitale de l'Empire romain d'Orient, appelé Empire byzantin.",
+          "pieges": [
+            {
+              "texte": "Rome.",
+              "pourquoi": "Rome était la capitale de l'Empire romain d'Occident, disparu en 476."
+            },
+            {
+              "texte": "Bagdad.",
+              "pourquoi": "Bagdad était la capitale du califat abbasside, pas de l'Empire byzantin."
+            }
+          ]
+        },
+        {
+          "texte": "En 1453, les Ottomans prennent Constantinople. Range : prise de Bagdad par les Mongols, prise de Constantinople, arrivée de Colomb en Amérique.",
+          "nom": "Bagdad (1258), Constantinople (1453), Colomb (1492).",
+          "explication": "1258, puis 1453, puis 1492 : on range les années de la plus petite à la plus grande.",
+          "pieges": [
+            {
+              "texte": "Constantinople, Bagdad, Colomb.",
+              "pourquoi": "1453 est après 1258 : Bagdad vient d'abord."
+            },
+            {
+              "texte": "Colomb, Constantinople, Bagdad.",
+              "pourquoi": "C'est l'ordre du plus récent au plus ancien."
+            }
+          ]
+        },
+        {
+          "texte": "Dans la société féodale, qui protège les paysans et domine les campagnes ?",
+          "nom": "Le seigneur.",
+          "explication": "Le seigneur domine une seigneurie : les paysans travaillent ses terres et lui doivent des redevances en échange de sa protection.",
+          "pieges": [
+            {
+              "texte": "Le maire élu.",
+              "pourquoi": "Il n'y a pas de maires élus dans les campagnes féodales."
+            },
+            {
+              "texte": "Le président de la République.",
+              "pourquoi": "La République n'existe pas encore : la France est un royaume."
+            }
+          ]
+        },
+        {
+          "texte": "François Ier, roi de la Renaissance, remporte la bataille de Marignan en 1515. En quel siècle ?",
+          "nom": "Le XVIe siècle.",
+          "explication": "1515 : 15 centaines plus 1, donc XVIe siècle, au début des Temps modernes.",
+          "pieges": [
+            {
+              "texte": "Le XVe siècle.",
+              "pourquoi": "Il faut ajouter 1 aux centaines : 1515 est au XVIe siècle."
+            },
+            {
+              "texte": "Le Moyen Âge.",
+              "pourquoi": "1515 est après 1492 : on est dans les Temps modernes."
+            }
+          ]
+        },
+        {
+          "texte": "En 1598, Henri IV signe l'édit de Nantes. Que permet-il ?",
+          "nom": "Aux protestants de pratiquer leur religion, sous conditions.",
+          "explication": "L'édit de Nantes met fin aux guerres de Religion en accordant aux protestants une liberté de culte limitée.",
+          "pieges": [
+            {
+              "texte": "D'interdire le protestantisme.",
+              "pourquoi": "C'est l'inverse : il le tolère. Louis XIV le révoquera en 1685."
+            },
+            {
+              "texte": "De donner le droit de vote à tous.",
+              "pourquoi": "Le droit de vote n'est pas en jeu : c'est un édit sur la religion."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi appelle-t-on Louis XIV un roi absolu ?",
+          "nom": "Parce qu'il concentre tous les pouvoirs entre ses mains.",
+          "explication": "Le roi absolu fait les lois, rend la justice et commande l'armée, sans partager son pouvoir avec une assemblée élue.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il est élu par tous les Français.",
+              "pourquoi": "Le roi n'est pas élu : il hérite du trône."
+            },
+            {
+              "texte": "Parce qu'il a régné absolument partout dans le monde.",
+              "pourquoi": "« Absolu » parle de son pouvoir en France, pas d'un territoire mondial."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Landmarks from the Middle Ages to Louis XIV",
+        "idee": "Year 8 history in France runs from the 6th to the 17th century: Byzantium and Charlemagne, the birth of Islam, feudal society, then the great discoveries and the Renaissance.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "To find the century, take the number of hundreds and add 1. Then compare with 476, 1492 and 1789.",
+          "exemple": "Example: the Mongols take Baghdad in 1258. 12 hundreds plus 1: 13th century. 1258 is between 476 and 1492: it's the Middle Ages.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In 622, Muhammad leaves Mecca for Medina: this is the Hijra, the start of the Islamic calendar. Which century?",
+            "nom": "The 7th century.",
+            "explication": "622: 6 hundreds plus 1, so the 7th century. It's in the Middle Ages.",
+            "pieges": [
+              {
+                "texte": "The 6th century.",
+                "pourquoi": "You read 6, but you must add 1: the years 601 to 700 make the 7th century."
+              },
+              {
+                "texte": "The 22nd century.",
+                "pourquoi": "Don't read the last two digits: count the hundreds."
+              }
+            ]
+          },
+          {
+            "texte": "Charlemagne is crowned emperor in 800. Which period?",
+            "nom": "The Middle Ages.",
+            "explication": "800 is between 476 and 1492: it's the Middle Ages.",
+            "pieges": [
+              {
+                "texte": "Antiquity.",
+                "pourquoi": "Antiquity ends in 476, more than three centuries earlier."
+              },
+              {
+                "texte": "The Early Modern period.",
+                "pourquoi": "The Early Modern period starts around 1492."
+              }
+            ]
+          },
+          {
+            "texte": "What was the capital of the Byzantine Empire?",
+            "nom": "Constantinople.",
+            "explication": "Constantinople, formerly Byzantium, was the capital of the Eastern Roman Empire, called the Byzantine Empire.",
+            "pieges": [
+              {
+                "texte": "Rome.",
+                "pourquoi": "Rome was the capital of the Western Roman Empire, which ended in 476."
+              },
+              {
+                "texte": "Baghdad.",
+                "pourquoi": "Baghdad was the capital of the Abbasid caliphate, not the Byzantine Empire."
+              }
+            ]
+          },
+          {
+            "texte": "In 1453, the Ottomans take Constantinople. Put in order: the Mongols take Baghdad, the fall of Constantinople, Columbus reaches America.",
+            "nom": "Baghdad (1258), Constantinople (1453), Columbus (1492).",
+            "explication": "1258, then 1453, then 1492: put the years from smallest to biggest.",
+            "pieges": [
+              {
+                "texte": "Constantinople, Baghdad, Columbus.",
+                "pourquoi": "1453 is after 1258: Baghdad comes first."
+              },
+              {
+                "texte": "Columbus, Constantinople, Baghdad.",
+                "pourquoi": "That's the order from most recent to oldest."
+              }
+            ]
+          },
+          {
+            "texte": "In feudal society, who protects the peasants and rules the countryside?",
+            "nom": "The lord.",
+            "explication": "The lord rules a lordship: peasants work his land and owe him dues in return for his protection.",
+            "pieges": [
+              {
+                "texte": "The elected mayor.",
+                "pourquoi": "There are no elected mayors in the feudal countryside."
+              },
+              {
+                "texte": "The President of the Republic.",
+                "pourquoi": "There's no Republic yet: France is a kingdom."
+              }
+            ]
+          },
+          {
+            "texte": "Francis I, a Renaissance king, wins the battle of Marignano in 1515. Which century?",
+            "nom": "The 16th century.",
+            "explication": "1515: 15 hundreds plus 1, so the 16th century, at the start of the Early Modern period.",
+            "pieges": [
+              {
+                "texte": "The 15th century.",
+                "pourquoi": "You must add 1 to the hundreds: 1515 is in the 16th century."
+              },
+              {
+                "texte": "The Middle Ages.",
+                "pourquoi": "1515 is after 1492: we're in the Early Modern period."
+              }
+            ]
+          },
+          {
+            "texte": "In 1598, Henry IV signs the Edict of Nantes. What does it allow?",
+            "nom": "Protestants to practise their religion, within limits.",
+            "explication": "The Edict of Nantes ends the Wars of Religion by giving Protestants limited freedom of worship.",
+            "pieges": [
+              {
+                "texte": "Banning Protestantism.",
+                "pourquoi": "It's the opposite: it tolerates it. Louis XIV will revoke it in 1685."
+              },
+              {
+                "texte": "Giving everyone the vote.",
+                "pourquoi": "Voting isn't the point: it's an edict about religion."
+              }
+            ]
+          },
+          {
+            "texte": "Why is Louis XIV called an absolute monarch?",
+            "nom": "Because he holds all the powers in his own hands.",
+            "explication": "The absolute monarch makes the laws, judges and commands the army, without sharing power with an elected assembly.",
+            "pieges": [
+              {
+                "texte": "Because he's elected by all the French.",
+                "pourquoi": "The king isn't elected: he inherits the throne."
+              },
+              {
+                "texte": "Because he ruled absolutely everywhere in the world.",
+                "pourquoi": "« Absolute » is about his power in France, not a worldwide territory."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "univers-distances",
+      "titre": "Les distances dans l'Univers",
+      "niveau": "5e",
+      "prerequis": [
+        "terre-soleil"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Aborder les différentes unités de distance et savoir les convertir : du kilomètre à l’année-lumière."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La lumière va à environ 300 000 kilomètres par seconde. Une année-lumière est la distance qu'elle parcourt en un an : environ 9 500 milliards de kilomètres.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "L'année-lumière est une distance, pas une durée : c'est le chemin parcouru par la lumière en un an.",
+        "exemple": "Exemple : la lumière du Soleil met environ 8 minutes pour arriver sur Terre. On voit donc le Soleil tel qu'il était il y a 8 minutes.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'une année-lumière ?",
+          "nom": "La distance parcourue par la lumière en un an.",
+          "explication": "Malgré son nom, l'année-lumière est une unité de distance : environ 9 500 milliards de kilomètres.",
+          "pieges": [
+            {
+              "texte": "Une durée d'un an.",
+              "pourquoi": "Le mot « année » trompe : c'est une distance, pas une durée."
+            },
+            {
+              "texte": "Une année où il y a beaucoup de soleil.",
+              "pourquoi": "Cela n'a rien à voir avec la météo : c'est une distance en astronomie."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle vitesse se propage la lumière dans le vide ?",
+          "nom": "Environ 300 000 kilomètres par seconde.",
+          "explication": "La lumière parcourt environ 300 000 kilomètres chaque seconde : plus de sept fois le tour de la Terre.",
+          "pieges": [
+            {
+              "texte": "Environ 300 kilomètres par heure.",
+              "pourquoi": "C'est la vitesse d'un train rapide, pas de la lumière."
+            },
+            {
+              "texte": "Elle arrive instantanément, sans durée.",
+              "pourquoi": "La lumière est très rapide, mais pas instantanée : celle du Soleil met environ 8 minutes à nous parvenir."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de temps met la lumière du Soleil pour arriver sur Terre ?",
+          "nom": "Environ 8 minutes.",
+          "explication": "Le Soleil est à environ 150 millions de kilomètres : à 300 000 kilomètres par seconde, cela fait environ 500 secondes, un peu plus de 8 minutes.",
+          "pieges": [
+            {
+              "texte": "Environ 8 secondes.",
+              "pourquoi": "En 8 secondes, la lumière ne ferait que 2,4 millions de kilomètres."
+            },
+            {
+              "texte": "Environ 8 ans.",
+              "pourquoi": "8 ans, ce serait pour une étoile bien plus lointaine que le Soleil."
+            }
+          ]
+        },
+        {
+          "texte": "L'étoile la plus proche après le Soleil, Proxima du Centaure, est à environ 4,2 années-lumière. Que veut dire ce nombre ?",
+          "nom": "Sa lumière met environ 4,2 ans pour nous parvenir.",
+          "explication": "4,2 années-lumière, c'est environ 40 000 milliards de kilomètres. Nous voyons cette étoile telle qu'elle était il y a 4,2 ans.",
+          "pieges": [
+            {
+              "texte": "Elle a 4,2 ans.",
+              "pourquoi": "L'année-lumière mesure une distance, pas un âge."
+            },
+            {
+              "texte": "On peut l'atteindre en 4,2 ans avec une fusée.",
+              "pourquoi": "Il faudrait aller à la vitesse de la lumière, ce qu'aucune fusée ne peut faire."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi utilise-t-on l'année-lumière plutôt que le kilomètre pour les étoiles ?",
+          "nom": "Parce que les distances en kilomètres seraient des nombres énormes.",
+          "explication": "Écrire 40 000 milliards de kilomètres est peu pratique : 4,2 années-lumière est plus simple à lire et à comparer.",
+          "pieges": [
+            {
+              "texte": "Parce que le kilomètre n'existe pas dans l'espace.",
+              "pourquoi": "Le kilomètre reste valable partout ; il est seulement trop petit pour ces distances."
+            },
+            {
+              "texte": "Parce que les étoiles bougent trop vite.",
+              "pourquoi": "Le choix de l'unité vient de la taille des distances, pas du mouvement."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle la galaxie dont fait partie le Soleil ?",
+          "nom": "La Voie lactée.",
+          "explication": "Le Soleil est l'une des milliards d'étoiles de la Voie lactée, notre galaxie.",
+          "pieges": [
+            {
+              "texte": "Le système solaire.",
+              "pourquoi": "Le système solaire, c'est le Soleil et ce qui tourne autour de lui ; il fait partie de la Voie lactée."
+            },
+            {
+              "texte": "La Lune.",
+              "pourquoi": "La Lune est le satellite de la Terre, pas une galaxie."
+            }
+          ]
+        },
+        {
+          "texte": "Range du plus petit au plus grand : galaxie, système solaire, Terre.",
+          "nom": "Terre, système solaire, galaxie.",
+          "explication": "La Terre est une planète du système solaire, qui est lui-même une petite partie de la galaxie.",
+          "pieges": [
+            {
+              "texte": "Système solaire, Terre, galaxie.",
+              "pourquoi": "La Terre fait partie du système solaire : elle est plus petite que lui."
+            },
+            {
+              "texte": "Galaxie, système solaire, Terre.",
+              "pourquoi": "C'est l'ordre du plus grand au plus petit."
+            }
+          ]
+        },
+        {
+          "texte": "La Lune est à environ 384 000 kilomètres. Combien de temps sa lumière met-elle pour nous arriver ?",
+          "nom": "Un peu plus d'une seconde.",
+          "explication": "384 000 divisé par 300 000 donne environ 1,3 : la lumière de la Lune met un peu plus d'une seconde.",
+          "pieges": [
+            {
+              "texte": "Environ 8 minutes.",
+              "pourquoi": "C'est pour le Soleil, bien plus lointain."
+            },
+            {
+              "texte": "Environ un an.",
+              "pourquoi": "Un an de trajet correspond à une année-lumière, une distance immense comparée à la Lune."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Distances in the Universe",
+        "idee": "Light travels at about 300,000 kilometres per second. A light year is the distance it travels in a year: about 9,500 billion kilometres.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A light year is a distance, not a length of time: it's how far light travels in a year.",
+          "exemple": "Example: sunlight takes about 8 minutes to reach the Earth. So we see the Sun as it was 8 minutes ago.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a light year?",
+            "nom": "The distance light travels in a year.",
+            "explication": "Despite its name, the light year is a unit of distance: about 9,500 billion kilometres.",
+            "pieges": [
+              {
+                "texte": "A length of time of one year.",
+                "pourquoi": "The word « year » is misleading: it's a distance, not a time."
+              },
+              {
+                "texte": "A year with lots of sunshine.",
+                "pourquoi": "It has nothing to do with weather: it's a distance used in astronomy."
+              }
+            ]
+          },
+          {
+            "texte": "How fast does light travel in a vacuum?",
+            "nom": "About 300,000 kilometres per second.",
+            "explication": "Light travels about 300,000 kilometres every second: more than seven times round the Earth.",
+            "pieges": [
+              {
+                "texte": "About 300 kilometres per hour.",
+                "pourquoi": "That's the speed of a fast train, not of light."
+              },
+              {
+                "texte": "It arrives instantly, taking no time.",
+                "pourquoi": "Light is very fast, but not instant: sunlight takes about 8 minutes to reach us."
+              }
+            ]
+          },
+          {
+            "texte": "How long does sunlight take to reach the Earth?",
+            "nom": "About 8 minutes.",
+            "explication": "The Sun is about 150 million kilometres away: at 300,000 kilometres per second, that's about 500 seconds, a little over 8 minutes.",
+            "pieges": [
+              {
+                "texte": "About 8 seconds.",
+                "pourquoi": "In 8 seconds, light would only cover 2.4 million kilometres."
+              },
+              {
+                "texte": "About 8 years.",
+                "pourquoi": "8 years would be for a star much further away than the Sun."
+              }
+            ]
+          },
+          {
+            "texte": "The nearest star after the Sun, Proxima Centauri, is about 4.2 light years away. What does this number mean?",
+            "nom": "Its light takes about 4.2 years to reach us.",
+            "explication": "4.2 light years is about 40,000 billion kilometres. We see this star as it was 4.2 years ago.",
+            "pieges": [
+              {
+                "texte": "It's 4.2 years old.",
+                "pourquoi": "A light year measures distance, not age."
+              },
+              {
+                "texte": "A rocket could reach it in 4.2 years.",
+                "pourquoi": "It would have to go at the speed of light, which no rocket can do."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we use light years rather than kilometres for stars?",
+            "nom": "Because distances in kilometres would be huge numbers.",
+            "explication": "Writing 40,000 billion kilometres isn't handy: 4.2 light years is easier to read and compare.",
+            "pieges": [
+              {
+                "texte": "Because kilometres don't exist in space.",
+                "pourquoi": "Kilometres work everywhere; they're just too small for these distances."
+              },
+              {
+                "texte": "Because stars move too fast.",
+                "pourquoi": "The unit is chosen because of the size of the distances, not movement."
+              }
+            ]
+          },
+          {
+            "texte": "What is the name of the galaxy the Sun belongs to?",
+            "nom": "The Milky Way.",
+            "explication": "The Sun is one of billions of stars in the Milky Way, our galaxy.",
+            "pieges": [
+              {
+                "texte": "The solar system.",
+                "pourquoi": "The solar system is the Sun and what goes round it; it's part of the Milky Way."
+              },
+              {
+                "texte": "The Moon.",
+                "pourquoi": "The Moon is the Earth's satellite, not a galaxy."
+              }
+            ]
+          },
+          {
+            "texte": "Put in order from smallest to biggest: galaxy, solar system, Earth.",
+            "nom": "Earth, solar system, galaxy.",
+            "explication": "The Earth is a planet of the solar system, which is itself a small part of the galaxy.",
+            "pieges": [
+              {
+                "texte": "Solar system, Earth, galaxy.",
+                "pourquoi": "The Earth is part of the solar system: it's smaller than it."
+              },
+              {
+                "texte": "Galaxy, solar system, Earth.",
+                "pourquoi": "That's the order from biggest to smallest."
+              }
+            ]
+          },
+          {
+            "texte": "The Moon is about 384,000 kilometres away. How long does its light take to reach us?",
+            "nom": "A little over one second.",
+            "explication": "384,000 divided by 300,000 gives about 1.3: moonlight takes a little over a second.",
+            "pieges": [
+              {
+                "texte": "About 8 minutes.",
+                "pourquoi": "That's for the Sun, much further away."
+              },
+              {
+                "texte": "About a year.",
+                "pourquoi": "A year's journey is one light year, a huge distance compared with the Moon."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "revolution-empire",
+      "titre": "La Révolution française et l'Empire",
+      "niveau": "4e",
+      "prerequis": [
+        "moyen-age"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "La Révolution française et l’Empire : nouvel ordre politique et société révolutionnée en France et en Europe."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "En 1789, la Révolution met fin à la monarchie absolue et proclame les droits de l'homme. La République naît en 1792. En 1804, Napoléon Bonaparte devient empereur.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1789 la Révolution, 1792 la République, 1793 l'exécution du roi, 1804 l'Empire, 1815 la chute de Napoléon.",
+        "exemple": "Exemple : le 14 juillet 1789, les Parisiens prennent la Bastille, une prison royale. C'est devenu le jour de la fête nationale.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Que se passe-t-il le 14 juillet 1789 à Paris ?",
+          "nom": "La prise de la Bastille.",
+          "explication": "Le 14 juillet 1789, le peuple de Paris prend la Bastille, symbole du pouvoir du roi.",
+          "pieges": [
+            {
+              "texte": "Le sacre de Napoléon.",
+              "pourquoi": "Napoléon est sacré empereur en 1804, quinze ans plus tard."
+            },
+            {
+              "texte": "L'exécution de Louis XVI.",
+              "pourquoi": "Louis XVI est exécuté en janvier 1793."
+            }
+          ]
+        },
+        {
+          "texte": "Que proclame la Déclaration des droits de l'homme et du citoyen, en août 1789 ?",
+          "nom": "Que les hommes naissent et demeurent libres et égaux en droits.",
+          "explication": "Son article premier affirme la liberté et l'égalité en droits : c'est la fin des privilèges de naissance.",
+          "pieges": [
+            {
+              "texte": "Que le roi a tous les pouvoirs.",
+              "pourquoi": "C'est le principe de la monarchie absolue, que la Déclaration rejette."
+            },
+            {
+              "texte": "Que les femmes ont le droit de vote.",
+              "pourquoi": "Les femmes n'obtiennent le droit de vote en France qu'en 1944."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il dans la nuit du 4 août 1789 ?",
+          "nom": "Les députés abolissent les privilèges.",
+          "explication": "Les privilèges de la noblesse et du clergé sont abolis : tous les Français doivent être soumis aux mêmes lois.",
+          "pieges": [
+            {
+              "texte": "Le roi s'enfuit à l'étranger.",
+              "pourquoi": "La fuite du roi, arrêtée à Varennes, a lieu en 1791."
+            },
+            {
+              "texte": "Napoléon gagne une bataille.",
+              "pourquoi": "Napoléon n'est pas encore au pouvoir en 1789."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année la royauté est-elle abolie et la Première République proclamée ?",
+          "nom": "En 1792.",
+          "explication": "En septembre 1792, la royauté est abolie et la République est proclamée. Louis XVI est exécuté en janvier 1793.",
+          "pieges": [
+            {
+              "texte": "En 1789.",
+              "pourquoi": "En 1789, le roi est toujours là : la Révolution commence, mais la République vient plus tard."
+            },
+            {
+              "texte": "En 1848.",
+              "pourquoi": "1848 est la date de la Deuxième République."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle le dernier roi de l'Ancien Régime ?",
+          "nom": "Louis XVI.",
+          "explication": "Louis XVI est le dernier roi de l'Ancien Régime ; il est exécuté en 1793.",
+          "pieges": [
+            {
+              "texte": "Louis XIV.",
+              "pourquoi": "Louis XIV, le Roi-Soleil, est mort en 1715, bien avant la Révolution."
+            },
+            {
+              "texte": "Napoléon Ier.",
+              "pourquoi": "Napoléon est empereur, pas roi, et il vient après la Révolution."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année Napoléon Bonaparte est-il proclamé empereur des Français ?",
+          "nom": "En 1804.",
+          "explication": "Général des armées républicaines, Bonaparte prend le pouvoir par la force en 1799, puis il est proclamé empereur en 1804.",
+          "pieges": [
+            {
+              "texte": "En 1789.",
+              "pourquoi": "En 1789, Bonaparte n'est qu'un jeune officier."
+            },
+            {
+              "texte": "En 1815.",
+              "pourquoi": "1815 est l'année de sa défaite à Waterloo et de la fin de son règne."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que l'Ancien Régime ?",
+          "nom": "La société et la monarchie d'avant 1789.",
+          "explication": "C'est le nom donné, pendant la Révolution, à l'organisation d'avant 1789 : monarchie absolue et société d'ordres avec des privilèges.",
+          "pieges": [
+            {
+              "texte": "Le régime de Napoléon.",
+              "pourquoi": "L'Empire vient après la Révolution ; l'Ancien Régime est ce qui la précède."
+            },
+            {
+              "texte": "Un régime alimentaire ancien.",
+              "pourquoi": "Ici, « régime » veut dire organisation politique."
+            }
+          ]
+        },
+        {
+          "texte": "Napoléon garde certains acquis de la Révolution. Lequel ?",
+          "nom": "L'égalité devant la loi, inscrite dans le Code civil.",
+          "explication": "Le Code civil de 1804 conserve l'égalité des citoyens devant la loi, l'un des principes de 1789.",
+          "pieges": [
+            {
+              "texte": "La République.",
+              "pourquoi": "Napoléon remplace la République par l'Empire."
+            },
+            {
+              "texte": "Les privilèges de la noblesse.",
+              "pourquoi": "Les privilèges ont été abolis en 1789 et ne sont pas rétablis."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The French Revolution and the Empire",
+        "idee": "In 1789, the Revolution ends absolute monarchy and proclaims the rights of man. The Republic is born in 1792. In 1804, Napoleon Bonaparte becomes emperor.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1789 the Revolution, 1792 the Republic, 1793 the king's execution, 1804 the Empire, 1815 Napoleon's fall.",
+          "exemple": "Example: on 14 July 1789, Parisians storm the Bastille, a royal prison. It became France's national day.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What happens in Paris on 14 July 1789?",
+            "nom": "The storming of the Bastille.",
+            "explication": "On 14 July 1789, the people of Paris take the Bastille, a symbol of the king's power.",
+            "pieges": [
+              {
+                "texte": "Napoleon's coronation.",
+                "pourquoi": "Napoleon is crowned emperor in 1804, fifteen years later."
+              },
+              {
+                "texte": "The execution of Louis XVI.",
+                "pourquoi": "Louis XVI is executed in January 1793."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Declaration of the Rights of Man and of the Citizen, in August 1789, proclaim?",
+            "nom": "That men are born and remain free and equal in rights.",
+            "explication": "Its first article states freedom and equal rights: it's the end of privileges by birth.",
+            "pieges": [
+              {
+                "texte": "That the king has all the powers.",
+                "pourquoi": "That's the principle of absolute monarchy, which the Declaration rejects."
+              },
+              {
+                "texte": "That women have the vote.",
+                "pourquoi": "Women only get the vote in France in 1944."
+              }
+            ]
+          },
+          {
+            "texte": "What happens on the night of 4 August 1789?",
+            "nom": "The deputies abolish privileges.",
+            "explication": "The privileges of the nobility and clergy are abolished: all French people must follow the same laws.",
+            "pieges": [
+              {
+                "texte": "The king flees abroad.",
+                "pourquoi": "The king's flight, stopped at Varennes, is in 1791."
+              },
+              {
+                "texte": "Napoleon wins a battle.",
+                "pourquoi": "Napoleon isn't in power yet in 1789."
+              }
+            ]
+          },
+          {
+            "texte": "In which year is the monarchy abolished and the First Republic proclaimed?",
+            "nom": "In 1792.",
+            "explication": "In September 1792, the monarchy is abolished and the Republic proclaimed. Louis XVI is executed in January 1793.",
+            "pieges": [
+              {
+                "texte": "In 1789.",
+                "pourquoi": "In 1789, the king is still there: the Revolution begins, but the Republic comes later."
+              },
+              {
+                "texte": "In 1848.",
+                "pourquoi": "1848 is the date of the Second Republic."
+              }
+            ]
+          },
+          {
+            "texte": "Who was the last king of the Ancien Régime?",
+            "nom": "Louis XVI.",
+            "explication": "Louis XVI is the last king of the Ancien Régime; he is executed in 1793.",
+            "pieges": [
+              {
+                "texte": "Louis XIV.",
+                "pourquoi": "Louis XIV, the Sun King, died in 1715, long before the Revolution."
+              },
+              {
+                "texte": "Napoleon I.",
+                "pourquoi": "Napoleon is an emperor, not a king, and he comes after the Revolution."
+              }
+            ]
+          },
+          {
+            "texte": "In which year is Napoleon Bonaparte proclaimed Emperor of the French?",
+            "nom": "In 1804.",
+            "explication": "A general in the Republic's armies, Bonaparte seizes power by force in 1799, then is proclaimed emperor in 1804.",
+            "pieges": [
+              {
+                "texte": "In 1789.",
+                "pourquoi": "In 1789, Bonaparte is just a young officer."
+              },
+              {
+                "texte": "In 1815.",
+                "pourquoi": "1815 is the year of his defeat at Waterloo and the end of his rule."
+              }
+            ]
+          },
+          {
+            "texte": "What is the Ancien Régime?",
+            "nom": "The society and monarchy before 1789.",
+            "explication": "It's the name given, during the Revolution, to the system before 1789: absolute monarchy and a society of orders with privileges.",
+            "pieges": [
+              {
+                "texte": "Napoleon's regime.",
+                "pourquoi": "The Empire comes after the Revolution; the Ancien Régime is what came before it."
+              },
+              {
+                "texte": "An old diet.",
+                "pourquoi": "In French, « régime » can mean a diet, but here it means a political system."
+              }
+            ]
+          },
+          {
+            "texte": "Napoleon keeps some gains of the Revolution. Which one?",
+            "nom": "Equality before the law, written into the Civil Code.",
+            "explication": "The Civil Code of 1804 keeps citizens equal before the law, one of the principles of 1789.",
+            "pieges": [
+              {
+                "texte": "The Republic.",
+                "pourquoi": "Napoleon replaces the Republic with the Empire."
+              },
+              {
+                "texte": "The nobility's privileges.",
+                "pourquoi": "Privileges were abolished in 1789 and aren't brought back."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "republique-xixe",
+      "titre": "Voter et faire la République au XIXe siècle",
+      "niveau": "4e",
+      "prerequis": [
+        "revolution-empire"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Une difficile conquête : voter de 1815 à 1870."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Au XIXe siècle, le droit de vote s'élargit : réservé aux plus riches, il devient universel pour les hommes en 1848. La IIIe République, née en 1870, s'enracine par l'école.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1848 suffrage universel masculin et abolition de l'esclavage, 1870 IIIe République, 1881-1882 lois Ferry, 1905 séparation des Églises et de l'État.",
+        "exemple": "Exemple : avant 1848, seuls les hommes qui payaient assez d'impôts votaient : c'est le suffrage censitaire. En 1848, tous les hommes adultes peuvent voter.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce que le suffrage censitaire ?",
+          "nom": "Un vote réservé aux hommes qui paient assez d'impôts.",
+          "explication": "Le cens est un montant d'impôt minimum : seuls les plus riches votent. C'est le cas en France de 1815 à 1848.",
+          "pieges": [
+            {
+              "texte": "Un vote ouvert à tous, hommes et femmes.",
+              "pourquoi": "C'est le suffrage universel, qui ne s'étend aux femmes qu'en 1944."
+            },
+            {
+              "texte": "Un vote où l'on compte la population.",
+              "pourquoi": "« Cens » ne veut pas dire recensement ici : c'est un seuil d'impôt."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année le suffrage universel masculin est-il établi en France ?",
+          "nom": "En 1848.",
+          "explication": "En 1848, avec la Deuxième République, tous les hommes adultes peuvent voter.",
+          "pieges": [
+            {
+              "texte": "En 1789.",
+              "pourquoi": "La Révolution n'a pas établi durablement le vote de tous les hommes."
+            },
+            {
+              "texte": "En 1944.",
+              "pourquoi": "1944, c'est le droit de vote des femmes."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle grande décision est prise aussi en 1848 ?",
+          "nom": "L'abolition définitive de l'esclavage dans les colonies françaises.",
+          "explication": "En 1848, la Deuxième République abolit l'esclavage. Une première abolition, en 1794, avait été annulée par Bonaparte en 1802.",
+          "pieges": [
+            {
+              "texte": "La création de l'Union européenne.",
+              "pourquoi": "La construction européenne commence après 1945."
+            },
+            {
+              "texte": "Le droit de vote des femmes.",
+              "pourquoi": "Il faudra attendre 1944."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année la Troisième République est-elle proclamée ?",
+          "nom": "En 1870.",
+          "explication": "Le 4 septembre 1870, après la défaite de Napoléon III face à la Prusse, la République est proclamée.",
+          "pieges": [
+            {
+              "texte": "En 1792.",
+              "pourquoi": "1792 est la Première République."
+            },
+            {
+              "texte": "En 1958.",
+              "pourquoi": "1958 est la naissance de la Cinquième République."
+            }
+          ]
+        },
+        {
+          "texte": "Que rendent les lois Ferry de 1881 et 1882 ?",
+          "nom": "L'école primaire gratuite, laïque et obligatoire.",
+          "explication": "Jules Ferry fait voter ces lois : l'école devient un lieu où se construit l'adhésion à la République.",
+          "pieges": [
+            {
+              "texte": "L'école payante et réservée aux garçons.",
+              "pourquoi": "C'est l'inverse : l'école devient gratuite et obligatoire pour les filles comme pour les garçons."
+            },
+            {
+              "texte": "Le collège obligatoire jusqu'à 16 ans.",
+              "pourquoi": "Les lois Ferry concernent l'école primaire."
+            }
+          ]
+        },
+        {
+          "texte": "Que décide la loi de 1905 ?",
+          "nom": "La séparation des Églises et de l'État.",
+          "explication": "L'État ne reconnaît ni ne finance aucun culte, et garantit la liberté de conscience : c'est un pilier de la laïcité.",
+          "pieges": [
+            {
+              "texte": "L'interdiction de toutes les religions.",
+              "pourquoi": "La loi garantit au contraire le libre exercice des cultes."
+            },
+            {
+              "texte": "Le retour du roi.",
+              "pourquoi": "La République est alors installée : la loi de 1905 concerne les cultes."
+            }
+          ]
+        },
+        {
+          "texte": "Au XIXe siècle, les femmes peuvent-elles voter en France ?",
+          "nom": "Non, elles sont exclues du vote.",
+          "explication": "Le suffrage de 1848 est universel pour les hommes seulement. Les femmes votent pour la première fois en 1945.",
+          "pieges": [
+            {
+              "texte": "Oui, depuis 1848.",
+              "pourquoi": "En 1848, le vote devient universel pour les hommes, pas pour les femmes."
+            },
+            {
+              "texte": "Oui, si elles paient assez d'impôts.",
+              "pourquoi": "Même riches, les femmes ne votent pas au XIXe siècle."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que le droit de vote a été une « difficile conquête » ?",
+          "nom": "Parce qu'il s'est élargi peu à peu, au fil de luttes et de changements de régime.",
+          "explication": "Du vote des plus riches au suffrage universel masculin, puis au vote des femmes, il a fallu plus d'un siècle.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il a été donné à tous dès 1789.",
+              "pourquoi": "Ni les pauvres ni les femmes ne votaient en 1789."
+            },
+            {
+              "texte": "Parce que les bureaux de vote étaient difficiles à trouver.",
+              "pourquoi": "« Conquête » parle d'un droit obtenu en luttant, pas d'un trajet."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Voting and building the Republic in the 19th century",
+        "idee": "In the 19th century, the vote widens: kept for the richest, it becomes universal for men in 1848. The Third Republic, born in 1870, takes root through schools.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1848 votes for all men and the abolition of slavery, 1870 Third Republic, 1881-1882 Ferry laws, 1905 separation of Churches and State.",
+          "exemple": "Example: before 1848, only men who paid enough tax could vote: that's property-based voting. In 1848, all adult men can vote.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is property-based (censitary) voting?",
+            "nom": "A vote kept for men who pay enough tax.",
+            "explication": "The « cens » is a minimum amount of tax: only the richest vote. That's the case in France from 1815 to 1848.",
+            "pieges": [
+              {
+                "texte": "A vote open to everyone, men and women.",
+                "pourquoi": "That's universal suffrage, which only extends to women in 1944."
+              },
+              {
+                "texte": "A vote where the population is counted.",
+                "pourquoi": "« Cens » doesn't mean census here: it's a tax threshold."
+              }
+            ]
+          },
+          {
+            "texte": "In which year is the vote for all men set up in France?",
+            "nom": "In 1848.",
+            "explication": "In 1848, with the Second Republic, all adult men can vote.",
+            "pieges": [
+              {
+                "texte": "In 1789.",
+                "pourquoi": "The Revolution didn't set up a lasting vote for all men."
+              },
+              {
+                "texte": "In 1944.",
+                "pourquoi": "1944 is women's right to vote."
+              }
+            ]
+          },
+          {
+            "texte": "What other great decision is taken in 1848?",
+            "nom": "The final abolition of slavery in the French colonies.",
+            "explication": "In 1848, the Second Republic abolishes slavery. A first abolition, in 1794, had been cancelled by Bonaparte in 1802.",
+            "pieges": [
+              {
+                "texte": "The creation of the European Union.",
+                "pourquoi": "European integration begins after 1945."
+              },
+              {
+                "texte": "Votes for women.",
+                "pourquoi": "That has to wait until 1944."
+              }
+            ]
+          },
+          {
+            "texte": "In which year is the Third Republic proclaimed?",
+            "nom": "In 1870.",
+            "explication": "On 4 September 1870, after Napoleon III's defeat by Prussia, the Republic is proclaimed.",
+            "pieges": [
+              {
+                "texte": "In 1792.",
+                "pourquoi": "1792 is the First Republic."
+              },
+              {
+                "texte": "In 1958.",
+                "pourquoi": "1958 is the birth of the Fifth Republic."
+              }
+            ]
+          },
+          {
+            "texte": "What do the Ferry laws of 1881 and 1882 make primary school?",
+            "nom": "Free, secular and compulsory.",
+            "explication": "Jules Ferry has these laws passed: school becomes a place where support for the Republic is built.",
+            "pieges": [
+              {
+                "texte": "Fee-paying and for boys only.",
+                "pourquoi": "It's the opposite: school becomes free and compulsory for girls as well as boys."
+              },
+              {
+                "texte": "Secondary school compulsory until 16.",
+                "pourquoi": "The Ferry laws are about primary school."
+              }
+            ]
+          },
+          {
+            "texte": "What does the 1905 law decide?",
+            "nom": "The separation of the Churches and the State.",
+            "explication": "The State neither recognises nor funds any religion, and guarantees freedom of conscience: it's a pillar of « laïcité ».",
+            "pieges": [
+              {
+                "texte": "Banning all religions.",
+                "pourquoi": "On the contrary, the law guarantees the free practice of religion."
+              },
+              {
+                "texte": "The return of the king.",
+                "pourquoi": "The Republic is in place by then: the 1905 law is about religion."
+              }
+            ]
+          },
+          {
+            "texte": "In the 19th century, can women vote in France?",
+            "nom": "No, they are shut out of voting.",
+            "explication": "The 1848 vote is universal for men only. Women vote for the first time in 1945.",
+            "pieges": [
+              {
+                "texte": "Yes, since 1848.",
+                "pourquoi": "In 1848, voting becomes universal for men, not for women."
+              },
+              {
+                "texte": "Yes, if they pay enough tax.",
+                "pourquoi": "Even rich women can't vote in the 19th century."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say the vote was a « hard-won conquest »?",
+            "nom": "Because it widened step by step, through struggles and changes of regime.",
+            "explication": "From votes for the richest to votes for all men, then votes for women, it took more than a century.",
+            "pieges": [
+              {
+                "texte": "Because it was given to everyone in 1789.",
+                "pourquoi": "Neither the poor nor women voted in 1789."
+              },
+              {
+                "texte": "Because polling stations were hard to find.",
+                "pourquoi": "« Conquest » means a right won by struggle, not a journey."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "guerres-mondiales",
+      "titre": "Les deux guerres mondiales",
+      "niveau": "3e",
+      "prerequis": [
+        "republique-xixe"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "L'Europe, un théâtre majeur des guerres totales (1914-1945)"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La Première Guerre mondiale dure de 1914 à 1918, la Seconde de 1939 à 1945. Ce sont des guerres totales, qui mobilisent les civils comme les soldats.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1914-1918, 11 novembre 1918, 1939-1945, 18 juin 1940, 6 juin 1944, 8 mai 1945.",
+        "exemple": "Exemple : le 11 novembre 1918, l'armistice met fin aux combats de la Première Guerre mondiale. Ce jour est férié en France.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelles sont les dates de la Première Guerre mondiale ?",
+          "nom": "1914-1918.",
+          "explication": "La Première Guerre mondiale commence en 1914 ; l'armistice du 11 novembre 1918 arrête les combats.",
+          "pieges": [
+            {
+              "texte": "1939-1945.",
+              "pourquoi": "Ce sont les dates de la Seconde Guerre mondiale."
+            },
+            {
+              "texte": "1870-1871.",
+              "pourquoi": "C'est la guerre franco-prussienne, avant la IIIe République."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi parle-t-on de « guerre totale » ?",
+          "nom": "Parce que toute la société est mobilisée : soldats, civils, économie.",
+          "explication": "Les usines produisent pour la guerre, les civils travaillent et souffrent aussi : toute la nation est engagée.",
+          "pieges": [
+            {
+              "texte": "Parce que tous les pays du monde ont combattu.",
+              "pourquoi": "Certains pays sont restés neutres : « totale » parle de la mobilisation de toute la société."
+            },
+            {
+              "texte": "Parce qu'elle a duré très longtemps.",
+              "pourquoi": "La durée n'est pas le critère : c'est l'engagement de toute la société."
+            }
+          ]
+        },
+        {
+          "texte": "Quel génocide a lieu en 1915, pendant la Première Guerre mondiale ?",
+          "nom": "Le génocide des Arméniens.",
+          "explication": "En 1915, dans l'Empire ottoman, les Arméniens sont victimes d'un génocide.",
+          "pieges": [
+            {
+              "texte": "Le génocide des Juifs.",
+              "pourquoi": "Le génocide des Juifs a lieu pendant la Seconde Guerre mondiale."
+            },
+            {
+              "texte": "Aucun.",
+              "pourquoi": "Le programme d'histoire rappelle le génocide des Arméniens en 1915."
+            }
+          ]
+        },
+        {
+          "texte": "Le 18 juin 1940, que fait le général de Gaulle depuis Londres ?",
+          "nom": "Il lance un appel à continuer le combat.",
+          "explication": "Après la défaite de 1940, de Gaulle appelle à la radio les Français à poursuivre la lutte : c'est l'appel du 18 juin.",
+          "pieges": [
+            {
+              "texte": "Il signe l'armistice avec l'Allemagne.",
+              "pourquoi": "C'est le gouvernement du maréchal Pétain qui signe l'armistice, en juin 1940."
+            },
+            {
+              "texte": "Il proclame la Ve République.",
+              "pourquoi": "La Ve République date de 1958."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que le régime de Vichy ?",
+          "nom": "Le régime du maréchal Pétain, qui collabore avec l'Allemagne nazie.",
+          "explication": "De 1940 à 1944, le régime de Vichy met fin à la République en France et collabore avec l'occupant nazi.",
+          "pieges": [
+            {
+              "texte": "Le gouvernement de la Résistance.",
+              "pourquoi": "La Résistance combat justement le régime de Vichy et l'occupant."
+            },
+            {
+              "texte": "Une République démocratique.",
+              "pourquoi": "Vichy supprime la République et les libertés."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il le 6 juin 1944 ?",
+          "nom": "Le débarquement allié en Normandie.",
+          "explication": "Le 6 juin 1944, les Alliés débarquent en Normandie : c'est le début de la libération de la France.",
+          "pieges": [
+            {
+              "texte": "L'armistice de la Première Guerre mondiale.",
+              "pourquoi": "C'est le 11 novembre 1918."
+            },
+            {
+              "texte": "La capitulation de l'Allemagne.",
+              "pourquoi": "L'Allemagne capitule le 8 mai 1945."
+            }
+          ]
+        },
+        {
+          "texte": "Quand la Seconde Guerre mondiale prend-elle fin en Europe ?",
+          "nom": "Le 8 mai 1945.",
+          "explication": "Le 8 mai 1945, l'Allemagne nazie capitule. La guerre se termine en Asie en septembre 1945.",
+          "pieges": [
+            {
+              "texte": "Le 11 novembre 1918.",
+              "pourquoi": "C'est la fin des combats de la Première Guerre mondiale."
+            },
+            {
+              "texte": "Le 14 juillet 1789.",
+              "pourquoi": "C'est la prise de la Bastille, au début de la Révolution."
+            }
+          ]
+        },
+        {
+          "texte": "Comment appelle-t-on l'extermination des Juifs d'Europe par les nazis ?",
+          "nom": "La Shoah.",
+          "explication": "Pendant la Seconde Guerre mondiale, environ six millions de Juifs sont assassinés par les nazis et leurs complices : c'est la Shoah.",
+          "pieges": [
+            {
+              "texte": "La Résistance.",
+              "pourquoi": "La Résistance désigne ceux qui ont combattu l'occupant."
+            },
+            {
+              "texte": "L'armistice.",
+              "pourquoi": "Un armistice est un arrêt des combats."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le 11 novembre et le 8 mai sont-ils des jours fériés en France ?",
+          "nom": "Pour se souvenir de la fin des combats des deux guerres mondiales et de leurs victimes.",
+          "explication": "Ces commémorations entretiennent la mémoire des soldats et des civils morts pendant les guerres.",
+          "pieges": [
+            {
+              "texte": "Pour fêter le début des guerres.",
+              "pourquoi": "Ces dates rappellent la fin des combats, pas leur début."
+            },
+            {
+              "texte": "Pour célébrer la Révolution.",
+              "pourquoi": "La Révolution est célébrée le 14 juillet."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The two World Wars",
+        "idee": "The First World War lasts from 1914 to 1918, the Second from 1939 to 1945. They are total wars, involving civilians as well as soldiers.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1914-1918, 11 November 1918, 1939-1945, 18 June 1940, 6 June 1944, 8 May 1945.",
+          "exemple": "Example: on 11 November 1918, the armistice ends the fighting of the First World War. It's a public holiday in France.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What are the dates of the First World War?",
+            "nom": "1914-1918.",
+            "explication": "The First World War begins in 1914; the armistice of 11 November 1918 stops the fighting.",
+            "pieges": [
+              {
+                "texte": "1939-1945.",
+                "pourquoi": "Those are the dates of the Second World War."
+              },
+              {
+                "texte": "1870-1871.",
+                "pourquoi": "That's the Franco-Prussian War, before the Third Republic."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we speak of « total war »?",
+            "nom": "Because the whole of society is involved: soldiers, civilians, the economy.",
+            "explication": "Factories produce for the war, civilians work and suffer too: the whole nation takes part.",
+            "pieges": [
+              {
+                "texte": "Because every country in the world fought.",
+                "pourquoi": "Some countries stayed neutral: « total » is about the whole of society taking part."
+              },
+              {
+                "texte": "Because it lasted a very long time.",
+                "pourquoi": "Length isn't the point: it's the whole society taking part."
+              }
+            ]
+          },
+          {
+            "texte": "Which genocide takes place in 1915, during the First World War?",
+            "nom": "The Armenian genocide.",
+            "explication": "In 1915, in the Ottoman Empire, the Armenians are the victims of a genocide.",
+            "pieges": [
+              {
+                "texte": "The genocide of the Jews.",
+                "pourquoi": "The genocide of the Jews happens during the Second World War."
+              },
+              {
+                "texte": "None.",
+                "pourquoi": "The French history curriculum recalls the Armenian genocide in 1915."
+              }
+            ]
+          },
+          {
+            "texte": "On 18 June 1940, what does General de Gaulle do from London?",
+            "nom": "He calls on people to keep fighting.",
+            "explication": "After the 1940 defeat, de Gaulle calls on the French by radio to carry on the struggle: it's the Appeal of 18 June.",
+            "pieges": [
+              {
+                "texte": "He signs the armistice with Germany.",
+                "pourquoi": "It's Marshal Pétain's government that signs the armistice, in June 1940."
+              },
+              {
+                "texte": "He proclaims the Fifth Republic.",
+                "pourquoi": "The Fifth Republic dates from 1958."
+              }
+            ]
+          },
+          {
+            "texte": "What is the Vichy regime?",
+            "nom": "Marshal Pétain's regime, which collaborates with Nazi Germany.",
+            "explication": "From 1940 to 1944, the Vichy regime ends the Republic in France and collaborates with the Nazi occupiers.",
+            "pieges": [
+              {
+                "texte": "The Resistance government.",
+                "pourquoi": "The Resistance fights against the Vichy regime and the occupiers."
+              },
+              {
+                "texte": "A democratic Republic.",
+                "pourquoi": "Vichy abolishes the Republic and freedoms."
+              }
+            ]
+          },
+          {
+            "texte": "What happens on 6 June 1944?",
+            "nom": "The Allied landings in Normandy.",
+            "explication": "On 6 June 1944, the Allies land in Normandy: it's the start of the liberation of France.",
+            "pieges": [
+              {
+                "texte": "The armistice of the First World War.",
+                "pourquoi": "That's 11 November 1918."
+              },
+              {
+                "texte": "Germany's surrender.",
+                "pourquoi": "Germany surrenders on 8 May 1945."
+              }
+            ]
+          },
+          {
+            "texte": "When does the Second World War end in Europe?",
+            "nom": "On 8 May 1945.",
+            "explication": "On 8 May 1945, Nazi Germany surrenders. The war ends in Asia in September 1945.",
+            "pieges": [
+              {
+                "texte": "On 11 November 1918.",
+                "pourquoi": "That's the end of the fighting in the First World War."
+              },
+              {
+                "texte": "On 14 July 1789.",
+                "pourquoi": "That's the storming of the Bastille, at the start of the Revolution."
+              }
+            ]
+          },
+          {
+            "texte": "What do we call the murder of Europe's Jews by the Nazis?",
+            "nom": "The Shoah, or Holocaust.",
+            "explication": "During the Second World War, about six million Jews are murdered by the Nazis and their accomplices: that's the Shoah.",
+            "pieges": [
+              {
+                "texte": "The Resistance.",
+                "pourquoi": "The Resistance means those who fought the occupiers."
+              },
+              {
+                "texte": "The armistice.",
+                "pourquoi": "An armistice is a halt to the fighting."
+              }
+            ]
+          },
+          {
+            "texte": "Why are 11 November and 8 May public holidays in France?",
+            "nom": "To remember the end of the fighting in the two World Wars and their victims.",
+            "explication": "These commemorations keep alive the memory of the soldiers and civilians who died in the wars.",
+            "pieges": [
+              {
+                "texte": "To celebrate the start of the wars.",
+                "pourquoi": "These dates recall the end of the fighting, not the start."
+              },
+              {
+                "texte": "To celebrate the Revolution.",
+                "pourquoi": "The Revolution is celebrated on 14 July."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "france-outre-mer",
+      "titre": "La France, ses régions et l'outre-mer",
+      "niveau": "3e",
+      "prerequis": [
+        "continents-oceans"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Les territoires ultra-marins français : une problématique spécifique."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La France compte 18 régions : 13 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte). Elle a 101 départements.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Les 5 régions d'outre-mer : Guadeloupe et Martinique aux Antilles, Guyane en Amérique du Sud, La Réunion et Mayotte dans l'océan Indien.",
+        "exemple": "Exemple : La Réunion est une île de l'océan Indien, à l'est de Madagascar. C'est une région et un département français.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Combien de régions compte la France ?",
+          "nom": "18 régions.",
+          "explication": "La France compte 18 régions : 13 en France métropolitaine et 5 en outre-mer.",
+          "pieges": [
+            {
+              "texte": "13 régions.",
+              "pourquoi": "13, ce sont seulement les régions de métropole : il faut ajouter les 5 régions d'outre-mer."
+            },
+            {
+              "texte": "22 régions.",
+              "pourquoi": "C'était le nombre de régions de métropole avant la réforme de 2016."
+            }
+          ]
+        },
+        {
+          "texte": "Combien la France compte-t-elle de départements ?",
+          "nom": "101 départements.",
+          "explication": "96 départements en métropole et 5 en outre-mer : 101 en tout.",
+          "pieges": [
+            {
+              "texte": "96 départements.",
+              "pourquoi": "96, c'est la métropole seule ; il faut ajouter les 5 d'outre-mer."
+            },
+            {
+              "texte": "18 départements.",
+              "pourquoi": "18, c'est le nombre de régions."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quel continent se trouve la Guyane ?",
+          "nom": "L'Amérique du Sud.",
+          "explication": "La Guyane est en Amérique du Sud, entre le Brésil et le Suriname. Elle est couverte en grande partie par la forêt amazonienne.",
+          "pieges": [
+            {
+              "texte": "L'Afrique.",
+              "pourquoi": "La Guinée est en Afrique, mais la Guyane est en Amérique du Sud."
+            },
+            {
+              "texte": "L'Europe.",
+              "pourquoi": "La Guyane fait partie de la France, mais elle n'est pas sur le continent européen."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quel océan se trouve Mayotte ?",
+          "nom": "L'océan Indien.",
+          "explication": "Mayotte est dans l'océan Indien, entre Madagascar et la côte de l'Afrique, dans l'archipel des Comores.",
+          "pieges": [
+            {
+              "texte": "L'océan Atlantique.",
+              "pourquoi": "Ce sont la Guadeloupe et la Martinique qui sont du côté de l'Atlantique, aux Antilles."
+            },
+            {
+              "texte": "La mer Méditerranée.",
+              "pourquoi": "En Méditerranée, la grande île française est la Corse, en métropole."
+            }
+          ]
+        },
+        {
+          "texte": "Où se trouvent la Guadeloupe et la Martinique ?",
+          "nom": "Aux Antilles, dans la mer des Caraïbes.",
+          "explication": "Ces deux îles françaises font partie des Antilles, entre l'océan Atlantique et la mer des Caraïbes.",
+          "pieges": [
+            {
+              "texte": "Dans l'océan Indien.",
+              "pourquoi": "Dans l'océan Indien, ce sont La Réunion et Mayotte."
+            },
+            {
+              "texte": "Près de la Bretagne.",
+              "pourquoi": "Elles sont de l'autre côté de l'Atlantique, à des milliers de kilomètres."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle activité spatiale se trouve à Kourou, en Guyane ?",
+          "nom": "Un centre de lancement de fusées.",
+          "explication": "Le centre spatial guyanais, à Kourou, sert à lancer des fusées européennes.",
+          "pieges": [
+            {
+              "texte": "Une station de ski.",
+              "pourquoi": "La Guyane a un climat équatorial, chaud et humide."
+            },
+            {
+              "texte": "Aucune, c'est seulement de la forêt.",
+              "pourquoi": "La forêt couvre une grande partie de la Guyane, mais Kourou accueille un centre spatial."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l'outre-mer donne-t-il à la France l'un des plus grands espaces maritimes du monde ?",
+          "nom": "Parce que ses îles et territoires sont répartis sur tous les océans.",
+          "explication": "Autour de chaque île, la France a des droits sur une large zone de mer : avec ses territoires dans plusieurs océans, l'ensemble est immense.",
+          "pieges": [
+            {
+              "texte": "Parce que la métropole a beaucoup de côtes.",
+              "pourquoi": "Les côtes de la métropole comptent, mais c'est surtout l'outre-mer qui fait la taille de cet espace."
+            },
+            {
+              "texte": "Parce que la France possède tous les océans.",
+              "pourquoi": "Aucun pays ne possède les océans : la France a des droits sur des zones autour de ses territoires."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi parle-t-on de « problématique spécifique » pour les territoires d'outre-mer ?",
+          "nom": "Parce qu'ils sont éloignés de la métropole et ont leur propre milieu et leurs propres défis.",
+          "explication": "Distance, insularité, climat tropical, risques naturels, coût des transports : ces territoires demandent des aménagements adaptés.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils ne font pas partie de la France.",
+              "pourquoi": "Les régions d'outre-mer font pleinement partie de la France."
+            },
+            {
+              "texte": "Parce qu'ils ont tous le même climat que Paris.",
+              "pourquoi": "La plupart ont un climat tropical, très différent de celui de Paris."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "France, its regions and overseas",
+        "idee": "France has 18 regions: 13 in mainland France and 5 overseas (Guadeloupe, Martinique, French Guiana, Réunion, Mayotte). It has 101 departments.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The 5 overseas regions: Guadeloupe and Martinique in the West Indies, French Guiana in South America, Réunion and Mayotte in the Indian Ocean.",
+          "exemple": "Example: Réunion is an island in the Indian Ocean, east of Madagascar. It's a French region and department.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "How many regions does France have?",
+            "nom": "18 regions.",
+            "explication": "France has 18 regions: 13 in mainland France and 5 overseas.",
+            "pieges": [
+              {
+                "texte": "13 regions.",
+                "pourquoi": "13 is only the mainland regions: add the 5 overseas regions."
+              },
+              {
+                "texte": "22 regions.",
+                "pourquoi": "That was the number of mainland regions before the 2016 reform."
+              }
+            ]
+          },
+          {
+            "texte": "How many departments does France have?",
+            "nom": "101 departments.",
+            "explication": "96 departments in mainland France and 5 overseas: 101 in all.",
+            "pieges": [
+              {
+                "texte": "96 departments.",
+                "pourquoi": "96 is mainland France alone; add the 5 overseas ones."
+              },
+              {
+                "texte": "18 departments.",
+                "pourquoi": "18 is the number of regions."
+              }
+            ]
+          },
+          {
+            "texte": "Which continent is French Guiana on?",
+            "nom": "South America.",
+            "explication": "French Guiana is in South America, between Brazil and Suriname. Much of it is covered by the Amazon rainforest.",
+            "pieges": [
+              {
+                "texte": "Africa.",
+                "pourquoi": "Guinea is in Africa, but French Guiana is in South America."
+              },
+              {
+                "texte": "Europe.",
+                "pourquoi": "French Guiana is part of France, but it isn't on the European continent."
+              }
+            ]
+          },
+          {
+            "texte": "Which ocean is Mayotte in?",
+            "nom": "The Indian Ocean.",
+            "explication": "Mayotte is in the Indian Ocean, between Madagascar and the African coast, in the Comoros archipelago.",
+            "pieges": [
+              {
+                "texte": "The Atlantic Ocean.",
+                "pourquoi": "It's Guadeloupe and Martinique that are on the Atlantic side, in the West Indies."
+              },
+              {
+                "texte": "The Mediterranean Sea.",
+                "pourquoi": "In the Mediterranean, the big French island is Corsica, in mainland France."
+              }
+            ]
+          },
+          {
+            "texte": "Where are Guadeloupe and Martinique?",
+            "nom": "In the West Indies, in the Caribbean Sea.",
+            "explication": "These two French islands are part of the West Indies, between the Atlantic Ocean and the Caribbean Sea.",
+            "pieges": [
+              {
+                "texte": "In the Indian Ocean.",
+                "pourquoi": "In the Indian Ocean, it's Réunion and Mayotte."
+              },
+              {
+                "texte": "Near Brittany.",
+                "pourquoi": "They are on the other side of the Atlantic, thousands of kilometres away."
+              }
+            ]
+          },
+          {
+            "texte": "What space activity is at Kourou, in French Guiana?",
+            "nom": "A rocket launch centre.",
+            "explication": "The Guiana Space Centre, at Kourou, is used to launch European rockets.",
+            "pieges": [
+              {
+                "texte": "A ski resort.",
+                "pourquoi": "French Guiana has an equatorial climate, hot and humid."
+              },
+              {
+                "texte": "None, it's only forest.",
+                "pourquoi": "Forest covers much of French Guiana, but Kourou has a space centre."
+              }
+            ]
+          },
+          {
+            "texte": "Why do its overseas lands give France one of the biggest sea areas in the world?",
+            "nom": "Because its islands and territories are spread across every ocean.",
+            "explication": "Around each island, France has rights over a wide area of sea: with territories in several oceans, the total is huge.",
+            "pieges": [
+              {
+                "texte": "Because mainland France has a lot of coastline.",
+                "pourquoi": "Mainland coasts count, but it's mostly the overseas lands that make this area so big."
+              },
+              {
+                "texte": "Because France owns all the oceans.",
+                "pourquoi": "No country owns the oceans: France has rights over areas around its territories."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we speak of « specific challenges » for overseas territories?",
+            "nom": "Because they are far from mainland France and have their own environment and challenges.",
+            "explication": "Distance, being islands, tropical climate, natural hazards, transport costs: these territories need suitable planning.",
+            "pieges": [
+              {
+                "texte": "Because they aren't part of France.",
+                "pourquoi": "The overseas regions are fully part of France."
+              },
+              {
+                "texte": "Because they all have the same climate as Paris.",
+                "pourquoi": "Most have a tropical climate, very different from Paris."
+              }
+            ]
           }
         ]
       }

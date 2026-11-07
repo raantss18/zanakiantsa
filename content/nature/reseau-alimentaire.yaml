@@ -1,0 +1,136 @@
+id: reseau-alimentaire
+titre: "Le réseau alimentaire"
+niveau: CM1
+prerequis: [chaine-alimentaire]
+programme: { source: c3s, texte: "Représenter par un réseau les liens alimentaires entre les êtres vivants." }
+activite: quiz
+parametres: {}
+idee: "Dans un milieu, les chaînes alimentaires se croisent : elles forment un réseau. Chaque flèche va du mangé vers le mangeur et montre le passage de la matière."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "La flèche part de celui qui est mangé et pointe vers celui qui mange."
+  exemple: "Exemple : le gland est mangé par l'écureuil. On dessine une flèche du gland vers l'écureuil : la matière du gland passe dans l'écureuil."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans un réseau alimentaire, dans quel sens dessine-t-on la flèche entre l'herbe et le lapin ?"
+    nom: "De l'herbe vers le lapin."
+    explication: "La flèche va du mangé vers le mangeur : elle montre que la matière de l'herbe passe dans le lapin."
+    pieges:
+      - { texte: "Du lapin vers l'herbe.", pourquoi: "C'est l'idée « le lapin va vers l'herbe ». Mais la flèche montre le trajet de la matière, du mangé vers le mangeur." }
+      - { texte: "Dans les deux sens.", pourquoi: "L'herbe ne mange pas le lapin : une seule flèche suffit." }
+  - texte: "Le renard mange des lapins, des souris et des fruits. Combien de flèches arrivent au renard ?"
+    nom: "Trois."
+    explication: "Une flèche part de chaque aliment du renard : lapin, souris et fruits. Un animal peut avoir plusieurs aliments : c'est pour cela qu'on parle de réseau."
+    pieges:
+      - { texte: "Une seule.", pourquoi: "Une flèche par aliment : le renard a trois aliments différents." }
+      - { texte: "Aucune, il est en haut.", pourquoi: "Les flèches arrivent vers le mangeur : elles arrivent donc au renard." }
+  - texte: "Pourquoi parle-t-on de réseau, et pas seulement de chaîne ?"
+    nom: "Parce qu'un être vivant mange souvent plusieurs espèces et est mangé par plusieurs."
+    explication: "Les chaînes se croisent : la souris est mangée par la chouette, le renard et le serpent. Toutes ces flèches forment un réseau."
+    pieges:
+      - { texte: "Parce qu'il y a plus d'animaux dans un réseau.", pourquoi: "Ce n'est pas le nombre qui compte, ce sont les croisements entre chaînes." }
+      - { texte: "Parce que chaque animal ne mange qu'une seule espèce.", pourquoi: "C'est l'inverse : la plupart des animaux mangent plusieurs espèces." }
+  - texte: "Un jeune lapin mange beaucoup et grandit. D'où vient la matière de son corps ?"
+    nom: "Des plantes qu'il mange."
+    explication: "Un animal fabrique sa propre matière à partir de sa nourriture, qui vient d'autres êtres vivants."
+    pieges:
+      - { texte: "De l'air qu'il respire.", pourquoi: "Respirer apporte du dioxygène, pas la matière qui fait grandir le lapin." }
+      - { texte: "Il la fabrique à partir de rien.", pourquoi: "Rien ne se crée à partir de rien : sans manger, le lapin ne grandit pas." }
+  - texte: "Dans un lac, on pêche presque tous les brochets, qui mangent des gardons. Que va-t-il se passer pour les gardons ?"
+    nom: "Ils vont sans doute devenir plus nombreux."
+    explication: "Leur prédateur a presque disparu : moins de gardons sont mangés. La surpêche d'une espèce change tout le réseau."
+    pieges:
+      - { texte: "Rien ne change pour eux.", pourquoi: "Dans un réseau, tout est relié : quand une espèce disparaît, ses proies et ses prédateurs sont touchés." }
+      - { texte: "Ils vont disparaître aussi.", pourquoi: "C'est leur prédateur qui disparaît, pas leur nourriture : ils sont moins mangés." }
+  - texte: "Si les gardons deviennent très nombreux, que peut-il arriver aux petits animaux qu'ils mangent ?"
+    nom: "Ils risquent de diminuer."
+    explication: "Plus de gardons mangent plus de petits animaux. Un changement se propage dans tout le réseau."
+    pieges:
+      - { texte: "Ils vont augmenter aussi.", pourquoi: "Ils sont mangés par les gardons : plus de mangeurs, moins de proies." }
+      - { texte: "Rien, ils ne sont pas reliés aux brochets.", pourquoi: "Ils ne sont pas mangés par les brochets, mais ils sont reliés par les gardons." }
+  - texte: "Qu'est-ce qu'une espèce invasive ?"
+    nom: "Une espèce introduite dans un milieu où elle n'était pas, et qui s'y répand."
+    explication: "Une espèce venue d'ailleurs peut manger ou concurrencer les espèces du lieu et déséquilibrer le réseau alimentaire."
+    pieges:
+      - { texte: "Une espèce très grande.", pourquoi: "La taille ne compte pas : une plante ou un insecte peut être invasif." }
+      - { texte: "Une espèce qui mange tout le monde.", pourquoi: "Ce qui la définit, c'est qu'elle a été introduite d'ailleurs et qu'elle se répand." }
+  - texte: "Quel être vivant ne reçoit aucune flèche dans un réseau alimentaire ?"
+    nom: "La plante."
+    explication: "La plante ne mange pas d'autres êtres vivants : aucune flèche n'arrive vers elle. Elle est au départ du réseau."
+    pieges:
+      - { texte: "Le plus gros prédateur.", pourquoi: "Le prédateur reçoit des flèches de ses proies ; c'est de lui qu'aucune flèche ne part." }
+      - { texte: "Le plus petit animal.", pourquoi: "Même le plus petit animal mange : une flèche arrive vers lui." }
+  - texte: "Une chouette mange des souris et des mulots. Les mulots disparaissent d'un champ. Que peut faire la chouette ?"
+    nom: "Manger davantage de souris."
+    explication: "Quand un animal a plusieurs aliments, la perte d'une proie peut être compensée par une autre. Le réseau rend le milieu plus stable."
+    pieges:
+      - { texte: "Elle meurt forcément de faim.", pourquoi: "Elle a d'autres proies : c'est l'intérêt d'avoir plusieurs aliments." }
+      - { texte: "Elle se met à manger de l'herbe.", pourquoi: "La chouette est carnivore : elle ne mange pas d'herbe." }
+
+en:
+  titre: "The food web"
+  idee: "In a habitat, food chains cross each other: they make a web. Each arrow goes from what is eaten to what eats it, and shows the matter passing on."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "The arrow starts from the one that is eaten and points to the one that eats it."
+    exemple: "Example: an acorn is eaten by a squirrel. We draw an arrow from the acorn to the squirrel: the acorn's matter passes into the squirrel."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In a food web, which way do we draw the arrow between grass and a rabbit?"
+      nom: "From the grass to the rabbit."
+      explication: "The arrow goes from what is eaten to what eats it: it shows the grass's matter passing into the rabbit."
+      pieges:
+        - { texte: "From the rabbit to the grass.", pourquoi: "That's the idea « the rabbit goes to the grass ». But the arrow shows where the matter goes, from eaten to eater." }
+        - { texte: "Both ways.", pourquoi: "Grass doesn't eat rabbits: one arrow is enough." }
+    - texte: "A fox eats rabbits, mice and fruit. How many arrows point to the fox?"
+      nom: "Three."
+      explication: "One arrow starts from each of the fox's foods: rabbit, mouse and fruit. An animal can have several foods: that's why we call it a web."
+      pieges:
+        - { texte: "Just one.", pourquoi: "One arrow per food: the fox has three different foods." }
+        - { texte: "None, it's at the top.", pourquoi: "Arrows point to the eater, so they point to the fox." }
+    - texte: "Why do we say web, and not just chain?"
+      nom: "Because a living thing often eats several species and is eaten by several."
+      explication: "Chains cross: mice are eaten by owls, foxes and snakes. All those arrows make a web."
+      pieges:
+        - { texte: "Because there are more animals in a web.", pourquoi: "It isn't the number that matters, it's the chains crossing each other." }
+        - { texte: "Because each animal eats only one species.", pourquoi: "It's the opposite: most animals eat several species." }
+    - texte: "A young rabbit eats a lot and grows. Where does the matter in its body come from?"
+      nom: "From the plants it eats."
+      explication: "An animal builds its own matter from its food, which comes from other living things."
+      pieges:
+        - { texte: "From the air it breathes.", pourquoi: "Breathing brings oxygen, not the matter that makes the rabbit grow." }
+        - { texte: "It makes it out of nothing.", pourquoi: "Nothing is made out of nothing: without food, the rabbit doesn't grow." }
+    - texte: "In a lake, people catch almost all the pike, which eat roach. What will happen to the roach?"
+      nom: "They will probably become more numerous."
+      explication: "Their predator has almost gone: fewer roach are eaten. Overfishing one species changes the whole web."
+      pieges:
+        - { texte: "Nothing changes for them.", pourquoi: "In a web everything is linked: when a species goes, its prey and predators are affected." }
+        - { texte: "They will disappear too.", pourquoi: "It's their predator that disappears, not their food: fewer of them are eaten." }
+    - texte: "If there are lots more roach, what may happen to the small animals they eat?"
+      nom: "They may decrease."
+      explication: "More roach eat more small animals. A change spreads through the whole web."
+      pieges:
+        - { texte: "They will increase too.", pourquoi: "They are eaten by the roach: more eaters, less prey." }
+        - { texte: "Nothing, they aren't linked to the pike.", pourquoi: "Pike don't eat them, but they are linked through the roach." }
+    - texte: "What is an invasive species?"
+      nom: "A species brought into a place where it didn't live, which spreads there."
+      explication: "A species from elsewhere can eat or compete with the local species and upset the food web."
+      pieges:
+        - { texte: "A very big species.", pourquoi: "Size doesn't matter: a plant or an insect can be invasive." }
+        - { texte: "A species that eats everything.", pourquoi: "What defines it is that it was brought from elsewhere and spreads." }
+    - texte: "Which living thing has no arrow pointing to it in a food web?"
+      nom: "The plant."
+      explication: "A plant doesn't eat other living things: no arrow points to it. It's at the start of the web."
+      pieges:
+        - { texte: "The biggest predator.", pourquoi: "The predator gets arrows from its prey; it's the one no arrow starts from." }
+        - { texte: "The smallest animal.", pourquoi: "Even the smallest animal eats: an arrow points to it." }
+    - texte: "An owl eats mice and wood mice. The wood mice disappear from a field. What can the owl do?"
+      nom: "Eat more mice."
+      explication: "When an animal has several foods, losing one prey can be made up by another. The web makes the habitat steadier."
+      pieges:
+        - { texte: "It must starve.", pourquoi: "It has other prey: that's the advantage of having several foods." }
+        - { texte: "It starts eating grass.", pourquoi: "Owls are carnivores: they don't eat grass." }

@@ -1,0 +1,149 @@
+id: figures-de-style
+titre: "Les figures de style"
+niveau: 2de
+prerequis: ["sens-propre-figure"]
+programme: { source: lycee2de, texte: "Elles sont adossées à des termes (métaphore, adjectif, subordination, focalisation, assonance, etc.) dont elles proposent des définitions." }
+activite: quiz
+parametres: {}
+idee: "Comparaison : un outil (comme, semblable à). Métaphore : l’image sans outil. Personnification : une chose agit comme un humain. Hyperbole : on exagère. Litote : on dit moins pour dire plus."
+phrases:
+  consigne: "Lis l’extrait, cherche l’image ou l’effet, puis touche la figure de style."
+  question: "{texte}"
+  indice: "Y a-t-il un outil de comparaison ? Une exagération ? Deux contraires ? Un mot ou un son répété ?"
+  exemple: "« Le Poète est semblable au prince des nuées » (Baudelaire) : « semblable à » est un outil de comparaison, c’est une comparaison."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Le Poète est semblable au prince des nuées » (Baudelaire, « L’Albatros »). Quelle figure ?"
+    nom: "une comparaison"
+    explication: "Le poète est rapproché de l’albatros avec un outil, « semblable à » : c’est une comparaison."
+    pieges:
+      - { texte: "une métaphore", pourquoi: "Une métaphore rapproche sans outil ; ici il y a « semblable à »." }
+      - { texte: "une hyperbole", pourquoi: "L’hyperbole exagère ; ici on rapproche deux réalités avec un outil." }
+  - texte: "« Ma jeunesse ne fut qu’un ténébreux orage » (Baudelaire, « L’Ennemi »). Quelle figure ?"
+    nom: "une métaphore"
+    explication: "La jeunesse est assimilée à un orage sans outil de comparaison : c’est une métaphore."
+    pieges:
+      - { texte: "une comparaison", pourquoi: "Il n’y a ni « comme » ni « semblable à » : la jeunesse est directement un orage." }
+      - { texte: "une personnification", pourquoi: "L’orage ne prend aucun trait humain ici : c’est la jeunesse qui devient un orage." }
+  - texte: "« Cette obscure clarté qui tombe des étoiles » (Corneille, « Le Cid »). Quelle figure dans « obscure clarté » ?"
+    nom: "un oxymore"
+    explication: "Deux mots de sens contraire sont réunis dans le même groupe : « obscure » et « clarté »."
+    pieges:
+      - { texte: "une antithèse", pourquoi: "L’antithèse oppose deux termes dans la phrase ; l’oxymore les colle dans un même groupe : « obscure clarté »." }
+      - { texte: "une hyperbole", pourquoi: "Il n’y a pas d’exagération : on réunit deux contraires." }
+  - texte: "« Va, je ne te hais point. » (Corneille, « Le Cid »). Chimène fait entendre qu’elle aime Rodrigue. Quelle figure ?"
+    nom: "une litote"
+    explication: "Elle dit moins (« je ne te hais point ») pour faire entendre plus (« je t’aime ») : c’est une litote."
+    pieges:
+      - { texte: "une hyperbole", pourquoi: "L’hyperbole exagère ; ici, au contraire, Chimène atténue." }
+      - { texte: "une métaphore", pourquoi: "Il n’y a pas d’image : Chimène atténue ce qu’elle ressent." }
+  - texte: "« Je te l’ai répété mille fois ! » Quelle figure ?"
+    nom: "une hyperbole"
+    explication: "« mille fois » exagère pour insister : c’est une hyperbole."
+    pieges:
+      - { texte: "une litote", pourquoi: "La litote dit moins pour faire entendre plus ; ici, on exagère." }
+      - { texte: "une comparaison", pourquoi: "Il n’y a pas d’outil de comparaison : on exagère." }
+  - texte: "« Le vent hurle dans les rues, et la ville dort. » Quelle figure ?"
+    nom: "une personnification"
+    explication: "Le vent « hurle » et la ville « dort » comme des êtres humains : c’est une personnification."
+    pieges:
+      - { texte: "une comparaison", pourquoi: "Il n’y a pas d’outil de comparaison : le vent et la ville agissent comme des humains." }
+      - { texte: "un oxymore", pourquoi: "Aucun mot n’est réuni avec son contraire : ce sont des actions humaines prêtées à des choses." }
+  - texte: "« Il faut du courage, il faut de la patience, il faut du travail. » Quelle figure ?"
+    nom: "une anaphore"
+    explication: "« il faut » est répété en tête de chaque groupe : c’est une anaphore."
+    pieges:
+      - { texte: "une hyperbole", pourquoi: "Rien n’est exagéré : un même mot revient en début de groupe." }
+      - { texte: "une allitération", pourquoi: "L’allitération répète un son de consonne ; ici c’est une expression entière, en tête de groupe." }
+  - texte: "« Le jour, il rit ; la nuit, il pleure. » Quelle figure ?"
+    nom: "une antithèse"
+    explication: "Deux idées contraires s’opposent dans deux parties de la phrase : jour/nuit, rire/pleurer."
+    pieges:
+      - { texte: "un oxymore", pourquoi: "L’oxymore réunit deux contraires dans un même groupe de mots ; ici ils sont dans deux parties de la phrase." }
+      - { texte: "une anaphore", pourquoi: "Aucun mot n’est répété en tête de groupe : ce sont des contraires qui s’opposent." }
+  - texte: "« Six souris sans souci sautent sur le sofa. » Quelle figure ?"
+    nom: "une allitération"
+    explication: "Le son de consonne [s] est répété : c’est une allitération."
+    pieges:
+      - { texte: "une assonance", pourquoi: "L’assonance répète un son de voyelle ; ici, c’est la consonne [s] qui revient." }
+      - { texte: "une anaphore", pourquoi: "L’anaphore répète un mot en tête de groupe ; ici, c’est un son qui revient." }
+  - texte: "« Ses yeux brillent comme des étoiles. » Pourquoi est-ce une comparaison et non une métaphore ?"
+    nom: "Il y a un outil de comparaison : « comme »."
+    explication: "La comparaison a un outil (comme, tel, semblable à) ; la métaphore n’en a pas."
+    pieges:
+      - { texte: "Parce que les étoiles brillent vraiment.", pourquoi: "Ce n’est pas la vérité du rapprochement qui compte : c’est la présence de « comme »." }
+      - { texte: "Parce que la phrase est au présent.", pourquoi: "Le temps du verbe ne change pas la figure : c’est l’outil « comme » qui fait la comparaison." }
+
+en:
+  langue: "fr"
+  titre: "French: figures of speech"
+  idee: "Simile: a comparing word (« comme », « semblable à »). Metaphor: the image with no comparing word. Personification: a thing acts like a human. Hyperbole: exaggeration. Litotes: saying less to mean more."
+  phrases:
+    consigne: "Read the French extract, find the image or effect, then touch the figure of speech."
+    question: "{texte}"
+    indice: "Is there a comparing word? An exaggeration? Two opposites? A word or sound repeated?"
+    exemple: "« Le Poète est semblable au prince des nuées » (Baudelaire): « semblable à » is a comparing word, so it's a simile."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Le Poète est semblable au prince des nuées » (Baudelaire, « L’Albatros »). Which figure?"
+      nom: "a simile"
+      explication: "The poet is compared to the albatross with a comparing word, « semblable à »: it's a simile."
+      pieges:
+        - { texte: "a metaphor", pourquoi: "A metaphor compares with no comparing word; here there's « semblable à »." }
+        - { texte: "hyperbole", pourquoi: "Hyperbole exaggerates; here two things are compared with a comparing word." }
+    - texte: "« Ma jeunesse ne fut qu’un ténébreux orage » (Baudelaire, « L’Ennemi »). Which figure?"
+      nom: "a metaphor"
+      explication: "Youth is turned into a storm with no comparing word: it's a metaphor."
+      pieges:
+        - { texte: "a simile", pourquoi: "There's no « comme » or « semblable à »: youth simply is a storm." }
+        - { texte: "personification", pourquoi: "The storm takes on no human trait here: it's youth that becomes a storm." }
+    - texte: "« Cette obscure clarté qui tombe des étoiles » (Corneille, « Le Cid »). Which figure is « obscure clarté »?"
+      nom: "an oxymoron"
+      explication: "Two words with opposite meanings are joined in the same phrase: « obscure » (dark) and « clarté » (light)."
+      pieges:
+        - { texte: "an antithesis", pourquoi: "An antithesis sets two terms against each other in the sentence; an oxymoron puts them side by side in one phrase: « obscure clarté »." }
+        - { texte: "hyperbole", pourquoi: "There's no exaggeration: two opposites are joined." }
+    - texte: "« Va, je ne te hais point. » (Corneille, « Le Cid »). Chimène means she loves Rodrigue. Which figure?"
+      nom: "litotes"
+      explication: "She says less (« I don't hate you ») to mean more (« I love you »): it's litotes."
+      pieges:
+        - { texte: "hyperbole", pourquoi: "Hyperbole exaggerates; here, on the contrary, Chimène tones it down." }
+        - { texte: "a metaphor", pourquoi: "There's no image: Chimène tones down what she feels." }
+    - texte: "« Je te l’ai répété mille fois ! » Which figure?"
+      nom: "hyperbole"
+      explication: "« mille fois », a thousand times, exaggerates for emphasis: it's hyperbole."
+      pieges:
+        - { texte: "litotes", pourquoi: "Litotes says less to mean more; here, it exaggerates." }
+        - { texte: "a simile", pourquoi: "There's no comparing word: it's an exaggeration." }
+    - texte: "« Le vent hurle dans les rues, et la ville dort. » Which figure?"
+      nom: "personification"
+      explication: "The wind « hurle » (howls) and the town « dort » (sleeps) like human beings: it's personification."
+      pieges:
+        - { texte: "a simile", pourquoi: "There's no comparing word: the wind and the town act like humans." }
+        - { texte: "an oxymoron", pourquoi: "No word is paired with its opposite: human actions are given to things." }
+    - texte: "« Il faut du courage, il faut de la patience, il faut du travail. » Which figure?"
+      nom: "anaphora"
+      explication: "« il faut » is repeated at the start of each group: it's anaphora."
+      pieges:
+        - { texte: "hyperbole", pourquoi: "Nothing is exaggerated: the same words come back at the start of each group." }
+        - { texte: "alliteration", pourquoi: "Alliteration repeats a consonant sound; here it's a whole expression at the start of each group." }
+    - texte: "« Le jour, il rit ; la nuit, il pleure. » Which figure?"
+      nom: "an antithesis"
+      explication: "Two opposite ideas face each other in two parts of the sentence: day/night, laughing/crying."
+      pieges:
+        - { texte: "an oxymoron", pourquoi: "An oxymoron joins two opposites in one phrase; here they're in two parts of the sentence." }
+        - { texte: "anaphora", pourquoi: "No word is repeated at the start of a group: opposites face each other." }
+    - texte: "« Six souris sans souci sautent sur le sofa. » Which figure?"
+      nom: "alliteration"
+      explication: "The consonant sound « s » is repeated: it's alliteration."
+      pieges:
+        - { texte: "assonance", pourquoi: "Assonance repeats a vowel sound; here it's the consonant « s » that comes back." }
+        - { texte: "anaphora", pourquoi: "Anaphora repeats a word at the start of a group; here a sound comes back." }
+    - texte: "« Ses yeux brillent comme des étoiles. » Why is it a simile and not a metaphor?"
+      nom: "There's a comparing word: « comme »."
+      explication: "A simile has a comparing word (« comme », « tel », « semblable à »); a metaphor doesn't."
+      pieges:
+        - { texte: "Because stars really shine.", pourquoi: "Whether the comparison is true doesn't matter: it's the word « comme » that counts." }
+        - { texte: "Because the sentence is in the present.", pourquoi: "The tense doesn't change the figure: it's « comme » that makes a simile." }

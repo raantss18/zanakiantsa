@@ -1,0 +1,136 @@
+id: decimaux-multiplier
+titre: "Multiplier deux nombres décimaux"
+niveau: 6e
+prerequis: ["decimal-fois-entier"]
+programme: { source: cycle3, texte: "Calculer le produit de deux nombres décimaux" }
+activite: quiz
+parametres: {}
+idee: "0,3 × 0,2 : 3 dixièmes × 2 dixièmes = 6 centièmes = 0,06. On multiplie sans les virgules, puis on compte les chiffres après la virgule dans les deux facteurs."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Compte les chiffres après la virgule dans les deux facteurs, et vérifie avec un ordre de grandeur."
+  exemple: "2,4 × 1,5 : 24 × 15 = 360. Il y a 1 + 1 = 2 chiffres après les virgules, donc 3,60, soit 3,6. Ordre de grandeur : 2 × 2 = 4, c'est plausible."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 0,3 × 0,2 ?"
+    nom: "0,06"
+    explication: "3 × 2 = 6. Il y a 1 + 1 = 2 chiffres après les virgules : 0,06."
+    pieges:
+      - { texte: "0,6", pourquoi: "Des dixièmes fois des dixièmes donnent des centièmes : 0,06." }
+      - { texte: "6", pourquoi: "Les deux facteurs sont plus petits que 1 : le produit aussi." }
+  - texte: "Combien font 1,5 × 2,5 ?"
+    nom: "3,75"
+    explication: "15 × 25 = 375. Il y a 2 chiffres après les virgules : 3,75. Ordre de grandeur : 2 × 2 = 4."
+    pieges:
+      - { texte: "37,5", pourquoi: "Il y a deux chiffres après les virgules en tout : 3,75." }
+      - { texte: "2,25", pourquoi: "On ne multiplie pas seulement unités entre elles et dixièmes entre eux : 15 × 25 = 375." }
+  - texte: "Combien font 2,4 × 0,5 ?"
+    nom: "1,2"
+    explication: "24 × 5 = 120. 2 chiffres après les virgules : 1,20 = 1,2. Multiplier par 0,5, c'est prendre la moitié."
+    pieges:
+      - { texte: "12", pourquoi: "Il y a 2 chiffres après les virgules : 1,20." }
+      - { texte: "4,8", pourquoi: "4,8 = 2,4 × 2 : multiplier par 0,5 donne la moitié, un nombre plus petit." }
+  - texte: "Combien font 0,04 × 3,1 ?"
+    nom: "0,124"
+    explication: "4 × 31 = 124. Il y a 2 + 1 = 3 chiffres après les virgules : 0,124."
+    pieges:
+      - { texte: "1,24", pourquoi: "Il y a 3 chiffres après les virgules en tout : 0,124." }
+      - { texte: "0,0124", pourquoi: "On compte 2 + 1 = 3 chiffres, pas 4." }
+  - texte: "Combien font 12 × 0,1 ?"
+    nom: "1,2"
+    explication: "Multiplier par 0,1, c'est prendre un dixième, comme diviser par 10 : 1,2."
+    pieges:
+      - { texte: "120", pourquoi: "120 = 12 × 10 : multiplier par 0,1, c'est diviser par 10." }
+      - { texte: "12,1", pourquoi: "12 + 0,1 : c'est une multiplication." }
+  - texte: "Un rectangle mesure 2,5 m sur 1,2 m. Quelle est son aire ?"
+    nom: "3 m²"
+    explication: "25 × 12 = 300. 2 chiffres après les virgules : 3,00 m² = 3 m²."
+    pieges:
+      - { texte: "7,4 m", pourquoi: "7,4 m, c'est le périmètre : 2,5 + 1,2 + 2,5 + 1,2." }
+      - { texte: "30 m²", pourquoi: "25 × 12 = 300 : avec 2 chiffres après les virgules, on obtient 3,00." }
+  - texte: "Quel est le bon résultat de 4,8 × 2,1 ?"
+    nom: "10,08"
+    explication: "48 × 21 = 1 008, avec 2 chiffres après les virgules : 10,08. Ordre de grandeur : 5 × 2 = 10."
+    pieges:
+      - { texte: "100,8", pourquoi: "4,8 × 2,1 est proche de 5 × 2 = 10, pas de 100." }
+      - { texte: "1,008", pourquoi: "Le produit est proche de 10 : 1,008 est bien trop petit." }
+  - texte: "3,6 × 0,7 : 36 × 7 = 252. Chiffres après les virgules : 1 + 1 = … Donc 2,52. Quel nombre manque ?"
+    nom: "2"
+    explication: "3,6 a 1 chiffre après la virgule, 0,7 aussi : 1 + 1 = 2. 252 devient 2,52."
+    pieges:
+      - { texte: "1", pourquoi: "Chaque facteur a un chiffre après la virgule : 1 + 1 = 2." }
+      - { texte: "3", pourquoi: "252 a trois chiffres, mais on compte ceux des facteurs après la virgule." }
+  - texte: "Pourquoi 6 × 0,5 est-il plus petit que 6 ?"
+    nom: "Parce que multiplier par 0,5, c'est prendre la moitié."
+    explication: "0,5 est plus petit que 1 : 6 × 0,5 = 3, la moitié de 6."
+    pieges:
+      - { texte: "Une multiplication donne toujours un nombre plus grand.", pourquoi: "C'est vrai pour un facteur plus grand que 1 : 0,5 est plus petit que 1." }
+      - { texte: "Parce que 0,5 a une virgule.", pourquoi: "1,5 a aussi une virgule, et 6 × 1,5 = 9 est plus grand que 6." }
+
+en:
+  titre: "Multiplying two decimals"
+  idee: "0.3 × 0.2: 3 tenths × 2 tenths = 6 hundredths = 0.06. Multiply without the points, then count the digits after the point in both factors."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Count the digits after the point in both factors, and check with an estimate."
+    exemple: "2.4 × 1.5: 24 × 15 = 360. There are 1 + 1 = 2 digits after the points, so 3.60, which is 3.6. Estimate: 2 × 2 = 4, it makes sense."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 0.3 × 0.2?"
+      nom: "0.06"
+      explication: "3 × 2 = 6. There are 1 + 1 = 2 digits after the points: 0.06."
+      pieges:
+        - { texte: "0.6", pourquoi: "Tenths times tenths give hundredths: 0.06." }
+        - { texte: "6", pourquoi: "Both factors are smaller than 1: so is the product." }
+    - texte: "What is 1.5 × 2.5?"
+      nom: "3.75"
+      explication: "15 × 25 = 375. There are 2 digits after the points: 3.75. Estimate: 2 × 2 = 4."
+      pieges:
+        - { texte: "37.5", pourquoi: "There are two digits after the points altogether: 3.75." }
+        - { texte: "2.25", pourquoi: "Don't just multiply ones by ones and tenths by tenths: 15 × 25 = 375." }
+    - texte: "What is 2.4 × 0.5?"
+      nom: "1.2"
+      explication: "24 × 5 = 120. 2 digits after the points: 1.20 = 1.2. Multiplying by 0.5 means taking half."
+      pieges:
+        - { texte: "12", pourquoi: "There are 2 digits after the points: 1.20." }
+        - { texte: "4.8", pourquoi: "4.8 = 2.4 × 2: multiplying by 0.5 gives half, a smaller number." }
+    - texte: "What is 0.04 × 3.1?"
+      nom: "0.124"
+      explication: "4 × 31 = 124. There are 2 + 1 = 3 digits after the points: 0.124."
+      pieges:
+        - { texte: "1.24", pourquoi: "There are 3 digits after the points altogether: 0.124." }
+        - { texte: "0.0124", pourquoi: "Count 2 + 1 = 3 digits, not 4." }
+    - texte: "What is 12 × 0.1?"
+      nom: "1.2"
+      explication: "Multiplying by 0.1 means taking a tenth, like dividing by 10: 1.2."
+      pieges:
+        - { texte: "120", pourquoi: "120 = 12 × 10: multiplying by 0.1 is dividing by 10." }
+        - { texte: "12.1", pourquoi: "12 + 0.1: this is a multiplication." }
+    - texte: "A rectangle is 2.5 m by 1.2 m. What is its area?"
+      nom: "3 m²"
+      explication: "25 × 12 = 300. 2 digits after the points: 3.00 m² = 3 m²."
+      pieges:
+        - { texte: "7.4 m", pourquoi: "7.4 m is the perimeter: 2.5 + 1.2 + 2.5 + 1.2." }
+        - { texte: "30 m²", pourquoi: "25 × 12 = 300: with 2 digits after the points, that is 3.00." }
+    - texte: "Which is the correct answer to 4.8 × 2.1?"
+      nom: "10.08"
+      explication: "48 × 21 = 1,008, with 2 digits after the points: 10.08. Estimate: 5 × 2 = 10."
+      pieges:
+        - { texte: "100.8", pourquoi: "4.8 × 2.1 is close to 5 × 2 = 10, not 100." }
+        - { texte: "1.008", pourquoi: "The product is close to 10: 1.008 is far too small." }
+    - texte: "3.6 × 0.7: 36 × 7 = 252. Digits after the points: 1 + 1 = … So 2.52. Which number is missing?"
+      nom: "2"
+      explication: "3.6 has 1 digit after the point, so does 0.7: 1 + 1 = 2. 252 becomes 2.52."
+      pieges:
+        - { texte: "1", pourquoi: "Each factor has one digit after the point: 1 + 1 = 2." }
+        - { texte: "3", pourquoi: "252 has three digits, but we count the factors' digits after the point." }
+    - texte: "Why is 6 × 0.5 smaller than 6?"
+      nom: "Because multiplying by 0.5 means taking half."
+      explication: "0.5 is smaller than 1: 6 × 0.5 = 3, half of 6."
+      pieges:
+        - { texte: "A multiplication always gives a bigger number.", pourquoi: "That's true for a factor bigger than 1: 0.5 is smaller than 1." }
+        - { texte: "Because 0.5 has a decimal point.", pourquoi: "1.5 has a point too, and 6 × 1.5 = 9 is bigger than 6." }

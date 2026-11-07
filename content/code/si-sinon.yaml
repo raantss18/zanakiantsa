@@ -1,0 +1,124 @@
+id: si-sinon
+titre: "Si … alors … sinon"
+niveau: 4e
+prerequis: [variable-affectation]
+programme: { source: cycle4, texte: "Écrire des instructions conditionnelles." }
+activite: quiz
+parametres: {}
+idee: "« si condition alors [ A ] sinon [ B ] » teste la condition une fois : vraie, le programme fait A ; fausse, il fait B. Jamais les deux."
+phrases:
+  consigne: "Teste la condition avec les valeurs du moment, puis choisis la branche."
+  question: "{texte}"
+  indice: "Remplace la variable par sa valeur, puis demande-toi : vrai ou faux ?"
+  exemple: "mettre x à 7, puis si x > 5 alors [ dire grand ] sinon [ dire petit ] : 7 > 5 est vrai, le lutin dit grand."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre x à 7\nsi x > 5 alors [ dire grand ] sinon [ dire petit ]\nQue dit le lutin ?"
+    nom: "grand"
+    explication: "7 > 5 est vrai, donc le lutin dit grand, et seulement grand."
+    pieges:
+      - { texte: "petit", pourquoi: "7 > 5 est vrai : c’est la branche « alors » qui s’exécute." }
+      - { texte: "grand, puis petit", pourquoi: "Une seule branche s’exécute : « sinon » ne sert que si la condition est fausse." }
+  - texte: "mettre x à 5\nsi x > 5 alors [ dire grand ] sinon [ dire petit ]\nQue dit le lutin ?"
+    nom: "petit"
+    explication: "5 > 5 est faux (5 est égal à 5, pas plus grand). Le lutin dit petit."
+    pieges:
+      - { texte: "grand", pourquoi: "5 > 5 est faux : 5 n’est pas strictement plus grand que 5." }
+      - { texte: "Rien", pourquoi: "Quand la condition est fausse, la branche « sinon » s’exécute : il dit petit." }
+  - texte: "demander Un nombre ? et attendre\nsi ( réponse modulo 2 ) = 0 alors [ dire pair ] sinon [ dire impair ]\nOn tape 14. Que dit le lutin ?"
+    nom: "pair"
+    explication: "14 = 2 × 7 + 0 : le reste vaut 0, la condition est vraie, le lutin dit pair."
+    pieges:
+      - { texte: "impair", pourquoi: "14 modulo 2, c’est le reste de 14 ÷ 2 : 0. La condition est vraie." }
+      - { texte: "0", pourquoi: "0 est le reste calculé dans la condition ; le lutin dit le mot de la branche choisie." }
+  - texte: "mettre x à 3\nsi x < 10 alors [ ajouter 5 à x ]\nsi x < 10 alors [ ajouter 5 à x ]\ndire x\nQue dit le lutin ?"
+    nom: "13"
+    explication: "3 < 10, x passe à 8. Puis 8 < 10, x passe à 13."
+    pieges:
+      - { texte: "8", pourquoi: "Le deuxième « si » teste encore : x vaut 8, et 8 < 10 est vrai." }
+      - { texte: "3", pourquoi: "3 < 10 est vrai : le premier « si » ajoute bien 5." }
+  - texte: "mettre x à 0\nmettre n à 0\nrépéter 6 fois [ ajouter 1 à x, si ( x modulo 3 ) = 0 alors [ ajouter 1 à n ] ]\ndire n\nQue dit le lutin ?"
+    nom: "2"
+    explication: "x prend les valeurs 1 à 6. Seuls 3 et 6 sont des multiples de 3 : n vaut 2."
+    pieges:
+      - { texte: "6", pourquoi: "n n’augmente pas à chaque tour : seulement quand x est un multiple de 3." }
+      - { texte: "3", pourquoi: "x commence à 1 dans la boucle (on ajoute 1 avant de tester) : 0 n’est jamais testé." }
+  - texte: "mettre t à 25\nsi t > 30 alors [ dire chaud ] sinon [ si t > 15 alors [ dire doux ] sinon [ dire froid ] ]\nQue dit le lutin ?"
+    nom: "doux"
+    explication: "25 > 30 est faux, alors on teste 25 > 15 : vrai. Le lutin dit doux."
+    pieges:
+      - { texte: "chaud", pourquoi: "25 > 30 est faux : on passe dans le « sinon »." }
+      - { texte: "froid", pourquoi: "Dans le « sinon », on teste encore : 25 > 15 est vrai." }
+  - texte: "Le lutin doit dire gagné quand le score vaut 10 ou plus. Quelle condition mettre dans le « si » ?"
+    nom: "non ( score < 10 )"
+    explication: "« 10 ou plus », c’est le contraire de « moins de 10 » : non ( score < 10 ). Avec 10, 10 < 10 est faux, donc la condition est vraie."
+    pieges:
+      - { texte: "score > 10", pourquoi: "Avec un score de 10 exactement, 10 > 10 est faux : le lutin ne dirait rien." }
+      - { texte: "score < 10", pourquoi: "C’est l’inverse : vrai quand le score est trop petit." }
+  - texte: "Pourquoi essaie-t-on x = 5 pour tester le programme « si x > 5 alors … sinon … » ?"
+    nom: "C’est la limite : on vérifie de quel côté tombe 5"
+    explication: "Loin de la limite (0 ou 100), > et ≥ donnent la même branche. Avec 5, ils donnent des branches différentes : c’est là qu’une erreur se voit."
+    pieges:
+      - { texte: "Parce que 5 est un petit nombre", pourquoi: "La taille ne compte pas : c’est 5 qui sépare les deux branches." }
+      - { texte: "Pour que le programme aille plus vite", pourquoi: "La vitesse ne change pas. On cherche le cas où une erreur (> au lieu de ≥) se verrait." }
+
+en:
+  titre: "If … then … else"
+  idee: "“if condition then [ A ] else [ B ]” tests the condition once: if it is true, the program does A; if it is false, it does B. Never both."
+  phrases:
+    consigne: "Test the condition with the current values, then choose the branch."
+    question: "{texte}"
+    indice: "Replace the variable with its value, then ask yourself: true or false?"
+    exemple: "set x to 7, then if x > 5 then [ say big ] else [ say small ]: 7 > 5 is true, the sprite says big."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set x to 7\nif x > 5 then [ say big ] else [ say small ]\nWhat does the sprite say?"
+      nom: "big"
+      explication: "7 > 5 is true, so the sprite says big, and only big."
+      pieges:
+        - { texte: "small", pourquoi: "7 > 5 is true: the “then” branch runs." }
+        - { texte: "big, then small", pourquoi: "Only one branch runs: “else” is only used when the condition is false." }
+    - texte: "set x to 5\nif x > 5 then [ say big ] else [ say small ]\nWhat does the sprite say?"
+      nom: "small"
+      explication: "5 > 5 is false (5 is equal to 5, not greater). The sprite says small."
+      pieges:
+        - { texte: "big", pourquoi: "5 > 5 is false: 5 is not strictly greater than 5." }
+        - { texte: "Nothing", pourquoi: "When the condition is false, the “else” branch runs: it says small." }
+    - texte: "ask A number? and wait\nif ( answer mod 2 ) = 0 then [ say even ] else [ say odd ]\nYou type 14. What does the sprite say?"
+      nom: "even"
+      explication: "14 = 2 × 7 + 0: the remainder is 0, the condition is true, the sprite says even."
+      pieges:
+        - { texte: "odd", pourquoi: "14 mod 2 is the remainder of 14 ÷ 2: 0. The condition is true." }
+        - { texte: "0", pourquoi: "0 is the remainder worked out in the condition; the sprite says the word of the chosen branch." }
+    - texte: "set x to 3\nif x < 10 then [ change x by 5 ]\nif x < 10 then [ change x by 5 ]\nsay x\nWhat does the sprite say?"
+      nom: "13"
+      explication: "3 < 10, x becomes 8. Then 8 < 10, x becomes 13."
+      pieges:
+        - { texte: "8", pourquoi: "The second “if” tests again: x is 8, and 8 < 10 is true." }
+        - { texte: "3", pourquoi: "3 < 10 is true: the first “if” does add 5." }
+    - texte: "set x to 0\nset n to 0\nrepeat 6 [ change x by 1, if ( x mod 3 ) = 0 then [ change n by 1 ] ]\nsay n\nWhat does the sprite say?"
+      nom: "2"
+      explication: "x takes the values 1 to 6. Only 3 and 6 are multiples of 3: n is 2."
+      pieges:
+        - { texte: "6", pourquoi: "n does not go up on every turn: only when x is a multiple of 3." }
+        - { texte: "3", pourquoi: "x starts at 1 inside the loop (1 is added before the test): 0 is never tested." }
+    - texte: "set t to 25\nif t > 30 then [ say hot ] else [ if t > 15 then [ say mild ] else [ say cold ] ]\nWhat does the sprite say?"
+      nom: "mild"
+      explication: "25 > 30 is false, so 25 > 15 is tested: true. The sprite says mild."
+      pieges:
+        - { texte: "hot", pourquoi: "25 > 30 is false: the program goes into the “else”." }
+        - { texte: "cold", pourquoi: "Inside the “else”, there is another test: 25 > 15 is true." }
+    - texte: "The sprite must say won when the score is 10 or more. Which condition goes in the “if”?"
+      nom: "not ( score < 10 )"
+      explication: "“10 or more” is the opposite of “less than 10”: not ( score < 10 ). With 10, 10 < 10 is false, so the condition is true."
+      pieges:
+        - { texte: "score > 10", pourquoi: "With a score of exactly 10, 10 > 10 is false: the sprite would say nothing." }
+        - { texte: "score < 10", pourquoi: "That is the opposite: true when the score is too small." }
+    - texte: "Why do we try x = 5 to test the program “if x > 5 then … else …”?"
+      nom: "It is the boundary: we check which side 5 falls on"
+      explication: "Far from the boundary (0 or 100), > and ≥ choose the same branch. With 5, they choose different branches: that is where a mistake shows."
+      pieges:
+        - { texte: "Because 5 is a small number", pourquoi: "Size does not matter: 5 is what separates the two branches." }
+        - { texte: "To make the program run faster", pourquoi: "Speed does not change. We are looking for the case where a mistake (> instead of ≥) would show." }

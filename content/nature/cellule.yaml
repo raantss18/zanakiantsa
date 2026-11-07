@@ -1,0 +1,136 @@
+id: cellule
+titre: "La cellule, brique du vivant"
+niveau: 6e
+prerequis: []
+programme: { source: c3s, texte: "Identifier la cellule comme l’unité structurale commune à tous les êtres vivants." }
+activite: quiz
+parametres: {}
+idee: "Tous les êtres vivants sont faits de cellules. Une cellule a une membrane et du cytoplasme ; souvent un noyau. Les cellules végétales ont aussi une paroi."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense aux trois parties qu'on voit au microscope : la membrane qui entoure, le cytoplasme à l'intérieur, et souvent le noyau."
+  exemple: "Exemple : au microscope, une cellule d'épiderme d'oignon montre une paroi, une membrane, du cytoplasme et un noyau."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'ont en commun un chêne, un chat, un champignon et une bactérie ?"
+    nom: "Ils sont tous faits de cellules."
+    explication: "La cellule est l'unité commune à tous les êtres vivants, des plus petits aux plus grands."
+    pieges:
+      - { texte: "Ils ont tous des os.", pourquoi: "Le chêne, le champignon et la bactérie n'ont pas d'os." }
+      - { texte: "Ils ont tous des feuilles.", pourquoi: "Seules les plantes, comme le chêne, ont des feuilles." }
+  - texte: "Quel instrument faut-il pour voir la plupart des cellules ?"
+    nom: "Un microscope."
+    explication: "La plupart des cellules sont trop petites pour l'œil nu : on les observe au microscope."
+    pieges:
+      - { texte: "Une loupe suffit toujours.", pourquoi: "Une loupe grossit trop peu pour voir le détail de la plupart des cellules." }
+      - { texte: "Un télescope.", pourquoi: "Le télescope sert à observer des objets très lointains, pas très petits." }
+  - texte: "Quelle partie entoure toute cellule et la sépare de l'extérieur ?"
+    nom: "La membrane."
+    explication: "Toute cellule est limitée par une membrane, qui entoure le cytoplasme."
+    pieges:
+      - { texte: "Le noyau.", pourquoi: "Le noyau est à l'intérieur de la cellule ; il ne l'entoure pas." }
+      - { texte: "La paroi.", pourquoi: "La paroi existe chez les cellules végétales, mais pas chez les cellules animales. La membrane, elle, est partout." }
+  - texte: "Quelle partie trouve-t-on dans une cellule de feuille, mais pas dans une cellule de ta joue ?"
+    nom: "La paroi."
+    explication: "Les cellules végétales ont une paroi rigide autour de la membrane. Les cellules animales n'en ont pas."
+    pieges:
+      - { texte: "Le noyau.", pourquoi: "Les cellules de ta joue ont un noyau, elles aussi." }
+      - { texte: "La membrane.", pourquoi: "Toutes les cellules ont une membrane." }
+  - texte: "Un être vivant formé d'une seule cellule s'appelle…"
+    nom: "Un être unicellulaire."
+    explication: "Une bactérie, une levure ou une paramécie sont faites d'une seule cellule : ce sont des êtres unicellulaires."
+    pieges:
+      - { texte: "Un objet, pas un être vivant.", pourquoi: "Une seule cellule peut suffire pour vivre : se nourrir, grandir, se reproduire." }
+      - { texte: "Un être pluricellulaire.", pourquoi: "Pluricellulaire veut dire « fait de nombreuses cellules », comme nous." }
+  - texte: "Le corps humain est-il fait d'une seule grande cellule ?"
+    nom: "Non, il est fait d'un nombre immense de cellules."
+    explication: "Nous sommes pluricellulaires : notre corps compte des milliers de milliards de cellules, de sortes différentes."
+    pieges:
+      - { texte: "Oui, une cellule de la taille du corps.", pourquoi: "Au microscope, une peau ou un muscle montrent beaucoup de petites cellules." }
+      - { texte: "Seulement de quelques centaines de cellules.", pourquoi: "C'est beaucoup trop peu : on parle de milliers de milliards." }
+  - texte: "Que contient l'intérieur de la cellule, à l'intérieur de la membrane ?"
+    nom: "Le cytoplasme."
+    explication: "Le cytoplasme remplit la cellule, à l'intérieur de la membrane. Le noyau, quand il existe, s'y trouve."
+    pieges:
+      - { texte: "Du vide.", pourquoi: "Une cellule n'est pas creuse : elle est remplie de cytoplasme." }
+      - { texte: "Du sang.", pourquoi: "Le sang contient des cellules, mais l'intérieur d'une cellule, c'est le cytoplasme." }
+  - texte: "Les bactéries ont-elles un noyau ?"
+    nom: "Non, leurs cellules n'ont pas de noyau."
+    explication: "La cellule d'une bactérie a une membrane et du cytoplasme, mais pas de noyau. Elle est quand même vivante."
+    pieges:
+      - { texte: "Oui, comme toutes les cellules.", pourquoi: "Toutes les cellules n'ont pas de noyau : les bactéries n'en ont pas." }
+      - { texte: "Non, car ce ne sont pas des êtres vivants.", pourquoi: "Les bactéries sont bien vivantes, même sans noyau." }
+  - texte: "Pourquoi dit-on que la cellule est la brique du vivant ?"
+    nom: "Parce que tous les êtres vivants sont construits avec des cellules."
+    explication: "Comme un mur est fait de briques, chaque être vivant est fait d'une ou de plusieurs cellules."
+    pieges:
+      - { texte: "Parce que les cellules sont dures comme des briques.", pourquoi: "La comparaison porte sur l'assemblage, pas sur la dureté." }
+      - { texte: "Parce que seules les maisons des animaux sont faites de cellules.", pourquoi: "Ce sont les êtres vivants eux-mêmes qui sont faits de cellules." }
+
+en:
+  titre: "The cell, building block of life"
+  idee: "All living things are made of cells. A cell has a membrane and cytoplasm; often a nucleus. Plant cells also have a cell wall."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of the three parts you see under a microscope: the membrane around it, the cytoplasm inside, and often the nucleus."
+    exemple: "Example: under a microscope, an onion skin cell shows a cell wall, a membrane, cytoplasm and a nucleus."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What do an oak tree, a cat, a mushroom and a bacterium have in common?"
+      nom: "They are all made of cells."
+      explication: "The cell is the unit shared by all living things, from the smallest to the biggest."
+      pieges:
+        - { texte: "They all have bones.", pourquoi: "The oak, the mushroom and the bacterium have no bones." }
+        - { texte: "They all have leaves.", pourquoi: "Only plants, like the oak, have leaves." }
+    - texte: "Which instrument do you need to see most cells?"
+      nom: "A microscope."
+      explication: "Most cells are too small for the naked eye: we look at them under a microscope."
+      pieges:
+        - { texte: "A magnifying glass is always enough.", pourquoi: "A magnifying glass doesn't enlarge enough to show most cells in detail." }
+        - { texte: "A telescope.", pourquoi: "A telescope is for looking at very distant things, not very small ones." }
+    - texte: "Which part surrounds every cell and separates it from the outside?"
+      nom: "The membrane."
+      explication: "Every cell is bounded by a membrane, which surrounds the cytoplasm."
+      pieges:
+        - { texte: "The nucleus.", pourquoi: "The nucleus is inside the cell; it doesn't surround it." }
+        - { texte: "The cell wall.", pourquoi: "Plant cells have a wall, but animal cells don't. Every cell has a membrane." }
+    - texte: "Which part is found in a leaf cell, but not in a cell from your cheek?"
+      nom: "The cell wall."
+      explication: "Plant cells have a stiff wall around the membrane. Animal cells don't."
+      pieges:
+        - { texte: "The nucleus.", pourquoi: "Your cheek cells have a nucleus too." }
+        - { texte: "The membrane.", pourquoi: "All cells have a membrane." }
+    - texte: "A living thing made of just one cell is called…"
+      nom: "A single-celled organism."
+      explication: "A bacterium, a yeast or a paramecium is made of just one cell: they are single-celled organisms."
+      pieges:
+        - { texte: "An object, not a living thing.", pourquoi: "One cell can be enough to live: to feed, grow and reproduce." }
+        - { texte: "A many-celled organism.", pourquoi: "Many-celled means « made of lots of cells », like us." }
+    - texte: "Is the human body made of one big cell?"
+      nom: "No, it's made of a huge number of cells."
+      explication: "We are many-celled: our body has thousands of billions of cells, of different kinds."
+      pieges:
+        - { texte: "Yes, one cell the size of the body.", pourquoi: "Under a microscope, skin or muscle shows lots of small cells." }
+        - { texte: "Only a few hundred cells.", pourquoi: "That's far too few: we're talking about thousands of billions." }
+    - texte: "What fills the cell, inside the membrane?"
+      nom: "The cytoplasm."
+      explication: "Cytoplasm fills the cell, inside the membrane. The nucleus, when there is one, is found in it."
+      pieges:
+        - { texte: "Empty space.", pourquoi: "A cell isn't hollow: it's full of cytoplasm." }
+        - { texte: "Blood.", pourquoi: "Blood contains cells, but the inside of a cell is cytoplasm." }
+    - texte: "Do bacteria have a nucleus?"
+      nom: "No, their cells have no nucleus."
+      explication: "A bacterial cell has a membrane and cytoplasm, but no nucleus. It's still alive."
+      pieges:
+        - { texte: "Yes, like every cell.", pourquoi: "Not all cells have a nucleus: bacteria don't." }
+        - { texte: "No, because they aren't living things.", pourquoi: "Bacteria are alive, even without a nucleus." }
+    - texte: "Why do we say the cell is the building block of life?"
+      nom: "Because all living things are built from cells."
+      explication: "Just as a wall is made of bricks, each living thing is made of one or more cells."
+      pieges:
+        - { texte: "Because cells are as hard as bricks.", pourquoi: "The comparison is about how they fit together, not hardness." }
+        - { texte: "Because only animals' homes are made of cells.", pourquoi: "It's the living things themselves that are made of cells." }

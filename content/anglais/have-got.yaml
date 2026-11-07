@@ -1,0 +1,154 @@
+id: have-got
+titre: "Avoir : have got, has got"
+niveau: CM2
+prerequis: [to-be]
+programme: { source: lver_c3, texte: "CM2 : nommer, caractériser, dénombrer simplement des personnes, des objets, des lieux." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "En anglais britannique, « have got » veut dire « avoir ». Avec he, she, it : « has got ». Formes courtes : « I've got », « she's got »."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Regarde le sujet : avec he, she, it ou un seul prénom, c'est « has got » ; sinon, « have got »."
+  exemple: "« My brother … got a cat. » « my brother », c'est « he » : « My brother has got a cat. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … got a bike. »"
+    nom: "have"
+    explication: "Avec « I », on dit « have got » : « I have got a bike. »"
+    pieges:
+      - { texte: "has", pourquoi: "« has » va avec he, she, it. Avec « I » : « have got »." }
+      - { texte: "am", pourquoi: "« am » vient de « be », être. Pour « avoir » : « have got »." }
+  - texte: "Complète : « She … got blue eyes. »"
+    nom: "has"
+    explication: "Avec « she », on dit « has got » : « She has got blue eyes. »"
+    pieges:
+      - { texte: "have", pourquoi: "Avec « she », « have » devient « has »." }
+      - { texte: "is", pourquoi: "« is » vient de « be », être. Pour « avoir » : « has got »." }
+  - texte: "Complète : « They … got a dog. »"
+    nom: "have"
+    explication: "Avec « they », on dit « have got » : « They have got a dog. »"
+    pieges:
+      - { texte: "has", pourquoi: "« has » va avec he, she, it. « they », ce sont plusieurs : « have »." }
+      - { texte: "are", pourquoi: "« are » vient de « be », être. Pour « avoir » : « have got »." }
+  - texte: "Complète : « My grandma … got a garden. »"
+    nom: "has"
+    explication: "« my grandma », c'est « she » : « My grandma has got a garden. »"
+    pieges:
+      - { texte: "have", pourquoi: "« my grandma », c'est « she » : avec she, on dit « has »." }
+      - { texte: "had", pourquoi: "« had » est le passé. Ici, on parle du présent : « has got »." }
+  - texte: "Complète : « He … got a computer. » (il n'a pas)"
+    nom: "hasn't"
+    explication: "Avec « he », la négation est « hasn't got » : « He hasn't got a computer. »"
+    pieges:
+      - { texte: "haven't", pourquoi: "« haven't » va avec I, you, we, they. Avec « he » : « hasn't got »." }
+      - { texte: "doesn't", pourquoi: "Avec « got », la négation est « hasn't got ». « doesn't » irait avec « have » sans « got » : « He doesn't have a computer »." }
+  - texte: "Complète : « We … got a car. » (nous n'avons pas)"
+    nom: "haven't"
+    explication: "Avec « we », la négation est « haven't got » : « We haven't got a car. »"
+    pieges:
+      - { texte: "hasn't", pourquoi: "« hasn't » va avec he, she, it. Avec « we » : « haven't got »." }
+      - { texte: "aren't", pourquoi: "« aren't » vient de « be », être. Pour « avoir » : « haven't got »." }
+  - texte: "Complète : « … you got a pet? »"
+    nom: "Have"
+    explication: "Avec « got », la question commence par « Have » : « Have you got a pet? »"
+    pieges:
+      - { texte: "Has", pourquoi: "« Has » va avec he, she, it. Avec « you » : « Have you got… ? »" }
+      - { texte: "Do", pourquoi: "Avec « got », la question commence par « Have ». « Do » irait sans « got » : « Do you have a pet? »" }
+  - texte: "Que veut dire « I've got » ?"
+    nom: "I have got : j'ai"
+    explication: "« I've » est la forme courte de « I have » : « I've got » veut dire « j'ai »."
+    pieges:
+      - { texte: "I am : je suis", pourquoi: "La forme courte de « I am » est « I'm ». « I've » vient de « I have »." }
+      - { texte: "I will : je vais", pourquoi: "La forme courte de « I will » est « I'll ». « I've » vient de « I have »." }
+  - texte: "Pourquoi dit-on « she has got », avec « has » ?"
+    nom: "Avec he, she, it, « have » devient « has »."
+    explication: "À la 3e personne du singulier, he, she, it, « have » devient « has »."
+    pieges:
+      - { texte: "Parce que « she » est une fille.", pourquoi: "Non : on dit aussi « he has got » et « it has got ». C'est la 3e personne du singulier qui compte." }
+      - { texte: "Parce que « has » est le passé de « have ».", pourquoi: "Non : le passé de « have » est « had ». « has » est du présent." }
+en:
+  titre: "Have got, has got"
+  idee: "In British English, “have got” means to own or to have. With he, she and it: has got. Short forms: I've got, she's got."
+  phrases:
+    consigne: "Read the sentence, then touch the right form."
+    question: "{texte}"
+    indice: "Look at the subject: with he, she, it or one name, it's has got; otherwise, have got."
+    exemple: "“My brother … got a cat.” My brother is he: “My brother has got a cat.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … got a bike.”"
+      nom: "have"
+      explication: "With I, we say have got: “I have got a bike.”"
+      pieges:
+        - texte: "has"
+          pourquoi: "“has” goes with he, she and it. With I: have got."
+        - texte: "am"
+          pourquoi: "“am” comes from be. To own something: have got."
+    - texte: "Complete: “She … got blue eyes.”"
+      nom: "has"
+      explication: "With she, we say has got: “She has got blue eyes.”"
+      pieges:
+        - texte: "have"
+          pourquoi: "With she, have becomes has."
+        - texte: "is"
+          pourquoi: "“is” comes from be. To own something: has got."
+    - texte: "Complete: “They … got a dog.”"
+      nom: "have"
+      explication: "With they, we say have got: “They have got a dog.”"
+      pieges:
+        - texte: "has"
+          pourquoi: "“has” goes with he, she and it. They means several: have."
+        - texte: "are"
+          pourquoi: "“are” comes from be. To own something: have got."
+    - texte: "Complete: “My grandma … got a garden.”"
+      nom: "has"
+      explication: "My grandma is she: “My grandma has got a garden.”"
+      pieges:
+        - texte: "have"
+          pourquoi: "My grandma is she: with she, we say has."
+        - texte: "had"
+          pourquoi: "“had” is the past. This sentence is about now: has got."
+    - texte: "Complete: “He … got a computer.” (negative)"
+      nom: "hasn't"
+      explication: "With he, the negative is hasn't got: “He hasn't got a computer.”"
+      pieges:
+        - texte: "haven't"
+          pourquoi: "“haven't” goes with I, you, we and they. With he: hasn't got."
+        - texte: "doesn't"
+          pourquoi: "With got, the negative is hasn't got. Doesn't goes with have without got: “He doesn't have a computer.”"
+    - texte: "Complete: “We … got a car.” (negative)"
+      nom: "haven't"
+      explication: "With we, the negative is haven't got: “We haven't got a car.”"
+      pieges:
+        - texte: "hasn't"
+          pourquoi: "“hasn't” goes with he, she and it. With we: haven't got."
+        - texte: "aren't"
+          pourquoi: "“aren't” comes from be. To own something: haven't got."
+    - texte: "Complete: “… you got a pet?”"
+      nom: "Have"
+      explication: "With got, the question starts with Have: “Have you got a pet?”"
+      pieges:
+        - texte: "Has"
+          pourquoi: "“Has” goes with he, she and it. With you: Have you got…?"
+        - texte: "Do"
+          pourquoi: "With got, the question starts with Have. Do goes without got: “Do you have a pet?”"
+    - texte: "What does “I've got” stand for?"
+      nom: "I have got"
+      explication: "“I've” is the short form of “I have”."
+      pieges:
+        - texte: "I am"
+          pourquoi: "The short form of “I am” is “I'm”. “I've” comes from “I have”."
+        - texte: "I will"
+          pourquoi: "The short form of “I will” is “I'll”. “I've” comes from “I have”."
+    - texte: "Why do we say “she has got”, with has?"
+      nom: "With he, she and it, have becomes has."
+      explication: "In the third person singular, he, she, it, have becomes has."
+      pieges:
+        - texte: "Because she is a girl."
+          pourquoi: "No: we also say “he has got” and “it has got”. It's the third person singular that matters."
+        - texte: "Because has is the past of have."
+          pourquoi: "No: the past of have is had. Has is the present."

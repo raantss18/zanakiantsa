@@ -1,0 +1,137 @@
+id: accord-groupe-nominal
+titre: "L’accord dans le groupe nominal"
+niveau: CE2
+prerequis: ["pluriel-noms"]
+programme: { source: cycle2, texte: "Repérer, comprendre et mettre en œuvre les marques d’accord au sein du groupe nominal." }
+activite: quiz
+parametres: {}
+idee: "Dans le groupe nominal, le déterminant et l’adjectif s’accordent avec le nom : féminin, on ajoute souvent -e ; pluriel, on ajoute souvent -s. Des fleurs jolies, un chat noir."
+phrases:
+  consigne: "Trouve le nom, regarde s’il est masculin ou féminin, singulier ou pluriel, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Le nom est-il féminin ? Au pluriel ? L’adjectif prend les mêmes marques."
+  exemple: "« des fleurs (joli) » : « fleurs » est féminin et pluriel, donc -e et -s : des fleurs jolies."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Accorde l’adjectif : « des fleurs (joli) »"
+    nom: "jolies"
+    explication: "« fleurs » est féminin et pluriel : on ajoute -e et -s."
+    pieges:
+      - { texte: "jolis", pourquoi: "« fleurs » est féminin : il faut aussi le -e." }
+      - { texte: "jolie", pourquoi: "Il y a plusieurs fleurs : il faut aussi le -s du pluriel." }
+  - texte: "Accorde l’adjectif : « un chat (noir) »"
+    nom: "noir"
+    explication: "« chat » est masculin et singulier : l’adjectif ne prend pas de marque."
+    pieges:
+      - { texte: "noire", pourquoi: "« chat » est masculin : pas de -e." }
+      - { texte: "noirs", pourquoi: "Il n’y a qu’un chat : pas de -s." }
+  - texte: "Accorde l’adjectif : « une robe (vert) »"
+    nom: "verte"
+    explication: "« robe » est féminin et singulier : on ajoute -e."
+    pieges:
+      - { texte: "vert", pourquoi: "« robe » est féminin : il faut le -e." }
+      - { texte: "verts", pourquoi: "« robe » est féminin et singulier : -e, pas -s." }
+  - texte: "Accorde l’adjectif : « les (grand) arbres »"
+    nom: "grands"
+    explication: "« arbres » est masculin et pluriel : on ajoute -s."
+    pieges:
+      - { texte: "grand", pourquoi: "Il y a plusieurs arbres : il faut le -s du pluriel." }
+      - { texte: "grandes", pourquoi: "« arbres » est masculin : pas de -e." }
+  - texte: "Accorde l’adjectif : « une fille (joyeux) »"
+    nom: "joyeuse"
+    explication: "Au féminin, -eux devient -euse : une fille joyeuse."
+    pieges:
+      - { texte: "joyeux", pourquoi: "« fille » est féminin : -eux devient -euse." }
+      - { texte: "joyeuses", pourquoi: "Il n’y a qu’une fille : pas de -s." }
+  - texte: "Accorde l’adjectif : « des chiens (gentil) »"
+    nom: "gentils"
+    explication: "« chiens » est masculin et pluriel : on ajoute -s."
+    pieges:
+      - { texte: "gentil", pourquoi: "Il y a plusieurs chiens : il faut le -s du pluriel." }
+      - { texte: "gentilles", pourquoi: "« chiens » est masculin : pas de marque du féminin." }
+  - texte: "Accorde l’adjectif : « ma (petit) sœur »"
+    nom: "petite"
+    explication: "« sœur » est féminin et singulier : on ajoute -e."
+    pieges:
+      - { texte: "petit", pourquoi: "« sœur » est féminin : il faut le -e." }
+      - { texte: "petites", pourquoi: "Il n’y a qu’une sœur : pas de -s." }
+  - texte: "Choisis le déterminant : « ___ pommes rouges »"
+    nom: "les"
+    explication: "« pommes » est au pluriel : il faut un déterminant pluriel, « les »."
+    pieges:
+      - { texte: "la", pourquoi: "« la » est singulier ; « pommes » est au pluriel : « les »." }
+      - { texte: "le", pourquoi: "« le » est masculin singulier ; « pommes » est féminin pluriel : « les »." }
+  - texte: "Pourquoi écrit-on « des voitures rapides » avec un -s à « rapides » ?"
+    nom: "L’adjectif s’accorde avec le nom « voitures », au pluriel."
+    explication: "C’est le nom qui donne ses marques à l’adjectif : « voitures » est au pluriel."
+    pieges:
+      - { texte: "Parce que les voitures roulent vite.", pourquoi: "Le sens ne décide pas de l’accord : c’est le nombre du nom qui décide." }
+      - { texte: "Parce que « rapides » est un verbe.", pourquoi: "« rapides » est un adjectif : il dit comment sont les voitures." }
+
+en:
+  langue: "fr"
+  titre: "French: agreement in the noun phrase"
+  idee: "In a French noun phrase, the determiner and the adjective agree with the noun: feminine often adds « -e », plural often adds « -s ». « Des fleurs jolies », « un chat noir »."
+  phrases:
+    consigne: "Find the noun, check if it's masculine or feminine, singular or plural, then touch the right form."
+    question: "{texte}"
+    indice: "Is the noun feminine? Plural? The adjective takes the same endings."
+    exemple: "« des fleurs (joli) »: « fleurs » is feminine and plural, so add « e » and « s »: « des fleurs jolies »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Make the adjective agree: « des fleurs (joli) »"
+      nom: "jolies"
+      explication: "« fleurs » is feminine and plural: add « e » and « s »."
+      pieges:
+        - { texte: "jolis", pourquoi: "« fleurs » is feminine: it also needs the « e »." }
+        - { texte: "jolie", pourquoi: "There are several flowers: it also needs the plural « s »." }
+    - texte: "Make the adjective agree: « un chat (noir) »"
+      nom: "noir"
+      explication: "« chat » is masculine and singular: the adjective takes no ending."
+      pieges:
+        - { texte: "noire", pourquoi: "« chat » is masculine: no « e »." }
+        - { texte: "noirs", pourquoi: "There's only one cat: no « s »." }
+    - texte: "Make the adjective agree: « une robe (vert) »"
+      nom: "verte"
+      explication: "« robe » is feminine and singular: add « e »."
+      pieges:
+        - { texte: "vert", pourquoi: "« robe » is feminine: it needs the « e »." }
+        - { texte: "verts", pourquoi: "« robe » is feminine and singular: « e », not « s »." }
+    - texte: "Make the adjective agree: « les (grand) arbres »"
+      nom: "grands"
+      explication: "« arbres » is masculine and plural: add « s »."
+      pieges:
+        - { texte: "grand", pourquoi: "There are several trees: it needs the plural « s »." }
+        - { texte: "grandes", pourquoi: "« arbres » is masculine: no « e »." }
+    - texte: "Make the adjective agree: « une fille (joyeux) »"
+      nom: "joyeuse"
+      explication: "In the feminine, « -eux » becomes « -euse »: « une fille joyeuse »."
+      pieges:
+        - { texte: "joyeux", pourquoi: "« fille » is feminine: « -eux » becomes « -euse »." }
+        - { texte: "joyeuses", pourquoi: "There's only one girl: no « s »." }
+    - texte: "Make the adjective agree: « des chiens (gentil) »"
+      nom: "gentils"
+      explication: "« chiens » is masculine and plural: add « s »."
+      pieges:
+        - { texte: "gentil", pourquoi: "There are several dogs: it needs the plural « s »." }
+        - { texte: "gentilles", pourquoi: "« chiens » is masculine: no feminine ending." }
+    - texte: "Make the adjective agree: « ma (petit) sœur »"
+      nom: "petite"
+      explication: "« sœur » is feminine and singular: add « e »."
+      pieges:
+        - { texte: "petit", pourquoi: "« sœur » is feminine: it needs the « e »." }
+        - { texte: "petites", pourquoi: "There's only one sister: no « s »." }
+    - texte: "Choose the determiner: « ___ pommes rouges »"
+      nom: "les"
+      explication: "« pommes » is plural: it needs a plural determiner, « les »."
+      pieges:
+        - { texte: "la", pourquoi: "« la » is singular; « pommes » is plural: « les »." }
+        - { texte: "le", pourquoi: "« le » is masculine singular; « pommes » is feminine plural: « les »." }
+    - texte: "Why does « rapides » have an « s » in « des voitures rapides »?"
+      nom: "The adjective agrees with the noun « voitures », which is plural."
+      explication: "The noun gives its endings to the adjective: « voitures » is plural."
+      pieges:
+        - { texte: "Because the cars go fast.", pourquoi: "The meaning doesn't decide the agreement: the number of the noun does." }
+        - { texte: "Because « rapides » is a verb.", pourquoi: "« rapides » is an adjective: it says what the cars are like." }

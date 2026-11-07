@@ -1,0 +1,137 @@
+id: relatives-dont
+titre: "Les relatives : dont, auquel, duquel"
+niveau: 2de
+prerequis: ["subordonnees"]
+programme: { source: lycee2de, texte: "On travaille en priorité la compréhension de la structure des relatives (notamment celles qui sont introduites par dont, auquel, duquel, etc.), en insistant, par exemple, sur ce qui les distingue des subordonnées conjonctives." }
+activite: quiz
+parametres: {}
+idee: "Le pronom relatif dépend de la construction du verbe : parler de quelque chose → dont ; penser à quelque chose → auquel ; au milieu de quelque chose → duquel."
+phrases:
+  consigne: "Cherche la construction du verbe ou de la préposition, puis touche le bon pronom ou la bonne nature."
+  question: "{texte}"
+  indice: "Remets l’antécédent dans la relative : parle-t-on DE lui, À lui, ou au milieu DE lui ?"
+  exemple: "« C’est le livre ___ je t’ai parlé » : je t’ai parlé DE ce livre, donc « dont »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète : « C’est le livre ___ je t’ai parlé. »"
+    nom: "dont"
+    explication: "On parle DE quelque chose : « dont » remplace un complément introduit par « de »."
+    pieges:
+      - { texte: "que", pourquoi: "« que » remplace un COD ; on parle DE ce livre : il faut « dont »." }
+      - { texte: "auquel", pourquoi: "« auquel » remplace « à + nom » ; on parle DE ce livre : « dont »." }
+  - texte: "Complète : « Voici l’outil ___ j’ai besoin. »"
+    nom: "dont"
+    explication: "On a besoin DE quelque chose : « dont »."
+    pieges:
+      - { texte: "que", pourquoi: "« que » remplace un COD ; on a besoin DE l’outil : « dont »." }
+      - { texte: "où", pourquoi: "« où » reprend un lieu ou un moment ; on a besoin DE l’outil : « dont »." }
+  - texte: "Complète : « Le projet ___ je pense est ambitieux. »"
+    nom: "auquel"
+    explication: "On pense À quelque chose : à + lequel = « auquel »."
+    pieges:
+      - { texte: "dont", pourquoi: "« dont » remplace « de + nom » ; on pense À ce projet : « auquel »." }
+      - { texte: "que", pourquoi: "« que » remplace un COD ; on pense À ce projet : « auquel »." }
+  - texte: "Complète : « Le concours ___ elle participe commence demain. »"
+    nom: "auquel"
+    explication: "On participe À quelque chose : à + lequel = « auquel »."
+    pieges:
+      - { texte: "dont", pourquoi: "« dont » remplace « de + nom » ; on participe À un concours : « auquel »." }
+      - { texte: "duquel", pourquoi: "« duquel » contient « de » ; on participe À un concours : « auquel »." }
+  - texte: "Complète : « Le parc au milieu ___ se trouve une fontaine. »"
+    nom: "duquel"
+    explication: "« au milieu de » + lequel = « au milieu duquel »."
+    pieges:
+      - { texte: "dont", pourquoi: "« dont » ne peut pas compléter un nom placé après une préposition comme « au milieu de » : on emploie « duquel »." }
+      - { texte: "auquel", pourquoi: "« au milieu de » contient « de », pas « à » : « duquel »." }
+  - texte: "Complète : « La personne ___ je pense est ma sœur. »"
+    nom: "à qui"
+    explication: "On pense À quelqu’un : pour une personne, « à qui » convient."
+    pieges:
+      - { texte: "dont", pourquoi: "« dont » remplace « de + nom » ; on pense À cette personne." }
+      - { texte: "que", pourquoi: "« que » remplace un COD ; on pense À cette personne." }
+  - texte: "Dans « L’idée que tu proposes est bonne. », quelle est la nature de « que » ?"
+    nom: "un pronom relatif"
+    explication: "« que » reprend « l’idée » et il est COD de « proposes » : c’est un pronom relatif."
+    pieges:
+      - { texte: "une conjonction de subordination", pourquoi: "Une conjonction ne reprend aucun nom ; ici « que » reprend « l’idée »." }
+      - { texte: "un adverbe", pourquoi: "« que » reprend un nom et a une fonction dans la relative : c’est un pronom." }
+  - texte: "Dans « Je sais que tu viendras. », quelle est la nature de « que » ?"
+    nom: "une conjonction de subordination"
+    explication: "« que » ne reprend aucun nom et n’a pas de fonction dans la subordonnée : c’est une conjonction."
+    pieges:
+      - { texte: "un pronom relatif", pourquoi: "Un pronom relatif reprend un antécédent ; ici, « que » ne reprend aucun nom." }
+      - { texte: "un adverbe", pourquoi: "« que » introduit une subordonnée COD de « sais » : c’est une conjonction." }
+  - texte: "Pourquoi écrit-on « la ville dont je rêve » ?"
+    nom: "On rêve DE quelque chose : « dont » remplace un complément en « de »."
+    explication: "Je rêve de cette ville : le complément commence par « de », d’où « dont »."
+    pieges:
+      - { texte: "Parce que « ville » est féminin.", pourquoi: "Le genre ne compte pas : « dont » ne varie pas." }
+      - { texte: "Parce que « dont » reprend toujours un lieu.", pourquoi: "Pour un lieu, on emploie souvent « où » ; « dont » remplace un complément en « de »." }
+
+en:
+  langue: "fr"
+  titre: "French: relative clauses with « dont », « auquel », « duquel »"
+  idee: "The relative pronoun depends on how the verb is built: « parler de » something → « dont »; « penser à » something → « auquel »; « au milieu de » something → « duquel »."
+  phrases:
+    consigne: "Look at how the verb or preposition is built, then touch the right pronoun or word type."
+    question: "{texte}"
+    indice: "Put the antecedent back in the clause: do we say « de » it, « à » it, or « au milieu de » it?"
+    exemple: "« C’est le livre ___ je t’ai parlé »: « je t’ai parlé DE ce livre », so « dont »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Fill in: « C’est le livre ___ je t’ai parlé. »"
+      nom: "dont"
+      explication: "We say « parler DE » something: « dont » stands for a complement introduced by « de »."
+      pieges:
+        - { texte: "que", pourquoi: "« que » stands for a direct object; we say « parler DE ce livre »: « dont »." }
+        - { texte: "auquel", pourquoi: "« auquel » stands for « à + noun »; we say « parler DE ce livre »: « dont »." }
+    - texte: "Fill in: « Voici l’outil ___ j’ai besoin. »"
+      nom: "dont"
+      explication: "We say « avoir besoin DE » something: « dont »."
+      pieges:
+        - { texte: "que", pourquoi: "« que » stands for a direct object; we say « avoir besoin DE l’outil »: « dont »." }
+        - { texte: "où", pourquoi: "« où » refers to a place or a time; we say « avoir besoin DE l’outil »: « dont »." }
+    - texte: "Fill in: « Le projet ___ je pense est ambitieux. »"
+      nom: "auquel"
+      explication: "We say « penser À » something: « à + lequel » = « auquel »."
+      pieges:
+        - { texte: "dont", pourquoi: "« dont » stands for « de + noun »; we say « penser À ce projet »: « auquel »." }
+        - { texte: "que", pourquoi: "« que » stands for a direct object; we say « penser À ce projet »: « auquel »." }
+    - texte: "Fill in: « Le concours ___ elle participe commence demain. »"
+      nom: "auquel"
+      explication: "We say « participer À » something: « à + lequel » = « auquel »."
+      pieges:
+        - { texte: "dont", pourquoi: "« dont » stands for « de + noun »; we say « participer À un concours »: « auquel »." }
+        - { texte: "duquel", pourquoi: "« duquel » contains « de »; we say « participer À un concours »: « auquel »." }
+    - texte: "Fill in: « Le parc au milieu ___ se trouve une fontaine. »"
+      nom: "duquel"
+      explication: "« au milieu de » + « lequel » = « au milieu duquel »."
+      pieges:
+        - { texte: "dont", pourquoi: "« dont » can't complete a noun that comes after a preposition like « au milieu de »: use « duquel »." }
+        - { texte: "auquel", pourquoi: "« au milieu de » contains « de », not « à »: « duquel »." }
+    - texte: "Fill in: « La personne ___ je pense est ma sœur. »"
+      nom: "à qui"
+      explication: "We say « penser À » someone: for a person, « à qui » works."
+      pieges:
+        - { texte: "dont", pourquoi: "« dont » stands for « de + noun »; we say « penser À cette personne »." }
+        - { texte: "que", pourquoi: "« que » stands for a direct object; we say « penser À cette personne »." }
+    - texte: "In « L’idée que tu proposes est bonne. », what kind of word is « que »?"
+      nom: "a relative pronoun"
+      explication: "« que » stands for « l’idée » and is the object of « proposes »: it's a relative pronoun."
+      pieges:
+        - { texte: "a subordinating conjunction", pourquoi: "A conjunction doesn't stand for a noun; here « que » stands for « l’idée »." }
+        - { texte: "an adverb", pourquoi: "« que » stands for a noun and has a role in the clause: it's a pronoun." }
+    - texte: "In « Je sais que tu viendras. », what kind of word is « que »?"
+      nom: "a subordinating conjunction"
+      explication: "« que » stands for no noun and has no role inside the clause: it's a conjunction."
+      pieges:
+        - { texte: "a relative pronoun", pourquoi: "A relative pronoun stands for an antecedent; here « que » stands for no noun." }
+        - { texte: "an adverb", pourquoi: "« que » introduces a clause that is the object of « sais »: it's a conjunction." }
+    - texte: "Why do we write « la ville dont je rêve »?"
+      nom: "We say « rêver DE » something: « dont » stands for a « de » complement."
+      explication: "« Je rêve de cette ville »: the complement starts with « de », hence « dont »."
+      pieges:
+        - { texte: "Because « ville » is feminine.", pourquoi: "Gender doesn't matter: « dont » never changes." }
+        - { texte: "Because « dont » always refers to a place.", pourquoi: "For a place we often use « où »; « dont » stands for a « de » complement." }

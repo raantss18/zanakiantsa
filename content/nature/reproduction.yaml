@@ -1,0 +1,124 @@
+id: reproduction
+titre: "Reproduction sexuée et asexuée"
+niveau: 4e
+prerequis: [cellule]
+programme: { source: c4, texte: "Relier des éléments de biologie de la reproduction sexuée et asexuée des êtres vivants et l’influence du milieu sur la survie des individus, à la dynamique des populations." }
+activite: quiz
+parametres: {}
+idee: "Reproduction sexuée : deux gamètes, un mâle et un femelle, s'unissent ; c'est la fécondation. Reproduction asexuée : un seul parent donne des descendants qui lui sont identiques."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi : y a-t-il rencontre de deux gamètes, ou un seul parent suffit-il ?"
+  exemple: "Exemple : un fraisier produit des tiges rampantes, les stolons, qui donnent de nouveaux fraisiers identiques. Un seul parent : c'est une reproduction asexuée."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Comment appelle-t-on l'union d'un gamète mâle et d'un gamète femelle ?"
+    nom: "La fécondation."
+    explication: "La fécondation unit deux gamètes : elle forme une cellule-œuf, à l'origine d'un nouvel individu."
+    pieges:
+      - { texte: "La pollinisation.", pourquoi: "La pollinisation transporte le pollen jusqu'au pistil ; la fécondation vient après." }
+      - { texte: "La germination.", pourquoi: "La germination, c'est la graine qui se met à pousser." }
+  - texte: "Quels sont les gamètes chez les humains ?"
+    nom: "Le spermatozoïde et l'ovule."
+    explication: "Le spermatozoïde est le gamète mâle, l'ovule le gamète femelle."
+    pieges:
+      - { texte: "Le pollen et l'ovule.", pourquoi: "Le pollen concerne les plantes à fleurs, pas les humains." }
+      - { texte: "Les globules rouges et blancs.", pourquoi: "Ce sont des cellules du sang, pas des gamètes." }
+  - texte: "On plante dans la terre un morceau de tige de géranium, et il donne une nouvelle plante. Quel type de reproduction est-ce ?"
+    nom: "Une reproduction asexuée, par bouturage."
+    explication: "Un seul parent suffit, sans fécondation : la nouvelle plante est identique à la plante de départ."
+    pieges:
+      - { texte: "Une reproduction sexuée.", pourquoi: "Il n'y a pas de rencontre de gamètes : un morceau de tige suffit." }
+      - { texte: "Ce n'est pas une reproduction.", pourquoi: "Un nouvel individu est apparu : c'est bien une reproduction." }
+  - texte: "Pourquoi les enfants d'un même couple ne sont-ils pas tous identiques ?"
+    nom: "Parce que chaque fécondation réunit des gamètes différents."
+    explication: "La reproduction sexuée mélange l'information génétique des deux parents d'une façon différente à chaque fois : elle crée de la diversité."
+    pieges:
+      - { texte: "Parce qu'ils ne mangent pas la même chose.", pourquoi: "L'alimentation joue sur la croissance, mais les différences de départ viennent des gamètes." }
+      - { texte: "Ils sont tous identiques, sauf les vrais jumeaux.", pourquoi: "C'est l'inverse : seuls les vrais jumeaux viennent de la même cellule-œuf." }
+  - texte: "Chez beaucoup de poissons, la femelle pond ses ovules dans l'eau et le mâle y libère ses spermatozoïdes. Où se fait la fécondation ?"
+    nom: "Dans l'eau, hors du corps de la femelle."
+    explication: "C'est une fécondation externe. Elle se fait en milieu aquatique, où les gamètes peuvent se rencontrer."
+    pieges:
+      - { texte: "Dans le ventre de la femelle.", pourquoi: "Ici, les gamètes sont libérés dans l'eau : la fécondation est externe." }
+      - { texte: "Il n'y a pas de fécondation.", pourquoi: "Il y a bien rencontre des gamètes, mais dans l'eau." }
+  - texte: "Une grenouille pond des milliers d'œufs. Pourquoi si peu deviennent-ils des adultes ?"
+    nom: "Beaucoup sont mangés ou ne survivent pas aux conditions du milieu."
+    explication: "Prédateurs, froid, sécheresse : le milieu influence la survie. Pondre beaucoup compense ces pertes."
+    pieges:
+      - { texte: "Parce que la plupart des œufs sont vides.", pourquoi: "Les œufs fécondés contiennent un embryon ; c'est la survie qui est difficile." }
+      - { texte: "Ils deviennent tous adultes.", pourquoi: "Sinon, les mares déborderaient de grenouilles !" }
+  - texte: "Le fraisier se reproduit par stolons et aussi par graines. Qu'apportent les graines de plus ?"
+    nom: "Des descendants différents, issus d'une fécondation."
+    explication: "Les graines viennent d'une reproduction sexuée : elles créent de la diversité, utile si le milieu change."
+    pieges:
+      - { texte: "Des copies identiques au parent.", pourquoi: "Ce sont les stolons qui donnent des copies identiques." }
+      - { texte: "Rien, c'est la même chose.", pourquoi: "Les deux modes ne donnent pas le même résultat : diversité d'un côté, copies identiques de l'autre." }
+  - texte: "Que contient le noyau des gamètes ?"
+    nom: "La moitié de l'information génétique de chaque parent."
+    explication: "Chaque gamète apporte la moitié des chromosomes. À la fécondation, la cellule-œuf retrouve un nombre complet."
+    pieges:
+      - { texte: "Toute l'information génétique du parent.", pourquoi: "Si c'était le cas, le nombre de chromosomes doublerait à chaque génération." }
+      - { texte: "Rien, ce sont des cellules vides.", pourquoi: "Les gamètes portent l'information génétique transmise aux descendants." }
+
+en:
+  titre: "Sexual and asexual reproduction"
+  idee: "Sexual reproduction: two sex cells, a male and a female one, join; that's fertilisation. Asexual reproduction: one parent gives offspring identical to itself."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Ask yourself: do two sex cells meet, or is one parent enough?"
+    exemple: "Example: a strawberry plant grows creeping stems, runners, which become new identical plants. One parent: that's asexual reproduction."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What do we call the joining of a male and a female sex cell?"
+      nom: "Fertilisation."
+      explication: "Fertilisation joins two sex cells: it makes a fertilised egg cell, the start of a new individual."
+      pieges:
+        - { texte: "Pollination.", pourquoi: "Pollination carries pollen to the pistil; fertilisation comes after." }
+        - { texte: "Germination.", pourquoi: "Germination is when a seed starts to grow." }
+    - texte: "What are the sex cells in humans?"
+      nom: "The sperm cell and the egg cell."
+      explication: "The sperm cell is the male sex cell, the egg cell is the female sex cell."
+      pieges:
+        - { texte: "Pollen and the egg cell.", pourquoi: "Pollen is for flowering plants, not humans." }
+        - { texte: "Red and white blood cells.", pourquoi: "Those are blood cells, not sex cells." }
+    - texte: "We plant a piece of geranium stem in soil, and it grows into a new plant. What kind of reproduction is it?"
+      nom: "Asexual reproduction, by a cutting."
+      explication: "One parent is enough, with no fertilisation: the new plant is identical to the first one."
+      pieges:
+        - { texte: "Sexual reproduction.", pourquoi: "No sex cells meet: a piece of stem is enough." }
+        - { texte: "It isn't reproduction.", pourquoi: "A new individual has appeared: it is reproduction." }
+    - texte: "Why aren't the children of the same couple all identical?"
+      nom: "Because each fertilisation joins different sex cells."
+      explication: "Sexual reproduction mixes both parents' genetic information differently each time: it creates variety."
+      pieges:
+        - { texte: "Because they don't eat the same things.", pourquoi: "Food affects growth, but the differences at the start come from the sex cells." }
+        - { texte: "They're all identical, except identical twins.", pourquoi: "It's the other way round: only identical twins come from the same fertilised egg." }
+    - texte: "In many fish, the female lays her eggs in the water and the male releases his sperm there. Where does fertilisation happen?"
+      nom: "In the water, outside the female's body."
+      explication: "That's external fertilisation. It happens in water, where the sex cells can meet."
+      pieges:
+        - { texte: "Inside the female's body.", pourquoi: "Here, the sex cells are released into the water: fertilisation is external." }
+        - { texte: "There's no fertilisation.", pourquoi: "The sex cells do meet, but in the water." }
+    - texte: "A frog lays thousands of eggs. Why do so few become adults?"
+      nom: "Many are eaten or don't survive the conditions around them."
+      explication: "Predators, cold, drought: the environment affects survival. Laying lots of eggs makes up for these losses."
+      pieges:
+        - { texte: "Because most eggs are empty.", pourquoi: "Fertilised eggs contain an embryo; it's surviving that's hard." }
+        - { texte: "They all become adults.", pourquoi: "If they did, ponds would overflow with frogs!" }
+    - texte: "Strawberry plants reproduce by runners and also by seeds. What extra do seeds bring?"
+      nom: "Different offspring, from fertilisation."
+      explication: "Seeds come from sexual reproduction: they create variety, useful if the environment changes."
+      pieges:
+        - { texte: "Copies identical to the parent.", pourquoi: "It's the runners that give identical copies." }
+        - { texte: "Nothing, it's the same thing.", pourquoi: "The two ways don't give the same result: variety on one side, identical copies on the other." }
+    - texte: "What does the nucleus of a sex cell contain?"
+      nom: "Half of each parent's genetic information."
+      explication: "Each sex cell brings half the chromosomes. At fertilisation, the fertilised egg gets a full set again."
+      pieges:
+        - { texte: "All of the parent's genetic information.", pourquoi: "If it did, the number of chromosomes would double every generation." }
+        - { texte: "Nothing, they're empty cells.", pourquoi: "Sex cells carry the genetic information passed on to the offspring." }

@@ -1,0 +1,124 @@
+id: lire-carte
+titre: "Lire une carte"
+niveau: CM2
+prerequis: [continents-oceans]
+programme: { source: c3hg, texte: "Utiliser des cartes analogiques et numériques à différentes échelles, des photographies de paysages ou de lieux." }
+activite: quiz
+parametres: {}
+idee: "Pour lire une carte, on regarde son titre, sa légende (le sens des couleurs et des symboles), son échelle (les distances réelles) et son orientation (où est le nord)."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Titre, légende, échelle, orientation : ces quatre éléments aident à lire toute carte."
+  exemple: "Exemple : l'échelle dit 1 cm pour 2 km. Deux villages sont à 3 cm sur la carte : 3 fois 2 km, ils sont à 6 km l'un de l'autre."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "À quoi sert la légende d'une carte ?"
+    nom: "À expliquer ce que veulent dire les couleurs et les symboles."
+    explication: "La légende donne le sens de chaque couleur et de chaque symbole : forêt, route, ville, rivière…"
+    pieges:
+      - { texte: "À raconter une histoire sur le lieu.", pourquoi: "Ici, « légende » ne veut pas dire « conte » : c'est la clé pour lire la carte." }
+      - { texte: "À indiquer les distances.", pourquoi: "Les distances se calculent avec l'échelle." }
+  - texte: "L'échelle indique 1 cm pour 1 km. Deux villes sont à 5 cm sur la carte. Quelle est la distance réelle ?"
+    nom: "5 km."
+    explication: "Chaque centimètre représente 1 km : 5 cm représentent 5 km."
+    pieges:
+      - { texte: "5 cm.", pourquoi: "5 cm, c'est la distance sur la carte, pas sur le terrain." }
+      - { texte: "1 km.", pourquoi: "1 km correspond à 1 cm seulement : il faut multiplier par 5." }
+  - texte: "L'échelle indique 1 cm pour 10 km. Un lac mesure 3 cm de long sur la carte. Quelle est sa longueur réelle ?"
+    nom: "30 km."
+    explication: "3 fois 10 km font 30 km."
+    pieges:
+      - { texte: "13 km.", pourquoi: "On a additionné 3 et 10 : il faut multiplier." }
+      - { texte: "3 km.", pourquoi: "Chaque centimètre vaut 10 km, pas 1 km." }
+  - texte: "Sur la plupart des cartes, le nord est en haut. Où est l'est ?"
+    nom: "À droite."
+    explication: "Nord en haut, sud en bas, est à droite, ouest à gauche. La rose des vents le rappelle."
+    pieges:
+      - { texte: "À gauche.", pourquoi: "À gauche, c'est l'ouest quand le nord est en haut." }
+      - { texte: "En bas.", pourquoi: "En bas, c'est le sud." }
+  - texte: "Quelle carte montre le plus de détails sur ta rue ?"
+    nom: "Le plan de ta ville."
+    explication: "Plus la carte représente un petit espace, plus elle peut montrer de détails : rues, écoles, parcs."
+    pieges:
+      - { texte: "La carte de France.", pourquoi: "Elle montre un très grand espace : on n'y voit pas les rues." }
+      - { texte: "Le planisphère.", pourquoi: "Le planisphère représente le monde entier : ta rue y est invisible." }
+  - texte: "Sur une carte de relief, le vert foncé est en bas de la légende et le marron en haut. Où sont les montagnes ?"
+    nom: "Dans les zones marron."
+    explication: "Sur ce type de carte, la légende associe le marron aux altitudes élevées et le vert aux plaines basses."
+    pieges:
+      - { texte: "Dans les zones vertes, car il y a des forêts.", pourquoi: "Sur une carte de relief, le vert indique les basses altitudes, pas les forêts : c'est la légende qui le dit." }
+      - { texte: "Dans les zones bleues.", pourquoi: "Le bleu représente l'eau : mers, lacs, rivières." }
+  - texte: "Pourquoi faut-il toujours lire la légende avant d'interpréter une carte ?"
+    nom: "Parce que chaque carte choisit ses propres couleurs et symboles."
+    explication: "Une même couleur peut vouloir dire des choses différentes selon les cartes : la légende évite les erreurs."
+    pieges:
+      - { texte: "Parce que toutes les cartes utilisent les mêmes couleurs.", pourquoi: "Au contraire : les couleurs changent d'une carte à l'autre." }
+      - { texte: "Ce n'est pas utile, le titre suffit.", pourquoi: "Le titre dit le sujet, mais pas le sens des couleurs et des symboles." }
+  - texte: "Sur un plan, l'école est au-dessus de la mairie. Le nord est en haut. Où est l'école par rapport à la mairie ?"
+    nom: "Au nord."
+    explication: "Quand le nord est en haut du plan, ce qui est au-dessus se trouve au nord."
+    pieges:
+      - { texte: "Au sud.", pourquoi: "Le sud est en bas du plan." }
+      - { texte: "On ne peut pas savoir.", pourquoi: "On le sait grâce à l'orientation : le nord est en haut." }
+
+en:
+  titre: "Reading a map"
+  idee: "To read a map, look at its title, its key (what colours and symbols mean), its scale (real distances) and its orientation (where north is)."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Title, key, scale, orientation: these four help you read any map."
+    exemple: "Example: the scale says 1 cm for 2 km. Two villages are 3 cm apart on the map: 3 times 2 km, they are 6 km apart."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a map's key for?"
+      nom: "To explain what the colours and symbols mean."
+      explication: "The key gives the meaning of each colour and symbol: forest, road, town, river…"
+      pieges:
+        - { texte: "To tell a story about the place.", pourquoi: "In French, the key is called a « légende », but it isn't a tale: it's what unlocks the map." }
+        - { texte: "To show distances.", pourquoi: "Distances are worked out with the scale." }
+    - texte: "The scale says 1 cm for 1 km. Two towns are 5 cm apart on the map. What is the real distance?"
+      nom: "5 km."
+      explication: "Each centimetre stands for 1 km: 5 cm stand for 5 km."
+      pieges:
+        - { texte: "5 cm.", pourquoi: "5 cm is the distance on the map, not on the ground." }
+        - { texte: "1 km.", pourquoi: "1 km is only 1 cm: you must multiply by 5." }
+    - texte: "The scale says 1 cm for 10 km. A lake is 3 cm long on the map. How long is it really?"
+      nom: "30 km."
+      explication: "3 times 10 km makes 30 km."
+      pieges:
+        - { texte: "13 km.", pourquoi: "That adds 3 and 10: you must multiply." }
+        - { texte: "3 km.", pourquoi: "Each centimetre is worth 10 km, not 1 km." }
+    - texte: "On most maps, north is at the top. Where is east?"
+      nom: "On the right."
+      explication: "North at the top, south at the bottom, east on the right, west on the left. The compass rose reminds you."
+      pieges:
+        - { texte: "On the left.", pourquoi: "On the left is west when north is at the top." }
+        - { texte: "At the bottom.", pourquoi: "At the bottom is south." }
+    - texte: "Which map shows the most detail about your street?"
+      nom: "The plan of your town."
+      explication: "The smaller the area a map shows, the more detail it can show: streets, schools, parks."
+      pieges:
+        - { texte: "The map of France.", pourquoi: "It shows a very large area: you can't see streets on it." }
+        - { texte: "The world map.", pourquoi: "A world map shows the whole world: your street is invisible on it." }
+    - texte: "On a relief map, dark green is at the bottom of the key and brown at the top. Where are the mountains?"
+      nom: "In the brown areas."
+      explication: "On this kind of map, the key matches brown to high ground and green to low plains."
+      pieges:
+        - { texte: "In the green areas, because there are forests.", pourquoi: "On a relief map, green shows low ground, not forests: the key says so." }
+        - { texte: "In the blue areas.", pourquoi: "Blue stands for water: seas, lakes, rivers." }
+    - texte: "Why should you always read the key before making sense of a map?"
+      nom: "Because each map chooses its own colours and symbols."
+      explication: "The same colour can mean different things on different maps: the key avoids mistakes."
+      pieges:
+        - { texte: "Because all maps use the same colours.", pourquoi: "Quite the opposite: colours change from one map to another." }
+        - { texte: "There's no need, the title is enough.", pourquoi: "The title gives the subject, but not what the colours and symbols mean." }
+    - texte: "On a plan, the school is above the town hall. North is at the top. Where is the school compared with the town hall?"
+      nom: "To the north."
+      explication: "When north is at the top of the plan, whatever is above is to the north."
+      pieges:
+        - { texte: "To the south.", pourquoi: "South is at the bottom of the plan." }
+        - { texte: "You can't tell.", pourquoi: "You can tell from the orientation: north is at the top." }

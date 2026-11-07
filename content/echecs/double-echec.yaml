@@ -1,0 +1,76 @@
+id: double-echec
+titre: "Le double échec"
+niveau: CM2
+prerequis: [decouverte]
+programme: { source: fide, texte: "3.9.1 : The king is said to be 'in check' if it is attacked by one or more of the opponent's pieces." }
+activite: probleme
+parametres: { theme: double }
+idee: "Un double échec, c’est deux pièces qui font échec en même temps. On ne peut ni prendre ni boucher les deux à la fois : le roi doit bouger."
+phrases:
+  consigne: "Bouge la pièce qui cache une ligne vers le roi noir, sur une case où elle fait échec elle aussi."
+  question: "{texte}"
+  indice: "La pièce qui part doit faire échec à son arrivée, pendant que la pièce cachée fait échec derrière elle."
+  exemple: "Regarde quelle pièce bouche une ligne vers le roi noir, et où elle peut faire échec."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Fais un double échec !"
+    fen: "4k3/8/5P2/8/4N3/8/8/4R1K1 w - - 0 1"
+    coups: [e4d6]
+    explication: "Le cavalier va en d6 et fait échec ; en partant, il découvre aussi la tour e1. Deux pièces font échec : le roi doit bouger."
+  - texte: "Fais un double échec !"
+    fen: "4k3/5p2/8/8/4B3/8/8/4R1K1 w - - 0 1"
+    coups: [e4c6]
+    explication: "Le fou va en c6 et fait échec ; en partant, il découvre aussi la tour e1. Deux pièces font échec : le roi doit bouger."
+  - texte: "Fais un double échec !"
+    fen: "R2N3k/8/8/8/8/8/8/6K1 w - - 0 1"
+    coups: [d8f7]
+    explication: "Le cavalier va en f7 et fait échec ; en partant, il découvre aussi la tour a8. Deux pièces font échec : le roi doit bouger."
+  - texte: "Fais un double échec !"
+    fen: "7k/7p/8/8/3R4/8/8/B5K1 w - - 0 1"
+    coups: [d4d8]
+    explication: "La tour va en d8 et fait échec ; en partant, il découvre aussi le fou a1. Deux pièces font échec : le roi doit bouger."
+  - texte: "Fais un double échec !"
+    fen: "8/7k/8/6P1/4N3/8/8/1B4K1 w - - 0 1"
+    coups: [e4f6]
+    explication: "Le cavalier va en f6 et fait échec ; en partant, il découvre aussi le fou b1. Deux pièces font échec : le roi doit bouger."
+  - texte: "Fais un double échec !"
+    fen: "7k/8/8/8/7N/8/8/6KQ w - - 0 1"
+    coups: [h4g6]
+    explication: "Le cavalier va en g6 et fait échec ; en partant, il découvre aussi la dame h1. Deux pièces font échec : le roi doit bouger."
+
+en:
+  titre: "Double check"
+  idee: "A double check means two pieces giving check at the same time. You cannot capture or block both at once: the king has to move."
+  phrases:
+    consigne: "Move the piece that hides a line towards the black king, to a square where it gives check too."
+    question: "{texte}"
+    indice: "The piece that moves must give check where it lands, while the hidden piece gives check behind it."
+    exemple: "Look at which piece blocks a line towards the black king, and where it can give check."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Give a double check!"
+      fen: "4k3/8/5P2/8/4N3/8/8/4R1K1 w - - 0 1"
+      coups: [e4d6]
+      explication: "The knight goes to d6 and gives check; as it moves, it also uncovers the rook on e1. Two pieces give check: the king has to move."
+    - texte: "Give a double check!"
+      fen: "4k3/5p2/8/8/4B3/8/8/4R1K1 w - - 0 1"
+      coups: [e4c6]
+      explication: "The bishop goes to c6 and gives check; as it moves, it also uncovers the rook on e1. Two pieces give check: the king has to move."
+    - texte: "Give a double check!"
+      fen: "R2N3k/8/8/8/8/8/8/6K1 w - - 0 1"
+      coups: [d8f7]
+      explication: "The knight goes to f7 and gives check; as it moves, it also uncovers the rook on a8. Two pieces give check: the king has to move."
+    - texte: "Give a double check!"
+      fen: "7k/7p/8/8/3R4/8/8/B5K1 w - - 0 1"
+      coups: [d4d8]
+      explication: "The rook goes to d8 and gives check; as it moves, it also uncovers the bishop on a1. Two pieces give check: the king has to move."
+    - texte: "Give a double check!"
+      fen: "8/7k/8/6P1/4N3/8/8/1B4K1 w - - 0 1"
+      coups: [e4f6]
+      explication: "The knight goes to f6 and gives check; as it moves, it also uncovers the bishop on b1. Two pieces give check: the king has to move."
+    - texte: "Give a double check!"
+      fen: "7k/8/8/8/7N/8/8/6KQ w - - 0 1"
+      coups: [h4g6]
+      explication: "The knight goes to g6 and gives check; as it moves, it also uncovers the queen on h1. Two pieces give check: the king has to move."

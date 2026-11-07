@@ -1,0 +1,136 @@
+id: decimaux-ecriture
+titre: "L'écriture à virgule"
+niveau: CM1
+prerequis: ["fractions-decimales"]
+programme: { source: cycle3, texte: "Passer d’une écriture sous forme d’une fraction décimale ou d’une somme de fractions décimales à une écriture à virgule et réciproquement" }
+activite: quiz
+parametres: {}
+idee: "L'écriture à virgule raccourcit une somme de fractions décimales : 35 + 7/10 + 8/100 s'écrit 35,78. Après la virgule, on trouve les dixièmes, puis les centièmes."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Le premier chiffre après la virgule compte les dixièmes, le deuxième compte les centièmes."
+  exemple: "4 + 3/10 + 6/100 : 4 unités, 3 dixièmes, 6 centièmes. On écrit 4,36."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Écris 7/10 avec une virgule."
+    nom: "0,7"
+    explication: "7/10, c'est 0 unité et 7 dixièmes : 0,7."
+    pieges:
+      - { texte: "7,10", pourquoi: "La virgule ne remplace pas la barre de fraction : 7 dixièmes s'écrivent 0,7." }
+      - { texte: "0,07", pourquoi: "0,07, ce sont 7 centièmes." }
+  - texte: "Écris 12 + 5/10 avec une virgule."
+    nom: "12,5"
+    explication: "12 unités et 5 dixièmes : 12,5."
+    pieges:
+      - { texte: "12,05", pourquoi: "Le 5 compte des dixièmes : il va juste après la virgule." }
+      - { texte: "17", pourquoi: "12 + 5 : 5/10 n'est pas 5 unités." }
+  - texte: "Écris 3 + 4/100 avec une virgule."
+    nom: "3,04"
+    explication: "3 unités, 0 dixième, 4 centièmes : 3,04. Le 0 garde la place des dixièmes."
+    pieges:
+      - { texte: "3,4", pourquoi: "3,4, c'est 3 unités et 4 dixièmes : ici il n'y a pas de dixièmes, on écrit 0." }
+      - { texte: "3,400", pourquoi: "3,400 = 3,4 : le 4 doit être au rang des centièmes." }
+  - texte: "Écris 245/100 avec une virgule."
+    nom: "2,45"
+    explication: "245 centièmes = 200 centièmes + 45 centièmes = 2 unités, 4 dixièmes, 5 centièmes : 2,45."
+    pieges:
+      - { texte: "24,5", pourquoi: "24,5 = 245/10 : ici ce sont des centièmes, deux chiffres après la virgule." }
+      - { texte: "245,100", pourquoi: "La virgule ne remplace pas la barre de fraction." }
+  - texte: "Quelle fraction est égale à 0,09 ?"
+    nom: "9/100"
+    explication: "0,09 : 0 dixième et 9 centièmes, soit 9/100."
+    pieges:
+      - { texte: "9/10", pourquoi: "9/10 = 0,9 : dans 0,09, le 9 est au rang des centièmes." }
+      - { texte: "90/100", pourquoi: "90/100 = 0,9 : 9 dixièmes." }
+  - texte: "Dans 35,78, que vaut le chiffre 8 ?"
+    nom: "8 centièmes"
+    explication: "35,78 : 3 dizaines, 5 unités, 7 dixièmes, 8 centièmes."
+    pieges:
+      - { texte: "8 dixièmes", pourquoi: "Le premier chiffre après la virgule compte les dixièmes : ici, c'est 7." }
+      - { texte: "8 unités", pourquoi: "Les unités sont avant la virgule : il y a 5 unités." }
+  - texte: "Écris 6 + 2/10 + 3/100 avec une virgule."
+    nom: "6,23"
+    explication: "6 unités, 2 dixièmes, 3 centièmes : 6,23."
+    pieges:
+      - { texte: "6,32", pourquoi: "Les dixièmes viennent avant les centièmes : d'abord 2, puis 3." }
+      - { texte: "11", pourquoi: "6 + 2 + 3 : les fractions ne sont pas des unités." }
+  - texte: "Complète : 1,4 = 1 + 4/10 = 14/… Quel nombre manque ?"
+    nom: "10"
+    explication: "1 unité = 10 dixièmes, plus 4 dixièmes : 14 dixièmes, donc 14/10."
+    pieges:
+      - { texte: "100", pourquoi: "14/100 = 0,14 : ici ce sont des dixièmes." }
+      - { texte: "4", pourquoi: "Le dénominateur dit la taille des parts : des dixièmes, donc 10." }
+  - texte: "Pourquoi 2,5 et 2,50 sont-ils égaux ?"
+    nom: "5 dixièmes et 50 centièmes, c'est la même quantité."
+    explication: "2,50 = 2 unités et 50 centièmes ; 50 centièmes = 5 dixièmes. C'est le même nombre que 2,5."
+    pieges:
+      - { texte: "Ils ne sont pas égaux : 50 est plus grand que 5.", pourquoi: "50 centièmes = 5 dixièmes : on compare des parts de tailles différentes." }
+      - { texte: "On peut toujours ajouter un 0 à un nombre.", pourquoi: "25 et 250 ne sont pas égaux. Ici, le 0 ajoute 0 centième." }
+
+en:
+  titre: "Writing decimals with a point"
+  idee: "Decimal notation shortens a sum of decimal fractions: 35 + 7/10 + 8/100 is written 35.78. After the point come the tenths, then the hundredths."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "The first digit after the point counts tenths, the second counts hundredths."
+    exemple: "4 + 3/10 + 6/100: 4 ones, 3 tenths, 6 hundredths. We write 4.36."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Write 7/10 as a decimal."
+      nom: "0.7"
+      explication: "7/10 is 0 ones and 7 tenths: 0.7."
+      pieges:
+        - { texte: "7.10", pourquoi: "The point doesn't replace the fraction bar: 7 tenths is written 0.7." }
+        - { texte: "0.07", pourquoi: "0.07 is 7 hundredths." }
+    - texte: "Write 12 + 5/10 as a decimal."
+      nom: "12.5"
+      explication: "12 ones and 5 tenths: 12.5."
+      pieges:
+        - { texte: "12.05", pourquoi: "The 5 counts tenths: it goes just after the point." }
+        - { texte: "17", pourquoi: "12 + 5: 5/10 is not 5 ones." }
+    - texte: "Write 3 + 4/100 as a decimal."
+      nom: "3.04"
+      explication: "3 ones, 0 tenths, 4 hundredths: 3.04. The 0 keeps the tenths place."
+      pieges:
+        - { texte: "3.4", pourquoi: "3.4 is 3 ones and 4 tenths: here there are no tenths, so write 0." }
+        - { texte: "3.400", pourquoi: "3.400 = 3.4: the 4 must be in the hundredths place." }
+    - texte: "Write 245/100 as a decimal."
+      nom: "2.45"
+      explication: "245 hundredths = 200 hundredths + 45 hundredths = 2 ones, 4 tenths, 5 hundredths: 2.45."
+      pieges:
+        - { texte: "24.5", pourquoi: "24.5 = 245/10: here they are hundredths, two digits after the point." }
+        - { texte: "245.100", pourquoi: "The point doesn't replace the fraction bar." }
+    - texte: "Which fraction is equal to 0.09?"
+      nom: "9/100"
+      explication: "0.09: 0 tenths and 9 hundredths, which is 9/100."
+      pieges:
+        - { texte: "9/10", pourquoi: "9/10 = 0.9: in 0.09, the 9 is in the hundredths place." }
+        - { texte: "90/100", pourquoi: "90/100 = 0.9: 9 tenths." }
+    - texte: "In 35.78, what is the digit 8 worth?"
+      nom: "8 hundredths"
+      explication: "35.78: 3 tens, 5 ones, 7 tenths, 8 hundredths."
+      pieges:
+        - { texte: "8 tenths", pourquoi: "The first digit after the point counts tenths: here it is 7." }
+        - { texte: "8 ones", pourquoi: "The ones come before the point: there are 5 ones." }
+    - texte: "Write 6 + 2/10 + 3/100 as a decimal."
+      nom: "6.23"
+      explication: "6 ones, 2 tenths, 3 hundredths: 6.23."
+      pieges:
+        - { texte: "6.32", pourquoi: "Tenths come before hundredths: first 2, then 3." }
+        - { texte: "11", pourquoi: "6 + 2 + 3: the fractions are not ones." }
+    - texte: "Fill the gap: 1.4 = 1 + 4/10 = 14/… Which number is missing?"
+      nom: "10"
+      explication: "1 whole = 10 tenths, plus 4 tenths: 14 tenths, so 14/10."
+      pieges:
+        - { texte: "100", pourquoi: "14/100 = 0.14: here they are tenths." }
+        - { texte: "4", pourquoi: "The denominator tells you the size of the parts: tenths, so 10." }
+    - texte: "Why are 2.5 and 2.50 equal?"
+      nom: "5 tenths and 50 hundredths are the same amount."
+      explication: "2.50 = 2 ones and 50 hundredths; 50 hundredths = 5 tenths. It is the same number as 2.5."
+      pieges:
+        - { texte: "They are not equal: 50 is bigger than 5.", pourquoi: "50 hundredths = 5 tenths: we are comparing parts of different sizes." }
+        - { texte: "You can always add a 0 to a number.", pourquoi: "25 and 250 are not equal. Here the 0 adds 0 hundredths." }

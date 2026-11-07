@@ -29,12 +29,12 @@
   ],
   "ages": [
     4,
-    8
+    15
   ],
   "en": {
     "titre": "Discovering living things",
     "nom": "Living things",
-    "resume": "Living things, what they need, their bodies and where they live.",
+    "resume": "Living things, matter and energy, from nursery school to Year 10.",
     "intro": [
       {
         "texte": "Living things are born, grow up and change.",
@@ -61,7 +61,10 @@
   },
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
-    "c2": "https://eduscol.education.fr/document/50261/download"
+    "c2": "https://eduscol.education.fr/document/50261/download",
+    "c2s": "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf",
+    "c3s": "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-519023.pdf",
+    "c4": "https://eduscol.education.fr/document/621/download"
   },
   "competences": [
     {
@@ -3282,6 +3285,4171 @@
               ]
             ],
             "explication": "Great cold is what makes water freeze."
+          }
+        ]
+      }
+    },
+    {
+      "id": "chaine-alimentaire",
+      "titre": "Qui mange qui ? La chaîne alimentaire",
+      "niveau": "CE2",
+      "prerequis": [
+        "besoins"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Élaborer une courte chaine alimentaire."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Une chaîne alimentaire relie des êtres vivants : chacun est mangé par le suivant. Elle commence toujours par une plante.",
+      "phrases": {
+        "consigne": "Écoute la chaîne alimentaire, puis touche le bon être vivant.",
+        "question": "{texte}",
+        "indice": "Cherche qui mange l'autre. Les herbivores mangent des plantes ; les carnivores mangent d'autres animaux.",
+        "exemple": "Exemple : l'herbe est mangée par le lapin, et le lapin est mangé par le renard.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "L'herbe est mangée par le lapin. Le lapin est mangé par… qui ?",
+          "bonne": [
+            "1f98a",
+            "le renard"
+          ],
+          "autres": [
+            [
+              "1f955",
+              "la carotte"
+            ],
+            [
+              "1f404",
+              "la vache"
+            ]
+          ],
+          "explication": "Le renard mange le lapin : herbe, puis lapin, puis renard."
+        },
+        {
+          "texte": "Les feuilles sont mangées par la chenille. La chenille est mangée par… qui ?",
+          "bonne": [
+            "1f426",
+            "l'oiseau"
+          ],
+          "autres": [
+            [
+              "1f33f",
+              "l'herbe"
+            ],
+            [
+              "1f411",
+              "le mouton"
+            ]
+          ],
+          "explication": "Beaucoup d'oiseaux mangent des chenilles : feuilles, puis chenille, puis oiseau."
+        },
+        {
+          "texte": "L'herbe est mangée par le zèbre. Le zèbre est mangé par… qui ?",
+          "bonne": [
+            "1f981",
+            "le lion"
+          ],
+          "autres": [
+            [
+              "1f992",
+              "la girafe"
+            ],
+            [
+              "1f404",
+              "la vache"
+            ]
+          ],
+          "explication": "Dans la savane, le lion mange le zèbre."
+        },
+        {
+          "texte": "Les graines sont mangées par la souris. La souris est mangée par… qui ?",
+          "bonne": [
+            "1f989",
+            "la chouette"
+          ],
+          "autres": [
+            [
+              "1f337",
+              "la tulipe"
+            ],
+            [
+              "1f41e",
+              "la coccinelle"
+            ]
+          ],
+          "explication": "La chouette chasse la nuit et mange des souris."
+        },
+        {
+          "texte": "L'herbe est mangée par le mouton. Le mouton peut être mangé par… qui ?",
+          "bonne": [
+            "1f43a",
+            "le loup"
+          ],
+          "autres": [
+            [
+              "1f407",
+              "le lapin"
+            ],
+            [
+              "1f33f",
+              "l'herbe"
+            ]
+          ],
+          "explication": "Le loup est un carnivore : il peut manger le mouton."
+        },
+        {
+          "texte": "Dans la chaîne herbe, lapin, renard, qui est l'herbivore ?",
+          "bonne": [
+            "1f407",
+            "le lapin"
+          ],
+          "autres": [
+            [
+              "1f98a",
+              "le renard"
+            ],
+            [
+              "1f43a",
+              "le loup"
+            ]
+          ],
+          "explication": "Le lapin mange des plantes : c'est un herbivore."
+        },
+        {
+          "texte": "Dans la chaîne graines, souris, chouette, qui est le carnivore ?",
+          "bonne": [
+            "1f989",
+            "la chouette"
+          ],
+          "autres": [
+            [
+              "1f401",
+              "la souris"
+            ],
+            [
+              "1f331",
+              "la plante"
+            ]
+          ],
+          "explication": "La chouette mange d'autres animaux : c'est une carnivore."
+        },
+        {
+          "texte": "Par quoi commence toujours une chaîne alimentaire ?",
+          "bonne": [
+            "1f331",
+            "par une plante"
+          ],
+          "autres": [
+            [
+              "1f981",
+              "par un lion"
+            ],
+            [
+              "1f98a",
+              "par un renard"
+            ]
+          ],
+          "explication": "Une chaîne alimentaire commence toujours par une plante : la plante ne mange pas d'autres êtres vivants."
+        },
+        {
+          "texte": "Le petit poisson est mangé par… qui ?",
+          "bonne": [
+            "1f988",
+            "le requin"
+          ],
+          "autres": [
+            [
+              "1f41b",
+              "la chenille"
+            ],
+            [
+              "1f411",
+              "le mouton"
+            ]
+          ],
+          "explication": "Le requin vit dans la mer et mange des poissons."
+        }
+      ],
+      "en": {
+        "titre": "Who eats whom? The food chain",
+        "idee": "A food chain links living things: each one is eaten by the next. It always starts with a plant.",
+        "phrases": {
+          "consigne": "Listen to the food chain, then touch the right living thing.",
+          "question": "{texte}",
+          "indice": "Look for who eats the other. Herbivores eat plants; carnivores eat other animals.",
+          "exemple": "Example: grass is eaten by the rabbit, and the rabbit is eaten by the fox.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Grass is eaten by the rabbit. The rabbit is eaten by… whom?",
+            "bonne": [
+              "1f98a",
+              "the fox"
+            ],
+            "autres": [
+              [
+                "1f955",
+                "the carrot"
+              ],
+              [
+                "1f404",
+                "the cow"
+              ]
+            ],
+            "explication": "The fox eats the rabbit: grass, then rabbit, then fox."
+          },
+          {
+            "texte": "Leaves are eaten by the caterpillar. The caterpillar is eaten by… whom?",
+            "bonne": [
+              "1f426",
+              "the bird"
+            ],
+            "autres": [
+              [
+                "1f33f",
+                "the grass"
+              ],
+              [
+                "1f411",
+                "the sheep"
+              ]
+            ],
+            "explication": "Lots of birds eat caterpillars: leaves, then caterpillar, then bird."
+          },
+          {
+            "texte": "Grass is eaten by the zebra. The zebra is eaten by… whom?",
+            "bonne": [
+              "1f981",
+              "the lion"
+            ],
+            "autres": [
+              [
+                "1f992",
+                "the giraffe"
+              ],
+              [
+                "1f404",
+                "the cow"
+              ]
+            ],
+            "explication": "In the savannah, the lion eats the zebra."
+          },
+          {
+            "texte": "Seeds are eaten by the mouse. The mouse is eaten by… whom?",
+            "bonne": [
+              "1f989",
+              "the owl"
+            ],
+            "autres": [
+              [
+                "1f337",
+                "the tulip"
+              ],
+              [
+                "1f41e",
+                "the ladybird"
+              ]
+            ],
+            "explication": "The owl hunts at night and eats mice."
+          },
+          {
+            "texte": "Grass is eaten by the sheep. The sheep can be eaten by… whom?",
+            "bonne": [
+              "1f43a",
+              "the wolf"
+            ],
+            "autres": [
+              [
+                "1f407",
+                "the rabbit"
+              ],
+              [
+                "1f33f",
+                "the grass"
+              ]
+            ],
+            "explication": "The wolf is a carnivore: it can eat the sheep."
+          },
+          {
+            "texte": "In the chain grass, rabbit, fox, which one is the herbivore?",
+            "bonne": [
+              "1f407",
+              "the rabbit"
+            ],
+            "autres": [
+              [
+                "1f98a",
+                "the fox"
+              ],
+              [
+                "1f43a",
+                "the wolf"
+              ]
+            ],
+            "explication": "The rabbit eats plants: it's a herbivore."
+          },
+          {
+            "texte": "In the chain seeds, mouse, owl, which one is the carnivore?",
+            "bonne": [
+              "1f989",
+              "the owl"
+            ],
+            "autres": [
+              [
+                "1f401",
+                "the mouse"
+              ],
+              [
+                "1f331",
+                "the plant"
+              ]
+            ],
+            "explication": "The owl eats other animals: it's a carnivore."
+          },
+          {
+            "texte": "What does a food chain always start with?",
+            "bonne": [
+              "1f331",
+              "a plant"
+            ],
+            "autres": [
+              [
+                "1f981",
+                "a lion"
+              ],
+              [
+                "1f98a",
+                "a fox"
+              ]
+            ],
+            "explication": "A food chain always starts with a plant: a plant doesn't eat other living things."
+          },
+          {
+            "texte": "The little fish is eaten by… whom?",
+            "bonne": [
+              "1f988",
+              "the shark"
+            ],
+            "autres": [
+              [
+                "1f41b",
+                "the caterpillar"
+              ],
+              [
+                "1f411",
+                "the sheep"
+              ]
+            ],
+            "explication": "The shark lives in the sea and eats fish."
+          }
+        ]
+      }
+    },
+    {
+      "id": "solide-liquide",
+      "titre": "Solide ou liquide ?",
+      "niveau": "CE2",
+      "prerequis": [
+        "fondre-geler"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Différencier les états physiques solide (forme et volume propre) et liquide (volume propre, absence de forme propre et surface horizontale)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un solide garde sa forme : on peut le tenir. Un liquide coule et prend la forme du récipient ; sa surface reste plate et horizontale.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi : garde-t-il sa forme si on le change de récipient ? Sa surface reste-t-elle plate ?",
+        "exemple": "Exemple : on verse l'eau d'un verre dans un bol. Elle prend la forme du bol : c'est un liquide.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "On verse du lait d'une bouteille dans un bol. Que fait sa forme ?",
+          "nom": "Il prend la forme du bol.",
+          "explication": "Le lait est un liquide : il n'a pas de forme propre, il prend celle du récipient.",
+          "pieges": [
+            {
+              "texte": "Il garde la forme de la bouteille.",
+              "pourquoi": "Seul un solide garde sa forme. Le lait coule."
+            },
+            {
+              "texte": "Il devient solide dans le bol.",
+              "pourquoi": "Changer de récipient ne change pas l'état : le lait reste liquide."
+            }
+          ]
+        },
+        {
+          "texte": "On pose un caillou dans un verre, puis dans une boîte. Que fait sa forme ?",
+          "nom": "Il garde toujours la même forme.",
+          "explication": "Le caillou est un solide : il a une forme propre, quel que soit le récipient.",
+          "pieges": [
+            {
+              "texte": "Il prend la forme de la boîte.",
+              "pourquoi": "C'est le comportement d'un liquide, pas d'un solide."
+            },
+            {
+              "texte": "Il coule au fond comme de l'eau.",
+              "pourquoi": "Couler au fond n'est pas couler comme un liquide : le caillou ne se répand pas."
+            }
+          ]
+        },
+        {
+          "texte": "Le sable coule entre les doigts. Est-il solide ou liquide ?",
+          "nom": "Solide : ce sont de tout petits grains solides.",
+          "explication": "Chaque grain de sable garde sa forme. Un tas de sable ne reste pas plat : il fait une bosse. Un liquide ferait une surface plate.",
+          "pieges": [
+            {
+              "texte": "Liquide, puisqu'il coule.",
+              "pourquoi": "Le sable glisse grain par grain, mais chaque grain est un petit solide."
+            },
+            {
+              "texte": "Ni l'un ni l'autre.",
+              "pourquoi": "Le sable est un solide en grains, comme le sel ou la farine."
+            }
+          ]
+        },
+        {
+          "texte": "On penche une bouteille d'eau à moitié pleine. Comment est la surface de l'eau ?",
+          "nom": "Elle reste horizontale.",
+          "explication": "La surface d'un liquide au repos reste plate et horizontale, même si on penche le récipient. Essaie avec une bouteille transparente !",
+          "pieges": [
+            {
+              "texte": "Elle penche avec la bouteille.",
+              "pourquoi": "La bouteille penche, mais la surface de l'eau reste horizontale, comme l'horizon."
+            },
+            {
+              "texte": "Elle devient toute bosselée.",
+              "pourquoi": "Une fois l'eau calme, sa surface redevient plate."
+            }
+          ]
+        },
+        {
+          "texte": "On transvase 1 litre de jus dans une carafe plus large. Combien de jus y a-t-il dans la carafe ?",
+          "nom": "Toujours 1 litre.",
+          "explication": "Un liquide a un volume propre : sa forme change, mais pas son volume.",
+          "pieges": [
+            {
+              "texte": "Moins d'1 litre, car le niveau est plus bas.",
+              "pourquoi": "Le niveau baisse parce que la carafe est plus large, mais la quantité est la même."
+            },
+            {
+              "texte": "Plus d'1 litre, car il prend plus de place.",
+              "pourquoi": "Le jus s'étale, mais on n'en a pas ajouté : le volume ne change pas."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel de ces objets est un liquide ?",
+          "nom": "Le miel.",
+          "explication": "Le miel coule lentement, mais il coule et prend la forme du pot : c'est un liquide.",
+          "pieges": [
+            {
+              "texte": "Le beurre froid.",
+              "pourquoi": "Le beurre sorti du réfrigérateur garde sa forme : il est solide."
+            },
+            {
+              "texte": "Le sucre en poudre.",
+              "pourquoi": "Le sucre en poudre coule, mais ce sont des grains solides."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi peut-on tenir un glaçon dans la main, mais pas de l'eau ?",
+          "nom": "Le glaçon est solide : il a une forme propre.",
+          "explication": "La glace est de l'eau à l'état solide. L'eau liquide n'a pas de forme propre : elle s'échappe entre les doigts.",
+          "pieges": [
+            {
+              "texte": "Parce que le glaçon n'est pas de l'eau.",
+              "pourquoi": "Le glaçon est bien de l'eau, mais à l'état solide."
+            },
+            {
+              "texte": "Parce que le glaçon est plus lourd.",
+              "pourquoi": "Ce n'est pas le poids : c'est l'état, solide ou liquide."
+            }
+          ]
+        },
+        {
+          "texte": "Une pâte à modeler change de forme quand on l'écrase. Est-elle liquide ?",
+          "nom": "Non, elle est solide : sans nous, elle garde sa forme.",
+          "explication": "On peut déformer un solide en appuyant. Mais posée sur la table, la pâte garde sa forme ; un liquide, lui, s'étalerait tout seul.",
+          "pieges": [
+            {
+              "texte": "Oui, car elle change de forme.",
+              "pourquoi": "Elle change de forme seulement quand on la pousse : ce n'est pas couler."
+            },
+            {
+              "texte": "Elle est liquide quand elle est molle.",
+              "pourquoi": "Molle ne veut pas dire liquide : elle ne coule pas et ne prend pas la forme du pot."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Solid or liquid?",
+        "idee": "A solid keeps its shape: you can hold it. A liquid flows and takes the shape of its container; its surface stays flat and level.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Ask yourself: does it keep its shape in a different container? Does its surface stay flat?",
+          "exemple": "Example: we pour water from a glass into a bowl. It takes the shape of the bowl: it's a liquid.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "We pour milk from a bottle into a bowl. What happens to its shape?",
+            "nom": "It takes the shape of the bowl.",
+            "explication": "Milk is a liquid: it has no shape of its own, it takes the shape of its container.",
+            "pieges": [
+              {
+                "texte": "It keeps the shape of the bottle.",
+                "pourquoi": "Only a solid keeps its shape. Milk flows."
+              },
+              {
+                "texte": "It turns solid in the bowl.",
+                "pourquoi": "Changing container doesn't change the state: the milk stays liquid."
+              }
+            ]
+          },
+          {
+            "texte": "We put a stone in a glass, then in a box. What happens to its shape?",
+            "nom": "It always keeps the same shape.",
+            "explication": "A stone is a solid: it has its own shape, whatever the container.",
+            "pieges": [
+              {
+                "texte": "It takes the shape of the box.",
+                "pourquoi": "That's what a liquid does, not a solid."
+              },
+              {
+                "texte": "It flows to the bottom like water.",
+                "pourquoi": "Sinking to the bottom isn't flowing like a liquid: the stone doesn't spread out."
+              }
+            ]
+          },
+          {
+            "texte": "Sand runs through your fingers. Is it solid or liquid?",
+            "nom": "Solid: it's made of tiny solid grains.",
+            "explication": "Each grain of sand keeps its shape. A pile of sand isn't flat: it makes a heap. A liquid would have a flat surface.",
+            "pieges": [
+              {
+                "texte": "Liquid, because it flows.",
+                "pourquoi": "Sand slides grain by grain, but each grain is a little solid."
+              },
+              {
+                "texte": "Neither.",
+                "pourquoi": "Sand is a solid in grains, like salt or flour."
+              }
+            ]
+          },
+          {
+            "texte": "We tilt a half-full bottle of water. What is the surface of the water like?",
+            "nom": "It stays level.",
+            "explication": "The surface of a still liquid stays flat and level, even when the container is tilted. Try it with a clear bottle!",
+            "pieges": [
+              {
+                "texte": "It tilts with the bottle.",
+                "pourquoi": "The bottle tilts, but the water's surface stays level, like the horizon."
+              },
+              {
+                "texte": "It goes all bumpy.",
+                "pourquoi": "Once the water is calm, its surface is flat again."
+              }
+            ]
+          },
+          {
+            "texte": "We pour 1 litre of juice into a wider jug. How much juice is in the jug?",
+            "nom": "Still 1 litre.",
+            "explication": "A liquid has its own volume: its shape changes, but not its volume.",
+            "pieges": [
+              {
+                "texte": "Less than 1 litre, because the level is lower.",
+                "pourquoi": "The level is lower because the jug is wider, but the amount is the same."
+              },
+              {
+                "texte": "More than 1 litre, because it takes up more room.",
+                "pourquoi": "The juice spreads out, but none was added: the volume doesn't change."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these is a liquid?",
+            "nom": "Honey.",
+            "explication": "Honey flows slowly, but it does flow and takes the shape of the jar: it's a liquid.",
+            "pieges": [
+              {
+                "texte": "Cold butter.",
+                "pourquoi": "Butter from the fridge keeps its shape: it's solid."
+              },
+              {
+                "texte": "Caster sugar.",
+                "pourquoi": "Caster sugar pours, but it's made of solid grains."
+              }
+            ]
+          },
+          {
+            "texte": "Why can you hold an ice cube in your hand, but not water?",
+            "nom": "The ice cube is solid: it has its own shape.",
+            "explication": "Ice is water in the solid state. Liquid water has no shape of its own: it escapes between your fingers.",
+            "pieges": [
+              {
+                "texte": "Because an ice cube isn't water.",
+                "pourquoi": "An ice cube is water, but in the solid state."
+              },
+              {
+                "texte": "Because the ice cube is heavier.",
+                "pourquoi": "It's not the weight: it's the state, solid or liquid."
+              }
+            ]
+          },
+          {
+            "texte": "Modelling clay changes shape when you squash it. Is it liquid?",
+            "nom": "No, it's solid: left alone, it keeps its shape.",
+            "explication": "You can change a solid's shape by pressing it. But on the table, the clay keeps its shape; a liquid would spread out by itself.",
+            "pieges": [
+              {
+                "texte": "Yes, because it changes shape.",
+                "pourquoi": "It only changes shape when you push it: that isn't flowing."
+              },
+              {
+                "texte": "It's liquid when it's soft.",
+                "pourquoi": "Soft doesn't mean liquid: it doesn't flow or take the shape of the pot."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reseau-alimentaire",
+      "titre": "Le réseau alimentaire",
+      "niveau": "CM1",
+      "prerequis": [
+        "chaine-alimentaire"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Représenter par un réseau les liens alimentaires entre les êtres vivants."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans un milieu, les chaînes alimentaires se croisent : elles forment un réseau. Chaque flèche va du mangé vers le mangeur et montre le passage de la matière.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "La flèche part de celui qui est mangé et pointe vers celui qui mange.",
+        "exemple": "Exemple : le gland est mangé par l'écureuil. On dessine une flèche du gland vers l'écureuil : la matière du gland passe dans l'écureuil.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans un réseau alimentaire, dans quel sens dessine-t-on la flèche entre l'herbe et le lapin ?",
+          "nom": "De l'herbe vers le lapin.",
+          "explication": "La flèche va du mangé vers le mangeur : elle montre que la matière de l'herbe passe dans le lapin.",
+          "pieges": [
+            {
+              "texte": "Du lapin vers l'herbe.",
+              "pourquoi": "C'est l'idée « le lapin va vers l'herbe ». Mais la flèche montre le trajet de la matière, du mangé vers le mangeur."
+            },
+            {
+              "texte": "Dans les deux sens.",
+              "pourquoi": "L'herbe ne mange pas le lapin : une seule flèche suffit."
+            }
+          ]
+        },
+        {
+          "texte": "Le renard mange des lapins, des souris et des fruits. Combien de flèches arrivent au renard ?",
+          "nom": "Trois.",
+          "explication": "Une flèche part de chaque aliment du renard : lapin, souris et fruits. Un animal peut avoir plusieurs aliments : c'est pour cela qu'on parle de réseau.",
+          "pieges": [
+            {
+              "texte": "Une seule.",
+              "pourquoi": "Une flèche par aliment : le renard a trois aliments différents."
+            },
+            {
+              "texte": "Aucune, il est en haut.",
+              "pourquoi": "Les flèches arrivent vers le mangeur : elles arrivent donc au renard."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi parle-t-on de réseau, et pas seulement de chaîne ?",
+          "nom": "Parce qu'un être vivant mange souvent plusieurs espèces et est mangé par plusieurs.",
+          "explication": "Les chaînes se croisent : la souris est mangée par la chouette, le renard et le serpent. Toutes ces flèches forment un réseau.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il y a plus d'animaux dans un réseau.",
+              "pourquoi": "Ce n'est pas le nombre qui compte, ce sont les croisements entre chaînes."
+            },
+            {
+              "texte": "Parce que chaque animal ne mange qu'une seule espèce.",
+              "pourquoi": "C'est l'inverse : la plupart des animaux mangent plusieurs espèces."
+            }
+          ]
+        },
+        {
+          "texte": "Un jeune lapin mange beaucoup et grandit. D'où vient la matière de son corps ?",
+          "nom": "Des plantes qu'il mange.",
+          "explication": "Un animal fabrique sa propre matière à partir de sa nourriture, qui vient d'autres êtres vivants.",
+          "pieges": [
+            {
+              "texte": "De l'air qu'il respire.",
+              "pourquoi": "Respirer apporte du dioxygène, pas la matière qui fait grandir le lapin."
+            },
+            {
+              "texte": "Il la fabrique à partir de rien.",
+              "pourquoi": "Rien ne se crée à partir de rien : sans manger, le lapin ne grandit pas."
+            }
+          ]
+        },
+        {
+          "texte": "Dans un lac, on pêche presque tous les brochets, qui mangent des gardons. Que va-t-il se passer pour les gardons ?",
+          "nom": "Ils vont sans doute devenir plus nombreux.",
+          "explication": "Leur prédateur a presque disparu : moins de gardons sont mangés. La surpêche d'une espèce change tout le réseau.",
+          "pieges": [
+            {
+              "texte": "Rien ne change pour eux.",
+              "pourquoi": "Dans un réseau, tout est relié : quand une espèce disparaît, ses proies et ses prédateurs sont touchés."
+            },
+            {
+              "texte": "Ils vont disparaître aussi.",
+              "pourquoi": "C'est leur prédateur qui disparaît, pas leur nourriture : ils sont moins mangés."
+            }
+          ]
+        },
+        {
+          "texte": "Si les gardons deviennent très nombreux, que peut-il arriver aux petits animaux qu'ils mangent ?",
+          "nom": "Ils risquent de diminuer.",
+          "explication": "Plus de gardons mangent plus de petits animaux. Un changement se propage dans tout le réseau.",
+          "pieges": [
+            {
+              "texte": "Ils vont augmenter aussi.",
+              "pourquoi": "Ils sont mangés par les gardons : plus de mangeurs, moins de proies."
+            },
+            {
+              "texte": "Rien, ils ne sont pas reliés aux brochets.",
+              "pourquoi": "Ils ne sont pas mangés par les brochets, mais ils sont reliés par les gardons."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'une espèce invasive ?",
+          "nom": "Une espèce introduite dans un milieu où elle n'était pas, et qui s'y répand.",
+          "explication": "Une espèce venue d'ailleurs peut manger ou concurrencer les espèces du lieu et déséquilibrer le réseau alimentaire.",
+          "pieges": [
+            {
+              "texte": "Une espèce très grande.",
+              "pourquoi": "La taille ne compte pas : une plante ou un insecte peut être invasif."
+            },
+            {
+              "texte": "Une espèce qui mange tout le monde.",
+              "pourquoi": "Ce qui la définit, c'est qu'elle a été introduite d'ailleurs et qu'elle se répand."
+            }
+          ]
+        },
+        {
+          "texte": "Quel être vivant ne reçoit aucune flèche dans un réseau alimentaire ?",
+          "nom": "La plante.",
+          "explication": "La plante ne mange pas d'autres êtres vivants : aucune flèche n'arrive vers elle. Elle est au départ du réseau.",
+          "pieges": [
+            {
+              "texte": "Le plus gros prédateur.",
+              "pourquoi": "Le prédateur reçoit des flèches de ses proies ; c'est de lui qu'aucune flèche ne part."
+            },
+            {
+              "texte": "Le plus petit animal.",
+              "pourquoi": "Même le plus petit animal mange : une flèche arrive vers lui."
+            }
+          ]
+        },
+        {
+          "texte": "Une chouette mange des souris et des mulots. Les mulots disparaissent d'un champ. Que peut faire la chouette ?",
+          "nom": "Manger davantage de souris.",
+          "explication": "Quand un animal a plusieurs aliments, la perte d'une proie peut être compensée par une autre. Le réseau rend le milieu plus stable.",
+          "pieges": [
+            {
+              "texte": "Elle meurt forcément de faim.",
+              "pourquoi": "Elle a d'autres proies : c'est l'intérêt d'avoir plusieurs aliments."
+            },
+            {
+              "texte": "Elle se met à manger de l'herbe.",
+              "pourquoi": "La chouette est carnivore : elle ne mange pas d'herbe."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The food web",
+        "idee": "In a habitat, food chains cross each other: they make a web. Each arrow goes from what is eaten to what eats it, and shows the matter passing on.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The arrow starts from the one that is eaten and points to the one that eats it.",
+          "exemple": "Example: an acorn is eaten by a squirrel. We draw an arrow from the acorn to the squirrel: the acorn's matter passes into the squirrel.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In a food web, which way do we draw the arrow between grass and a rabbit?",
+            "nom": "From the grass to the rabbit.",
+            "explication": "The arrow goes from what is eaten to what eats it: it shows the grass's matter passing into the rabbit.",
+            "pieges": [
+              {
+                "texte": "From the rabbit to the grass.",
+                "pourquoi": "That's the idea « the rabbit goes to the grass ». But the arrow shows where the matter goes, from eaten to eater."
+              },
+              {
+                "texte": "Both ways.",
+                "pourquoi": "Grass doesn't eat rabbits: one arrow is enough."
+              }
+            ]
+          },
+          {
+            "texte": "A fox eats rabbits, mice and fruit. How many arrows point to the fox?",
+            "nom": "Three.",
+            "explication": "One arrow starts from each of the fox's foods: rabbit, mouse and fruit. An animal can have several foods: that's why we call it a web.",
+            "pieges": [
+              {
+                "texte": "Just one.",
+                "pourquoi": "One arrow per food: the fox has three different foods."
+              },
+              {
+                "texte": "None, it's at the top.",
+                "pourquoi": "Arrows point to the eater, so they point to the fox."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say web, and not just chain?",
+            "nom": "Because a living thing often eats several species and is eaten by several.",
+            "explication": "Chains cross: mice are eaten by owls, foxes and snakes. All those arrows make a web.",
+            "pieges": [
+              {
+                "texte": "Because there are more animals in a web.",
+                "pourquoi": "It isn't the number that matters, it's the chains crossing each other."
+              },
+              {
+                "texte": "Because each animal eats only one species.",
+                "pourquoi": "It's the opposite: most animals eat several species."
+              }
+            ]
+          },
+          {
+            "texte": "A young rabbit eats a lot and grows. Where does the matter in its body come from?",
+            "nom": "From the plants it eats.",
+            "explication": "An animal builds its own matter from its food, which comes from other living things.",
+            "pieges": [
+              {
+                "texte": "From the air it breathes.",
+                "pourquoi": "Breathing brings oxygen, not the matter that makes the rabbit grow."
+              },
+              {
+                "texte": "It makes it out of nothing.",
+                "pourquoi": "Nothing is made out of nothing: without food, the rabbit doesn't grow."
+              }
+            ]
+          },
+          {
+            "texte": "In a lake, people catch almost all the pike, which eat roach. What will happen to the roach?",
+            "nom": "They will probably become more numerous.",
+            "explication": "Their predator has almost gone: fewer roach are eaten. Overfishing one species changes the whole web.",
+            "pieges": [
+              {
+                "texte": "Nothing changes for them.",
+                "pourquoi": "In a web everything is linked: when a species goes, its prey and predators are affected."
+              },
+              {
+                "texte": "They will disappear too.",
+                "pourquoi": "It's their predator that disappears, not their food: fewer of them are eaten."
+              }
+            ]
+          },
+          {
+            "texte": "If there are lots more roach, what may happen to the small animals they eat?",
+            "nom": "They may decrease.",
+            "explication": "More roach eat more small animals. A change spreads through the whole web.",
+            "pieges": [
+              {
+                "texte": "They will increase too.",
+                "pourquoi": "They are eaten by the roach: more eaters, less prey."
+              },
+              {
+                "texte": "Nothing, they aren't linked to the pike.",
+                "pourquoi": "Pike don't eat them, but they are linked through the roach."
+              }
+            ]
+          },
+          {
+            "texte": "What is an invasive species?",
+            "nom": "A species brought into a place where it didn't live, which spreads there.",
+            "explication": "A species from elsewhere can eat or compete with the local species and upset the food web.",
+            "pieges": [
+              {
+                "texte": "A very big species.",
+                "pourquoi": "Size doesn't matter: a plant or an insect can be invasive."
+              },
+              {
+                "texte": "A species that eats everything.",
+                "pourquoi": "What defines it is that it was brought from elsewhere and spreads."
+              }
+            ]
+          },
+          {
+            "texte": "Which living thing has no arrow pointing to it in a food web?",
+            "nom": "The plant.",
+            "explication": "A plant doesn't eat other living things: no arrow points to it. It's at the start of the web.",
+            "pieges": [
+              {
+                "texte": "The biggest predator.",
+                "pourquoi": "The predator gets arrows from its prey; it's the one no arrow starts from."
+              },
+              {
+                "texte": "The smallest animal.",
+                "pourquoi": "Even the smallest animal eats: an arrow points to it."
+              }
+            ]
+          },
+          {
+            "texte": "An owl eats mice and wood mice. The wood mice disappear from a field. What can the owl do?",
+            "nom": "Eat more mice.",
+            "explication": "When an animal has several foods, losing one prey can be made up by another. The web makes the habitat steadier.",
+            "pieges": [
+              {
+                "texte": "It must starve.",
+                "pourquoi": "It has other prey: that's the advantage of having several foods."
+              },
+              {
+                "texte": "It starts eating grass.",
+                "pourquoi": "Owls are carnivores: they don't eat grass."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "melanges",
+      "titre": "Les mélanges et la dissolution",
+      "niveau": "CM1",
+      "prerequis": [
+        "solide-liquide"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Distinguer des mélanges homogènes et des mélanges hétérogènes."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans un mélange homogène, on ne distingue plus les constituants à l'œil nu. Dans un mélange hétérogène, on les voit. Un solide qui se dissout ne disparaît pas.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Regarde le mélange à l'œil nu : vois-tu encore plusieurs constituants ?",
+        "exemple": "Exemple : de l'eau et du sable. On voit le sable au fond : le mélange est hétérogène.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "On mélange de l'eau et du sel jusqu'à ne plus voir le sel. Comment est ce mélange ?",
+          "nom": "Homogène.",
+          "explication": "On ne distingue plus le sel à l'œil nu : le mélange est homogène. Le sel s'est dissous.",
+          "pieges": [
+            {
+              "texte": "Hétérogène.",
+              "pourquoi": "Hétérogène veut dire qu'on voit plusieurs constituants. Ici, on ne voit plus le sel."
+            },
+            {
+              "texte": "Ce n'est plus un mélange, c'est de l'eau.",
+              "pourquoi": "Le sel est toujours là : goûte une goutte d'eau salée, elle est salée."
+            }
+          ]
+        },
+        {
+          "texte": "Le sucre a « disparu » dans le verre d'eau. Où est-il ?",
+          "nom": "Il est dissous dans l'eau : il est toujours là.",
+          "explication": "Le sucre s'est dispersé dans l'eau en morceaux trop petits pour être vus. L'eau sucrée a d'ailleurs un goût sucré.",
+          "pieges": [
+            {
+              "texte": "Il a disparu pour de bon.",
+              "pourquoi": "C'est l'idée la plus courante, mais elle est fausse : la masse du verre n'a pas diminué, et l'eau est sucrée."
+            },
+            {
+              "texte": "Il est tombé au fond en invisible.",
+              "pourquoi": "Il n'est pas au fond : il est réparti partout dans l'eau."
+            }
+          ]
+        },
+        {
+          "texte": "De l'eau et de l'huile, secouées puis laissées au repos. Comment est le mélange ?",
+          "nom": "Hétérogène : l'huile se sépare et reste au-dessus.",
+          "explication": "L'huile et l'eau ne se mélangent pas : on voit deux couches. Le mélange est hétérogène.",
+          "pieges": [
+            {
+              "texte": "Homogène.",
+              "pourquoi": "On voit bien deux liquides séparés : ce n'est pas homogène."
+            },
+            {
+              "texte": "L'huile se dissout dans l'eau.",
+              "pourquoi": "Même après avoir secoué, l'huile remonte : elle ne se dissout pas dans l'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel de ces solides se dissout dans l'eau ?",
+          "nom": "Le sucre.",
+          "explication": "Le sucre et le sel se dissolvent dans l'eau. Le sable, lui, ne s'y dissout pas.",
+          "pieges": [
+            {
+              "texte": "Le sable.",
+              "pourquoi": "Le sable reste visible au fond : il ne se dissout pas."
+            },
+            {
+              "texte": "Un caillou.",
+              "pourquoi": "Un caillou ne se dissout pas dans l'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Comment séparer de l'eau et de la terre mélangées ?",
+          "nom": "Laisser reposer, puis filtrer.",
+          "explication": "Au repos, la terre se dépose au fond : c'est la décantation. Le filtre (par exemple un filtre à café) retient les grains qui restent.",
+          "pieges": [
+            {
+              "texte": "Ajouter encore de l'eau.",
+              "pourquoi": "On dilue le mélange, on ne le sépare pas."
+            },
+            {
+              "texte": "C'est impossible.",
+              "pourquoi": "La terre ne se dissout pas : on peut la retenir par décantation et filtration."
+            }
+          ]
+        },
+        {
+          "texte": "Peut-on récupérer le sel de l'eau salée avec un filtre ?",
+          "nom": "Non, le sel dissous passe à travers le filtre.",
+          "explication": "Un solide dissous traverse le filtre avec l'eau. C'est justement un moyen de savoir qu'il est dissous.",
+          "pieges": [
+            {
+              "texte": "Oui, le filtre retient le sel.",
+              "pourquoi": "Le filtre retient les grains non dissous, comme le sable, pas le sel dissous."
+            },
+            {
+              "texte": "Oui, si on filtre deux fois.",
+              "pourquoi": "Même plusieurs fois, le sel dissous passe toujours."
+            }
+          ]
+        },
+        {
+          "texte": "On ajoute du sel dans un verre d'eau, cuillère après cuillère. Que finit-il par se passer ?",
+          "nom": "Le sel ne se dissout plus et reste au fond.",
+          "explication": "Un volume d'eau ne peut dissoudre qu'une quantité limitée de sel : on dit que l'eau est saturée.",
+          "pieges": [
+            {
+              "texte": "Le sel se dissout toujours, sans limite.",
+              "pourquoi": "Il y a une limite : l'eau finit par être saturée."
+            },
+            {
+              "texte": "L'eau devient solide.",
+              "pourquoi": "L'eau reste liquide ; c'est le sel en trop qui reste solide au fond."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi trier des cailloux, du gravier et du sable en commençant par le tamis aux plus grands trous ?",
+          "nom": "Pour retenir d'abord les plus gros morceaux, puis les plus petits.",
+          "explication": "Le premier tamis garde les cailloux et laisse passer le reste ; un tamis plus fin garde ensuite le gravier ; le sable passe.",
+          "pieges": [
+            {
+              "texte": "C'est pareil dans n'importe quel ordre.",
+              "pourquoi": "Avec le tamis le plus fin d'abord, cailloux et gravier restent ensemble."
+            },
+            {
+              "texte": "Pour que le sable reste dans le premier tamis.",
+              "pourquoi": "Le sable est le plus fin : il passe à travers les grands trous."
+            }
+          ]
+        },
+        {
+          "texte": "Observe chez toi un verre d'eau avec une cuillère de sel, puis un autre avec une cuillère de poivre. Lequel est homogène ?",
+          "nom": "L'eau salée.",
+          "explication": "Le sel se dissout, le poivre non : on voit les grains de poivre flotter ou tomber. L'eau poivrée est un mélange hétérogène.",
+          "pieges": [
+            {
+              "texte": "L'eau poivrée.",
+              "pourquoi": "On voit les grains de poivre : le mélange est hétérogène."
+            },
+            {
+              "texte": "Les deux.",
+              "pourquoi": "Seul le sel se dissout. Fais l'essai pour le voir !"
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Mixtures and dissolving",
+        "idee": "In a uniform mixture, you can't tell the parts apart by eye. In a non-uniform mixture, you can see them. A solid that dissolves does not disappear.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Look at the mixture with your eyes: can you still see several parts?",
+          "exemple": "Example: water and sand. You can see the sand at the bottom: the mixture is non-uniform.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "We stir salt into water until we can't see the salt any more. What is this mixture like?",
+            "nom": "Uniform.",
+            "explication": "You can't see the salt any more: the mixture is uniform. The salt has dissolved.",
+            "pieges": [
+              {
+                "texte": "Non-uniform.",
+                "pourquoi": "Non-uniform means you can see several parts. Here, you can't see the salt."
+              },
+              {
+                "texte": "It isn't a mixture any more, it's just water.",
+                "pourquoi": "The salt is still there: taste a drop of salty water, it's salty."
+              }
+            ]
+          },
+          {
+            "texte": "The sugar has « disappeared » in the glass of water. Where is it?",
+            "nom": "It's dissolved in the water: it's still there.",
+            "explication": "The sugar has spread through the water in pieces too small to see. The sugary water tastes sweet, too.",
+            "pieges": [
+              {
+                "texte": "It has gone for good.",
+                "pourquoi": "That's the most common idea, but it's wrong: the glass is just as heavy, and the water is sweet."
+              },
+              {
+                "texte": "It fell to the bottom and became invisible.",
+                "pourquoi": "It isn't at the bottom: it's spread all through the water."
+              }
+            ]
+          },
+          {
+            "texte": "Water and oil, shaken then left to stand. What is the mixture like?",
+            "nom": "Non-uniform: the oil separates and stays on top.",
+            "explication": "Oil and water don't mix: you can see two layers. The mixture is non-uniform.",
+            "pieges": [
+              {
+                "texte": "Uniform.",
+                "pourquoi": "You can clearly see two separate liquids: it's not uniform."
+              },
+              {
+                "texte": "The oil dissolves in the water.",
+                "pourquoi": "Even after shaking, the oil rises again: it doesn't dissolve in water."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these solids dissolves in water?",
+            "nom": "Sugar.",
+            "explication": "Sugar and salt dissolve in water. Sand doesn't.",
+            "pieges": [
+              {
+                "texte": "Sand.",
+                "pourquoi": "Sand stays visible at the bottom: it doesn't dissolve."
+              },
+              {
+                "texte": "A pebble.",
+                "pourquoi": "A pebble doesn't dissolve in water."
+              }
+            ]
+          },
+          {
+            "texte": "How can you separate water and soil that are mixed together?",
+            "nom": "Let it stand, then filter it.",
+            "explication": "Left to stand, the soil settles at the bottom: that's settling. A filter (a coffee filter, for example) catches the grains that are left.",
+            "pieges": [
+              {
+                "texte": "Add more water.",
+                "pourquoi": "That dilutes the mixture, it doesn't separate it."
+              },
+              {
+                "texte": "It's impossible.",
+                "pourquoi": "Soil doesn't dissolve: settling and filtering can hold it back."
+              }
+            ]
+          },
+          {
+            "texte": "Can you get the salt back out of salty water with a filter?",
+            "nom": "No, dissolved salt goes through the filter.",
+            "explication": "A dissolved solid goes through the filter with the water. That's actually one way to tell it's dissolved.",
+            "pieges": [
+              {
+                "texte": "Yes, the filter catches the salt.",
+                "pourquoi": "A filter catches undissolved grains, like sand, not dissolved salt."
+              },
+              {
+                "texte": "Yes, if you filter it twice.",
+                "pourquoi": "Even many times, the dissolved salt still goes through."
+              }
+            ]
+          },
+          {
+            "texte": "We add salt to a glass of water, spoon after spoon. What happens in the end?",
+            "nom": "The salt stops dissolving and stays at the bottom.",
+            "explication": "A volume of water can only dissolve a limited amount of salt: we say the water is saturated.",
+            "pieges": [
+              {
+                "texte": "The salt keeps dissolving, with no limit.",
+                "pourquoi": "There is a limit: the water ends up saturated."
+              },
+              {
+                "texte": "The water turns solid.",
+                "pourquoi": "The water stays liquid; it's the extra salt that stays solid at the bottom."
+              }
+            ]
+          },
+          {
+            "texte": "Why sort pebbles, gravel and sand starting with the sieve with the biggest holes?",
+            "nom": "To catch the biggest pieces first, then the smaller ones.",
+            "explication": "The first sieve keeps the pebbles and lets the rest through; a finer sieve then keeps the gravel; the sand goes through.",
+            "pieges": [
+              {
+                "texte": "Any order works the same.",
+                "pourquoi": "With the finest sieve first, pebbles and gravel stay together."
+              },
+              {
+                "texte": "So the sand stays in the first sieve.",
+                "pourquoi": "Sand is the finest: it goes through the big holes."
+              }
+            ]
+          },
+          {
+            "texte": "At home, look at a glass of water with a spoon of salt, and another with a spoon of pepper. Which one is uniform?",
+            "nom": "The salty water.",
+            "explication": "Salt dissolves, pepper doesn't: you can see the pepper grains float or sink. Peppery water is a non-uniform mixture.",
+            "pieges": [
+              {
+                "texte": "The peppery water.",
+                "pourquoi": "You can see the pepper grains: the mixture is non-uniform."
+              },
+              {
+                "texte": "Both.",
+                "pourquoi": "Only the salt dissolves. Try it and see!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "changements-etat",
+      "titre": "Les changements d'état de l'eau",
+      "niveau": "CM2",
+      "prerequis": [
+        "melanges"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Observer des changements d’état physique et leur réversibilité. Nommer les changements d’état."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'eau existe à l'état solide, liquide et gazeux. Fusion : solide vers liquide. Solidification : l'inverse. Vaporisation : liquide vers gaz. Liquéfaction : l'inverse.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi d'abord : quel était l'état au départ, et quel est l'état à la fin ?",
+        "exemple": "Exemple : un glaçon fond dans un verre. Solide au départ, liquide à la fin : c'est une fusion.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Un glaçon fond dans ta main. Comment s'appelle ce changement d'état ?",
+          "nom": "La fusion.",
+          "explication": "La glace (solide) devient de l'eau liquide : c'est la fusion.",
+          "pieges": [
+            {
+              "texte": "La solidification.",
+              "pourquoi": "La solidification va dans l'autre sens : du liquide vers le solide."
+            },
+            {
+              "texte": "La dissolution.",
+              "pourquoi": "Dissoudre, c'est mélanger un solide dans un liquide. Ici, un seul corps change d'état."
+            }
+          ]
+        },
+        {
+          "texte": "De l'eau mise au congélateur devient de la glace. Comment s'appelle ce changement d'état ?",
+          "nom": "La solidification.",
+          "explication": "L'eau liquide devient solide : c'est la solidification.",
+          "pieges": [
+            {
+              "texte": "La fusion.",
+              "pourquoi": "La fusion va du solide vers le liquide : c'est le contraire."
+            },
+            {
+              "texte": "La liquéfaction.",
+              "pourquoi": "La liquéfaction, c'est un gaz qui devient liquide."
+            }
+          ]
+        },
+        {
+          "texte": "Une flaque sèche au soleil. Où est passée l'eau ?",
+          "nom": "Elle est devenue de la vapeur d'eau, un gaz invisible, dans l'air.",
+          "explication": "L'eau s'est évaporée : c'est une vaporisation. La vapeur d'eau est invisible et se mélange à l'air.",
+          "pieges": [
+            {
+              "texte": "Elle a disparu.",
+              "pourquoi": "L'eau ne disparaît pas : elle change d'état et part dans l'air sous forme de gaz."
+            },
+            {
+              "texte": "Elle est entrée entièrement dans le sol.",
+              "pourquoi": "Un peu d'eau peut s'infiltrer, mais une flaque sur du goudron sèche aussi : l'eau part dans l'air."
+            }
+          ]
+        },
+        {
+          "texte": "Au-dessus d'une casserole d'eau bouillante, on voit un petit nuage blanc. De quoi est-il fait ?",
+          "nom": "De minuscules gouttes d'eau liquide.",
+          "explication": "La vapeur d'eau est invisible. En se refroidissant dans l'air, elle redevient liquide en gouttelettes : c'est ce nuage blanc qu'on voit.",
+          "pieges": [
+            {
+              "texte": "De vapeur d'eau.",
+              "pourquoi": "C'est l'erreur la plus courante : la vapeur d'eau ne se voit pas. Ce qu'on voit, ce sont des gouttelettes liquides."
+            },
+            {
+              "texte": "De fumée.",
+              "pourquoi": "Rien ne brûle : c'est de l'eau, sous forme de gouttelettes."
+            }
+          ]
+        },
+        {
+          "texte": "Dans l'eau qui bout, de grosses bulles montent. Que contiennent-elles ?",
+          "nom": "De la vapeur d'eau.",
+          "explication": "Pendant l'ébullition, l'eau liquide se vaporise au fond de la casserole : les bulles sont faites de vapeur d'eau.",
+          "pieges": [
+            {
+              "texte": "De l'air.",
+              "pourquoi": "Les petites bulles du début contiennent de l'air, mais pendant l'ébullition, les grosses bulles sont de la vapeur d'eau."
+            },
+            {
+              "texte": "Rien du tout, du vide.",
+              "pourquoi": "Les bulles sont remplies d'un gaz : la vapeur d'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Après une douche chaude, le miroir est couvert de gouttelettes. Comment s'appelle ce changement d'état ?",
+          "nom": "La liquéfaction.",
+          "explication": "La vapeur d'eau de l'air touche le miroir froid et redevient liquide : c'est la liquéfaction.",
+          "pieges": [
+            {
+              "texte": "La vaporisation.",
+              "pourquoi": "La vaporisation va du liquide vers le gaz : ici, c'est l'inverse."
+            },
+            {
+              "texte": "Le miroir transpire.",
+              "pourquoi": "Le miroir ne produit pas d'eau : elle vient de la vapeur contenue dans l'air."
+            }
+          ]
+        },
+        {
+          "texte": "On fait geler de l'eau, puis on la laisse fondre. Qu'obtient-on ?",
+          "nom": "De l'eau liquide, comme au départ.",
+          "explication": "Les changements d'état sont réversibles : la glace redevient de l'eau, sans perte de matière.",
+          "pieges": [
+            {
+              "texte": "Une autre matière que l'eau.",
+              "pourquoi": "Changer d'état ne change pas la matière : c'est toujours de l'eau."
+            },
+            {
+              "texte": "De la glace pour toujours.",
+              "pourquoi": "Au chaud, la glace fond : le changement est réversible."
+            }
+          ]
+        },
+        {
+          "texte": "Le brouillard est de l'eau dans quel état ?",
+          "nom": "Liquide, en fines gouttelettes.",
+          "explication": "Le brouillard, comme les nuages, est fait de gouttelettes d'eau liquide en suspension dans l'air.",
+          "pieges": [
+            {
+              "texte": "Gazeux.",
+              "pourquoi": "Si c'était de la vapeur d'eau, on ne le verrait pas."
+            },
+            {
+              "texte": "Solide.",
+              "pourquoi": "Ce ne sont pas des cristaux de glace, mais des gouttelettes liquides."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le linge mouillé sèche-t-il plus vite dehors quand il y a du vent et du soleil ?",
+          "nom": "Parce que la chaleur et le vent favorisent l'évaporation.",
+          "explication": "L'eau du linge se vaporise plus vite quand il fait chaud, quand l'air bouge et quand le linge est bien étalé.",
+          "pieges": [
+            {
+              "texte": "Parce que le vent emporte les gouttes d'eau entières.",
+              "pourquoi": "L'eau ne part pas en gouttes : elle se vaporise, elle devient un gaz invisible."
+            },
+            {
+              "texte": "Parce que le soleil fait disparaître l'eau.",
+              "pourquoi": "L'eau ne disparaît pas : elle passe dans l'air sous forme de vapeur."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Water changing state",
+        "idee": "Water can be solid, liquid or gas. Melting: solid to liquid. Freezing: the reverse. Vaporisation: liquid to gas. Condensation: the reverse.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "First ask yourself: what state was it at the start, and what state is it at the end?",
+          "exemple": "Example: an ice cube melts in a glass. Solid at the start, liquid at the end: it's melting.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "An ice cube melts in your hand. What is this change of state called?",
+            "nom": "Melting.",
+            "explication": "Ice (solid) turns into liquid water: that's melting.",
+            "pieges": [
+              {
+                "texte": "Freezing.",
+                "pourquoi": "Freezing goes the other way: from liquid to solid."
+              },
+              {
+                "texte": "Dissolving.",
+                "pourquoi": "Dissolving means mixing a solid into a liquid. Here, one substance changes state."
+              }
+            ]
+          },
+          {
+            "texte": "Water put in the freezer turns into ice. What is this change of state called?",
+            "nom": "Freezing.",
+            "explication": "Liquid water turns solid: that's freezing.",
+            "pieges": [
+              {
+                "texte": "Melting.",
+                "pourquoi": "Melting goes from solid to liquid: it's the opposite."
+              },
+              {
+                "texte": "Condensation.",
+                "pourquoi": "Condensation is a gas turning into a liquid."
+              }
+            ]
+          },
+          {
+            "texte": "A puddle dries in the sun. Where has the water gone?",
+            "nom": "It has become water vapour, an invisible gas, in the air.",
+            "explication": "The water has evaporated: that's vaporisation. Water vapour is invisible and mixes with the air.",
+            "pieges": [
+              {
+                "texte": "It has disappeared.",
+                "pourquoi": "Water doesn't disappear: it changes state and goes into the air as a gas."
+              },
+              {
+                "texte": "It has all soaked into the ground.",
+                "pourquoi": "A little water may soak in, but a puddle on tarmac dries too: the water goes into the air."
+              }
+            ]
+          },
+          {
+            "texte": "Above a pan of boiling water, you can see a little white cloud. What is it made of?",
+            "nom": "Tiny drops of liquid water.",
+            "explication": "Water vapour is invisible. As it cools in the air, it turns back into liquid droplets: that's the white cloud you see.",
+            "pieges": [
+              {
+                "texte": "Water vapour.",
+                "pourquoi": "That's the most common mistake: you can't see water vapour. What you see are liquid droplets."
+              },
+              {
+                "texte": "Smoke.",
+                "pourquoi": "Nothing is burning: it's water, as droplets."
+              }
+            ]
+          },
+          {
+            "texte": "In boiling water, big bubbles rise. What is inside them?",
+            "nom": "Water vapour.",
+            "explication": "When water boils, liquid water vaporises at the bottom of the pan: the bubbles are made of water vapour.",
+            "pieges": [
+              {
+                "texte": "Air.",
+                "pourquoi": "The small bubbles at the start contain air, but while it boils, the big bubbles are water vapour."
+              },
+              {
+                "texte": "Nothing at all, empty space.",
+                "pourquoi": "The bubbles are full of a gas: water vapour."
+              }
+            ]
+          },
+          {
+            "texte": "After a hot shower, the mirror is covered in droplets. What is this change of state called?",
+            "nom": "Condensation.",
+            "explication": "Water vapour in the air touches the cold mirror and turns back into liquid: that's condensation.",
+            "pieges": [
+              {
+                "texte": "Vaporisation.",
+                "pourquoi": "Vaporisation goes from liquid to gas: here it's the reverse."
+              },
+              {
+                "texte": "The mirror is sweating.",
+                "pourquoi": "The mirror doesn't make water: it comes from the vapour in the air."
+              }
+            ]
+          },
+          {
+            "texte": "We freeze some water, then let it melt. What do we get?",
+            "nom": "Liquid water, as at the start.",
+            "explication": "Changes of state can be reversed: the ice turns back into water, with no matter lost.",
+            "pieges": [
+              {
+                "texte": "A different substance from water.",
+                "pourquoi": "Changing state doesn't change the substance: it's still water."
+              },
+              {
+                "texte": "Ice for ever.",
+                "pourquoi": "In the warmth, ice melts: the change can be reversed."
+              }
+            ]
+          },
+          {
+            "texte": "Fog is water in which state?",
+            "nom": "Liquid, as tiny droplets.",
+            "explication": "Fog, like clouds, is made of droplets of liquid water floating in the air.",
+            "pieges": [
+              {
+                "texte": "Gas.",
+                "pourquoi": "If it were water vapour, you couldn't see it."
+              },
+              {
+                "texte": "Solid.",
+                "pourquoi": "They aren't ice crystals, but liquid droplets."
+              }
+            ]
+          },
+          {
+            "texte": "Why does wet washing dry faster outside when it's windy and sunny?",
+            "nom": "Because warmth and wind help evaporation.",
+            "explication": "The water in the washing vaporises faster when it's warm, when the air moves and when the washing is spread out.",
+            "pieges": [
+              {
+                "texte": "Because the wind blows the whole drops away.",
+                "pourquoi": "The water doesn't leave as drops: it vaporises, it becomes an invisible gas."
+              },
+              {
+                "texte": "Because the sun makes the water disappear.",
+                "pourquoi": "Water doesn't disappear: it goes into the air as vapour."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "circuit-electrique",
+      "titre": "Le circuit électrique",
+      "niveau": "CM2",
+      "prerequis": [],
+      "programme": {
+        "source": "c3s",
+        "texte": "Réaliser un circuit électrique à une boucle associant un générateur (pile), un interrupteur, un ou deux récepteurs (ampoule) pour mettre en évidence la circulation du courant électrique."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une ampoule s'allume quand elle forme une boucle sans coupure avec les deux bornes de la pile. Un interrupteur ouvert coupe la boucle. Les métaux conduisent le courant.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Suis le chemin avec ton doigt : part-il d'une borne de la pile pour revenir à l'autre sans coupure ?",
+        "exemple": "Exemple : pile, fil, ampoule, fil, retour à l'autre borne de la pile, interrupteur fermé. La boucle est complète : l'ampoule brille.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "On relie l'ampoule à une seule borne de la pile, avec un seul fil. Que se passe-t-il ?",
+          "nom": "L'ampoule ne s'allume pas.",
+          "explication": "Il faut une boucle complète : le courant part d'une borne de la pile, traverse l'ampoule et revient à l'autre borne.",
+          "pieges": [
+            {
+              "texte": "L'ampoule s'allume, car le courant arrive par le fil.",
+              "pourquoi": "C'est l'idée du courant « qui arrive et s'use » dans l'ampoule. Sans retour vers la pile, aucun courant ne circule."
+            },
+            {
+              "texte": "L'ampoule s'allume faiblement.",
+              "pourquoi": "Sans boucle, il n'y a pas de courant du tout, pas même un peu."
+            }
+          ]
+        },
+        {
+          "texte": "L'interrupteur est ouvert. L'ampoule s'allume-t-elle ?",
+          "nom": "Non, la boucle est coupée.",
+          "explication": "Un interrupteur ouvert coupe le circuit : le courant ne circule plus. Fermé, il complète la boucle.",
+          "pieges": [
+            {
+              "texte": "Oui, ouvert veut dire que le courant passe.",
+              "pourquoi": "Pour un interrupteur, c'est le contraire d'une porte : ouvert, il coupe le chemin."
+            },
+            {
+              "texte": "Oui, si la pile est neuve.",
+              "pourquoi": "Même avec une pile neuve, une boucle ouverte ne laisse pas passer le courant."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel de ces objets laisse passer le courant ?",
+          "nom": "Un trombone en métal.",
+          "explication": "Les métaux sont des conducteurs électriques. Le plastique, le bois sec et le caoutchouc sont des isolants.",
+          "pieges": [
+            {
+              "texte": "Une règle en plastique.",
+              "pourquoi": "Le plastique est un isolant : il ne laisse pas passer le courant."
+            },
+            {
+              "texte": "Une gomme.",
+              "pourquoi": "La gomme est un isolant."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les fils électriques sont-ils entourés de plastique ?",
+          "nom": "Le plastique est un isolant : il protège.",
+          "explication": "Le cuivre à l'intérieur conduit le courant ; la gaine en plastique, isolante, évite qu'il passe ailleurs, par exemple dans nos doigts.",
+          "pieges": [
+            {
+              "texte": "Pour que le courant aille plus vite.",
+              "pourquoi": "La gaine ne change pas la vitesse : elle isole."
+            },
+            {
+              "texte": "Pour la couleur seulement.",
+              "pourquoi": "La couleur aide à repérer les fils, mais le rôle de la gaine est d'isoler."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une boucle, on met deux ampoules l'une après l'autre. On dévisse l'une d'elles. Que fait l'autre ?",
+          "nom": "Elle s'éteint aussi.",
+          "explication": "Dans une boucle unique, dévisser une ampoule coupe la boucle : le courant ne circule plus nulle part.",
+          "pieges": [
+            {
+              "texte": "Elle brille plus fort.",
+              "pourquoi": "Avec une boucle coupée, plus aucun courant ne circule."
+            },
+            {
+              "texte": "Elle reste allumée comme avant.",
+              "pourquoi": "Les deux ampoules sont sur la même boucle : si elle est coupée, tout s'arrête."
+            }
+          ]
+        },
+        {
+          "texte": "On échange la place de l'ampoule et de l'interrupteur dans la boucle. Le circuit marche-t-il encore ?",
+          "nom": "Oui, de la même façon.",
+          "explication": "Dans une boucle simple, l'ordre des composants ne change pas le fonctionnement : ce qui compte, c'est que la boucle soit complète.",
+          "pieges": [
+            {
+              "texte": "Non, l'interrupteur doit être juste après la pile.",
+              "pourquoi": "L'interrupteur coupe la boucle où qu'il soit placé."
+            },
+            {
+              "texte": "Non, l'ampoule doit être en premier pour recevoir le courant.",
+              "pourquoi": "C'est l'idée d'un courant qui s'use en chemin. Le courant est le même partout dans la boucle."
+            }
+          ]
+        },
+        {
+          "texte": "La mine d'un crayon à papier est en graphite. Que fait-elle dans un circuit ?",
+          "nom": "Elle conduit le courant.",
+          "explication": "Le graphite conduit l'électricité : une ampoule peut s'allumer à travers une mine de crayon. Le bois du crayon, lui, est isolant.",
+          "pieges": [
+            {
+              "texte": "Elle est isolante comme le bois.",
+              "pourquoi": "Le bois du crayon est isolant, mais pas la mine en graphite."
+            },
+            {
+              "texte": "Elle brûle tout de suite.",
+              "pourquoi": "Avec une petite pile, la mine conduit sans brûler."
+            }
+          ]
+        },
+        {
+          "texte": "Peut-on faire des expériences avec une prise de courant de la maison ?",
+          "nom": "Non, jamais : c'est dangereux.",
+          "explication": "Le courant des prises peut tuer. Les expériences se font seulement avec une pile de faible tension.",
+          "pieges": [
+            {
+              "texte": "Oui, avec des fils en plastique.",
+              "pourquoi": "Aucune protection ne rend ces expériences sûres : on ne touche jamais l'intérieur d'une prise."
+            },
+            {
+              "texte": "Oui, si on a les mains sèches.",
+              "pourquoi": "Des mains sèches ne suffisent pas : le danger reste mortel."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The electric circuit",
+        "idee": "A bulb lights up when it makes an unbroken loop with both terminals of the battery. An open switch breaks the loop. Metals conduct electricity.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Follow the path with your finger: does it go from one terminal of the battery back to the other without a break?",
+          "exemple": "Example: battery, wire, bulb, wire, back to the other terminal, switch closed. The loop is complete: the bulb shines.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "We connect the bulb to just one terminal of the battery, with one wire. What happens?",
+            "nom": "The bulb doesn't light up.",
+            "explication": "You need a complete loop: the current leaves one terminal of the battery, goes through the bulb and comes back to the other terminal.",
+            "pieges": [
+              {
+                "texte": "The bulb lights up, because the current arrives through the wire.",
+                "pourquoi": "That's the idea of current « arriving and being used up » in the bulb. With no way back to the battery, no current flows."
+              },
+              {
+                "texte": "The bulb lights up dimly.",
+                "pourquoi": "With no loop, there's no current at all, not even a little."
+              }
+            ]
+          },
+          {
+            "texte": "The switch is open. Does the bulb light up?",
+            "nom": "No, the loop is broken.",
+            "explication": "An open switch breaks the circuit: the current stops flowing. Closed, it completes the loop.",
+            "pieges": [
+              {
+                "texte": "Yes, open means the current gets through.",
+                "pourquoi": "A switch is the opposite of a door: open, it breaks the path."
+              },
+              {
+                "texte": "Yes, if the battery is new.",
+                "pourquoi": "Even with a new battery, an open loop doesn't let current through."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these objects lets current through?",
+            "nom": "A metal paper clip.",
+            "explication": "Metals are electrical conductors. Plastic, dry wood and rubber are insulators.",
+            "pieges": [
+              {
+                "texte": "A plastic ruler.",
+                "pourquoi": "Plastic is an insulator: it doesn't let current through."
+              },
+              {
+                "texte": "A rubber.",
+                "pourquoi": "A rubber is an insulator."
+              }
+            ]
+          },
+          {
+            "texte": "Why are electric wires covered in plastic?",
+            "nom": "Plastic is an insulator: it protects us.",
+            "explication": "The copper inside conducts the current; the insulating plastic coat stops it going anywhere else, such as into our fingers.",
+            "pieges": [
+              {
+                "texte": "To make the current go faster.",
+                "pourquoi": "The coat doesn't change the speed: it insulates."
+              },
+              {
+                "texte": "Just for the colour.",
+                "pourquoi": "The colour helps tell wires apart, but the coat's job is to insulate."
+              }
+            ]
+          },
+          {
+            "texte": "In one loop, we put two bulbs one after the other. We unscrew one of them. What does the other do?",
+            "nom": "It goes out too.",
+            "explication": "In a single loop, unscrewing a bulb breaks the loop: no current flows anywhere.",
+            "pieges": [
+              {
+                "texte": "It shines brighter.",
+                "pourquoi": "With the loop broken, no current flows at all."
+              },
+              {
+                "texte": "It stays lit as before.",
+                "pourquoi": "Both bulbs are on the same loop: if it's broken, everything stops."
+              }
+            ]
+          },
+          {
+            "texte": "We swap the places of the bulb and the switch in the loop. Does the circuit still work?",
+            "nom": "Yes, in the same way.",
+            "explication": "In a simple loop, the order of the parts doesn't change how it works: what matters is that the loop is complete.",
+            "pieges": [
+              {
+                "texte": "No, the switch must come right after the battery.",
+                "pourquoi": "The switch breaks the loop wherever it is."
+              },
+              {
+                "texte": "No, the bulb must come first to get the current.",
+                "pourquoi": "That's the idea of current being used up on the way. The current is the same all round the loop."
+              }
+            ]
+          },
+          {
+            "texte": "Pencil lead is made of graphite. What does it do in a circuit?",
+            "nom": "It conducts the current.",
+            "explication": "Graphite conducts electricity: a bulb can light up through a pencil lead. The pencil's wood is an insulator.",
+            "pieges": [
+              {
+                "texte": "It's an insulator, like wood.",
+                "pourquoi": "The pencil's wood insulates, but not the graphite lead."
+              },
+              {
+                "texte": "It burns straight away.",
+                "pourquoi": "With a small battery, the lead conducts without burning."
+              }
+            ]
+          },
+          {
+            "texte": "Can you do experiments with a plug socket at home?",
+            "nom": "No, never: it's dangerous.",
+            "explication": "Mains electricity can kill. Experiments are only done with a low-voltage battery.",
+            "pieges": [
+              {
+                "texte": "Yes, with plastic-coated wires.",
+                "pourquoi": "Nothing makes these experiments safe: never touch the inside of a socket."
+              },
+              {
+                "texte": "Yes, if your hands are dry.",
+                "pourquoi": "Dry hands aren't enough: the danger can still kill."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "temperatures-etat",
+      "titre": "Températures et changements d'état",
+      "niveau": "6e",
+      "prerequis": [
+        "changements-etat"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Mesurer des températures de changement d’état."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'eau pure fond et gèle à 0 degré Celsius, et bout à 100 degrés au niveau de la mer. Pendant un changement d'état, sa température reste la même : c'est un palier.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Souviens-toi des deux nombres de l'eau pure : 0 degré pour la glace qui fond, 100 degrés pour l'eau qui bout.",
+        "exemple": "Exemple : on chauffe des glaçons pilés en relevant la température. Elle monte jusqu'à 0 degré, puis reste à 0 degré tant qu'il reste de la glace.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "À quelle température la glace pure fond-elle ?",
+          "nom": "0 degré Celsius.",
+          "explication": "La glace d'eau pure fond à 0 degré Celsius ; l'eau liquide gèle à cette même température.",
+          "pieges": [
+            {
+              "texte": "100 degrés Celsius.",
+              "pourquoi": "100 degrés, c'est la température d'ébullition de l'eau, pas de fusion."
+            },
+            {
+              "texte": "Elle fond à n'importe quelle température.",
+              "pourquoi": "Sous 0 degré, la glace d'eau pure ne fond pas."
+            }
+          ]
+        },
+        {
+          "texte": "On chauffe de l'eau pure dans une casserole, au niveau de la mer. À quelle température bout-elle ?",
+          "nom": "100 degrés Celsius.",
+          "explication": "Au niveau de la mer, l'eau pure bout à 100 degrés Celsius.",
+          "pieges": [
+            {
+              "texte": "0 degré Celsius.",
+              "pourquoi": "0 degré, c'est la température de fusion de la glace."
+            },
+            {
+              "texte": "Elle n'a pas de température fixe.",
+              "pourquoi": "Pour l'eau pure, à pression donnée, l'ébullition se fait à une température fixe."
+            }
+          ]
+        },
+        {
+          "texte": "L'eau bout depuis cinq minutes. On continue de chauffer fort. Que fait sa température ?",
+          "nom": "Elle reste à 100 degrés.",
+          "explication": "Pendant l'ébullition, l'énergie apportée sert à vaporiser l'eau : la température reste stable. C'est un palier.",
+          "pieges": [
+            {
+              "texte": "Elle continue de monter.",
+              "pourquoi": "Tant qu'il reste de l'eau liquide qui bout, la température ne dépasse pas 100 degrés."
+            },
+            {
+              "texte": "Elle redescend.",
+              "pourquoi": "On chauffe toujours : elle ne redescend pas."
+            }
+          ]
+        },
+        {
+          "texte": "On relève la température de glaçons qui fondent dans un verre. Que voit-on sur le graphique ?",
+          "nom": "Un palier à 0 degré tant qu'il reste de la glace.",
+          "explication": "Pendant la fusion d'un corps pur, la température reste constante : sur le graphique, la courbe devient horizontale.",
+          "pieges": [
+            {
+              "texte": "Une montée régulière, sans arrêt.",
+              "pourquoi": "Pendant la fusion, la courbe s'arrête de monter : c'est le palier."
+            },
+            {
+              "texte": "Une descente.",
+              "pourquoi": "Le verre se réchauffe dans la pièce : la température ne baisse pas."
+            }
+          ]
+        },
+        {
+          "texte": "En montagne, l'eau bout un peu en dessous de 100 degrés. Pourquoi ?",
+          "nom": "Parce que l'air y appuie moins fort : la pression est plus faible.",
+          "explication": "La température d'ébullition dépend de la pression de l'air. En altitude, la pression baisse et l'eau bout à une température plus basse.",
+          "pieges": [
+            {
+              "texte": "Parce que l'eau de montagne est plus froide.",
+              "pourquoi": "Même chauffée, l'eau bout plus tôt : c'est la pression qui compte, pas la température de départ."
+            },
+            {
+              "texte": "Parce que les casseroles sont différentes.",
+              "pourquoi": "La casserole n'y est pour rien : c'est l'air qui appuie moins fort."
+            }
+          ]
+        },
+        {
+          "texte": "On met de l'eau très salée au congélateur. Que remarque-t-on par rapport à l'eau pure ?",
+          "nom": "Elle gèle à une température plus basse que 0 degré.",
+          "explication": "L'eau salée est un mélange : elle commence à geler en dessous de 0 degré. C'est pourquoi on sale les routes en hiver.",
+          "pieges": [
+            {
+              "texte": "Elle gèle à 0 degré, comme l'eau pure.",
+              "pourquoi": "0 degré est la température de l'eau pure. Le sel la fait baisser."
+            },
+            {
+              "texte": "Elle ne peut jamais geler.",
+              "pourquoi": "Elle gèle, mais il faut qu'il fasse plus froid."
+            }
+          ]
+        },
+        {
+          "texte": "Quel instrument utilise-t-on pour mesurer une température ?",
+          "nom": "Un thermomètre.",
+          "explication": "Le thermomètre mesure la température, en degrés Celsius en France.",
+          "pieges": [
+            {
+              "texte": "Une balance.",
+              "pourquoi": "La balance mesure une masse, pas une température."
+            },
+            {
+              "texte": "Un chronomètre.",
+              "pourquoi": "Le chronomètre mesure une durée. Il sert à relever la température à intervalles réguliers, avec le thermomètre."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la température d'ébullition peut-elle aider à reconnaître une matière ?",
+          "nom": "Parce que chaque corps pur a sa propre température de changement d'état.",
+          "explication": "À pression donnée, un corps pur change d'état à une température qui lui est propre : l'eau pure bout à 100 degrés au niveau de la mer.",
+          "pieges": [
+            {
+              "texte": "Parce que tous les liquides bouillent à 100 degrés.",
+              "pourquoi": "Non : chaque corps pur a sa propre température d'ébullition."
+            },
+            {
+              "texte": "Elle ne sert à rien pour reconnaître une matière.",
+              "pourquoi": "C'est au contraire un moyen d'identifier un corps pur."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Temperatures and changes of state",
+        "idee": "Pure water melts and freezes at 0 degrees Celsius, and boils at 100 degrees at sea level. While it changes state, its temperature stays the same: that's a plateau.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Remember the two numbers for pure water: 0 degrees for melting ice, 100 degrees for boiling water.",
+          "exemple": "Example: we warm crushed ice and note the temperature. It rises to 0 degrees, then stays at 0 degrees while there's still ice.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "At what temperature does pure ice melt?",
+            "nom": "0 degrees Celsius.",
+            "explication": "Pure water ice melts at 0 degrees Celsius; liquid water freezes at the same temperature.",
+            "pieges": [
+              {
+                "texte": "100 degrees Celsius.",
+                "pourquoi": "100 degrees is water's boiling point, not its melting point."
+              },
+              {
+                "texte": "It melts at any temperature.",
+                "pourquoi": "Below 0 degrees, pure water ice doesn't melt."
+              }
+            ]
+          },
+          {
+            "texte": "We heat pure water in a pan at sea level. At what temperature does it boil?",
+            "nom": "100 degrees Celsius.",
+            "explication": "At sea level, pure water boils at 100 degrees Celsius.",
+            "pieges": [
+              {
+                "texte": "0 degrees Celsius.",
+                "pourquoi": "0 degrees is the melting point of ice."
+              },
+              {
+                "texte": "It has no fixed temperature.",
+                "pourquoi": "For pure water at a given pressure, boiling happens at a fixed temperature."
+              }
+            ]
+          },
+          {
+            "texte": "The water has been boiling for five minutes. We keep heating it hard. What does its temperature do?",
+            "nom": "It stays at 100 degrees.",
+            "explication": "While it boils, the energy supplied turns water into vapour: the temperature stays steady. That's a plateau.",
+            "pieges": [
+              {
+                "texte": "It keeps rising.",
+                "pourquoi": "While liquid water is still boiling, the temperature doesn't go above 100 degrees."
+              },
+              {
+                "texte": "It goes down again.",
+                "pourquoi": "We're still heating: it doesn't go down."
+              }
+            ]
+          },
+          {
+            "texte": "We note the temperature of ice cubes melting in a glass. What does the graph show?",
+            "nom": "A plateau at 0 degrees while there's still ice.",
+            "explication": "While a pure substance melts, its temperature stays constant: on the graph, the line goes flat.",
+            "pieges": [
+              {
+                "texte": "A steady rise, without stopping.",
+                "pourquoi": "During melting, the line stops rising: that's the plateau."
+              },
+              {
+                "texte": "A fall.",
+                "pourquoi": "The glass warms up in the room: the temperature doesn't drop."
+              }
+            ]
+          },
+          {
+            "texte": "In the mountains, water boils a little below 100 degrees. Why?",
+            "nom": "Because the air presses less hard there: the pressure is lower.",
+            "explication": "The boiling point depends on air pressure. Higher up, the pressure drops and water boils at a lower temperature.",
+            "pieges": [
+              {
+                "texte": "Because mountain water is colder.",
+                "pourquoi": "Even when heated, the water boils sooner: it's the pressure that matters, not the starting temperature."
+              },
+              {
+                "texte": "Because the pans are different.",
+                "pourquoi": "The pan has nothing to do with it: the air presses less hard."
+              }
+            ]
+          },
+          {
+            "texte": "We put very salty water in the freezer. What do we notice compared with pure water?",
+            "nom": "It freezes at a temperature below 0 degrees.",
+            "explication": "Salty water is a mixture: it starts to freeze below 0 degrees. That's why roads are salted in winter.",
+            "pieges": [
+              {
+                "texte": "It freezes at 0 degrees, like pure water.",
+                "pourquoi": "0 degrees is for pure water. Salt lowers it."
+              },
+              {
+                "texte": "It can never freeze.",
+                "pourquoi": "It does freeze, but it has to be colder."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument do we use to measure a temperature?",
+            "nom": "A thermometer.",
+            "explication": "A thermometer measures temperature, in degrees Celsius in France.",
+            "pieges": [
+              {
+                "texte": "A balance.",
+                "pourquoi": "A balance measures mass, not temperature."
+              },
+              {
+                "texte": "A stopwatch.",
+                "pourquoi": "A stopwatch measures time. It helps note the temperature at regular times, together with the thermometer."
+              }
+            ]
+          },
+          {
+            "texte": "Why can the boiling point help to identify a substance?",
+            "nom": "Because each pure substance has its own temperature for changing state.",
+            "explication": "At a given pressure, a pure substance changes state at its own temperature: pure water boils at 100 degrees at sea level.",
+            "pieges": [
+              {
+                "texte": "Because all liquids boil at 100 degrees.",
+                "pourquoi": "No: each pure substance has its own boiling point."
+              },
+              {
+                "texte": "It's no use for identifying a substance.",
+                "pourquoi": "On the contrary, it's one way to identify a pure substance."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cellule",
+      "titre": "La cellule, brique du vivant",
+      "niveau": "6e",
+      "prerequis": [],
+      "programme": {
+        "source": "c3s",
+        "texte": "Identifier la cellule comme l’unité structurale commune à tous les êtres vivants."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Tous les êtres vivants sont faits de cellules. Une cellule a une membrane et du cytoplasme ; souvent un noyau. Les cellules végétales ont aussi une paroi.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense aux trois parties qu'on voit au microscope : la membrane qui entoure, le cytoplasme à l'intérieur, et souvent le noyau.",
+        "exemple": "Exemple : au microscope, une cellule d'épiderme d'oignon montre une paroi, une membrane, du cytoplasme et un noyau.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'ont en commun un chêne, un chat, un champignon et une bactérie ?",
+          "nom": "Ils sont tous faits de cellules.",
+          "explication": "La cellule est l'unité commune à tous les êtres vivants, des plus petits aux plus grands.",
+          "pieges": [
+            {
+              "texte": "Ils ont tous des os.",
+              "pourquoi": "Le chêne, le champignon et la bactérie n'ont pas d'os."
+            },
+            {
+              "texte": "Ils ont tous des feuilles.",
+              "pourquoi": "Seules les plantes, comme le chêne, ont des feuilles."
+            }
+          ]
+        },
+        {
+          "texte": "Quel instrument faut-il pour voir la plupart des cellules ?",
+          "nom": "Un microscope.",
+          "explication": "La plupart des cellules sont trop petites pour l'œil nu : on les observe au microscope.",
+          "pieges": [
+            {
+              "texte": "Une loupe suffit toujours.",
+              "pourquoi": "Une loupe grossit trop peu pour voir le détail de la plupart des cellules."
+            },
+            {
+              "texte": "Un télescope.",
+              "pourquoi": "Le télescope sert à observer des objets très lointains, pas très petits."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle partie entoure toute cellule et la sépare de l'extérieur ?",
+          "nom": "La membrane.",
+          "explication": "Toute cellule est limitée par une membrane, qui entoure le cytoplasme.",
+          "pieges": [
+            {
+              "texte": "Le noyau.",
+              "pourquoi": "Le noyau est à l'intérieur de la cellule ; il ne l'entoure pas."
+            },
+            {
+              "texte": "La paroi.",
+              "pourquoi": "La paroi existe chez les cellules végétales, mais pas chez les cellules animales. La membrane, elle, est partout."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle partie trouve-t-on dans une cellule de feuille, mais pas dans une cellule de ta joue ?",
+          "nom": "La paroi.",
+          "explication": "Les cellules végétales ont une paroi rigide autour de la membrane. Les cellules animales n'en ont pas.",
+          "pieges": [
+            {
+              "texte": "Le noyau.",
+              "pourquoi": "Les cellules de ta joue ont un noyau, elles aussi."
+            },
+            {
+              "texte": "La membrane.",
+              "pourquoi": "Toutes les cellules ont une membrane."
+            }
+          ]
+        },
+        {
+          "texte": "Un être vivant formé d'une seule cellule s'appelle…",
+          "nom": "Un être unicellulaire.",
+          "explication": "Une bactérie, une levure ou une paramécie sont faites d'une seule cellule : ce sont des êtres unicellulaires.",
+          "pieges": [
+            {
+              "texte": "Un objet, pas un être vivant.",
+              "pourquoi": "Une seule cellule peut suffire pour vivre : se nourrir, grandir, se reproduire."
+            },
+            {
+              "texte": "Un être pluricellulaire.",
+              "pourquoi": "Pluricellulaire veut dire « fait de nombreuses cellules », comme nous."
+            }
+          ]
+        },
+        {
+          "texte": "Le corps humain est-il fait d'une seule grande cellule ?",
+          "nom": "Non, il est fait d'un nombre immense de cellules.",
+          "explication": "Nous sommes pluricellulaires : notre corps compte des milliers de milliards de cellules, de sortes différentes.",
+          "pieges": [
+            {
+              "texte": "Oui, une cellule de la taille du corps.",
+              "pourquoi": "Au microscope, une peau ou un muscle montrent beaucoup de petites cellules."
+            },
+            {
+              "texte": "Seulement de quelques centaines de cellules.",
+              "pourquoi": "C'est beaucoup trop peu : on parle de milliers de milliards."
+            }
+          ]
+        },
+        {
+          "texte": "Que contient l'intérieur de la cellule, à l'intérieur de la membrane ?",
+          "nom": "Le cytoplasme.",
+          "explication": "Le cytoplasme remplit la cellule, à l'intérieur de la membrane. Le noyau, quand il existe, s'y trouve.",
+          "pieges": [
+            {
+              "texte": "Du vide.",
+              "pourquoi": "Une cellule n'est pas creuse : elle est remplie de cytoplasme."
+            },
+            {
+              "texte": "Du sang.",
+              "pourquoi": "Le sang contient des cellules, mais l'intérieur d'une cellule, c'est le cytoplasme."
+            }
+          ]
+        },
+        {
+          "texte": "Les bactéries ont-elles un noyau ?",
+          "nom": "Non, leurs cellules n'ont pas de noyau.",
+          "explication": "La cellule d'une bactérie a une membrane et du cytoplasme, mais pas de noyau. Elle est quand même vivante.",
+          "pieges": [
+            {
+              "texte": "Oui, comme toutes les cellules.",
+              "pourquoi": "Toutes les cellules n'ont pas de noyau : les bactéries n'en ont pas."
+            },
+            {
+              "texte": "Non, car ce ne sont pas des êtres vivants.",
+              "pourquoi": "Les bactéries sont bien vivantes, même sans noyau."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que la cellule est la brique du vivant ?",
+          "nom": "Parce que tous les êtres vivants sont construits avec des cellules.",
+          "explication": "Comme un mur est fait de briques, chaque être vivant est fait d'une ou de plusieurs cellules.",
+          "pieges": [
+            {
+              "texte": "Parce que les cellules sont dures comme des briques.",
+              "pourquoi": "La comparaison porte sur l'assemblage, pas sur la dureté."
+            },
+            {
+              "texte": "Parce que seules les maisons des animaux sont faites de cellules.",
+              "pourquoi": "Ce sont les êtres vivants eux-mêmes qui sont faits de cellules."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The cell, building block of life",
+        "idee": "All living things are made of cells. A cell has a membrane and cytoplasm; often a nucleus. Plant cells also have a cell wall.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of the three parts you see under a microscope: the membrane around it, the cytoplasm inside, and often the nucleus.",
+          "exemple": "Example: under a microscope, an onion skin cell shows a cell wall, a membrane, cytoplasm and a nucleus.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What do an oak tree, a cat, a mushroom and a bacterium have in common?",
+            "nom": "They are all made of cells.",
+            "explication": "The cell is the unit shared by all living things, from the smallest to the biggest.",
+            "pieges": [
+              {
+                "texte": "They all have bones.",
+                "pourquoi": "The oak, the mushroom and the bacterium have no bones."
+              },
+              {
+                "texte": "They all have leaves.",
+                "pourquoi": "Only plants, like the oak, have leaves."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument do you need to see most cells?",
+            "nom": "A microscope.",
+            "explication": "Most cells are too small for the naked eye: we look at them under a microscope.",
+            "pieges": [
+              {
+                "texte": "A magnifying glass is always enough.",
+                "pourquoi": "A magnifying glass doesn't enlarge enough to show most cells in detail."
+              },
+              {
+                "texte": "A telescope.",
+                "pourquoi": "A telescope is for looking at very distant things, not very small ones."
+              }
+            ]
+          },
+          {
+            "texte": "Which part surrounds every cell and separates it from the outside?",
+            "nom": "The membrane.",
+            "explication": "Every cell is bounded by a membrane, which surrounds the cytoplasm.",
+            "pieges": [
+              {
+                "texte": "The nucleus.",
+                "pourquoi": "The nucleus is inside the cell; it doesn't surround it."
+              },
+              {
+                "texte": "The cell wall.",
+                "pourquoi": "Plant cells have a wall, but animal cells don't. Every cell has a membrane."
+              }
+            ]
+          },
+          {
+            "texte": "Which part is found in a leaf cell, but not in a cell from your cheek?",
+            "nom": "The cell wall.",
+            "explication": "Plant cells have a stiff wall around the membrane. Animal cells don't.",
+            "pieges": [
+              {
+                "texte": "The nucleus.",
+                "pourquoi": "Your cheek cells have a nucleus too."
+              },
+              {
+                "texte": "The membrane.",
+                "pourquoi": "All cells have a membrane."
+              }
+            ]
+          },
+          {
+            "texte": "A living thing made of just one cell is called…",
+            "nom": "A single-celled organism.",
+            "explication": "A bacterium, a yeast or a paramecium is made of just one cell: they are single-celled organisms.",
+            "pieges": [
+              {
+                "texte": "An object, not a living thing.",
+                "pourquoi": "One cell can be enough to live: to feed, grow and reproduce."
+              },
+              {
+                "texte": "A many-celled organism.",
+                "pourquoi": "Many-celled means « made of lots of cells », like us."
+              }
+            ]
+          },
+          {
+            "texte": "Is the human body made of one big cell?",
+            "nom": "No, it's made of a huge number of cells.",
+            "explication": "We are many-celled: our body has thousands of billions of cells, of different kinds.",
+            "pieges": [
+              {
+                "texte": "Yes, one cell the size of the body.",
+                "pourquoi": "Under a microscope, skin or muscle shows lots of small cells."
+              },
+              {
+                "texte": "Only a few hundred cells.",
+                "pourquoi": "That's far too few: we're talking about thousands of billions."
+              }
+            ]
+          },
+          {
+            "texte": "What fills the cell, inside the membrane?",
+            "nom": "The cytoplasm.",
+            "explication": "Cytoplasm fills the cell, inside the membrane. The nucleus, when there is one, is found in it.",
+            "pieges": [
+              {
+                "texte": "Empty space.",
+                "pourquoi": "A cell isn't hollow: it's full of cytoplasm."
+              },
+              {
+                "texte": "Blood.",
+                "pourquoi": "Blood contains cells, but the inside of a cell is cytoplasm."
+              }
+            ]
+          },
+          {
+            "texte": "Do bacteria have a nucleus?",
+            "nom": "No, their cells have no nucleus.",
+            "explication": "A bacterial cell has a membrane and cytoplasm, but no nucleus. It's still alive.",
+            "pieges": [
+              {
+                "texte": "Yes, like every cell.",
+                "pourquoi": "Not all cells have a nucleus: bacteria don't."
+              },
+              {
+                "texte": "No, because they aren't living things.",
+                "pourquoi": "Bacteria are alive, even without a nucleus."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say the cell is the building block of life?",
+            "nom": "Because all living things are built from cells.",
+            "explication": "Just as a wall is made of bricks, each living thing is made of one or more cells.",
+            "pieges": [
+              {
+                "texte": "Because cells are as hard as bricks.",
+                "pourquoi": "The comparison is about how they fit together, not hardness."
+              },
+              {
+                "texte": "Because only animals' homes are made of cells.",
+                "pourquoi": "It's the living things themselves that are made of cells."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "vegetaux-producteurs",
+      "titre": "Les végétaux, producteurs de matière",
+      "niveau": "6e",
+      "prerequis": [
+        "reseau-alimentaire"
+      ],
+      "programme": {
+        "source": "c3s",
+        "texte": "Justifier la place des végétaux dans les réseaux alimentaires par leur propriété de production primaire."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une plante verte ne mange pas d'autres êtres vivants. À la lumière, elle fabrique sa matière avec de l'eau, du dioxyde de carbone de l'air et des sels minéraux.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense aux quatre besoins d'une plante verte : la lumière, l'eau, le dioxyde de carbone de l'air et les sels minéraux.",
+        "exemple": "Exemple : un radis pousse au jardin. Sa matière vient surtout de l'eau et du dioxyde de carbone de l'air, grâce à la lumière.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une plante verte « mange »-t-elle la terre pour grandir ?",
+          "nom": "Non : elle prend dans le sol de l'eau et des sels minéraux, pas de la terre.",
+          "explication": "La terre ne sert pas de nourriture. La plante fabrique sa matière avec la lumière, l'eau, le dioxyde de carbone et un peu de sels minéraux.",
+          "pieges": [
+            {
+              "texte": "Oui, la terre est sa nourriture.",
+              "pourquoi": "C'est une idée très répandue, mais fausse : la terre d'un pot ne diminue presque pas quand la plante grandit."
+            },
+            {
+              "texte": "Oui, avec ses racines qui la mâchent.",
+              "pourquoi": "Les racines absorbent de l'eau et des sels minéraux dissous ; elles ne mâchent rien."
+            }
+          ]
+        },
+        {
+          "texte": "Au XVIIe siècle, Van Helmont fait pousser un saule dans un pot de terre pesée. Cinq ans plus tard, l'arbre a pris des dizaines de kilos. Et la terre ?",
+          "nom": "Elle n'a presque pas perdu de masse.",
+          "explication": "La terre avait perdu à peine quelques dizaines de grammes : la matière de l'arbre ne venait donc pas de la terre.",
+          "pieges": [
+            {
+              "texte": "Elle a perdu autant que ce que l'arbre a gagné.",
+              "pourquoi": "C'est ce qu'on attendrait si la plante mangeait la terre, mais ce n'est pas ce qu'il a mesuré."
+            },
+            {
+              "texte": "Le pot était vide à la fin.",
+              "pourquoi": "La terre était toujours là, presque aussi lourde qu'au début."
+            }
+          ]
+        },
+        {
+          "texte": "De quoi une plante verte a-t-elle besoin pour fabriquer sa matière ?",
+          "nom": "De lumière, d'eau, de dioxyde de carbone et de sels minéraux.",
+          "explication": "Avec l'énergie de la lumière, la plante fabrique sa matière organique à partir de matière minérale.",
+          "pieges": [
+            {
+              "texte": "D'insectes et de viande.",
+              "pourquoi": "Quelques plantes rares attrapent des insectes, mais une plante verte fabrique sa matière sans manger d'êtres vivants."
+            },
+            {
+              "texte": "Seulement d'eau.",
+              "pourquoi": "L'eau ne suffit pas : il faut aussi la lumière et le dioxyde de carbone de l'air."
+            }
+          ]
+        },
+        {
+          "texte": "On place une plante verte dans un placard noir pendant plusieurs semaines. Que se passe-t-il ?",
+          "nom": "Elle dépérit, car elle ne peut plus produire sa matière sans lumière.",
+          "explication": "Sans lumière, la plante verte ne fabrique plus de matière : elle s'affaiblit, jaunit puis meurt.",
+          "pieges": [
+            {
+              "texte": "Elle pousse mieux, au calme.",
+              "pourquoi": "La lumière est indispensable à la production de matière par la plante verte."
+            },
+            {
+              "texte": "Rien, si on l'arrose.",
+              "pourquoi": "L'eau seule ne suffit pas : il faut aussi la lumière."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les végétaux sont-ils toujours au début des réseaux alimentaires ?",
+          "nom": "Parce qu'ils produisent leur matière sans manger d'autres êtres vivants.",
+          "explication": "Les végétaux sont des producteurs primaires : ils fabriquent la matière que les animaux mangeront ensuite.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils sont plus petits que les animaux.",
+              "pourquoi": "Un chêne est bien plus grand qu'une souris : la taille ne compte pas."
+            },
+            {
+              "texte": "Parce qu'ils ne servent à rien d'autre.",
+              "pourquoi": "Ils produisent la matière dont dépendent tous les autres êtres vivants."
+            }
+          ]
+        },
+        {
+          "texte": "D'où vient la plus grande partie de la masse d'un arbre ?",
+          "nom": "Du dioxyde de carbone de l'air et de l'eau.",
+          "explication": "La matière du bois est fabriquée par l'arbre à partir du dioxyde de carbone de l'air et de l'eau, grâce à la lumière.",
+          "pieges": [
+            {
+              "texte": "De la terre.",
+              "pourquoi": "L'expérience du saule montre que la terre ne perd presque rien."
+            },
+            {
+              "texte": "Des engrais.",
+              "pourquoi": "Les engrais apportent des sels minéraux, en petite quantité ; ils ne font pas la masse de l'arbre."
+            }
+          ]
+        },
+        {
+          "texte": "Que deviennent les feuilles mortes tombées sur le sol de la forêt ?",
+          "nom": "Elles sont décomposées par des êtres vivants du sol.",
+          "explication": "Des animaux du sol, des champignons et des bactéries décomposent la matière morte : elle redevient matière minérale pour les plantes.",
+          "pieges": [
+            {
+              "texte": "Elles restent intactes pour toujours.",
+              "pourquoi": "Observe un tas de feuilles : au fil des mois, elles se transforment et disparaissent."
+            },
+            {
+              "texte": "Elles disparaissent toutes seules, sans aide.",
+              "pourquoi": "Sans les êtres vivants du sol, elles ne se décomposeraient pas."
+            }
+          ]
+        },
+        {
+          "texte": "Quel rôle jouent les champignons et les bactéries du sol ?",
+          "nom": "Ils décomposent la matière organique morte.",
+          "explication": "Ces décomposeurs recyclent la matière : les sels minéraux libérés nourrissent de nouveau les plantes.",
+          "pieges": [
+            {
+              "texte": "Ils fabriquent leur matière avec la lumière, comme les plantes.",
+              "pourquoi": "Les champignons ne sont pas des végétaux verts : ils se nourrissent de matière organique."
+            },
+            {
+              "texte": "Aucun, ils abîment seulement le sol.",
+              "pourquoi": "Sans eux, la matière ne serait pas recyclée."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Plants, producers of matter",
+        "idee": "A green plant doesn't eat other living things. In the light, it makes its own matter from water, carbon dioxide from the air and mineral salts.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of a green plant's four needs: light, water, carbon dioxide from the air and mineral salts.",
+          "exemple": "Example: a radish grows in the garden. Its matter comes mainly from water and carbon dioxide from the air, thanks to light.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Does a green plant « eat » soil to grow?",
+            "nom": "No: it takes water and mineral salts from the soil, not soil itself.",
+            "explication": "Soil isn't food. The plant makes its matter from light, water, carbon dioxide and a little mineral salt.",
+            "pieges": [
+              {
+                "texte": "Yes, soil is its food.",
+                "pourquoi": "That's a very common idea, but it's wrong: the soil in a pot hardly decreases as the plant grows."
+              },
+              {
+                "texte": "Yes, with roots that chew it.",
+                "pourquoi": "Roots take in water and dissolved mineral salts; they don't chew anything."
+              }
+            ]
+          },
+          {
+            "texte": "In the 17th century, Van Helmont grew a willow in a pot of weighed soil. Five years later, the tree had gained tens of kilos. And the soil?",
+            "nom": "It had hardly lost any mass.",
+            "explication": "The soil had lost only a few tens of grams: so the tree's matter didn't come from the soil.",
+            "pieges": [
+              {
+                "texte": "It had lost as much as the tree gained.",
+                "pourquoi": "That's what we'd expect if the plant ate soil, but it isn't what he measured."
+              },
+              {
+                "texte": "The pot was empty at the end.",
+                "pourquoi": "The soil was still there, almost as heavy as at the start."
+              }
+            ]
+          },
+          {
+            "texte": "What does a green plant need to make its matter?",
+            "nom": "Light, water, carbon dioxide and mineral salts.",
+            "explication": "Using the energy of light, the plant makes organic matter from mineral matter.",
+            "pieges": [
+              {
+                "texte": "Insects and meat.",
+                "pourquoi": "A few rare plants catch insects, but a green plant makes its matter without eating living things."
+              },
+              {
+                "texte": "Only water.",
+                "pourquoi": "Water isn't enough: it also needs light and carbon dioxide from the air."
+              }
+            ]
+          },
+          {
+            "texte": "We put a green plant in a dark cupboard for several weeks. What happens?",
+            "nom": "It wilts, because it can't make its matter without light.",
+            "explication": "Without light, a green plant stops making matter: it weakens, turns yellow and dies.",
+            "pieges": [
+              {
+                "texte": "It grows better, in peace and quiet.",
+                "pourquoi": "Light is essential for a green plant to make matter."
+              },
+              {
+                "texte": "Nothing, if we water it.",
+                "pourquoi": "Water alone isn't enough: it also needs light."
+              }
+            ]
+          },
+          {
+            "texte": "Why are plants always at the start of food webs?",
+            "nom": "Because they make their matter without eating other living things.",
+            "explication": "Plants are primary producers: they make the matter that animals will then eat.",
+            "pieges": [
+              {
+                "texte": "Because they are smaller than animals.",
+                "pourquoi": "An oak is far bigger than a mouse: size doesn't matter."
+              },
+              {
+                "texte": "Because they're no use for anything else.",
+                "pourquoi": "They make the matter that every other living thing depends on."
+              }
+            ]
+          },
+          {
+            "texte": "Where does most of a tree's mass come from?",
+            "nom": "From carbon dioxide in the air and water.",
+            "explication": "The tree makes the matter of its wood from carbon dioxide in the air and water, thanks to light.",
+            "pieges": [
+              {
+                "texte": "From the soil.",
+                "pourquoi": "The willow experiment shows the soil loses almost nothing."
+              },
+              {
+                "texte": "From fertiliser.",
+                "pourquoi": "Fertiliser brings small amounts of mineral salts; it doesn't make up the tree's mass."
+              }
+            ]
+          },
+          {
+            "texte": "What happens to dead leaves that fall on the forest floor?",
+            "nom": "They are broken down by living things in the soil.",
+            "explication": "Soil animals, fungi and bacteria break down dead matter: it turns back into mineral matter for plants.",
+            "pieges": [
+              {
+                "texte": "They stay as they are for ever.",
+                "pourquoi": "Watch a pile of leaves: over the months, they change and disappear."
+              },
+              {
+                "texte": "They disappear by themselves, with no help.",
+                "pourquoi": "Without the living things in the soil, they wouldn't break down."
+              }
+            ]
+          },
+          {
+            "texte": "What do fungi and bacteria in the soil do?",
+            "nom": "They break down dead organic matter.",
+            "explication": "These decomposers recycle matter: the mineral salts they release feed plants again.",
+            "pieges": [
+              {
+                "texte": "They make their matter with light, like plants.",
+                "pourquoi": "Fungi aren't green plants: they feed on organic matter."
+              },
+              {
+                "texte": "Nothing, they just spoil the soil.",
+                "pourquoi": "Without them, matter wouldn't be recycled."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "digestion",
+      "titre": "Le trajet des aliments : la digestion",
+      "niveau": "5e",
+      "prerequis": [
+        "cellule"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Expliquer le devenir des aliments dans le tube digestif."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Les aliments traversent le tube digestif : bouche, œsophage, estomac, intestin grêle, gros intestin. Ils y sont transformés en nutriments, qui passent dans le sang.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Suis le trajet dans l'ordre : bouche, œsophage, estomac, intestin grêle, gros intestin, anus.",
+        "exemple": "Exemple : une bouchée de pain est mâchée dans la bouche, avalée par l'œsophage, brassée dans l'estomac, puis digérée dans l'intestin grêle.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans quel ordre les aliments traversent-ils le tube digestif ?",
+          "nom": "Bouche, œsophage, estomac, intestin grêle, gros intestin.",
+          "explication": "Le tube digestif est un long tuyau continu, de la bouche à l'anus.",
+          "pieges": [
+            {
+              "texte": "Bouche, estomac, œsophage, intestin.",
+              "pourquoi": "L'œsophage relie la bouche à l'estomac : il vient avant."
+            },
+            {
+              "texte": "Bouche, estomac, foie, intestin.",
+              "pourquoi": "Le foie participe à la digestion, mais les aliments ne passent pas dedans."
+            }
+          ]
+        },
+        {
+          "texte": "Où la plupart des nutriments passent-ils dans le sang ?",
+          "nom": "Dans l'intestin grêle.",
+          "explication": "La paroi de l'intestin grêle est très fine et très étendue : les nutriments la traversent pour passer dans le sang. C'est l'absorption.",
+          "pieges": [
+            {
+              "texte": "Dans l'estomac.",
+              "pourquoi": "L'estomac brasse et commence à digérer, mais l'essentiel de l'absorption se fait dans l'intestin grêle."
+            },
+            {
+              "texte": "Dans la bouche.",
+              "pourquoi": "La bouche découpe et mélange avec la salive ; les nutriments ne passent pas encore dans le sang."
+            }
+          ]
+        },
+        {
+          "texte": "L'eau que tu bois passe-t-elle par un autre tuyau que la nourriture ?",
+          "nom": "Non, elle suit le même tube digestif.",
+          "explication": "Boissons et aliments descendent par l'œsophage jusqu'à l'estomac, puis l'intestin.",
+          "pieges": [
+            {
+              "texte": "Oui, l'eau va directement dans la vessie.",
+              "pourquoi": "C'est une idée courante, mais il n'y a pas de tuyau direct : l'eau passe par l'intestin, puis par le sang, avant d'être filtrée par les reins."
+            },
+            {
+              "texte": "Oui, elle va dans les poumons.",
+              "pourquoi": "Les poumons reçoivent l'air. Si une boisson y entre, on tousse : c'est une fausse route."
+            }
+          ]
+        },
+        {
+          "texte": "Mâche longtemps un morceau de pain sans l'avaler. Il devient un peu sucré. Pourquoi ?",
+          "nom": "La salive commence à transformer l'amidon du pain en sucre.",
+          "explication": "La digestion commence dans la bouche : la salive contient une substance qui découpe l'amidon en sucres. Fais l'essai !",
+          "pieges": [
+            {
+              "texte": "Parce qu'il y a du sucre caché dans la salive.",
+              "pourquoi": "La salive n'est pas sucrée : elle transforme l'amidon du pain en sucre."
+            },
+            {
+              "texte": "Parce que les dents fabriquent du sucre.",
+              "pourquoi": "Les dents découpent les aliments, elles ne produisent aucune substance."
+            }
+          ]
+        },
+        {
+          "texte": "À quoi servent les dents dans la digestion ?",
+          "nom": "À couper et broyer les aliments en petits morceaux.",
+          "explication": "Les dents fragmentent les aliments : les sucs digestifs agissent alors plus facilement sur ces petits morceaux.",
+          "pieges": [
+            {
+              "texte": "À faire passer les nutriments dans le sang.",
+              "pourquoi": "Ce passage se fait dans l'intestin grêle."
+            },
+            {
+              "texte": "Seulement à sourire.",
+              "pourquoi": "Elles ont un vrai rôle dans la digestion : mâcher."
+            }
+          ]
+        },
+        {
+          "texte": "Que font les sucs digestifs ?",
+          "nom": "Ils transforment les aliments en nutriments.",
+          "explication": "Salive, suc gastrique et sucs de l'intestin découpent chimiquement les aliments en nutriments assez petits pour passer dans le sang.",
+          "pieges": [
+            {
+              "texte": "Ils colorent les aliments.",
+              "pourquoi": "Leur rôle est chimique : découper les aliments, pas les colorer."
+            },
+            {
+              "texte": "Ils rendent les aliments plus gros.",
+              "pourquoi": "C'est l'inverse : ils les découpent en éléments très petits."
+            }
+          ]
+        },
+        {
+          "texte": "Que devient la partie des aliments qui n'est pas absorbée ?",
+          "nom": "Elle passe dans le gros intestin et forme les excréments.",
+          "explication": "Les déchets non digérés traversent le gros intestin, où de l'eau est récupérée, puis sont rejetés par l'anus.",
+          "pieges": [
+            {
+              "texte": "Elle reste pour toujours dans l'estomac.",
+              "pourquoi": "L'estomac se vide : rien n'y reste pour toujours."
+            },
+            {
+              "texte": "Elle passe aussi dans le sang.",
+              "pourquoi": "Seuls les nutriments passent dans le sang ; le reste est éliminé."
+            }
+          ]
+        },
+        {
+          "texte": "Une fois dans le sang, où vont les nutriments ?",
+          "nom": "Vers tous les organes du corps.",
+          "explication": "Le sang transporte les nutriments jusqu'aux cellules de tous les organes, comme les muscles et le cerveau.",
+          "pieges": [
+            {
+              "texte": "Ils restent dans l'intestin.",
+              "pourquoi": "Ils quittent l'intestin par le sang, qui circule dans tout le corps."
+            },
+            {
+              "texte": "Seulement vers l'estomac.",
+              "pourquoi": "Ils vont partout où il y a des cellules à nourrir."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les nutriments doivent-ils être très petits ?",
+          "nom": "Pour traverser la paroi de l'intestin et passer dans le sang.",
+          "explication": "Un morceau de pain ne peut pas traverser la paroi de l'intestin. Les nutriments, eux, sont assez petits pour le faire.",
+          "pieges": [
+            {
+              "texte": "Pour tenir dans l'estomac.",
+              "pourquoi": "L'estomac reçoit des bouchées entières : la taille compte surtout pour traverser l'intestin."
+            },
+            {
+              "texte": "Pour être plus faciles à goûter.",
+              "pourquoi": "Le goût se joue dans la bouche, bien avant la fin de la digestion."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Where food goes: digestion",
+        "idee": "Food travels through the digestive tract: mouth, oesophagus, stomach, small intestine, large intestine. There it is turned into nutrients, which pass into the blood.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Follow the route in order: mouth, oesophagus, stomach, small intestine, large intestine, anus.",
+          "exemple": "Example: a mouthful of bread is chewed in the mouth, swallowed down the oesophagus, churned in the stomach, then digested in the small intestine.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In what order does food go through the digestive tract?",
+            "nom": "Mouth, oesophagus, stomach, small intestine, large intestine.",
+            "explication": "The digestive tract is one long continuous tube, from the mouth to the anus.",
+            "pieges": [
+              {
+                "texte": "Mouth, stomach, oesophagus, intestine.",
+                "pourquoi": "The oesophagus links the mouth to the stomach: it comes first."
+              },
+              {
+                "texte": "Mouth, stomach, liver, intestine.",
+                "pourquoi": "The liver helps digestion, but food doesn't pass through it."
+              }
+            ]
+          },
+          {
+            "texte": "Where do most nutrients pass into the blood?",
+            "nom": "In the small intestine.",
+            "explication": "The wall of the small intestine is very thin and very large: nutrients cross it into the blood. That's absorption.",
+            "pieges": [
+              {
+                "texte": "In the stomach.",
+                "pourquoi": "The stomach churns and starts digesting, but most absorption happens in the small intestine."
+              },
+              {
+                "texte": "In the mouth.",
+                "pourquoi": "The mouth cuts food up and mixes it with saliva; nutrients don't pass into the blood yet."
+              }
+            ]
+          },
+          {
+            "texte": "Does the water you drink go down a different tube from food?",
+            "nom": "No, it follows the same digestive tract.",
+            "explication": "Drinks and food go down the oesophagus to the stomach, then the intestine.",
+            "pieges": [
+              {
+                "texte": "Yes, water goes straight to the bladder.",
+                "pourquoi": "That's a common idea, but there's no direct tube: water goes through the intestine, then the blood, before the kidneys filter it."
+              },
+              {
+                "texte": "Yes, it goes to the lungs.",
+                "pourquoi": "The lungs take in air. If a drink goes in there, you cough: it's gone down the wrong way."
+              }
+            ]
+          },
+          {
+            "texte": "Chew a piece of bread for a long time without swallowing. It turns a little sweet. Why?",
+            "nom": "Saliva starts turning the starch in bread into sugar.",
+            "explication": "Digestion starts in the mouth: saliva contains a substance that breaks starch into sugars. Try it!",
+            "pieges": [
+              {
+                "texte": "Because there's hidden sugar in saliva.",
+                "pourquoi": "Saliva isn't sweet: it turns the bread's starch into sugar."
+              },
+              {
+                "texte": "Because teeth make sugar.",
+                "pourquoi": "Teeth cut food up; they don't make any substance."
+              }
+            ]
+          },
+          {
+            "texte": "What do teeth do in digestion?",
+            "nom": "They cut and grind food into small pieces.",
+            "explication": "Teeth break food up: digestive juices then work more easily on the small pieces.",
+            "pieges": [
+              {
+                "texte": "They pass nutrients into the blood.",
+                "pourquoi": "That happens in the small intestine."
+              },
+              {
+                "texte": "They're only for smiling.",
+                "pourquoi": "They have a real job in digestion: chewing."
+              }
+            ]
+          },
+          {
+            "texte": "What do digestive juices do?",
+            "nom": "They turn food into nutrients.",
+            "explication": "Saliva, stomach juice and intestinal juices break food down chemically into nutrients small enough to pass into the blood.",
+            "pieges": [
+              {
+                "texte": "They colour the food.",
+                "pourquoi": "Their job is chemical: breaking food down, not colouring it."
+              },
+              {
+                "texte": "They make food bigger.",
+                "pourquoi": "It's the opposite: they break it into very small pieces."
+              }
+            ]
+          },
+          {
+            "texte": "What happens to the part of food that isn't absorbed?",
+            "nom": "It goes into the large intestine and becomes faeces.",
+            "explication": "Undigested waste goes through the large intestine, where water is taken back, then leaves through the anus.",
+            "pieges": [
+              {
+                "texte": "It stays in the stomach for ever.",
+                "pourquoi": "The stomach empties: nothing stays there for ever."
+              },
+              {
+                "texte": "It goes into the blood as well.",
+                "pourquoi": "Only nutrients pass into the blood; the rest is got rid of."
+              }
+            ]
+          },
+          {
+            "texte": "Once in the blood, where do nutrients go?",
+            "nom": "To all the organs of the body.",
+            "explication": "Blood carries nutrients to the cells of every organ, such as the muscles and the brain.",
+            "pieges": [
+              {
+                "texte": "They stay in the intestine.",
+                "pourquoi": "They leave the intestine in the blood, which flows all round the body."
+              },
+              {
+                "texte": "Only to the stomach.",
+                "pourquoi": "They go wherever there are cells to feed."
+              }
+            ]
+          },
+          {
+            "texte": "Why must nutrients be very small?",
+            "nom": "To cross the wall of the intestine and pass into the blood.",
+            "explication": "A piece of bread can't cross the intestine wall. Nutrients are small enough to do so.",
+            "pieges": [
+              {
+                "texte": "To fit in the stomach.",
+                "pourquoi": "The stomach takes whole mouthfuls: size matters mostly for crossing the intestine."
+              },
+              {
+                "texte": "To be easier to taste.",
+                "pourquoi": "Taste happens in the mouth, long before digestion ends."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "seismes-volcans",
+      "titre": "Séismes et volcans",
+      "niveau": "5e",
+      "prerequis": [],
+      "programme": {
+        "source": "c4",
+        "texte": "Expliquer quelques phénomènes géologiques à partir du contexte géodynamique global."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La surface de la Terre est découpée en plaques qui bougent lentement. Là où elles se rencontrent ou s'écartent, il y a beaucoup de séismes et de volcans.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense aux plaques : elles bougent de quelques centimètres par an, et leurs bords sont les zones les plus actives.",
+        "exemple": "Exemple : le Japon est au bord de plusieurs plaques. On y ressent souvent des séismes et on y trouve de nombreux volcans.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'un séisme ?",
+          "nom": "Des secousses du sol dues à une rupture brutale de roches en profondeur.",
+          "explication": "Des roches qui subissent des forces finissent par casser d'un coup : l'énergie libérée fait vibrer le sol.",
+          "pieges": [
+            {
+              "texte": "Une explosion de volcan.",
+              "pourquoi": "Un volcan peut faire trembler le sol, mais la plupart des séismes viennent de roches qui cassent."
+            },
+            {
+              "texte": "Un très gros orage.",
+              "pourquoi": "Un orage se passe dans l'atmosphère ; un séisme vient du sous-sol."
+            }
+          ]
+        },
+        {
+          "texte": "Sous la croûte terrestre, y a-t-il un océan de roche fondue ?",
+          "nom": "Non, le manteau est presque entièrement solide.",
+          "explication": "Le magma se forme seulement à certains endroits, par fusion partielle des roches. Le manteau, lui, est solide, même s'il se déforme très lentement.",
+          "pieges": [
+            {
+              "texte": "Oui, tout le dessous de la croûte est liquide.",
+              "pourquoi": "C'est une idée très répandue, mais fausse : les ondes des séismes montrent que le manteau est solide."
+            },
+            {
+              "texte": "Oui, c'est de là que vient la lave de tous les volcans.",
+              "pourquoi": "La lave vient de poches de magma formées localement, pas d'un océan sous toute la Terre."
+            }
+          ]
+        },
+        {
+          "texte": "Où se produisent la plupart des séismes et des volcans ?",
+          "nom": "Aux limites entre les plaques.",
+          "explication": "Sur une carte, séismes et volcans dessinent des lignes : ce sont les bords des plaques.",
+          "pieges": [
+            {
+              "texte": "Au hasard, partout sur Terre.",
+              "pourquoi": "Leur répartition n'est pas au hasard : ils se concentrent aux bords des plaques."
+            },
+            {
+              "texte": "Seulement au milieu des océans.",
+              "pourquoi": "Il y en a aussi sur les continents, par exemple autour du Pacifique."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle vitesse les plaques se déplacent-elles ?",
+          "nom": "De quelques centimètres par an.",
+          "explication": "C'est à peu près la vitesse à laquelle poussent les ongles : invisible pour nous, mais énorme sur des millions d'années.",
+          "pieges": [
+            {
+              "texte": "De plusieurs mètres par jour.",
+              "pourquoi": "Ce serait des milliers de fois trop rapide."
+            },
+            {
+              "texte": "Elles ne bougent pas du tout.",
+              "pourquoi": "Les mesures par satellite montrent qu'elles bougent, lentement."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que la lave ?",
+          "nom": "Du magma qui sort à la surface.",
+          "explication": "Le magma est de la roche fondue en profondeur ; quand il sort par le volcan, on l'appelle lave.",
+          "pieges": [
+            {
+              "texte": "De l'eau très chaude.",
+              "pourquoi": "La lave est de la roche fondue, pas de l'eau."
+            },
+            {
+              "texte": "Du feu.",
+              "pourquoi": "La lave est rouge parce qu'elle est très chaude, mais ce n'est pas une flamme : c'est de la roche liquide."
+            }
+          ]
+        },
+        {
+          "texte": "Le Piton de la Fournaise, à La Réunion, fait surtout couler de la lave fluide. Comment appelle-t-on ce type d'éruption ?",
+          "nom": "Effusive.",
+          "explication": "Une éruption effusive émet des coulées de lave fluide. Une éruption explosive projette surtout des cendres et des blocs.",
+          "pieges": [
+            {
+              "texte": "Explosive.",
+              "pourquoi": "Une éruption explosive projette cendres et blocs ; au Piton de la Fournaise, ce sont surtout des coulées."
+            },
+            {
+              "texte": "Sismique.",
+              "pourquoi": "« Sismique » se rapporte aux séismes, pas au type d'éruption."
+            }
+          ]
+        },
+        {
+          "texte": "Sait-on prévoir le jour exact d'un séisme ?",
+          "nom": "Non, mais on sait quelles régions sont à risque.",
+          "explication": "On connaît les zones où les séismes sont fréquents, mais pas leur date. On s'en protège surtout par des constructions parasismiques.",
+          "pieges": [
+            {
+              "texte": "Oui, des semaines à l'avance.",
+              "pourquoi": "Aucune méthode ne permet aujourd'hui de prévoir la date d'un séisme."
+            },
+            {
+              "texte": "Non, et on ne peut rien faire.",
+              "pourquoi": "On peut réduire le risque : bâtiments adaptés, consignes de sécurité, exercices."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un même séisme fait-il plus de dégâts dans une ville que dans un désert ?",
+          "nom": "Parce qu'il y a plus de personnes et de bâtiments exposés.",
+          "explication": "Le risque dépend de l'aléa, le séisme, et de la vulnérabilité : les personnes, les bâtiments, les routes exposés.",
+          "pieges": [
+            {
+              "texte": "Parce que le séisme est plus fort sous les villes.",
+              "pourquoi": "La force du séisme ne dépend pas de la ville au-dessus."
+            },
+            {
+              "texte": "Parce que le sable du désert absorbe tout.",
+              "pourquoi": "Le sol joue un rôle, mais la principale différence est le nombre de personnes et de bâtiments."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Earthquakes and volcanoes",
+        "idee": "The Earth's surface is split into plates that move slowly. Where they meet or pull apart, there are many earthquakes and volcanoes.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of the plates: they move a few centimetres a year, and their edges are the most active areas.",
+          "exemple": "Example: Japan lies at the edge of several plates. Earthquakes are often felt there and there are many volcanoes.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is an earthquake?",
+            "nom": "The ground shaking because rocks deep down break suddenly.",
+            "explication": "Rocks under stress end up breaking all at once: the energy released makes the ground shake.",
+            "pieges": [
+              {
+                "texte": "A volcano exploding.",
+                "pourquoi": "A volcano can make the ground shake, but most earthquakes come from rocks breaking."
+              },
+              {
+                "texte": "A very big storm.",
+                "pourquoi": "A storm happens in the atmosphere; an earthquake comes from underground."
+              }
+            ]
+          },
+          {
+            "texte": "Under the Earth's crust, is there an ocean of melted rock?",
+            "nom": "No, the mantle is almost entirely solid.",
+            "explication": "Magma forms only in certain places, when rocks partly melt. The mantle is solid, even though it slowly changes shape.",
+            "pieges": [
+              {
+                "texte": "Yes, everything under the crust is liquid.",
+                "pourquoi": "That's a very common idea, but it's wrong: earthquake waves show the mantle is solid."
+              },
+              {
+                "texte": "Yes, that's where all volcanoes' lava comes from.",
+                "pourquoi": "Lava comes from pockets of magma formed locally, not from an ocean under the whole Earth."
+              }
+            ]
+          },
+          {
+            "texte": "Where do most earthquakes and volcanoes happen?",
+            "nom": "At the boundaries between plates.",
+            "explication": "On a map, earthquakes and volcanoes make lines: those are the plate edges.",
+            "pieges": [
+              {
+                "texte": "Randomly, all over the Earth.",
+                "pourquoi": "They aren't spread at random: they gather along plate edges."
+              },
+              {
+                "texte": "Only in the middle of the oceans.",
+                "pourquoi": "There are some on land too, for example around the Pacific."
+              }
+            ]
+          },
+          {
+            "texte": "How fast do the plates move?",
+            "nom": "A few centimetres a year.",
+            "explication": "That's about how fast your fingernails grow: too slow to see, but huge over millions of years.",
+            "pieges": [
+              {
+                "texte": "Several metres a day.",
+                "pourquoi": "That would be thousands of times too fast."
+              },
+              {
+                "texte": "They don't move at all.",
+                "pourquoi": "Satellite measurements show they do move, slowly."
+              }
+            ]
+          },
+          {
+            "texte": "What is lava?",
+            "nom": "Magma that comes out at the surface.",
+            "explication": "Magma is melted rock deep underground; when it comes out of a volcano, we call it lava.",
+            "pieges": [
+              {
+                "texte": "Very hot water.",
+                "pourquoi": "Lava is melted rock, not water."
+              },
+              {
+                "texte": "Fire.",
+                "pourquoi": "Lava is red because it's very hot, but it isn't a flame: it's liquid rock."
+              }
+            ]
+          },
+          {
+            "texte": "Piton de la Fournaise, on Réunion Island, mostly pours out runny lava. What is this type of eruption called?",
+            "nom": "Effusive.",
+            "explication": "An effusive eruption gives off flows of runny lava. An explosive eruption mostly throws out ash and blocks.",
+            "pieges": [
+              {
+                "texte": "Explosive.",
+                "pourquoi": "An explosive eruption throws out ash and blocks; at Piton de la Fournaise, it's mostly lava flows."
+              },
+              {
+                "texte": "Seismic.",
+                "pourquoi": "« Seismic » is about earthquakes, not the type of eruption."
+              }
+            ]
+          },
+          {
+            "texte": "Can we predict the exact day of an earthquake?",
+            "nom": "No, but we know which regions are at risk.",
+            "explication": "We know where earthquakes are frequent, but not when. We protect ourselves mainly with earthquake-proof buildings.",
+            "pieges": [
+              {
+                "texte": "Yes, weeks in advance.",
+                "pourquoi": "No method today can predict the date of an earthquake."
+              },
+              {
+                "texte": "No, and nothing can be done.",
+                "pourquoi": "The risk can be reduced: suitable buildings, safety rules, drills."
+              }
+            ]
+          },
+          {
+            "texte": "Why does the same earthquake do more damage in a city than in a desert?",
+            "nom": "Because more people and buildings are exposed.",
+            "explication": "Risk depends on the hazard, the earthquake, and on vulnerability: the people, buildings and roads exposed.",
+            "pieges": [
+              {
+                "texte": "Because the earthquake is stronger under cities.",
+                "pourquoi": "The earthquake's strength doesn't depend on the city above it."
+              },
+              {
+                "texte": "Because desert sand soaks it all up.",
+                "pourquoi": "The ground plays a part, but the main difference is the number of people and buildings."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "transformation-chimique",
+      "titre": "Transformation chimique ou physique ?",
+      "niveau": "4e",
+      "prerequis": [
+        "temperatures-etat"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Distinguer transformation chimique et mélange, transformation chimique et transformation physique."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans une transformation chimique, des espèces disparaissent (les réactifs) et de nouvelles apparaissent (les produits). Un changement d'état ou un mélange ne crée pas de nouvelle espèce.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi : à la fin, y a-t-il une espèce chimique nouvelle, qui n'était pas là au départ ?",
+        "exemple": "Exemple : le carbone brûle dans le dioxygène. Le carbone et le dioxygène disparaissent ; du dioxyde de carbone apparaît : c'est une transformation chimique.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "La glace fond et devient de l'eau liquide. Quel type de transformation est-ce ?",
+          "nom": "Une transformation physique.",
+          "explication": "C'est toujours de l'eau, avant comme après : seul l'état change. Aucune espèce nouvelle n'apparaît.",
+          "pieges": [
+            {
+              "texte": "Une transformation chimique.",
+              "pourquoi": "L'aspect change, mais l'espèce reste la même : de l'eau."
+            },
+            {
+              "texte": "Un mélange.",
+              "pourquoi": "Il n'y a qu'une seule espèce, l'eau : rien n'est mélangé."
+            }
+          ]
+        },
+        {
+          "texte": "On fait brûler une bougie. Quel type de transformation est-ce ?",
+          "nom": "Une transformation chimique.",
+          "explication": "La cire brûle avec le dioxygène de l'air : il se forme du dioxyde de carbone et de l'eau, de nouvelles espèces.",
+          "pieges": [
+            {
+              "texte": "Une simple fusion de la cire.",
+              "pourquoi": "La cire fond aussi, mais la flamme montre une combustion qui produit de nouvelles espèces."
+            },
+            {
+              "texte": "Une transformation physique, car rien ne disparaît.",
+              "pourquoi": "La bougie raccourcit : la cire et du dioxygène disparaissent, transformés en d'autres espèces."
+            }
+          ]
+        },
+        {
+          "texte": "On dissout du sucre dans l'eau. Quel type de transformation est-ce ?",
+          "nom": "Un mélange, pas une transformation chimique.",
+          "explication": "Le sucre et l'eau sont toujours là ; on peut récupérer le sucre en évaporant l'eau.",
+          "pieges": [
+            {
+              "texte": "Une transformation chimique, car le sucre disparaît.",
+              "pourquoi": "Le sucre ne se voit plus, mais il est toujours là, dissous."
+            },
+            {
+              "texte": "Une combustion.",
+              "pourquoi": "Rien ne brûle : le sucre se disperse dans l'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Un clou en fer laissé dehors se couvre de rouille. Que s'est-il passé ?",
+          "nom": "Une transformation chimique : la corrosion du fer.",
+          "explication": "Le fer réagit avec le dioxygène et l'eau : la rouille est une espèce nouvelle, différente du fer.",
+          "pieges": [
+            {
+              "texte": "Le fer s'est sali avec de la terre.",
+              "pourquoi": "La rouille ne part pas comme de la saleté : c'est le fer lui-même qui s'est transformé."
+            },
+            {
+              "texte": "Le fer a changé d'état.",
+              "pourquoi": "La rouille n'est pas du fer fondu ni gazeux : c'est une autre espèce."
+            }
+          ]
+        },
+        {
+          "texte": "Lors d'une transformation chimique en récipient fermé, que devient la masse totale ?",
+          "nom": "Elle se conserve.",
+          "explication": "Les atomes ne disparaissent pas : ils se réarrangent. La masse des produits est égale à celle des réactifs.",
+          "pieges": [
+            {
+              "texte": "Elle diminue, car des réactifs disparaissent.",
+              "pourquoi": "Les réactifs disparaissent, mais leurs atomes se retrouvent dans les produits."
+            },
+            {
+              "texte": "Elle augmente, car de nouvelles espèces apparaissent.",
+              "pourquoi": "Les nouvelles espèces sont faites des mêmes atomes : la masse ne change pas."
+            }
+          ]
+        },
+        {
+          "texte": "Une bûche brûle et il ne reste qu'un peu de cendres, bien plus légères. La masse a-t-elle disparu ?",
+          "nom": "Non, elle est partie surtout sous forme de gaz.",
+          "explication": "La combustion produit du dioxyde de carbone et de la vapeur d'eau, qui partent dans l'air. Dans un récipient fermé, la masse totale ne changerait pas.",
+          "pieges": [
+            {
+              "texte": "Oui, le feu détruit la matière.",
+              "pourquoi": "La matière ne disparaît pas : elle se transforme en gaz invisibles."
+            },
+            {
+              "texte": "Oui, les cendres sont tout ce qui reste.",
+              "pourquoi": "Il faut compter aussi les gaz produits : ils emportent l'essentiel de la masse."
+            }
+          ]
+        },
+        {
+          "texte": "On verse de l'eau de chaux dans un flacon où l'on a fait brûler du carbone. L'eau de chaux se trouble. Qu'est-ce que cela montre ?",
+          "nom": "La présence de dioxyde de carbone.",
+          "explication": "L'eau de chaux se trouble en présence de dioxyde de carbone : c'est un test caractéristique.",
+          "pieges": [
+            {
+              "texte": "La présence de dioxygène.",
+              "pourquoi": "Le dioxygène ne trouble pas l'eau de chaux."
+            },
+            {
+              "texte": "La présence d'eau.",
+              "pourquoi": "L'eau de chaux contient déjà de l'eau : elle se trouble à cause du dioxyde de carbone."
+            }
+          ]
+        },
+        {
+          "texte": "Un œuf cuit ne redevient jamais cru en refroidissant. Pourquoi ?",
+          "nom": "La cuisson est une transformation chimique.",
+          "explication": "En cuisant, les espèces de l'œuf se transforment en d'autres espèces. Ce n'est pas un simple changement d'état qu'on pourrait inverser en refroidissant.",
+          "pieges": [
+            {
+              "texte": "Parce que le blanc a gelé.",
+              "pourquoi": "Le blanc n'est pas solide à cause du froid, mais parce que ses espèces ont été transformées par la chaleur."
+            },
+            {
+              "texte": "Parce qu'il faudrait attendre plus longtemps.",
+              "pourquoi": "Même après des jours, il ne redeviendra pas cru."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Chemical or physical change?",
+        "idee": "In a chemical change, some substances disappear (reactants) and new ones appear (products). A change of state or a mixture makes no new substance.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Ask yourself: at the end, is there a new substance that wasn't there at the start?",
+          "exemple": "Example: carbon burns in oxygen. Carbon and oxygen disappear; carbon dioxide appears: it's a chemical change.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Ice melts and becomes liquid water. What kind of change is it?",
+            "nom": "A physical change.",
+            "explication": "It's still water, before and after: only the state changes. No new substance appears.",
+            "pieges": [
+              {
+                "texte": "A chemical change.",
+                "pourquoi": "It looks different, but the substance is the same: water."
+              },
+              {
+                "texte": "A mixture.",
+                "pourquoi": "There's only one substance, water: nothing is mixed."
+              }
+            ]
+          },
+          {
+            "texte": "We light a candle. What kind of change is it?",
+            "nom": "A chemical change.",
+            "explication": "The wax burns with oxygen from the air: carbon dioxide and water form, which are new substances.",
+            "pieges": [
+              {
+                "texte": "Just the wax melting.",
+                "pourquoi": "The wax melts too, but the flame shows burning, which makes new substances."
+              },
+              {
+                "texte": "A physical change, because nothing disappears.",
+                "pourquoi": "The candle gets shorter: wax and oxygen disappear, turned into other substances."
+              }
+            ]
+          },
+          {
+            "texte": "We dissolve sugar in water. What kind of change is it?",
+            "nom": "A mixture, not a chemical change.",
+            "explication": "Both sugar and water are still there; you can get the sugar back by evaporating the water.",
+            "pieges": [
+              {
+                "texte": "A chemical change, because the sugar disappears.",
+                "pourquoi": "You can't see the sugar any more, but it's still there, dissolved."
+              },
+              {
+                "texte": "Burning.",
+                "pourquoi": "Nothing burns: the sugar spreads through the water."
+              }
+            ]
+          },
+          {
+            "texte": "An iron nail left outside gets covered in rust. What has happened?",
+            "nom": "A chemical change: the iron has corroded.",
+            "explication": "Iron reacts with oxygen and water: rust is a new substance, different from iron.",
+            "pieges": [
+              {
+                "texte": "The iron got dirty with soil.",
+                "pourquoi": "Rust doesn't wash off like dirt: the iron itself has changed."
+              },
+              {
+                "texte": "The iron changed state.",
+                "pourquoi": "Rust isn't melted or gaseous iron: it's a different substance."
+              }
+            ]
+          },
+          {
+            "texte": "During a chemical change in a closed container, what happens to the total mass?",
+            "nom": "It stays the same.",
+            "explication": "Atoms don't disappear: they rearrange. The mass of the products equals the mass of the reactants.",
+            "pieges": [
+              {
+                "texte": "It goes down, because reactants disappear.",
+                "pourquoi": "The reactants disappear, but their atoms end up in the products."
+              },
+              {
+                "texte": "It goes up, because new substances appear.",
+                "pourquoi": "The new substances are made of the same atoms: the mass doesn't change."
+              }
+            ]
+          },
+          {
+            "texte": "A log burns and only a little ash is left, much lighter. Has the mass disappeared?",
+            "nom": "No, most of it has gone off as gas.",
+            "explication": "Burning makes carbon dioxide and water vapour, which go into the air. In a closed container, the total mass wouldn't change.",
+            "pieges": [
+              {
+                "texte": "Yes, fire destroys matter.",
+                "pourquoi": "Matter doesn't disappear: it turns into invisible gases."
+              },
+              {
+                "texte": "Yes, the ash is all that's left.",
+                "pourquoi": "You also have to count the gases made: they carry away most of the mass."
+              }
+            ]
+          },
+          {
+            "texte": "We pour limewater into a jar where carbon was burnt. The limewater turns cloudy. What does that show?",
+            "nom": "That carbon dioxide is there.",
+            "explication": "Limewater turns cloudy when carbon dioxide is present: it's a standard test.",
+            "pieges": [
+              {
+                "texte": "That oxygen is there.",
+                "pourquoi": "Oxygen doesn't turn limewater cloudy."
+              },
+              {
+                "texte": "That water is there.",
+                "pourquoi": "Limewater already contains water: it turns cloudy because of carbon dioxide."
+              }
+            ]
+          },
+          {
+            "texte": "A cooked egg never turns raw again when it cools. Why?",
+            "nom": "Cooking is a chemical change.",
+            "explication": "As it cooks, the egg's substances turn into other substances. It isn't just a change of state that cooling could reverse.",
+            "pieges": [
+              {
+                "texte": "Because the white has frozen.",
+                "pourquoi": "The white isn't solid because of cold, but because heat changed its substances."
+              },
+              {
+                "texte": "Because you'd have to wait longer.",
+                "pourquoi": "Even after days, it won't turn raw again."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reproduction",
+      "titre": "Reproduction sexuée et asexuée",
+      "niveau": "4e",
+      "prerequis": [
+        "cellule"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Relier des éléments de biologie de la reproduction sexuée et asexuée des êtres vivants et l’influence du milieu sur la survie des individus, à la dynamique des populations."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Reproduction sexuée : deux gamètes, un mâle et un femelle, s'unissent ; c'est la fécondation. Reproduction asexuée : un seul parent donne des descendants qui lui sont identiques.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi : y a-t-il rencontre de deux gamètes, ou un seul parent suffit-il ?",
+        "exemple": "Exemple : un fraisier produit des tiges rampantes, les stolons, qui donnent de nouveaux fraisiers identiques. Un seul parent : c'est une reproduction asexuée.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Comment appelle-t-on l'union d'un gamète mâle et d'un gamète femelle ?",
+          "nom": "La fécondation.",
+          "explication": "La fécondation unit deux gamètes : elle forme une cellule-œuf, à l'origine d'un nouvel individu.",
+          "pieges": [
+            {
+              "texte": "La pollinisation.",
+              "pourquoi": "La pollinisation transporte le pollen jusqu'au pistil ; la fécondation vient après."
+            },
+            {
+              "texte": "La germination.",
+              "pourquoi": "La germination, c'est la graine qui se met à pousser."
+            }
+          ]
+        },
+        {
+          "texte": "Quels sont les gamètes chez les humains ?",
+          "nom": "Le spermatozoïde et l'ovule.",
+          "explication": "Le spermatozoïde est le gamète mâle, l'ovule le gamète femelle.",
+          "pieges": [
+            {
+              "texte": "Le pollen et l'ovule.",
+              "pourquoi": "Le pollen concerne les plantes à fleurs, pas les humains."
+            },
+            {
+              "texte": "Les globules rouges et blancs.",
+              "pourquoi": "Ce sont des cellules du sang, pas des gamètes."
+            }
+          ]
+        },
+        {
+          "texte": "On plante dans la terre un morceau de tige de géranium, et il donne une nouvelle plante. Quel type de reproduction est-ce ?",
+          "nom": "Une reproduction asexuée, par bouturage.",
+          "explication": "Un seul parent suffit, sans fécondation : la nouvelle plante est identique à la plante de départ.",
+          "pieges": [
+            {
+              "texte": "Une reproduction sexuée.",
+              "pourquoi": "Il n'y a pas de rencontre de gamètes : un morceau de tige suffit."
+            },
+            {
+              "texte": "Ce n'est pas une reproduction.",
+              "pourquoi": "Un nouvel individu est apparu : c'est bien une reproduction."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les enfants d'un même couple ne sont-ils pas tous identiques ?",
+          "nom": "Parce que chaque fécondation réunit des gamètes différents.",
+          "explication": "La reproduction sexuée mélange l'information génétique des deux parents d'une façon différente à chaque fois : elle crée de la diversité.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils ne mangent pas la même chose.",
+              "pourquoi": "L'alimentation joue sur la croissance, mais les différences de départ viennent des gamètes."
+            },
+            {
+              "texte": "Ils sont tous identiques, sauf les vrais jumeaux.",
+              "pourquoi": "C'est l'inverse : seuls les vrais jumeaux viennent de la même cellule-œuf."
+            }
+          ]
+        },
+        {
+          "texte": "Chez beaucoup de poissons, la femelle pond ses ovules dans l'eau et le mâle y libère ses spermatozoïdes. Où se fait la fécondation ?",
+          "nom": "Dans l'eau, hors du corps de la femelle.",
+          "explication": "C'est une fécondation externe. Elle se fait en milieu aquatique, où les gamètes peuvent se rencontrer.",
+          "pieges": [
+            {
+              "texte": "Dans le ventre de la femelle.",
+              "pourquoi": "Ici, les gamètes sont libérés dans l'eau : la fécondation est externe."
+            },
+            {
+              "texte": "Il n'y a pas de fécondation.",
+              "pourquoi": "Il y a bien rencontre des gamètes, mais dans l'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Une grenouille pond des milliers d'œufs. Pourquoi si peu deviennent-ils des adultes ?",
+          "nom": "Beaucoup sont mangés ou ne survivent pas aux conditions du milieu.",
+          "explication": "Prédateurs, froid, sécheresse : le milieu influence la survie. Pondre beaucoup compense ces pertes.",
+          "pieges": [
+            {
+              "texte": "Parce que la plupart des œufs sont vides.",
+              "pourquoi": "Les œufs fécondés contiennent un embryon ; c'est la survie qui est difficile."
+            },
+            {
+              "texte": "Ils deviennent tous adultes.",
+              "pourquoi": "Sinon, les mares déborderaient de grenouilles !"
+            }
+          ]
+        },
+        {
+          "texte": "Le fraisier se reproduit par stolons et aussi par graines. Qu'apportent les graines de plus ?",
+          "nom": "Des descendants différents, issus d'une fécondation.",
+          "explication": "Les graines viennent d'une reproduction sexuée : elles créent de la diversité, utile si le milieu change.",
+          "pieges": [
+            {
+              "texte": "Des copies identiques au parent.",
+              "pourquoi": "Ce sont les stolons qui donnent des copies identiques."
+            },
+            {
+              "texte": "Rien, c'est la même chose.",
+              "pourquoi": "Les deux modes ne donnent pas le même résultat : diversité d'un côté, copies identiques de l'autre."
+            }
+          ]
+        },
+        {
+          "texte": "Que contient le noyau des gamètes ?",
+          "nom": "La moitié de l'information génétique de chaque parent.",
+          "explication": "Chaque gamète apporte la moitié des chromosomes. À la fécondation, la cellule-œuf retrouve un nombre complet.",
+          "pieges": [
+            {
+              "texte": "Toute l'information génétique du parent.",
+              "pourquoi": "Si c'était le cas, le nombre de chromosomes doublerait à chaque génération."
+            },
+            {
+              "texte": "Rien, ce sont des cellules vides.",
+              "pourquoi": "Les gamètes portent l'information génétique transmise aux descendants."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Sexual and asexual reproduction",
+        "idee": "Sexual reproduction: two sex cells, a male and a female one, join; that's fertilisation. Asexual reproduction: one parent gives offspring identical to itself.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Ask yourself: do two sex cells meet, or is one parent enough?",
+          "exemple": "Example: a strawberry plant grows creeping stems, runners, which become new identical plants. One parent: that's asexual reproduction.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What do we call the joining of a male and a female sex cell?",
+            "nom": "Fertilisation.",
+            "explication": "Fertilisation joins two sex cells: it makes a fertilised egg cell, the start of a new individual.",
+            "pieges": [
+              {
+                "texte": "Pollination.",
+                "pourquoi": "Pollination carries pollen to the pistil; fertilisation comes after."
+              },
+              {
+                "texte": "Germination.",
+                "pourquoi": "Germination is when a seed starts to grow."
+              }
+            ]
+          },
+          {
+            "texte": "What are the sex cells in humans?",
+            "nom": "The sperm cell and the egg cell.",
+            "explication": "The sperm cell is the male sex cell, the egg cell is the female sex cell.",
+            "pieges": [
+              {
+                "texte": "Pollen and the egg cell.",
+                "pourquoi": "Pollen is for flowering plants, not humans."
+              },
+              {
+                "texte": "Red and white blood cells.",
+                "pourquoi": "Those are blood cells, not sex cells."
+              }
+            ]
+          },
+          {
+            "texte": "We plant a piece of geranium stem in soil, and it grows into a new plant. What kind of reproduction is it?",
+            "nom": "Asexual reproduction, by a cutting.",
+            "explication": "One parent is enough, with no fertilisation: the new plant is identical to the first one.",
+            "pieges": [
+              {
+                "texte": "Sexual reproduction.",
+                "pourquoi": "No sex cells meet: a piece of stem is enough."
+              },
+              {
+                "texte": "It isn't reproduction.",
+                "pourquoi": "A new individual has appeared: it is reproduction."
+              }
+            ]
+          },
+          {
+            "texte": "Why aren't the children of the same couple all identical?",
+            "nom": "Because each fertilisation joins different sex cells.",
+            "explication": "Sexual reproduction mixes both parents' genetic information differently each time: it creates variety.",
+            "pieges": [
+              {
+                "texte": "Because they don't eat the same things.",
+                "pourquoi": "Food affects growth, but the differences at the start come from the sex cells."
+              },
+              {
+                "texte": "They're all identical, except identical twins.",
+                "pourquoi": "It's the other way round: only identical twins come from the same fertilised egg."
+              }
+            ]
+          },
+          {
+            "texte": "In many fish, the female lays her eggs in the water and the male releases his sperm there. Where does fertilisation happen?",
+            "nom": "In the water, outside the female's body.",
+            "explication": "That's external fertilisation. It happens in water, where the sex cells can meet.",
+            "pieges": [
+              {
+                "texte": "Inside the female's body.",
+                "pourquoi": "Here, the sex cells are released into the water: fertilisation is external."
+              },
+              {
+                "texte": "There's no fertilisation.",
+                "pourquoi": "The sex cells do meet, but in the water."
+              }
+            ]
+          },
+          {
+            "texte": "A frog lays thousands of eggs. Why do so few become adults?",
+            "nom": "Many are eaten or don't survive the conditions around them.",
+            "explication": "Predators, cold, drought: the environment affects survival. Laying lots of eggs makes up for these losses.",
+            "pieges": [
+              {
+                "texte": "Because most eggs are empty.",
+                "pourquoi": "Fertilised eggs contain an embryo; it's surviving that's hard."
+              },
+              {
+                "texte": "They all become adults.",
+                "pourquoi": "If they did, ponds would overflow with frogs!"
+              }
+            ]
+          },
+          {
+            "texte": "Strawberry plants reproduce by runners and also by seeds. What extra do seeds bring?",
+            "nom": "Different offspring, from fertilisation.",
+            "explication": "Seeds come from sexual reproduction: they create variety, useful if the environment changes.",
+            "pieges": [
+              {
+                "texte": "Copies identical to the parent.",
+                "pourquoi": "It's the runners that give identical copies."
+              },
+              {
+                "texte": "Nothing, it's the same thing.",
+                "pourquoi": "The two ways don't give the same result: variety on one side, identical copies on the other."
+              }
+            ]
+          },
+          {
+            "texte": "What does the nucleus of a sex cell contain?",
+            "nom": "Half of each parent's genetic information.",
+            "explication": "Each sex cell brings half the chromosomes. At fertilisation, the fertilised egg gets a full set again.",
+            "pieges": [
+              {
+                "texte": "All of the parent's genetic information.",
+                "pourquoi": "If it did, the number of chromosomes would double every generation."
+              },
+              {
+                "texte": "Nothing, they're empty cells.",
+                "pourquoi": "Sex cells carry the genetic information passed on to the offspring."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "energie",
+      "titre": "Formes et conversions d'énergie",
+      "niveau": "3e",
+      "prerequis": [
+        "circuit-electrique",
+        "transformation-chimique"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Identifier les sources, les transferts, les conversions et les formes d’énergie."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'énergie existe sous plusieurs formes : cinétique, électrique, thermique, lumineuse, chimique… Un convertisseur la fait passer d'une forme à une autre. Elle ne se crée ni ne se perd.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pour un convertisseur, cherche la forme d'énergie qui entre, puis celle qui sort.",
+        "exemple": "Exemple : une lampe de poche. La pile fournit de l'énergie électrique ; la lampe la convertit en énergie lumineuse et en énergie thermique.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une éolienne tourne avec le vent et alimente le réseau. Quelle conversion fait-elle ?",
+          "nom": "De l'énergie cinétique en énergie électrique.",
+          "explication": "Le vent fait tourner les pales (énergie de mouvement, dite cinétique) ; un alternateur la convertit en énergie électrique.",
+          "pieges": [
+            {
+              "texte": "De l'énergie électrique en énergie cinétique.",
+              "pourquoi": "C'est ce que fait un moteur, l'inverse d'une éolienne."
+            },
+            {
+              "texte": "De l'énergie lumineuse en énergie électrique.",
+              "pourquoi": "C'est le rôle d'un panneau photovoltaïque, pas d'une éolienne."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle forme d'énergie une pile stocke-t-elle ?",
+          "nom": "De l'énergie chimique.",
+          "explication": "Dans une pile, une transformation chimique fournit de l'énergie électrique au circuit.",
+          "pieges": [
+            {
+              "texte": "De l'électricité en réserve, comme de l'eau dans un réservoir.",
+              "pourquoi": "La pile ne contient pas de courant en stock : elle convertit de l'énergie chimique en énergie électrique."
+            },
+            {
+              "texte": "De l'énergie nucléaire.",
+              "pourquoi": "Une pile ordinaire n'utilise pas de réaction nucléaire."
+            }
+          ]
+        },
+        {
+          "texte": "Une ampoule allumée chauffe. Pourquoi ?",
+          "nom": "Une partie de l'énergie électrique est convertie en énergie thermique.",
+          "explication": "Une lampe convertit l'énergie électrique en énergie lumineuse, mais aussi en énergie thermique, souvent inutile.",
+          "pieges": [
+            {
+              "texte": "Parce que la lumière est chaude par nature.",
+              "pourquoi": "C'est la conversion d'énergie dans la lampe qui produit de la chaleur."
+            },
+            {
+              "texte": "Parce que l'énergie est détruite.",
+              "pourquoi": "L'énergie n'est jamais détruite : elle est convertie, ici en lumière et en chaleur."
+            }
+          ]
+        },
+        {
+          "texte": "Quand on dit qu'on « consomme » de l'énergie, est-elle détruite ?",
+          "nom": "Non, elle est convertie en d'autres formes, souvent moins utilisables.",
+          "explication": "L'énergie se conserve : elle change de forme. Au bout du compte, elle finit souvent en énergie thermique dispersée.",
+          "pieges": [
+            {
+              "texte": "Oui, elle disparaît.",
+              "pourquoi": "L'énergie ne disparaît jamais : c'est la conservation de l'énergie."
+            },
+            {
+              "texte": "Oui, mais seulement l'énergie électrique.",
+              "pourquoi": "Aucune forme d'énergie n'est détruite."
+            }
+          ]
+        },
+        {
+          "texte": "Un panneau photovoltaïque sur un toit convertit…",
+          "nom": "De l'énergie lumineuse en énergie électrique.",
+          "explication": "Le panneau reçoit la lumière du Soleil et produit un courant électrique.",
+          "pieges": [
+            {
+              "texte": "De l'énergie thermique en énergie lumineuse.",
+              "pourquoi": "Le panneau ne produit pas de lumière : il en reçoit."
+            },
+            {
+              "texte": "De l'énergie électrique en énergie lumineuse.",
+              "pourquoi": "C'est ce que fait une lampe, l'inverse d'un panneau."
+            }
+          ]
+        },
+        {
+          "texte": "Une balle tombe d'une table. Quelle énergie augmente pendant la chute ?",
+          "nom": "Son énergie cinétique.",
+          "explication": "En tombant, la balle va de plus en plus vite : son énergie de position diminue et son énergie cinétique augmente.",
+          "pieges": [
+            {
+              "texte": "Son énergie de position.",
+              "pourquoi": "Elle descend : son énergie de position diminue."
+            },
+            {
+              "texte": "Aucune, l'énergie reste la même sous la même forme.",
+              "pourquoi": "Le total se conserve, mais la forme change : de position vers cinétique."
+            }
+          ]
+        },
+        {
+          "texte": "Laquelle de ces sources d'énergie est renouvelable ?",
+          "nom": "Le vent.",
+          "explication": "Le vent, le Soleil ou les cours d'eau se renouvellent rapidement. Le pétrole et le charbon mettent des millions d'années à se former.",
+          "pieges": [
+            {
+              "texte": "Le pétrole.",
+              "pourquoi": "Le pétrole s'est formé en des millions d'années : on l'utilise bien plus vite qu'il ne se reforme."
+            },
+            {
+              "texte": "Le charbon.",
+              "pourquoi": "Comme le pétrole, c'est une ressource fossile, non renouvelable à notre échelle."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est l'unité d'énergie dans le système international ?",
+          "nom": "Le joule.",
+          "explication": "L'énergie se mesure en joules. Sur les factures d'électricité, on utilise aussi le kilowattheure.",
+          "pieges": [
+            {
+              "texte": "Le watt.",
+              "pourquoi": "Le watt est l'unité de puissance, pas d'énergie."
+            },
+            {
+              "texte": "Le volt.",
+              "pourquoi": "Le volt est l'unité de tension électrique."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi brûler du pétrole ou du charbon contribue-t-il au réchauffement climatique ?",
+          "nom": "Leur combustion rejette du dioxyde de carbone, un gaz à effet de serre.",
+          "explication": "La combustion des ressources fossiles libère du dioxyde de carbone, qui renforce l'effet de serre.",
+          "pieges": [
+            {
+              "texte": "Parce que les flammes chauffent directement l'atmosphère.",
+              "pourquoi": "La chaleur des flammes est faible à l'échelle de la Terre : c'est le dioxyde de carbone rejeté qui compte."
+            },
+            {
+              "texte": "Parce qu'ils produisent du dioxygène.",
+              "pourquoi": "La combustion consomme du dioxygène ; elle ne le produit pas."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Forms of energy and how they change",
+        "idee": "Energy comes in several forms: kinetic, electrical, thermal, light, chemical… A converter changes it from one form to another. It is never created or lost.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "For a converter, find the form of energy that goes in, then the one that comes out.",
+          "exemple": "Example: a torch. The battery supplies electrical energy; the bulb converts it into light energy and thermal energy.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "A wind turbine turns in the wind and feeds the grid. What conversion does it make?",
+            "nom": "Kinetic energy into electrical energy.",
+            "explication": "The wind turns the blades (energy of movement, called kinetic); a generator converts it into electrical energy.",
+            "pieges": [
+              {
+                "texte": "Electrical energy into kinetic energy.",
+                "pourquoi": "That's what a motor does, the opposite of a wind turbine."
+              },
+              {
+                "texte": "Light energy into electrical energy.",
+                "pourquoi": "That's a solar panel's job, not a wind turbine's."
+              }
+            ]
+          },
+          {
+            "texte": "What form of energy does a battery store?",
+            "nom": "Chemical energy.",
+            "explication": "In a battery, a chemical change supplies electrical energy to the circuit.",
+            "pieges": [
+              {
+                "texte": "Stored electricity, like water in a tank.",
+                "pourquoi": "A battery doesn't hold a stock of current: it converts chemical energy into electrical energy."
+              },
+              {
+                "texte": "Nuclear energy.",
+                "pourquoi": "An ordinary battery doesn't use a nuclear reaction."
+              }
+            ]
+          },
+          {
+            "texte": "A lit bulb gets hot. Why?",
+            "nom": "Part of the electrical energy is converted into thermal energy.",
+            "explication": "A lamp converts electrical energy into light energy, but also into thermal energy, often wasted.",
+            "pieges": [
+              {
+                "texte": "Because light is hot by nature.",
+                "pourquoi": "It's the energy conversion in the lamp that makes heat."
+              },
+              {
+                "texte": "Because energy is destroyed.",
+                "pourquoi": "Energy is never destroyed: it's converted, here into light and heat."
+              }
+            ]
+          },
+          {
+            "texte": "When we say we « use up » energy, is it destroyed?",
+            "nom": "No, it's converted into other forms, often less useful.",
+            "explication": "Energy is conserved: it changes form. In the end, it often ends up as spread-out thermal energy.",
+            "pieges": [
+              {
+                "texte": "Yes, it disappears.",
+                "pourquoi": "Energy never disappears: that's conservation of energy."
+              },
+              {
+                "texte": "Yes, but only electrical energy.",
+                "pourquoi": "No form of energy is destroyed."
+              }
+            ]
+          },
+          {
+            "texte": "A solar panel on a roof converts…",
+            "nom": "Light energy into electrical energy.",
+            "explication": "The panel receives sunlight and produces an electric current.",
+            "pieges": [
+              {
+                "texte": "Thermal energy into light energy.",
+                "pourquoi": "The panel doesn't make light: it receives it."
+              },
+              {
+                "texte": "Electrical energy into light energy.",
+                "pourquoi": "That's what a lamp does, the opposite of a panel."
+              }
+            ]
+          },
+          {
+            "texte": "A ball falls off a table. Which energy increases as it falls?",
+            "nom": "Its kinetic energy.",
+            "explication": "As it falls, the ball goes faster and faster: its energy of position goes down and its kinetic energy goes up.",
+            "pieges": [
+              {
+                "texte": "Its energy of position.",
+                "pourquoi": "It's going down: its energy of position decreases."
+              },
+              {
+                "texte": "None, the energy stays the same in the same form.",
+                "pourquoi": "The total is conserved, but the form changes: from position to kinetic."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these energy sources is renewable?",
+            "nom": "Wind.",
+            "explication": "Wind, sunlight and rivers renew themselves quickly. Oil and coal take millions of years to form.",
+            "pieges": [
+              {
+                "texte": "Oil.",
+                "pourquoi": "Oil formed over millions of years: we use it far faster than it forms again."
+              },
+              {
+                "texte": "Coal.",
+                "pourquoi": "Like oil, it's a fossil resource, not renewable on our timescale."
+              }
+            ]
+          },
+          {
+            "texte": "What is the unit of energy in the international system?",
+            "nom": "The joule.",
+            "explication": "Energy is measured in joules. On electricity bills, the kilowatt-hour is also used.",
+            "pieges": [
+              {
+                "texte": "The watt.",
+                "pourquoi": "The watt is the unit of power, not energy."
+              },
+              {
+                "texte": "The volt.",
+                "pourquoi": "The volt is the unit of voltage."
+              }
+            ]
+          },
+          {
+            "texte": "Why does burning oil or coal add to global warming?",
+            "nom": "Burning them gives off carbon dioxide, a greenhouse gas.",
+            "explication": "Burning fossil fuels releases carbon dioxide, which strengthens the greenhouse effect.",
+            "pieges": [
+              {
+                "texte": "Because the flames heat the atmosphere directly.",
+                "pourquoi": "The flames' heat is tiny on the scale of the Earth: it's the carbon dioxide given off that matters."
+              },
+              {
+                "texte": "Because they produce oxygen.",
+                "pourquoi": "Burning uses up oxygen; it doesn't produce it."
+              }
+            ]
           }
         ]
       }

@@ -1,0 +1,154 @@
+id: days-months
+titre: "Les jours et les mois en anglais"
+niveau: CM1
+prerequis: [numbers]
+programme: { source: lver_c3, texte: "CM1 : situer dans le temps : exprimer une date ou des repères temporels simples." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "En anglais, les jours et les mois s'écrivent avec une majuscule : « Monday », lundi ; « January », janvier."
+phrases:
+  consigne: "Lis la question, puis touche le bon jour ou le bon mois."
+  question: "{texte}"
+  indice: "Récite dans l'ordre : « Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday »."
+  exemple: "Quel jour vient après « Thursday », jeudi ? C'est vendredi : « Friday »."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel jour vient après « Monday » ?"
+    nom: "Tuesday"
+    explication: "Après lundi, « Monday », vient mardi : « Tuesday »."
+    pieges:
+      - { texte: "Thursday", pourquoi: "« Thursday », c'est jeudi. Après lundi, c'est mardi : « Tuesday »." }
+      - { texte: "Sunday", pourquoi: "« Sunday », c'est dimanche : il vient avant lundi." }
+  - texte: "Comment dit-on « mercredi » ?"
+    nom: "Wednesday"
+    explication: "Mercredi se dit « Wednesday »."
+    pieges:
+      - { texte: "Tuesday", pourquoi: "« Tuesday », c'est mardi." }
+      - { texte: "Thursday", pourquoi: "« Thursday », c'est jeudi." }
+  - texte: "Quel jour vient avant « Saturday » ?"
+    nom: "Friday"
+    explication: "Avant samedi, « Saturday », vient vendredi : « Friday »."
+    pieges:
+      - { texte: "Sunday", pourquoi: "« Sunday », dimanche, vient après samedi." }
+      - { texte: "Thursday", pourquoi: "« Thursday », jeudi, vient deux jours avant samedi." }
+  - texte: "Quel est le premier mois de l'année ?"
+    nom: "January"
+    explication: "Le premier mois, janvier, se dit « January »."
+    pieges:
+      - { texte: "June", pourquoi: "« June », c'est juin, le sixième mois." }
+      - { texte: "December", pourquoi: "« December », c'est décembre, le dernier mois." }
+  - texte: "Comment dit-on « août » ?"
+    nom: "August"
+    explication: "Août se dit « August »."
+    pieges:
+      - { texte: "April", pourquoi: "« April », c'est avril." }
+      - { texte: "October", pourquoi: "« October », c'est octobre." }
+  - texte: "Quel mois vient après « March » ?"
+    nom: "April"
+    explication: "Après mars, « March », vient avril : « April »."
+    pieges:
+      - { texte: "May", pourquoi: "« May », mai, vient deux mois après mars." }
+      - { texte: "February", pourquoi: "« February », février, vient avant mars." }
+  - texte: "« Christmas Day is on the 25th of … » Quel mois ?"
+    nom: "December"
+    explication: "Noël est le 25 décembre : « the 25th of December »."
+    pieges:
+      - { texte: "November", pourquoi: "« November », c'est novembre. Noël est en décembre." }
+      - { texte: "January", pourquoi: "« January », c'est janvier. Noël est en décembre." }
+  - texte: "Quels jours forment le week-end ?"
+    nom: "Saturday and Sunday"
+    explication: "Le week-end, c'est samedi et dimanche : « Saturday and Sunday »."
+    pieges:
+      - { texte: "Friday and Saturday", pourquoi: "« Friday », c'est vendredi : ce n'est pas encore le week-end." }
+      - { texte: "Sunday and Monday", pourquoi: "« Monday », c'est lundi : la semaine recommence." }
+  - texte: "Pourquoi écrit-on « on Monday » avec une majuscule ?"
+    nom: "En anglais, les jours et les mois prennent toujours une majuscule."
+    explication: "Les jours et les mois prennent toujours une majuscule en anglais : « on Monday », « in July »."
+    pieges:
+      - { texte: "Parce que c'est le début de la phrase.", pourquoi: "Non : même au milieu d'une phrase, on écrit « on Monday » avec une majuscule." }
+      - { texte: "Parce que lundi est le premier jour de la semaine.", pourquoi: "Non : « Tuesday », « Sunday », « July »… prennent tous une majuscule." }
+en:
+  titre: "Days and months in English"
+  idee: "In English, days and months always start with a capital letter: Monday, January."
+  phrases:
+    consigne: "Read the question, then touch the right day or month."
+    question: "{texte}"
+    indice: "Say them in order: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+    exemple: "Which day comes after Thursday? It's Friday."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which day comes after Monday?"
+      nom: "Tuesday"
+      explication: "After Monday comes Tuesday."
+      pieges:
+        - texte: "Thursday"
+          pourquoi: "Thursday comes three days after Monday. The next day is Tuesday."
+        - texte: "Sunday"
+          pourquoi: "Sunday comes before Monday."
+    - texte: "Which day comes between Tuesday and Thursday?"
+      nom: "Wednesday"
+      explication: "Between Tuesday and Thursday comes Wednesday."
+      pieges:
+        - texte: "Tuesday"
+          pourquoi: "Tuesday is the day before. The one in between is Wednesday."
+        - texte: "Thursday"
+          pourquoi: "Thursday is the day after. The one in between is Wednesday."
+    - texte: "Which day comes before Saturday?"
+      nom: "Friday"
+      explication: "Before Saturday comes Friday."
+      pieges:
+        - texte: "Sunday"
+          pourquoi: "Sunday comes after Saturday."
+        - texte: "Thursday"
+          pourquoi: "Thursday comes two days before Saturday."
+    - texte: "What is the first month of the year?"
+      nom: "January"
+      explication: "The first month is January."
+      pieges:
+        - texte: "June"
+          pourquoi: "June is the sixth month."
+        - texte: "December"
+          pourquoi: "December is the last month."
+    - texte: "Which month comes after July?"
+      nom: "August"
+      explication: "After July comes August."
+      pieges:
+        - texte: "April"
+          pourquoi: "April is the fourth month, long before July."
+        - texte: "October"
+          pourquoi: "October comes three months after July."
+    - texte: "Which month comes after March?"
+      nom: "April"
+      explication: "After March comes April."
+      pieges:
+        - texte: "May"
+          pourquoi: "May comes two months after March."
+        - texte: "February"
+          pourquoi: "February comes before March."
+    - texte: "“Christmas Day is on the 25th of …” Which month?"
+      nom: "December"
+      explication: "Christmas Day is on the 25th of December."
+      pieges:
+        - texte: "November"
+          pourquoi: "Christmas is in December, not November."
+        - texte: "January"
+          pourquoi: "Christmas is in December, not January."
+    - texte: "Which days make the weekend?"
+      nom: "Saturday and Sunday"
+      explication: "The weekend is Saturday and Sunday."
+      pieges:
+        - texte: "Friday and Saturday"
+          pourquoi: "Friday is still a school day: it is not the weekend yet."
+        - texte: "Sunday and Monday"
+          pourquoi: "On Monday, the week starts again."
+    - texte: "Why do we write “on Monday” with a capital M?"
+      nom: "In English, days and months always take a capital letter."
+      explication: "Days and months always take a capital letter in English: on Monday, in July."
+      pieges:
+        - texte: "Because it starts the sentence."
+          pourquoi: "No: even in the middle of a sentence, we write “on Monday” with a capital."
+        - texte: "Because Monday is the first day of the week."
+          pourquoi: "No: Tuesday, Sunday, July… all take a capital letter."

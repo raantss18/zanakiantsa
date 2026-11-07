@@ -1,0 +1,136 @@
+id: decimaux-additionner
+titre: "Additionner et soustraire des décimaux"
+niveau: 6e
+prerequis: ["decimaux-comparer", "soustraction-posee"]
+programme: { source: cycle3, texte: "Additionner et soustraire des nombres décimaux" }
+activite: quiz
+parametres: {}
+idee: "On aligne les chiffres de même rang : unités sous unités, dixièmes sous dixièmes. Les virgules sont donc l'une sous l'autre. On complète avec des 0 si besoin."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Écris les deux nombres avec autant de chiffres après la virgule."
+  exemple: "4,56 + 15,3 : on écrit 15,30. Centièmes : 6 + 0 = 6. Dixièmes : 5 + 3 = 8. Unités : 4 + 5 = 9. Dizaines : 1. La somme est 19,86."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 2,5 + 1,25 ?"
+    nom: "3,75"
+    explication: "2,50 + 1,25 : centièmes 0 + 5 = 5 ; dixièmes 5 + 2 = 7 ; unités 2 + 1 = 3. La somme est 3,75."
+    pieges:
+      - { texte: "1,50", pourquoi: "Les derniers chiffres ont été alignés : 5 dixièmes ne s'ajoutent pas à 5 centièmes." }
+      - { texte: "3,30", pourquoi: "2 + 1 = 3 et 5 + 25 = 30 : on a ajouté des dixièmes à des centièmes." }
+  - texte: "Combien font 7,4 − 2,15 ?"
+    nom: "5,25"
+    explication: "On écrit 7,40 − 2,15. Le résultat est 5,25. Vérification : 5,25 + 2,15 = 7,40."
+    pieges:
+      - { texte: "5,35", pourquoi: "Aux centièmes, 0 − 5 ne se fait pas : on n'inverse pas les chiffres, on écrit 7,40 et on fait une retenue." }
+      - { texte: "9,55", pourquoi: "7,4 + 2,15 : c'est une soustraction." }
+  - texte: "Combien font 12 + 0,8 ?"
+    nom: "12,8"
+    explication: "12 unités et 8 dixièmes : 12,8."
+    pieges:
+      - { texte: "20", pourquoi: "8 dixièmes ne sont pas 8 unités : 12 + 0,8 = 12,8." }
+      - { texte: "12,08", pourquoi: "8 dixièmes s'écrivent juste après la virgule : 12,8." }
+  - texte: "Combien font 10 − 3,6 ?"
+    nom: "6,4"
+    explication: "On écrit 10,0 − 3,6. Vérification : 6,4 + 3,6 = 10."
+    pieges:
+      - { texte: "7,6", pourquoi: "10 − 3 = 7, mais il faut encore enlever 0,6 : 7 − 0,6 = 6,4." }
+      - { texte: "7,4", pourquoi: "10,0 − 3,6 : aux dixièmes, 0 − 6 demande une retenue." }
+  - texte: "Combien font 0,75 + 0,25 ?"
+    nom: "1"
+    explication: "75 centièmes + 25 centièmes = 100 centièmes = 1 unité."
+    pieges:
+      - { texte: "0,100", pourquoi: "100 centièmes font 1 unité : 0,75 + 0,25 = 1." }
+      - { texte: "0,1", pourquoi: "100 centièmes font 1 unité, pas 1 dixième." }
+  - texte: "Un ruban mesure 3,5 m. On en coupe 1,25 m. Quelle longueur reste-t-il ?"
+    nom: "2,25 m"
+    explication: "Schéma partie-tout : le tout, 3,5 m ; une partie, 1,25 m. L'autre partie : 3,50 − 1,25 = 2,25 m."
+    pieges:
+      - { texte: "4,75 m", pourquoi: "On cherche ce qui reste : c'est une soustraction." }
+      - { texte: "2,2 m", pourquoi: "On a enlevé 5 de 25 : il faut écrire 3,50 − 1,25." }
+  - texte: "Paul court 4,6 km. Inès court 1,8 km de plus que Paul. Quelle distance court Inès ?"
+    nom: "6,4 km"
+    explication: "Schéma : la barre de Paul, 4,6 km, et 1,8 km de plus pour Inès. 4,6 + 1,8 = 6,4 km."
+    pieges:
+      - { texte: "2,8 km", pourquoi: "« De plus » : Inès court davantage, on ajoute." }
+      - { texte: "5,14 km", pourquoi: "6 + 8 = 14 dixièmes = 1 unité et 4 dixièmes : on retient 1." }
+  - texte: "Pour calculer 6,45 + 2,7, on écrit d'abord 2,7 avec deux chiffres après la virgule. Quelle écriture ?"
+    nom: "2,70"
+    explication: "2,7 = 2,70 : 7 dixièmes = 70 centièmes. Puis 6,45 + 2,70 = 9,15."
+    pieges:
+      - { texte: "2,07", pourquoi: "2,07, c'est 2 unités et 7 centièmes : ce n'est plus le même nombre." }
+      - { texte: "20,7", pourquoi: "20,7 est 10 fois plus grand que 2,7." }
+  - texte: "Pourquoi aligne-t-on les virgules pour additionner 3,4 et 12,56 ?"
+    nom: "Pour ajouter les chiffres de même rang : dixièmes avec dixièmes."
+    explication: "3,40 + 12,56 : les centièmes vont ensemble, les dixièmes ensemble, les unités ensemble. La somme est 15,96."
+    pieges:
+      - { texte: "Pour que les nombres aient la même longueur.", pourquoi: "Ils n'ont pas la même longueur : on aligne les rangs, pas les longueurs." }
+      - { texte: "Parce qu'on aligne toujours à droite.", pourquoi: "Aligner à droite ajouterait 4 dixièmes à 6 centièmes." }
+
+en:
+  titre: "Adding and subtracting decimals"
+  idee: "Line up digits of the same place: ones under ones, tenths under tenths. So the points sit one under the other. Fill in with 0s if needed."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Write both numbers with the same number of digits after the point."
+    exemple: "4.56 + 15.3: write 15.30. Hundredths: 6 + 0 = 6. Tenths: 5 + 3 = 8. Ones: 4 + 5 = 9. Tens: 1. The sum is 19.86."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 2.5 + 1.25?"
+      nom: "3.75"
+      explication: "2.50 + 1.25: hundredths 0 + 5 = 5; tenths 5 + 2 = 7; ones 2 + 1 = 3. The sum is 3.75."
+      pieges:
+        - { texte: "1.50", pourquoi: "The last digits were lined up: 5 tenths don't add to 5 hundredths." }
+        - { texte: "3.30", pourquoi: "2 + 1 = 3 and 5 + 25 = 30: tenths were added to hundredths." }
+    - texte: "What is 7.4 − 2.15?"
+      nom: "5.25"
+      explication: "Write 7.40 − 2.15. The answer is 5.25. Check: 5.25 + 2.15 = 7.40."
+      pieges:
+        - { texte: "5.35", pourquoi: "In the hundredths, 0 − 5 can't be done: don't swap the digits, write 7.40 and exchange." }
+        - { texte: "9.55", pourquoi: "7.4 + 2.15: this is a subtraction." }
+    - texte: "What is 12 + 0.8?"
+      nom: "12.8"
+      explication: "12 ones and 8 tenths: 12.8."
+      pieges:
+        - { texte: "20", pourquoi: "8 tenths are not 8 ones: 12 + 0.8 = 12.8." }
+        - { texte: "12.08", pourquoi: "8 tenths go just after the point: 12.8." }
+    - texte: "What is 10 − 3.6?"
+      nom: "6.4"
+      explication: "Write 10.0 − 3.6. Check: 6.4 + 3.6 = 10."
+      pieges:
+        - { texte: "7.6", pourquoi: "10 − 3 = 7, but you still have to take away 0.6: 7 − 0.6 = 6.4." }
+        - { texte: "7.4", pourquoi: "10.0 − 3.6: in the tenths, 0 − 6 needs an exchange." }
+    - texte: "What is 0.75 + 0.25?"
+      nom: "1"
+      explication: "75 hundredths + 25 hundredths = 100 hundredths = 1 whole."
+      pieges:
+        - { texte: "0.100", pourquoi: "100 hundredths make 1 whole: 0.75 + 0.25 = 1." }
+        - { texte: "0.1", pourquoi: "100 hundredths make 1 whole, not 1 tenth." }
+    - texte: "A ribbon is 3.5 m long. 1.25 m is cut off. What length is left?"
+      nom: "2.25 m"
+      explication: "Part-whole model: the whole, 3.5 m; one part, 1.25 m. The other part: 3.50 − 1.25 = 2.25 m."
+      pieges:
+        - { texte: "4.75 m", pourquoi: "We want what is left: it is a subtraction." }
+        - { texte: "2.2 m", pourquoi: "5 was taken from 25: write 3.50 − 1.25." }
+    - texte: "Paul runs 4.6 km. Ines runs 1.8 km more than Paul. How far does Ines run?"
+      nom: "6.4 km"
+      explication: "Bar model: Paul's bar, 4.6 km, and 1.8 km more for Ines. 4.6 + 1.8 = 6.4 km."
+      pieges:
+        - { texte: "2.8 km", pourquoi: "\"More\": Ines runs further, so add." }
+        - { texte: "5.14 km", pourquoi: "6 + 8 = 14 tenths = 1 one and 4 tenths: carry 1." }
+    - texte: "To work out 6.45 + 2.7, first write 2.7 with two digits after the point. Which way?"
+      nom: "2.70"
+      explication: "2.7 = 2.70: 7 tenths = 70 hundredths. Then 6.45 + 2.70 = 9.15."
+      pieges:
+        - { texte: "2.07", pourquoi: "2.07 is 2 ones and 7 hundredths: it is no longer the same number." }
+        - { texte: "20.7", pourquoi: "20.7 is 10 times bigger than 2.7." }
+    - texte: "Why do we line up the points to add 3.4 and 12.56?"
+      nom: "To add digits of the same place: tenths with tenths."
+      explication: "3.40 + 12.56: hundredths go together, tenths together, ones together. The sum is 15.96."
+      pieges:
+        - { texte: "So that the numbers are the same length.", pourquoi: "They are not the same length: we line up places, not lengths." }
+        - { texte: "Because you always line up on the right.", pourquoi: "Lining up on the right would add 4 tenths to 6 hundredths." }

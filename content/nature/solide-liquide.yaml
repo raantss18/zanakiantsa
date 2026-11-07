@@ -1,0 +1,124 @@
+id: solide-liquide
+titre: "Solide ou liquide ?"
+niveau: CE2
+prerequis: [fondre-geler]
+programme: { source: c2s, texte: "Différencier les états physiques solide (forme et volume propre) et liquide (volume propre, absence de forme propre et surface horizontale)." }
+activite: quiz
+parametres: {}
+idee: "Un solide garde sa forme : on peut le tenir. Un liquide coule et prend la forme du récipient ; sa surface reste plate et horizontale."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi : garde-t-il sa forme si on le change de récipient ? Sa surface reste-t-elle plate ?"
+  exemple: "Exemple : on verse l'eau d'un verre dans un bol. Elle prend la forme du bol : c'est un liquide."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "On verse du lait d'une bouteille dans un bol. Que fait sa forme ?"
+    nom: "Il prend la forme du bol."
+    explication: "Le lait est un liquide : il n'a pas de forme propre, il prend celle du récipient."
+    pieges:
+      - { texte: "Il garde la forme de la bouteille.", pourquoi: "Seul un solide garde sa forme. Le lait coule." }
+      - { texte: "Il devient solide dans le bol.", pourquoi: "Changer de récipient ne change pas l'état : le lait reste liquide." }
+  - texte: "On pose un caillou dans un verre, puis dans une boîte. Que fait sa forme ?"
+    nom: "Il garde toujours la même forme."
+    explication: "Le caillou est un solide : il a une forme propre, quel que soit le récipient."
+    pieges:
+      - { texte: "Il prend la forme de la boîte.", pourquoi: "C'est le comportement d'un liquide, pas d'un solide." }
+      - { texte: "Il coule au fond comme de l'eau.", pourquoi: "Couler au fond n'est pas couler comme un liquide : le caillou ne se répand pas." }
+  - texte: "Le sable coule entre les doigts. Est-il solide ou liquide ?"
+    nom: "Solide : ce sont de tout petits grains solides."
+    explication: "Chaque grain de sable garde sa forme. Un tas de sable ne reste pas plat : il fait une bosse. Un liquide ferait une surface plate."
+    pieges:
+      - { texte: "Liquide, puisqu'il coule.", pourquoi: "Le sable glisse grain par grain, mais chaque grain est un petit solide." }
+      - { texte: "Ni l'un ni l'autre.", pourquoi: "Le sable est un solide en grains, comme le sel ou la farine." }
+  - texte: "On penche une bouteille d'eau à moitié pleine. Comment est la surface de l'eau ?"
+    nom: "Elle reste horizontale."
+    explication: "La surface d'un liquide au repos reste plate et horizontale, même si on penche le récipient. Essaie avec une bouteille transparente !"
+    pieges:
+      - { texte: "Elle penche avec la bouteille.", pourquoi: "La bouteille penche, mais la surface de l'eau reste horizontale, comme l'horizon." }
+      - { texte: "Elle devient toute bosselée.", pourquoi: "Une fois l'eau calme, sa surface redevient plate." }
+  - texte: "On transvase 1 litre de jus dans une carafe plus large. Combien de jus y a-t-il dans la carafe ?"
+    nom: "Toujours 1 litre."
+    explication: "Un liquide a un volume propre : sa forme change, mais pas son volume."
+    pieges:
+      - { texte: "Moins d'1 litre, car le niveau est plus bas.", pourquoi: "Le niveau baisse parce que la carafe est plus large, mais la quantité est la même." }
+      - { texte: "Plus d'1 litre, car il prend plus de place.", pourquoi: "Le jus s'étale, mais on n'en a pas ajouté : le volume ne change pas." }
+  - texte: "Lequel de ces objets est un liquide ?"
+    nom: "Le miel."
+    explication: "Le miel coule lentement, mais il coule et prend la forme du pot : c'est un liquide."
+    pieges:
+      - { texte: "Le beurre froid.", pourquoi: "Le beurre sorti du réfrigérateur garde sa forme : il est solide." }
+      - { texte: "Le sucre en poudre.", pourquoi: "Le sucre en poudre coule, mais ce sont des grains solides." }
+  - texte: "Pourquoi peut-on tenir un glaçon dans la main, mais pas de l'eau ?"
+    nom: "Le glaçon est solide : il a une forme propre."
+    explication: "La glace est de l'eau à l'état solide. L'eau liquide n'a pas de forme propre : elle s'échappe entre les doigts."
+    pieges:
+      - { texte: "Parce que le glaçon n'est pas de l'eau.", pourquoi: "Le glaçon est bien de l'eau, mais à l'état solide." }
+      - { texte: "Parce que le glaçon est plus lourd.", pourquoi: "Ce n'est pas le poids : c'est l'état, solide ou liquide." }
+  - texte: "Une pâte à modeler change de forme quand on l'écrase. Est-elle liquide ?"
+    nom: "Non, elle est solide : sans nous, elle garde sa forme."
+    explication: "On peut déformer un solide en appuyant. Mais posée sur la table, la pâte garde sa forme ; un liquide, lui, s'étalerait tout seul."
+    pieges:
+      - { texte: "Oui, car elle change de forme.", pourquoi: "Elle change de forme seulement quand on la pousse : ce n'est pas couler." }
+      - { texte: "Elle est liquide quand elle est molle.", pourquoi: "Molle ne veut pas dire liquide : elle ne coule pas et ne prend pas la forme du pot." }
+
+en:
+  titre: "Solid or liquid?"
+  idee: "A solid keeps its shape: you can hold it. A liquid flows and takes the shape of its container; its surface stays flat and level."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Ask yourself: does it keep its shape in a different container? Does its surface stay flat?"
+    exemple: "Example: we pour water from a glass into a bowl. It takes the shape of the bowl: it's a liquid."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "We pour milk from a bottle into a bowl. What happens to its shape?"
+      nom: "It takes the shape of the bowl."
+      explication: "Milk is a liquid: it has no shape of its own, it takes the shape of its container."
+      pieges:
+        - { texte: "It keeps the shape of the bottle.", pourquoi: "Only a solid keeps its shape. Milk flows." }
+        - { texte: "It turns solid in the bowl.", pourquoi: "Changing container doesn't change the state: the milk stays liquid." }
+    - texte: "We put a stone in a glass, then in a box. What happens to its shape?"
+      nom: "It always keeps the same shape."
+      explication: "A stone is a solid: it has its own shape, whatever the container."
+      pieges:
+        - { texte: "It takes the shape of the box.", pourquoi: "That's what a liquid does, not a solid." }
+        - { texte: "It flows to the bottom like water.", pourquoi: "Sinking to the bottom isn't flowing like a liquid: the stone doesn't spread out." }
+    - texte: "Sand runs through your fingers. Is it solid or liquid?"
+      nom: "Solid: it's made of tiny solid grains."
+      explication: "Each grain of sand keeps its shape. A pile of sand isn't flat: it makes a heap. A liquid would have a flat surface."
+      pieges:
+        - { texte: "Liquid, because it flows.", pourquoi: "Sand slides grain by grain, but each grain is a little solid." }
+        - { texte: "Neither.", pourquoi: "Sand is a solid in grains, like salt or flour." }
+    - texte: "We tilt a half-full bottle of water. What is the surface of the water like?"
+      nom: "It stays level."
+      explication: "The surface of a still liquid stays flat and level, even when the container is tilted. Try it with a clear bottle!"
+      pieges:
+        - { texte: "It tilts with the bottle.", pourquoi: "The bottle tilts, but the water's surface stays level, like the horizon." }
+        - { texte: "It goes all bumpy.", pourquoi: "Once the water is calm, its surface is flat again." }
+    - texte: "We pour 1 litre of juice into a wider jug. How much juice is in the jug?"
+      nom: "Still 1 litre."
+      explication: "A liquid has its own volume: its shape changes, but not its volume."
+      pieges:
+        - { texte: "Less than 1 litre, because the level is lower.", pourquoi: "The level is lower because the jug is wider, but the amount is the same." }
+        - { texte: "More than 1 litre, because it takes up more room.", pourquoi: "The juice spreads out, but none was added: the volume doesn't change." }
+    - texte: "Which of these is a liquid?"
+      nom: "Honey."
+      explication: "Honey flows slowly, but it does flow and takes the shape of the jar: it's a liquid."
+      pieges:
+        - { texte: "Cold butter.", pourquoi: "Butter from the fridge keeps its shape: it's solid." }
+        - { texte: "Caster sugar.", pourquoi: "Caster sugar pours, but it's made of solid grains." }
+    - texte: "Why can you hold an ice cube in your hand, but not water?"
+      nom: "The ice cube is solid: it has its own shape."
+      explication: "Ice is water in the solid state. Liquid water has no shape of its own: it escapes between your fingers."
+      pieges:
+        - { texte: "Because an ice cube isn't water.", pourquoi: "An ice cube is water, but in the solid state." }
+        - { texte: "Because the ice cube is heavier.", pourquoi: "It's not the weight: it's the state, solid or liquid." }
+    - texte: "Modelling clay changes shape when you squash it. Is it liquid?"
+      nom: "No, it's solid: left alone, it keeps its shape."
+      explication: "You can change a solid's shape by pressing it. But on the table, the clay keeps its shape; a liquid would spread out by itself."
+      pieges:
+        - { texte: "Yes, because it changes shape.", pourquoi: "It only changes shape when you push it: that isn't flowing." }
+        - { texte: "It's liquid when it's soft.", pourquoi: "Soft doesn't mean liquid: it doesn't flow or take the shape of the pot." }

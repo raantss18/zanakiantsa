@@ -1,0 +1,154 @@
+id: prepositions
+titre: "Où est-ce ? in, on, under, behind…"
+niveau: CM2
+prerequis: [house]
+programme: { source: lver_c3, texte: "CM2 : situer dans l’espace les personnes, les objets et les lieux, à l’aide de mots et d'expressions lexicalisées." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Pour dire où : « in », dans ; « on », sur ; « under », sous ; « behind », derrière ; « in front of », devant ; « next to », à côté de ; « between », entre."
+phrases:
+  consigne: "Lis la phrase, puis touche le bon mot pour dire où."
+  question: "{texte}"
+  indice: "Imagine la scène, puis cherche le mot : in, dans ; on, sur ; under, sous ; behind, derrière."
+  exemple: "Le chat est sur la table. Sur, c'est « on » : « The cat is on the table. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Le chat est sur la table : « The cat is … the table. »"
+    nom: "on"
+    explication: "Sur se dit « on » : « The cat is on the table. »"
+    pieges:
+      - { texte: "in", pourquoi: "« in » veut dire « dans ». Sur, c'est « on »." }
+      - { texte: "under", pourquoi: "« under » veut dire « sous ». Sur, c'est « on »." }
+  - texte: "La balle est dans la boîte : « The ball is … the box. »"
+    nom: "in"
+    explication: "Dans se dit « in » : « The ball is in the box. »"
+    pieges:
+      - { texte: "on", pourquoi: "« on » veut dire « sur ». Dans, c'est « in »." }
+      - { texte: "behind", pourquoi: "« behind » veut dire « derrière ». Dans, c'est « in »." }
+  - texte: "Les chaussures sont sous le lit : « My shoes are … the bed. »"
+    nom: "under"
+    explication: "Sous se dit « under » : « My shoes are under the bed. »"
+    pieges:
+      - { texte: "on", pourquoi: "« on » veut dire « sur ». Sous, c'est « under »." }
+      - { texte: "next to", pourquoi: "« next to » veut dire « à côté de ». Sous, c'est « under »." }
+  - texte: "Le chien est derrière la porte : « The dog is … the door. »"
+    nom: "behind"
+    explication: "Derrière se dit « behind » : « The dog is behind the door. »"
+    pieges:
+      - { texte: "in front of", pourquoi: "« in front of » veut dire « devant ». Derrière, c'est « behind »." }
+      - { texte: "under", pourquoi: "« under » veut dire « sous ». Derrière, c'est « behind »." }
+  - texte: "La voiture est devant la maison : « The car is … the house. »"
+    nom: "in front of"
+    explication: "Devant se dit « in front of » : « The car is in front of the house. »"
+    pieges:
+      - { texte: "behind", pourquoi: "« behind » veut dire « derrière ». Devant, c'est « in front of »." }
+      - { texte: "between", pourquoi: "« between » veut dire « entre ». Devant, c'est « in front of »." }
+  - texte: "La boulangerie est à côté de l'école : « The bakery is … the school. »"
+    nom: "next to"
+    explication: "À côté de se dit « next to » : « The bakery is next to the school. »"
+    pieges:
+      - { texte: "between", pourquoi: "« between » veut dire « entre » : il faut deux repères. À côté de, c'est « next to »." }
+      - { texte: "in", pourquoi: "« in » veut dire « dans ». À côté de, c'est « next to »." }
+  - texte: "Je suis assis entre Tom et Lucy : « I sit … Tom and Lucy. »"
+    nom: "between"
+    explication: "Entre se dit « between » : « I sit between Tom and Lucy. »"
+    pieges:
+      - { texte: "next to", pourquoi: "« next to » veut dire « à côté de » un seul. Entre deux personnes, c'est « between »." }
+      - { texte: "behind", pourquoi: "« behind » veut dire « derrière ». Entre, c'est « between »." }
+  - texte: "Que veut dire « The book is under the bed » ?"
+    nom: "Le livre est sous le lit."
+    explication: "« under », c'est « sous » : le livre est sous le lit."
+    pieges:
+      - { texte: "Le livre est sur le lit.", pourquoi: "Sur, ce serait « on the bed ». « under », c'est « sous »." }
+      - { texte: "Le livre est dans le lit.", pourquoi: "Dans, ce serait « in the bed ». « under », c'est « sous »." }
+  - texte: "Pourquoi « next to » et « between » ne veulent-ils pas dire la même chose ?"
+    nom: "« between » demande deux repères ; « next to » n'en demande qu'un."
+    explication: "On est « between » deux choses, entre Tom et Lucy ; on est « next to » une seule, à côté de Tom."
+    pieges:
+      - { texte: "Parce que « between » veut dire « derrière ».", pourquoi: "Non : derrière, c'est « behind ». « between » veut dire « entre »." }
+      - { texte: "En fait, ils veulent dire la même chose.", pourquoi: "Non : « between » demande deux repères, « next to » un seul." }
+en:
+  titre: "Where is it? In, on, under, behind…"
+  idee: "To say where: in, on, under, behind, in front of, next to, between."
+  phrases:
+    consigne: "Read the sentence, then touch the right word to say where."
+    question: "{texte}"
+    indice: "Picture the scene, then find the word: in, on, under, behind."
+    exemple: "The cat is on top of the table: “The cat is on the table.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "The cat is on top of the table: “The cat is … the table.”"
+      nom: "on"
+      explication: "On top of is on: “The cat is on the table.”"
+      pieges:
+        - texte: "in"
+          pourquoi: "“in” means inside. On top of is on."
+        - texte: "under"
+          pourquoi: "“under” means below. On top of is on."
+    - texte: "The ball is inside the box: “The ball is … the box.”"
+      nom: "in"
+      explication: "Inside is in: “The ball is in the box.”"
+      pieges:
+        - texte: "on"
+          pourquoi: "“on” means on top of. Inside is in."
+        - texte: "behind"
+          pourquoi: "“behind” means at the back of. Inside is in."
+    - texte: "My shoes are below the bed: “My shoes are … the bed.”"
+      nom: "under"
+      explication: "Below is under: “My shoes are under the bed.”"
+      pieges:
+        - texte: "on"
+          pourquoi: "“on” means on top of. Below is under."
+        - texte: "next to"
+          pourquoi: "“next to” means beside. Below is under."
+    - texte: "The dog is at the back of the door: “The dog is … the door.”"
+      nom: "behind"
+      explication: "At the back of is behind: “The dog is behind the door.”"
+      pieges:
+        - texte: "in front of"
+          pourquoi: "“in front of” is the opposite of behind."
+        - texte: "under"
+          pourquoi: "“under” means below. At the back is behind."
+    - texte: "The car is facing the house, outside it: “The car is … the house.”"
+      nom: "in front of"
+      explication: "“The car is in front of the house.”"
+      pieges:
+        - texte: "behind"
+          pourquoi: "“behind” means at the back. Facing the house is in front of."
+        - texte: "between"
+          pourquoi: "“between” needs two places. Here there is only the house: in front of."
+    - texte: "The bakery is beside the school: “The bakery is … the school.”"
+      nom: "next to"
+      explication: "Beside is next to: “The bakery is next to the school.”"
+      pieges:
+        - texte: "between"
+          pourquoi: "“between” needs two places. Beside one place is next to."
+        - texte: "in"
+          pourquoi: "“in” means inside. Beside is next to."
+    - texte: "Tom is on my left, Lucy on my right: “I sit … Tom and Lucy.”"
+      nom: "between"
+      explication: "With one on each side: “I sit between Tom and Lucy.”"
+      pieges:
+        - texte: "next to"
+          pourquoi: "“next to” is beside one person. With one on each side: between."
+        - texte: "behind"
+          pourquoi: "“behind” means at the back. With one on each side: between."
+    - texte: "“The book is under the bed.” Where is the book?"
+      nom: "below the bed"
+      explication: "“under” means below: the book is below the bed."
+      pieges:
+        - texte: "on top of the bed"
+          pourquoi: "On top of would be “on the bed”. Under means below."
+        - texte: "inside the bed"
+          pourquoi: "Inside would be “in the bed”. Under means below."
+    - texte: "Why don't “next to” and “between” mean the same thing?"
+      nom: "Between needs two places; next to only needs one."
+      explication: "You are between two things, Tom and Lucy; you are next to one thing, Tom."
+      pieges:
+        - texte: "Because between means behind."
+          pourquoi: "No: at the back is behind. Between needs two places."
+        - texte: "In fact, they mean the same thing."
+          pourquoi: "No: between needs two places, next to only one."

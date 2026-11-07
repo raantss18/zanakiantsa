@@ -1,0 +1,124 @@
+id: vegetaux-producteurs
+titre: "Les végétaux, producteurs de matière"
+niveau: 6e
+prerequis: [reseau-alimentaire]
+programme: { source: c3s, texte: "Justifier la place des végétaux dans les réseaux alimentaires par leur propriété de production primaire." }
+activite: quiz
+parametres: {}
+idee: "Une plante verte ne mange pas d'autres êtres vivants. À la lumière, elle fabrique sa matière avec de l'eau, du dioxyde de carbone de l'air et des sels minéraux."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense aux quatre besoins d'une plante verte : la lumière, l'eau, le dioxyde de carbone de l'air et les sels minéraux."
+  exemple: "Exemple : un radis pousse au jardin. Sa matière vient surtout de l'eau et du dioxyde de carbone de l'air, grâce à la lumière."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Une plante verte « mange »-t-elle la terre pour grandir ?"
+    nom: "Non : elle prend dans le sol de l'eau et des sels minéraux, pas de la terre."
+    explication: "La terre ne sert pas de nourriture. La plante fabrique sa matière avec la lumière, l'eau, le dioxyde de carbone et un peu de sels minéraux."
+    pieges:
+      - { texte: "Oui, la terre est sa nourriture.", pourquoi: "C'est une idée très répandue, mais fausse : la terre d'un pot ne diminue presque pas quand la plante grandit." }
+      - { texte: "Oui, avec ses racines qui la mâchent.", pourquoi: "Les racines absorbent de l'eau et des sels minéraux dissous ; elles ne mâchent rien." }
+  - texte: "Au XVIIe siècle, Van Helmont fait pousser un saule dans un pot de terre pesée. Cinq ans plus tard, l'arbre a pris des dizaines de kilos. Et la terre ?"
+    nom: "Elle n'a presque pas perdu de masse."
+    explication: "La terre avait perdu à peine quelques dizaines de grammes : la matière de l'arbre ne venait donc pas de la terre."
+    pieges:
+      - { texte: "Elle a perdu autant que ce que l'arbre a gagné.", pourquoi: "C'est ce qu'on attendrait si la plante mangeait la terre, mais ce n'est pas ce qu'il a mesuré." }
+      - { texte: "Le pot était vide à la fin.", pourquoi: "La terre était toujours là, presque aussi lourde qu'au début." }
+  - texte: "De quoi une plante verte a-t-elle besoin pour fabriquer sa matière ?"
+    nom: "De lumière, d'eau, de dioxyde de carbone et de sels minéraux."
+    explication: "Avec l'énergie de la lumière, la plante fabrique sa matière organique à partir de matière minérale."
+    pieges:
+      - { texte: "D'insectes et de viande.", pourquoi: "Quelques plantes rares attrapent des insectes, mais une plante verte fabrique sa matière sans manger d'êtres vivants." }
+      - { texte: "Seulement d'eau.", pourquoi: "L'eau ne suffit pas : il faut aussi la lumière et le dioxyde de carbone de l'air." }
+  - texte: "On place une plante verte dans un placard noir pendant plusieurs semaines. Que se passe-t-il ?"
+    nom: "Elle dépérit, car elle ne peut plus produire sa matière sans lumière."
+    explication: "Sans lumière, la plante verte ne fabrique plus de matière : elle s'affaiblit, jaunit puis meurt."
+    pieges:
+      - { texte: "Elle pousse mieux, au calme.", pourquoi: "La lumière est indispensable à la production de matière par la plante verte." }
+      - { texte: "Rien, si on l'arrose.", pourquoi: "L'eau seule ne suffit pas : il faut aussi la lumière." }
+  - texte: "Pourquoi les végétaux sont-ils toujours au début des réseaux alimentaires ?"
+    nom: "Parce qu'ils produisent leur matière sans manger d'autres êtres vivants."
+    explication: "Les végétaux sont des producteurs primaires : ils fabriquent la matière que les animaux mangeront ensuite."
+    pieges:
+      - { texte: "Parce qu'ils sont plus petits que les animaux.", pourquoi: "Un chêne est bien plus grand qu'une souris : la taille ne compte pas." }
+      - { texte: "Parce qu'ils ne servent à rien d'autre.", pourquoi: "Ils produisent la matière dont dépendent tous les autres êtres vivants." }
+  - texte: "D'où vient la plus grande partie de la masse d'un arbre ?"
+    nom: "Du dioxyde de carbone de l'air et de l'eau."
+    explication: "La matière du bois est fabriquée par l'arbre à partir du dioxyde de carbone de l'air et de l'eau, grâce à la lumière."
+    pieges:
+      - { texte: "De la terre.", pourquoi: "L'expérience du saule montre que la terre ne perd presque rien." }
+      - { texte: "Des engrais.", pourquoi: "Les engrais apportent des sels minéraux, en petite quantité ; ils ne font pas la masse de l'arbre." }
+  - texte: "Que deviennent les feuilles mortes tombées sur le sol de la forêt ?"
+    nom: "Elles sont décomposées par des êtres vivants du sol."
+    explication: "Des animaux du sol, des champignons et des bactéries décomposent la matière morte : elle redevient matière minérale pour les plantes."
+    pieges:
+      - { texte: "Elles restent intactes pour toujours.", pourquoi: "Observe un tas de feuilles : au fil des mois, elles se transforment et disparaissent." }
+      - { texte: "Elles disparaissent toutes seules, sans aide.", pourquoi: "Sans les êtres vivants du sol, elles ne se décomposeraient pas." }
+  - texte: "Quel rôle jouent les champignons et les bactéries du sol ?"
+    nom: "Ils décomposent la matière organique morte."
+    explication: "Ces décomposeurs recyclent la matière : les sels minéraux libérés nourrissent de nouveau les plantes."
+    pieges:
+      - { texte: "Ils fabriquent leur matière avec la lumière, comme les plantes.", pourquoi: "Les champignons ne sont pas des végétaux verts : ils se nourrissent de matière organique." }
+      - { texte: "Aucun, ils abîment seulement le sol.", pourquoi: "Sans eux, la matière ne serait pas recyclée." }
+
+en:
+  titre: "Plants, producers of matter"
+  idee: "A green plant doesn't eat other living things. In the light, it makes its own matter from water, carbon dioxide from the air and mineral salts."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of a green plant's four needs: light, water, carbon dioxide from the air and mineral salts."
+    exemple: "Example: a radish grows in the garden. Its matter comes mainly from water and carbon dioxide from the air, thanks to light."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Does a green plant « eat » soil to grow?"
+      nom: "No: it takes water and mineral salts from the soil, not soil itself."
+      explication: "Soil isn't food. The plant makes its matter from light, water, carbon dioxide and a little mineral salt."
+      pieges:
+        - { texte: "Yes, soil is its food.", pourquoi: "That's a very common idea, but it's wrong: the soil in a pot hardly decreases as the plant grows." }
+        - { texte: "Yes, with roots that chew it.", pourquoi: "Roots take in water and dissolved mineral salts; they don't chew anything." }
+    - texte: "In the 17th century, Van Helmont grew a willow in a pot of weighed soil. Five years later, the tree had gained tens of kilos. And the soil?"
+      nom: "It had hardly lost any mass."
+      explication: "The soil had lost only a few tens of grams: so the tree's matter didn't come from the soil."
+      pieges:
+        - { texte: "It had lost as much as the tree gained.", pourquoi: "That's what we'd expect if the plant ate soil, but it isn't what he measured." }
+        - { texte: "The pot was empty at the end.", pourquoi: "The soil was still there, almost as heavy as at the start." }
+    - texte: "What does a green plant need to make its matter?"
+      nom: "Light, water, carbon dioxide and mineral salts."
+      explication: "Using the energy of light, the plant makes organic matter from mineral matter."
+      pieges:
+        - { texte: "Insects and meat.", pourquoi: "A few rare plants catch insects, but a green plant makes its matter without eating living things." }
+        - { texte: "Only water.", pourquoi: "Water isn't enough: it also needs light and carbon dioxide from the air." }
+    - texte: "We put a green plant in a dark cupboard for several weeks. What happens?"
+      nom: "It wilts, because it can't make its matter without light."
+      explication: "Without light, a green plant stops making matter: it weakens, turns yellow and dies."
+      pieges:
+        - { texte: "It grows better, in peace and quiet.", pourquoi: "Light is essential for a green plant to make matter." }
+        - { texte: "Nothing, if we water it.", pourquoi: "Water alone isn't enough: it also needs light." }
+    - texte: "Why are plants always at the start of food webs?"
+      nom: "Because they make their matter without eating other living things."
+      explication: "Plants are primary producers: they make the matter that animals will then eat."
+      pieges:
+        - { texte: "Because they are smaller than animals.", pourquoi: "An oak is far bigger than a mouse: size doesn't matter." }
+        - { texte: "Because they're no use for anything else.", pourquoi: "They make the matter that every other living thing depends on." }
+    - texte: "Where does most of a tree's mass come from?"
+      nom: "From carbon dioxide in the air and water."
+      explication: "The tree makes the matter of its wood from carbon dioxide in the air and water, thanks to light."
+      pieges:
+        - { texte: "From the soil.", pourquoi: "The willow experiment shows the soil loses almost nothing." }
+        - { texte: "From fertiliser.", pourquoi: "Fertiliser brings small amounts of mineral salts; it doesn't make up the tree's mass." }
+    - texte: "What happens to dead leaves that fall on the forest floor?"
+      nom: "They are broken down by living things in the soil."
+      explication: "Soil animals, fungi and bacteria break down dead matter: it turns back into mineral matter for plants."
+      pieges:
+        - { texte: "They stay as they are for ever.", pourquoi: "Watch a pile of leaves: over the months, they change and disappear." }
+        - { texte: "They disappear by themselves, with no help.", pourquoi: "Without the living things in the soil, they wouldn't break down." }
+    - texte: "What do fungi and bacteria in the soil do?"
+      nom: "They break down dead organic matter."
+      explication: "These decomposers recycle matter: the mineral salts they release feed plants again."
+      pieges:
+        - { texte: "They make their matter with light, like plants.", pourquoi: "Fungi aren't green plants: they feed on organic matter." }
+        - { texte: "Nothing, they just spoil the soil.", pourquoi: "Without them, matter wouldn't be recycled." }

@@ -1,0 +1,137 @@
+id: classes-de-mots
+titre: "Nom, déterminant, adjectif, verbe"
+niveau: CE1
+prerequis: ["lire-phrases"]
+programme: { source: cycle2, texte: "Différencier et nommer les principales classes de mots : le déterminant, le nom commun, le nom propre, l’adjectif, le verbe, le pronom personnel sujet." }
+activite: quiz
+parametres: {}
+idee: "Le nom désigne une personne, un animal ou une chose. Le déterminant se place devant le nom. L’adjectif dit comment est le nom. Le verbe dit ce qu’on fait : il se conjugue."
+phrases:
+  consigne: "Lis la phrase, regarde le mot entre « », puis touche sa nature."
+  question: "{texte}"
+  indice: "Peut-on le conjuguer ? Dit-il comment est quelque chose ? Est-il devant un nom ?"
+  exemple: "« Le petit chat boit. » : « Le » est un déterminant, « petit » un adjectif, « chat » un nom, « boit » un verbe."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « Le petit chat boit du lait. », quelle est la nature de « petit » ?"
+    nom: "un adjectif"
+    explication: "« petit » dit comment est le chat : c’est un adjectif."
+    pieges:
+      - { texte: "un nom", pourquoi: "Le nom, c’est « chat ». « petit » dit comment est le chat." }
+      - { texte: "un verbe", pourquoi: "Le verbe dit ce qu’on fait : ici, c’est « boit »." }
+  - texte: "Dans « La fille chante. », quelle est la nature de « chante » ?"
+    nom: "un verbe"
+    explication: "« chante » dit ce que fait la fille, et on peut le conjuguer : je chante, nous chantons."
+    pieges:
+      - { texte: "un nom", pourquoi: "Un nom désigne une personne ou une chose ; « chante » dit ce que fait la fille." }
+      - { texte: "un adjectif", pourquoi: "Un adjectif dit comment est un nom ; « chante » dit ce qu’on fait." }
+  - texte: "Dans « Les oiseaux volent. », quelle est la nature de « Les » ?"
+    nom: "un déterminant"
+    explication: "« Les » se place devant le nom « oiseaux » : c’est un déterminant."
+    pieges:
+      - { texte: "un nom", pourquoi: "« Les » ne désigne rien tout seul : il se place devant le nom « oiseaux »." }
+      - { texte: "un adjectif", pourquoi: "Un adjectif dit comment est le nom ; « Les » dit seulement qu’il y en a plusieurs." }
+  - texte: "Dans « Paul lit un livre. », quelle est la nature de « Paul » ?"
+    nom: "un nom propre"
+    explication: "« Paul » désigne une personne précise et prend une majuscule : c’est un nom propre."
+    pieges:
+      - { texte: "un nom commun", pourquoi: "Un nom commun suit souvent un déterminant, comme « un livre ». « Paul » est le nom d’une personne précise : nom propre." }
+      - { texte: "un verbe", pourquoi: "On ne peut pas conjuguer « Paul » ; le verbe, c’est « lit »." }
+  - texte: "Dans « Elle mange une banane jaune. », quelle est la nature de « jaune » ?"
+    nom: "un adjectif"
+    explication: "« jaune » dit comment est la banane : c’est un adjectif."
+    pieges:
+      - { texte: "un nom", pourquoi: "Le nom, c’est « banane ». « jaune » dit comment elle est." }
+      - { texte: "un déterminant", pourquoi: "Le déterminant est devant le nom : c’est « une »." }
+  - texte: "Dans « Il dort. », quelle est la nature de « Il » ?"
+    nom: "un pronom"
+    explication: "« Il » remplace un nom (Tom, le chat…) : c’est un pronom personnel sujet."
+    pieges:
+      - { texte: "un nom propre", pourquoi: "« Il » ne nomme personne en particulier : il remplace un nom. C’est un pronom." }
+      - { texte: "un déterminant", pourquoi: "Un déterminant est suivi d’un nom ; « Il » est suivi du verbe « dort »." }
+  - texte: "Dans « Le vent souffle fort. », quelle est la nature de « vent » ?"
+    nom: "un nom commun"
+    explication: "« vent » désigne une chose et suit le déterminant « Le » : c’est un nom commun."
+    pieges:
+      - { texte: "un verbe", pourquoi: "On ne peut pas conjuguer « vent » ; le verbe, c’est « souffle »." }
+      - { texte: "un adjectif", pourquoi: "« vent » ne dit pas comment est quelque chose : il désigne une chose." }
+  - texte: "« Mon chien est gentil. » Pourquoi « chien » est-il un nom ?"
+    nom: "Il désigne un animal et suit le déterminant « Mon »."
+    explication: "Un nom désigne une personne, un animal ou une chose, souvent après un déterminant."
+    pieges:
+      - { texte: "Il dit ce qu’on fait.", pourquoi: "Ça, c’est le rôle du verbe : ici, « est »." }
+      - { texte: "Il dit comment est le chien.", pourquoi: "Ça, c’est le rôle de l’adjectif : ici, « gentil »." }
+  - texte: "« Nous jouons. » Pourquoi « jouons » est-il un verbe ?"
+    nom: "Il change avec la personne : je joue, nous jouons."
+    explication: "Un verbe se conjugue : sa fin change avec la personne et le temps."
+    pieges:
+      - { texte: "Il a un déterminant devant lui.", pourquoi: "Un verbe n’a pas de déterminant : « Nous » est un pronom." }
+      - { texte: "Il dit comment est quelqu’un.", pourquoi: "Ça, c’est le rôle de l’adjectif. « jouons » dit ce qu’on fait." }
+
+en:
+  langue: "fr"
+  titre: "French: noun, determiner, adjective, verb"
+  idee: "A noun names a person, an animal or a thing. A determiner comes before the noun. An adjective says what the noun is like. A verb says what someone does: it can be conjugated."
+  phrases:
+    consigne: "Read the French sentence, look at the word in « », then touch what kind of word it is."
+    question: "{texte}"
+    indice: "Can you conjugate it? Does it say what something is like? Does it come before a noun?"
+    exemple: "« Le petit chat boit. »: « Le » is a determiner, « petit » an adjective, « chat » a noun, « boit » a verb."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "In « Le petit chat boit du lait. », what kind of word is « petit »?"
+      nom: "an adjective"
+      explication: "« petit » says what the cat is like: it's an adjective."
+      pieges:
+        - { texte: "a noun", pourquoi: "The noun is « chat ». « petit » says what the cat is like." }
+        - { texte: "a verb", pourquoi: "The verb says what someone does: here, it's « boit »." }
+    - texte: "In « La fille chante. », what kind of word is « chante »?"
+      nom: "a verb"
+      explication: "« chante » says what the girl does, and you can conjugate it: « je chante », « nous chantons »."
+      pieges:
+        - { texte: "a noun", pourquoi: "A noun names a person or a thing; « chante » says what the girl does." }
+        - { texte: "an adjective", pourquoi: "An adjective says what a noun is like; « chante » says what someone does." }
+    - texte: "In « Les oiseaux volent. », what kind of word is « Les »?"
+      nom: "a determiner"
+      explication: "« Les » comes before the noun « oiseaux »: it's a determiner."
+      pieges:
+        - { texte: "a noun", pourquoi: "« Les » names nothing on its own: it comes before the noun « oiseaux »." }
+        - { texte: "an adjective", pourquoi: "An adjective says what the noun is like; « Les » only says there are several." }
+    - texte: "In « Paul lit un livre. », what kind of word is « Paul »?"
+      nom: "a proper noun"
+      explication: "« Paul » names one particular person and has a capital letter: it's a proper noun."
+      pieges:
+        - { texte: "a common noun", pourquoi: "A common noun often follows a determiner, like « un livre ». « Paul » names one particular person: proper noun." }
+        - { texte: "a verb", pourquoi: "You can't conjugate « Paul »; the verb is « lit »." }
+    - texte: "In « Elle mange une banane jaune. », what kind of word is « jaune »?"
+      nom: "an adjective"
+      explication: "« jaune » says what the banana is like: it's an adjective."
+      pieges:
+        - { texte: "a noun", pourquoi: "The noun is « banane ». « jaune » says what it is like." }
+        - { texte: "a determiner", pourquoi: "The determiner comes before the noun: it's « une »." }
+    - texte: "In « Il dort. », what kind of word is « Il »?"
+      nom: "a pronoun"
+      explication: "« Il » stands for a noun (Tom, the cat…): it's a subject pronoun."
+      pieges:
+        - { texte: "a proper noun", pourquoi: "« Il » doesn't name anyone in particular: it stands for a noun. It's a pronoun." }
+        - { texte: "a determiner", pourquoi: "A determiner is followed by a noun; « Il » is followed by the verb « dort »." }
+    - texte: "In « Le vent souffle fort. », what kind of word is « vent »?"
+      nom: "a common noun"
+      explication: "« vent » names a thing and follows the determiner « Le »: it's a common noun."
+      pieges:
+        - { texte: "a verb", pourquoi: "You can't conjugate « vent »; the verb is « souffle »." }
+        - { texte: "an adjective", pourquoi: "« vent » doesn't say what something is like: it names a thing." }
+    - texte: "« Mon chien est gentil. » Why is « chien » a noun?"
+      nom: "It names an animal and follows the determiner « Mon »."
+      explication: "A noun names a person, an animal or a thing, often after a determiner."
+      pieges:
+        - { texte: "It says what someone does.", pourquoi: "That's what the verb does: here, « est »." }
+        - { texte: "It says what the dog is like.", pourquoi: "That's what the adjective does: here, « gentil »." }
+    - texte: "« Nous jouons. » Why is « jouons » a verb?"
+      nom: "It changes with the person: « je joue », « nous jouons »."
+      explication: "A verb can be conjugated: its ending changes with the person and the tense."
+      pieges:
+        - { texte: "It has a determiner in front of it.", pourquoi: "A verb has no determiner: « Nous » is a pronoun." }
+        - { texte: "It says what someone is like.", pourquoi: "That's what an adjective does. « jouons » says what people do." }

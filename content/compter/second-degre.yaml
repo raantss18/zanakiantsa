@@ -1,0 +1,136 @@
+id: second-degre
+titre: "Le second degré et le discriminant"
+niveau: 1re
+prerequis: ["equation-produit-nul", "racine-carree"]
+programme: { source: lycee1re, texte: "Forme canonique d’une fonction polynôme du second degré. Discriminant. Factorisation éventuelle. Résolution d’une équation du second degré. Signe." }
+activite: quiz
+parametres: {}
+idee: "Pour ax² + bx + c = 0, le discriminant est Δ = b² − 4ac. Si Δ > 0 : deux solutions ; si Δ = 0 : une seule ; si Δ < 0 : aucune solution réelle."
+phrases:
+  consigne: "Calcule le discriminant, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repère a, b et c avec leurs signes, puis calcule b² − 4ac."
+  exemple: "x² − 5x + 6 = 0 : a = 1, b = −5, c = 6. Δ = 25 − 24 = 1 > 0. Solutions : (5 − 1) ÷ 2 = 2 et (5 + 1) ÷ 2 = 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quel est le discriminant de x² + 3x − 4 ?"
+    nom: "25"
+    explication: "a = 1, b = 3, c = −4 : Δ = 3² − 4 × 1 × (−4) = 9 + 16 = 25."
+    pieges:
+      - { texte: "−7", pourquoi: "c = −4 est négatif : −4ac = −4 × 1 × (−4) = +16, donc 9 + 16." }
+      - { texte: "19", pourquoi: "b est au carré : 3² = 9, pas 3." }
+  - texte: "Quel est le discriminant de 2x² − 4x + 2 ?"
+    nom: "0"
+    explication: "a = 2, b = −4, c = 2 : Δ = (−4)² − 4 × 2 × 2 = 16 − 16 = 0."
+    pieges:
+      - { texte: "32", pourquoi: "−4ac = −4 × 2 × 2 = −16 : on soustrait 16." }
+      - { texte: "8", pourquoi: "Il manque a = 2 : 4ac = 4 × 2 × 2 = 16, pas 4 × 2 = 8." }
+  - texte: "Combien de solutions réelles a l’équation x² + x + 1 = 0 ?"
+    nom: "Aucune"
+    explication: "Δ = 1² − 4 × 1 × 1 = 1 − 4 = −3 < 0 : aucune solution réelle."
+    pieges:
+      - { texte: "Deux", pourquoi: "Deux solutions quand Δ > 0 : ici Δ = −3 est négatif." }
+      - { texte: "Une", pourquoi: "Une seule solution quand Δ = 0 : ici Δ = −3." }
+  - texte: "Résous : x² − 6x + 8 = 0"
+    nom: "x = 2 ou x = 4"
+    explication: "Δ = 36 − 32 = 4, √Δ = 2. x = (6 − 2) ÷ 2 = 2 ou x = (6 + 2) ÷ 2 = 4."
+    pieges:
+      - { texte: "x = −2 ou x = −4", pourquoi: "La formule utilise −b : ici b = −6, donc −b = 6." }
+      - { texte: "x = 4 ou x = 8", pourquoi: "Il faut diviser par 2a = 2 : (6 − 2) ÷ 2 et (6 + 2) ÷ 2." }
+  - texte: "Résous : x² + 2x − 3 = 0"
+    nom: "x = 1 ou x = −3"
+    explication: "Δ = 4 + 12 = 16, √Δ = 4. x = (−2 + 4) ÷ 2 = 1 ou x = (−2 − 4) ÷ 2 = −3."
+    pieges:
+      - { texte: "x = −1 ou x = 3", pourquoi: "La formule utilise −b : ici b = 2, donc −b = −2." }
+      - { texte: "x = 2 ou x = −6", pourquoi: "Il faut diviser par 2a = 2 : (−2 + 4) ÷ 2 et (−2 − 4) ÷ 2." }
+  - texte: "Résous : x² − 4x + 4 = 0"
+    nom: "x = 2"
+    explication: "Δ = 16 − 16 = 0 : une seule solution, x = −b ÷ 2a = 4 ÷ 2 = 2. En effet x² − 4x + 4 = (x − 2)²."
+    pieges:
+      - { texte: "x = 2 ou x = −2", pourquoi: "Δ = 0 : il n’y a qu’une solution. (−2)² − 4 × (−2) + 4 = 16, pas 0." }
+      - { texte: "x = −2", pourquoi: "La formule utilise −b : b = −4, donc −b = 4 et x = 4 ÷ 2 = 2." }
+  - texte: "Complète : 2x² − 3x − 2 = 0. Δ = 9 + 16 = 25, donc x = (3 − 5) ÷ 4 ou x = (3 + 5) ÷ 4, soit …"
+    nom: "x = −0,5 ou x = 2"
+    explication: "(3 − 5) ÷ 4 = −2 ÷ 4 = −0,5 et (3 + 5) ÷ 4 = 8 ÷ 4 = 2. On divise par 2a = 4."
+    pieges:
+      - { texte: "x = −1 ou x = 4", pourquoi: "On divise par 2a = 2 × 2 = 4, pas par 2." }
+      - { texte: "x = −2 ou x = 0,5", pourquoi: "La formule utilise −b = 3 : (3 − 5) ÷ 4 et (3 + 5) ÷ 4." }
+  - texte: "Pourquoi x² + 4 = 0 n’a-t-il aucune solution réelle ?"
+    nom: "Un carré est toujours positif ou nul, donc x² + 4 est au moins 4."
+    explication: "x² ≥ 0, donc x² + 4 ≥ 4 > 0. Le discriminant le confirme : Δ = 0 − 4 × 1 × 4 = −16 < 0."
+    pieges:
+      - { texte: "Parce qu’il n’y a pas de terme en x.", pourquoi: "x² − 4 = 0 n’a pas de terme en x non plus, et il a deux solutions, 2 et −2." }
+      - { texte: "Parce que 4 n’est pas un carré.", pourquoi: "4 = 2² est un carré : ce n’est pas la raison." }
+  - texte: "Quelle est la forme factorisée de x² − 5x + 6 ?"
+    nom: "(x − 2)(x − 3)"
+    explication: "Les racines sont 2 et 3 (Δ = 1). On vérifie : (x − 2)(x − 3) = x² − 3x − 2x + 6 = x² − 5x + 6."
+    pieges:
+      - { texte: "(x + 2)(x + 3)", pourquoi: "(x + 2)(x + 3) = x² + 5x + 6 : le signe du terme en x ne va pas." }
+      - { texte: "(x − 1)(x − 6)", pourquoi: "(x − 1)(x − 6) = x² − 7x + 6 : 1 et 6 ont le bon produit, 6, mais pas la bonne somme, 5." }
+
+en:
+  titre: "Quadratics and the discriminant"
+  idee: "For ax² + bx + c = 0, the discriminant is Δ = b² − 4ac. If Δ > 0: two solutions; if Δ = 0: just one; if Δ < 0: no real solution."
+  phrases:
+    consigne: "Work out the discriminant, then touch the right answer."
+    question: "{texte}"
+    indice: "Find a, b and c with their signs, then work out b² − 4ac."
+    exemple: "x² − 5x + 6 = 0: a = 1, b = −5, c = 6. Δ = 25 − 24 = 1 > 0. Solutions: (5 − 1) ÷ 2 = 2 and (5 + 1) ÷ 2 = 3."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is the discriminant of x² + 3x − 4?"
+      nom: "25"
+      explication: "a = 1, b = 3, c = −4: Δ = 3² − 4 × 1 × (−4) = 9 + 16 = 25."
+      pieges:
+        - { texte: "−7", pourquoi: "c = −4 is negative: −4ac = −4 × 1 × (−4) = +16, so 9 + 16." }
+        - { texte: "19", pourquoi: "b is squared: 3² = 9, not 3." }
+    - texte: "What is the discriminant of 2x² − 4x + 2?"
+      nom: "0"
+      explication: "a = 2, b = −4, c = 2: Δ = (−4)² − 4 × 2 × 2 = 16 − 16 = 0."
+      pieges:
+        - { texte: "32", pourquoi: "−4ac = −4 × 2 × 2 = −16: subtract 16." }
+        - { texte: "8", pourquoi: "a = 2 is missing: 4ac = 4 × 2 × 2 = 16, not 4 × 2 = 8." }
+    - texte: "How many real solutions does x² + x + 1 = 0 have?"
+      nom: "None"
+      explication: "Δ = 1² − 4 × 1 × 1 = 1 − 4 = −3 < 0: no real solution."
+      pieges:
+        - { texte: "Two", pourquoi: "Two solutions when Δ > 0: here Δ = −3 is negative." }
+        - { texte: "One", pourquoi: "Just one solution when Δ = 0: here Δ = −3." }
+    - texte: "Solve: x² − 6x + 8 = 0"
+      nom: "x = 2 or x = 4"
+      explication: "Δ = 36 − 32 = 4, √Δ = 2. x = (6 − 2) ÷ 2 = 2 or x = (6 + 2) ÷ 2 = 4."
+      pieges:
+        - { texte: "x = −2 or x = −4", pourquoi: "The formula uses −b: here b = −6, so −b = 6." }
+        - { texte: "x = 4 or x = 8", pourquoi: "Divide by 2a = 2: (6 − 2) ÷ 2 and (6 + 2) ÷ 2." }
+    - texte: "Solve: x² + 2x − 3 = 0"
+      nom: "x = 1 or x = −3"
+      explication: "Δ = 4 + 12 = 16, √Δ = 4. x = (−2 + 4) ÷ 2 = 1 or x = (−2 − 4) ÷ 2 = −3."
+      pieges:
+        - { texte: "x = −1 or x = 3", pourquoi: "The formula uses −b: here b = 2, so −b = −2." }
+        - { texte: "x = 2 or x = −6", pourquoi: "Divide by 2a = 2: (−2 + 4) ÷ 2 and (−2 − 4) ÷ 2." }
+    - texte: "Solve: x² − 4x + 4 = 0"
+      nom: "x = 2"
+      explication: "Δ = 16 − 16 = 0: just one solution, x = −b ÷ 2a = 4 ÷ 2 = 2. Indeed x² − 4x + 4 = (x − 2)²."
+      pieges:
+        - { texte: "x = 2 or x = −2", pourquoi: "Δ = 0: there is only one solution. (−2)² − 4 × (−2) + 4 = 16, not 0." }
+        - { texte: "x = −2", pourquoi: "The formula uses −b: b = −4, so −b = 4 and x = 4 ÷ 2 = 2." }
+    - texte: "Fill in the step: 2x² − 3x − 2 = 0. Δ = 9 + 16 = 25, so x = (3 − 5) ÷ 4 or x = (3 + 5) ÷ 4, which gives …"
+      nom: "x = −0.5 or x = 2"
+      explication: "(3 − 5) ÷ 4 = −2 ÷ 4 = −0.5 and (3 + 5) ÷ 4 = 8 ÷ 4 = 2. We divide by 2a = 4."
+      pieges:
+        - { texte: "x = −1 or x = 4", pourquoi: "Divide by 2a = 2 × 2 = 4, not by 2." }
+        - { texte: "x = −2 or x = 0.5", pourquoi: "The formula uses −b = 3: (3 − 5) ÷ 4 and (3 + 5) ÷ 4." }
+    - texte: "Why does x² + 4 = 0 have no real solution?"
+      nom: "A square is always positive or zero, so x² + 4 is at least 4."
+      explication: "x² ≥ 0, so x² + 4 ≥ 4 > 0. The discriminant agrees: Δ = 0 − 4 × 1 × 4 = −16 < 0."
+      pieges:
+        - { texte: "Because there is no x term.", pourquoi: "x² − 4 = 0 has no x term either, and it has two solutions, 2 and −2." }
+        - { texte: "Because 4 is not a square.", pourquoi: "4 = 2² is a square: that is not the reason." }
+    - texte: "What is the factorised form of x² − 5x + 6?"
+      nom: "(x − 2)(x − 3)"
+      explication: "The roots are 2 and 3 (Δ = 1). Check: (x − 2)(x − 3) = x² − 3x − 2x + 6 = x² − 5x + 6."
+      pieges:
+        - { texte: "(x + 2)(x + 3)", pourquoi: "(x + 2)(x + 3) = x² + 5x + 6: the sign of the x term is wrong." }
+        - { texte: "(x − 1)(x − 6)", pourquoi: "(x − 1)(x − 6) = x² − 7x + 6: 1 and 6 have the right product, 6, but not the right sum, 5." }

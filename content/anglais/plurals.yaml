@@ -1,0 +1,154 @@
+id: plurals
+titre: "Le pluriel des noms en anglais"
+niveau: CM1
+prerequis: [animals]
+programme: { source: lver_c3, texte: "CM1 : appliquer les règles d’accord élémentaires sur un champ lexical plus large." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Au pluriel, on ajoute souvent -s : « a cat », « two cats ». Après -s, -x, -ch, -sh, on ajoute -es : « boxes ». Quelques mots changent : « child », « children »."
+phrases:
+  consigne: "Lis le mot anglais, puis touche son pluriel."
+  question: "{texte}"
+  indice: "Regarde la fin du mot : -s, -x, -ch ou -sh demandent -es. Sinon, -s. Quelques mots changent tout à fait."
+  exemple: "« one fox, two … » : « fox » finit par -x, on ajoute -es. « two foxes »."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « one cat, two … »"
+    nom: "cats"
+    explication: "On ajoute -s : « two cats »."
+    pieges:
+      - { texte: "cat", pourquoi: "« cat », c'est le singulier : un seul chat. Pour deux, on ajoute -s." }
+      - { texte: "a cat", pourquoi: "« a » veut dire « un » : c'est un seul chat." }
+  - texte: "Complète : « one bus, two … »"
+    nom: "buses"
+    explication: "« bus » finit par -s : on ajoute -es. « two buses »."
+    pieges:
+      - { texte: "bus", pourquoi: "« bus », c'est le singulier. Après -s, le pluriel prend -es : « buses »." }
+      - { texte: "a bus", pourquoi: "« a » veut dire « un » : c'est un seul bus." }
+  - texte: "Complète : « one box, two … »"
+    nom: "boxes"
+    explication: "« box » finit par -x : on ajoute -es. « two boxes »."
+    pieges:
+      - { texte: "box", pourquoi: "« box », c'est le singulier. Après -x, le pluriel prend -es : « boxes »." }
+      - { texte: "a box", pourquoi: "« a » veut dire « un » : c'est une seule boîte." }
+  - texte: "Complète : « one brush, two … »"
+    nom: "brushes"
+    explication: "« brush » finit par -sh : on ajoute -es. « two brushes »."
+    pieges:
+      - { texte: "brush", pourquoi: "« brush », c'est le singulier. Après -sh, le pluriel prend -es : « brushes »." }
+      - { texte: "a brush", pourquoi: "« a » veut dire « un » : c'est une seule brosse." }
+  - texte: "Complète : « one child, two … »"
+    nom: "children"
+    explication: "« child » est irrégulier : son pluriel est « children »."
+    pieges:
+      - { texte: "child", pourquoi: "« child », c'est le singulier : un seul enfant. Son pluriel est « children »." }
+      - { texte: "people", pourquoi: "« people » est le pluriel de « person », une personne. Pour « child » : « children »." }
+  - texte: "Complète : « one man, two … »"
+    nom: "men"
+    explication: "« man » est irrégulier : son pluriel est « men »."
+    pieges:
+      - { texte: "man", pourquoi: "« man », c'est le singulier : un seul homme. Son pluriel est « men »." }
+      - { texte: "women", pourquoi: "« women » est le pluriel de « woman », femme. Pour « man » : « men »." }
+  - texte: "Complète : « one woman, two … »"
+    nom: "women"
+    explication: "« woman » est irrégulier : son pluriel est « women »."
+    pieges:
+      - { texte: "woman", pourquoi: "« woman », c'est le singulier : une seule femme. Son pluriel est « women »." }
+      - { texte: "men", pourquoi: "« men » est le pluriel de « man », homme. Pour « woman » : « women »." }
+  - texte: "Complète : « one foot, two … »"
+    nom: "feet"
+    explication: "« foot » est irrégulier : son pluriel est « feet »."
+    pieges:
+      - { texte: "foot", pourquoi: "« foot », c'est le singulier : un seul pied. Son pluriel est « feet »." }
+      - { texte: "teeth", pourquoi: "« teeth » est le pluriel de « tooth », dent. Pour « foot » : « feet »." }
+  - texte: "Pourquoi écrit-on « boxes », avec -es ?"
+    nom: "Après -x, on ajoute -es : on entend une syllabe de plus."
+    explication: "Après -s, -x, -ch, -sh, on ajoute -es : « boxes », « buses », « brushes »."
+    pieges:
+      - { texte: "Parce que « box » est irrégulier, comme « child ».", pourquoi: "Non : « boxes » suit une règle. Les irréguliers, comme « children », changent de forme." }
+      - { texte: "Parce que tous les pluriels prennent -es.", pourquoi: "Non : la plupart prennent seulement -s : « cats », « dogs »." }
+en:
+  titre: "Plural nouns in English"
+  idee: "For the plural, we often add -s: a cat, two cats. After -s, -x, -ch, -sh, we add -es: boxes. A few words change: child, children."
+  phrases:
+    consigne: "Read the word, then touch its plural."
+    question: "{texte}"
+    indice: "Look at the end of the word: -s, -x, -ch or -sh take -es. Otherwise, -s. A few words change completely."
+    exemple: "“one fox, two …”: fox ends in -x, so we add -es. “two foxes”."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “one cat, two …”"
+      nom: "cats"
+      explication: "We add -s: “two cats”."
+      pieges:
+        - texte: "cat"
+          pourquoi: "“cat” is the singular: only one. For two, we add -s."
+        - texte: "a cat"
+          pourquoi: "“a” means one: that is only one cat."
+    - texte: "Complete: “one bus, two …”"
+      nom: "buses"
+      explication: "Bus ends in -s, so we add -es: “two buses”."
+      pieges:
+        - texte: "bus"
+          pourquoi: "“bus” is the singular. After -s, the plural takes -es: buses."
+        - texte: "a bus"
+          pourquoi: "“a” means one: that is only one bus."
+    - texte: "Complete: “one box, two …”"
+      nom: "boxes"
+      explication: "Box ends in -x, so we add -es: “two boxes”."
+      pieges:
+        - texte: "box"
+          pourquoi: "“box” is the singular. After -x, the plural takes -es: boxes."
+        - texte: "a box"
+          pourquoi: "“a” means one: that is only one box."
+    - texte: "Complete: “one brush, two …”"
+      nom: "brushes"
+      explication: "Brush ends in -sh, so we add -es: “two brushes”."
+      pieges:
+        - texte: "brush"
+          pourquoi: "“brush” is the singular. After -sh, the plural takes -es: brushes."
+        - texte: "a brush"
+          pourquoi: "“a” means one: that is only one brush."
+    - texte: "Complete: “one child, two …”"
+      nom: "children"
+      explication: "Child is irregular: its plural is children."
+      pieges:
+        - texte: "child"
+          pourquoi: "“child” is the singular: only one. Its plural is children."
+        - texte: "people"
+          pourquoi: "“people” is the plural of person. For child: children."
+    - texte: "Complete: “one man, two …”"
+      nom: "men"
+      explication: "Man is irregular: its plural is men."
+      pieges:
+        - texte: "man"
+          pourquoi: "“man” is the singular: only one. Its plural is men."
+        - texte: "women"
+          pourquoi: "“women” is the plural of woman. For man: men."
+    - texte: "Complete: “one woman, two …”"
+      nom: "women"
+      explication: "Woman is irregular: its plural is women."
+      pieges:
+        - texte: "woman"
+          pourquoi: "“woman” is the singular: only one. Its plural is women."
+        - texte: "men"
+          pourquoi: "“men” is the plural of man. For woman: women."
+    - texte: "Complete: “one foot, two …”"
+      nom: "feet"
+      explication: "Foot is irregular: its plural is feet."
+      pieges:
+        - texte: "foot"
+          pourquoi: "“foot” is the singular: only one. Its plural is feet."
+        - texte: "teeth"
+          pourquoi: "“teeth” is the plural of tooth. For foot: feet."
+    - texte: "Why do we write “boxes”, with -es?"
+      nom: "After -x, we add -es: you can hear one more syllable."
+      explication: "After -s, -x, -ch, -sh, we add -es: boxes, buses, brushes."
+      pieges:
+        - texte: "Because box is irregular, like child."
+          pourquoi: "No: boxes follows a rule. Irregular words, like children, change their form."
+        - texte: "Because all plurals take -es."
+          pourquoi: "No: most of them only take -s: cats, dogs."

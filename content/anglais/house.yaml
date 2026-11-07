@@ -1,0 +1,94 @@
+id: house
+titre: "À la maison, en anglais"
+niveau: CM1
+prerequis: []
+programme: { source: lver_c3, texte: "CM1, décrire son environnement quotidien : présenter ce qui se trouve dans l’environnement proche." }
+activite: choisir
+# Les phrases entre « » sont dites par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "Une phrase anglaise parle de la maison : « I sleep in my bed », je dors dans mon lit. Cherche le mot de la maison, puis touche l'image."
+phrases:
+  consigne: "Écoute la phrase anglaise, puis touche l'objet de la maison dont elle parle."
+  question: "« {texte} »"
+  indice: "Cherche le dernier mot de la phrase : c'est l'objet de la maison."
+  exemple: "Regarde : « I sit on a chair », je m'assois sur une chaise. Le mot « chair », c'est la chaise."
+  demonstration: "Regarde : « {texte} » : c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "This is my house."
+    bonne: ["1f3e0", "la maison"]
+    autres: [["1f6aa", "la porte"], ["1f6cf", "le lit"]]
+    explication: "« house », c'est la maison."
+  - texte: "I open the door."
+    bonne: ["1f6aa", "la porte"]
+    autres: [["1fa9e", "le miroir"], ["1fa91", "la chaise"]]
+    explication: "« door », c'est la porte."
+  - texte: "I sleep in my bed."
+    bonne: ["1f6cf", "le lit"]
+    autres: [["1f6bf", "la douche"], ["1fa91", "la chaise"]]
+    explication: "« bed », c'est le lit."
+  - texte: "I sit on a chair."
+    bonne: ["1fa91", "la chaise"]
+    autres: [["1f6cf", "le lit"], ["1f4fa", "la télévision"]]
+    explication: "« chair », c'est la chaise."
+  - texte: "I have a shower."
+    bonne: ["1f6bf", "la douche"]
+    autres: [["1f6aa", "la porte"], ["1f4bb", "l'ordinateur"]]
+    explication: "« shower », c'est la douche."
+  - texte: "I watch television."
+    bonne: ["1f4fa", "la télévision"]
+    autres: [["1f4bb", "l'ordinateur"], ["1fa9e", "le miroir"]]
+    explication: "« television », c'est la télévision."
+  - texte: "I play on the computer."
+    bonne: ["1f4bb", "l'ordinateur"]
+    autres: [["1f4fa", "la télévision"], ["1f3e0", "la maison"]]
+    explication: "« computer », c'est l'ordinateur."
+  - texte: "I look in the mirror."
+    bonne: ["1fa9e", "le miroir"]
+    autres: [["1f6bf", "la douche"], ["1f6aa", "la porte"]]
+    explication: "« mirror », c'est le miroir."
+en:
+  titre: "At home, in English"
+  idee: "Each sentence talks about the home: “I sleep in my bed”. Find the word for the object, then touch the picture."
+  phrases:
+    consigne: "Listen to the sentence, then touch the thing in the house it talks about."
+    question: "{texte}"
+    indice: "Look at the last word of the sentence: it is the thing in the house."
+    exemple: "Look: “I sit on a chair”. The word chair is the chair."
+    demonstration: "Look: {texte} That is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}"
+  items:
+    - texte: "This is my house."
+      bonne: ["1f3e0", "the house"]
+      autres: [["1f6aa", "the door"], ["1f6cf", "the bed"]]
+      explication: "house — well done!"
+    - texte: "I open the door."
+      bonne: ["1f6aa", "the door"]
+      autres: [["1fa9e", "the mirror"], ["1fa91", "the chair"]]
+      explication: "door — well done!"
+    - texte: "I sleep in my bed."
+      bonne: ["1f6cf", "the bed"]
+      autres: [["1f6bf", "the shower"], ["1fa91", "the chair"]]
+      explication: "bed — well done!"
+    - texte: "I sit on a chair."
+      bonne: ["1fa91", "the chair"]
+      autres: [["1f6cf", "the bed"], ["1f4fa", "the television"]]
+      explication: "chair — well done!"
+    - texte: "I have a shower."
+      bonne: ["1f6bf", "the shower"]
+      autres: [["1f6aa", "the door"], ["1f4bb", "the computer"]]
+      explication: "shower — well done!"
+    - texte: "I watch television."
+      bonne: ["1f4fa", "the television"]
+      autres: [["1f4bb", "the computer"], ["1fa9e", "the mirror"]]
+      explication: "television — well done!"
+    - texte: "I play on the computer."
+      bonne: ["1f4bb", "the computer"]
+      autres: [["1f4fa", "the television"], ["1f3e0", "the house"]]
+      explication: "computer — well done!"
+    - texte: "I look in the mirror."
+      bonne: ["1fa9e", "the mirror"]
+      autres: [["1f6bf", "the shower"], ["1f6aa", "the door"]]
+      explication: "mirror — well done!"

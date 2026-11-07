@@ -4,7 +4,7 @@ nom: "Les échecs"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Les leçons pas à pas, puis de vraies parties contre le robot ou à deux."
 icone: "265f"
-ages: [5, 10]
+ages: [5, 12]
 # Règles officielles : FIDE Laws of Chess (1er janvier 2023), article 3 « The moves of the pieces ». Hors programme
 # scolaire : le cours suit l'ordre usuel des initiations (une pièce à la fois, attraper des étoiles), observé sur
 # https://lichess.org/learn (idée seulement, aucun code ni dessin repris, CLAUDE.md règle 7).
@@ -13,7 +13,11 @@ sources:
   # Tactiques (fourchette, pièce non protégée, mat du couloir) : pas de programme officiel trouvé (FFE). Chaque
   # position est vérifiée par le moteur de l'app : app/test/problems_test.dart (ADR 0040).
   moteur: "https://github.com/raantss18/zanakiantsa/blob/main/app/test/problems_test.dart"
-ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir]
+  # Clouage, enfilade, découverte, double échec, mats de l'escalier et du baiser (thèmes mat, clouage, enfilade,
+  # decouverte, double) : positions vérifiées aussi avec python-chess (légalité, coups gagnants = « coups »). Règle du
+  # carré : pas de source officielle trouvée ; chaque réponse est calculée par une recherche complète de la course
+  # roi contre pion. Articles FIDE cités relus le 2026-11-07.
+ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir, mat-escalier, mat-baiser, clouage, enfilade, ouverture, decouverte, double-echec, regle-carre]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

@@ -1,0 +1,136 @@
+id: fractions-decimales
+titre: "Dixièmes et centièmes"
+niveau: CM1
+prerequis: ["fractions-superieures"]
+programme: { source: cycle3, texte: "Connaître et utiliser les relations entre unités simples, dixièmes et centièmes" }
+activite: quiz
+parametres: {}
+idee: "On partage l'unité en 10 parts égales : chaque part est un dixième. On partage un dixième en 10 : chaque part est un centième."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "1 unité = 10 dixièmes = 100 centièmes, et 1 dixième = 10 centièmes."
+  exemple: "Combien de centièmes dans 3 dixièmes ? 1 dixième = 10 centièmes, donc 3 dixièmes = 30 centièmes : 3/10 = 30/100."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien y a-t-il de dixièmes dans 1 unité ?"
+    nom: "10"
+    explication: "On partage l'unité en 10 parts égales : 1 = 10/10."
+    pieges:
+      - { texte: "100", pourquoi: "100, c'est le nombre de centièmes dans 1 unité." }
+      - { texte: "1", pourquoi: "Un dixième est une part sur 10 : il en faut 10 pour faire 1." }
+  - texte: "Combien y a-t-il de centièmes dans 1 dixième ?"
+    nom: "10"
+    explication: "On partage un dixième en 10 : 1/10 = 10/100."
+    pieges:
+      - { texte: "100", pourquoi: "100 centièmes font 1 unité, pas 1 dixième." }
+      - { texte: "1 000", pourquoi: "1 000 parts, ce sont les millièmes d'une unité." }
+  - texte: "Combien y a-t-il de centièmes dans 4 dixièmes ?"
+    nom: "40"
+    explication: "1 dixième = 10 centièmes, donc 4 dixièmes = 40 centièmes."
+    pieges:
+      - { texte: "4", pourquoi: "4 dixièmes ne sont pas 4 centièmes : un dixième vaut 10 centièmes." }
+      - { texte: "400", pourquoi: "400 centièmes font 4 unités." }
+  - texte: "Quelle fraction est égale à 7/10 ?"
+    nom: "70/100"
+    explication: "Chaque dixième vaut 10 centièmes : 7 dixièmes = 70 centièmes."
+    pieges:
+      - { texte: "7/100", pourquoi: "7 centièmes, c'est 10 fois moins que 7 dixièmes." }
+      - { texte: "70/10", pourquoi: "70/10 = 7 unités : on multiplie le haut et le bas par 10, pas seulement le haut." }
+  - texte: "23/10, c'est combien ?"
+    nom: "2 unités et 3 dixièmes"
+    explication: "10 dixièmes font 1 unité. 23 dixièmes = 20 dixièmes + 3 dixièmes = 2 unités et 3 dixièmes."
+    pieges:
+      - { texte: "23 unités", pourquoi: "23/10, ce sont 23 dixièmes : 10 dixièmes font 1 unité." }
+      - { texte: "2 unités et 3 centièmes", pourquoi: "Le dénominateur est 10 : ce sont des dixièmes." }
+  - texte: "Écris 4 + 6/10 + 5/100 avec une seule fraction."
+    nom: "465/100"
+    explication: "4 unités = 400 centièmes ; 6 dixièmes = 60 centièmes ; plus 5 centièmes : 465 centièmes."
+    pieges:
+      - { texte: "465/10", pourquoi: "Le plus petit rang est le centième : le dénominateur est 100." }
+      - { texte: "65/100", pourquoi: "Il manque les 4 unités : 4 unités font 400 centièmes." }
+  - texte: "1 unité = 10 dixièmes, et 1 dixième = 10 centièmes. Donc 1 unité = … centièmes. Quel nombre manque ?"
+    nom: "100"
+    explication: "10 dixièmes de 10 centièmes chacun : 10 × 10 = 100 centièmes."
+    pieges:
+      - { texte: "20", pourquoi: "10 + 10 : on a 10 fois 10 centièmes, c'est une multiplication." }
+      - { texte: "10", pourquoi: "10 dixièmes, oui ; mais chaque dixième vaut 10 centièmes." }
+  - texte: "Une bande unité est partagée en 10 parts égales. Ana colorie 3 parts, puis encore 4 parts. Quelle fraction a-t-elle coloriée ?"
+    nom: "7/10"
+    explication: "3 dixièmes + 4 dixièmes = 7 dixièmes : 7/10."
+    pieges:
+      - { texte: "7/20", pourquoi: "On ne change pas le dénominateur : la bande a toujours 10 parts." }
+      - { texte: "1/10", pourquoi: "4 − 3 : elle colorie encore 4 parts, on ajoute." }
+  - texte: "Pourquoi 5/10 = 50/100 ?"
+    nom: "Les parts sont 10 fois plus petites, et 10 fois plus nombreuses."
+    explication: "Chaque dixième est coupé en 10 centièmes : 5 dixièmes deviennent 50 centièmes, la même quantité."
+    pieges:
+      - { texte: "Parce qu'on ajoute un 0 en haut et en bas.", pourquoi: "Ce n'est pas une raison : on a coupé chaque dixième en 10 centièmes." }
+      - { texte: "Parce que 50 est plus grand que 5.", pourquoi: "50 est plus grand, mais les centièmes sont 10 fois plus petits : la quantité ne change pas." }
+
+en:
+  titre: "Tenths and hundredths"
+  idee: "Split one whole into 10 equal parts: each part is a tenth. Split a tenth into 10: each part is a hundredth."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "1 whole = 10 tenths = 100 hundredths, and 1 tenth = 10 hundredths."
+    exemple: "How many hundredths in 3 tenths? 1 tenth = 10 hundredths, so 3 tenths = 30 hundredths: 3/10 = 30/100."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "How many tenths are there in 1 whole?"
+      nom: "10"
+      explication: "Split the whole into 10 equal parts: 1 = 10/10."
+      pieges:
+        - { texte: "100", pourquoi: "100 is the number of hundredths in 1 whole." }
+        - { texte: "1", pourquoi: "A tenth is one part out of 10: you need 10 of them to make 1." }
+    - texte: "How many hundredths are there in 1 tenth?"
+      nom: "10"
+      explication: "Split one tenth into 10: 1/10 = 10/100."
+      pieges:
+        - { texte: "100", pourquoi: "100 hundredths make 1 whole, not 1 tenth." }
+        - { texte: "1,000", pourquoi: "1,000 parts are the thousandths of a whole." }
+    - texte: "How many hundredths are there in 4 tenths?"
+      nom: "40"
+      explication: "1 tenth = 10 hundredths, so 4 tenths = 40 hundredths."
+      pieges:
+        - { texte: "4", pourquoi: "4 tenths are not 4 hundredths: a tenth is worth 10 hundredths." }
+        - { texte: "400", pourquoi: "400 hundredths make 4 wholes." }
+    - texte: "Which fraction is equal to 7/10?"
+      nom: "70/100"
+      explication: "Each tenth is worth 10 hundredths: 7 tenths = 70 hundredths."
+      pieges:
+        - { texte: "7/100", pourquoi: "7 hundredths is 10 times less than 7 tenths." }
+        - { texte: "70/10", pourquoi: "70/10 = 7 wholes: multiply the top and the bottom by 10, not just the top." }
+    - texte: "How much is 23/10?"
+      nom: "2 wholes and 3 tenths"
+      explication: "10 tenths make 1 whole. 23 tenths = 20 tenths + 3 tenths = 2 wholes and 3 tenths."
+      pieges:
+        - { texte: "23 wholes", pourquoi: "23/10 is 23 tenths: 10 tenths make 1 whole." }
+        - { texte: "2 wholes and 3 hundredths", pourquoi: "The denominator is 10: these are tenths." }
+    - texte: "Write 4 + 6/10 + 5/100 as a single fraction."
+      nom: "465/100"
+      explication: "4 wholes = 400 hundredths; 6 tenths = 60 hundredths; plus 5 hundredths: 465 hundredths."
+      pieges:
+        - { texte: "465/10", pourquoi: "The smallest place is hundredths: the denominator is 100." }
+        - { texte: "65/100", pourquoi: "The 4 wholes are missing: 4 wholes make 400 hundredths." }
+    - texte: "1 whole = 10 tenths, and 1 tenth = 10 hundredths. So 1 whole = … hundredths. Which number is missing?"
+      nom: "100"
+      explication: "10 tenths of 10 hundredths each: 10 × 10 = 100 hundredths."
+      pieges:
+        - { texte: "20", pourquoi: "10 + 10: there are 10 lots of 10 hundredths, so multiply." }
+        - { texte: "10", pourquoi: "10 tenths, yes; but each tenth is worth 10 hundredths." }
+    - texte: "A strip is split into 10 equal parts. Ana colours 3 parts, then 4 more parts. What fraction has she coloured?"
+      nom: "7/10"
+      explication: "3 tenths + 4 tenths = 7 tenths: 7/10."
+      pieges:
+        - { texte: "7/20", pourquoi: "The denominator doesn't change: the strip still has 10 parts." }
+        - { texte: "1/10", pourquoi: "4 − 3: she colours 4 more parts, so add." }
+    - texte: "Why is 5/10 = 50/100?"
+      nom: "The parts are 10 times smaller and there are 10 times more of them."
+      explication: "Each tenth is cut into 10 hundredths: 5 tenths become 50 hundredths, the same amount."
+      pieges:
+        - { texte: "Because you add a 0 at the top and bottom.", pourquoi: "That's not a reason: each tenth has been cut into 10 hundredths." }
+        - { texte: "Because 50 is bigger than 5.", pourquoi: "50 is bigger, but hundredths are 10 times smaller: the amount doesn't change." }

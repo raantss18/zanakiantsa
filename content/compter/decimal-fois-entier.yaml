@@ -1,0 +1,136 @@
+id: decimal-fois-entier
+titre: "Multiplier un décimal par un entier"
+niveau: CM2
+prerequis: ["multiplication-posee", "decimaux-ecriture"]
+programme: { source: cycle3, texte: "Poser et effectuer la multiplication d’un nombre décimal par un nombre entier" }
+activite: quiz
+parametres: {}
+idee: "Pour 2,35 × 4, on calcule 235 × 4 = 940, en centièmes : 940 centièmes = 9,40. Le produit a autant de chiffres après la virgule que le nombre décimal."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Calcule sans la virgule, puis remets les dixièmes ou les centièmes. Vérifie avec un ordre de grandeur."
+  exemple: "1,6 × 3 : 16 dixièmes × 3 = 48 dixièmes = 4,8. Ordre de grandeur : 1,6 est proche de 2, et 2 × 3 = 6. 4,8 est plausible."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 1,2 × 3 ?"
+    nom: "3,6"
+    explication: "12 dixièmes × 3 = 36 dixièmes = 3,6."
+    pieges:
+      - { texte: "36", pourquoi: "Ce sont 36 dixièmes : il faut remettre la virgule, 3,6." }
+      - { texte: "3,06", pourquoi: "2 dixièmes × 3 = 6 dixièmes, pas 6 centièmes." }
+  - texte: "Combien font 2,5 × 4 ?"
+    nom: "10"
+    explication: "25 dixièmes × 4 = 100 dixièmes = 10."
+    pieges:
+      - { texte: "8,20", pourquoi: "5 dixièmes × 4 = 20 dixièmes = 2 unités : 8 + 2 = 10." }
+      - { texte: "100", pourquoi: "25 × 4 = 100 dixièmes : il faut remettre la virgule, 100 dixièmes = 10." }
+  - texte: "Combien font 3,45 × 2 ?"
+    nom: "6,9"
+    explication: "345 × 2 = 690 centièmes = 6,90 = 6,9."
+    pieges:
+      - { texte: "69", pourquoi: "345 × 2 = 690 centièmes : il faut remettre la virgule, 6,90." }
+      - { texte: "6,8", pourquoi: "La retenue est oubliée : 10 centièmes font 1 dixième, 8 + 1 = 9." }
+  - texte: "Combien font 0,8 × 7 ?"
+    nom: "5,6"
+    explication: "8 dixièmes × 7 = 56 dixièmes = 5,6."
+    pieges:
+      - { texte: "56", pourquoi: "Ce sont 56 dixièmes : 5,6." }
+      - { texte: "0,56", pourquoi: "Des dixièmes multipliés par 7 restent des dixièmes, pas des centièmes." }
+  - texte: "Combien font 12,5 × 6 ?"
+    nom: "75"
+    explication: "125 × 6 = 750 dixièmes = 75."
+    pieges:
+      - { texte: "72,30", pourquoi: "12 × 6 = 72 et 5 × 6 = 30 dixièmes, soit 3 unités : 72 + 3 = 75." }
+      - { texte: "750", pourquoi: "125 × 6 = 750 dixièmes : il faut remettre la virgule, 75." }
+  - texte: "Un ticket de bus coûte 1,35 €. Combien coûtent 8 tickets ?"
+    nom: "10,80 €"
+    explication: "135 × 8 = 1 080 centièmes = 10,80 €. Ordre de grandeur : 8 × 1 = 8 et 8 × 2 = 16, le résultat est entre les deux."
+    pieges:
+      - { texte: "108 €", pourquoi: "135 × 8 = 1 080 centièmes = 10,80 €. Un ticket coûte moins de 2 €, donc 8 tickets moins de 16 €." }
+      - { texte: "9,35 €", pourquoi: "1,35 + 8 : on achète 8 fois un ticket, c'est une multiplication." }
+  - texte: "Quel est l'ordre de grandeur de 4,9 × 6 ?"
+    nom: "environ 30"
+    explication: "4,9 est proche de 5, et 5 × 6 = 30. Le produit exact, 29,4, est bien proche de 30."
+    pieges:
+      - { texte: "environ 3", pourquoi: "4,9 est proche de 5 : 5 × 6 = 30, pas 3." }
+      - { texte: "environ 300", pourquoi: "4,9 est proche de 5, pas de 50 : 5 × 6 = 30." }
+  - texte: "2,14 × 3 : on calcule 214 × 3 = 642, en centièmes. 642 centièmes = … Quel nombre ?"
+    nom: "6,42"
+    explication: "642 centièmes = 6 unités, 4 dixièmes, 2 centièmes : 6,42."
+    pieges:
+      - { texte: "64,2", pourquoi: "64,2 = 642 dixièmes : ici, ce sont des centièmes." }
+      - { texte: "642", pourquoi: "642 unités, c'est 100 fois trop : ce sont des centièmes." }
+  - texte: "Pourquoi 0,5 × 4 = 2 ?"
+    nom: "5 dixièmes × 4 = 20 dixièmes = 2 unités."
+    explication: "On multiplie des dixièmes : 20 dixièmes, et 10 dixièmes font 1 unité, donc 2 unités."
+    pieges:
+      - { texte: "Parce qu'on enlève toujours la virgule.", pourquoi: "Non : 0,3 × 4 = 1,2 garde une virgule." }
+      - { texte: "Parce que 5 × 4 = 20, et on enlève le 0.", pourquoi: "Cette règle ne dit pas pourquoi : 20 dixièmes font 2 unités." }
+
+en:
+  titre: "Multiplying a decimal by a whole number"
+  idee: "For 2.35 × 4, work out 235 × 4 = 940, in hundredths: 940 hundredths = 9.40. The product has as many digits after the point as the decimal."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Work it out without the point, then put back the tenths or hundredths. Check with an estimate."
+    exemple: "1.6 × 3: 16 tenths × 3 = 48 tenths = 4.8. Estimate: 1.6 is close to 2, and 2 × 3 = 6. 4.8 makes sense."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 1.2 × 3?"
+      nom: "3.6"
+      explication: "12 tenths × 3 = 36 tenths = 3.6."
+      pieges:
+        - { texte: "36", pourquoi: "That is 36 tenths: put the point back, 3.6." }
+        - { texte: "3.06", pourquoi: "2 tenths × 3 = 6 tenths, not 6 hundredths." }
+    - texte: "What is 2.5 × 4?"
+      nom: "10"
+      explication: "25 tenths × 4 = 100 tenths = 10."
+      pieges:
+        - { texte: "8.20", pourquoi: "5 tenths × 4 = 20 tenths = 2 ones: 8 + 2 = 10." }
+        - { texte: "100", pourquoi: "25 × 4 = 100 tenths: put the point back, 100 tenths = 10." }
+    - texte: "What is 3.45 × 2?"
+      nom: "6.9"
+      explication: "345 × 2 = 690 hundredths = 6.90 = 6.9."
+      pieges:
+        - { texte: "69", pourquoi: "345 × 2 = 690 hundredths: put the point back, 6.90." }
+        - { texte: "6.8", pourquoi: "The carry was forgotten: 10 hundredths make 1 tenth, 8 + 1 = 9." }
+    - texte: "What is 0.8 × 7?"
+      nom: "5.6"
+      explication: "8 tenths × 7 = 56 tenths = 5.6."
+      pieges:
+        - { texte: "56", pourquoi: "That is 56 tenths: 5.6." }
+        - { texte: "0.56", pourquoi: "Tenths times 7 are still tenths, not hundredths." }
+    - texte: "What is 12.5 × 6?"
+      nom: "75"
+      explication: "125 × 6 = 750 tenths = 75."
+      pieges:
+        - { texte: "72.30", pourquoi: "12 × 6 = 72 and 5 × 6 = 30 tenths, which is 3 ones: 72 + 3 = 75." }
+        - { texte: "750", pourquoi: "125 × 6 = 750 tenths: put the point back, 75." }
+    - texte: "A bus ticket costs €1.35. How much do 8 tickets cost?"
+      nom: "€10.80"
+      explication: "135 × 8 = 1,080 hundredths = €10.80. Estimate: 8 × 1 = 8 and 8 × 2 = 16, the answer is in between."
+      pieges:
+        - { texte: "€108", pourquoi: "135 × 8 = 1,080 hundredths = €10.80. A ticket costs less than €2, so 8 tickets cost less than €16." }
+        - { texte: "€9.35", pourquoi: "1.35 + 8: we buy a ticket 8 times, so it is a multiplication." }
+    - texte: "Roughly how much is 4.9 × 6?"
+      nom: "about 30"
+      explication: "4.9 is close to 5, and 5 × 6 = 30. The exact product, 29.4, is indeed close to 30."
+      pieges:
+        - { texte: "about 3", pourquoi: "4.9 is close to 5: 5 × 6 = 30, not 3." }
+        - { texte: "about 300", pourquoi: "4.9 is close to 5, not 50: 5 × 6 = 30." }
+    - texte: "2.14 × 3: work out 214 × 3 = 642, in hundredths. 642 hundredths = … Which number?"
+      nom: "6.42"
+      explication: "642 hundredths = 6 ones, 4 tenths, 2 hundredths: 6.42."
+      pieges:
+        - { texte: "64.2", pourquoi: "64.2 = 642 tenths: here they are hundredths." }
+        - { texte: "642", pourquoi: "642 ones is 100 times too much: these are hundredths." }
+    - texte: "Why is 0.5 × 4 = 2?"
+      nom: "5 tenths × 4 = 20 tenths = 2 ones."
+      explication: "We are multiplying tenths: 20 tenths, and 10 tenths make 1 whole, so 2 wholes."
+      pieges:
+        - { texte: "Because you always remove the point.", pourquoi: "No: 0.3 × 4 = 1.2 keeps a point." }
+        - { texte: "Because 5 × 4 = 20, and you drop the 0.", pourquoi: "That rule doesn't say why: 20 tenths make 2 ones." }

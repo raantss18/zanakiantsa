@@ -1,0 +1,136 @@
+id: decimaux-droite
+titre: "Les décimaux sur la droite graduée"
+niveau: CM1
+prerequis: ["decimaux-ecriture", "comparer-10000"]
+programme: { source: cycle3, texte: "Placer un nombre décimal en écriture à virgule sur une demi-droite graduée et repérer un point d’une demi-droite graduée par un nombre décimal" }
+activite: quiz
+parametres: {}
+idee: "Entre 0 et 1, la droite est partagée en 10 : chaque graduation vaut un dixième. 0,7 est à 7 graduations de 0. Plus un point est loin de 0, plus son nombre est grand."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Trouve d'abord ce que vaut une graduation, puis compte les graduations depuis le nombre de départ."
+  exemple: "Droite graduée en dixièmes. Le point A est 3 graduations après 2. Chaque graduation vaut 0,1 : A = 2 + 0,3 = 2,3."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Entre 0 et 1, la droite est partagée en 10 parts égales. Le point A est sur la 6e graduation après 0. Quel nombre est en A ?"
+    nom: "0,6"
+    explication: "Chaque graduation vaut 1 dixième. 6 graduations : 6 dixièmes, 0,6."
+    pieges:
+      - { texte: "6", pourquoi: "Le point est entre 0 et 1 : son nombre est plus petit que 1." }
+      - { texte: "0,06", pourquoi: "Chaque graduation vaut un dixième, pas un centième." }
+  - texte: "Entre 3 et 4, la droite est partagée en 10. Le point B est sur la 8e graduation après 3. Quel nombre est en B ?"
+    nom: "3,8"
+    explication: "On part de 3 et on avance de 8 dixièmes : 3 + 0,8 = 3,8."
+    pieges:
+      - { texte: "0,8", pourquoi: "On part de 3, pas de 0 : 3 + 0,8." }
+      - { texte: "3,08", pourquoi: "Chaque graduation vaut 0,1 : 8 dixièmes, pas 8 centièmes." }
+  - texte: "Entre 0 et 1, la droite est partagée en 10. Combien de graduations compte-t-on depuis 0 pour placer 0,4 ?"
+    nom: "4"
+    explication: "0,4, ce sont 4 dixièmes : 4 graduations depuis 0."
+    pieges:
+      - { texte: "40", pourquoi: "40 graduations, ce serait pour des centièmes : ici, ce sont des dixièmes." }
+      - { texte: "6", pourquoi: "6 graduations, c'est en partant de 1 : on compte depuis 0." }
+  - texte: "Une droite est graduée de 0,1 en 0,1. Quel nombre vient juste après 1,9 ?"
+    nom: "2"
+    explication: "1,9 + 0,1 : 9 dixièmes + 1 dixième = 10 dixièmes = 1 unité. 1 + 1 = 2."
+    pieges:
+      - { texte: "1,10", pourquoi: "10 dixièmes font 1 unité : 1,9 + 0,1 = 2." }
+      - { texte: "1,91", pourquoi: "On avance de 0,1, pas de 0,01." }
+  - texte: "Quel nombre est au milieu entre 2 et 3 sur la droite ?"
+    nom: "2,5"
+    explication: "De 2 à 3, il y a 10 dixièmes. Le milieu est à 5 dixièmes : 2,5."
+    pieges:
+      - { texte: "2,05", pourquoi: "2,05 est tout près de 2 : le milieu est à 5 dixièmes de 2." }
+      - { texte: "5", pourquoi: "2 + 3 = 5 : le milieu est entre les deux nombres, ce n'est pas leur somme." }
+  - texte: "Entre 1 et 2, la droite est partagée en 4 parts égales. Le point C est sur la 1re graduation après 1. Quel nombre est en C ?"
+    nom: "1,25"
+    explication: "Chaque part est un quart d'unité. Un quart = 25 centièmes = 0,25. C = 1 + 0,25 = 1,25."
+    pieges:
+      - { texte: "1,1", pourquoi: "La droite est partagée en 4, pas en 10 : chaque part vaut un quart, 0,25." }
+      - { texte: "1,4", pourquoi: "Partager en 4 ne donne pas 0,4 : un quart vaut 0,25." }
+  - texte: "Entre 0 et 0,1, la droite est partagée en 10 parts égales. Que vaut une graduation ?"
+    nom: "0,01"
+    explication: "Un dixième partagé en 10 donne un centième : 0,01."
+    pieges:
+      - { texte: "0,1", pourquoi: "0,1, c'est tout l'intervalle : on le partage en 10." }
+      - { texte: "1", pourquoi: "1 est bien plus grand que 0,1 : la graduation est plus petite." }
+  - texte: "Sur une droite graduée en dixièmes, le point D est 7 graduations après 5. D = 5 + … = 5,7. Quel nombre manque ?"
+    nom: "0,7"
+    explication: "7 graduations de 0,1 font 0,7 : D = 5 + 0,7 = 5,7."
+    pieges:
+      - { texte: "7", pourquoi: "5 + 7 = 12 : les graduations valent des dixièmes." }
+      - { texte: "0,07", pourquoi: "Chaque graduation vaut 0,1 : 7 dixièmes, pas 7 centièmes." }
+  - texte: "Sur la droite, pourquoi 0,8 est-il placé plus loin de 0 que 0,75 ?"
+    nom: "Parce que 0,8 = 0,80, et 80 centièmes, c'est plus que 75."
+    explication: "0,8 = 80 centièmes ; 0,75 = 75 centièmes. 0,8 est plus grand, donc plus loin de 0."
+    pieges:
+      - { texte: "Parce que 0,75 a plus de chiffres.", pourquoi: "Plus de chiffres ne veut pas dire plus grand : 0,8 = 0,80." }
+      - { texte: "Non, 0,75 est plus loin.", pourquoi: "75 centièmes, c'est moins que 80 centièmes : 0,75 est plus près de 0." }
+
+en:
+  titre: "Decimals on the number line"
+  idee: "Between 0 and 1, the line is split into 10: each mark is worth one tenth. 0.7 is 7 marks from 0. The further a point is from 0, the bigger its number."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "First find what one mark is worth, then count the marks from the starting number."
+    exemple: "Number line marked in tenths. Point A is 3 marks after 2. Each mark is worth 0.1: A = 2 + 0.3 = 2.3."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Between 0 and 1, the line is split into 10 equal parts. Point A is on the 6th mark after 0. Which number is at A?"
+      nom: "0.6"
+      explication: "Each mark is worth 1 tenth. 6 marks: 6 tenths, 0.6."
+      pieges:
+        - { texte: "6", pourquoi: "The point is between 0 and 1: its number is smaller than 1." }
+        - { texte: "0.06", pourquoi: "Each mark is worth a tenth, not a hundredth." }
+    - texte: "Between 3 and 4, the line is split into 10. Point B is on the 8th mark after 3. Which number is at B?"
+      nom: "3.8"
+      explication: "Start at 3 and move on 8 tenths: 3 + 0.8 = 3.8."
+      pieges:
+        - { texte: "0.8", pourquoi: "Start from 3, not from 0: 3 + 0.8." }
+        - { texte: "3.08", pourquoi: "Each mark is worth 0.1: 8 tenths, not 8 hundredths." }
+    - texte: "Between 0 and 1, the line is split into 10. How many marks do you count from 0 to place 0.4?"
+      nom: "4"
+      explication: "0.4 is 4 tenths: 4 marks from 0."
+      pieges:
+        - { texte: "40", pourquoi: "40 marks would be for hundredths: here they are tenths." }
+        - { texte: "6", pourquoi: "6 marks is counting back from 1: count from 0." }
+    - texte: "A line is marked in steps of 0.1. Which number comes just after 1.9?"
+      nom: "2"
+      explication: "1.9 + 0.1: 9 tenths + 1 tenth = 10 tenths = 1 whole. 1 + 1 = 2."
+      pieges:
+        - { texte: "1.10", pourquoi: "10 tenths make 1 whole: 1.9 + 0.1 = 2." }
+        - { texte: "1.91", pourquoi: "We move on by 0.1, not 0.01." }
+    - texte: "Which number is halfway between 2 and 3 on the line?"
+      nom: "2.5"
+      explication: "From 2 to 3 there are 10 tenths. Halfway is 5 tenths along: 2.5."
+      pieges:
+        - { texte: "2.05", pourquoi: "2.05 is very close to 2: halfway is 5 tenths from 2." }
+        - { texte: "5", pourquoi: "2 + 3 = 5: halfway is between the two numbers, not their sum." }
+    - texte: "Between 1 and 2, the line is split into 4 equal parts. Point C is on the 1st mark after 1. Which number is at C?"
+      nom: "1.25"
+      explication: "Each part is a quarter of a whole. A quarter = 25 hundredths = 0.25. C = 1 + 0.25 = 1.25."
+      pieges:
+        - { texte: "1.1", pourquoi: "The line is split into 4, not 10: each part is a quarter, 0.25." }
+        - { texte: "1.4", pourquoi: "Splitting into 4 doesn't give 0.4: a quarter is 0.25." }
+    - texte: "Between 0 and 0.1, the line is split into 10 equal parts. What is one mark worth?"
+      nom: "0.01"
+      explication: "A tenth split into 10 gives a hundredth: 0.01."
+      pieges:
+        - { texte: "0.1", pourquoi: "0.1 is the whole gap: it is split into 10." }
+        - { texte: "1", pourquoi: "1 is much bigger than 0.1: the mark is smaller." }
+    - texte: "On a line marked in tenths, point D is 7 marks after 5. D = 5 + … = 5.7. Which number is missing?"
+      nom: "0.7"
+      explication: "7 marks of 0.1 make 0.7: D = 5 + 0.7 = 5.7."
+      pieges:
+        - { texte: "7", pourquoi: "5 + 7 = 12: the marks are worth tenths." }
+        - { texte: "0.07", pourquoi: "Each mark is worth 0.1: 7 tenths, not 7 hundredths." }
+    - texte: "On the line, why is 0.8 placed further from 0 than 0.75?"
+      nom: "Because 0.8 = 0.80, and 80 hundredths is more than 75."
+      explication: "0.8 = 80 hundredths; 0.75 = 75 hundredths. 0.8 is bigger, so further from 0."
+      pieges:
+        - { texte: "Because 0.75 has more digits.", pourquoi: "More digits doesn't mean bigger: 0.8 = 0.80." }
+        - { texte: "No, 0.75 is further.", pourquoi: "75 hundredths is less than 80 hundredths: 0.75 is closer to 0." }

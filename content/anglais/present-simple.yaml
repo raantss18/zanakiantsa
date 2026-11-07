@@ -1,0 +1,154 @@
+id: present-simple
+titre: "Le présent simple : I play, she plays"
+niveau: CM2
+prerequis: [to-be]
+programme: { source: lver_c3, texte: "CM2 : maitriser le présent simple [...] de verbes courants à la première, deuxième et troisième personne du singulier." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Au présent simple, le verbe prend -s avec he, she, it : « I play », « she plays ». Pour dire non : « I don't play », « he doesn't play »."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme du verbe."
+  question: "{texte}"
+  indice: "Regarde le sujet : avec he, she, it ou un seul prénom, le verbe prend -s, ou on dit « does »."
+  exemple: "« My dad … tea. » (drink) : « my dad », c'est « he ». Le verbe prend -s : « My dad drinks tea. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « She … football. » (play)"
+    nom: "plays"
+    explication: "Avec « she », le verbe prend -s : « She plays football. »"
+    pieges:
+      - { texte: "play", pourquoi: "Avec « she », le verbe prend -s : « she plays »." }
+      - { texte: "playing", pourquoi: "« playing » ne s'emploie jamais seul : il lui faut « is » devant. Au présent simple : « plays »." }
+  - texte: "Complète : « I … to school by bike. » (go)"
+    nom: "go"
+    explication: "Avec « I », le verbe ne prend pas de -s : « I go to school by bike. »"
+    pieges:
+      - { texte: "goes", pourquoi: "« goes » va avec he, she, it. Avec « I », pas de -s : « I go »." }
+      - { texte: "going", pourquoi: "« going » ne s'emploie jamais seul : il lui faut « am » devant. Au présent simple : « I go »." }
+  - texte: "Complète : « He … TV after school. » (watch)"
+    nom: "watches"
+    explication: "« watch » finit par -ch : avec « he », on ajoute -es. « He watches TV. »"
+    pieges:
+      - { texte: "watch", pourquoi: "Avec « he », le verbe prend une marque : après -ch, c'est -es, « watches »." }
+      - { texte: "watching", pourquoi: "« watching » ne s'emploie jamais seul : il lui faut « is » devant. Au présent simple : « watches »." }
+  - texte: "Complète : « We … in London. » (live)"
+    nom: "live"
+    explication: "Avec « we », le verbe ne prend pas de -s : « We live in London. »"
+    pieges:
+      - { texte: "lives", pourquoi: "« lives » va avec he, she, it. « we », c'est plusieurs personnes : pas de -s." }
+      - { texte: "living", pourquoi: "« living » ne s'emploie jamais seul : il lui faut « are » devant. Au présent simple : « we live »." }
+  - texte: "Complète : « Tom … his homework every day. » (do)"
+    nom: "does"
+    explication: "« Tom », c'est « he » : « do » devient « does ». « Tom does his homework. »"
+    pieges:
+      - { texte: "do", pourquoi: "Tom, c'est « he » : avec he, « do » devient « does »." }
+      - { texte: "did", pourquoi: "« did » est le passé. « every day » dit une habitude, au présent : « does »." }
+  - texte: "Complète : « She … like carrots. » (ne pas aimer)"
+    nom: "doesn't"
+    explication: "Avec « she », la négation est « doesn't » : « She doesn't like carrots. »"
+    pieges:
+      - { texte: "don't", pourquoi: "« don't » va avec I, you, we, they. Avec « she », on dit « doesn't »." }
+      - { texte: "isn't", pourquoi: "« isn't » vient de « be ». Avec un verbe comme « like », on dit « doesn't »." }
+  - texte: "Complète : « I … like spinach. » (ne pas aimer)"
+    nom: "don't"
+    explication: "Avec « I », la négation est « don't » : « I don't like spinach. »"
+    pieges:
+      - { texte: "doesn't", pourquoi: "« doesn't » va avec he, she, it. Avec « I », on dit « don't »." }
+      - { texte: "am not", pourquoi: "« am not » vient de « be ». Avec « like », on dit « I don't like »." }
+  - texte: "Complète : « … you like apples? »"
+    nom: "Do"
+    explication: "Avec « you », la question commence par « Do » : « Do you like apples? »"
+    pieges:
+      - { texte: "Does", pourquoi: "« Does » va avec he, she, it. Avec « you » : « Do you… ? »" }
+      - { texte: "Are", pourquoi: "« Are » vient de « be ». Avec « like », la question commence par « Do »." }
+  - texte: "Pourquoi écrit-on « she doesn't like », sans -s à « like » ?"
+    nom: "La marque est déjà sur « doesn't » : le verbe qui suit reste sans -s."
+    explication: "« does » porte déjà la marque de « she » : « like » reste tel quel. « She doesn't like carrots. »"
+    pieges:
+      - { texte: "Parce que « like » ne prend jamais de -s.", pourquoi: "Non : sans « doesn't », on écrit « she likes »." }
+      - { texte: "Parce que « she » est au pluriel.", pourquoi: "Non : « she » est une seule personne, c'est la 3e personne du singulier." }
+en:
+  titre: "The present simple: I play, she plays"
+  idee: "In the present simple, the verb takes -s with he, she and it: I play, she plays. To say no: I don't play, he doesn't play."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of the verb."
+    question: "{texte}"
+    indice: "Look at the subject: with he, she, it or one name, the verb takes -s, or we use does."
+    exemple: "“My dad … tea.” (drink): my dad is he. The verb takes -s: “My dad drinks tea.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “She … football.” (play)"
+      nom: "plays"
+      explication: "With she, the verb takes -s: “She plays football.”"
+      pieges:
+        - texte: "play"
+          pourquoi: "With she, the verb takes -s: she plays."
+        - texte: "playing"
+          pourquoi: "“playing” never works alone: it needs is before it. In the present simple: plays."
+    - texte: "Complete: “I … to school by bike.” (go)"
+      nom: "go"
+      explication: "With I, the verb takes no -s: “I go to school by bike.”"
+      pieges:
+        - texte: "goes"
+          pourquoi: "“goes” goes with he, she and it. With I, no -s: I go."
+        - texte: "going"
+          pourquoi: "“going” never works alone: it needs am before it. In the present simple: I go."
+    - texte: "Complete: “He … TV after school.” (watch)"
+      nom: "watches"
+      explication: "Watch ends in -ch: with he, we add -es. “He watches TV.”"
+      pieges:
+        - texte: "watch"
+          pourquoi: "With he, the verb needs an ending: after -ch, it's -es, watches."
+        - texte: "watching"
+          pourquoi: "“watching” never works alone: it needs is before it. In the present simple: watches."
+    - texte: "Complete: “We … in London.” (live)"
+      nom: "live"
+      explication: "With we, the verb takes no -s: “We live in London.”"
+      pieges:
+        - texte: "lives"
+          pourquoi: "“lives” goes with he, she and it. We means several people: no -s."
+        - texte: "living"
+          pourquoi: "“living” never works alone: it needs are before it. In the present simple: we live."
+    - texte: "Complete: “Tom … his homework every day.” (do)"
+      nom: "does"
+      explication: "Tom is he: do becomes does. “Tom does his homework.”"
+      pieges:
+        - texte: "do"
+          pourquoi: "Tom is he: with he, do becomes does."
+        - texte: "did"
+          pourquoi: "“did” is the past. “Every day” is a habit, in the present: does."
+    - texte: "Complete: “She … like carrots.” (not like)"
+      nom: "doesn't"
+      explication: "With she, the negative is doesn't: “She doesn't like carrots.”"
+      pieges:
+        - texte: "don't"
+          pourquoi: "“don't” goes with I, you, we and they. With she, we say doesn't."
+        - texte: "isn't"
+          pourquoi: "“isn't” comes from be. With a verb like like, we say doesn't."
+    - texte: "Complete: “I … like spinach.” (not like)"
+      nom: "don't"
+      explication: "With I, the negative is don't: “I don't like spinach.”"
+      pieges:
+        - texte: "doesn't"
+          pourquoi: "“doesn't” goes with he, she and it. With I, we say don't."
+        - texte: "am not"
+          pourquoi: "“am not” comes from be. With like, we say I don't like."
+    - texte: "Complete: “… you like apples?”"
+      nom: "Do"
+      explication: "With you, the question starts with Do: “Do you like apples?”"
+      pieges:
+        - texte: "Does"
+          pourquoi: "“Does” goes with he, she and it. With you: Do you…?"
+        - texte: "Are"
+          pourquoi: "“Are” comes from be. With like, the question starts with Do."
+    - texte: "Why do we write “she doesn't like”, with no -s on like?"
+      nom: "The ending is already on doesn't: the verb after it takes no -s."
+      explication: "Does already carries the ending for she: like stays as it is. “She doesn't like carrots.”"
+      pieges:
+        - texte: "Because like never takes -s."
+          pourquoi: "No: without doesn't, we write “she likes”."
+        - texte: "Because she is plural."
+          pourquoi: "No: she is one person, the third person singular."

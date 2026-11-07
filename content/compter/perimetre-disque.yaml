@@ -1,0 +1,136 @@
+id: perimetre-disque
+titre: "Le périmètre d'un disque"
+niveau: 6e
+prerequis: ["decimal-fois-entier", "aire-rectangle"]
+programme: { source: cycle3, texte: "Calculer le périmètre d’un disque" }
+activite: quiz
+parametres: {}
+idee: "Le périmètre d'un disque est proportionnel à son diamètre : il est égal à pi fois le diamètre. Pi est un nombre proche de 3,14."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Périmètre = pi × diamètre, et le diamètre vaut 2 fois le rayon."
+  exemple: "Disque de 10 cm de diamètre : périmètre = pi × 10 cm, environ 3,14 × 10 = 31,4 cm."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Un disque a un diamètre de 10 cm. Quel est son périmètre, avec pi environ égal à 3,14 ?"
+    nom: "environ 31,4 cm"
+    explication: "Périmètre = pi × diamètre, environ 3,14 × 10 = 31,4 cm."
+    pieges:
+      - { texte: "environ 314 cm", pourquoi: "3,14 × 10 = 31,4 : chaque chiffre ne glisse que d'un rang." }
+      - { texte: "environ 13,14 cm", pourquoi: "3,14 + 10 : on multiplie par pi, on n'ajoute pas." }
+  - texte: "Un disque a un diamètre de 2 m. Quel est son périmètre, avec pi environ égal à 3,14 ?"
+    nom: "environ 6,28 m"
+    explication: "Périmètre = pi × diamètre, environ 3,14 × 2 = 6,28 m."
+    pieges:
+      - { texte: "environ 5,14 m", pourquoi: "3,14 + 2 : on multiplie par pi." }
+      - { texte: "environ 4 m", pourquoi: "2 × 2 : le périmètre est pi × diamètre, pas 2 × diamètre." }
+  - texte: "Un disque a un rayon de 5 cm. Quel est son périmètre, avec pi environ égal à 3,14 ?"
+    nom: "environ 31,4 cm"
+    explication: "Diamètre = 2 × 5 = 10 cm. Périmètre, environ 3,14 × 10 = 31,4 cm."
+    pieges:
+      - { texte: "environ 15,7 cm", pourquoi: "3,14 × 5 utilise le rayon : le diamètre vaut 2 × 5 = 10 cm." }
+      - { texte: "environ 8,14 cm", pourquoi: "3,14 + 5 : on multiplie pi par le diamètre." }
+  - texte: "Un disque a un diamètre de 4 cm, un autre un diamètre de 8 cm. Le périmètre du deuxième est …"
+    nom: "2 fois plus grand"
+    explication: "Le périmètre est proportionnel au diamètre : 8 cm, c'est 2 fois 4 cm, donc le périmètre est 2 fois plus grand."
+    pieges:
+      - { texte: "4 cm plus grand", pourquoi: "Le périmètre est proportionnel au diamètre : 2 fois plus de diamètre, 2 fois plus de périmètre." }
+      - { texte: "4 fois plus grand", pourquoi: "Le diamètre double, le périmètre double aussi, pas plus." }
+  - texte: "Une roue a un diamètre de 50 cm. Quelle distance parcourt-elle en un tour, avec pi environ égal à 3,14 ?"
+    nom: "environ 157 cm"
+    explication: "En un tour, la roue avance de son périmètre : environ 3,14 × 50 = 157 cm."
+    pieges:
+      - { texte: "environ 50 cm", pourquoi: "50 cm est le diamètre : un tour, c'est le périmètre." }
+      - { texte: "environ 15,7 cm", pourquoi: "3,14 × 50 = 157 : par 50, le nombre grandit beaucoup." }
+  - texte: "Quelle valeur approchée de pi utilise-t-on souvent ?"
+    nom: "3,14"
+    explication: "Pi est un peu plus grand que 3 : on utilise souvent 3,14."
+    pieges:
+      - { texte: "3,41", pourquoi: "Les chiffres sont inversés : pi est environ 3,14." }
+      - { texte: "31,4", pourquoi: "31,4, c'est le périmètre d'un disque de 10 cm de diamètre." }
+  - texte: "Un demi-disque a un diamètre de 10 cm. Quel est le périmètre de sa figure, côté droit compris, avec pi environ égal à 3,14 ?"
+    nom: "environ 25,7 cm"
+    explication: "L'arc est la moitié du périmètre du disque : 31,4 ÷ 2 = 15,7 cm. On ajoute le diamètre : 15,7 + 10 = 25,7 cm."
+    pieges:
+      - { texte: "environ 15,7 cm", pourquoi: "Il manque le côté droit : le diamètre, 10 cm." }
+      - { texte: "environ 41,4 cm", pourquoi: "31,4 + 10 : c'est un demi-disque, l'arc vaut la moitié de 31,4." }
+  - texte: "Rayon 3 cm. Diamètre = 2 × 3 = … cm. Périmètre, environ 3,14 × 6 = 18,84 cm. Quel nombre manque ?"
+    nom: "6"
+    explication: "Le diamètre vaut 2 fois le rayon : 2 × 3 = 6 cm."
+    pieges:
+      - { texte: "9", pourquoi: "3 × 3 : le diamètre vaut 2 fois le rayon, pas 3 fois." }
+      - { texte: "1,5", pourquoi: "Le diamètre est plus grand que le rayon : 2 × 3 = 6." }
+  - texte: "Pourquoi le périmètre d'un disque est-il un peu plus de 3 fois son diamètre ?"
+    nom: "Parce que pi, environ 3,14, est un peu plus grand que 3."
+    explication: "Périmètre = pi × diamètre, et pi est environ 3,14 : un peu plus de 3 fois le diamètre."
+    pieges:
+      - { texte: "Parce qu'un disque a 3 côtés.", pourquoi: "Un disque n'a pas de côtés : son bord est un cercle." }
+      - { texte: "Parce que le rayon est 3 fois le diamètre.", pourquoi: "C'est l'inverse : le diamètre est 2 fois le rayon." }
+
+en:
+  titre: "The perimeter of a circle"
+  idee: "The perimeter of a circle is proportional to its diameter: it equals pi times the diameter. Pi is a number close to 3.14."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Perimeter = pi × diameter, and the diameter is 2 times the radius."
+    exemple: "A circle with a 10 cm diameter: perimeter = pi × 10 cm, about 3.14 × 10 = 31.4 cm."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "A circle has a diameter of 10 cm. What is its perimeter, with pi about 3.14?"
+      nom: "about 31.4 cm"
+      explication: "Perimeter = pi × diameter, about 3.14 × 10 = 31.4 cm."
+      pieges:
+        - { texte: "about 314 cm", pourquoi: "3.14 × 10 = 31.4: each digit moves only one place." }
+        - { texte: "about 13.14 cm", pourquoi: "3.14 + 10: multiply by pi, don't add." }
+    - texte: "A circle has a diameter of 2 m. What is its perimeter, with pi about 3.14?"
+      nom: "about 6.28 m"
+      explication: "Perimeter = pi × diameter, about 3.14 × 2 = 6.28 m."
+      pieges:
+        - { texte: "about 5.14 m", pourquoi: "3.14 + 2: multiply by pi." }
+        - { texte: "about 4 m", pourquoi: "2 × 2: the perimeter is pi × diameter, not 2 × diameter." }
+    - texte: "A circle has a radius of 5 cm. What is its perimeter, with pi about 3.14?"
+      nom: "about 31.4 cm"
+      explication: "Diameter = 2 × 5 = 10 cm. Perimeter, about 3.14 × 10 = 31.4 cm."
+      pieges:
+        - { texte: "about 15.7 cm", pourquoi: "3.14 × 5 uses the radius: the diameter is 2 × 5 = 10 cm." }
+        - { texte: "about 8.14 cm", pourquoi: "3.14 + 5: multiply pi by the diameter." }
+    - texte: "One circle has a diameter of 4 cm, another a diameter of 8 cm. The second perimeter is …"
+      nom: "2 times as big"
+      explication: "The perimeter is proportional to the diameter: 8 cm is 2 times 4 cm, so the perimeter is 2 times as big."
+      pieges:
+        - { texte: "4 cm bigger", pourquoi: "The perimeter is proportional to the diameter: twice the diameter, twice the perimeter." }
+        - { texte: "4 times as big", pourquoi: "The diameter doubles, so the perimeter doubles too, no more." }
+    - texte: "A wheel has a diameter of 50 cm. How far does it travel in one turn, with pi about 3.14?"
+      nom: "about 157 cm"
+      explication: "In one turn, the wheel moves forward by its perimeter: about 3.14 × 50 = 157 cm."
+      pieges:
+        - { texte: "about 50 cm", pourquoi: "50 cm is the diameter: one turn is the perimeter." }
+        - { texte: "about 15.7 cm", pourquoi: "3.14 × 50 = 157: times 50, the number gets much bigger." }
+    - texte: "Which approximate value of pi is often used?"
+      nom: "3.14"
+      explication: "Pi is a little bigger than 3: we often use 3.14."
+      pieges:
+        - { texte: "3.41", pourquoi: "The digits are swapped: pi is about 3.14." }
+        - { texte: "31.4", pourquoi: "31.4 is the perimeter of a circle with a 10 cm diameter." }
+    - texte: "A half circle has a diameter of 10 cm. What is the perimeter of the shape, straight side included, with pi about 3.14?"
+      nom: "about 25.7 cm"
+      explication: "The arc is half the circle's perimeter: 31.4 ÷ 2 = 15.7 cm. Add the diameter: 15.7 + 10 = 25.7 cm."
+      pieges:
+        - { texte: "about 15.7 cm", pourquoi: "The straight side is missing: the diameter, 10 cm." }
+        - { texte: "about 41.4 cm", pourquoi: "31.4 + 10: it is a half circle, so the arc is half of 31.4." }
+    - texte: "Radius 3 cm. Diameter = 2 × 3 = … cm. Perimeter, about 3.14 × 6 = 18.84 cm. Which number is missing?"
+      nom: "6"
+      explication: "The diameter is 2 times the radius: 2 × 3 = 6 cm."
+      pieges:
+        - { texte: "9", pourquoi: "3 × 3: the diameter is 2 times the radius, not 3 times." }
+        - { texte: "1.5", pourquoi: "The diameter is bigger than the radius: 2 × 3 = 6." }
+    - texte: "Why is the perimeter of a circle a little more than 3 times its diameter?"
+      nom: "Because pi, about 3.14, is a little more than 3."
+      explication: "Perimeter = pi × diameter, and pi is about 3.14: a little more than 3 times the diameter."
+      pieges:
+        - { texte: "Because a circle has 3 sides.", pourquoi: "A circle has no sides: its edge is a curve." }
+        - { texte: "Because the radius is 3 times the diameter.", pourquoi: "It's the other way round: the diameter is 2 times the radius." }

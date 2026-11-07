@@ -1,0 +1,76 @@
+id: enfilade
+titre: "L’enfilade"
+niveau: CM1
+prerequis: [clouage]
+programme: { source: moteur, texte: "Non vérifié par un programme officiel : vocabulaire usuel des joueurs. Chaque position est vérifiée par le moteur de l'app (un seul coup fait échec avec une tour, un fou ou une dame, sur une case sûre, avec une pièce noire juste derrière le roi). " }
+activite: probleme
+parametres: { theme: enfilade }
+idee: "L’enfilade, c’est un clouage à l’envers : le roi est devant, une grosse pièce derrière lui sur la même ligne. Le roi doit fuir, la pièce derrière est perdue."
+phrases:
+  consigne: "Fais échec au roi noir sur une ligne où une autre pièce noire se cache juste derrière lui."
+  question: "{texte}"
+  indice: "Cherche une pièce noire alignée avec le roi noir. Fais échec sur cette ligne, du côté du roi."
+  exemple: "Regarde quelles pièces noires sont sur la même ligne que leur roi."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Fais une enfilade !"
+    fen: "q7/8/2k5/8/8/8/8/1B4K1 w - - 0 1"
+    coups: [b1e4]
+    explication: "Ta pièce va en e4 et fait échec. Le roi doit s’écarter de la ligne : la dame a8, juste derrière lui, est alors prise."
+  - texte: "Fais une enfilade !"
+    fen: "4q3/8/8/4k3/8/8/8/R5K1 w - - 0 1"
+    coups: [a1e1]
+    explication: "Ta pièce va en e1 et fait échec. Le roi doit s’écarter de la ligne : la dame e8, juste derrière lui, est alors prise."
+  - texte: "Fais une enfilade !"
+    fen: "8/8/8/8/2k4r/8/8/R5K1 w - - 0 1"
+    coups: [a1a4]
+    explication: "Ta pièce va en a4 et fait échec. Le roi doit s’écarter de la ligne : la tour h4, juste derrière lui, est alors prise."
+  - texte: "Fais une enfilade !"
+    fen: "7r/8/5k2/8/8/8/5B2/6K1 w - - 0 1"
+    coups: [f2d4]
+    explication: "Ta pièce va en d4 et fait échec. Le roi doit s’écarter de la ligne : la tour h8, juste derrière lui, est alors prise."
+  - texte: "Fais une enfilade !"
+    fen: "3Q4/8/2k5/8/8/K7/8/7r w - - 0 1"
+    coups: [d8a8]
+    explication: "Ta pièce va en a8 et fait échec. Le roi doit s’écarter de la ligne : la tour h1, juste derrière lui, est alors prise."
+  - texte: "Fais une enfilade !"
+    fen: "8/6q1/8/4k3/8/8/8/1K2B3 w - - 0 1"
+    coups: [e1c3]
+    explication: "Ta pièce va en c3 et fait échec. Le roi doit s’écarter de la ligne : la dame g7, juste derrière lui, est alors prise."
+
+en:
+  titre: "The skewer"
+  idee: "A skewer is a pin the other way round: the king is in front, a big piece behind it on the same line. The king has to run away, and the piece behind is lost."
+  phrases:
+    consigne: "Check the black king along a line where another black piece hides right behind it."
+    question: "{texte}"
+    indice: "Look for a black piece lined up with the black king. Give check along that line, from the king’s side."
+    exemple: "Look at which black pieces are on the same line as their king."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Make a skewer!"
+      fen: "q7/8/2k5/8/8/8/8/1B4K1 w - - 0 1"
+      coups: [b1e4]
+      explication: "Your piece goes to e4 and gives check. The king has to step off the line: the queen on a8, right behind it, is then captured."
+    - texte: "Make a skewer!"
+      fen: "4q3/8/8/4k3/8/8/8/R5K1 w - - 0 1"
+      coups: [a1e1]
+      explication: "Your piece goes to e1 and gives check. The king has to step off the line: the queen on e8, right behind it, is then captured."
+    - texte: "Make a skewer!"
+      fen: "8/8/8/8/2k4r/8/8/R5K1 w - - 0 1"
+      coups: [a1a4]
+      explication: "Your piece goes to a4 and gives check. The king has to step off the line: the rook on h4, right behind it, is then captured."
+    - texte: "Make a skewer!"
+      fen: "7r/8/5k2/8/8/8/5B2/6K1 w - - 0 1"
+      coups: [f2d4]
+      explication: "Your piece goes to d4 and gives check. The king has to step off the line: the rook on h8, right behind it, is then captured."
+    - texte: "Make a skewer!"
+      fen: "3Q4/8/2k5/8/8/K7/8/7r w - - 0 1"
+      coups: [d8a8]
+      explication: "Your piece goes to a8 and gives check. The king has to step off the line: the rook on h1, right behind it, is then captured."
+    - texte: "Make a skewer!"
+      fen: "8/6q1/8/4k3/8/8/8/1K2B3 w - - 0 1"
+      coups: [e1c3]
+      explication: "Your piece goes to c3 and gives check. The king has to step off the line: the queen on g7, right behind it, is then captured."

@@ -1,0 +1,124 @@
+id: python-listes
+titre: "Python : les listes"
+niveau: 2de
+prerequis: [python-for]
+programme: { source: seconde, texte: "À partir de deux listes représentant deux caractères d'individus, déterminer un sous-ensemble d'individus répondant à un critère (filtre, utilisation de ET, OU, NON)." }
+activite: quiz
+parametres: {}
+idee: "Une liste range plusieurs valeurs dans l’ordre : L = [12, 8, 15]. L[0] est la première, car les positions (indices) commencent à 0. len(L) donne le nombre d’éléments."
+phrases:
+  consigne: "Numérote les éléments à partir de 0, puis prédis l’affichage."
+  question: "{texte}"
+  indice: "Écris l’indice sous chaque élément : 0, 1, 2…"
+  exemple: "L = [12, 8, 15]. Indices : 12 est en 0, 8 en 1, 15 en 2. print(L[1]) affiche 8, et len(L) vaut 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\nnotes = [12, 8, 15]\nprint(notes[0])"
+    nom: "12"
+    explication: "Indice 0 : 12. Indice 1 : 8. Indice 2 : 15."
+    pieges:
+      - { texte: "8", pourquoi: "Les indices commencent à 0 : notes[0] est le premier élément." }
+      - { texte: "15", pourquoi: "15 est en position 2, le dernier." }
+  - texte: "Que va afficher ce programme ?\nnotes = [12, 8, 15]\nprint(len(notes))"
+    nom: "3"
+    explication: "La liste a 3 éléments : len(notes) vaut 3."
+    pieges:
+      - { texte: "2", pourquoi: "len compte les éléments : 3. C’est le dernier indice qui vaut 2." }
+      - { texte: "35", pourquoi: "35 est la somme des notes ; len compte, il n’additionne pas." }
+  - texte: "Que va afficher ce programme ?\nL = [4, 7, 1]\ns = 0\nfor x in L: s = s + x\nprint(s)"
+    nom: "12"
+    explication: "for x in L prend chaque élément à son tour : s vaut 4, puis 11, puis 12."
+    pieges:
+      - { texte: "3", pourquoi: "3 est le nombre d’éléments. La boucle ajoute chaque élément à s." }
+      - { texte: "1", pourquoi: "1 est le dernier élément. s garde la somme de tous." }
+  - texte: "Que va afficher ce programme ?\nL = [5, 2, 9]\nL.append(4)\nprint(L)"
+    nom: "[5, 2, 9, 4]"
+    explication: "L.append(4) ajoute 4 à la fin : [5, 2, 9, 4]."
+    pieges:
+      - { texte: "[4, 5, 2, 9]", pourquoi: "append ajoute à la fin de la liste, pas au début." }
+      - { texte: "[5, 2, 9]", pourquoi: "append modifie la liste : 4 y est ajouté." }
+  - texte: "Que va afficher ce programme ?\nL = [2, 4, 6]\nL[1] = 10\nprint(L)"
+    nom: "[2, 10, 6]"
+    explication: "L[1] = 10 remplace l’élément d’indice 1, c’est-à-dire 4 : [2, 10, 6]."
+    pieges:
+      - { texte: "[10, 4, 6]", pourquoi: "L[1] est le deuxième élément : l’indice 0 est le premier." }
+      - { texte: "[2, 4, 10]", pourquoi: "L[1] désigne la position 1, pas la dernière." }
+  - texte: "Que va afficher ce programme ?\nL = []\nfor i in range(3): L.append(i * i)\nprint(L)"
+    nom: "[0, 1, 4]"
+    explication: "Tours : i = 0, 1, 2. On ajoute 0 × 0, 1 × 1, 2 × 2 : [0, 1, 4]."
+    pieges:
+      - { texte: "[1, 4, 9]", pourquoi: "range(3) donne i = 0, 1, 2 : les carrés sont 0, 1, 4." }
+      - { texte: "[0, 2, 4]", pourquoi: "i * i est le carré de i, pas son double." }
+  - texte: "ages = [12, 15, 17, 20]\nPour chaque a de la liste ages, si a > 14 and a < 18, le programme affiche a. Qu’affiche-t-il ?"
+    nom: "15, puis 17"
+    explication: "12 > 14 est faux. 15 et 17 vérifient les deux conditions. 20 < 18 est faux. Il reste 15 et 17."
+    pieges:
+      - { texte: "15, puis 17, puis 20", pourquoi: "20 < 18 est faux : avec and, les deux conditions doivent être vraies." }
+      - { texte: "12, puis 15, puis 17, puis 20", pourquoi: "Le filtre ne garde que les âges qui vérifient la condition." }
+  - texte: "Pourquoi le dernier élément de L = [3, 6, 9] est-il L[2], et pas L[3] ?"
+    nom: "Les indices commencent à 0 : 0, 1, 2"
+    explication: "3 éléments, indices 0, 1 et 2. Le dernier indice est toujours len(L) − 1."
+    pieges:
+      - { texte: "L[3] existe mais il est vide", pourquoi: "L[3] n’existe pas : Python signale une erreur (IndexError)." }
+      - { texte: "Python compte à l’envers", pourquoi: "Python compte de gauche à droite, mais à partir de 0." }
+
+en:
+  titre: "Python: lists"
+  idee: "A list stores several values in order: L = [12, 8, 15]. L[0] is the first one, because positions (indices) start at 0. len(L) gives the number of items."
+  phrases:
+    consigne: "Number the items starting from 0, then predict the output."
+    question: "{texte}"
+    indice: "Write the index under each item: 0, 1, 2…"
+    exemple: "L = [12, 8, 15]. Indices: 12 is at 0, 8 at 1, 15 at 2. print(L[1]) displays 8, and len(L) is 3."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\nmarks = [12, 8, 15]\nprint(marks[0])"
+      nom: "12"
+      explication: "Index 0: 12. Index 1: 8. Index 2: 15."
+      pieges:
+        - { texte: "8", pourquoi: "Indices start at 0: marks[0] is the first item." }
+        - { texte: "15", pourquoi: "15 is at position 2, the last one." }
+    - texte: "What will this program display?\nmarks = [12, 8, 15]\nprint(len(marks))"
+      nom: "3"
+      explication: "The list has 3 items: len(marks) is 3."
+      pieges:
+        - { texte: "2", pourquoi: "len counts the items: 3. It is the last index that is 2." }
+        - { texte: "35", pourquoi: "35 is the sum of the marks; len counts, it does not add." }
+    - texte: "What will this program display?\nL = [4, 7, 1]\ns = 0\nfor x in L: s = s + x\nprint(s)"
+      nom: "12"
+      explication: "for x in L takes each item in turn: s is 4, then 11, then 12."
+      pieges:
+        - { texte: "3", pourquoi: "3 is the number of items. The loop adds each item to s." }
+        - { texte: "1", pourquoi: "1 is the last item. s keeps the sum of all of them." }
+    - texte: "What will this program display?\nL = [5, 2, 9]\nL.append(4)\nprint(L)"
+      nom: "[5, 2, 9, 4]"
+      explication: "L.append(4) adds 4 at the end: [5, 2, 9, 4]."
+      pieges:
+        - { texte: "[4, 5, 2, 9]", pourquoi: "append adds to the end of the list, not the start." }
+        - { texte: "[5, 2, 9]", pourquoi: "append changes the list: 4 is added to it." }
+    - texte: "What will this program display?\nL = [2, 4, 6]\nL[1] = 10\nprint(L)"
+      nom: "[2, 10, 6]"
+      explication: "L[1] = 10 replaces the item at index 1, that is 4: [2, 10, 6]."
+      pieges:
+        - { texte: "[10, 4, 6]", pourquoi: "L[1] is the second item: index 0 is the first." }
+        - { texte: "[2, 4, 10]", pourquoi: "L[1] means position 1, not the last one." }
+    - texte: "What will this program display?\nL = []\nfor i in range(3): L.append(i * i)\nprint(L)"
+      nom: "[0, 1, 4]"
+      explication: "Turns: i = 0, 1, 2. Add 0 × 0, 1 × 1, 2 × 2: [0, 1, 4]."
+      pieges:
+        - { texte: "[1, 4, 9]", pourquoi: "range(3) gives i = 0, 1, 2: the squares are 0, 1, 4." }
+        - { texte: "[0, 2, 4]", pourquoi: "i * i is the square of i, not its double." }
+    - texte: "ages = [12, 15, 17, 20]\nFor each a in the list ages, if a > 14 and a < 18, the program displays a. What does it display?"
+      nom: "15, then 17"
+      explication: "12 > 14 is false. 15 and 17 meet both conditions. 20 < 18 is false. 15 and 17 are left."
+      pieges:
+        - { texte: "15, then 17, then 20", pourquoi: "20 < 18 is false: with and, both conditions must be true." }
+        - { texte: "12, then 15, then 17, then 20", pourquoi: "The filter only keeps the ages that meet the condition." }
+    - texte: "Why is the last item of L = [3, 6, 9] L[2], and not L[3]?"
+      nom: "Indices start at 0: 0, 1, 2"
+      explication: "3 items, indices 0, 1 and 2. The last index is always len(L) − 1."
+      pieges:
+        - { texte: "L[3] exists but it is empty", pourquoi: "L[3] does not exist: Python reports an error (IndexError)." }
+        - { texte: "Python counts backwards", pourquoi: "Python counts from left to right, but starting at 0." }

@@ -1,0 +1,124 @@
+id: entrees-sorties
+titre: "Entrées, sorties et expressions"
+niveau: 5e
+prerequis: [sequence-instructions]
+programme: { source: cycle4, texte: "Identifier les entrées et sorties d’un programme." }
+activite: quiz
+parametres: {}
+idee: "L’entrée, c’est ce que le programme reçoit (la réponse tapée). La sortie, c’est ce qu’il donne (ce que dit le lutin). Entre les deux, il calcule."
+phrases:
+  consigne: "Prévois le résultat avant de l’exécuter, puis touche la réponse."
+  question: "{texte}"
+  indice: "Remplace « réponse » par le nombre tapé, puis calcule ligne par ligne."
+  exemple: "demander Un nombre ? et attendre, puis dire réponse * 2. On tape 6 : l’entrée est 6, la sortie est 12."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "demander Quel âge as-tu ? et attendre\ndire réponse + 1\nOn tape 12. Que dit le lutin ?"
+    nom: "13"
+    explication: "réponse vaut 12, donc réponse + 1 vaut 13."
+    pieges:
+      - { texte: "12", pourquoi: "« réponse + 1 » ajoute 1 au nombre tapé avant que le lutin le dise." }
+      - { texte: "réponse + 1", pourquoi: "« dire » calcule l’expression d’abord, puis dit le résultat." }
+  - texte: "demander Un nombre ? et attendre\nmettre x à réponse * 2\ndire x\nQuelle est l’entrée de ce programme ?"
+    nom: "Le nombre tapé (réponse)"
+    explication: "L’entrée est la donnée reçue : le nombre tapé, rangé dans « réponse »."
+    pieges:
+      - { texte: "Ce que dit le lutin (x)", pourquoi: "Ce que dit le lutin, c’est la sortie : ce que le programme donne à la fin." }
+      - { texte: "Le bloc « mettre x à »", pourquoi: "Ce bloc fait un calcul à l’intérieur du programme : ni entrée, ni sortie." }
+  - texte: "demander Un nombre ? et attendre\nmettre x à réponse * réponse\ndire x\nOn tape 7. Que dit le lutin ?"
+    nom: "49"
+    explication: "réponse vaut 7, donc x = 7 × 7 = 49."
+    pieges:
+      - { texte: "14", pourquoi: "Tu as fait réponse + réponse. Le bloc multiplie : 7 × 7." }
+      - { texte: "7", pourquoi: "7 est l’entrée. Le programme la transforme avant de la dire." }
+  - texte: "Les blocs sont emboîtés : le bloc + est à l’intérieur du bloc *.\n( 3 + 4 ) * 2\nQue vaut cette expression ?"
+    nom: "14"
+    explication: "Le bloc intérieur d’abord : 3 + 4 = 7. Puis 7 × 2 = 14."
+    pieges:
+      - { texte: "11", pourquoi: "Le bloc intérieur est calculé d’abord : 3 + 4 = 7, puis 7 × 2." }
+      - { texte: "9", pourquoi: "Tu as ajouté 2 au lieu de multiplier par 2." }
+  - texte: "Cette fois, le bloc * est à l’intérieur du bloc +.\n3 + ( 4 * 2 )\nQue vaut cette expression ?"
+    nom: "11"
+    explication: "Le bloc intérieur d’abord : 4 × 2 = 8. Puis 3 + 8 = 11."
+    pieges:
+      - { texte: "14", pourquoi: "Le bloc intérieur, ici, c’est 4 × 2 : il est calculé avant d’ajouter 3." }
+      - { texte: "24", pourquoi: "Tu as tout multiplié. Il y a une addition : 3 + 8." }
+  - texte: "demander Un nombre ? et attendre\nmettre x à réponse + 2\nmettre x à x * 4\nmettre x à x - 3\ndire x\nOn tape 1. Que dit le lutin ?"
+    nom: "9"
+    explication: "x = 1 + 2 = 3, puis 3 × 4 = 12, puis 12 − 3 = 9."
+    pieges:
+      - { texte: "6", pourquoi: "Tu as fait 1 + 2 × 4 − 3. Ligne par ligne, x vaut 3 avant d’être multiplié." }
+      - { texte: "12", pourquoi: "Tu t’es arrêté avant la dernière ligne : il faut encore retirer 3." }
+  - texte: "On tape 10 et le lutin dit 25. Quel calcul fait le programme ?"
+    nom: "réponse * 2 + 5"
+    explication: "On essaie chaque calcul avec 10 : 10 × 2 + 5 = 25. C’est le bon."
+    pieges:
+      - { texte: "réponse + 5", pourquoi: "10 + 5 = 15, pas 25. Teste chaque calcul avec l’entrée 10." }
+      - { texte: "réponse * 3 - 3", pourquoi: "10 × 3 − 3 = 27, pas 25." }
+  - texte: "Pourquoi utiliser « demander … et attendre » plutôt que « mettre x à 5 » ?"
+    nom: "Le programme marche avec n’importe quel nombre tapé"
+    explication: "Avec « mettre x à 5 », le calcul est toujours fait sur 5. Avec une entrée, le même programme sert pour tous les nombres."
+    pieges:
+      - { texte: "Le programme va plus vite", pourquoi: "La vitesse ne change rien ici : « demander » attend même qu’on tape." }
+      - { texte: "Le lutin ne sait pas calculer sans demander", pourquoi: "Il calcule aussi avec « mettre x à 5 », mais toujours avec 5." }
+
+en:
+  titre: "Inputs, outputs and expressions"
+  idee: "The input is what the program receives (the answer typed in). The output is what it gives back (what the sprite says). In between, it calculates."
+  phrases:
+    consigne: "Predict the result before running it, then touch the answer."
+    question: "{texte}"
+    indice: "Replace “answer” with the number typed in, then work line by line."
+    exemple: "ask A number? and wait, then say answer * 2. You type 6: the input is 6, the output is 12."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "ask How old are you? and wait\nsay answer + 1\nYou type 12. What does the sprite say?"
+      nom: "13"
+      explication: "answer is 12, so answer + 1 is 13."
+      pieges:
+        - { texte: "12", pourquoi: "“answer + 1” adds 1 to the number typed in before the sprite says it." }
+        - { texte: "answer + 1", pourquoi: "“say” works out the expression first, then says the result." }
+    - texte: "ask A number? and wait\nset x to answer * 2\nsay x\nWhat is the input of this program?"
+      nom: "The number typed in (answer)"
+      explication: "The input is the data received: the number typed in, stored in “answer”."
+      pieges:
+        - { texte: "What the sprite says (x)", pourquoi: "What the sprite says is the output: what the program gives at the end." }
+        - { texte: "The “set x to” block", pourquoi: "This block does a calculation inside the program: it is neither input nor output." }
+    - texte: "ask A number? and wait\nset x to answer * answer\nsay x\nYou type 7. What does the sprite say?"
+      nom: "49"
+      explication: "answer is 7, so x = 7 × 7 = 49."
+      pieges:
+        - { texte: "14", pourquoi: "You did answer + answer. The block multiplies: 7 × 7." }
+        - { texte: "7", pourquoi: "7 is the input. The program changes it before saying it." }
+    - texte: "The blocks are nested: the + block is inside the * block.\n( 3 + 4 ) * 2\nWhat is the value of this expression?"
+      nom: "14"
+      explication: "The inner block first: 3 + 4 = 7. Then 7 × 2 = 14."
+      pieges:
+        - { texte: "11", pourquoi: "The inner block is worked out first: 3 + 4 = 7, then 7 × 2." }
+        - { texte: "9", pourquoi: "You added 2 instead of multiplying by 2." }
+    - texte: "This time, the * block is inside the + block.\n3 + ( 4 * 2 )\nWhat is the value of this expression?"
+      nom: "11"
+      explication: "The inner block first: 4 × 2 = 8. Then 3 + 8 = 11."
+      pieges:
+        - { texte: "14", pourquoi: "Here the inner block is 4 × 2: it is worked out before adding 3." }
+        - { texte: "24", pourquoi: "You multiplied everything. There is an addition: 3 + 8." }
+    - texte: "ask A number? and wait\nset x to answer + 2\nset x to x * 4\nset x to x - 3\nsay x\nYou type 1. What does the sprite say?"
+      nom: "9"
+      explication: "x = 1 + 2 = 3, then 3 × 4 = 12, then 12 − 3 = 9."
+      pieges:
+        - { texte: "6", pourquoi: "You did 1 + 2 × 4 − 3. Line by line, x is 3 before it is multiplied." }
+        - { texte: "12", pourquoi: "You stopped before the last line: you still have to subtract 3." }
+    - texte: "You type 10 and the sprite says 25. Which calculation does the program do?"
+      nom: "answer * 2 + 5"
+      explication: "Try each calculation with 10: 10 × 2 + 5 = 25. That is the right one."
+      pieges:
+        - { texte: "answer + 5", pourquoi: "10 + 5 = 15, not 25. Test each calculation with the input 10." }
+        - { texte: "answer * 3 - 3", pourquoi: "10 × 3 − 3 = 27, not 25." }
+    - texte: "Why use “ask … and wait” instead of “set x to 5”?"
+      nom: "The program works with any number typed in"
+      explication: "With “set x to 5”, the calculation is always done on 5. With an input, the same program works for every number."
+      pieges:
+        - { texte: "The program runs faster", pourquoi: "Speed has nothing to do with it: “ask” even waits for you to type." }
+        - { texte: "The sprite cannot calculate without asking", pourquoi: "It also calculates with “set x to 5”, but always with 5." }

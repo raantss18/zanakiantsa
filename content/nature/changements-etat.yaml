@@ -1,0 +1,136 @@
+id: changements-etat
+titre: "Les changements d'état de l'eau"
+niveau: CM2
+prerequis: [melanges]
+programme: { source: c3s, texte: "Observer des changements d’état physique et leur réversibilité. Nommer les changements d’état." }
+activite: quiz
+parametres: {}
+idee: "L'eau existe à l'état solide, liquide et gazeux. Fusion : solide vers liquide. Solidification : l'inverse. Vaporisation : liquide vers gaz. Liquéfaction : l'inverse."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi d'abord : quel était l'état au départ, et quel est l'état à la fin ?"
+  exemple: "Exemple : un glaçon fond dans un verre. Solide au départ, liquide à la fin : c'est une fusion."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Un glaçon fond dans ta main. Comment s'appelle ce changement d'état ?"
+    nom: "La fusion."
+    explication: "La glace (solide) devient de l'eau liquide : c'est la fusion."
+    pieges:
+      - { texte: "La solidification.", pourquoi: "La solidification va dans l'autre sens : du liquide vers le solide." }
+      - { texte: "La dissolution.", pourquoi: "Dissoudre, c'est mélanger un solide dans un liquide. Ici, un seul corps change d'état." }
+  - texte: "De l'eau mise au congélateur devient de la glace. Comment s'appelle ce changement d'état ?"
+    nom: "La solidification."
+    explication: "L'eau liquide devient solide : c'est la solidification."
+    pieges:
+      - { texte: "La fusion.", pourquoi: "La fusion va du solide vers le liquide : c'est le contraire." }
+      - { texte: "La liquéfaction.", pourquoi: "La liquéfaction, c'est un gaz qui devient liquide." }
+  - texte: "Une flaque sèche au soleil. Où est passée l'eau ?"
+    nom: "Elle est devenue de la vapeur d'eau, un gaz invisible, dans l'air."
+    explication: "L'eau s'est évaporée : c'est une vaporisation. La vapeur d'eau est invisible et se mélange à l'air."
+    pieges:
+      - { texte: "Elle a disparu.", pourquoi: "L'eau ne disparaît pas : elle change d'état et part dans l'air sous forme de gaz." }
+      - { texte: "Elle est entrée entièrement dans le sol.", pourquoi: "Un peu d'eau peut s'infiltrer, mais une flaque sur du goudron sèche aussi : l'eau part dans l'air." }
+  - texte: "Au-dessus d'une casserole d'eau bouillante, on voit un petit nuage blanc. De quoi est-il fait ?"
+    nom: "De minuscules gouttes d'eau liquide."
+    explication: "La vapeur d'eau est invisible. En se refroidissant dans l'air, elle redevient liquide en gouttelettes : c'est ce nuage blanc qu'on voit."
+    pieges:
+      - { texte: "De vapeur d'eau.", pourquoi: "C'est l'erreur la plus courante : la vapeur d'eau ne se voit pas. Ce qu'on voit, ce sont des gouttelettes liquides." }
+      - { texte: "De fumée.", pourquoi: "Rien ne brûle : c'est de l'eau, sous forme de gouttelettes." }
+  - texte: "Dans l'eau qui bout, de grosses bulles montent. Que contiennent-elles ?"
+    nom: "De la vapeur d'eau."
+    explication: "Pendant l'ébullition, l'eau liquide se vaporise au fond de la casserole : les bulles sont faites de vapeur d'eau."
+    pieges:
+      - { texte: "De l'air.", pourquoi: "Les petites bulles du début contiennent de l'air, mais pendant l'ébullition, les grosses bulles sont de la vapeur d'eau." }
+      - { texte: "Rien du tout, du vide.", pourquoi: "Les bulles sont remplies d'un gaz : la vapeur d'eau." }
+  - texte: "Après une douche chaude, le miroir est couvert de gouttelettes. Comment s'appelle ce changement d'état ?"
+    nom: "La liquéfaction."
+    explication: "La vapeur d'eau de l'air touche le miroir froid et redevient liquide : c'est la liquéfaction."
+    pieges:
+      - { texte: "La vaporisation.", pourquoi: "La vaporisation va du liquide vers le gaz : ici, c'est l'inverse." }
+      - { texte: "Le miroir transpire.", pourquoi: "Le miroir ne produit pas d'eau : elle vient de la vapeur contenue dans l'air." }
+  - texte: "On fait geler de l'eau, puis on la laisse fondre. Qu'obtient-on ?"
+    nom: "De l'eau liquide, comme au départ."
+    explication: "Les changements d'état sont réversibles : la glace redevient de l'eau, sans perte de matière."
+    pieges:
+      - { texte: "Une autre matière que l'eau.", pourquoi: "Changer d'état ne change pas la matière : c'est toujours de l'eau." }
+      - { texte: "De la glace pour toujours.", pourquoi: "Au chaud, la glace fond : le changement est réversible." }
+  - texte: "Le brouillard est de l'eau dans quel état ?"
+    nom: "Liquide, en fines gouttelettes."
+    explication: "Le brouillard, comme les nuages, est fait de gouttelettes d'eau liquide en suspension dans l'air."
+    pieges:
+      - { texte: "Gazeux.", pourquoi: "Si c'était de la vapeur d'eau, on ne le verrait pas." }
+      - { texte: "Solide.", pourquoi: "Ce ne sont pas des cristaux de glace, mais des gouttelettes liquides." }
+  - texte: "Pourquoi le linge mouillé sèche-t-il plus vite dehors quand il y a du vent et du soleil ?"
+    nom: "Parce que la chaleur et le vent favorisent l'évaporation."
+    explication: "L'eau du linge se vaporise plus vite quand il fait chaud, quand l'air bouge et quand le linge est bien étalé."
+    pieges:
+      - { texte: "Parce que le vent emporte les gouttes d'eau entières.", pourquoi: "L'eau ne part pas en gouttes : elle se vaporise, elle devient un gaz invisible." }
+      - { texte: "Parce que le soleil fait disparaître l'eau.", pourquoi: "L'eau ne disparaît pas : elle passe dans l'air sous forme de vapeur." }
+
+en:
+  titre: "Water changing state"
+  idee: "Water can be solid, liquid or gas. Melting: solid to liquid. Freezing: the reverse. Vaporisation: liquid to gas. Condensation: the reverse."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "First ask yourself: what state was it at the start, and what state is it at the end?"
+    exemple: "Example: an ice cube melts in a glass. Solid at the start, liquid at the end: it's melting."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "An ice cube melts in your hand. What is this change of state called?"
+      nom: "Melting."
+      explication: "Ice (solid) turns into liquid water: that's melting."
+      pieges:
+        - { texte: "Freezing.", pourquoi: "Freezing goes the other way: from liquid to solid." }
+        - { texte: "Dissolving.", pourquoi: "Dissolving means mixing a solid into a liquid. Here, one substance changes state." }
+    - texte: "Water put in the freezer turns into ice. What is this change of state called?"
+      nom: "Freezing."
+      explication: "Liquid water turns solid: that's freezing."
+      pieges:
+        - { texte: "Melting.", pourquoi: "Melting goes from solid to liquid: it's the opposite." }
+        - { texte: "Condensation.", pourquoi: "Condensation is a gas turning into a liquid." }
+    - texte: "A puddle dries in the sun. Where has the water gone?"
+      nom: "It has become water vapour, an invisible gas, in the air."
+      explication: "The water has evaporated: that's vaporisation. Water vapour is invisible and mixes with the air."
+      pieges:
+        - { texte: "It has disappeared.", pourquoi: "Water doesn't disappear: it changes state and goes into the air as a gas." }
+        - { texte: "It has all soaked into the ground.", pourquoi: "A little water may soak in, but a puddle on tarmac dries too: the water goes into the air." }
+    - texte: "Above a pan of boiling water, you can see a little white cloud. What is it made of?"
+      nom: "Tiny drops of liquid water."
+      explication: "Water vapour is invisible. As it cools in the air, it turns back into liquid droplets: that's the white cloud you see."
+      pieges:
+        - { texte: "Water vapour.", pourquoi: "That's the most common mistake: you can't see water vapour. What you see are liquid droplets." }
+        - { texte: "Smoke.", pourquoi: "Nothing is burning: it's water, as droplets." }
+    - texte: "In boiling water, big bubbles rise. What is inside them?"
+      nom: "Water vapour."
+      explication: "When water boils, liquid water vaporises at the bottom of the pan: the bubbles are made of water vapour."
+      pieges:
+        - { texte: "Air.", pourquoi: "The small bubbles at the start contain air, but while it boils, the big bubbles are water vapour." }
+        - { texte: "Nothing at all, empty space.", pourquoi: "The bubbles are full of a gas: water vapour." }
+    - texte: "After a hot shower, the mirror is covered in droplets. What is this change of state called?"
+      nom: "Condensation."
+      explication: "Water vapour in the air touches the cold mirror and turns back into liquid: that's condensation."
+      pieges:
+        - { texte: "Vaporisation.", pourquoi: "Vaporisation goes from liquid to gas: here it's the reverse." }
+        - { texte: "The mirror is sweating.", pourquoi: "The mirror doesn't make water: it comes from the vapour in the air." }
+    - texte: "We freeze some water, then let it melt. What do we get?"
+      nom: "Liquid water, as at the start."
+      explication: "Changes of state can be reversed: the ice turns back into water, with no matter lost."
+      pieges:
+        - { texte: "A different substance from water.", pourquoi: "Changing state doesn't change the substance: it's still water." }
+        - { texte: "Ice for ever.", pourquoi: "In the warmth, ice melts: the change can be reversed." }
+    - texte: "Fog is water in which state?"
+      nom: "Liquid, as tiny droplets."
+      explication: "Fog, like clouds, is made of droplets of liquid water floating in the air."
+      pieges:
+        - { texte: "Gas.", pourquoi: "If it were water vapour, you couldn't see it." }
+        - { texte: "Solid.", pourquoi: "They aren't ice crystals, but liquid droplets." }
+    - texte: "Why does wet washing dry faster outside when it's windy and sunny?"
+      nom: "Because warmth and wind help evaporation."
+      explication: "The water in the washing vaporises faster when it's warm, when the air moves and when the washing is spread out."
+      pieges:
+        - { texte: "Because the wind blows the whole drops away.", pourquoi: "The water doesn't leave as drops: it vaporises, it becomes an invisible gas." }
+        - { texte: "Because the sun makes the water disappear.", pourquoi: "Water doesn't disappear: it goes into the air as vapour." }

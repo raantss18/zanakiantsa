@@ -1,0 +1,94 @@
+id: clothes
+titre: "Les vêtements et les accessoires, en anglais"
+niveau: CE2
+prerequis: []
+programme: { source: lver_c2, texte: "CE2 : l’élève peut reconnaitre des mots familiers accompagnés d’images comme, par exemple, dans un menu de restaurant illustré par des photos ou dans un livre d’images utilisant un vocabulaire familier." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "Pour s'habiller, en anglais : « a dress », une robe ; « a hat », un chapeau ; « trainers », des baskets. Écoute le mot, puis trouve l'image."
+phrases:
+  consigne: "Écoute le mot anglais et touche la bonne image."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit quelque chose qu'on porte."
+  exemple: "Regarde : « hat », c'est le chapeau. Écoute encore le mot, puis touche son image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "dress"
+    bonne: ["1f457", "la robe"]
+    autres: [["1f452", "le chapeau"], ["1f45c", "le sac"]]
+    explication: "« dress », c'est la robe."
+  - texte: "hat"
+    bonne: ["1f452", "le chapeau"]
+    autres: [["1f453", "les lunettes"], ["1f461", "la sandale"]]
+    explication: "« hat », c'est le chapeau."
+  - texte: "glasses"
+    bonne: ["1f453", "les lunettes"]
+    autres: [["1f452", "le chapeau"], ["1f457", "la robe"]]
+    explication: "« glasses », ce sont les lunettes."
+  - texte: "trainers"
+    bonne: ["1f45f", "les baskets"]
+    autres: [["1f461", "la sandale"], ["1f45c", "le sac"]]
+    explication: "« trainers », ce sont les baskets."
+  - texte: "shoe"
+    bonne: ["1f460", "la chaussure"]
+    autres: [["1f453", "les lunettes"], ["2602", "le parapluie"]]
+    explication: "« shoe », c'est la chaussure."
+  - texte: "sandal"
+    bonne: ["1f461", "la sandale"]
+    autres: [["1f45f", "les baskets"], ["1f457", "la robe"]]
+    explication: "« sandal », c'est la sandale."
+  - texte: "bag"
+    bonne: ["1f45c", "le sac"]
+    autres: [["1f460", "la chaussure"], ["1f452", "le chapeau"]]
+    explication: "« bag », c'est le sac."
+  - texte: "umbrella"
+    bonne: ["2602", "le parapluie"]
+    autres: [["1f45c", "le sac"], ["1f453", "les lunettes"]]
+    explication: "« umbrella », c'est le parapluie."
+en:
+  titre: "Clothes and accessories in English"
+  idee: "To get dressed: a dress, a hat, trainers. Listen to the word, then find the picture."
+  phrases:
+    consigne: "Listen to the word and touch the right picture."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is something we wear or carry."
+    exemple: "Look: hat is the hat. Listen to the word again, then touch its picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "dress"
+      bonne: ["1f457", "the dress"]
+      autres: [["1f452", "the hat"], ["1f45c", "the bag"]]
+      explication: "dress — well done!"
+    - texte: "hat"
+      bonne: ["1f452", "the hat"]
+      autres: [["1f453", "the glasses"], ["1f461", "the sandal"]]
+      explication: "hat — well done!"
+    - texte: "glasses"
+      bonne: ["1f453", "the glasses"]
+      autres: [["1f452", "the hat"], ["1f457", "the dress"]]
+      explication: "glasses — well done!"
+    - texte: "trainers"
+      bonne: ["1f45f", "the trainers"]
+      autres: [["1f461", "the sandal"], ["1f45c", "the bag"]]
+      explication: "trainers — well done!"
+    - texte: "shoe"
+      bonne: ["1f460", "the shoe"]
+      autres: [["1f453", "the glasses"], ["2602", "the umbrella"]]
+      explication: "shoe — well done!"
+    - texte: "sandal"
+      bonne: ["1f461", "the sandal"]
+      autres: [["1f45f", "the trainers"], ["1f457", "the dress"]]
+      explication: "sandal — well done!"
+    - texte: "bag"
+      bonne: ["1f45c", "the bag"]
+      autres: [["1f460", "the shoe"], ["1f452", "the hat"]]
+      explication: "bag — well done!"
+    - texte: "umbrella"
+      bonne: ["2602", "the umbrella"]
+      autres: [["1f45c", "the bag"], ["1f453", "the glasses"]]
+      explication: "umbrella — well done!"

@@ -1,0 +1,124 @@
+id: transformation-chimique
+titre: "Transformation chimique ou physique ?"
+niveau: 4e
+prerequis: [temperatures-etat]
+programme: { source: c4, texte: "Distinguer transformation chimique et mélange, transformation chimique et transformation physique." }
+activite: quiz
+parametres: {}
+idee: "Dans une transformation chimique, des espèces disparaissent (les réactifs) et de nouvelles apparaissent (les produits). Un changement d'état ou un mélange ne crée pas de nouvelle espèce."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi : à la fin, y a-t-il une espèce chimique nouvelle, qui n'était pas là au départ ?"
+  exemple: "Exemple : le carbone brûle dans le dioxygène. Le carbone et le dioxygène disparaissent ; du dioxyde de carbone apparaît : c'est une transformation chimique."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "La glace fond et devient de l'eau liquide. Quel type de transformation est-ce ?"
+    nom: "Une transformation physique."
+    explication: "C'est toujours de l'eau, avant comme après : seul l'état change. Aucune espèce nouvelle n'apparaît."
+    pieges:
+      - { texte: "Une transformation chimique.", pourquoi: "L'aspect change, mais l'espèce reste la même : de l'eau." }
+      - { texte: "Un mélange.", pourquoi: "Il n'y a qu'une seule espèce, l'eau : rien n'est mélangé." }
+  - texte: "On fait brûler une bougie. Quel type de transformation est-ce ?"
+    nom: "Une transformation chimique."
+    explication: "La cire brûle avec le dioxygène de l'air : il se forme du dioxyde de carbone et de l'eau, de nouvelles espèces."
+    pieges:
+      - { texte: "Une simple fusion de la cire.", pourquoi: "La cire fond aussi, mais la flamme montre une combustion qui produit de nouvelles espèces." }
+      - { texte: "Une transformation physique, car rien ne disparaît.", pourquoi: "La bougie raccourcit : la cire et du dioxygène disparaissent, transformés en d'autres espèces." }
+  - texte: "On dissout du sucre dans l'eau. Quel type de transformation est-ce ?"
+    nom: "Un mélange, pas une transformation chimique."
+    explication: "Le sucre et l'eau sont toujours là ; on peut récupérer le sucre en évaporant l'eau."
+    pieges:
+      - { texte: "Une transformation chimique, car le sucre disparaît.", pourquoi: "Le sucre ne se voit plus, mais il est toujours là, dissous." }
+      - { texte: "Une combustion.", pourquoi: "Rien ne brûle : le sucre se disperse dans l'eau." }
+  - texte: "Un clou en fer laissé dehors se couvre de rouille. Que s'est-il passé ?"
+    nom: "Une transformation chimique : la corrosion du fer."
+    explication: "Le fer réagit avec le dioxygène et l'eau : la rouille est une espèce nouvelle, différente du fer."
+    pieges:
+      - { texte: "Le fer s'est sali avec de la terre.", pourquoi: "La rouille ne part pas comme de la saleté : c'est le fer lui-même qui s'est transformé." }
+      - { texte: "Le fer a changé d'état.", pourquoi: "La rouille n'est pas du fer fondu ni gazeux : c'est une autre espèce." }
+  - texte: "Lors d'une transformation chimique en récipient fermé, que devient la masse totale ?"
+    nom: "Elle se conserve."
+    explication: "Les atomes ne disparaissent pas : ils se réarrangent. La masse des produits est égale à celle des réactifs."
+    pieges:
+      - { texte: "Elle diminue, car des réactifs disparaissent.", pourquoi: "Les réactifs disparaissent, mais leurs atomes se retrouvent dans les produits." }
+      - { texte: "Elle augmente, car de nouvelles espèces apparaissent.", pourquoi: "Les nouvelles espèces sont faites des mêmes atomes : la masse ne change pas." }
+  - texte: "Une bûche brûle et il ne reste qu'un peu de cendres, bien plus légères. La masse a-t-elle disparu ?"
+    nom: "Non, elle est partie surtout sous forme de gaz."
+    explication: "La combustion produit du dioxyde de carbone et de la vapeur d'eau, qui partent dans l'air. Dans un récipient fermé, la masse totale ne changerait pas."
+    pieges:
+      - { texte: "Oui, le feu détruit la matière.", pourquoi: "La matière ne disparaît pas : elle se transforme en gaz invisibles." }
+      - { texte: "Oui, les cendres sont tout ce qui reste.", pourquoi: "Il faut compter aussi les gaz produits : ils emportent l'essentiel de la masse." }
+  - texte: "On verse de l'eau de chaux dans un flacon où l'on a fait brûler du carbone. L'eau de chaux se trouble. Qu'est-ce que cela montre ?"
+    nom: "La présence de dioxyde de carbone."
+    explication: "L'eau de chaux se trouble en présence de dioxyde de carbone : c'est un test caractéristique."
+    pieges:
+      - { texte: "La présence de dioxygène.", pourquoi: "Le dioxygène ne trouble pas l'eau de chaux." }
+      - { texte: "La présence d'eau.", pourquoi: "L'eau de chaux contient déjà de l'eau : elle se trouble à cause du dioxyde de carbone." }
+  - texte: "Un œuf cuit ne redevient jamais cru en refroidissant. Pourquoi ?"
+    nom: "La cuisson est une transformation chimique."
+    explication: "En cuisant, les espèces de l'œuf se transforment en d'autres espèces. Ce n'est pas un simple changement d'état qu'on pourrait inverser en refroidissant."
+    pieges:
+      - { texte: "Parce que le blanc a gelé.", pourquoi: "Le blanc n'est pas solide à cause du froid, mais parce que ses espèces ont été transformées par la chaleur." }
+      - { texte: "Parce qu'il faudrait attendre plus longtemps.", pourquoi: "Même après des jours, il ne redeviendra pas cru." }
+
+en:
+  titre: "Chemical or physical change?"
+  idee: "In a chemical change, some substances disappear (reactants) and new ones appear (products). A change of state or a mixture makes no new substance."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Ask yourself: at the end, is there a new substance that wasn't there at the start?"
+    exemple: "Example: carbon burns in oxygen. Carbon and oxygen disappear; carbon dioxide appears: it's a chemical change."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Ice melts and becomes liquid water. What kind of change is it?"
+      nom: "A physical change."
+      explication: "It's still water, before and after: only the state changes. No new substance appears."
+      pieges:
+        - { texte: "A chemical change.", pourquoi: "It looks different, but the substance is the same: water." }
+        - { texte: "A mixture.", pourquoi: "There's only one substance, water: nothing is mixed." }
+    - texte: "We light a candle. What kind of change is it?"
+      nom: "A chemical change."
+      explication: "The wax burns with oxygen from the air: carbon dioxide and water form, which are new substances."
+      pieges:
+        - { texte: "Just the wax melting.", pourquoi: "The wax melts too, but the flame shows burning, which makes new substances." }
+        - { texte: "A physical change, because nothing disappears.", pourquoi: "The candle gets shorter: wax and oxygen disappear, turned into other substances." }
+    - texte: "We dissolve sugar in water. What kind of change is it?"
+      nom: "A mixture, not a chemical change."
+      explication: "Both sugar and water are still there; you can get the sugar back by evaporating the water."
+      pieges:
+        - { texte: "A chemical change, because the sugar disappears.", pourquoi: "You can't see the sugar any more, but it's still there, dissolved." }
+        - { texte: "Burning.", pourquoi: "Nothing burns: the sugar spreads through the water." }
+    - texte: "An iron nail left outside gets covered in rust. What has happened?"
+      nom: "A chemical change: the iron has corroded."
+      explication: "Iron reacts with oxygen and water: rust is a new substance, different from iron."
+      pieges:
+        - { texte: "The iron got dirty with soil.", pourquoi: "Rust doesn't wash off like dirt: the iron itself has changed." }
+        - { texte: "The iron changed state.", pourquoi: "Rust isn't melted or gaseous iron: it's a different substance." }
+    - texte: "During a chemical change in a closed container, what happens to the total mass?"
+      nom: "It stays the same."
+      explication: "Atoms don't disappear: they rearrange. The mass of the products equals the mass of the reactants."
+      pieges:
+        - { texte: "It goes down, because reactants disappear.", pourquoi: "The reactants disappear, but their atoms end up in the products." }
+        - { texte: "It goes up, because new substances appear.", pourquoi: "The new substances are made of the same atoms: the mass doesn't change." }
+    - texte: "A log burns and only a little ash is left, much lighter. Has the mass disappeared?"
+      nom: "No, most of it has gone off as gas."
+      explication: "Burning makes carbon dioxide and water vapour, which go into the air. In a closed container, the total mass wouldn't change."
+      pieges:
+        - { texte: "Yes, fire destroys matter.", pourquoi: "Matter doesn't disappear: it turns into invisible gases." }
+        - { texte: "Yes, the ash is all that's left.", pourquoi: "You also have to count the gases made: they carry away most of the mass." }
+    - texte: "We pour limewater into a jar where carbon was burnt. The limewater turns cloudy. What does that show?"
+      nom: "That carbon dioxide is there."
+      explication: "Limewater turns cloudy when carbon dioxide is present: it's a standard test."
+      pieges:
+        - { texte: "That oxygen is there.", pourquoi: "Oxygen doesn't turn limewater cloudy." }
+        - { texte: "That water is there.", pourquoi: "Limewater already contains water: it turns cloudy because of carbon dioxide." }
+    - texte: "A cooked egg never turns raw again when it cools. Why?"
+      nom: "Cooking is a chemical change."
+      explication: "As it cooks, the egg's substances turn into other substances. It isn't just a change of state that cooling could reverse."
+      pieges:
+        - { texte: "Because the white has frozen.", pourquoi: "The white isn't solid because of cold, but because heat changed its substances." }
+        - { texte: "Because you'd have to wait longer.", pourquoi: "Even after days, it won't turn raw again." }

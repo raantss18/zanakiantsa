@@ -11,7 +11,7 @@ import 'universe.dart';
 
 /// Icône de chaque étagère (Twemoji) ; l'étagère « Tout » a la pile de livres.
 const shelfIcons = {
-  'tout': '1f4da', 'apprendre': '1f4a1', 'nature': '1f331', 'vie': '1f3e0', 'contes': '1f3f0', 'curiosite': '1f52d', 'grands': '1f4dc',
+  'tout': '1f4da', 'apprendre': '1f4a1', 'nature': '1f331', 'vie': '1f3e0', 'contes': '1f3f0', 'curiosite': '1f52d', 'grands': '1f4dc', 'classiques': '1f4d6',
 };
 
 /// Ma bibliothèque (docs/design.md § 6, ADR 0026) : étagères en puces, couvertures en grille, ✔ « Lu ».
@@ -144,7 +144,8 @@ class LevelLabel extends StatelessWidget {
   Widget build(BuildContext context) => Row(mainAxisSize: MainAxisSize.min, children: [
         Text(tf('Niveau {level}', {'level': level}), style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
         const SizedBox(width: 4),
-        for (var i = 1; i <= 5; i++)
+        // Niveaux 1 à 7 : African Storybook va de 1 à 5, les classiques du domaine public de 5 à 7.
+        for (var i = 1; i <= 7; i++)
           Container(
             width: 9,
             height: 9,
@@ -189,7 +190,7 @@ class _Continue extends StatelessWidget {
             child: Row(children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(14),
-                child: SizedBox(width: compact ? 64 : 84, height: compact ? 64 : 84, child: cover == null ? const ColoredBox(color: Color(0xFFF1F3F2)) : Image.asset(cover, fit: BoxFit.cover, cacheWidth: 200)),
+                child: SizedBox(width: compact ? 64 : 84, height: compact ? 64 : 84, child: cover == null ? _TextCover(book: book, small: true) : Image.asset(cover, fit: BoxFit.cover, cacheWidth: 200)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -253,7 +254,7 @@ class _BookCover extends StatelessWidget {
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Expanded(
               child: Stack(fit: StackFit.expand, children: [
-                if (cover != null) Image.asset(cover, fit: BoxFit.cover, cacheWidth: 400) else const ColoredBox(color: Color(0xFFF1F3F2)),
+                if (cover != null) Image.asset(cover, fit: BoxFit.cover, cacheWidth: 400) else _TextCover(book: book),
                 if (mark != null)
                   Positioned(
                     left: 10,
@@ -464,8 +465,19 @@ class _Page extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(24), boxShadow: cardShadow),
-              child: Text(page.text, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: ink, height: 1.3)),
+              // Un long texte (classiques, ~650 caractères) en un peu plus petit, sans gras : il se lit d'un bloc.
+              child: Text(page.text,
+                  style: page.text.length > 300
+                      ? const TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: ink, height: 1.45)
+                      : const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: ink, height: 1.3)),
             );
+      // Page sans image (classiques) : tout l'espace pour le texte, en colonne de lecture (avant, 3/5 de la hauteur restaient vides).
+      if (img == null) {
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+          child: Center(child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 760), child: SingleChildScrollView(child: text))),
+        );
+      }
       return Padding(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
         child: wide
@@ -505,6 +517,37 @@ class _End extends StatelessWidget {
               Text(tf('Licence {licence} — {source}', {'licence': book.licence, 'source': book.source}), style: const TextStyle(fontSize: 14, color: Color(0xFF5F6B63))),
             ]),
           ),
+        ),
+      );
+}
+
+
+/// Couverture d'un livre sans image (classiques du domaine public) : une couleur propre au livre, un livre ouvert et
+/// l'auteur, pour qu'on les distingue sur l'étagère (avant : un carré gris).
+class _TextCover extends StatelessWidget {
+  const _TextCover({required this.book, this.small = false});
+  final Book book;
+  final bool small;
+
+  static const _colors = [Color(0xFF7B3F61), Color(0xFF2E5E4E), Color(0xFF3B4F8C), Color(0xFF8C5A2B), Color(0xFF5B3E8C), Color(0xFF8C2F39)];
+
+  @override
+  Widget build(BuildContext context) => ColoredBox(
+        color: _colors[book.id % _colors.length],
+        child: Center(
+          child: small
+              ? const Art('1f4d6', size: 40)
+              : Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(mainAxisSize: MainAxisSize.min, children: [
+                    const Art('1f4d6', size: 56),
+                    if (book.author case final author? when author.isNotEmpty) ...[
+                      const SizedBox(height: 6),
+                      Text(author, textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
+                    ],
+                  ]),
+                ),
         ),
       );
 }

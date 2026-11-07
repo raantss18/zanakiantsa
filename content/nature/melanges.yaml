@@ -1,0 +1,136 @@
+id: melanges
+titre: "Les mélanges et la dissolution"
+niveau: CM1
+prerequis: [solide-liquide]
+programme: { source: c3s, texte: "Distinguer des mélanges homogènes et des mélanges hétérogènes." }
+activite: quiz
+parametres: {}
+idee: "Dans un mélange homogène, on ne distingue plus les constituants à l'œil nu. Dans un mélange hétérogène, on les voit. Un solide qui se dissout ne disparaît pas."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Regarde le mélange à l'œil nu : vois-tu encore plusieurs constituants ?"
+  exemple: "Exemple : de l'eau et du sable. On voit le sable au fond : le mélange est hétérogène."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "On mélange de l'eau et du sel jusqu'à ne plus voir le sel. Comment est ce mélange ?"
+    nom: "Homogène."
+    explication: "On ne distingue plus le sel à l'œil nu : le mélange est homogène. Le sel s'est dissous."
+    pieges:
+      - { texte: "Hétérogène.", pourquoi: "Hétérogène veut dire qu'on voit plusieurs constituants. Ici, on ne voit plus le sel." }
+      - { texte: "Ce n'est plus un mélange, c'est de l'eau.", pourquoi: "Le sel est toujours là : goûte une goutte d'eau salée, elle est salée." }
+  - texte: "Le sucre a « disparu » dans le verre d'eau. Où est-il ?"
+    nom: "Il est dissous dans l'eau : il est toujours là."
+    explication: "Le sucre s'est dispersé dans l'eau en morceaux trop petits pour être vus. L'eau sucrée a d'ailleurs un goût sucré."
+    pieges:
+      - { texte: "Il a disparu pour de bon.", pourquoi: "C'est l'idée la plus courante, mais elle est fausse : la masse du verre n'a pas diminué, et l'eau est sucrée." }
+      - { texte: "Il est tombé au fond en invisible.", pourquoi: "Il n'est pas au fond : il est réparti partout dans l'eau." }
+  - texte: "De l'eau et de l'huile, secouées puis laissées au repos. Comment est le mélange ?"
+    nom: "Hétérogène : l'huile se sépare et reste au-dessus."
+    explication: "L'huile et l'eau ne se mélangent pas : on voit deux couches. Le mélange est hétérogène."
+    pieges:
+      - { texte: "Homogène.", pourquoi: "On voit bien deux liquides séparés : ce n'est pas homogène." }
+      - { texte: "L'huile se dissout dans l'eau.", pourquoi: "Même après avoir secoué, l'huile remonte : elle ne se dissout pas dans l'eau." }
+  - texte: "Lequel de ces solides se dissout dans l'eau ?"
+    nom: "Le sucre."
+    explication: "Le sucre et le sel se dissolvent dans l'eau. Le sable, lui, ne s'y dissout pas."
+    pieges:
+      - { texte: "Le sable.", pourquoi: "Le sable reste visible au fond : il ne se dissout pas." }
+      - { texte: "Un caillou.", pourquoi: "Un caillou ne se dissout pas dans l'eau." }
+  - texte: "Comment séparer de l'eau et de la terre mélangées ?"
+    nom: "Laisser reposer, puis filtrer."
+    explication: "Au repos, la terre se dépose au fond : c'est la décantation. Le filtre (par exemple un filtre à café) retient les grains qui restent."
+    pieges:
+      - { texte: "Ajouter encore de l'eau.", pourquoi: "On dilue le mélange, on ne le sépare pas." }
+      - { texte: "C'est impossible.", pourquoi: "La terre ne se dissout pas : on peut la retenir par décantation et filtration." }
+  - texte: "Peut-on récupérer le sel de l'eau salée avec un filtre ?"
+    nom: "Non, le sel dissous passe à travers le filtre."
+    explication: "Un solide dissous traverse le filtre avec l'eau. C'est justement un moyen de savoir qu'il est dissous."
+    pieges:
+      - { texte: "Oui, le filtre retient le sel.", pourquoi: "Le filtre retient les grains non dissous, comme le sable, pas le sel dissous." }
+      - { texte: "Oui, si on filtre deux fois.", pourquoi: "Même plusieurs fois, le sel dissous passe toujours." }
+  - texte: "On ajoute du sel dans un verre d'eau, cuillère après cuillère. Que finit-il par se passer ?"
+    nom: "Le sel ne se dissout plus et reste au fond."
+    explication: "Un volume d'eau ne peut dissoudre qu'une quantité limitée de sel : on dit que l'eau est saturée."
+    pieges:
+      - { texte: "Le sel se dissout toujours, sans limite.", pourquoi: "Il y a une limite : l'eau finit par être saturée." }
+      - { texte: "L'eau devient solide.", pourquoi: "L'eau reste liquide ; c'est le sel en trop qui reste solide au fond." }
+  - texte: "Pourquoi trier des cailloux, du gravier et du sable en commençant par le tamis aux plus grands trous ?"
+    nom: "Pour retenir d'abord les plus gros morceaux, puis les plus petits."
+    explication: "Le premier tamis garde les cailloux et laisse passer le reste ; un tamis plus fin garde ensuite le gravier ; le sable passe."
+    pieges:
+      - { texte: "C'est pareil dans n'importe quel ordre.", pourquoi: "Avec le tamis le plus fin d'abord, cailloux et gravier restent ensemble." }
+      - { texte: "Pour que le sable reste dans le premier tamis.", pourquoi: "Le sable est le plus fin : il passe à travers les grands trous." }
+  - texte: "Observe chez toi un verre d'eau avec une cuillère de sel, puis un autre avec une cuillère de poivre. Lequel est homogène ?"
+    nom: "L'eau salée."
+    explication: "Le sel se dissout, le poivre non : on voit les grains de poivre flotter ou tomber. L'eau poivrée est un mélange hétérogène."
+    pieges:
+      - { texte: "L'eau poivrée.", pourquoi: "On voit les grains de poivre : le mélange est hétérogène." }
+      - { texte: "Les deux.", pourquoi: "Seul le sel se dissout. Fais l'essai pour le voir !" }
+
+en:
+  titre: "Mixtures and dissolving"
+  idee: "In a uniform mixture, you can't tell the parts apart by eye. In a non-uniform mixture, you can see them. A solid that dissolves does not disappear."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Look at the mixture with your eyes: can you still see several parts?"
+    exemple: "Example: water and sand. You can see the sand at the bottom: the mixture is non-uniform."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "We stir salt into water until we can't see the salt any more. What is this mixture like?"
+      nom: "Uniform."
+      explication: "You can't see the salt any more: the mixture is uniform. The salt has dissolved."
+      pieges:
+        - { texte: "Non-uniform.", pourquoi: "Non-uniform means you can see several parts. Here, you can't see the salt." }
+        - { texte: "It isn't a mixture any more, it's just water.", pourquoi: "The salt is still there: taste a drop of salty water, it's salty." }
+    - texte: "The sugar has « disappeared » in the glass of water. Where is it?"
+      nom: "It's dissolved in the water: it's still there."
+      explication: "The sugar has spread through the water in pieces too small to see. The sugary water tastes sweet, too."
+      pieges:
+        - { texte: "It has gone for good.", pourquoi: "That's the most common idea, but it's wrong: the glass is just as heavy, and the water is sweet." }
+        - { texte: "It fell to the bottom and became invisible.", pourquoi: "It isn't at the bottom: it's spread all through the water." }
+    - texte: "Water and oil, shaken then left to stand. What is the mixture like?"
+      nom: "Non-uniform: the oil separates and stays on top."
+      explication: "Oil and water don't mix: you can see two layers. The mixture is non-uniform."
+      pieges:
+        - { texte: "Uniform.", pourquoi: "You can clearly see two separate liquids: it's not uniform." }
+        - { texte: "The oil dissolves in the water.", pourquoi: "Even after shaking, the oil rises again: it doesn't dissolve in water." }
+    - texte: "Which of these solids dissolves in water?"
+      nom: "Sugar."
+      explication: "Sugar and salt dissolve in water. Sand doesn't."
+      pieges:
+        - { texte: "Sand.", pourquoi: "Sand stays visible at the bottom: it doesn't dissolve." }
+        - { texte: "A pebble.", pourquoi: "A pebble doesn't dissolve in water." }
+    - texte: "How can you separate water and soil that are mixed together?"
+      nom: "Let it stand, then filter it."
+      explication: "Left to stand, the soil settles at the bottom: that's settling. A filter (a coffee filter, for example) catches the grains that are left."
+      pieges:
+        - { texte: "Add more water.", pourquoi: "That dilutes the mixture, it doesn't separate it." }
+        - { texte: "It's impossible.", pourquoi: "Soil doesn't dissolve: settling and filtering can hold it back." }
+    - texte: "Can you get the salt back out of salty water with a filter?"
+      nom: "No, dissolved salt goes through the filter."
+      explication: "A dissolved solid goes through the filter with the water. That's actually one way to tell it's dissolved."
+      pieges:
+        - { texte: "Yes, the filter catches the salt.", pourquoi: "A filter catches undissolved grains, like sand, not dissolved salt." }
+        - { texte: "Yes, if you filter it twice.", pourquoi: "Even many times, the dissolved salt still goes through." }
+    - texte: "We add salt to a glass of water, spoon after spoon. What happens in the end?"
+      nom: "The salt stops dissolving and stays at the bottom."
+      explication: "A volume of water can only dissolve a limited amount of salt: we say the water is saturated."
+      pieges:
+        - { texte: "The salt keeps dissolving, with no limit.", pourquoi: "There is a limit: the water ends up saturated." }
+        - { texte: "The water turns solid.", pourquoi: "The water stays liquid; it's the extra salt that stays solid at the bottom." }
+    - texte: "Why sort pebbles, gravel and sand starting with the sieve with the biggest holes?"
+      nom: "To catch the biggest pieces first, then the smaller ones."
+      explication: "The first sieve keeps the pebbles and lets the rest through; a finer sieve then keeps the gravel; the sand goes through."
+      pieges:
+        - { texte: "Any order works the same.", pourquoi: "With the finest sieve first, pebbles and gravel stay together." }
+        - { texte: "So the sand stays in the first sieve.", pourquoi: "Sand is the finest: it goes through the big holes." }
+    - texte: "At home, look at a glass of water with a spoon of salt, and another with a spoon of pepper. Which one is uniform?"
+      nom: "The salty water."
+      explication: "Salt dissolves, pepper doesn't: you can see the pepper grains float or sink. Peppery water is a non-uniform mixture."
+      pieges:
+        - { texte: "The peppery water.", pourquoi: "You can see the pepper grains: the mixture is non-uniform." }
+        - { texte: "Both.", pourquoi: "Only the salt dissolves. Try it and see!" }

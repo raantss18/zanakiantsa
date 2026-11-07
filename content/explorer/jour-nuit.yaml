@@ -1,0 +1,124 @@
+id: jour-nuit
+titre: "Le jour, la nuit et l'année"
+niveau: 6e
+prerequis: [terre-soleil]
+programme: { source: c3s, texte: "Associer la durée d’une année au mouvement de révolution de la Terre autour du Soleil, du point de vue héliocentrique, et associer la durée d’un jour au mouvement de rotation de la Terre autour de l’axe des pôles." }
+activite: quiz
+parametres: {}
+idee: "La Terre tourne sur elle-même autour de l'axe des pôles en un jour : c'est la rotation. Elle tourne autour du Soleil en un an : c'est la révolution."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Rotation : un tour sur soi-même, un jour. Révolution : un tour autour du Soleil, une année."
+  exemple: "Exemple : éclaire une balle avec une lampe et fais-la tourner sur elle-même. Une moitié est toujours éclairée : c'est le jour ; l'autre est dans l'ombre : c'est la nuit."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Pourquoi y a-t-il des jours et des nuits ?"
+    nom: "Parce que la Terre tourne sur elle-même."
+    explication: "Une moitié de la Terre est éclairée par le Soleil. En tournant, chaque endroit passe du côté éclairé (le jour) au côté dans l'ombre (la nuit)."
+    pieges:
+      - { texte: "Parce que le Soleil s'éteint le soir.", pourquoi: "Le Soleil brille sans arrêt : quand il fait nuit chez nous, il fait jour de l'autre côté de la Terre." }
+      - { texte: "Parce que la Lune cache le Soleil la nuit.", pourquoi: "La Lune ne cache le Soleil que pendant une éclipse, très rarement. La nuit, c'est la Terre elle-même qui nous cache le Soleil." }
+  - texte: "Combien de temps dure un tour de la Terre sur elle-même ?"
+    nom: "Environ 24 heures."
+    explication: "Un tour sur elle-même autour de l'axe des pôles dure environ 24 heures : c'est la durée d'un jour."
+    pieges:
+      - { texte: "365 jours.", pourquoi: "365 jours, c'est la durée d'un tour autour du Soleil." }
+      - { texte: "12 heures.", pourquoi: "12 heures, c'est à peu près la durée du jour seul ou de la nuit seule, pas d'une rotation complète." }
+  - texte: "Comment s'appelle le mouvement de la Terre autour du Soleil ?"
+    nom: "La révolution."
+    explication: "La révolution est le tour de la Terre autour du Soleil. Elle dure environ un an."
+    pieges:
+      - { texte: "La rotation.", pourquoi: "La rotation est le tour de la Terre sur elle-même." }
+      - { texte: "L'éclipse.", pourquoi: "Une éclipse, c'est quand un astre en cache un autre." }
+  - texte: "Où le Soleil se lève-t-il chaque matin ?"
+    nom: "Du côté de l'est."
+    explication: "La Terre tourne d'ouest en est : le Soleil semble donc se lever à l'est et se coucher à l'ouest."
+    pieges:
+      - { texte: "Du côté de l'ouest.", pourquoi: "Le Soleil se couche du côté de l'ouest." }
+      - { texte: "Toujours exactement au nord.", pourquoi: "En France, on ne voit jamais le Soleil au nord." }
+  - texte: "Il est midi en France. En Polynésie française, de l'autre côté de la Terre, fait-il jour ?"
+    nom: "Non, il fait nuit."
+    explication: "La Polynésie est sur la moitié de la Terre qui n'est pas éclairée à ce moment-là. C'est pour cela que l'heure change selon les pays."
+    pieges:
+      - { texte: "Oui, il est midi partout sur Terre.", pourquoi: "La moitié de la Terre seulement est éclairée : l'heure n'est pas la même partout." }
+      - { texte: "On ne peut pas savoir.", pourquoi: "On peut le prévoir : de l'autre côté de la Terre, c'est la nuit quand il est midi chez nous." }
+  - texte: "La Terre est découpée en 24 fuseaux horaires. Pourquoi 24 ?"
+    nom: "Parce qu'un tour de la Terre sur elle-même dure 24 heures."
+    explication: "En une heure, la Terre tourne de 360 divisé par 24, soit 15 degrés : chaque fuseau horaire est large de 15 degrés environ."
+    pieges:
+      - { texte: "Parce qu'il y a 24 pays dans le monde.", pourquoi: "Il y a bien plus de 24 pays : les fuseaux suivent la rotation de la Terre." }
+      - { texte: "Au hasard.", pourquoi: "Le nombre vient de la durée de la rotation : 24 heures." }
+  - texte: "Vu de la Terre, le Soleil semble traverser le ciel. Que se passe-t-il vraiment ?"
+    nom: "C'est la Terre qui tourne sur elle-même."
+    explication: "Comme dans un manège : quand on tourne, c'est le paysage qui semble défiler."
+    pieges:
+      - { texte: "Le Soleil fait le tour de la Terre chaque jour.", pourquoi: "C'est le modèle qu'on a longtemps cru, mais c'est la rotation de la Terre qui produit ce mouvement apparent." }
+      - { texte: "Le Soleil monte et descend sur place.", pourquoi: "Le Soleil ne monte ni ne descend : c'est notre point de vue qui change avec la rotation." }
+  - texte: "Plante un bâton au soleil. Que fait son ombre au cours de la journée ?"
+    nom: "Elle tourne et change de longueur."
+    explication: "Le Soleil semble se déplacer dans le ciel : l'ombre change de direction et elle est la plus courte vers le milieu de la journée."
+    pieges:
+      - { texte: "Elle ne bouge pas.", pourquoi: "Observe-la toutes les heures : elle tourne." }
+      - { texte: "Elle est toujours la plus longue à midi.", pourquoi: "C'est l'inverse : vers le milieu de la journée, le Soleil est le plus haut et l'ombre est la plus courte." }
+
+en:
+  titre: "Day, night and the year"
+  idee: "The Earth spins on itself around the axis through the poles in one day: that's rotation. It goes round the Sun in a year: that's revolution."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Rotation: one spin on itself, one day. Revolution: one trip round the Sun, one year."
+    exemple: "Example: shine a torch on a ball and spin it. One half is always lit: that's day; the other is in shadow: that's night."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Why are there days and nights?"
+      nom: "Because the Earth spins on itself."
+      explication: "One half of the Earth is lit by the Sun. As it spins, each place moves from the lit side (day) to the shadow side (night)."
+      pieges:
+        - { texte: "Because the Sun switches off in the evening.", pourquoi: "The Sun shines all the time: when it's night here, it's day on the other side of the Earth." }
+        - { texte: "Because the Moon hides the Sun at night.", pourquoi: "The Moon only hides the Sun during an eclipse, very rarely. At night, it's the Earth itself that hides the Sun from us." }
+    - texte: "How long does the Earth take to spin once on itself?"
+      nom: "About 24 hours."
+      explication: "One spin around the axis through the poles takes about 24 hours: that's the length of a day."
+      pieges:
+        - { texte: "365 days.", pourquoi: "365 days is how long a trip round the Sun takes." }
+        - { texte: "12 hours.", pourquoi: "12 hours is roughly daytime alone or night-time alone, not a full spin." }
+    - texte: "What is the Earth's movement round the Sun called?"
+      nom: "Revolution."
+      explication: "Revolution is the Earth's trip round the Sun. It takes about a year."
+      pieges:
+        - { texte: "Rotation.", pourquoi: "Rotation is the Earth spinning on itself." }
+        - { texte: "An eclipse.", pourquoi: "An eclipse is when one body hides another." }
+    - texte: "Where does the Sun rise each morning?"
+      nom: "In the east."
+      explication: "The Earth spins from west to east: so the Sun seems to rise in the east and set in the west."
+      pieges:
+        - { texte: "In the west.", pourquoi: "The Sun sets in the west." }
+        - { texte: "Always exactly in the north.", pourquoi: "In France, you never see the Sun in the north." }
+    - texte: "It's midday in France. In French Polynesia, on the other side of the Earth, is it daytime?"
+      nom: "No, it's night."
+      explication: "Polynesia is on the half of the Earth that isn't lit at that moment. That's why the time changes from country to country."
+      pieges:
+        - { texte: "Yes, it's midday everywhere on Earth.", pourquoi: "Only half the Earth is lit: the time isn't the same everywhere." }
+        - { texte: "You can't tell.", pourquoi: "You can work it out: on the other side of the Earth, it's night when it's midday here." }
+    - texte: "The Earth is divided into 24 time zones. Why 24?"
+      nom: "Because one spin of the Earth takes 24 hours."
+      explication: "In one hour, the Earth turns 360 divided by 24, that is 15 degrees: each time zone is about 15 degrees wide."
+      pieges:
+        - { texte: "Because there are 24 countries in the world.", pourquoi: "There are far more than 24 countries: time zones follow the Earth's spin." }
+        - { texte: "By chance.", pourquoi: "The number comes from how long the spin takes: 24 hours." }
+    - texte: "Seen from Earth, the Sun seems to cross the sky. What is really happening?"
+      nom: "The Earth is spinning on itself."
+      explication: "Like on a merry-go-round: when you turn, it's the scenery that seems to go past."
+      pieges:
+        - { texte: "The Sun goes round the Earth every day.", pourquoi: "People believed that for a long time, but it's the Earth's spin that makes this apparent movement." }
+        - { texte: "The Sun goes up and down on the spot.", pourquoi: "The Sun doesn't go up or down: our point of view changes as the Earth spins." }
+    - texte: "Stand a stick in the sunshine. What does its shadow do during the day?"
+      nom: "It turns and changes length."
+      explication: "The Sun seems to move across the sky: the shadow changes direction and is shortest around the middle of the day."
+      pieges:
+        - { texte: "It doesn't move.", pourquoi: "Look at it every hour: it turns." }
+        - { texte: "It's always longest at midday.", pourquoi: "It's the opposite: around the middle of the day, the Sun is highest and the shadow is shortest." }

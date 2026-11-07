@@ -1,0 +1,136 @@
+id: multiplication-posee
+titre: "La multiplication posée"
+niveau: CE2
+prerequis: ["multiplier-10-100", "tables-8-9"]
+programme: { source: cycle2, texte: "Poser et effectuer des multiplications d’un nombre à deux ou trois chiffres par un nombre à un ou deux chiffres." }
+activite: quiz
+parametres: {}
+idee: "On multiplie chaque chiffre, des unités vers la gauche, et on ajoute les retenues. Par un nombre à deux chiffres, on fait deux lignes, puis on les additionne."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Commence par les unités. Ajoute la retenue au produit suivant."
+  exemple: "23 × 7 : 7 × 3 = 21, j'écris 1 et je retiens 2. 7 × 2 = 14, plus 2 de retenue : 16. Le produit est 161."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 46 × 3 ?"
+    nom: "138"
+    explication: "3 × 6 = 18 : j'écris 8, je retiens 1. 3 × 4 = 12, plus 1 : 13. Le produit est 138."
+    pieges:
+      - { texte: "128", pourquoi: "La retenue est oubliée : 3 × 6 = 18, on retient 1 pour les dizaines." }
+      - { texte: "49", pourquoi: "46 + 3 : c'est une multiplication, pas une addition." }
+  - texte: "Combien font 125 × 4 ?"
+    nom: "500"
+    explication: "4 × 5 = 20 : j'écris 0, je retiens 2. 4 × 2 = 8, plus 2 : 10, j'écris 0, je retiens 1. 4 × 1 = 4, plus 1 : 5. Le produit est 500."
+    pieges:
+      - { texte: "480", pourquoi: "Les retenues sont oubliées : 4 × 5 = 20, on retient 2 dizaines." }
+      - { texte: "129", pourquoi: "125 + 4 : c'est une multiplication." }
+  - texte: "Combien font 208 × 3 ?"
+    nom: "624"
+    explication: "3 × 8 = 24 : j'écris 4, je retiens 2. 3 × 0 = 0, plus 2 : 2. 3 × 2 = 6. Le produit est 624."
+    pieges:
+      - { texte: "604", pourquoi: "La retenue est oubliée : 3 × 0 = 0, plus 2 de retenue, cela donne 2." }
+      - { texte: "6 024", pourquoi: "On n'écrit qu'un chiffre par rang : 24 donne 4 et une retenue de 2." }
+  - texte: "Combien font 548 × 6 ?"
+    nom: "3 288"
+    explication: "6 × 8 = 48 : 8, retenue 4. 6 × 4 = 24, plus 4 : 28, j'écris 8, retenue 2. 6 × 5 = 30, plus 2 : 32. Le produit est 3 288."
+    pieges:
+      - { texte: "3 048", pourquoi: "Les retenues sont oubliées : 6 × 8 = 48, on retient 4 dizaines." }
+      - { texte: "554", pourquoi: "548 + 6 : c'est une multiplication." }
+  - texte: "Combien font 34 × 12 ?"
+    nom: "408"
+    explication: "Première ligne : 34 × 2 = 68. Deuxième ligne : 34 × 10 = 340. 68 + 340 = 408."
+    pieges:
+      - { texte: "102", pourquoi: "La deuxième ligne vaut 34 × 10 = 340, pas 34 : il faut décaler d'un rang." }
+      - { texte: "68", pourquoi: "68, c'est seulement 34 × 2 : il manque la ligne 34 × 10." }
+  - texte: "Combien font 548 × 16 ?"
+    nom: "8 768"
+    explication: "Première ligne : 548 × 6 = 3 288. Deuxième ligne : 548 × 10 = 5 480. 3 288 + 5 480 = 8 768."
+    pieges:
+      - { texte: "3 836", pourquoi: "548 × 1 dizaine vaut 5 480, pas 548 : il manque le décalage." }
+      - { texte: "3 288", pourquoi: "C'est seulement 548 × 6 : il manque la ligne 548 × 10." }
+  - texte: "25 × 13 : première ligne, 25 × 3 = 75. Deuxième ligne, 25 × 10 = … Quel nombre manque ?"
+    nom: "250"
+    explication: "Le 1 de 13 compte une dizaine : 25 × 10 = 250. Puis 75 + 250 = 325."
+    pieges:
+      - { texte: "25", pourquoi: "Le 1 de 13 compte une dizaine : on calcule 25 × 10, pas 25 × 1." }
+      - { texte: "75", pourquoi: "75 est la première ligne : la deuxième ligne est 25 × 10." }
+  - texte: "Un car transporte 52 élèves. Combien d'élèves transportent 14 cars pareils ?"
+    nom: "728"
+    explication: "14 fois 52 : 52 × 4 = 208 et 52 × 10 = 520. 208 + 520 = 728 élèves."
+    pieges:
+      - { texte: "66", pourquoi: "52 + 14 : il y a 14 cars de 52 élèves, c'est une multiplication." }
+      - { texte: "260", pourquoi: "La ligne des dizaines vaut 52 × 10 = 520, pas 52 : 208 + 520." }
+  - texte: "Dans 34 × 12, pourquoi la deuxième ligne commence-t-elle par un 0 ?"
+    nom: "Parce qu'on multiplie par 1 dizaine, donc par 10."
+    explication: "Le 1 de 12 est au rang des dizaines : on calcule 34 × 10 = 340, d'où le 0 des unités."
+    pieges:
+      - { texte: "Pour que les lignes aient la même longueur.", pourquoi: "Le 0 n'est pas une décoration : on multiplie 34 par 10." }
+      - { texte: "Parce que 34 × 0 = 0.", pourquoi: "Il n'y a pas de 0 dans 12 : le 0 vient de la dizaine." }
+
+en:
+  titre: "Column multiplication"
+  idee: "Multiply each digit, starting from the ones, and add the carries. With a two-digit number, write two lines, then add them."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Start with the ones. Add the carry to the next product."
+    exemple: "23 × 7: 7 × 3 = 21, write 1 and carry 2. 7 × 2 = 14, plus the carried 2: 16. The product is 161."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 46 × 3?"
+      nom: "138"
+      explication: "3 × 6 = 18: write 8, carry 1. 3 × 4 = 12, plus 1: 13. The product is 138."
+      pieges:
+        - { texte: "128", pourquoi: "The carry was forgotten: 3 × 6 = 18, carry 1 to the tens." }
+        - { texte: "49", pourquoi: "46 + 3: this is a multiplication, not an addition." }
+    - texte: "What is 125 × 4?"
+      nom: "500"
+      explication: "4 × 5 = 20: write 0, carry 2. 4 × 2 = 8, plus 2: 10, write 0, carry 1. 4 × 1 = 4, plus 1: 5. The product is 500."
+      pieges:
+        - { texte: "480", pourquoi: "The carries were forgotten: 4 × 5 = 20, carry 2 tens." }
+        - { texte: "129", pourquoi: "125 + 4: this is a multiplication." }
+    - texte: "What is 208 × 3?"
+      nom: "624"
+      explication: "3 × 8 = 24: write 4, carry 2. 3 × 0 = 0, plus 2: 2. 3 × 2 = 6. The product is 624."
+      pieges:
+        - { texte: "604", pourquoi: "The carry was forgotten: 3 × 0 = 0, plus the carried 2 gives 2." }
+        - { texte: "6,024", pourquoi: "Write only one digit per place: 24 gives 4 and a carry of 2." }
+    - texte: "What is 548 × 6?"
+      nom: "3,288"
+      explication: "6 × 8 = 48: 8, carry 4. 6 × 4 = 24, plus 4: 28, write 8, carry 2. 6 × 5 = 30, plus 2: 32. The product is 3,288."
+      pieges:
+        - { texte: "3,048", pourquoi: "The carries were forgotten: 6 × 8 = 48, carry 4 tens." }
+        - { texte: "554", pourquoi: "548 + 6: this is a multiplication." }
+    - texte: "What is 34 × 12?"
+      nom: "408"
+      explication: "First line: 34 × 2 = 68. Second line: 34 × 10 = 340. 68 + 340 = 408."
+      pieges:
+        - { texte: "102", pourquoi: "The second line is 34 × 10 = 340, not 34: it must move one place left." }
+        - { texte: "68", pourquoi: "68 is only 34 × 2: the line 34 × 10 is missing." }
+    - texte: "What is 548 × 16?"
+      nom: "8,768"
+      explication: "First line: 548 × 6 = 3,288. Second line: 548 × 10 = 5,480. 3,288 + 5,480 = 8,768."
+      pieges:
+        - { texte: "3,836", pourquoi: "548 × 1 ten is 5,480, not 548: the shift is missing." }
+        - { texte: "3,288", pourquoi: "That is only 548 × 6: the line 548 × 10 is missing." }
+    - texte: "25 × 13: first line, 25 × 3 = 75. Second line, 25 × 10 = … Which number is missing?"
+      nom: "250"
+      explication: "The 1 in 13 counts one ten: 25 × 10 = 250. Then 75 + 250 = 325."
+      pieges:
+        - { texte: "25", pourquoi: "The 1 in 13 counts one ten: work out 25 × 10, not 25 × 1." }
+        - { texte: "75", pourquoi: "75 is the first line: the second line is 25 × 10." }
+    - texte: "A coach carries 52 pupils. How many pupils do 14 such coaches carry?"
+      nom: "728"
+      explication: "14 times 52: 52 × 4 = 208 and 52 × 10 = 520. 208 + 520 = 728 pupils."
+      pieges:
+        - { texte: "66", pourquoi: "52 + 14: there are 14 coaches of 52 pupils, so it is a multiplication." }
+        - { texte: "260", pourquoi: "The tens line is 52 × 10 = 520, not 52: 208 + 520." }
+    - texte: "In 34 × 12, why does the second line start with a 0?"
+      nom: "Because we multiply by 1 ten, so by 10."
+      explication: "The 1 in 12 is in the tens place: work out 34 × 10 = 340, hence the 0 in the ones."
+      pieges:
+        - { texte: "So that the lines are the same length.", pourquoi: "The 0 is not decoration: we are multiplying 34 by 10." }
+        - { texte: "Because 34 × 0 = 0.", pourquoi: "There is no 0 in 12: the 0 comes from the ten." }

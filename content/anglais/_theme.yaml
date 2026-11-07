@@ -1,16 +1,26 @@
 id: anglais
-titre: Anglais — comprendre des mots simples
+titre: Anglais — des premiers mots à la grammaire du collège
 nom: "L'anglais"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Couleurs, nombres, animaux, le corps : écouter le mot et toucher l'image."
+resume: "Des premiers mots (couleurs, nombres, animaux) à la grammaire du collège : présent, passé, futur, comparatifs, modaux, et de courts textes à comprendre."
 icone: "1f1ec-1f1e7"
-ages: [5, 9]
+ages: [5, 15]
 # Projet de programmes de langues vivantes étrangères et régionales du cycle 2 (Conseil supérieur des programmes,
 # juin 2025) : « ce projet n'engage pas, à ce stade, le ministère ». Version publiée au BO à vérifier (ADR 0022).
 # Consulté le 2026-11-03.
 sources:
   lver: "https://www.education.gouv.fr/sites/default/files/document/le-projet-de-programmes-de-langues-vivantes-trang-res-et-r-gionales-lver-pour-le-cycle-2-477446.pdf"
-ordre: [colours, numbers, animals, body, weather, simon-says]
+  # CE2 : programme de LVER du cycle 2, annexe 1 de l'arrêté publié au BO n° 12 du 19 mars 2026 (CE2 à partir de 2027-2028
+  # selon les résumés lus ; arrêté lui-même non lu, page du BO bloquée). Copie hébergée par le Sgen-CFDT : l'URL sur
+  # education.gouv.fr n'a pas été trouvée (reste à vérifier). Lu le 2026-11-07.
+  lver_c2: "https://sgen-cfdt.fr/contenu/uploads/sites/13/2026/03/Annexe-1-–-Programme-de-langues-vivantes-etrangeres-et-regionales-pour-le-cycle-2-481187.pdf"
+  # CM1-CM2 : programme de LVER pour les classes de cours moyen (cycle 3), annexe 2 du même BO. Même réserve. Lu le 2026-11-07.
+  lver_c3: "https://sgen-cfdt.fr/contenu/uploads/sites/13/2026/03/Annexe-2-–-Programme-de-langues-vivantes-etrangeres-et-regionales-pour-les-classes-de-cours-moyen-cycle-3-481190.pdf"
+  # 6e-3e : « Programme d'anglais pour les classes de collège » (BO n° 22 du 29 mai 2025, annexe 3), « Outils
+  # linguistiques » et « Compréhension de l'oral et de l'écrit » de chaque classe ; niveaux LVA (en bleu dans le texte).
+  # Application en 4e et 3e : calendrier à vérifier (eduscol, illisible d'ici). Lu le 2026-11-07.
+  college: "https://www.education.gouv.fr/sites/default/files/ensel621_annexe3.pdf"
+ordre: [colours, numbers, animals, body, weather, simon-says, food, clothes, reading-hello, house, to-be, plurals, days-months, present-simple, have-got, prepositions, possessives, there-is-are, telling-time, reading-6e, present-continuous, can-must, past-simple-regular, past-simple-irregular, comparatives, present-perfect, future, modals-advice, reading-3e]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -21,9 +31,9 @@ intro:
   - texte: "Touche celle qui va avec le mot !"
     images: ["1f446"]
 en:
-  titre: "English — understanding simple words"
+  titre: "English — from first words to secondary-school grammar"
   nom: "English"
-  resume: "Colours, numbers, animals, the body: listen to the word and touch the picture."
+  resume: "From first words (colours, numbers, animals) to secondary-school grammar: present, past, future, comparatives, modals, and short texts to understand."
   intro:
     - texte: "Listen to the word."
       images: ["1f1ec-1f1e7", "1f442"]

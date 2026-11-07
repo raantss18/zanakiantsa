@@ -1,0 +1,124 @@
+id: boucle-calcul
+titre: "Calculer avec une boucle"
+niveau: 5e
+prerequis: [repeter-a-la-main, entrees-sorties]
+programme: { source: cycle4, texte: "Effectuer une boucle inconditionnelle simple permettant de répéter une séquence linéaire d’instructions un nombre précis de fois." }
+activite: quiz
+parametres: {}
+idee: "Dans une boucle, une variable peut changer à chaque tour. Pour prévoir le résultat, on suit sa valeur tour après tour."
+phrases:
+  consigne: "Suis chaque variable tour après tour, puis touche la réponse."
+  question: "{texte}"
+  indice: "Fais un petit tableau : une ligne par tour, une colonne par variable."
+  exemple: "mettre s à 0, mettre n à 1, puis répéter 3 fois [ ajouter n à s, ajouter 1 à n ] : s vaut 1, puis 3, puis 6."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre s à 0\nmettre n à 1\nrépéter 4 fois [ ajouter n à s, ajouter 1 à n ]\ndire s\nQue dit le lutin ?"
+    nom: "10"
+    explication: "s vaut 1, puis 1 + 2 = 3, puis 3 + 3 = 6, puis 6 + 4 = 10."
+    pieges:
+      - { texte: "4", pourquoi: "4, c’est le nombre de tours. Le lutin dit s, la somme 1 + 2 + 3 + 4." }
+      - { texte: "14", pourquoi: "Tu as ajouté n après l’avoir augmenté. Dans la boucle, on ajoute n à s d’abord : 1, puis 2, 3, 4." }
+  - texte: "mettre x à 2\nrépéter 3 fois [ mettre x à x * x ]\ndire x\nQue dit le lutin ?"
+    nom: "256"
+    explication: "Tour 1 : 2 × 2 = 4. Tour 2 : 4 × 4 = 16. Tour 3 : 16 × 16 = 256."
+    pieges:
+      - { texte: "8", pourquoi: "Tu as fait 2 × 2 × 2. Ici, x est multiplié par lui-même : 2, 4, 16, 256." }
+      - { texte: "16", pourquoi: "Ça, c’est après deux tours. Il y en a un troisième : 16 × 16." }
+  - texte: "x vaut 0 au départ. Le lutin doit dire 5, puis 10, puis 15, puis 20. Quel programme ?"
+    nom: "répéter 4 fois [ ajouter 5 à x, dire x ]"
+    explication: "On ajoute 5, puis on dit x, quatre fois : 5, 10, 15, 20."
+    pieges:
+      - { texte: "répéter 4 fois [ dire x, ajouter 5 à x ]", pourquoi: "Ce lutin parle avant d’ajouter : il dit 0, 5, 10, 15." }
+      - { texte: "répéter 5 fois [ ajouter 5 à x, dire x ]", pourquoi: "Un tour de trop : il dit aussi 25." }
+  - texte: "mettre x à 100\nrépéter 4 fois [ mettre x à x / 2 ]\ndire x\nQue dit le lutin ?"
+    nom: "6.25"
+    explication: "100 / 2 = 50, puis 25, puis 12.5, puis 6.25. Scratch écrit les nombres décimaux avec un point."
+    pieges:
+      - { texte: "25", pourquoi: "Ça, c’est après deux tours. Il y en a 4 : 50, 25, 12.5, 6.25." }
+      - { texte: "12.5", pourquoi: "Ça, c’est après trois tours. Il reste un tour : 12.5 / 2." }
+  - texte: "mettre x à 0\nrépéter 3 fois [ ajouter 1 à x ]\nrépéter 3 fois [ ajouter x à x ]\ndire x\nQue dit le lutin ?"
+    nom: "24"
+    explication: "La première boucle donne 3. Puis x double à chaque tour : 6, 12, 24."
+    pieges:
+      - { texte: "9", pourquoi: "Tu as ajouté 3 trois fois. Mais x change à chaque tour : on ajoute 3, puis 6, puis 12." }
+      - { texte: "6", pourquoi: "Ça, c’est après un seul tour de la deuxième boucle." }
+  - texte: "mettre x à 1\nrépéter 5 fois [ ajouter 2 à x ]\ndire x\nQue dit le lutin ?"
+    nom: "11"
+    explication: "On part de 1 et on ajoute 2 cinq fois : 1 + 10 = 11."
+    pieges:
+      - { texte: "10", pourquoi: "Tu as oublié la valeur de départ : x vaut 1 avant la boucle, 1 + 10 = 11." }
+      - { texte: "3", pourquoi: "Ça, c’est après un seul tour. La boucle en fait 5." }
+  - texte: "Combien de fois le bloc « avancer de 10 pas » est-il exécuté ?\nrépéter 4 fois [ avancer de 10 pas, répéter 3 fois [ tourner de 30 degrés ] ]"
+    nom: "4"
+    explication: "« avancer » est dans la grande boucle : 4 fois. « tourner » est dans la petite : 4 × 3 = 12 fois."
+    pieges:
+      - { texte: "12", pourquoi: "12, c’est pour « tourner » : il est dans la petite boucle, refaite à chaque grand tour." }
+      - { texte: "7", pourquoi: "On n’ajoute pas les deux nombres : « avancer » est dans la grande boucle seulement." }
+  - texte: "Ce programme doit dire 1 + 2 + 3 = 6, mais il dit 3. Pourquoi ?\nmettre s à 0\nrépéter 3 fois [ mettre n à 1, ajouter n à s, ajouter 1 à n ]\ndire s"
+    nom: "n est remis à 1 à chaque tour : il faut le mettre à 1 avant la boucle"
+    explication: "Au début de chaque tour, « mettre n à 1 » efface l’augmentation de n. On ajoute donc 1 trois fois. Placé avant la boucle, ce bloc n’est exécuté qu’une fois."
+    pieges:
+      - { texte: "Il faut répéter 6 fois", pourquoi: "Avec 6 tours, il dirait 6, mais en ajoutant 1 six fois : l’erreur reste." }
+      - { texte: "« ajouter » ne marche pas dans une boucle", pourquoi: "Il marche : s augmente bien de 1 à chaque tour." }
+
+en:
+  titre: "Calculating with a loop"
+  idee: "In a loop, a variable can change on every turn. To predict the result, follow its value turn after turn."
+  phrases:
+    consigne: "Follow each variable turn after turn, then touch the answer."
+    question: "{texte}"
+    indice: "Make a small table: one row per turn, one column per variable."
+    exemple: "set s to 0, set n to 1, then repeat 3 [ change s by n, change n by 1 ]: s is 1, then 3, then 6."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set s to 0\nset n to 1\nrepeat 4 [ change s by n, change n by 1 ]\nsay s\nWhat does the sprite say?"
+      nom: "10"
+      explication: "s is 1, then 1 + 2 = 3, then 3 + 3 = 6, then 6 + 4 = 10."
+      pieges:
+        - { texte: "4", pourquoi: "4 is the number of turns. The sprite says s, the sum 1 + 2 + 3 + 4." }
+        - { texte: "14", pourquoi: "You added n after increasing it. In the loop, n is added to s first: 1, then 2, 3, 4." }
+    - texte: "set x to 2\nrepeat 3 [ set x to x * x ]\nsay x\nWhat does the sprite say?"
+      nom: "256"
+      explication: "Turn 1: 2 × 2 = 4. Turn 2: 4 × 4 = 16. Turn 3: 16 × 16 = 256."
+      pieges:
+        - { texte: "8", pourquoi: "You did 2 × 2 × 2. Here, x is multiplied by itself: 2, 4, 16, 256." }
+        - { texte: "16", pourquoi: "That is after two turns. There is a third one: 16 × 16." }
+    - texte: "x is 0 at the start. The sprite must say 5, then 10, then 15, then 20. Which program?"
+      nom: "repeat 4 [ change x by 5, say x ]"
+      explication: "Add 5, then say x, four times: 5, 10, 15, 20."
+      pieges:
+        - { texte: "repeat 4 [ say x, change x by 5 ]", pourquoi: "This sprite speaks before adding: it says 0, 5, 10, 15." }
+        - { texte: "repeat 5 [ change x by 5, say x ]", pourquoi: "One turn too many: it also says 25." }
+    - texte: "set x to 100\nrepeat 4 [ set x to x / 2 ]\nsay x\nWhat does the sprite say?"
+      nom: "6.25"
+      explication: "100 / 2 = 50, then 25, then 12.5, then 6.25."
+      pieges:
+        - { texte: "25", pourquoi: "That is after two turns. There are 4: 50, 25, 12.5, 6.25." }
+        - { texte: "12.5", pourquoi: "That is after three turns. One turn is left: 12.5 / 2." }
+    - texte: "set x to 0\nrepeat 3 [ change x by 1 ]\nrepeat 3 [ change x by x ]\nsay x\nWhat does the sprite say?"
+      nom: "24"
+      explication: "The first loop gives 3. Then x doubles on each turn: 6, 12, 24."
+      pieges:
+        - { texte: "9", pourquoi: "You added 3 three times. But x changes on every turn: you add 3, then 6, then 12." }
+        - { texte: "6", pourquoi: "That is after one turn of the second loop only." }
+    - texte: "set x to 1\nrepeat 5 [ change x by 2 ]\nsay x\nWhat does the sprite say?"
+      nom: "11"
+      explication: "Start at 1 and add 2 five times: 1 + 10 = 11."
+      pieges:
+        - { texte: "10", pourquoi: "You forgot the starting value: x is 1 before the loop, 1 + 10 = 11." }
+        - { texte: "3", pourquoi: "That is after one turn only. The loop does 5." }
+    - texte: "How many times does the “move 10 steps” block run?\nrepeat 4 [ move 10 steps, repeat 3 [ turn 30 degrees ] ]"
+      nom: "4"
+      explication: "“move” is inside the big loop: 4 times. “turn” is inside the small one: 4 × 3 = 12 times."
+      pieges:
+        - { texte: "12", pourquoi: "12 is for “turn”: it is inside the small loop, which runs again on every big turn." }
+        - { texte: "7", pourquoi: "Don’t add the two numbers: “move” is only inside the big loop." }
+    - texte: "This program should say 1 + 2 + 3 = 6, but it says 3. Why?\nset s to 0\nrepeat 3 [ set n to 1, change s by n, change n by 1 ]\nsay s"
+      nom: "n is reset to 1 on every turn: it must be set to 1 before the loop"
+      explication: "At the start of each turn, “set n to 1” wipes out the increase of n. So 1 is added three times. Placed before the loop, this block runs only once."
+      pieges:
+        - { texte: "It should repeat 6 times", pourquoi: "With 6 turns it would say 6, but by adding 1 six times: the mistake is still there." }
+        - { texte: "“change” does not work inside a loop", pourquoi: "It does work: s goes up by 1 on every turn." }

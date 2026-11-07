@@ -1,0 +1,154 @@
+id: there-is-are
+titre: "Il y a : there is, there are"
+niveau: 6e
+prerequis: [plurals, prepositions]
+programme: { source: college, texte: "6e : appliquer les règles d’accord élémentaires : there is/there are, foot/feet, child/children, woman/women." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« There is » (il y a) avec un seul : « There is a cat. » « There are » avec plusieurs : « There are two cats. » Pour dire non : « There isn't », « There aren't »."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Compte ce qui suit : un seul, « is » ; plusieurs, « are »."
+  exemple: "« … three chairs in the kitchen. » Trois chaises, c'est plusieurs : « There are three chairs in the kitchen. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « … a bed in my room. »"
+    nom: "There is"
+    explication: "« a bed », un seul lit : « There is a bed in my room. »"
+    pieges:
+      - { texte: "There are", pourquoi: "« a bed » : un seul lit. Avec un seul, on dit « There is »." }
+      - { texte: "It is", pourquoi: "« It is » veut dire « c'est ». Pour « il y a », on dit « There is »." }
+  - texte: "Complète : « … two windows in the kitchen. »"
+    nom: "There are"
+    explication: "« two windows », plusieurs : « There are two windows in the kitchen. »"
+    pieges:
+      - { texte: "There is", pourquoi: "« two windows » : deux fenêtres. Avec plusieurs, on dit « There are »." }
+      - { texte: "They are", pourquoi: "« They are » veut dire « ils sont ». Pour « il y a », on dit « There are »." }
+  - texte: "Complète : « There … a computer on the desk. »"
+    nom: "is"
+    explication: "« a computer », un seul : « There is a computer on the desk. »"
+    pieges:
+      - { texte: "are", pourquoi: "« a computer » : un seul ordinateur. Avec un seul : « is »." }
+      - { texte: "has", pourquoi: "En anglais, « il y a » se dit avec « be » : « there is », pas « has »." }
+  - texte: "Complète : « There … three bedrooms in our house. »"
+    nom: "are"
+    explication: "« three bedrooms », plusieurs : « There are three bedrooms in our house. »"
+    pieges:
+      - { texte: "is", pourquoi: "« three bedrooms » : trois chambres. Avec plusieurs : « are »." }
+      - { texte: "have", pourquoi: "En anglais, « il y a » se dit avec « be » : « there are », pas « have »." }
+  - texte: "Complète : « There … any milk in the fridge. » (il n'y a pas)"
+    nom: "isn't"
+    explication: "« milk » ne se compte pas : on le traite comme un seul. « There isn't any milk. »"
+    pieges:
+      - { texte: "aren't", pourquoi: "« milk » ne se compte pas : on le traite comme un seul. Donc « isn't »." }
+      - { texte: "doesn't", pourquoi: "Avec « there », la négation se fait avec « be » : « There isn't »." }
+  - texte: "Complète : « There … any children in the garden. » (il n'y a pas)"
+    nom: "aren't"
+    explication: "« children », le pluriel de « child » : « There aren't any children in the garden. »"
+    pieges:
+      - { texte: "isn't", pourquoi: "« children » est le pluriel de « child » : plusieurs, donc « aren't »." }
+      - { texte: "don't", pourquoi: "Avec « there », la négation se fait avec « be » : « There aren't »." }
+  - texte: "Complète : « … there a shower in the house? »"
+    nom: "Is"
+    explication: "« a shower », un seul : la question commence par « Is » : « Is there a shower? »"
+    pieges:
+      - { texte: "Are", pourquoi: "« a shower » : une seule douche. Avec un seul : « Is there… ? »" }
+      - { texte: "Has", pourquoi: "La question se fait avec « be » : « Is there… ? »" }
+  - texte: "Complète : « How many people … there in your family? »"
+    nom: "are"
+    explication: "« people » est un pluriel : « How many people are there in your family? »"
+    pieges:
+      - { texte: "is", pourquoi: "« people » est le pluriel de « person » : plusieurs, donc « are »." }
+      - { texte: "have", pourquoi: "La question se fait avec « be » : « How many people are there… ? »" }
+  - texte: "Pourquoi dit-on « There are two feet » ?"
+    nom: "« feet » est le pluriel de « foot » : il y a plusieurs pieds, donc « are »."
+    explication: "« feet », c'est plusieurs pieds : avec plusieurs, « There are »."
+    pieges:
+      - { texte: "Parce que « feet » se termine par -t.", pourquoi: "Non : c'est le nombre qui compte, pas la dernière lettre." }
+      - { texte: "Parce que « There are » va toujours avec le corps.", pourquoi: "Non : « There is a nose on my face » ; un seul nez, c'est « is »." }
+en:
+  titre: "There is, there are"
+  idee: "There is with one thing: “There is a cat.” There are with several: “There are two cats.” To say no: there isn't, there aren't."
+  phrases:
+    consigne: "Read the sentence, then touch the right form."
+    question: "{texte}"
+    indice: "Count what comes next: one thing, is; several things, are."
+    exemple: "“… three chairs in the kitchen.” Three chairs are several: “There are three chairs in the kitchen.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “… a bed in my room.”"
+      nom: "There is"
+      explication: "A bed is one thing: “There is a bed in my room.”"
+      pieges:
+        - texte: "There are"
+          pourquoi: "A bed is one thing. With one thing, we say there is."
+        - texte: "It is"
+          pourquoi: "“It is” describes something. To say something exists here, we say there is."
+    - texte: "Complete: “… two windows in the kitchen.”"
+      nom: "There are"
+      explication: "Two windows are several: “There are two windows in the kitchen.”"
+      pieges:
+        - texte: "There is"
+          pourquoi: "Two windows are several. With several, we say there are."
+        - texte: "They are"
+          pourquoi: "“They are” describes people or things. To say they exist here, we say there are."
+    - texte: "Complete: “There … a computer on the desk.”"
+      nom: "is"
+      explication: "A computer is one thing: “There is a computer on the desk.”"
+      pieges:
+        - texte: "are"
+          pourquoi: "A computer is one thing: is."
+        - texte: "has"
+          pourquoi: "With there, we use be: there is, not has."
+    - texte: "Complete: “There … three bedrooms in our house.”"
+      nom: "are"
+      explication: "Three bedrooms are several: “There are three bedrooms in our house.”"
+      pieges:
+        - texte: "is"
+          pourquoi: "Three bedrooms are several: are."
+        - texte: "have"
+          pourquoi: "With there, we use be: there are, not have."
+    - texte: "Complete: “There … any milk in the fridge.” (negative)"
+      nom: "isn't"
+      explication: "Milk can't be counted: we treat it as one. “There isn't any milk.”"
+      pieges:
+        - texte: "aren't"
+          pourquoi: "Milk can't be counted: we treat it as one, so isn't."
+        - texte: "doesn't"
+          pourquoi: "With there, the negative uses be: there isn't."
+    - texte: "Complete: “There … any children in the garden.” (negative)"
+      nom: "aren't"
+      explication: "Children is the plural of child: “There aren't any children in the garden.”"
+      pieges:
+        - texte: "isn't"
+          pourquoi: "Children is the plural of child: several, so aren't."
+        - texte: "don't"
+          pourquoi: "With there, the negative uses be: there aren't."
+    - texte: "Complete: “… there a shower in the house?”"
+      nom: "Is"
+      explication: "A shower is one thing: “Is there a shower in the house?”"
+      pieges:
+        - texte: "Are"
+          pourquoi: "A shower is one thing: Is there…?"
+        - texte: "Has"
+          pourquoi: "The question uses be: Is there…?"
+    - texte: "Complete: “How many people … there in your family?”"
+      nom: "are"
+      explication: "People is plural: “How many people are there in your family?”"
+      pieges:
+        - texte: "is"
+          pourquoi: "People is the plural of person: several, so are."
+        - texte: "have"
+          pourquoi: "The question uses be: How many people are there…?"
+    - texte: "Why do we say “There are two feet”?"
+      nom: "Feet is the plural of foot: there are several feet, so are."
+      explication: "Feet means several: with several, there are."
+      pieges:
+        - texte: "Because feet ends in -t."
+          pourquoi: "No: the number matters, not the last letter."
+        - texte: "Because there are always goes with the body."
+          pourquoi: "No: “There is a nose on my face”; one nose, so is."

@@ -1,0 +1,154 @@
+id: can-must
+titre: "Pouvoir et devoir : can, must"
+niveau: 5e
+prerequis: [present-simple]
+programme: { source: college, texte: "5e : les auxiliaires de modalité : can/can’t, must/mustn’t." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« can » : pouvoir, savoir faire. « must » : devoir. « mustn't » : c'est interdit. Après « can » et « must », le verbe ne prend ni -s ni « to » : « She can swim. »"
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Capacité ou permission : « can ». Obligation : « must ». Interdiction : « mustn't »."
+  exemple: "« You … wear a helmet on your bike. » C'est une obligation : « must ». « You must wear a helmet. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « Fish … swim. »"
+    nom: "can"
+    explication: "Les poissons savent nager : « Fish can swim. »"
+    pieges:
+      - { texte: "can't", pourquoi: "« can't » veut dire « ne peut pas ». Les poissons savent nager : « can »." }
+      - { texte: "must", pourquoi: "« must » dit une obligation. Ici, on parle de ce qu'ils savent faire : « can »." }
+  - texte: "Complète : « Penguins … fly. »"
+    nom: "can't"
+    explication: "Les manchots ne savent pas voler : « Penguins can't fly. »"
+    pieges:
+      - { texte: "can", pourquoi: "Les manchots ne volent pas : « can't »." }
+      - { texte: "mustn't", pourquoi: "« mustn't » est une interdiction. Ici, ils n'en sont pas capables : « can't »." }
+  - texte: "Complète : « You … touch the paintings in the museum. » (c'est interdit)"
+    nom: "mustn't"
+    explication: "Interdiction : « mustn't ». « You mustn't touch the paintings. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must » est une obligation : tu dois. Ici, c'est interdit : « mustn't »." }
+      - { texte: "can", pourquoi: "« can » donne une permission. Ici, c'est interdit : « mustn't »." }
+  - texte: "Complète : « You … wear a helmet on your bike. » (c'est obligatoire)"
+    nom: "must"
+    explication: "Obligation : « must ». « You must wear a helmet on your bike. »"
+    pieges:
+      - { texte: "mustn't", pourquoi: "« mustn't » est une interdiction. Ici, c'est obligatoire : « must »." }
+      - { texte: "can't", pourquoi: "« can't » dit que c'est impossible. Ici, c'est obligatoire : « must »." }
+  - texte: "Complète : « She can … the piano. » (play)"
+    nom: "play"
+    explication: "Après « can », le verbe reste à la base : « She can play the piano. »"
+    pieges:
+      - { texte: "plays", pourquoi: "Après « can », le verbe ne prend jamais -s : « she can play »." }
+      - { texte: "to play", pourquoi: "Après « can », pas de « to » : « can play »." }
+  - texte: "Complète : « We must … our homework. » (do)"
+    nom: "do"
+    explication: "Après « must », le verbe reste à la base : « We must do our homework. »"
+    pieges:
+      - { texte: "to do", pourquoi: "Après « must », pas de « to » : « must do »." }
+      - { texte: "doing", pourquoi: "Après « must », le verbe reste à la base, sans -ing : « must do »." }
+  - texte: "Comment demande-t-on « Est-ce que je peux ouvrir la fenêtre ? »"
+    nom: "Can I open the window?"
+    explication: "Pour demander une permission, « can » passe devant : « Can I open the window? »"
+    pieges:
+      - { texte: "Must I open the window?", pourquoi: "« Must I… ? » demande si c'est obligatoire. Pour une permission : « Can I… ? »" }
+      - { texte: "I can open the window.", pourquoi: "C'est une affirmation. Pour une question, « can » passe devant : « Can I… ? »" }
+  - texte: "Que veut dire « You mustn't run in the corridor » ?"
+    nom: "Il est interdit de courir dans le couloir."
+    explication: "« mustn't » est une interdiction : on ne doit pas courir dans le couloir."
+    pieges:
+      - { texte: "Tu n'as pas besoin de courir dans le couloir.", pourquoi: "« mustn't » est une interdiction, pas une absence d'obligation." }
+      - { texte: "Tu dois courir dans le couloir.", pourquoi: "Ça, ce serait « must ». « mustn't » est le contraire : c'est interdit." }
+  - texte: "Pourquoi écrit-on « He can swim », sans -s à « swim » ?"
+    nom: "Après « can », le verbe reste à la base, à toutes les personnes."
+    explication: "« can » ne change jamais, et le verbe qui le suit reste à la base : « He can swim »."
+    pieges:
+      - { texte: "Parce que « he » ne prend jamais de -s.", pourquoi: "Non : au présent simple, « he swims » prend un -s. C'est « can » qui l'empêche." }
+      - { texte: "Parce que « swim » est un verbe irrégulier.", pourquoi: "Non : « swim » prend un -s au présent simple, « he swims ». C'est « can » qui l'empêche." }
+en:
+  titre: "Can and must"
+  idee: "can: ability or permission. must: obligation. mustn't: it's not allowed. After can and must, the verb takes no -s and no to: “She can swim.”"
+  phrases:
+    consigne: "Read the sentence, then touch the right word."
+    question: "{texte}"
+    indice: "Ability or permission: can. Obligation: must. Not allowed: mustn't."
+    exemple: "“You … wear a helmet on your bike.” It's an obligation: must. “You must wear a helmet.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “Fish … swim.”"
+      nom: "can"
+      explication: "Fish are able to swim: “Fish can swim.”"
+      pieges:
+        - texte: "can't"
+          pourquoi: "“can't” means not able to. Fish are able to swim: can."
+        - texte: "must"
+          pourquoi: "“must” is an obligation. Here we talk about what they are able to do: can."
+    - texte: "Complete: “Penguins … fly.”"
+      nom: "can't"
+      explication: "Penguins aren't able to fly: “Penguins can't fly.”"
+      pieges:
+        - texte: "can"
+          pourquoi: "Penguins don't fly: can't."
+        - texte: "mustn't"
+          pourquoi: "“mustn't” means it's not allowed. Here they aren't able to: can't."
+    - texte: "Complete: “You … touch the paintings in the museum.” (not allowed)"
+      nom: "mustn't"
+      explication: "Not allowed: mustn't. “You mustn't touch the paintings.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must” is an obligation. Here it's not allowed: mustn't."
+        - texte: "can"
+          pourquoi: "“can” gives permission. Here it's not allowed: mustn't."
+    - texte: "Complete: “You … wear a helmet on your bike.” (obligation)"
+      nom: "must"
+      explication: "Obligation: must. “You must wear a helmet on your bike.”"
+      pieges:
+        - texte: "mustn't"
+          pourquoi: "“mustn't” means not allowed. Here it's an obligation: must."
+        - texte: "can't"
+          pourquoi: "“can't” means not able to. Here it's an obligation: must."
+    - texte: "Complete: “She can … the piano.” (play)"
+      nom: "play"
+      explication: "After can, the verb stays in its base form: “She can play the piano.”"
+      pieges:
+        - texte: "plays"
+          pourquoi: "After can, the verb never takes -s: she can play."
+        - texte: "to play"
+          pourquoi: "After can, no to: can play."
+    - texte: "Complete: “We must … our homework.” (do)"
+      nom: "do"
+      explication: "After must, the verb stays in its base form: “We must do our homework.”"
+      pieges:
+        - texte: "to do"
+          pourquoi: "After must, no to: must do."
+        - texte: "doing"
+          pourquoi: "After must, the verb stays in its base form, without -ing: must do."
+    - texte: "How do you ask for permission to open the window?"
+      nom: "Can I open the window?"
+      explication: "To ask for permission, can comes first: “Can I open the window?”"
+      pieges:
+        - texte: "Must I open the window?"
+          pourquoi: "“Must I…?” asks if it's an obligation. For permission: Can I…?"
+        - texte: "I can open the window."
+          pourquoi: "That's a statement. For a question, can comes first: Can I…?"
+    - texte: "What does “You mustn't run in the corridor” mean?"
+      nom: "Running in the corridor is not allowed."
+      explication: "“mustn't” means it's not allowed."
+      pieges:
+        - texte: "You don't need to run in the corridor."
+          pourquoi: "“mustn't” forbids something; it doesn't mean you don't need to."
+        - texte: "You have to run in the corridor."
+          pourquoi: "That would be must. Mustn't is the opposite: not allowed."
+    - texte: "Why do we write “He can swim”, with no -s on swim?"
+      nom: "After can, the verb stays in its base form, with every person."
+      explication: "Can never changes, and the verb after it stays in its base form: “He can swim.”"
+      pieges:
+        - texte: "Because he never takes -s."
+          pourquoi: "No: in the present simple, “he swims” takes -s. Can is what stops it."
+        - texte: "Because swim is an irregular verb."
+          pourquoi: "No: swim takes -s in the present simple, “he swims”. Can is what stops it."

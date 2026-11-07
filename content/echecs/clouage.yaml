@@ -1,0 +1,84 @@
+id: clouage
+titre: "Le clouage"
+niveau: CM1
+prerequis: [fourchette]
+programme: { source: fide, texte: "3.9.2 : No piece can be moved that will either expose the king of the same colour to check or leave that king in check." }
+activite: probleme
+parametres: { theme: clouage }
+idee: "Une pièce clouée est coincée entre une tour, un fou ou une dame et son propre roi. Elle ne peut plus bouger : son roi serait en échec."
+phrases:
+  consigne: "Trouve le coup qui met une pièce noire entre ta pièce et le roi noir, sur la même ligne, sur une case où personne ne peut te prendre."
+  question: "{texte}"
+  indice: "Trace la ligne qui part du roi noir et passe par une pièce noire. Amène ta tour, ton fou ou ta dame au bout de cette ligne."
+  exemple: "Regarde les lignes qui partent du roi noir."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "4k3/8/8/4n3/8/8/8/R5K1 w - - 0 1"
+    coups: [a1e1]
+    explication: "Ta pièce va en e1. Le cavalier e5 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "6k1/8/4n3/8/8/8/8/1B4K1 w - - 0 1"
+    coups: [b1a2]
+    explication: "Ta pièce va en a2. Le cavalier e6 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "7k/8/5r2/8/8/8/8/K5B1 w - - 0 1"
+    coups: [g1d4]
+    explication: "Ta pièce va en d4. La tour f6 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "4k3/8/8/4b3/8/R7/8/6K1 w - - 0 1"
+    coups: [a3e3]
+    explication: "Ta pièce va en e3. Le fou e5 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "8/8/8/2k1b3/8/8/8/6KR w - - 0 1"
+    coups: [h1h5]
+    explication: "Ta pièce va en h5. Le fou e5 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "1k6/8/3n4/8/8/8/8/Q5K1 w - - 0 1"
+    coups: [a1e5]
+    explication: "Ta pièce va en e5. Le cavalier d6 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+  - texte: "Cloue une pièce noire contre son roi !"
+    fen: "2k5/8/2n5/8/8/8/8/5RK1 w - - 0 1"
+    coups: [f1c1]
+    explication: "Ta pièce va en c1. Le cavalier c6 est entre elle et le roi noir : s’il bougeait, son roi serait en échec. Il est cloué."
+
+en:
+  titre: "The pin"
+  idee: "A pinned piece is stuck between a rook, a bishop or a queen and its own king. It cannot move any more: its king would be in check."
+  phrases:
+    consigne: "Find the move that puts a black piece between your piece and the black king, on the same line, on a square where nobody can take you."
+    question: "{texte}"
+    indice: "Draw the line from the black king through a black piece. Bring your rook, bishop or queen to the end of that line."
+    exemple: "Look at the lines that start from the black king."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Pin a black piece to its king!"
+      fen: "4k3/8/8/4n3/8/8/8/R5K1 w - - 0 1"
+      coups: [a1e1]
+      explication: "Your piece goes to e1. The knight on e5 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "6k1/8/4n3/8/8/8/8/1B4K1 w - - 0 1"
+      coups: [b1a2]
+      explication: "Your piece goes to a2. The knight on e6 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "7k/8/5r2/8/8/8/8/K5B1 w - - 0 1"
+      coups: [g1d4]
+      explication: "Your piece goes to d4. The rook on f6 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "4k3/8/8/4b3/8/R7/8/6K1 w - - 0 1"
+      coups: [a3e3]
+      explication: "Your piece goes to e3. The bishop on e5 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "8/8/8/2k1b3/8/8/8/6KR w - - 0 1"
+      coups: [h1h5]
+      explication: "Your piece goes to h5. The bishop on e5 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "1k6/8/3n4/8/8/8/8/Q5K1 w - - 0 1"
+      coups: [a1e5]
+      explication: "Your piece goes to e5. The knight on d6 is between it and the black king: if it moved, its king would be in check. It is pinned."
+    - texte: "Pin a black piece to its king!"
+      fen: "2k5/8/2n5/8/8/8/8/5RK1 w - - 0 1"
+      coups: [f1c1]
+      explication: "Your piece goes to c1. The knight on c6 is between it and the black king: if it moved, its king would be in check. It is pinned."

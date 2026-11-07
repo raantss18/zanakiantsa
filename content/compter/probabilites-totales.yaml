@@ -1,0 +1,148 @@
+id: probabilites-totales
+titre: "Probabilités totales et indépendance"
+niveau: 1re
+prerequis: ["probabilites-conditionnelles"]
+programme: { source: lycee1re, texte: "Dans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales." }
+activite: quiz
+parametres: {}
+idee: "P(B) = P(A et B) + P(non A et B) : on additionne les chemins de l’arbre qui mènent à B. A et B sont indépendants si P(A et B) = P(A) × P(B)."
+phrases:
+  consigne: "Suis les chemins de l’arbre, puis touche la probabilité."
+  question: "{texte}"
+  indice: "Multiplie le long de chaque chemin, puis additionne les chemins qui mènent à B."
+  exemple: "P(A) = 0,4 ; B sachant A : 0,5 ; B sachant non A : 0,2. P(B) = 0,4 × 0,5 + 0,6 × 0,2 = 0,2 + 0,12 = 0,32."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "P(A) = 0,3 ; probabilité de B sachant A : 0,6 ; probabilité de B sachant non A : 0,2. Combien vaut P(B) ?"
+    nom: "0,32"
+    explication: "P(B) = 0,3 × 0,6 + 0,7 × 0,2 = 0,18 + 0,14 = 0,32."
+    pieges:
+      - { texte: "0,8", pourquoi: "0,6 + 0,2 oublie les poids des branches : chaque chemin se multiplie par P(A) ou P(non A)." }
+      - { texte: "0,18", pourquoi: "0,18 est seulement le chemin qui passe par A : il faut ajouter celui qui passe par non A." }
+  - texte: "Une machine A fait 70 % des pièces, dont 2 % défectueuses ; une machine B fait 30 % des pièces, dont 5 % défectueuses. Probabilité qu’une pièce soit défectueuse ?"
+    nom: "0,029"
+    explication: "0,7 × 0,02 + 0,3 × 0,05 = 0,014 + 0,015 = 0,029, soit 2,9 %."
+    pieges:
+      - { texte: "0,07", pourquoi: "2 % + 5 % oublie que les machines ne font pas autant de pièces : on pondère par 0,7 et 0,3." }
+      - { texte: "0,035", pourquoi: "(2 % + 5 %) ÷ 2 suppose que chaque machine fait la moitié des pièces." }
+  - texte: "On lance une pièce et un dé, indépendamment. Probabilité d’obtenir Pile et 6 ?"
+    nom: "1/12"
+    explication: "Épreuves indépendantes : on multiplie, 1/2 × 1/6 = 1/12."
+    pieges:
+      - { texte: "2/3", pourquoi: "1/2 + 1/6 : pour « et » avec des épreuves indépendantes, on multiplie." }
+      - { texte: "1/6", pourquoi: "1/6 ne compte que le dé : il faut aussi Pile, avec la probabilité 1/2." }
+  - texte: "P(A) = 0,5, P(B) = 0,4 et P(A et B) = 0,2. A et B sont-ils indépendants ?"
+    nom: "Oui, car 0,5 × 0,4 = 0,2"
+    explication: "P(A) × P(B) = 0,2 = P(A et B) : c’est la définition de l’indépendance."
+    pieges:
+      - { texte: "Non, car 0,5 + 0,4 n’est pas 0,2", pourquoi: "L’indépendance se teste avec le produit, pas avec la somme." }
+      - { texte: "Non, car P(A) et P(B) sont différentes", pourquoi: "Deux évènements indépendants peuvent avoir des probabilités différentes." }
+  - texte: "P(A) = 0,5, P(B) = 0,4 et P(A et B) = 0,1. A et B sont-ils indépendants ?"
+    nom: "Non, car 0,5 × 0,4 = 0,2, pas 0,1"
+    explication: "Pour l’indépendance, il faudrait P(A et B) = P(A) × P(B) = 0,2. Ici 0,1 : ils ne sont pas indépendants."
+    pieges:
+      - { texte: "Oui, car 0,1 est plus petit que 0,5 et que 0,4", pourquoi: "P(A et B) est toujours plus petit : cela ne prouve rien. On compare à P(A) × P(B)." }
+      - { texte: "Oui, car P(A et B) n’est pas nul", pourquoi: "Pouvoir arriver ensemble ne veut pas dire indépendants : on compare à P(A) × P(B)." }
+  - texte: "On lance 3 fois une pièce équilibrée. Probabilité d’obtenir 3 fois Pile ?"
+    nom: "1/8"
+    explication: "Trois lancers indépendants : 1/2 × 1/2 × 1/2 = 1/8. Un seul chemin sur les 8 de l’arbre."
+    pieges:
+      - { texte: "1/2", pourquoi: "1/2 est la probabilité pour un seul lancer : il en faut trois." }
+      - { texte: "1/6", pourquoi: "On multiplie les trois probabilités, 2 × 2 × 2 = 8, pas 2 × 3 = 6." }
+  - texte: "Un tir réussit avec la probabilité 0,8. Deux tirs indépendants. Probabilité de deux réussites ?"
+    nom: "0,64"
+    explication: "Indépendance : 0,8 × 0,8 = 0,64."
+    pieges:
+      - { texte: "1,6", pourquoi: "0,8 + 0,8 dépasse 1 : pour « et », on multiplie." }
+      - { texte: "0,8", pourquoi: "0,8 ne compte qu’un tir : les deux doivent réussir." }
+  - texte: "Complète : P(A) = 0,6 ; B sachant A : 0,5 ; B sachant non A : 0,25. P(B) = 0,6 × 0,5 + … × 0,25"
+    nom: "0,4"
+    explication: "Le second chemin passe par « non A », de probabilité 1 − 0,6 = 0,4. P(B) = 0,3 + 0,1 = 0,4."
+    pieges:
+      - { texte: "0,6", pourquoi: "Le second chemin passe par « non A » : P(non A) = 1 − 0,6 = 0,4." }
+      - { texte: "0,5", pourquoi: "0,5 est la probabilité de B sachant A : le poids du second chemin est P(non A)." }
+  - texte: "Pourquoi a-t-on P(B) = P(A et B) + P(non A et B) ?"
+    nom: "A et non A séparent tous les cas sans se chevaucher : chaque cas de B est compté une seule fois."
+    explication: "Un cas de B est soit dans A, soit dans non A, jamais les deux : on additionne les deux parts."
+    pieges:
+      - { texte: "Parce que P(A) + P(B) = 1.", pourquoi: "C’est P(A) + P(non A) qui vaut 1, pas P(A) + P(B)." }
+      - { texte: "Parce que A et B sont toujours indépendants.", pourquoi: "La formule est vraie même si A et B ne sont pas indépendants." }
+  - texte: "Un tir réussit avec la probabilité 0,8. Deux tirs indépendants. Probabilité d’au moins une réussite ?"
+    nom: "0,96"
+    explication: "Le contraire est « deux échecs » : 0,2 × 0,2 = 0,04. Donc 1 − 0,04 = 0,96."
+    pieges:
+      - { texte: "0,64", pourquoi: "0,64 est la probabilité de deux réussites : « au moins une » compte aussi une seule réussite." }
+      - { texte: "0,32", pourquoi: "0,32 est la probabilité d’exactement une réussite : il faut ajouter les deux réussites, 0,64." }
+
+en:
+  titre: "Total probability and independence"
+  idee: "P(B) = P(A and B) + P(not A and B): add up the paths of the tree that lead to B. A and B are independent if P(A and B) = P(A) × P(B)."
+  phrases:
+    consigne: "Follow the paths of the tree, then touch the probability."
+    question: "{texte}"
+    indice: "Multiply along each path, then add the paths that lead to B."
+    exemple: "P(A) = 0.4; B given A: 0.5; B given not A: 0.2. P(B) = 0.4 × 0.5 + 0.6 × 0.2 = 0.2 + 0.12 = 0.32."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "P(A) = 0.3; probability of B given A: 0.6; probability of B given not A: 0.2. What is P(B)?"
+      nom: "0.32"
+      explication: "P(B) = 0.3 × 0.6 + 0.7 × 0.2 = 0.18 + 0.14 = 0.32."
+      pieges:
+        - { texte: "0.8", pourquoi: "0.6 + 0.2 ignores the branch weights: each path is multiplied by P(A) or P(not A)." }
+        - { texte: "0.18", pourquoi: "0.18 is only the path through A: add the path through not A." }
+    - texte: "Machine A makes 70 % of the parts, 2 % of them faulty; machine B makes 30 %, 5 % of them faulty. Probability that a part is faulty?"
+      nom: "0.029"
+      explication: "0.7 × 0.02 + 0.3 × 0.05 = 0.014 + 0.015 = 0.029, that is 2.9 %."
+      pieges:
+        - { texte: "0.07", pourquoi: "2 % + 5 % ignores that the machines do not make the same number of parts: weight by 0.7 and 0.3." }
+        - { texte: "0.035", pourquoi: "(2 % + 5 %) ÷ 2 assumes each machine makes half the parts." }
+    - texte: "You toss a coin and roll a dice, independently. Probability of heads and a 6?"
+      nom: "1/12"
+      explication: "Independent trials: multiply, 1/2 × 1/6 = 1/12."
+      pieges:
+        - { texte: "2/3", pourquoi: "1/2 + 1/6: for “and” with independent trials, multiply." }
+        - { texte: "1/6", pourquoi: "1/6 counts only the dice: you also need heads, probability 1/2." }
+    - texte: "P(A) = 0.5, P(B) = 0.4 and P(A and B) = 0.2. Are A and B independent?"
+      nom: "Yes, because 0.5 × 0.4 = 0.2"
+      explication: "P(A) × P(B) = 0.2 = P(A and B): that is the definition of independence."
+      pieges:
+        - { texte: "No, because 0.5 + 0.4 is not 0.2", pourquoi: "Independence is tested with the product, not the sum." }
+        - { texte: "No, because P(A) and P(B) are different", pourquoi: "Two independent events can have different probabilities." }
+    - texte: "P(A) = 0.5, P(B) = 0.4 and P(A and B) = 0.1. Are A and B independent?"
+      nom: "No, because 0.5 × 0.4 = 0.2, not 0.1"
+      explication: "For independence you would need P(A and B) = P(A) × P(B) = 0.2. Here it is 0.1: they are not independent."
+      pieges:
+        - { texte: "Yes, because 0.1 is smaller than 0.5 and 0.4", pourquoi: "P(A and B) is always smaller: that proves nothing. Compare it with P(A) × P(B)." }
+        - { texte: "Yes, because P(A and B) is not zero", pourquoi: "Being able to happen together does not mean independent: compare with P(A) × P(B)." }
+    - texte: "You toss a fair coin 3 times. Probability of 3 heads?"
+      nom: "1/8"
+      explication: "Three independent tosses: 1/2 × 1/2 × 1/2 = 1/8. Just one path out of the 8 in the tree."
+      pieges:
+        - { texte: "1/2", pourquoi: "1/2 is the probability for a single toss: you need three." }
+        - { texte: "1/6", pourquoi: "Multiply the three probabilities, 2 × 2 × 2 = 8, not 2 × 3 = 6." }
+    - texte: "A shot succeeds with probability 0.8. Two independent shots. Probability that both succeed?"
+      nom: "0.64"
+      explication: "Independence: 0.8 × 0.8 = 0.64."
+      pieges:
+        - { texte: "1.6", pourquoi: "0.8 + 0.8 is more than 1: for “and”, multiply." }
+        - { texte: "0.8", pourquoi: "0.8 counts only one shot: both must succeed." }
+    - texte: "Fill in the step: P(A) = 0.6; B given A: 0.5; B given not A: 0.25. P(B) = 0.6 × 0.5 + … × 0.25"
+      nom: "0.4"
+      explication: "The second path goes through “not A”, with probability 1 − 0.6 = 0.4. P(B) = 0.3 + 0.1 = 0.4."
+      pieges:
+        - { texte: "0.6", pourquoi: "The second path goes through “not A”: P(not A) = 1 − 0.6 = 0.4." }
+        - { texte: "0.5", pourquoi: "0.5 is the probability of B given A: the weight of the second path is P(not A)." }
+    - texte: "Why is P(B) = P(A and B) + P(not A and B)?"
+      nom: "A and not A split all the cases without overlapping: each case of B is counted exactly once."
+      explication: "A case of B is either in A or in not A, never both: add the two parts."
+      pieges:
+        - { texte: "Because P(A) + P(B) = 1.", pourquoi: "It is P(A) + P(not A) that equals 1, not P(A) + P(B)." }
+        - { texte: "Because A and B are always independent.", pourquoi: "The formula holds even when A and B are not independent." }
+    - texte: "A shot succeeds with probability 0.8. Two independent shots. Probability of at least one success?"
+      nom: "0.96"
+      explication: "The complement is “two misses”: 0.2 × 0.2 = 0.04. So 1 − 0.04 = 0.96."
+      pieges:
+        - { texte: "0.64", pourquoi: "0.64 is the probability of two successes: “at least one” also counts a single success." }
+        - { texte: "0.32", pourquoi: "0.32 is the probability of exactly one success: add the two successes, 0.64." }

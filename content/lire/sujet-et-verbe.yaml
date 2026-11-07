@@ -1,0 +1,125 @@
+id: sujet-et-verbe
+titre: "Trouver le sujet et le verbe"
+niveau: CE1
+prerequis: ["classes-de-mots"]
+programme: { source: cycle2, texte: "Identifier la relation sujet-verbe à partir de l’observation des effets des transformations liées au changement de temps et de personne dans des situations simples (groupe sujet + verbe)." }
+activite: quiz
+parametres: {}
+idee: "Le verbe change quand on change le temps : il court, il courait. Le sujet dit qui fait l’action : on le trouve avec « Qui est-ce qui… ? »."
+phrases:
+  consigne: "Lis la phrase, puis touche le verbe ou le sujet demandé."
+  question: "{texte}"
+  indice: "Pour le verbe, change le temps : quel mot change ? Pour le sujet, demande « Qui est-ce qui… ? »."
+  exemple: "« Le chien court. » Hier, le chien courait : « court » change, c’est le verbe. Qui est-ce qui court ? Le chien : c’est le sujet."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « Le chien court dans le jardin. », quel est le verbe ?"
+    nom: "court"
+    explication: "Hier, le chien courait : « court » change avec le temps, c’est le verbe."
+    pieges:
+      - { texte: "chien", pourquoi: "« chien » est un nom : il ne change pas avec le temps. Le verbe, c’est « court » (il courait)." }
+      - { texte: "jardin", pourquoi: "« jardin » est un nom : il dit où. Le verbe, c’est « court »." }
+  - texte: "Dans « Le chien court dans le jardin. », quel est le sujet ?"
+    nom: "le chien"
+    explication: "Qui est-ce qui court ? Le chien : c’est le sujet."
+    pieges:
+      - { texte: "le jardin", pourquoi: "Qui est-ce qui court ? Le chien, pas le jardin : « dans le jardin » dit où." }
+      - { texte: "court", pourquoi: "« court » est le verbe ; le sujet dit qui fait l’action." }
+  - texte: "Dans « Mes amis jouent au ballon. », quel est le sujet ?"
+    nom: "mes amis"
+    explication: "Qui est-ce qui joue ? Mes amis : c’est le sujet."
+    pieges:
+      - { texte: "au ballon", pourquoi: "« au ballon » dit à quoi on joue, pas qui joue." }
+      - { texte: "jouent", pourquoi: "« jouent » est le verbe ; le sujet dit qui joue." }
+  - texte: "Dans « Ce soir, Lina regarde la lune. », quel est le verbe ?"
+    nom: "regarde"
+    explication: "Hier soir, Lina regardait : « regarde » change avec le temps, c’est le verbe."
+    pieges:
+      - { texte: "soir", pourquoi: "« soir » est un nom : il dit quand. Le verbe, c’est « regarde »." }
+      - { texte: "lune", pourquoi: "« lune » est un nom : c’est ce que Lina regarde." }
+  - texte: "Dans « Ce soir, Lina regarde la lune. », quel est le sujet ?"
+    nom: "Lina"
+    explication: "Qui est-ce qui regarde ? Lina : c’est le sujet."
+    pieges:
+      - { texte: "ce soir", pourquoi: "« Ce soir » dit quand. Qui est-ce qui regarde ? Lina." }
+      - { texte: "la lune", pourquoi: "La lune ne regarde pas : c’est Lina qui la regarde." }
+  - texte: "Dans « Les poules picorent le grain. », quel est le verbe ?"
+    nom: "picorent"
+    explication: "Hier, les poules picoraient : « picorent » change avec le temps, c’est le verbe."
+    pieges:
+      - { texte: "poules", pourquoi: "« poules » est un nom : c’est le sujet, pas le verbe." }
+      - { texte: "grain", pourquoi: "« grain » est un nom : c’est ce que les poules picorent." }
+  - texte: "Dans « Tom mange. », comment sait-on que « mange » est le verbe ?"
+    nom: "Il change si on change le temps : Tom mangeait."
+    explication: "Le verbe change avec le temps et la personne : c’est ce qui le fait reconnaître."
+    pieges:
+      - { texte: "Il est au début de la phrase.", pourquoi: "Le verbe n’est pas toujours au début : ici, c’est « Tom » qui est au début." }
+      - { texte: "Il a une majuscule.", pourquoi: "C’est « Tom » qui a une majuscule : c’est un nom propre." }
+  - texte: "Dans « Les enfants chantent. », pourquoi le verbe finit-il par -nt ?"
+    nom: "Le sujet « les enfants » est au pluriel."
+    explication: "Quand le sujet est au pluriel, le verbe prend la marque -nt : ils chantent."
+    pieges:
+      - { texte: "Le verbe est au futur.", pourquoi: "« chantent » est au présent. Le -nt vient du sujet au pluriel." }
+      - { texte: "Le sujet est « je ».", pourquoi: "Le sujet est « les enfants » ; avec « je », on écrirait « je chante »." }
+
+en:
+  langue: "fr"
+  titre: "French: finding the subject and the verb"
+  idee: "The verb changes when you change the tense: « il court », « il courait ». The subject tells who is doing it: find it by asking « Qui est-ce qui… ? »."
+  phrases:
+    consigne: "Read the French sentence, then touch the verb or the subject you're asked for."
+    question: "{texte}"
+    indice: "For the verb, change the tense: which word changes? For the subject, ask « Qui est-ce qui… ? »: who is doing it?"
+    exemple: "« Le chien court. » Yesterday, « le chien courait »: « court » changes, so it's the verb. Who is running? « Le chien »: that's the subject."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "In « Le chien court dans le jardin. », which word is the verb?"
+      nom: "court"
+      explication: "Yesterday, « le chien courait »: « court » changes with the tense, so it's the verb."
+      pieges:
+        - { texte: "chien", pourquoi: "« chien » is a noun: it doesn't change with the tense. The verb is « court » (« il courait »)." }
+        - { texte: "jardin", pourquoi: "« jardin » is a noun: it says where. The verb is « court »." }
+    - texte: "In « Le chien court dans le jardin. », what is the subject?"
+      nom: "le chien"
+      explication: "Who is running? « Le chien »: that's the subject."
+      pieges:
+        - { texte: "le jardin", pourquoi: "Who is running? The dog, not the garden: « dans le jardin » says where." }
+        - { texte: "court", pourquoi: "« court » is the verb; the subject tells who is doing it." }
+    - texte: "In « Mes amis jouent au ballon. », what is the subject?"
+      nom: "mes amis"
+      explication: "Who is playing? « Mes amis »: that's the subject."
+      pieges:
+        - { texte: "au ballon", pourquoi: "« au ballon » says what they're playing, not who is playing." }
+        - { texte: "jouent", pourquoi: "« jouent » is the verb; the subject tells who is playing." }
+    - texte: "In « Ce soir, Lina regarde la lune. », which word is the verb?"
+      nom: "regarde"
+      explication: "Yesterday evening, « Lina regardait »: « regarde » changes with the tense, so it's the verb."
+      pieges:
+        - { texte: "soir", pourquoi: "« soir » is a noun: it says when. The verb is « regarde »." }
+        - { texte: "lune", pourquoi: "« lune » is a noun: it's what Lina is looking at." }
+    - texte: "In « Ce soir, Lina regarde la lune. », what is the subject?"
+      nom: "Lina"
+      explication: "Who is looking? « Lina »: that's the subject."
+      pieges:
+        - { texte: "ce soir", pourquoi: "« Ce soir » says when. Who is looking? Lina." }
+        - { texte: "la lune", pourquoi: "The moon isn't looking: Lina is looking at it." }
+    - texte: "In « Les poules picorent le grain. », which word is the verb?"
+      nom: "picorent"
+      explication: "Yesterday, « les poules picoraient »: « picorent » changes with the tense, so it's the verb."
+      pieges:
+        - { texte: "poules", pourquoi: "« poules » is a noun: it's the subject, not the verb." }
+        - { texte: "grain", pourquoi: "« grain » is a noun: it's what the hens are pecking." }
+    - texte: "In « Tom mange. », how do we know that « mange » is the verb?"
+      nom: "It changes when you change the tense: « Tom mangeait »."
+      explication: "A verb changes with the tense and the person: that's how you recognise it."
+      pieges:
+        - { texte: "It's at the start of the sentence.", pourquoi: "The verb isn't always at the start: here, « Tom » comes first." }
+        - { texte: "It has a capital letter.", pourquoi: "It's « Tom » that has a capital letter: it's a proper noun." }
+    - texte: "In « Les enfants chantent. », why does the verb end in « -nt »?"
+      nom: "The subject « les enfants » is plural."
+      explication: "When the subject is plural, the verb takes the ending « -nt »: « ils chantent »."
+      pieges:
+        - { texte: "The verb is in the future tense.", pourquoi: "« chantent » is in the present. The « -nt » comes from the plural subject." }
+        - { texte: "The subject is « je ».", pourquoi: "The subject is « les enfants »; with « je » you would write « je chante »." }

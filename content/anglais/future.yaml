@@ -1,0 +1,154 @@
+id: future
+titre: "Le futur : will et be going to"
+niveau: 3e
+prerequis: [present-continuous]
+programme: { source: college, texte: "3e : l’expression du futur avec will et be going to + BV." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« will » + verbe : une prédiction, ou une décision prise sur le moment. « be going to » + verbe : un projet déjà décidé, ou ce qu'on voit arriver. Le verbe reste à la base."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Décision prise à l'instant ou prédiction : « will ». Projet déjà prévu, ou signe visible : « be going to »."
+  exemple: "« The phone is ringing. » « I … answer it! » On décide à l'instant : « will ». « I'll answer it! »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« The phone is ringing. » Complète : « I … answer it! » (décision sur le moment)"
+    nom: "will"
+    explication: "On décide à l'instant : « will ». « I will answer it! », ou « I'll answer it! »"
+    pieges:
+      - { texte: "am going to", pourquoi: "« going to » dit un projet décidé avant. Ici, on décide à l'instant : « will »." }
+      - { texte: "did", pourquoi: "« did » parle du passé. Ici, on va répondre : futur, « will »." }
+  - texte: "« Look at those black clouds! » Complète : « It … rain. »"
+    nom: "is going to"
+    explication: "On voit les nuages : la pluie arrive. « It is going to rain. »"
+    pieges:
+      - { texte: "is raining", pourquoi: "« is raining » dit qu'il pleut déjà. Les nuages annoncent la pluie : « is going to rain »." }
+      - { texte: "rained", pourquoi: "« rained » est le passé. Les nuages annoncent ce qui va arriver : « is going to »." }
+  - texte: "« We have booked the tickets. » Complète : « Next summer, we … visit New York. »"
+    nom: "are going to"
+    explication: "Projet déjà décidé, avec « we » : « We are going to visit New York. »"
+    pieges:
+      - { texte: "is going to", pourquoi: "« is » va avec he, she, it. Avec « we » : « are going to »." }
+      - { texte: "visited", pourquoi: "« visited » est le passé. « Next summer » parle de l'avenir." }
+  - texte: "Complète : « I think robots … do many jobs in the future. » (prédiction)"
+    nom: "will"
+    explication: "Une prédiction, avec « I think » : « will ». « Robots will do many jobs. »"
+    pieges:
+      - { texte: "did", pourquoi: "« did » parle du passé. « in the future » demande « will »." }
+      - { texte: "were", pourquoi: "« were » est le passé de « be ». « in the future » demande « will »." }
+  - texte: "Complète : « She will … her friends tomorrow. » (see)"
+    nom: "see"
+    explication: "Après « will », le verbe reste à la base : « She will see her friends tomorrow. »"
+    pieges:
+      - { texte: "sees", pourquoi: "Après « will », le verbe ne prend jamais -s : « will see »." }
+      - { texte: "to see", pourquoi: "Après « will », pas de « to » : « will see »." }
+  - texte: "Complète : « Don't worry, I … tell anyone. » (je ne le dirai pas)"
+    nom: "won't"
+    explication: "« won't » est la forme courte de « will not » : « I won't tell anyone. »"
+    pieges:
+      - { texte: "don't", pourquoi: "« don't » est le présent. Pour le futur : « won't », de « will not »." }
+      - { texte: "didn't", pourquoi: "« didn't » est le passé. Pour le futur : « won't »." }
+  - texte: "Complète : « What … you going to do this weekend? »"
+    nom: "are"
+    explication: "« going to » a besoin de « be » : « What are you going to do this weekend? »"
+    pieges:
+      - { texte: "will", pourquoi: "Avec « going to », il faut « be » : « What are you going to do? »" }
+      - { texte: "do", pourquoi: "Avec « going to », la question se fait avec « be » : « are you going to… ? »" }
+  - texte: "Complète : « I'm going to … a doctor when I grow up. »"
+    nom: "be"
+    explication: "Après « going to », le verbe reste à la base : « I'm going to be a doctor. »"
+    pieges:
+      - { texte: "am", pourquoi: "Après « going to », la base du verbe : « be »." }
+      - { texte: "being", pourquoi: "Après « going to », la base du verbe, sans -ing : « be »." }
+  - texte: "« I've bought the ticket. I'm going to visit my uncle. » Pourquoi « going to » ?"
+    nom: "C'est un projet décidé à l'avance : le billet est déjà acheté."
+    explication: "Le billet est acheté : le projet est décidé. « going to » convient."
+    pieges:
+      - { texte: "Parce que « will » ne va jamais avec « I ».", pourquoi: "Non : « I will help you » est juste." }
+      - { texte: "Parce que « going to » parle du passé.", pourquoi: "Non : « going to » parle de l'avenir, d'un projet." }
+en:
+  titre: "The future: will and be going to"
+  idee: "will + verb: a prediction, or a decision made on the spot. be going to + verb: a plan already decided, or something we can see coming. The verb stays in its base form."
+  phrases:
+    consigne: "Read the sentence, then touch the right form."
+    question: "{texte}"
+    indice: "A decision made on the spot, or a prediction: will. A plan already made, or a visible sign: be going to."
+    exemple: "“The phone is ringing.” “I … answer it!” We decide on the spot: will. “I'll answer it!”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“The phone is ringing.” Complete: “I … answer it!” (decision on the spot)"
+      nom: "will"
+      explication: "We decide on the spot: will. “I will answer it!” or “I'll answer it!”"
+      pieges:
+        - texte: "am going to"
+          pourquoi: "“going to” is for a plan decided before. Here we decide on the spot: will."
+        - texte: "did"
+          pourquoi: "“did” is about the past. Here we are going to answer: future, will."
+    - texte: "“Look at those black clouds!” Complete: “It … rain.”"
+      nom: "is going to"
+      explication: "We can see the clouds: rain is coming. “It is going to rain.”"
+      pieges:
+        - texte: "is raining"
+          pourquoi: "“is raining” means it's already raining. The clouds show rain is coming: is going to rain."
+        - texte: "rained"
+          pourquoi: "“rained” is the past. The clouds show what is coming: is going to."
+    - texte: "“We have booked the tickets.” Complete: “Next summer, we … visit New York.”"
+      nom: "are going to"
+      explication: "A plan already decided, with we: “We are going to visit New York.”"
+      pieges:
+        - texte: "is going to"
+          pourquoi: "“is” goes with he, she and it. With we: are going to."
+        - texte: "visited"
+          pourquoi: "“visited” is the past. Next summer is about the future."
+    - texte: "Complete: “I think robots … do many jobs in the future.” (prediction)"
+      nom: "will"
+      explication: "A prediction, with I think: will. “Robots will do many jobs.”"
+      pieges:
+        - texte: "did"
+          pourquoi: "“did” is about the past. In the future needs will."
+        - texte: "were"
+          pourquoi: "“were” is the past of be. In the future needs will."
+    - texte: "Complete: “She will … her friends tomorrow.” (see)"
+      nom: "see"
+      explication: "After will, the verb stays in its base form: “She will see her friends tomorrow.”"
+      pieges:
+        - texte: "sees"
+          pourquoi: "After will, the verb never takes -s: will see."
+        - texte: "to see"
+          pourquoi: "After will, no to: will see."
+    - texte: "Complete: “Don't worry, I … tell anyone.” (negative, future)"
+      nom: "won't"
+      explication: "“won't” is the short form of will not: “I won't tell anyone.”"
+      pieges:
+        - texte: "don't"
+          pourquoi: "“don't” is the present. For the future: won't, from will not."
+        - texte: "didn't"
+          pourquoi: "“didn't” is the past. For the future: won't."
+    - texte: "Complete: “What … you going to do this weekend?”"
+      nom: "are"
+      explication: "Going to needs be: “What are you going to do this weekend?”"
+      pieges:
+        - texte: "will"
+          pourquoi: "With going to, we need be: What are you going to do?"
+        - texte: "do"
+          pourquoi: "With going to, the question uses be: are you going to…?"
+    - texte: "Complete: “I'm going to … a doctor when I grow up.”"
+      nom: "be"
+      explication: "After going to, the verb stays in its base form: “I'm going to be a doctor.”"
+      pieges:
+        - texte: "am"
+          pourquoi: "After going to, the base form of the verb: be."
+        - texte: "being"
+          pourquoi: "After going to, the base form, without -ing: be."
+    - texte: "“I've bought the ticket. I'm going to visit my uncle.” Why going to?"
+      nom: "It's a plan made in advance: the ticket is already bought."
+      explication: "The ticket is bought: the plan is decided. Going to fits."
+      pieges:
+        - texte: "Because will never goes with I."
+          pourquoi: "No: “I will help you” is correct."
+        - texte: "Because going to is about the past."
+          pourquoi: "No: going to is about the future, about a plan."

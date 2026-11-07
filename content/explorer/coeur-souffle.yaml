@@ -1,0 +1,124 @@
+id: coeur-souffle
+titre: "Le cœur et la respiration pendant l'effort"
+niveau: CE2
+prerequis: [corps-parties]
+programme: { source: c2s, texte: "Relier l’activité physique avec la variation du rythme respiratoire (inspiration, expiration) et du rythme cardiaque par la mesure du pouls." }
+activite: quiz
+parametres: {}
+idee: "Quand on court, on respire plus vite et le cœur bat plus vite. On sent les battements du cœur au poignet ou au cou : c'est le pouls."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense à ce que tu ressens après avoir couru : souffle rapide, cœur qui bat fort."
+  exemple: "Exemple : assis, Léa compte ses battements au poignet pendant une minute. Après avoir sauté à la corde, elle recommence : elle en compte beaucoup plus."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Après une course, comment respires-tu ?"
+    nom: "Plus vite et plus fort."
+    explication: "Pendant et après l'effort, le nombre de respirations par minute augmente."
+    pieges:
+      - { texte: "Plus lentement.", pourquoi: "C'est au repos que la respiration est lente. Après une course, on est essoufflé." }
+      - { texte: "Exactement comme au repos.", pourquoi: "Fais l'essai : compte tes respirations avant et après avoir couru." }
+  - texte: "Que fait ton cœur quand tu cours ?"
+    nom: "Il bat plus vite."
+    explication: "Pendant l'effort, le rythme cardiaque augmente : le cœur envoie plus de sang aux muscles."
+    pieges:
+      - { texte: "Il s'arrête de battre un moment.", pourquoi: "Le cœur ne s'arrête jamais : il accélère pendant l'effort." }
+      - { texte: "Il bat moins vite pour se reposer.", pourquoi: "C'est après l'effort, au repos, que le rythme redescend petit à petit." }
+  - texte: "Où peux-tu sentir ton pouls avec deux doigts ?"
+    nom: "Au poignet, du côté du pouce."
+    explication: "Au poignet, on sent les battements du sang dans une artère : chaque battement correspond à un battement du cœur."
+    pieges:
+      - { texte: "Au bout du nez.", pourquoi: "On ne sent pas le pouls à cet endroit." }
+      - { texte: "Sur le genou.", pourquoi: "On le cherche au poignet ou sur le côté du cou." }
+  - texte: "Comment s'appelle le moment où l'air entre dans tes poumons ?"
+    nom: "L'inspiration."
+    explication: "À l'inspiration, l'air entre ; à l'expiration, il ressort."
+    pieges:
+      - { texte: "L'expiration.", pourquoi: "L'expiration, c'est quand l'air ressort des poumons." }
+      - { texte: "La digestion.", pourquoi: "La digestion concerne les aliments, pas l'air." }
+  - texte: "Où va l'air que tu respires ?"
+    nom: "Dans les poumons."
+    explication: "L'air passe par le nez ou la bouche, descend par la trachée et arrive dans les poumons."
+    pieges:
+      - { texte: "Dans le ventre.", pourquoi: "Le ventre se soulève quand on respire, mais l'air va dans les poumons, dans la poitrine." }
+      - { texte: "Dans le cœur.", pourquoi: "Le cœur fait circuler le sang ; l'air va dans les poumons." }
+  - texte: "Pourquoi le cœur et la respiration accélèrent-ils pendant l'effort ?"
+    nom: "Parce que les muscles qui travaillent ont besoin de plus d'air et de nourriture apportés par le sang."
+    explication: "Le sang transporte vers les muscles ce dont ils ont besoin pour travailler. Plus ils travaillent, plus il leur en faut."
+    pieges:
+      - { texte: "Parce qu'on a peur.", pourquoi: "L'émotion peut accélérer le cœur, mais pendant le sport, c'est le travail des muscles qui compte." }
+      - { texte: "Parce que le cœur veut courir lui aussi.", pourquoi: "Le cœur ne court pas : il pompe plus vite le sang vers les muscles." }
+  - texte: "Après l'effort, tu t'assois et tu te reposes. Que font ton souffle et ton cœur ?"
+    nom: "Ils ralentissent peu à peu."
+    explication: "Au repos, les muscles ont moins de besoins : le rythme cardiaque et le rythme respiratoire redescendent."
+    pieges:
+      - { texte: "Ils restent rapides toute la journée.", pourquoi: "Ils ralentissent après quelques minutes de repos." }
+      - { texte: "Ils s'arrêtent.", pourquoi: "Ils ralentissent, mais ne s'arrêtent jamais." }
+  - texte: "Quels signes montrent que ton corps fait un effort ?"
+    nom: "Essoufflement, cœur rapide, transpiration, peau rouge."
+    explication: "Pendant l'effort, on respire plus vite, le cœur accélère, on transpire et la peau rougit."
+    pieges:
+      - { texte: "On a froid et on frissonne.", pourquoi: "Pendant l'effort, on a plutôt chaud et on transpire." }
+      - { texte: "Aucun signe, le corps ne change pas.", pourquoi: "Plusieurs signes se voient et se sentent : essoufflement, transpiration…" }
+
+en:
+  titre: "Heart and breathing during exercise"
+  idee: "When you run, you breathe faster and your heart beats faster. You can feel your heartbeat at your wrist or neck: that's your pulse."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think about how you feel after running: fast breathing, heart beating hard."
+    exemple: "Example: sitting down, Léa counts the beats at her wrist for one minute. After skipping, she counts again: there are many more."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "After a race, how do you breathe?"
+      nom: "Faster and harder."
+      explication: "During and after exercise, the number of breaths per minute goes up."
+      pieges:
+        - { texte: "More slowly.", pourquoi: "Breathing is slow when you're resting. After a race, you're out of breath." }
+        - { texte: "Just as when resting.", pourquoi: "Try it: count your breaths before and after running." }
+    - texte: "What does your heart do when you run?"
+      nom: "It beats faster."
+      explication: "During exercise, the heart rate goes up: the heart sends more blood to the muscles."
+      pieges:
+        - { texte: "It stops beating for a while.", pourquoi: "The heart never stops: it speeds up during exercise." }
+        - { texte: "It beats more slowly to rest.", pourquoi: "It's after exercise, when resting, that it slowly comes back down." }
+    - texte: "Where can you feel your pulse with two fingers?"
+      nom: "At your wrist, on the thumb side."
+      explication: "At the wrist, you feel the blood beating in an artery: each beat matches one heartbeat."
+      pieges:
+        - { texte: "On the tip of your nose.", pourquoi: "You can't feel your pulse there." }
+        - { texte: "On your knee.", pourquoi: "Look for it at the wrist or the side of the neck." }
+    - texte: "What do we call the moment when air goes into your lungs?"
+      nom: "Breathing in."
+      explication: "When you breathe in, air goes in; when you breathe out, it comes back out."
+      pieges:
+        - { texte: "Breathing out.", pourquoi: "Breathing out is when air leaves the lungs." }
+        - { texte: "Digestion.", pourquoi: "Digestion is about food, not air." }
+    - texte: "Where does the air you breathe go?"
+      nom: "Into the lungs."
+      explication: "Air goes in through the nose or mouth, down the windpipe and into the lungs."
+      pieges:
+        - { texte: "Into the tummy.", pourquoi: "Your tummy rises when you breathe, but the air goes into the lungs, in your chest." }
+        - { texte: "Into the heart.", pourquoi: "The heart pumps blood; air goes into the lungs." }
+    - texte: "Why do your heart and breathing speed up during exercise?"
+      nom: "Because working muscles need more air and food brought by the blood."
+      explication: "Blood carries what muscles need to work. The harder they work, the more they need."
+      pieges:
+        - { texte: "Because you're scared.", pourquoi: "Feelings can speed up the heart, but during sport it's the muscles' work that matters." }
+        - { texte: "Because the heart wants to run too.", pourquoi: "The heart doesn't run: it pumps blood to the muscles faster." }
+    - texte: "After exercise, you sit down and rest. What do your breathing and heart do?"
+      nom: "They slow down little by little."
+      explication: "At rest, the muscles need less: heart rate and breathing rate come back down."
+      pieges:
+        - { texte: "They stay fast all day.", pourquoi: "They slow down after a few minutes' rest." }
+        - { texte: "They stop.", pourquoi: "They slow down, but they never stop." }
+    - texte: "Which signs show your body is working hard?"
+      nom: "Being out of breath, a fast heart, sweating, red skin."
+      explication: "During exercise, you breathe faster, your heart speeds up, you sweat and your skin goes red."
+      pieges:
+        - { texte: "Feeling cold and shivering.", pourquoi: "During exercise, you usually feel hot and sweat." }
+        - { texte: "No signs, the body doesn't change.", pourquoi: "Several signs can be seen and felt: breathlessness, sweating…" }

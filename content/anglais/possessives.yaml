@@ -1,0 +1,154 @@
+id: possessives
+titre: "my, your, his, her, our, their"
+niveau: 6e
+prerequis: [have-got]
+programme: { source: college, texte: "6e : utiliser le déterminant possessif : my father, your mother, his/her brother, her, its, our, your, their." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Le possessif dépend de celui qui possède : « his » pour un garçon, « her » pour une fille, « its » pour une chose ou un animal, « their » pour plusieurs."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche le bon possessif."
+  question: "{texte}"
+  indice: "Demande-toi : à qui est-ce ? Regarde celui qui possède, pas l'objet."
+  exemple: "« Emma is with … brother. » Le frère est à Emma, une fille : « her ». « Emma is with her brother. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « Tom loves … sister. »"
+    nom: "his"
+    explication: "La sœur est à Tom, un garçon : « his ». « Tom loves his sister. »"
+    pieges:
+      - { texte: "her", pourquoi: "« her » renvoie à une fille qui possède. Ici, c'est Tom qui possède : « his »." }
+      - { texte: "its", pourquoi: "« its » renvoie à une chose ou un animal. Tom est un garçon : « his »." }
+  - texte: "Complète : « Emma is with … brother. »"
+    nom: "her"
+    explication: "Le frère est à Emma, une fille : « her ». « Emma is with her brother. »"
+    pieges:
+      - { texte: "his", pourquoi: "En anglais, on regarde qui possède : Emma, une fille, donc « her », même si le frère est un garçon." }
+      - { texte: "their", pourquoi: "« their » renvoie à plusieurs personnes. Emma est seule : « her »." }
+  - texte: "Complète : « We love … house. »"
+    nom: "our"
+    explication: "La maison est à nous, « we » : « our ». « We love our house. »"
+    pieges:
+      - { texte: "their", pourquoi: "« their » renvoie à « they », eux. Avec « we » : « our »." }
+      - { texte: "your", pourquoi: "« your » renvoie à « you ». Avec « we » : « our »." }
+  - texte: "Complète : « The children play with … dog. »"
+    nom: "their"
+    explication: "Le chien est aux enfants, « they » : « their ». « The children play with their dog. »"
+    pieges:
+      - { texte: "there", pourquoi: "« there » veut dire « là ». Il se prononce comme « their », mais ce n'est pas un possessif." }
+      - { texte: "his", pourquoi: "« his » renvoie à un seul garçon. « the children », ce sont plusieurs : « their »." }
+  - texte: "Complète : « Hello! … name is Leo. »"
+    nom: "My"
+    explication: "Le nom est à moi : « my ». « My name is Leo. »"
+    pieges:
+      - { texte: "Your", pourquoi: "« your » veut dire « ton » ou « votre ». Pour parler de soi : « my »." }
+      - { texte: "I", pourquoi: "« I » est le sujet, « je ». Le possessif, c'est « my »." }
+  - texte: "Complète : « The cat is eating … food. »"
+    nom: "its"
+    explication: "La nourriture est au chat, un animal : « its ». « The cat is eating its food. »"
+    pieges:
+      - { texte: "it's", pourquoi: "« it's » veut dire « it is », il est. Le possessif s'écrit « its », sans apostrophe." }
+      - { texte: "their", pourquoi: "« their » renvoie à plusieurs. Il n'y a qu'un chat : « its »." }
+  - texte: "Complète : « Is this … bag, Sam? »"
+    nom: "your"
+    explication: "On parle à Sam : « your », ton. « Is this your bag, Sam? »"
+    pieges:
+      - { texte: "you", pourquoi: "« you » est le sujet, « tu ». Le possessif, c'est « your »." }
+      - { texte: "my", pourquoi: "« my » veut dire « mon ». On demande à Sam si le sac est à lui : « your »." }
+  - texte: "Que veut dire « Jack's bike » ?"
+    nom: "le vélo de Jack"
+    explication: "« 's » dit à qui est l'objet : « Jack's bike », le vélo de Jack."
+    pieges:
+      - { texte: "Jack est un vélo", pourquoi: "Ici, « 's » n'est pas « is » : il montre à qui est le vélo." }
+      - { texte: "les vélos de Jack", pourquoi: "« bike » n'a pas de -s : il n'y a qu'un vélo." }
+  - texte: "Pourquoi dit-on « Emma and her father » ?"
+    nom: "Le possessif suit celui qui possède : Emma est une fille, donc « her »."
+    explication: "On regarde qui possède : Emma, une fille, donc « her », même devant « father »."
+    pieges:
+      - { texte: "Parce que « father » est un homme.", pourquoi: "Non : si on regardait le père, on dirait « his ». On regarde Emma, qui possède : « her »." }
+      - { texte: "Parce que « his » ne s'emploie qu'au pluriel.", pourquoi: "Non : « his » est singulier, pour un garçon : « Tom and his father »." }
+en:
+  titre: "My, your, his, her, our, their"
+  idee: "The possessive depends on the owner: his for a boy, her for a girl, its for a thing or an animal, their for several."
+  phrases:
+    consigne: "Read the sentence, then touch the right possessive."
+    question: "{texte}"
+    indice: "Ask yourself: who does it belong to? Look at the owner, not the thing."
+    exemple: "“Emma is with … brother.” The brother belongs to Emma, a girl: her. “Emma is with her brother.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “Tom loves … sister.”"
+      nom: "his"
+      explication: "The sister belongs to Tom, a boy: “Tom loves his sister.”"
+      pieges:
+        - texte: "her"
+          pourquoi: "“her” is for a girl who owns something. Here Tom is the owner: his."
+        - texte: "its"
+          pourquoi: "“its” is for a thing or an animal. Tom is a boy: his."
+    - texte: "Complete: “Emma is with … brother.”"
+      nom: "her"
+      explication: "The brother belongs to Emma, a girl: “Emma is with her brother.”"
+      pieges:
+        - texte: "his"
+          pourquoi: "We look at the owner: Emma is a girl, so her, even if the brother is a boy."
+        - texte: "their"
+          pourquoi: "“their” is for several people. Emma is one person: her."
+    - texte: "Complete: “We love … house.”"
+      nom: "our"
+      explication: "The house belongs to us: “We love our house.”"
+      pieges:
+        - texte: "their"
+          pourquoi: "“their” goes with they. With we: our."
+        - texte: "your"
+          pourquoi: "“your” goes with you. With we: our."
+    - texte: "Complete: “The children play with … dog.”"
+      nom: "their"
+      explication: "The dog belongs to the children, they: “The children play with their dog.”"
+      pieges:
+        - texte: "there"
+          pourquoi: "“there” means in that place. It sounds like their, but it is not a possessive."
+        - texte: "his"
+          pourquoi: "“his” is for one boy. The children are several: their."
+    - texte: "Complete: “Hello! … name is Leo.”"
+      nom: "My"
+      explication: "Leo is talking about himself: “My name is Leo.”"
+      pieges:
+        - texte: "Your"
+          pourquoi: "“your” is for the person you talk to. About yourself: my."
+        - texte: "I"
+          pourquoi: "“I” is the subject. The possessive is my."
+    - texte: "Complete: “The cat is eating … food.”"
+      nom: "its"
+      explication: "The food belongs to the cat, an animal: “The cat is eating its food.”"
+      pieges:
+        - texte: "it's"
+          pourquoi: "“it's” means it is. The possessive is its, with no apostrophe."
+        - texte: "their"
+          pourquoi: "“their” is for several. There is only one cat: its."
+    - texte: "Complete: “Is this … bag, Sam?”"
+      nom: "your"
+      explication: "We are talking to Sam: “Is this your bag, Sam?”"
+      pieges:
+        - texte: "you"
+          pourquoi: "“you” is the subject. The possessive is your."
+        - texte: "my"
+          pourquoi: "“my” is about yourself. We ask Sam about his bag: your."
+    - texte: "What does “Jack's bike” mean?"
+      nom: "the bike that belongs to Jack"
+      explication: "'s shows who owns it: Jack's bike is Jack's own bike."
+      pieges:
+        - texte: "Jack is a bike"
+          pourquoi: "Here 's is not is: it shows who owns the bike."
+        - texte: "Jack's bikes, more than one"
+          pourquoi: "Bike has no -s: there is only one bike."
+    - texte: "Why do we say “Emma and her father”?"
+      nom: "The possessive follows the owner: Emma is a girl, so her."
+      explication: "We look at the owner: Emma is a girl, so her, even before father."
+      pieges:
+        - texte: "Because father is a man."
+          pourquoi: "No: if we looked at the father, we would say his. We look at Emma, the owner: her."
+        - texte: "Because his is only used for plurals."
+          pourquoi: "No: his is singular, for a boy: “Tom and his father”."

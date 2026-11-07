@@ -1,0 +1,136 @@
+id: division-posee
+titre: "La division posée"
+niveau: CM1
+prerequis: ["division-sens", "multiplication-posee"]
+programme: { source: cycle3, texte: "Poser et effectuer des divisions euclidiennes avec un diviseur à un chiffre" }
+activite: quiz
+parametres: {}
+idee: "On partage d'abord les plus grandes unités, puis les plus petites. On trouve un quotient et un reste. Le reste est toujours plus petit que le diviseur."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Vérifie toujours : (diviseur × quotient) + reste = dividende."
+  exemple: "85 ÷ 4 : en 8 dizaines, 4 va 2 fois, reste 0. En 5 unités, 4 va 1 fois, reste 1. Quotient 21, reste 1. Vérification : (4 × 21) + 1 = 85."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Quel est le quotient de 96 ÷ 3 ?"
+    nom: "32"
+    explication: "9 dizaines ÷ 3 = 3 dizaines. 6 unités ÷ 3 = 2 unités. Quotient : 32. Vérification : 3 × 32 = 96."
+    pieges:
+      - { texte: "23", pourquoi: "On commence par les dizaines : 9 dizaines ÷ 3 = 3 dizaines, le 3 s'écrit en premier." }
+      - { texte: "93", pourquoi: "96 − 3 : diviser, ce n'est pas soustraire une seule fois." }
+  - texte: "Dans la division de 47 par 5, quel est le reste ?"
+    nom: "2"
+    explication: "5 × 9 = 45 et 47 − 45 = 2. Quotient 9, reste 2 : 2 est plus petit que 5."
+    pieges:
+      - { texte: "9", pourquoi: "9 est le quotient, pas le reste." }
+      - { texte: "7", pourquoi: "Avec 5 × 8 = 40, il reste 7 ; mais 7 est plus grand que 5, on peut faire une part de plus." }
+  - texte: "Quel est le quotient de 156 ÷ 6 ?"
+    nom: "26"
+    explication: "15 dizaines ÷ 6 = 2 dizaines, reste 3 dizaines. 36 unités ÷ 6 = 6. Quotient : 26."
+    pieges:
+      - { texte: "25", pourquoi: "6 × 25 = 150 : il reste 6, ce n'est pas plus petit que 6. Il y a encore une part." }
+      - { texte: "2", pourquoi: "On a oublié les unités : il faut continuer avec 36 unités." }
+  - texte: "Quel est le quotient de 832 ÷ 4 ?"
+    nom: "208"
+    explication: "8 centaines ÷ 4 = 2. 3 dizaines ÷ 4 = 0, reste 3 dizaines. 32 unités ÷ 4 = 8. Quotient : 208."
+    pieges:
+      - { texte: "28", pourquoi: "Il manque le 0 : en 3 dizaines, 4 va 0 fois, on écrit 0 au quotient." }
+      - { texte: "2 008", pourquoi: "Le quotient n'a que trois chiffres : centaines, dizaines, unités." }
+  - texte: "Quel est le reste de la division de 100 par 7 ?"
+    nom: "2"
+    explication: "7 × 14 = 98 et 100 − 98 = 2. Quotient 14, reste 2."
+    pieges:
+      - { texte: "14", pourquoi: "14 est le quotient, pas le reste." }
+      - { texte: "9", pourquoi: "Avec 7 × 13 = 91, il reste 9 ; mais 9 est plus grand que 7 : encore une part." }
+  - texte: "On range 75 œufs dans des boîtes de 6. Combien de boîtes sont pleines ?"
+    nom: "12"
+    explication: "75 ÷ 6 : quotient 12, reste 3, car (6 × 12) + 3 = 75. 12 boîtes pleines, et 3 œufs à part."
+    pieges:
+      - { texte: "13", pourquoi: "La 13e boîte n'aurait que 3 œufs : on compte les boîtes pleines." }
+      - { texte: "3", pourquoi: "3 est le reste : les œufs qui ne remplissent pas une boîte." }
+  - texte: "30 enfants partent en voiture, 4 enfants par voiture. Combien de voitures faut-il pour emmener tout le monde ?"
+    nom: "8"
+    explication: "30 ÷ 4 : quotient 7, reste 2, car (4 × 7) + 2 = 30. Les 2 enfants qui restent ont besoin d'une voiture de plus : 8."
+    pieges:
+      - { texte: "7", pourquoi: "Avec 7 voitures, 2 enfants restent à pied : il en faut une de plus." }
+      - { texte: "2", pourquoi: "2 est le reste : les enfants qui ne tiennent pas dans 7 voitures." }
+  - texte: "Vérification de 59 ÷ 8 : quotient 7, reste 3. On écrit (8 × 7) + … = 59. Quel nombre manque ?"
+    nom: "3"
+    explication: "8 × 7 = 56 et 56 + 3 = 59 : le reste est 3, plus petit que 8."
+    pieges:
+      - { texte: "7", pourquoi: "7 est le quotient, il est déjà écrit : il manque le reste." }
+      - { texte: "56", pourquoi: "56 = 8 × 7 : il manque ce qu'on ajoute pour arriver à 59." }
+  - texte: "Dans une division par 6, pourquoi le reste ne peut-il pas être 8 ?"
+    nom: "Parce que le reste doit être plus petit que le diviseur."
+    explication: "Avec 8 de reste, on peut encore faire une part de 6 : le quotient augmente de 1 et il reste 2."
+    pieges:
+      - { texte: "Parce que 8 est un nombre pair.", pourquoi: "Pair ou impair n'y change rien : avec 8, on fait encore une part de 6." }
+      - { texte: "Parce que le reste est toujours 0.", pourquoi: "Le reste est souvent différent de 0 : 47 ÷ 5 a un reste de 2." }
+
+en:
+  titre: "Short division"
+  idee: "Share the biggest place values first, then the smaller ones. You get a quotient and a remainder. The remainder is always smaller than the divisor."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Always check: (divisor × quotient) + remainder = dividend."
+    exemple: "85 ÷ 4: in 8 tens, 4 goes 2 times, remainder 0. In 5 ones, 4 goes 1 time, remainder 1. Quotient 21, remainder 1. Check: (4 × 21) + 1 = 85."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is the quotient of 96 ÷ 3?"
+      nom: "32"
+      explication: "9 tens ÷ 3 = 3 tens. 6 ones ÷ 3 = 2 ones. Quotient: 32. Check: 3 × 32 = 96."
+      pieges:
+        - { texte: "23", pourquoi: "Start with the tens: 9 tens ÷ 3 = 3 tens, so the 3 comes first." }
+        - { texte: "93", pourquoi: "96 − 3: dividing is not subtracting just once." }
+    - texte: "When you divide 47 by 5, what is the remainder?"
+      nom: "2"
+      explication: "5 × 9 = 45 and 47 − 45 = 2. Quotient 9, remainder 2: 2 is smaller than 5."
+      pieges:
+        - { texte: "9", pourquoi: "9 is the quotient, not the remainder." }
+        - { texte: "7", pourquoi: "With 5 × 8 = 40, 7 is left over; but 7 is bigger than 5, so one more share fits." }
+    - texte: "What is the quotient of 156 ÷ 6?"
+      nom: "26"
+      explication: "15 tens ÷ 6 = 2 tens, remainder 3 tens. 36 ones ÷ 6 = 6. Quotient: 26."
+      pieges:
+        - { texte: "25", pourquoi: "6 × 25 = 150: 6 is left, which is not smaller than 6. One more share fits." }
+        - { texte: "2", pourquoi: "The ones were forgotten: carry on with 36 ones." }
+    - texte: "What is the quotient of 832 ÷ 4?"
+      nom: "208"
+      explication: "8 hundreds ÷ 4 = 2. 3 tens ÷ 4 = 0, remainder 3 tens. 32 ones ÷ 4 = 8. Quotient: 208."
+      pieges:
+        - { texte: "28", pourquoi: "The 0 is missing: 4 goes 0 times into 3 tens, so write 0 in the quotient." }
+        - { texte: "2,008", pourquoi: "The quotient has only three digits: hundreds, tens, ones." }
+    - texte: "What is the remainder when you divide 100 by 7?"
+      nom: "2"
+      explication: "7 × 14 = 98 and 100 − 98 = 2. Quotient 14, remainder 2."
+      pieges:
+        - { texte: "14", pourquoi: "14 is the quotient, not the remainder." }
+        - { texte: "9", pourquoi: "With 7 × 13 = 91, 9 is left; but 9 is bigger than 7: one more share fits." }
+    - texte: "75 eggs go into boxes of 6. How many boxes are full?"
+      nom: "12"
+      explication: "75 ÷ 6: quotient 12, remainder 3, because (6 × 12) + 3 = 75. 12 full boxes and 3 eggs left over."
+      pieges:
+        - { texte: "13", pourquoi: "The 13th box would only hold 3 eggs: we count full boxes." }
+        - { texte: "3", pourquoi: "3 is the remainder: the eggs that don't fill a box." }
+    - texte: "30 children travel by car, 4 children per car. How many cars are needed to take everyone?"
+      nom: "8"
+      explication: "30 ÷ 4: quotient 7, remainder 2, because (4 × 7) + 2 = 30. The 2 children left need one more car: 8."
+      pieges:
+        - { texte: "7", pourquoi: "With 7 cars, 2 children are left behind: one more car is needed." }
+        - { texte: "2", pourquoi: "2 is the remainder: the children who don't fit in 7 cars." }
+    - texte: "Checking 59 ÷ 8: quotient 7, remainder 3. We write (8 × 7) + … = 59. Which number is missing?"
+      nom: "3"
+      explication: "8 × 7 = 56 and 56 + 3 = 59: the remainder is 3, smaller than 8."
+      pieges:
+        - { texte: "7", pourquoi: "7 is the quotient, already written: the remainder is missing." }
+        - { texte: "56", pourquoi: "56 = 8 × 7: what you add to reach 59 is missing." }
+    - texte: "When dividing by 6, why can't the remainder be 8?"
+      nom: "Because the remainder must be smaller than the divisor."
+      explication: "With 8 left over, another share of 6 fits: the quotient goes up by 1 and 2 is left."
+      pieges:
+        - { texte: "Because 8 is an even number.", pourquoi: "Even or odd doesn't matter: with 8, another share of 6 fits." }
+        - { texte: "Because the remainder is always 0.", pourquoi: "The remainder is often not 0: 47 ÷ 5 has a remainder of 2." }

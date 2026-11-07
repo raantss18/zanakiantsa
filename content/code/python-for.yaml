@@ -1,0 +1,136 @@
+id: python-for
+titre: "Python : affectation et boucle for"
+niveau: 2de
+prerequis: [boucle-conditionnelle]
+programme: { source: seconde, texte: "Boucle bornée (for), boucle non bornée (while)." }
+activite: quiz
+parametres: {}
+idee: "En Python, x = 3 range 3 dans x. for i in range(4) fait 4 tours, avec i = 0, 1, 2, 3 : range commence à 0 et s’arrête avant 4."
+phrases:
+  consigne: "Prédis l’affichage avant de l’exécuter, puis touche la réponse."
+  question: "{texte}"
+  indice: "Écris les valeurs de i, tour par tour : range(n) va de 0 à n − 1."
+  exemple: "s = 0, puis for i in range(3): s = s + i. Les tours donnent i = 0, 1, 2 ; s vaut 0, 1, 3. print(s) affiche 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\nx = 3\nx = x + 4\nprint(x)"
+    nom: "7"
+    explication: "x vaut 3, puis x reçoit 3 + 4 = 7. print(x) affiche 7."
+    pieges:
+      - { texte: "3", pourquoi: "La 2e ligne calcule 3 + 4 et range le résultat dans x : x ne vaut plus 3." }
+      - { texte: "x + 4", pourquoi: "print affiche la valeur de x, pas le texte du calcul." }
+  - texte: "Que va afficher ce programme ?\nfor i in range(4): print(i)"
+    nom: "0, 1, 2, 3 (un nombre par ligne)"
+    explication: "range(4) donne 0, 1, 2, 3 : quatre tours, et 4 n’en fait pas partie."
+    pieges:
+      - { texte: "1, 2, 3, 4 (un nombre par ligne)", pourquoi: "range(4) commence à 0, pas à 1." }
+      - { texte: "0, 1, 2, 3, 4 (un nombre par ligne)", pourquoi: "range(4) s’arrête avant 4 : il donne 4 valeurs, de 0 à 3." }
+  - texte: "Que va afficher ce programme ?\ns = 0\nfor i in range(5): s = s + i\nprint(s)"
+    nom: "10"
+    explication: "s reçoit 0, puis 0 + 1 = 1, 3, 6, 10. La somme 0 + 1 + 2 + 3 + 4 vaut 10."
+    pieges:
+      - { texte: "15", pourquoi: "Tu as fait 1 + 2 + 3 + 4 + 5. range(5) donne 0, 1, 2, 3, 4." }
+      - { texte: "4", pourquoi: "4 est la dernière valeur de i. print affiche s, la somme." }
+  - texte: "Que va afficher ce programme ?\nfor i in range(2, 6): print(i)"
+    nom: "2, 3, 4, 5 (un nombre par ligne)"
+    explication: "range(2, 6) va de 2 jusqu’à 6 non compris : 2, 3, 4, 5."
+    pieges:
+      - { texte: "2, 3, 4, 5, 6 (un nombre par ligne)", pourquoi: "range(2, 6) s’arrête avant 6." }
+      - { texte: "0, 1, 2, 3, 4, 5 (un nombre par ligne)", pourquoi: "Avec deux nombres, range commence au premier : 2." }
+  - texte: "Que va afficher ce programme ?\nfor i in range(0, 10, 3): print(i)"
+    nom: "0, 3, 6, 9 (un nombre par ligne)"
+    explication: "On part de 0 et on avance de 3 tant qu’on reste sous 10 : 0, 3, 6, 9."
+    pieges:
+      - { texte: "3, 6, 9 (un nombre par ligne)", pourquoi: "range commence à son premier nombre, 0, puis avance de 3." }
+      - { texte: "0, 3, 6 (un nombre par ligne)", pourquoi: "9 est plus petit que 10 : il en fait partie." }
+  - texte: "Que va afficher ce programme ?\np = 1\nfor k in range(4): p = p * 2\nprint(p)"
+    nom: "16"
+    explication: "p double 4 fois : 2, 4, 8, 16."
+    pieges:
+      - { texte: "8", pourquoi: "range(4) fait 4 tours, pas 3 : 2, 4, 8, 16." }
+      - { texte: "2", pourquoi: "Ça, c’est après un seul tour." }
+  - texte: "Quel est le type de x ?\nx = 7 / 2"
+    nom: "Un flottant (x vaut 3.5)"
+    explication: "7 / 2 vaut 3.5 : un nombre à virgule, de type flottant (float)."
+    pieges:
+      - { texte: "Un entier (x vaut 3)", pourquoi: "En Python 3, / donne toujours un flottant ; c’est // qui donne le quotient entier." }
+      - { texte: "Une chaîne de caractères", pourquoi: "Il n’y a pas de guillemets : c’est un calcul sur des nombres." }
+  - texte: "Que va afficher ce programme ?\nx = 1\nwhile x < 50: x = x * 3\nprint(x)"
+    nom: "81"
+    explication: "while répète tant que la condition est vraie : 1, 3, 9, 27, puis 81. 81 < 50 est faux : la boucle s’arrête."
+    pieges:
+      - { texte: "27", pourquoi: "27 < 50 est vrai : la boucle fait encore un tour." }
+      - { texte: "50", pourquoi: "x ne prend que les valeurs 1, 3, 9, 27, 81 : il ne vaut jamais 50." }
+  - texte: "Pourquoi range(5) fait-il 5 tours, alors que la dernière valeur de i est 4 ?\nfor i in range(5): print(i)"
+    nom: "range(5) commence à 0 : 0, 1, 2, 3, 4, cela fait 5 valeurs"
+    explication: "De 0 à 4, il y a 5 nombres. range(n) fait toujours n tours, avec i de 0 à n − 1."
+    pieges:
+      - { texte: "Le dernier tour est sauté", pourquoi: "Aucun tour n’est sauté : les 5 valeurs sont 0, 1, 2, 3, 4." }
+      - { texte: "Python ajoute un tour de plus", pourquoi: "Il n’y a ni tour en plus ni tour en moins : 5 tours, de 0 à 4." }
+
+en:
+  titre: "Python: assignment and the for loop"
+  idee: "In Python, x = 3 stores 3 in x. for i in range(4) does 4 turns, with i = 0, 1, 2, 3: range starts at 0 and stops before 4."
+  phrases:
+    consigne: "Predict the output before running it, then touch the answer."
+    question: "{texte}"
+    indice: "Write down the values of i, turn by turn: range(n) goes from 0 to n − 1."
+    exemple: "s = 0, then for i in range(3): s = s + i. The turns give i = 0, 1, 2; s is 0, 1, 3. print(s) displays 3."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\nx = 3\nx = x + 4\nprint(x)"
+      nom: "7"
+      explication: "x is 3, then x gets 3 + 4 = 7. print(x) displays 7."
+      pieges:
+        - { texte: "3", pourquoi: "The 2nd line works out 3 + 4 and stores the result in x: x is no longer 3." }
+        - { texte: "x + 4", pourquoi: "print displays the value of x, not the text of the calculation." }
+    - texte: "What will this program display?\nfor i in range(4): print(i)"
+      nom: "0, 1, 2, 3 (one number per line)"
+      explication: "range(4) gives 0, 1, 2, 3: four turns, and 4 is not one of them."
+      pieges:
+        - { texte: "1, 2, 3, 4 (one number per line)", pourquoi: "range(4) starts at 0, not at 1." }
+        - { texte: "0, 1, 2, 3, 4 (one number per line)", pourquoi: "range(4) stops before 4: it gives 4 values, from 0 to 3." }
+    - texte: "What will this program display?\ns = 0\nfor i in range(5): s = s + i\nprint(s)"
+      nom: "10"
+      explication: "s gets 0, then 0 + 1 = 1, 3, 6, 10. The sum 0 + 1 + 2 + 3 + 4 is 10."
+      pieges:
+        - { texte: "15", pourquoi: "You did 1 + 2 + 3 + 4 + 5. range(5) gives 0, 1, 2, 3, 4." }
+        - { texte: "4", pourquoi: "4 is the last value of i. print displays s, the sum." }
+    - texte: "What will this program display?\nfor i in range(2, 6): print(i)"
+      nom: "2, 3, 4, 5 (one number per line)"
+      explication: "range(2, 6) goes from 2 up to 6, not included: 2, 3, 4, 5."
+      pieges:
+        - { texte: "2, 3, 4, 5, 6 (one number per line)", pourquoi: "range(2, 6) stops before 6." }
+        - { texte: "0, 1, 2, 3, 4, 5 (one number per line)", pourquoi: "With two numbers, range starts at the first one: 2." }
+    - texte: "What will this program display?\nfor i in range(0, 10, 3): print(i)"
+      nom: "0, 3, 6, 9 (one number per line)"
+      explication: "Start at 0 and go up by 3 as long as you stay below 10: 0, 3, 6, 9."
+      pieges:
+        - { texte: "3, 6, 9 (one number per line)", pourquoi: "range starts at its first number, 0, then goes up by 3." }
+        - { texte: "0, 3, 6 (one number per line)", pourquoi: "9 is less than 10: it is included." }
+    - texte: "What will this program display?\np = 1\nfor k in range(4): p = p * 2\nprint(p)"
+      nom: "16"
+      explication: "p doubles 4 times: 2, 4, 8, 16."
+      pieges:
+        - { texte: "8", pourquoi: "range(4) does 4 turns, not 3: 2, 4, 8, 16." }
+        - { texte: "2", pourquoi: "That is after one turn only." }
+    - texte: "What is the type of x?\nx = 7 / 2"
+      nom: "A float (x is 3.5)"
+      explication: "7 / 2 is 3.5: a decimal number, of type float."
+      pieges:
+        - { texte: "An integer (x is 3)", pourquoi: "In Python 3, / always gives a float; it is // that gives the whole-number quotient." }
+        - { texte: "A string", pourquoi: "There are no quotation marks: it is a calculation on numbers." }
+    - texte: "What will this program display?\nx = 1\nwhile x < 50: x = x * 3\nprint(x)"
+      nom: "81"
+      explication: "while repeats as long as the condition is true: 1, 3, 9, 27, then 81. 81 < 50 is false: the loop stops."
+      pieges:
+        - { texte: "27", pourquoi: "27 < 50 is true: the loop does one more turn." }
+        - { texte: "50", pourquoi: "x only takes the values 1, 3, 9, 27, 81: it is never 50." }
+    - texte: "Why does range(5) do 5 turns, when the last value of i is 4?\nfor i in range(5): print(i)"
+      nom: "range(5) starts at 0: 0, 1, 2, 3, 4 makes 5 values"
+      explication: "From 0 to 4 there are 5 numbers. range(n) always does n turns, with i from 0 to n − 1."
+      pieges:
+        - { texte: "The last turn is skipped", pourquoi: "No turn is skipped: the 5 values are 0, 1, 2, 3, 4." }
+        - { texte: "Python adds an extra turn", pourquoi: "There is no extra turn and none missing: 5 turns, from 0 to 4." }

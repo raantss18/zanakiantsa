@@ -1,0 +1,136 @@
+id: regle-carre
+titre: "Roi et pion contre roi : la règle du carré"
+niveau: 6e
+prerequis: [promotion]
+programme: { source: fide, texte: "3.7.3.3 : When a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn as part of the same move for a new queen, rook, bishop or knight of the same colour." }
+activite: quiz
+parametres: {}
+idee: "Trace le carré du pion : du pion jusqu’à sa case de promotion, et autant de cases sur le côté. Le roi noir qui est dans ce carré rattrape le pion. Si c’est à lui de jouer, il lui suffit d’y entrer."
+phrases:
+  consigne: "Ici, le roi blanc est loin et n’aide pas : compte seulement la course entre le pion et le roi noir."
+  question: "{texte}"
+  indice: "Compte les coups du pion jusqu’à la promotion, puis les pas du roi noir jusqu’à la case de promotion. Le roi a un pas d’avance si c’est à lui de jouer."
+  exemple: "Pion en a5 : 3 coups jusqu’à a8. Le carré va de a5 à d8. Roi noir en e5, aux Noirs : il entre en d6, dans le carré, et rattrape le pion."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Un pion blanc est en c4. Combien de coups lui faut-il pour arriver en c8 ?"
+    nom: "4"
+    explication: "c5, c6, c7, c8 : 4 coups."
+    pieges:
+      - { texte: "5", pourquoi: "Tu as compté la case de départ c4 : le pion fait c5, c6, c7, c8." }
+      - { texte: "3", pourquoi: "c5, c6, c7 : il reste encore c8, la case de promotion." }
+  - texte: "Un pion blanc est en e2 : il n’a pas encore bougé. Combien de coups lui faut-il pour arriver en e8 ?"
+    nom: "5"
+    explication: "Règles FIDE, article 3.7.2 : au premier coup, le pion peut avancer de deux cases. e2-e4, puis e5, e6, e7, e8 : 5 coups. On le compte comme s’il était en e3."
+    pieges:
+      - { texte: "6", pourquoi: "Tu as oublié le premier coup : le pion peut avancer de deux cases, de e2 à e4." }
+      - { texte: "4", pourquoi: "Le double pas n’est permis qu’au premier coup : e4, e5, e6, e7, e8." }
+  - texte: "Un pion blanc est en b5. Le roi noir arrive par la droite. Quels sont les coins du carré du pion ?"
+    nom: "b5, b8, e8 et e5"
+    explication: "De b5 à b8, il y a 4 cases. Le carré a donc 4 cases de côté : colonnes b, c, d, e et rangées 5 à 8."
+    pieges:
+      - { texte: "b5, b8, f8 et f5", pourquoi: "Le carré est trop large : de b5 à b8, il y a 4 cases, donc 4 colonnes, de b à e." }
+      - { texte: "b5, b8, d8 et d5", pourquoi: "Le carré est trop étroit : il faut 4 colonnes, comme les 4 cases de b5 à b8." }
+  - texte: "Pion blanc en a4, aux Noirs de jouer. Sur quelle case le roi noir rattrape-t-il le pion ?"
+    nom: "f4"
+    explication: "Le carré du pion a4 va de a4 à e8. De f4, le roi entre dans le carré en un pas (e5) et rattrape le pion."
+    pieges:
+      - { texte: "g4", pourquoi: "De g4, il lui faut 6 pas pour atteindre a8, et le pion arrive en 4 coups : il est hors du carré." }
+      - { texte: "h6", pourquoi: "De h6, il lui faut 7 pas jusqu’à a8 : bien trop loin." }
+  - texte: "Pion blanc en d4, aux Blancs de jouer. Sur quelle case le roi noir rattrape-t-il le pion ?"
+    nom: "h5"
+    explication: "Le carré du pion d4 va de d4 à h8. h5 est dedans : même si le pion avance d’abord, le roi le rattrape."
+    pieges:
+      - { texte: "h3", pourquoi: "Ce serait juste si c’était aux Noirs de jouer. Ici, le pion avance d’abord : le roi doit déjà être dans le carré." }
+      - { texte: "h2", pourquoi: "De h2, le roi est bien trop bas : 6 pas jusqu’à d8." }
+  - texte: "Pion blanc en c2 (pas encore joué), aux Noirs de jouer. Sur quelle case le roi noir rattrape-t-il le pion ?"
+    nom: "g3"
+    explication: "Avec le double pas, le pion compte comme en c3 : 5 coups. De g3, le roi atteint c8 en 5 pas, et il joue le premier : il rattrape le pion."
+    pieges:
+      - { texte: "h1", pourquoi: "Tu as oublié le double pas : le pion arrive en 5 coups, pas 6. De h1, le roi a besoin de 7 pas jusqu’à c8." }
+      - { texte: "a1", pourquoi: "Derrière le pion, le roi ne le rattrape pas : il lui faut 7 pas jusqu’à c8." }
+  - texte: "Pion blanc en h5, aux Noirs de jouer. Sur quelle case le roi noir rattrape-t-il le pion ?"
+    nom: "d5"
+    explication: "Le carré du pion h5 va de h5 à e8. De d5, le roi entre en un pas dans le carré (e6) et rattrape le pion."
+    pieges:
+      - { texte: "c5", pourquoi: "De c5, il faut 5 pas jusqu’à h8, et le pion arrive en 3 coups : le roi ne peut pas entrer dans le carré à temps." }
+      - { texte: "d1", pourquoi: "De d1, il faut 7 pas jusqu’à h8 : bien trop loin." }
+  - texte: "Pion blanc en e6, aux Blancs de jouer. Sur quelle case le roi noir rattrape-t-il le pion ?"
+    nom: "c7"
+    explication: "Le carré du pion e6 va de e6 à g8 vers la droite, et de e6 à c8 vers la gauche. c7 est dedans : après e7, le roi va en d7, puis il prend le pion ou la nouvelle dame en e8."
+    pieges:
+      - { texte: "b7", pourquoi: "De b7, il faut 3 pas jusqu’à e8, et le pion n’a besoin que de 2 coups, en jouant le premier." }
+      - { texte: "c5", pourquoi: "De c5, il faut 3 pas jusqu’à e8 : un de trop." }
+  - texte: "Pourquoi le roi noir peut-il être un pas hors du carré quand c’est à lui de jouer ?"
+    nom: "Il joue en premier : il entre dans le carré avant que le pion avance"
+    explication: "Le roi joue d’abord, puis le pion avance et son carré rétrécit. Si le roi est entré dans le carré, il reste dedans jusqu’à la promotion."
+    pieges:
+      - { texte: "Parce que le roi va plus vite que le pion", pourquoi: "Le roi et le pion font chacun un pas par coup : c’est le trait qui donne l’avance." }
+      - { texte: "Ce n’est jamais permis", pourquoi: "Quand c’est aux Noirs de jouer, entrer dans le carré au premier pas suffit : les exemples le montrent." }
+
+en:
+  titre: "King and pawn against king: the rule of the square"
+  idee: "Draw the pawn’s square: from the pawn to its promotion square, and the same number of squares to the side. A black king inside this square catches the pawn. If it is the king’s move, it only has to step into it."
+  phrases:
+    consigne: "Here the white king is far away and does not help: only count the race between the pawn and the black king."
+    question: "{texte}"
+    indice: "Count the pawn’s moves to promotion, then the black king’s steps to the promotion square. The king is one step ahead if it is its move."
+    exemple: "Pawn on a5: 3 moves to a8. The square goes from a5 to d8. Black king on e5, Black to move: it steps into d6, inside the square, and catches the pawn."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "A white pawn is on c4. How many moves does it need to reach c8?"
+      nom: "4"
+      explication: "c5, c6, c7, c8: 4 moves."
+      pieges:
+        - { texte: "5", pourquoi: "You counted the starting square c4: the pawn goes c5, c6, c7, c8." }
+        - { texte: "3", pourquoi: "c5, c6, c7: c8, the promotion square, is still to come." }
+    - texte: "A white pawn is on e2: it has not moved yet. How many moves does it need to reach e8?"
+      nom: "5"
+      explication: "FIDE Laws, article 3.7.2: on its first move the pawn may advance two squares. e2-e4, then e5, e6, e7, e8: 5 moves. Count it as if it were on e3."
+      pieges:
+        - { texte: "6", pourquoi: "You forgot the first move: the pawn may advance two squares, from e2 to e4." }
+        - { texte: "4", pourquoi: "The double step is only allowed on the first move: e4, e5, e6, e7, e8." }
+    - texte: "A white pawn is on b5. The black king comes from the right. What are the corners of the pawn’s square?"
+      nom: "b5, b8, e8 and e5"
+      explication: "From b5 to b8 there are 4 squares. So the square has 4 squares per side: files b, c, d, e and ranks 5 to 8."
+      pieges:
+        - { texte: "b5, b8, f8 and f5", pourquoi: "The square is too wide: from b5 to b8 there are 4 squares, so 4 files, from b to e." }
+        - { texte: "b5, b8, d8 and d5", pourquoi: "The square is too narrow: it needs 4 files, like the 4 squares from b5 to b8." }
+    - texte: "White pawn on a4, Black to move. On which square does the black king catch the pawn?"
+      nom: "f4"
+      explication: "The square of the a4 pawn goes from a4 to e8. From f4, the king steps into the square (e5) and catches the pawn."
+      pieges:
+        - { texte: "g4", pourquoi: "From g4 it needs 6 steps to reach a8, and the pawn gets there in 4 moves: it is outside the square." }
+        - { texte: "h6", pourquoi: "From h6 it needs 7 steps to a8: far too far." }
+    - texte: "White pawn on d4, White to move. On which square does the black king catch the pawn?"
+      nom: "h5"
+      explication: "The square of the d4 pawn goes from d4 to h8. h5 is inside it: even though the pawn moves first, the king catches it."
+      pieges:
+        - { texte: "h3", pourquoi: "That would be right if it were Black’s move. Here the pawn moves first: the king must already be inside the square." }
+        - { texte: "h2", pourquoi: "From h2 the king is far too low: 6 steps to d8." }
+    - texte: "White pawn on c2 (not moved yet), Black to move. On which square does the black king catch the pawn?"
+      nom: "g3"
+      explication: "With the double step, the pawn counts as if on c3: 5 moves. From g3 the king reaches c8 in 5 steps, and it moves first: it catches the pawn."
+      pieges:
+        - { texte: "h1", pourquoi: "You forgot the double step: the pawn arrives in 5 moves, not 6. From h1 the king needs 7 steps to c8." }
+        - { texte: "a1", pourquoi: "Behind the pawn, the king does not catch it: it needs 7 steps to c8." }
+    - texte: "White pawn on h5, Black to move. On which square does the black king catch the pawn?"
+      nom: "d5"
+      explication: "The square of the h5 pawn goes from h5 to e8. From d5, the king steps into the square (e6) and catches the pawn."
+      pieges:
+        - { texte: "c5", pourquoi: "From c5 it needs 5 steps to h8, and the pawn gets there in 3 moves: the king cannot enter the square in time." }
+        - { texte: "d1", pourquoi: "From d1 it needs 7 steps to h8: far too far." }
+    - texte: "White pawn on e6, White to move. On which square does the black king catch the pawn?"
+      nom: "c7"
+      explication: "The square of the e6 pawn goes from e6 to g8 to the right, and from e6 to c8 to the left. c7 is inside: after e7, the king goes to d7, then takes the pawn or the new queen on e8."
+      pieges:
+        - { texte: "b7", pourquoi: "From b7 it needs 3 steps to e8, and the pawn only needs 2 moves, moving first." }
+        - { texte: "c5", pourquoi: "From c5 it needs 3 steps to e8: one too many." }
+    - texte: "Why may the black king be one step outside the square when it is its move?"
+      nom: "It moves first: it steps into the square before the pawn advances"
+      explication: "The king moves first, then the pawn advances and its square shrinks. Once the king is inside the square, it stays inside until promotion."
+      pieges:
+        - { texte: "Because the king is faster than the pawn", pourquoi: "The king and the pawn each make one step per move: having the move is what gives the lead." }
+        - { texte: "It is never allowed", pourquoi: "When it is Black’s move, stepping into the square on the first step is enough: the examples show it." }

@@ -12,6 +12,36 @@ void main() {
   final topic = Topic(jsonDecode(File('assets/content/echecs.json').readAsStringSync()) as Map<String, dynamic>);
   final problems = topic.skills.where((s) => s.activity == 'probleme').toList();
 
+  /// La pièce en [from] attaque-t-elle la case [to] (marche de la pièce, pièces qui bouchent la ligne comprises) ?
+  bool hits(List<String?> b, int from, int to) {
+    final piece = b[from]!.toUpperCase();
+    final (fr, ff, tr, tf) = (from ~/ 8, from % 8, to ~/ 8, to % 8);
+    final (dr, df) = (tr - fr, tf - ff);
+    switch (piece) {
+      case 'P':
+        return dr == (isWhitePiece(b[from]!) ? 1 : -1) && df.abs() == 1;
+      case 'N':
+        return (dr.abs() == 1 && df.abs() == 2) || (dr.abs() == 2 && df.abs() == 1);
+      case 'K':
+        return dr.abs() <= 1 && df.abs() <= 1 && (dr != 0 || df != 0);
+    }
+    final straight = dr == 0 || df == 0, diagonal = dr.abs() == df.abs();
+    if ((dr == 0 && df == 0) || !(piece == 'R' && straight || piece == 'B' && diagonal || piece == 'Q' && (straight || diagonal))) return false;
+    final (sr, sf) = (dr.sign, df.sign);
+    for (var (r, f) = (fr + sr, ff + sf); (r, f) != (tr, tf); (r, f) = (r + sr, f + sf)) {
+      if (b[r * 8 + f] != null) return false;
+    }
+    return true;
+  }
+
+  /// Les pièces blanches qui font échec au roi noir.
+  Set<int> checkers(Position q) {
+    final k = q.kingOf(false)!;
+    return {for (var s = 0; s < 64; s++) if (q.board[s] != null && isWhitePiece(q.board[s]!) && hits(q.board, s, k)) s};
+  }
+
+  bool mate(Position q) => q.inCheck && q.legalMoves().isEmpty;
+
   /// Les coups qui réussissent, d'après le moteur, pour un thème.
   Set<String> winning(String theme, Position p) {
     final moves = p.legalMoves();
@@ -42,12 +72,65 @@ void main() {
         if (free.isEmpty) return {};
         final best = free.values.reduce((a, b) => a > b ? a : b);
         return {for (final e in free.entries) if (e.value == best) e.key};
+      case 'mat':
+        return {for (final m in moves) if (mate(p.play(m))) m.uci};
+      case 'double':
+        return {for (final m in moves) if (checkers(p.play(m)).length == 2) m.uci};
+      case 'decouverte':
+        // Échec par une autre pièce que celle qui a bougé, et celle-ci prend une pièce (pas un pion) au passage.
+        return {
+          for (final m in moves)
+            if (p.play(m).inCheck &&
+                !checkers(p.play(m)).contains(m.to) &&
+                p.board[m.to] != null &&
+                !isWhitePiece(p.board[m.to]!) &&
+                p.board[m.to] != 'p')
+              m.uci,
+        };
+      case 'clouage':
+        // Pas d'échec, la pièce est à l'abri, et une pièce noire (ni roi ni pion) protège seule son roi de cette pièce.
+        return {
+          for (final m in moves)
+            if (!p.play(m).inCheck &&
+                !p.play(m).attacked(m.to, byWhite: false) &&
+                [
+                  for (var x = 0; x < 64; x++)
+                    if (p.play(m).board[x] case final c? when !isWhitePiece(c) && c != 'k' && c != 'p') x,
+                ].any((x) {
+                  final b = List.of(p.play(m).board)..[x] = null;
+                  return hits(b, m.to, p.play(m).kingOf(false)!);
+                }))
+              m.uci,
+        };
+      case 'enfilade':
+        // Tour, fou ou dame seule à faire échec, à l'abri ; derrière le roi, sur la même ligne, une pièce noire (pas un pion).
+        return {
+          for (final m in moves)
+            if ('RBQ'.contains(p.board[m.from]!) &&
+                checkers(p.play(m)).length == 1 &&
+                checkers(p.play(m)).single == m.to &&
+                !p.play(m).attacked(m.to, byWhite: false) &&
+                (() {
+                  final q = p.play(m);
+                  final k = q.kingOf(false)!;
+                  final (sr, sf) = ((k ~/ 8 - m.to ~/ 8).sign, (k % 8 - m.to % 8).sign);
+                  for (var (r, f) = (k ~/ 8 + sr, k % 8 + sf); r >= 0 && r < 8 && f >= 0 && f < 8; (r, f) = (r + sr, f + sf)) {
+                    final c = q.board[r * 8 + f];
+                    if (c != null) return !isWhitePiece(c) && c != 'p';
+                  }
+                  return false;
+                })())
+              m.uci,
+        };
     }
     throw StateError('thème inconnu $theme');
   }
 
-  test('six leçons de problèmes', () {
-    expect(problems.map((s) => s.id).toSet(), {'roque', 'promotion', 'en-passant', 'piece-gratuite', 'fourchette', 'mat-couloir'});
+  test('douze leçons de problèmes', () {
+    expect(problems.map((s) => s.id).toSet(), {
+      'roque', 'promotion', 'en-passant', 'piece-gratuite', 'fourchette', 'mat-couloir', //
+      'mat-escalier', 'mat-baiser', 'clouage', 'enfilade', 'decouverte', 'double-echec',
+    });
   });
 
   for (final s in problems) {

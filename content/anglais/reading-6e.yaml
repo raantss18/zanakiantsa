@@ -1,0 +1,168 @@
+id: reading-6e
+titre: "Lire et comprendre de courts textes"
+niveau: 6e
+prerequis: [present-simple]
+programme: { source: college, texte: "6e (A1) : il peut comprendre des expressions isolées dans des histoires, des conversations et des énoncés très simples, courts et concrets à propos de sujets familiers et quotidiens." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Pour comprendre un texte, on lit d'abord la question, puis on cherche dans le texte les mots qui y répondent."
+phrases:
+  consigne: "Lis le court texte en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis la question, puis cherche dans le texte la phrase qui en parle."
+  exemple: "« Ben gets up at seven. He goes to school by bus. » Comment Ben va-t-il à l'école ? Je cherche « school » : « by bus », en bus."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« Hi, I'm Amy. I live in Edinburgh, in Scotland. I've got two brothers. » Combien de frères a Amy ?"
+    nom: "deux"
+    explication: "« I've got two brothers » : Amy a deux frères."
+    pieges:
+      - { texte: "un", pourquoi: "Le texte dit « two brothers » : deux frères." }
+      - { texte: "trois", pourquoi: "Trois, ce serait « three ». Le texte dit « two »." }
+  - texte: "« Ben gets up at seven. He has breakfast and goes to school by bus. » Comment Ben va-t-il à l'école ?"
+    nom: "en bus"
+    explication: "« He goes to school by bus » : en bus."
+    pieges:
+      - { texte: "à pied", pourquoi: "À pied, ce serait « on foot ». Le texte dit « by bus »." }
+      - { texte: "à vélo", pourquoi: "À vélo, ce serait « by bike ». Le texte dit « by bus »." }
+  - texte: "« On Saturdays, I play football in the morning and I visit my grandma in the afternoon. » Que fait l'enfant le samedi après-midi ?"
+    nom: "Il rend visite à sa grand-mère."
+    explication: "« I visit my grandma in the afternoon » : l'après-midi, il va voir sa grand-mère."
+    pieges:
+      - { texte: "Il joue au football.", pourquoi: "Le football, c'est « in the morning », le matin." }
+      - { texte: "Il va à l'école.", pourquoi: "Le texte ne parle pas d'école." }
+  - texte: "« Lucy is tall and she has got long red hair. She is very funny. » Comment sont les cheveux de Lucy ?"
+    nom: "longs et roux"
+    explication: "« long red hair » : des cheveux longs et roux."
+    pieges:
+      - { texte: "courts et roux", pourquoi: "« long » veut dire long. Courts, ce serait « short »." }
+      - { texte: "longs et blonds", pourquoi: "« red hair », ce sont des cheveux roux. Blonds, ce serait « blond »." }
+  - texte: "« Swimming pool. Open Monday to Saturday, 9 a.m. to 6 p.m. Closed on Sunday. » Quel jour la piscine est-elle fermée ?"
+    nom: "le dimanche"
+    explication: "« Closed on Sunday » : fermée le dimanche."
+    pieges:
+      - { texte: "le samedi", pourquoi: "« Monday to Saturday » : du lundi au samedi, elle est ouverte." }
+      - { texte: "le lundi", pourquoi: "« Monday to Saturday » : le lundi, elle est ouverte." }
+  - texte: "« Dear Sam, I'm in Cornwall with my family. The beach is beautiful but the water is cold! See you soon, Mia » Qu'est-ce que ce texte ?"
+    nom: "une carte postale"
+    explication: "« Dear Sam… See you soon, Mia » : Mia écrit de ses vacances, c'est une carte postale."
+    pieges:
+      - { texte: "une recette", pourquoi: "Une recette donne des ingrédients et des étapes. Ici, Mia raconte ses vacances à Sam." }
+      - { texte: "une publicité", pourquoi: "Une publicité veut vendre quelque chose. Ici, Mia raconte ses vacances à Sam." }
+  - texte: "« The beach is beautiful but the water is cold! » Comment est l'eau ?"
+    nom: "froide"
+    explication: "« the water is cold » : l'eau est froide."
+    pieges:
+      - { texte: "chaude", pourquoi: "Chaude, ce serait « hot » ou « warm ». « cold », c'est froid." }
+      - { texte: "belle", pourquoi: "« beautiful » parle de la plage, « the beach », pas de l'eau." }
+  - texte: "« Tom doesn't like vegetables. He loves pizza and chocolate cake. » Qu'est-ce que Tom n'aime pas ?"
+    nom: "les légumes"
+    explication: "« Tom doesn't like vegetables » : il n'aime pas les légumes."
+    pieges:
+      - { texte: "la pizza", pourquoi: "« He loves pizza » : il adore la pizza." }
+      - { texte: "le gâteau au chocolat", pourquoi: "« He loves… chocolate cake » : il adore le gâteau au chocolat." }
+  - texte: "Un panneau au zoo : « Please don't feed the animals. » Que dit le panneau ?"
+    nom: "Ne donnez pas à manger aux animaux."
+    explication: "« don't feed » : ne donnez pas à manger."
+    pieges:
+      - { texte: "Regardez les animaux.", pourquoi: "Regarder, ce serait « look at ». « feed » veut dire donner à manger." }
+      - { texte: "Donnez à manger aux animaux.", pourquoi: "« don't » rend l'ordre négatif : ne… pas." }
+  - texte: "« Ben gets up at seven. » Pourquoi « gets » prend-il un -s ?"
+    nom: "Ben, c'est « he » : au présent simple, le verbe prend -s."
+    explication: "Avec he, she, it ou un seul prénom, le verbe prend -s au présent simple : « Ben gets up »."
+    pieges:
+      - { texte: "Parce que Ben se lève plusieurs fois.", pourquoi: "Non : ce -s ne compte pas les fois ; il marque he, she, it." }
+      - { texte: "Parce que c'est le passé.", pourquoi: "Non : le passé de « get » est « got »." }
+en:
+  titre: "Reading short texts"
+  idee: "To understand a text, read the question first, then look in the text for the words that answer it."
+  phrases:
+    consigne: "Read the short text, then touch the right answer."
+    question: "{texte}"
+    indice: "Read the question again, then find the sentence in the text that talks about it."
+    exemple: "“Ben gets up at seven. He goes to school by bus.” How does Ben go to school? I look for school: by bus."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“Hi, I'm Amy. I live in Edinburgh, in Scotland. I've got two brothers.” How many brothers has Amy got?"
+      nom: "two"
+      explication: "“I've got two brothers.”"
+      pieges:
+        - texte: "one"
+          pourquoi: "The text says two brothers."
+        - texte: "three"
+          pourquoi: "The text says two, not three."
+    - texte: "“Ben gets up at seven. He has breakfast and goes to school by bus.” How does Ben go to school?"
+      nom: "by bus"
+      explication: "“He goes to school by bus.”"
+      pieges:
+        - texte: "on foot"
+          pourquoi: "The text says by bus, not on foot."
+        - texte: "by bike"
+          pourquoi: "The text says by bus, not by bike."
+    - texte: "“On Saturdays, I play football in the morning and I visit my grandma in the afternoon.” What does the child do on Saturday afternoon?"
+      nom: "visits Grandma"
+      explication: "“I visit my grandma in the afternoon.”"
+      pieges:
+        - texte: "plays football"
+          pourquoi: "Football is in the morning."
+        - texte: "goes to school"
+          pourquoi: "The text doesn't talk about school."
+    - texte: "“Lucy is tall and she has got long red hair. She is very funny.” What is Lucy's hair like?"
+      nom: "long and red"
+      explication: "“long red hair”."
+      pieges:
+        - texte: "short and red"
+          pourquoi: "The text says long, not short."
+        - texte: "long and blond"
+          pourquoi: "The text says red, not blond."
+    - texte: "“Swimming pool. Open Monday to Saturday, 9 a.m. to 6 p.m. Closed on Sunday.” When is the pool closed?"
+      nom: "on Sunday"
+      explication: "“Closed on Sunday.”"
+      pieges:
+        - texte: "on Saturday"
+          pourquoi: "Monday to Saturday: it's open on Saturday."
+        - texte: "on Monday"
+          pourquoi: "Monday to Saturday: it's open on Monday."
+    - texte: "“Dear Sam, I'm in Cornwall with my family. The beach is beautiful but the water is cold! See you soon, Mia” What kind of text is it?"
+      nom: "a postcard"
+      explication: "“Dear Sam… See you soon, Mia”: Mia writes from her holiday, it's a postcard."
+      pieges:
+        - texte: "a recipe"
+          pourquoi: "A recipe gives ingredients and steps. Here Mia tells Sam about her holiday."
+        - texte: "an advert"
+          pourquoi: "An advert tries to sell something. Here Mia tells Sam about her holiday."
+    - texte: "“The beach is beautiful but the water is cold!” What is the water like?"
+      nom: "cold"
+      explication: "“the water is cold”."
+      pieges:
+        - texte: "warm"
+          pourquoi: "The text says cold, not warm."
+        - texte: "beautiful"
+          pourquoi: "Beautiful is about the beach, not the water."
+    - texte: "“Tom doesn't like vegetables. He loves pizza and chocolate cake.” What doesn't Tom like?"
+      nom: "vegetables"
+      explication: "“Tom doesn't like vegetables.”"
+      pieges:
+        - texte: "pizza"
+          pourquoi: "“He loves pizza.”"
+        - texte: "chocolate cake"
+          pourquoi: "He loves chocolate cake."
+    - texte: "A sign at the zoo: “Please don't feed the animals.” What does the sign mean?"
+      nom: "Do not give the animals food."
+      explication: "“Don't feed” means do not give food."
+      pieges:
+        - texte: "Look at the animals."
+          pourquoi: "Feed means give food, not look."
+        - texte: "Give the animals food."
+          pourquoi: "Don't makes the order negative."
+    - texte: "“Ben gets up at seven.” Why does gets end in -s?"
+      nom: "Ben is he: in the present simple, the verb takes -s."
+      explication: "With he, she, it or one name, the verb takes -s in the present simple: “Ben gets up.”"
+      pieges:
+        - texte: "Because Ben gets up several times."
+          pourquoi: "No: this -s doesn't count times; it shows he, she, it."
+        - texte: "Because it is the past."
+          pourquoi: "No: the past of get is got."

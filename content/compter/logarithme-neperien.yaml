@@ -1,0 +1,148 @@
+id: logarithme-neperien
+titre: "Exponentielle et logarithme"
+niveau: Terminale
+prerequis: ["suites-geometriques"]
+programme: { source: terminale, texte: "Utiliser l’équation fonctionnelle de l’exponentielle ou du logarithme pour transformer une écriture, résoudre une équation, une inéquation." }
+activite: quiz
+parametres: {}
+idee: "ln est la fonction réciproque de exp : pour x > 0, y = ln(x) veut dire exp(y) = x. ln(1) = 0, ln(e) = 1, et ln(ab) = ln(a) + ln(b)."
+phrases:
+  consigne: "Transforme l’écriture, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "ln et exp se défont l’un l’autre : ln(exp(x)) = x et exp(ln(x)) = x."
+  exemple: "exp(x) = 5 donne x = ln(5), environ 1,61. Et ln(2) + ln(3) = ln(2 × 3) = ln(6)."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Combien vaut ln(1) ?"
+    nom: "0"
+    explication: "exp(0) = 1, donc ln(1) = 0."
+    pieges:
+      - { texte: "1", pourquoi: "ln(e) = 1, mais ln(1) = 0 car exp(0) = 1." }
+      - { texte: "e", pourquoi: "e est le nombre tel que ln(e) = 1, pas la valeur de ln(1)." }
+  - texte: "Combien vaut ln(e³) ?"
+    nom: "3"
+    explication: "ln défait exp : ln(e³) = 3 × ln(e) = 3 × 1 = 3."
+    pieges:
+      - { texte: "e³", pourquoi: "ln et exp se défont : il reste l’exposant, 3." }
+      - { texte: "3e", pourquoi: "ln(e³) = 3 × ln(e), et ln(e) = 1, pas e." }
+  - texte: "Écris plus simplement : ln(4) + ln(5)"
+    nom: "ln(20)"
+    explication: "ln(a) + ln(b) = ln(a × b) : ln(4) + ln(5) = ln(20)."
+    pieges:
+      - { texte: "ln(9)", pourquoi: "Une somme de logarithmes est le logarithme du produit, 4 × 5, pas de la somme." }
+      - { texte: "20", pourquoi: "Le résultat est ln(20), pas 20 : ln(20) vaut environ 3." }
+  - texte: "Écris plus simplement : ln(12) − ln(3)"
+    nom: "ln(4)"
+    explication: "ln(a) − ln(b) = ln(a ÷ b) : ln(12 ÷ 3) = ln(4)."
+    pieges:
+      - { texte: "ln(9)", pourquoi: "Une différence de logarithmes est le logarithme du quotient, 12 ÷ 3, pas de la différence." }
+      - { texte: "4", pourquoi: "Le résultat est ln(4), pas 4." }
+  - texte: "Écris plus simplement : ln(2³)"
+    nom: "3 ln(2)"
+    explication: "ln(aⁿ) = n ln(a) : ln(2³) = 3 ln(2), c’est aussi ln(8)."
+    pieges:
+      - { texte: "ln(6)", pourquoi: "2³ = 2 × 2 × 2 = 8, pas 2 × 3 = 6." }
+      - { texte: "(ln(2))³", pourquoi: "L’exposant passe devant comme un facteur : 3 × ln(2), pas ln(2) au cube." }
+  - texte: "Résous : exp(x) = 7"
+    nom: "x = ln(7)"
+    explication: "On applique ln, qui défait exp : x = ln(7), environ 1,95."
+    pieges:
+      - { texte: "x = 7/e", pourquoi: "exp(x) n’est pas e × x : on applique ln aux deux membres." }
+      - { texte: "x = exp(7)", pourquoi: "Pour défaire exp, on applique ln, pas exp." }
+  - texte: "Résous : ln(x) = 2"
+    nom: "x = e²"
+    explication: "On applique exp, qui défait ln : x = exp(2) = e², environ 7,39."
+    pieges:
+      - { texte: "x = ln(2)", pourquoi: "Pour défaire ln, on applique exp, pas ln." }
+      - { texte: "x = 2e", pourquoi: "exp(2) = e², c’est e × e, pas 2 × e." }
+  - texte: "Complète : exp(2x) = 9 donne 2x = ln(9), donc x = …"
+    nom: "ln(9) ÷ 2, c’est-à-dire ln(3)"
+    explication: "On divise par 2 : x = ln(9) ÷ 2. Et ln(9) = ln(3²) = 2 ln(3), donc x = ln(3)."
+    pieges:
+      - { texte: "ln(9) − 2", pourquoi: "2x veut dire 2 × x : on divise par 2, on ne retranche pas 2." }
+      - { texte: "ln(4,5)", pourquoi: "ln(9) ÷ 2 n’est pas ln(9 ÷ 2) : ln(9) ÷ 2 = ln(3)." }
+  - texte: "Pourquoi ln(−2) n’existe-t-il pas ?"
+    nom: "exp(y) est toujours strictement positif : aucun y ne donne exp(y) = −2."
+    explication: "ln(x) est le nombre y tel que exp(y) = x. Comme exp ne prend que des valeurs positives, ln n’est défini que pour x > 0."
+    pieges:
+      - { texte: "Parce que −2 est trop petit.", pourquoi: "ln(0,001) existe : ce n’est pas la taille qui compte, c’est le signe." }
+      - { texte: "Parce que ln(−2) = −ln(2).", pourquoi: "C’est ln(1/2) qui vaut −ln(2)." }
+  - texte: "Résous : exp(x) > 1"
+    nom: "x > 0"
+    explication: "exp(0) = 1 et exp est croissante : exp(x) > exp(0) donne x > 0."
+    pieges:
+      - { texte: "x > 1", pourquoi: "exp(1) = e, environ 2,72 : c’est exp(0) qui vaut 1." }
+      - { texte: "x < 0", pourquoi: "exp est croissante : le sens de l’inégalité ne change pas." }
+
+en:
+  titre: "Exponential and logarithm"
+  idee: "ln is the inverse function of exp: for x > 0, y = ln(x) means exp(y) = x. ln(1) = 0, ln(e) = 1, and ln(ab) = ln(a) + ln(b)."
+  phrases:
+    consigne: "Rewrite the expression, then touch the right answer."
+    question: "{texte}"
+    indice: "ln and exp undo each other: ln(exp(x)) = x and exp(ln(x)) = x."
+    exemple: "exp(x) = 5 gives x = ln(5), about 1.61. And ln(2) + ln(3) = ln(2 × 3) = ln(6)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is ln(1)?"
+      nom: "0"
+      explication: "exp(0) = 1, so ln(1) = 0."
+      pieges:
+        - { texte: "1", pourquoi: "ln(e) = 1, but ln(1) = 0 because exp(0) = 1." }
+        - { texte: "e", pourquoi: "e is the number with ln(e) = 1, not the value of ln(1)." }
+    - texte: "What is ln(e³)?"
+      nom: "3"
+      explication: "ln undoes exp: ln(e³) = 3 × ln(e) = 3 × 1 = 3."
+      pieges:
+        - { texte: "e³", pourquoi: "ln and exp undo each other: the power, 3, is what is left." }
+        - { texte: "3e", pourquoi: "ln(e³) = 3 × ln(e), and ln(e) = 1, not e." }
+    - texte: "Simplify: ln(4) + ln(5)"
+      nom: "ln(20)"
+      explication: "ln(a) + ln(b) = ln(a × b): ln(4) + ln(5) = ln(20)."
+      pieges:
+        - { texte: "ln(9)", pourquoi: "A sum of logarithms is the logarithm of the product, 4 × 5, not of the sum." }
+        - { texte: "20", pourquoi: "The result is ln(20), not 20: ln(20) is about 3." }
+    - texte: "Simplify: ln(12) − ln(3)"
+      nom: "ln(4)"
+      explication: "ln(a) − ln(b) = ln(a ÷ b): ln(12 ÷ 3) = ln(4)."
+      pieges:
+        - { texte: "ln(9)", pourquoi: "A difference of logarithms is the logarithm of the quotient, 12 ÷ 3, not of the difference." }
+        - { texte: "4", pourquoi: "The result is ln(4), not 4." }
+    - texte: "Simplify: ln(2³)"
+      nom: "3 ln(2)"
+      explication: "ln(aⁿ) = n ln(a): ln(2³) = 3 ln(2), which is also ln(8)."
+      pieges:
+        - { texte: "ln(6)", pourquoi: "2³ = 2 × 2 × 2 = 8, not 2 × 3 = 6." }
+        - { texte: "(ln(2))³", pourquoi: "The power comes to the front as a factor: 3 × ln(2), not ln(2) cubed." }
+    - texte: "Solve: exp(x) = 7"
+      nom: "x = ln(7)"
+      explication: "Apply ln, which undoes exp: x = ln(7), about 1.95."
+      pieges:
+        - { texte: "x = 7/e", pourquoi: "exp(x) is not e × x: apply ln to both sides." }
+        - { texte: "x = exp(7)", pourquoi: "To undo exp, apply ln, not exp." }
+    - texte: "Solve: ln(x) = 2"
+      nom: "x = e²"
+      explication: "Apply exp, which undoes ln: x = exp(2) = e², about 7.39."
+      pieges:
+        - { texte: "x = ln(2)", pourquoi: "To undo ln, apply exp, not ln." }
+        - { texte: "x = 2e", pourquoi: "exp(2) = e², which is e × e, not 2 × e." }
+    - texte: "Fill in the step: exp(2x) = 9 gives 2x = ln(9), so x = …"
+      nom: "ln(9) ÷ 2, which is ln(3)"
+      explication: "Divide by 2: x = ln(9) ÷ 2. And ln(9) = ln(3²) = 2 ln(3), so x = ln(3)."
+      pieges:
+        - { texte: "ln(9) − 2", pourquoi: "2x means 2 × x: divide by 2, do not subtract 2." }
+        - { texte: "ln(4.5)", pourquoi: "ln(9) ÷ 2 is not ln(9 ÷ 2): ln(9) ÷ 2 = ln(3)." }
+    - texte: "Why does ln(−2) not exist?"
+      nom: "exp(y) is always strictly positive: no y gives exp(y) = −2."
+      explication: "ln(x) is the number y with exp(y) = x. Since exp only takes positive values, ln is defined only for x > 0."
+      pieges:
+        - { texte: "Because −2 is too small.", pourquoi: "ln(0.001) exists: what matters is the sign, not the size." }
+        - { texte: "Because ln(−2) = −ln(2).", pourquoi: "It is ln(1/2) that equals −ln(2)." }
+    - texte: "Solve: exp(x) > 1"
+      nom: "x > 0"
+      explication: "exp(0) = 1 and exp is increasing: exp(x) > exp(0) gives x > 0."
+      pieges:
+        - { texte: "x > 1", pourquoi: "exp(1) = e, about 2.72: it is exp(0) that equals 1." }
+        - { texte: "x < 0", pourquoi: "exp is increasing: the inequality sign stays the same." }

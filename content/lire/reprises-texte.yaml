@@ -1,0 +1,125 @@
+id: reprises-texte
+titre: "Qui est « il » ? Les mots qui reprennent"
+niveau: CE2
+prerequis: ["comprendre-texte"]
+programme: { source: cycle2, texte: "Se repérer dans la chaine anaphorique (qui relie un nom à sa ou ses reprise(s) pronominale(s) ou à d’autres noms de sens équivalent) et s’appuyer sur le sens du texte pour résoudre des ambigüités." }
+activite: quiz
+parametres: {}
+idee: "Dans un texte, on ne répète pas toujours le même nom : on le reprend par « il », « elle », « le », ou par un autre nom. Pour comprendre, on cherche qui ce mot remplace."
+phrases:
+  consigne: "Lis le petit texte, puis trouve qui ou quoi le mot remplace."
+  question: "{texte}"
+  indice: "Remonte dans le texte : quel nom va avec ce mot, et avec le sens de la phrase ?"
+  exemple: "« Tom a un chat. Il le nourrit. » « Il », c’est Tom ; « le », c’est le chat."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « Tom a un chat. Il le nourrit chaque matin. » Qui est « Il » ?"
+    nom: "Tom"
+    explication: "Celui qui nourrit, c’est Tom : « Il » reprend Tom."
+    pieges:
+      - { texte: "le chat", pourquoi: "Le chat est nourri : c’est lui que « le » reprend. Celui qui nourrit, c’est Tom." }
+      - { texte: "le matin", pourquoi: "« chaque matin » dit quand. « Il » reprend une personne : Tom." }
+  - texte: "Lis : « Tom a un chat. Il le nourrit chaque matin. » Que reprend « le » ?"
+    nom: "le chat"
+    explication: "Tom nourrit le chat : « le » reprend le chat."
+    pieges:
+      - { texte: "Tom", pourquoi: "Tom est celui qui nourrit ; « le », c’est celui qu’on nourrit : le chat." }
+      - { texte: "le matin", pourquoi: "On ne nourrit pas le matin : on nourrit le chat." }
+  - texte: "Lis : « Lou et Sara vont à la piscine. Elles nagent longtemps. » Qui est « Elles » ?"
+    nom: "Lou et Sara"
+    explication: "« Elles » est au pluriel et désigne les deux filles qui nagent."
+    pieges:
+      - { texte: "la piscine", pourquoi: "La piscine ne nage pas. « Elles », ce sont les deux filles." }
+      - { texte: "Sara toute seule", pourquoi: "« Elles » est au pluriel : il désigne plusieurs personnes, Lou et Sara." }
+  - texte: "Lis : « Un renard sort du bois. L’animal cherche à manger. » Qui est « L’animal » ?"
+    nom: "le renard"
+    explication: "« L’animal » est un autre nom pour reprendre le renard, sans répéter le mot."
+    pieges:
+      - { texte: "le bois", pourquoi: "Le bois n’est pas un animal : c’est l’endroit d’où sort le renard." }
+      - { texte: "un chasseur", pourquoi: "Le texte ne parle pas de chasseur : « L’animal » reprend le renard." }
+  - texte: "Lis : « Grand-mère a fait une soupe. Elle l’a mangée avec du pain. » Qui a mangé ?"
+    nom: "Grand-mère"
+    explication: "« Elle » reprend Grand-mère, qui mange ; « l’ » reprend la soupe, qui est mangée."
+    pieges:
+      - { texte: "la soupe", pourquoi: "La soupe est mangée : c’est elle que « l’ » reprend. Celle qui mange, c’est Grand-mère." }
+      - { texte: "le pain", pourquoi: "Le pain est mangé avec la soupe ; il ne mange pas." }
+  - texte: "Lis : « Le maître lit une histoire aux élèves. Ils l’écoutent en silence. » Qui est « Ils » ?"
+    nom: "les élèves"
+    explication: "« Ils » est au pluriel : ce sont les élèves qui écoutent."
+    pieges:
+      - { texte: "le maître", pourquoi: "Le maître est seul et c’est lui qui lit. « Ils » est au pluriel : les élèves." }
+      - { texte: "l’histoire", pourquoi: "L’histoire est écoutée : c’est elle que « l’ » reprend." }
+  - texte: "Lis : « Max a perdu son ballon. Le garçon le cherche partout. » Qui est « Le garçon » ?"
+    nom: "Max"
+    explication: "« Le garçon » reprend Max pour ne pas répéter son nom."
+    pieges:
+      - { texte: "le ballon", pourquoi: "Le ballon est cherché : c’est lui que « le » reprend. Le garçon, c’est Max." }
+      - { texte: "un autre enfant", pourquoi: "Le texte ne parle que de Max : « Le garçon » le reprend." }
+  - texte: "Lis : « Nina adore son vélo. Elle le prend chaque jour. » Pourquoi « Elle », c’est Nina ?"
+    nom: "Seule Nina peut prendre le vélo : c’est la personne du texte."
+    explication: "On s’appuie sur le sens : c’est Nina qui prend son vélo."
+    pieges:
+      - { texte: "Parce que « Elle » est au début de la phrase.", pourquoi: "La place ne suffit pas : on cherche le nom que « Elle » remplace, avec le sens du texte." }
+      - { texte: "Parce que « Elle » reprend toujours le dernier nom.", pourquoi: "Le dernier nom est « vélo », et un vélo ne prend pas un vélo." }
+
+en:
+  langue: "fr"
+  titre: "French: who is « il »? Words that stand for others"
+  idee: "A text doesn't always repeat the same noun: it uses « il », « elle », « le », or another noun instead. To understand, find out who that word stands for."
+  phrases:
+    consigne: "Read the short French text, then find who or what the word stands for."
+    question: "{texte}"
+    indice: "Go back in the text: which noun fits this word, and the meaning of the sentence?"
+    exemple: "« Tom a un chat. Il le nourrit. » « Il » is Tom; « le » is the cat."
+    demonstration: "{explication}"
+    bravo: "Yes! That's right."
+  items:
+    - texte: "Read: « Tom a un chat. Il le nourrit chaque matin. » Who is « Il »?"
+      nom: "Tom"
+      explication: "The one who feeds is Tom: « Il » stands for Tom."
+      pieges:
+        - { texte: "le chat", pourquoi: "The cat is the one being fed: « le » stands for it. The one who feeds is Tom." }
+        - { texte: "le matin", pourquoi: "« chaque matin » says when. « Il » stands for a person: Tom." }
+    - texte: "Read: « Tom a un chat. Il le nourrit chaque matin. » What does « le » stand for?"
+      nom: "le chat"
+      explication: "Tom feeds the cat: « le » stands for « le chat »."
+      pieges:
+        - { texte: "Tom", pourquoi: "Tom is the one who feeds; « le » is the one being fed: the cat." }
+        - { texte: "le matin", pourquoi: "You don't feed the morning: you feed the cat." }
+    - texte: "Read: « Lou et Sara vont à la piscine. Elles nagent longtemps. » Who is « Elles »?"
+      nom: "Lou et Sara"
+      explication: "« Elles » is plural and means the two girls who are swimming."
+      pieges:
+        - { texte: "la piscine", pourquoi: "The pool doesn't swim. « Elles » means the two girls." }
+        - { texte: "Sara toute seule", pourquoi: "« Elles » is plural: it means several people, Lou and Sara." }
+    - texte: "Read: « Un renard sort du bois. L’animal cherche à manger. » Who is « L’animal »?"
+      nom: "le renard"
+      explication: "« L’animal » is another noun for the fox, so the word isn't repeated."
+      pieges:
+        - { texte: "le bois", pourquoi: "The wood isn't an animal: it's where the fox comes out of." }
+        - { texte: "un chasseur", pourquoi: "The text doesn't mention a hunter: « L’animal » stands for the fox." }
+    - texte: "Read: « Grand-mère a fait une soupe. Elle l’a mangée avec du pain. » Who ate?"
+      nom: "Grand-mère"
+      explication: "« Elle » stands for Grand-mère, who eats; « l’ » stands for the soup, which is eaten."
+      pieges:
+        - { texte: "la soupe", pourquoi: "The soup is eaten: « l’ » stands for it. The one who eats is Grand-mère." }
+        - { texte: "le pain", pourquoi: "The bread is eaten with the soup; it doesn't eat." }
+    - texte: "Read: « Le maître lit une histoire aux élèves. Ils l’écoutent en silence. » Who is « Ils »?"
+      nom: "les élèves"
+      explication: "« Ils » is plural: it's the pupils who are listening."
+      pieges:
+        - { texte: "le maître", pourquoi: "The teacher is one person and he's the one reading. « Ils » is plural: the pupils." }
+        - { texte: "l’histoire", pourquoi: "The story is listened to: « l’ » stands for it." }
+    - texte: "Read: « Max a perdu son ballon. Le garçon le cherche partout. » Who is « Le garçon »?"
+      nom: "Max"
+      explication: "« Le garçon » stands for Max, so his name isn't repeated."
+      pieges:
+        - { texte: "le ballon", pourquoi: "The ball is being looked for: « le » stands for it. The boy is Max." }
+        - { texte: "un autre enfant", pourquoi: "The text only talks about Max: « Le garçon » stands for him." }
+    - texte: "Read: « Nina adore son vélo. Elle le prend chaque jour. » Why is « Elle » Nina?"
+      nom: "Only Nina can take the bike: she's the person in the text."
+      explication: "We use the meaning: it's Nina who takes her bike."
+      pieges:
+        - { texte: "Because « Elle » is at the start of the sentence.", pourquoi: "Its place isn't enough: we look for the noun « Elle » stands for, using the meaning of the text." }
+        - { texte: "Because « Elle » always stands for the last noun.", pourquoi: "The last noun is « vélo », and a bike can't take a bike." }

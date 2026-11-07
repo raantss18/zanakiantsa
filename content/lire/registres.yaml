@@ -1,0 +1,137 @@
+id: registres
+titre: "Les registres (tonalités)"
+niveau: 1re
+prerequis: ["genres-litteraires"]
+programme: { source: lycee1re, texte: "comparaison entre deux pièces dont l’une est à la source de l’autre sur des sujets comme la construction de l’action, le système des personnages, la tonalité dominante, l’intention de sens, etc." }
+activite: quiz
+parametres: {}
+idee: "Le registre, ou tonalité, est l’effet qu’un texte cherche à produire : faire rire (comique), émouvoir (pathétique), montrer un destin implacable (tragique), exprimer ses sentiments (lyrique)…"
+phrases:
+  consigne: "Lis la description ou l’extrait, cherche l’effet produit, puis touche le registre."
+  question: "{texte}"
+  indice: "Quel effet sur le lecteur : rire, pitié, admiration, critique, hésitation ? Qui parle de ses sentiments ?"
+  exemple: "Un héros écrasé par un destin auquel il ne peut échapper : c’est le registre tragique."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Un texte qui fait rire par des situations, des mots ou des caractères ridicules : quel registre ?"
+    nom: "comique"
+    explication: "Faire rire par des situations, des mots ou des caractères : c’est le registre comique."
+    pieges:
+      - { texte: "tragique", pourquoi: "Le tragique montre un destin implacable ; il ne cherche pas à faire rire." }
+      - { texte: "lyrique", pourquoi: "Le lyrique exprime les sentiments personnels ; il ne cherche pas à faire rire." }
+  - texte: "Un héros écrasé par un destin auquel il ne peut échapper : quel registre ?"
+    nom: "tragique"
+    explication: "Le destin inévitable qui écrase le héros est la marque du tragique."
+    pieges:
+      - { texte: "pathétique", pourquoi: "Le pathétique cherche à émouvoir par la souffrance, sans l’idée d’un destin inévitable." }
+      - { texte: "comique", pourquoi: "Le comique fait rire ; ici, le héros est écrasé par son destin." }
+  - texte: "Le poète exprime ses sentiments personnels, avec « je », souvent avec des exclamations : quel registre ?"
+    nom: "lyrique"
+    explication: "L’expression des sentiments personnels, à la première personne, est la marque du lyrique."
+    pieges:
+      - { texte: "épique", pourquoi: "L’épique raconte des exploits grandioses, souvent collectifs, pas des sentiments intimes." }
+      - { texte: "satirique", pourquoi: "Le satirique se moque pour critiquer ; ici, le poète confie ce qu’il ressent." }
+  - texte: "Un combat héroïque raconté avec des exagérations grandioses : quel registre ?"
+    nom: "épique"
+    explication: "Des exploits héroïques amplifiés par l’exagération : c’est le registre épique."
+    pieges:
+      - { texte: "lyrique", pourquoi: "Le lyrique exprime des sentiments personnels ; ici, on raconte des exploits." }
+      - { texte: "comique", pourquoi: "L’exagération sert ici à grandir le héros, pas à faire rire." }
+  - texte: "Un texte qui se moque d’un groupe ou d’un défaut pour le critiquer : quel registre ?"
+    nom: "satirique"
+    explication: "Se moquer pour dénoncer : c’est le registre satirique."
+    pieges:
+      - { texte: "comique", pourquoi: "Le comique fait rire ; la satire fait rire pour critiquer, dénoncer." }
+      - { texte: "lyrique", pourquoi: "Le lyrique exprime des sentiments personnels ; ici, on critique." }
+  - texte: "Une scène qui veut faire naître la pitié du lecteur devant une souffrance : quel registre ?"
+    nom: "pathétique"
+    explication: "Émouvoir, faire naître la pitié devant la souffrance : c’est le registre pathétique."
+    pieges:
+      - { texte: "tragique", pourquoi: "Le tragique insiste sur un destin inévitable ; le pathétique cherche d’abord la pitié." }
+      - { texte: "épique", pourquoi: "L’épique fait admirer des exploits ; ici, on veut faire naître la pitié." }
+  - texte: "« Ô douleur ! Je pleure seul sous la lune pâle. » Quel registre ?"
+    nom: "lyrique"
+    explication: "« Je », une exclamation, une émotion confiée : c’est le registre lyrique."
+    pieges:
+      - { texte: "comique", pourquoi: "Rien ne cherche à faire rire : le « je » confie sa douleur." }
+      - { texte: "épique", pourquoi: "Il n’y a pas d’exploit héroïque : le « je » exprime un sentiment intime." }
+  - texte: "Un événement étrange fait hésiter le lecteur entre une explication naturelle et une explication surnaturelle : quel registre ?"
+    nom: "fantastique"
+    explication: "L’hésitation entre le naturel et le surnaturel est la marque du fantastique."
+    pieges:
+      - { texte: "merveilleux", pourquoi: "Dans le merveilleux, le surnaturel est accepté sans hésitation, comme dans les contes de fées." }
+      - { texte: "tragique", pourquoi: "Le tragique montre un destin inévitable ; ici, c’est l’hésitation face à l’étrange qui compte." }
+  - texte: "Un avare hurle « au meurtrier ! » parce qu’on lui a volé son argent. Pourquoi la scène est-elle comique ?"
+    nom: "Sa réaction est démesurée : l’exagération fait rire."
+    explication: "Crier au meurtre pour un vol d’argent : le décalage entre la perte et la réaction rend la scène comique."
+    pieges:
+      - { texte: "Parce qu’il y a un vol.", pourquoi: "Un vol peut être raconté de façon grave ; c’est la disproportion de la réaction qui fait rire." }
+      - { texte: "Parce qu’il crie.", pourquoi: "Un cri peut aussi être pathétique : c’est le décalage avec la situation qui fait rire." }
+
+en:
+  langue: "fr"
+  titre: "French: literary registers (tones)"
+  idee: "The register, or tone, is the effect a text aims for: making you laugh (comic), moving you to pity (pathetic), showing an inescapable fate (tragic), expressing feelings (lyrical)…"
+  phrases:
+    consigne: "Read the description or the extract, find the effect it creates, then touch the register."
+    question: "{texte}"
+    indice: "What effect on the reader: laughter, pity, admiration, criticism, hesitation? Who is talking about their feelings?"
+    exemple: "A hero crushed by a fate he can't escape: that's the tragic register."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "A text that makes you laugh through ridiculous situations, words or characters: which register?"
+      nom: "comic"
+      explication: "Making you laugh through situations, words or characters: that's the comic register."
+      pieges:
+        - { texte: "tragic", pourquoi: "The tragic shows an inescapable fate; it doesn't try to make you laugh." }
+        - { texte: "lyrical", pourquoi: "The lyrical expresses personal feelings; it doesn't try to make you laugh." }
+    - texte: "A hero crushed by a fate he can't escape: which register?"
+      nom: "tragic"
+      explication: "An inescapable fate crushing the hero is the mark of the tragic."
+      pieges:
+        - { texte: "pathetic", pourquoi: "The pathetic aims to move you through suffering, without the idea of an inescapable fate." }
+        - { texte: "comic", pourquoi: "The comic makes you laugh; here the hero is crushed by fate." }
+    - texte: "The poet expresses personal feelings, with « je », often with exclamations: which register?"
+      nom: "lyrical"
+      explication: "Expressing personal feelings in the first person is the mark of the lyrical."
+      pieges:
+        - { texte: "epic", pourquoi: "The epic tells of grand, often collective, deeds, not intimate feelings." }
+        - { texte: "satirical", pourquoi: "The satirical mocks in order to criticise; here the poet shares what he feels." }
+    - texte: "A heroic battle told with grand exaggerations: which register?"
+      nom: "epic"
+      explication: "Heroic deeds magnified by exaggeration: that's the epic register."
+      pieges:
+        - { texte: "lyrical", pourquoi: "The lyrical expresses personal feelings; here, deeds are being told." }
+        - { texte: "comic", pourquoi: "Here the exaggeration makes the hero greater, not funny." }
+    - texte: "A text that mocks a group or a fault in order to criticise it: which register?"
+      nom: "satirical"
+      explication: "Mocking in order to denounce: that's the satirical register."
+      pieges:
+        - { texte: "comic", pourquoi: "The comic makes you laugh; satire makes you laugh in order to criticise." }
+        - { texte: "lyrical", pourquoi: "The lyrical expresses personal feelings; here, something is being criticised." }
+    - texte: "A scene meant to make the reader feel pity for someone's suffering: which register?"
+      nom: "pathetic"
+      explication: "Moving the reader to pity for suffering: that's the pathetic register."
+      pieges:
+        - { texte: "tragic", pourquoi: "The tragic stresses an inescapable fate; the pathetic aims first at pity." }
+        - { texte: "epic", pourquoi: "The epic makes you admire great deeds; here the aim is pity." }
+    - texte: "« Ô douleur ! Je pleure seul sous la lune pâle. » Which register?"
+      nom: "lyrical"
+      explication: "« Je », an exclamation, a feeling shared: that's the lyrical register."
+      pieges:
+        - { texte: "comic", pourquoi: "Nothing tries to make you laugh: the « je » shares his pain." }
+        - { texte: "epic", pourquoi: "There's no heroic deed: the « je » expresses an intimate feeling." }
+    - texte: "A strange event makes the reader hesitate between a natural and a supernatural explanation: which register?"
+      nom: "fantastic"
+      explication: "Hesitating between the natural and the supernatural is the mark of the fantastic."
+      pieges:
+        - { texte: "marvellous", pourquoi: "In the marvellous, the supernatural is accepted without hesitation, as in fairy tales." }
+        - { texte: "tragic", pourquoi: "The tragic shows an inescapable fate; here what counts is hesitating before the strange." }
+    - texte: "A miser screams « au meurtrier ! » (murder!) because his money has been stolen. Why is the scene comic?"
+      nom: "His reaction is out of proportion: the exaggeration makes us laugh."
+      explication: "Crying murder over stolen money: the gap between the loss and the reaction makes the scene comic."
+      pieges:
+        - { texte: "Because there's a theft.", pourquoi: "A theft can be told seriously; it's the disproportionate reaction that's funny." }
+        - { texte: "Because he shouts.", pourquoi: "A shout can be pathetic too: it's the gap with the situation that's funny." }

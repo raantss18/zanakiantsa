@@ -1,0 +1,76 @@
+id: decouverte
+titre: "L’attaque à la découverte"
+niveau: CM2
+prerequis: [enfilade]
+programme: { source: fide, texte: "3.9.1 : The king is said to be 'in check' if it is attacked by one or more of the opponent's pieces." }
+activite: probleme
+parametres: { theme: decouverte }
+idee: "Une de tes pièces cache une tour, un fou ou ta dame. Quand elle bouge, la pièce cachée fait échec. Celle qui a bougé peut prendre ce qu’elle veut pendant ce temps."
+phrases:
+  consigne: "Bouge la pièce qui cache ta tour, ton fou ou ta dame : la pièce cachée fait échec, et celle qui bouge prend une pièce noire."
+  question: "{texte}"
+  indice: "Repère la ligne entre ta pièce cachée et le roi noir. La pièce qui bouche cette ligne doit partir… en prenant quelque chose."
+  exemple: "Regarde quelle pièce bouche une ligne vers le roi noir."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "4k3/8/8/2r5/4N3/8/8/4R1K1 w - - 0 1"
+    coups: [e4c5]
+    explication: "Le cavalier prend la tour en c5. En partant, il découvre la tour e1, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "2q3k1/8/8/8/6B1/8/7K/6R1 w - - 0 1"
+    coups: [g4c8]
+    explication: "Le fou prend la dame en c8. En partant, il découvre la tour g1, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "7k/3n4/8/8/3R4/8/1B6/6K1 w - - 0 1"
+    coups: [d4d7]
+    explication: "La tour prend le cavalier en d7. En partant, il découvre le fou b2, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "7k/8/8/1r6/8/2N5/8/Q5K1 w - - 0 1"
+    coups: [c3b5]
+    explication: "Le cavalier prend la tour en b5. En partant, il découvre la dame a1, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "8/4q3/8/R1B4k/8/8/8/K7 w - - 0 1"
+    coups: [c5e7]
+    explication: "Le fou prend la dame en e7. En partant, il découvre la tour a5, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+  - texte: "Fais un échec à la découverte qui prend une pièce !"
+    fen: "8/7k/8/3n4/4P3/8/8/1B4K1 w - - 0 1"
+    coups: [e4d5]
+    explication: "Le pion prend le cavalier en d5. En partant, il découvre le fou b1, qui fait échec : le roi doit se protéger, et la prise est gagnée."
+
+en:
+  titre: "The discovered attack"
+  idee: "One of your pieces hides a rook, a bishop or your queen. When it moves, the hidden piece gives check. Meanwhile, the piece that moved can capture whatever it likes."
+  phrases:
+    consigne: "Move the piece that hides your rook, bishop or queen: the hidden piece gives check, and the piece that moves captures a black piece."
+    question: "{texte}"
+    indice: "Find the line between your hidden piece and the black king. The piece blocking that line must move away… by capturing something."
+    exemple: "Look at which piece blocks a line towards the black king."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "4k3/8/8/2r5/4N3/8/8/4R1K1 w - - 0 1"
+      coups: [e4c5]
+      explication: "The knight takes the rook on c5. As it moves away, it uncovers the rook on e1, which gives check: the king has to deal with it, and the capture is won."
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "2q3k1/8/8/8/6B1/8/7K/6R1 w - - 0 1"
+      coups: [g4c8]
+      explication: "The bishop takes the queen on c8. As it moves away, it uncovers the rook on g1, which gives check: the king has to deal with it, and the capture is won."
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "7k/3n4/8/8/3R4/8/1B6/6K1 w - - 0 1"
+      coups: [d4d7]
+      explication: "The rook takes the knight on d7. As it moves away, it uncovers the bishop on b2, which gives check: the king has to deal with it, and the capture is won."
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "7k/8/8/1r6/8/2N5/8/Q5K1 w - - 0 1"
+      coups: [c3b5]
+      explication: "The knight takes the rook on b5. As it moves away, it uncovers the queen on a1, which gives check: the king has to deal with it, and the capture is won."
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "8/4q3/8/R1B4k/8/8/8/K7 w - - 0 1"
+      coups: [c5e7]
+      explication: "The bishop takes the queen on e7. As it moves away, it uncovers the rook on a5, which gives check: the king has to deal with it, and the capture is won."
+    - texte: "Make a discovered check that captures a piece!"
+      fen: "8/7k/8/3n4/4P3/8/8/1B4K1 w - - 0 1"
+      coups: [e4d5]
+      explication: "The pawn takes the knight on d5. As it moves away, it uncovers the bishop on b1, which gives check: the king has to deal with it, and the capture is won."

@@ -1,0 +1,136 @@
+id: grandes-periodes
+titre: "Les grandes périodes de l'histoire"
+niveau: CM1
+prerequis: []
+programme: { source: c3hg, texte: "Situer chronologiquement des grandes périodes historiques." }
+activite: quiz
+parametres: {}
+idee: "On découpe l'histoire en grandes périodes : Préhistoire, Antiquité, Moyen Âge, Temps modernes, époque contemporaine. Des événements marquants servent de limites."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : l'écriture (vers 3300 avant J.-C.), 476, 1492, 1789. Pour le siècle, ajoute 1 aux centaines : 1515, c'est le XVIe siècle."
+  exemple: "Exemple : Charlemagne est couronné empereur en 800. 800 est entre 476 et 1492 : c'est le Moyen Âge."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle période commence avec l'apparition des premiers humains et s'achève avec l'invention de l'écriture ?"
+    nom: "La Préhistoire."
+    explication: "La Préhistoire est la plus longue période : elle s'arrête quand apparaît l'écriture, vers 3300 avant J.-C."
+    pieges:
+      - { texte: "Le Moyen Âge.", pourquoi: "Le Moyen Âge est bien plus récent : il commence en 476 après J.-C." }
+      - { texte: "L'Antiquité.", pourquoi: "L'Antiquité commence justement avec l'écriture, à la fin de la Préhistoire." }
+  - texte: "Quel événement marque, en 476, la fin de l'Antiquité ?"
+    nom: "La fin de l'Empire romain d'Occident."
+    explication: "En 476, le dernier empereur romain d'Occident est déposé : on fait commencer le Moyen Âge à cette date."
+    pieges:
+      - { texte: "La Révolution française.", pourquoi: "La Révolution date de 1789 : elle ouvre l'époque contemporaine." }
+      - { texte: "L'invention de l'écriture.", pourquoi: "L'écriture marque le début de l'Antiquité, pas sa fin." }
+  - texte: "Christophe Colomb atteint l'Amérique en 1492. Quelle période commence alors, selon le découpage habituel ?"
+    nom: "Les Temps modernes."
+    explication: "On fait souvent commencer les Temps modernes en 1492. Ils durent jusqu'à la Révolution française, en 1789."
+    pieges:
+      - { texte: "L'époque contemporaine.", pourquoi: "L'époque contemporaine commence en 1789." }
+      - { texte: "Le Moyen Âge.", pourquoi: "1492 marque au contraire la fin du Moyen Âge." }
+  - texte: "Dans quelle période vivons-nous aujourd'hui ?"
+    nom: "L'époque contemporaine."
+    explication: "L'époque contemporaine commence avec la Révolution française, en 1789, et dure jusqu'à aujourd'hui."
+    pieges:
+      - { texte: "Les Temps modernes.", pourquoi: "Les Temps modernes s'arrêtent en 1789." }
+      - { texte: "Les temps récents n'ont pas de nom.", pourquoi: "Les historiens appellent cette période l'époque contemporaine." }
+  - texte: "En quel siècle se trouve l'année 1515 ?"
+    nom: "Le XVIe siècle."
+    explication: "Le XVIe siècle va de 1501 à 1600. On prend les centaines, 15, et on ajoute 1 : 16."
+    pieges:
+      - { texte: "Le XVe siècle.", pourquoi: "C'est l'erreur la plus fréquente : on lit 15, mais il faut ajouter 1. 1515 est dans le XVIe siècle." }
+      - { texte: "Le XIVe siècle.", pourquoi: "Le XIVe siècle, ce sont les années 1301 à 1400." }
+  - texte: "En quel siècle a eu lieu la Révolution française, en 1789 ?"
+    nom: "Le XVIIIe siècle."
+    explication: "1789 : 17 centaines, plus 1, donne 18. C'est le XVIIIe siècle."
+    pieges:
+      - { texte: "Le XVIIe siècle.", pourquoi: "N'oublie pas d'ajouter 1 aux centaines." }
+      - { texte: "Le XIXe siècle.", pourquoi: "Le XIXe siècle va de 1801 à 1900." }
+  - texte: "César prend la ville gauloise d'Alésia en 52 avant J.-C. Dans quelle période est-ce ?"
+    nom: "L'Antiquité."
+    explication: "Avant J.-C., on compte les années à rebours. 52 avant J.-C. se situe après l'invention de l'écriture et avant 476 : c'est l'Antiquité."
+    pieges:
+      - { texte: "La Préhistoire.", pourquoi: "On écrivait déjà à cette époque : César a même raconté cette guerre." }
+      - { texte: "Le Moyen Âge.", pourquoi: "Le Moyen Âge commence plus de cinq siècles plus tard, en 476." }
+  - texte: "Range ces repères du plus ancien au plus récent."
+    nom: "Alésia, Charlemagne empereur, Révolution française."
+    explication: "52 avant J.-C., puis 800, puis 1789. Les années avant J.-C. sont les plus anciennes."
+    pieges:
+      - { texte: "Charlemagne empereur, Alésia, Révolution française.", pourquoi: "Alésia est avant J.-C. : elle est plus ancienne que l'an 800." }
+      - { texte: "Révolution française, Charlemagne empereur, Alésia.", pourquoi: "C'est l'ordre inverse : du plus récent au plus ancien." }
+  - texte: "Pourquoi l'invention de l'écriture sert-elle de limite entre la Préhistoire et l'Antiquité ?"
+    nom: "Parce qu'avec l'écriture, on dispose de textes qui racontent le passé."
+    explication: "Pour la Préhistoire, on n'a que des traces matérielles : outils, os, peintures. Avec l'écriture apparaissent des documents écrits."
+    pieges:
+      - { texte: "Parce que les humains apparaissent à ce moment-là.", pourquoi: "Les humains existaient depuis très longtemps avant l'écriture." }
+      - { texte: "Parce qu'elle a été inventée partout en même temps.", pourquoi: "L'écriture est apparue à des moments différents selon les régions du monde." }
+
+en:
+  titre: "The great periods of history"
+  idee: "History is divided into great periods: Prehistory, Antiquity, the Middle Ages, the Early Modern period, the Contemporary period. Key events mark the boundaries."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: writing (around 3300 BC), 476, 1492, 1789. For the century, add 1 to the hundreds: 1515 is in the 16th century."
+    exemple: "Example: Charlemagne is crowned emperor in 800. 800 is between 476 and 1492: it's the Middle Ages."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which period starts with the first humans and ends with the invention of writing?"
+      nom: "Prehistory."
+      explication: "Prehistory is the longest period: it ends when writing appears, around 3300 BC."
+      pieges:
+        - { texte: "The Middle Ages.", pourquoi: "The Middle Ages are much more recent: they start in AD 476." }
+        - { texte: "Antiquity.", pourquoi: "Antiquity starts with writing, at the end of Prehistory." }
+    - texte: "What event in 476 marks the end of Antiquity?"
+      nom: "The end of the Western Roman Empire."
+      explication: "In 476, the last Western Roman emperor was removed: the Middle Ages are said to start then."
+      pieges:
+        - { texte: "The French Revolution.", pourquoi: "The Revolution was in 1789: it opens the Contemporary period." }
+        - { texte: "The invention of writing.", pourquoi: "Writing marks the start of Antiquity, not its end." }
+    - texte: "Christopher Columbus reaches America in 1492. Which period begins then, in the usual division?"
+      nom: "The Early Modern period."
+      explication: "The Early Modern period is often said to begin in 1492. It lasts until the French Revolution, in 1789."
+      pieges:
+        - { texte: "The Contemporary period.", pourquoi: "The Contemporary period starts in 1789." }
+        - { texte: "The Middle Ages.", pourquoi: "1492 marks the end of the Middle Ages, not the start." }
+    - texte: "Which period do we live in today?"
+      nom: "The Contemporary period."
+      explication: "The Contemporary period starts with the French Revolution, in 1789, and lasts until today."
+      pieges:
+        - { texte: "The Early Modern period.", pourquoi: "The Early Modern period ends in 1789." }
+        - { texte: "Recent times have no name.", pourquoi: "French historians call this period the Contemporary period." }
+    - texte: "Which century is the year 1515 in?"
+      nom: "The 16th century."
+      explication: "The 16th century runs from 1501 to 1600. Take the hundreds, 15, and add 1: 16."
+      pieges:
+        - { texte: "The 15th century.", pourquoi: "That's the most common mistake: you read 15, but you must add 1. 1515 is in the 16th century." }
+        - { texte: "The 14th century.", pourquoi: "The 14th century is the years 1301 to 1400." }
+    - texte: "Which century was the French Revolution, in 1789, in?"
+      nom: "The 18th century."
+      explication: "1789: 17 hundreds, plus 1, makes 18. It's the 18th century."
+      pieges:
+        - { texte: "The 17th century.", pourquoi: "Don't forget to add 1 to the hundreds." }
+        - { texte: "The 19th century.", pourquoi: "The 19th century runs from 1801 to 1900." }
+    - texte: "Caesar takes the Gallic town of Alesia in 52 BC. Which period is that?"
+      nom: "Antiquity."
+      explication: "Before Christ, years are counted backwards. 52 BC is after the invention of writing and before 476: it's Antiquity."
+      pieges:
+        - { texte: "Prehistory.", pourquoi: "People already wrote then: Caesar even wrote about this war." }
+        - { texte: "The Middle Ages.", pourquoi: "The Middle Ages start over five centuries later, in 476." }
+    - texte: "Put these landmarks in order, from oldest to most recent."
+      nom: "Alesia, Charlemagne emperor, French Revolution."
+      explication: "52 BC, then 800, then 1789. Years BC are the oldest."
+      pieges:
+        - { texte: "Charlemagne emperor, Alesia, French Revolution.", pourquoi: "Alesia is BC: it's older than the year 800." }
+        - { texte: "French Revolution, Charlemagne emperor, Alesia.", pourquoi: "That's the reverse order: from most recent to oldest." }
+    - texte: "Why is the invention of writing used as the boundary between Prehistory and Antiquity?"
+      nom: "Because with writing, we have texts that tell us about the past."
+      explication: "For Prehistory, we only have physical traces: tools, bones, paintings. With writing come written documents."
+      pieges:
+        - { texte: "Because humans appeared then.", pourquoi: "Humans existed for a very long time before writing." }
+        - { texte: "Because it was invented everywhere at the same time.", pourquoi: "Writing appeared at different times in different parts of the world." }

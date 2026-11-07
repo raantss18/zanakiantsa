@@ -26,7 +26,7 @@
   ],
   "ages": [
     5,
-    10
+    16
   ],
   "en": {
     "titre": "Programming a robot",
@@ -56,7 +56,10 @@
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
-    "prog": "https://eduscol.education.fr/document/14773/download"
+    "prog": "https://eduscol.education.fr/document/14773/download",
+    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf",
+    "cycle4": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf",
+    "seconde": "https://www.snes.edu/IMG/pdf/maths_annexe_2egt_bo.pdf"
   },
   "competences": [
     {
@@ -288,6 +291,3505 @@
           "demonstration": "Look at this program: it counts the gems, and works on all three paths.",
           "bravo": "Well done! Your program works everywhere, because your robot knows how to count."
         }
+      }
+    },
+    {
+      "id": "sequence-instructions",
+      "titre": "Exécuter une suite d’instructions",
+      "niveau": "6e",
+      "prerequis": [
+        "compteur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Identifier une instruction ou une séquence d’instructions"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un programme est une suite d’instructions. L’ordinateur les exécute une par une, dans l’ordre, de haut en bas.",
+      "phrases": {
+        "consigne": "Exécute le programme dans ta tête, ligne par ligne, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Écris la valeur de x après chaque ligne, avant de lire la suivante.",
+        "exemple": "mettre x à 4, puis ajouter 3 à x, puis dire x : x vaut 4, puis 7. Le lutin dit 7.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre x à 5\najouter 3 à x\ndire x\nQue dit le lutin ?",
+          "nom": "8",
+          "explication": "x vaut 5, puis 5 + 3 = 8. Le lutin dit 8.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "L’instruction « ajouter 3 à x » est exécutée avant « dire x » : x vaut déjà 8."
+            },
+            {
+              "texte": "x",
+              "pourquoi": "« dire x » dit la valeur rangée dans x, pas la lettre x."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 2\najouter 4 à x\nmettre x à x * 3\ndire x\nQue dit le lutin ?",
+          "nom": "18",
+          "explication": "x vaut 2, puis 2 + 4 = 6, puis 6 × 3 = 18.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "Tu as calculé 2 + 4 × 3 d’un coup. Les lignes s’exécutent dans l’ordre : x vaut déjà 6 quand on le multiplie."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "Tu as multiplié avant d’ajouter : l’ordre des lignes compte."
+            }
+          ]
+        },
+        {
+          "texte": "Programme de calcul :\nchoisir le nombre 5\najouter 2\nmultiplier le résultat par 4\nretirer 3\nQuel nombre obtient-on ?",
+          "nom": "25",
+          "explication": "5 + 2 = 7, puis 7 × 4 = 28, puis 28 − 3 = 25.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "Tu as fait 5 + 2 × 4 − 3. Chaque étape part du résultat de l’étape d’avant : (5 + 2) × 4."
+            },
+            {
+              "texte": "28",
+              "pourquoi": "Tu as oublié la dernière instruction : il faut encore retirer 3."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 10\ndire x\najouter 5 à x\nQue dit le lutin ?",
+          "nom": "10",
+          "explication": "À la ligne « dire x », x vaut 10. L’ajout vient après : le lutin a déjà parlé.",
+          "pieges": [
+            {
+              "texte": "15",
+              "pourquoi": "Le lutin parle avant l’ajout : à la ligne « dire x », x vaut encore 10."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "« ajouter 5 à x » ne remplace pas x par 5, et il arrive après « dire x »."
+            }
+          ]
+        },
+        {
+          "texte": "mettre a à 3\nmettre b à 4\nmettre a à a + b\ndire a\nQue dit le lutin ?",
+          "nom": "7",
+          "explication": "a vaut 3, b vaut 4, puis a reçoit 3 + 4 = 7.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "La 3e ligne range a + b dans a : a ne vaut plus 3."
+            },
+            {
+              "texte": "4",
+              "pourquoi": "On dit a, pas b."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 7\nmettre x à 2\ndire x\nQue dit le lutin ?",
+          "nom": "2",
+          "explication": "x vaut 7, puis la 2e ligne remplace 7 par 2.",
+          "pieges": [
+            {
+              "texte": "7",
+              "pourquoi": "Une nouvelle valeur remplace l’ancienne : après la 2e ligne, x vaut 2."
+            },
+            {
+              "texte": "9",
+              "pourquoi": "« mettre x à 2 » remplace la valeur, il n’ajoute pas 2."
+            }
+          ]
+        },
+        {
+          "texte": "Combien d’instructions compte ce programme ?\nmettre x à 1\najouter 2 à x\najouter 2 à x\ndire x",
+          "nom": "4",
+          "explication": "Quatre lignes, quatre instructions, exécutées l’une après l’autre.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "Deux lignes identiques sont deux instructions : chacune est exécutée."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "5, c’est ce que dit le lutin (1 + 2 + 2), pas le nombre d’instructions."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi ? x vaut 3 au départ.\nA : ajouter 1 à x, puis mettre x à x * 2\nB : mettre x à x * 2, puis ajouter 1 à x\nPourquoi A et B ne donnent-ils pas le même x ?",
+          "nom": "L’ordre change le calcul : A donne 8, B donne 7",
+          "explication": "A : (3 + 1) × 2 = 8. B : 3 × 2 + 1 = 7. Mêmes instructions, ordre différent, résultat différent.",
+          "pieges": [
+            {
+              "texte": "Les mêmes instructions donnent toujours le même résultat",
+              "pourquoi": "Pas si l’ordre change : chaque instruction part de la valeur laissée par la précédente."
+            },
+            {
+              "texte": "Il y a une erreur dans B",
+              "pourquoi": "B est juste : (3 × 2) + 1 = 7. Il fait seulement un autre calcul que A."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Running a sequence of instructions",
+        "idee": "A program is a sequence of instructions. The computer runs them one at a time, in order, from top to bottom.",
+        "phrases": {
+          "consigne": "Run the program in your head, line by line, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Write down the value of x after each line, before you read the next one.",
+          "exemple": "set x to 4, then change x by 3, then say x: x is 4, then 7. The sprite says 7.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set x to 5\nchange x by 3\nsay x\nWhat does the sprite say?",
+            "nom": "8",
+            "explication": "x is 5, then 5 + 3 = 8. The sprite says 8.",
+            "pieges": [
+              {
+                "texte": "5",
+                "pourquoi": "“change x by 3” runs before “say x”: x is already 8."
+              },
+              {
+                "texte": "x",
+                "pourquoi": "“say x” says the value stored in x, not the letter x."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 2\nchange x by 4\nset x to x * 3\nsay x\nWhat does the sprite say?",
+            "nom": "18",
+            "explication": "x is 2, then 2 + 4 = 6, then 6 × 3 = 18.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "You worked out 2 + 4 × 3 in one go. The lines run in order: x is already 6 when it is multiplied."
+              },
+              {
+                "texte": "10",
+                "pourquoi": "You multiplied before adding: the order of the lines matters."
+              }
+            ]
+          },
+          {
+            "texte": "Calculation program:\nchoose the number 5\nadd 2\nmultiply the result by 4\nsubtract 3\nWhich number do you get?",
+            "nom": "25",
+            "explication": "5 + 2 = 7, then 7 × 4 = 28, then 28 − 3 = 25.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "You did 5 + 2 × 4 − 3. Each step starts from the result of the step before: (5 + 2) × 4."
+              },
+              {
+                "texte": "28",
+                "pourquoi": "You forgot the last instruction: you still have to subtract 3."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 10\nsay x\nchange x by 5\nWhat does the sprite say?",
+            "nom": "10",
+            "explication": "On the line “say x”, x is 10. The change comes afterwards: the sprite has already spoken.",
+            "pieges": [
+              {
+                "texte": "15",
+                "pourquoi": "The sprite speaks before the change: on the line “say x”, x is still 10."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "“change x by 5” does not replace x with 5, and it comes after “say x”."
+              }
+            ]
+          },
+          {
+            "texte": "set a to 3\nset b to 4\nset a to a + b\nsay a\nWhat does the sprite say?",
+            "nom": "7",
+            "explication": "a is 3, b is 4, then a gets 3 + 4 = 7.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "The 3rd line stores a + b in a: a is no longer 3."
+              },
+              {
+                "texte": "4",
+                "pourquoi": "The sprite says a, not b."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 7\nset x to 2\nsay x\nWhat does the sprite say?",
+            "nom": "2",
+            "explication": "x is 7, then the 2nd line replaces 7 with 2.",
+            "pieges": [
+              {
+                "texte": "7",
+                "pourquoi": "A new value replaces the old one: after the 2nd line, x is 2."
+              },
+              {
+                "texte": "9",
+                "pourquoi": "“set x to 2” replaces the value, it does not add 2."
+              }
+            ]
+          },
+          {
+            "texte": "How many instructions are there in this program?\nset x to 1\nchange x by 2\nchange x by 2\nsay x",
+            "nom": "4",
+            "explication": "Four lines, four instructions, run one after the other.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "Two identical lines are two instructions: each one is run."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "5 is what the sprite says (1 + 2 + 2), not the number of instructions."
+              }
+            ]
+          },
+          {
+            "texte": "Why? x is 3 at the start.\nA: change x by 1, then set x to x * 2\nB: set x to x * 2, then change x by 1\nWhy don’t A and B give the same x?",
+            "nom": "The order changes the calculation: A gives 8, B gives 7",
+            "explication": "A: (3 + 1) × 2 = 8. B: 3 × 2 + 1 = 7. Same instructions, different order, different result.",
+            "pieges": [
+              {
+                "texte": "The same instructions always give the same result",
+                "pourquoi": "Not if the order changes: each instruction starts from the value left by the one before."
+              },
+              {
+                "texte": "There is a mistake in B",
+                "pourquoi": "B is correct: (3 × 2) + 1 = 7. It just does a different calculation from A."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "repeter-a-la-main",
+      "titre": "Exécuter une boucle « répéter »",
+      "niveau": "6e",
+      "prerequis": [
+        "sequence-instructions"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Répéter à la main une séquence d’instructions pour accomplir une tâche imposée"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "« répéter 4 fois » exécute les blocs qu’il contient 4 fois de suite. Ensuite seulement, le programme passe à la ligne suivante.",
+      "phrases": {
+        "consigne": "Fais tourner la boucle à la main, tour par tour, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Note la valeur de x à la fin de chaque tour de boucle.",
+        "exemple": "mettre x à 0, puis répéter 3 fois [ ajouter 2 à x ] : x vaut 2, puis 4, puis 6. À la fin, x vaut 6.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre x à 0\nrépéter 4 fois [ ajouter 3 à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "12",
+          "explication": "Tour 1 : 3. Tour 2 : 6. Tour 3 : 9. Tour 4 : 12.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "Le bloc dans la boucle est exécuté 4 fois, pas une seule."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "Tu as ajouté 3 et 4. La boucle ajoute 3, quatre fois : 3 + 3 + 3 + 3."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 1\nrépéter 3 fois [ mettre x à x * 2 ]\ndire x\nQue dit le lutin ?",
+          "nom": "8",
+          "explication": "Tour 1 : 1 × 2 = 2. Tour 2 : 2 × 2 = 4. Tour 3 : 4 × 2 = 8.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "On multiplie par 2 à chaque tour, on n’ajoute pas 2 : 1, 2, 4, 8."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "Ça, c’est après un seul tour. La boucle en fait 3."
+            }
+          ]
+        },
+        {
+          "texte": "stylo en position d’écriture\nrépéter 4 fois [ avancer de 50 pas, tourner de 90 degrés ]\nQuelle figure le lutin dessine-t-il ?",
+          "nom": "Un carré",
+          "explication": "4 côtés de 50 pas, et un quart de tour (90 degrés) entre deux côtés : c’est un carré.",
+          "pieges": [
+            {
+              "texte": "Un triangle",
+              "pourquoi": "Un triangle a 3 côtés : il faudrait répéter 3 fois et tourner de 120 degrés."
+            },
+            {
+              "texte": "Une ligne droite",
+              "pourquoi": "À chaque tour, le lutin tourne d’un quart de tour : le trait change de direction."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de fois le lutin dit-il Bonjour ?\nrépéter 3 fois [ dire Bonjour ]\nrépéter 2 fois [ dire Bonjour ]",
+          "nom": "5",
+          "explication": "La première boucle dit Bonjour 3 fois, puis la deuxième 2 fois : 3 + 2 = 5.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "Les deux boucles sont l’une après l’autre, pas l’une dans l’autre : 3 + 2, pas 3 × 2."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "Après la première boucle, le programme continue : la deuxième boucle s’exécute aussi."
+            }
+          ]
+        },
+        {
+          "texte": "x vaut 0 au départ.\nrépéter 3 fois [ répéter 2 fois [ ajouter 1 à x ] ]\nQue vaut x à la fin ?",
+          "nom": "6",
+          "explication": "Chaque grand tour ajoute 2. Trois grands tours : 2 + 2 + 2 = 6.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "La petite boucle est dans la grande : elle est refaite à chaque grand tour, 3 × 2 fois."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "La petite boucle ne s’exécute pas qu’une fois : la grande boucle la relance 3 fois."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 10\nrépéter 3 fois [ ajouter -2 à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "4",
+          "explication": "10 − 2 = 8, puis 6, puis 4.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "Ajouter −2, c’est retirer 2 : x descend."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "Ça, c’est après un seul tour. La boucle en fait 3 : 10, 8, 6, 4."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 0\nrépéter 5 fois [ ajouter 1 à x ]\najouter 10 à x\ndire x\nQue dit le lutin ?",
+          "nom": "15",
+          "explication": "La boucle donne 5, puis la ligne suivante ajoute 10 : 15.",
+          "pieges": [
+            {
+              "texte": "55",
+              "pourquoi": "« ajouter 10 à x » est après la boucle, pas dedans : il n’est exécuté qu’une fois."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "Après la boucle, le programme continue : il reste à ajouter 10."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi écrire « répéter 10 fois [ avancer de 10 pas ] » plutôt que 10 blocs « avancer de 10 pas » à la suite ?",
+          "nom": "Le programme est plus court, et on change le nombre à un seul endroit",
+          "explication": "Les deux programmes font avancer de 100 pas. La boucle dit la même chose en une ligne, et on peut passer à 20 tours en changeant un seul nombre.",
+          "pieges": [
+            {
+              "texte": "Le lutin va plus loin avec la boucle",
+              "pourquoi": "Le trajet est le même : 10 × 10 = 100 pas dans les deux cas."
+            },
+            {
+              "texte": "Sans boucle, le programme ne marche pas",
+              "pourquoi": "Les 10 blocs à la suite marchent aussi. La boucle évite seulement de les recopier."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Running a “repeat” loop",
+        "idee": "“repeat 4” runs the blocks inside it 4 times in a row. Only then does the program move on to the next line.",
+        "phrases": {
+          "consigne": "Run the loop by hand, one turn at a time, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Write down the value of x at the end of each turn of the loop.",
+          "exemple": "set x to 0, then repeat 3 [ change x by 2 ]: x is 2, then 4, then 6. At the end, x is 6.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set x to 0\nrepeat 4 [ change x by 3 ]\nsay x\nWhat does the sprite say?",
+            "nom": "12",
+            "explication": "Turn 1: 3. Turn 2: 6. Turn 3: 9. Turn 4: 12.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "The block inside the loop runs 4 times, not just once."
+              },
+              {
+                "texte": "7",
+                "pourquoi": "You added 3 and 4. The loop adds 3, four times: 3 + 3 + 3 + 3."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 1\nrepeat 3 [ set x to x * 2 ]\nsay x\nWhat does the sprite say?",
+            "nom": "8",
+            "explication": "Turn 1: 1 × 2 = 2. Turn 2: 2 × 2 = 4. Turn 3: 4 × 2 = 8.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "Each turn multiplies by 2, it does not add 2: 1, 2, 4, 8."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "That is after one turn only. The loop does 3."
+              }
+            ]
+          },
+          {
+            "texte": "pen down\nrepeat 4 [ move 50 steps, turn 90 degrees ]\nWhich shape does the sprite draw?",
+            "nom": "A square",
+            "explication": "4 sides of 50 steps, with a quarter turn (90 degrees) between two sides: it is a square.",
+            "pieges": [
+              {
+                "texte": "A triangle",
+                "pourquoi": "A triangle has 3 sides: you would repeat 3 times and turn 120 degrees."
+              },
+              {
+                "texte": "A straight line",
+                "pourquoi": "Each turn, the sprite turns a quarter turn: the line changes direction."
+              }
+            ]
+          },
+          {
+            "texte": "How many times does the sprite say Hello?\nrepeat 3 [ say Hello ]\nrepeat 2 [ say Hello ]",
+            "nom": "5",
+            "explication": "The first loop says Hello 3 times, then the second one 2 times: 3 + 2 = 5.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "The two loops are one after the other, not one inside the other: 3 + 2, not 3 × 2."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "After the first loop, the program goes on: the second loop runs too."
+              }
+            ]
+          },
+          {
+            "texte": "x is 0 at the start.\nrepeat 3 [ repeat 2 [ change x by 1 ] ]\nWhat is x at the end?",
+            "nom": "6",
+            "explication": "Each big turn adds 2. Three big turns: 2 + 2 + 2 = 6.",
+            "pieges": [
+              {
+                "texte": "5",
+                "pourquoi": "The small loop is inside the big one: it runs again on every big turn, 3 × 2 times."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "The small loop does not run only once: the big loop starts it 3 times."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 10\nrepeat 3 [ change x by -2 ]\nsay x\nWhat does the sprite say?",
+            "nom": "4",
+            "explication": "10 − 2 = 8, then 6, then 4.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "Changing by −2 means taking away 2: x goes down."
+              },
+              {
+                "texte": "8",
+                "pourquoi": "That is after one turn only. The loop does 3: 10, 8, 6, 4."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 0\nrepeat 5 [ change x by 1 ]\nchange x by 10\nsay x\nWhat does the sprite say?",
+            "nom": "15",
+            "explication": "The loop gives 5, then the next line adds 10: 15.",
+            "pieges": [
+              {
+                "texte": "55",
+                "pourquoi": "“change x by 10” is after the loop, not inside it: it runs only once."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "After the loop, the program goes on: you still have to add 10."
+              }
+            ]
+          },
+          {
+            "texte": "Why write “repeat 10 [ move 10 steps ]” instead of 10 “move 10 steps” blocks one after the other?",
+            "nom": "The program is shorter, and you change the number in one place only",
+            "explication": "Both programs move the sprite 100 steps. The loop says the same thing in one line, and you can switch to 20 turns by changing a single number.",
+            "pieges": [
+              {
+                "texte": "The sprite goes further with the loop",
+                "pourquoi": "The path is the same: 10 × 10 = 100 steps in both cases."
+              },
+              {
+                "texte": "Without a loop, the program does not work",
+                "pourquoi": "The 10 blocks in a row work too. The loop just saves copying them."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "entrees-sorties",
+      "titre": "Entrées, sorties et expressions",
+      "niveau": "5e",
+      "prerequis": [
+        "sequence-instructions"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Identifier les entrées et sorties d’un programme."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L’entrée, c’est ce que le programme reçoit (la réponse tapée). La sortie, c’est ce qu’il donne (ce que dit le lutin). Entre les deux, il calcule.",
+      "phrases": {
+        "consigne": "Prévois le résultat avant de l’exécuter, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Remplace « réponse » par le nombre tapé, puis calcule ligne par ligne.",
+        "exemple": "demander Un nombre ? et attendre, puis dire réponse * 2. On tape 6 : l’entrée est 6, la sortie est 12.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "demander Quel âge as-tu ? et attendre\ndire réponse + 1\nOn tape 12. Que dit le lutin ?",
+          "nom": "13",
+          "explication": "réponse vaut 12, donc réponse + 1 vaut 13.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "« réponse + 1 » ajoute 1 au nombre tapé avant que le lutin le dise."
+            },
+            {
+              "texte": "réponse + 1",
+              "pourquoi": "« dire » calcule l’expression d’abord, puis dit le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "demander Un nombre ? et attendre\nmettre x à réponse * 2\ndire x\nQuelle est l’entrée de ce programme ?",
+          "nom": "Le nombre tapé (réponse)",
+          "explication": "L’entrée est la donnée reçue : le nombre tapé, rangé dans « réponse ».",
+          "pieges": [
+            {
+              "texte": "Ce que dit le lutin (x)",
+              "pourquoi": "Ce que dit le lutin, c’est la sortie : ce que le programme donne à la fin."
+            },
+            {
+              "texte": "Le bloc « mettre x à »",
+              "pourquoi": "Ce bloc fait un calcul à l’intérieur du programme : ni entrée, ni sortie."
+            }
+          ]
+        },
+        {
+          "texte": "demander Un nombre ? et attendre\nmettre x à réponse * réponse\ndire x\nOn tape 7. Que dit le lutin ?",
+          "nom": "49",
+          "explication": "réponse vaut 7, donc x = 7 × 7 = 49.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "Tu as fait réponse + réponse. Le bloc multiplie : 7 × 7."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "7 est l’entrée. Le programme la transforme avant de la dire."
+            }
+          ]
+        },
+        {
+          "texte": "Les blocs sont emboîtés : le bloc + est à l’intérieur du bloc *.\n( 3 + 4 ) * 2\nQue vaut cette expression ?",
+          "nom": "14",
+          "explication": "Le bloc intérieur d’abord : 3 + 4 = 7. Puis 7 × 2 = 14.",
+          "pieges": [
+            {
+              "texte": "11",
+              "pourquoi": "Le bloc intérieur est calculé d’abord : 3 + 4 = 7, puis 7 × 2."
+            },
+            {
+              "texte": "9",
+              "pourquoi": "Tu as ajouté 2 au lieu de multiplier par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Cette fois, le bloc * est à l’intérieur du bloc +.\n3 + ( 4 * 2 )\nQue vaut cette expression ?",
+          "nom": "11",
+          "explication": "Le bloc intérieur d’abord : 4 × 2 = 8. Puis 3 + 8 = 11.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "Le bloc intérieur, ici, c’est 4 × 2 : il est calculé avant d’ajouter 3."
+            },
+            {
+              "texte": "24",
+              "pourquoi": "Tu as tout multiplié. Il y a une addition : 3 + 8."
+            }
+          ]
+        },
+        {
+          "texte": "demander Un nombre ? et attendre\nmettre x à réponse + 2\nmettre x à x * 4\nmettre x à x - 3\ndire x\nOn tape 1. Que dit le lutin ?",
+          "nom": "9",
+          "explication": "x = 1 + 2 = 3, puis 3 × 4 = 12, puis 12 − 3 = 9.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "Tu as fait 1 + 2 × 4 − 3. Ligne par ligne, x vaut 3 avant d’être multiplié."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "Tu t’es arrêté avant la dernière ligne : il faut encore retirer 3."
+            }
+          ]
+        },
+        {
+          "texte": "On tape 10 et le lutin dit 25. Quel calcul fait le programme ?",
+          "nom": "réponse * 2 + 5",
+          "explication": "On essaie chaque calcul avec 10 : 10 × 2 + 5 = 25. C’est le bon.",
+          "pieges": [
+            {
+              "texte": "réponse + 5",
+              "pourquoi": "10 + 5 = 15, pas 25. Teste chaque calcul avec l’entrée 10."
+            },
+            {
+              "texte": "réponse * 3 - 3",
+              "pourquoi": "10 × 3 − 3 = 27, pas 25."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi utiliser « demander … et attendre » plutôt que « mettre x à 5 » ?",
+          "nom": "Le programme marche avec n’importe quel nombre tapé",
+          "explication": "Avec « mettre x à 5 », le calcul est toujours fait sur 5. Avec une entrée, le même programme sert pour tous les nombres.",
+          "pieges": [
+            {
+              "texte": "Le programme va plus vite",
+              "pourquoi": "La vitesse ne change rien ici : « demander » attend même qu’on tape."
+            },
+            {
+              "texte": "Le lutin ne sait pas calculer sans demander",
+              "pourquoi": "Il calcule aussi avec « mettre x à 5 », mais toujours avec 5."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Inputs, outputs and expressions",
+        "idee": "The input is what the program receives (the answer typed in). The output is what it gives back (what the sprite says). In between, it calculates.",
+        "phrases": {
+          "consigne": "Predict the result before running it, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Replace “answer” with the number typed in, then work line by line.",
+          "exemple": "ask A number? and wait, then say answer * 2. You type 6: the input is 6, the output is 12.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "ask How old are you? and wait\nsay answer + 1\nYou type 12. What does the sprite say?",
+            "nom": "13",
+            "explication": "answer is 12, so answer + 1 is 13.",
+            "pieges": [
+              {
+                "texte": "12",
+                "pourquoi": "“answer + 1” adds 1 to the number typed in before the sprite says it."
+              },
+              {
+                "texte": "answer + 1",
+                "pourquoi": "“say” works out the expression first, then says the result."
+              }
+            ]
+          },
+          {
+            "texte": "ask A number? and wait\nset x to answer * 2\nsay x\nWhat is the input of this program?",
+            "nom": "The number typed in (answer)",
+            "explication": "The input is the data received: the number typed in, stored in “answer”.",
+            "pieges": [
+              {
+                "texte": "What the sprite says (x)",
+                "pourquoi": "What the sprite says is the output: what the program gives at the end."
+              },
+              {
+                "texte": "The “set x to” block",
+                "pourquoi": "This block does a calculation inside the program: it is neither input nor output."
+              }
+            ]
+          },
+          {
+            "texte": "ask A number? and wait\nset x to answer * answer\nsay x\nYou type 7. What does the sprite say?",
+            "nom": "49",
+            "explication": "answer is 7, so x = 7 × 7 = 49.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "You did answer + answer. The block multiplies: 7 × 7."
+              },
+              {
+                "texte": "7",
+                "pourquoi": "7 is the input. The program changes it before saying it."
+              }
+            ]
+          },
+          {
+            "texte": "The blocks are nested: the + block is inside the * block.\n( 3 + 4 ) * 2\nWhat is the value of this expression?",
+            "nom": "14",
+            "explication": "The inner block first: 3 + 4 = 7. Then 7 × 2 = 14.",
+            "pieges": [
+              {
+                "texte": "11",
+                "pourquoi": "The inner block is worked out first: 3 + 4 = 7, then 7 × 2."
+              },
+              {
+                "texte": "9",
+                "pourquoi": "You added 2 instead of multiplying by 2."
+              }
+            ]
+          },
+          {
+            "texte": "This time, the * block is inside the + block.\n3 + ( 4 * 2 )\nWhat is the value of this expression?",
+            "nom": "11",
+            "explication": "The inner block first: 4 × 2 = 8. Then 3 + 8 = 11.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "Here the inner block is 4 × 2: it is worked out before adding 3."
+              },
+              {
+                "texte": "24",
+                "pourquoi": "You multiplied everything. There is an addition: 3 + 8."
+              }
+            ]
+          },
+          {
+            "texte": "ask A number? and wait\nset x to answer + 2\nset x to x * 4\nset x to x - 3\nsay x\nYou type 1. What does the sprite say?",
+            "nom": "9",
+            "explication": "x = 1 + 2 = 3, then 3 × 4 = 12, then 12 − 3 = 9.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "You did 1 + 2 × 4 − 3. Line by line, x is 3 before it is multiplied."
+              },
+              {
+                "texte": "12",
+                "pourquoi": "You stopped before the last line: you still have to subtract 3."
+              }
+            ]
+          },
+          {
+            "texte": "You type 10 and the sprite says 25. Which calculation does the program do?",
+            "nom": "answer * 2 + 5",
+            "explication": "Try each calculation with 10: 10 × 2 + 5 = 25. That is the right one.",
+            "pieges": [
+              {
+                "texte": "answer + 5",
+                "pourquoi": "10 + 5 = 15, not 25. Test each calculation with the input 10."
+              },
+              {
+                "texte": "answer * 3 - 3",
+                "pourquoi": "10 × 3 − 3 = 27, not 25."
+              }
+            ]
+          },
+          {
+            "texte": "Why use “ask … and wait” instead of “set x to 5”?",
+            "nom": "The program works with any number typed in",
+            "explication": "With “set x to 5”, the calculation is always done on 5. With an input, the same program works for every number.",
+            "pieges": [
+              {
+                "texte": "The program runs faster",
+                "pourquoi": "Speed has nothing to do with it: “ask” even waits for you to type."
+              },
+              {
+                "texte": "The sprite cannot calculate without asking",
+                "pourquoi": "It also calculates with “set x to 5”, but always with 5."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "boucle-calcul",
+      "titre": "Calculer avec une boucle",
+      "niveau": "5e",
+      "prerequis": [
+        "repeter-a-la-main",
+        "entrees-sorties"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Effectuer une boucle inconditionnelle simple permettant de répéter une séquence linéaire d’instructions un nombre précis de fois."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans une boucle, une variable peut changer à chaque tour. Pour prévoir le résultat, on suit sa valeur tour après tour.",
+      "phrases": {
+        "consigne": "Suis chaque variable tour après tour, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Fais un petit tableau : une ligne par tour, une colonne par variable.",
+        "exemple": "mettre s à 0, mettre n à 1, puis répéter 3 fois [ ajouter n à s, ajouter 1 à n ] : s vaut 1, puis 3, puis 6.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre s à 0\nmettre n à 1\nrépéter 4 fois [ ajouter n à s, ajouter 1 à n ]\ndire s\nQue dit le lutin ?",
+          "nom": "10",
+          "explication": "s vaut 1, puis 1 + 2 = 3, puis 3 + 3 = 6, puis 6 + 4 = 10.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "4, c’est le nombre de tours. Le lutin dit s, la somme 1 + 2 + 3 + 4."
+            },
+            {
+              "texte": "14",
+              "pourquoi": "Tu as ajouté n après l’avoir augmenté. Dans la boucle, on ajoute n à s d’abord : 1, puis 2, 3, 4."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 2\nrépéter 3 fois [ mettre x à x * x ]\ndire x\nQue dit le lutin ?",
+          "nom": "256",
+          "explication": "Tour 1 : 2 × 2 = 4. Tour 2 : 4 × 4 = 16. Tour 3 : 16 × 16 = 256.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu as fait 2 × 2 × 2. Ici, x est multiplié par lui-même : 2, 4, 16, 256."
+            },
+            {
+              "texte": "16",
+              "pourquoi": "Ça, c’est après deux tours. Il y en a un troisième : 16 × 16."
+            }
+          ]
+        },
+        {
+          "texte": "x vaut 0 au départ. Le lutin doit dire 5, puis 10, puis 15, puis 20. Quel programme ?",
+          "nom": "répéter 4 fois [ ajouter 5 à x, dire x ]",
+          "explication": "On ajoute 5, puis on dit x, quatre fois : 5, 10, 15, 20.",
+          "pieges": [
+            {
+              "texte": "répéter 4 fois [ dire x, ajouter 5 à x ]",
+              "pourquoi": "Ce lutin parle avant d’ajouter : il dit 0, 5, 10, 15."
+            },
+            {
+              "texte": "répéter 5 fois [ ajouter 5 à x, dire x ]",
+              "pourquoi": "Un tour de trop : il dit aussi 25."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 100\nrépéter 4 fois [ mettre x à x / 2 ]\ndire x\nQue dit le lutin ?",
+          "nom": "6.25",
+          "explication": "100 / 2 = 50, puis 25, puis 12.5, puis 6.25. Scratch écrit les nombres décimaux avec un point.",
+          "pieges": [
+            {
+              "texte": "25",
+              "pourquoi": "Ça, c’est après deux tours. Il y en a 4 : 50, 25, 12.5, 6.25."
+            },
+            {
+              "texte": "12.5",
+              "pourquoi": "Ça, c’est après trois tours. Il reste un tour : 12.5 / 2."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 0\nrépéter 3 fois [ ajouter 1 à x ]\nrépéter 3 fois [ ajouter x à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "24",
+          "explication": "La première boucle donne 3. Puis x double à chaque tour : 6, 12, 24.",
+          "pieges": [
+            {
+              "texte": "9",
+              "pourquoi": "Tu as ajouté 3 trois fois. Mais x change à chaque tour : on ajoute 3, puis 6, puis 12."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Ça, c’est après un seul tour de la deuxième boucle."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 1\nrépéter 5 fois [ ajouter 2 à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "11",
+          "explication": "On part de 1 et on ajoute 2 cinq fois : 1 + 10 = 11.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "Tu as oublié la valeur de départ : x vaut 1 avant la boucle, 1 + 10 = 11."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "Ça, c’est après un seul tour. La boucle en fait 5."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de fois le bloc « avancer de 10 pas » est-il exécuté ?\nrépéter 4 fois [ avancer de 10 pas, répéter 3 fois [ tourner de 30 degrés ] ]",
+          "nom": "4",
+          "explication": "« avancer » est dans la grande boucle : 4 fois. « tourner » est dans la petite : 4 × 3 = 12 fois.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "12, c’est pour « tourner » : il est dans la petite boucle, refaite à chaque grand tour."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "On n’ajoute pas les deux nombres : « avancer » est dans la grande boucle seulement."
+            }
+          ]
+        },
+        {
+          "texte": "Ce programme doit dire 1 + 2 + 3 = 6, mais il dit 3. Pourquoi ?\nmettre s à 0\nrépéter 3 fois [ mettre n à 1, ajouter n à s, ajouter 1 à n ]\ndire s",
+          "nom": "n est remis à 1 à chaque tour : il faut le mettre à 1 avant la boucle",
+          "explication": "Au début de chaque tour, « mettre n à 1 » efface l’augmentation de n. On ajoute donc 1 trois fois. Placé avant la boucle, ce bloc n’est exécuté qu’une fois.",
+          "pieges": [
+            {
+              "texte": "Il faut répéter 6 fois",
+              "pourquoi": "Avec 6 tours, il dirait 6, mais en ajoutant 1 six fois : l’erreur reste."
+            },
+            {
+              "texte": "« ajouter » ne marche pas dans une boucle",
+              "pourquoi": "Il marche : s augmente bien de 1 à chaque tour."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Calculating with a loop",
+        "idee": "In a loop, a variable can change on every turn. To predict the result, follow its value turn after turn.",
+        "phrases": {
+          "consigne": "Follow each variable turn after turn, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Make a small table: one row per turn, one column per variable.",
+          "exemple": "set s to 0, set n to 1, then repeat 3 [ change s by n, change n by 1 ]: s is 1, then 3, then 6.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set s to 0\nset n to 1\nrepeat 4 [ change s by n, change n by 1 ]\nsay s\nWhat does the sprite say?",
+            "nom": "10",
+            "explication": "s is 1, then 1 + 2 = 3, then 3 + 3 = 6, then 6 + 4 = 10.",
+            "pieges": [
+              {
+                "texte": "4",
+                "pourquoi": "4 is the number of turns. The sprite says s, the sum 1 + 2 + 3 + 4."
+              },
+              {
+                "texte": "14",
+                "pourquoi": "You added n after increasing it. In the loop, n is added to s first: 1, then 2, 3, 4."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 2\nrepeat 3 [ set x to x * x ]\nsay x\nWhat does the sprite say?",
+            "nom": "256",
+            "explication": "Turn 1: 2 × 2 = 4. Turn 2: 4 × 4 = 16. Turn 3: 16 × 16 = 256.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You did 2 × 2 × 2. Here, x is multiplied by itself: 2, 4, 16, 256."
+              },
+              {
+                "texte": "16",
+                "pourquoi": "That is after two turns. There is a third one: 16 × 16."
+              }
+            ]
+          },
+          {
+            "texte": "x is 0 at the start. The sprite must say 5, then 10, then 15, then 20. Which program?",
+            "nom": "repeat 4 [ change x by 5, say x ]",
+            "explication": "Add 5, then say x, four times: 5, 10, 15, 20.",
+            "pieges": [
+              {
+                "texte": "repeat 4 [ say x, change x by 5 ]",
+                "pourquoi": "This sprite speaks before adding: it says 0, 5, 10, 15."
+              },
+              {
+                "texte": "repeat 5 [ change x by 5, say x ]",
+                "pourquoi": "One turn too many: it also says 25."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 100\nrepeat 4 [ set x to x / 2 ]\nsay x\nWhat does the sprite say?",
+            "nom": "6.25",
+            "explication": "100 / 2 = 50, then 25, then 12.5, then 6.25.",
+            "pieges": [
+              {
+                "texte": "25",
+                "pourquoi": "That is after two turns. There are 4: 50, 25, 12.5, 6.25."
+              },
+              {
+                "texte": "12.5",
+                "pourquoi": "That is after three turns. One turn is left: 12.5 / 2."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 0\nrepeat 3 [ change x by 1 ]\nrepeat 3 [ change x by x ]\nsay x\nWhat does the sprite say?",
+            "nom": "24",
+            "explication": "The first loop gives 3. Then x doubles on each turn: 6, 12, 24.",
+            "pieges": [
+              {
+                "texte": "9",
+                "pourquoi": "You added 3 three times. But x changes on every turn: you add 3, then 6, then 12."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "That is after one turn of the second loop only."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 1\nrepeat 5 [ change x by 2 ]\nsay x\nWhat does the sprite say?",
+            "nom": "11",
+            "explication": "Start at 1 and add 2 five times: 1 + 10 = 11.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "You forgot the starting value: x is 1 before the loop, 1 + 10 = 11."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "That is after one turn only. The loop does 5."
+              }
+            ]
+          },
+          {
+            "texte": "How many times does the “move 10 steps” block run?\nrepeat 4 [ move 10 steps, repeat 3 [ turn 30 degrees ] ]",
+            "nom": "4",
+            "explication": "“move” is inside the big loop: 4 times. “turn” is inside the small one: 4 × 3 = 12 times.",
+            "pieges": [
+              {
+                "texte": "12",
+                "pourquoi": "12 is for “turn”: it is inside the small loop, which runs again on every big turn."
+              },
+              {
+                "texte": "7",
+                "pourquoi": "Don’t add the two numbers: “move” is only inside the big loop."
+              }
+            ]
+          },
+          {
+            "texte": "This program should say 1 + 2 + 3 = 6, but it says 3. Why?\nset s to 0\nrepeat 3 [ set n to 1, change s by n, change n by 1 ]\nsay s",
+            "nom": "n is reset to 1 on every turn: it must be set to 1 before the loop",
+            "explication": "At the start of each turn, “set n to 1” wipes out the increase of n. So 1 is added three times. Placed before the loop, this block runs only once.",
+            "pieges": [
+              {
+                "texte": "It should repeat 6 times",
+                "pourquoi": "With 6 turns it would say 6, but by adding 1 six times: the mistake is still there."
+              },
+              {
+                "texte": "“change” does not work inside a loop",
+                "pourquoi": "It does work: s goes up by 1 on every turn."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "variable-affectation",
+      "titre": "Une variable change de valeur",
+      "niveau": "4e",
+      "prerequis": [
+        "boucle-calcul"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Manipuler une variable."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une variable est une case avec un nom. « mettre x à … » calcule d’abord la valeur de droite, puis la range dans x : l’ancienne valeur est perdue.",
+      "phrases": {
+        "consigne": "Suis la valeur de chaque variable, ligne par ligne, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Calcule d’abord ce qui est à droite de « à », avec les valeurs du moment ; ensuite seulement, range le résultat.",
+        "exemple": "mettre x à 3, puis mettre x à x + 1 : on calcule 3 + 1 = 4, puis on range 4 dans x. x vaut 4.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre a à 3\nmettre b à 8\nmettre a à b\nmettre b à a\ndire a, puis dire b\nQue dit le lutin ?",
+          "nom": "8, puis 8",
+          "explication": "Après la 3e ligne, a = 8. La 4e ligne range a, donc 8, dans b. Les deux valent 8.",
+          "pieges": [
+            {
+              "texte": "8, puis 3",
+              "pourquoi": "On croit échanger, mais à la 4e ligne a vaut déjà 8 : l’ancienne valeur 3 est perdue."
+            },
+            {
+              "texte": "3, puis 8",
+              "pourquoi": "La 3e ligne range 8 dans a : a ne vaut plus 3."
+            }
+          ]
+        },
+        {
+          "texte": "mettre a à 3\nmettre b à 8\nmettre t à a\nmettre a à b\nmettre b à t\ndire a, puis dire b\nQue dit le lutin ?",
+          "nom": "8, puis 3",
+          "explication": "t garde 3, a reçoit 8, puis b reçoit t, donc 3. Les valeurs sont échangées.",
+          "pieges": [
+            {
+              "texte": "8, puis 8",
+              "pourquoi": "Cette fois, t a gardé l’ancienne valeur de a (3) avant qu’elle soit effacée."
+            },
+            {
+              "texte": "3, puis 3",
+              "pourquoi": "La 4e ligne range 8 dans a : a vaut 8."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 5\nmettre y à x + 1\nmettre x à 10\ndire y\nQue dit le lutin ?",
+          "nom": "6",
+          "explication": "À la 2e ligne, x vaut 5 : y reçoit 6. Changer x ensuite ne change pas y.",
+          "pieges": [
+            {
+              "texte": "11",
+              "pourquoi": "y a été calculé une fois, quand x valait 5. Il ne suit pas les changements de x."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "y reçoit x + 1, pas x."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 4\nmettre x à ( x * x ) - x\ndire x\nQue dit le lutin ?",
+          "nom": "12",
+          "explication": "On calcule à droite avec x = 4 : 4 × 4 − 4 = 12, puis on range 12 dans x.",
+          "pieges": [
+            {
+              "texte": "0",
+              "pourquoi": "Tu as fait x × (x − x). Le bloc intérieur est x × x = 16, puis 16 − 4."
+            },
+            {
+              "texte": "16",
+              "pourquoi": "Tu t’es arrêté à x × x : il faut encore retirer x."
+            }
+          ]
+        },
+        {
+          "texte": "mettre score à 0\najouter 10 à score\najouter 10 à score\nmettre score à score - 5\ndire score\nQue dit le lutin ?",
+          "nom": "15",
+          "explication": "0, puis 10, puis 20, puis 20 − 5 = 15.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "« mettre score à score − 5 » retire 5 au score : il ne le remplace pas par 5."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "Tu as oublié la dernière ligne avant « dire »."
+            }
+          ]
+        },
+        {
+          "texte": "mettre prénom à Léa\ndire regrouper Bonjour et prénom\nQue dit le lutin ?",
+          "nom": "BonjourLéa",
+          "explication": "La variable prénom contient le texte Léa. « regrouper » colle Bonjour et Léa sans espace.",
+          "pieges": [
+            {
+              "texte": "Bonjour Léa",
+              "pourquoi": "« regrouper » colle les deux textes tels quels : il n’ajoute pas d’espace."
+            },
+            {
+              "texte": "Bonjourprénom",
+              "pourquoi": "prénom est une variable : on regroupe sa valeur, Léa."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 7\najouter -7 à x\najouter 3 à x\ndire x\nQue dit le lutin ?",
+          "nom": "3",
+          "explication": "7 − 7 = 0, puis 0 + 3 = 3.",
+          "pieges": [
+            {
+              "texte": "17",
+              "pourquoi": "Ajouter −7, c’est retirer 7 : x passe à 0."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "Tu as oublié la dernière ligne : on ajoute encore 3."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi « mettre x à x + 1 » n’est-il pas une égalité fausse ?",
+          "nom": "Ce n’est pas une égalité : on calcule x + 1, puis on range le résultat dans x",
+          "explication": "« mettre x à » est une affectation, pas une égalité : la valeur de droite est calculée avec l’ancien x, puis elle remplace l’ancien x.",
+          "pieges": [
+            {
+              "texte": "Parce que x vaut toujours 0",
+              "pourquoi": "x peut valoir n’importe quel nombre : le bloc marche pour tous."
+            },
+            {
+              "texte": "C’est une erreur, Scratch la refuse",
+              "pourquoi": "Scratch l’accepte : c’est même la façon de faire monter un compteur."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A variable changes its value",
+        "idee": "A variable is a box with a name. “set x to …” first works out the value on the right, then stores it in x: the old value is lost.",
+        "phrases": {
+          "consigne": "Follow the value of each variable, line by line, then touch the answer.",
+          "question": "{texte}",
+          "indice": "First work out what is to the right of “to”, with the current values; only then store the result.",
+          "exemple": "set x to 3, then set x to x + 1: work out 3 + 1 = 4, then store 4 in x. x is 4.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set a to 3\nset b to 8\nset a to b\nset b to a\nsay a, then say b\nWhat does the sprite say?",
+            "nom": "8, then 8",
+            "explication": "After the 3rd line, a = 8. The 4th line stores a, so 8, in b. Both are 8.",
+            "pieges": [
+              {
+                "texte": "8, then 3",
+                "pourquoi": "It looks like a swap, but on the 4th line a is already 8: the old value 3 is lost."
+              },
+              {
+                "texte": "3, then 8",
+                "pourquoi": "The 3rd line stores 8 in a: a is no longer 3."
+              }
+            ]
+          },
+          {
+            "texte": "set a to 3\nset b to 8\nset t to a\nset a to b\nset b to t\nsay a, then say b\nWhat does the sprite say?",
+            "nom": "8, then 3",
+            "explication": "t keeps 3, a gets 8, then b gets t, so 3. The values are swapped.",
+            "pieges": [
+              {
+                "texte": "8, then 8",
+                "pourquoi": "This time, t kept the old value of a (3) before it was wiped out."
+              },
+              {
+                "texte": "3, then 3",
+                "pourquoi": "The 4th line stores 8 in a: a is 8."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 5\nset y to x + 1\nset x to 10\nsay y\nWhat does the sprite say?",
+            "nom": "6",
+            "explication": "On the 2nd line, x is 5: y gets 6. Changing x afterwards does not change y.",
+            "pieges": [
+              {
+                "texte": "11",
+                "pourquoi": "y was worked out once, when x was 5. It does not follow the changes of x."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "y gets x + 1, not x."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 4\nset x to ( x * x ) - x\nsay x\nWhat does the sprite say?",
+            "nom": "12",
+            "explication": "Work out the right side with x = 4: 4 × 4 − 4 = 12, then store 12 in x.",
+            "pieges": [
+              {
+                "texte": "0",
+                "pourquoi": "You did x × (x − x). The inner block is x × x = 16, then 16 − 4."
+              },
+              {
+                "texte": "16",
+                "pourquoi": "You stopped at x × x: you still have to subtract x."
+              }
+            ]
+          },
+          {
+            "texte": "set score to 0\nchange score by 10\nchange score by 10\nset score to score - 5\nsay score\nWhat does the sprite say?",
+            "nom": "15",
+            "explication": "0, then 10, then 20, then 20 − 5 = 15.",
+            "pieges": [
+              {
+                "texte": "5",
+                "pourquoi": "“set score to score − 5” takes 5 away from the score: it does not replace it with 5."
+              },
+              {
+                "texte": "20",
+                "pourquoi": "You forgot the last line before “say”."
+              }
+            ]
+          },
+          {
+            "texte": "set name to Lea\nsay join Hello name\nWhat does the sprite say?",
+            "nom": "HelloLea",
+            "explication": "The variable name holds the text Lea. “join” sticks Hello and Lea together without a space.",
+            "pieges": [
+              {
+                "texte": "Hello Lea",
+                "pourquoi": "“join” sticks the two texts together as they are: it does not add a space."
+              },
+              {
+                "texte": "Helloname",
+                "pourquoi": "name is a variable: its value, Lea, is joined."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 7\nchange x by -7\nchange x by 3\nsay x\nWhat does the sprite say?",
+            "nom": "3",
+            "explication": "7 − 7 = 0, then 0 + 3 = 3.",
+            "pieges": [
+              {
+                "texte": "17",
+                "pourquoi": "Changing by −7 means taking away 7: x becomes 0."
+              },
+              {
+                "texte": "0",
+                "pourquoi": "You forgot the last line: 3 is still added."
+              }
+            ]
+          },
+          {
+            "texte": "Why is “set x to x + 1” not a false equation?",
+            "nom": "It is not an equation: x + 1 is worked out, then the result is stored in x",
+            "explication": "“set x to” is an assignment, not an equation: the value on the right is worked out with the old x, then it replaces the old x.",
+            "pieges": [
+              {
+                "texte": "Because x is always 0",
+                "pourquoi": "x can be any number: the block works for all of them."
+              },
+              {
+                "texte": "It is a mistake, Scratch refuses it",
+                "pourquoi": "Scratch accepts it: it is even the way to make a counter go up."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "si-sinon",
+      "titre": "Si … alors … sinon",
+      "niveau": "4e",
+      "prerequis": [
+        "variable-affectation"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Écrire des instructions conditionnelles."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "« si condition alors [ A ] sinon [ B ] » teste la condition une fois : vraie, le programme fait A ; fausse, il fait B. Jamais les deux.",
+      "phrases": {
+        "consigne": "Teste la condition avec les valeurs du moment, puis choisis la branche.",
+        "question": "{texte}",
+        "indice": "Remplace la variable par sa valeur, puis demande-toi : vrai ou faux ?",
+        "exemple": "mettre x à 7, puis si x > 5 alors [ dire grand ] sinon [ dire petit ] : 7 > 5 est vrai, le lutin dit grand.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre x à 7\nsi x > 5 alors [ dire grand ] sinon [ dire petit ]\nQue dit le lutin ?",
+          "nom": "grand",
+          "explication": "7 > 5 est vrai, donc le lutin dit grand, et seulement grand.",
+          "pieges": [
+            {
+              "texte": "petit",
+              "pourquoi": "7 > 5 est vrai : c’est la branche « alors » qui s’exécute."
+            },
+            {
+              "texte": "grand, puis petit",
+              "pourquoi": "Une seule branche s’exécute : « sinon » ne sert que si la condition est fausse."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 5\nsi x > 5 alors [ dire grand ] sinon [ dire petit ]\nQue dit le lutin ?",
+          "nom": "petit",
+          "explication": "5 > 5 est faux (5 est égal à 5, pas plus grand). Le lutin dit petit.",
+          "pieges": [
+            {
+              "texte": "grand",
+              "pourquoi": "5 > 5 est faux : 5 n’est pas strictement plus grand que 5."
+            },
+            {
+              "texte": "Rien",
+              "pourquoi": "Quand la condition est fausse, la branche « sinon » s’exécute : il dit petit."
+            }
+          ]
+        },
+        {
+          "texte": "demander Un nombre ? et attendre\nsi ( réponse modulo 2 ) = 0 alors [ dire pair ] sinon [ dire impair ]\nOn tape 14. Que dit le lutin ?",
+          "nom": "pair",
+          "explication": "14 = 2 × 7 + 0 : le reste vaut 0, la condition est vraie, le lutin dit pair.",
+          "pieges": [
+            {
+              "texte": "impair",
+              "pourquoi": "14 modulo 2, c’est le reste de 14 ÷ 2 : 0. La condition est vraie."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "0 est le reste calculé dans la condition ; le lutin dit le mot de la branche choisie."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 3\nsi x < 10 alors [ ajouter 5 à x ]\nsi x < 10 alors [ ajouter 5 à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "13",
+          "explication": "3 < 10, x passe à 8. Puis 8 < 10, x passe à 13.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Le deuxième « si » teste encore : x vaut 8, et 8 < 10 est vrai."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "3 < 10 est vrai : le premier « si » ajoute bien 5."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 0\nmettre n à 0\nrépéter 6 fois [ ajouter 1 à x, si ( x modulo 3 ) = 0 alors [ ajouter 1 à n ] ]\ndire n\nQue dit le lutin ?",
+          "nom": "2",
+          "explication": "x prend les valeurs 1 à 6. Seuls 3 et 6 sont des multiples de 3 : n vaut 2.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "n n’augmente pas à chaque tour : seulement quand x est un multiple de 3."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "x commence à 1 dans la boucle (on ajoute 1 avant de tester) : 0 n’est jamais testé."
+            }
+          ]
+        },
+        {
+          "texte": "mettre t à 25\nsi t > 30 alors [ dire chaud ] sinon [ si t > 15 alors [ dire doux ] sinon [ dire froid ] ]\nQue dit le lutin ?",
+          "nom": "doux",
+          "explication": "25 > 30 est faux, alors on teste 25 > 15 : vrai. Le lutin dit doux.",
+          "pieges": [
+            {
+              "texte": "chaud",
+              "pourquoi": "25 > 30 est faux : on passe dans le « sinon »."
+            },
+            {
+              "texte": "froid",
+              "pourquoi": "Dans le « sinon », on teste encore : 25 > 15 est vrai."
+            }
+          ]
+        },
+        {
+          "texte": "Le lutin doit dire gagné quand le score vaut 10 ou plus. Quelle condition mettre dans le « si » ?",
+          "nom": "non ( score < 10 )",
+          "explication": "« 10 ou plus », c’est le contraire de « moins de 10 » : non ( score < 10 ). Avec 10, 10 < 10 est faux, donc la condition est vraie.",
+          "pieges": [
+            {
+              "texte": "score > 10",
+              "pourquoi": "Avec un score de 10 exactement, 10 > 10 est faux : le lutin ne dirait rien."
+            },
+            {
+              "texte": "score < 10",
+              "pourquoi": "C’est l’inverse : vrai quand le score est trop petit."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi essaie-t-on x = 5 pour tester le programme « si x > 5 alors … sinon … » ?",
+          "nom": "C’est la limite : on vérifie de quel côté tombe 5",
+          "explication": "Loin de la limite (0 ou 100), > et ≥ donnent la même branche. Avec 5, ils donnent des branches différentes : c’est là qu’une erreur se voit.",
+          "pieges": [
+            {
+              "texte": "Parce que 5 est un petit nombre",
+              "pourquoi": "La taille ne compte pas : c’est 5 qui sépare les deux branches."
+            },
+            {
+              "texte": "Pour que le programme aille plus vite",
+              "pourquoi": "La vitesse ne change pas. On cherche le cas où une erreur (> au lieu de ≥) se verrait."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "If … then … else",
+        "idee": "“if condition then [ A ] else [ B ]” tests the condition once: if it is true, the program does A; if it is false, it does B. Never both.",
+        "phrases": {
+          "consigne": "Test the condition with the current values, then choose the branch.",
+          "question": "{texte}",
+          "indice": "Replace the variable with its value, then ask yourself: true or false?",
+          "exemple": "set x to 7, then if x > 5 then [ say big ] else [ say small ]: 7 > 5 is true, the sprite says big.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set x to 7\nif x > 5 then [ say big ] else [ say small ]\nWhat does the sprite say?",
+            "nom": "big",
+            "explication": "7 > 5 is true, so the sprite says big, and only big.",
+            "pieges": [
+              {
+                "texte": "small",
+                "pourquoi": "7 > 5 is true: the “then” branch runs."
+              },
+              {
+                "texte": "big, then small",
+                "pourquoi": "Only one branch runs: “else” is only used when the condition is false."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 5\nif x > 5 then [ say big ] else [ say small ]\nWhat does the sprite say?",
+            "nom": "small",
+            "explication": "5 > 5 is false (5 is equal to 5, not greater). The sprite says small.",
+            "pieges": [
+              {
+                "texte": "big",
+                "pourquoi": "5 > 5 is false: 5 is not strictly greater than 5."
+              },
+              {
+                "texte": "Nothing",
+                "pourquoi": "When the condition is false, the “else” branch runs: it says small."
+              }
+            ]
+          },
+          {
+            "texte": "ask A number? and wait\nif ( answer mod 2 ) = 0 then [ say even ] else [ say odd ]\nYou type 14. What does the sprite say?",
+            "nom": "even",
+            "explication": "14 = 2 × 7 + 0: the remainder is 0, the condition is true, the sprite says even.",
+            "pieges": [
+              {
+                "texte": "odd",
+                "pourquoi": "14 mod 2 is the remainder of 14 ÷ 2: 0. The condition is true."
+              },
+              {
+                "texte": "0",
+                "pourquoi": "0 is the remainder worked out in the condition; the sprite says the word of the chosen branch."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 3\nif x < 10 then [ change x by 5 ]\nif x < 10 then [ change x by 5 ]\nsay x\nWhat does the sprite say?",
+            "nom": "13",
+            "explication": "3 < 10, x becomes 8. Then 8 < 10, x becomes 13.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "The second “if” tests again: x is 8, and 8 < 10 is true."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "3 < 10 is true: the first “if” does add 5."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 0\nset n to 0\nrepeat 6 [ change x by 1, if ( x mod 3 ) = 0 then [ change n by 1 ] ]\nsay n\nWhat does the sprite say?",
+            "nom": "2",
+            "explication": "x takes the values 1 to 6. Only 3 and 6 are multiples of 3: n is 2.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "n does not go up on every turn: only when x is a multiple of 3."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "x starts at 1 inside the loop (1 is added before the test): 0 is never tested."
+              }
+            ]
+          },
+          {
+            "texte": "set t to 25\nif t > 30 then [ say hot ] else [ if t > 15 then [ say mild ] else [ say cold ] ]\nWhat does the sprite say?",
+            "nom": "mild",
+            "explication": "25 > 30 is false, so 25 > 15 is tested: true. The sprite says mild.",
+            "pieges": [
+              {
+                "texte": "hot",
+                "pourquoi": "25 > 30 is false: the program goes into the “else”."
+              },
+              {
+                "texte": "cold",
+                "pourquoi": "Inside the “else”, there is another test: 25 > 15 is true."
+              }
+            ]
+          },
+          {
+            "texte": "The sprite must say won when the score is 10 or more. Which condition goes in the “if”?",
+            "nom": "not ( score < 10 )",
+            "explication": "“10 or more” is the opposite of “less than 10”: not ( score < 10 ). With 10, 10 < 10 is false, so the condition is true.",
+            "pieges": [
+              {
+                "texte": "score > 10",
+                "pourquoi": "With a score of exactly 10, 10 > 10 is false: the sprite would say nothing."
+              },
+              {
+                "texte": "score < 10",
+                "pourquoi": "That is the opposite: true when the score is too small."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we try x = 5 to test the program “if x > 5 then … else …”?",
+            "nom": "It is the boundary: we check which side 5 falls on",
+            "explication": "Far from the boundary (0 or 100), > and ≥ choose the same branch. With 5, they choose different branches: that is where a mistake shows.",
+            "pieges": [
+              {
+                "texte": "Because 5 is a small number",
+                "pourquoi": "Size does not matter: 5 is what separates the two branches."
+              },
+              {
+                "texte": "To make the program run faster",
+                "pourquoi": "Speed does not change. We are looking for the case where a mistake (> instead of ≥) would show."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "boucle-conditionnelle",
+      "titre": "Répéter jusqu’à ce que",
+      "niveau": "3e",
+      "prerequis": [
+        "si-sinon"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Utiliser une boucle conditionnelle."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "« répéter jusqu’à ce que condition » teste la condition avant chaque tour. Fausse : un tour de plus. Vraie : la boucle s’arrête. On ne sait pas d’avance combien de tours il y aura.",
+      "phrases": {
+        "consigne": "Teste la condition avant chaque tour, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Avant chaque tour, demande-toi : la condition est-elle vraie ? Si oui, on sort de la boucle.",
+        "exemple": "mettre x à 1, puis répéter jusqu’à ce que x > 5 [ mettre x à x * 2 ] : 1, 2, 4, 8. 8 > 5 est vrai : la boucle s’arrête, x vaut 8.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre x à 1\nrépéter jusqu’à ce que x > 20 [ mettre x à x * 2 ]\ndire x\nQue dit le lutin ?",
+          "nom": "32",
+          "explication": "1, 2, 4, 8, 16 : la condition est fausse. 32 > 20 est vrai : la boucle s’arrête.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "16 > 20 est faux : la boucle fait encore un tour."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "x ne prend que les valeurs 1, 2, 4, 8, 16, 32 : il ne vaut jamais 20."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 0\nmettre n à 0\nrépéter jusqu’à ce que x > 10 [ ajouter 3 à x, ajouter 1 à n ]\ndire n\nQue dit le lutin ?",
+          "nom": "4",
+          "explication": "x vaut 3, 6, 9, 12. Il faut 4 tours pour dépasser 10 : n vaut 4.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "Après 3 tours, x vaut 9, et 9 > 10 est faux : il faut un 4e tour."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "12, c’est la valeur de x. Le lutin dit n, le nombre de tours."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 5\nrépéter jusqu’à ce que x = 5 [ ajouter 1 à x ]\ndire x\nQue dit le lutin ?",
+          "nom": "5",
+          "explication": "Avant le premier tour, x = 5 est vrai : on sort sans rien faire. Le lutin dit 5.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "La condition est testée avant le premier tour : x = 5 est déjà vrai, la boucle ne tourne pas."
+            },
+            {
+              "texte": "Rien : le programme ne s’arrête jamais",
+              "pourquoi": "La boucle s’arrête tout de suite, puisque x = 5 dès le départ."
+            }
+          ]
+        },
+        {
+          "texte": "mettre x à 1\nrépéter jusqu’à ce que x = 10 [ ajouter 2 à x ]\ndire x\nQue se passe-t-il ?",
+          "nom": "La boucle ne s’arrête jamais",
+          "explication": "x reste impair : 1, 3, 5, 7, 9, 11, 13… La condition x = 10 n’est jamais vraie. Il aurait fallu écrire x > 9.",
+          "pieges": [
+            {
+              "texte": "Le lutin dit 10",
+              "pourquoi": "x prend les valeurs 1, 3, 5, 7, 9, 11… : il ne vaut jamais 10."
+            },
+            {
+              "texte": "Le lutin dit 11",
+              "pourquoi": "À 11, la condition x = 10 est fausse : la boucle continue."
+            }
+          ]
+        },
+        {
+          "texte": "mettre a à 4\nsi ( a > 2 ) et ( a < 6 ) alors [ dire oui ] sinon [ dire non ]\nQue dit le lutin ?",
+          "nom": "oui",
+          "explication": "4 > 2 : vrai. 4 < 6 : vrai. Vrai et vrai donne vrai : le lutin dit oui.",
+          "pieges": [
+            {
+              "texte": "non",
+              "pourquoi": "4 > 2 est vrai et 4 < 6 est vrai : avec « et », les deux sont vraies, donc la condition aussi."
+            },
+            {
+              "texte": "oui, puis non",
+              "pourquoi": "Une seule branche s’exécute."
+            }
+          ]
+        },
+        {
+          "texte": "mettre a à 8\nsi ( a < 2 ) ou ( a > 6 ) alors [ dire oui ] sinon [ dire non ]\nQue dit le lutin ?",
+          "nom": "oui",
+          "explication": "8 < 2 est faux, mais 8 > 6 est vrai. Faux ou vrai donne vrai.",
+          "pieges": [
+            {
+              "texte": "non",
+              "pourquoi": "Avec « ou », il suffit qu’une des deux soit vraie : 8 > 6 est vrai."
+            },
+            {
+              "texte": "Rien",
+              "pourquoi": "La condition est vraie : la branche « alors » s’exécute."
+            }
+          ]
+        },
+        {
+          "texte": "Pour quelles valeurs de x la condition ( x > 3 ) et ( x < 3 ) est-elle vraie ?",
+          "nom": "Aucune",
+          "explication": "Un nombre ne peut pas être à la fois plus grand que 3 et plus petit que 3 : la condition est toujours fausse.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "Avec x = 3, 3 > 3 est faux et 3 < 3 aussi."
+            },
+            {
+              "texte": "Toutes",
+              "pourquoi": "Avec « et », il faut les deux à la fois : un nombre ne peut pas être plus grand et plus petit que 3."
+            }
+          ]
+        },
+        {
+          "texte": "mettre n à 100\nmettre c à 0\nrépéter jusqu’à ce que n < 1 [ mettre n à n / 10, ajouter 1 à c ]\ndire c\nQue dit le lutin ?",
+          "nom": "3",
+          "explication": "n vaut 10, puis 1, puis 0.1. Seul 0.1 < 1 est vrai : c vaut 3.",
+          "pieges": [
+            {
+              "texte": "2",
+              "pourquoi": "Après 2 tours, n vaut 1, et 1 < 1 est faux : il faut un 3e tour."
+            },
+            {
+              "texte": "100",
+              "pourquoi": "100 est la valeur de départ de n. Le lutin dit c, le nombre de tours."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi utiliser « répéter jusqu’à ce que » plutôt que « répéter 10 fois » pour faire avancer un lutin jusqu’au bord ?",
+          "nom": "On ne sait pas d’avance combien de pas il faudra",
+          "explication": "La distance au bord dépend de l’endroit où se trouve le lutin. La boucle conditionnelle s’arrête quand la condition devient vraie, quel que soit le nombre de tours.",
+          "pieges": [
+            {
+              "texte": "C’est plus rapide",
+              "pourquoi": "La vitesse ne change pas : c’est le nombre de tours qui n’est pas connu."
+            },
+            {
+              "texte": "« répéter 10 fois » ne peut pas faire avancer",
+              "pourquoi": "Il peut, mais il s’arrête après 10 tours, même loin du bord ou trop tard."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Repeat until",
+        "idee": "“repeat until condition” tests the condition before each turn. False: one more turn. True: the loop stops. You don’t know in advance how many turns there will be.",
+        "phrases": {
+          "consigne": "Test the condition before each turn, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Before each turn, ask yourself: is the condition true? If so, the loop ends.",
+          "exemple": "set x to 1, then repeat until x > 5 [ set x to x * 2 ]: 1, 2, 4, 8. 8 > 5 is true: the loop stops, x is 8.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set x to 1\nrepeat until x > 20 [ set x to x * 2 ]\nsay x\nWhat does the sprite say?",
+            "nom": "32",
+            "explication": "1, 2, 4, 8, 16: the condition is false. 32 > 20 is true: the loop stops.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "16 > 20 is false: the loop does one more turn."
+              },
+              {
+                "texte": "20",
+                "pourquoi": "x only takes the values 1, 2, 4, 8, 16, 32: it is never 20."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 0\nset n to 0\nrepeat until x > 10 [ change x by 3, change n by 1 ]\nsay n\nWhat does the sprite say?",
+            "nom": "4",
+            "explication": "x is 3, 6, 9, 12. It takes 4 turns to go past 10: n is 4.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "After 3 turns, x is 9, and 9 > 10 is false: a 4th turn is needed."
+              },
+              {
+                "texte": "12",
+                "pourquoi": "12 is the value of x. The sprite says n, the number of turns."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 5\nrepeat until x = 5 [ change x by 1 ]\nsay x\nWhat does the sprite say?",
+            "nom": "5",
+            "explication": "Before the first turn, x = 5 is true: the loop ends without doing anything. The sprite says 5.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "The condition is tested before the first turn: x = 5 is already true, the loop does not run."
+              },
+              {
+                "texte": "Nothing: the program never stops",
+                "pourquoi": "The loop stops straight away, since x = 5 from the start."
+              }
+            ]
+          },
+          {
+            "texte": "set x to 1\nrepeat until x = 10 [ change x by 2 ]\nsay x\nWhat happens?",
+            "nom": "The loop never stops",
+            "explication": "x stays odd: 1, 3, 5, 7, 9, 11, 13… The condition x = 10 is never true. It should have been x > 9.",
+            "pieges": [
+              {
+                "texte": "The sprite says 10",
+                "pourquoi": "x takes the values 1, 3, 5, 7, 9, 11…: it is never 10."
+              },
+              {
+                "texte": "The sprite says 11",
+                "pourquoi": "At 11, the condition x = 10 is false: the loop goes on."
+              }
+            ]
+          },
+          {
+            "texte": "set a to 4\nif ( a > 2 ) and ( a < 6 ) then [ say yes ] else [ say no ]\nWhat does the sprite say?",
+            "nom": "yes",
+            "explication": "4 > 2: true. 4 < 6: true. True and true gives true: the sprite says yes.",
+            "pieges": [
+              {
+                "texte": "no",
+                "pourquoi": "4 > 2 is true and 4 < 6 is true: with “and”, both are true, so the condition is too."
+              },
+              {
+                "texte": "yes, then no",
+                "pourquoi": "Only one branch runs."
+              }
+            ]
+          },
+          {
+            "texte": "set a to 8\nif ( a < 2 ) or ( a > 6 ) then [ say yes ] else [ say no ]\nWhat does the sprite say?",
+            "nom": "yes",
+            "explication": "8 < 2 is false, but 8 > 6 is true. False or true gives true.",
+            "pieges": [
+              {
+                "texte": "no",
+                "pourquoi": "With “or”, one true part is enough: 8 > 6 is true."
+              },
+              {
+                "texte": "Nothing",
+                "pourquoi": "The condition is true: the “then” branch runs."
+              }
+            ]
+          },
+          {
+            "texte": "For which values of x is the condition ( x > 3 ) and ( x < 3 ) true?",
+            "nom": "None",
+            "explication": "A number cannot be both greater than 3 and smaller than 3: the condition is always false.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "With x = 3, 3 > 3 is false and so is 3 < 3."
+              },
+              {
+                "texte": "All of them",
+                "pourquoi": "With “and”, both must hold at once: a number cannot be greater and smaller than 3."
+              }
+            ]
+          },
+          {
+            "texte": "set n to 100\nset c to 0\nrepeat until n < 1 [ set n to n / 10, change c by 1 ]\nsay c\nWhat does the sprite say?",
+            "nom": "3",
+            "explication": "n is 10, then 1, then 0.1. Only 0.1 < 1 is true: c is 3.",
+            "pieges": [
+              {
+                "texte": "2",
+                "pourquoi": "After 2 turns, n is 1, and 1 < 1 is false: a 3rd turn is needed."
+              },
+              {
+                "texte": "100",
+                "pourquoi": "100 is the starting value of n. The sprite says c, the number of turns."
+              }
+            ]
+          },
+          {
+            "texte": "Why use “repeat until” rather than “repeat 10” to move a sprite to the edge?",
+            "nom": "You don’t know in advance how many steps it will take",
+            "explication": "The distance to the edge depends on where the sprite is. The conditional loop stops when the condition becomes true, whatever the number of turns.",
+            "pieges": [
+              {
+                "texte": "It is faster",
+                "pourquoi": "Speed does not change: it is the number of turns that is unknown."
+              },
+              {
+                "texte": "“repeat 10” cannot move the sprite",
+                "pourquoi": "It can, but it stops after 10 turns, even far from the edge or too late."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "evenements",
+      "titre": "Les événements : quand…",
+      "niveau": "3e",
+      "prerequis": [
+        "boucle-conditionnelle"
+      ],
+      "programme": {
+        "source": "prog",
+        "texte": "Écrire un programme dans lequel des actions sont déclenchées par des événements extérieurs."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un script commence par un bloc « quand … » : il attend un événement (clic sur le drapeau vert, touche pressée, message reçu). À chaque fois que l’événement arrive, le script s’exécute.",
+      "phrases": {
+        "consigne": "Regarde quels événements arrivent, et dans quel ordre, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Pour chaque script, demande-toi : son événement est-il arrivé ? Combien de fois ?",
+        "exemple": "quand la touche espace est pressée [ ajouter 1 à x ] : on appuie 3 fois sur espace, le script s’exécute 3 fois, x augmente de 3.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Script 1 : quand le drapeau vert est cliqué [ mettre score à 0 ]\nScript 2 : quand la touche espace est pressée [ ajouter 1 à score ]\nOn clique sur le drapeau, puis on appuie 3 fois sur espace. Que vaut score ?",
+          "nom": "3",
+          "explication": "Le drapeau met score à 0. Puis 3 appuis, 3 exécutions du script 2 : score vaut 3.",
+          "pieges": [
+            {
+              "texte": "0",
+              "pourquoi": "Chaque appui sur espace est un événement : le script 2 s’exécute à chaque fois."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "Le script 2 ne s’exécute pas qu’une fois : il recommence à chaque appui."
+            }
+          ]
+        },
+        {
+          "texte": "Script 1 : quand le drapeau vert est cliqué [ dire Bonjour ]\nScript 2 : quand ce sprite est cliqué [ dire Aïe ]\nOn clique seulement sur le drapeau vert. Que dit le lutin ?",
+          "nom": "Bonjour",
+          "explication": "Seul le drapeau vert a été cliqué : seul le script 1 s’exécute.",
+          "pieges": [
+            {
+              "texte": "Aïe",
+              "pourquoi": "Personne n’a cliqué sur le lutin : l’événement du script 2 n’est pas arrivé."
+            },
+            {
+              "texte": "Bonjour, puis Aïe",
+              "pourquoi": "Le script 2 attend un clic sur le lutin ; sans ce clic, il ne s’exécute pas."
+            }
+          ]
+        },
+        {
+          "texte": "quand la touche flèche droite est pressée [ avancer de 10 pas ]\nDans ce script, quel est l’événement ?",
+          "nom": "Appuyer sur la flèche droite",
+          "explication": "L’événement est écrit dans le bloc « quand … » : la touche flèche droite. Avancer est l’action qu’il déclenche.",
+          "pieges": [
+            {
+              "texte": "Avancer de 10 pas",
+              "pourquoi": "C’est l’action, déclenchée par l’événement."
+            },
+            {
+              "texte": "Cliquer sur le drapeau vert",
+              "pourquoi": "Ce script ne parle pas du drapeau : il attend la flèche droite."
+            }
+          ]
+        },
+        {
+          "texte": "x est une variable pour tous les sprites.\nLutin A : quand le drapeau vert est cliqué [ mettre x à 5, envoyer à tous calcul ]\nLutin B : quand je reçois calcul [ mettre x à x * 2 ]\nOn clique sur le drapeau. Que vaut x à la fin ?",
+          "nom": "10",
+          "explication": "A met x à 5 et envoie calcul. B reçoit le message et calcule 5 × 2 = 10.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "Le message calcul est un événement pour le lutin B : son script s’exécute et double x."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "Le lutin B calcule x × 2 avec x = 5 : il ne remplace pas x par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Script 1 : quand le drapeau vert est cliqué [ … ]\nScript 2 : quand la touche a est pressée [ … ]\nScript 3 : quand le drapeau vert est cliqué [ … ]\nOn clique sur le drapeau vert. Combien de scripts démarrent ?",
+          "nom": "2",
+          "explication": "Les scripts 1 et 3 attendent le drapeau vert : les deux démarrent. Le script 2 attend toujours.",
+          "pieges": [
+            {
+              "texte": "1",
+              "pourquoi": "Plusieurs scripts peuvent attendre le même événement : ils démarrent tous."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "Le script 2 attend la touche a, pas le drapeau."
+            }
+          ]
+        },
+        {
+          "texte": "x vaut 0.\nquand la touche espace est pressée [ répéter 2 fois [ ajouter 5 à x ] ]\nOn appuie 2 fois sur espace. Que vaut x ?",
+          "nom": "20",
+          "explication": "Un appui : la boucle ajoute 5 + 5 = 10. Deux appuis : 10 + 10 = 20.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "Ça, c’est après un seul appui. Chaque appui relance tout le script : 2 × 10."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "La boucle ajoute 5 deux fois, et le script s’exécute deux fois."
+            }
+          ]
+        },
+        {
+          "texte": "Lutin A : quand je reçois fin [ dire Bravo ]\nAucun script n’envoie le message fin. Que dit le lutin A ?",
+          "nom": "Rien",
+          "explication": "Sans « envoyer à tous fin » quelque part, l’événement n’arrive pas : le lutin A ne dit rien.",
+          "pieges": [
+            {
+              "texte": "Bravo",
+              "pourquoi": "Le script attend le message fin, qui n’arrive jamais : il ne s’exécute pas."
+            },
+            {
+              "texte": "fin",
+              "pourquoi": "fin est le nom du message, pas ce que dit le lutin."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un jeu place-t-il « mettre score à 0 » sous « quand le drapeau vert est cliqué » ?",
+          "nom": "Pour repartir de 0 à chaque nouvelle partie",
+          "explication": "Le drapeau vert lance une nouvelle partie. Sans cette remise à 0, le score de la partie précédente resterait.",
+          "pieges": [
+            {
+              "texte": "Pour que le score monte tout seul",
+              "pourquoi": "Ce bloc remet le score à 0 : il ne le fait pas monter."
+            },
+            {
+              "texte": "Sinon, Scratch refuse la variable",
+              "pourquoi": "La variable existe sans ce bloc ; elle garderait simplement le score de la partie d’avant."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Events: when…",
+        "idee": "A script starts with a “when …” block: it waits for an event (green flag clicked, key pressed, message received). Every time the event happens, the script runs.",
+        "phrases": {
+          "consigne": "Look at which events happen, and in what order, then touch the answer.",
+          "question": "{texte}",
+          "indice": "For each script, ask yourself: has its event happened? How many times?",
+          "exemple": "when space key pressed [ change x by 1 ]: you press space 3 times, the script runs 3 times, x goes up by 3.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Script 1: when green flag clicked [ set score to 0 ]\nScript 2: when space key pressed [ change score by 1 ]\nYou click the flag, then press space 3 times. What is score?",
+            "nom": "3",
+            "explication": "The flag sets score to 0. Then 3 presses, 3 runs of script 2: score is 3.",
+            "pieges": [
+              {
+                "texte": "0",
+                "pourquoi": "Each press of space is an event: script 2 runs every time."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "Script 2 does not run only once: it runs again on every press."
+              }
+            ]
+          },
+          {
+            "texte": "Script 1: when green flag clicked [ say Hello ]\nScript 2: when this sprite clicked [ say Ouch ]\nYou only click the green flag. What does the sprite say?",
+            "nom": "Hello",
+            "explication": "Only the green flag was clicked: only script 1 runs.",
+            "pieges": [
+              {
+                "texte": "Ouch",
+                "pourquoi": "Nobody clicked the sprite: the event of script 2 did not happen."
+              },
+              {
+                "texte": "Hello, then Ouch",
+                "pourquoi": "Script 2 waits for a click on the sprite; without that click, it does not run."
+              }
+            ]
+          },
+          {
+            "texte": "when right arrow key pressed [ move 10 steps ]\nIn this script, what is the event?",
+            "nom": "Pressing the right arrow",
+            "explication": "The event is written in the “when …” block: the right arrow key. Moving is the action it triggers.",
+            "pieges": [
+              {
+                "texte": "Moving 10 steps",
+                "pourquoi": "That is the action, triggered by the event."
+              },
+              {
+                "texte": "Clicking the green flag",
+                "pourquoi": "This script says nothing about the flag: it waits for the right arrow."
+              }
+            ]
+          },
+          {
+            "texte": "x is a variable for all sprites.\nSprite A: when green flag clicked [ set x to 5, broadcast calc ]\nSprite B: when I receive calc [ set x to x * 2 ]\nYou click the flag. What is x at the end?",
+            "nom": "10",
+            "explication": "A sets x to 5 and broadcasts calc. B receives the message and works out 5 × 2 = 10.",
+            "pieges": [
+              {
+                "texte": "5",
+                "pourquoi": "The message calc is an event for sprite B: its script runs and doubles x."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "Sprite B works out x × 2 with x = 5: it does not replace x with 2."
+              }
+            ]
+          },
+          {
+            "texte": "Script 1: when green flag clicked [ … ]\nScript 2: when a key pressed [ … ]\nScript 3: when green flag clicked [ … ]\nYou click the green flag. How many scripts start?",
+            "nom": "2",
+            "explication": "Scripts 1 and 3 wait for the green flag: both start. Script 2 is still waiting.",
+            "pieges": [
+              {
+                "texte": "1",
+                "pourquoi": "Several scripts can wait for the same event: they all start."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "Script 2 waits for the a key, not for the flag."
+              }
+            ]
+          },
+          {
+            "texte": "x is 0.\nwhen space key pressed [ repeat 2 [ change x by 5 ] ]\nYou press space 2 times. What is x?",
+            "nom": "20",
+            "explication": "One press: the loop adds 5 + 5 = 10. Two presses: 10 + 10 = 20.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "That is after one press only. Each press runs the whole script again: 2 × 10."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "The loop adds 5 twice, and the script runs twice."
+              }
+            ]
+          },
+          {
+            "texte": "Sprite A: when I receive end [ say Well done ]\nNo script broadcasts the message end. What does sprite A say?",
+            "nom": "Nothing",
+            "explication": "Without “broadcast end” somewhere, the event does not happen: sprite A says nothing.",
+            "pieges": [
+              {
+                "texte": "Well done",
+                "pourquoi": "The script waits for the message end, which never comes: it does not run."
+              },
+              {
+                "texte": "end",
+                "pourquoi": "end is the name of the message, not what the sprite says."
+              }
+            ]
+          },
+          {
+            "texte": "Why does a game put “set score to 0” under “when green flag clicked”?",
+            "nom": "To start again from 0 at every new game",
+            "explication": "The green flag starts a new game. Without this reset, the score of the previous game would stay.",
+            "pieges": [
+              {
+                "texte": "So that the score goes up by itself",
+                "pourquoi": "This block sets the score back to 0: it does not make it go up."
+              },
+              {
+                "texte": "Otherwise Scratch refuses the variable",
+                "pourquoi": "The variable exists without this block; it would simply keep the score of the game before."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "python-for",
+      "titre": "Python : affectation et boucle for",
+      "niveau": "2de",
+      "prerequis": [
+        "boucle-conditionnelle"
+      ],
+      "programme": {
+        "source": "seconde",
+        "texte": "Boucle bornée (for), boucle non bornée (while)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "En Python, x = 3 range 3 dans x. for i in range(4) fait 4 tours, avec i = 0, 1, 2, 3 : range commence à 0 et s’arrête avant 4.",
+      "phrases": {
+        "consigne": "Prédis l’affichage avant de l’exécuter, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Écris les valeurs de i, tour par tour : range(n) va de 0 à n − 1.",
+        "exemple": "s = 0, puis for i in range(3): s = s + i. Les tours donnent i = 0, 1, 2 ; s vaut 0, 1, 3. print(s) affiche 3.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Que va afficher ce programme ?\nx = 3\nx = x + 4\nprint(x)",
+          "nom": "7",
+          "explication": "x vaut 3, puis x reçoit 3 + 4 = 7. print(x) affiche 7.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "La 2e ligne calcule 3 + 4 et range le résultat dans x : x ne vaut plus 3."
+            },
+            {
+              "texte": "x + 4",
+              "pourquoi": "print affiche la valeur de x, pas le texte du calcul."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nfor i in range(4): print(i)",
+          "nom": "0, 1, 2, 3 (un nombre par ligne)",
+          "explication": "range(4) donne 0, 1, 2, 3 : quatre tours, et 4 n’en fait pas partie.",
+          "pieges": [
+            {
+              "texte": "1, 2, 3, 4 (un nombre par ligne)",
+              "pourquoi": "range(4) commence à 0, pas à 1."
+            },
+            {
+              "texte": "0, 1, 2, 3, 4 (un nombre par ligne)",
+              "pourquoi": "range(4) s’arrête avant 4 : il donne 4 valeurs, de 0 à 3."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ns = 0\nfor i in range(5): s = s + i\nprint(s)",
+          "nom": "10",
+          "explication": "s reçoit 0, puis 0 + 1 = 1, 3, 6, 10. La somme 0 + 1 + 2 + 3 + 4 vaut 10.",
+          "pieges": [
+            {
+              "texte": "15",
+              "pourquoi": "Tu as fait 1 + 2 + 3 + 4 + 5. range(5) donne 0, 1, 2, 3, 4."
+            },
+            {
+              "texte": "4",
+              "pourquoi": "4 est la dernière valeur de i. print affiche s, la somme."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nfor i in range(2, 6): print(i)",
+          "nom": "2, 3, 4, 5 (un nombre par ligne)",
+          "explication": "range(2, 6) va de 2 jusqu’à 6 non compris : 2, 3, 4, 5.",
+          "pieges": [
+            {
+              "texte": "2, 3, 4, 5, 6 (un nombre par ligne)",
+              "pourquoi": "range(2, 6) s’arrête avant 6."
+            },
+            {
+              "texte": "0, 1, 2, 3, 4, 5 (un nombre par ligne)",
+              "pourquoi": "Avec deux nombres, range commence au premier : 2."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nfor i in range(0, 10, 3): print(i)",
+          "nom": "0, 3, 6, 9 (un nombre par ligne)",
+          "explication": "On part de 0 et on avance de 3 tant qu’on reste sous 10 : 0, 3, 6, 9.",
+          "pieges": [
+            {
+              "texte": "3, 6, 9 (un nombre par ligne)",
+              "pourquoi": "range commence à son premier nombre, 0, puis avance de 3."
+            },
+            {
+              "texte": "0, 3, 6 (un nombre par ligne)",
+              "pourquoi": "9 est plus petit que 10 : il en fait partie."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\np = 1\nfor k in range(4): p = p * 2\nprint(p)",
+          "nom": "16",
+          "explication": "p double 4 fois : 2, 4, 8, 16.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "range(4) fait 4 tours, pas 3 : 2, 4, 8, 16."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "Ça, c’est après un seul tour."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le type de x ?\nx = 7 / 2",
+          "nom": "Un flottant (x vaut 3.5)",
+          "explication": "7 / 2 vaut 3.5 : un nombre à virgule, de type flottant (float).",
+          "pieges": [
+            {
+              "texte": "Un entier (x vaut 3)",
+              "pourquoi": "En Python 3, / donne toujours un flottant ; c’est // qui donne le quotient entier."
+            },
+            {
+              "texte": "Une chaîne de caractères",
+              "pourquoi": "Il n’y a pas de guillemets : c’est un calcul sur des nombres."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nx = 1\nwhile x < 50: x = x * 3\nprint(x)",
+          "nom": "81",
+          "explication": "while répète tant que la condition est vraie : 1, 3, 9, 27, puis 81. 81 < 50 est faux : la boucle s’arrête.",
+          "pieges": [
+            {
+              "texte": "27",
+              "pourquoi": "27 < 50 est vrai : la boucle fait encore un tour."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "x ne prend que les valeurs 1, 3, 9, 27, 81 : il ne vaut jamais 50."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi range(5) fait-il 5 tours, alors que la dernière valeur de i est 4 ?\nfor i in range(5): print(i)",
+          "nom": "range(5) commence à 0 : 0, 1, 2, 3, 4, cela fait 5 valeurs",
+          "explication": "De 0 à 4, il y a 5 nombres. range(n) fait toujours n tours, avec i de 0 à n − 1.",
+          "pieges": [
+            {
+              "texte": "Le dernier tour est sauté",
+              "pourquoi": "Aucun tour n’est sauté : les 5 valeurs sont 0, 1, 2, 3, 4."
+            },
+            {
+              "texte": "Python ajoute un tour de plus",
+              "pourquoi": "Il n’y a ni tour en plus ni tour en moins : 5 tours, de 0 à 4."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Python: assignment and the for loop",
+        "idee": "In Python, x = 3 stores 3 in x. for i in range(4) does 4 turns, with i = 0, 1, 2, 3: range starts at 0 and stops before 4.",
+        "phrases": {
+          "consigne": "Predict the output before running it, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Write down the values of i, turn by turn: range(n) goes from 0 to n − 1.",
+          "exemple": "s = 0, then for i in range(3): s = s + i. The turns give i = 0, 1, 2; s is 0, 1, 3. print(s) displays 3.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "What will this program display?\nx = 3\nx = x + 4\nprint(x)",
+            "nom": "7",
+            "explication": "x is 3, then x gets 3 + 4 = 7. print(x) displays 7.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "The 2nd line works out 3 + 4 and stores the result in x: x is no longer 3."
+              },
+              {
+                "texte": "x + 4",
+                "pourquoi": "print displays the value of x, not the text of the calculation."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nfor i in range(4): print(i)",
+            "nom": "0, 1, 2, 3 (one number per line)",
+            "explication": "range(4) gives 0, 1, 2, 3: four turns, and 4 is not one of them.",
+            "pieges": [
+              {
+                "texte": "1, 2, 3, 4 (one number per line)",
+                "pourquoi": "range(4) starts at 0, not at 1."
+              },
+              {
+                "texte": "0, 1, 2, 3, 4 (one number per line)",
+                "pourquoi": "range(4) stops before 4: it gives 4 values, from 0 to 3."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ns = 0\nfor i in range(5): s = s + i\nprint(s)",
+            "nom": "10",
+            "explication": "s gets 0, then 0 + 1 = 1, 3, 6, 10. The sum 0 + 1 + 2 + 3 + 4 is 10.",
+            "pieges": [
+              {
+                "texte": "15",
+                "pourquoi": "You did 1 + 2 + 3 + 4 + 5. range(5) gives 0, 1, 2, 3, 4."
+              },
+              {
+                "texte": "4",
+                "pourquoi": "4 is the last value of i. print displays s, the sum."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nfor i in range(2, 6): print(i)",
+            "nom": "2, 3, 4, 5 (one number per line)",
+            "explication": "range(2, 6) goes from 2 up to 6, not included: 2, 3, 4, 5.",
+            "pieges": [
+              {
+                "texte": "2, 3, 4, 5, 6 (one number per line)",
+                "pourquoi": "range(2, 6) stops before 6."
+              },
+              {
+                "texte": "0, 1, 2, 3, 4, 5 (one number per line)",
+                "pourquoi": "With two numbers, range starts at the first one: 2."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nfor i in range(0, 10, 3): print(i)",
+            "nom": "0, 3, 6, 9 (one number per line)",
+            "explication": "Start at 0 and go up by 3 as long as you stay below 10: 0, 3, 6, 9.",
+            "pieges": [
+              {
+                "texte": "3, 6, 9 (one number per line)",
+                "pourquoi": "range starts at its first number, 0, then goes up by 3."
+              },
+              {
+                "texte": "0, 3, 6 (one number per line)",
+                "pourquoi": "9 is less than 10: it is included."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\np = 1\nfor k in range(4): p = p * 2\nprint(p)",
+            "nom": "16",
+            "explication": "p doubles 4 times: 2, 4, 8, 16.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "range(4) does 4 turns, not 3: 2, 4, 8, 16."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "That is after one turn only."
+              }
+            ]
+          },
+          {
+            "texte": "What is the type of x?\nx = 7 / 2",
+            "nom": "A float (x is 3.5)",
+            "explication": "7 / 2 is 3.5: a decimal number, of type float.",
+            "pieges": [
+              {
+                "texte": "An integer (x is 3)",
+                "pourquoi": "In Python 3, / always gives a float; it is // that gives the whole-number quotient."
+              },
+              {
+                "texte": "A string",
+                "pourquoi": "There are no quotation marks: it is a calculation on numbers."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nx = 1\nwhile x < 50: x = x * 3\nprint(x)",
+            "nom": "81",
+            "explication": "while repeats as long as the condition is true: 1, 3, 9, 27, then 81. 81 < 50 is false: the loop stops.",
+            "pieges": [
+              {
+                "texte": "27",
+                "pourquoi": "27 < 50 is true: the loop does one more turn."
+              },
+              {
+                "texte": "50",
+                "pourquoi": "x only takes the values 1, 3, 9, 27, 81: it is never 50."
+              }
+            ]
+          },
+          {
+            "texte": "Why does range(5) do 5 turns, when the last value of i is 4?\nfor i in range(5): print(i)",
+            "nom": "range(5) starts at 0: 0, 1, 2, 3, 4 makes 5 values",
+            "explication": "From 0 to 4 there are 5 numbers. range(n) always does n turns, with i from 0 to n − 1.",
+            "pieges": [
+              {
+                "texte": "The last turn is skipped",
+                "pourquoi": "No turn is skipped: the 5 values are 0, 1, 2, 3, 4."
+              },
+              {
+                "texte": "Python adds an extra turn",
+                "pourquoi": "There is no extra turn and none missing: 5 turns, from 0 to 4."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "python-si",
+      "titre": "Python : if, elif, else",
+      "niveau": "2de",
+      "prerequis": [
+        "python-for"
+      ],
+      "programme": {
+        "source": "seconde",
+        "texte": "Instruction conditionnelle."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "if teste une condition. Vraie : Python exécute la suite de la ligne. Fausse : il passe à elif ou à else. == compare, = range une valeur.",
+      "phrases": {
+        "consigne": "Teste chaque condition avec les valeurs du moment, puis prédis l’affichage.",
+        "question": "{texte}",
+        "indice": "Remplace chaque variable par sa valeur et dis vrai ou faux, dans l’ordre des lignes.",
+        "exemple": "x = 12, puis if x > 10: print(\"grand\"), sinon print(\"petit\"). 12 > 10 est vrai : le programme affiche grand.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Que va afficher ce programme ?\nx = 12\nif x > 10: print(\"grand\")\nelse: print(\"petit\")",
+          "nom": "grand",
+          "explication": "12 > 10 est vrai : le programme affiche grand, et seulement grand.",
+          "pieges": [
+            {
+              "texte": "petit",
+              "pourquoi": "12 > 10 est vrai : c’est la ligne du if qui s’exécute."
+            },
+            {
+              "texte": "grand, puis petit",
+              "pourquoi": "Une seule branche s’exécute : else ne sert que si la condition est fausse."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nx = 10\nif x >= 10: print(\"A\")\nelse: print(\"B\")",
+          "nom": "A",
+          "explication": "10 >= 10 est vrai, car 10 est égal à 10. Le programme affiche A.",
+          "pieges": [
+            {
+              "texte": "B",
+              "pourquoi": ">= veut dire « supérieur ou égal » : 10 >= 10 est vrai."
+            },
+            {
+              "texte": "Une erreur",
+              "pourquoi": ">= est un opérateur de Python : le programme est correct."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nn = 7\nif n % 2 == 0: print(\"pair\")\nelse: print(\"impair\")",
+          "nom": "impair",
+          "explication": "7 = 2 × 3 + 1 : le reste vaut 1, la condition est fausse, le programme affiche impair.",
+          "pieges": [
+            {
+              "texte": "pair",
+              "pourquoi": "7 % 2 est le reste de 7 ÷ 2 : 1. 1 == 0 est faux."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "1 est le reste calculé dans la condition ; le programme affiche le mot de la branche choisie."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nx = 5\nif x == 5: x = x + 1\nif x == 5: x = x + 10\nprint(x)",
+          "nom": "6",
+          "explication": "Premier if : vrai, x passe à 6. Deuxième if : 6 == 5 est faux, x reste 6.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "Au deuxième if, x vaut déjà 6 : 6 == 5 est faux."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "5 == 5 est vrai : le premier if ajoute 1."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\na = 3\nb = 8\nif a > b: m = a\nelse: m = b\nprint(m)",
+          "nom": "8",
+          "explication": "3 > 8 est faux, donc m = b = 8. Ce programme garde le plus grand des deux.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "3 > 8 est faux : m reçoit b."
+            },
+            {
+              "texte": "11",
+              "pourquoi": "Le programme choisit un des deux nombres, il ne les additionne pas."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nx = 4\nif x > 0 and x < 3: print(\"oui\")\nelse: print(\"non\")",
+          "nom": "non",
+          "explication": "4 > 0 est vrai, mais 4 < 3 est faux. Vrai and faux donne faux : le programme affiche non.",
+          "pieges": [
+            {
+              "texte": "oui",
+              "pourquoi": "Avec and, il faut que les deux soient vraies : 4 < 3 est faux."
+            },
+            {
+              "texte": "oui, puis non",
+              "pourquoi": "Une seule branche s’exécute."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nx = 4\nif x < 0 or x > 3: print(\"oui\")\nelse: print(\"non\")",
+          "nom": "oui",
+          "explication": "4 < 0 est faux, 4 > 3 est vrai. Faux or vrai donne vrai : le programme affiche oui.",
+          "pieges": [
+            {
+              "texte": "non",
+              "pourquoi": "Avec or, une seule condition vraie suffit : 4 > 3 est vrai."
+            },
+            {
+              "texte": "Une erreur",
+              "pourquoi": "or est un mot de Python : le programme est correct."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nt = 18\nif t > 25: print(\"chaud\")\nelif t > 15: print(\"doux\")\nelse: print(\"froid\")",
+          "nom": "doux",
+          "explication": "18 > 25 : faux. 18 > 15 : vrai. Le programme affiche doux et s’arrête là.",
+          "pieges": [
+            {
+              "texte": "chaud",
+              "pourquoi": "18 > 25 est faux : on passe à elif."
+            },
+            {
+              "texte": "froid",
+              "pourquoi": "elif teste encore : 18 > 15 est vrai, donc on n’arrive pas au else."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il ?\nx = 3\nif x = 3: print(\"ok\")",
+          "nom": "Python signale une erreur de syntaxe",
+          "explication": "= range une valeur, == compare. if x = 3 n’a pas de sens pour Python : c’est une erreur de syntaxe (SyntaxError).",
+          "pieges": [
+            {
+              "texte": "Le programme affiche ok",
+              "pourquoi": "Dans un if, il faut ==. Avec un seul =, Python refuse la ligne avant même de l’exécuter."
+            },
+            {
+              "texte": "Rien ne s’affiche",
+              "pourquoi": "Ce n’est pas un test faux : Python ne lance pas le programme et signale une erreur."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi écrit-on x == 5 dans un if, et pas x = 5 ?",
+          "nom": "== compare deux valeurs ; = range une valeur dans x",
+          "explication": "x = 5 est une affectation : x reçoit 5. x == 5 est une comparaison : vrai si x vaut 5, faux sinon. Un if a besoin d’une comparaison.",
+          "pieges": [
+            {
+              "texte": "Les deux veulent dire la même chose",
+              "pourquoi": "Non : x = 5 change x, x == 5 demande seulement si x vaut 5."
+            },
+            {
+              "texte": "== veut dire « à peu près égal »",
+              "pourquoi": "== teste l’égalité exacte : vrai ou faux."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Python: if, elif, else",
+        "idee": "if tests a condition. True: Python runs the rest of the line. False: it moves on to elif or else. == compares, = stores a value.",
+        "phrases": {
+          "consigne": "Test each condition with the current values, then predict the output.",
+          "question": "{texte}",
+          "indice": "Replace each variable with its value and say true or false, in the order of the lines.",
+          "exemple": "x = 12, then if x > 10: print(\"big\"), else print(\"small\"). 12 > 10 is true: the program displays big.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "What will this program display?\nx = 12\nif x > 10: print(\"big\")\nelse: print(\"small\")",
+            "nom": "big",
+            "explication": "12 > 10 is true: the program displays big, and only big.",
+            "pieges": [
+              {
+                "texte": "small",
+                "pourquoi": "12 > 10 is true: the if line runs."
+              },
+              {
+                "texte": "big, then small",
+                "pourquoi": "Only one branch runs: else is only used when the condition is false."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nx = 10\nif x >= 10: print(\"A\")\nelse: print(\"B\")",
+            "nom": "A",
+            "explication": "10 >= 10 is true, because 10 equals 10. The program displays A.",
+            "pieges": [
+              {
+                "texte": "B",
+                "pourquoi": ">= means “greater than or equal to”: 10 >= 10 is true."
+              },
+              {
+                "texte": "An error",
+                "pourquoi": ">= is a Python operator: the program is correct."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nn = 7\nif n % 2 == 0: print(\"even\")\nelse: print(\"odd\")",
+            "nom": "odd",
+            "explication": "7 = 2 × 3 + 1: the remainder is 1, the condition is false, the program displays odd.",
+            "pieges": [
+              {
+                "texte": "even",
+                "pourquoi": "7 % 2 is the remainder of 7 ÷ 2: 1. 1 == 0 is false."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "1 is the remainder worked out in the condition; the program displays the word of the chosen branch."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nx = 5\nif x == 5: x = x + 1\nif x == 5: x = x + 10\nprint(x)",
+            "nom": "6",
+            "explication": "First if: true, x becomes 6. Second if: 6 == 5 is false, x stays 6.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "At the second if, x is already 6: 6 == 5 is false."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "5 == 5 is true: the first if adds 1."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\na = 3\nb = 8\nif a > b: m = a\nelse: m = b\nprint(m)",
+            "nom": "8",
+            "explication": "3 > 8 is false, so m = b = 8. This program keeps the larger of the two.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "3 > 8 is false: m gets b."
+              },
+              {
+                "texte": "11",
+                "pourquoi": "The program chooses one of the two numbers, it does not add them."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nx = 4\nif x > 0 and x < 3: print(\"yes\")\nelse: print(\"no\")",
+            "nom": "no",
+            "explication": "4 > 0 is true, but 4 < 3 is false. True and false gives false: the program displays no.",
+            "pieges": [
+              {
+                "texte": "yes",
+                "pourquoi": "With and, both must be true: 4 < 3 is false."
+              },
+              {
+                "texte": "yes, then no",
+                "pourquoi": "Only one branch runs."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nx = 4\nif x < 0 or x > 3: print(\"yes\")\nelse: print(\"no\")",
+            "nom": "yes",
+            "explication": "4 < 0 is false, 4 > 3 is true. False or true gives true: the program displays yes.",
+            "pieges": [
+              {
+                "texte": "no",
+                "pourquoi": "With or, one true condition is enough: 4 > 3 is true."
+              },
+              {
+                "texte": "An error",
+                "pourquoi": "or is a Python keyword: the program is correct."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nt = 18\nif t > 25: print(\"hot\")\nelif t > 15: print(\"mild\")\nelse: print(\"cold\")",
+            "nom": "mild",
+            "explication": "18 > 25: false. 18 > 15: true. The program displays mild and stops there.",
+            "pieges": [
+              {
+                "texte": "hot",
+                "pourquoi": "18 > 25 is false: the program moves on to elif."
+              },
+              {
+                "texte": "cold",
+                "pourquoi": "elif tests again: 18 > 15 is true, so the else is never reached."
+              }
+            ]
+          },
+          {
+            "texte": "What happens?\nx = 3\nif x = 3: print(\"ok\")",
+            "nom": "Python reports a syntax error",
+            "explication": "= stores a value, == compares. if x = 3 makes no sense to Python: it is a syntax error (SyntaxError).",
+            "pieges": [
+              {
+                "texte": "The program displays ok",
+                "pourquoi": "In an if, you need ==. With a single =, Python rejects the line before even running it."
+              },
+              {
+                "texte": "Nothing is displayed",
+                "pourquoi": "It is not a false test: Python does not run the program and reports an error."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we write x == 5 in an if, and not x = 5?",
+            "nom": "== compares two values; = stores a value in x",
+            "explication": "x = 5 is an assignment: x gets 5. x == 5 is a comparison: true if x is 5, false otherwise. An if needs a comparison.",
+            "pieges": [
+              {
+                "texte": "They both mean the same thing",
+                "pourquoi": "No: x = 5 changes x, x == 5 only asks whether x is 5."
+              },
+              {
+                "texte": "== means “roughly equal”",
+                "pourquoi": "== tests exact equality: true or false."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "python-fonctions",
+      "titre": "Python : écrire et appeler une fonction",
+      "niveau": "2de",
+      "prerequis": [
+        "python-si"
+      ],
+      "programme": {
+        "source": "seconde",
+        "texte": "Écrire des fonctions simples ; lire, comprendre, modifier, compléter des fonctions plus complexes. Appeler une fonction."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "def f(x): return … définit une fonction. f(3) l’appelle : x prend la valeur 3, Python calcule, et return renvoie le résultat à l’endroit de l’appel.",
+      "phrases": {
+        "consigne": "Remplace l’argument par sa valeur, calcule ce que renvoie la fonction, puis prédis l’affichage.",
+        "question": "{texte}",
+        "indice": "Pour f(3), écris la ligne return en remplaçant x par 3.",
+        "exemple": "def f(x): return 2 * x + 1. Pour f(3) : 2 × 3 + 1 = 7. print(f(3)) affiche 7.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Que va afficher ce programme ?\ndef f(x): return 2 * x + 1\nprint(f(3))",
+          "nom": "7",
+          "explication": "x prend la valeur 3 : 2 × 3 + 1 = 7.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu as calculé 2 × (3 + 1). Python multiplie d’abord : 2 × 3, puis + 1."
+            },
+            {
+              "texte": "2 * x + 1",
+              "pourquoi": "print affiche la valeur renvoyée, pas le texte de la fonction."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef aire(l, L): return l * L\nprint(aire(3, 5))",
+          "nom": "15",
+          "explication": "Les arguments sont rangés dans l’ordre : l = 3, L = 5. La fonction renvoie 3 × 5 = 15.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "La fonction multiplie ses deux arguments : 3 × 5, pas 3 + 5."
+            },
+            {
+              "texte": "aire(3, 5)",
+              "pourquoi": "print affiche le résultat de l’appel, pas l’appel lui-même."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef f(x): return x * x\nprint(f(2) + f(3))",
+          "nom": "13",
+          "explication": "f(2) = 4, f(3) = 9, et 4 + 9 = 13.",
+          "pieges": [
+            {
+              "texte": "25",
+              "pourquoi": "Tu as calculé f(5). On calcule f(2) = 4 et f(3) = 9, puis on les ajoute."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "f(x) renvoie x × x, pas 2 × x."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef f(x): return x + 1\nprint(f(f(1)))",
+          "nom": "3",
+          "explication": "On calcule de l’intérieur vers l’extérieur : f(1) = 2, puis f(2) = 3.",
+          "pieges": [
+            {
+              "texte": "2",
+              "pourquoi": "f est appelée deux fois : d’abord f(1) = 2, puis f(2)."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "Chaque appel ajoute 1 : la valeur change."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef g(x): print(x * 2)\ny = g(5)\nprint(y)",
+          "nom": "10, puis None",
+          "explication": "g(5) affiche 10. Sans return, une fonction renvoie None : y vaut None, et print(y) affiche None.",
+          "pieges": [
+            {
+              "texte": "10, puis 10",
+              "pourquoi": "g affiche 10 mais ne renvoie rien (pas de return) : y reçoit None."
+            },
+            {
+              "texte": "None seulement",
+              "pourquoi": "L’appel g(5) exécute print(x * 2) : 10 s’affiche d’abord."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef double(x): return 2 * x\nx = 4\nprint(double(x + 1))",
+          "nom": "10",
+          "explication": "x + 1 = 5, donc double(5) = 10.",
+          "pieges": [
+            {
+              "texte": "9",
+              "pourquoi": "L’argument est calculé avant l’appel : x + 1 = 5, puis 2 × 5."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "On appelle double avec x + 1, pas avec x."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\ndef moyenne(a, b): return (a + b) / 2\nprint(moyenne(4, 7))",
+          "nom": "5.5",
+          "explication": "(4 + 7) / 2 = 11 / 2 = 5.5. Python écrit les décimaux avec un point.",
+          "pieges": [
+            {
+              "texte": "7.5",
+              "pourquoi": "Sans les parenthèses, ce serait 4 + 7 / 2. Ici, on divise la somme : 11 / 2."
+            },
+            {
+              "texte": "11",
+              "pourquoi": "La fonction divise la somme par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles valeurs peut prendre de ?\nfrom random import randint\nde = randint(1, 6)",
+          "nom": "1, 2, 3, 4, 5 ou 6",
+          "explication": "randint(a, b) renvoie un entier au hasard entre a et b, a et b compris : ici, comme un dé.",
+          "pieges": [
+            {
+              "texte": "1, 2, 3, 4 ou 5",
+              "pourquoi": "randint(1, 6) inclut ses deux bornes, contrairement à range."
+            },
+            {
+              "texte": "De 0 à 6",
+              "pourquoi": "La plus petite valeur possible est la première borne, 1."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi écrire une fonction plutôt que recopier le même calcul plusieurs fois ?",
+          "nom": "On l’écrit une fois, puis on l’appelle autant qu’on veut, avec d’autres valeurs",
+          "explication": "Une fonction donne un nom à un calcul. On la corrige à un seul endroit, et chaque appel peut lui donner d’autres arguments.",
+          "pieges": [
+            {
+              "texte": "Le calcul est plus juste dans une fonction",
+              "pourquoi": "Le résultat est le même ; la fonction évite de recopier, et donc de se tromper en recopiant."
+            },
+            {
+              "texte": "Python interdit de recopier un calcul",
+              "pourquoi": "Python accepte les calculs recopiés : c’est un choix d’organisation."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Python: writing and calling a function",
+        "idee": "def f(x): return … defines a function. f(3) calls it: x takes the value 3, Python calculates, and return sends the result back to where it was called.",
+        "phrases": {
+          "consigne": "Replace the argument with its value, work out what the function returns, then predict the output.",
+          "question": "{texte}",
+          "indice": "For f(3), write the return line with x replaced by 3.",
+          "exemple": "def f(x): return 2 * x + 1. For f(3): 2 × 3 + 1 = 7. print(f(3)) displays 7.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "What will this program display?\ndef f(x): return 2 * x + 1\nprint(f(3))",
+            "nom": "7",
+            "explication": "x takes the value 3: 2 × 3 + 1 = 7.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You worked out 2 × (3 + 1). Python multiplies first: 2 × 3, then + 1."
+              },
+              {
+                "texte": "2 * x + 1",
+                "pourquoi": "print displays the value returned, not the text of the function."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef area(w, h): return w * h\nprint(area(3, 5))",
+            "nom": "15",
+            "explication": "The arguments are stored in order: w = 3, h = 5. The function returns 3 × 5 = 15.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "The function multiplies its two arguments: 3 × 5, not 3 + 5."
+              },
+              {
+                "texte": "area(3, 5)",
+                "pourquoi": "print displays the result of the call, not the call itself."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef f(x): return x * x\nprint(f(2) + f(3))",
+            "nom": "13",
+            "explication": "f(2) = 4, f(3) = 9, and 4 + 9 = 13.",
+            "pieges": [
+              {
+                "texte": "25",
+                "pourquoi": "You worked out f(5). Work out f(2) = 4 and f(3) = 9, then add them."
+              },
+              {
+                "texte": "10",
+                "pourquoi": "f(x) returns x × x, not 2 × x."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef f(x): return x + 1\nprint(f(f(1)))",
+            "nom": "3",
+            "explication": "Work from the inside out: f(1) = 2, then f(2) = 3.",
+            "pieges": [
+              {
+                "texte": "2",
+                "pourquoi": "f is called twice: first f(1) = 2, then f(2)."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "Each call adds 1: the value changes."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef g(x): print(x * 2)\ny = g(5)\nprint(y)",
+            "nom": "10, then None",
+            "explication": "g(5) displays 10. Without return, a function returns None: y is None, and print(y) displays None.",
+            "pieges": [
+              {
+                "texte": "10, then 10",
+                "pourquoi": "g displays 10 but returns nothing (no return): y gets None."
+              },
+              {
+                "texte": "None only",
+                "pourquoi": "The call g(5) runs print(x * 2): 10 is displayed first."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef double(x): return 2 * x\nx = 4\nprint(double(x + 1))",
+            "nom": "10",
+            "explication": "x + 1 = 5, so double(5) = 10.",
+            "pieges": [
+              {
+                "texte": "9",
+                "pourquoi": "The argument is worked out before the call: x + 1 = 5, then 2 × 5."
+              },
+              {
+                "texte": "8",
+                "pourquoi": "double is called with x + 1, not with x."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\ndef mean(a, b): return (a + b) / 2\nprint(mean(4, 7))",
+            "nom": "5.5",
+            "explication": "(4 + 7) / 2 = 11 / 2 = 5.5. Python writes decimals with a point.",
+            "pieges": [
+              {
+                "texte": "7.5",
+                "pourquoi": "Without the brackets it would be 4 + 7 / 2. Here, the sum is divided: 11 / 2."
+              },
+              {
+                "texte": "11",
+                "pourquoi": "The function divides the sum by 2."
+              }
+            ]
+          },
+          {
+            "texte": "Which values can die take?\nfrom random import randint\ndie = randint(1, 6)",
+            "nom": "1, 2, 3, 4, 5 or 6",
+            "explication": "randint(a, b) returns a random whole number between a and b, both included: here, like a die.",
+            "pieges": [
+              {
+                "texte": "1, 2, 3, 4 or 5",
+                "pourquoi": "randint(1, 6) includes both its bounds, unlike range."
+              },
+              {
+                "texte": "From 0 to 6",
+                "pourquoi": "The smallest possible value is the first bound, 1."
+              }
+            ]
+          },
+          {
+            "texte": "Why write a function rather than copy the same calculation several times?",
+            "nom": "You write it once, then call it as often as you like, with other values",
+            "explication": "A function gives a name to a calculation. You fix it in one place only, and each call can give it other arguments.",
+            "pieges": [
+              {
+                "texte": "The calculation is more accurate in a function",
+                "pourquoi": "The result is the same; the function avoids copying, and so avoids copying mistakes."
+              },
+              {
+                "texte": "Python forbids copying a calculation",
+                "pourquoi": "Python accepts copied calculations: it is a choice of organisation."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "python-listes",
+      "titre": "Python : les listes",
+      "niveau": "2de",
+      "prerequis": [
+        "python-for"
+      ],
+      "programme": {
+        "source": "seconde",
+        "texte": "À partir de deux listes représentant deux caractères d'individus, déterminer un sous-ensemble d'individus répondant à un critère (filtre, utilisation de ET, OU, NON)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une liste range plusieurs valeurs dans l’ordre : L = [12, 8, 15]. L[0] est la première, car les positions (indices) commencent à 0. len(L) donne le nombre d’éléments.",
+      "phrases": {
+        "consigne": "Numérote les éléments à partir de 0, puis prédis l’affichage.",
+        "question": "{texte}",
+        "indice": "Écris l’indice sous chaque élément : 0, 1, 2…",
+        "exemple": "L = [12, 8, 15]. Indices : 12 est en 0, 8 en 1, 15 en 2. print(L[1]) affiche 8, et len(L) vaut 3.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Que va afficher ce programme ?\nnotes = [12, 8, 15]\nprint(notes[0])",
+          "nom": "12",
+          "explication": "Indice 0 : 12. Indice 1 : 8. Indice 2 : 15.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Les indices commencent à 0 : notes[0] est le premier élément."
+            },
+            {
+              "texte": "15",
+              "pourquoi": "15 est en position 2, le dernier."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nnotes = [12, 8, 15]\nprint(len(notes))",
+          "nom": "3",
+          "explication": "La liste a 3 éléments : len(notes) vaut 3.",
+          "pieges": [
+            {
+              "texte": "2",
+              "pourquoi": "len compte les éléments : 3. C’est le dernier indice qui vaut 2."
+            },
+            {
+              "texte": "35",
+              "pourquoi": "35 est la somme des notes ; len compte, il n’additionne pas."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nL = [4, 7, 1]\ns = 0\nfor x in L: s = s + x\nprint(s)",
+          "nom": "12",
+          "explication": "for x in L prend chaque élément à son tour : s vaut 4, puis 11, puis 12.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "3 est le nombre d’éléments. La boucle ajoute chaque élément à s."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "1 est le dernier élément. s garde la somme de tous."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nL = [5, 2, 9]\nL.append(4)\nprint(L)",
+          "nom": "[5, 2, 9, 4]",
+          "explication": "L.append(4) ajoute 4 à la fin : [5, 2, 9, 4].",
+          "pieges": [
+            {
+              "texte": "[4, 5, 2, 9]",
+              "pourquoi": "append ajoute à la fin de la liste, pas au début."
+            },
+            {
+              "texte": "[5, 2, 9]",
+              "pourquoi": "append modifie la liste : 4 y est ajouté."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nL = [2, 4, 6]\nL[1] = 10\nprint(L)",
+          "nom": "[2, 10, 6]",
+          "explication": "L[1] = 10 remplace l’élément d’indice 1, c’est-à-dire 4 : [2, 10, 6].",
+          "pieges": [
+            {
+              "texte": "[10, 4, 6]",
+              "pourquoi": "L[1] est le deuxième élément : l’indice 0 est le premier."
+            },
+            {
+              "texte": "[2, 4, 10]",
+              "pourquoi": "L[1] désigne la position 1, pas la dernière."
+            }
+          ]
+        },
+        {
+          "texte": "Que va afficher ce programme ?\nL = []\nfor i in range(3): L.append(i * i)\nprint(L)",
+          "nom": "[0, 1, 4]",
+          "explication": "Tours : i = 0, 1, 2. On ajoute 0 × 0, 1 × 1, 2 × 2 : [0, 1, 4].",
+          "pieges": [
+            {
+              "texte": "[1, 4, 9]",
+              "pourquoi": "range(3) donne i = 0, 1, 2 : les carrés sont 0, 1, 4."
+            },
+            {
+              "texte": "[0, 2, 4]",
+              "pourquoi": "i * i est le carré de i, pas son double."
+            }
+          ]
+        },
+        {
+          "texte": "ages = [12, 15, 17, 20]\nPour chaque a de la liste ages, si a > 14 and a < 18, le programme affiche a. Qu’affiche-t-il ?",
+          "nom": "15, puis 17",
+          "explication": "12 > 14 est faux. 15 et 17 vérifient les deux conditions. 20 < 18 est faux. Il reste 15 et 17.",
+          "pieges": [
+            {
+              "texte": "15, puis 17, puis 20",
+              "pourquoi": "20 < 18 est faux : avec and, les deux conditions doivent être vraies."
+            },
+            {
+              "texte": "12, puis 15, puis 17, puis 20",
+              "pourquoi": "Le filtre ne garde que les âges qui vérifient la condition."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le dernier élément de L = [3, 6, 9] est-il L[2], et pas L[3] ?",
+          "nom": "Les indices commencent à 0 : 0, 1, 2",
+          "explication": "3 éléments, indices 0, 1 et 2. Le dernier indice est toujours len(L) − 1.",
+          "pieges": [
+            {
+              "texte": "L[3] existe mais il est vide",
+              "pourquoi": "L[3] n’existe pas : Python signale une erreur (IndexError)."
+            },
+            {
+              "texte": "Python compte à l’envers",
+              "pourquoi": "Python compte de gauche à droite, mais à partir de 0."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Python: lists",
+        "idee": "A list stores several values in order: L = [12, 8, 15]. L[0] is the first one, because positions (indices) start at 0. len(L) gives the number of items.",
+        "phrases": {
+          "consigne": "Number the items starting from 0, then predict the output.",
+          "question": "{texte}",
+          "indice": "Write the index under each item: 0, 1, 2…",
+          "exemple": "L = [12, 8, 15]. Indices: 12 is at 0, 8 at 1, 15 at 2. print(L[1]) displays 8, and len(L) is 3.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "What will this program display?\nmarks = [12, 8, 15]\nprint(marks[0])",
+            "nom": "12",
+            "explication": "Index 0: 12. Index 1: 8. Index 2: 15.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "Indices start at 0: marks[0] is the first item."
+              },
+              {
+                "texte": "15",
+                "pourquoi": "15 is at position 2, the last one."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nmarks = [12, 8, 15]\nprint(len(marks))",
+            "nom": "3",
+            "explication": "The list has 3 items: len(marks) is 3.",
+            "pieges": [
+              {
+                "texte": "2",
+                "pourquoi": "len counts the items: 3. It is the last index that is 2."
+              },
+              {
+                "texte": "35",
+                "pourquoi": "35 is the sum of the marks; len counts, it does not add."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nL = [4, 7, 1]\ns = 0\nfor x in L: s = s + x\nprint(s)",
+            "nom": "12",
+            "explication": "for x in L takes each item in turn: s is 4, then 11, then 12.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "3 is the number of items. The loop adds each item to s."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "1 is the last item. s keeps the sum of all of them."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nL = [5, 2, 9]\nL.append(4)\nprint(L)",
+            "nom": "[5, 2, 9, 4]",
+            "explication": "L.append(4) adds 4 at the end: [5, 2, 9, 4].",
+            "pieges": [
+              {
+                "texte": "[4, 5, 2, 9]",
+                "pourquoi": "append adds to the end of the list, not the start."
+              },
+              {
+                "texte": "[5, 2, 9]",
+                "pourquoi": "append changes the list: 4 is added to it."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nL = [2, 4, 6]\nL[1] = 10\nprint(L)",
+            "nom": "[2, 10, 6]",
+            "explication": "L[1] = 10 replaces the item at index 1, that is 4: [2, 10, 6].",
+            "pieges": [
+              {
+                "texte": "[10, 4, 6]",
+                "pourquoi": "L[1] is the second item: index 0 is the first."
+              },
+              {
+                "texte": "[2, 4, 10]",
+                "pourquoi": "L[1] means position 1, not the last one."
+              }
+            ]
+          },
+          {
+            "texte": "What will this program display?\nL = []\nfor i in range(3): L.append(i * i)\nprint(L)",
+            "nom": "[0, 1, 4]",
+            "explication": "Turns: i = 0, 1, 2. Add 0 × 0, 1 × 1, 2 × 2: [0, 1, 4].",
+            "pieges": [
+              {
+                "texte": "[1, 4, 9]",
+                "pourquoi": "range(3) gives i = 0, 1, 2: the squares are 0, 1, 4."
+              },
+              {
+                "texte": "[0, 2, 4]",
+                "pourquoi": "i * i is the square of i, not its double."
+              }
+            ]
+          },
+          {
+            "texte": "ages = [12, 15, 17, 20]\nFor each a in the list ages, if a > 14 and a < 18, the program displays a. What does it display?",
+            "nom": "15, then 17",
+            "explication": "12 > 14 is false. 15 and 17 meet both conditions. 20 < 18 is false. 15 and 17 are left.",
+            "pieges": [
+              {
+                "texte": "15, then 17, then 20",
+                "pourquoi": "20 < 18 is false: with and, both conditions must be true."
+              },
+              {
+                "texte": "12, then 15, then 17, then 20",
+                "pourquoi": "The filter only keeps the ages that meet the condition."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the last item of L = [3, 6, 9] L[2], and not L[3]?",
+            "nom": "Indices start at 0: 0, 1, 2",
+            "explication": "3 items, indices 0, 1 and 2. The last index is always len(L) − 1.",
+            "pieges": [
+              {
+                "texte": "L[3] exists but it is empty",
+                "pourquoi": "L[3] does not exist: Python reports an error (IndexError)."
+              },
+              {
+                "texte": "Python counts backwards",
+                "pourquoi": "Python counts from left to right, but starting at 0."
+              }
+            ]
+          }
+        ]
       }
     }
   ]

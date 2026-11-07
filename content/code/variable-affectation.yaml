@@ -1,0 +1,124 @@
+id: variable-affectation
+titre: "Une variable change de valeur"
+niveau: 4e
+prerequis: [boucle-calcul]
+programme: { source: cycle4, texte: "Manipuler une variable." }
+activite: quiz
+parametres: {}
+idee: "Une variable est une case avec un nom. « mettre x à … » calcule d’abord la valeur de droite, puis la range dans x : l’ancienne valeur est perdue."
+phrases:
+  consigne: "Suis la valeur de chaque variable, ligne par ligne, puis touche la réponse."
+  question: "{texte}"
+  indice: "Calcule d’abord ce qui est à droite de « à », avec les valeurs du moment ; ensuite seulement, range le résultat."
+  exemple: "mettre x à 3, puis mettre x à x + 1 : on calcule 3 + 1 = 4, puis on range 4 dans x. x vaut 4."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre a à 3\nmettre b à 8\nmettre a à b\nmettre b à a\ndire a, puis dire b\nQue dit le lutin ?"
+    nom: "8, puis 8"
+    explication: "Après la 3e ligne, a = 8. La 4e ligne range a, donc 8, dans b. Les deux valent 8."
+    pieges:
+      - { texte: "8, puis 3", pourquoi: "On croit échanger, mais à la 4e ligne a vaut déjà 8 : l’ancienne valeur 3 est perdue." }
+      - { texte: "3, puis 8", pourquoi: "La 3e ligne range 8 dans a : a ne vaut plus 3." }
+  - texte: "mettre a à 3\nmettre b à 8\nmettre t à a\nmettre a à b\nmettre b à t\ndire a, puis dire b\nQue dit le lutin ?"
+    nom: "8, puis 3"
+    explication: "t garde 3, a reçoit 8, puis b reçoit t, donc 3. Les valeurs sont échangées."
+    pieges:
+      - { texte: "8, puis 8", pourquoi: "Cette fois, t a gardé l’ancienne valeur de a (3) avant qu’elle soit effacée." }
+      - { texte: "3, puis 3", pourquoi: "La 4e ligne range 8 dans a : a vaut 8." }
+  - texte: "mettre x à 5\nmettre y à x + 1\nmettre x à 10\ndire y\nQue dit le lutin ?"
+    nom: "6"
+    explication: "À la 2e ligne, x vaut 5 : y reçoit 6. Changer x ensuite ne change pas y."
+    pieges:
+      - { texte: "11", pourquoi: "y a été calculé une fois, quand x valait 5. Il ne suit pas les changements de x." }
+      - { texte: "5", pourquoi: "y reçoit x + 1, pas x." }
+  - texte: "mettre x à 4\nmettre x à ( x * x ) - x\ndire x\nQue dit le lutin ?"
+    nom: "12"
+    explication: "On calcule à droite avec x = 4 : 4 × 4 − 4 = 12, puis on range 12 dans x."
+    pieges:
+      - { texte: "0", pourquoi: "Tu as fait x × (x − x). Le bloc intérieur est x × x = 16, puis 16 − 4." }
+      - { texte: "16", pourquoi: "Tu t’es arrêté à x × x : il faut encore retirer x." }
+  - texte: "mettre score à 0\najouter 10 à score\najouter 10 à score\nmettre score à score - 5\ndire score\nQue dit le lutin ?"
+    nom: "15"
+    explication: "0, puis 10, puis 20, puis 20 − 5 = 15."
+    pieges:
+      - { texte: "5", pourquoi: "« mettre score à score − 5 » retire 5 au score : il ne le remplace pas par 5." }
+      - { texte: "20", pourquoi: "Tu as oublié la dernière ligne avant « dire »." }
+  - texte: "mettre prénom à Léa\ndire regrouper Bonjour et prénom\nQue dit le lutin ?"
+    nom: "BonjourLéa"
+    explication: "La variable prénom contient le texte Léa. « regrouper » colle Bonjour et Léa sans espace."
+    pieges:
+      - { texte: "Bonjour Léa", pourquoi: "« regrouper » colle les deux textes tels quels : il n’ajoute pas d’espace." }
+      - { texte: "Bonjourprénom", pourquoi: "prénom est une variable : on regroupe sa valeur, Léa." }
+  - texte: "mettre x à 7\najouter -7 à x\najouter 3 à x\ndire x\nQue dit le lutin ?"
+    nom: "3"
+    explication: "7 − 7 = 0, puis 0 + 3 = 3."
+    pieges:
+      - { texte: "17", pourquoi: "Ajouter −7, c’est retirer 7 : x passe à 0." }
+      - { texte: "0", pourquoi: "Tu as oublié la dernière ligne : on ajoute encore 3." }
+  - texte: "Pourquoi « mettre x à x + 1 » n’est-il pas une égalité fausse ?"
+    nom: "Ce n’est pas une égalité : on calcule x + 1, puis on range le résultat dans x"
+    explication: "« mettre x à » est une affectation, pas une égalité : la valeur de droite est calculée avec l’ancien x, puis elle remplace l’ancien x."
+    pieges:
+      - { texte: "Parce que x vaut toujours 0", pourquoi: "x peut valoir n’importe quel nombre : le bloc marche pour tous." }
+      - { texte: "C’est une erreur, Scratch la refuse", pourquoi: "Scratch l’accepte : c’est même la façon de faire monter un compteur." }
+
+en:
+  titre: "A variable changes its value"
+  idee: "A variable is a box with a name. “set x to …” first works out the value on the right, then stores it in x: the old value is lost."
+  phrases:
+    consigne: "Follow the value of each variable, line by line, then touch the answer."
+    question: "{texte}"
+    indice: "First work out what is to the right of “to”, with the current values; only then store the result."
+    exemple: "set x to 3, then set x to x + 1: work out 3 + 1 = 4, then store 4 in x. x is 4."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set a to 3\nset b to 8\nset a to b\nset b to a\nsay a, then say b\nWhat does the sprite say?"
+      nom: "8, then 8"
+      explication: "After the 3rd line, a = 8. The 4th line stores a, so 8, in b. Both are 8."
+      pieges:
+        - { texte: "8, then 3", pourquoi: "It looks like a swap, but on the 4th line a is already 8: the old value 3 is lost." }
+        - { texte: "3, then 8", pourquoi: "The 3rd line stores 8 in a: a is no longer 3." }
+    - texte: "set a to 3\nset b to 8\nset t to a\nset a to b\nset b to t\nsay a, then say b\nWhat does the sprite say?"
+      nom: "8, then 3"
+      explication: "t keeps 3, a gets 8, then b gets t, so 3. The values are swapped."
+      pieges:
+        - { texte: "8, then 8", pourquoi: "This time, t kept the old value of a (3) before it was wiped out." }
+        - { texte: "3, then 3", pourquoi: "The 4th line stores 8 in a: a is 8." }
+    - texte: "set x to 5\nset y to x + 1\nset x to 10\nsay y\nWhat does the sprite say?"
+      nom: "6"
+      explication: "On the 2nd line, x is 5: y gets 6. Changing x afterwards does not change y."
+      pieges:
+        - { texte: "11", pourquoi: "y was worked out once, when x was 5. It does not follow the changes of x." }
+        - { texte: "5", pourquoi: "y gets x + 1, not x." }
+    - texte: "set x to 4\nset x to ( x * x ) - x\nsay x\nWhat does the sprite say?"
+      nom: "12"
+      explication: "Work out the right side with x = 4: 4 × 4 − 4 = 12, then store 12 in x."
+      pieges:
+        - { texte: "0", pourquoi: "You did x × (x − x). The inner block is x × x = 16, then 16 − 4." }
+        - { texte: "16", pourquoi: "You stopped at x × x: you still have to subtract x." }
+    - texte: "set score to 0\nchange score by 10\nchange score by 10\nset score to score - 5\nsay score\nWhat does the sprite say?"
+      nom: "15"
+      explication: "0, then 10, then 20, then 20 − 5 = 15."
+      pieges:
+        - { texte: "5", pourquoi: "“set score to score − 5” takes 5 away from the score: it does not replace it with 5." }
+        - { texte: "20", pourquoi: "You forgot the last line before “say”." }
+    - texte: "set name to Lea\nsay join Hello name\nWhat does the sprite say?"
+      nom: "HelloLea"
+      explication: "The variable name holds the text Lea. “join” sticks Hello and Lea together without a space."
+      pieges:
+        - { texte: "Hello Lea", pourquoi: "“join” sticks the two texts together as they are: it does not add a space." }
+        - { texte: "Helloname", pourquoi: "name is a variable: its value, Lea, is joined." }
+    - texte: "set x to 7\nchange x by -7\nchange x by 3\nsay x\nWhat does the sprite say?"
+      nom: "3"
+      explication: "7 − 7 = 0, then 0 + 3 = 3."
+      pieges:
+        - { texte: "17", pourquoi: "Changing by −7 means taking away 7: x becomes 0." }
+        - { texte: "0", pourquoi: "You forgot the last line: 3 is still added." }
+    - texte: "Why is “set x to x + 1” not a false equation?"
+      nom: "It is not an equation: x + 1 is worked out, then the result is stored in x"
+      explication: "“set x to” is an assignment, not an equation: the value on the right is worked out with the old x, then it replaces the old x."
+      pieges:
+        - { texte: "Because x is always 0", pourquoi: "x can be any number: the block works for all of them." }
+        - { texte: "It is a mistake, Scratch refuses it", pourquoi: "Scratch accepts it: it is even the way to make a counter go up." }

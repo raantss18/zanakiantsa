@@ -1,0 +1,148 @@
+id: vecteurs-coordonnees
+titre: "Vecteurs et coordonnées"
+niveau: 2de
+prerequis: ["relatifs-additionner", "pythagore"]
+programme: { source: lycee2de, texte: "Calculer les coordonnées d’une somme de vecteurs, d’un produit d’un vecteur par un nombre réel." }
+activite: quiz
+parametres: {}
+idee: "Le vecteur AB va de A à B. Ses coordonnées : arrivée moins départ, (xB − xA ; yB − yA). On additionne deux vecteurs coordonnée par coordonnée."
+phrases:
+  consigne: "Calcule les coordonnées, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pour le vecteur AB : coordonnées de B moins coordonnées de A."
+  exemple: "A(1 ; 2) et B(4 ; 6) : vecteur AB (4 − 1 ; 6 − 2) = (3 ; 4). Sa norme, sa longueur : √(3² + 4²) = √25 = 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "A(2 ; 1) et B(5 ; 7). Quelles sont les coordonnées du vecteur AB ?"
+    nom: "(3 ; 6)"
+    explication: "Arrivée moins départ : (5 − 2 ; 7 − 1) = (3 ; 6)."
+    pieges:
+      - { texte: "(−3 ; −6)", pourquoi: "Départ moins arrivée donne le vecteur BA, de B vers A." }
+      - { texte: "(7 ; 8)", pourquoi: "On soustrait les coordonnées, on ne les additionne pas." }
+  - texte: "A(−1 ; 4) et B(3 ; 2). Quelles sont les coordonnées du vecteur AB ?"
+    nom: "(4 ; −2)"
+    explication: "(3 − (−1) ; 2 − 4) = (3 + 1 ; −2) = (4 ; −2)."
+    pieges:
+      - { texte: "(2 ; −2)", pourquoi: "3 − (−1) = 3 + 1 = 4 : soustraire un négatif, c’est ajouter." }
+      - { texte: "(−4 ; 2)", pourquoi: "Ce sont les coordonnées du vecteur BA : l’arrivée est B." }
+  - texte: "u(2 ; −3) et v(4 ; 5). Quelles sont les coordonnées de u + v ?"
+    nom: "(6 ; 2)"
+    explication: "On additionne coordonnée par coordonnée : (2 + 4 ; −3 + 5) = (6 ; 2)."
+    pieges:
+      - { texte: "(8 ; −15)", pourquoi: "Pour une somme de vecteurs, on additionne les coordonnées, on ne les multiplie pas." }
+      - { texte: "(6 ; 8)", pourquoi: "−3 + 5 = 2 : attention au signe de −3." }
+  - texte: "u(−1 ; 4). Quelles sont les coordonnées de 3u ?"
+    nom: "(−3 ; 12)"
+    explication: "On multiplie chaque coordonnée par 3 : (3 × (−1) ; 3 × 4) = (−3 ; 12)."
+    pieges:
+      - { texte: "(2 ; 7)", pourquoi: "3u, c’est 3 fois u : on multiplie par 3, on n’ajoute pas 3." }
+      - { texte: "(−3 ; 4)", pourquoi: "On multiplie les deux coordonnées par 3, pas seulement la première." }
+  - texte: "Quelle est la norme du vecteur u(6 ; 8) ?"
+    nom: "10"
+    explication: "Comme pour Pythagore : √(6² + 8²) = √(36 + 64) = √100 = 10."
+    pieges:
+      - { texte: "14", pourquoi: "6 + 8 : on additionne les carrés des coordonnées, puis on prend la racine carrée." }
+      - { texte: "100", pourquoi: "100 est le carré de la norme : il reste à prendre la racine carrée." }
+  - texte: "Complète : A(0 ; 3) et B(5 ; 15). AB = √(5² + 12²) = √…"
+    nom: "169, donc AB = 13"
+    explication: "5² + 12² = 25 + 144 = 169, et 13 × 13 = 169 : AB = 13."
+    pieges:
+      - { texte: "17, donc AB = √17", pourquoi: "5 + 12 = 17 : on additionne les carrés, 5² et 12², pas les nombres." }
+      - { texte: "144, donc AB = 12", pourquoi: "Il manque 5² = 25 : on additionne les deux carrés." }
+  - texte: "A(2 ; 4) et B(6 ; 10). Quelles sont les coordonnées du milieu de [AB] ?"
+    nom: "(4 ; 7)"
+    explication: "On fait la moyenne des coordonnées : ((2 + 6) ÷ 2 ; (4 + 10) ÷ 2) = (4 ; 7)."
+    pieges:
+      - { texte: "(8 ; 14)", pourquoi: "On a additionné sans diviser par 2." }
+      - { texte: "(2 ; 3)", pourquoi: "C’est la moitié du vecteur AB, (4 ; 6) ÷ 2, pas le milieu du segment." }
+  - texte: "u(2 ; 3) et v(4 ; 6) sont-ils colinéaires ?"
+    nom: "Oui, car v = 2u"
+    explication: "2 × 2 = 4 et 2 × 3 = 6 : v = 2u, les deux vecteurs ont la même direction."
+    pieges:
+      - { texte: "Non, car 2 ≠ 4", pourquoi: "Des coordonnées différentes n’empêchent rien : on cherche un nombre k tel que v = k × u." }
+      - { texte: "Non, car leurs normes sont différentes", pourquoi: "Colinéaires veut dire même direction : les longueurs peuvent être différentes." }
+  - texte: "Pourquoi le vecteur AB a-t-il pour coordonnées (xB − xA ; yB − yA) ?"
+    nom: "Il mesure le déplacement de A vers B : arrivée moins départ."
+    explication: "Pour aller de A à B, l’abscisse passe de xA à xB : elle change de xB − xA. De même pour l’ordonnée."
+    pieges:
+      - { texte: "Parce qu’on part de B pour aller à A.", pourquoi: "Partir de B pour aller à A, c’est le vecteur BA, de coordonnées (xA − xB ; yA − yB)." }
+      - { texte: "Parce qu’on additionne les coordonnées de A et de B.", pourquoi: "La somme des coordonnées donne le double du milieu, pas le déplacement." }
+  - texte: "u(3 ; −1) et v(−5 ; 2). Quelles sont les coordonnées de u − v ?"
+    nom: "(8 ; −3)"
+    explication: "(3 − (−5) ; −1 − 2) = (3 + 5 ; −3) = (8 ; −3)."
+    pieges:
+      - { texte: "(−2 ; 1)", pourquoi: "Ce sont les coordonnées de u + v : ici on soustrait v." }
+      - { texte: "(−8 ; 3)", pourquoi: "Ce sont les coordonnées de v − u : l’ordre compte." }
+
+en:
+  titre: "Vectors and coordinates"
+  idee: "Vector AB goes from A to B. Its components: end minus start, (xB − xA, yB − yA). To add two vectors, add the components one by one."
+  phrases:
+    consigne: "Work out the components, then touch the right answer."
+    question: "{texte}"
+    indice: "For vector AB: coordinates of B minus coordinates of A."
+    exemple: "A(1, 2) and B(4, 6): vector AB is (4 − 1, 6 − 2) = (3, 4). Its magnitude, its length: √(3² + 4²) = √25 = 5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "A(2, 1) and B(5, 7). What are the components of vector AB?"
+      nom: "(3, 6)"
+      explication: "End minus start: (5 − 2, 7 − 1) = (3, 6)."
+      pieges:
+        - { texte: "(−3, −6)", pourquoi: "Start minus end gives vector BA, from B to A." }
+        - { texte: "(7, 8)", pourquoi: "Subtract the coordinates, do not add them." }
+    - texte: "A(−1, 4) and B(3, 2). What are the components of vector AB?"
+      nom: "(4, −2)"
+      explication: "(3 − (−1), 2 − 4) = (3 + 1, −2) = (4, −2)."
+      pieges:
+        - { texte: "(2, −2)", pourquoi: "3 − (−1) = 3 + 1 = 4: subtracting a negative means adding." }
+        - { texte: "(−4, 2)", pourquoi: "Those are the components of vector BA: the end point is B." }
+    - texte: "u = (2, −3) and v = (4, 5). What are the components of u + v?"
+      nom: "(6, 2)"
+      explication: "Add component by component: (2 + 4, −3 + 5) = (6, 2)."
+      pieges:
+        - { texte: "(8, −15)", pourquoi: "For a sum of vectors, add the components, do not multiply them." }
+        - { texte: "(6, 8)", pourquoi: "−3 + 5 = 2: watch the sign of −3." }
+    - texte: "u = (−1, 4). What are the components of 3u?"
+      nom: "(−3, 12)"
+      explication: "Multiply each component by 3: (3 × (−1), 3 × 4) = (−3, 12)."
+      pieges:
+        - { texte: "(2, 7)", pourquoi: "3u means 3 times u: multiply by 3, do not add 3." }
+        - { texte: "(−3, 4)", pourquoi: "Multiply both components by 3, not just the first one." }
+    - texte: "What is the magnitude of vector u = (6, 8)?"
+      nom: "10"
+      explication: "As with Pythagoras: √(6² + 8²) = √(36 + 64) = √100 = 10."
+      pieges:
+        - { texte: "14", pourquoi: "6 + 8: add the squares of the components, then take the square root." }
+        - { texte: "100", pourquoi: "100 is the square of the magnitude: you still need the square root." }
+    - texte: "Fill in the step: A(0, 3) and B(5, 15). AB = √(5² + 12²) = √…"
+      nom: "169, so AB = 13"
+      explication: "5² + 12² = 25 + 144 = 169, and 13 × 13 = 169: AB = 13."
+      pieges:
+        - { texte: "17, so AB = √17", pourquoi: "5 + 12 = 17: add the squares, 5² and 12², not the numbers." }
+        - { texte: "144, so AB = 12", pourquoi: "5² = 25 is missing: add both squares." }
+    - texte: "A(2, 4) and B(6, 10). What are the coordinates of the midpoint of [AB]?"
+      nom: "(4, 7)"
+      explication: "Take the mean of the coordinates: ((2 + 6) ÷ 2, (4 + 10) ÷ 2) = (4, 7)."
+      pieges:
+        - { texte: "(8, 14)", pourquoi: "Added without dividing by 2." }
+        - { texte: "(2, 3)", pourquoi: "That is half of vector AB, (4, 6) ÷ 2, not the midpoint of the segment." }
+    - texte: "Are u = (2, 3) and v = (4, 6) parallel (collinear)?"
+      nom: "Yes, because v = 2u"
+      explication: "2 × 2 = 4 and 2 × 3 = 6: v = 2u, so both vectors have the same direction."
+      pieges:
+        - { texte: "No, because 2 ≠ 4", pourquoi: "Different components do not matter: look for a number k with v = k × u." }
+        - { texte: "No, because their magnitudes are different", pourquoi: "Collinear means same direction: the lengths can be different." }
+    - texte: "Why are the components of vector AB (xB − xA, yB − yA)?"
+      nom: "It measures the movement from A to B: end minus start."
+      explication: "Going from A to B, the x-coordinate changes from xA to xB: it changes by xB − xA. The same goes for y."
+      pieges:
+        - { texte: "Because we start at B and go to A.", pourquoi: "Going from B to A is vector BA, with components (xA − xB, yA − yB)." }
+        - { texte: "Because we add the coordinates of A and B.", pourquoi: "Adding the coordinates gives twice the midpoint, not the movement." }
+    - texte: "u = (3, −1) and v = (−5, 2). What are the components of u − v?"
+      nom: "(8, −3)"
+      explication: "(3 − (−5), −1 − 2) = (3 + 5, −3) = (8, −3)."
+      pieges:
+        - { texte: "(−2, 1)", pourquoi: "Those are the components of u + v: here we subtract v." }
+        - { texte: "(−8, 3)", pourquoi: "Those are the components of v − u: the order matters." }

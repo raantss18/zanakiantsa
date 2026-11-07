@@ -1,0 +1,154 @@
+id: present-continuous
+titre: "En ce moment : be + -ing"
+niveau: 5e
+prerequis: [present-simple]
+programme: { source: college, texte: "5e : le présent be+ing : reconnaitre quelques formes courantes : He is wearing a uniform, They are walking to school." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Pour dire ce qui se passe en ce moment : « be » + verbe en -ing. « I am reading », « she is running », « they are playing ». Pour une habitude, on garde le présent simple."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme du verbe."
+  question: "{texte}"
+  indice: "Ça se passe en ce moment ? Alors « am », « is » ou « are », puis le verbe en -ing. Une habitude ? Le présent simple."
+  exemple: "« Look! The baby … » (sleep) : « Look! » montre que c'est maintenant. « baby », c'est « it » : « The baby is sleeping. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … a book now. » (read)"
+    nom: "am reading"
+    explication: "« now » : en ce moment. Avec « I » : « I am reading a book now. »"
+    pieges:
+      - { texte: "is reading", pourquoi: "« is » va avec he, she, it. Avec « I » : « am reading »." }
+      - { texte: "reading", pourquoi: "Le verbe en -ing ne marche jamais sans « be » devant : « I am reading »." }
+  - texte: "Complète : « They … football at the moment. » (play)"
+    nom: "are playing"
+    explication: "« at the moment » : en ce moment. Avec « they » : « They are playing football. »"
+    pieges:
+      - { texte: "is playing", pourquoi: "« they », c'est plusieurs : « are playing »." }
+      - { texte: "play", pourquoi: "« play » dit une habitude. « at the moment » demande be + -ing : « are playing »." }
+  - texte: "Complète : « Look! She … in the park. » (run)"
+    nom: "is running"
+    explication: "« Look! » : c'est maintenant. « She is running in the park. » (n doublé devant -ing)"
+    pieges:
+      - { texte: "runs", pourquoi: "« runs » dit une habitude. « Look! » montre que c'est maintenant : « is running »." }
+      - { texte: "are running", pourquoi: "« are » va avec you, we, they. Avec « she » : « is running »." }
+  - texte: "Complète : « We … TV now. » (ne pas regarder)"
+    nom: "aren't watching"
+    explication: "« now », en ce moment, à la forme négative : « We aren't watching TV now. »"
+    pieges:
+      - { texte: "don't watch", pourquoi: "« don't watch » dit une habitude : nous ne regardons jamais. « now » demande be + -ing : « aren't watching »." }
+      - { texte: "isn't watching", pourquoi: "« isn't » va avec he, she, it. Avec « we » : « aren't watching »." }
+  - texte: "Complète : « … you listening to me? »"
+    nom: "Are"
+    explication: "Avec -ing, la question commence par « be » : « Are you listening to me? »"
+    pieges:
+      - { texte: "Do", pourquoi: "« Do » pose une question au présent simple. Avec -ing, la question commence par « be » : « Are you… ? »" }
+      - { texte: "Is", pourquoi: "« Is » va avec he, she, it. Avec « you » : « Are you… ? »" }
+  - texte: "Complète : « Every day, he … to school by bus. » (go)"
+    nom: "goes"
+    explication: "« Every day » dit une habitude : présent simple. « He goes to school by bus. »"
+    pieges:
+      - { texte: "is going", pourquoi: "« Every day » dit une habitude : on emploie le présent simple, « goes »." }
+      - { texte: "go", pourquoi: "Avec « he », le présent simple prend une marque : « goes »." }
+  - texte: "Complète : « Be quiet! Dad … on the phone. » (talk)"
+    nom: "is talking"
+    explication: "« Be quiet! » montre que ça se passe maintenant : « Dad is talking on the phone. »"
+    pieges:
+      - { texte: "talks", pourquoi: "« talks » dit une habitude. « Be quiet! » montre que c'est maintenant : « is talking »." }
+      - { texte: "talking", pourquoi: "Il manque « is » : le verbe en -ing ne marche jamais sans « be »." }
+  - texte: "Que veut dire « He is wearing a uniform » ?"
+    nom: "Il porte un uniforme en ce moment."
+    explication: "be + -ing parle de ce moment-ci : il porte un uniforme maintenant."
+    pieges:
+      - { texte: "Il porte toujours un uniforme.", pourquoi: "Une habitude se dirait au présent simple : « He wears a uniform »." }
+      - { texte: "Il a porté un uniforme.", pourquoi: "Le passé se dirait « He wore a uniform ». « is wearing », c'est maintenant." }
+  - texte: "Pourquoi dit-on « Look! It's raining. » avec -ing ?"
+    nom: "« Look! » montre que ça se passe en ce moment : on emploie be + -ing."
+    explication: "La pluie tombe maintenant, sous nos yeux : be + -ing, « It's raining »."
+    pieges:
+      - { texte: "Parce que « rain » ne s'emploie jamais au présent simple.", pourquoi: "Non : « It rains a lot in Scotland » dit une habitude, au présent simple." }
+      - { texte: "Parce que le temps qu'il fait demande toujours -ing.", pourquoi: "Non : « It snows in winter » est juste. C'est le moment présent qui demande -ing." }
+en:
+  titre: "Right now: be + -ing"
+  idee: "To say what is happening right now: be + verb in -ing. I am reading, she is running, they are playing. For habits, we keep the present simple."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of the verb."
+    question: "{texte}"
+    indice: "Is it happening right now? Then am, is or are, plus the verb in -ing. A habit? The present simple."
+    exemple: "“Look! The baby …” (sleep): Look! shows it's happening now. The baby is it: “The baby is sleeping.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … a book now.” (read)"
+      nom: "am reading"
+      explication: "Now: at this moment. With I: “I am reading a book now.”"
+      pieges:
+        - texte: "is reading"
+          pourquoi: "“is” goes with he, she and it. With I: am reading."
+        - texte: "reading"
+          pourquoi: "The -ing form never works without be: I am reading."
+    - texte: "Complete: “They … football at the moment.” (play)"
+      nom: "are playing"
+      explication: "At the moment: right now. With they: “They are playing football.”"
+      pieges:
+        - texte: "is playing"
+          pourquoi: "They means several: are playing."
+        - texte: "play"
+          pourquoi: "“play” is for habits. At the moment needs be + -ing: are playing."
+    - texte: "Complete: “Look! She … in the park.” (run)"
+      nom: "is running"
+      explication: "Look! It's happening now: “She is running in the park.” (double n before -ing)"
+      pieges:
+        - texte: "runs"
+          pourquoi: "“runs” is for habits. Look! shows it's happening now: is running."
+        - texte: "are running"
+          pourquoi: "“are” goes with you, we and they. With she: is running."
+    - texte: "Complete: “We … TV now.” (not watch)"
+      nom: "aren't watching"
+      explication: "Now, in the negative: “We aren't watching TV now.”"
+      pieges:
+        - texte: "don't watch"
+          pourquoi: "“don't watch” is a habit: we never watch. Now needs be + -ing: aren't watching."
+        - texte: "isn't watching"
+          pourquoi: "“isn't” goes with he, she and it. With we: aren't watching."
+    - texte: "Complete: “… you listening to me?”"
+      nom: "Are"
+      explication: "With -ing, the question starts with be: “Are you listening to me?”"
+      pieges:
+        - texte: "Do"
+          pourquoi: "“Do” asks questions in the present simple. With -ing, the question starts with be: Are you…?"
+        - texte: "Is"
+          pourquoi: "“Is” goes with he, she and it. With you: Are you…?"
+    - texte: "Complete: “Every day, he … to school by bus.” (go)"
+      nom: "goes"
+      explication: "Every day is a habit: present simple. “He goes to school by bus.”"
+      pieges:
+        - texte: "is going"
+          pourquoi: "Every day is a habit: we use the present simple, goes."
+        - texte: "go"
+          pourquoi: "With he, the present simple needs an ending: goes."
+    - texte: "Complete: “Be quiet! Dad … on the phone.” (talk)"
+      nom: "is talking"
+      explication: "Be quiet! shows it's happening now: “Dad is talking on the phone.”"
+      pieges:
+        - texte: "talks"
+          pourquoi: "“talks” is for habits. Be quiet! shows it's happening now: is talking."
+        - texte: "talking"
+          pourquoi: "Is is missing: the -ing form never works without be."
+    - texte: "What does “He is wearing a uniform” mean?"
+      nom: "He has a uniform on right now."
+      explication: "Be + -ing talks about this moment: he has a uniform on now."
+      pieges:
+        - texte: "He always wears a uniform."
+          pourquoi: "A habit would be in the present simple: “He wears a uniform.”"
+        - texte: "He wore a uniform in the past."
+          pourquoi: "The past would be “He wore a uniform”. Is wearing means now."
+    - texte: "Why do we say “Look! It's raining.” with -ing?"
+      nom: "Look! shows it's happening right now: we use be + -ing."
+      explication: "The rain is falling now, before our eyes: be + -ing, “It's raining.”"
+      pieges:
+        - texte: "Because rain is never used in the present simple."
+          pourquoi: "No: “It rains a lot in Scotland” is a habit, in the present simple."
+        - texte: "Because the weather always needs -ing."
+          pourquoi: "No: “It snows in winter” is correct. It's the present moment that needs -ing."

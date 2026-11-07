@@ -1,0 +1,148 @@
+id: evolutions-pourcentages
+titre: "Évolutions et coefficient multiplicateur"
+niveau: 2de
+prerequis: ["pourcentages"]
+programme: { source: lycee2de, texte: "Calculer le taux d’évolution global à partir des taux d’évolution successifs. Calculer un taux d’évolution réciproque." }
+activite: quiz
+parametres: {}
+idee: "Augmenter de t %, c’est multiplier par 1 + t/100 ; baisser de t %, par 1 − t/100. Deux évolutions de suite : on multiplie les coefficients, on n’additionne pas les pourcentages."
+phrases:
+  consigne: "Trouve le coefficient multiplicateur, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Écris chaque évolution comme une multiplication, puis multiplie les coefficients."
+  exemple: "80 € augmente de 25 % : 80 × 1,25 = 100 €. Puis baisse de 20 % : 100 × 0,8 = 80 €. Coefficient global : 1,25 × 0,8 = 1, aucune évolution."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Augmenter de 15 %, c’est multiplier par …"
+    nom: "1,15"
+    explication: "On garde 100 % et on ajoute 15 % : 1 + 0,15 = 1,15."
+    pieges:
+      - { texte: "0,15", pourquoi: "Multiplier par 0,15 donne seulement l’augmentation, 15 % de la valeur." }
+      - { texte: "0,85", pourquoi: "Multiplier par 0,85, c’est baisser de 15 %." }
+  - texte: "Baisser de 30 %, c’est multiplier par …"
+    nom: "0,7"
+    explication: "Il reste 100 % − 30 % = 70 % : 1 − 0,3 = 0,7."
+    pieges:
+      - { texte: "1,3", pourquoi: "Multiplier par 1,3, c’est augmenter de 30 %." }
+      - { texte: "0,3", pourquoi: "Après une baisse de 30 %, il reste 70 % de la valeur, pas 30 %." }
+  - texte: "Un prix de 60 € augmente de 10 %. Quel est le nouveau prix ?"
+    nom: "66 €"
+    explication: "60 × 1,1 = 66 € : l’augmentation est de 10 % de 60, soit 6 €."
+    pieges:
+      - { texte: "70 €", pourquoi: "10 % de 60 €, c’est 6 €, pas 10 €." }
+      - { texte: "6 €", pourquoi: "6 € est l’augmentation : il faut l’ajouter aux 60 €." }
+  - texte: "Une hausse de 10 %, puis une autre hausse de 10 %. Quelle est l’évolution globale ?"
+    nom: "+21 %"
+    explication: "1,1 × 1,1 = 1,21 : multiplier par 1,21, c’est augmenter de 21 %."
+    pieges:
+      - { texte: "+20 %", pourquoi: "On multiplie les coefficients, on n’additionne pas les pourcentages : la 2e hausse porte sur un prix déjà augmenté." }
+      - { texte: "+10 %", pourquoi: "Les deux hausses s’ajoutent l’une à l’autre : le prix augmente deux fois." }
+  - texte: "Une hausse de 20 %, puis une baisse de 20 %. Quelle est l’évolution globale ?"
+    nom: "−4 %"
+    explication: "1,2 × 0,8 = 0,96 : multiplier par 0,96, c’est baisser de 4 %."
+    pieges:
+      - { texte: "0 %", pourquoi: "La baisse de 20 % porte sur un prix plus grand : elle enlève plus que la hausse n’a ajouté." }
+      - { texte: "+4 %", pourquoi: "0,96 est plus petit que 1 : c’est une baisse." }
+  - texte: "Un prix a augmenté de 25 %. Quelle baisse le ramène au prix de départ ?"
+    nom: "−20 %"
+    explication: "Il faut multiplier par 1 ÷ 1,25 = 0,8, c’est-à-dire baisser de 20 %."
+    pieges:
+      - { texte: "−25 %", pourquoi: "1,25 × 0,75 = 0,9375 : une baisse de 25 % descend en dessous du prix de départ." }
+      - { texte: "−80 %", pourquoi: "0,8 est le coefficient : garder 80 % du prix, c’est baisser de 20 %." }
+  - texte: "Complète : 200 € baisse de 15 %. 200 × … = 170 €"
+    nom: "0,85"
+    explication: "Baisser de 15 %, c’est garder 85 % : 200 × 0,85 = 170 €."
+    pieges:
+      - { texte: "0,15", pourquoi: "200 × 0,15 = 30 € : c’est le montant de la baisse, pas le nouveau prix." }
+      - { texte: "1,15", pourquoi: "200 × 1,15 = 230 € : c’est une hausse de 15 %." }
+  - texte: "Un prix passe de 50 € à 65 €. Quel est le taux d’évolution ?"
+    nom: "+30 %"
+    explication: "Variation : 65 − 50 = 15 €. Taux : 15 ÷ 50 = 0,3, soit +30 %."
+    pieges:
+      - { texte: "+15 %", pourquoi: "15 € est la variation en euros : il faut la diviser par la valeur de départ, 50." }
+      - { texte: "Environ +23 %", pourquoi: "15 ÷ 65 : on divise par la valeur de départ, 50, pas par la valeur d’arrivée." }
+  - texte: "Pourquoi deux baisses de 50 % ne font-elles pas tomber un prix à 0 ?"
+    nom: "On multiplie par 0,5 puis par 0,5 : il reste 25 % du prix."
+    explication: "0,5 × 0,5 = 0,25 : l’évolution globale est −75 %, pas −100 %."
+    pieges:
+      - { texte: "Parce qu’on ne peut pas baisser deux fois un prix.", pourquoi: "On peut : chaque baisse multiplie le prix par son coefficient." }
+      - { texte: "Parce qu’une baisse de 50 % multiplie par 1,5.", pourquoi: "Baisser de 50 %, c’est multiplier par 0,5 ; multiplier par 1,5, c’est augmenter de 50 %." }
+  - texte: "Une ville de 2 000 habitants augmente de 5 % par an. Combien d’habitants après 2 ans ?"
+    nom: "2 205"
+    explication: "2 000 × 1,05 × 1,05 = 2 000 × 1,1025 = 2 205."
+    pieges:
+      - { texte: "2 200", pourquoi: "Les 5 % de la 2e année portent sur 2 100 habitants, pas sur 2 000." }
+      - { texte: "2 100", pourquoi: "2 100 habitants, c’est après une seule année." }
+
+en:
+  titre: "Percentage change and multipliers"
+  idee: "Increasing by t % means multiplying by 1 + t/100; decreasing by t %, by 1 − t/100. For two changes in a row, multiply the multipliers; do not add the percentages."
+  phrases:
+    consigne: "Find the multiplier, then touch the right answer."
+    question: "{texte}"
+    indice: "Write each change as a multiplication, then multiply the multipliers."
+    exemple: "€80 goes up by 25 %: 80 × 1.25 = €100. Then down by 20 %: 100 × 0.8 = €80. Overall multiplier: 1.25 × 0.8 = 1, no change."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Increasing by 15 % means multiplying by …"
+      nom: "1.15"
+      explication: "Keep 100 % and add 15 %: 1 + 0.15 = 1.15."
+      pieges:
+        - { texte: "0.15", pourquoi: "Multiplying by 0.15 gives only the increase, 15 % of the value." }
+        - { texte: "0.85", pourquoi: "Multiplying by 0.85 means decreasing by 15 %." }
+    - texte: "Decreasing by 30 % means multiplying by …"
+      nom: "0.7"
+      explication: "100 % − 30 % = 70 % is left: 1 − 0.3 = 0.7."
+      pieges:
+        - { texte: "1.3", pourquoi: "Multiplying by 1.3 means increasing by 30 %." }
+        - { texte: "0.3", pourquoi: "After a 30 % decrease, 70 % of the value is left, not 30 %." }
+    - texte: "A price of €60 goes up by 10 %. What is the new price?"
+      nom: "€66"
+      explication: "60 × 1.1 = €66: the increase is 10 % of 60, which is €6."
+      pieges:
+        - { texte: "€70", pourquoi: "10 % of €60 is €6, not €10." }
+        - { texte: "€6", pourquoi: "€6 is the increase: add it to the €60." }
+    - texte: "A 10 % increase, then another 10 % increase. What is the overall change?"
+      nom: "+21 %"
+      explication: "1.1 × 1.1 = 1.21: multiplying by 1.21 means increasing by 21 %."
+      pieges:
+        - { texte: "+20 %", pourquoi: "Multiply the multipliers, do not add the percentages: the 2nd increase applies to a price already raised." }
+        - { texte: "+10 %", pourquoi: "The two increases build on each other: the price goes up twice." }
+    - texte: "A 20 % increase, then a 20 % decrease. What is the overall change?"
+      nom: "−4 %"
+      explication: "1.2 × 0.8 = 0.96: multiplying by 0.96 means decreasing by 4 %."
+      pieges:
+        - { texte: "0 %", pourquoi: "The 20 % decrease applies to a bigger price: it takes off more than the increase added." }
+        - { texte: "+4 %", pourquoi: "0.96 is less than 1: it is a decrease." }
+    - texte: "A price went up by 25 %. Which decrease brings it back to the starting price?"
+      nom: "−20 %"
+      explication: "You must multiply by 1 ÷ 1.25 = 0.8, which means decreasing by 20 %."
+      pieges:
+        - { texte: "−25 %", pourquoi: "1.25 × 0.75 = 0.9375: a 25 % decrease goes below the starting price." }
+        - { texte: "−80 %", pourquoi: "0.8 is the multiplier: keeping 80 % of the price means decreasing by 20 %." }
+    - texte: "Fill in the step: €200 drops by 15 %. 200 × … = €170"
+      nom: "0.85"
+      explication: "Decreasing by 15 % means keeping 85 %: 200 × 0.85 = €170."
+      pieges:
+        - { texte: "0.15", pourquoi: "200 × 0.15 = €30: that is the size of the drop, not the new price." }
+        - { texte: "1.15", pourquoi: "200 × 1.15 = €230: that is a 15 % increase." }
+    - texte: "A price goes from €50 to €65. What is the percentage change?"
+      nom: "+30 %"
+      explication: "Change: 65 − 50 = €15. Rate: 15 ÷ 50 = 0.3, so +30 %."
+      pieges:
+        - { texte: "+15 %", pourquoi: "€15 is the change in euros: divide it by the starting value, 50." }
+        - { texte: "About +23 %", pourquoi: "15 ÷ 65: divide by the starting value, 50, not the final value." }
+    - texte: "Why do two 50 % decreases not bring a price down to 0?"
+      nom: "You multiply by 0.5, then by 0.5: 25 % of the price is left."
+      explication: "0.5 × 0.5 = 0.25: the overall change is −75 %, not −100 %."
+      pieges:
+        - { texte: "Because you cannot lower a price twice.", pourquoi: "You can: each decrease multiplies the price by its multiplier." }
+        - { texte: "Because a 50 % decrease multiplies by 1.5.", pourquoi: "A 50 % decrease multiplies by 0.5; multiplying by 1.5 is a 50 % increase." }
+    - texte: "A town of 2,000 people grows by 5 % a year. How many people after 2 years?"
+      nom: "2,205"
+      explication: "2,000 × 1.05 × 1.05 = 2,000 × 1.1025 = 2,205."
+      pieges:
+        - { texte: "2,200", pourquoi: "The 5 % in the 2nd year applies to 2,100 people, not 2,000." }
+        - { texte: "2,100", pourquoi: "2,100 people is after just one year." }

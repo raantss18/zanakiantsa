@@ -1,0 +1,137 @@
+id: interrogation
+titre: "L’interrogation directe et indirecte"
+niveau: 1re
+prerequis: ["types-de-phrases", "subordonnees"]
+programme: { source: lycee1re, texte: "on vise à éclairer surtout les distinctions entre l’interrogation directe et les interrogatives indirectes (ou enchâssées), souvent peu maîtrisées dans les productions écrites et orales." }
+activite: quiz
+parametres: {}
+idee: "Directe : la question est posée telle quelle, avec « ? ». Indirecte : elle dépend d’un verbe (demander, savoir…), sans « ? ». Totale : réponse oui ou non. Partielle : elle porte sur qui, où, quand…"
+phrases:
+  consigne: "Lis la phrase, puis touche le type d’interrogation ou la bonne transformation."
+  question: "{texte}"
+  indice: "Y a-t-il un « ? » et un verbe comme « demander » ? Répond-on par oui ou non, ou par une information précise ?"
+  exemple: "« Je me demande s’il viendra. » : la question dépend de « je me demande », sans « ? » ; on répond oui ou non : interrogation indirecte totale."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Viendras-tu demain ? » Quel type d’interrogation ?"
+    nom: "directe totale"
+    explication: "La question est posée telle quelle, avec « ? », et on répond oui ou non."
+    pieges:
+      - { texte: "directe partielle", pourquoi: "Une partielle porte sur un élément (qui, où, quand…) ; ici on répond par oui ou non." }
+      - { texte: "indirecte totale", pourquoi: "Elle ne dépend d’aucun verbe comme « demander » et finit par « ? » : elle est directe." }
+  - texte: "« Où vas-tu ? » Quel type d’interrogation ?"
+    nom: "directe partielle"
+    explication: "Elle porte sur le lieu (« où ») et elle est posée telle quelle, avec « ? »."
+    pieges:
+      - { texte: "directe totale", pourquoi: "On ne répond pas par oui ou non à « Où vas-tu ? » : elle est partielle." }
+      - { texte: "indirecte partielle", pourquoi: "Elle ne dépend d’aucun verbe et finit par « ? » : elle est directe." }
+  - texte: "« Je me demande s’il viendra. » Quel type d’interrogation ?"
+    nom: "indirecte totale"
+    explication: "Elle dépend de « je me demande », sans « ? », et appelle oui ou non : « si » marque la totale."
+    pieges:
+      - { texte: "directe totale", pourquoi: "Il n’y a pas de « ? » : la question dépend de « je me demande », elle est indirecte." }
+      - { texte: "indirecte partielle", pourquoi: "« si » introduit une question à laquelle on répond oui ou non : elle est totale." }
+  - texte: "« Dis-moi où tu vas. » Quel type d’interrogation ?"
+    nom: "indirecte partielle"
+    explication: "Elle dépend de « dis-moi », sans « ? », et porte sur le lieu : indirecte partielle."
+    pieges:
+      - { texte: "directe partielle", pourquoi: "La question dépend de « dis-moi » et n’a pas de « ? » : elle est indirecte." }
+      - { texte: "indirecte totale", pourquoi: "On ne répond pas par oui ou non : elle porte sur le lieu, elle est partielle." }
+  - texte: "« Je ne sais pas qui a appelé. » Quel type d’interrogation ?"
+    nom: "indirecte partielle"
+    explication: "Elle dépend de « je ne sais pas » et porte sur la personne (« qui »)."
+    pieges:
+      - { texte: "directe partielle", pourquoi: "Il n’y a pas de « ? » et la question dépend de « je ne sais pas » : elle est indirecte." }
+      - { texte: "indirecte totale", pourquoi: "On ne répond pas par oui ou non : elle porte sur « qui », elle est partielle." }
+  - texte: "« Il me demande : “Viens-tu ?” » Comment le dire au discours indirect ?"
+    nom: "Il me demande si je viens."
+    explication: "Une question totale devient « si » + proposition, sans inversion ni « ? »."
+    pieges:
+      - { texte: "Il me demande quand je viens.", pourquoi: "Ça change la question : « Viens-tu ? » appelle oui ou non, donc « si »." }
+      - { texte: "Il me demande où je vais.", pourquoi: "Ça change la question : « Viens-tu ? » appelle oui ou non, donc « si »." }
+  - texte: "Dans « Qui as-tu vu ? », quelle est la fonction du mot interrogatif « qui » ?"
+    nom: "COD de « as vu »"
+    explication: "Tu as vu quelqu’un : « qui » remplace ce COD."
+    pieges:
+      - { texte: "sujet", pourquoi: "Le sujet est « tu » : c’est toi qui as vu." }
+      - { texte: "attribut du sujet", pourquoi: "« voir » n’est pas un verbe d’état : « qui » est l’objet vu, le COD." }
+  - texte: "« Est-ce que tu viens ? » De quel niveau de langue relève cette forme ?"
+    nom: "courant"
+    explication: "« Est-ce que » est la forme courante ; l’inversion est soutenue, l’intonation seule est familière."
+    pieges:
+      - { texte: "soutenu", pourquoi: "La forme soutenue inverse le sujet : « Viens-tu ? »." }
+      - { texte: "familier", pourquoi: "La forme familière garde l’ordre de la phrase déclarative : « Tu viens ? »." }
+  - texte: "Pourquoi n’y a-t-il pas de point d’interrogation dans « Je me demande où il va. » ?"
+    nom: "La question est enchâssée dans une phrase déclarative : elle est indirecte."
+    explication: "La phrase entière est déclarative ; la question y dépend de « je me demande »."
+    pieges:
+      - { texte: "Parce que la question est partielle.", pourquoi: "Une partielle directe, comme « Où va-t-il ? », a bien un point d’interrogation." }
+      - { texte: "Parce qu’on l’a oublié.", pourquoi: "Ce n’est pas un oubli : la phrase est déclarative, la question y est indirecte." }
+
+en:
+  langue: "fr"
+  titre: "French: direct and indirect questions"
+  idee: "Direct: the question is asked as it is, with « ? ». Indirect: it depends on a verb (« demander », « savoir »…), with no « ? ». Total: yes-or-no answer. Partial: it's about who, where, when…"
+  phrases:
+    consigne: "Read the French sentence, then touch the type of question or the right transformation."
+    question: "{texte}"
+    indice: "Is there a « ? » and a verb like « demander »? Do you answer yes or no, or with a precise piece of information?"
+    exemple: "« Je me demande s’il viendra. »: the question depends on « je me demande », with no « ? »; the answer is yes or no: indirect total question."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Viendras-tu demain ? » What type of question?"
+      nom: "direct, total"
+      explication: "The question is asked as it is, with « ? », and the answer is yes or no."
+      pieges:
+        - { texte: "direct, partial", pourquoi: "A partial question is about one element (who, where, when…); here the answer is yes or no." }
+        - { texte: "indirect, total", pourquoi: "It doesn't depend on a verb like « demander » and ends with « ? »: it's direct." }
+    - texte: "« Où vas-tu ? » What type of question?"
+      nom: "direct, partial"
+      explication: "It's about place (« où ») and it's asked as it is, with « ? »."
+      pieges:
+        - { texte: "direct, total", pourquoi: "You can't answer « Où vas-tu ? » with yes or no: it's partial." }
+        - { texte: "indirect, partial", pourquoi: "It doesn't depend on any verb and ends with « ? »: it's direct." }
+    - texte: "« Je me demande s’il viendra. » What type of question?"
+      nom: "indirect, total"
+      explication: "It depends on « je me demande », has no « ? », and calls for yes or no: « si » marks a total question."
+      pieges:
+        - { texte: "direct, total", pourquoi: "There's no « ? »: the question depends on « je me demande », so it's indirect." }
+        - { texte: "indirect, partial", pourquoi: "« si » introduces a yes-or-no question: it's total." }
+    - texte: "« Dis-moi où tu vas. » What type of question?"
+      nom: "indirect, partial"
+      explication: "It depends on « dis-moi », has no « ? », and is about place: indirect, partial."
+      pieges:
+        - { texte: "direct, partial", pourquoi: "The question depends on « dis-moi » and has no « ? »: it's indirect." }
+        - { texte: "indirect, total", pourquoi: "You don't answer yes or no: it's about place, so it's partial." }
+    - texte: "« Je ne sais pas qui a appelé. » What type of question?"
+      nom: "indirect, partial"
+      explication: "It depends on « je ne sais pas » and is about a person (« qui »)."
+      pieges:
+        - { texte: "direct, partial", pourquoi: "There's no « ? » and the question depends on « je ne sais pas »: it's indirect." }
+        - { texte: "indirect, total", pourquoi: "You don't answer yes or no: it's about « qui », so it's partial." }
+    - texte: "« Il me demande : “Viens-tu ?” » How do you put this into reported speech?"
+      nom: "Il me demande si je viens."
+      explication: "A total question becomes « si » + clause, with no inversion and no « ? »."
+      pieges:
+        - { texte: "Il me demande quand je viens.", pourquoi: "That changes the question: « Viens-tu ? » calls for yes or no, hence « si »." }
+        - { texte: "Il me demande où je vais.", pourquoi: "That changes the question: « Viens-tu ? » calls for yes or no, hence « si »." }
+    - texte: "In « Qui as-tu vu ? », what is the function of the question word « qui »?"
+      nom: "direct object of « as vu »"
+      explication: "You saw someone: « qui » stands for that direct object."
+      pieges:
+        - { texte: "subject", pourquoi: "The subject is « tu »: you're the one who saw." }
+        - { texte: "subject complement", pourquoi: "« voir » isn't a linking verb: « qui » is the person seen, the direct object." }
+    - texte: "« Est-ce que tu viens ? » Which register does this form belong to?"
+      nom: "standard"
+      explication: "« Est-ce que » is the standard form; inversion is formal, intonation alone is informal."
+      pieges:
+        - { texte: "formal", pourquoi: "The formal version inverts the subject: « Viens-tu ? »." }
+        - { texte: "informal", pourquoi: "The informal version keeps statement word order: « Tu viens ? »." }
+    - texte: "Why is there no question mark in « Je me demande où il va. »?"
+      nom: "The question is embedded in a statement: it's indirect."
+      explication: "The whole sentence is a statement; the question in it depends on « je me demande »."
+      pieges:
+        - { texte: "Because the question is partial.", pourquoi: "A direct partial question, like « Où va-t-il ? », does have a question mark." }
+        - { texte: "Because someone forgot it.", pourquoi: "It isn't a mistake: the sentence is a statement, and the question in it is indirect." }

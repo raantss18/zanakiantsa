@@ -1,0 +1,136 @@
+id: guerres-mondiales
+titre: "Les deux guerres mondiales"
+niveau: 3e
+prerequis: [republique-xixe]
+programme: { source: c4, texte: "L'Europe, un théâtre majeur des guerres totales (1914-1945)" }
+activite: quiz
+parametres: {}
+idee: "La Première Guerre mondiale dure de 1914 à 1918, la Seconde de 1939 à 1945. Ce sont des guerres totales, qui mobilisent les civils comme les soldats."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1914-1918, 11 novembre 1918, 1939-1945, 18 juin 1940, 6 juin 1944, 8 mai 1945."
+  exemple: "Exemple : le 11 novembre 1918, l'armistice met fin aux combats de la Première Guerre mondiale. Ce jour est férié en France."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelles sont les dates de la Première Guerre mondiale ?"
+    nom: "1914-1918."
+    explication: "La Première Guerre mondiale commence en 1914 ; l'armistice du 11 novembre 1918 arrête les combats."
+    pieges:
+      - { texte: "1939-1945.", pourquoi: "Ce sont les dates de la Seconde Guerre mondiale." }
+      - { texte: "1870-1871.", pourquoi: "C'est la guerre franco-prussienne, avant la IIIe République." }
+  - texte: "Pourquoi parle-t-on de « guerre totale » ?"
+    nom: "Parce que toute la société est mobilisée : soldats, civils, économie."
+    explication: "Les usines produisent pour la guerre, les civils travaillent et souffrent aussi : toute la nation est engagée."
+    pieges:
+      - { texte: "Parce que tous les pays du monde ont combattu.", pourquoi: "Certains pays sont restés neutres : « totale » parle de la mobilisation de toute la société." }
+      - { texte: "Parce qu'elle a duré très longtemps.", pourquoi: "La durée n'est pas le critère : c'est l'engagement de toute la société." }
+  - texte: "Quel génocide a lieu en 1915, pendant la Première Guerre mondiale ?"
+    nom: "Le génocide des Arméniens."
+    explication: "En 1915, dans l'Empire ottoman, les Arméniens sont victimes d'un génocide."
+    pieges:
+      - { texte: "Le génocide des Juifs.", pourquoi: "Le génocide des Juifs a lieu pendant la Seconde Guerre mondiale." }
+      - { texte: "Aucun.", pourquoi: "Le programme d'histoire rappelle le génocide des Arméniens en 1915." }
+  - texte: "Le 18 juin 1940, que fait le général de Gaulle depuis Londres ?"
+    nom: "Il lance un appel à continuer le combat."
+    explication: "Après la défaite de 1940, de Gaulle appelle à la radio les Français à poursuivre la lutte : c'est l'appel du 18 juin."
+    pieges:
+      - { texte: "Il signe l'armistice avec l'Allemagne.", pourquoi: "C'est le gouvernement du maréchal Pétain qui signe l'armistice, en juin 1940." }
+      - { texte: "Il proclame la Ve République.", pourquoi: "La Ve République date de 1958." }
+  - texte: "Qu'est-ce que le régime de Vichy ?"
+    nom: "Le régime du maréchal Pétain, qui collabore avec l'Allemagne nazie."
+    explication: "De 1940 à 1944, le régime de Vichy met fin à la République en France et collabore avec l'occupant nazi."
+    pieges:
+      - { texte: "Le gouvernement de la Résistance.", pourquoi: "La Résistance combat justement le régime de Vichy et l'occupant." }
+      - { texte: "Une République démocratique.", pourquoi: "Vichy supprime la République et les libertés." }
+  - texte: "Que se passe-t-il le 6 juin 1944 ?"
+    nom: "Le débarquement allié en Normandie."
+    explication: "Le 6 juin 1944, les Alliés débarquent en Normandie : c'est le début de la libération de la France."
+    pieges:
+      - { texte: "L'armistice de la Première Guerre mondiale.", pourquoi: "C'est le 11 novembre 1918." }
+      - { texte: "La capitulation de l'Allemagne.", pourquoi: "L'Allemagne capitule le 8 mai 1945." }
+  - texte: "Quand la Seconde Guerre mondiale prend-elle fin en Europe ?"
+    nom: "Le 8 mai 1945."
+    explication: "Le 8 mai 1945, l'Allemagne nazie capitule. La guerre se termine en Asie en septembre 1945."
+    pieges:
+      - { texte: "Le 11 novembre 1918.", pourquoi: "C'est la fin des combats de la Première Guerre mondiale." }
+      - { texte: "Le 14 juillet 1789.", pourquoi: "C'est la prise de la Bastille, au début de la Révolution." }
+  - texte: "Comment appelle-t-on l'extermination des Juifs d'Europe par les nazis ?"
+    nom: "La Shoah."
+    explication: "Pendant la Seconde Guerre mondiale, environ six millions de Juifs sont assassinés par les nazis et leurs complices : c'est la Shoah."
+    pieges:
+      - { texte: "La Résistance.", pourquoi: "La Résistance désigne ceux qui ont combattu l'occupant." }
+      - { texte: "L'armistice.", pourquoi: "Un armistice est un arrêt des combats." }
+  - texte: "Pourquoi le 11 novembre et le 8 mai sont-ils des jours fériés en France ?"
+    nom: "Pour se souvenir de la fin des combats des deux guerres mondiales et de leurs victimes."
+    explication: "Ces commémorations entretiennent la mémoire des soldats et des civils morts pendant les guerres."
+    pieges:
+      - { texte: "Pour fêter le début des guerres.", pourquoi: "Ces dates rappellent la fin des combats, pas leur début." }
+      - { texte: "Pour célébrer la Révolution.", pourquoi: "La Révolution est célébrée le 14 juillet." }
+
+en:
+  titre: "The two World Wars"
+  idee: "The First World War lasts from 1914 to 1918, the Second from 1939 to 1945. They are total wars, involving civilians as well as soldiers."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1914-1918, 11 November 1918, 1939-1945, 18 June 1940, 6 June 1944, 8 May 1945."
+    exemple: "Example: on 11 November 1918, the armistice ends the fighting of the First World War. It's a public holiday in France."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What are the dates of the First World War?"
+      nom: "1914-1918."
+      explication: "The First World War begins in 1914; the armistice of 11 November 1918 stops the fighting."
+      pieges:
+        - { texte: "1939-1945.", pourquoi: "Those are the dates of the Second World War." }
+        - { texte: "1870-1871.", pourquoi: "That's the Franco-Prussian War, before the Third Republic." }
+    - texte: "Why do we speak of « total war »?"
+      nom: "Because the whole of society is involved: soldiers, civilians, the economy."
+      explication: "Factories produce for the war, civilians work and suffer too: the whole nation takes part."
+      pieges:
+        - { texte: "Because every country in the world fought.", pourquoi: "Some countries stayed neutral: « total » is about the whole of society taking part." }
+        - { texte: "Because it lasted a very long time.", pourquoi: "Length isn't the point: it's the whole society taking part." }
+    - texte: "Which genocide takes place in 1915, during the First World War?"
+      nom: "The Armenian genocide."
+      explication: "In 1915, in the Ottoman Empire, the Armenians are the victims of a genocide."
+      pieges:
+        - { texte: "The genocide of the Jews.", pourquoi: "The genocide of the Jews happens during the Second World War." }
+        - { texte: "None.", pourquoi: "The French history curriculum recalls the Armenian genocide in 1915." }
+    - texte: "On 18 June 1940, what does General de Gaulle do from London?"
+      nom: "He calls on people to keep fighting."
+      explication: "After the 1940 defeat, de Gaulle calls on the French by radio to carry on the struggle: it's the Appeal of 18 June."
+      pieges:
+        - { texte: "He signs the armistice with Germany.", pourquoi: "It's Marshal Pétain's government that signs the armistice, in June 1940." }
+        - { texte: "He proclaims the Fifth Republic.", pourquoi: "The Fifth Republic dates from 1958." }
+    - texte: "What is the Vichy regime?"
+      nom: "Marshal Pétain's regime, which collaborates with Nazi Germany."
+      explication: "From 1940 to 1944, the Vichy regime ends the Republic in France and collaborates with the Nazi occupiers."
+      pieges:
+        - { texte: "The Resistance government.", pourquoi: "The Resistance fights against the Vichy regime and the occupiers." }
+        - { texte: "A democratic Republic.", pourquoi: "Vichy abolishes the Republic and freedoms." }
+    - texte: "What happens on 6 June 1944?"
+      nom: "The Allied landings in Normandy."
+      explication: "On 6 June 1944, the Allies land in Normandy: it's the start of the liberation of France."
+      pieges:
+        - { texte: "The armistice of the First World War.", pourquoi: "That's 11 November 1918." }
+        - { texte: "Germany's surrender.", pourquoi: "Germany surrenders on 8 May 1945." }
+    - texte: "When does the Second World War end in Europe?"
+      nom: "On 8 May 1945."
+      explication: "On 8 May 1945, Nazi Germany surrenders. The war ends in Asia in September 1945."
+      pieges:
+        - { texte: "On 11 November 1918.", pourquoi: "That's the end of the fighting in the First World War." }
+        - { texte: "On 14 July 1789.", pourquoi: "That's the storming of the Bastille, at the start of the Revolution." }
+    - texte: "What do we call the murder of Europe's Jews by the Nazis?"
+      nom: "The Shoah, or Holocaust."
+      explication: "During the Second World War, about six million Jews are murdered by the Nazis and their accomplices: that's the Shoah."
+      pieges:
+        - { texte: "The Resistance.", pourquoi: "The Resistance means those who fought the occupiers." }
+        - { texte: "The armistice.", pourquoi: "An armistice is a halt to the fighting." }
+    - texte: "Why are 11 November and 8 May public holidays in France?"
+      nom: "To remember the end of the fighting in the two World Wars and their victims."
+      explication: "These commemorations keep alive the memory of the soldiers and civilians who died in the wars."
+      pieges:
+        - { texte: "To celebrate the start of the wars.", pourquoi: "These dates recall the end of the fighting, not the start." }
+        - { texte: "To celebrate the Revolution.", pourquoi: "The Revolution is celebrated on 14 July." }

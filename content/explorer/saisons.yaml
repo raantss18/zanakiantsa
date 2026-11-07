@@ -1,0 +1,124 @@
+id: saisons
+titre: "Pourquoi y a-t-il des saisons ?"
+niveau: 6e
+prerequis: [jour-nuit]
+programme: { source: c3s, texte: "Associer l’alternance des saisons à l’inclinaison du Soleil et à la durée du jour pour un observateur sur la Terre (modèle géocentrique)." }
+activite: quiz
+parametres: {}
+idee: "L'axe de la Terre est penché. En été, le Soleil monte plus haut dans le ciel et les journées sont plus longues : il fait plus chaud. Ce n'est pas une question de distance au Soleil."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense à deux choses : la hauteur du Soleil dans le ciel à midi, et la durée de la journée."
+  exemple: "Exemple : en France, fin juin, le Soleil est haut à midi et la journée dure longtemps : c'est l'été. Fin décembre, il reste bas et les journées sont courtes : c'est l'hiver."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Pourquoi fait-il plus chaud en été qu'en hiver, en France ?"
+    nom: "Parce que le Soleil monte plus haut et que les journées sont plus longues."
+    explication: "Un Soleil haut chauffe davantage le sol, et plus longtemps. C'est dû à l'inclinaison de l'axe de la Terre."
+    pieges:
+      - { texte: "Parce que la Terre est plus près du Soleil en été.", pourquoi: "C'est l'idée fausse la plus répandue : la Terre est au plus près du Soleil début janvier, en plein hiver chez nous." }
+      - { texte: "Parce que le Soleil brille plus fort en été.", pourquoi: "Le Soleil brille de la même façon toute l'année : c'est sa hauteur dans notre ciel qui change." }
+  - texte: "À quel moment de l'année la Terre est-elle au plus près du Soleil ?"
+    nom: "Début janvier."
+    explication: "Début janvier, la Terre est à environ 147 millions de kilomètres du Soleil, et c'est l'hiver en France. La distance n'explique donc pas les saisons."
+    pieges:
+      - { texte: "Début juillet.", pourquoi: "Début juillet, la Terre est au contraire au plus loin, à environ 152 millions de kilomètres." }
+      - { texte: "Elle est toujours à la même distance.", pourquoi: "La distance varie un peu au cours de l'année, mais pas assez pour faire les saisons." }
+  - texte: "Quand c'est l'été en France, quelle saison est-ce en Australie ?"
+    nom: "L'hiver."
+    explication: "Les saisons sont inversées entre l'hémisphère Nord et l'hémisphère Sud : quand l'un penche vers le Soleil, l'autre s'en détourne."
+    pieges:
+      - { texte: "L'été aussi.", pourquoi: "Si la distance au Soleil faisait les saisons, ce serait vrai. Mais les deux hémisphères ont des saisons inversées." }
+      - { texte: "Il n'y a pas de saisons en Australie.", pourquoi: "L'Australie a bien des saisons, mais inversées par rapport aux nôtres." }
+  - texte: "À La Réunion, dans l'hémisphère Sud, en quelle saison tombe Noël ?"
+    nom: "En été."
+    explication: "À La Réunion, décembre et janvier sont les mois les plus chauds : Noël tombe en été."
+    pieges:
+      - { texte: "En hiver, comme en métropole.", pourquoi: "La Réunion est dans l'hémisphère Sud : les saisons y sont inversées." }
+      - { texte: "Au printemps.", pourquoi: "Fin décembre, c'est le début de l'été dans l'hémisphère Sud." }
+  - texte: "Vers le 21 juin, en France, comment est la journée ?"
+    nom: "C'est la plus longue de l'année."
+    explication: "Vers le 21 juin, c'est le solstice d'été dans l'hémisphère Nord : la journée est la plus longue, la nuit la plus courte."
+    pieges:
+      - { texte: "C'est la plus courte de l'année.", pourquoi: "La journée la plus courte est vers le 21 décembre, au solstice d'hiver." }
+      - { texte: "Le jour et la nuit durent autant.", pourquoi: "C'est le cas aux équinoxes, vers le 20 mars et le 22 septembre." }
+  - texte: "Que se passe-t-il aux équinoxes de printemps et d'automne ?"
+    nom: "Le jour et la nuit durent à peu près autant."
+    explication: "Aux équinoxes, vers le 20 mars et le 22 septembre, le jour et la nuit durent environ 12 heures partout sur Terre."
+    pieges:
+      - { texte: "C'est le jour le plus long.", pourquoi: "Le jour le plus long est au solstice d'été." }
+      - { texte: "Le Soleil ne se couche pas.", pourquoi: "Cela arrive près des pôles en été, pas aux équinoxes." }
+  - texte: "Mesure l'ombre d'un bâton à midi en juin, puis en décembre. Quand est-elle la plus longue ?"
+    nom: "En décembre."
+    explication: "En décembre, le Soleil reste bas dans le ciel : les ombres sont longues. En juin, il est haut : elles sont courtes."
+    pieges:
+      - { texte: "En juin.", pourquoi: "En juin, le Soleil est haut à midi : l'ombre est courte." }
+      - { texte: "Elle a toujours la même longueur.", pourquoi: "La hauteur du Soleil change avec les saisons, donc la longueur des ombres aussi." }
+  - texte: "Pourquoi un Soleil haut dans le ciel chauffe-t-il davantage le sol ?"
+    nom: "Parce que sa lumière arrive plus droit et se concentre sur une plus petite surface."
+    explication: "Une lampe tenue bien au-dessus d'une feuille fait une petite tache très éclairée ; penchée, la tache s'étale et éclaire moins chaque endroit."
+    pieges:
+      - { texte: "Parce qu'il est alors plus près de nous.", pourquoi: "La hauteur dans le ciel ne change presque rien à la distance au Soleil." }
+      - { texte: "Parce qu'il est plus gros en été.", pourquoi: "Le Soleil a la même taille toute l'année." }
+
+en:
+  titre: "Why are there seasons?"
+  idee: "The Earth's axis is tilted. In summer, the Sun climbs higher in the sky and days are longer: it's warmer. It isn't about the distance from the Sun."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of two things: how high the Sun is in the sky at midday, and how long the day lasts."
+    exemple: "Example: in France, at the end of June, the Sun is high at midday and the day is long: it's summer. At the end of December, it stays low and days are short: it's winter."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Why is it warmer in summer than in winter, in France?"
+      nom: "Because the Sun climbs higher and days are longer."
+      explication: "A high Sun warms the ground more, and for longer. It's because the Earth's axis is tilted."
+      pieges:
+        - { texte: "Because the Earth is closer to the Sun in summer.", pourquoi: "That's the most common wrong idea: the Earth is closest to the Sun in early January, in the middle of our winter." }
+        - { texte: "Because the Sun shines harder in summer.", pourquoi: "The Sun shines the same all year: it's its height in our sky that changes." }
+    - texte: "When in the year is the Earth closest to the Sun?"
+      nom: "Early January."
+      explication: "In early January, the Earth is about 147 million kilometres from the Sun, and it's winter in France. So distance doesn't explain the seasons."
+      pieges:
+        - { texte: "Early July.", pourquoi: "In early July, the Earth is actually furthest away, about 152 million kilometres." }
+        - { texte: "It's always the same distance.", pourquoi: "The distance changes a little during the year, but not enough to make the seasons." }
+    - texte: "When it's summer in France, what season is it in Australia?"
+      nom: "Winter."
+      explication: "Seasons are reversed between the Northern and Southern Hemispheres: when one leans towards the Sun, the other leans away."
+      pieges:
+        - { texte: "Summer too.", pourquoi: "If distance from the Sun made the seasons, that would be true. But the two hemispheres have opposite seasons." }
+        - { texte: "Australia has no seasons.", pourquoi: "Australia does have seasons, but the other way round from ours." }
+    - texte: "On Réunion Island, in the Southern Hemisphere, what season is Christmas in?"
+      nom: "Summer."
+      explication: "On Réunion, December and January are the hottest months: Christmas is in summer."
+      pieges:
+        - { texte: "Winter, as in mainland France.", pourquoi: "Réunion is in the Southern Hemisphere: its seasons are reversed." }
+        - { texte: "Spring.", pourquoi: "Late December is the start of summer in the Southern Hemisphere." }
+    - texte: "Around 21 June, in France, what is the day like?"
+      nom: "It's the longest of the year."
+      explication: "Around 21 June is the summer solstice in the Northern Hemisphere: the longest day and the shortest night."
+      pieges:
+        - { texte: "It's the shortest of the year.", pourquoi: "The shortest day is around 21 December, at the winter solstice." }
+        - { texte: "Day and night are the same length.", pourquoi: "That happens at the equinoxes, around 20 March and 22 September." }
+    - texte: "What happens at the spring and autumn equinoxes?"
+      nom: "Day and night last about the same time."
+      explication: "At the equinoxes, around 20 March and 22 September, day and night each last about 12 hours all over the Earth."
+      pieges:
+        - { texte: "It's the longest day.", pourquoi: "The longest day is at the summer solstice." }
+        - { texte: "The Sun doesn't set.", pourquoi: "That happens near the poles in summer, not at the equinoxes." }
+    - texte: "Measure a stick's shadow at midday in June, then in December. When is it longest?"
+      nom: "In December."
+      explication: "In December, the Sun stays low in the sky: shadows are long. In June, it's high: they are short."
+      pieges:
+        - { texte: "In June.", pourquoi: "In June, the Sun is high at midday: the shadow is short." }
+        - { texte: "It's always the same length.", pourquoi: "The Sun's height changes with the seasons, so shadow length does too." }
+    - texte: "Why does a Sun high in the sky warm the ground more?"
+      nom: "Because its light arrives more directly and is concentrated on a smaller area."
+      explication: "A torch held straight above a sheet of paper makes a small, very bright patch; tilted, the patch spreads out and lights each spot less."
+      pieges:
+        - { texte: "Because it's closer to us then.", pourquoi: "Its height in the sky makes almost no difference to the distance from the Sun." }
+        - { texte: "Because it's bigger in summer.", pourquoi: "The Sun is the same size all year." }

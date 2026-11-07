@@ -1,0 +1,136 @@
+id: nombres-10000
+titre: "Lire les nombres jusqu'à 10 000"
+niveau: CE2
+prerequis: ["centaines-lire"]
+programme: { source: cycle2, texte: "Connaitre la valeur des chiffres en fonction de leur position dans un nombre." }
+activite: quiz
+parametres: {}
+idee: "Dans 4 635, le 4 est le chiffre des milliers, le 6 celui des centaines, le 3 celui des dizaines et le 5 celui des unités."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Lis les rangs de droite à gauche : unités, dizaines, centaines, milliers."
+  exemple: "4 635, c'est 4 milliers, 6 centaines, 3 dizaines et 5 unités : 4 000 + 600 + 30 + 5 = 4 635."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Dans 4 635, quel est le chiffre des centaines ?"
+    nom: "6"
+    explication: "4 635 : 4 milliers, 6 centaines, 3 dizaines, 5 unités. Le chiffre des centaines est 6."
+    pieges:
+      - { texte: "4", pourquoi: "4 est le chiffre des milliers : le nombre a quatre chiffres, le premier compte les milliers." }
+      - { texte: "3", pourquoi: "3 est le chiffre des dizaines : les centaines sont juste à sa gauche." }
+  - texte: "Quel nombre s'écrit 7 000 + 200 + 50 + 8 ?"
+    nom: "7 258"
+    explication: "7 milliers, 2 centaines, 5 dizaines et 8 unités : 7 258."
+    pieges:
+      - { texte: "7 285", pourquoi: "Le 5 compte des dizaines et le 8 des unités : l'ordre des chiffres a changé." }
+      - { texte: "7 000 258", pourquoi: "On n'écrit pas 7 000 puis 258 à la suite : 200, 50 et 8 prennent la place des zéros." }
+  - texte: "Quel nombre s'écrit 5 000 + 40 + 3 ?"
+    nom: "5 043"
+    explication: "5 milliers, 0 centaine, 4 dizaines, 3 unités : 5 043. Le 0 garde la place des centaines."
+    pieges:
+      - { texte: "5 430", pourquoi: "Il n'y a pas de centaines : il faut un 0 au rang des centaines." }
+      - { texte: "543", pourquoi: "5 000, ce sont 5 milliers, pas 5 centaines : il faut quatre chiffres." }
+  - texte: "3 400, c'est combien de centaines en tout ?"
+    nom: "34"
+    explication: "3 milliers font 30 centaines, et il y a encore 4 centaines : 34 centaines en tout."
+    pieges:
+      - { texte: "4", pourquoi: "4 est le chiffre des centaines, mais les 3 milliers valent aussi 30 centaines." }
+      - { texte: "3 400", pourquoi: "3 400, c'est le nombre d'unités : on cherche des centaines." }
+  - texte: "Quel nombre font 6 milliers et 12 centaines ?"
+    nom: "7 200"
+    explication: "12 centaines, c'est 1 millier et 2 centaines. 6 milliers + 1 millier + 2 centaines = 7 200."
+    pieges:
+      - { texte: "61 200", pourquoi: "On ne colle pas 6 et 12 : 12 centaines font 1 millier et 2 centaines." }
+      - { texte: "6 120", pourquoi: "12 centaines valent 1 200, pas 120 : 120, ce sont 12 dizaines." }
+  - texte: "Quel nombre s'écrit (8 × 1 000) + (3 × 100) + (9 × 1) ?"
+    nom: "8 309"
+    explication: "8 milliers, 3 centaines, 0 dizaine et 9 unités : 8 309."
+    pieges:
+      - { texte: "839", pourquoi: "Il manque des rangs : 8 × 1 000 = 8 000, le nombre a quatre chiffres." }
+      - { texte: "8 390", pourquoi: "Il n'y a pas de dizaines : le 9 compte des unités." }
+  - texte: "Complète : 2 958 = 2 000 + 900 + … + 8. Quel nombre manque ?"
+    nom: "50"
+    explication: "Le 5 est au rang des dizaines : 5 dizaines valent 50. 2 000 + 900 + 50 + 8 = 2 958."
+    pieges:
+      - { texte: "5", pourquoi: "Le 5 est au rang des dizaines : il vaut 5 dizaines, donc 50." }
+      - { texte: "500", pourquoi: "500, ce sont 5 centaines : les centaines sont déjà écrites, 900." }
+  - texte: "Quel nombre vient juste après 4 999 ?"
+    nom: "5 000"
+    explication: "4 999 + 1 : 9 unités + 1 font 1 dizaine, puis 1 centaine, puis 1 millier. On obtient 5 000."
+    pieges:
+      - { texte: "5 999", pourquoi: "5 999, c'est 4 999 + 1 000 : on n'ajoute qu'une unité." }
+      - { texte: "4 000", pourquoi: "4 000 vient avant 4 999 : en ajoutant 1, le nombre grandit." }
+  - texte: "Dans 3 333, les quatre chiffres 3 ont-ils la même valeur ? Pourquoi ?"
+    nom: "Non, car la valeur d'un chiffre dépend de sa place."
+    explication: "Le premier 3 vaut 3 000, le deuxième 300, le troisième 30 et le dernier 3."
+    pieges:
+      - { texte: "Oui, car ce sont tous des 3.", pourquoi: "Ils s'écrivent pareil, mais leur place change leur valeur : 3 000 n'est pas 3." }
+      - { texte: "Non, car le dernier 3 est le plus grand.", pourquoi: "Le dernier 3 vaut 3 unités : c'est le plus petit. Le premier vaut 3 000." }
+
+en:
+  titre: "Reading numbers up to 10,000"
+  idee: "In 4,635, the 4 is the thousands digit, the 6 the hundreds digit, the 3 the tens digit and the 5 the ones digit."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Read the places from right to left: ones, tens, hundreds, thousands."
+    exemple: "4,635 is 4 thousands, 6 hundreds, 3 tens and 5 ones: 4,000 + 600 + 30 + 5 = 4,635."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "In 4,635, what is the hundreds digit?"
+      nom: "6"
+      explication: "4,635: 4 thousands, 6 hundreds, 3 tens, 5 ones. The hundreds digit is 6."
+      pieges:
+        - { texte: "4", pourquoi: "4 is the thousands digit: the number has four digits, the first one counts thousands." }
+        - { texte: "3", pourquoi: "3 is the tens digit: the hundreds are just to its left." }
+    - texte: "Which number is 7,000 + 200 + 50 + 8?"
+      nom: "7,258"
+      explication: "7 thousands, 2 hundreds, 5 tens and 8 ones: 7,258."
+      pieges:
+        - { texte: "7,285", pourquoi: "The 5 counts tens and the 8 counts ones: the digits have swapped places." }
+        - { texte: "7,000,258", pourquoi: "Don't write 7,000 and then 258 after it: 200, 50 and 8 take the places of the zeros." }
+    - texte: "Which number is 5,000 + 40 + 3?"
+      nom: "5,043"
+      explication: "5 thousands, 0 hundreds, 4 tens, 3 ones: 5,043. The 0 keeps the hundreds place."
+      pieges:
+        - { texte: "5,430", pourquoi: "There are no hundreds: you need a 0 in the hundreds place." }
+        - { texte: "543", pourquoi: "5,000 is 5 thousands, not 5 hundreds: you need four digits." }
+    - texte: "How many hundreds are there in 3,400 altogether?"
+      nom: "34"
+      explication: "3 thousands make 30 hundreds, plus 4 more hundreds: 34 hundreds altogether."
+      pieges:
+        - { texte: "4", pourquoi: "4 is the hundreds digit, but the 3 thousands are also worth 30 hundreds." }
+        - { texte: "3,400", pourquoi: "3,400 is the number of ones: we want hundreds." }
+    - texte: "Which number is 6 thousands and 12 hundreds?"
+      nom: "7,200"
+      explication: "12 hundreds are 1 thousand and 2 hundreds. 6 thousands + 1 thousand + 2 hundreds = 7,200."
+      pieges:
+        - { texte: "61,200", pourquoi: "Don't stick 6 and 12 together: 12 hundreds make 1 thousand and 2 hundreds." }
+        - { texte: "6,120", pourquoi: "12 hundreds are 1,200, not 120: 120 is 12 tens." }
+    - texte: "Which number is (8 × 1,000) + (3 × 100) + (9 × 1)?"
+      nom: "8,309"
+      explication: "8 thousands, 3 hundreds, 0 tens and 9 ones: 8,309."
+      pieges:
+        - { texte: "839", pourquoi: "Some places are missing: 8 × 1,000 = 8,000, so the number has four digits." }
+        - { texte: "8,390", pourquoi: "There are no tens: the 9 counts ones." }
+    - texte: "Fill the gap: 2,958 = 2,000 + 900 + … + 8. Which number is missing?"
+      nom: "50"
+      explication: "The 5 is in the tens place: 5 tens are 50. 2,000 + 900 + 50 + 8 = 2,958."
+      pieges:
+        - { texte: "5", pourquoi: "The 5 is in the tens place: it is worth 5 tens, so 50." }
+        - { texte: "500", pourquoi: "500 is 5 hundreds: the hundreds are already there, 900." }
+    - texte: "Which number comes just after 4,999?"
+      nom: "5,000"
+      explication: "4,999 + 1: 9 ones + 1 make 1 ten, then 1 hundred, then 1 thousand. We get 5,000."
+      pieges:
+        - { texte: "5,999", pourquoi: "5,999 is 4,999 + 1,000: we only add one." }
+        - { texte: "4,000", pourquoi: "4,000 comes before 4,999: adding 1 makes the number bigger." }
+    - texte: "In 3,333, are the four 3s worth the same? Why?"
+      nom: "No, because a digit's value depends on its place."
+      explication: "The first 3 is worth 3,000, the second 300, the third 30 and the last one 3."
+      pieges:
+        - { texte: "Yes, because they are all 3s.", pourquoi: "They look the same, but their place changes their value: 3,000 is not 3." }
+        - { texte: "No, because the last 3 is the biggest.", pourquoi: "The last 3 is worth 3 ones: it is the smallest. The first is worth 3,000." }

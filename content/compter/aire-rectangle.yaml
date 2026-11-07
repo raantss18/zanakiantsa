@@ -1,0 +1,136 @@
+id: aire-rectangle
+titre: "L'aire d'un rectangle"
+niveau: CM2
+prerequis: ["multiplication-posee"]
+programme: { source: cycle3, texte: "Déterminer l’aire d’un carré ou d’un rectangle" }
+activite: quiz
+parametres: {}
+idee: "L'aire mesure la surface couverte. Un rectangle de 5 cm sur 3 cm contient 3 rangées de 5 carrés de 1 cm² : son aire est 3 × 5 = 15 cm²."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Aire : longueur × largeur, en cm². Ne la confonds pas avec le périmètre, la longueur du tour."
+  exemple: "Rectangle de 6 cm sur 4 cm : 4 rangées de 6 carreaux de 1 cm². Aire : 4 × 6 = 24 cm². Son périmètre, lui, est 6 + 4 + 6 + 4 = 20 cm."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Quelle est l'aire d'un rectangle de 7 cm sur 3 cm ?"
+    nom: "21 cm²"
+    explication: "3 rangées de 7 carrés de 1 cm² : 3 × 7 = 21 cm²."
+    pieges:
+      - { texte: "20 cm", pourquoi: "20 cm, c'est le périmètre : 7 + 3 + 7 + 3, le tour du rectangle." }
+      - { texte: "10 cm²", pourquoi: "7 + 3 : l'aire se calcule avec une multiplication." }
+  - texte: "Quelle est l'aire d'un carré de 5 cm de côté ?"
+    nom: "25 cm²"
+    explication: "5 rangées de 5 carrés de 1 cm² : 5 × 5 = 25 cm²."
+    pieges:
+      - { texte: "20 cm", pourquoi: "20 cm, c'est le périmètre du carré : 4 × 5." }
+      - { texte: "10 cm²", pourquoi: "5 + 5 : l'aire se calcule avec une multiplication, 5 × 5." }
+  - texte: "Quelle est l'aire d'un jardin rectangulaire de 8 m sur 6 m ?"
+    nom: "48 m²"
+    explication: "6 rangées de 8 carrés de 1 m² : 6 × 8 = 48 m²."
+    pieges:
+      - { texte: "28 m", pourquoi: "28 m, c'est le périmètre : 8 + 6 + 8 + 6." }
+      - { texte: "14 m²", pourquoi: "8 + 6 : l'aire se calcule avec une multiplication." }
+  - texte: "Une surface est faite de 4 rangées de 9 carreaux de 1 cm². Quelle est son aire ?"
+    nom: "36 cm²"
+    explication: "4 rangées de 9 carreaux : 4 × 9 = 36 carreaux, donc 36 cm²."
+    pieges:
+      - { texte: "13 cm²", pourquoi: "4 + 9 : il y a 4 rangées de 9, c'est une multiplication." }
+      - { texte: "26 cm", pourquoi: "26 cm, c'est le périmètre du rectangle : 9 + 4 + 9 + 4." }
+  - texte: "Un rectangle a une aire de 40 cm² et une longueur de 8 cm. Quelle est sa largeur ?"
+    nom: "5 cm"
+    explication: "8 × … = 40 : 8 × 5 = 40, donc la largeur est 40 ÷ 8 = 5 cm."
+    pieges:
+      - { texte: "32 cm", pourquoi: "40 − 8 : l'aire est un produit, on cherche un facteur, 40 ÷ 8." }
+      - { texte: "320 cm", pourquoi: "40 × 8 : on cherche le nombre qui, multiplié par 8, donne 40." }
+  - texte: "Combien de carrés de 1 dm² faut-il pour couvrir 1 m² ?"
+    nom: "100"
+    explication: "1 m = 10 dm : une rangée contient 10 carrés de 1 dm², et il y a 10 rangées. 10 × 10 = 100."
+    pieges:
+      - { texte: "10", pourquoi: "Une rangée contient 10 dm², et il y a 10 rangées : 10 × 10 = 100." }
+      - { texte: "1 000", pourquoi: "1 m² est un carré de 10 dm sur 10 dm : 10 × 10 = 100, pas 1 000." }
+  - texte: "La figure A est un rectangle de 6 cm sur 2 cm. La figure B est un rectangle de 4 cm sur 3 cm. Laquelle a la plus grande aire ?"
+    nom: "Elles ont la même aire."
+    explication: "A : 6 × 2 = 12 cm². B : 4 × 3 = 12 cm². Les aires sont égales, même si les périmètres sont différents."
+    pieges:
+      - { texte: "A, car son périmètre est plus grand.", pourquoi: "Un plus grand périmètre ne veut pas dire une plus grande aire : 6 × 2 = 12 et 4 × 3 = 12." }
+      - { texte: "B, car elle est plus large.", pourquoi: "B est plus large mais moins longue : 4 × 3 = 12 cm², comme A." }
+  - texte: "Rectangle de 9 cm sur 7 cm : aire = … × 7 = 63 cm². Quel nombre manque ?"
+    nom: "9"
+    explication: "L'aire est longueur × largeur : 9 × 7 = 63 cm²."
+    pieges:
+      - { texte: "16", pourquoi: "9 + 7 : l'aire est un produit, pas une somme." }
+      - { texte: "56", pourquoi: "63 − 7 : il manque la longueur du rectangle, 9." }
+  - texte: "Pourquoi l'aire d'un rectangle de 5 cm sur 3 cm est-elle 3 × 5 cm² ?"
+    nom: "Il y a 3 rangées de 5 carrés de 1 cm²."
+    explication: "On peut paver le rectangle avec des carrés de 1 cm² : 3 rangées de 5, soit 15 cm²."
+    pieges:
+      - { texte: "Parce qu'on additionne les quatre côtés.", pourquoi: "Additionner les côtés donne le périmètre, pas l'aire." }
+      - { texte: "Parce que 3 + 5 = 8.", pourquoi: "8 n'est pas 15 : l'aire compte des carrés rangés en lignes." }
+
+en:
+  titre: "The area of a rectangle"
+  idee: "Area measures the surface covered. A 5 cm by 3 cm rectangle holds 3 rows of 5 squares of 1 cm²: its area is 3 × 5 = 15 cm²."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Area: length × width, in cm². Don't mix it up with the perimeter, the distance around."
+    exemple: "A 6 cm by 4 cm rectangle: 4 rows of 6 squares of 1 cm². Area: 4 × 6 = 24 cm². Its perimeter is 6 + 4 + 6 + 4 = 20 cm."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is the area of a 7 cm by 3 cm rectangle?"
+      nom: "21 cm²"
+      explication: "3 rows of 7 squares of 1 cm²: 3 × 7 = 21 cm²."
+      pieges:
+        - { texte: "20 cm", pourquoi: "20 cm is the perimeter: 7 + 3 + 7 + 3, the distance around." }
+        - { texte: "10 cm²", pourquoi: "7 + 3: area is worked out with a multiplication." }
+    - texte: "What is the area of a square with 5 cm sides?"
+      nom: "25 cm²"
+      explication: "5 rows of 5 squares of 1 cm²: 5 × 5 = 25 cm²."
+      pieges:
+        - { texte: "20 cm", pourquoi: "20 cm is the perimeter of the square: 4 × 5." }
+        - { texte: "10 cm²", pourquoi: "5 + 5: area is worked out with a multiplication, 5 × 5." }
+    - texte: "What is the area of a rectangular garden 8 m by 6 m?"
+      nom: "48 m²"
+      explication: "6 rows of 8 squares of 1 m²: 6 × 8 = 48 m²."
+      pieges:
+        - { texte: "28 m", pourquoi: "28 m is the perimeter: 8 + 6 + 8 + 6." }
+        - { texte: "14 m²", pourquoi: "8 + 6: area is worked out with a multiplication." }
+    - texte: "A surface is made of 4 rows of 9 squares of 1 cm². What is its area?"
+      nom: "36 cm²"
+      explication: "4 rows of 9 squares: 4 × 9 = 36 squares, so 36 cm²."
+      pieges:
+        - { texte: "13 cm²", pourquoi: "4 + 9: there are 4 rows of 9, so it is a multiplication." }
+        - { texte: "26 cm", pourquoi: "26 cm is the perimeter of the rectangle: 9 + 4 + 9 + 4." }
+    - texte: "A rectangle has an area of 40 cm² and a length of 8 cm. What is its width?"
+      nom: "5 cm"
+      explication: "8 × … = 40: 8 × 5 = 40, so the width is 40 ÷ 8 = 5 cm."
+      pieges:
+        - { texte: "32 cm", pourquoi: "40 − 8: area is a product, so look for a factor, 40 ÷ 8." }
+        - { texte: "320 cm", pourquoi: "40 × 8: look for the number that, times 8, gives 40." }
+    - texte: "How many squares of 1 dm² are needed to cover 1 m²?"
+      nom: "100"
+      explication: "1 m = 10 dm: one row holds 10 squares of 1 dm², and there are 10 rows. 10 × 10 = 100."
+      pieges:
+        - { texte: "10", pourquoi: "One row holds 10 dm², and there are 10 rows: 10 × 10 = 100." }
+        - { texte: "1,000", pourquoi: "1 m² is a square 10 dm by 10 dm: 10 × 10 = 100, not 1,000." }
+    - texte: "Shape A is a 6 cm by 2 cm rectangle. Shape B is a 4 cm by 3 cm rectangle. Which has the bigger area?"
+      nom: "They have the same area."
+      explication: "A: 6 × 2 = 12 cm². B: 4 × 3 = 12 cm². The areas are equal, even though the perimeters are different."
+      pieges:
+        - { texte: "A, because its perimeter is bigger.", pourquoi: "A bigger perimeter doesn't mean a bigger area: 6 × 2 = 12 and 4 × 3 = 12." }
+        - { texte: "B, because it is wider.", pourquoi: "B is wider but shorter: 4 × 3 = 12 cm², the same as A." }
+    - texte: "A 9 cm by 7 cm rectangle: area = … × 7 = 63 cm². Which number is missing?"
+      nom: "9"
+      explication: "Area is length × width: 9 × 7 = 63 cm²."
+      pieges:
+        - { texte: "16", pourquoi: "9 + 7: area is a product, not a sum." }
+        - { texte: "56", pourquoi: "63 − 7: the missing number is the length of the rectangle, 9." }
+    - texte: "Why is the area of a 5 cm by 3 cm rectangle 3 × 5 cm²?"
+      nom: "There are 3 rows of 5 squares of 1 cm²."
+      explication: "You can tile the rectangle with 1 cm² squares: 3 rows of 5, which is 15 cm²."
+      pieges:
+        - { texte: "Because you add the four sides.", pourquoi: "Adding the sides gives the perimeter, not the area." }
+        - { texte: "Because 3 + 5 = 8.", pourquoi: "8 is not 15: area counts squares laid out in rows." }

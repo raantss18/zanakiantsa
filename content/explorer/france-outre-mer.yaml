@@ -1,0 +1,124 @@
+id: france-outre-mer
+titre: "La France, ses régions et l'outre-mer"
+niveau: 3e
+prerequis: [continents-oceans]
+programme: { source: c4, texte: "Les territoires ultra-marins français : une problématique spécifique." }
+activite: quiz
+parametres: {}
+idee: "La France compte 18 régions : 13 en métropole et 5 en outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte). Elle a 101 départements."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Les 5 régions d'outre-mer : Guadeloupe et Martinique aux Antilles, Guyane en Amérique du Sud, La Réunion et Mayotte dans l'océan Indien."
+  exemple: "Exemple : La Réunion est une île de l'océan Indien, à l'est de Madagascar. C'est une région et un département français."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Combien de régions compte la France ?"
+    nom: "18 régions."
+    explication: "La France compte 18 régions : 13 en France métropolitaine et 5 en outre-mer."
+    pieges:
+      - { texte: "13 régions.", pourquoi: "13, ce sont seulement les régions de métropole : il faut ajouter les 5 régions d'outre-mer." }
+      - { texte: "22 régions.", pourquoi: "C'était le nombre de régions de métropole avant la réforme de 2016." }
+  - texte: "Combien la France compte-t-elle de départements ?"
+    nom: "101 départements."
+    explication: "96 départements en métropole et 5 en outre-mer : 101 en tout."
+    pieges:
+      - { texte: "96 départements.", pourquoi: "96, c'est la métropole seule ; il faut ajouter les 5 d'outre-mer." }
+      - { texte: "18 départements.", pourquoi: "18, c'est le nombre de régions." }
+  - texte: "Sur quel continent se trouve la Guyane ?"
+    nom: "L'Amérique du Sud."
+    explication: "La Guyane est en Amérique du Sud, entre le Brésil et le Suriname. Elle est couverte en grande partie par la forêt amazonienne."
+    pieges:
+      - { texte: "L'Afrique.", pourquoi: "La Guinée est en Afrique, mais la Guyane est en Amérique du Sud." }
+      - { texte: "L'Europe.", pourquoi: "La Guyane fait partie de la France, mais elle n'est pas sur le continent européen." }
+  - texte: "Dans quel océan se trouve Mayotte ?"
+    nom: "L'océan Indien."
+    explication: "Mayotte est dans l'océan Indien, entre Madagascar et la côte de l'Afrique, dans l'archipel des Comores."
+    pieges:
+      - { texte: "L'océan Atlantique.", pourquoi: "Ce sont la Guadeloupe et la Martinique qui sont du côté de l'Atlantique, aux Antilles." }
+      - { texte: "La mer Méditerranée.", pourquoi: "En Méditerranée, la grande île française est la Corse, en métropole." }
+  - texte: "Où se trouvent la Guadeloupe et la Martinique ?"
+    nom: "Aux Antilles, dans la mer des Caraïbes."
+    explication: "Ces deux îles françaises font partie des Antilles, entre l'océan Atlantique et la mer des Caraïbes."
+    pieges:
+      - { texte: "Dans l'océan Indien.", pourquoi: "Dans l'océan Indien, ce sont La Réunion et Mayotte." }
+      - { texte: "Près de la Bretagne.", pourquoi: "Elles sont de l'autre côté de l'Atlantique, à des milliers de kilomètres." }
+  - texte: "Quelle activité spatiale se trouve à Kourou, en Guyane ?"
+    nom: "Un centre de lancement de fusées."
+    explication: "Le centre spatial guyanais, à Kourou, sert à lancer des fusées européennes."
+    pieges:
+      - { texte: "Une station de ski.", pourquoi: "La Guyane a un climat équatorial, chaud et humide." }
+      - { texte: "Aucune, c'est seulement de la forêt.", pourquoi: "La forêt couvre une grande partie de la Guyane, mais Kourou accueille un centre spatial." }
+  - texte: "Pourquoi l'outre-mer donne-t-il à la France l'un des plus grands espaces maritimes du monde ?"
+    nom: "Parce que ses îles et territoires sont répartis sur tous les océans."
+    explication: "Autour de chaque île, la France a des droits sur une large zone de mer : avec ses territoires dans plusieurs océans, l'ensemble est immense."
+    pieges:
+      - { texte: "Parce que la métropole a beaucoup de côtes.", pourquoi: "Les côtes de la métropole comptent, mais c'est surtout l'outre-mer qui fait la taille de cet espace." }
+      - { texte: "Parce que la France possède tous les océans.", pourquoi: "Aucun pays ne possède les océans : la France a des droits sur des zones autour de ses territoires." }
+  - texte: "Pourquoi parle-t-on de « problématique spécifique » pour les territoires d'outre-mer ?"
+    nom: "Parce qu'ils sont éloignés de la métropole et ont leur propre milieu et leurs propres défis."
+    explication: "Distance, insularité, climat tropical, risques naturels, coût des transports : ces territoires demandent des aménagements adaptés."
+    pieges:
+      - { texte: "Parce qu'ils ne font pas partie de la France.", pourquoi: "Les régions d'outre-mer font pleinement partie de la France." }
+      - { texte: "Parce qu'ils ont tous le même climat que Paris.", pourquoi: "La plupart ont un climat tropical, très différent de celui de Paris." }
+
+en:
+  titre: "France, its regions and overseas"
+  idee: "France has 18 regions: 13 in mainland France and 5 overseas (Guadeloupe, Martinique, French Guiana, Réunion, Mayotte). It has 101 departments."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "The 5 overseas regions: Guadeloupe and Martinique in the West Indies, French Guiana in South America, Réunion and Mayotte in the Indian Ocean."
+    exemple: "Example: Réunion is an island in the Indian Ocean, east of Madagascar. It's a French region and department."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "How many regions does France have?"
+      nom: "18 regions."
+      explication: "France has 18 regions: 13 in mainland France and 5 overseas."
+      pieges:
+        - { texte: "13 regions.", pourquoi: "13 is only the mainland regions: add the 5 overseas regions." }
+        - { texte: "22 regions.", pourquoi: "That was the number of mainland regions before the 2016 reform." }
+    - texte: "How many departments does France have?"
+      nom: "101 departments."
+      explication: "96 departments in mainland France and 5 overseas: 101 in all."
+      pieges:
+        - { texte: "96 departments.", pourquoi: "96 is mainland France alone; add the 5 overseas ones." }
+        - { texte: "18 departments.", pourquoi: "18 is the number of regions." }
+    - texte: "Which continent is French Guiana on?"
+      nom: "South America."
+      explication: "French Guiana is in South America, between Brazil and Suriname. Much of it is covered by the Amazon rainforest."
+      pieges:
+        - { texte: "Africa.", pourquoi: "Guinea is in Africa, but French Guiana is in South America." }
+        - { texte: "Europe.", pourquoi: "French Guiana is part of France, but it isn't on the European continent." }
+    - texte: "Which ocean is Mayotte in?"
+      nom: "The Indian Ocean."
+      explication: "Mayotte is in the Indian Ocean, between Madagascar and the African coast, in the Comoros archipelago."
+      pieges:
+        - { texte: "The Atlantic Ocean.", pourquoi: "It's Guadeloupe and Martinique that are on the Atlantic side, in the West Indies." }
+        - { texte: "The Mediterranean Sea.", pourquoi: "In the Mediterranean, the big French island is Corsica, in mainland France." }
+    - texte: "Where are Guadeloupe and Martinique?"
+      nom: "In the West Indies, in the Caribbean Sea."
+      explication: "These two French islands are part of the West Indies, between the Atlantic Ocean and the Caribbean Sea."
+      pieges:
+        - { texte: "In the Indian Ocean.", pourquoi: "In the Indian Ocean, it's Réunion and Mayotte." }
+        - { texte: "Near Brittany.", pourquoi: "They are on the other side of the Atlantic, thousands of kilometres away." }
+    - texte: "What space activity is at Kourou, in French Guiana?"
+      nom: "A rocket launch centre."
+      explication: "The Guiana Space Centre, at Kourou, is used to launch European rockets."
+      pieges:
+        - { texte: "A ski resort.", pourquoi: "French Guiana has an equatorial climate, hot and humid." }
+        - { texte: "None, it's only forest.", pourquoi: "Forest covers much of French Guiana, but Kourou has a space centre." }
+    - texte: "Why do its overseas lands give France one of the biggest sea areas in the world?"
+      nom: "Because its islands and territories are spread across every ocean."
+      explication: "Around each island, France has rights over a wide area of sea: with territories in several oceans, the total is huge."
+      pieges:
+        - { texte: "Because mainland France has a lot of coastline.", pourquoi: "Mainland coasts count, but it's mostly the overseas lands that make this area so big." }
+        - { texte: "Because France owns all the oceans.", pourquoi: "No country owns the oceans: France has rights over areas around its territories." }
+    - texte: "Why do we speak of « specific challenges » for overseas territories?"
+      nom: "Because they are far from mainland France and have their own environment and challenges."
+      explication: "Distance, being islands, tropical climate, natural hazards, transport costs: these territories need suitable planning."
+      pieges:
+        - { texte: "Because they aren't part of France.", pourquoi: "The overseas regions are fully part of France." }
+        - { texte: "Because they all have the same climate as Paris.", pourquoi: "Most have a tropical climate, very different from Paris." }

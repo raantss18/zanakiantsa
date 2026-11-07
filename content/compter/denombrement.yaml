@@ -1,0 +1,148 @@
+id: denombrement
+titre: "Dénombrer : listes, permutations, combinaisons"
+niveau: Terminale
+prerequis: ["probabilites-totales"]
+programme: { source: terminale, texte: "Nombre des k-uplets d’éléments distincts d’un ensemble à n éléments. Définition de n! Nombre de permutations d’un ensemble fini à n éléments." }
+activite: quiz
+parametres: {}
+idee: "Choix successifs : on multiplie les nombres de possibilités. n! = n × (n − 1) × … × 1 compte les façons de ranger n objets. Si l’ordre ne compte pas, on divise par le nombre d’ordres."
+phrases:
+  consigne: "Compte les possibilités, puis touche le bon nombre."
+  question: "{texte}"
+  indice: "L’ordre compte-t-il ? Peut-on reprendre le même élément ?"
+  exemple: "Code de 3 chiffres de 0 à 9 : 10 × 10 × 10 = 1 000 codes. Ranger 4 livres : 4! = 4 × 3 × 2 × 1 = 24 façons."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Un menu : 3 entrées, 4 plats, 2 desserts. Combien de menus différents ?"
+    nom: "24"
+    explication: "On choisit une entrée, puis un plat, puis un dessert : 3 × 4 × 2 = 24."
+    pieges:
+      - { texte: "9", pourquoi: "3 + 4 + 2 : pour des choix successifs, on multiplie." }
+      - { texte: "12", pourquoi: "3 × 4 oublie le choix du dessert : × 2." }
+  - texte: "Combien de codes de 4 chiffres (de 0 à 9), si un chiffre peut revenir ?"
+    nom: "10 000"
+    explication: "10 choix pour chaque chiffre : 10 × 10 × 10 × 10 = 10⁴ = 10 000."
+    pieges:
+      - { texte: "40", pourquoi: "10 × 4 : on multiplie 10 par lui-même 4 fois, 10⁴." }
+      - { texte: "5 040", pourquoi: "10 × 9 × 8 × 7 compte les codes aux chiffres tous différents : ici un chiffre peut revenir." }
+  - texte: "Combien vaut 5! (factorielle 5) ?"
+    nom: "120"
+    explication: "5! = 5 × 4 × 3 × 2 × 1 = 120."
+    pieges:
+      - { texte: "15", pourquoi: "1 + 2 + 3 + 4 + 5 : une factorielle est un produit, pas une somme." }
+      - { texte: "20", pourquoi: "5 × 4 s’arrête trop tôt : on multiplie jusqu’à 1." }
+  - texte: "De combien de façons peut-on ranger 6 élèves en file ?"
+    nom: "720"
+    explication: "6 choix pour la 1re place, 5 pour la 2e, et ainsi de suite : 6! = 720."
+    pieges:
+      - { texte: "36", pourquoi: "6 × 6 permettrait de placer deux fois le même élève : il reste un élève de moins à chaque place." }
+      - { texte: "6", pourquoi: "6 compte seulement qui est en tête : il faut ranger toute la file, 6!." }
+  - texte: "8 coureurs. Combien de podiums différents (or, argent, bronze) ?"
+    nom: "336"
+    explication: "8 choix pour l’or, puis 7 pour l’argent, puis 6 pour le bronze : 8 × 7 × 6 = 336."
+    pieges:
+      - { texte: "512", pourquoi: "8³ permettrait au même coureur d’avoir deux médailles." }
+      - { texte: "56", pourquoi: "56 compte les groupes de 3 sans ordre : sur un podium, l’ordre compte." }
+  - texte: "On choisit 2 délégués parmi 5 élèves, sans ordre. Combien de choix ?"
+    nom: "10"
+    explication: "5 × 4 = 20 compte chaque paire deux fois (Ana puis Bo, Bo puis Ana) : 20 ÷ 2 = 10."
+    pieges:
+      - { texte: "20", pourquoi: "5 × 4 compte chaque paire dans les deux ordres : on divise par 2." }
+      - { texte: "25", pourquoi: "5 × 5 permettrait de choisir deux fois le même élève." }
+  - texte: "Complète : choisir 3 élèves parmi 6, sans ordre : (6 × 5 × 4) ÷ … = 20"
+    nom: "6"
+    explication: "On divise par 3! = 3 × 2 × 1 = 6, le nombre d’ordres d’un même groupe de 3 : 120 ÷ 6 = 20."
+    pieges:
+      - { texte: "3", pourquoi: "3 élèves peuvent se ranger de 3! = 6 façons, pas 3." }
+      - { texte: "2", pourquoi: "Diviser par 2 vaut pour des paires : pour 3 élèves, on divise par 3! = 6." }
+  - texte: "Pourquoi 5 lancers de pièce donnent-ils 2⁵ = 32 suites de résultats possibles ?"
+    nom: "Chaque lancer a 2 issues, et on multiplie pour les 5 lancers."
+    explication: "2 × 2 × 2 × 2 × 2 = 32 : c’est le nombre de chemins dans l’arbre des 5 lancers."
+    pieges:
+      - { texte: "Parce qu’on additionne 2 issues 5 fois.", pourquoi: "2 + 2 + 2 + 2 + 2 = 10 : pour des choix successifs, on multiplie." }
+      - { texte: "Parce que 5! = 32.", pourquoi: "5! = 120 : il compte les façons de ranger 5 objets, pas les suites de Pile et Face." }
+  - texte: "Combien de parties (sous-ensembles) a un ensemble de 4 éléments ?"
+    nom: "16"
+    explication: "Chaque élément est dedans ou pas : 2 choix, 4 fois. 2⁴ = 16, en comptant l’ensemble vide et l’ensemble entier."
+    pieges:
+      - { texte: "4", pourquoi: "4 compte seulement les parties à un élément : il y a aussi les parties à 0, 2, 3 et 4 éléments." }
+      - { texte: "24", pourquoi: "4! = 24 compte les façons de ranger 4 éléments, pas les parties." }
+  - texte: "Combien de façons de choisir 2 éléments parmi 10, sans ordre ?"
+    nom: "45"
+    explication: "10 × 9 = 90 ordres, chaque paire comptée deux fois : 90 ÷ 2 = 45."
+    pieges:
+      - { texte: "90", pourquoi: "10 × 9 compte chaque paire dans les deux ordres : on divise par 2." }
+      - { texte: "20", pourquoi: "10 × 2 ne correspond à aucun dénombrement : 10 choix, puis 9, puis on divise par 2." }
+
+en:
+  titre: "Counting: lists, permutations, combinations"
+  idee: "Successive choices: multiply the numbers of options. n! = n × (n − 1) × … × 1 counts the ways to arrange n objects. If order does not matter, divide by the number of orders."
+  phrases:
+    consigne: "Count the possibilities, then touch the right number."
+    question: "{texte}"
+    indice: "Does the order matter? Can the same item be used again?"
+    exemple: "A 3-digit code using 0 to 9: 10 × 10 × 10 = 1,000 codes. Arranging 4 books: 4! = 4 × 3 × 2 × 1 = 24 ways."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "A menu: 3 starters, 4 mains, 2 desserts. How many different meals?"
+      nom: "24"
+      explication: "Choose a starter, then a main, then a dessert: 3 × 4 × 2 = 24."
+      pieges:
+        - { texte: "9", pourquoi: "3 + 4 + 2: for successive choices, multiply." }
+        - { texte: "12", pourquoi: "3 × 4 leaves out the choice of dessert: × 2." }
+    - texte: "How many 4-digit codes (0 to 9) are there if a digit can be repeated?"
+      nom: "10,000"
+      explication: "10 options for each digit: 10 × 10 × 10 × 10 = 10⁴ = 10,000."
+      pieges:
+        - { texte: "40", pourquoi: "10 × 4: multiply 10 by itself 4 times, 10⁴." }
+        - { texte: "5,040", pourquoi: "10 × 9 × 8 × 7 counts codes with all different digits: here a digit can repeat." }
+    - texte: "What is 5! (5 factorial)?"
+      nom: "120"
+      explication: "5! = 5 × 4 × 3 × 2 × 1 = 120."
+      pieges:
+        - { texte: "15", pourquoi: "1 + 2 + 3 + 4 + 5: a factorial is a product, not a sum." }
+        - { texte: "20", pourquoi: "5 × 4 stops too soon: multiply all the way down to 1." }
+    - texte: "In how many ways can 6 pupils stand in a line?"
+      nom: "720"
+      explication: "6 choices for the 1st place, 5 for the 2nd, and so on: 6! = 720."
+      pieges:
+        - { texte: "36", pourquoi: "6 × 6 would allow the same pupil twice: there is one pupil fewer for each place." }
+        - { texte: "6", pourquoi: "6 only counts who is at the front: arrange the whole line, 6!." }
+    - texte: "8 runners. How many different podiums (gold, silver, bronze)?"
+      nom: "336"
+      explication: "8 choices for gold, then 7 for silver, then 6 for bronze: 8 × 7 × 6 = 336."
+      pieges:
+        - { texte: "512", pourquoi: "8³ would let the same runner win two medals." }
+        - { texte: "56", pourquoi: "56 counts groups of 3 without order: on a podium, order matters." }
+    - texte: "You choose 2 class reps out of 5 pupils, order not mattering. How many choices?"
+      nom: "10"
+      explication: "5 × 4 = 20 counts each pair twice (Ana then Bo, Bo then Ana): 20 ÷ 2 = 10."
+      pieges:
+        - { texte: "20", pourquoi: "5 × 4 counts each pair in both orders: divide by 2." }
+        - { texte: "25", pourquoi: "5 × 5 would allow the same pupil twice." }
+    - texte: "Fill in the step: choosing 3 pupils out of 6, order not mattering: (6 × 5 × 4) ÷ … = 20"
+      nom: "6"
+      explication: "Divide by 3! = 3 × 2 × 1 = 6, the number of orders of the same group of 3: 120 ÷ 6 = 20."
+      pieges:
+        - { texte: "3", pourquoi: "3 pupils can be arranged in 3! = 6 ways, not 3." }
+        - { texte: "2", pourquoi: "Dividing by 2 is for pairs: for 3 pupils, divide by 3! = 6." }
+    - texte: "Why do 5 coin tosses give 2⁵ = 32 possible sequences of results?"
+      nom: "Each toss has 2 outcomes, and you multiply for the 5 tosses."
+      explication: "2 × 2 × 2 × 2 × 2 = 32: it is the number of paths in the tree of the 5 tosses."
+      pieges:
+        - { texte: "Because you add 2 outcomes 5 times.", pourquoi: "2 + 2 + 2 + 2 + 2 = 10: for successive choices, multiply." }
+        - { texte: "Because 5! = 32.", pourquoi: "5! = 120: it counts the ways to arrange 5 objects, not the sequences of heads and tails." }
+    - texte: "How many subsets does a set with 4 elements have?"
+      nom: "16"
+      explication: "Each element is either in or out: 2 choices, 4 times. 2⁴ = 16, counting the empty set and the whole set."
+      pieges:
+        - { texte: "4", pourquoi: "4 only counts the one-element subsets: there are also subsets with 0, 2, 3 and 4 elements." }
+        - { texte: "24", pourquoi: "4! = 24 counts the ways to arrange 4 elements, not the subsets." }
+    - texte: "How many ways are there to choose 2 items out of 10, order not mattering?"
+      nom: "45"
+      explication: "10 × 9 = 90 ordered pairs, each pair counted twice: 90 ÷ 2 = 45."
+      pieges:
+        - { texte: "90", pourquoi: "10 × 9 counts each pair in both orders: divide by 2." }
+        - { texte: "20", pourquoi: "10 × 2 does not count anything here: 10 choices, then 9, then divide by 2." }

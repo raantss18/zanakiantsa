@@ -1,0 +1,148 @@
+id: produit-scalaire
+titre: "Le produit scalaire"
+niveau: 1re
+prerequis: ["vecteurs-coordonnees"]
+programme: { source: lycee1re, texte: "Bilinéarité, symétrie. En base orthonormée, expression du produit scalaire et de la norme, critère d’orthogonalité." }
+activite: quiz
+parametres: {}
+idee: "Dans un repère orthonormé, u(x ; y) et v(x′ ; y′) ont pour produit scalaire u · v = xx′ + yy′. C’est un nombre, pas un vecteur. Si u · v = 0, u et v sont orthogonaux."
+phrases:
+  consigne: "Calcule le produit scalaire, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Abscisse fois abscisse, plus ordonnée fois ordonnée."
+  exemple: "u(3 ; 2) et v(4 ; −1) : u · v = 3 × 4 + 2 × (−1) = 12 − 2 = 10."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "u(2 ; 5) et v(3 ; 1). Combien vaut u · v ?"
+    nom: "11"
+    explication: "u · v = 2 × 3 + 5 × 1 = 6 + 5 = 11."
+    pieges:
+      - { texte: "(6 ; 5)", pourquoi: "Le produit scalaire est un nombre : on additionne les deux produits." }
+      - { texte: "13", pourquoi: "On multiplie abscisse par abscisse, 2 × 3, et ordonnée par ordonnée, 5 × 1." }
+  - texte: "u(4 ; −2) et v(1 ; 2). Combien vaut u · v ?"
+    nom: "0"
+    explication: "u · v = 4 × 1 + (−2) × 2 = 4 − 4 = 0."
+    pieges:
+      - { texte: "8", pourquoi: "(−2) × 2 = −4 : le produit est négatif." }
+      - { texte: "(4 ; −4)", pourquoi: "Le produit scalaire est un nombre : 4 + (−4)." }
+  - texte: "u(4 ; −2) et v(1 ; 2) sont-ils orthogonaux ?"
+    nom: "Oui, car u · v = 0"
+    explication: "u · v = 4 − 4 = 0 : deux vecteurs dont le produit scalaire est nul sont orthogonaux."
+    pieges:
+      - { texte: "Non, car leurs normes sont différentes", pourquoi: "L’orthogonalité parle de l’angle, pas de la longueur." }
+      - { texte: "Non, car u · v = 8", pourquoi: "(−2) × 2 = −4, donc u · v = 4 − 4 = 0." }
+  - texte: "u(3 ; 4). Combien vaut u · u ?"
+    nom: "25"
+    explication: "u · u = 3 × 3 + 4 × 4 = 25 : c’est le carré de la norme, ‖u‖ = 5."
+    pieges:
+      - { texte: "5", pourquoi: "5 est la norme de u : u · u est son carré, 5² = 25." }
+      - { texte: "7", pourquoi: "3 + 4 : on multiplie chaque coordonnée par elle-même, puis on additionne." }
+  - texte: "‖u‖ = 4, ‖v‖ = 5 et l’angle entre u et v est 60°. Combien vaut u · v ?"
+    nom: "10"
+    explication: "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0,5 = 10."
+    pieges:
+      - { texte: "20", pourquoi: "4 × 5 oublie le cosinus de l’angle : cos(60°) = 0,5." }
+      - { texte: "Environ 17,3", pourquoi: "C’est 4 × 5 × sin(60°) : la formule utilise le cosinus." }
+  - texte: "‖u‖ = 3, ‖v‖ = 7 et l’angle entre u et v est droit. Combien vaut u · v ?"
+    nom: "0"
+    explication: "cos(90°) = 0, donc u · v = 3 × 7 × 0 = 0 : des vecteurs orthogonaux ont un produit scalaire nul."
+    pieges:
+      - { texte: "21", pourquoi: "3 × 7 oublie le cosinus : cos(90°) = 0." }
+      - { texte: "10", pourquoi: "On multiplie les normes, on ne les additionne pas, et cos(90°) = 0 annule tout." }
+  - texte: "Complète : u(−1 ; 3) et v(2 ; 4). u · v = (−1) × 2 + 3 × 4 = …"
+    nom: "10"
+    explication: "(−1) × 2 = −2 et 3 × 4 = 12 : −2 + 12 = 10."
+    pieges:
+      - { texte: "14", pourquoi: "(−1) × 2 = −2 : le premier produit est négatif." }
+      - { texte: "11", pourquoi: "On multiplie −1 par 2 : −1 + 12 oublie la multiplication." }
+  - texte: "Pourquoi u(2 ; 3) et v(−3 ; 2) sont-ils orthogonaux ?"
+    nom: "u · v = 2 × (−3) + 3 × 2 = 0."
+    explication: "−6 + 6 = 0 : un produit scalaire nul veut dire que les vecteurs sont orthogonaux."
+    pieges:
+      - { texte: "Parce qu’ils ont la même norme.", pourquoi: "Même norme ne dit rien de l’angle : u et −u ont la même norme et ne sont pas orthogonaux." }
+      - { texte: "Parce que leurs coordonnées utilisent les mêmes nombres.", pourquoi: "u(2 ; 3) et (3 ; 2) utilisent les mêmes nombres, et leur produit scalaire vaut 12." }
+  - texte: "u(1 ; m) et v(4 ; 2). Pour quelle valeur de m sont-ils orthogonaux ?"
+    nom: "−2"
+    explication: "u · v = 1 × 4 + m × 2 = 4 + 2m. 4 + 2m = 0 donne m = −2."
+    pieges:
+      - { texte: "2", pourquoi: "4 + 2m = 0 donne 2m = −4 : m est négatif." }
+      - { texte: "−4", pourquoi: "2m = −4 : il reste à diviser par 2." }
+  - texte: "‖u‖ = 2, ‖v‖ = 3 et u · v = 6. Quel est l’angle entre u et v ?"
+    nom: "0°"
+    explication: "u · v = 2 × 3 × cos(angle), donc cos(angle) = 6 ÷ 6 = 1 : l’angle vaut 0°, même direction et même sens."
+    pieges:
+      - { texte: "90°", pourquoi: "Pour 90°, le produit scalaire serait 0, pas 6." }
+      - { texte: "180°", pourquoi: "Pour 180°, cos = −1 et le produit scalaire serait −6." }
+
+en:
+  titre: "The scalar product"
+  idee: "In an orthonormal basis, u = (x, y) and v = (x′, y′) have scalar product u · v = xx′ + yy′. It is a number, not a vector. If u · v = 0, u and v are perpendicular."
+  phrases:
+    consigne: "Work out the scalar product, then touch the right answer."
+    question: "{texte}"
+    indice: "First component times first component, plus second times second."
+    exemple: "u = (3, 2) and v = (4, −1): u · v = 3 × 4 + 2 × (−1) = 12 − 2 = 10."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "u = (2, 5) and v = (3, 1). What is u · v?"
+      nom: "11"
+      explication: "u · v = 2 × 3 + 5 × 1 = 6 + 5 = 11."
+      pieges:
+        - { texte: "(6, 5)", pourquoi: "The scalar product is a number: add the two products." }
+        - { texte: "13", pourquoi: "Multiply first by first, 2 × 3, and second by second, 5 × 1." }
+    - texte: "u = (4, −2) and v = (1, 2). What is u · v?"
+      nom: "0"
+      explication: "u · v = 4 × 1 + (−2) × 2 = 4 − 4 = 0."
+      pieges:
+        - { texte: "8", pourquoi: "(−2) × 2 = −4: the product is negative." }
+        - { texte: "(4, −4)", pourquoi: "The scalar product is a number: 4 + (−4)." }
+    - texte: "Are u = (4, −2) and v = (1, 2) perpendicular?"
+      nom: "Yes, because u · v = 0"
+      explication: "u · v = 4 − 4 = 0: two vectors whose scalar product is zero are perpendicular."
+      pieges:
+        - { texte: "No, because their magnitudes are different", pourquoi: "Being perpendicular is about the angle, not the length." }
+        - { texte: "No, because u · v = 8", pourquoi: "(−2) × 2 = −4, so u · v = 4 − 4 = 0." }
+    - texte: "u = (3, 4). What is u · u?"
+      nom: "25"
+      explication: "u · u = 3 × 3 + 4 × 4 = 25: it is the square of the magnitude, ‖u‖ = 5."
+      pieges:
+        - { texte: "5", pourquoi: "5 is the magnitude of u: u · u is its square, 5² = 25." }
+        - { texte: "7", pourquoi: "3 + 4: multiply each component by itself, then add." }
+    - texte: "‖u‖ = 4, ‖v‖ = 5 and the angle between u and v is 60°. What is u · v?"
+      nom: "10"
+      explication: "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0.5 = 10."
+      pieges:
+        - { texte: "20", pourquoi: "4 × 5 leaves out the cosine of the angle: cos(60°) = 0.5." }
+        - { texte: "About 17.3", pourquoi: "That is 4 × 5 × sin(60°): the formula uses the cosine." }
+    - texte: "‖u‖ = 3, ‖v‖ = 7 and the angle between u and v is a right angle. What is u · v?"
+      nom: "0"
+      explication: "cos(90°) = 0, so u · v = 3 × 7 × 0 = 0: perpendicular vectors have a zero scalar product."
+      pieges:
+        - { texte: "21", pourquoi: "3 × 7 leaves out the cosine: cos(90°) = 0." }
+        - { texte: "10", pourquoi: "Multiply the magnitudes, do not add them, and cos(90°) = 0 makes it all zero." }
+    - texte: "Fill in the step: u = (−1, 3) and v = (2, 4). u · v = (−1) × 2 + 3 × 4 = …"
+      nom: "10"
+      explication: "(−1) × 2 = −2 and 3 × 4 = 12: −2 + 12 = 10."
+      pieges:
+        - { texte: "14", pourquoi: "(−1) × 2 = −2: the first product is negative." }
+        - { texte: "11", pourquoi: "Multiply −1 by 2: −1 + 12 skips the multiplication." }
+    - texte: "Why are u = (2, 3) and v = (−3, 2) perpendicular?"
+      nom: "u · v = 2 × (−3) + 3 × 2 = 0."
+      explication: "−6 + 6 = 0: a zero scalar product means the vectors are perpendicular."
+      pieges:
+        - { texte: "Because they have the same magnitude.", pourquoi: "The same magnitude says nothing about the angle: u and −u have the same magnitude and are not perpendicular." }
+        - { texte: "Because their components use the same numbers.", pourquoi: "u = (2, 3) and (3, 2) use the same numbers, and their scalar product is 12." }
+    - texte: "u = (1, m) and v = (4, 2). For which value of m are they perpendicular?"
+      nom: "−2"
+      explication: "u · v = 1 × 4 + m × 2 = 4 + 2m. 4 + 2m = 0 gives m = −2."
+      pieges:
+        - { texte: "2", pourquoi: "4 + 2m = 0 gives 2m = −4: m is negative." }
+        - { texte: "−4", pourquoi: "2m = −4: you still need to divide by 2." }
+    - texte: "‖u‖ = 2, ‖v‖ = 3 and u · v = 6. What is the angle between u and v?"
+      nom: "0°"
+      explication: "u · v = 2 × 3 × cos(angle), so cos(angle) = 6 ÷ 6 = 1: the angle is 0°, same direction."
+      pieges:
+        - { texte: "90°", pourquoi: "For 90°, the scalar product would be 0, not 6." }
+        - { texte: "180°", pourquoi: "For 180°, cos = −1 and the scalar product would be −6." }

@@ -1,0 +1,136 @@
+id: proportionnalite-6e
+titre: "Proportionnalité : passer par l'unité"
+niveau: 6e
+prerequis: ["proportionnalite", "decimal-fois-entier"]
+programme: { source: cycle3, texte: "Résoudre un problème de proportionnalité en choisissant une procédure adaptée : propriété de linéarité pour la multiplication ou l’addition, retour à l’unité" }
+activite: quiz
+parametres: {}
+idee: "Quand une quantité n'est pas un multiple de l'autre, on passe par 1 : on cherche la valeur pour une unité, comme le prix au kilo, puis on multiplie."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Calcule d'abord la valeur pour 1, puis multiplie."
+  exemple: "5 kg de pommes coûtent 12 €. Prix de 1 kg : 12 € ÷ 5 = 2,40 €. Prix de 7 kg : 7 × 2,40 € = 16,80 €."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "4 stylos coûtent 6 €. Combien coûtent 7 stylos ?"
+    nom: "10,50 €"
+    explication: "Prix d'un stylo : 6 € ÷ 4 = 1,50 €. Prix de 7 stylos : 7 × 1,50 € = 10,50 €."
+    pieges:
+      - { texte: "9 €", pourquoi: "On a ajouté 3 stylos et 3 € : il faut passer par le prix d'un stylo, 1,50 €." }
+      - { texte: "42 €", pourquoi: "7 × 6 € : 6 € est le prix de 4 stylos, pas d'un seul." }
+  - texte: "Une voiture roule toujours à la même vitesse et parcourt 270 km en 3 h. Combien de kilomètres parcourt-elle en 5 h ?"
+    nom: "450 km"
+    explication: "En 1 h : 270 ÷ 3 = 90 km. En 5 h : 5 × 90 = 450 km."
+    pieges:
+      - { texte: "272 km", pourquoi: "On a ajouté 2 h et 2 km : en 1 h, la voiture parcourt 90 km." }
+      - { texte: "1 350 km", pourquoi: "5 × 270 : 270 km, c'est pour 3 h, pas pour 1 h." }
+  - texte: "Le prix au kilo des tomates est 3 €. Combien coûtent 2,5 kg de tomates ?"
+    nom: "7,50 €"
+    explication: "On paie 3 € pour chaque kilo : 2,5 × 3 € = 7,50 €."
+    pieges:
+      - { texte: "5,50 €", pourquoi: "3 + 2,5 : on paie 3 € pour chaque kilo, c'est une multiplication." }
+      - { texte: "1,20 €", pourquoi: "3 ÷ 2,5 : le prix augmente avec la masse, on multiplie." }
+  - texte: "Tableau. Masse en kg : 2 ; 6. Prix en euros : 5 ; … Quel prix manque ?"
+    nom: "15 €"
+    explication: "6 kg, c'est 3 fois plus que 2 kg : 3 × 5 € = 15 €."
+    pieges:
+      - { texte: "9 €", pourquoi: "5 + 4 : 6 kg, c'est 3 fois 2 kg, on multiplie le prix par 3." }
+      - { texte: "30 €", pourquoi: "6 × 5 € : 5 € est le prix de 2 kg, pas d'un seul kilo." }
+  - texte: "Un taxi demande 3 € au départ, puis 2 € par kilomètre. Le prix est-il proportionnel au nombre de kilomètres ?"
+    nom: "Non, à cause des 3 € de départ."
+    explication: "1 km coûte 3 + 2 = 5 € ; 2 km coûtent 3 + 4 = 7 €, pas 10 €. Ce n'est pas proportionnel."
+    pieges:
+      - { texte: "Oui, car le prix augmente avec les kilomètres.", pourquoi: "Augmenter ne suffit pas : 1 km coûte 5 €, 2 km coûtent 7 €, pas le double." }
+      - { texte: "Oui, car on paie 2 € par kilomètre.", pourquoi: "Les 3 € de départ s'ajoutent toujours : 2 km coûtent 7 €, pas 2 fois 5 €." }
+  - texte: "Le cœur de Tom bat 75 fois par minute. Combien de battements en 4 minutes, au même rythme ?"
+    nom: "300"
+    explication: "75 battements pour chaque minute : 4 × 75 = 300 battements."
+    pieges:
+      - { texte: "79", pourquoi: "75 + 4 : on compte 75 battements pour chaque minute, c'est une multiplication." }
+      - { texte: "18,75", pourquoi: "75 ÷ 4 : en 4 minutes, il y a plus de battements qu'en 1 minute." }
+  - texte: "3 cahiers coûtent 4,50 € et 5 cahiers coûtent 7,50 €. Combien coûtent 8 cahiers ?"
+    nom: "12 €"
+    explication: "8 cahiers = 3 cahiers + 5 cahiers, donc 4,50 € + 7,50 € = 12 €."
+    pieges:
+      - { texte: "36 €", pourquoi: "8 × 4,50 € : 4,50 € est le prix de 3 cahiers. 8 = 3 + 5 : on ajoute les prix." }
+      - { texte: "3 €", pourquoi: "7,50 − 4,50 : on cherche le prix de 8 cahiers, plus que 5 cahiers." }
+  - texte: "6 litres de jus coûtent 9 €. Prix de 1 litre : 9 € ÷ 6 = … Puis 4 litres coûtent 4 × 1,50 € = 6 €. Quel prix manque ?"
+    nom: "1,50 €"
+    explication: "On partage 9 € entre 6 litres : 9 ÷ 6 = 1,5. Un litre coûte 1,50 €."
+    pieges:
+      - { texte: "0,67 €", pourquoi: "C'est environ 6 ÷ 9 : on divise le prix par le nombre de litres." }
+      - { texte: "15 €", pourquoi: "9 + 6 : on cherche le prix d'un litre, c'est une division." }
+  - texte: "3 stylos coûtent 2 €. Pour trouver le prix de 5 stylos, pourquoi passe-t-on par le prix d'un stylo ?"
+    nom: "Parce que 5 n'est ni le double ni le triple de 3."
+    explication: "On ne passe pas de 3 à 5 en multipliant par un entier : on cherche le prix d'un stylo, puis on multiplie par 5."
+    pieges:
+      - { texte: "Parce qu'il faut toujours le faire.", pourquoi: "Pas toujours : pour 6 stylos, il suffit de doubler 2 €." }
+      - { texte: "Parce qu'il y a 2 stylos de plus.", pourquoi: "Ajouter 2 stylos ne dit pas leur prix : il faut le prix d'un stylo." }
+
+en:
+  titre: "Proportion: going through one"
+  idee: "When one amount is not a multiple of the other, go through 1: find the value for one unit, like the price per kilo, then multiply."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Work out the value for 1 first, then multiply."
+    exemple: "5 kg of apples cost €12. Price of 1 kg: €12 ÷ 5 = €2.40. Price of 7 kg: 7 × €2.40 = €16.80."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "4 pens cost €6. How much do 7 pens cost?"
+      nom: "€10.50"
+      explication: "Price of one pen: €6 ÷ 4 = €1.50. Price of 7 pens: 7 × €1.50 = €10.50."
+      pieges:
+        - { texte: "€9", pourquoi: "3 pens and €3 were added: go through the price of one pen, €1.50." }
+        - { texte: "€42", pourquoi: "7 × €6: €6 is the price of 4 pens, not of one." }
+    - texte: "A car drives at a steady speed and covers 270 km in 3 hours. How far does it go in 5 hours?"
+      nom: "450 km"
+      explication: "In 1 hour: 270 ÷ 3 = 90 km. In 5 hours: 5 × 90 = 450 km."
+      pieges:
+        - { texte: "272 km", pourquoi: "2 hours and 2 km were added: in 1 hour the car covers 90 km." }
+        - { texte: "1,350 km", pourquoi: "5 × 270: 270 km is for 3 hours, not for 1 hour." }
+    - texte: "Tomatoes cost €3 per kilo. How much do 2.5 kg of tomatoes cost?"
+      nom: "€7.50"
+      explication: "You pay €3 for each kilo: 2.5 × €3 = €7.50."
+      pieges:
+        - { texte: "€5.50", pourquoi: "3 + 2.5: you pay €3 for each kilo, so multiply." }
+        - { texte: "€1.20", pourquoi: "3 ÷ 2.5: the price goes up with the mass, so multiply." }
+    - texte: "Table. Mass in kg: 2; 6. Price in euros: 5; … Which price is missing?"
+      nom: "€15"
+      explication: "6 kg is 3 times 2 kg: 3 × €5 = €15."
+      pieges:
+        - { texte: "€9", pourquoi: "5 + 4: 6 kg is 3 times 2 kg, so multiply the price by 3." }
+        - { texte: "€30", pourquoi: "6 × €5: €5 is the price of 2 kg, not of one kilo." }
+    - texte: "A taxi charges €3 to start, then €2 per kilometre. Is the price proportional to the number of kilometres?"
+      nom: "No, because of the €3 starting charge."
+      explication: "1 km costs 3 + 2 = €5; 2 km cost 3 + 4 = €7, not €10. It is not proportional."
+      pieges:
+        - { texte: "Yes, because the price goes up with the kilometres.", pourquoi: "Going up is not enough: 1 km costs €5, 2 km cost €7, not double." }
+        - { texte: "Yes, because you pay €2 per kilometre.", pourquoi: "The €3 starting charge is always added: 2 km cost €7, not 2 times €5." }
+    - texte: "Tom's heart beats 75 times per minute. How many beats in 4 minutes at the same rate?"
+      nom: "300"
+      explication: "75 beats for each minute: 4 × 75 = 300 beats."
+      pieges:
+        - { texte: "79", pourquoi: "75 + 4: count 75 beats for each minute, so multiply." }
+        - { texte: "18.75", pourquoi: "75 ÷ 4: in 4 minutes there are more beats than in 1 minute." }
+    - texte: "3 exercise books cost €4.50 and 5 cost €7.50. How much do 8 exercise books cost?"
+      nom: "€12"
+      explication: "8 books = 3 books + 5 books, so €4.50 + €7.50 = €12."
+      pieges:
+        - { texte: "€36", pourquoi: "8 × €4.50: €4.50 is the price of 3 books. 8 = 3 + 5: add the prices." }
+        - { texte: "€3", pourquoi: "7.50 − 4.50: we want the price of 8 books, more than 5 books." }
+    - texte: "6 litres of juice cost €9. Price of 1 litre: €9 ÷ 6 = … Then 4 litres cost 4 × €1.50 = €6. Which price is missing?"
+      nom: "€1.50"
+      explication: "Share €9 between 6 litres: 9 ÷ 6 = 1.5. One litre costs €1.50."
+      pieges:
+        - { texte: "€0.67", pourquoi: "That is about 6 ÷ 9: divide the price by the number of litres." }
+        - { texte: "€15", pourquoi: "9 + 6: we want the price of one litre, so divide." }
+    - texte: "3 pens cost €2. To find the price of 5 pens, why do we work out the price of one pen?"
+      nom: "Because 5 is neither double nor triple 3."
+      explication: "You can't get from 3 to 5 by multiplying by a whole number: find the price of one pen, then multiply by 5."
+      pieges:
+        - { texte: "Because you always have to.", pourquoi: "Not always: for 6 pens, just double €2." }
+        - { texte: "Because there are 2 more pens.", pourquoi: "Adding 2 pens doesn't tell you their price: you need the price of one pen." }

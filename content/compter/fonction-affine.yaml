@@ -1,0 +1,148 @@
+id: fonction-affine
+titre: "Fonctions affines et droites"
+niveau: 2de
+prerequis: ["equation-premier-degre", "relatifs-multiplier"]
+programme: { source: lycee2de, texte: "Variations d’une fonction affine selon le signe du coefficient directeur." }
+activite: quiz
+parametres: {}
+idee: "f(x) = mx + p : sa courbe est une droite. p est l’ordonnée à l’origine. m est le coefficient directeur : m > 0, f est croissante ; m < 0, f est décroissante."
+phrases:
+  consigne: "Lis la fonction ou la droite, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repère m, le nombre devant x, et p, le nombre seul."
+  exemple: "f(x) = 2x − 1 : la droite coupe l’axe des ordonnées en −1 ; quand x augmente de 1, f(x) augmente de 2. f(3) = 2 × 3 − 1 = 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "f(x) = 3x − 4. Combien vaut f(2) ?"
+    nom: "2"
+    explication: "On remplace x par 2 : f(2) = 3 × 2 − 4 = 6 − 4 = 2."
+    pieges:
+      - { texte: "10", pourquoi: "Le signe reste : 3 × 2 − 4 = 2, pas 3 × 2 + 4." }
+      - { texte: "1", pourquoi: "3x signifie 3 × x : 3 × 2 = 6, pas 3 + 2 = 5." }
+  - texte: "f(x) = −2x + 5. Quelle est l’ordonnée à l’origine ?"
+    nom: "5"
+    explication: "L’ordonnée à l’origine est f(0) = −2 × 0 + 5 = 5 : la droite coupe l’axe des ordonnées en 5."
+    pieges:
+      - { texte: "−2", pourquoi: "−2 est le coefficient directeur, le nombre devant x." }
+      - { texte: "2,5", pourquoi: "2,5 est l’endroit où la droite coupe l’axe des abscisses (−2x + 5 = 0), pas l’axe des ordonnées." }
+  - texte: "f(x) = −2x + 5 est-elle croissante ou décroissante ?"
+    nom: "Décroissante"
+    explication: "Le coefficient directeur m = −2 est négatif : quand x augmente de 1, f(x) diminue de 2."
+    pieges:
+      - { texte: "Croissante", pourquoi: "5 est positif, mais c’est le signe de m qui compte : m = −2 < 0." }
+      - { texte: "Constante", pourquoi: "Une fonction affine est constante seulement si m = 0." }
+  - texte: "Une droite passe par A(1 ; 3) et B(3 ; 7). Quel est son coefficient directeur ?"
+    nom: "2"
+    explication: "Écart des ordonnées divisé par écart des abscisses : (7 − 3) ÷ (3 − 1) = 4 ÷ 2 = 2."
+    pieges:
+      - { texte: "1/2", pourquoi: "C’est l’inverse : on divise l’écart des ordonnées (4) par l’écart des abscisses (2)." }
+      - { texte: "4", pourquoi: "4 est l’écart des ordonnées : il reste à le diviser par l’écart des abscisses, 2." }
+  - texte: "Sur le graphique d’une fonction affine, quand x passe de 0 à 1, f(x) passe de 4 à 1. Combien vaut m ?"
+    nom: "−3"
+    explication: "Quand x augmente de 1, f(x) varie de 1 − 4 = −3 : m = −3, la droite descend."
+    pieges:
+      - { texte: "3", pourquoi: "f(x) diminue : la variation 1 − 4 est négative, m = −3." }
+      - { texte: "4", pourquoi: "4 est l’ordonnée à l’origine, f(0), pas le coefficient directeur." }
+  - texte: "Complète : f(x) = 2x + 1. f(x) = 7 donne 2x = 6, donc x = …"
+    nom: "3"
+    explication: "2x = 6, on divise par 2 : x = 3. Vérification : f(3) = 2 × 3 + 1 = 7."
+    pieges:
+      - { texte: "6", pourquoi: "Il reste à diviser par 2 : 2x = 6 donne x = 3." }
+      - { texte: "4", pourquoi: "On retranche 1 : 7 − 1 = 6, pas 7 + 1 = 8, puis 6 ÷ 2 = 3." }
+  - texte: "Quelle fonction a pour droite celle qui passe par le point (0 ; −1) avec un coefficient directeur égal à 3 ?"
+    nom: "f(x) = 3x − 1"
+    explication: "m = 3 est le nombre devant x, et p = −1 est l’ordonnée à l’origine (le point d’abscisse 0)."
+    pieges:
+      - { texte: "f(x) = −x + 3", pourquoi: "m et p sont inversés : le coefficient directeur 3 va devant x." }
+      - { texte: "f(x) = 3x + 1", pourquoi: "La droite coupe l’axe des ordonnées en −1 : p = −1, pas 1." }
+  - texte: "Pourquoi f(x) = 4 − 3x est-elle décroissante ?"
+    nom: "Son coefficient directeur, −3, est négatif."
+    explication: "f(x) = −3x + 4 : m = −3 < 0, donc quand x augmente de 1, f(x) diminue de 3."
+    pieges:
+      - { texte: "Parce que 4 est positif.", pourquoi: "4 est l’ordonnée à l’origine : elle ne dit rien du sens de variation." }
+      - { texte: "Parce que 4 est plus grand que 3.", pourquoi: "Comparer 4 et 3 ne sert à rien : seul le signe de m compte." }
+  - texte: "Le point M(2 ; 5) est-il sur la droite de f(x) = 3x − 1 ?"
+    nom: "Oui, car f(2) = 5"
+    explication: "On remplace x par l’abscisse 2 : f(2) = 3 × 2 − 1 = 5, c’est bien l’ordonnée de M."
+    pieges:
+      - { texte: "Non, car f(5) = 14", pourquoi: "On remplace x par l’abscisse de M, 2, pas par son ordonnée 5." }
+      - { texte: "Non, car f(2) = 7", pourquoi: "3 × 2 − 1 = 5 : on retranche 1, on ne l’ajoute pas." }
+  - texte: "Pour quelle valeur de x la fonction f(x) = 2x − 6 s’annule-t-elle ?"
+    nom: "3"
+    explication: "2x − 6 = 0 donne 2x = 6, donc x = 3 : la droite coupe l’axe des abscisses en 3."
+    pieges:
+      - { texte: "−3", pourquoi: "2x = 6 donne x = 3, positif." }
+      - { texte: "−6", pourquoi: "−6 est f(0), l’ordonnée à l’origine, pas la valeur où f s’annule." }
+
+en:
+  titre: "Linear functions and straight lines"
+  idee: "f(x) = mx + p: its graph is a straight line. p is the y-intercept. m is the gradient: if m > 0, f is increasing; if m < 0, f is decreasing."
+  phrases:
+    consigne: "Read the function or the line, then touch the right answer."
+    question: "{texte}"
+    indice: "Find m, the number in front of x, and p, the number on its own."
+    exemple: "f(x) = 2x − 1: the line crosses the y-axis at −1; when x goes up by 1, f(x) goes up by 2. f(3) = 2 × 3 − 1 = 5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "f(x) = 3x − 4. What is f(2)?"
+      nom: "2"
+      explication: "Replace x with 2: f(2) = 3 × 2 − 4 = 6 − 4 = 2."
+      pieges:
+        - { texte: "10", pourquoi: "Keep the sign: 3 × 2 − 4 = 2, not 3 × 2 + 4." }
+        - { texte: "1", pourquoi: "3x means 3 × x: 3 × 2 = 6, not 3 + 2 = 5." }
+    - texte: "f(x) = −2x + 5. What is the y-intercept?"
+      nom: "5"
+      explication: "The y-intercept is f(0) = −2 × 0 + 5 = 5: the line crosses the y-axis at 5."
+      pieges:
+        - { texte: "−2", pourquoi: "−2 is the gradient, the number in front of x." }
+        - { texte: "2.5", pourquoi: "2.5 is where the line crosses the x-axis (−2x + 5 = 0), not the y-axis." }
+    - texte: "Is f(x) = −2x + 5 increasing or decreasing?"
+      nom: "Decreasing"
+      explication: "The gradient m = −2 is negative: when x goes up by 1, f(x) goes down by 2."
+      pieges:
+        - { texte: "Increasing", pourquoi: "5 is positive, but what matters is the sign of m: m = −2 < 0." }
+        - { texte: "Constant", pourquoi: "A linear function is constant only if m = 0." }
+    - texte: "A line goes through A(1, 3) and B(3, 7). What is its gradient?"
+      nom: "2"
+      explication: "Change in y divided by change in x: (7 − 3) ÷ (3 − 1) = 4 ÷ 2 = 2."
+      pieges:
+        - { texte: "1/2", pourquoi: "That is upside down: divide the change in y (4) by the change in x (2)." }
+        - { texte: "4", pourquoi: "4 is the change in y: you still need to divide it by the change in x, 2." }
+    - texte: "On the graph of a linear function, when x goes from 0 to 1, f(x) goes from 4 to 1. What is m?"
+      nom: "−3"
+      explication: "When x goes up by 1, f(x) changes by 1 − 4 = −3: m = −3, the line goes down."
+      pieges:
+        - { texte: "3", pourquoi: "f(x) goes down: the change 1 − 4 is negative, so m = −3." }
+        - { texte: "4", pourquoi: "4 is the y-intercept, f(0), not the gradient." }
+    - texte: "Fill in the step: f(x) = 2x + 1. f(x) = 7 gives 2x = 6, so x = …"
+      nom: "3"
+      explication: "2x = 6, divide by 2: x = 3. Check: f(3) = 2 × 3 + 1 = 7."
+      pieges:
+        - { texte: "6", pourquoi: "You still need to divide by 2: 2x = 6 gives x = 3." }
+        - { texte: "4", pourquoi: "Subtract 1: 7 − 1 = 6, not 7 + 1 = 8, then 6 ÷ 2 = 3." }
+    - texte: "Which function has the line through the point (0, −1) with gradient 3?"
+      nom: "f(x) = 3x − 1"
+      explication: "m = 3 is the number in front of x, and p = −1 is the y-intercept (the point where x = 0)."
+      pieges:
+        - { texte: "f(x) = −x + 3", pourquoi: "m and p are swapped: the gradient 3 goes in front of x." }
+        - { texte: "f(x) = 3x + 1", pourquoi: "The line crosses the y-axis at −1: p = −1, not 1." }
+    - texte: "Why is f(x) = 4 − 3x decreasing?"
+      nom: "Its gradient, −3, is negative."
+      explication: "f(x) = −3x + 4: m = −3 < 0, so when x goes up by 1, f(x) goes down by 3."
+      pieges:
+        - { texte: "Because 4 is positive.", pourquoi: "4 is the y-intercept: it says nothing about whether f goes up or down." }
+        - { texte: "Because 4 is greater than 3.", pourquoi: "Comparing 4 and 3 does not help: only the sign of m matters." }
+    - texte: "Is the point M(2, 5) on the line of f(x) = 3x − 1?"
+      nom: "Yes, because f(2) = 5"
+      explication: "Replace x with the x-coordinate 2: f(2) = 3 × 2 − 1 = 5, which is the y-coordinate of M."
+      pieges:
+        - { texte: "No, because f(5) = 14", pourquoi: "Replace x with the x-coordinate of M, 2, not its y-coordinate 5." }
+        - { texte: "No, because f(2) = 7", pourquoi: "3 × 2 − 1 = 5: subtract 1, do not add it." }
+    - texte: "For which value of x is f(x) = 2x − 6 equal to zero?"
+      nom: "3"
+      explication: "2x − 6 = 0 gives 2x = 6, so x = 3: the line crosses the x-axis at 3."
+      pieges:
+        - { texte: "−3", pourquoi: "2x = 6 gives x = 3, a positive number." }
+        - { texte: "−6", pourquoi: "−6 is f(0), the y-intercept, not the value where f is zero." }

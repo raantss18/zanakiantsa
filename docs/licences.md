@@ -58,6 +58,7 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | Police Fredoka (`assets/fonts/Fredoka-Bold.ttf`, sous-ensemble) | The Fredoka Project Authors | SIL OFL 1.1 (`assets/fonts/OFL-Fredoka.txt`) |
 | Logo et icône (`design/logo/`) | créés pour l'app (ADR 0027) | comme le contenu de l'app |
 | `assets/livres/` (livres illustrés) | African Storybook Initiative et auteurs cités dans chaque livre (`catalogue.json`, page « Fin ») | CC BY 4.0, livre par livre (ADR 0026) |
+| `assets/livres/catalogue.json`, étagère « Classiques » (livres 900001 et suivants, texte seul) | Textes transcrits par Wikisource (https://fr.wikisource.org), auteur, traducteur, édition et URL exacte dans chaque livre (`auteur`, `credits`, `source`, page « Fin ») ; liste ci-dessous | Domaine public (auteurs et traducteurs morts avant 1956, `app/tool/import_classiques.py`) |
 | `assets/echecs/*.svg` (pièces d'échecs) | Cburnett, Wikimedia Commons | CC BY-SA 3.0 (`assets/echecs/LICENCE.txt`) |
 | `assets/audio/sfx/*.wav` (bruitages) | synthétisés par code (`lib/audio/sfx.dart`, `tool/build_sounds.dart`) | original |
 | Illustrations Twemoji v17.0.3 (157 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
@@ -66,3 +67,24 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 
 **Andika 7.000** (SIL, Open Font License ; « literacy font » pour les lecteurs débutants, https://software.sil.org/andika/,
 lu le 2026-11-02) : Regular et Bold dans `app/assets/fonts/`, avec `OFL.txt`.
+
+## Classiques du domaine public (bibliothèque, étagère « Classiques »)
+
+Importés par `app/tool/import_classiques.py` depuis Wikisource (lu le 2026-11-07), en texte seul, sans notes ni
+illustrations. Règle : en France, une œuvre entre dans le domaine public le 1er janvier qui suit les 70 ans de la mort de
+l'auteur (Code de la propriété intellectuelle, art. L123-1 ;
+texte non relu sur Légifrance, qui refuse l'accès automatique — non vérifié ici) ; pour une traduction, il faut aussi que le
+traducteur soit mort depuis plus de 70 ans. Dates de mort relevées sur les pages « Auteur: » de Wikisource.
+
+| Auteur (mort en) | Traducteur (mort en) | Édition transcrite | Textes |
+| --- | --- | --- | --- |
+| Jean de La Fontaine (1695) | — | Fables, Bernardin-Béchet, 1874 | La Cigale et la Fourmi, Le Corbeau et le Renard, Le Loup et l’Agneau, Le Lièvre et la Tortue, Le Chêne et le Roseau |
+| Charles Perrault (1703) | — | Contes des fées, Beauchemin et Valois, Montréal, 1886 | Le Petit Chaperon rouge, Le Chat botté, Les Fées, Cendrillon |
+| Hans Christian Andersen (1875) | David Soldi (1884) | Contes d’Andersen, Hachette, 1876 | Les Habits neufs du Grand-Duc, Le Vilain Petit Canard, L’Intrépide Soldat de plomb, Le Rossignol, La Petite Fille et les allumettes |
+| Alphonse Daudet (1897) | — | Lettres de mon moulin ; Contes du lundi | La Chèvre de monsieur Seguin, Le Secret de maître Cornille, La Mule du pape, Les Étoiles, La Dernière Classe |
+| Jules Renard (1910) | — | Histoires naturelles, 1909 | Histoires naturelles (choix) |
+| Guy de Maupassant (1893) | — | éditions de 1885 à 1910 | La Parure, Aux champs, La Ficelle, Deux Amis |
+| Jules Verne (1905), revu par Michel Verne (1925) | — | Un billet de loterie, suivi de Frritt-Flacc, 1886 ; Hier et demain, 1910 | Frritt-Flacc, Au XXIXe siècle |
+| Victor Hugo (1885) | — | Les Contemplations ; Les Chansons des rues et des bois ; La Légende des siècles | Poèmes choisis |
+
+L’URL exacte de chaque texte est dans le champ `source` du livre (`app/assets/livres/catalogue.json`).

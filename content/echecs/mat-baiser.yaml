@@ -1,0 +1,84 @@
+id: mat-baiser
+titre: "Le mat du baiser"
+niveau: CE2
+prerequis: [mat-dame, mat-escalier]
+programme: { source: fide, texte: "5.1.1 : the game is won by the player who has checkmated his/her opponent's king." }
+activite: probleme
+parametres: { theme: mat }
+idee: "La dame se colle au roi noir, juste devant lui. Si une pièce blanche la protège, le roi ne peut pas la prendre : c’est mat."
+phrases:
+  consigne: "Trouve la case collée au roi noir où ta dame fait mat. Elle doit y être protégée."
+  question: "{texte}"
+  indice: "Cherche une case à côté du roi noir que ton roi (ou une autre pièce) protège déjà, et où ta dame peut aller."
+  exemple: "Regarde les cases autour du roi noir."
+  demonstration: "Regarde : {explication}"
+  bravo: "Échec et mat ! {explication}"
+items:
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "7k/8/5K2/8/8/8/6Q1/8 w - - 0 1"
+    coups: [g2g7]
+    explication: "La dame va en g7, collée au roi noir. Ton roi en f6 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "6k1/Q7/5K2/8/8/8/8/8 w - - 0 1"
+    coups: [a7g7]
+    explication: "La dame va en g7, collée au roi noir. Ton roi en f6 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "8/8/8/8/7k/5K2/8/6Q1 w - - 0 1"
+    coups: [g1g4]
+    explication: "La dame va en g4, collée au roi noir. Ton roi en f3 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "8/8/8/8/8/4K3/6Q1/3k4 w - - 0 1"
+    coups: [g2d2]
+    explication: "La dame va en d2, collée au roi noir. Ton roi en e3 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "3Bk3/8/8/8/7Q/8/5K2/8 w - - 0 1"
+    coups: [h4e7]
+    explication: "La dame va en e7, collée au roi noir. Ton fou en d8 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "3k4/Q7/2K4p/3p4/8/8/8/8 w - - 0 1"
+    coups: [a7d7]
+    explication: "La dame va en d7, collée au roi noir. Ton roi en c6 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+  - texte: "Fais le mat du baiser avec ta dame !"
+    fen: "8/k1K5/8/8/8/4pQ2/6p1/8 w - - 0 1"
+    coups: [f3b7]
+    explication: "La dame va en b7, collée au roi noir. Ton roi en c7 la protège : le roi ne peut pas la prendre, et toutes ses cases sont attaquées."
+
+en:
+  titre: "The kiss mate"
+  idee: "The queen moves right next to the black king. If a white piece protects her, the king cannot take her: it is checkmate."
+  phrases:
+    consigne: "Find the square next to the black king where your queen gives checkmate. She must be protected there."
+    question: "{texte}"
+    indice: "Look for a square next to the black king that your king (or another piece) already protects, and that your queen can reach."
+    exemple: "Look at the squares around the black king."
+    demonstration: "Look: {explication}"
+    bravo: "Checkmate! {explication}"
+  items:
+    - texte: "Give the kiss mate with your queen!"
+      fen: "7k/8/5K2/8/8/8/6Q1/8 w - - 0 1"
+      coups: [g2g7]
+      explication: "The queen goes to g7, right next to the black king. Your king on f6 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "6k1/Q7/5K2/8/8/8/8/8 w - - 0 1"
+      coups: [a7g7]
+      explication: "The queen goes to g7, right next to the black king. Your king on f6 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "8/8/8/8/7k/5K2/8/6Q1 w - - 0 1"
+      coups: [g1g4]
+      explication: "The queen goes to g4, right next to the black king. Your king on f3 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "8/8/8/8/8/4K3/6Q1/3k4 w - - 0 1"
+      coups: [g2d2]
+      explication: "The queen goes to d2, right next to the black king. Your king on e3 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "3Bk3/8/8/8/7Q/8/5K2/8 w - - 0 1"
+      coups: [h4e7]
+      explication: "The queen goes to e7, right next to the black king. Your bishop on d8 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "3k4/Q7/2K4p/3p4/8/8/8/8 w - - 0 1"
+      coups: [a7d7]
+      explication: "The queen goes to d7, right next to the black king. Your king on c6 protects her: the king cannot take her, and all its squares are attacked."
+    - texte: "Give the kiss mate with your queen!"
+      fen: "8/k1K5/8/8/8/4pQ2/6p1/8 w - - 0 1"
+      coups: [f3b7]
+      explication: "The queen goes to b7, right next to the black king. Your king on c7 protects her: the king cannot take her, and all its squares are attacked."

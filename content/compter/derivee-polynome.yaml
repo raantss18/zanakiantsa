@@ -1,0 +1,148 @@
+id: derivee-polynome
+titre: "Dériver un polynôme"
+niveau: 1re
+prerequis: ["fonction-affine", "puissances-carre"]
+programme: { source: lycee1re, texte: "Dans des cas simples, calculer une fonction dérivée en utilisant les propriétés des opérations sur les fonctions dérivables." }
+activite: quiz
+parametres: {}
+idee: "La dérivée de xⁿ est n xⁿ⁻¹ : x² donne 2x, x³ donne 3x². Une constante a pour dérivée 0. f′(a) est la pente de la tangente au point d’abscisse a."
+phrases:
+  consigne: "Dérive, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Dérive chaque terme : l’exposant descend devant, puis il baisse de 1."
+  exemple: "f(x) = x³ − 4x + 1 : f′(x) = 3x² − 4. En x = 2 : f′(2) = 12 − 4 = 8, la pente de la tangente."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "f(x) = x². Quelle est sa dérivée f′(x) ?"
+    nom: "2x"
+    explication: "La dérivée de xⁿ est n xⁿ⁻¹ : pour n = 2, 2x¹ = 2x."
+    pieges:
+      - { texte: "2x²", pourquoi: "L’exposant descend devant et baisse de 1 : x² donne 2x, pas 2x²." }
+      - { texte: "x", pourquoi: "On multiplie par l’exposant 2 : la dérivée est 2x." }
+  - texte: "f(x) = x³ + 5. Quelle est sa dérivée f′(x) ?"
+    nom: "3x²"
+    explication: "x³ donne 3x², et la constante 5 a pour dérivée 0."
+    pieges:
+      - { texte: "3x² + 5", pourquoi: "Une constante a pour dérivée 0 : le 5 disparaît." }
+      - { texte: "3x³", pourquoi: "L’exposant baisse de 1 : x³ donne 3x²." }
+  - texte: "f(x) = 4x² − 3x + 7. Quelle est sa dérivée f′(x) ?"
+    nom: "8x − 3"
+    explication: "4x² donne 4 × 2x = 8x ; −3x donne −3 ; 7 donne 0."
+    pieges:
+      - { texte: "8x + 4", pourquoi: "La constante 7 a pour dérivée 0 : on ne l’ajoute pas à −3." }
+      - { texte: "4x − 3", pourquoi: "Le coefficient reste : 4x² donne 4 × 2x = 8x." }
+  - texte: "f(x) = 5x − 2. Quelle est sa dérivée f′(x) ?"
+    nom: "5"
+    explication: "La dérivée de 5x est 5, celle de −2 est 0. La droite a partout la pente 5."
+    pieges:
+      - { texte: "5x", pourquoi: "x a pour dérivée 1 : 5x a pour dérivée 5 × 1 = 5." }
+      - { texte: "−2", pourquoi: "−2 est une constante, sa dérivée est 0 : c’est le coefficient directeur 5 qui reste." }
+  - texte: "f(x) = x² − 6x. Combien vaut f′(3) ?"
+    nom: "0"
+    explication: "f′(x) = 2x − 6, donc f′(3) = 6 − 6 = 0 : la tangente est horizontale en x = 3."
+    pieges:
+      - { texte: "−9", pourquoi: "−9 est f(3) = 9 − 18 : on dérive d’abord, puis on remplace x par 3." }
+      - { texte: "6", pourquoi: "2 × 3 = 6, mais il reste à retrancher 6 : f′(x) = 2x − 6." }
+  - texte: "f(x) = 2x³. Quelle est sa dérivée f′(x) ?"
+    nom: "6x²"
+    explication: "2x³ donne 2 × 3x² = 6x²."
+    pieges:
+      - { texte: "6x³", pourquoi: "L’exposant baisse de 1 : x³ devient x²." }
+      - { texte: "3x²", pourquoi: "Le coefficient 2 reste : 2 × 3x² = 6x²." }
+  - texte: "Complète : f(x) = x² + 3x, donc f′(x) = 2x + 3 et f′(1) = …"
+    nom: "5"
+    explication: "On remplace x par 1 dans la dérivée : f′(1) = 2 × 1 + 3 = 5."
+    pieges:
+      - { texte: "4", pourquoi: "4 est f(1) = 1 + 3 : on remplace x dans f′(x), pas dans f(x)." }
+      - { texte: "2", pourquoi: "Il reste le terme 3 : f′(1) = 2 + 3." }
+  - texte: "f(x) = x² − 4x et f′(x) = 2x − 4. Pourquoi f est-elle décroissante pour x < 2 ?"
+    nom: "Pour x < 2, f′(x) < 0 : une dérivée négative veut dire que f décroît."
+    explication: "Pour x < 2, 2x < 4, donc f′(x) = 2x − 4 < 0. Le signe de la dérivée donne le sens de variation."
+    pieges:
+      - { texte: "Parce que f(2) est négatif.", pourquoi: "f(2) = −4, mais c’est le signe de f′(x), pas celui de f, qui donne le sens de variation." }
+      - { texte: "Parce que −4 est négatif.", pourquoi: "−4 seul ne suffit pas : il faut le signe de 2x − 4, qui dépend de x." }
+  - texte: "f(x) = x². Quelle est la pente de la tangente au point d’abscisse 3 ?"
+    nom: "6"
+    explication: "La pente de la tangente est f′(3). f′(x) = 2x, donc f′(3) = 6."
+    pieges:
+      - { texte: "9", pourquoi: "9 est f(3), l’ordonnée du point : la pente de la tangente est f′(3)." }
+      - { texte: "3", pourquoi: "La dérivée de x² est 2x, pas x : f′(3) = 2 × 3." }
+  - texte: "f(x) = x³ − 3x. Pour quelles valeurs de x a-t-on f′(x) = 0 ?"
+    nom: "x = −1 ou x = 1"
+    explication: "f′(x) = 3x² − 3 = 0 donne x² = 1, donc x = 1 ou x = −1 : deux tangentes horizontales."
+    pieges:
+      - { texte: "x = 0", pourquoi: "f′(0) = −3, pas 0 : on résout 3x² − 3 = 0." }
+      - { texte: "x = 1", pourquoi: "x² = 1 a deux solutions : 1 et −1." }
+
+en:
+  titre: "Differentiating a polynomial"
+  idee: "The derivative of xⁿ is n xⁿ⁻¹: x² gives 2x, x³ gives 3x². A constant has derivative 0. f′(a) is the gradient of the tangent at the point where x = a."
+  phrases:
+    consigne: "Differentiate, then touch the right answer."
+    question: "{texte}"
+    indice: "Differentiate each term: the power comes down in front, then goes down by 1."
+    exemple: "f(x) = x³ − 4x + 1: f′(x) = 3x² − 4. At x = 2: f′(2) = 12 − 4 = 8, the gradient of the tangent."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "f(x) = x². What is its derivative f′(x)?"
+      nom: "2x"
+      explication: "The derivative of xⁿ is n xⁿ⁻¹: for n = 2, 2x¹ = 2x."
+      pieges:
+        - { texte: "2x²", pourquoi: "The power comes down and goes down by 1: x² gives 2x, not 2x²." }
+        - { texte: "x", pourquoi: "Multiply by the power 2: the derivative is 2x." }
+    - texte: "f(x) = x³ + 5. What is its derivative f′(x)?"
+      nom: "3x²"
+      explication: "x³ gives 3x², and the constant 5 has derivative 0."
+      pieges:
+        - { texte: "3x² + 5", pourquoi: "A constant has derivative 0: the 5 disappears." }
+        - { texte: "3x³", pourquoi: "The power goes down by 1: x³ gives 3x²." }
+    - texte: "f(x) = 4x² − 3x + 7. What is its derivative f′(x)?"
+      nom: "8x − 3"
+      explication: "4x² gives 4 × 2x = 8x; −3x gives −3; 7 gives 0."
+      pieges:
+        - { texte: "8x + 4", pourquoi: "The constant 7 has derivative 0: do not add it to −3." }
+        - { texte: "4x − 3", pourquoi: "The coefficient stays: 4x² gives 4 × 2x = 8x." }
+    - texte: "f(x) = 5x − 2. What is its derivative f′(x)?"
+      nom: "5"
+      explication: "The derivative of 5x is 5, and of −2 it is 0. The line has gradient 5 everywhere."
+      pieges:
+        - { texte: "5x", pourquoi: "x has derivative 1: 5x has derivative 5 × 1 = 5." }
+        - { texte: "−2", pourquoi: "−2 is a constant, its derivative is 0: the gradient 5 is what remains." }
+    - texte: "f(x) = x² − 6x. What is f′(3)?"
+      nom: "0"
+      explication: "f′(x) = 2x − 6, so f′(3) = 6 − 6 = 0: the tangent is horizontal at x = 3."
+      pieges:
+        - { texte: "−9", pourquoi: "−9 is f(3) = 9 − 18: differentiate first, then replace x with 3." }
+        - { texte: "6", pourquoi: "2 × 3 = 6, but you still subtract 6: f′(x) = 2x − 6." }
+    - texte: "f(x) = 2x³. What is its derivative f′(x)?"
+      nom: "6x²"
+      explication: "2x³ gives 2 × 3x² = 6x²."
+      pieges:
+        - { texte: "6x³", pourquoi: "The power goes down by 1: x³ becomes x²." }
+        - { texte: "3x²", pourquoi: "The coefficient 2 stays: 2 × 3x² = 6x²." }
+    - texte: "Fill in the step: f(x) = x² + 3x, so f′(x) = 2x + 3 and f′(1) = …"
+      nom: "5"
+      explication: "Replace x with 1 in the derivative: f′(1) = 2 × 1 + 3 = 5."
+      pieges:
+        - { texte: "4", pourquoi: "4 is f(1) = 1 + 3: replace x in f′(x), not in f(x)." }
+        - { texte: "2", pourquoi: "The 3 is still there: f′(1) = 2 + 3." }
+    - texte: "f(x) = x² − 4x and f′(x) = 2x − 4. Why is f decreasing for x < 2?"
+      nom: "For x < 2, f′(x) < 0: a negative derivative means f is decreasing."
+      explication: "For x < 2, 2x < 4, so f′(x) = 2x − 4 < 0. The sign of the derivative tells you whether f goes up or down."
+      pieges:
+        - { texte: "Because f(2) is negative.", pourquoi: "f(2) = −4, but it is the sign of f′(x), not of f, that tells you whether f goes up or down." }
+        - { texte: "Because −4 is negative.", pourquoi: "−4 alone is not enough: you need the sign of 2x − 4, which depends on x." }
+    - texte: "f(x) = x². What is the gradient of the tangent at the point where x = 3?"
+      nom: "6"
+      explication: "The gradient of the tangent is f′(3). f′(x) = 2x, so f′(3) = 6."
+      pieges:
+        - { texte: "9", pourquoi: "9 is f(3), the y-coordinate of the point: the gradient of the tangent is f′(3)." }
+        - { texte: "3", pourquoi: "The derivative of x² is 2x, not x: f′(3) = 2 × 3." }
+    - texte: "f(x) = x³ − 3x. For which values of x is f′(x) = 0?"
+      nom: "x = −1 or x = 1"
+      explication: "f′(x) = 3x² − 3 = 0 gives x² = 1, so x = 1 or x = −1: two horizontal tangents."
+      pieges:
+        - { texte: "x = 0", pourquoi: "f′(0) = −3, not 0: solve 3x² − 3 = 0." }
+        - { texte: "x = 1", pourquoi: "x² = 1 has two solutions: 1 and −1." }

@@ -1,0 +1,154 @@
+id: modals-advice
+titre: "Conseiller, supposer : should, could, might"
+niveau: 3e
+prerequis: [can-must]
+programme: { source: college, texte: "3e : les auxiliaires de modalité : should/shouldn’t, could/couldn’t ; (B1, en bleu) les auxiliaires de modalité et les formes lexicalisées : might/mightn’t, would/wouldn’t, ought/ought not to, be able to, be allowed to, etc." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "« should » : un conseil, tu devrais. « could » : savait ou pouvait (passé), ou une demande polie. « might » : peut-être. Après eux, le verbe reste à la base."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Un conseil : « should ». Une capacité passée ou une demande polie : « could ». Un peut-être : « might »."
+  exemple: "« You look tired. You … go to bed. » C'est un conseil : « should ». « You should go to bed. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« You look tired. » Complète : « You … go to bed. » (conseil)"
+    nom: "should"
+    explication: "Un conseil : « should ». « You should go to bed. »"
+    pieges:
+      - { texte: "mustn't", pourquoi: "« mustn't » est une interdiction : ce serait le contraire du conseil." }
+      - { texte: "can't", pourquoi: "« can't » dit que c'est impossible. Ici, on donne un conseil : « should »." }
+  - texte: "Complète : « You … eat so many sweets. » (conseil : pas autant)"
+    nom: "shouldn't"
+    explication: "Un conseil négatif : « shouldn't ». « You shouldn't eat so many sweets. »"
+    pieges:
+      - { texte: "should", pourquoi: "« should » conseillerait d'en manger. Ici, c'est le contraire : « shouldn't »." }
+      - { texte: "couldn't", pourquoi: "« couldn't » veut dire « ne pouvait pas ». Pour un conseil : « shouldn't »." }
+  - texte: "Complète : « When I was five, I … swim. » (je savais nager)"
+    nom: "could"
+    explication: "Une capacité dans le passé : « could ». « When I was five, I could swim. »"
+    pieges:
+      - { texte: "can", pourquoi: "« can » est le présent. « When I was five » demande le passé : « could »." }
+      - { texte: "should", pourquoi: "« should » donne un conseil. Ici, on dit ce qu'on savait faire : « could »." }
+  - texte: "Complète : « Take an umbrella. It … rain. » (peut-être)"
+    nom: "might"
+    explication: "« peut-être » : « might ». « It might rain. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must » dit une obligation ou une certitude. « peut-être » : « might »." }
+      - { texte: "won't", pourquoi: "« won't » dirait qu'il ne pleuvra pas : le parapluie ne servirait à rien." }
+  - texte: "Complète : « She should … more water. » (drink)"
+    nom: "drink"
+    explication: "Après « should », le verbe reste à la base : « She should drink more water. »"
+    pieges:
+      - { texte: "to drink", pourquoi: "Après « should », pas de « to » : « should drink »." }
+      - { texte: "drinks", pourquoi: "Après « should », le verbe ne prend jamais -s : « should drink »." }
+  - texte: "Complète : « … you help me, please? » (demande polie)"
+    nom: "Could"
+    explication: "Une demande polie : « Could you help me, please? »"
+    pieges:
+      - { texte: "Should", pourquoi: "« Should you… ? » demande un conseil. Pour une demande polie : « Could you… ? »" }
+      - { texte: "Must", pourquoi: "« Must you… ? » demande si c'est obligatoire : ce n'est pas une demande polie." }
+  - texte: "Que veut dire « You shouldn't shout » ?"
+    nom: "Tu ne devrais pas crier."
+    explication: "« shouldn't » donne un conseil : tu ne devrais pas crier."
+    pieges:
+      - { texte: "Tu ne peux pas crier.", pourquoi: "Ça, ce serait « You can't shout »." }
+      - { texte: "Tu n'as pas crié.", pourquoi: "Ça, ce serait « You didn't shout », au passé." }
+  - texte: "Complète : « I'm not sure. I … go to the party. » (peut-être)"
+    nom: "might"
+    explication: "Le doute, « peut-être » : « might ». « I might go to the party. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must » serait une obligation ou une certitude. Le doute : « might »." }
+      - { texte: "should", pourquoi: "« should » donnerait un conseil. Le doute : « might »." }
+  - texte: "Pourquoi écrit-on « He should study », sans -s ?"
+    nom: "« should » ne change jamais, et le verbe qui le suit reste à la base."
+    explication: "« should » ne prend jamais -s, et le verbe après lui reste à la base : « He should study »."
+    pieges:
+      - { texte: "Parce que « he » est au pluriel.", pourquoi: "Non : « he » est singulier. C'est « should » qui empêche le -s." }
+      - { texte: "Parce que « study » est irrégulier.", pourquoi: "Non : « he studies » prend bien une marque au présent simple. C'est « should » qui l'empêche." }
+en:
+  titre: "Advice and possibility: should, could, might"
+  idee: "should: advice. could: was able to, or a polite request. might: perhaps. After them, the verb stays in its base form."
+  phrases:
+    consigne: "Read the sentence, then touch the right word."
+    question: "{texte}"
+    indice: "Advice: should. Past ability or a polite request: could. Perhaps: might."
+    exemple: "“You look tired. You … go to bed.” It's advice: should. “You should go to bed.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“You look tired.” Complete: “You … go to bed.” (advice)"
+      nom: "should"
+      explication: "Advice: should. “You should go to bed.”"
+      pieges:
+        - texte: "mustn't"
+          pourquoi: "“mustn't” means it's not allowed: the opposite of the advice."
+        - texte: "can't"
+          pourquoi: "“can't” means it's impossible. Here we give advice: should."
+    - texte: "Complete: “You … eat so many sweets.” (advice: not so many)"
+      nom: "shouldn't"
+      explication: "Negative advice: shouldn't. “You shouldn't eat so many sweets.”"
+      pieges:
+        - texte: "should"
+          pourquoi: "“should” would advise eating them. Here it's the opposite: shouldn't."
+        - texte: "couldn't"
+          pourquoi: "“couldn't” means was not able to. For advice: shouldn't."
+    - texte: "Complete: “When I was five, I … swim.” (I was able to)"
+      nom: "could"
+      explication: "Ability in the past: could. “When I was five, I could swim.”"
+      pieges:
+        - texte: "can"
+          pourquoi: "“can” is the present. When I was five needs the past: could."
+        - texte: "should"
+          pourquoi: "“should” gives advice. Here we say what we were able to do: could."
+    - texte: "Complete: “Take an umbrella. It … rain.” (perhaps)"
+      nom: "might"
+      explication: "Perhaps: might. “It might rain.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must” is an obligation or a certainty. Perhaps: might."
+        - texte: "won't"
+          pourquoi: "“won't” would say it isn't going to rain: then the umbrella would be useless."
+    - texte: "Complete: “She should … more water.” (drink)"
+      nom: "drink"
+      explication: "After should, the verb stays in its base form: “She should drink more water.”"
+      pieges:
+        - texte: "to drink"
+          pourquoi: "After should, no to: should drink."
+        - texte: "drinks"
+          pourquoi: "After should, the verb never takes -s: should drink."
+    - texte: "Complete: “… you help me, please?” (polite request)"
+      nom: "Could"
+      explication: "A polite request: “Could you help me, please?”"
+      pieges:
+        - texte: "Should"
+          pourquoi: "“Should you…?” asks for advice. For a polite request: Could you…?"
+        - texte: "Must"
+          pourquoi: "“Must you…?” asks about an obligation: it isn't a polite request."
+    - texte: "What does “You shouldn't shout” mean?"
+      nom: "It's better not to shout."
+      explication: "“shouldn't” gives advice: it's better not to shout."
+      pieges:
+        - texte: "You are not able to shout."
+          pourquoi: "That would be “You can't shout”."
+        - texte: "You didn't shout."
+          pourquoi: "That would be the past: “You didn't shout”."
+    - texte: "Complete: “I'm not sure. I … go to the party.” (perhaps)"
+      nom: "might"
+      explication: "Doubt, perhaps: might. “I might go to the party.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must” would be an obligation or a certainty. Doubt: might."
+        - texte: "should"
+          pourquoi: "“should” would give advice. Doubt: might."
+    - texte: "Why do we write “He should study”, with no -s?"
+      nom: "Should never changes, and the verb after it stays in its base form."
+      explication: "Should never takes -s, and the verb after it stays in its base form: “He should study.”"
+      pieges:
+        - texte: "Because he is plural."
+          pourquoi: "No: he is singular. Should is what stops the -s."
+        - texte: "Because study is irregular."
+          pourquoi: "No: “he studies” does take an ending in the present simple. Should is what stops it."

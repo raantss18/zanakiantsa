@@ -4,7 +4,8 @@
 Ne garde que les livres dont la dernière page indique « Creative Commons: Attribution 4.0 » (sans « NonCommercial »).
 Écrit app/assets/livres/<id>/<n>.webp (images réduites) et app/assets/livres/catalogue.json (texte, crédits, licence).
 Usage (depuis app/) : python3 tool/import_livres.py
-Le choix des livres et leur étagère sont faits à la main ci-dessous (livres approuvés, en français, niveaux 1 à 3).
+Le choix des livres et leur étagère sont faits à la main ci-dessous (livres approuvés, en français, niveaux 1 à 5).
+Les livres du domaine public ajoutés par tool/import_classiques.py sont gardés.
 """
 import html
 import io
@@ -43,9 +44,13 @@ BOOKS = [
     # Ma vie
     (13156, "vie"), (34105, "vie"), (13272, "vie"), (14537, "vie"), (35180, "vie"), (10942, "vie"), (33158, "vie"),
     (14536, "vie"),
+    # Ajouts 2026-11-07 : niveaux 1 et 3, les plus minces (35762 écarté : texte mal encodé, « Ã¨ » laissé)
+    (33851, "vie"), (13771, "vie"), (47159, "vie"), (35173, "vie"),
+    (10844, "vie"), (13271, "vie"), (12665, "vie"),
     # Contes et fables
     (9965, "contes"), (10936, "contes"), (10839, "contes"), (10856, "contes"), (12655, "contes"), (9954, "contes"),
     (9963, "contes"), (12658, "contes"), (36529, "contes"),
+    (13275, "contes"), (10838, "contes"), (10842, "contes"), (39918, "contes"),
     # Curiosité : vies célèbres, espace, nature, métiers, le monde (niveaux 3 à 5)
     (10136, "curiosite"), (12706, "curiosite"), (40638, "curiosite"), (13770, "curiosite"), (13774, "curiosite"),
     (33844, "curiosite"), (13270, "curiosite"), (12866, "curiosite"), (13159, "curiosite"), (9926, "curiosite"),
@@ -139,8 +144,14 @@ def main() -> None:
         if b:
             cache.write_text(json.dumps(b, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
             books.append(b)
-    catalogue = {"source": "African Storybook Initiative, https://www.africanstorybook.org", "etageres": SHELVES, "livres": books}
-    (OUT / "catalogue.json").write_text(json.dumps(catalogue, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    # Les classiques du domaine public (tool/import_classiques.py) sont gardés tels quels, après ces livres-ci :
+    # relancer l'un ou l'autre script redonne le même catalogue.
+    path = OUT / "catalogue.json"
+    old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"etageres": {}, "livres": []}
+    others = [b for b in old["livres"] if b.get("licence") == "Domaine public"]
+    shelves = SHELVES | {k: v for k, v in old["etageres"].items() if k not in SHELVES and any(b["etagere"] == k for b in others)}
+    catalogue = {"source": "African Storybook Initiative, https://www.africanstorybook.org", "etageres": shelves, "livres": books + others}
+    path.write_text(json.dumps(catalogue, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     size = sum(f.stat().st_size for f in OUT.rglob("*") if f.is_file())
     print(f"{len(books)} livres, {size / 1e6:.1f} Mo")
 

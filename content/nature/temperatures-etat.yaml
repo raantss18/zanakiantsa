@@ -1,0 +1,124 @@
+id: temperatures-etat
+titre: "Températures et changements d'état"
+niveau: 6e
+prerequis: [changements-etat]
+programme: { source: c3s, texte: "Mesurer des températures de changement d’état." }
+activite: quiz
+parametres: {}
+idee: "L'eau pure fond et gèle à 0 degré Celsius, et bout à 100 degrés au niveau de la mer. Pendant un changement d'état, sa température reste la même : c'est un palier."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Souviens-toi des deux nombres de l'eau pure : 0 degré pour la glace qui fond, 100 degrés pour l'eau qui bout."
+  exemple: "Exemple : on chauffe des glaçons pilés en relevant la température. Elle monte jusqu'à 0 degré, puis reste à 0 degré tant qu'il reste de la glace."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "À quelle température la glace pure fond-elle ?"
+    nom: "0 degré Celsius."
+    explication: "La glace d'eau pure fond à 0 degré Celsius ; l'eau liquide gèle à cette même température."
+    pieges:
+      - { texte: "100 degrés Celsius.", pourquoi: "100 degrés, c'est la température d'ébullition de l'eau, pas de fusion." }
+      - { texte: "Elle fond à n'importe quelle température.", pourquoi: "Sous 0 degré, la glace d'eau pure ne fond pas." }
+  - texte: "On chauffe de l'eau pure dans une casserole, au niveau de la mer. À quelle température bout-elle ?"
+    nom: "100 degrés Celsius."
+    explication: "Au niveau de la mer, l'eau pure bout à 100 degrés Celsius."
+    pieges:
+      - { texte: "0 degré Celsius.", pourquoi: "0 degré, c'est la température de fusion de la glace." }
+      - { texte: "Elle n'a pas de température fixe.", pourquoi: "Pour l'eau pure, à pression donnée, l'ébullition se fait à une température fixe." }
+  - texte: "L'eau bout depuis cinq minutes. On continue de chauffer fort. Que fait sa température ?"
+    nom: "Elle reste à 100 degrés."
+    explication: "Pendant l'ébullition, l'énergie apportée sert à vaporiser l'eau : la température reste stable. C'est un palier."
+    pieges:
+      - { texte: "Elle continue de monter.", pourquoi: "Tant qu'il reste de l'eau liquide qui bout, la température ne dépasse pas 100 degrés." }
+      - { texte: "Elle redescend.", pourquoi: "On chauffe toujours : elle ne redescend pas." }
+  - texte: "On relève la température de glaçons qui fondent dans un verre. Que voit-on sur le graphique ?"
+    nom: "Un palier à 0 degré tant qu'il reste de la glace."
+    explication: "Pendant la fusion d'un corps pur, la température reste constante : sur le graphique, la courbe devient horizontale."
+    pieges:
+      - { texte: "Une montée régulière, sans arrêt.", pourquoi: "Pendant la fusion, la courbe s'arrête de monter : c'est le palier." }
+      - { texte: "Une descente.", pourquoi: "Le verre se réchauffe dans la pièce : la température ne baisse pas." }
+  - texte: "En montagne, l'eau bout un peu en dessous de 100 degrés. Pourquoi ?"
+    nom: "Parce que l'air y appuie moins fort : la pression est plus faible."
+    explication: "La température d'ébullition dépend de la pression de l'air. En altitude, la pression baisse et l'eau bout à une température plus basse."
+    pieges:
+      - { texte: "Parce que l'eau de montagne est plus froide.", pourquoi: "Même chauffée, l'eau bout plus tôt : c'est la pression qui compte, pas la température de départ." }
+      - { texte: "Parce que les casseroles sont différentes.", pourquoi: "La casserole n'y est pour rien : c'est l'air qui appuie moins fort." }
+  - texte: "On met de l'eau très salée au congélateur. Que remarque-t-on par rapport à l'eau pure ?"
+    nom: "Elle gèle à une température plus basse que 0 degré."
+    explication: "L'eau salée est un mélange : elle commence à geler en dessous de 0 degré. C'est pourquoi on sale les routes en hiver."
+    pieges:
+      - { texte: "Elle gèle à 0 degré, comme l'eau pure.", pourquoi: "0 degré est la température de l'eau pure. Le sel la fait baisser." }
+      - { texte: "Elle ne peut jamais geler.", pourquoi: "Elle gèle, mais il faut qu'il fasse plus froid." }
+  - texte: "Quel instrument utilise-t-on pour mesurer une température ?"
+    nom: "Un thermomètre."
+    explication: "Le thermomètre mesure la température, en degrés Celsius en France."
+    pieges:
+      - { texte: "Une balance.", pourquoi: "La balance mesure une masse, pas une température." }
+      - { texte: "Un chronomètre.", pourquoi: "Le chronomètre mesure une durée. Il sert à relever la température à intervalles réguliers, avec le thermomètre." }
+  - texte: "Pourquoi la température d'ébullition peut-elle aider à reconnaître une matière ?"
+    nom: "Parce que chaque corps pur a sa propre température de changement d'état."
+    explication: "À pression donnée, un corps pur change d'état à une température qui lui est propre : l'eau pure bout à 100 degrés au niveau de la mer."
+    pieges:
+      - { texte: "Parce que tous les liquides bouillent à 100 degrés.", pourquoi: "Non : chaque corps pur a sa propre température d'ébullition." }
+      - { texte: "Elle ne sert à rien pour reconnaître une matière.", pourquoi: "C'est au contraire un moyen d'identifier un corps pur." }
+
+en:
+  titre: "Temperatures and changes of state"
+  idee: "Pure water melts and freezes at 0 degrees Celsius, and boils at 100 degrees at sea level. While it changes state, its temperature stays the same: that's a plateau."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Remember the two numbers for pure water: 0 degrees for melting ice, 100 degrees for boiling water."
+    exemple: "Example: we warm crushed ice and note the temperature. It rises to 0 degrees, then stays at 0 degrees while there's still ice."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "At what temperature does pure ice melt?"
+      nom: "0 degrees Celsius."
+      explication: "Pure water ice melts at 0 degrees Celsius; liquid water freezes at the same temperature."
+      pieges:
+        - { texte: "100 degrees Celsius.", pourquoi: "100 degrees is water's boiling point, not its melting point." }
+        - { texte: "It melts at any temperature.", pourquoi: "Below 0 degrees, pure water ice doesn't melt." }
+    - texte: "We heat pure water in a pan at sea level. At what temperature does it boil?"
+      nom: "100 degrees Celsius."
+      explication: "At sea level, pure water boils at 100 degrees Celsius."
+      pieges:
+        - { texte: "0 degrees Celsius.", pourquoi: "0 degrees is the melting point of ice." }
+        - { texte: "It has no fixed temperature.", pourquoi: "For pure water at a given pressure, boiling happens at a fixed temperature." }
+    - texte: "The water has been boiling for five minutes. We keep heating it hard. What does its temperature do?"
+      nom: "It stays at 100 degrees."
+      explication: "While it boils, the energy supplied turns water into vapour: the temperature stays steady. That's a plateau."
+      pieges:
+        - { texte: "It keeps rising.", pourquoi: "While liquid water is still boiling, the temperature doesn't go above 100 degrees." }
+        - { texte: "It goes down again.", pourquoi: "We're still heating: it doesn't go down." }
+    - texte: "We note the temperature of ice cubes melting in a glass. What does the graph show?"
+      nom: "A plateau at 0 degrees while there's still ice."
+      explication: "While a pure substance melts, its temperature stays constant: on the graph, the line goes flat."
+      pieges:
+        - { texte: "A steady rise, without stopping.", pourquoi: "During melting, the line stops rising: that's the plateau." }
+        - { texte: "A fall.", pourquoi: "The glass warms up in the room: the temperature doesn't drop." }
+    - texte: "In the mountains, water boils a little below 100 degrees. Why?"
+      nom: "Because the air presses less hard there: the pressure is lower."
+      explication: "The boiling point depends on air pressure. Higher up, the pressure drops and water boils at a lower temperature."
+      pieges:
+        - { texte: "Because mountain water is colder.", pourquoi: "Even when heated, the water boils sooner: it's the pressure that matters, not the starting temperature." }
+        - { texte: "Because the pans are different.", pourquoi: "The pan has nothing to do with it: the air presses less hard." }
+    - texte: "We put very salty water in the freezer. What do we notice compared with pure water?"
+      nom: "It freezes at a temperature below 0 degrees."
+      explication: "Salty water is a mixture: it starts to freeze below 0 degrees. That's why roads are salted in winter."
+      pieges:
+        - { texte: "It freezes at 0 degrees, like pure water.", pourquoi: "0 degrees is for pure water. Salt lowers it." }
+        - { texte: "It can never freeze.", pourquoi: "It does freeze, but it has to be colder." }
+    - texte: "Which instrument do we use to measure a temperature?"
+      nom: "A thermometer."
+      explication: "A thermometer measures temperature, in degrees Celsius in France."
+      pieges:
+        - { texte: "A balance.", pourquoi: "A balance measures mass, not temperature." }
+        - { texte: "A stopwatch.", pourquoi: "A stopwatch measures time. It helps note the temperature at regular times, together with the thermometer." }
+    - texte: "Why can the boiling point help to identify a substance?"
+      nom: "Because each pure substance has its own temperature for changing state."
+      explication: "At a given pressure, a pure substance changes state at its own temperature: pure water boils at 100 degrees at sea level."
+      pieges:
+        - { texte: "Because all liquids boil at 100 degrees.", pourquoi: "No: each pure substance has its own boiling point." }
+        - { texte: "It's no use for identifying a substance.", pourquoi: "On the contrary, it's one way to identify a pure substance." }

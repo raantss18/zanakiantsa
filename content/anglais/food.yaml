@@ -1,0 +1,110 @@
+id: food
+titre: "Manger et boire, en anglais"
+niveau: CE2
+prerequis: []
+programme: { source: lver_c2, texte: "CE2, exemple de réussite : les élèves de CE2 enquêtent, en utilisant une grille, sur les gouts alimentaires des CM2 [...] I love carrots." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "En anglais, « I like apples » veut dire « j'aime les pommes ». Écoute le nom de l'aliment, puis trouve son image."
+phrases:
+  consigne: "Écoute le mot anglais et touche le bon aliment."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit quelque chose qu'on mange ou qu'on boit."
+  exemple: "Regarde : « banana », c'est la banane. Écoute encore le mot, puis touche son image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "apple"
+    bonne: ["1f34e", "la pomme"]
+    autres: [["1f345", "la tomate"], ["1f352", "les cerises"]]
+    explication: "« apple », c'est la pomme."
+  - texte: "banana"
+    bonne: ["1f34c", "la banane"]
+    autres: [["1f34b", "le citron"], ["1f955", "la carotte"]]
+    explication: "« banana », c'est la banane."
+  - texte: "carrot"
+    bonne: ["1f955", "la carotte"]
+    autres: [["1f34c", "la banane"], ["1f345", "la tomate"]]
+    explication: "« carrot », c'est la carotte."
+  - texte: "egg"
+    bonne: ["1f95a", "l'œuf"]
+    autres: [["1f95b", "le lait"], ["1f382", "le gâteau"]]
+    explication: "« egg », c'est l'œuf."
+  - texte: "milk"
+    bonne: ["1f95b", "le lait"]
+    autres: [["2615", "la boisson chaude"], ["1f95a", "l'œuf"]]
+    explication: "« milk », c'est le lait."
+  - texte: "cake"
+    bonne: ["1f382", "le gâteau"]
+    autres: [["1f36c", "le bonbon"], ["1f34d", "l'ananas"]]
+    explication: "« cake », c'est le gâteau."
+  - texte: "tomato"
+    bonne: ["1f345", "la tomate"]
+    autres: [["1f34e", "la pomme"], ["1f352", "les cerises"]]
+    explication: "« tomato », c'est la tomate."
+  - texte: "cherries"
+    bonne: ["1f352", "les cerises"]
+    autres: [["1f34e", "la pomme"], ["1f34b", "le citron"]]
+    explication: "« cherries », ce sont les cerises."
+  - texte: "pineapple"
+    bonne: ["1f34d", "l'ananas"]
+    autres: [["1f34c", "la banane"], ["1f382", "le gâteau"]]
+    explication: "« pineapple », c'est l'ananas."
+  - texte: "lemon"
+    bonne: ["1f34b", "le citron"]
+    autres: [["1f34d", "l'ananas"], ["1f955", "la carotte"]]
+    explication: "« lemon », c'est le citron."
+en:
+  titre: "Food and drink in English"
+  idee: "“I like apples” means you enjoy apples. Listen to the name of the food, then find its picture."
+  phrases:
+    consigne: "Listen to the word and touch the right food."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is something we eat or drink."
+    exemple: "Look: banana is the banana. Listen to the word again, then touch its picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "apple"
+      bonne: ["1f34e", "the apple"]
+      autres: [["1f345", "the tomato"], ["1f352", "the cherries"]]
+      explication: "apple — well done!"
+    - texte: "banana"
+      bonne: ["1f34c", "the banana"]
+      autres: [["1f34b", "the lemon"], ["1f955", "the carrot"]]
+      explication: "banana — well done!"
+    - texte: "carrot"
+      bonne: ["1f955", "the carrot"]
+      autres: [["1f34c", "the banana"], ["1f345", "the tomato"]]
+      explication: "carrot — well done!"
+    - texte: "egg"
+      bonne: ["1f95a", "the egg"]
+      autres: [["1f95b", "the milk"], ["1f382", "the cake"]]
+      explication: "egg — well done!"
+    - texte: "milk"
+      bonne: ["1f95b", "the milk"]
+      autres: [["2615", "the hot drink"], ["1f95a", "the egg"]]
+      explication: "milk — well done!"
+    - texte: "cake"
+      bonne: ["1f382", "the cake"]
+      autres: [["1f36c", "the sweet"], ["1f34d", "the pineapple"]]
+      explication: "cake — well done!"
+    - texte: "tomato"
+      bonne: ["1f345", "the tomato"]
+      autres: [["1f34e", "the apple"], ["1f352", "the cherries"]]
+      explication: "tomato — well done!"
+    - texte: "cherries"
+      bonne: ["1f352", "the cherries"]
+      autres: [["1f34e", "the apple"], ["1f34b", "the lemon"]]
+      explication: "cherries — well done!"
+    - texte: "pineapple"
+      bonne: ["1f34d", "the pineapple"]
+      autres: [["1f34c", "the banana"], ["1f382", "the cake"]]
+      explication: "pineapple — well done!"
+    - texte: "lemon"
+      bonne: ["1f34b", "the lemon"]
+      autres: [["1f34d", "the pineapple"], ["1f955", "the carrot"]]
+      explication: "lemon — well done!"

@@ -1,0 +1,124 @@
+id: repeter-a-la-main
+titre: "Exécuter une boucle « répéter »"
+niveau: 6e
+prerequis: [sequence-instructions]
+programme: { source: cycle3, texte: "Répéter à la main une séquence d’instructions pour accomplir une tâche imposée" }
+activite: quiz
+parametres: {}
+idee: "« répéter 4 fois » exécute les blocs qu’il contient 4 fois de suite. Ensuite seulement, le programme passe à la ligne suivante."
+phrases:
+  consigne: "Fais tourner la boucle à la main, tour par tour, puis touche la réponse."
+  question: "{texte}"
+  indice: "Note la valeur de x à la fin de chaque tour de boucle."
+  exemple: "mettre x à 0, puis répéter 3 fois [ ajouter 2 à x ] : x vaut 2, puis 4, puis 6. À la fin, x vaut 6."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre x à 0\nrépéter 4 fois [ ajouter 3 à x ]\ndire x\nQue dit le lutin ?"
+    nom: "12"
+    explication: "Tour 1 : 3. Tour 2 : 6. Tour 3 : 9. Tour 4 : 12."
+    pieges:
+      - { texte: "3", pourquoi: "Le bloc dans la boucle est exécuté 4 fois, pas une seule." }
+      - { texte: "7", pourquoi: "Tu as ajouté 3 et 4. La boucle ajoute 3, quatre fois : 3 + 3 + 3 + 3." }
+  - texte: "mettre x à 1\nrépéter 3 fois [ mettre x à x * 2 ]\ndire x\nQue dit le lutin ?"
+    nom: "8"
+    explication: "Tour 1 : 1 × 2 = 2. Tour 2 : 2 × 2 = 4. Tour 3 : 4 × 2 = 8."
+    pieges:
+      - { texte: "6", pourquoi: "On multiplie par 2 à chaque tour, on n’ajoute pas 2 : 1, 2, 4, 8." }
+      - { texte: "2", pourquoi: "Ça, c’est après un seul tour. La boucle en fait 3." }
+  - texte: "stylo en position d’écriture\nrépéter 4 fois [ avancer de 50 pas, tourner de 90 degrés ]\nQuelle figure le lutin dessine-t-il ?"
+    nom: "Un carré"
+    explication: "4 côtés de 50 pas, et un quart de tour (90 degrés) entre deux côtés : c’est un carré."
+    pieges:
+      - { texte: "Un triangle", pourquoi: "Un triangle a 3 côtés : il faudrait répéter 3 fois et tourner de 120 degrés." }
+      - { texte: "Une ligne droite", pourquoi: "À chaque tour, le lutin tourne d’un quart de tour : le trait change de direction." }
+  - texte: "Combien de fois le lutin dit-il Bonjour ?\nrépéter 3 fois [ dire Bonjour ]\nrépéter 2 fois [ dire Bonjour ]"
+    nom: "5"
+    explication: "La première boucle dit Bonjour 3 fois, puis la deuxième 2 fois : 3 + 2 = 5."
+    pieges:
+      - { texte: "6", pourquoi: "Les deux boucles sont l’une après l’autre, pas l’une dans l’autre : 3 + 2, pas 3 × 2." }
+      - { texte: "3", pourquoi: "Après la première boucle, le programme continue : la deuxième boucle s’exécute aussi." }
+  - texte: "x vaut 0 au départ.\nrépéter 3 fois [ répéter 2 fois [ ajouter 1 à x ] ]\nQue vaut x à la fin ?"
+    nom: "6"
+    explication: "Chaque grand tour ajoute 2. Trois grands tours : 2 + 2 + 2 = 6."
+    pieges:
+      - { texte: "5", pourquoi: "La petite boucle est dans la grande : elle est refaite à chaque grand tour, 3 × 2 fois." }
+      - { texte: "2", pourquoi: "La petite boucle ne s’exécute pas qu’une fois : la grande boucle la relance 3 fois." }
+  - texte: "mettre x à 10\nrépéter 3 fois [ ajouter -2 à x ]\ndire x\nQue dit le lutin ?"
+    nom: "4"
+    explication: "10 − 2 = 8, puis 6, puis 4."
+    pieges:
+      - { texte: "16", pourquoi: "Ajouter −2, c’est retirer 2 : x descend." }
+      - { texte: "8", pourquoi: "Ça, c’est après un seul tour. La boucle en fait 3 : 10, 8, 6, 4." }
+  - texte: "mettre x à 0\nrépéter 5 fois [ ajouter 1 à x ]\najouter 10 à x\ndire x\nQue dit le lutin ?"
+    nom: "15"
+    explication: "La boucle donne 5, puis la ligne suivante ajoute 10 : 15."
+    pieges:
+      - { texte: "55", pourquoi: "« ajouter 10 à x » est après la boucle, pas dedans : il n’est exécuté qu’une fois." }
+      - { texte: "5", pourquoi: "Après la boucle, le programme continue : il reste à ajouter 10." }
+  - texte: "Pourquoi écrire « répéter 10 fois [ avancer de 10 pas ] » plutôt que 10 blocs « avancer de 10 pas » à la suite ?"
+    nom: "Le programme est plus court, et on change le nombre à un seul endroit"
+    explication: "Les deux programmes font avancer de 100 pas. La boucle dit la même chose en une ligne, et on peut passer à 20 tours en changeant un seul nombre."
+    pieges:
+      - { texte: "Le lutin va plus loin avec la boucle", pourquoi: "Le trajet est le même : 10 × 10 = 100 pas dans les deux cas." }
+      - { texte: "Sans boucle, le programme ne marche pas", pourquoi: "Les 10 blocs à la suite marchent aussi. La boucle évite seulement de les recopier." }
+
+en:
+  titre: "Running a “repeat” loop"
+  idee: "“repeat 4” runs the blocks inside it 4 times in a row. Only then does the program move on to the next line."
+  phrases:
+    consigne: "Run the loop by hand, one turn at a time, then touch the answer."
+    question: "{texte}"
+    indice: "Write down the value of x at the end of each turn of the loop."
+    exemple: "set x to 0, then repeat 3 [ change x by 2 ]: x is 2, then 4, then 6. At the end, x is 6."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set x to 0\nrepeat 4 [ change x by 3 ]\nsay x\nWhat does the sprite say?"
+      nom: "12"
+      explication: "Turn 1: 3. Turn 2: 6. Turn 3: 9. Turn 4: 12."
+      pieges:
+        - { texte: "3", pourquoi: "The block inside the loop runs 4 times, not just once." }
+        - { texte: "7", pourquoi: "You added 3 and 4. The loop adds 3, four times: 3 + 3 + 3 + 3." }
+    - texte: "set x to 1\nrepeat 3 [ set x to x * 2 ]\nsay x\nWhat does the sprite say?"
+      nom: "8"
+      explication: "Turn 1: 1 × 2 = 2. Turn 2: 2 × 2 = 4. Turn 3: 4 × 2 = 8."
+      pieges:
+        - { texte: "6", pourquoi: "Each turn multiplies by 2, it does not add 2: 1, 2, 4, 8." }
+        - { texte: "2", pourquoi: "That is after one turn only. The loop does 3." }
+    - texte: "pen down\nrepeat 4 [ move 50 steps, turn 90 degrees ]\nWhich shape does the sprite draw?"
+      nom: "A square"
+      explication: "4 sides of 50 steps, with a quarter turn (90 degrees) between two sides: it is a square."
+      pieges:
+        - { texte: "A triangle", pourquoi: "A triangle has 3 sides: you would repeat 3 times and turn 120 degrees." }
+        - { texte: "A straight line", pourquoi: "Each turn, the sprite turns a quarter turn: the line changes direction." }
+    - texte: "How many times does the sprite say Hello?\nrepeat 3 [ say Hello ]\nrepeat 2 [ say Hello ]"
+      nom: "5"
+      explication: "The first loop says Hello 3 times, then the second one 2 times: 3 + 2 = 5."
+      pieges:
+        - { texte: "6", pourquoi: "The two loops are one after the other, not one inside the other: 3 + 2, not 3 × 2." }
+        - { texte: "3", pourquoi: "After the first loop, the program goes on: the second loop runs too." }
+    - texte: "x is 0 at the start.\nrepeat 3 [ repeat 2 [ change x by 1 ] ]\nWhat is x at the end?"
+      nom: "6"
+      explication: "Each big turn adds 2. Three big turns: 2 + 2 + 2 = 6."
+      pieges:
+        - { texte: "5", pourquoi: "The small loop is inside the big one: it runs again on every big turn, 3 × 2 times." }
+        - { texte: "2", pourquoi: "The small loop does not run only once: the big loop starts it 3 times." }
+    - texte: "set x to 10\nrepeat 3 [ change x by -2 ]\nsay x\nWhat does the sprite say?"
+      nom: "4"
+      explication: "10 − 2 = 8, then 6, then 4."
+      pieges:
+        - { texte: "16", pourquoi: "Changing by −2 means taking away 2: x goes down." }
+        - { texte: "8", pourquoi: "That is after one turn only. The loop does 3: 10, 8, 6, 4." }
+    - texte: "set x to 0\nrepeat 5 [ change x by 1 ]\nchange x by 10\nsay x\nWhat does the sprite say?"
+      nom: "15"
+      explication: "The loop gives 5, then the next line adds 10: 15."
+      pieges:
+        - { texte: "55", pourquoi: "“change x by 10” is after the loop, not inside it: it runs only once." }
+        - { texte: "5", pourquoi: "After the loop, the program goes on: you still have to add 10." }
+    - texte: "Why write “repeat 10 [ move 10 steps ]” instead of 10 “move 10 steps” blocks one after the other?"
+      nom: "The program is shorter, and you change the number in one place only"
+      explication: "Both programs move the sprite 100 steps. The loop says the same thing in one line, and you can switch to 20 turns by changing a single number."
+      pieges:
+        - { texte: "The sprite goes further with the loop", pourquoi: "The path is the same: 10 × 10 = 100 steps in both cases." }
+        - { texte: "Without a loop, the program does not work", pourquoi: "The 10 blocks in a row work too. The loop just saves copying them." }

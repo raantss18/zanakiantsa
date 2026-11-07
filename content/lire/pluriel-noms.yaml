@@ -1,0 +1,137 @@
+id: pluriel-noms
+titre: "Le pluriel des noms : -s, -x, -aux"
+niveau: CE2
+prerequis: ["classes-de-mots"]
+programme: { source: cycle2, texte: "L’élève comprend la notion de chaine d’accords dans le groupe nominal et utilise des marques d’accords réguliers pour les noms et les adjectifs (nombre (-s) et genre (-e), des marques d’accord de pluriels irréguliers pour les noms (-x, -al/-aux)" }
+activite: quiz
+parametres: {}
+idee: "Au pluriel, on ajoute souvent -s. Les noms en -eau et -eu prennent -x, la plupart des noms en -al font -aux, et les noms en -s, -x ou -z ne changent pas."
+phrases:
+  consigne: "Regarde le nom au singulier et au pluriel, puis touche la règle qui explique le pluriel."
+  question: "{texte}"
+  indice: "Regarde comment finit le nom au singulier : -eau, -eu, -al, -s, -x, -z ?"
+  exemple: "« un gâteau », « des gâteaux » : les noms en -eau prennent un -x au pluriel."
+  demonstration: "{explication}"
+  bravo: "Oui ! La règle : {bonne}."
+items:
+  - texte: "« une table » → « des tables ». Quelle règle ?"
+    nom: "on ajoute -s"
+    explication: "C’est la règle la plus fréquente : on ajoute -s."
+    pieges:
+      - { texte: "on ajoute -x", pourquoi: "Le -x est pour les noms en -eau, -eu et quelques noms en -ou ; « table » prend un -s." }
+      - { texte: "le nom ne change pas", pourquoi: "On voit un -s à la fin de « tables » : le nom change." }
+  - texte: "« un gâteau » → « des gâteaux ». Quelle règle ?"
+    nom: "on ajoute -x"
+    explication: "Les noms en -eau prennent un -x au pluriel : des gâteaux."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "Les noms en -eau ne prennent pas de -s : ils prennent un -x." }
+      - { texte: "-al devient -aux", pourquoi: "« gâteau » ne finit pas par -al : on ajoute seulement un -x." }
+  - texte: "« un cheval » → « des chevaux ». Quelle règle ?"
+    nom: "-al devient -aux"
+    explication: "La plupart des noms en -al font -aux au pluriel : des chevaux."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "La plupart des noms en -al ne prennent pas de -s : la fin -al devient -aux." }
+      - { texte: "on ajoute -x", pourquoi: "On n’ajoute pas seulement un -x : la fin -al change en -aux." }
+  - texte: "« une souris » → « des souris ». Quelle règle ?"
+    nom: "le nom ne change pas"
+    explication: "« souris » finit déjà par -s : au pluriel, il ne change pas."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "« souris » finit déjà par -s : on n’en ajoute pas un deuxième." }
+      - { texte: "on ajoute -x", pourquoi: "Rien n’est ajouté : « souris » finit déjà par -s, il ne change pas." }
+  - texte: "« un jeu » → « des jeux ». Quelle règle ?"
+    nom: "on ajoute -x"
+    explication: "Les noms en -eu prennent en général un -x au pluriel : des jeux."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "Les noms en -eu prennent en général un -x : des jeux." }
+      - { texte: "le nom ne change pas", pourquoi: "On voit un -x à la fin de « jeux » : le nom change." }
+  - texte: "« un bijou » → « des bijoux ». Quelle règle ?"
+    nom: "on ajoute -x"
+    explication: "« bijou » fait partie des sept noms en -ou qui prennent un -x : bijou, caillou, chou, genou, hibou, joujou, pou."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "La plupart des noms en -ou prennent un -s (des clous), mais « bijou » fait partie des sept qui prennent un -x." }
+      - { texte: "le nom ne change pas", pourquoi: "On voit un -x à la fin de « bijoux » : le nom change." }
+  - texte: "« un journal » → « des journaux ». Quelle règle ?"
+    nom: "-al devient -aux"
+    explication: "« journal » finit par -al : au pluriel, -al devient -aux."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "La plupart des noms en -al ne prennent pas de -s : la fin -al devient -aux." }
+      - { texte: "on ajoute -x", pourquoi: "On n’ajoute pas seulement un -x : la fin -al change en -aux." }
+  - texte: "« un nez » → « des nez ». Quelle règle ?"
+    nom: "le nom ne change pas"
+    explication: "Les noms qui finissent par -s, -x ou -z ne changent pas au pluriel."
+    pieges:
+      - { texte: "on ajoute -s", pourquoi: "« nez » finit par -z : les noms en -s, -x ou -z ne changent pas." }
+      - { texte: "on ajoute -x", pourquoi: "« nez » finit par -z : il ne change pas au pluriel." }
+  - texte: "Pourquoi écrit-on « des oiseaux » avec un -x ?"
+    nom: "les noms en -eau prennent un -x"
+    explication: "C’est la fin du nom, -eau, qui demande un -x au pluriel."
+    pieges:
+      - { texte: "parce qu’il y a beaucoup d’oiseaux", pourquoi: "Avec deux ou cent oiseaux, la marque est la même : c’est la fin -eau qui demande un -x." }
+      - { texte: "parce qu’on ajoute toujours -x", pourquoi: "Non : la plupart des noms prennent un -s (des tables). Le -x vient de la fin -eau." }
+
+en:
+  langue: "fr"
+  titre: "French: plural nouns with « -s », « -x », « -aux »"
+  idee: "In the plural you usually add « -s ». Nouns ending in « -eau » and « -eu » take « -x », most nouns in « -al » become « -aux », and nouns ending in « -s », « -x » or « -z » don't change."
+  phrases:
+    consigne: "Look at the French noun in the singular and the plural, then touch the rule that explains the plural."
+    question: "{texte}"
+    indice: "Look at how the singular noun ends: « -eau », « -eu », « -al », « -s », « -x », « -z »?"
+    exemple: "« un gâteau », « des gâteaux »: nouns ending in « -eau » take an « x » in the plural."
+    demonstration: "{explication}"
+    bravo: "Yes! The rule: {bonne}."
+  items:
+    - texte: "« une table » → « des tables ». Which rule?"
+      nom: "add « -s »"
+      explication: "This is the most common rule: add « -s »."
+      pieges:
+        - { texte: "add « -x »", pourquoi: "« -x » is for nouns in « -eau », « -eu » and a few in « -ou »; « table » takes an « s »." }
+        - { texte: "the noun doesn't change", pourquoi: "There's an « s » at the end of « tables »: the noun does change." }
+    - texte: "« un gâteau » → « des gâteaux ». Which rule?"
+      nom: "add « -x »"
+      explication: "Nouns ending in « -eau » take an « x » in the plural: « des gâteaux »."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "Nouns ending in « -eau » don't take an « s »: they take an « x »." }
+        - { texte: "« -al » becomes « -aux »", pourquoi: "« gâteau » doesn't end in « -al »: you just add an « x »." }
+    - texte: "« un cheval » → « des chevaux ». Which rule?"
+      nom: "« -al » becomes « -aux »"
+      explication: "Most nouns ending in « -al » become « -aux » in the plural: « des chevaux »."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "Most nouns in « -al » don't take an « s »: « -al » becomes « -aux »." }
+        - { texte: "add « -x »", pourquoi: "You don't just add an « x »: the ending « -al » changes to « -aux »." }
+    - texte: "« une souris » → « des souris ». Which rule?"
+      nom: "the noun doesn't change"
+      explication: "« souris » already ends in « s »: it doesn't change in the plural."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "« souris » already ends in « s »: you don't add a second one." }
+        - { texte: "add « -x »", pourquoi: "Nothing is added: « souris » already ends in « s », so it doesn't change." }
+    - texte: "« un jeu » → « des jeux ». Which rule?"
+      nom: "add « -x »"
+      explication: "Nouns ending in « -eu » usually take an « x » in the plural: « des jeux »."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "Nouns ending in « -eu » usually take an « x »: « des jeux »." }
+        - { texte: "the noun doesn't change", pourquoi: "There's an « x » at the end of « jeux »: the noun does change." }
+    - texte: "« un bijou » → « des bijoux ». Which rule?"
+      nom: "add « -x »"
+      explication: "« bijou » is one of the seven nouns in « -ou » that take an « x »: « bijou, caillou, chou, genou, hibou, joujou, pou »."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "Most nouns in « -ou » take an « s » (« des clous »), but « bijou » is one of the seven that take an « x »." }
+        - { texte: "the noun doesn't change", pourquoi: "There's an « x » at the end of « bijoux »: the noun does change." }
+    - texte: "« un journal » → « des journaux ». Which rule?"
+      nom: "« -al » becomes « -aux »"
+      explication: "« journal » ends in « -al »: in the plural, « -al » becomes « -aux »."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "Most nouns in « -al » don't take an « s »: « -al » becomes « -aux »." }
+        - { texte: "add « -x »", pourquoi: "You don't just add an « x »: the ending « -al » changes to « -aux »." }
+    - texte: "« un nez » → « des nez ». Which rule?"
+      nom: "the noun doesn't change"
+      explication: "Nouns ending in « -s », « -x » or « -z » don't change in the plural."
+      pieges:
+        - { texte: "add « -s »", pourquoi: "« nez » ends in « z »: nouns in « -s », « -x » or « -z » don't change." }
+        - { texte: "add « -x »", pourquoi: "« nez » ends in « z »: it doesn't change in the plural." }
+    - texte: "Why do we write « des oiseaux » with an « x »?"
+      nom: "nouns in « -eau » take an « x »"
+      explication: "It's the ending of the noun, « -eau », that calls for an « x » in the plural."
+      pieges:
+        - { texte: "because there are lots of birds", pourquoi: "With two birds or a hundred, the ending is the same: it's « -eau » that calls for an « x »." }
+        - { texte: "because you always add « -x »", pourquoi: "No: most nouns take an « s » (« des tables »). The « x » comes from the ending « -eau »." }

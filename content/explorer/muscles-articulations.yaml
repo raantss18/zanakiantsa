@@ -1,0 +1,124 @@
+id: muscles-articulations
+titre: "Muscles et articulations"
+niveau: CE2
+prerequis: [corps-parties]
+programme: { source: c2s, texte: "Modéliser un mouvement de flexion/extension pour identifier le rôle des muscles et des articulations." }
+activite: quiz
+parametres: {}
+idee: "Pour bouger, un muscle se contracte : il raccourcit et tire sur un os. L'os tourne au niveau d'une articulation, comme le coude ou le genou."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Un muscle ne sait que tirer. Pour plier le bras, c'est le biceps qui tire ; pour le tendre, c'est le triceps."
+  exemple: "Exemple : pose ta main sur le haut de ton bras et plie le coude. Tu sens le biceps se gonfler et durcir : il se contracte."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Plie ton bras. Quel muscle se contracte, sur le devant du bras ?"
+    nom: "Le biceps."
+    explication: "Le biceps se contracte, raccourcit et tire l'avant-bras vers le haut : le bras se plie."
+    pieges:
+      - { texte: "Le triceps.", pourquoi: "Le triceps est derrière le bras : il sert à tendre le bras, pas à le plier." }
+      - { texte: "Aucun, c'est l'os qui se plie.", pourquoi: "Les os sont rigides : ils ne se plient pas. C'est un muscle qui les fait bouger." }
+  - texte: "Quel muscle tend le bras ?"
+    nom: "Le triceps, à l'arrière du bras."
+    explication: "Pour tendre le bras, le triceps se contracte et tire l'avant-bras vers le bas."
+    pieges:
+      - { texte: "Le biceps, en poussant.", pourquoi: "Un muscle ne peut pas pousser : il ne peut que tirer. C'est le triceps qui tend le bras." }
+      - { texte: "Le cœur.", pourquoi: "Le cœur est un muscle, mais il fait circuler le sang ; il ne bouge pas le bras." }
+  - texte: "Où le bras se plie-t-il ?"
+    nom: "Au coude, une articulation."
+    explication: "Une articulation est l'endroit où deux os se rejoignent et peuvent bouger l'un par rapport à l'autre."
+    pieges:
+      - { texte: "Au milieu de l'os du bras.", pourquoi: "Un os ne se plie pas : le mouvement se fait aux articulations." }
+      - { texte: "Au poignet seulement.", pourquoi: "Le poignet est une articulation aussi, mais c'est au coude que le bras se plie." }
+  - texte: "Quand un muscle se contracte, que se passe-t-il ?"
+    nom: "Il raccourcit et devient plus épais."
+    explication: "En se contractant, le muscle raccourcit et gonfle : c'est ce que tu sens sous ta main."
+    pieges:
+      - { texte: "Il s'allonge.", pourquoi: "C'est l'inverse : un muscle qui se contracte raccourcit." }
+      - { texte: "Il ne change pas.", pourquoi: "Pose ta main sur ton biceps et plie le bras : tu le sens changer." }
+  - texte: "Comment un muscle est-il attaché à l'os ?"
+    nom: "Par un tendon."
+    explication: "Les tendons relient les muscles aux os. Quand le muscle tire, le tendon transmet le mouvement à l'os."
+    pieges:
+      - { texte: "Par la peau.", pourquoi: "La peau recouvre le corps, mais ce sont les tendons qui attachent les muscles aux os." }
+      - { texte: "Il n'est pas attaché.", pourquoi: "S'il n'était pas attaché, le muscle ne pourrait pas faire bouger l'os." }
+  - texte: "Laquelle de ces parties du corps est une articulation ?"
+    nom: "Le genou."
+    explication: "Le genou relie l'os de la cuisse aux os de la jambe : il permet de plier et de tendre la jambe."
+    pieges:
+      - { texte: "Le mollet.", pourquoi: "Le mollet est un muscle, à l'arrière de la jambe." }
+      - { texte: "Le tibia.", pourquoi: "Le tibia est un os de la jambe." }
+  - texte: "Pourquoi faut-il deux muscles pour plier puis tendre le bras ?"
+    nom: "Parce qu'un muscle ne peut que tirer, pas pousser."
+    explication: "Le biceps tire pour plier, le triceps tire dans l'autre sens pour tendre. Ils travaillent en équipe."
+    pieges:
+      - { texte: "Pour que le bras soit plus fort.", pourquoi: "La raison, c'est qu'un muscle ne tire que dans un seul sens." }
+      - { texte: "Un seul muscle suffit, il pousse et il tire.", pourquoi: "Un muscle ne pousse jamais : il lui faut un partenaire qui tire dans l'autre sens." }
+  - texte: "Quel est le rôle des os dans un mouvement ?"
+    nom: "Ils sont rigides et servent de leviers que les muscles font bouger."
+    explication: "Les os forment le squelette : solides et rigides, ils sont déplacés par les muscles autour des articulations."
+    pieges:
+      - { texte: "Ils se contractent comme les muscles.", pourquoi: "Seuls les muscles se contractent ; les os sont rigides." }
+      - { texte: "Ils n'ont aucun rôle.", pourquoi: "Sans os, les muscles n'auraient rien à tirer." }
+
+en:
+  titre: "Muscles and joints"
+  idee: "To move, a muscle contracts: it shortens and pulls on a bone. The bone turns at a joint, like the elbow or the knee."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "A muscle can only pull. To bend the arm, the biceps pulls; to straighten it, the triceps pulls."
+    exemple: "Example: put your hand on your upper arm and bend your elbow. You feel the biceps swell and get hard: it's contracting."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Bend your arm. Which muscle contracts, on the front of the arm?"
+      nom: "The biceps."
+      explication: "The biceps contracts, shortens and pulls the forearm up: the arm bends."
+      pieges:
+        - { texte: "The triceps.", pourquoi: "The triceps is at the back of the arm: it straightens the arm, it doesn't bend it." }
+        - { texte: "None, the bone bends.", pourquoi: "Bones are stiff: they don't bend. A muscle makes them move." }
+    - texte: "Which muscle straightens the arm?"
+      nom: "The triceps, at the back of the arm."
+      explication: "To straighten the arm, the triceps contracts and pulls the forearm down."
+      pieges:
+        - { texte: "The biceps, by pushing.", pourquoi: "A muscle can't push: it can only pull. The triceps straightens the arm." }
+        - { texte: "The heart.", pourquoi: "The heart is a muscle, but it pumps blood; it doesn't move the arm." }
+    - texte: "Where does the arm bend?"
+      nom: "At the elbow, a joint."
+      explication: "A joint is where two bones meet and can move against each other."
+      pieges:
+        - { texte: "In the middle of the arm bone.", pourquoi: "A bone doesn't bend: movement happens at the joints." }
+        - { texte: "Only at the wrist.", pourquoi: "The wrist is a joint too, but the arm bends at the elbow." }
+    - texte: "When a muscle contracts, what happens?"
+      nom: "It gets shorter and thicker."
+      explication: "As it contracts, the muscle shortens and swells: that's what you feel under your hand."
+      pieges:
+        - { texte: "It gets longer.", pourquoi: "It's the opposite: a contracting muscle gets shorter." }
+        - { texte: "It doesn't change.", pourquoi: "Put your hand on your biceps and bend your arm: you can feel it change." }
+    - texte: "How is a muscle attached to a bone?"
+      nom: "By a tendon."
+      explication: "Tendons join muscles to bones. When the muscle pulls, the tendon passes the movement on to the bone."
+      pieges:
+        - { texte: "By the skin.", pourquoi: "Skin covers the body, but tendons attach muscles to bones." }
+        - { texte: "It isn't attached.", pourquoi: "If it weren't attached, the muscle couldn't move the bone." }
+    - texte: "Which of these body parts is a joint?"
+      nom: "The knee."
+      explication: "The knee links the thigh bone to the lower leg bones: it lets you bend and straighten your leg."
+      pieges:
+        - { texte: "The calf.", pourquoi: "The calf is a muscle, at the back of the leg." }
+        - { texte: "The shin bone.", pourquoi: "The shin bone is a bone of the leg." }
+    - texte: "Why do you need two muscles to bend and then straighten your arm?"
+      nom: "Because a muscle can only pull, not push."
+      explication: "The biceps pulls to bend, the triceps pulls the other way to straighten. They work as a team."
+      pieges:
+        - { texte: "To make the arm stronger.", pourquoi: "The reason is that a muscle only pulls one way." }
+        - { texte: "One muscle is enough, it pushes and pulls.", pourquoi: "A muscle never pushes: it needs a partner pulling the other way." }
+    - texte: "What do bones do in a movement?"
+      nom: "They are stiff and act as levers that muscles move."
+      explication: "Bones make up the skeleton: strong and stiff, they are moved by muscles around the joints."
+      pieges:
+        - { texte: "They contract like muscles.", pourquoi: "Only muscles contract; bones are stiff." }
+        - { texte: "They do nothing.", pourquoi: "Without bones, muscles would have nothing to pull." }

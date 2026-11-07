@@ -1,0 +1,124 @@
+id: circuit-electrique
+titre: "Le circuit électrique"
+niveau: CM2
+prerequis: []
+programme: { source: c3s, texte: "Réaliser un circuit électrique à une boucle associant un générateur (pile), un interrupteur, un ou deux récepteurs (ampoule) pour mettre en évidence la circulation du courant électrique." }
+activite: quiz
+parametres: {}
+idee: "Une ampoule s'allume quand elle forme une boucle sans coupure avec les deux bornes de la pile. Un interrupteur ouvert coupe la boucle. Les métaux conduisent le courant."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Suis le chemin avec ton doigt : part-il d'une borne de la pile pour revenir à l'autre sans coupure ?"
+  exemple: "Exemple : pile, fil, ampoule, fil, retour à l'autre borne de la pile, interrupteur fermé. La boucle est complète : l'ampoule brille."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "On relie l'ampoule à une seule borne de la pile, avec un seul fil. Que se passe-t-il ?"
+    nom: "L'ampoule ne s'allume pas."
+    explication: "Il faut une boucle complète : le courant part d'une borne de la pile, traverse l'ampoule et revient à l'autre borne."
+    pieges:
+      - { texte: "L'ampoule s'allume, car le courant arrive par le fil.", pourquoi: "C'est l'idée du courant « qui arrive et s'use » dans l'ampoule. Sans retour vers la pile, aucun courant ne circule." }
+      - { texte: "L'ampoule s'allume faiblement.", pourquoi: "Sans boucle, il n'y a pas de courant du tout, pas même un peu." }
+  - texte: "L'interrupteur est ouvert. L'ampoule s'allume-t-elle ?"
+    nom: "Non, la boucle est coupée."
+    explication: "Un interrupteur ouvert coupe le circuit : le courant ne circule plus. Fermé, il complète la boucle."
+    pieges:
+      - { texte: "Oui, ouvert veut dire que le courant passe.", pourquoi: "Pour un interrupteur, c'est le contraire d'une porte : ouvert, il coupe le chemin." }
+      - { texte: "Oui, si la pile est neuve.", pourquoi: "Même avec une pile neuve, une boucle ouverte ne laisse pas passer le courant." }
+  - texte: "Lequel de ces objets laisse passer le courant ?"
+    nom: "Un trombone en métal."
+    explication: "Les métaux sont des conducteurs électriques. Le plastique, le bois sec et le caoutchouc sont des isolants."
+    pieges:
+      - { texte: "Une règle en plastique.", pourquoi: "Le plastique est un isolant : il ne laisse pas passer le courant." }
+      - { texte: "Une gomme.", pourquoi: "La gomme est un isolant." }
+  - texte: "Pourquoi les fils électriques sont-ils entourés de plastique ?"
+    nom: "Le plastique est un isolant : il protège."
+    explication: "Le cuivre à l'intérieur conduit le courant ; la gaine en plastique, isolante, évite qu'il passe ailleurs, par exemple dans nos doigts."
+    pieges:
+      - { texte: "Pour que le courant aille plus vite.", pourquoi: "La gaine ne change pas la vitesse : elle isole." }
+      - { texte: "Pour la couleur seulement.", pourquoi: "La couleur aide à repérer les fils, mais le rôle de la gaine est d'isoler." }
+  - texte: "Dans une boucle, on met deux ampoules l'une après l'autre. On dévisse l'une d'elles. Que fait l'autre ?"
+    nom: "Elle s'éteint aussi."
+    explication: "Dans une boucle unique, dévisser une ampoule coupe la boucle : le courant ne circule plus nulle part."
+    pieges:
+      - { texte: "Elle brille plus fort.", pourquoi: "Avec une boucle coupée, plus aucun courant ne circule." }
+      - { texte: "Elle reste allumée comme avant.", pourquoi: "Les deux ampoules sont sur la même boucle : si elle est coupée, tout s'arrête." }
+  - texte: "On échange la place de l'ampoule et de l'interrupteur dans la boucle. Le circuit marche-t-il encore ?"
+    nom: "Oui, de la même façon."
+    explication: "Dans une boucle simple, l'ordre des composants ne change pas le fonctionnement : ce qui compte, c'est que la boucle soit complète."
+    pieges:
+      - { texte: "Non, l'interrupteur doit être juste après la pile.", pourquoi: "L'interrupteur coupe la boucle où qu'il soit placé." }
+      - { texte: "Non, l'ampoule doit être en premier pour recevoir le courant.", pourquoi: "C'est l'idée d'un courant qui s'use en chemin. Le courant est le même partout dans la boucle." }
+  - texte: "La mine d'un crayon à papier est en graphite. Que fait-elle dans un circuit ?"
+    nom: "Elle conduit le courant."
+    explication: "Le graphite conduit l'électricité : une ampoule peut s'allumer à travers une mine de crayon. Le bois du crayon, lui, est isolant."
+    pieges:
+      - { texte: "Elle est isolante comme le bois.", pourquoi: "Le bois du crayon est isolant, mais pas la mine en graphite." }
+      - { texte: "Elle brûle tout de suite.", pourquoi: "Avec une petite pile, la mine conduit sans brûler." }
+  - texte: "Peut-on faire des expériences avec une prise de courant de la maison ?"
+    nom: "Non, jamais : c'est dangereux."
+    explication: "Le courant des prises peut tuer. Les expériences se font seulement avec une pile de faible tension."
+    pieges:
+      - { texte: "Oui, avec des fils en plastique.", pourquoi: "Aucune protection ne rend ces expériences sûres : on ne touche jamais l'intérieur d'une prise." }
+      - { texte: "Oui, si on a les mains sèches.", pourquoi: "Des mains sèches ne suffisent pas : le danger reste mortel." }
+
+en:
+  titre: "The electric circuit"
+  idee: "A bulb lights up when it makes an unbroken loop with both terminals of the battery. An open switch breaks the loop. Metals conduct electricity."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Follow the path with your finger: does it go from one terminal of the battery back to the other without a break?"
+    exemple: "Example: battery, wire, bulb, wire, back to the other terminal, switch closed. The loop is complete: the bulb shines."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "We connect the bulb to just one terminal of the battery, with one wire. What happens?"
+      nom: "The bulb doesn't light up."
+      explication: "You need a complete loop: the current leaves one terminal of the battery, goes through the bulb and comes back to the other terminal."
+      pieges:
+        - { texte: "The bulb lights up, because the current arrives through the wire.", pourquoi: "That's the idea of current « arriving and being used up » in the bulb. With no way back to the battery, no current flows." }
+        - { texte: "The bulb lights up dimly.", pourquoi: "With no loop, there's no current at all, not even a little." }
+    - texte: "The switch is open. Does the bulb light up?"
+      nom: "No, the loop is broken."
+      explication: "An open switch breaks the circuit: the current stops flowing. Closed, it completes the loop."
+      pieges:
+        - { texte: "Yes, open means the current gets through.", pourquoi: "A switch is the opposite of a door: open, it breaks the path." }
+        - { texte: "Yes, if the battery is new.", pourquoi: "Even with a new battery, an open loop doesn't let current through." }
+    - texte: "Which of these objects lets current through?"
+      nom: "A metal paper clip."
+      explication: "Metals are electrical conductors. Plastic, dry wood and rubber are insulators."
+      pieges:
+        - { texte: "A plastic ruler.", pourquoi: "Plastic is an insulator: it doesn't let current through." }
+        - { texte: "A rubber.", pourquoi: "A rubber is an insulator." }
+    - texte: "Why are electric wires covered in plastic?"
+      nom: "Plastic is an insulator: it protects us."
+      explication: "The copper inside conducts the current; the insulating plastic coat stops it going anywhere else, such as into our fingers."
+      pieges:
+        - { texte: "To make the current go faster.", pourquoi: "The coat doesn't change the speed: it insulates." }
+        - { texte: "Just for the colour.", pourquoi: "The colour helps tell wires apart, but the coat's job is to insulate." }
+    - texte: "In one loop, we put two bulbs one after the other. We unscrew one of them. What does the other do?"
+      nom: "It goes out too."
+      explication: "In a single loop, unscrewing a bulb breaks the loop: no current flows anywhere."
+      pieges:
+        - { texte: "It shines brighter.", pourquoi: "With the loop broken, no current flows at all." }
+        - { texte: "It stays lit as before.", pourquoi: "Both bulbs are on the same loop: if it's broken, everything stops." }
+    - texte: "We swap the places of the bulb and the switch in the loop. Does the circuit still work?"
+      nom: "Yes, in the same way."
+      explication: "In a simple loop, the order of the parts doesn't change how it works: what matters is that the loop is complete."
+      pieges:
+        - { texte: "No, the switch must come right after the battery.", pourquoi: "The switch breaks the loop wherever it is." }
+        - { texte: "No, the bulb must come first to get the current.", pourquoi: "That's the idea of current being used up on the way. The current is the same all round the loop." }
+    - texte: "Pencil lead is made of graphite. What does it do in a circuit?"
+      nom: "It conducts the current."
+      explication: "Graphite conducts electricity: a bulb can light up through a pencil lead. The pencil's wood is an insulator."
+      pieges:
+        - { texte: "It's an insulator, like wood.", pourquoi: "The pencil's wood insulates, but not the graphite lead." }
+        - { texte: "It burns straight away.", pourquoi: "With a small battery, the lead conducts without burning." }
+    - texte: "Can you do experiments with a plug socket at home?"
+      nom: "No, never: it's dangerous."
+      explication: "Mains electricity can kill. Experiments are only done with a low-voltage battery."
+      pieges:
+        - { texte: "Yes, with plastic-coated wires.", pourquoi: "Nothing makes these experiments safe: never touch the inside of a socket." }
+        - { texte: "Yes, if your hands are dry.", pourquoi: "Dry hands aren't enough: the danger can still kill." }

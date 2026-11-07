@@ -1,0 +1,136 @@
+id: comparer-10000
+titre: "Comparer et placer les nombres jusqu'à 10 000"
+niveau: CE2
+prerequis: ["nombres-10000"]
+programme: { source: cycle2, texte: "Comparer, encadrer, intercaler des nombres entiers en utilisant les symboles (=, <, >)." }
+activite: quiz
+parametres: {}
+idee: "On compare d'abord le nombre de chiffres, puis les milliers, les centaines, les dizaines. Sur la demi-droite graduée, le plus grand nombre est le plus loin de 0."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Compare les chiffres de gauche à droite, rang par rang."
+  exemple: "6 234 ou 6 243 ? Mêmes milliers, 6. Mêmes centaines, 2. Dizaines : 3 est inférieur à 4. Donc 6 234 est inférieur à 6 243."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Quel nombre est le plus grand : 6 243, 6 234 ou 6 239 ?"
+    nom: "6 243"
+    explication: "Mêmes milliers et mêmes centaines. Dizaines : 4 est supérieur à 3. Le plus grand est 6 243."
+    pieges:
+      - { texte: "6 234", pourquoi: "Mêmes milliers et centaines : on compare les dizaines, 3 est inférieur à 4." }
+      - { texte: "6 239", pourquoi: "9 unités ne suffisent pas : on compare d'abord les dizaines, 3 est inférieur à 4." }
+  - texte: "Quel nombre est le plus petit : 5 229, 998 ou 6 300 ?"
+    nom: "998"
+    explication: "998 n'a que trois chiffres : il est plus petit que tous les nombres à quatre chiffres."
+    pieges:
+      - { texte: "5 229", pourquoi: "998 n'a que trois chiffres : il est plus petit que 5 229." }
+      - { texte: "6 300", pourquoi: "6 300 a le plus de milliers : c'est le plus grand." }
+  - texte: "Complète : 4 080 est … 4 800."
+    nom: "inférieur à"
+    explication: "Mêmes milliers, 4. Centaines : 0 est inférieur à 8. Donc 4 080 est inférieur à 4 800."
+    pieges:
+      - { texte: "supérieur à", pourquoi: "Mêmes milliers ; aux centaines, 0 est inférieur à 8 : 4 080 est plus petit." }
+      - { texte: "égal à", pourquoi: "Les chiffres sont les mêmes, mais pas aux mêmes places : les nombres sont différents." }
+  - texte: "Sur une demi-droite graduée, quel nombre est au milieu entre 3 000 et 4 000 ?"
+    nom: "3 500"
+    explication: "De 3 000 à 4 000, il y a 1 000. La moitié de 1 000 est 500 : 3 000 + 500 = 3 500."
+    pieges:
+      - { texte: "3 050", pourquoi: "3 050 est tout près de 3 000 : le milieu est à 500 de chaque côté." }
+      - { texte: "7 000", pourquoi: "3 000 + 4 000 = 7 000 : le milieu est entre les deux, ce n'est pas leur somme." }
+  - texte: "Sur une demi-droite graduée de 100 en 100, le point A est 3 graduations après 2 600. Quel nombre est en A ?"
+    nom: "2 900"
+    explication: "Chaque graduation vaut 100. 3 graduations font 300 : 2 600 + 300 = 2 900."
+    pieges:
+      - { texte: "2 603", pourquoi: "Chaque graduation vaut 100, pas 1 : on avance de 300." }
+      - { texte: "2 630", pourquoi: "Chaque graduation vaut 100, pas 10 : on avance de 300." }
+  - texte: "Quel nombre est compris entre 7 490 et 7 500 ?"
+    nom: "7 495"
+    explication: "7 495 est supérieur à 7 490 et inférieur à 7 500."
+    pieges:
+      - { texte: "7 510", pourquoi: "7 510 est après 7 500 : il est trop grand." }
+      - { texte: "7 409", pourquoi: "7 409 est inférieur à 7 490 : 0 dizaine, c'est moins que 9 dizaines." }
+  - texte: "Quelle liste va du plus petit au plus grand ?"
+    nom: "2 391 ; 2 913 ; 3 129"
+    explication: "2 391 et 2 913 ont 2 milliers ; 3 centaines, c'est moins que 9. Puis 3 129 a 3 milliers."
+    pieges:
+      - { texte: "2 913 ; 2 391 ; 3 129", pourquoi: "Mêmes milliers : 9 centaines, c'est plus que 3 centaines. 2 913 est plus grand que 2 391." }
+      - { texte: "3 129 ; 2 913 ; 2 391", pourquoi: "C'est l'ordre décroissant : du plus grand au plus petit." }
+  - texte: "On compare 8 156 et 8 165. Milliers : 8 et 8. Centaines : 1 et 1. Il reste à comparer les dizaines. Quel nombre est le plus grand ?"
+    nom: "8 165"
+    explication: "Dizaines : 5 et 6. 6 est supérieur à 5, donc 8 165 est le plus grand."
+    pieges:
+      - { texte: "8 156", pourquoi: "6 unités, c'est plus que 5, mais on compare d'abord les dizaines : 5 est inférieur à 6." }
+      - { texte: "Ils sont égaux.", pourquoi: "Les chiffres sont les mêmes, mais pas aux mêmes places." }
+  - texte: "Pourquoi 999 est-il plus petit que 1 000 ?"
+    nom: "Parce que 999 a moins de chiffres que 1 000."
+    explication: "999 a trois chiffres, 1 000 en a quatre : il a un millier, 999 n'en a aucun."
+    pieges:
+      - { texte: "Parce que 9 est plus petit que 1.", pourquoi: "9 est plus grand que 1. On regarde d'abord le nombre de chiffres." }
+      - { texte: "Parce que 1 000 finit par des zéros.", pourquoi: "Les zéros ne rendent pas un nombre grand : c'est le millier qui compte." }
+
+en:
+  titre: "Comparing and placing numbers up to 10,000"
+  idee: "First compare how many digits, then the thousands, hundreds and tens. On a number line, the bigger number is further from 0."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Compare the digits from left to right, place by place."
+    exemple: "6,234 or 6,243? Same thousands, 6. Same hundreds, 2. Tens: 3 is less than 4. So 6,234 is less than 6,243."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Which number is the biggest: 6,243, 6,234 or 6,239?"
+      nom: "6,243"
+      explication: "Same thousands and same hundreds. Tens: 4 is greater than 3. The biggest is 6,243."
+      pieges:
+        - { texte: "6,234", pourquoi: "Same thousands and hundreds: compare the tens, 3 is less than 4." }
+        - { texte: "6,239", pourquoi: "9 ones are not enough: compare the tens first, 3 is less than 4." }
+    - texte: "Which number is the smallest: 5,229, 998 or 6,300?"
+      nom: "998"
+      explication: "998 has only three digits: it is smaller than any four-digit number."
+      pieges:
+        - { texte: "5,229", pourquoi: "998 has only three digits: it is smaller than 5,229." }
+        - { texte: "6,300", pourquoi: "6,300 has the most thousands: it is the biggest." }
+    - texte: "Fill the gap: 4,080 is … 4,800."
+      nom: "less than"
+      explication: "Same thousands, 4. Hundreds: 0 is less than 8. So 4,080 is less than 4,800."
+      pieges:
+        - { texte: "greater than", pourquoi: "Same thousands; in the hundreds, 0 is less than 8: 4,080 is smaller." }
+        - { texte: "equal to", pourquoi: "The digits are the same, but not in the same places: the numbers are different." }
+    - texte: "On a number line, which number is halfway between 3,000 and 4,000?"
+      nom: "3,500"
+      explication: "From 3,000 to 4,000 there are 1,000. Half of 1,000 is 500: 3,000 + 500 = 3,500."
+      pieges:
+        - { texte: "3,050", pourquoi: "3,050 is very close to 3,000: halfway is 500 from each end." }
+        - { texte: "7,000", pourquoi: "3,000 + 4,000 = 7,000: halfway is between the two, not their sum." }
+    - texte: "On a number line marked in hundreds, point A is 3 marks after 2,600. Which number is at A?"
+      nom: "2,900"
+      explication: "Each mark is worth 100. 3 marks make 300: 2,600 + 300 = 2,900."
+      pieges:
+        - { texte: "2,603", pourquoi: "Each mark is worth 100, not 1: move on by 300." }
+        - { texte: "2,630", pourquoi: "Each mark is worth 100, not 10: move on by 300." }
+    - texte: "Which number is between 7,490 and 7,500?"
+      nom: "7,495"
+      explication: "7,495 is greater than 7,490 and less than 7,500."
+      pieges:
+        - { texte: "7,510", pourquoi: "7,510 comes after 7,500: it is too big." }
+        - { texte: "7,409", pourquoi: "7,409 is less than 7,490: 0 tens is less than 9 tens." }
+    - texte: "Which list goes from smallest to biggest?"
+      nom: "2,391; 2,913; 3,129"
+      explication: "2,391 and 2,913 have 2 thousands; 3 hundreds is less than 9. Then 3,129 has 3 thousands."
+      pieges:
+        - { texte: "2,913; 2,391; 3,129", pourquoi: "Same thousands: 9 hundreds is more than 3 hundreds. 2,913 is bigger than 2,391." }
+        - { texte: "3,129; 2,913; 2,391", pourquoi: "That is decreasing order: from biggest to smallest." }
+    - texte: "Compare 8,156 and 8,165. Thousands: 8 and 8. Hundreds: 1 and 1. Now compare the tens. Which number is bigger?"
+      nom: "8,165"
+      explication: "Tens: 5 and 6. 6 is greater than 5, so 8,165 is bigger."
+      pieges:
+        - { texte: "8,156", pourquoi: "6 ones is more than 5, but compare the tens first: 5 is less than 6." }
+        - { texte: "They are equal.", pourquoi: "The digits are the same, but not in the same places." }
+    - texte: "Why is 999 smaller than 1,000?"
+      nom: "Because 999 has fewer digits than 1,000."
+      explication: "999 has three digits, 1,000 has four: it has one thousand, 999 has none."
+      pieges:
+        - { texte: "Because 9 is smaller than 1.", pourquoi: "9 is bigger than 1. Look at the number of digits first." }
+        - { texte: "Because 1,000 ends in zeros.", pourquoi: "Zeros don't make a number big: the thousand is what counts." }

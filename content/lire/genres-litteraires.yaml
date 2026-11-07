@@ -1,0 +1,137 @@
+id: genres-litteraires
+titre: "Les genres littéraires"
+niveau: 2de
+prerequis: []
+programme: { source: lycee2de, texte: "La classe de seconde vise à construire une approche raisonnée des formes, des genres et une connaissance générale des grandes périodes de l’histoire littéraire" }
+activite: quiz
+parametres: {}
+idee: "Quatre grands genres : la poésie (souvent en vers), le roman et le récit (une histoire racontée par un narrateur), le théâtre (des répliques à jouer), la littérature d’idées (un raisonnement)."
+phrases:
+  consigne: "Lis la description ou l’extrait, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Qui parle : un narrateur, des personnages sur scène, un poète, un auteur qui raisonne ?"
+  exemple: "Une pièce avec des répliques et des didascalies, écrite pour être jouée : c’est du théâtre."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Un texte fait de répliques et de didascalies, écrit pour être joué : quel genre ?"
+    nom: "le théâtre"
+    explication: "Les répliques sont dites par des personnages sur scène, les didascalies guident le jeu : c’est du théâtre."
+    pieges:
+      - { texte: "le roman", pourquoi: "Un roman est raconté par un narrateur ; il n’est pas fait de répliques à jouer." }
+      - { texte: "la poésie", pourquoi: "Un poème n’a ni répliques de personnages ni didascalies." }
+  - texte: "Au théâtre, qu’est-ce qu’une didascalie ?"
+    nom: "une indication de jeu, hors des répliques"
+    explication: "La didascalie dit le décor, les gestes, le ton : elle n’est pas prononcée par les acteurs."
+    pieges:
+      - { texte: "une très longue réplique", pourquoi: "Une longue réplique, c’est une tirade." }
+      - { texte: "un vers de douze syllabes", pourquoi: "Un vers de douze syllabes, c’est un alexandrin." }
+  - texte: "« Va, je ne te hais point. » (Corneille, Le Cid, acte III, scène 4). De quel genre vient ce vers ?"
+    nom: "le théâtre"
+    explication: "Le Cid est une pièce : c’est une réplique de Chimène à Rodrigue, sans narrateur."
+    pieges:
+      - { texte: "le roman", pourquoi: "Il n’y a pas de narrateur : Chimène parle directement à Rodrigue, sur scène." }
+      - { texte: "la littérature d’idées", pourquoi: "Ce n’est pas un raisonnement : c’est la parole d’un personnage." }
+  - texte: "Dans un roman, qui raconte l’histoire ?"
+    nom: "le narrateur"
+    explication: "Le narrateur est la voix qui raconte ; ce peut être un personnage ou une voix extérieure."
+    pieges:
+      - { texte: "toujours l’auteur lui-même", pourquoi: "L’auteur écrit le livre ; la voix qui raconte est le narrateur, parfois un personnage." }
+      - { texte: "le metteur en scène", pourquoi: "Le metteur en scène dirige une pièce de théâtre, pas un roman." }
+  - texte: "Un essai qui défend une opinion par des arguments appartient à…"
+    nom: "la littérature d’idées"
+    explication: "La littérature d’idées défend une thèse par un raisonnement : essai, discours, article…"
+    pieges:
+      - { texte: "la poésie", pourquoi: "La poésie travaille d’abord les images, le rythme et les sons, pas un raisonnement suivi." }
+      - { texte: "le théâtre", pourquoi: "Un essai n’est pas écrit pour être joué par des personnages." }
+  - texte: "Au théâtre, qu’est-ce qu’un monologue ?"
+    nom: "un personnage seul qui parle sur scène"
+    explication: "Dans un monologue, le personnage est seul ou se croit seul et parle pour lui-même."
+    pieges:
+      - { texte: "une conversation entre deux personnages", pourquoi: "Ça, c’est un dialogue." }
+      - { texte: "un passage raconté par un narrateur", pourquoi: "Il n’y a pas de narrateur au théâtre." }
+  - texte: "Au théâtre, qu’est-ce qu’une tirade ?"
+    nom: "une longue réplique d’un personnage"
+    explication: "La tirade est une longue réplique, dite devant d’autres personnages."
+    pieges:
+      - { texte: "un personnage seul en scène qui parle", pourquoi: "Ça, c’est un monologue : dans une tirade, d’autres personnages écoutent." }
+      - { texte: "une indication de mise en scène", pourquoi: "Ça, c’est une didascalie." }
+  - texte: "Une fable raconte une courte histoire et en tire une leçon de morale. Quel nom donne-t-on à ce type de récit ?"
+    nom: "un apologue"
+    explication: "Un apologue est un court récit qui illustre une leçon : la fable en est un exemple."
+    pieges:
+      - { texte: "une tragédie", pourquoi: "Une tragédie est une pièce de théâtre, pas un court récit avec une morale." }
+      - { texte: "un roman", pourquoi: "Un roman est un long récit, en général en prose, sans morale obligée." }
+  - texte: "Le Cid est écrit en vers. Pourquoi est-ce pourtant du théâtre ?"
+    nom: "Il est fait de répliques de personnages, pour être joué."
+    explication: "C’est la forme dialoguée, faite pour la scène, qui fait le théâtre, en vers comme en prose."
+    pieges:
+      - { texte: "Parce que tout texte en vers est du théâtre.", pourquoi: "Non : la poésie aussi est en vers. C’est la forme dialoguée, pour la scène, qui fait le théâtre." }
+      - { texte: "Parce qu’il y a un narrateur.", pourquoi: "Au théâtre, il n’y a pas de narrateur : les personnages parlent directement." }
+
+en:
+  langue: "fr"
+  titre: "French: literary genres"
+  idee: "Four main genres: poetry (often in verse), the novel and narrative (a story told by a narrator), theatre (lines to be performed), and the literature of ideas (an argument)."
+  phrases:
+    consigne: "Read the description or the extract, then touch the right answer."
+    question: "{texte}"
+    indice: "Who is speaking: a narrator, characters on stage, a poet, an author making an argument?"
+    exemple: "A play with lines and stage directions, written to be performed: that's theatre."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "A text made of lines and stage directions, written to be performed: which genre?"
+      nom: "theatre"
+      explication: "Characters speak the lines on stage, the stage directions guide the acting: it's theatre."
+      pieges:
+        - { texte: "the novel", pourquoi: "A novel is told by a narrator; it isn't made of lines to be performed." }
+        - { texte: "poetry", pourquoi: "A poem has neither characters' lines nor stage directions." }
+    - texte: "In theatre, what is a stage direction (« didascalie »)?"
+      nom: "an acting instruction, outside the lines"
+      explication: "A stage direction gives the set, the gestures, the tone: the actors don't say it."
+      pieges:
+        - { texte: "a very long speech", pourquoi: "A long speech is a « tirade »." }
+        - { texte: "a line of verse with twelve syllables", pourquoi: "A twelve-syllable line is an alexandrine." }
+    - texte: "« Va, je ne te hais point. » (Corneille, « Le Cid », Act III, scene 4). Which genre is this line from?"
+      nom: "theatre"
+      explication: "« Le Cid » is a play: this is Chimène speaking to Rodrigue, with no narrator."
+      pieges:
+        - { texte: "the novel", pourquoi: "There's no narrator: Chimène speaks directly to Rodrigue, on stage." }
+        - { texte: "the literature of ideas", pourquoi: "It isn't an argument: it's a character speaking." }
+    - texte: "In a novel, who tells the story?"
+      nom: "the narrator"
+      explication: "The narrator is the voice telling the story; it can be a character or an outside voice."
+      pieges:
+        - { texte: "always the author", pourquoi: "The author writes the book; the voice telling it is the narrator, sometimes a character." }
+        - { texte: "the director", pourquoi: "A director stages a play, not a novel." }
+    - texte: "An essay defending an opinion with arguments belongs to…"
+      nom: "the literature of ideas"
+      explication: "The literature of ideas defends a thesis through reasoning: essay, speech, article…"
+      pieges:
+        - { texte: "poetry", pourquoi: "Poetry works first on images, rhythm and sound, not on a sustained argument." }
+        - { texte: "theatre", pourquoi: "An essay isn't written to be performed by characters." }
+    - texte: "In theatre, what is a monologue?"
+      nom: "a character alone, speaking on stage"
+      explication: "In a monologue, the character is alone, or thinks so, and speaks to themselves."
+      pieges:
+        - { texte: "a conversation between two characters", pourquoi: "That's a dialogue." }
+        - { texte: "a passage told by a narrator", pourquoi: "There's no narrator in theatre." }
+    - texte: "In theatre, what is a « tirade »?"
+      nom: "a long speech by one character"
+      explication: "A « tirade » is a long speech, made in front of other characters."
+      pieges:
+        - { texte: "a character alone on stage, speaking", pourquoi: "That's a monologue: during a « tirade », other characters are listening." }
+        - { texte: "a staging instruction", pourquoi: "That's a stage direction." }
+    - texte: "A fable tells a short story and draws a moral from it. What do we call this kind of story?"
+      nom: "an apologue"
+      explication: "An apologue is a short story that illustrates a lesson: the fable is one example."
+      pieges:
+        - { texte: "a tragedy", pourquoi: "A tragedy is a play, not a short story with a moral." }
+        - { texte: "a novel", pourquoi: "A novel is a long story, usually in prose, with no required moral." }
+    - texte: "« Le Cid » is written in verse. Why is it still theatre?"
+      nom: "It's made of characters' lines, to be performed."
+      explication: "It's the dialogue form, made for the stage, that makes theatre, in verse or in prose."
+      pieges:
+        - { texte: "Because every text in verse is theatre.", pourquoi: "No: poetry is in verse too. It's the dialogue form, for the stage, that makes theatre." }
+        - { texte: "Because there's a narrator.", pourquoi: "In theatre there's no narrator: the characters speak directly." }

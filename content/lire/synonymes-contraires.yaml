@@ -1,0 +1,137 @@
+id: synonymes-contraires
+titre: "Synonymes et contraires"
+niveau: CE2
+prerequis: ["lire-mots"]
+programme: { source: cycle2, texte: "L’élève mobilise des synonymes, termes génériques ou expressions lors de divers écrits pour éviter les répétitions (ex. : le lion/le félin/le carnivore/le roi de la savane/etc.)." }
+activite: quiz
+parametres: {}
+idee: "Un synonyme veut dire presque la même chose : content, joyeux. Un contraire dit l’inverse : rapide, lent. Les préfixes dé-, in-, mal- font souvent des contraires : ranger, déranger."
+phrases:
+  consigne: "Lis bien : on cherche un synonyme ou un contraire ? Puis touche le bon mot."
+  question: "{texte}"
+  indice: "Un synonyme garde le sens ; un contraire dit l’inverse. Un mot de la même famille n’est ni l’un ni l’autre."
+  exemple: "« content » : un synonyme est « joyeux », un contraire est « triste »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Quel mot est un synonyme de « content » ?"
+    nom: "joyeux"
+    explication: "« joyeux » veut dire presque la même chose que « content »."
+    pieges:
+      - { texte: "triste", pourquoi: "C’est le contraire : « triste » dit l’inverse de « content »." }
+      - { texte: "fatigué", pourquoi: "Ça ne veut pas dire la même chose : on peut être fatigué et content." }
+  - texte: "Quel mot est un synonyme de « commencer » ?"
+    nom: "débuter"
+    explication: "« débuter » veut dire presque la même chose que « commencer »."
+    pieges:
+      - { texte: "finir", pourquoi: "C’est le contraire : « finir » dit l’inverse de « commencer »." }
+      - { texte: "continuer", pourquoi: "On continue ce qui a déjà commencé : ce n’est pas le même sens." }
+  - texte: "Quel mot est le contraire de « rapide » ?"
+    nom: "lent"
+    explication: "« lent » dit l’inverse de « rapide »."
+    pieges:
+      - { texte: "vite", pourquoi: "« vite » a un sens proche de « rapide » : ce n’est pas un contraire." }
+      - { texte: "grand", pourquoi: "« grand » parle de la taille, pas de la vitesse." }
+  - texte: "Quel mot est le contraire de « visible » ?"
+    nom: "invisible"
+    explication: "Le préfixe in- donne le sens contraire : visible, invisible."
+    pieges:
+      - { texte: "lisible", pourquoi: "« lisible » veut dire qu’on peut le lire : ce n’est pas le contraire de « visible »." }
+      - { texte: "voyant", pourquoi: "« voyant » veut dire qu’on le remarque : c’est un sens proche, pas un contraire." }
+  - texte: "Quel mot est le contraire de « ranger » ?"
+    nom: "déranger"
+    explication: "Le préfixe dé- donne le sens contraire : ranger, déranger."
+    pieges:
+      - { texte: "arranger", pourquoi: "« arranger » veut aussi dire mettre en ordre : c’est un sens proche, pas un contraire." }
+      - { texte: "rangement", pourquoi: "« rangement » est un nom de la même famille, pas un contraire." }
+  - texte: "« Le lion rugit. Le ___ secoue sa crinière. » Quel mot reprend « lion » sans le répéter ?"
+    nom: "félin"
+    explication: "Le lion est un félin : ce mot évite de répéter « lion »."
+    pieges:
+      - { texte: "zèbre", pourquoi: "Le zèbre est un autre animal : on ne parlerait plus du lion." }
+      - { texte: "rugissement", pourquoi: "« rugissement » est le cri du lion, pas l’animal : il ne peut pas secouer sa crinière." }
+  - texte: "Quel mot dit une peur encore plus forte que « la peur » ?"
+    nom: "l’épouvante"
+    explication: "On peut ranger : la crainte, la peur, l’épouvante, de la plus faible à la plus forte."
+    pieges:
+      - { texte: "la crainte", pourquoi: "« la crainte » est une peur plus faible que « la peur »." }
+      - { texte: "le courage", pourquoi: "Le courage, c’est le contraire de la peur." }
+  - texte: "Quel mot est le contraire de « heureux » ?"
+    nom: "malheureux"
+    explication: "Le préfixe mal- donne le sens contraire : heureux, malheureux."
+    pieges:
+      - { texte: "heureusement", pourquoi: "C’est un mot de la même famille, pas un contraire." }
+      - { texte: "joyeux", pourquoi: "« joyeux » a un sens proche de « heureux » : c’est presque un synonyme." }
+  - texte: "Pourquoi « défaire » est-il le contraire de « faire » ?"
+    nom: "Le préfixe dé- donne le sens inverse."
+    explication: "dé- placé devant un mot lui donne souvent le sens contraire : faire, défaire ; monter, démonter."
+    pieges:
+      - { texte: "Parce qu’il est plus long.", pourquoi: "La longueur ne dit rien : c’est le sens du préfixe dé- qui compte." }
+      - { texte: "Parce que « défaire » veut dire « faire encore ».", pourquoi: "Non : « refaire » veut dire faire encore. « défaire » annule ce qui est fait." }
+
+en:
+  langue: "fr"
+  titre: "French: synonyms and opposites"
+  idee: "A synonym means almost the same: « content », « joyeux ». An opposite means the reverse: « rapide », « lent ». The prefixes « dé- », « in- », « mal- » often make opposites: « ranger », « déranger »."
+  phrases:
+    consigne: "Read carefully: are we looking for a synonym or an opposite? Then touch the right French word."
+    question: "{texte}"
+    indice: "A synonym keeps the meaning; an opposite says the reverse. A word from the same family is neither."
+    exemple: "« content »: a synonym is « joyeux », an opposite is « triste »."
+    demonstration: "{explication}"
+    bravo: "Yes! It's « {bonne} »."
+  items:
+    - texte: "Which word is a synonym of « content » (happy)?"
+      nom: "joyeux"
+      explication: "« joyeux » means almost the same as « content »."
+      pieges:
+        - { texte: "triste", pourquoi: "That's the opposite: « triste » means sad, the reverse of « content »." }
+        - { texte: "fatigué", pourquoi: "It doesn't mean the same: you can be tired and happy." }
+    - texte: "Which word is a synonym of « commencer » (to begin)?"
+      nom: "débuter"
+      explication: "« débuter » means almost the same as « commencer »."
+      pieges:
+        - { texte: "finir", pourquoi: "That's the opposite: « finir » means to finish." }
+        - { texte: "continuer", pourquoi: "You continue something that has already begun: it's not the same meaning." }
+    - texte: "Which word is the opposite of « rapide » (fast)?"
+      nom: "lent"
+      explication: "« lent » means slow, the reverse of « rapide »."
+      pieges:
+        - { texte: "vite", pourquoi: "« vite » means quickly, close to « rapide »: it isn't an opposite." }
+        - { texte: "grand", pourquoi: "« grand » is about size, not speed." }
+    - texte: "Which word is the opposite of « visible »?"
+      nom: "invisible"
+      explication: "The prefix « in- » gives the opposite meaning: « visible », « invisible »."
+      pieges:
+        - { texte: "lisible", pourquoi: "« lisible » means readable: it isn't the opposite of « visible »." }
+        - { texte: "voyant", pourquoi: "« voyant » means eye-catching: that's close in meaning, not an opposite." }
+    - texte: "Which word is the opposite of « ranger » (to tidy)?"
+      nom: "déranger"
+      explication: "The prefix « dé- » gives the opposite meaning: « ranger », « déranger »."
+      pieges:
+        - { texte: "arranger", pourquoi: "« arranger » also means to put in order: it's close in meaning, not an opposite." }
+        - { texte: "rangement", pourquoi: "« rangement » is a noun from the same family, not an opposite." }
+    - texte: "« Le lion rugit. Le ___ secoue sa crinière. » Which word refers to « lion » without repeating it?"
+      nom: "félin"
+      explication: "A lion is a « félin », a big cat: this word avoids repeating « lion »."
+      pieges:
+        - { texte: "zèbre", pourquoi: "A zebra is a different animal: we'd no longer be talking about the lion." }
+        - { texte: "rugissement", pourquoi: "« rugissement » is the lion's roar, not the animal: it can't shake its mane." }
+    - texte: "Which word means a fear even stronger than « la peur »?"
+      nom: "l’épouvante"
+      explication: "You can order them: « la crainte », « la peur », « l’épouvante », from weakest to strongest."
+      pieges:
+        - { texte: "la crainte", pourquoi: "« la crainte » is a weaker fear than « la peur »." }
+        - { texte: "le courage", pourquoi: "Courage is the opposite of fear." }
+    - texte: "Which word is the opposite of « heureux » (happy)?"
+      nom: "malheureux"
+      explication: "The prefix « mal- » gives the opposite meaning: « heureux », « malheureux »."
+      pieges:
+        - { texte: "heureusement", pourquoi: "It's a word from the same family, not an opposite." }
+        - { texte: "joyeux", pourquoi: "« joyeux » is close in meaning to « heureux »: almost a synonym." }
+    - texte: "Why is « défaire » the opposite of « faire »?"
+      nom: "The prefix « dé- » reverses the meaning."
+      explication: "« dé- » in front of a word often gives the opposite meaning: « faire », « défaire »; « monter », « démonter »."
+      pieges:
+        - { texte: "Because it's longer.", pourquoi: "Length tells you nothing: it's the meaning of the prefix « dé- » that counts." }
+        - { texte: "Because « défaire » means « do again ».", pourquoi: "No: « refaire » means to do again. « défaire » undoes what was done." }

@@ -1,0 +1,100 @@
+id: chaine-alimentaire
+titre: "Qui mange qui ? La chaîne alimentaire"
+niveau: CE2
+prerequis: [besoins]
+programme: { source: c2s, texte: "Élaborer une courte chaine alimentaire." }
+activite: choisir
+parametres: {}
+idee: "Une chaîne alimentaire relie des êtres vivants : chacun est mangé par le suivant. Elle commence toujours par une plante."
+phrases:
+  consigne: "Écoute la chaîne alimentaire, puis touche le bon être vivant."
+  question: "{texte}"
+  indice: "Cherche qui mange l'autre. Les herbivores mangent des plantes ; les carnivores mangent d'autres animaux."
+  exemple: "Exemple : l'herbe est mangée par le lapin, et le lapin est mangé par le renard."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "L'herbe est mangée par le lapin. Le lapin est mangé par… qui ?"
+    bonne: ["1f98a", "le renard"]
+    autres: [["1f955", "la carotte"], ["1f404", "la vache"]]
+    explication: "Le renard mange le lapin : herbe, puis lapin, puis renard."
+  - texte: "Les feuilles sont mangées par la chenille. La chenille est mangée par… qui ?"
+    bonne: ["1f426", "l'oiseau"]
+    autres: [["1f33f", "l'herbe"], ["1f411", "le mouton"]]
+    explication: "Beaucoup d'oiseaux mangent des chenilles : feuilles, puis chenille, puis oiseau."
+  - texte: "L'herbe est mangée par le zèbre. Le zèbre est mangé par… qui ?"
+    bonne: ["1f981", "le lion"]
+    autres: [["1f992", "la girafe"], ["1f404", "la vache"]]
+    explication: "Dans la savane, le lion mange le zèbre."
+  - texte: "Les graines sont mangées par la souris. La souris est mangée par… qui ?"
+    bonne: ["1f989", "la chouette"]
+    autres: [["1f337", "la tulipe"], ["1f41e", "la coccinelle"]]
+    explication: "La chouette chasse la nuit et mange des souris."
+  - texte: "L'herbe est mangée par le mouton. Le mouton peut être mangé par… qui ?"
+    bonne: ["1f43a", "le loup"]
+    autres: [["1f407", "le lapin"], ["1f33f", "l'herbe"]]
+    explication: "Le loup est un carnivore : il peut manger le mouton."
+  - texte: "Dans la chaîne herbe, lapin, renard, qui est l'herbivore ?"
+    bonne: ["1f407", "le lapin"]
+    autres: [["1f98a", "le renard"], ["1f43a", "le loup"]]
+    explication: "Le lapin mange des plantes : c'est un herbivore."
+  - texte: "Dans la chaîne graines, souris, chouette, qui est le carnivore ?"
+    bonne: ["1f989", "la chouette"]
+    autres: [["1f401", "la souris"], ["1f331", "la plante"]]
+    explication: "La chouette mange d'autres animaux : c'est une carnivore."
+  - texte: "Par quoi commence toujours une chaîne alimentaire ?"
+    bonne: ["1f331", "par une plante"]
+    autres: [["1f981", "par un lion"], ["1f98a", "par un renard"]]
+    explication: "Une chaîne alimentaire commence toujours par une plante : la plante ne mange pas d'autres êtres vivants."
+  - texte: "Le petit poisson est mangé par… qui ?"
+    bonne: ["1f988", "le requin"]
+    autres: [["1f41b", "la chenille"], ["1f411", "le mouton"]]
+    explication: "Le requin vit dans la mer et mange des poissons."
+
+en:
+  titre: "Who eats whom? The food chain"
+  idee: "A food chain links living things: each one is eaten by the next. It always starts with a plant."
+  phrases:
+    consigne: "Listen to the food chain, then touch the right living thing."
+    question: "{texte}"
+    indice: "Look for who eats the other. Herbivores eat plants; carnivores eat other animals."
+    exemple: "Example: grass is eaten by the rabbit, and the rabbit is eaten by the fox."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Grass is eaten by the rabbit. The rabbit is eaten by… whom?"
+      bonne: ["1f98a", "the fox"]
+      autres: [["1f955", "the carrot"], ["1f404", "the cow"]]
+      explication: "The fox eats the rabbit: grass, then rabbit, then fox."
+    - texte: "Leaves are eaten by the caterpillar. The caterpillar is eaten by… whom?"
+      bonne: ["1f426", "the bird"]
+      autres: [["1f33f", "the grass"], ["1f411", "the sheep"]]
+      explication: "Lots of birds eat caterpillars: leaves, then caterpillar, then bird."
+    - texte: "Grass is eaten by the zebra. The zebra is eaten by… whom?"
+      bonne: ["1f981", "the lion"]
+      autres: [["1f992", "the giraffe"], ["1f404", "the cow"]]
+      explication: "In the savannah, the lion eats the zebra."
+    - texte: "Seeds are eaten by the mouse. The mouse is eaten by… whom?"
+      bonne: ["1f989", "the owl"]
+      autres: [["1f337", "the tulip"], ["1f41e", "the ladybird"]]
+      explication: "The owl hunts at night and eats mice."
+    - texte: "Grass is eaten by the sheep. The sheep can be eaten by… whom?"
+      bonne: ["1f43a", "the wolf"]
+      autres: [["1f407", "the rabbit"], ["1f33f", "the grass"]]
+      explication: "The wolf is a carnivore: it can eat the sheep."
+    - texte: "In the chain grass, rabbit, fox, which one is the herbivore?"
+      bonne: ["1f407", "the rabbit"]
+      autres: [["1f98a", "the fox"], ["1f43a", "the wolf"]]
+      explication: "The rabbit eats plants: it's a herbivore."
+    - texte: "In the chain seeds, mouse, owl, which one is the carnivore?"
+      bonne: ["1f989", "the owl"]
+      autres: [["1f401", "the mouse"], ["1f331", "the plant"]]
+      explication: "The owl eats other animals: it's a carnivore."
+    - texte: "What does a food chain always start with?"
+      bonne: ["1f331", "a plant"]
+      autres: [["1f981", "a lion"], ["1f98a", "a fox"]]
+      explication: "A food chain always starts with a plant: a plant doesn't eat other living things."
+    - texte: "The little fish is eaten by… whom?"
+      bonne: ["1f988", "the shark"]
+      autres: [["1f41b", "the caterpillar"], ["1f411", "the sheep"]]
+      explication: "The shark lives in the sea and eats fish."

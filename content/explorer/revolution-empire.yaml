@@ -1,0 +1,124 @@
+id: revolution-empire
+titre: "La Révolution française et l'Empire"
+niveau: 4e
+prerequis: [moyen-age]
+programme: { source: c4, texte: "La Révolution française et l’Empire : nouvel ordre politique et société révolutionnée en France et en Europe." }
+activite: quiz
+parametres: {}
+idee: "En 1789, la Révolution met fin à la monarchie absolue et proclame les droits de l'homme. La République naît en 1792. En 1804, Napoléon Bonaparte devient empereur."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1789 la Révolution, 1792 la République, 1793 l'exécution du roi, 1804 l'Empire, 1815 la chute de Napoléon."
+  exemple: "Exemple : le 14 juillet 1789, les Parisiens prennent la Bastille, une prison royale. C'est devenu le jour de la fête nationale."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Que se passe-t-il le 14 juillet 1789 à Paris ?"
+    nom: "La prise de la Bastille."
+    explication: "Le 14 juillet 1789, le peuple de Paris prend la Bastille, symbole du pouvoir du roi."
+    pieges:
+      - { texte: "Le sacre de Napoléon.", pourquoi: "Napoléon est sacré empereur en 1804, quinze ans plus tard." }
+      - { texte: "L'exécution de Louis XVI.", pourquoi: "Louis XVI est exécuté en janvier 1793." }
+  - texte: "Que proclame la Déclaration des droits de l'homme et du citoyen, en août 1789 ?"
+    nom: "Que les hommes naissent et demeurent libres et égaux en droits."
+    explication: "Son article premier affirme la liberté et l'égalité en droits : c'est la fin des privilèges de naissance."
+    pieges:
+      - { texte: "Que le roi a tous les pouvoirs.", pourquoi: "C'est le principe de la monarchie absolue, que la Déclaration rejette." }
+      - { texte: "Que les femmes ont le droit de vote.", pourquoi: "Les femmes n'obtiennent le droit de vote en France qu'en 1944." }
+  - texte: "Que se passe-t-il dans la nuit du 4 août 1789 ?"
+    nom: "Les députés abolissent les privilèges."
+    explication: "Les privilèges de la noblesse et du clergé sont abolis : tous les Français doivent être soumis aux mêmes lois."
+    pieges:
+      - { texte: "Le roi s'enfuit à l'étranger.", pourquoi: "La fuite du roi, arrêtée à Varennes, a lieu en 1791." }
+      - { texte: "Napoléon gagne une bataille.", pourquoi: "Napoléon n'est pas encore au pouvoir en 1789." }
+  - texte: "En quelle année la royauté est-elle abolie et la Première République proclamée ?"
+    nom: "En 1792."
+    explication: "En septembre 1792, la royauté est abolie et la République est proclamée. Louis XVI est exécuté en janvier 1793."
+    pieges:
+      - { texte: "En 1789.", pourquoi: "En 1789, le roi est toujours là : la Révolution commence, mais la République vient plus tard." }
+      - { texte: "En 1848.", pourquoi: "1848 est la date de la Deuxième République." }
+  - texte: "Comment s'appelle le dernier roi de l'Ancien Régime ?"
+    nom: "Louis XVI."
+    explication: "Louis XVI est le dernier roi de l'Ancien Régime ; il est exécuté en 1793."
+    pieges:
+      - { texte: "Louis XIV.", pourquoi: "Louis XIV, le Roi-Soleil, est mort en 1715, bien avant la Révolution." }
+      - { texte: "Napoléon Ier.", pourquoi: "Napoléon est empereur, pas roi, et il vient après la Révolution." }
+  - texte: "En quelle année Napoléon Bonaparte est-il proclamé empereur des Français ?"
+    nom: "En 1804."
+    explication: "Général des armées républicaines, Bonaparte prend le pouvoir par la force en 1799, puis il est proclamé empereur en 1804."
+    pieges:
+      - { texte: "En 1789.", pourquoi: "En 1789, Bonaparte n'est qu'un jeune officier." }
+      - { texte: "En 1815.", pourquoi: "1815 est l'année de sa défaite à Waterloo et de la fin de son règne." }
+  - texte: "Qu'est-ce que l'Ancien Régime ?"
+    nom: "La société et la monarchie d'avant 1789."
+    explication: "C'est le nom donné, pendant la Révolution, à l'organisation d'avant 1789 : monarchie absolue et société d'ordres avec des privilèges."
+    pieges:
+      - { texte: "Le régime de Napoléon.", pourquoi: "L'Empire vient après la Révolution ; l'Ancien Régime est ce qui la précède." }
+      - { texte: "Un régime alimentaire ancien.", pourquoi: "Ici, « régime » veut dire organisation politique." }
+  - texte: "Napoléon garde certains acquis de la Révolution. Lequel ?"
+    nom: "L'égalité devant la loi, inscrite dans le Code civil."
+    explication: "Le Code civil de 1804 conserve l'égalité des citoyens devant la loi, l'un des principes de 1789."
+    pieges:
+      - { texte: "La République.", pourquoi: "Napoléon remplace la République par l'Empire." }
+      - { texte: "Les privilèges de la noblesse.", pourquoi: "Les privilèges ont été abolis en 1789 et ne sont pas rétablis." }
+
+en:
+  titre: "The French Revolution and the Empire"
+  idee: "In 1789, the Revolution ends absolute monarchy and proclaims the rights of man. The Republic is born in 1792. In 1804, Napoleon Bonaparte becomes emperor."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1789 the Revolution, 1792 the Republic, 1793 the king's execution, 1804 the Empire, 1815 Napoleon's fall."
+    exemple: "Example: on 14 July 1789, Parisians storm the Bastille, a royal prison. It became France's national day."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What happens in Paris on 14 July 1789?"
+      nom: "The storming of the Bastille."
+      explication: "On 14 July 1789, the people of Paris take the Bastille, a symbol of the king's power."
+      pieges:
+        - { texte: "Napoleon's coronation.", pourquoi: "Napoleon is crowned emperor in 1804, fifteen years later." }
+        - { texte: "The execution of Louis XVI.", pourquoi: "Louis XVI is executed in January 1793." }
+    - texte: "What does the Declaration of the Rights of Man and of the Citizen, in August 1789, proclaim?"
+      nom: "That men are born and remain free and equal in rights."
+      explication: "Its first article states freedom and equal rights: it's the end of privileges by birth."
+      pieges:
+        - { texte: "That the king has all the powers.", pourquoi: "That's the principle of absolute monarchy, which the Declaration rejects." }
+        - { texte: "That women have the vote.", pourquoi: "Women only get the vote in France in 1944." }
+    - texte: "What happens on the night of 4 August 1789?"
+      nom: "The deputies abolish privileges."
+      explication: "The privileges of the nobility and clergy are abolished: all French people must follow the same laws."
+      pieges:
+        - { texte: "The king flees abroad.", pourquoi: "The king's flight, stopped at Varennes, is in 1791." }
+        - { texte: "Napoleon wins a battle.", pourquoi: "Napoleon isn't in power yet in 1789." }
+    - texte: "In which year is the monarchy abolished and the First Republic proclaimed?"
+      nom: "In 1792."
+      explication: "In September 1792, the monarchy is abolished and the Republic proclaimed. Louis XVI is executed in January 1793."
+      pieges:
+        - { texte: "In 1789.", pourquoi: "In 1789, the king is still there: the Revolution begins, but the Republic comes later." }
+        - { texte: "In 1848.", pourquoi: "1848 is the date of the Second Republic." }
+    - texte: "Who was the last king of the Ancien Régime?"
+      nom: "Louis XVI."
+      explication: "Louis XVI is the last king of the Ancien Régime; he is executed in 1793."
+      pieges:
+        - { texte: "Louis XIV.", pourquoi: "Louis XIV, the Sun King, died in 1715, long before the Revolution." }
+        - { texte: "Napoleon I.", pourquoi: "Napoleon is an emperor, not a king, and he comes after the Revolution." }
+    - texte: "In which year is Napoleon Bonaparte proclaimed Emperor of the French?"
+      nom: "In 1804."
+      explication: "A general in the Republic's armies, Bonaparte seizes power by force in 1799, then is proclaimed emperor in 1804."
+      pieges:
+        - { texte: "In 1789.", pourquoi: "In 1789, Bonaparte is just a young officer." }
+        - { texte: "In 1815.", pourquoi: "1815 is the year of his defeat at Waterloo and the end of his rule." }
+    - texte: "What is the Ancien Régime?"
+      nom: "The society and monarchy before 1789."
+      explication: "It's the name given, during the Revolution, to the system before 1789: absolute monarchy and a society of orders with privileges."
+      pieges:
+        - { texte: "Napoleon's regime.", pourquoi: "The Empire comes after the Revolution; the Ancien Régime is what came before it." }
+        - { texte: "An old diet.", pourquoi: "In French, « régime » can mean a diet, but here it means a political system." }
+    - texte: "Napoleon keeps some gains of the Revolution. Which one?"
+      nom: "Equality before the law, written into the Civil Code."
+      explication: "The Civil Code of 1804 keeps citizens equal before the law, one of the principles of 1789."
+      pieges:
+        - { texte: "The Republic.", pourquoi: "Napoleon replaces the Republic with the Empire." }
+        - { texte: "The nobility's privileges.", pourquoi: "Privileges were abolished in 1789 and aren't brought back." }

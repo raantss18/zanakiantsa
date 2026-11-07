@@ -1,0 +1,137 @@
+id: circonstancielles
+titre: "Cause, conséquence, but, condition, concession"
+niveau: 1re
+prerequis: ["phrase-complexe"]
+programme: { source: lycee1re, texte: "Le professeur rappelle aux élèves les subordonnées conjonctives utilisées en fonction de compléments circonstanciels de cause, de conséquence, de but, de condition et de concession, ainsi que les outils grammaticaux qui permettent leur construction" }
+activite: quiz
+parametres: {}
+idee: "Cause : parce que, puisque, comme. Conséquence : si bien que, tant… que. But : pour que, afin que. Condition : si. Concession : bien que, quoique."
+phrases:
+  consigne: "Repère le mot qui introduit la subordonnée, puis touche le rapport qu’elle exprime."
+  question: "{texte}"
+  indice: "La subordonnée dit-elle pourquoi, avec quel résultat, dans quel but, à quelle condition, ou malgré quoi ?"
+  exemple: "« Bien qu’il pleuve, nous sortons » : on sort malgré la pluie, c’est une concession."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Bien qu’il pleuve, nous sortons. » Quel rapport exprime la subordonnée ?"
+    nom: "la concession"
+    explication: "On sort malgré la pluie : « bien que » introduit une concession."
+    pieges:
+      - { texte: "la cause", pourquoi: "La pluie n’explique pas la sortie : on sort malgré elle." }
+      - { texte: "la condition", pourquoi: "La condition s’exprime avec « si » ; ici, la pluie est un fait qui n’empêche pas l’action." }
+  - texte: "« Puisque tu insistes, je viens. » Quel rapport exprime la subordonnée ?"
+    nom: "la cause"
+    explication: "« puisque » donne la raison, déjà connue, de l’action : c’est la cause."
+    pieges:
+      - { texte: "le but", pourquoi: "Le but dit ce qu’on vise (« pour que ») ; ici, on donne la raison." }
+      - { texte: "la conséquence", pourquoi: "La conséquence est le résultat ; ici, l’insistance est la raison de venir." }
+  - texte: "« Il parle fort pour qu’on l’entende. » Quel rapport exprime la subordonnée ?"
+    nom: "le but"
+    explication: "« pour que » + subjonctif dit le résultat visé : c’est le but."
+    pieges:
+      - { texte: "la conséquence", pourquoi: "La conséquence est un résultat obtenu ; « pour que » vise un résultat voulu : le but." }
+      - { texte: "la cause", pourquoi: "La subordonnée ne dit pas pourquoi il parle fort après coup, mais ce qu’il cherche à obtenir." }
+  - texte: "« Il a tant couru qu’il est épuisé. » Quel rapport exprime la subordonnée ?"
+    nom: "la conséquence"
+    explication: "« tant… que » : la fatigue est le résultat de la course. C’est la conséquence."
+    pieges:
+      - { texte: "la cause", pourquoi: "La cause est la course, dans la principale ; la subordonnée dit le résultat." }
+      - { texte: "le but", pourquoi: "Il ne cherchait pas à être épuisé : c’est un résultat, pas un but." }
+  - texte: "« Si tu travailles, tu réussiras. » Quel rapport exprime la subordonnée ?"
+    nom: "la condition"
+    explication: "La réussite dépend du travail : « si » introduit une condition."
+    pieges:
+      - { texte: "la cause", pourquoi: "Le travail n’est pas encore fait : c’est une condition, pas une cause constatée." }
+      - { texte: "la concession", pourquoi: "La concession dit « malgré » ; ici, la réussite dépend du travail." }
+  - texte: "« Quoique la route soit longue, il part à pied. » Quel rapport exprime la subordonnée ?"
+    nom: "la concession"
+    explication: "Il part à pied malgré la longueur de la route : « quoique » introduit une concession."
+    pieges:
+      - { texte: "la cause", pourquoi: "La longueur de la route n’explique pas qu’il marche : il part malgré elle." }
+      - { texte: "la conséquence", pourquoi: "La subordonnée ne dit pas un résultat : elle dit un obstacle qui n’empêche pas l’action." }
+  - texte: "« Je te prête ce livre afin que tu le lises. » Quel rapport exprime la subordonnée ?"
+    nom: "le but"
+    explication: "« afin que » + subjonctif dit ce qu’on vise : c’est le but."
+    pieges:
+      - { texte: "la conséquence", pourquoi: "La lecture n’a pas encore eu lieu : elle est visée, c’est un but." }
+      - { texte: "la condition", pourquoi: "La condition s’exprime avec « si » ; « afin que » dit l’intention." }
+  - texte: "« Comme il faisait froid, nous sommes rentrés. » Quel rapport exprime la subordonnée ?"
+    nom: "la cause"
+    explication: "Le froid explique le retour : « comme », en tête de phrase, introduit ici la cause."
+    pieges:
+      - { texte: "la concession", pourquoi: "On n’est pas rentré malgré le froid, mais à cause de lui." }
+      - { texte: "le but", pourquoi: "Le froid n’est pas un résultat visé : c’est la raison du retour." }
+  - texte: "« Il est malade, donc il reste au lit. » et « Il reste au lit parce qu’il est malade. » Pourquoi ces phrases disent-elles la même chose ?"
+    nom: "Elles expriment le même lien, vu côté conséquence puis côté cause."
+    explication: "« donc » annonce la conséquence, « parce que » la cause : c’est le même rapport logique."
+    pieges:
+      - { texte: "Parce qu’elles ont le même nombre de mots.", pourquoi: "Le nombre de mots ne compte pas : c’est le rapport logique qui est le même." }
+      - { texte: "Parce que « donc » et « parce que » sont deux subordonnants.", pourquoi: "Non : « donc » relie sans subordonner. C’est le sens, cause et conséquence, qui les rapproche." }
+
+en:
+  langue: "fr"
+  titre: "French: cause, consequence, purpose, condition, concession"
+  idee: "Cause: « parce que », « puisque », « comme ». Consequence: « si bien que », « tant… que ». Purpose: « pour que », « afin que ». Condition: « si ». Concession: « bien que », « quoique »."
+  phrases:
+    consigne: "Find the word that introduces the clause, then touch the relationship it expresses."
+    question: "{texte}"
+    indice: "Does the clause say why, with what result, for what purpose, on what condition, or despite what?"
+    exemple: "« Bien qu’il pleuve, nous sortons »: we go out despite the rain, so it's a concession."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Bien qu’il pleuve, nous sortons. » What relationship does the clause express?"
+      nom: "concession"
+      explication: "We go out despite the rain: « bien que » introduces a concession."
+      pieges:
+        - { texte: "cause", pourquoi: "The rain doesn't explain going out: we go out despite it." }
+        - { texte: "condition", pourquoi: "A condition uses « si »; here the rain is a fact that doesn't stop the action." }
+    - texte: "« Puisque tu insistes, je viens. » What relationship does the clause express?"
+      nom: "cause"
+      explication: "« puisque » gives the reason, already known, for the action: it's the cause."
+      pieges:
+        - { texte: "purpose", pourquoi: "A purpose says what you aim for (« pour que »); here it gives the reason." }
+        - { texte: "consequence", pourquoi: "A consequence is the result; here, insisting is the reason for coming." }
+    - texte: "« Il parle fort pour qu’on l’entende. » What relationship does the clause express?"
+      nom: "purpose"
+      explication: "« pour que » + subjunctive states the intended result: it's the purpose."
+      pieges:
+        - { texte: "consequence", pourquoi: "A consequence is a result that has happened; « pour que » aims at a wanted result: purpose." }
+        - { texte: "cause", pourquoi: "The clause doesn't explain why he speaks loudly after the fact, but what he wants to achieve." }
+    - texte: "« Il a tant couru qu’il est épuisé. » What relationship does the clause express?"
+      nom: "consequence"
+      explication: "« tant… que »: exhaustion is the result of running. It's the consequence."
+      pieges:
+        - { texte: "cause", pourquoi: "The cause is the running, in the main clause; the subordinate clause gives the result." }
+        - { texte: "purpose", pourquoi: "He wasn't trying to get exhausted: it's a result, not a purpose." }
+    - texte: "« Si tu travailles, tu réussiras. » What relationship does the clause express?"
+      nom: "condition"
+      explication: "Success depends on working: « si » introduces a condition."
+      pieges:
+        - { texte: "cause", pourquoi: "The work hasn't been done yet: it's a condition, not an observed cause." }
+        - { texte: "concession", pourquoi: "A concession means « despite »; here success depends on working." }
+    - texte: "« Quoique la route soit longue, il part à pied. » What relationship does the clause express?"
+      nom: "concession"
+      explication: "He sets off on foot despite the long road: « quoique » introduces a concession."
+      pieges:
+        - { texte: "cause", pourquoi: "The long road doesn't explain why he walks: he goes despite it." }
+        - { texte: "consequence", pourquoi: "The clause doesn't give a result: it gives an obstacle that doesn't stop the action." }
+    - texte: "« Je te prête ce livre afin que tu le lises. » What relationship does the clause express?"
+      nom: "purpose"
+      explication: "« afin que » + subjunctive says what is aimed at: it's the purpose."
+      pieges:
+        - { texte: "consequence", pourquoi: "The reading hasn't happened yet: it's aimed at, so it's a purpose." }
+        - { texte: "condition", pourquoi: "A condition uses « si »; « afin que » states an intention." }
+    - texte: "« Comme il faisait froid, nous sommes rentrés. » What relationship does the clause express?"
+      nom: "cause"
+      explication: "The cold explains going home: « comme », at the start of the sentence, introduces the cause here."
+      pieges:
+        - { texte: "concession", pourquoi: "We didn't go home despite the cold, but because of it." }
+        - { texte: "purpose", pourquoi: "The cold isn't an aimed-for result: it's the reason for going home." }
+    - texte: "« Il est malade, donc il reste au lit. » and « Il reste au lit parce qu’il est malade. » Why do these say the same thing?"
+      nom: "They express the same link, seen from the consequence side then the cause side."
+      explication: "« donc » introduces the consequence, « parce que » the cause: it's the same logical relationship."
+      pieges:
+        - { texte: "Because they have the same number of words.", pourquoi: "Word count doesn't matter: the logical relationship is what's the same." }
+        - { texte: "Because « donc » and « parce que » are both subordinating words.", pourquoi: "No: « donc » links without subordinating. It's the meaning, cause and consequence, that brings them together." }

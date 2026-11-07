@@ -1,0 +1,154 @@
+id: reading-hello
+titre: "Lire un petit message en anglais"
+niveau: CE2
+prerequis: [numbers, animals]
+programme: { source: lver_c2, texte: "CE2 (A1) : il peut reconnaitre et comprendre de petits messages simples et brefs sur une carte postale, une lettre, un courriel, des annonces ou de courts récits illustrés, au sujet d’activités quotidiennes." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Pour comprendre un message en anglais, on cherche les mots qu'on connaît déjà : les nombres, les animaux, les jours, le temps qu'il fait."
+phrases:
+  consigne: "Lis le petit message en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Lis la question, puis cherche dans le message le mot qui y répond."
+  exemple: "« Hello! I am Tom. I am nine. » Quel âge a Tom ? Je cherche le nombre : « nine », c'est 9. Tom a 9 ans."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« Hello! My name is Sam. I am eight. » Quel âge a Sam ?"
+    nom: "8 ans"
+    explication: "« I am eight » : Sam a 8 ans."
+    pieges:
+      - { texte: "7 ans", pourquoi: "7, c'est « seven ». Sam dit « eight », 8." }
+      - { texte: "10 ans", pourquoi: "10, c'est « ten ». Sam dit « eight », 8." }
+  - texte: "« I have got a dog. His name is Rex. » Quel animal a l'enfant ?"
+    nom: "un chien"
+    explication: "« a dog », c'est un chien : il s'appelle Rex."
+    pieges:
+      - { texte: "un chat", pourquoi: "Le chat, c'est « cat ». Le message dit « dog », le chien." }
+      - { texte: "un cheval", pourquoi: "Le cheval, c'est « horse ». Le message dit « dog », le chien." }
+  - texte: "« I like apples. I don't like bananas. » Qu'est-ce que l'enfant n'aime pas ?"
+    nom: "les bananes"
+    explication: "« I don't like bananas » : il n'aime pas les bananes."
+    pieges:
+      - { texte: "les pommes", pourquoi: "« I like apples » : il aime les pommes. « don't like » veut dire « ne pas aimer »." }
+      - { texte: "les carottes", pourquoi: "Le message ne parle pas de carottes, « carrots »." }
+  - texte: "« Today is Monday. It's sunny. » Quel temps fait-il ?"
+    nom: "Il fait soleil."
+    explication: "« It's sunny » : il fait soleil."
+    pieges:
+      - { texte: "Il pleut.", pourquoi: "Il pleut, ce serait « It's rainy ». Le message dit « It's sunny »." }
+      - { texte: "Il neige.", pourquoi: "Il neige, ce serait « It's snowy ». Le message dit « It's sunny »." }
+  - texte: "« Hello! I am in London. I can see a red bus. » Où est l'enfant ?"
+    nom: "à Londres"
+    explication: "« I am in London » : il est à Londres."
+    pieges:
+      - { texte: "à Paris", pourquoi: "Le message dit « I am in London » : à Londres." }
+      - { texte: "dans un bus", pourquoi: "Il voit un bus : « I can see a red bus ». Mais il est à Londres." }
+  - texte: "« My sister is Emma. She is six. » Qui est Emma ?"
+    nom: "la sœur"
+    explication: "« My sister is Emma » : Emma est la sœur."
+    pieges:
+      - { texte: "la mère", pourquoi: "La mère, c'est « mother ». « sister », c'est la sœur." }
+      - { texte: "le frère", pourquoi: "Le frère, c'est « brother ». « sister », c'est la sœur." }
+  - texte: "« I wake up at seven. I go to school at eight. » À quelle heure l'enfant va-t-il à l'école ?"
+    nom: "à 8 heures"
+    explication: "« I go to school at eight » : il va à l'école à 8 heures."
+    pieges:
+      - { texte: "à 7 heures", pourquoi: "À 7 heures, « seven », il se réveille : « I wake up at seven »." }
+      - { texte: "à 9 heures", pourquoi: "9, c'est « nine ». Le message dit « eight », 8." }
+  - texte: "« Dear Tom, come to my party on Saturday! Leo » Quel jour est la fête ?"
+    nom: "samedi"
+    explication: "« on Saturday » : la fête est samedi."
+    pieges:
+      - { texte: "dimanche", pourquoi: "Dimanche, c'est « Sunday ». Le message dit « Saturday », samedi." }
+      - { texte: "lundi", pourquoi: "Lundi, c'est « Monday ». Le message dit « Saturday », samedi." }
+  - texte: "« At the zoo, I can see two elephants and three monkeys. » Combien de singes voit l'enfant ?"
+    nom: "3"
+    explication: "« three monkeys » : trois singes."
+    pieges:
+      - { texte: "2", pourquoi: "« two elephants » : 2, ce sont les éléphants. Les singes, « monkeys », sont trois." }
+      - { texte: "5", pourquoi: "5, c'est tous les animaux ensemble. Les singes, « monkeys », sont « three », trois." }
+en:
+  titre: "Reading a short message"
+  idee: "To understand a message, look for the words you already know: numbers, animals, days, the weather."
+  phrases:
+    consigne: "Read the short message, then touch the right answer."
+    question: "{texte}"
+    indice: "Read the question, then look in the message for the word that answers it."
+    exemple: "“Hello! I am Tom. I am nine.” How old is Tom? I look for the number: nine. Tom is 9."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“Hello! My name is Sam. I am eight.” How old is Sam?"
+      nom: "8"
+      explication: "“I am eight”: Sam is 8."
+      pieges:
+        - texte: "7"
+          pourquoi: "7 is seven. Sam says eight."
+        - texte: "10"
+          pourquoi: "10 is ten. Sam says eight."
+    - texte: "“I have got a dog. His name is Rex.” Which animal has the child got?"
+      nom: "a dog"
+      explication: "“a dog”: the dog is called Rex."
+      pieges:
+        - texte: "a cat"
+          pourquoi: "The message says dog, not cat."
+        - texte: "a horse"
+          pourquoi: "The message says dog, not horse."
+    - texte: "“I like apples. I don't like bananas.” What doesn't the child like?"
+      nom: "bananas"
+      explication: "“I don't like bananas.”"
+      pieges:
+        - texte: "apples"
+          pourquoi: "“I like apples”: the child likes apples. “Don't like” is the opposite."
+        - texte: "carrots"
+          pourquoi: "The message doesn't talk about carrots."
+    - texte: "“Today is Monday. It's sunny.” What's the weather like?"
+      nom: "It's sunny."
+      explication: "“It's sunny”: the sun is shining."
+      pieges:
+        - texte: "It's rainy."
+          pourquoi: "The message says sunny, not rainy."
+        - texte: "It's snowy."
+          pourquoi: "The message says sunny, not snowy."
+    - texte: "“Hello! I am in London. I can see a red bus.” Where is the child?"
+      nom: "in London"
+      explication: "“I am in London.”"
+      pieges:
+        - texte: "in Paris"
+          pourquoi: "The message says “I am in London”."
+        - texte: "on a bus"
+          pourquoi: "The child can see a bus, but is in London."
+    - texte: "“My sister is Emma. She is six.” Who is Emma?"
+      nom: "the sister"
+      explication: "“My sister is Emma.”"
+      pieges:
+        - texte: "the mother"
+          pourquoi: "The message says sister, not mother."
+        - texte: "the brother"
+          pourquoi: "The message says sister, not brother. And Emma is “she”."
+    - texte: "“I wake up at seven. I go to school at eight.” When does the child go to school?"
+      nom: "at 8 o'clock"
+      explication: "“I go to school at eight.”"
+      pieges:
+        - texte: "at 7 o'clock"
+          pourquoi: "At seven, the child wakes up: “I wake up at seven”."
+        - texte: "at 9 o'clock"
+          pourquoi: "9 is nine. The message says eight."
+    - texte: "“Dear Tom, come to my party on Saturday! Leo” When is the party?"
+      nom: "on Saturday"
+      explication: "“on Saturday”."
+      pieges:
+        - texte: "on Sunday"
+          pourquoi: "The message says Saturday, not Sunday."
+        - texte: "on Monday"
+          pourquoi: "The message says Saturday, not Monday."
+    - texte: "“At the zoo, I can see two elephants and three monkeys.” How many monkeys can the child see?"
+      nom: "3"
+      explication: "“three monkeys”."
+      pieges:
+        - texte: "2"
+          pourquoi: "Two is the number of elephants. There are three monkeys."
+        - texte: "5"
+          pourquoi: "5 is all the animals together. There are three monkeys."

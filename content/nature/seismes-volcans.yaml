@@ -1,0 +1,124 @@
+id: seismes-volcans
+titre: "Séismes et volcans"
+niveau: 5e
+prerequis: []
+programme: { source: c4, texte: "Expliquer quelques phénomènes géologiques à partir du contexte géodynamique global." }
+activite: quiz
+parametres: {}
+idee: "La surface de la Terre est découpée en plaques qui bougent lentement. Là où elles se rencontrent ou s'écartent, il y a beaucoup de séismes et de volcans."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense aux plaques : elles bougent de quelques centimètres par an, et leurs bords sont les zones les plus actives."
+  exemple: "Exemple : le Japon est au bord de plusieurs plaques. On y ressent souvent des séismes et on y trouve de nombreux volcans."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'un séisme ?"
+    nom: "Des secousses du sol dues à une rupture brutale de roches en profondeur."
+    explication: "Des roches qui subissent des forces finissent par casser d'un coup : l'énergie libérée fait vibrer le sol."
+    pieges:
+      - { texte: "Une explosion de volcan.", pourquoi: "Un volcan peut faire trembler le sol, mais la plupart des séismes viennent de roches qui cassent." }
+      - { texte: "Un très gros orage.", pourquoi: "Un orage se passe dans l'atmosphère ; un séisme vient du sous-sol." }
+  - texte: "Sous la croûte terrestre, y a-t-il un océan de roche fondue ?"
+    nom: "Non, le manteau est presque entièrement solide."
+    explication: "Le magma se forme seulement à certains endroits, par fusion partielle des roches. Le manteau, lui, est solide, même s'il se déforme très lentement."
+    pieges:
+      - { texte: "Oui, tout le dessous de la croûte est liquide.", pourquoi: "C'est une idée très répandue, mais fausse : les ondes des séismes montrent que le manteau est solide." }
+      - { texte: "Oui, c'est de là que vient la lave de tous les volcans.", pourquoi: "La lave vient de poches de magma formées localement, pas d'un océan sous toute la Terre." }
+  - texte: "Où se produisent la plupart des séismes et des volcans ?"
+    nom: "Aux limites entre les plaques."
+    explication: "Sur une carte, séismes et volcans dessinent des lignes : ce sont les bords des plaques."
+    pieges:
+      - { texte: "Au hasard, partout sur Terre.", pourquoi: "Leur répartition n'est pas au hasard : ils se concentrent aux bords des plaques." }
+      - { texte: "Seulement au milieu des océans.", pourquoi: "Il y en a aussi sur les continents, par exemple autour du Pacifique." }
+  - texte: "À quelle vitesse les plaques se déplacent-elles ?"
+    nom: "De quelques centimètres par an."
+    explication: "C'est à peu près la vitesse à laquelle poussent les ongles : invisible pour nous, mais énorme sur des millions d'années."
+    pieges:
+      - { texte: "De plusieurs mètres par jour.", pourquoi: "Ce serait des milliers de fois trop rapide." }
+      - { texte: "Elles ne bougent pas du tout.", pourquoi: "Les mesures par satellite montrent qu'elles bougent, lentement." }
+  - texte: "Qu'est-ce que la lave ?"
+    nom: "Du magma qui sort à la surface."
+    explication: "Le magma est de la roche fondue en profondeur ; quand il sort par le volcan, on l'appelle lave."
+    pieges:
+      - { texte: "De l'eau très chaude.", pourquoi: "La lave est de la roche fondue, pas de l'eau." }
+      - { texte: "Du feu.", pourquoi: "La lave est rouge parce qu'elle est très chaude, mais ce n'est pas une flamme : c'est de la roche liquide." }
+  - texte: "Le Piton de la Fournaise, à La Réunion, fait surtout couler de la lave fluide. Comment appelle-t-on ce type d'éruption ?"
+    nom: "Effusive."
+    explication: "Une éruption effusive émet des coulées de lave fluide. Une éruption explosive projette surtout des cendres et des blocs."
+    pieges:
+      - { texte: "Explosive.", pourquoi: "Une éruption explosive projette cendres et blocs ; au Piton de la Fournaise, ce sont surtout des coulées." }
+      - { texte: "Sismique.", pourquoi: "« Sismique » se rapporte aux séismes, pas au type d'éruption." }
+  - texte: "Sait-on prévoir le jour exact d'un séisme ?"
+    nom: "Non, mais on sait quelles régions sont à risque."
+    explication: "On connaît les zones où les séismes sont fréquents, mais pas leur date. On s'en protège surtout par des constructions parasismiques."
+    pieges:
+      - { texte: "Oui, des semaines à l'avance.", pourquoi: "Aucune méthode ne permet aujourd'hui de prévoir la date d'un séisme." }
+      - { texte: "Non, et on ne peut rien faire.", pourquoi: "On peut réduire le risque : bâtiments adaptés, consignes de sécurité, exercices." }
+  - texte: "Pourquoi un même séisme fait-il plus de dégâts dans une ville que dans un désert ?"
+    nom: "Parce qu'il y a plus de personnes et de bâtiments exposés."
+    explication: "Le risque dépend de l'aléa, le séisme, et de la vulnérabilité : les personnes, les bâtiments, les routes exposés."
+    pieges:
+      - { texte: "Parce que le séisme est plus fort sous les villes.", pourquoi: "La force du séisme ne dépend pas de la ville au-dessus." }
+      - { texte: "Parce que le sable du désert absorbe tout.", pourquoi: "Le sol joue un rôle, mais la principale différence est le nombre de personnes et de bâtiments." }
+
+en:
+  titre: "Earthquakes and volcanoes"
+  idee: "The Earth's surface is split into plates that move slowly. Where they meet or pull apart, there are many earthquakes and volcanoes."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of the plates: they move a few centimetres a year, and their edges are the most active areas."
+    exemple: "Example: Japan lies at the edge of several plates. Earthquakes are often felt there and there are many volcanoes."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is an earthquake?"
+      nom: "The ground shaking because rocks deep down break suddenly."
+      explication: "Rocks under stress end up breaking all at once: the energy released makes the ground shake."
+      pieges:
+        - { texte: "A volcano exploding.", pourquoi: "A volcano can make the ground shake, but most earthquakes come from rocks breaking." }
+        - { texte: "A very big storm.", pourquoi: "A storm happens in the atmosphere; an earthquake comes from underground." }
+    - texte: "Under the Earth's crust, is there an ocean of melted rock?"
+      nom: "No, the mantle is almost entirely solid."
+      explication: "Magma forms only in certain places, when rocks partly melt. The mantle is solid, even though it slowly changes shape."
+      pieges:
+        - { texte: "Yes, everything under the crust is liquid.", pourquoi: "That's a very common idea, but it's wrong: earthquake waves show the mantle is solid." }
+        - { texte: "Yes, that's where all volcanoes' lava comes from.", pourquoi: "Lava comes from pockets of magma formed locally, not from an ocean under the whole Earth." }
+    - texte: "Where do most earthquakes and volcanoes happen?"
+      nom: "At the boundaries between plates."
+      explication: "On a map, earthquakes and volcanoes make lines: those are the plate edges."
+      pieges:
+        - { texte: "Randomly, all over the Earth.", pourquoi: "They aren't spread at random: they gather along plate edges." }
+        - { texte: "Only in the middle of the oceans.", pourquoi: "There are some on land too, for example around the Pacific." }
+    - texte: "How fast do the plates move?"
+      nom: "A few centimetres a year."
+      explication: "That's about how fast your fingernails grow: too slow to see, but huge over millions of years."
+      pieges:
+        - { texte: "Several metres a day.", pourquoi: "That would be thousands of times too fast." }
+        - { texte: "They don't move at all.", pourquoi: "Satellite measurements show they do move, slowly." }
+    - texte: "What is lava?"
+      nom: "Magma that comes out at the surface."
+      explication: "Magma is melted rock deep underground; when it comes out of a volcano, we call it lava."
+      pieges:
+        - { texte: "Very hot water.", pourquoi: "Lava is melted rock, not water." }
+        - { texte: "Fire.", pourquoi: "Lava is red because it's very hot, but it isn't a flame: it's liquid rock." }
+    - texte: "Piton de la Fournaise, on Réunion Island, mostly pours out runny lava. What is this type of eruption called?"
+      nom: "Effusive."
+      explication: "An effusive eruption gives off flows of runny lava. An explosive eruption mostly throws out ash and blocks."
+      pieges:
+        - { texte: "Explosive.", pourquoi: "An explosive eruption throws out ash and blocks; at Piton de la Fournaise, it's mostly lava flows." }
+        - { texte: "Seismic.", pourquoi: "« Seismic » is about earthquakes, not the type of eruption." }
+    - texte: "Can we predict the exact day of an earthquake?"
+      nom: "No, but we know which regions are at risk."
+      explication: "We know where earthquakes are frequent, but not when. We protect ourselves mainly with earthquake-proof buildings."
+      pieges:
+        - { texte: "Yes, weeks in advance.", pourquoi: "No method today can predict the date of an earthquake." }
+        - { texte: "No, and nothing can be done.", pourquoi: "The risk can be reduced: suitable buildings, safety rules, drills." }
+    - texte: "Why does the same earthquake do more damage in a city than in a desert?"
+      nom: "Because more people and buildings are exposed."
+      explication: "Risk depends on the hazard, the earthquake, and on vulnerability: the people, buildings and roads exposed."
+      pieges:
+        - { texte: "Because the earthquake is stronger under cities.", pourquoi: "The earthquake's strength doesn't depend on the city above it." }
+        - { texte: "Because desert sand soaks it all up.", pourquoi: "The ground plays a part, but the main difference is the number of people and buildings." }

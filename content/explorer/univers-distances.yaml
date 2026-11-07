@@ -1,0 +1,124 @@
+id: univers-distances
+titre: "Les distances dans l'Univers"
+niveau: 5e
+prerequis: [terre-soleil]
+programme: { source: c4, texte: "Aborder les différentes unités de distance et savoir les convertir : du kilomètre à l’année-lumière." }
+activite: quiz
+parametres: {}
+idee: "La lumière va à environ 300 000 kilomètres par seconde. Une année-lumière est la distance qu'elle parcourt en un an : environ 9 500 milliards de kilomètres."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "L'année-lumière est une distance, pas une durée : c'est le chemin parcouru par la lumière en un an."
+  exemple: "Exemple : la lumière du Soleil met environ 8 minutes pour arriver sur Terre. On voit donc le Soleil tel qu'il était il y a 8 minutes."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'une année-lumière ?"
+    nom: "La distance parcourue par la lumière en un an."
+    explication: "Malgré son nom, l'année-lumière est une unité de distance : environ 9 500 milliards de kilomètres."
+    pieges:
+      - { texte: "Une durée d'un an.", pourquoi: "Le mot « année » trompe : c'est une distance, pas une durée." }
+      - { texte: "Une année où il y a beaucoup de soleil.", pourquoi: "Cela n'a rien à voir avec la météo : c'est une distance en astronomie." }
+  - texte: "À quelle vitesse se propage la lumière dans le vide ?"
+    nom: "Environ 300 000 kilomètres par seconde."
+    explication: "La lumière parcourt environ 300 000 kilomètres chaque seconde : plus de sept fois le tour de la Terre."
+    pieges:
+      - { texte: "Environ 300 kilomètres par heure.", pourquoi: "C'est la vitesse d'un train rapide, pas de la lumière." }
+      - { texte: "Elle arrive instantanément, sans durée.", pourquoi: "La lumière est très rapide, mais pas instantanée : celle du Soleil met environ 8 minutes à nous parvenir." }
+  - texte: "Combien de temps met la lumière du Soleil pour arriver sur Terre ?"
+    nom: "Environ 8 minutes."
+    explication: "Le Soleil est à environ 150 millions de kilomètres : à 300 000 kilomètres par seconde, cela fait environ 500 secondes, un peu plus de 8 minutes."
+    pieges:
+      - { texte: "Environ 8 secondes.", pourquoi: "En 8 secondes, la lumière ne ferait que 2,4 millions de kilomètres." }
+      - { texte: "Environ 8 ans.", pourquoi: "8 ans, ce serait pour une étoile bien plus lointaine que le Soleil." }
+  - texte: "L'étoile la plus proche après le Soleil, Proxima du Centaure, est à environ 4,2 années-lumière. Que veut dire ce nombre ?"
+    nom: "Sa lumière met environ 4,2 ans pour nous parvenir."
+    explication: "4,2 années-lumière, c'est environ 40 000 milliards de kilomètres. Nous voyons cette étoile telle qu'elle était il y a 4,2 ans."
+    pieges:
+      - { texte: "Elle a 4,2 ans.", pourquoi: "L'année-lumière mesure une distance, pas un âge." }
+      - { texte: "On peut l'atteindre en 4,2 ans avec une fusée.", pourquoi: "Il faudrait aller à la vitesse de la lumière, ce qu'aucune fusée ne peut faire." }
+  - texte: "Pourquoi utilise-t-on l'année-lumière plutôt que le kilomètre pour les étoiles ?"
+    nom: "Parce que les distances en kilomètres seraient des nombres énormes."
+    explication: "Écrire 40 000 milliards de kilomètres est peu pratique : 4,2 années-lumière est plus simple à lire et à comparer."
+    pieges:
+      - { texte: "Parce que le kilomètre n'existe pas dans l'espace.", pourquoi: "Le kilomètre reste valable partout ; il est seulement trop petit pour ces distances." }
+      - { texte: "Parce que les étoiles bougent trop vite.", pourquoi: "Le choix de l'unité vient de la taille des distances, pas du mouvement." }
+  - texte: "Comment s'appelle la galaxie dont fait partie le Soleil ?"
+    nom: "La Voie lactée."
+    explication: "Le Soleil est l'une des milliards d'étoiles de la Voie lactée, notre galaxie."
+    pieges:
+      - { texte: "Le système solaire.", pourquoi: "Le système solaire, c'est le Soleil et ce qui tourne autour de lui ; il fait partie de la Voie lactée." }
+      - { texte: "La Lune.", pourquoi: "La Lune est le satellite de la Terre, pas une galaxie." }
+  - texte: "Range du plus petit au plus grand : galaxie, système solaire, Terre."
+    nom: "Terre, système solaire, galaxie."
+    explication: "La Terre est une planète du système solaire, qui est lui-même une petite partie de la galaxie."
+    pieges:
+      - { texte: "Système solaire, Terre, galaxie.", pourquoi: "La Terre fait partie du système solaire : elle est plus petite que lui." }
+      - { texte: "Galaxie, système solaire, Terre.", pourquoi: "C'est l'ordre du plus grand au plus petit." }
+  - texte: "La Lune est à environ 384 000 kilomètres. Combien de temps sa lumière met-elle pour nous arriver ?"
+    nom: "Un peu plus d'une seconde."
+    explication: "384 000 divisé par 300 000 donne environ 1,3 : la lumière de la Lune met un peu plus d'une seconde."
+    pieges:
+      - { texte: "Environ 8 minutes.", pourquoi: "C'est pour le Soleil, bien plus lointain." }
+      - { texte: "Environ un an.", pourquoi: "Un an de trajet correspond à une année-lumière, une distance immense comparée à la Lune." }
+
+en:
+  titre: "Distances in the Universe"
+  idee: "Light travels at about 300,000 kilometres per second. A light year is the distance it travels in a year: about 9,500 billion kilometres."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "A light year is a distance, not a length of time: it's how far light travels in a year."
+    exemple: "Example: sunlight takes about 8 minutes to reach the Earth. So we see the Sun as it was 8 minutes ago."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a light year?"
+      nom: "The distance light travels in a year."
+      explication: "Despite its name, the light year is a unit of distance: about 9,500 billion kilometres."
+      pieges:
+        - { texte: "A length of time of one year.", pourquoi: "The word « year » is misleading: it's a distance, not a time." }
+        - { texte: "A year with lots of sunshine.", pourquoi: "It has nothing to do with weather: it's a distance used in astronomy." }
+    - texte: "How fast does light travel in a vacuum?"
+      nom: "About 300,000 kilometres per second."
+      explication: "Light travels about 300,000 kilometres every second: more than seven times round the Earth."
+      pieges:
+        - { texte: "About 300 kilometres per hour.", pourquoi: "That's the speed of a fast train, not of light." }
+        - { texte: "It arrives instantly, taking no time.", pourquoi: "Light is very fast, but not instant: sunlight takes about 8 minutes to reach us." }
+    - texte: "How long does sunlight take to reach the Earth?"
+      nom: "About 8 minutes."
+      explication: "The Sun is about 150 million kilometres away: at 300,000 kilometres per second, that's about 500 seconds, a little over 8 minutes."
+      pieges:
+        - { texte: "About 8 seconds.", pourquoi: "In 8 seconds, light would only cover 2.4 million kilometres." }
+        - { texte: "About 8 years.", pourquoi: "8 years would be for a star much further away than the Sun." }
+    - texte: "The nearest star after the Sun, Proxima Centauri, is about 4.2 light years away. What does this number mean?"
+      nom: "Its light takes about 4.2 years to reach us."
+      explication: "4.2 light years is about 40,000 billion kilometres. We see this star as it was 4.2 years ago."
+      pieges:
+        - { texte: "It's 4.2 years old.", pourquoi: "A light year measures distance, not age." }
+        - { texte: "A rocket could reach it in 4.2 years.", pourquoi: "It would have to go at the speed of light, which no rocket can do." }
+    - texte: "Why do we use light years rather than kilometres for stars?"
+      nom: "Because distances in kilometres would be huge numbers."
+      explication: "Writing 40,000 billion kilometres isn't handy: 4.2 light years is easier to read and compare."
+      pieges:
+        - { texte: "Because kilometres don't exist in space.", pourquoi: "Kilometres work everywhere; they're just too small for these distances." }
+        - { texte: "Because stars move too fast.", pourquoi: "The unit is chosen because of the size of the distances, not movement." }
+    - texte: "What is the name of the galaxy the Sun belongs to?"
+      nom: "The Milky Way."
+      explication: "The Sun is one of billions of stars in the Milky Way, our galaxy."
+      pieges:
+        - { texte: "The solar system.", pourquoi: "The solar system is the Sun and what goes round it; it's part of the Milky Way." }
+        - { texte: "The Moon.", pourquoi: "The Moon is the Earth's satellite, not a galaxy." }
+    - texte: "Put in order from smallest to biggest: galaxy, solar system, Earth."
+      nom: "Earth, solar system, galaxy."
+      explication: "The Earth is a planet of the solar system, which is itself a small part of the galaxy."
+      pieges:
+        - { texte: "Solar system, Earth, galaxy.", pourquoi: "The Earth is part of the solar system: it's smaller than it." }
+        - { texte: "Galaxy, solar system, Earth.", pourquoi: "That's the order from biggest to smallest." }
+    - texte: "The Moon is about 384,000 kilometres away. How long does its light take to reach us?"
+      nom: "A little over one second."
+      explication: "384,000 divided by 300,000 gives about 1.3: moonlight takes a little over a second."
+      pieges:
+        - { texte: "About 8 minutes.", pourquoi: "That's for the Sun, much further away." }
+        - { texte: "About a year.", pourquoi: "A year's journey is one light year, a huge distance compared with the Moon." }

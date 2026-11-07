@@ -4,7 +4,7 @@ nom: "Le code"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Programmer un robot avec des flèches, puis des blocs : boucles, conditions, compteur."
 icone: "1f916"
-ages: [5, 10]
+ages: [5, 16]
 # Maternelle (version consolidée 2026) : « Se repérer dans l'espace » p. 54-57 et « Découvrir le monde des objets »
 # p. 61. CP (programme de mathématiques du cycle 2, annexe 4) : « Le repérage dans l'espace ». Consultés le 2026-11-03.
 # Blocs inspirés de l'idée de ScratchJr (aucun code ni dessin repris, CLAUDE.md règle 7).
@@ -13,7 +13,17 @@ sources:
   cycle2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
   # Fiche éduscol « Programmer » (DNE, juillet 2016), cycles 3 et 4 : boucle, instructions conditionnelles.
   prog: "https://eduscol.education.fr/document/14773/download"
-ordre: [fleches, robot-tourner, robot-rochers, boucle-repeter, condition-si, compteur]
+  # 6e : programme de mathématiques du cycle 3, « Initiation à la pensée informatique », Sixième. 5e–3e : programme de
+  # mathématiques du cycle 4 (annexe 2), « La pensée informatique », Cinquième à Troisième. Lus le 2026-11-07.
+  cycle3: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
+  cycle4: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf"
+  # 2de : programme de mathématiques de seconde générale et technologique, partie « Algorithmique et programmation »
+  # (annexe du BO spécial n° 1 du 22 janvier 2019), lu dans cette copie le 2026-11-07 : le site du ministère refuse le
+  # téléchargement automatique. ⚠ Un programme de 2de paru au BO n° 14 du 2 avril 2026 n'a pas été lu à la source.
+  # Les sorties de chaque programme Python ont été vérifiées en l'exécutant (Python 3.14). Noms des blocs Scratch :
+  # traductions officielles de Scratch 3 (github.com/scratchfoundation/scratch-l10n, editor/blocks/fr.json).
+  seconde: "https://www.snes.edu/IMG/pdf/maths_annexe_2egt_bo.pdf"
+ordre: [fleches, robot-tourner, robot-rochers, boucle-repeter, condition-si, compteur, sequence-instructions, repeter-a-la-main, entrees-sorties, boucle-calcul, variable-affectation, si-sinon, boucle-conditionnelle, evenements, python-for, python-si, python-fonctions, python-listes]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

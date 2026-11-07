@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('46 compétences, prérequis connus et placés avant', () {
+    test('87 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 46);
+      expect(t.skills.length, 87);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -85,9 +85,18 @@ void main() {
     });
 
     test('aucune phrase ne contient « faux » ni « échec » (ADR 0006/0008)', () {
-      final text = File('assets/content/compter.json').readAsStringSync() + File('assets/content/commun.json').readAsStringSync();
+      // Exception : « succès / échec » est le vocabulaire officiel des probabilités au lycée (épreuve de Bernoulli,
+      // loi binomiale) ; il désigne l'issue d'une expérience, jamais l'enfant.
+      const probabilites = {'loi-binomiale', 'probabilites-totales'};
+      final compter = jsonDecode(File('assets/content/compter.json').readAsStringSync()) as Map<String, dynamic>;
+      compter['competences'] = [for (final s in compter['competences'] as List) if (!probabilites.contains((s as Map)['id'])) s];
+      final text = jsonEncode(compter) + File('assets/content/commun.json').readAsStringSync();
       expect(text.toLowerCase(), isNot(contains('faux')));
       expect(text.toLowerCase(), isNot(contains('échec')));
+      for (final id in probabilites) {
+        final s = (jsonDecode(File('assets/content/compter.json').readAsStringSync())['competences'] as List).firstWhere((s) => s['id'] == id);
+        expect(jsonEncode(s).toLowerCase(), isNot(contains('faux')), reason: id);
+      }
     });
 
     test('les variables {n} {a} {b} sont toutes remplacées', () {

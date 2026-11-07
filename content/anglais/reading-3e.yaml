@@ -1,0 +1,168 @@
+id: reading-3e
+titre: "Comprendre des textes : récits, annonces, lettres"
+niveau: 3e
+prerequis: [present-perfect, future, comparatives]
+programme: { source: college, texte: "3e (A2) : il peut comprendre et repérer des informations simples, relevant de situations prévisibles, exprimées dans une langue usuelle, à l’aide d’expressions connues, dans des textes, histoires, ou conversations." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Lis d'abord la question, puis cherche les indices : les mots de temps (at first, now, next month), les liens (but, because of) et le type de texte."
+phrases:
+  consigne: "Lis le texte en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis la phrase du texte qui répond, et fais attention aux petits mots : but, because of, for, next."
+  exemple: "« Trains are faster than buses, but buses are cheaper. » Qu'est-ce qui coûte moins cher ? « cheaper », moins cher : le bus."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« Last year, Maya moved from Manchester to Toronto with her parents. At first, she missed her friends, but now she loves her new school. » Que ressentait Maya au début ?"
+    nom: "Ses amis lui manquaient."
+    explication: "« At first, she missed her friends » : au début, ses amis lui manquaient."
+    pieges:
+      - { texte: "Elle adorait sa nouvelle école.", pourquoi: "Ça, c'est maintenant : « but now she loves her new school »." }
+      - { texte: "Elle voulait partir à Toronto.", pourquoi: "Le texte ne dit pas qu'elle le voulait." }
+  - texte: "« Last year, Maya moved from Manchester to Toronto with her parents. » D'où vient Maya ?"
+    nom: "de Manchester"
+    explication: "« from Manchester to Toronto » : de Manchester vers Toronto. Elle vient de Manchester."
+    pieges:
+      - { texte: "de Toronto", pourquoi: "« to Toronto » : c'est là qu'elle va. « from Manchester » : d'où elle vient." }
+      - { texte: "du Canada", pourquoi: "Toronto est au Canada : c'est là qu'elle est arrivée, pas d'où elle vient." }
+  - texte: "« The museum will be closed on Monday because of the storm. Visitors who have bought tickets can come back on Tuesday. » Pourquoi le musée sera-t-il fermé ?"
+    nom: "à cause de la tempête"
+    explication: "« because of the storm » : à cause de la tempête."
+    pieges:
+      - { texte: "parce que c'est lundi", pourquoi: "Lundi est seulement le jour. La cause est « because of the storm »." }
+      - { texte: "parce qu'il n'y a plus de billets", pourquoi: "Le texte parle de visiteurs qui ont déjà un billet ; il ne dit pas qu'il n'y en a plus." }
+  - texte: "« The museum will be closed on Monday because of the storm. Visitors who have bought tickets can come back on Tuesday. » Que peuvent faire les visiteurs qui ont un billet ?"
+    nom: "revenir mardi"
+    explication: "« can come back on Tuesday » : ils peuvent revenir mardi."
+    pieges:
+      - { texte: "revenir lundi", pourquoi: "Lundi, le musée est fermé. « come back on Tuesday » : mardi." }
+      - { texte: "se faire rembourser", pourquoi: "Le texte ne parle pas de remboursement." }
+  - texte: "« Sam has been learning the guitar for two years. He practises every evening, and next month he is going to play in a concert. » Depuis combien de temps Sam apprend-il la guitare ?"
+    nom: "deux ans"
+    explication: "« for two years » : depuis deux ans."
+    pieges:
+      - { texte: "un mois", pourquoi: "« next month », le mois prochain, c'est le concert." }
+      - { texte: "tous les soirs", pourquoi: "« every evening » dit quand il s'entraîne, pas depuis combien de temps." }
+  - texte: "« Sam has been learning the guitar for two years. He practises every evening, and next month he is going to play in a concert. » Que va faire Sam le mois prochain ?"
+    nom: "jouer dans un concert"
+    explication: "« next month he is going to play in a concert » : le mois prochain, il jouera dans un concert."
+    pieges:
+      - { texte: "commencer la guitare", pourquoi: "Il apprend déjà depuis deux ans : « for two years »." }
+      - { texte: "arrêter la guitare", pourquoi: "Le texte ne dit pas qu'il arrête : il s'entraîne « every evening »." }
+  - texte: "« Trains are faster than buses, but buses are cheaper. Bikes are the cheapest way to travel in the city. » Quel est le moyen le moins cher ?"
+    nom: "le vélo"
+    explication: "« Bikes are the cheapest » : le vélo est le moins cher de tous."
+    pieges:
+      - { texte: "le bus", pourquoi: "Le bus est moins cher que le train, « cheaper », mais « the cheapest », le moins cher de tous, c'est le vélo." }
+      - { texte: "le train", pourquoi: "Le train est le plus rapide des deux, « faster », pas le moins cher." }
+  - texte: "« Dear Mr Hill, I am writing to ask if I could do my work experience in your shop in June. Yours sincerely, Lena Dubois » Que demande Lena ?"
+    nom: "faire un stage dans le magasin"
+    explication: "« work experience » : un stage. Lena demande à faire son stage en juin."
+    pieges:
+      - { texte: "acheter quelque chose", pourquoi: "« work experience » veut dire un stage, pas un achat." }
+      - { texte: "une place de concert", pourquoi: "Le texte parle de « work experience » dans un magasin : un stage." }
+  - texte: "« Mix the flour and the eggs. Then add the milk slowly. Bake for 20 minutes. » Quel type de texte est-ce ?"
+    nom: "une recette"
+    explication: "Des ordres qui se suivent, « Mix… add… Bake » : c'est une recette."
+    pieges:
+      - { texte: "une lettre", pourquoi: "Une lettre commence souvent par « Dear… ». Ici, ce sont des étapes : « Mix… add… Bake »." }
+      - { texte: "un article de presse", pourquoi: "Un article raconte des faits ; ici, ce sont des étapes à suivre." }
+  - texte: "« Trains are faster than buses. » Pourquoi « faster » ?"
+    nom: "On compare deux choses : « fast » + -er, puis « than »."
+    explication: "Deux moyens comparés : comparatif « faster than »."
+    pieges:
+      - { texte: "Parce que les trains sont les plus rapides de tous.", pourquoi: "Le plus rapide de tous, ce serait « the fastest »." }
+      - { texte: "Parce que « faster » veut dire « plus lent ».", pourquoi: "Non : « faster », c'est plus rapide ; plus lent, c'est « slower »." }
+en:
+  titre: "Understanding texts: stories, notices, letters"
+  idee: "Read the question first, then look for clues: time words (at first, now, next month), links (but, because of) and the type of text."
+  phrases:
+    consigne: "Read the text, then touch the right answer."
+    question: "{texte}"
+    indice: "Read again the sentence that answers, and watch the small words: but, because of, for, next."
+    exemple: "“Trains are faster than buses, but buses are cheaper.” Which costs less? Cheaper means it costs less: the bus."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“Last year, Maya moved from Manchester to Toronto with her parents. At first, she missed her friends, but now she loves her new school.” How did Maya feel at first?"
+      nom: "She missed her friends."
+      explication: "“At first, she missed her friends.”"
+      pieges:
+        - texte: "She loved her new school."
+          pourquoi: "That's now: “but now she loves her new school”."
+        - texte: "She wanted to go to Toronto."
+          pourquoi: "The text doesn't say she wanted to."
+    - texte: "“Last year, Maya moved from Manchester to Toronto with her parents.” Where does Maya come from?"
+      nom: "Manchester"
+      explication: "“from Manchester to Toronto”: she comes from Manchester."
+      pieges:
+        - texte: "Toronto"
+          pourquoi: "“to Toronto” is where she went. “from Manchester” is where she comes from."
+        - texte: "Canada"
+          pourquoi: "Toronto is in Canada: that's where she arrived, not where she comes from."
+    - texte: "“The museum will be closed on Monday because of the storm. Visitors who have bought tickets can come back on Tuesday.” Why will the museum be closed?"
+      nom: "because of the storm"
+      explication: "“because of the storm”."
+      pieges:
+        - texte: "because it's Monday"
+          pourquoi: "Monday is just the day. The reason is “because of the storm”."
+        - texte: "because there are no tickets left"
+          pourquoi: "The text talks about visitors who already have tickets; it doesn't say there are none left."
+    - texte: "“The museum will be closed on Monday because of the storm. Visitors who have bought tickets can come back on Tuesday.” What can visitors with a ticket do?"
+      nom: "come back on Tuesday"
+      explication: "“can come back on Tuesday”."
+      pieges:
+        - texte: "come back on Monday"
+          pourquoi: "On Monday, the museum is closed. They can come back on Tuesday."
+        - texte: "get their money back"
+          pourquoi: "The text doesn't talk about getting money back."
+    - texte: "“Sam has been learning the guitar for two years. He practises every evening, and next month he is going to play in a concert.” How long has Sam been learning the guitar?"
+      nom: "two years"
+      explication: "“for two years”."
+      pieges:
+        - texte: "one month"
+          pourquoi: "Next month is when the concert is."
+        - texte: "every evening"
+          pourquoi: "Every evening says when he practises, not how long he has been learning."
+    - texte: "“Sam has been learning the guitar for two years. He practises every evening, and next month he is going to play in a concert.” What is Sam going to do next month?"
+      nom: "play in a concert"
+      explication: "“next month he is going to play in a concert”."
+      pieges:
+        - texte: "start the guitar"
+          pourquoi: "He has already been learning for two years."
+        - texte: "give up the guitar"
+          pourquoi: "The text doesn't say he stops: he practises every evening."
+    - texte: "“Trains are faster than buses, but buses are cheaper. Bikes are the cheapest way to travel in the city.” Which is the cheapest way to travel?"
+      nom: "the bike"
+      explication: "“Bikes are the cheapest”."
+      pieges:
+        - texte: "the bus"
+          pourquoi: "The bus is cheaper than the train, but the cheapest of all is the bike."
+        - texte: "the train"
+          pourquoi: "The train is the faster of the two, not the cheapest."
+    - texte: "“Dear Mr Hill, I am writing to ask if I could do my work experience in your shop in June. Yours sincerely, Lena Dubois” What is Lena asking for?"
+      nom: "a work placement in the shop"
+      explication: "Lena asks to do her work experience in the shop in June."
+      pieges:
+        - texte: "to buy something"
+          pourquoi: "Work experience means working there for a while, not buying."
+        - texte: "a concert ticket"
+          pourquoi: "The text talks about work experience in a shop."
+    - texte: "“Mix the flour and the eggs. Then add the milk slowly. Bake for 20 minutes.” What kind of text is it?"
+      nom: "a recipe"
+      explication: "Instructions one after another, “Mix… add… Bake”: it's a recipe."
+      pieges:
+        - texte: "a letter"
+          pourquoi: "A letter often starts with “Dear…”. Here there are steps: Mix… add… Bake."
+        - texte: "a newspaper article"
+          pourquoi: "An article reports facts; here there are steps to follow."
+    - texte: "“Trains are faster than buses.” Why faster?"
+      nom: "We compare two things: fast + -er, then than."
+      explication: "Two ways of travelling compared: the comparative faster than."
+      pieges:
+        - texte: "Because trains are the fastest of all."
+          pourquoi: "The fastest of all would be “the fastest”."
+        - texte: "Because faster means slower."
+          pourquoi: "No: faster is the opposite of slower."

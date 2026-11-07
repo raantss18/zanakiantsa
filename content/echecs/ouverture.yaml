@@ -1,0 +1,136 @@
+id: ouverture
+titre: "Bien commencer la partie"
+niveau: CM1
+prerequis: [roque]
+programme: { source: fide, texte: "3.8.2.1 : The right to castle has been lost: 1) If the king has already moved, or 2) With a rook that has already moved." }
+activite: quiz
+parametres: {}
+idee: "Au début de la partie : un pion au centre, puis on sort les cavaliers et les fous, puis on roque pour mettre le roi à l’abri."
+phrases:
+  consigne: "Lis la question, pense au centre, aux pièces à sortir et au roi, puis touche la réponse."
+  question: "{texte}"
+  indice: "Trois idées : occuper le centre, sortir les cavaliers et les fous, roquer tôt."
+  exemple: "1. e4 : le pion prend une case du centre et ouvre la route du fou f1 et de la dame. Ensuite, cavalier en f3, fou en c4, puis petit roque."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Quelles sont les quatre cases du centre de l’échiquier ?"
+    nom: "d4, e4, d5 et e5"
+    explication: "L’échiquier a 8 colonnes et 8 rangées : les colonnes d et e et les rangées 4 et 5 sont au milieu."
+    pieges:
+      - { texte: "a1, h1, a8 et h8", pourquoi: "Ce sont les quatre coins, les cases les plus loin du centre." }
+      - { texte: "c3, f3, c6 et f6", pourquoi: "Ces cases entourent le centre, mais ne sont pas au milieu." }
+  - texte: "Au premier coup, lequel de ces coups de pion occupe une case du centre ?"
+    nom: "e2-e4"
+    explication: "Au premier coup, un pion peut avancer de deux cases : e2-e4 va directement sur e4, une case du centre."
+    pieges:
+      - { texte: "a2-a4", pourquoi: "Le pion a va au bord : il ne touche pas le centre." }
+      - { texte: "h2-h3", pourquoi: "Ce pion reste au bord et n’aide pas à prendre le centre." }
+  - texte: "Un cavalier en a3 attaque 4 cases. Combien de cases attaque-t-il en c3, plus près du centre ?"
+    nom: "8"
+    explication: "En c3, le cavalier attaque a2, a4, b1, b5, d1, d5, e2 et e4 : 8 cases. Plus près du centre, une pièce attaque plus de cases."
+    pieges:
+      - { texte: "4", pourquoi: "Au bord, une partie de ses sauts sort de l’échiquier ; en c3, tous ses sauts restent dedans." }
+      - { texte: "6", pourquoi: "Compte les huit sauts en L autour de c3 : aucun ne sort de l’échiquier." }
+  - texte: "Les Blancs ont joué e2-e4. Quel fou blanc peut maintenant sortir ?"
+    nom: "Le fou f1"
+    explication: "En partant de e2, le pion ouvre la diagonale f1-a6 : le fou f1 peut sortir. Le fou c1 attend que le pion d2 bouge."
+    pieges:
+      - { texte: "Le fou c1", pourquoi: "Le pion d2 bouche encore la route du fou c1." }
+      - { texte: "Les deux fous", pourquoi: "Seul le pion e2 a bougé : il libère la route du fou f1, pas celle du fou c1." }
+  - texte: "Au début de la partie, quelles pièces sort-on d’abord ?"
+    nom: "Les cavaliers et les fous"
+    explication: "Les cavaliers et les fous sortent vite et prennent des cases au centre. Les tours et la dame viennent ensuite."
+    pieges:
+      - { texte: "La dame", pourquoi: "Sortie trop tôt, elle se fait chasser par des pièces moins fortes : on perd des coups à la sauver." }
+      - { texte: "Les tours", pourquoi: "Elles sont coincées dans les coins derrière les pions ; elles entrent en jeu après le roque." }
+  - texte: "Ton roi a bougé, puis il est revenu sur e1. Peux-tu encore roquer ?"
+    nom: "Non, plus jamais dans cette partie"
+    explication: "Règles FIDE, article 3.8.2.1 : le droit de roquer est perdu si le roi a déjà bougé."
+    pieges:
+      - { texte: "Oui, puisqu’il est revenu à sa place", pourquoi: "La règle regarde si le roi a déjà bougé, pas où il est maintenant." }
+      - { texte: "Oui, mais seulement le grand roque", pourquoi: "Le droit de roquer est perdu des deux côtés quand le roi a bougé." }
+  - texte: "Ton roi est en échec. Peux-tu roquer pour lui échapper ?"
+    nom: "Non, pas tant qu’il est en échec"
+    explication: "Règles FIDE, article 3.8.2.2 : on ne roque pas si la case où se trouve le roi est attaquée. Il faut d’abord parer l’échec."
+    pieges:
+      - { texte: "Oui, c’est fait pour ça", pourquoi: "Le roque est interdit quand la case du roi est attaquée, donc quand il est en échec." }
+      - { texte: "Oui, si la tour n’a pas bougé", pourquoi: "La tour doit ne pas avoir bougé, mais ça ne suffit pas : le roi ne doit pas être en échec." }
+  - texte: "Pour le petit roque, ton roi doit traverser f1. Un fou noir attaque f1. Peux-tu roquer ?"
+    nom: "Pas maintenant : le roi ne traverse pas une case attaquée"
+    explication: "Règles FIDE, article 3.8.2.2 : le roque est empêché pour l’instant si la case que le roi traverse est attaquée."
+    pieges:
+      - { texte: "Oui, seule la case d’arrivée compte", pourquoi: "La règle compte aussi la case que le roi traverse." }
+      - { texte: "Non, plus jamais dans cette partie", pourquoi: "C’est seulement interdit pour l’instant : quand f1 ne sera plus attaquée, tu pourras roquer." }
+  - texte: "Pourquoi roque-t-on tôt dans la partie ?"
+    nom: "Le roi se met à l’abri derrière ses pions, et la tour se rapproche du centre"
+    explication: "Après le petit roque, le roi est en g1 derrière les pions f2, g2, h2, et la tour arrive en f1, prête à jouer."
+    pieges:
+      - { texte: "Pour gagner une pièce", pourquoi: "Le roque ne prend rien : il protège le roi et fait entrer une tour." }
+      - { texte: "Parce que le roque est obligatoire", pourquoi: "Il n’est pas obligatoire, mais au centre le roi est plus exposé quand les lignes s’ouvrent." }
+
+en:
+  titre: "Starting the game well"
+  idee: "At the start of the game: a pawn in the centre, then bring out the knights and bishops, then castle to put the king in safety."
+  phrases:
+    consigne: "Read the question, think about the centre, the pieces to bring out and the king, then touch the answer."
+    question: "{texte}"
+    indice: "Three ideas: take the centre, bring out the knights and bishops, castle early."
+    exemple: "1. e4: the pawn takes a centre square and opens the way for the f1 bishop and the queen. Then knight to f3, bishop to c4, then castle kingside."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Which are the four centre squares of the board?"
+      nom: "d4, e4, d5 and e5"
+      explication: "The board has 8 files and 8 ranks: files d and e and ranks 4 and 5 are in the middle."
+      pieges:
+        - { texte: "a1, h1, a8 and h8", pourquoi: "Those are the four corners, the squares furthest from the centre." }
+        - { texte: "c3, f3, c6 and f6", pourquoi: "These squares surround the centre, but they are not in the middle." }
+    - texte: "On the first move, which of these pawn moves takes a centre square?"
+      nom: "e2-e4"
+      explication: "On its first move a pawn may advance two squares: e2-e4 goes straight to e4, a centre square."
+      pieges:
+        - { texte: "a2-a4", pourquoi: "The a-pawn goes to the edge: it does not touch the centre." }
+        - { texte: "h2-h3", pourquoi: "This pawn stays on the edge and does not help take the centre." }
+    - texte: "A knight on a3 attacks 4 squares. How many squares does it attack on c3, nearer the centre?"
+      nom: "8"
+      explication: "On c3, the knight attacks a2, a4, b1, b5, d1, d5, e2 and e4: 8 squares. Nearer the centre, a piece attacks more squares."
+      pieges:
+        - { texte: "4", pourquoi: "On the edge, some of its jumps leave the board; on c3, all its jumps stay on it." }
+        - { texte: "6", pourquoi: "Count the eight L-shaped jumps around c3: none of them leaves the board." }
+    - texte: "White has played e2-e4. Which white bishop can come out now?"
+      nom: "The f1 bishop"
+      explication: "By leaving e2, the pawn opens the f1–a6 diagonal: the f1 bishop can come out. The c1 bishop waits for the d2 pawn to move."
+      pieges:
+        - { texte: "The c1 bishop", pourquoi: "The d2 pawn still blocks the way of the c1 bishop." }
+        - { texte: "Both bishops", pourquoi: "Only the e2 pawn has moved: it frees the way of the f1 bishop, not that of the c1 bishop." }
+    - texte: "At the start of the game, which pieces do you bring out first?"
+      nom: "The knights and the bishops"
+      explication: "The knights and bishops come out quickly and take squares in the centre. The rooks and the queen come later."
+      pieges:
+        - { texte: "The queen", pourquoi: "Out too early, she gets chased by weaker pieces: you lose moves saving her." }
+        - { texte: "The rooks", pourquoi: "They are stuck in the corners behind the pawns; they join the game after castling." }
+    - texte: "Your king has moved, then come back to e1. Can you still castle?"
+      nom: "No, never again in this game"
+      explication: "FIDE Laws, article 3.8.2.1: the right to castle is lost if the king has already moved."
+      pieges:
+        - { texte: "Yes, since it is back on its square", pourquoi: "The rule looks at whether the king has already moved, not where it is now." }
+        - { texte: "Yes, but only queenside", pourquoi: "The right to castle is lost on both sides once the king has moved." }
+    - texte: "Your king is in check. Can you castle to escape?"
+      nom: "No, not while it is in check"
+      explication: "FIDE Laws, article 3.8.2.2: you cannot castle if the square the king stands on is attacked. First deal with the check."
+      pieges:
+        - { texte: "Yes, that is what it is for", pourquoi: "Castling is forbidden when the king’s square is attacked, so when it is in check." }
+        - { texte: "Yes, if the rook has not moved", pourquoi: "The rook must not have moved, but that is not enough: the king must not be in check." }
+    - texte: "To castle kingside, your king must cross f1. A black bishop attacks f1. Can you castle?"
+      nom: "Not now: the king does not cross an attacked square"
+      explication: "FIDE Laws, article 3.8.2.2: castling is prevented for now if the square the king crosses is attacked."
+      pieges:
+        - { texte: "Yes, only the arrival square counts", pourquoi: "The rule also counts the square the king crosses." }
+        - { texte: "No, never again in this game", pourquoi: "It is only forbidden for now: when f1 is no longer attacked, you will be able to castle." }
+    - texte: "Why do we castle early in the game?"
+      nom: "The king takes shelter behind its pawns, and the rook comes nearer the centre"
+      explication: "After castling kingside, the king is on g1 behind the f2, g2, h2 pawns, and the rook arrives on f1, ready to play."
+      pieges:
+        - { texte: "To win a piece", pourquoi: "Castling captures nothing: it protects the king and brings a rook into play." }
+        - { texte: "Because castling is compulsory", pourquoi: "It is not compulsory, but in the centre the king is more exposed when lines open up." }

@@ -1,0 +1,136 @@
+id: energie
+titre: "Formes et conversions d'énergie"
+niveau: 3e
+prerequis: [circuit-electrique, transformation-chimique]
+programme: { source: c4, texte: "Identifier les sources, les transferts, les conversions et les formes d’énergie." }
+activite: quiz
+parametres: {}
+idee: "L'énergie existe sous plusieurs formes : cinétique, électrique, thermique, lumineuse, chimique… Un convertisseur la fait passer d'une forme à une autre. Elle ne se crée ni ne se perd."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pour un convertisseur, cherche la forme d'énergie qui entre, puis celle qui sort."
+  exemple: "Exemple : une lampe de poche. La pile fournit de l'énergie électrique ; la lampe la convertit en énergie lumineuse et en énergie thermique."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Une éolienne tourne avec le vent et alimente le réseau. Quelle conversion fait-elle ?"
+    nom: "De l'énergie cinétique en énergie électrique."
+    explication: "Le vent fait tourner les pales (énergie de mouvement, dite cinétique) ; un alternateur la convertit en énergie électrique."
+    pieges:
+      - { texte: "De l'énergie électrique en énergie cinétique.", pourquoi: "C'est ce que fait un moteur, l'inverse d'une éolienne." }
+      - { texte: "De l'énergie lumineuse en énergie électrique.", pourquoi: "C'est le rôle d'un panneau photovoltaïque, pas d'une éolienne." }
+  - texte: "Quelle forme d'énergie une pile stocke-t-elle ?"
+    nom: "De l'énergie chimique."
+    explication: "Dans une pile, une transformation chimique fournit de l'énergie électrique au circuit."
+    pieges:
+      - { texte: "De l'électricité en réserve, comme de l'eau dans un réservoir.", pourquoi: "La pile ne contient pas de courant en stock : elle convertit de l'énergie chimique en énergie électrique." }
+      - { texte: "De l'énergie nucléaire.", pourquoi: "Une pile ordinaire n'utilise pas de réaction nucléaire." }
+  - texte: "Une ampoule allumée chauffe. Pourquoi ?"
+    nom: "Une partie de l'énergie électrique est convertie en énergie thermique."
+    explication: "Une lampe convertit l'énergie électrique en énergie lumineuse, mais aussi en énergie thermique, souvent inutile."
+    pieges:
+      - { texte: "Parce que la lumière est chaude par nature.", pourquoi: "C'est la conversion d'énergie dans la lampe qui produit de la chaleur." }
+      - { texte: "Parce que l'énergie est détruite.", pourquoi: "L'énergie n'est jamais détruite : elle est convertie, ici en lumière et en chaleur." }
+  - texte: "Quand on dit qu'on « consomme » de l'énergie, est-elle détruite ?"
+    nom: "Non, elle est convertie en d'autres formes, souvent moins utilisables."
+    explication: "L'énergie se conserve : elle change de forme. Au bout du compte, elle finit souvent en énergie thermique dispersée."
+    pieges:
+      - { texte: "Oui, elle disparaît.", pourquoi: "L'énergie ne disparaît jamais : c'est la conservation de l'énergie." }
+      - { texte: "Oui, mais seulement l'énergie électrique.", pourquoi: "Aucune forme d'énergie n'est détruite." }
+  - texte: "Un panneau photovoltaïque sur un toit convertit…"
+    nom: "De l'énergie lumineuse en énergie électrique."
+    explication: "Le panneau reçoit la lumière du Soleil et produit un courant électrique."
+    pieges:
+      - { texte: "De l'énergie thermique en énergie lumineuse.", pourquoi: "Le panneau ne produit pas de lumière : il en reçoit." }
+      - { texte: "De l'énergie électrique en énergie lumineuse.", pourquoi: "C'est ce que fait une lampe, l'inverse d'un panneau." }
+  - texte: "Une balle tombe d'une table. Quelle énergie augmente pendant la chute ?"
+    nom: "Son énergie cinétique."
+    explication: "En tombant, la balle va de plus en plus vite : son énergie de position diminue et son énergie cinétique augmente."
+    pieges:
+      - { texte: "Son énergie de position.", pourquoi: "Elle descend : son énergie de position diminue." }
+      - { texte: "Aucune, l'énergie reste la même sous la même forme.", pourquoi: "Le total se conserve, mais la forme change : de position vers cinétique." }
+  - texte: "Laquelle de ces sources d'énergie est renouvelable ?"
+    nom: "Le vent."
+    explication: "Le vent, le Soleil ou les cours d'eau se renouvellent rapidement. Le pétrole et le charbon mettent des millions d'années à se former."
+    pieges:
+      - { texte: "Le pétrole.", pourquoi: "Le pétrole s'est formé en des millions d'années : on l'utilise bien plus vite qu'il ne se reforme." }
+      - { texte: "Le charbon.", pourquoi: "Comme le pétrole, c'est une ressource fossile, non renouvelable à notre échelle." }
+  - texte: "Quelle est l'unité d'énergie dans le système international ?"
+    nom: "Le joule."
+    explication: "L'énergie se mesure en joules. Sur les factures d'électricité, on utilise aussi le kilowattheure."
+    pieges:
+      - { texte: "Le watt.", pourquoi: "Le watt est l'unité de puissance, pas d'énergie." }
+      - { texte: "Le volt.", pourquoi: "Le volt est l'unité de tension électrique." }
+  - texte: "Pourquoi brûler du pétrole ou du charbon contribue-t-il au réchauffement climatique ?"
+    nom: "Leur combustion rejette du dioxyde de carbone, un gaz à effet de serre."
+    explication: "La combustion des ressources fossiles libère du dioxyde de carbone, qui renforce l'effet de serre."
+    pieges:
+      - { texte: "Parce que les flammes chauffent directement l'atmosphère.", pourquoi: "La chaleur des flammes est faible à l'échelle de la Terre : c'est le dioxyde de carbone rejeté qui compte." }
+      - { texte: "Parce qu'ils produisent du dioxygène.", pourquoi: "La combustion consomme du dioxygène ; elle ne le produit pas." }
+
+en:
+  titre: "Forms of energy and how they change"
+  idee: "Energy comes in several forms: kinetic, electrical, thermal, light, chemical… A converter changes it from one form to another. It is never created or lost."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "For a converter, find the form of energy that goes in, then the one that comes out."
+    exemple: "Example: a torch. The battery supplies electrical energy; the bulb converts it into light energy and thermal energy."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "A wind turbine turns in the wind and feeds the grid. What conversion does it make?"
+      nom: "Kinetic energy into electrical energy."
+      explication: "The wind turns the blades (energy of movement, called kinetic); a generator converts it into electrical energy."
+      pieges:
+        - { texte: "Electrical energy into kinetic energy.", pourquoi: "That's what a motor does, the opposite of a wind turbine." }
+        - { texte: "Light energy into electrical energy.", pourquoi: "That's a solar panel's job, not a wind turbine's." }
+    - texte: "What form of energy does a battery store?"
+      nom: "Chemical energy."
+      explication: "In a battery, a chemical change supplies electrical energy to the circuit."
+      pieges:
+        - { texte: "Stored electricity, like water in a tank.", pourquoi: "A battery doesn't hold a stock of current: it converts chemical energy into electrical energy." }
+        - { texte: "Nuclear energy.", pourquoi: "An ordinary battery doesn't use a nuclear reaction." }
+    - texte: "A lit bulb gets hot. Why?"
+      nom: "Part of the electrical energy is converted into thermal energy."
+      explication: "A lamp converts electrical energy into light energy, but also into thermal energy, often wasted."
+      pieges:
+        - { texte: "Because light is hot by nature.", pourquoi: "It's the energy conversion in the lamp that makes heat." }
+        - { texte: "Because energy is destroyed.", pourquoi: "Energy is never destroyed: it's converted, here into light and heat." }
+    - texte: "When we say we « use up » energy, is it destroyed?"
+      nom: "No, it's converted into other forms, often less useful."
+      explication: "Energy is conserved: it changes form. In the end, it often ends up as spread-out thermal energy."
+      pieges:
+        - { texte: "Yes, it disappears.", pourquoi: "Energy never disappears: that's conservation of energy." }
+        - { texte: "Yes, but only electrical energy.", pourquoi: "No form of energy is destroyed." }
+    - texte: "A solar panel on a roof converts…"
+      nom: "Light energy into electrical energy."
+      explication: "The panel receives sunlight and produces an electric current."
+      pieges:
+        - { texte: "Thermal energy into light energy.", pourquoi: "The panel doesn't make light: it receives it." }
+        - { texte: "Electrical energy into light energy.", pourquoi: "That's what a lamp does, the opposite of a panel." }
+    - texte: "A ball falls off a table. Which energy increases as it falls?"
+      nom: "Its kinetic energy."
+      explication: "As it falls, the ball goes faster and faster: its energy of position goes down and its kinetic energy goes up."
+      pieges:
+        - { texte: "Its energy of position.", pourquoi: "It's going down: its energy of position decreases." }
+        - { texte: "None, the energy stays the same in the same form.", pourquoi: "The total is conserved, but the form changes: from position to kinetic." }
+    - texte: "Which of these energy sources is renewable?"
+      nom: "Wind."
+      explication: "Wind, sunlight and rivers renew themselves quickly. Oil and coal take millions of years to form."
+      pieges:
+        - { texte: "Oil.", pourquoi: "Oil formed over millions of years: we use it far faster than it forms again." }
+        - { texte: "Coal.", pourquoi: "Like oil, it's a fossil resource, not renewable on our timescale." }
+    - texte: "What is the unit of energy in the international system?"
+      nom: "The joule."
+      explication: "Energy is measured in joules. On electricity bills, the kilowatt-hour is also used."
+      pieges:
+        - { texte: "The watt.", pourquoi: "The watt is the unit of power, not energy." }
+        - { texte: "The volt.", pourquoi: "The volt is the unit of voltage." }
+    - texte: "Why does burning oil or coal add to global warming?"
+      nom: "Burning them gives off carbon dioxide, a greenhouse gas."
+      explication: "Burning fossil fuels releases carbon dioxide, which strengthens the greenhouse effect."
+      pieges:
+        - { texte: "Because the flames heat the atmosphere directly.", pourquoi: "The flames' heat is tiny on the scale of the Earth: it's the carbon dioxide given off that matters." }
+        - { texte: "Because they produce oxygen.", pourquoi: "Burning uses up oxygen; it doesn't produce it." }

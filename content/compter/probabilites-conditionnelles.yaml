@@ -1,0 +1,136 @@
+id: probabilites-conditionnelles
+titre: "Probabilités conditionnelles"
+niveau: 2de
+prerequis: ["fraction-irreductible"]
+programme: { source: lycee2de, texte: "Calculer des probabilités conditionnelles lorsque les évènements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population) ou d’un arbre de probabilité." }
+activite: quiz
+parametres: {}
+idee: "La probabilité de B sachant A : on ne regarde que les cas où A est réalisé. Dans un arbre, on multiplie les probabilités le long d’un chemin."
+phrases:
+  consigne: "Repère les cas qui comptent, puis touche la probabilité."
+  question: "{texte}"
+  indice: "« Sachant A » : divise par le nombre de cas de A, pas par le total."
+  exemple: "40 élèves, dont 20 filles ; 15 filles sont demi-pensionnaires. Probabilité qu’un élève soit demi-pensionnaire sachant que c’est une fille : 15 ÷ 20 = 0,75."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "On lance un dé équilibré à 6 faces. Quelle est la probabilité d’obtenir un nombre pair ?"
+    nom: "1/2"
+    explication: "3 issues paires (2, 4, 6) sur 6 issues équiprobables : 3/6 = 1/2."
+    pieges:
+      - { texte: "1/6", pourquoi: "1/6 est la probabilité d’une seule face : il y a 3 faces paires." }
+      - { texte: "3", pourquoi: "3 est le nombre de cas favorables : une probabilité est entre 0 et 1, 3 ÷ 6." }
+  - texte: "P(A) = 0,3. Quelle est la probabilité de l’évènement contraire, « non A » ?"
+    nom: "0,7"
+    explication: "P(non A) = 1 − P(A) = 1 − 0,3 = 0,7."
+    pieges:
+      - { texte: "0,3", pourquoi: "0,3 est P(A) : le contraire a la probabilité 1 − 0,3." }
+      - { texte: "1,3", pourquoi: "Une probabilité ne dépasse pas 1 : on soustrait, 1 − 0,3." }
+  - texte: "Un lycée de 40 élèves : 20 filles, dont 15 demi-pensionnaires, et 20 garçons, dont 10 demi-pensionnaires. On tire un élève au hasard. Probabilité qu’il soit demi-pensionnaire ?"
+    nom: "0,625"
+    explication: "15 + 10 = 25 demi-pensionnaires sur 40 élèves : 25 ÷ 40 = 0,625."
+    pieges:
+      - { texte: "0,375", pourquoi: "15 ÷ 40 ne compte que les filles : les 10 garçons demi-pensionnaires comptent aussi." }
+      - { texte: "0,5", pourquoi: "Deux possibilités ne veulent pas dire une chance sur deux : 25 élèves sur 40." }
+  - texte: "Même lycée. Probabilité qu’un élève soit demi-pensionnaire sachant que c’est une fille ?"
+    nom: "0,75"
+    explication: "Sachant fille : on ne regarde que les 20 filles. 15 sont demi-pensionnaires : 15 ÷ 20 = 0,75."
+    pieges:
+      - { texte: "0,375", pourquoi: "15 ÷ 40 divise par tous les élèves : « sachant fille », on divise par les 20 filles." }
+      - { texte: "0,6", pourquoi: "15 ÷ 25 est la probabilité d’être une fille sachant qu’on est demi-pensionnaire : la condition est inversée." }
+  - texte: "Même lycée. Probabilité que ce soit une fille sachant que l’élève est demi-pensionnaire ?"
+    nom: "0,6"
+    explication: "Sachant demi-pensionnaire : on ne regarde que les 25 demi-pensionnaires, dont 15 filles. 15 ÷ 25 = 0,6."
+    pieges:
+      - { texte: "0,75", pourquoi: "15 ÷ 20 est la probabilité d’être demi-pensionnaire sachant fille : la condition est inversée." }
+      - { texte: "0,5", pourquoi: "20 ÷ 40 est la probabilité d’être une fille, sans condition." }
+  - texte: "P(A) = 0,4 et la probabilité de B sachant A vaut 0,5. Quelle est la probabilité de « A et B » ?"
+    nom: "0,2"
+    explication: "Dans l’arbre, on suit le chemin A puis B et on multiplie : 0,4 × 0,5 = 0,2."
+    pieges:
+      - { texte: "0,9", pourquoi: "Le long d’un chemin de l’arbre, on multiplie les probabilités, on ne les additionne pas." }
+      - { texte: "0,5", pourquoi: "0,5 est la probabilité de B sachant A : il faut encore multiplier par P(A)." }
+  - texte: "Complète : dans un arbre, P(A) = 0,6. La branche « non A » porte la probabilité …"
+    nom: "0,4"
+    explication: "Les branches qui partent d’un même point ont pour somme 1 : 1 − 0,6 = 0,4."
+    pieges:
+      - { texte: "0,6", pourquoi: "« A » et « non A » partent du même point : leurs probabilités font 1 ensemble." }
+      - { texte: "1,6", pourquoi: "Une probabilité ne dépasse pas 1 : 1 − 0,6, pas 1 + 0,6." }
+  - texte: "Un test est positif pour 99 % des malades. Pourquoi ne peut-on pas dire qu’un patient testé positif est malade avec une probabilité de 0,99 ?"
+    nom: "Ce sont deux probabilités conditionnelles différentes : la condition n’est pas la même."
+    explication: "0,99 est la probabilité d’être positif sachant qu’on est malade. Malade sachant positif dépend aussi du nombre de malades et des tests positifs à tort."
+    pieges:
+      - { texte: "Parce que 0,99 est trop proche de 1.", pourquoi: "La valeur ne change rien : c’est la condition qui est inversée." }
+      - { texte: "Parce que ces deux probabilités font toujours 1 ensemble.", pourquoi: "Elles ne sont pas contraires l’une de l’autre : leur somme n’a pas de raison de valoir 1." }
+  - texte: "Une urne contient 3 boules rouges et 2 bleues. On tire 2 boules sans remise. Probabilité d’avoir 2 rouges ?"
+    nom: "0,3"
+    explication: "1re rouge : 3/5. Il reste 2 rouges sur 4 : 2/4. Chemin : 3/5 × 2/4 = 6/20 = 0,3."
+    pieges:
+      - { texte: "0,36", pourquoi: "3/5 × 3/5 suppose une remise : sans remise, il reste 2 rouges sur 4 boules." }
+      - { texte: "0,6", pourquoi: "3/5 ne compte que la 1re boule : il faut aussi que la 2e soit rouge." }
+
+en:
+  titre: "Conditional probability"
+  idee: "The probability of B given A: look only at the cases where A happens. In a tree diagram, multiply the probabilities along a path."
+  phrases:
+    consigne: "Find the cases that count, then touch the probability."
+    question: "{texte}"
+    indice: "“Given A”: divide by the number of cases of A, not by the total."
+    exemple: "40 pupils, 20 of them girls; 15 girls stay for school lunch. Probability that a pupil stays for lunch given that she is a girl: 15 ÷ 20 = 0.75."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "You roll a fair 6-sided dice. What is the probability of an even number?"
+      nom: "1/2"
+      explication: "3 even outcomes (2, 4, 6) out of 6 equally likely outcomes: 3/6 = 1/2."
+      pieges:
+        - { texte: "1/6", pourquoi: "1/6 is the probability of one face: there are 3 even faces." }
+        - { texte: "3", pourquoi: "3 is the number of favourable cases: a probability is between 0 and 1, 3 ÷ 6." }
+    - texte: "P(A) = 0.3. What is the probability of the complementary event, “not A”?"
+      nom: "0.7"
+      explication: "P(not A) = 1 − P(A) = 1 − 0.3 = 0.7."
+      pieges:
+        - { texte: "0.3", pourquoi: "0.3 is P(A): its complement has probability 1 − 0.3." }
+        - { texte: "1.3", pourquoi: "A probability is never more than 1: subtract, 1 − 0.3." }
+    - texte: "A school of 40 pupils: 20 girls, 15 of whom stay for lunch, and 20 boys, 10 of whom stay for lunch. A pupil is picked at random. Probability that they stay for lunch?"
+      nom: "0.625"
+      explication: "15 + 10 = 25 lunch pupils out of 40: 25 ÷ 40 = 0.625."
+      pieges:
+        - { texte: "0.375", pourquoi: "15 ÷ 40 counts only the girls: the 10 boys who stay for lunch count too." }
+        - { texte: "0.5", pourquoi: "Two possibilities do not mean a one-in-two chance: 25 pupils out of 40." }
+    - texte: "Same school. Probability that a pupil stays for lunch given that she is a girl?"
+      nom: "0.75"
+      explication: "Given a girl: look only at the 20 girls. 15 stay for lunch: 15 ÷ 20 = 0.75."
+      pieges:
+        - { texte: "0.375", pourquoi: "15 ÷ 40 divides by all the pupils: “given a girl”, divide by the 20 girls." }
+        - { texte: "0.6", pourquoi: "15 ÷ 25 is the probability of being a girl given that the pupil stays for lunch: the condition is the wrong way round." }
+    - texte: "Same school. Probability that the pupil is a girl given that they stay for lunch?"
+      nom: "0.6"
+      explication: "Given lunch: look only at the 25 lunch pupils, 15 of them girls. 15 ÷ 25 = 0.6."
+      pieges:
+        - { texte: "0.75", pourquoi: "15 ÷ 20 is the probability of staying for lunch given a girl: the condition is the wrong way round." }
+        - { texte: "0.5", pourquoi: "20 ÷ 40 is the probability of being a girl, with no condition." }
+    - texte: "P(A) = 0.4 and the probability of B given A is 0.5. What is the probability of “A and B”?"
+      nom: "0.2"
+      explication: "In the tree, follow the path A then B and multiply: 0.4 × 0.5 = 0.2."
+      pieges:
+        - { texte: "0.9", pourquoi: "Along a path of the tree, multiply the probabilities, do not add them." }
+        - { texte: "0.5", pourquoi: "0.5 is the probability of B given A: you still need to multiply by P(A)." }
+    - texte: "Fill in the step: in a tree, P(A) = 0.6. The branch “not A” has probability …"
+      nom: "0.4"
+      explication: "Branches starting from the same point add up to 1: 1 − 0.6 = 0.4."
+      pieges:
+        - { texte: "0.6", pourquoi: "“A” and “not A” start from the same point: their probabilities add up to 1." }
+        - { texte: "1.6", pourquoi: "A probability is never more than 1: 1 − 0.6, not 1 + 0.6." }
+    - texte: "A test is positive for 99 % of people who are ill. Why can’t we say that someone who tests positive is ill with probability 0.99?"
+      nom: "They are two different conditional probabilities: the condition is not the same."
+      explication: "0.99 is the probability of testing positive given that you are ill. Ill given positive also depends on how many people are ill and on false positives."
+      pieges:
+        - { texte: "Because 0.99 is too close to 1.", pourquoi: "The value does not matter: the condition is the wrong way round." }
+        - { texte: "Because these two probabilities always add up to 1.", pourquoi: "They are not complements of each other: there is no reason for them to add up to 1." }
+    - texte: "A bag holds 3 red balls and 2 blue ones. You draw 2 balls without replacement. Probability of 2 reds?"
+      nom: "0.3"
+      explication: "1st red: 3/5. Then 2 reds are left out of 4: 2/4. Path: 3/5 × 2/4 = 6/20 = 0.3."
+      pieges:
+        - { texte: "0.36", pourquoi: "3/5 × 3/5 assumes replacement: without it, 2 reds are left out of 4 balls." }
+        - { texte: "0.6", pourquoi: "3/5 counts only the 1st ball: the 2nd one must be red too." }

@@ -1,0 +1,168 @@
+id: present-perfect
+titre: "Le present perfect : I have visited"
+niveau: 4e
+prerequis: [past-simple-irregular]
+programme: { source: college, texte: "4e (A2+, en bleu) : l’expression du passé en lien avec le présent : le present perfect." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Le present perfect relie le passé au présent : have ou has + participe passé. « I have visited London. » Avec une date passée (yesterday, in 2020), on prend le prétérit."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Une date passée et terminée ? Prétérit. Pas de date, ou un lien avec maintenant ? have ou has + participe passé."
+  exemple: "« He has … his leg. » (break) : après « has », le participe passé : « He has broken his leg. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … London twice. » (visit)"
+    nom: "have visited"
+    explication: "Avec « I » : have + participe passé. « I have visited London twice. »"
+    pieges:
+      - { texte: "has visited", pourquoi: "« has » va avec he, she, it. Avec « I » : « have visited »." }
+      - { texte: "am visited", pourquoi: "Le present perfect se fait avec « have », pas avec « be »." }
+  - texte: "Complète : « She has just … her homework. » (finish)"
+    nom: "finished"
+    explication: "Après « has », le participe passé : « She has just finished her homework. »"
+    pieges:
+      - { texte: "finish", pourquoi: "Après « has », il faut le participe passé : « finished »." }
+      - { texte: "finishing", pourquoi: "Après « has », il faut le participe passé, pas -ing : « finished »." }
+  - texte: "Complète : « They have never … to Scotland. » (be)"
+    nom: "been"
+    explication: "Le participe passé de « be » est « been » : « They have never been to Scotland. »"
+    pieges:
+      - { texte: "was", pourquoi: "« was » est le prétérit. Après « have », il faut le participe passé : « been »." }
+      - { texte: "be", pourquoi: "« be » est la base. Après « have », il faut le participe passé : « been »." }
+  - texte: "Complète : « … you ever eaten sushi? »"
+    nom: "Have"
+    explication: "Avec le participe passé « eaten », la question commence par « Have » : « Have you ever eaten sushi? »"
+    pieges:
+      - { texte: "Did", pourquoi: "Avec « eaten », il faut « have ». « Did » irait avec la base « eat »." }
+      - { texte: "Has", pourquoi: "« Has » va avec he, she, it. Avec « you » : « Have »." }
+  - texte: "Complète : « He has … his leg. » (break)"
+    nom: "broken"
+    explication: "Le participe passé de « break » est « broken » : « He has broken his leg. »"
+    pieges:
+      - { texte: "broke", pourquoi: "« broke » est le prétérit. Après « has », le participe passé : « broken »." }
+      - { texte: "break", pourquoi: "« break » est la base. Après « has », le participe passé : « broken »." }
+  - texte: "Complète : « I … my keys yesterday. » (lose)"
+    nom: "lost"
+    explication: "« yesterday » est une date passée : prétérit. « I lost my keys yesterday. »"
+    pieges:
+      - { texte: "have lost", pourquoi: "« yesterday » donne une date passée et terminée : on prend le prétérit, « I lost »." }
+      - { texte: "lose", pourquoi: "« lose » est le présent. « yesterday » demande le passé : « lost »." }
+  - texte: "Complète : « We have lived here … 2015. »"
+    nom: "since"
+    explication: "« since » + un point de départ : « We have lived here since 2015. »"
+    pieges:
+      - { texte: "for", pourquoi: "« for » + une durée : « for ten years ». Avec un point de départ, 2015 : « since »." }
+      - { texte: "ago", pourquoi: "« ago » va avec le prétérit : « ten years ago »." }
+  - texte: "Complète : « She has worked here … three years. »"
+    nom: "for"
+    explication: "« for » + une durée : « She has worked here for three years. »"
+    pieges:
+      - { texte: "since", pourquoi: "« since » + un point de départ : « since 2015 ». Avec une durée : « for »." }
+      - { texte: "ago", pourquoi: "« ago » va avec le prétérit : « three years ago »." }
+  - texte: "« Have you finished? » Complète la réponse : « Yes, I … »"
+    nom: "have"
+    explication: "La réponse courte reprend l'auxiliaire de la question : « Yes, I have. »"
+    pieges:
+      - { texte: "did", pourquoi: "La question commence par « Have » : la réponse courte reprend « have »." }
+      - { texte: "finished", pourquoi: "La réponse courte reprend l'auxiliaire seul : « Yes, I have. »" }
+  - texte: "Pourquoi dit-on « I went to Rome in 2019 », au prétérit ?"
+    nom: "« in 2019 » est une date passée et terminée : on emploie le prétérit."
+    explication: "Avec une date passée et terminée, on prend le prétérit : « I went to Rome in 2019 »."
+    pieges:
+      - { texte: "Parce que « go » n'a pas de present perfect.", pourquoi: "Non : « I have been to Rome », « she has gone » existent." }
+      - { texte: "Parce que le present perfect ne va qu'avec « he ».", pourquoi: "Non : « I have visited », « they have visited »… toutes les personnes." }
+en:
+  titre: "The present perfect: I have visited"
+  idee: "The present perfect links the past to the present: have or has + past participle. “I have visited London.” With a finished time (yesterday, in 2020), we use the past simple."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "A finished time in the past? Past simple. No time, or a link with now? have or has + past participle."
+    exemple: "“He has … his leg.” (break): after has, the past participle: “He has broken his leg.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … London twice.” (visit)"
+      nom: "have visited"
+      explication: "With I: have + past participle. “I have visited London twice.”"
+      pieges:
+        - texte: "has visited"
+          pourquoi: "“has” goes with he, she and it. With I: have visited."
+        - texte: "am visited"
+          pourquoi: "The present perfect uses have, not be."
+    - texte: "Complete: “She has just … her homework.” (finish)"
+      nom: "finished"
+      explication: "After has, the past participle: “She has just finished her homework.”"
+      pieges:
+        - texte: "finish"
+          pourquoi: "After has, we need the past participle: finished."
+        - texte: "finishing"
+          pourquoi: "After has, we need the past participle, not -ing: finished."
+    - texte: "Complete: “They have never … to Scotland.” (be)"
+      nom: "been"
+      explication: "The past participle of be is been: “They have never been to Scotland.”"
+      pieges:
+        - texte: "was"
+          pourquoi: "“was” is the past simple. After have, the past participle: been."
+        - texte: "be"
+          pourquoi: "“be” is the base form. After have, the past participle: been."
+    - texte: "Complete: “… you ever eaten sushi?”"
+      nom: "Have"
+      explication: "With the past participle eaten, the question starts with Have: “Have you ever eaten sushi?”"
+      pieges:
+        - texte: "Did"
+          pourquoi: "With eaten, we need have. Did would go with the base form eat."
+        - texte: "Has"
+          pourquoi: "“Has” goes with he, she and it. With you: Have."
+    - texte: "Complete: “He has … his leg.” (break)"
+      nom: "broken"
+      explication: "The past participle of break is broken: “He has broken his leg.”"
+      pieges:
+        - texte: "broke"
+          pourquoi: "“broke” is the past simple. After has, the past participle: broken."
+        - texte: "break"
+          pourquoi: "“break” is the base form. After has, the past participle: broken."
+    - texte: "Complete: “I … my keys yesterday.” (lose)"
+      nom: "lost"
+      explication: "Yesterday is a finished time: past simple. “I lost my keys yesterday.”"
+      pieges:
+        - texte: "have lost"
+          pourquoi: "Yesterday is a finished time in the past: we use the past simple, I lost."
+        - texte: "lose"
+          pourquoi: "“lose” is the present. Yesterday needs the past: lost."
+    - texte: "Complete: “We have lived here … 2015.”"
+      nom: "since"
+      explication: "Since + a starting point: “We have lived here since 2015.”"
+      pieges:
+        - texte: "for"
+          pourquoi: "For + a length of time: for ten years. With a starting point, 2015: since."
+        - texte: "ago"
+          pourquoi: "Ago goes with the past simple: ten years ago."
+    - texte: "Complete: “She has worked here … three years.”"
+      nom: "for"
+      explication: "For + a length of time: “She has worked here for three years.”"
+      pieges:
+        - texte: "since"
+          pourquoi: "Since + a starting point: since 2015. With a length of time: for."
+        - texte: "ago"
+          pourquoi: "Ago goes with the past simple: three years ago."
+    - texte: "“Have you finished?” Complete the answer: “Yes, I …”"
+      nom: "have"
+      explication: "The short answer repeats the auxiliary of the question: “Yes, I have.”"
+      pieges:
+        - texte: "did"
+          pourquoi: "The question starts with Have: the short answer repeats have."
+        - texte: "finished"
+          pourquoi: "The short answer repeats the auxiliary only: “Yes, I have.”"
+    - texte: "Why do we say “I went to Rome in 2019”, in the past simple?"
+      nom: "In 2019 is a finished time in the past: we use the past simple."
+      explication: "With a finished time in the past, we use the past simple: “I went to Rome in 2019.”"
+      pieges:
+        - texte: "Because go has no present perfect."
+          pourquoi: "No: “I have been to Rome”, “she has gone” exist."
+        - texte: "Because the present perfect only goes with he."
+          pourquoi: "No: I have visited, they have visited… every person."

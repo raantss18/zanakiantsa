@@ -1,0 +1,148 @@
+id: moyenne-mediane
+titre: "Moyenne et médiane"
+niveau: 2de
+prerequis: ["relatifs-comparer", "partager"]
+programme: { source: lycee2de, texte: "Influence sur la moyenne, la médiane de l’ajout ou de la suppression d’une valeur dans la série." }
+activite: quiz
+parametres: {}
+idee: "La moyenne : la somme des valeurs divisée par leur nombre. La médiane : la valeur du milieu de la série rangée dans l’ordre. Une valeur extrême change la moyenne, pas la médiane."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pour la médiane, range d’abord les valeurs dans l’ordre croissant."
+  exemple: "Notes 8, 12, 10, 14, 6 : rangées, 6, 8, 10, 12, 14. Médiane : 10, au milieu. Moyenne : (6 + 8 + 10 + 12 + 14) ÷ 5 = 50 ÷ 5 = 10."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quelle est la moyenne de 4, 6, 8 et 18 ?"
+    nom: "9"
+    explication: "Somme : 4 + 6 + 8 + 18 = 36. Il y a 4 valeurs : 36 ÷ 4 = 9."
+    pieges:
+      - { texte: "7", pourquoi: "7 est la médiane, (6 + 8) ÷ 2 : la moyenne utilise toutes les valeurs, 18 compris." }
+      - { texte: "36", pourquoi: "36 est la somme : il reste à diviser par le nombre de valeurs, 4." }
+  - texte: "Quelle est la médiane de la série 9, 20, 5, 12, 7 ?"
+    nom: "9"
+    explication: "Rangée : 5, 7, 9, 12, 20. Il y a 5 valeurs : la 3e, 9, est au milieu."
+    pieges:
+      - { texte: "5", pourquoi: "5 est au milieu de la liste non rangée : il faut d’abord ranger les valeurs." }
+      - { texte: "10,6", pourquoi: "10,6 est la moyenne, 53 ÷ 5, pas la médiane." }
+  - texte: "Quelle est la médiane de 2, 4, 6, 10, 12, 30 ?"
+    nom: "8"
+    explication: "6 valeurs, déjà rangées : le milieu tombe entre 6 et 10. Médiane : (6 + 10) ÷ 2 = 8."
+    pieges:
+      - { texte: "6", pourquoi: "Avec un nombre pair de valeurs, on prend la moyenne des deux valeurs du milieu, 6 et 10." }
+      - { texte: "Environ 10,7", pourquoi: "C’est la moyenne, 64 ÷ 6 : la médiane est la valeur du milieu." }
+  - texte: "Série 10, 11, 12, 13, 14 : moyenne 12, médiane 12. On remplace 14 par 64. Quelle est la nouvelle médiane ?"
+    nom: "12"
+    explication: "Rangée : 10, 11, 12, 13, 64. La valeur du milieu est toujours 12 : la médiane ne bouge pas."
+    pieges:
+      - { texte: "22", pourquoi: "22 est la nouvelle moyenne, 110 ÷ 5 : la médiane, elle, reste au milieu." }
+      - { texte: "62", pourquoi: "La médiane n’augmente pas de 50 : seule la plus grande valeur a changé, le milieu reste 12." }
+  - texte: "Même série, 14 remplacé par 64 : 10, 11, 12, 13, 64. Quelle est la nouvelle moyenne ?"
+    nom: "22"
+    explication: "Somme : 10 + 11 + 12 + 13 + 64 = 110. 110 ÷ 5 = 22 : la moyenne passe de 12 à 22."
+    pieges:
+      - { texte: "12", pourquoi: "12 est la médiane : la moyenne utilise toutes les valeurs, donc elle change." }
+      - { texte: "62", pourquoi: "La somme augmente de 50, donc la moyenne augmente de 50 ÷ 5 = 10, pas de 50." }
+  - texte: "Un élève a 12 avec le coefficient 3 et 8 avec le coefficient 1. Quelle est sa moyenne ?"
+    nom: "11"
+    explication: "Moyenne pondérée : (12 × 3 + 8 × 1) ÷ (3 + 1) = (36 + 8) ÷ 4 = 44 ÷ 4 = 11."
+    pieges:
+      - { texte: "10", pourquoi: "(12 + 8) ÷ 2 oublie les coefficients : 12 compte 3 fois." }
+      - { texte: "44", pourquoi: "44 est la somme pondérée : il reste à diviser par la somme des coefficients, 4." }
+  - texte: "Complète : 3 notes ont pour moyenne 12. La somme des notes vaut 3 × 12 = …"
+    nom: "36"
+    explication: "Moyenne = somme ÷ nombre de notes, donc somme = moyenne × nombre de notes = 12 × 3 = 36."
+    pieges:
+      - { texte: "15", pourquoi: "On multiplie la moyenne par le nombre de notes : 3 × 12, pas 3 + 12." }
+      - { texte: "4", pourquoi: "12 ÷ 3 = 4 : pour retrouver la somme, on multiplie, on ne divise pas." }
+  - texte: "Salaires : 1 500, 1 600, 1 700, 1 800 et 9 000 €. Pourquoi la médiane représente-t-elle mieux ces salaires que la moyenne ?"
+    nom: "La seule valeur 9 000 tire la moyenne vers le haut."
+    explication: "Moyenne : 15 600 ÷ 5 = 3 120 €, plus que 4 salaires sur 5. Médiane : 1 700 €, la valeur du milieu."
+    pieges:
+      - { texte: "Parce que la médiane est toujours plus grande que la moyenne.", pourquoi: "Ici la médiane, 1 700, est plus petite que la moyenne, 3 120." }
+      - { texte: "Parce que la moyenne ne compte pas les petites valeurs.", pourquoi: "La moyenne compte toutes les valeurs : c’est pour cela que 9 000 la fait monter." }
+  - texte: "5 valeurs ont pour moyenne 10. On ajoute la valeur 16. Quelle est la nouvelle moyenne ?"
+    nom: "11"
+    explication: "Somme des 5 valeurs : 5 × 10 = 50. Avec 16 : 66, pour 6 valeurs. 66 ÷ 6 = 11."
+    pieges:
+      - { texte: "13", pourquoi: "(10 + 16) ÷ 2 donne autant de poids à 16 qu’aux 5 autres valeurs ensemble." }
+      - { texte: "66", pourquoi: "66 est la nouvelle somme : il reste à diviser par 6 valeurs." }
+  - texte: "Une série a pour moyenne 15. On ajoute 2 à chaque valeur. Quelle est la nouvelle moyenne ?"
+    nom: "17"
+    explication: "Si chaque valeur augmente de 2, la somme augmente de 2 fois le nombre de valeurs : la moyenne augmente de 2."
+    pieges:
+      - { texte: "15", pourquoi: "Chaque valeur augmente de 2 : la moyenne augmente aussi de 2." }
+      - { texte: "On ne peut pas savoir sans les valeurs.", pourquoi: "On peut : ajouter 2 à chaque valeur ajoute 2 à la moyenne, quelles que soient les valeurs." }
+
+en:
+  titre: "Mean and median"
+  idee: "The mean: the sum of the values divided by how many there are. The median: the middle value once the list is in order. An extreme value changes the mean, not the median."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "For the median, first put the values in increasing order."
+    exemple: "Marks 8, 12, 10, 14, 6: in order, 6, 8, 10, 12, 14. Median: 10, in the middle. Mean: (6 + 8 + 10 + 12 + 14) ÷ 5 = 50 ÷ 5 = 10."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "What is the mean of 4, 6, 8 and 18?"
+      nom: "9"
+      explication: "Sum: 4 + 6 + 8 + 18 = 36. There are 4 values: 36 ÷ 4 = 9."
+      pieges:
+        - { texte: "7", pourquoi: "7 is the median, (6 + 8) ÷ 2: the mean uses every value, including 18." }
+        - { texte: "36", pourquoi: "36 is the sum: you still need to divide by the number of values, 4." }
+    - texte: "What is the median of 9, 20, 5, 12, 7?"
+      nom: "9"
+      explication: "In order: 5, 7, 9, 12, 20. There are 5 values: the 3rd one, 9, is in the middle."
+      pieges:
+        - { texte: "5", pourquoi: "5 is in the middle of the unordered list: put the values in order first." }
+        - { texte: "10.6", pourquoi: "10.6 is the mean, 53 ÷ 5, not the median." }
+    - texte: "What is the median of 2, 4, 6, 10, 12, 30?"
+      nom: "8"
+      explication: "6 values, already in order: the middle falls between 6 and 10. Median: (6 + 10) ÷ 2 = 8."
+      pieges:
+        - { texte: "6", pourquoi: "With an even number of values, take the mean of the two middle values, 6 and 10." }
+        - { texte: "About 10.7", pourquoi: "That is the mean, 64 ÷ 6: the median is the middle value." }
+    - texte: "List 10, 11, 12, 13, 14: mean 12, median 12. We replace 14 with 64. What is the new median?"
+      nom: "12"
+      explication: "In order: 10, 11, 12, 13, 64. The middle value is still 12: the median does not move."
+      pieges:
+        - { texte: "22", pourquoi: "22 is the new mean, 110 ÷ 5: the median stays in the middle." }
+        - { texte: "62", pourquoi: "The median does not go up by 50: only the largest value changed, the middle is still 12." }
+    - texte: "Same list with 14 replaced by 64: 10, 11, 12, 13, 64. What is the new mean?"
+      nom: "22"
+      explication: "Sum: 10 + 11 + 12 + 13 + 64 = 110. 110 ÷ 5 = 22: the mean goes from 12 to 22."
+      pieges:
+        - { texte: "12", pourquoi: "12 is the median: the mean uses every value, so it changes." }
+        - { texte: "62", pourquoi: "The sum goes up by 50, so the mean goes up by 50 ÷ 5 = 10, not by 50." }
+    - texte: "A student has 12 with weight 3 and 8 with weight 1. What is the mean?"
+      nom: "11"
+      explication: "Weighted mean: (12 × 3 + 8 × 1) ÷ (3 + 1) = (36 + 8) ÷ 4 = 44 ÷ 4 = 11."
+      pieges:
+        - { texte: "10", pourquoi: "(12 + 8) ÷ 2 ignores the weights: 12 counts 3 times." }
+        - { texte: "44", pourquoi: "44 is the weighted sum: you still need to divide by the total weight, 4." }
+    - texte: "Fill in the step: 3 marks have a mean of 12. Their sum is 3 × 12 = …"
+      nom: "36"
+      explication: "Mean = sum ÷ number of marks, so sum = mean × number of marks = 12 × 3 = 36."
+      pieges:
+        - { texte: "15", pourquoi: "Multiply the mean by the number of marks: 3 × 12, not 3 + 12." }
+        - { texte: "4", pourquoi: "12 ÷ 3 = 4: to get the sum back, multiply, do not divide." }
+    - texte: "Salaries: 1,500, 1,600, 1,700, 1,800 and 9,000 €. Why does the median describe these salaries better than the mean?"
+      nom: "The single value 9,000 pulls the mean up."
+      explication: "Mean: 15,600 ÷ 5 = 3,120 €, more than 4 salaries out of 5. Median: 1,700 €, the middle value."
+      pieges:
+        - { texte: "Because the median is always greater than the mean.", pourquoi: "Here the median, 1,700, is smaller than the mean, 3,120." }
+        - { texte: "Because the mean ignores the small values.", pourquoi: "The mean uses every value: that is why 9,000 pushes it up." }
+    - texte: "5 values have a mean of 10. We add the value 16. What is the new mean?"
+      nom: "11"
+      explication: "Sum of the 5 values: 5 × 10 = 50. With 16: 66, for 6 values. 66 ÷ 6 = 11."
+      pieges:
+        - { texte: "13", pourquoi: "(10 + 16) ÷ 2 gives 16 as much weight as the other 5 values together." }
+        - { texte: "66", pourquoi: "66 is the new sum: you still need to divide by 6 values." }
+    - texte: "A list has a mean of 15. We add 2 to every value. What is the new mean?"
+      nom: "17"
+      explication: "If every value goes up by 2, the sum goes up by 2 times the number of values: the mean goes up by 2."
+      pieges:
+        - { texte: "15", pourquoi: "Every value goes up by 2: so does the mean." }
+        - { texte: "We cannot tell without the values.", pourquoi: "We can: adding 2 to every value adds 2 to the mean, whatever the values are." }

@@ -1,0 +1,124 @@
+id: terre-soleil
+titre: "La Terre tourne autour du Soleil"
+niveau: CM2
+prerequis: [planetes]
+programme: { source: c3s, texte: "Décrire le mouvement de la Terre par rapport au Soleil et la situer dans le système solaire." }
+activite: quiz
+parametres: {}
+idee: "La Terre est la troisième planète du système solaire. Elle fait le tour du Soleil en un an, à environ 150 millions de kilomètres. Le Soleil est une étoile."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Le Soleil est au centre : la Terre tourne autour de lui en une année."
+  exemple: "Exemple : en maquette, si le Soleil est une balle de 10 cm, la Terre est un grain de semoule d'1 mm placé à 10 m."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qui tourne autour de qui ?"
+    nom: "La Terre tourne autour du Soleil."
+    explication: "Le Soleil semble traverser le ciel, mais c'est la Terre qui tourne autour du Soleil, et sur elle-même."
+    pieges:
+      - { texte: "Le Soleil tourne autour de la Terre.", pourquoi: "C'est ce qu'on croit voir depuis la Terre, et ce qu'on a longtemps pensé. Mais c'est la Terre qui tourne autour du Soleil." }
+      - { texte: "Ils ne bougent ni l'un ni l'autre.", pourquoi: "La Terre se déplace sans cesse autour du Soleil." }
+  - texte: "Combien de temps la Terre met-elle pour faire un tour complet autour du Soleil ?"
+    nom: "Environ 365 jours, soit une année."
+    explication: "Un tour complet dure environ 365 jours et un quart : c'est pour cela qu'il y a une année bissextile tous les quatre ans."
+    pieges:
+      - { texte: "Un jour.", pourquoi: "En un jour, la Terre fait un tour sur elle-même, pas autour du Soleil." }
+      - { texte: "Un mois.", pourquoi: "Environ un mois, c'est le temps que met la Lune pour tourner autour de la Terre." }
+  - texte: "Qu'est-ce que le Soleil ?"
+    nom: "Une étoile."
+    explication: "Le Soleil est une étoile : une énorme boule de gaz très chaud qui produit sa propre lumière."
+    pieges:
+      - { texte: "Une planète.", pourquoi: "Une planète ne produit pas de lumière ; elle tourne autour d'une étoile." }
+      - { texte: "Une boule de feu qui brûle du bois.", pourquoi: "Le Soleil ne brûle pas comme un feu de bois : c'est du gaz très chaud." }
+  - texte: "À quelle distance moyenne du Soleil se trouve la Terre ?"
+    nom: "Environ 150 millions de kilomètres."
+    explication: "La Terre est en moyenne à environ 150 millions de kilomètres du Soleil. Sa lumière met environ 8 minutes pour nous arriver."
+    pieges:
+      - { texte: "Environ 150 kilomètres.", pourquoi: "C'est à peine la distance entre deux villes : le Soleil est un million de fois plus loin." }
+      - { texte: "Environ 384 000 kilomètres.", pourquoi: "C'est à peu près la distance de la Terre à la Lune." }
+  - texte: "Dans une maquette à l'échelle, le Soleil est une balle de 10 cm. Quelle taille a la Terre ?"
+    nom: "Un grain d'environ 1 mm."
+    explication: "Le Soleil est environ cent fois plus large que la Terre : à cette échelle, la Terre est un grain de semoule d'1 mm, placé à 10 m."
+    pieges:
+      - { texte: "Une balle de 5 cm, la moitié du Soleil.", pourquoi: "Le Soleil est bien plus grand que ça : environ cent fois plus large que la Terre." }
+      - { texte: "Une balle de 10 cm aussi.", pourquoi: "Les dessins montrent souvent des planètes trop grosses ; en réalité, le Soleil est immense à côté de la Terre." }
+  - texte: "Quelle est la place de la Terre en partant du Soleil ?"
+    nom: "La troisième."
+    explication: "Mercure, Vénus, puis la Terre : c'est la troisième planète."
+    pieges:
+      - { texte: "La première.", pourquoi: "La première, la plus proche du Soleil, est Mercure." }
+      - { texte: "La quatrième.", pourquoi: "La quatrième est Mars." }
+  - texte: "Que fait la Lune ?"
+    nom: "Elle tourne autour de la Terre."
+    explication: "La Lune est le satellite naturel de la Terre : elle tourne autour d'elle en environ un mois."
+    pieges:
+      - { texte: "Elle tourne autour de Mars.", pourquoi: "Mars a ses propres petits satellites ; la Lune tourne autour de la Terre." }
+      - { texte: "Elle produit sa propre lumière.", pourquoi: "La Lune ne fait que renvoyer la lumière du Soleil." }
+  - texte: "Pourquoi a-t-on longtemps cru que le Soleil tournait autour de la Terre ?"
+    nom: "Parce que, vu de la Terre, le Soleil semble traverser le ciel."
+    explication: "Le mouvement dépend de l'observateur : pour nous, sur la Terre, c'est le Soleil qui paraît bouger."
+    pieges:
+      - { texte: "Parce que c'est vrai.", pourquoi: "Les observations et les mesures montrent que la Terre tourne autour du Soleil." }
+      - { texte: "Parce que le Soleil est plus petit que la Terre.", pourquoi: "C'est l'inverse : le Soleil est beaucoup plus grand." }
+
+en:
+  titre: "The Earth goes round the Sun"
+  idee: "The Earth is the third planet in the solar system. It goes round the Sun in one year, about 150 million kilometres away. The Sun is a star."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "The Sun is in the middle: the Earth goes round it in a year."
+    exemple: "Example: in a model, if the Sun is a 10 cm ball, the Earth is a 1 mm grain of semolina placed 10 m away."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What goes round what?"
+      nom: "The Earth goes round the Sun."
+      explication: "The Sun seems to cross the sky, but it's the Earth that goes round the Sun, and spins on itself."
+      pieges:
+        - { texte: "The Sun goes round the Earth.", pourquoi: "That's what we seem to see from Earth, and what people thought for a long time. But the Earth goes round the Sun." }
+        - { texte: "Neither of them moves.", pourquoi: "The Earth is always moving round the Sun." }
+    - texte: "How long does the Earth take to go all the way round the Sun?"
+      nom: "About 365 days, one year."
+      explication: "One full trip takes about 365 and a quarter days: that's why there's a leap year every four years."
+      pieges:
+        - { texte: "One day.", pourquoi: "In one day, the Earth spins once on itself, not round the Sun." }
+        - { texte: "One month.", pourquoi: "About a month is how long the Moon takes to go round the Earth." }
+    - texte: "What is the Sun?"
+      nom: "A star."
+      explication: "The Sun is a star: a huge ball of very hot gas that makes its own light."
+      pieges:
+        - { texte: "A planet.", pourquoi: "A planet doesn't make light; it goes round a star." }
+        - { texte: "A ball of fire burning wood.", pourquoi: "The Sun doesn't burn like a wood fire: it's very hot gas." }
+    - texte: "How far from the Sun is the Earth, on average?"
+      nom: "About 150 million kilometres."
+      explication: "The Earth is on average about 150 million kilometres from the Sun. Its light takes about 8 minutes to reach us."
+      pieges:
+        - { texte: "About 150 kilometres.", pourquoi: "That's barely the distance between two towns: the Sun is a million times further." }
+        - { texte: "About 384,000 kilometres.", pourquoi: "That's roughly the distance from the Earth to the Moon." }
+    - texte: "In a scale model, the Sun is a 10 cm ball. How big is the Earth?"
+      nom: "A grain about 1 mm across."
+      explication: "The Sun is about a hundred times wider than the Earth: at this scale, the Earth is a 1 mm grain of semolina, 10 m away."
+      pieges:
+        - { texte: "A 5 cm ball, half the Sun.", pourquoi: "The Sun is far bigger than that: about a hundred times wider than the Earth." }
+        - { texte: "A 10 cm ball too.", pourquoi: "Pictures often show planets far too big; really, the Sun is huge next to the Earth." }
+    - texte: "Where is the Earth, counting from the Sun?"
+      nom: "Third."
+      explication: "Mercury, Venus, then the Earth: it's the third planet."
+      pieges:
+        - { texte: "First.", pourquoi: "The first, closest to the Sun, is Mercury." }
+        - { texte: "Fourth.", pourquoi: "The fourth is Mars." }
+    - texte: "What does the Moon do?"
+      nom: "It goes round the Earth."
+      explication: "The Moon is the Earth's natural satellite: it goes round it in about a month."
+      pieges:
+        - { texte: "It goes round Mars.", pourquoi: "Mars has its own small moons; the Moon goes round the Earth." }
+        - { texte: "It makes its own light.", pourquoi: "The Moon only reflects the Sun's light." }
+    - texte: "Why did people believe for so long that the Sun went round the Earth?"
+      nom: "Because, seen from Earth, the Sun seems to cross the sky."
+      explication: "Movement depends on who is watching: for us, on Earth, it's the Sun that seems to move."
+      pieges:
+        - { texte: "Because it's true.", pourquoi: "Observations and measurements show the Earth goes round the Sun." }
+        - { texte: "Because the Sun is smaller than the Earth.", pourquoi: "It's the opposite: the Sun is much bigger." }

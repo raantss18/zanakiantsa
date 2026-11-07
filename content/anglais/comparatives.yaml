@@ -1,0 +1,154 @@
+id: comparatives
+titre: "Comparer : taller, more famous, the best"
+niveau: 4e
+prerequis: [to-be]
+programme: { source: college, texte: "4e (A2+, en bleu) : utiliser une gamme variée de comparatifs (more colourful than, taller than, etc.), de superlatifs (the most beautiful, the greatest one of all, the highest ever, etc.)" }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Mot court : -er, the -est (« taller », « the tallest »). Mot long : more, the most (« more famous »). Irréguliers : good, better, the best ; bad, worse, the worst."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne forme de l'adjectif."
+  question: "{texte}"
+  indice: "« than » : on compare deux choses, comparatif. « the … of all » ou « in the… » : superlatif. Puis regarde la longueur du mot."
+  exemple: "« An elephant is … than a horse. » (big) : « than » compare deux animaux ; « big » est court : « bigger » (g doublé)."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « An elephant is … than a horse. » (big)"
+    nom: "bigger"
+    explication: "Mot court et « than » : -er. « An elephant is bigger than a horse. »"
+    pieges:
+      - { texte: "biggest", pourquoi: "« biggest » est le superlatif, avec « the ». Avec « than », on compare deux : « bigger »." }
+      - { texte: "big", pourquoi: "Avec « than », il faut le comparatif : « bigger »." }
+  - texte: "Complète : « This book is … than that one. » (interesting)"
+    nom: "more interesting"
+    explication: "Mot long : « more » devant. « This book is more interesting than that one. »"
+    pieges:
+      - { texte: "the most interesting", pourquoi: "« the most » est le superlatif : le plus de tous. Avec « than », on compare deux : « more interesting »." }
+      - { texte: "interesting", pourquoi: "Avec « than », il faut le comparatif : « more interesting »." }
+  - texte: "Complète : « Ben Nevis is … mountain in the UK. » (high)"
+    nom: "the highest"
+    explication: "La plus haute de toutes : « Ben Nevis is the highest mountain in the UK. »"
+    pieges:
+      - { texte: "higher", pourquoi: "« higher » compare deux choses. Ici, c'est la plus haute de toutes : « the highest »." }
+      - { texte: "high", pourquoi: "« in the UK » demande le superlatif : « the highest »." }
+  - texte: "Complète : « Today is … than yesterday. » (good)"
+    nom: "better"
+    explication: "« good » est irrégulier : « better ». « Today is better than yesterday. »"
+    pieges:
+      - { texte: "the best", pourquoi: "« the best » : le meilleur de tous. Pour comparer deux jours : « better »." }
+      - { texte: "well", pourquoi: "« well » est un adverbe, « bien ». Le comparatif de « good » est « better »." }
+  - texte: "Complète : « It was … day of my life! » (bad)"
+    nom: "the worst"
+    explication: "« bad » est irrégulier : « the worst ». « It was the worst day of my life! »"
+    pieges:
+      - { texte: "worse", pourquoi: "« worse » compare deux choses. « of my life » demande le superlatif : « the worst »." }
+      - { texte: "the best", pourquoi: "« the best » est le superlatif de « good » : c'est le contraire." }
+  - texte: "Complète : « Lucy is … Tom. » (le même âge)"
+    nom: "as old as"
+    explication: "L'égalité se dit « as … as » : « Lucy is as old as Tom. »"
+    pieges:
+      - { texte: "older than", pourquoi: "« older than » veut dire « plus âgée que ». Pour le même âge : « as old as »." }
+      - { texte: "the oldest", pourquoi: "« the oldest » : la plus âgée de toutes. Pour le même âge : « as old as »." }
+  - texte: "Complète : « My bike is … expensive than yours. » (moins cher)"
+    nom: "less"
+    explication: "« moins » se dit « less » : « My bike is less expensive than yours. »"
+    pieges:
+      - { texte: "more", pourquoi: "« more expensive » veut dire « plus cher ». Moins cher : « less expensive »." }
+      - { texte: "the least", pourquoi: "« the least » : le moins de tous. Avec « than », on compare deux : « less »." }
+  - texte: "Complète : « This is … film of the year. » (exciting)"
+    nom: "the most exciting"
+    explication: "Mot long et superlatif : « the most ». « This is the most exciting film of the year. »"
+    pieges:
+      - { texte: "more exciting", pourquoi: "« more exciting » compare deux films. « of the year » demande le superlatif : « the most exciting »." }
+      - { texte: "most exciting", pourquoi: "Il manque « the » : « the most exciting »." }
+  - texte: "Pourquoi dit-on « taller » mais « more beautiful » ?"
+    nom: "« tall » est un mot court : il prend -er ; « beautiful » est long : « more » devant."
+    explication: "C'est la longueur de l'adjectif qui décide : court, -er ; long, « more »."
+    pieges:
+      - { texte: "Parce que « beautiful » est irrégulier, comme « good ».", pourquoi: "Non : les irréguliers changent de mot (good, better). « beautiful » suit la règle des mots longs." }
+      - { texte: "Parce que « more » va avec les mots sur l'apparence.", pourquoi: "Non : on dit « more interesting », « more expensive » : c'est la longueur du mot qui compte." }
+en:
+  titre: "Comparing: taller, more famous, the best"
+  idee: "Short word: -er, the -est (taller, the tallest). Long word: more, the most (more famous). Irregular: good, better, the best; bad, worse, the worst."
+  phrases:
+    consigne: "Read the sentence, then touch the right form of the adjective."
+    question: "{texte}"
+    indice: "Than: comparing two things, comparative. The … of all, or in the…: superlative. Then look at the length of the word."
+    exemple: "“An elephant is … than a horse.” (big): than compares two animals; big is short: bigger (double g)."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “An elephant is … than a horse.” (big)"
+      nom: "bigger"
+      explication: "Short word with than: -er. “An elephant is bigger than a horse.”"
+      pieges:
+        - texte: "biggest"
+          pourquoi: "“biggest” is the superlative, with the. With than, we compare two: bigger."
+        - texte: "big"
+          pourquoi: "With than, we need the comparative: bigger."
+    - texte: "Complete: “This book is … than that one.” (interesting)"
+      nom: "more interesting"
+      explication: "Long word: more before it. “This book is more interesting than that one.”"
+      pieges:
+        - texte: "the most interesting"
+          pourquoi: "“the most” is the superlative. With than, we compare two: more interesting."
+        - texte: "interesting"
+          pourquoi: "With than, we need the comparative: more interesting."
+    - texte: "Complete: “Ben Nevis is … mountain in the UK.” (high)"
+      nom: "the highest"
+      explication: "Higher than all the others: “Ben Nevis is the highest mountain in the UK.”"
+      pieges:
+        - texte: "higher"
+          pourquoi: "“higher” compares two things. Here it's the highest of all: the highest."
+        - texte: "high"
+          pourquoi: "In the UK needs the superlative: the highest."
+    - texte: "Complete: “Today is … than yesterday.” (good)"
+      nom: "better"
+      explication: "Good is irregular: better. “Today is better than yesterday.”"
+      pieges:
+        - texte: "the best"
+          pourquoi: "“the best” means better than all. To compare two days: better."
+        - texte: "well"
+          pourquoi: "“well” is an adverb. The comparative of good is better."
+    - texte: "Complete: “It was … day of my life!” (bad)"
+      nom: "the worst"
+      explication: "Bad is irregular: the worst. “It was the worst day of my life!”"
+      pieges:
+        - texte: "worse"
+          pourquoi: "“worse” compares two things. Of my life needs the superlative: the worst."
+        - texte: "the best"
+          pourquoi: "“the best” is the superlative of good: the opposite."
+    - texte: "Complete: “Lucy is … Tom.” (the same age)"
+      nom: "as old as"
+      explication: "Equality is as … as: “Lucy is as old as Tom.”"
+      pieges:
+        - texte: "older than"
+          pourquoi: "“older than” means Lucy has more years. For the same age: as old as."
+        - texte: "the oldest"
+          pourquoi: "“the oldest” means older than everyone. For the same age: as old as."
+    - texte: "Complete: “My bike is … expensive than yours.” (it costs less)"
+      nom: "less"
+      explication: "“My bike is less expensive than yours.”"
+      pieges:
+        - texte: "more"
+          pourquoi: "“more expensive” means it costs more. It costs less: less expensive."
+        - texte: "the least"
+          pourquoi: "“the least” is the superlative. With than, we compare two: less."
+    - texte: "Complete: “This is … film of the year.” (exciting)"
+      nom: "the most exciting"
+      explication: "Long word, superlative: the most. “This is the most exciting film of the year.”"
+      pieges:
+        - texte: "more exciting"
+          pourquoi: "“more exciting” compares two films. Of the year needs the superlative: the most exciting."
+        - texte: "most exciting"
+          pourquoi: "The is missing: the most exciting."
+    - texte: "Why do we say “taller” but “more beautiful”?"
+      nom: "Tall is a short word: it takes -er; beautiful is long: more before it."
+      explication: "The length of the adjective decides: short, -er; long, more."
+      pieges:
+        - texte: "Because beautiful is irregular, like good."
+          pourquoi: "No: irregular adjectives change their word (good, better). Beautiful follows the rule for long words."
+        - texte: "Because more goes with words about appearance."
+          pourquoi: "No: we say more interesting, more expensive: it's the length of the word that matters."

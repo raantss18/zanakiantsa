@@ -1,0 +1,137 @@
+id: phrase-complexe
+titre: "La phrase complexe : juxtaposition, coordination, subordination"
+niveau: 2de
+prerequis: ["subordonnees"]
+programme: { source: lycee2de, texte: "L’analyse syntaxique de la phrase complexe, déjà abordée au cycle 4, doit être consolidée et complétée : l’étude des rapports entre les propositions (juxtaposition, coordination, subordination) qui a été menée au collège s’enrichit d’une étude sémantique de ces rapports" }
+activite: quiz
+parametres: {}
+idee: "Une proposition par verbe conjugué. Juxtaposées : reliées par une ponctuation. Coordonnées : par mais, ou, et, donc, or, ni, car. Subordonnée : introduite par un subordonnant (que, quand, bien que…)."
+phrases:
+  consigne: "Repère les verbes conjugués et le mot qui relie les propositions, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Une virgule ou deux-points seuls ? Une conjonction de coordination ? Un mot subordonnant ?"
+  exemple: "« Il pleut, mais je sors. » : deux verbes, deux propositions, reliées par « mais » : elles sont coordonnées."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Il pleut, je reste chez moi. » Comment les propositions sont-elles reliées ?"
+    nom: "par juxtaposition"
+    explication: "Seule une virgule les sépare, sans mot de liaison : elles sont juxtaposées."
+    pieges:
+      - { texte: "par coordination", pourquoi: "Il n’y a aucune conjonction de coordination (mais, ou, et, donc, or, ni, car) : juste une virgule." }
+      - { texte: "par subordination", pourquoi: "Aucun mot subordonnant (que, quand, parce que…) : les deux propositions sont indépendantes." }
+  - texte: "« Il pleut, mais je sors. » Comment les propositions sont-elles reliées ?"
+    nom: "par coordination"
+    explication: "« mais » est une conjonction de coordination : les propositions sont coordonnées."
+    pieges:
+      - { texte: "par juxtaposition", pourquoi: "Il y a un mot de liaison, « mais » : ce n’est pas une simple juxtaposition." }
+      - { texte: "par subordination", pourquoi: "« mais » est une conjonction de coordination, pas un subordonnant." }
+  - texte: "« Je sors bien qu’il pleuve. » Comment les propositions sont-elles reliées ?"
+    nom: "par subordination"
+    explication: "« bien que » introduit une subordonnée qui dépend de « Je sors »."
+    pieges:
+      - { texte: "par coordination", pourquoi: "« bien que » n’est pas une conjonction de coordination : c’est une locution subordonnante." }
+      - { texte: "par juxtaposition", pourquoi: "Il y a un mot de liaison, « bien que » : ce n’est pas une juxtaposition." }
+  - texte: "« Je reste chez moi car il pleut. » Comment les propositions sont-elles reliées ?"
+    nom: "par coordination"
+    explication: "« car » est une conjonction de coordination : les propositions sont coordonnées."
+    pieges:
+      - { texte: "par subordination", pourquoi: "« car » est une conjonction de coordination, contrairement à « parce que »." }
+      - { texte: "par juxtaposition", pourquoi: "Il y a un mot de liaison, « car » : ce n’est pas une juxtaposition." }
+  - texte: "« Il fait nuit : les rues se vident. » Comment les propositions sont-elles reliées ?"
+    nom: "par juxtaposition"
+    explication: "Seuls les deux-points les séparent : elles sont juxtaposées."
+    pieges:
+      - { texte: "par coordination", pourquoi: "Les deux-points sont une ponctuation, pas une conjonction de coordination." }
+      - { texte: "par subordination", pourquoi: "Aucun mot subordonnant : les deux propositions sont indépendantes." }
+  - texte: "Combien de propositions dans « Quand le soleil se couche, les oiseaux se taisent et la ville s’allume. » ?"
+    nom: "3"
+    explication: "Trois verbes conjugués : se couche, se taisent, s’allume. Donc trois propositions."
+    pieges:
+      - { texte: "2", pourquoi: "Compte les verbes conjugués : se couche, se taisent, s’allume. Il y en a trois." }
+      - { texte: "1", pourquoi: "Une phrase simple n’a qu’un verbe conjugué ; ici il y en a trois." }
+  - texte: "« Il a beaucoup travaillé ; il a réussi. » Sans mot de liaison, quel rapport de sens unit les propositions ?"
+    nom: "la conséquence"
+    explication: "La réussite découle du travail : la juxtaposition exprime ici une conséquence."
+    pieges:
+      - { texte: "l’opposition", pourquoi: "Rien ne s’oppose : le travail mène à la réussite." }
+      - { texte: "le but", pourquoi: "Le but est un résultat visé, pas encore atteint ; ici, la réussite est acquise." }
+  - texte: "« Tu ris, je pleure. » Quel rapport de sens unit les deux propositions ?"
+    nom: "l’opposition"
+    explication: "Rire et pleurer s’opposent : la juxtaposition exprime ici une opposition."
+    pieges:
+      - { texte: "la cause", pourquoi: "Le texte ne dit pas que je pleure parce que tu ris : il oppose deux attitudes." }
+      - { texte: "la conséquence", pourquoi: "Rien n’indique que l’une découle de l’autre : elles s’opposent." }
+  - texte: "« car » et « parce que » expriment tous deux la cause. Pourquoi « car » marque-t-il une coordination ?"
+    nom: "C’est une conjonction de coordination : sa proposition ne peut pas passer en tête."
+    explication: "On dit « Parce qu’il pleut, je reste », mais pas « Car il pleut, je reste » : « car » coordonne."
+    pieges:
+      - { texte: "Parce qu’il exprime la cause.", pourquoi: "« parce que » exprime aussi la cause et c’est un subordonnant : le sens ne suffit pas." }
+      - { texte: "Parce qu’il est court.", pourquoi: "La longueur ne compte pas : c’est son fonctionnement qui le classe." }
+
+en:
+  langue: "fr"
+  titre: "French: complex sentences"
+  idee: "One clause per conjugated verb. Juxtaposed: joined by punctuation. Coordinated: by « mais, ou, et, donc, or, ni, car ». Subordinate: introduced by a subordinating word (« que », « quand », « bien que »…)."
+  phrases:
+    consigne: "Find the conjugated verbs and the word that links the clauses, then touch the right answer."
+    question: "{texte}"
+    indice: "Just a comma or a colon? A coordinating conjunction? A subordinating word?"
+    exemple: "« Il pleut, mais je sors. »: two verbs, two clauses, linked by « mais »: they're coordinated."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Il pleut, je reste chez moi. » How are the clauses linked?"
+      nom: "juxtaposition"
+      explication: "Only a comma separates them, with no linking word: they're juxtaposed."
+      pieges:
+        - { texte: "coordination", pourquoi: "There's no coordinating conjunction (« mais, ou, et, donc, or, ni, car »): just a comma." }
+        - { texte: "subordination", pourquoi: "No subordinating word (« que », « quand », « parce que »…): both clauses are independent." }
+    - texte: "« Il pleut, mais je sors. » How are the clauses linked?"
+      nom: "coordination"
+      explication: "« mais » is a coordinating conjunction: the clauses are coordinated."
+      pieges:
+        - { texte: "juxtaposition", pourquoi: "There's a linking word, « mais »: it isn't simple juxtaposition." }
+        - { texte: "subordination", pourquoi: "« mais » is a coordinating conjunction, not a subordinating word." }
+    - texte: "« Je sors bien qu’il pleuve. » How are the clauses linked?"
+      nom: "subordination"
+      explication: "« bien que » introduces a subordinate clause that depends on « Je sors »."
+      pieges:
+        - { texte: "coordination", pourquoi: "« bien que » isn't a coordinating conjunction: it's a subordinating phrase." }
+        - { texte: "juxtaposition", pourquoi: "There's a linking word, « bien que »: it isn't juxtaposition." }
+    - texte: "« Je reste chez moi car il pleut. » How are the clauses linked?"
+      nom: "coordination"
+      explication: "« car » is a coordinating conjunction: the clauses are coordinated."
+      pieges:
+        - { texte: "subordination", pourquoi: "« car » is a coordinating conjunction, unlike « parce que »." }
+        - { texte: "juxtaposition", pourquoi: "There's a linking word, « car »: it isn't juxtaposition." }
+    - texte: "« Il fait nuit : les rues se vident. » How are the clauses linked?"
+      nom: "juxtaposition"
+      explication: "Only the colon separates them: they're juxtaposed."
+      pieges:
+        - { texte: "coordination", pourquoi: "A colon is punctuation, not a coordinating conjunction." }
+        - { texte: "subordination", pourquoi: "No subordinating word: both clauses are independent." }
+    - texte: "How many clauses in « Quand le soleil se couche, les oiseaux se taisent et la ville s’allume. »?"
+      nom: "3"
+      explication: "Three conjugated verbs: « se couche », « se taisent », « s’allume ». So three clauses."
+      pieges:
+        - { texte: "2", pourquoi: "Count the conjugated verbs: « se couche », « se taisent », « s’allume ». There are three." }
+        - { texte: "1", pourquoi: "A simple sentence has only one conjugated verb; here there are three." }
+    - texte: "« Il a beaucoup travaillé ; il a réussi. » With no linking word, what meaning links the clauses?"
+      nom: "consequence"
+      explication: "Success follows from the work: here, juxtaposition expresses a consequence."
+      pieges:
+        - { texte: "opposition", pourquoi: "Nothing is opposed: the work leads to success." }
+        - { texte: "purpose", pourquoi: "A purpose is a result aimed at, not yet reached; here, success has been achieved." }
+    - texte: "« Tu ris, je pleure. » What meaning links the two clauses?"
+      nom: "opposition"
+      explication: "Laughing and crying are opposed: here, juxtaposition expresses opposition."
+      pieges:
+        - { texte: "cause", pourquoi: "The sentence doesn't say I cry because you laugh: it contrasts two attitudes." }
+        - { texte: "consequence", pourquoi: "Nothing shows that one follows from the other: they're opposed." }
+    - texte: "« car » and « parce que » both express cause. Why does « car » mark coordination?"
+      nom: "It's a coordinating conjunction: its clause can't move to the front."
+      explication: "You can say « Parce qu’il pleut, je reste », but not « Car il pleut, je reste »: « car » coordinates."
+      pieges:
+        - { texte: "Because it expresses cause.", pourquoi: "« parce que » also expresses cause and it's a subordinating word: meaning isn't enough." }
+        - { texte: "Because it's short.", pourquoi: "Length doesn't matter: it's how the word works that classifies it." }

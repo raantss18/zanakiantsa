@@ -1,0 +1,92 @@
+id: mat-escalier
+titre: "Le mat de l’escalier (deux tours)"
+niveau: CE2
+prerequis: [mat-couloir]
+programme: { source: fide, texte: "5.1.1 : the game is won by the player who has checkmated his/her opponent's king." }
+activite: probleme
+parametres: { theme: mat }
+idee: "Deux tours font un escalier : l’une garde la rangée (ou la colonne) à côté du bord, l’autre fait échec sur le bord. Le roi est mat."
+phrases:
+  consigne: "Une tour garde déjà la ligne voisine du bord. Trouve le coup de l’autre tour qui fait échec et mat sur le bord."
+  question: "{texte}"
+  indice: "Repère la ligne que garde déjà une tour. L’autre tour va sur le bord, là où se trouve le roi."
+  exemple: "Regarde quelle ligne chaque tour garde."
+  demonstration: "Regarde : {explication}"
+  bravo: "Échec et mat ! {explication}"
+items:
+  - texte: "Fais le mat de l’escalier !"
+    fen: "6k1/R7/8/8/8/8/8/1R4K1 w - - 0 1"
+    coups: [b1b8]
+    explication: "La tour va en b8 : elle fait échec sur le bord, et l’autre tour garde la rangée 7. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "8/8/8/8/k7/8/1R6/2R3K1 w - - 0 1"
+    coups: [c1a1]
+    explication: "La tour va en a1 : elle fait échec sur le bord, et l’autre tour garde la colonne b. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "6K1/7R/8/8/8/8/R7/4k3 w - - 0 1"
+    coups: [h7h1]
+    explication: "La tour va en h1 : elle fait échec sur le bord, et l’autre tour garde la rangée 2. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "R7/8/8/7k/8/8/8/K5R1 w - - 0 1"
+    coups: [a8h8]
+    explication: "La tour va en h8 : elle fait échec sur le bord, et l’autre tour garde la colonne g. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "3k4/7R/8/8/8/8/8/R5K1 w - - 0 1"
+    coups: [a1a8]
+    explication: "La tour va en a8 : elle fait échec sur le bord, et l’autre tour garde la rangée 7. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "k7/8/1R6/8/8/8/8/2R3K1 w - - 0 1"
+    coups: [c1a1]
+    explication: "La tour va en a1 : elle fait échec sur le bord, et l’autre tour garde la colonne b. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "1R6/8/8/8/k7/8/7K/7R w - - 0 1"
+    coups: [h1a1]
+    explication: "La tour va en a1 : elle fait échec sur le bord, et l’autre tour garde la colonne b. Le roi ne peut plus bouger."
+  - texte: "Fais le mat de l’escalier !"
+    fen: "R7/8/8/8/8/8/7R/2k3K1 w - - 0 1"
+    coups: [a8a1]
+    explication: "La tour va en a1 : elle fait échec sur le bord, et l’autre tour garde la rangée 2. Le roi ne peut plus bouger."
+
+en:
+  titre: "The ladder mate (two rooks)"
+  idee: "Two rooks make a ladder: one guards the row (or column) next to the edge, the other gives check on the edge. The king is checkmated."
+  phrases:
+    consigne: "One rook already guards the line next to the edge. Find the move of the other rook that gives checkmate on the edge."
+    question: "{texte}"
+    indice: "Find the line that a rook already guards. The other rook goes to the edge, where the king is."
+    exemple: "Look at which line each rook guards."
+    demonstration: "Look: {explication}"
+    bravo: "Checkmate! {explication}"
+  items:
+    - texte: "Give the ladder mate!"
+      fen: "6k1/R7/8/8/8/8/8/1R4K1 w - - 0 1"
+      coups: [b1b8]
+      explication: "The rook goes to b8: it gives check on the edge, and the other rook guards row 7. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "8/8/8/8/k7/8/1R6/2R3K1 w - - 0 1"
+      coups: [c1a1]
+      explication: "The rook goes to a1: it gives check on the edge, and the other rook guards column b. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "6K1/7R/8/8/8/8/R7/4k3 w - - 0 1"
+      coups: [h7h1]
+      explication: "The rook goes to h1: it gives check on the edge, and the other rook guards row 2. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "R7/8/8/7k/8/8/8/K5R1 w - - 0 1"
+      coups: [a8h8]
+      explication: "The rook goes to h8: it gives check on the edge, and the other rook guards column g. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "3k4/7R/8/8/8/8/8/R5K1 w - - 0 1"
+      coups: [a1a8]
+      explication: "The rook goes to a8: it gives check on the edge, and the other rook guards row 7. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "k7/8/1R6/8/8/8/8/2R3K1 w - - 0 1"
+      coups: [c1a1]
+      explication: "The rook goes to a1: it gives check on the edge, and the other rook guards column b. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "1R6/8/8/8/k7/8/7K/7R w - - 0 1"
+      coups: [h1a1]
+      explication: "The rook goes to a1: it gives check on the edge, and the other rook guards column b. The king cannot move any more."
+    - texte: "Give the ladder mate!"
+      fen: "R7/8/8/8/8/8/7R/2k3K1 w - - 0 1"
+      coups: [a8a1]
+      explication: "The rook goes to a1: it gives check on the edge, and the other rook guards row 2. The king cannot move any more."

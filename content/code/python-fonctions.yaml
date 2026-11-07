@@ -1,0 +1,136 @@
+id: python-fonctions
+titre: "Python : écrire et appeler une fonction"
+niveau: 2de
+prerequis: [python-si]
+programme: { source: seconde, texte: "Écrire des fonctions simples ; lire, comprendre, modifier, compléter des fonctions plus complexes. Appeler une fonction." }
+activite: quiz
+parametres: {}
+idee: "def f(x): return … définit une fonction. f(3) l’appelle : x prend la valeur 3, Python calcule, et return renvoie le résultat à l’endroit de l’appel."
+phrases:
+  consigne: "Remplace l’argument par sa valeur, calcule ce que renvoie la fonction, puis prédis l’affichage."
+  question: "{texte}"
+  indice: "Pour f(3), écris la ligne return en remplaçant x par 3."
+  exemple: "def f(x): return 2 * x + 1. Pour f(3) : 2 × 3 + 1 = 7. print(f(3)) affiche 7."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\ndef f(x): return 2 * x + 1\nprint(f(3))"
+    nom: "7"
+    explication: "x prend la valeur 3 : 2 × 3 + 1 = 7."
+    pieges:
+      - { texte: "8", pourquoi: "Tu as calculé 2 × (3 + 1). Python multiplie d’abord : 2 × 3, puis + 1." }
+      - { texte: "2 * x + 1", pourquoi: "print affiche la valeur renvoyée, pas le texte de la fonction." }
+  - texte: "Que va afficher ce programme ?\ndef aire(l, L): return l * L\nprint(aire(3, 5))"
+    nom: "15"
+    explication: "Les arguments sont rangés dans l’ordre : l = 3, L = 5. La fonction renvoie 3 × 5 = 15."
+    pieges:
+      - { texte: "8", pourquoi: "La fonction multiplie ses deux arguments : 3 × 5, pas 3 + 5." }
+      - { texte: "aire(3, 5)", pourquoi: "print affiche le résultat de l’appel, pas l’appel lui-même." }
+  - texte: "Que va afficher ce programme ?\ndef f(x): return x * x\nprint(f(2) + f(3))"
+    nom: "13"
+    explication: "f(2) = 4, f(3) = 9, et 4 + 9 = 13."
+    pieges:
+      - { texte: "25", pourquoi: "Tu as calculé f(5). On calcule f(2) = 4 et f(3) = 9, puis on les ajoute." }
+      - { texte: "10", pourquoi: "f(x) renvoie x × x, pas 2 × x." }
+  - texte: "Que va afficher ce programme ?\ndef f(x): return x + 1\nprint(f(f(1)))"
+    nom: "3"
+    explication: "On calcule de l’intérieur vers l’extérieur : f(1) = 2, puis f(2) = 3."
+    pieges:
+      - { texte: "2", pourquoi: "f est appelée deux fois : d’abord f(1) = 2, puis f(2)." }
+      - { texte: "1", pourquoi: "Chaque appel ajoute 1 : la valeur change." }
+  - texte: "Que va afficher ce programme ?\ndef g(x): print(x * 2)\ny = g(5)\nprint(y)"
+    nom: "10, puis None"
+    explication: "g(5) affiche 10. Sans return, une fonction renvoie None : y vaut None, et print(y) affiche None."
+    pieges:
+      - { texte: "10, puis 10", pourquoi: "g affiche 10 mais ne renvoie rien (pas de return) : y reçoit None." }
+      - { texte: "None seulement", pourquoi: "L’appel g(5) exécute print(x * 2) : 10 s’affiche d’abord." }
+  - texte: "Que va afficher ce programme ?\ndef double(x): return 2 * x\nx = 4\nprint(double(x + 1))"
+    nom: "10"
+    explication: "x + 1 = 5, donc double(5) = 10."
+    pieges:
+      - { texte: "9", pourquoi: "L’argument est calculé avant l’appel : x + 1 = 5, puis 2 × 5." }
+      - { texte: "8", pourquoi: "On appelle double avec x + 1, pas avec x." }
+  - texte: "Que va afficher ce programme ?\ndef moyenne(a, b): return (a + b) / 2\nprint(moyenne(4, 7))"
+    nom: "5.5"
+    explication: "(4 + 7) / 2 = 11 / 2 = 5.5. Python écrit les décimaux avec un point."
+    pieges:
+      - { texte: "7.5", pourquoi: "Sans les parenthèses, ce serait 4 + 7 / 2. Ici, on divise la somme : 11 / 2." }
+      - { texte: "11", pourquoi: "La fonction divise la somme par 2." }
+  - texte: "Quelles valeurs peut prendre de ?\nfrom random import randint\nde = randint(1, 6)"
+    nom: "1, 2, 3, 4, 5 ou 6"
+    explication: "randint(a, b) renvoie un entier au hasard entre a et b, a et b compris : ici, comme un dé."
+    pieges:
+      - { texte: "1, 2, 3, 4 ou 5", pourquoi: "randint(1, 6) inclut ses deux bornes, contrairement à range." }
+      - { texte: "De 0 à 6", pourquoi: "La plus petite valeur possible est la première borne, 1." }
+  - texte: "Pourquoi écrire une fonction plutôt que recopier le même calcul plusieurs fois ?"
+    nom: "On l’écrit une fois, puis on l’appelle autant qu’on veut, avec d’autres valeurs"
+    explication: "Une fonction donne un nom à un calcul. On la corrige à un seul endroit, et chaque appel peut lui donner d’autres arguments."
+    pieges:
+      - { texte: "Le calcul est plus juste dans une fonction", pourquoi: "Le résultat est le même ; la fonction évite de recopier, et donc de se tromper en recopiant." }
+      - { texte: "Python interdit de recopier un calcul", pourquoi: "Python accepte les calculs recopiés : c’est un choix d’organisation." }
+
+en:
+  titre: "Python: writing and calling a function"
+  idee: "def f(x): return … defines a function. f(3) calls it: x takes the value 3, Python calculates, and return sends the result back to where it was called."
+  phrases:
+    consigne: "Replace the argument with its value, work out what the function returns, then predict the output."
+    question: "{texte}"
+    indice: "For f(3), write the return line with x replaced by 3."
+    exemple: "def f(x): return 2 * x + 1. For f(3): 2 × 3 + 1 = 7. print(f(3)) displays 7."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\ndef f(x): return 2 * x + 1\nprint(f(3))"
+      nom: "7"
+      explication: "x takes the value 3: 2 × 3 + 1 = 7."
+      pieges:
+        - { texte: "8", pourquoi: "You worked out 2 × (3 + 1). Python multiplies first: 2 × 3, then + 1." }
+        - { texte: "2 * x + 1", pourquoi: "print displays the value returned, not the text of the function." }
+    - texte: "What will this program display?\ndef area(w, h): return w * h\nprint(area(3, 5))"
+      nom: "15"
+      explication: "The arguments are stored in order: w = 3, h = 5. The function returns 3 × 5 = 15."
+      pieges:
+        - { texte: "8", pourquoi: "The function multiplies its two arguments: 3 × 5, not 3 + 5." }
+        - { texte: "area(3, 5)", pourquoi: "print displays the result of the call, not the call itself." }
+    - texte: "What will this program display?\ndef f(x): return x * x\nprint(f(2) + f(3))"
+      nom: "13"
+      explication: "f(2) = 4, f(3) = 9, and 4 + 9 = 13."
+      pieges:
+        - { texte: "25", pourquoi: "You worked out f(5). Work out f(2) = 4 and f(3) = 9, then add them." }
+        - { texte: "10", pourquoi: "f(x) returns x × x, not 2 × x." }
+    - texte: "What will this program display?\ndef f(x): return x + 1\nprint(f(f(1)))"
+      nom: "3"
+      explication: "Work from the inside out: f(1) = 2, then f(2) = 3."
+      pieges:
+        - { texte: "2", pourquoi: "f is called twice: first f(1) = 2, then f(2)." }
+        - { texte: "1", pourquoi: "Each call adds 1: the value changes." }
+    - texte: "What will this program display?\ndef g(x): print(x * 2)\ny = g(5)\nprint(y)"
+      nom: "10, then None"
+      explication: "g(5) displays 10. Without return, a function returns None: y is None, and print(y) displays None."
+      pieges:
+        - { texte: "10, then 10", pourquoi: "g displays 10 but returns nothing (no return): y gets None." }
+        - { texte: "None only", pourquoi: "The call g(5) runs print(x * 2): 10 is displayed first." }
+    - texte: "What will this program display?\ndef double(x): return 2 * x\nx = 4\nprint(double(x + 1))"
+      nom: "10"
+      explication: "x + 1 = 5, so double(5) = 10."
+      pieges:
+        - { texte: "9", pourquoi: "The argument is worked out before the call: x + 1 = 5, then 2 × 5." }
+        - { texte: "8", pourquoi: "double is called with x + 1, not with x." }
+    - texte: "What will this program display?\ndef mean(a, b): return (a + b) / 2\nprint(mean(4, 7))"
+      nom: "5.5"
+      explication: "(4 + 7) / 2 = 11 / 2 = 5.5. Python writes decimals with a point."
+      pieges:
+        - { texte: "7.5", pourquoi: "Without the brackets it would be 4 + 7 / 2. Here, the sum is divided: 11 / 2." }
+        - { texte: "11", pourquoi: "The function divides the sum by 2." }
+    - texte: "Which values can die take?\nfrom random import randint\ndie = randint(1, 6)"
+      nom: "1, 2, 3, 4, 5 or 6"
+      explication: "randint(a, b) returns a random whole number between a and b, both included: here, like a die."
+      pieges:
+        - { texte: "1, 2, 3, 4 or 5", pourquoi: "randint(1, 6) includes both its bounds, unlike range." }
+        - { texte: "From 0 to 6", pourquoi: "The smallest possible value is the first bound, 1." }
+    - texte: "Why write a function rather than copy the same calculation several times?"
+      nom: "You write it once, then call it as often as you like, with other values"
+      explication: "A function gives a name to a calculation. You fix it in one place only, and each call can give it other arguments."
+      pieges:
+        - { texte: "The calculation is more accurate in a function", pourquoi: "The result is the same; the function avoids copying, and so avoids copying mistakes." }
+        - { texte: "Python forbids copying a calculation", pourquoi: "Python accepts copied calculations: it is a choice of organisation." }

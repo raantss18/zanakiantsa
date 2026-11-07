@@ -1,0 +1,148 @@
+id: inequations-intervalles
+titre: "Inéquations et intervalles"
+niveau: 2de
+prerequis: ["equation-premier-degre", "relatifs-comparer"]
+programme: { source: lycee2de, texte: "Ensemble des solutions des équations du type ax + b = 0, et des inéquations de la forme ax + b > 0." }
+activite: quiz
+parametres: {}
+idee: "Résoudre une inéquation, c’est trouver tous les nombres qui la vérifient : un intervalle de la droite graduée. Diviser par un nombre négatif change le sens de l’inégalité."
+phrases:
+  consigne: "Résous, puis touche l’ensemble des solutions."
+  question: "{texte}"
+  indice: "Isole x comme dans une équation. Si tu divises par un nombre négatif, change le sens du signe."
+  exemple: "2x − 6 > 0 : 2x > 6, puis x > 3 (on divise par 2, positif). Solutions : ]3 ; +∞[, tous les nombres à droite de 3 sur la droite graduée, 3 exclu."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Résous : 2x − 6 > 0"
+    nom: "]3 ; +∞["
+    explication: "2x > 6, puis x > 3 en divisant par 2 (positif, le sens reste). 3 est exclu : 2 × 3 − 6 = 0, qui n’est pas > 0."
+    pieges:
+      - { texte: "[3 ; +∞[", pourquoi: "3 n’est pas solution : 2 × 3 − 6 = 0 n’est pas strictement positif. Le crochet doit exclure 3." }
+      - { texte: "]−∞ ; 3[", pourquoi: "x > 3 désigne les nombres plus grands que 3, à droite sur la droite graduée." }
+  - texte: "Résous : 3x + 1 ≤ 10"
+    nom: "]−∞ ; 3]"
+    explication: "3x ≤ 9, puis x ≤ 3. 3 est solution : 3 × 3 + 1 = 10 ≤ 10, donc le crochet inclut 3."
+    pieges:
+      - { texte: "]−∞ ; 3[", pourquoi: "« ≤ » inclut l’égalité : 3 × 3 + 1 = 10 convient, 3 est solution." }
+      - { texte: "]−∞ ; 11/3]", pourquoi: "On retranche 1 des deux côtés : 3x ≤ 10 − 1 = 9, pas 10 + 1." }
+  - texte: "Résous : −2x > 8"
+    nom: "]−∞ ; −4["
+    explication: "On divise par −2, un nombre négatif : le sens change. x < 8 ÷ (−2), donc x < −4."
+    pieges:
+      - { texte: "]−4 ; +∞[", pourquoi: "On divise par −2, négatif : « > » devient « < »." }
+      - { texte: "]−∞ ; 4[", pourquoi: "8 ÷ (−2) = −4 : le quotient est négatif." }
+  - texte: "Résous : 5 − x ≥ 2"
+    nom: "]−∞ ; 3]"
+    explication: "−x ≥ −3, puis on multiplie par −1 : le sens change, x ≤ 3."
+    pieges:
+      - { texte: "[3 ; +∞[", pourquoi: "Multiplier par −1 change le sens : −x ≥ −3 donne x ≤ 3." }
+      - { texte: "]−∞ ; −3]", pourquoi: "Multiplier par −1 change aussi le signe de −3 : on obtient 3." }
+  - texte: "Complète : 4x − 8 < 0 donne 4x < 8, puis …"
+    nom: "x < 2"
+    explication: "On divise par 4, un nombre positif : le sens reste. 8 ÷ 4 = 2, donc x < 2."
+    pieges:
+      - { texte: "x > 2", pourquoi: "On divise par 4, positif : le sens de l’inégalité ne change pas." }
+      - { texte: "x < 32", pourquoi: "On divise par 4, on ne multiplie pas : 8 ÷ 4 = 2." }
+  - texte: "Quel nombre appartient à l’intervalle [−2 ; 5[ ?"
+    nom: "−2"
+    explication: "Le crochet [ en −2 est tourné vers l’intervalle : −2 est inclus. Le crochet [ en 5 est tourné vers l’extérieur : 5 est exclu."
+    pieges:
+      - { texte: "5", pourquoi: "Le crochet en 5 est tourné vers l’extérieur : 5 est exclu." }
+      - { texte: "−3", pourquoi: "−3 < −2 : sur la droite graduée, −3 est à gauche de −2, hors de l’intervalle." }
+  - texte: "Écris sous forme d’intervalle : x ≥ −1"
+    nom: "[−1 ; +∞["
+    explication: "« ≥ » inclut −1, et les solutions sont les nombres plus grands, à droite de −1 jusqu’à +∞."
+    pieges:
+      - { texte: "]−1 ; +∞[", pourquoi: "« ≥ » inclut l’égalité : −1 est solution, le crochet doit l’inclure." }
+      - { texte: "]−∞ ; −1]", pourquoi: "« ≥ » désigne les nombres plus grands que −1, à droite sur la droite graduée." }
+  - texte: "Pourquoi −3x < 6 donne-t-il x > −2 ?"
+    nom: "On divise par −3, un nombre négatif : le sens de l’inégalité change."
+    explication: "6 ÷ (−3) = −2, et diviser les deux membres par un nombre négatif change le sens : x > −2."
+    pieges:
+      - { texte: "Parce qu’on soustrait 3 des deux côtés.", pourquoi: "−3x est un produit : on divise par −3, on ne soustrait pas 3." }
+      - { texte: "Parce que 6 est positif.", pourquoi: "Le signe de 6 ne compte pas : c’est le signe du nombre par lequel on divise." }
+  - texte: "Résous : 3x + 2 > x + 8"
+    nom: "]3 ; +∞["
+    explication: "On retranche x : 2x + 2 > 8 ; on retranche 2 : 2x > 6 ; on divise par 2 : x > 3."
+    pieges:
+      - { texte: "]1,5 ; +∞[", pourquoi: "On retranche x des deux côtés : 3x − x = 2x, pas 3x + x." }
+      - { texte: "]5 ; +∞[", pourquoi: "On retranche 2 des deux côtés : 2x > 8 − 2 = 6, pas 8 + 2." }
+  - texte: "Résous : 1 − 2x < 9"
+    nom: "]−4 ; +∞["
+    explication: "−2x < 8, puis on divise par −2 (négatif, le sens change) : x > −4."
+    pieges:
+      - { texte: "]−∞ ; −4[", pourquoi: "On divise par −2, négatif : « < » devient « > »." }
+      - { texte: "]−5 ; +∞[", pourquoi: "On retranche 1 des deux côtés : −2x < 9 − 1 = 8, pas 9 + 1." }
+
+en:
+  titre: "Inequalities and intervals"
+  idee: "Solving an inequality means finding every number that makes it true: an interval on the number line. Dividing by a negative number reverses the inequality sign."
+  phrases:
+    consigne: "Solve it, then touch the set of solutions."
+    question: "{texte}"
+    indice: "Get x on its own as in an equation. If you divide by a negative number, reverse the sign."
+    exemple: "2x − 6 > 0: 2x > 6, then x > 3 (we divide by 2, which is positive). Solutions: (3, +∞), every number to the right of 3 on the number line, 3 not included."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Solve: 2x − 6 > 0"
+      nom: "(3, +∞)"
+      explication: "2x > 6, then x > 3 by dividing by 2 (positive, so the sign stays). 3 is not included: 2 × 3 − 6 = 0, which is not > 0."
+      pieges:
+        - { texte: "[3, +∞)", pourquoi: "3 is not a solution: 2 × 3 − 6 = 0 is not strictly positive. The bracket must leave 3 out." }
+        - { texte: "(−∞, 3)", pourquoi: "x > 3 means the numbers greater than 3, to the right on the number line." }
+    - texte: "Solve: 3x + 1 ≤ 10"
+      nom: "(−∞, 3]"
+      explication: "3x ≤ 9, then x ≤ 3. 3 is a solution: 3 × 3 + 1 = 10 ≤ 10, so the bracket includes 3."
+      pieges:
+        - { texte: "(−∞, 3)", pourquoi: "“≤” includes equality: 3 × 3 + 1 = 10 works, so 3 is a solution." }
+        - { texte: "(−∞, 11/3]", pourquoi: "Subtract 1 from both sides: 3x ≤ 10 − 1 = 9, not 10 + 1." }
+    - texte: "Solve: −2x > 8"
+      nom: "(−∞, −4)"
+      explication: "We divide by −2, a negative number, so the sign reverses: x < 8 ÷ (−2), so x < −4."
+      pieges:
+        - { texte: "(−4, +∞)", pourquoi: "Dividing by −2, a negative number, turns “>” into “<”." }
+        - { texte: "(−∞, 4)", pourquoi: "8 ÷ (−2) = −4: the quotient is negative." }
+    - texte: "Solve: 5 − x ≥ 2"
+      nom: "(−∞, 3]"
+      explication: "−x ≥ −3, then multiply by −1: the sign reverses, x ≤ 3."
+      pieges:
+        - { texte: "[3, +∞)", pourquoi: "Multiplying by −1 reverses the sign: −x ≥ −3 gives x ≤ 3." }
+        - { texte: "(−∞, −3]", pourquoi: "Multiplying by −1 also changes the sign of −3: you get 3." }
+    - texte: "Fill in the step: 4x − 8 < 0 gives 4x < 8, then …"
+      nom: "x < 2"
+      explication: "We divide by 4, a positive number, so the sign stays. 8 ÷ 4 = 2, so x < 2."
+      pieges:
+        - { texte: "x > 2", pourquoi: "Dividing by 4, a positive number, does not change the inequality sign." }
+        - { texte: "x < 32", pourquoi: "Divide by 4, do not multiply: 8 ÷ 4 = 2." }
+    - texte: "Which number belongs to the interval [−2, 5)?"
+      nom: "−2"
+      explication: "The square bracket at −2 means −2 is included. The round bracket at 5 means 5 is not included."
+      pieges:
+        - { texte: "5", pourquoi: "The round bracket at 5 means 5 is not included." }
+        - { texte: "−3", pourquoi: "−3 < −2: on the number line, −3 is to the left of −2, outside the interval." }
+    - texte: "Write as an interval: x ≥ −1"
+      nom: "[−1, +∞)"
+      explication: "“≥” includes −1, and the solutions are the greater numbers, to the right of −1 up to +∞."
+      pieges:
+        - { texte: "(−1, +∞)", pourquoi: "“≥” includes equality: −1 is a solution, so the bracket must include it." }
+        - { texte: "(−∞, −1]", pourquoi: "“≥” means the numbers greater than −1, to the right on the number line." }
+    - texte: "Why does −3x < 6 give x > −2?"
+      nom: "We divide by −3, a negative number, so the inequality sign reverses."
+      explication: "6 ÷ (−3) = −2, and dividing both sides by a negative number reverses the sign: x > −2."
+      pieges:
+        - { texte: "Because we subtract 3 from both sides.", pourquoi: "−3x is a product: we divide by −3, we do not subtract 3." }
+        - { texte: "Because 6 is positive.", pourquoi: "The sign of 6 does not matter: what matters is the sign of the number you divide by." }
+    - texte: "Solve: 3x + 2 > x + 8"
+      nom: "(3, +∞)"
+      explication: "Subtract x: 2x + 2 > 8; subtract 2: 2x > 6; divide by 2: x > 3."
+      pieges:
+        - { texte: "(1.5, +∞)", pourquoi: "Subtract x from both sides: 3x − x = 2x, not 3x + x." }
+        - { texte: "(5, +∞)", pourquoi: "Subtract 2 from both sides: 2x > 8 − 2 = 6, not 8 + 2." }
+    - texte: "Solve: 1 − 2x < 9"
+      nom: "(−4, +∞)"
+      explication: "−2x < 8, then divide by −2 (negative, so the sign reverses): x > −4."
+      pieges:
+        - { texte: "(−∞, −4)", pourquoi: "Dividing by −2, a negative number, turns “<” into “>”." }
+        - { texte: "(−5, +∞)", pourquoi: "Subtract 1 from both sides: −2x < 9 − 1 = 8, not 9 + 1." }

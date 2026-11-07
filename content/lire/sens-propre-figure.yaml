@@ -1,0 +1,125 @@
+id: sens-propre-figure
+titre: "Sens propre et sens figuré"
+niveau: CE2
+prerequis: ["synonymes-contraires"]
+programme: { source: cycle2, texte: "Comprendre la différence entre sens propre/sens figuré." }
+activite: quiz
+parametres: {}
+idee: "Au sens propre, un mot garde son sens premier : la pluie inonde la cave. Au sens figuré, on l’emploie autrement, comme une image : le soleil inonde la pièce."
+phrases:
+  consigne: "Lis la phrase, puis touche ce que veut dire le mot ou l’expression."
+  question: "{texte}"
+  indice: "Est-ce que c’est vraiment possible, mot à mot ? Si non, c’est une image : le sens figuré."
+  exemple: "« Léo souffle les bougies » : sens propre, il envoie de l’air. « Il souffle la réponse » : sens figuré, il la dit tout bas."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Léo souffle les bougies. » Que veut dire « souffle » ?"
+    nom: "il envoie de l’air"
+    explication: "C’est le sens propre : on envoie de l’air pour éteindre les bougies."
+    pieges:
+      - { texte: "il dit tout bas", pourquoi: "Ça, c’est le sens figuré, comme dans « souffler une réponse ». Ici, on éteint des bougies." }
+      - { texte: "il respire mal", pourquoi: "Rien ne dit que Léo respire mal : il éteint les bougies en soufflant." }
+  - texte: "« Il souffle la réponse à son voisin. » Que veut dire « souffle » ?"
+    nom: "il dit tout bas"
+    explication: "C’est le sens figuré : on ne pousse pas la réponse avec de l’air, on la dit discrètement."
+    pieges:
+      - { texte: "il envoie de l’air", pourquoi: "Ça, c’est le sens propre. On ne souffle pas une réponse avec de l’air : on la dit tout bas." }
+      - { texte: "il écrit", pourquoi: "Souffler une réponse, c’est la dire tout bas, pas l’écrire." }
+  - texte: "« Le soleil inonde la pièce. » Que veut dire « inonde » ?"
+    nom: "remplit de lumière"
+    explication: "C’est le sens figuré : le soleil n’apporte pas d’eau, il remplit la pièce de lumière."
+    pieges:
+      - { texte: "remplit d’eau", pourquoi: "Ça, c’est le sens propre, comme dans « la pluie inonde la cave ». Le soleil n’apporte pas d’eau." }
+      - { texte: "rend sombre", pourquoi: "C’est l’inverse : le soleil éclaire la pièce." }
+  - texte: "« La pluie inonde la cave. » Que veut dire « inonde » ?"
+    nom: "remplit d’eau"
+    explication: "C’est le sens propre : l’eau remplit vraiment la cave."
+    pieges:
+      - { texte: "remplit de lumière", pourquoi: "Ça, c’est le sens figuré, comme pour le soleil. Ici, c’est vraiment de l’eau." }
+      - { texte: "vide", pourquoi: "C’est l’inverse : la pluie remplit la cave d’eau." }
+  - texte: "« Elle a une peur bleue. » Que veut dire « une peur bleue » ?"
+    nom: "une très grande peur"
+    explication: "C’est une expression au sens figuré : la peur n’a pas de couleur, « bleue » veut dire « très forte »."
+    pieges:
+      - { texte: "la peur de la couleur bleue", pourquoi: "C’est une expression au sens figuré : la peur n’a pas de couleur." }
+      - { texte: "elle a le visage bleu", pourquoi: "Personne ne devient bleu : c’est une image pour dire une très grande peur." }
+  - texte: "« Il a pris ses jambes à son cou. » Que veut dire cette expression ?"
+    nom: "il s’est enfui très vite"
+    explication: "C’est une expression au sens figuré : elle veut dire s’enfuir en courant très vite."
+    pieges:
+      - { texte: "il a mis ses jambes autour de son cou", pourquoi: "C’est le sens mot à mot : impossible. L’expression est au sens figuré." }
+      - { texte: "il s’est assis", pourquoi: "C’est l’inverse : il est parti en courant." }
+  - texte: "« Cet élève dévore les livres. » Que veut dire « dévore » ?"
+    nom: "il lit beaucoup, avec plaisir"
+    explication: "C’est le sens figuré : il lit les livres aussi vite qu’on mange quand on a très faim."
+    pieges:
+      - { texte: "il mange les livres", pourquoi: "C’est le sens propre de « dévorer » : on ne mange pas un livre." }
+      - { texte: "il déchire les livres", pourquoi: "Rien ne parle de déchirer : il aime lire, beaucoup." }
+  - texte: "« Tom a un cœur d’or. » Pourquoi est-ce le sens figuré ?"
+    nom: "Son cœur n’est pas en or : on veut dire qu’il est très gentil."
+    explication: "Mot à mot, c’est impossible : c’est une image pour dire que Tom est bon et généreux."
+    pieges:
+      - { texte: "Parce que l’or coûte cher.", pourquoi: "Le prix n’est pas la raison : c’est que son cœur n’est pas vraiment en or." }
+      - { texte: "Parce que Tom est riche.", pourquoi: "La phrase ne parle pas d’argent : elle parle de sa gentillesse." }
+
+en:
+  langue: "fr"
+  titre: "French: literal and figurative meaning"
+  idee: "In its literal sense, a word keeps its first meaning: « la pluie inonde la cave ». In a figurative sense, it's used as an image: « le soleil inonde la pièce »."
+  phrases:
+    consigne: "Read the French sentence, then touch what the word or expression means."
+    question: "{texte}"
+    indice: "Is it really possible, word for word? If not, it's an image: the figurative meaning."
+    exemple: "« Léo souffle les bougies »: literal, he blows air. « Il souffle la réponse »: figurative, he whispers it."
+    demonstration: "{explication}"
+    bravo: "Yes! It means: {bonne}."
+  items:
+    - texte: "« Léo souffle les bougies. » What does « souffle » mean?"
+      nom: "he blows air"
+      explication: "This is the literal meaning: he blows air to put out the candles."
+      pieges:
+        - { texte: "he whispers", pourquoi: "That's the figurative meaning, as in « souffler une réponse ». Here, he's putting out candles." }
+        - { texte: "he can't breathe properly", pourquoi: "Nothing says Léo can't breathe: he's blowing out the candles." }
+    - texte: "« Il souffle la réponse à son voisin. » What does « souffle » mean?"
+      nom: "he whispers"
+      explication: "This is the figurative meaning: he doesn't push the answer with air, he says it quietly."
+      pieges:
+        - { texte: "he blows air", pourquoi: "That's the literal meaning. You don't blow an answer with air: you whisper it." }
+        - { texte: "he writes", pourquoi: "« Souffler une réponse » means saying it quietly, not writing it." }
+    - texte: "« Le soleil inonde la pièce. » What does « inonde » mean?"
+      nom: "fills with light"
+      explication: "This is the figurative meaning: the sun brings no water, it fills the room with light."
+      pieges:
+        - { texte: "fills with water", pourquoi: "That's the literal meaning, as in « la pluie inonde la cave ». The sun brings no water." }
+        - { texte: "makes dark", pourquoi: "It's the reverse: the sun lights up the room." }
+    - texte: "« La pluie inonde la cave. » What does « inonde » mean?"
+      nom: "fills with water"
+      explication: "This is the literal meaning: water really fills the cellar."
+      pieges:
+        - { texte: "fills with light", pourquoi: "That's the figurative meaning, as with the sun. Here, it really is water." }
+        - { texte: "empties", pourquoi: "It's the reverse: the rain fills the cellar with water." }
+    - texte: "« Elle a une peur bleue. » What does « une peur bleue » mean?"
+      nom: "a very great fear"
+      explication: "It's a figurative expression: fear has no colour, « bleue » means « very strong »."
+      pieges:
+        - { texte: "a fear of the colour blue", pourquoi: "It's a figurative expression: fear has no colour." }
+        - { texte: "her face is blue", pourquoi: "Nobody turns blue: it's an image for a very great fear." }
+    - texte: "« Il a pris ses jambes à son cou. » What does this expression mean?"
+      nom: "he ran away very fast"
+      explication: "It's a figurative expression: it means running away very fast."
+      pieges:
+        - { texte: "he put his legs round his neck", pourquoi: "That's the word-for-word meaning: impossible. The expression is figurative." }
+        - { texte: "he sat down", pourquoi: "It's the reverse: he ran off." }
+    - texte: "« Cet élève dévore les livres. » What does « dévore » mean?"
+      nom: "he reads a lot, with pleasure"
+      explication: "This is the figurative meaning: he reads books as fast as you eat when you're very hungry."
+      pieges:
+        - { texte: "he eats the books", pourquoi: "That's the literal meaning of « dévorer »: you don't eat a book." }
+        - { texte: "he tears the books", pourquoi: "Nothing is said about tearing: he loves reading, a lot." }
+    - texte: "« Tom a un cœur d’or. » Why is this figurative?"
+      nom: "His heart isn't made of gold: it means he's very kind."
+      explication: "Word for word, it's impossible: it's an image meaning Tom is good and generous."
+      pieges:
+        - { texte: "Because gold is expensive.", pourquoi: "The price isn't the reason: it's that his heart isn't really made of gold." }
+        - { texte: "Because Tom is rich.", pourquoi: "The sentence isn't about money: it's about his kindness." }

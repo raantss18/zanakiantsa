@@ -7,16 +7,21 @@ import 'package:zanakiantsa/books/books.dart';
 void main() {
   final lib = Library(jsonDecode(File('assets/livres/catalogue.json').readAsStringSync()) as Map<String, dynamic>);
 
+  final storybooks = lib.books.where((b) => b.licence != 'Domaine public').toList();
+  final classics = lib.books.where((b) => b.licence == 'Domaine public').toList();
+
   test('bibliothèque : chaque livre est sous CC BY 4.0, crédité, rangé, et ses images existent (ADR 0026)', () {
-    expect(lib.books, isNotEmpty);
+    expect(storybooks, isNotEmpty);
     expect(lib.books.map((b) => b.id).toSet().length, lib.books.length, reason: 'pas de doublon');
-    for (final b in lib.books) {
+    for (final b in storybooks) {
       expect(b.licence, 'CC BY 4.0', reason: b.title);
       expect(b.credits, contains('Attribution 4.0'), reason: b.title);
-      expect(lib.shelves.keys, contains(b.shelf), reason: b.title);
       expect(b.level, inInclusiveRange(1, 5));
-      expect(b.pages, isNotEmpty);
       expect(b.cover, isNotNull, reason: '${b.title} : pas de couverture');
+    }
+    for (final b in lib.books) {
+      expect(lib.shelves.keys, contains(b.shelf), reason: b.title);
+      expect(b.pages, isNotEmpty);
       for (final p in b.pages) {
         final img = b.imagePath(p);
         if (img != null) expect(File(img).existsSync(), isTrue, reason: img);
@@ -31,5 +36,28 @@ void main() {
       expect(lib.books.where((b) => b.shelf == s), isNotEmpty, reason: s);
     }
     expect(lib.books.where((b) => b.shelf == 'grands').every((b) => b.level >= 4), isTrue);
+  });
+
+  test('classiques du domaine public : auteur, source Wikisource, licence, niveaux 5 à 7, pages de taille raisonnable', () {
+    expect(classics.length, greaterThanOrEqualTo(25));
+    for (final b in classics) {
+      expect(b.author, isNotNull, reason: b.title);
+      expect(b.author!.trim(), isNotEmpty, reason: b.title);
+      expect(b.credits, contains(b.author!), reason: b.title);
+      expect(b.source, startsWith('https://fr.wikisource.org/wiki/'), reason: b.title);
+      expect(b.licence, 'Domaine public', reason: b.title);
+      expect(b.shelf, 'classiques', reason: b.title);
+      expect(b.level, inInclusiveRange(5, 7), reason: b.title);
+      expect(b.id, greaterThan(900000), reason: '${b.title} : numéro hors de ceux d\'African Storybook');
+      for (final p in b.pages) {
+        expect(p.image, isNull, reason: b.title);
+        expect(p.text.length, inInclusiveRange(1, 1200), reason: '${b.title} : page trop longue');
+        // Rien de Wikisource laissé dans le texte : appels de note, numéros de page, bandeaux.
+        expect(p.text, isNot(matches(RegExp(r'\[\d+\]|Wikisource|modifier|Page:'))), reason: '${b.title} : ${p.text}');
+      }
+    }
+    for (final level in [5, 6, 7]) {
+      expect(classics.where((b) => b.level == level), isNotEmpty, reason: 'niveau $level');
+    }
   });
 }

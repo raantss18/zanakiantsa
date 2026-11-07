@@ -1,0 +1,136 @@
+id: decimaux-10-100-1000
+titre: "Multiplier un décimal par 10, 100, 1 000"
+niveau: CM2
+prerequis: ["multiplier-10-100", "decimaux-ecriture"]
+programme: { source: cycle3, texte: "Multiplier un nombre décimal par 10, 100 ou 1 000" }
+activite: quiz
+parametres: {}
+idee: "Multiplier par 10, c'est rendre chaque chiffre 10 fois plus grand : les dixièmes deviennent des unités. 3,45 × 10 = 34,5. Ce sont les chiffres qui changent de rang."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "× 10 : un rang vers la gauche. × 100 : deux rangs. × 1 000 : trois rangs."
+  exemple: "3,45 × 100 : 3 unités deviennent 3 centaines, 4 dixièmes deviennent 4 dizaines, 5 centièmes deviennent 5 unités. 3,45 × 100 = 345."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 2,7 × 10 ?"
+    nom: "27"
+    explication: "2 unités deviennent 2 dizaines, 7 dixièmes deviennent 7 unités : 27."
+    pieges:
+      - { texte: "2,70", pourquoi: "Un 0 à droite après la virgule ne change rien : 2,70 = 2,7." }
+      - { texte: "20,7", pourquoi: "Les 7 dixièmes deviennent aussi 10 fois plus grands : 7 unités." }
+  - texte: "Combien font 0,35 × 100 ?"
+    nom: "35"
+    explication: "3 dixièmes deviennent 3 dizaines, 5 centièmes deviennent 5 unités : 35."
+    pieges:
+      - { texte: "3,5", pourquoi: "3,5 = 0,35 × 10 : par 100, deux rangs." }
+      - { texte: "0,3500", pourquoi: "Ajouter des 0 à la fin ne multiplie pas." }
+  - texte: "Combien font 4,6 × 1 000 ?"
+    nom: "4 600"
+    explication: "4 unités deviennent 4 milliers, 6 dixièmes deviennent 6 centaines : 4 600."
+    pieges:
+      - { texte: "460", pourquoi: "460 = 4,6 × 100 : par 1 000, trois rangs." }
+      - { texte: "4,6000", pourquoi: "Ajouter des 0 après la virgule ne change rien." }
+  - texte: "Combien font 12,08 × 10 ?"
+    nom: "120,8"
+    explication: "1 dizaine devient 1 centaine, 2 unités deviennent 2 dizaines, 0 dixième devient 0 unité, 8 centièmes deviennent 8 dixièmes : 120,8."
+    pieges:
+      - { texte: "128", pourquoi: "Le 0 des dixièmes garde sa place : il devient 0 unité." }
+      - { texte: "1 208", pourquoi: "1 208 = 12,08 × 100 : par 10, un seul rang." }
+  - texte: "Combien font 0,007 × 1 000 ?"
+    nom: "7"
+    explication: "7 millièmes, multipliés par 1 000, deviennent 7 unités."
+    pieges:
+      - { texte: "0,7", pourquoi: "0,7 = 0,007 × 100 : par 1 000, trois rangs." }
+      - { texte: "7 000", pourquoi: "Le 7 compte des millièmes : par 1 000, il devient 7 unités, pas 7 milliers." }
+  - texte: "Complète : … × 100 = 56. Quel nombre manque ?"
+    nom: "0,56"
+    explication: "0,56 × 100 : 5 dixièmes deviennent 5 dizaines, 6 centièmes deviennent 6 unités. On obtient 56."
+    pieges:
+      - { texte: "5 600", pourquoi: "5 600 = 56 × 100 : on cherche le nombre qui, multiplié par 100, donne 56." }
+      - { texte: "5,6", pourquoi: "5,6 × 100 = 560, pas 56." }
+  - texte: "Un stylo coûte 1,25 €. Combien coûtent 100 stylos ?"
+    nom: "125 €"
+    explication: "100 fois 1,25 € : 1,25 × 100 = 125 €."
+    pieges:
+      - { texte: "12,5 €", pourquoi: "12,5 = 1,25 × 10 : ici, il y a 100 stylos." }
+      - { texte: "101,25 €", pourquoi: "1,25 + 100 : c'est 100 fois le prix d'un stylo." }
+  - texte: "5,3 × 100 : 5 unités deviennent 5 centaines, 3 dixièmes deviennent 3 … On obtient 530. Quel mot manque ?"
+    nom: "dizaines"
+    explication: "Par 100, chaque chiffre glisse de deux rangs : les dixièmes passent par les unités et deviennent des dizaines."
+    pieges:
+      - { texte: "unités", pourquoi: "× 10, les dixièmes deviennent des unités ; × 100, deux rangs : des dizaines." }
+      - { texte: "centaines", pourquoi: "Ce sont les unités qui deviennent des centaines : 5 centaines." }
+  - texte: "Pourquoi 0,4 × 10 = 4 ?"
+    nom: "4 dixièmes × 10 = 40 dixièmes = 4 unités."
+    explication: "Chaque dixième devient 10 fois plus grand, c'est-à-dire une unité : 4 dixièmes deviennent 4 unités."
+    pieges:
+      - { texte: "Parce qu'on enlève la virgule.", pourquoi: "Ce n'est pas la raison : 0,45 × 10 = 4,5 garde une virgule." }
+      - { texte: "Parce qu'on ajoute un 0 : 0,40.", pourquoi: "0,40 = 0,4 : ajouter un 0 à la fin ne multiplie pas." }
+
+en:
+  titre: "Multiplying a decimal by 10, 100, 1,000"
+  idee: "Multiplying by 10 makes each digit worth 10 times more: tenths become ones. 3.45 × 10 = 34.5. It is the digits that change place."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "× 10: one place to the left. × 100: two places. × 1,000: three places."
+    exemple: "3.45 × 100: 3 ones become 3 hundreds, 4 tenths become 4 tens, 5 hundredths become 5 ones. 3.45 × 100 = 345."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 2.7 × 10?"
+      nom: "27"
+      explication: "2 ones become 2 tens, 7 tenths become 7 ones: 27."
+      pieges:
+        - { texte: "2.70", pourquoi: "A 0 on the right after the point changes nothing: 2.70 = 2.7." }
+        - { texte: "20.7", pourquoi: "The 7 tenths also become 10 times bigger: 7 ones." }
+    - texte: "What is 0.35 × 100?"
+      nom: "35"
+      explication: "3 tenths become 3 tens, 5 hundredths become 5 ones: 35."
+      pieges:
+        - { texte: "3.5", pourquoi: "3.5 = 0.35 × 10: times 100, two places." }
+        - { texte: "0.3500", pourquoi: "Adding 0s on the end doesn't multiply." }
+    - texte: "What is 4.6 × 1,000?"
+      nom: "4,600"
+      explication: "4 ones become 4 thousands, 6 tenths become 6 hundreds: 4,600."
+      pieges:
+        - { texte: "460", pourquoi: "460 = 4.6 × 100: times 1,000, three places." }
+        - { texte: "4.6000", pourquoi: "Adding 0s after the point changes nothing." }
+    - texte: "What is 12.08 × 10?"
+      nom: "120.8"
+      explication: "1 ten becomes 1 hundred, 2 ones become 2 tens, 0 tenths become 0 ones, 8 hundredths become 8 tenths: 120.8."
+      pieges:
+        - { texte: "128", pourquoi: "The 0 in the tenths keeps its place: it becomes 0 ones." }
+        - { texte: "1,208", pourquoi: "1,208 = 12.08 × 100: times 10, only one place." }
+    - texte: "What is 0.007 × 1,000?"
+      nom: "7"
+      explication: "7 thousandths, times 1,000, become 7 ones."
+      pieges:
+        - { texte: "0.7", pourquoi: "0.7 = 0.007 × 100: times 1,000, three places." }
+        - { texte: "7,000", pourquoi: "The 7 counts thousandths: times 1,000 it becomes 7 ones, not 7 thousands." }
+    - texte: "Fill the gap: … × 100 = 56. Which number is missing?"
+      nom: "0.56"
+      explication: "0.56 × 100: 5 tenths become 5 tens, 6 hundredths become 6 ones. That gives 56."
+      pieges:
+        - { texte: "5,600", pourquoi: "5,600 = 56 × 100: we want the number that, times 100, gives 56." }
+        - { texte: "5.6", pourquoi: "5.6 × 100 = 560, not 56." }
+    - texte: "A pen costs €1.25. How much do 100 pens cost?"
+      nom: "€125"
+      explication: "100 times €1.25: 1.25 × 100 = €125."
+      pieges:
+        - { texte: "€12.5", pourquoi: "12.5 = 1.25 × 10: here there are 100 pens." }
+        - { texte: "€101.25", pourquoi: "1.25 + 100: it is 100 times the price of one pen." }
+    - texte: "5.3 × 100: 5 ones become 5 hundreds, 3 tenths become 3 … We get 530. Which word is missing?"
+      nom: "tens"
+      explication: "Times 100, each digit moves two places: tenths go past the ones and become tens."
+      pieges:
+        - { texte: "ones", pourquoi: "× 10, tenths become ones; × 100, two places: tens." }
+        - { texte: "hundreds", pourquoi: "It is the ones that become hundreds: 5 hundreds." }
+    - texte: "Why is 0.4 × 10 = 4?"
+      nom: "4 tenths × 10 = 40 tenths = 4 ones."
+      explication: "Each tenth becomes 10 times bigger, that is one whole: 4 tenths become 4 ones."
+      pieges:
+        - { texte: "Because you remove the point.", pourquoi: "That's not the reason: 0.45 × 10 = 4.5 keeps a point." }
+        - { texte: "Because you add a 0: 0.40.", pourquoi: "0.40 = 0.4: adding a 0 on the end doesn't multiply." }
