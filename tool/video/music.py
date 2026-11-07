@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Musique de fond de la vidéo d'aide (ADR 0058) : une boîte à musique douce, composée ici par calcul (rien à créditer).
-Gamme pentatonique de do, 76 battements par minute, mélodie de 8 mesures qui revient, basse lente, fondu au début et à la fin.
+Gamme pentatonique de do, 104 battements par minute (76 était trop lent, retour d'Antsa), mélodie de 8 mesures qui revient, basse lente, fondu au début et à la fin.
 
   python3 tool/video/music.py --seconds 240 --out musique.wav
 """
@@ -10,7 +10,7 @@ import wave
 import numpy as np
 
 SR = 44100
-BPM = 76
+BPM = 104
 BEAT = 60 / BPM
 # Do pentatonique : do ré mi sol la (Hz), sur deux octaves.
 NOTE = {'C4': 261.63, 'D4': 293.66, 'E4': 329.63, 'G4': 392.00, 'A4': 440.00,
@@ -28,7 +28,7 @@ BASS = ['C3', 'A2', 'F2', 'G2', 'C3', 'A2', 'F2', 'G2']  # une note par mesure
 
 def bell(freq, dur, amp):
     t = np.arange(int(SR * dur)) / SR
-    env = np.exp(-t * 3.2) * (1 - np.exp(-t * 400))
+    env = np.exp(-t * 4.5) * (1 - np.exp(-t * 400))
     w = np.sin(2 * np.pi * freq * t) + 0.35 * np.sin(2 * np.pi * 2 * freq * t) * np.exp(-t * 6) + 0.12 * np.sin(2 * np.pi * 3.01 * freq * t) * np.exp(-t * 9)
     return amp * env * w
 
@@ -60,9 +60,17 @@ def main():
         for k, b in enumerate(BASS):
             tt = start + k * 4 * BEAT
             if tt < a.seconds:
-                s = pad(NOTE[b], 4 * BEAT, 0.07)
+                s = pad(NOTE[b], 4 * BEAT, 0.05)
                 i = int(tt * SR)
                 out[i:i + len(s)] += s[:max(0, n - i)]
+            # Arpège en croches (fondamentale, quinte, octave, quinte) : il donne l'allant.
+            root = NOTE[b] * 2
+            for j, r in enumerate([1, 1.5, 2, 1.5, 1, 1.5, 2, 1.5]):
+                t2 = tt + j * BEAT / 2
+                if t2 < a.seconds:
+                    s = bell(root * r, 0.6, 0.07)
+                    i = int(t2 * SR)
+                    out[i:i + len(s)] += s[:max(0, n - i)]
         start += loop
     out = out[:int(SR * a.seconds)]
     # Un peu d'écho, comme dans une pièce.
