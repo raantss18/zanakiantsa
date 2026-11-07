@@ -26,7 +26,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Une version publiée arrive sur une étiquette, et l'environnement github-pages n'accepte que main (échec à la 0.11.0) :
+  # on relance donc ce même flux sur main, sans élargir ce qui a le droit de publier le site.
+  relancer:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run site.yml --repo "${{ github.repository }}" --ref main
+
   deploiement:
+    if: github.event_name != 'release'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

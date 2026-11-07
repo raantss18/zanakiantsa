@@ -18,3 +18,4 @@
   valide. **Pas vérifié** : lecteurs d'écran ; Safari et Firefox.
 - **Règle d'Antsa (2026-11-07)** : toute mise à jour ou nouvelle se voit automatiquement sur le site. Déclencheurs : version
   publiée, modification de `site/`, et une reconstruction par jour en filet de sécurité. `tool/publish.sh` publie et vérifie.
+- **Corrigé à la 0.11.0** : le déclencheur « version publiée » échouait, l'environnement `github-pages` n'acceptant que `main`. Le flux se relance désormais sur `main`.
