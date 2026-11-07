@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart'
     as mlkit;
 
@@ -391,6 +392,23 @@ class _ParentPageState extends State<ParentPage> {
                     child: const Text('Installer'),
                   ),
               ],
+              const Divider(height: 32),
+              // À propos : une question, un souci d'installation (demande d'Antsa, vidéo d'aide).
+              Text('À propos', style: Theme.of(context).textTheme.titleLarge),
+              const SizedBox(height: 4),
+              Wrap(spacing: 16, runSpacing: 12, crossAxisAlignment: WrapCrossAlignment.center, children: [
+                Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(4),
+                  child: SvgPicture.asset('assets/logo/qr-site.svg', width: 128, height: 128, semanticsLabel: 'Code QR du site de l’application'),
+                ),
+                const SelectableText(
+                  'Zanak’i Antsa, par RANIRIAMANJAKA Antsa\n'
+                  'E-mail : antsa.raniriamanjaka@univ-antananarivo.mg\n'
+                  'Téléphone et WhatsApp : +261 33 43 838 82\n'
+                  'Site : raantss18.github.io/zanakiantsa',
+                ),
+              ]),
               const Divider(height: 32),
               Text('Crédits', style: Theme.of(context).textTheme.titleLarge),
               const Text(
