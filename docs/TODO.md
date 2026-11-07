@@ -226,6 +226,13 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
 
+## Versions 0.11.1 et 0.11.2 (2026-11-07) : publiées avec l'accord d'Antsa
+
+- ✅ 0.11.1 : « À propos » (contacts, code QR), recherche automatique des mises à jour à l'entrée de l'espace parent ; mise à jour
+  0.11.0 → 0.11.1 filmée sur la vraie tablette SM-X135G.
+- ✅ 0.11.2 : espace parent au visuel du site (ADR 0059). Guide vidéo d'installation sur le site (ADR 0058).
+- ⏳ Vidéo et nouvel espace parent pas vus sur téléphone ; musique pas écoutée.
+
 ## Version 0.11.0 (2026-11-07) : publiée avec l'accord d'Antsa
 
 - ✅ `0.11.0+11`, build 2011, 35,8 Mo, publiée par `tool/publish.sh`. Montée 0.10.0 → 0.11.0 vérifiée sur l'émulateur (données
