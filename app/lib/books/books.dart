@@ -49,6 +49,20 @@ class Library {
   final Map<String, String> shelves;
   final List<Book> books;
 
+  /// Les livres pour un âge (ADR 0068, demande d'Antsa : « les livres aussi doivent convenir à l'âge ») : ceux de sa tranche
+  /// et du niveau juste en dessous. Niveaux 1–5 d'African Storybook, 5–7 des classiques.
+  List<Book> forAge(int age) {
+    final levels = levelsForAge(age);
+    return [for (final b in books) if (levels.contains(b.level)) b];
+  }
+
+  /// Jusqu'à 7 ans : niveaux 1 à 3 ; de 8 à 11 ans : 2 à 5 ; à partir de 12 ans : 4 à 7.
+  static Set<int> levelsForAge(int age) => age <= 7
+      ? {1, 2, 3}
+      : age <= 11
+          ? {2, 3, 4, 5}
+          : {4, 5, 6, 7};
+
   static Future<Library> load() async =>
       Library(jsonDecode(await rootBundle.loadString('assets/livres/catalogue.json')) as Map<String, dynamic>);
 }

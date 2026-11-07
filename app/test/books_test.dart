@@ -60,4 +60,15 @@ void main() {
       expect(classics.where((b) => b.level == level), isNotEmpty, reason: 'niveau $level');
     }
   });
+
+  // ADR 0068 : « les livres aussi doivent convenir à l'âge ».
+  test('chaque âge a ses livres : pas de classiques pour les petits, pas de premiers mots pour les grands', () {
+    final lib = Library(jsonDecode(File('assets/livres/catalogue.json').readAsStringSync()) as Map<String, dynamic>);
+    for (final age in [5, 7, 9, 11, 13, 17, 40]) {
+      expect(lib.forAge(age).length, greaterThanOrEqualTo(25), reason: '$age ans');
+    }
+    expect(lib.forAge(6).every((b) => b.level <= 3), isTrue);
+    expect(lib.forAge(15).every((b) => b.level >= 4), isTrue);
+    expect(lib.forAge(15).any((b) => b.author != null && b.author!.isNotEmpty), isTrue, reason: 'les classiques');
+  });
 }

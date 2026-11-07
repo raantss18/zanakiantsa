@@ -30,8 +30,12 @@ class _LibraryPageState extends State<LibraryPage> {
     final u = app.universe;
     final lib = app.library;
     final read = app.booksRead;
-    final books = [for (final b in lib.books) if (shelf == 'tout' || b.shelf == shelf) b];
-    final last = lib.books.where((b) => b.id == app.lastBook).firstOrNull;
+    // Seulement les livres de son âge (ADR 0068) ; les étagères vides pour lui ne sont pas montrées.
+    final mine = lib.forAge(app.age);
+    final shelves = {for (final b in mine) b.shelf};
+    if (shelf != 'tout' && !shelves.contains(shelf)) shelf = 'tout';
+    final books = [for (final b in mine) if (shelf == 'tout' || b.shelf == shelf) b];
+    final last = mine.where((b) => b.id == app.lastBook).firstOrNull;
     return Scaffold(
       body: UniverseBackground(
         universe: u,
@@ -56,7 +60,7 @@ class _LibraryPageState extends State<LibraryPage> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
-                  child: Text(read.length > 1 ? tf('{n} lus / {total}', {'n': read.length, 'total': lib.books.length}) : tf('{n} lu / {total}', {'n': read.length, 'total': lib.books.length}),
+                  child: Text(mine.where((b) => read.contains(b.skillId)).length > 1 ? tf('{n} lus / {total}', {'n': mine.where((b) => read.contains(b.skillId)).length, 'total': mine.length}) : tf('{n} lu / {total}', {'n': mine.where((b) => read.contains(b.skillId)).length, 'total': mine.length}),
                       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink)),
                 ),
               ]),
@@ -69,7 +73,7 @@ class _LibraryPageState extends State<LibraryPage> {
                 spacing: 6,
                 runSpacing: 2,
                 children: [
-                  for (final (id, name) in [('tout', t('Tout')), ...lib.shelves.entries.map((e) => (e.key, e.value))])
+                  for (final (id, name) in [('tout', t('Tout')), ...lib.shelves.entries.where((e) => shelves.contains(e.key)).map((e) => (e.key, e.value))])
                     ChoiceChip(
                       selected: shelf == id,
                       showCheckmark: true,
