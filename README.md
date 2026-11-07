@@ -3,6 +3,17 @@
 Application éducative hors ligne pour enfants de 5 à 10 ans (GS → CM2), en français, avec l'anglais parmi les thèmes.
 Sans compte, sans pub, sans achat intégré, sans pistage.
 
-**État** : cadrage (étape 0). Rien n'est encore installable. Voir `docs/vision.md` et `docs/adr/`.
+**Télécharger, découvrir, lire les nouvelles : https://raantss18.github.io/zanakiantsa/**
 
-Licences : code Apache-2.0 (`LICENSE`) ; contenu original CC BY-SA 4.0 (voir `docs/adr/0001`).
+Dernière version : voir les [versions publiées](https://github.com/raantss18/zanakiantsa/releases). Le fichier se
+télécharge aussi depuis le site, avec les gestes d'installation.
+
+## Dans le dépôt
+
+- `app/` : l'application (Flutter), `content/` : le contenu pédagogique (YAML, sourcé), `docs/` : vision, pédagogie, décisions
+  (`docs/adr/`), `docs/TODO.md` : l'avancement.
+- `site/` : le site vitrine (HTML et CSS, sans script de suivi). `python3 tool/build_site.py --releases releases.json --out _site`
+  le construit ; `.github/workflows/site.yml` le publie sur GitHub Pages.
+
+Licences : code Apache-2.0 (`LICENSE`) ; contenu original CC BY-SA 4.0 (voir `docs/adr/0001`) ; programmes séparés
+sous GPL-3 et autres sources : `docs/licences.md`.
