@@ -5,7 +5,9 @@
 
 ## 0. Erreurs signalées
 
-Aucune pour l'instant. (Une erreur signalée s'inscrit ici avant d'être corrigée.)
+- ✅ Corrigé (trouvé le 2026-11-07, versions 0.9.0 et 0.10.0) : au format SM-X135G, la bonne réponse au calcul n'ouvrait plus l'espace
+  parent : le clavier réorganise l'accueil, le bouton disparaît, `context.mounted` devenait faux. Donc plus de mise à jour depuis
+  l'app sur ces écrans : passer par le site. Protégé par `test/parent_gate_test.dart`. ⏳ À publier.
 
 ## Étape 0 — Cadrage ✅
 
@@ -223,6 +225,13 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
+
+## Sans âge maximum (2026-11-07, demande d'Antsa) — ADR 0057
+
+- ✅ Réglage âge et classe dans l'espace parent, journée et point de départ adaptés, activité `quiz` (leçons écrites dans le contenu).
+- ✅ Première tranche 6e–4e : pourcentages, fraction d'un nombre, nombres relatifs, carrés, racine carrée (7 compétences).
+- ⏳ 3e et lycée ; français, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
+- ⏳ Essayer avec un grand : les mondes (fées, robots…) sont gardés tels quels à sa demande ; la voix lit-elle bien « −5 » et « 3/4 » ?
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 

@@ -6,7 +6,9 @@ import '../activities/calcul.dart';
 import '../activities/draw.dart';
 import '../app_state.dart';
 import '../core/day.dart';
+import '../core/progress.dart';
 import '../core/report.dart';
+import '../core/rules.dart';
 import '../ui/adaptive.dart';
 import '../update/updater.dart';
 
@@ -180,7 +182,14 @@ class _ParentPageState extends State<ParentPage> {
               const SizedBox(height: 12),
               const Text('Âge'),
               Wrap(spacing: 6, children: [
-                for (var y = 5; y <= 10; y++) ChoiceChip(label: Text('$y ans'), selected: years == y, onSelected: (_) => set(() => years = y)),
+                ValueStepper(
+                  label: 'Âge',
+                  value: '$years ans',
+                  minusLabel: 'Un an de moins',
+                  plusLabel: 'Un an de plus',
+                  onMinus: years <= 4 ? null : () => set(() => years--),
+                  onPlus: years >= 99 ? null : () => set(() => years++),
+                ),
               ]),
               const SizedBox(height: 12),
               const Text('C’est'),
@@ -258,28 +267,7 @@ class _ParentPageState extends State<ParentPage> {
                   ),
               ]),
               const Divider(height: 32),
-              Text(
-                'Âge de l’enfant',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const Text(
-                'Avant 6 ans, après trois essais, l’app montre la réponse ; à partir de 6 ans, seulement un indice.',
-              ),
-              const SizedBox(height: 8),
-              Wrap(
-                spacing: 8,
-                children: [
-                  for (var y = 5; y <= 10; y++)
-                    ChoiceChip(
-                      label: Text('$y ans'),
-                      selected: app.age == y,
-                      onSelected: (_) async {
-                        await app.setAge(y);
-                        setState(() {});
-                      },
-                    ),
-                ],
-              ),
+              _AgeAndClass(app: app),
               const Divider(height: 32),
               Text('Temps de jeu proposé par jour', style: Theme.of(context).textTheme.titleLarge),
               const Text(
@@ -424,5 +412,77 @@ class _ParentPageState extends State<ParentPage> {
         ),
       ),
     );
+  }
+}
+
+/// Un nombre ou une classe qu'on règle avec − et + : grands boutons, valeur au milieu, sans limite visible.
+class ValueStepper extends StatelessWidget {
+  const ValueStepper({super.key, required this.label, required this.value, required this.onMinus, required this.onPlus, this.minusLabel = 'Moins', this.plusLabel = 'Plus'});
+  final String label, value, minusLabel, plusLabel;
+  final VoidCallback? onMinus, onPlus;
+
+  @override
+  Widget build(BuildContext context) => Column(mainAxisSize: MainAxisSize.min, children: [
+        Text(label, style: Theme.of(context).textTheme.bodyMedium),
+        const SizedBox(height: 4),
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          IconButton.filledTonal(tooltip: minusLabel, iconSize: 28, onPressed: onMinus, icon: const Icon(Icons.remove_rounded)),
+          ConstrainedBox(
+            constraints: const BoxConstraints(minWidth: 112),
+            child: Text(value, textAlign: TextAlign.center, style: const TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700)),
+          ),
+          IconButton.filledTonal(tooltip: plusLabel, iconSize: 28, onPressed: onPlus, icon: const Icon(Icons.add_rounded)),
+        ]),
+      ]);
+}
+
+/// Âge et classe (ADR 0057) : deux réglages côte à côte. La classe suit l'âge tant que le parent n'y touche pas, et une
+/// phrase dit ce que cela change, sans jargon.
+class _AgeAndClass extends StatelessWidget {
+  const _AgeAndClass({required this.app});
+  final AppState app;
+
+  @override
+  Widget build(BuildContext context) {
+    final name = app.current.label;
+    final classe = app.schoolClass;
+    final start = schoolLevels[startLevelForClass(classe)];
+    final top = app.highestLevel;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text('Âge et classe', style: Theme.of(context).textTheme.titleLarge),
+      const SizedBox(height: 12),
+      Wrap(spacing: 32, runSpacing: 16, children: [
+        ValueStepper(
+          label: 'Âge',
+          value: '${app.age} ans',
+          minusLabel: 'Un an de moins',
+          plusLabel: 'Un an de plus',
+          onMinus: app.age <= 4 ? null : () => app.setAge(app.age - 1),
+          onPlus: app.age >= 99 ? null : () => app.setAge(app.age + 1),
+        ),
+        ValueStepper(
+          label: app.chosenClass == null ? 'Classe, d’après son âge' : 'Classe, choisie par vous',
+          value: schoolLevels[classe],
+          minusLabel: 'Classe plus facile',
+          plusLabel: 'Classe plus avancée',
+          onMinus: classe <= 0 ? null : () => app.chooseClass(classe - 1),
+          onPlus: classe >= schoolLevels.length - 1 ? null : () => app.chooseClass(classe + 1),
+        ),
+      ]),
+      if (app.chosenClass != null)
+        TextButton(onPressed: () => app.chooseClass(null), child: const Text('Revenir à la classe de son âge')),
+      const SizedBox(height: 8),
+      Text(
+        classe - 1 > top
+            ? 'Les leçons vont pour l’instant jusqu’à la classe de ${schoolLevels[top]} : $name commence par les plus avancées. D’autres arrivent à chaque mise à jour.'
+            : 'Les leçons commencent au niveau $start. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que $name connaît.',
+      ),
+      const SizedBox(height: 4),
+      Text(
+        afterLastMiss(app.age) == AfterLastMiss.demonstration
+            ? 'Après trois essais, l’app montre la réponse.'
+            : 'Après trois essais, l’app donne un dernier indice plutôt que la réponse.',
+      ),
+    ]);
   }
 }

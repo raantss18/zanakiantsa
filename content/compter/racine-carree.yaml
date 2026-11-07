@@ -1,0 +1,82 @@
+id: racine-carree
+titre: "La racine carrée"
+niveau: 4e
+prerequis: ["puissances-carre"]
+programme: { source: cycle4, texte: "Comprendre et connaitre la définition de la racine carrée d'un nombre positif." }
+activite: quiz
+parametres: {}
+idee: "La racine carrée de 49, c'est le nombre positif qui, multiplié par lui-même, donne 49 : c'est 7. Un carré d'aire 49 a un côté de 7."
+phrases:
+  consigne: "Cherche le nombre qui, multiplié par lui-même, donne ce résultat."
+  question: "{texte}"
+  indice: "Récite les carrés : lequel tombe sur ce nombre ?"
+  exemple: "La racine carrée de 49 est 7, car 7 × 7 = 49."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quelle est la racine carrée de 4 ?"
+    nom: "2"
+    explication: "2 × 2 = 4 : la racine carrée de 4 est 2."
+    pieges:
+      - { texte: "3", pourquoi: "3 × 3 = 9, pas 4." }
+      - { texte: "1", pourquoi: "1 × 1 = 1, pas 4." }
+  - texte: "Quelle est la racine carrée de 9 ?"
+    nom: "3"
+    explication: "3 × 3 = 9 : la racine carrée de 9 est 3."
+    pieges:
+      - { texte: "4", pourquoi: "4, c'est environ la moitié de 9. On cherche le nombre qui, multiplié par lui-même, donne 9." }
+      - { texte: "2", pourquoi: "2 × 2 = 4, pas 9." }
+  - texte: "Quelle est la racine carrée de 16 ?"
+    nom: "4"
+    explication: "4 × 4 = 16 : la racine carrée de 16 est 4."
+    pieges:
+      - { texte: "8", pourquoi: "8, c'est environ la moitié de 16. On cherche le nombre qui, multiplié par lui-même, donne 16." }
+      - { texte: "5", pourquoi: "5 × 5 = 25, pas 16." }
+  - texte: "Quelle est la racine carrée de 25 ?"
+    nom: "5"
+    explication: "5 × 5 = 25 : la racine carrée de 25 est 5."
+    pieges:
+      - { texte: "12", pourquoi: "12, c'est environ la moitié de 25. On cherche le nombre qui, multiplié par lui-même, donne 25." }
+      - { texte: "6", pourquoi: "6 × 6 = 36, pas 25." }
+  - texte: "Quelle est la racine carrée de 36 ?"
+    nom: "6"
+    explication: "6 × 6 = 36 : la racine carrée de 36 est 6."
+    pieges:
+      - { texte: "18", pourquoi: "18, c'est environ la moitié de 36. On cherche le nombre qui, multiplié par lui-même, donne 36." }
+      - { texte: "7", pourquoi: "7 × 7 = 49, pas 36." }
+  - texte: "Quelle est la racine carrée de 49 ?"
+    nom: "7"
+    explication: "7 × 7 = 49 : la racine carrée de 49 est 7."
+    pieges:
+      - { texte: "24", pourquoi: "24, c'est environ la moitié de 49. On cherche le nombre qui, multiplié par lui-même, donne 49." }
+      - { texte: "8", pourquoi: "8 × 8 = 64, pas 49." }
+  - texte: "Quelle est la racine carrée de 64 ?"
+    nom: "8"
+    explication: "8 × 8 = 64 : la racine carrée de 64 est 8."
+    pieges:
+      - { texte: "32", pourquoi: "32, c'est environ la moitié de 64. On cherche le nombre qui, multiplié par lui-même, donne 64." }
+      - { texte: "9", pourquoi: "9 × 9 = 81, pas 64." }
+  - texte: "Quelle est la racine carrée de 81 ?"
+    nom: "9"
+    explication: "9 × 9 = 81 : la racine carrée de 81 est 9."
+    pieges:
+      - { texte: "40", pourquoi: "40, c'est environ la moitié de 81. On cherche le nombre qui, multiplié par lui-même, donne 81." }
+      - { texte: "10", pourquoi: "10 × 10 = 100, pas 81." }
+  - texte: "Quelle est la racine carrée de 100 ?"
+    nom: "10"
+    explication: "10 × 10 = 100 : la racine carrée de 100 est 10."
+    pieges:
+      - { texte: "50", pourquoi: "50, c'est environ la moitié de 100. On cherche le nombre qui, multiplié par lui-même, donne 100." }
+      - { texte: "11", pourquoi: "11 × 11 = 121, pas 100." }
+  - texte: "Quelle est la racine carrée de 121 ?"
+    nom: "11"
+    explication: "11 × 11 = 121 : la racine carrée de 121 est 11."
+    pieges:
+      - { texte: "60", pourquoi: "60, c'est environ la moitié de 121. On cherche le nombre qui, multiplié par lui-même, donne 121." }
+      - { texte: "12", pourquoi: "12 × 12 = 144, pas 121." }
+  - texte: "Quelle est la racine carrée de 144 ?"
+    nom: "12"
+    explication: "12 × 12 = 144 : la racine carrée de 144 est 12."
+    pieges:
+      - { texte: "72", pourquoi: "72, c'est environ la moitié de 144. On cherche le nombre qui, multiplié par lui-même, donne 144." }
+      - { texte: "13", pourquoi: "13 × 13 = 169, pas 144." }

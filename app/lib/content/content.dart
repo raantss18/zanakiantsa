@@ -104,7 +104,7 @@ class Skill {
   /// Ce qui rend deux questions « les mêmes » pour l'enfant (le tirage d'aléa interne des activités n'en fait pas
   /// partie, sauf quand il est la question elle-même : motifs, échecs, robot).
   String signature(Question q) => switch (activity) {
-        'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' || 'probleme' => '${q.n}',
+        'choisir' || 'dessin' || 'planetes' || 'corps' || 'solide' || 'probleme' || 'quiz' => '${q.n}',
         'ecouter' || 'lettre' || 'syllabes' || 'tracer' => '${q.n}/${q.b}',
         'motif' || 'echecs' || 'programmer' || 'blocs' => '${q.a}',
         _ => '${q.n}/${q.a}/${q.b}',
@@ -112,7 +112,7 @@ class Skill {
 
   /// Variables d'activité d'une question.
   Map<String, String> vars(Question q) => switch (activity) {
-        'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme' => items[q.n].vars,
+        'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme' || 'quiz' => items[q.n].vars,
         'solide' => {'bonne': solidNames[(params['solides'] as List)[q.n]] ?? ''},
         'syllabes' => {
             ...items[q.n].vars,
@@ -171,7 +171,7 @@ class Skill {
         return Question(n: r.nextInt((params['lettres'] as List).length), a: r.nextInt(1 << 30));
       case 'solide':
         return Question(n: r.nextInt((params['solides'] as List).length), a: r.nextInt(1 << 30));
-      case 'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme':
+      case 'choisir' || 'dessin' || 'planetes' || 'corps' || 'probleme' || 'quiz':
         return Question(n: r.nextInt(items.length), a: r.nextInt(1 << 30));
       case 'ecouter':
         return Question(n: r.nextInt(2), a: r.nextInt(1 << 30), b: r.nextInt(2));
@@ -313,7 +313,11 @@ class Item {
         name = j['nom'] as String?,
         fen = j['fen'] as String?,
         moves = [for (final m in j['coups'] as List? ?? const []) m as String],
-        minStrokes = j['traits'] as int? ?? 1;
+        minStrokes = j['traits'] as int? ?? 1,
+        traps = [for (final t in j['pieges'] as List? ?? const []) Trap(Map<String, dynamic>.from(t as Map))];
+
+  /// Question écrite (`quiz`, ADR 0057) : les mauvaises réponses et ce que chacune montre ; la bonne est dans [name].
+  final List<Trap> traps;
 
   /// Problème d'échecs (ADR 0040) : la position (FEN) et les coups justes (UCI).
   final String? fen;
@@ -346,6 +350,14 @@ class Item {
 }
 
 /// Une image (code Twemoji) et son nom dit (« l'oreille »).
+/// Une mauvaise réponse d'une question écrite et ce qu'elle montre (ADR 0057).
+class Trap {
+  Trap(Map<String, dynamic> j)
+      : text = j['texte'] as String,
+        why = j['pourquoi'] as String;
+  final String text, why;
+}
+
 class Pic {
   const Pic(this.art, this.name);
   Pic.from(List l) : this(l[0] as String, l[1] as String);

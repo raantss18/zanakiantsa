@@ -35,12 +35,13 @@
   ],
   "ages": [
     5,
-    10
+    14
   ],
   "sources": {
     "cycle1": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
     "cycle2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
-    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
+    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf",
+    "cycle4": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf"
   },
   "competences": [
     {
@@ -1083,6 +1084,1262 @@
         "demonstration": "Regarde : {a} en {b} parts égales, cela fait {n} dans chaque part.",
         "bravo": "Oui ! Cela fait {n}."
       }
+    },
+    {
+      "id": "pourcentages",
+      "titre": "Pourcentages",
+      "niveau": "6e",
+      "prerequis": [
+        "fractions-quantite"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Appliquer un pourcentage à une grandeur ou à un nombre."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un pourcentage, c'est une part sur 100. 25 %, c'est 25 parts sur 100 : un quart.",
+      "phrases": {
+        "consigne": "Calcule, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Multiplie par le pourcentage, puis divise par 100.",
+        "exemple": "25 % de 80 : 80 × 25 ÷ 100 = 20.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Combien font 50 % de 80 ?",
+          "nom": "40",
+          "explication": "50 %, c'est 50 pour 100 : 80 × 50 ÷ 100 = 40.",
+          "pieges": [
+            {
+              "texte": "30",
+              "pourquoi": "80 − 50 : on n'enlève pas 50, on prend 50 parts sur 100."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "50, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 25 % de 80 ?",
+          "nom": "20",
+          "explication": "25 %, c'est 25 pour 100 : 80 × 25 ÷ 100 = 20.",
+          "pieges": [
+            {
+              "texte": "55",
+              "pourquoi": "80 − 25 : on n'enlève pas 25, on prend 25 parts sur 100."
+            },
+            {
+              "texte": "25",
+              "pourquoi": "25, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 10 % de 70 ?",
+          "nom": "7",
+          "explication": "10 %, c'est 10 pour 100 : 70 × 10 ÷ 100 = 7.",
+          "pieges": [
+            {
+              "texte": "60",
+              "pourquoi": "70 − 10 : on n'enlève pas 10, on prend 10 parts sur 100."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "10, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 20 % de 50 ?",
+          "nom": "10",
+          "explication": "20 %, c'est 20 pour 100 : 50 × 20 ÷ 100 = 10.",
+          "pieges": [
+            {
+              "texte": "30",
+              "pourquoi": "50 − 20 : on n'enlève pas 20, on prend 20 parts sur 100."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "20, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 75 % de 40 ?",
+          "nom": "30",
+          "explication": "75 %, c'est 75 pour 100 : 40 × 75 ÷ 100 = 30.",
+          "pieges": [
+            {
+              "texte": "-35",
+              "pourquoi": "40 − 75 : on n'enlève pas 75, on prend 75 parts sur 100."
+            },
+            {
+              "texte": "75",
+              "pourquoi": "75, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 10 % de 300 ?",
+          "nom": "30",
+          "explication": "10 %, c'est 10 pour 100 : 300 × 10 ÷ 100 = 30.",
+          "pieges": [
+            {
+              "texte": "290",
+              "pourquoi": "300 − 10 : on n'enlève pas 10, on prend 10 parts sur 100."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "10, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 50 % de 36 ?",
+          "nom": "18",
+          "explication": "50 %, c'est 50 pour 100 : 36 × 50 ÷ 100 = 18.",
+          "pieges": [
+            {
+              "texte": "-14",
+              "pourquoi": "36 − 50 : on n'enlève pas 50, on prend 50 parts sur 100."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "50, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 25 % de 60 ?",
+          "nom": "15",
+          "explication": "25 %, c'est 25 pour 100 : 60 × 25 ÷ 100 = 15.",
+          "pieges": [
+            {
+              "texte": "35",
+              "pourquoi": "60 − 25 : on n'enlève pas 25, on prend 25 parts sur 100."
+            },
+            {
+              "texte": "25",
+              "pourquoi": "25, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 20 % de 150 ?",
+          "nom": "30",
+          "explication": "20 %, c'est 20 pour 100 : 150 × 20 ÷ 100 = 30.",
+          "pieges": [
+            {
+              "texte": "130",
+              "pourquoi": "150 − 20 : on n'enlève pas 20, on prend 20 parts sur 100."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "20, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 75 % de 200 ?",
+          "nom": "150",
+          "explication": "75 %, c'est 75 pour 100 : 200 × 75 ÷ 100 = 150.",
+          "pieges": [
+            {
+              "texte": "125",
+              "pourquoi": "200 − 75 : on n'enlève pas 75, on prend 75 parts sur 100."
+            },
+            {
+              "texte": "75",
+              "pourquoi": "75, c'est le pourcentage, pas le résultat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction-entier",
+      "titre": "Une fraction d'un nombre",
+      "niveau": "6e",
+      "prerequis": [
+        "fractions-quantite"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Utiliser une multiplication pour appliquer une fraction à un nombre entier."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Trois quarts de 20 : on divise 20 par 4, puis on multiplie par 3. Le dénominateur partage, le numérateur compte les parts.",
+      "phrases": {
+        "consigne": "Calcule, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Divise par le dénominateur, puis multiplie par le numérateur.",
+        "exemple": "Trois quarts de 20 : 20 ÷ 4 = 5, puis 5 × 3 = 15.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Combien font 3/4 de 20 ?",
+          "nom": "15",
+          "explication": "20 ÷ 4 = 5, puis 5 × 3 = 15.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "5, c'est une seule part : 1/4 de 20. Il en faut 3."
+            },
+            {
+              "texte": "60",
+              "pourquoi": "20 × 3 : il faut encore diviser par 4."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 2/3 de 12 ?",
+          "nom": "8",
+          "explication": "12 ÷ 3 = 4, puis 4 × 2 = 8.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "4, c'est une seule part : 1/3 de 12. Il en faut 2."
+            },
+            {
+              "texte": "24",
+              "pourquoi": "12 × 2 : il faut encore diviser par 3."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 3/5 de 20 ?",
+          "nom": "12",
+          "explication": "20 ÷ 5 = 4, puis 4 × 3 = 12.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "4, c'est une seule part : 1/5 de 20. Il en faut 3."
+            },
+            {
+              "texte": "60",
+              "pourquoi": "20 × 3 : il faut encore diviser par 5."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 5/6 de 30 ?",
+          "nom": "25",
+          "explication": "30 ÷ 6 = 5, puis 5 × 5 = 25.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "5, c'est une seule part : 1/6 de 30. Il en faut 5."
+            },
+            {
+              "texte": "150",
+              "pourquoi": "30 × 5 : il faut encore diviser par 6."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 3/8 de 24 ?",
+          "nom": "9",
+          "explication": "24 ÷ 8 = 3, puis 3 × 3 = 9.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "3, c'est une seule part : 1/8 de 24. Il en faut 3."
+            },
+            {
+              "texte": "72",
+              "pourquoi": "24 × 3 : il faut encore diviser par 8."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 7/10 de 50 ?",
+          "nom": "35",
+          "explication": "50 ÷ 10 = 5, puis 5 × 7 = 35.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "5, c'est une seule part : 1/10 de 50. Il en faut 7."
+            },
+            {
+              "texte": "350",
+              "pourquoi": "50 × 7 : il faut encore diviser par 10."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 2/5 de 35 ?",
+          "nom": "14",
+          "explication": "35 ÷ 5 = 7, puis 7 × 2 = 14.",
+          "pieges": [
+            {
+              "texte": "7",
+              "pourquoi": "7, c'est une seule part : 1/5 de 35. Il en faut 2."
+            },
+            {
+              "texte": "70",
+              "pourquoi": "35 × 2 : il faut encore diviser par 5."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 3/4 de 48 ?",
+          "nom": "36",
+          "explication": "48 ÷ 4 = 12, puis 12 × 3 = 36.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "12, c'est une seule part : 1/4 de 48. Il en faut 3."
+            },
+            {
+              "texte": "144",
+              "pourquoi": "48 × 3 : il faut encore diviser par 4."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 5/8 de 40 ?",
+          "nom": "25",
+          "explication": "40 ÷ 8 = 5, puis 5 × 5 = 25.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "5, c'est une seule part : 1/8 de 40. Il en faut 5."
+            },
+            {
+              "texte": "200",
+              "pourquoi": "40 × 5 : il faut encore diviser par 8."
+            }
+          ]
+        },
+        {
+          "texte": "Combien font 4/5 de 25 ?",
+          "nom": "20",
+          "explication": "25 ÷ 5 = 5, puis 5 × 4 = 20.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "5, c'est une seule part : 1/5 de 25. Il en faut 4."
+            },
+            {
+              "texte": "100",
+              "pourquoi": "25 × 4 : il faut encore diviser par 5."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relatifs-comparer",
+      "titre": "Comparer des nombres négatifs",
+      "niveau": "5e",
+      "prerequis": [
+        "fractions-quantite"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Comparer et ranger dans l'ordre croissant et décroissant des nombres décimaux relatifs."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Sur la droite graduée, plus un nombre est à droite, plus il est grand. −3 est donc plus grand que −7, comme −3 °C est plus chaud que −7 °C.",
+      "phrases": {
+        "consigne": "Imagine la droite graduée, puis touche le plus grand.",
+        "question": "{texte}",
+        "indice": "Pense à des températures : laquelle est la plus chaude ?",
+        "exemple": "−3 est plus grand que −7 : il est plus à droite.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Lequel est le plus grand : −7, −3 ou −12 ?",
+          "nom": "−3",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −3.",
+          "pieges": [
+            {
+              "texte": "−7",
+              "pourquoi": "−7 est plus à gauche que −3 sur la droite graduée."
+            },
+            {
+              "texte": "−12",
+              "pourquoi": "−12 est plus à gauche que −3 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −2, −9 ou −5 ?",
+          "nom": "−2",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −2.",
+          "pieges": [
+            {
+              "texte": "−9",
+              "pourquoi": "−9 est plus à gauche que −2 sur la droite graduée."
+            },
+            {
+              "texte": "−5",
+              "pourquoi": "−5 est plus à gauche que −2 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : 4, −6 ou −1 ?",
+          "nom": "4",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : 4.",
+          "pieges": [
+            {
+              "texte": "−6",
+              "pourquoi": "−6 est plus à gauche que 4 sur la droite graduée."
+            },
+            {
+              "texte": "−1",
+              "pourquoi": "−1 est plus à gauche que 4 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −1, −4 ou −8 ?",
+          "nom": "−1",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −1.",
+          "pieges": [
+            {
+              "texte": "−4",
+              "pourquoi": "−4 est plus à gauche que −1 sur la droite graduée."
+            },
+            {
+              "texte": "−8",
+              "pourquoi": "−8 est plus à gauche que −1 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : 0, −5 ou −2 ?",
+          "nom": "0",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : 0.",
+          "pieges": [
+            {
+              "texte": "−5",
+              "pourquoi": "−5 est plus à gauche que 0 sur la droite graduée."
+            },
+            {
+              "texte": "−2",
+              "pourquoi": "−2 est plus à gauche que 0 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −10, −3 ou −30 ?",
+          "nom": "−3",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −3.",
+          "pieges": [
+            {
+              "texte": "−10",
+              "pourquoi": "−10 est plus à gauche que −3 sur la droite graduée."
+            },
+            {
+              "texte": "−30",
+              "pourquoi": "−30 est plus à gauche que −3 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −6, 2 ou −8 ?",
+          "nom": "2",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : 2.",
+          "pieges": [
+            {
+              "texte": "−6",
+              "pourquoi": "−6 est plus à gauche que 2 sur la droite graduée."
+            },
+            {
+              "texte": "−8",
+              "pourquoi": "−8 est plus à gauche que 2 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −15, −20 ou −11 ?",
+          "nom": "−11",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −11.",
+          "pieges": [
+            {
+              "texte": "−15",
+              "pourquoi": "−15 est plus à gauche que −11 sur la droite graduée."
+            },
+            {
+              "texte": "−20",
+              "pourquoi": "−20 est plus à gauche que −11 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −3, −8 ou 1 ?",
+          "nom": "1",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : 1.",
+          "pieges": [
+            {
+              "texte": "−3",
+              "pourquoi": "−3 est plus à gauche que 1 sur la droite graduée."
+            },
+            {
+              "texte": "−8",
+              "pourquoi": "−8 est plus à gauche que 1 sur la droite graduée."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est le plus grand : −25, −7 ou −14 ?",
+          "nom": "−7",
+          "explication": "Sur la droite graduée, le plus grand est le plus à droite : −7.",
+          "pieges": [
+            {
+              "texte": "−25",
+              "pourquoi": "−25 est plus à gauche que −7 sur la droite graduée."
+            },
+            {
+              "texte": "−14",
+              "pourquoi": "−14 est plus à gauche que −7 sur la droite graduée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relatifs-additionner",
+      "titre": "Additionner des nombres relatifs",
+      "niveau": "5e",
+      "prerequis": [
+        "relatifs-comparer"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Additionner deux nombres décimaux relatifs."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Ajouter un positif fait avancer sur la droite graduée, ajouter un négatif fait reculer. Parti de −5, avancer de 3 mène à −2.",
+      "phrases": {
+        "consigne": "Compte sur la droite graduée dans ta tête, puis touche le résultat.",
+        "question": "{texte}",
+        "indice": "Pars du premier nombre : un positif fait avancer, un négatif fait reculer.",
+        "exemple": "(−5) + 3 : parti de −5, on avance de 3, on arrive à −2.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "(−5) + 3 = ?",
+          "nom": "−2",
+          "explication": "Sur la droite graduée : on part de −5 et on avance de 3. On arrive à −2.",
+          "pieges": [
+            {
+              "texte": "2",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "4 + (−9) = ?",
+          "nom": "−5",
+          "explication": "Sur la droite graduée : on part de 4 et on recule de 9. On arrive à −5.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "13",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "(−6) + (−2) = ?",
+          "nom": "−8",
+          "explication": "Sur la droite graduée : on part de −6 et on recule de 2. On arrive à −8.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Les deux nombres sont négatifs : le résultat aussi."
+            },
+            {
+              "texte": "−4",
+              "pourquoi": "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence."
+            }
+          ]
+        },
+        {
+          "texte": "7 + (−3) = ?",
+          "nom": "4",
+          "explication": "Sur la droite graduée : on part de 7 et on recule de 3. On arrive à 4.",
+          "pieges": [
+            {
+              "texte": "−4",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "(−8) + 8 = ?",
+          "nom": "0",
+          "explication": "Sur la droite graduée : on part de −8 et on avance de 8. On arrive à 0.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "Deux opposés s'annulent : on revient à zéro."
+            },
+            {
+              "texte": "−16",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "(−4) + (−7) = ?",
+          "nom": "−11",
+          "explication": "Sur la droite graduée : on part de −4 et on recule de 7. On arrive à −11.",
+          "pieges": [
+            {
+              "texte": "11",
+              "pourquoi": "Les deux nombres sont négatifs : le résultat aussi."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence."
+            }
+          ]
+        },
+        {
+          "texte": "(−12) + 5 = ?",
+          "nom": "−7",
+          "explication": "Sur la droite graduée : on part de −12 et on avance de 5. On arrive à −7.",
+          "pieges": [
+            {
+              "texte": "7",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "17",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "9 + (−15) = ?",
+          "nom": "−6",
+          "explication": "Sur la droite graduée : on part de 9 et on recule de 15. On arrive à −6.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "24",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        },
+        {
+          "texte": "(−3) + (−3) = ?",
+          "nom": "−6",
+          "explication": "Sur la droite graduée : on part de −3 et on recule de 3. On arrive à −6.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "Les deux nombres sont négatifs : le résultat aussi."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence."
+            }
+          ]
+        },
+        {
+          "texte": "6 + (−11) = ?",
+          "nom": "−5",
+          "explication": "Sur la droite graduée : on part de 6 et on recule de 11. On arrive à −5.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "Le résultat a le signe du nombre le plus éloigné de zéro."
+            },
+            {
+              "texte": "17",
+              "pourquoi": "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puissances-carre",
+      "titre": "Les carrés",
+      "niveau": "5e",
+      "prerequis": [
+        "tables-8-9"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Connaitre les carrés des entiers de 0 à 12."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le carré d'un nombre, c'est ce nombre multiplié par lui-même : 5² = 5 × 5 = 25.",
+      "phrases": {
+        "consigne": "Multiplie le nombre par lui-même, puis touche le résultat.",
+        "question": "{texte}",
+        "indice": "Le petit 2 dit : multiplie le nombre par lui-même.",
+        "exemple": "7² = 7 × 7 = 49, pas 7 × 2.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Combien fait 2² ?",
+          "nom": "4",
+          "explication": "2² = 2 × 2 = 4.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "2², c'est 2 × 2, sans rien ajouter."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "Calcule le nombre multiplié par lui-même."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 3² ?",
+          "nom": "9",
+          "explication": "3² = 3 × 3 = 9.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "6, c'est 3 × 2. Le carré, c'est 3 × 3."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "3², c'est 3 × 3, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 4² ?",
+          "nom": "16",
+          "explication": "4² = 4 × 4 = 16.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "8, c'est 4 × 2. Le carré, c'est 4 × 4."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "4², c'est 4 × 4, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 5² ?",
+          "nom": "25",
+          "explication": "5² = 5 × 5 = 25.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "10, c'est 5 × 2. Le carré, c'est 5 × 5."
+            },
+            {
+              "texte": "30",
+              "pourquoi": "5², c'est 5 × 5, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 6² ?",
+          "nom": "36",
+          "explication": "6² = 6 × 6 = 36.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "12, c'est 6 × 2. Le carré, c'est 6 × 6."
+            },
+            {
+              "texte": "42",
+              "pourquoi": "6², c'est 6 × 6, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 7² ?",
+          "nom": "49",
+          "explication": "7² = 7 × 7 = 49.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "14, c'est 7 × 2. Le carré, c'est 7 × 7."
+            },
+            {
+              "texte": "56",
+              "pourquoi": "7², c'est 7 × 7, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 8² ?",
+          "nom": "64",
+          "explication": "8² = 8 × 8 = 64.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "16, c'est 8 × 2. Le carré, c'est 8 × 8."
+            },
+            {
+              "texte": "72",
+              "pourquoi": "8², c'est 8 × 8, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 9² ?",
+          "nom": "81",
+          "explication": "9² = 9 × 9 = 81.",
+          "pieges": [
+            {
+              "texte": "18",
+              "pourquoi": "18, c'est 9 × 2. Le carré, c'est 9 × 9."
+            },
+            {
+              "texte": "90",
+              "pourquoi": "9², c'est 9 × 9, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 10² ?",
+          "nom": "100",
+          "explication": "10² = 10 × 10 = 100.",
+          "pieges": [
+            {
+              "texte": "20",
+              "pourquoi": "20, c'est 10 × 2. Le carré, c'est 10 × 10."
+            },
+            {
+              "texte": "110",
+              "pourquoi": "10², c'est 10 × 10, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 11² ?",
+          "nom": "121",
+          "explication": "11² = 11 × 11 = 121.",
+          "pieges": [
+            {
+              "texte": "22",
+              "pourquoi": "22, c'est 11 × 2. Le carré, c'est 11 × 11."
+            },
+            {
+              "texte": "132",
+              "pourquoi": "11², c'est 11 × 11, sans rien ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Combien fait 12² ?",
+          "nom": "144",
+          "explication": "12² = 12 × 12 = 144.",
+          "pieges": [
+            {
+              "texte": "24",
+              "pourquoi": "24, c'est 12 × 2. Le carré, c'est 12 × 12."
+            },
+            {
+              "texte": "156",
+              "pourquoi": "12², c'est 12 × 12, sans rien ajouter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relatifs-multiplier",
+      "titre": "Multiplier des nombres relatifs",
+      "niveau": "4e",
+      "prerequis": [
+        "relatifs-additionner",
+        "tables-8-9"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Multiplier deux nombres relatifs : d'abord dans le cas où un seul des facteurs est négatif, puis dans le cas où les deux facteurs sont négatifs."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "On multiplie les deux nombres sans leur signe, puis on trouve le signe : un seul facteur négatif donne un négatif, deux facteurs négatifs donnent un positif.",
+      "phrases": {
+        "consigne": "Multiplie sans les signes, trouve le signe, puis touche le résultat.",
+        "question": "{texte}",
+        "indice": "Compte les signes moins : un seul, c'est négatif ; deux, c'est positif.",
+        "exemple": "(−4) × 3 = −12, et (−4) × (−3) = 12.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "(−4) × 3 = ?",
+          "nom": "−12",
+          "explication": "4 × 3 = 12. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−1",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "5 × (−6) = ?",
+          "nom": "−30",
+          "explication": "5 × 6 = 30. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "30",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−1",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−7) × (−2) = ?",
+          "nom": "14",
+          "explication": "7 × 2 = 14. Deux signes moins donnent un résultat positif.",
+          "pieges": [
+            {
+              "texte": "−14",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−9",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−3) × (−9) = ?",
+          "nom": "27",
+          "explication": "3 × 9 = 27. Deux signes moins donnent un résultat positif.",
+          "pieges": [
+            {
+              "texte": "−27",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−12",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "8 × (−4) = ?",
+          "nom": "−32",
+          "explication": "8 × 4 = 32. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "32",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "4",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−6) × 7 = ?",
+          "nom": "−42",
+          "explication": "6 × 7 = 42. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "42",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−5) × (−5) = ?",
+          "nom": "25",
+          "explication": "5 × 5 = 25. Deux signes moins donnent un résultat positif.",
+          "pieges": [
+            {
+              "texte": "−25",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−10",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "9 × (−3) = ?",
+          "nom": "−27",
+          "explication": "9 × 3 = 27. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "27",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−8) × 6 = ?",
+          "nom": "−48",
+          "explication": "8 × 6 = 48. Un seul signe moins donne un résultat négatif.",
+          "pieges": [
+            {
+              "texte": "48",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−2",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        },
+        {
+          "texte": "(−2) × (−12) = ?",
+          "nom": "24",
+          "explication": "2 × 12 = 24. Deux signes moins donnent un résultat positif.",
+          "pieges": [
+            {
+              "texte": "−24",
+              "pourquoi": "Regarde le signe : deux facteurs négatifs donnent un positif, un seul donne un négatif."
+            },
+            {
+              "texte": "−14",
+              "pourquoi": "Ça, c'est la somme. Ici, on multiplie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "racine-carree",
+      "titre": "La racine carrée",
+      "niveau": "4e",
+      "prerequis": [
+        "puissances-carre"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Comprendre et connaitre la définition de la racine carrée d'un nombre positif."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La racine carrée de 49, c'est le nombre positif qui, multiplié par lui-même, donne 49 : c'est 7. Un carré d'aire 49 a un côté de 7.",
+      "phrases": {
+        "consigne": "Cherche le nombre qui, multiplié par lui-même, donne ce résultat.",
+        "question": "{texte}",
+        "indice": "Récite les carrés : lequel tombe sur ce nombre ?",
+        "exemple": "La racine carrée de 49 est 7, car 7 × 7 = 49.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Quelle est la racine carrée de 4 ?",
+          "nom": "2",
+          "explication": "2 × 2 = 4 : la racine carrée de 4 est 2.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "3 × 3 = 9, pas 4."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "1 × 1 = 1, pas 4."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 9 ?",
+          "nom": "3",
+          "explication": "3 × 3 = 9 : la racine carrée de 9 est 3.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "4, c'est environ la moitié de 9. On cherche le nombre qui, multiplié par lui-même, donne 9."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "2 × 2 = 4, pas 9."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 16 ?",
+          "nom": "4",
+          "explication": "4 × 4 = 16 : la racine carrée de 16 est 4.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "8, c'est environ la moitié de 16. On cherche le nombre qui, multiplié par lui-même, donne 16."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "5 × 5 = 25, pas 16."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 25 ?",
+          "nom": "5",
+          "explication": "5 × 5 = 25 : la racine carrée de 25 est 5.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "12, c'est environ la moitié de 25. On cherche le nombre qui, multiplié par lui-même, donne 25."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "6 × 6 = 36, pas 25."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 36 ?",
+          "nom": "6",
+          "explication": "6 × 6 = 36 : la racine carrée de 36 est 6.",
+          "pieges": [
+            {
+              "texte": "18",
+              "pourquoi": "18, c'est environ la moitié de 36. On cherche le nombre qui, multiplié par lui-même, donne 36."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "7 × 7 = 49, pas 36."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 49 ?",
+          "nom": "7",
+          "explication": "7 × 7 = 49 : la racine carrée de 49 est 7.",
+          "pieges": [
+            {
+              "texte": "24",
+              "pourquoi": "24, c'est environ la moitié de 49. On cherche le nombre qui, multiplié par lui-même, donne 49."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "8 × 8 = 64, pas 49."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 64 ?",
+          "nom": "8",
+          "explication": "8 × 8 = 64 : la racine carrée de 64 est 8.",
+          "pieges": [
+            {
+              "texte": "32",
+              "pourquoi": "32, c'est environ la moitié de 64. On cherche le nombre qui, multiplié par lui-même, donne 64."
+            },
+            {
+              "texte": "9",
+              "pourquoi": "9 × 9 = 81, pas 64."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 81 ?",
+          "nom": "9",
+          "explication": "9 × 9 = 81 : la racine carrée de 81 est 9.",
+          "pieges": [
+            {
+              "texte": "40",
+              "pourquoi": "40, c'est environ la moitié de 81. On cherche le nombre qui, multiplié par lui-même, donne 81."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "10 × 10 = 100, pas 81."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 100 ?",
+          "nom": "10",
+          "explication": "10 × 10 = 100 : la racine carrée de 100 est 10.",
+          "pieges": [
+            {
+              "texte": "50",
+              "pourquoi": "50, c'est environ la moitié de 100. On cherche le nombre qui, multiplié par lui-même, donne 100."
+            },
+            {
+              "texte": "11",
+              "pourquoi": "11 × 11 = 121, pas 100."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 121 ?",
+          "nom": "11",
+          "explication": "11 × 11 = 121 : la racine carrée de 121 est 11.",
+          "pieges": [
+            {
+              "texte": "60",
+              "pourquoi": "60, c'est environ la moitié de 121. On cherche le nombre qui, multiplié par lui-même, donne 121."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "12 × 12 = 144, pas 121."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la racine carrée de 144 ?",
+          "nom": "12",
+          "explication": "12 × 12 = 144 : la racine carrée de 144 est 12.",
+          "pieges": [
+            {
+              "texte": "72",
+              "pourquoi": "72, c'est environ la moitié de 144. On cherche le nombre qui, multiplié par lui-même, donne 144."
+            },
+            {
+              "texte": "13",
+              "pourquoi": "13 × 13 = 169, pas 144."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

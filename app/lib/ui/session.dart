@@ -12,6 +12,7 @@ import '../activities/code.dart';
 import '../activities/explore.dart';
 import '../activities/fractions.dart';
 import '../activities/problem.dart';
+import '../activities/quiz.dart';
 import '../activities/choose.dart';
 import '../activities/letters.dart';
 import '../activities/listen.dart';
@@ -580,6 +581,7 @@ class _SessionPageState extends State<SessionPage> {
                           'heure' => ClockActivity(key: ObjectKey(a), attempt: a),
                           'suite' => SequenceActivity(key: ObjectKey(a), attempt: a),
                           'fraction' => FractionActivity(key: ObjectKey(a), attempt: a),
+                          'quiz' => QuizActivity(key: ObjectKey(a), attempt: a),
                           'planetes' => PlanetsActivity(key: ObjectKey(a), attempt: a),
                           'corps' => BodyActivity(key: ObjectKey(a), attempt: a),
                           _ => CalcActivity(key: ObjectKey(a), attempt: a),

@@ -1,0 +1,76 @@
+id: fraction-entier
+titre: "Une fraction d'un nombre"
+niveau: 6e
+prerequis: ["fractions-quantite"]
+programme: { source: cycle3, texte: "Utiliser une multiplication pour appliquer une fraction à un nombre entier." }
+activite: quiz
+parametres: {}
+idee: "Trois quarts de 20 : on divise 20 par 4, puis on multiplie par 3. Le dénominateur partage, le numérateur compte les parts."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Divise par le dénominateur, puis multiplie par le numérateur."
+  exemple: "Trois quarts de 20 : 20 ÷ 4 = 5, puis 5 × 3 = 15."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Combien font 3/4 de 20 ?"
+    nom: "15"
+    explication: "20 ÷ 4 = 5, puis 5 × 3 = 15."
+    pieges:
+      - { texte: "5", pourquoi: "5, c'est une seule part : 1/4 de 20. Il en faut 3." }
+      - { texte: "60", pourquoi: "20 × 3 : il faut encore diviser par 4." }
+  - texte: "Combien font 2/3 de 12 ?"
+    nom: "8"
+    explication: "12 ÷ 3 = 4, puis 4 × 2 = 8."
+    pieges:
+      - { texte: "4", pourquoi: "4, c'est une seule part : 1/3 de 12. Il en faut 2." }
+      - { texte: "24", pourquoi: "12 × 2 : il faut encore diviser par 3." }
+  - texte: "Combien font 3/5 de 20 ?"
+    nom: "12"
+    explication: "20 ÷ 5 = 4, puis 4 × 3 = 12."
+    pieges:
+      - { texte: "4", pourquoi: "4, c'est une seule part : 1/5 de 20. Il en faut 3." }
+      - { texte: "60", pourquoi: "20 × 3 : il faut encore diviser par 5." }
+  - texte: "Combien font 5/6 de 30 ?"
+    nom: "25"
+    explication: "30 ÷ 6 = 5, puis 5 × 5 = 25."
+    pieges:
+      - { texte: "5", pourquoi: "5, c'est une seule part : 1/6 de 30. Il en faut 5." }
+      - { texte: "150", pourquoi: "30 × 5 : il faut encore diviser par 6." }
+  - texte: "Combien font 3/8 de 24 ?"
+    nom: "9"
+    explication: "24 ÷ 8 = 3, puis 3 × 3 = 9."
+    pieges:
+      - { texte: "3", pourquoi: "3, c'est une seule part : 1/8 de 24. Il en faut 3." }
+      - { texte: "72", pourquoi: "24 × 3 : il faut encore diviser par 8." }
+  - texte: "Combien font 7/10 de 50 ?"
+    nom: "35"
+    explication: "50 ÷ 10 = 5, puis 5 × 7 = 35."
+    pieges:
+      - { texte: "5", pourquoi: "5, c'est une seule part : 1/10 de 50. Il en faut 7." }
+      - { texte: "350", pourquoi: "50 × 7 : il faut encore diviser par 10." }
+  - texte: "Combien font 2/5 de 35 ?"
+    nom: "14"
+    explication: "35 ÷ 5 = 7, puis 7 × 2 = 14."
+    pieges:
+      - { texte: "7", pourquoi: "7, c'est une seule part : 1/5 de 35. Il en faut 2." }
+      - { texte: "70", pourquoi: "35 × 2 : il faut encore diviser par 5." }
+  - texte: "Combien font 3/4 de 48 ?"
+    nom: "36"
+    explication: "48 ÷ 4 = 12, puis 12 × 3 = 36."
+    pieges:
+      - { texte: "12", pourquoi: "12, c'est une seule part : 1/4 de 48. Il en faut 3." }
+      - { texte: "144", pourquoi: "48 × 3 : il faut encore diviser par 4." }
+  - texte: "Combien font 5/8 de 40 ?"
+    nom: "25"
+    explication: "40 ÷ 8 = 5, puis 5 × 5 = 25."
+    pieges:
+      - { texte: "5", pourquoi: "5, c'est une seule part : 1/8 de 40. Il en faut 5." }
+      - { texte: "200", pourquoi: "40 × 5 : il faut encore diviser par 8." }
+  - texte: "Combien font 4/5 de 25 ?"
+    nom: "20"
+    explication: "25 ÷ 5 = 5, puis 5 × 4 = 20."
+    pieges:
+      - { texte: "5", pourquoi: "5, c'est une seule part : 1/5 de 25. Il en faut 4." }
+      - { texte: "100", pourquoi: "25 × 4 : il faut encore diviser par 5." }

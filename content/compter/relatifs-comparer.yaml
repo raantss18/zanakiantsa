@@ -1,0 +1,76 @@
+id: relatifs-comparer
+titre: "Comparer des nombres négatifs"
+niveau: 5e
+prerequis: ["fractions-quantite"]
+programme: { source: cycle4, texte: "Comparer et ranger dans l'ordre croissant et décroissant des nombres décimaux relatifs." }
+activite: quiz
+parametres: {}
+idee: "Sur la droite graduée, plus un nombre est à droite, plus il est grand. −3 est donc plus grand que −7, comme −3 °C est plus chaud que −7 °C."
+phrases:
+  consigne: "Imagine la droite graduée, puis touche le plus grand."
+  question: "{texte}"
+  indice: "Pense à des températures : laquelle est la plus chaude ?"
+  exemple: "−3 est plus grand que −7 : il est plus à droite."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Lequel est le plus grand : −7, −3 ou −12 ?"
+    nom: "−3"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −3."
+    pieges:
+      - { texte: "−7", pourquoi: "−7 est plus à gauche que −3 sur la droite graduée." }
+      - { texte: "−12", pourquoi: "−12 est plus à gauche que −3 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −2, −9 ou −5 ?"
+    nom: "−2"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −2."
+    pieges:
+      - { texte: "−9", pourquoi: "−9 est plus à gauche que −2 sur la droite graduée." }
+      - { texte: "−5", pourquoi: "−5 est plus à gauche que −2 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : 4, −6 ou −1 ?"
+    nom: "4"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : 4."
+    pieges:
+      - { texte: "−6", pourquoi: "−6 est plus à gauche que 4 sur la droite graduée." }
+      - { texte: "−1", pourquoi: "−1 est plus à gauche que 4 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −1, −4 ou −8 ?"
+    nom: "−1"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −1."
+    pieges:
+      - { texte: "−4", pourquoi: "−4 est plus à gauche que −1 sur la droite graduée." }
+      - { texte: "−8", pourquoi: "−8 est plus à gauche que −1 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : 0, −5 ou −2 ?"
+    nom: "0"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : 0."
+    pieges:
+      - { texte: "−5", pourquoi: "−5 est plus à gauche que 0 sur la droite graduée." }
+      - { texte: "−2", pourquoi: "−2 est plus à gauche que 0 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −10, −3 ou −30 ?"
+    nom: "−3"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −3."
+    pieges:
+      - { texte: "−10", pourquoi: "−10 est plus à gauche que −3 sur la droite graduée." }
+      - { texte: "−30", pourquoi: "−30 est plus à gauche que −3 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −6, 2 ou −8 ?"
+    nom: "2"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : 2."
+    pieges:
+      - { texte: "−6", pourquoi: "−6 est plus à gauche que 2 sur la droite graduée." }
+      - { texte: "−8", pourquoi: "−8 est plus à gauche que 2 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −15, −20 ou −11 ?"
+    nom: "−11"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −11."
+    pieges:
+      - { texte: "−15", pourquoi: "−15 est plus à gauche que −11 sur la droite graduée." }
+      - { texte: "−20", pourquoi: "−20 est plus à gauche que −11 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −3, −8 ou 1 ?"
+    nom: "1"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : 1."
+    pieges:
+      - { texte: "−3", pourquoi: "−3 est plus à gauche que 1 sur la droite graduée." }
+      - { texte: "−8", pourquoi: "−8 est plus à gauche que 1 sur la droite graduée." }
+  - texte: "Lequel est le plus grand : −25, −7 ou −14 ?"
+    nom: "−7"
+    explication: "Sur la droite graduée, le plus grand est le plus à droite : −7."
+    pieges:
+      - { texte: "−25", pourquoi: "−25 est plus à gauche que −7 sur la droite graduée." }
+      - { texte: "−14", pourquoi: "−14 est plus à gauche que −7 sur la droite graduée." }

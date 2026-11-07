@@ -13,16 +13,29 @@ class SkillRef {
   final String id;
   final List<String> prerequisites;
 
-  /// Rang du niveau scolaire : 0 MS, 1 GS, 2 CP, 3 CE1, 4 CE2 (voir [levelRank]).
+  /// Rang du niveau scolaire : sa place dans [schoolLevels].
   final int level;
 }
 
-/// Rang d'un niveau du contenu (« MS », « GS », « CP »…).
-int levelRank(String level) => const {'PS': 0, 'MS': 0, 'GS': 1, 'CP': 2, 'CE1': 3, 'CE2': 4, 'CM1': 5, 'CM2': 6}[level] ?? 0;
+/// Les classes, de la moyenne section à l'après-lycée (ADR 0057). Il n'y a pas d'âge maximum : la dernière vaut pour tous
+/// ceux qui ont passé le lycée.
+const schoolLevels = ['MS', 'GS', 'CP', 'CE1', 'CE2', 'CM1', 'CM2', '6e', '5e', '4e', '3e', '2de', '1re', 'Terminale', 'Après le lycée'];
 
-/// Point de départ selon l'âge (ADR 0034) : les niveaux en dessous sont tenus pour acquis (on ne les impose pas, ils
-/// restent jouables). 5 ans : tout ; 6 ans : dès la GS ; 7 ans : dès le CP ; 8 ans : dès le CE1.
-int startLevelForAge(int age) => (age - 5).clamp(0, 6);
+/// Rang d'un niveau du contenu (« MS », « GS », « CP »…).
+int levelRank(String level) => level == 'PS' ? 0 : max(0, schoolLevels.indexOf(level));
+
+/// La classe habituelle à un âge : 5 ans, GS ; 6 ans, CP ; 11 ans, 6e…
+int classForAge(int age) => (age - 4).clamp(0, schoolLevels.length - 1);
+
+/// Point de départ d'une classe (ADR 0034, 0057) : on commence au niveau juste en dessous, et les niveaux plus bas sont
+/// tenus pour acquis (on ne les impose pas, ils restent jouables).
+int startLevelForClass(int classe) => max(0, classe - 1);
+
+int startLevelForAge(int age) => startLevelForClass(classForAge(age));
+
+/// Le point de départ dans un domaine : jamais au-delà de ce que ce domaine propose de plus avancé. Sans cela, pour un
+/// grand, toutes ses compétences compteraient comme acquises et il n'y aurait plus rien à y apprendre.
+int startLevelIn(List<SkillRef> skills, int start) => skills.isEmpty ? start : min(start, skills.map((s) => s.level).reduce(max));
 
 /// Questions par séance (⚠ choix produit : vise ≈ 10–15 min, à mesurer).
 const questionsPerSession = 8;

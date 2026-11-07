@@ -1,0 +1,76 @@
+id: pourcentages
+titre: "Pourcentages"
+niveau: 6e
+prerequis: ["fractions-quantite"]
+programme: { source: cycle3, texte: "Appliquer un pourcentage à une grandeur ou à un nombre." }
+activite: quiz
+parametres: {}
+idee: "Un pourcentage, c'est une part sur 100. 25 %, c'est 25 parts sur 100 : un quart."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Multiplie par le pourcentage, puis divise par 100."
+  exemple: "25 % de 80 : 80 × 25 ÷ 100 = 20."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Combien font 50 % de 80 ?"
+    nom: "40"
+    explication: "50 %, c'est 50 pour 100 : 80 × 50 ÷ 100 = 40."
+    pieges:
+      - { texte: "30", pourquoi: "80 − 50 : on n'enlève pas 50, on prend 50 parts sur 100." }
+      - { texte: "50", pourquoi: "50, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 25 % de 80 ?"
+    nom: "20"
+    explication: "25 %, c'est 25 pour 100 : 80 × 25 ÷ 100 = 20."
+    pieges:
+      - { texte: "55", pourquoi: "80 − 25 : on n'enlève pas 25, on prend 25 parts sur 100." }
+      - { texte: "25", pourquoi: "25, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 10 % de 70 ?"
+    nom: "7"
+    explication: "10 %, c'est 10 pour 100 : 70 × 10 ÷ 100 = 7."
+    pieges:
+      - { texte: "60", pourquoi: "70 − 10 : on n'enlève pas 10, on prend 10 parts sur 100." }
+      - { texte: "10", pourquoi: "10, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 20 % de 50 ?"
+    nom: "10"
+    explication: "20 %, c'est 20 pour 100 : 50 × 20 ÷ 100 = 10."
+    pieges:
+      - { texte: "30", pourquoi: "50 − 20 : on n'enlève pas 20, on prend 20 parts sur 100." }
+      - { texte: "20", pourquoi: "20, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 75 % de 40 ?"
+    nom: "30"
+    explication: "75 %, c'est 75 pour 100 : 40 × 75 ÷ 100 = 30."
+    pieges:
+      - { texte: "-35", pourquoi: "40 − 75 : on n'enlève pas 75, on prend 75 parts sur 100." }
+      - { texte: "75", pourquoi: "75, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 10 % de 300 ?"
+    nom: "30"
+    explication: "10 %, c'est 10 pour 100 : 300 × 10 ÷ 100 = 30."
+    pieges:
+      - { texte: "290", pourquoi: "300 − 10 : on n'enlève pas 10, on prend 10 parts sur 100." }
+      - { texte: "10", pourquoi: "10, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 50 % de 36 ?"
+    nom: "18"
+    explication: "50 %, c'est 50 pour 100 : 36 × 50 ÷ 100 = 18."
+    pieges:
+      - { texte: "-14", pourquoi: "36 − 50 : on n'enlève pas 50, on prend 50 parts sur 100." }
+      - { texte: "50", pourquoi: "50, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 25 % de 60 ?"
+    nom: "15"
+    explication: "25 %, c'est 25 pour 100 : 60 × 25 ÷ 100 = 15."
+    pieges:
+      - { texte: "35", pourquoi: "60 − 25 : on n'enlève pas 25, on prend 25 parts sur 100." }
+      - { texte: "25", pourquoi: "25, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 20 % de 150 ?"
+    nom: "30"
+    explication: "20 %, c'est 20 pour 100 : 150 × 20 ÷ 100 = 30."
+    pieges:
+      - { texte: "130", pourquoi: "150 − 20 : on n'enlève pas 20, on prend 20 parts sur 100." }
+      - { texte: "20", pourquoi: "20, c'est le pourcentage, pas le résultat." }
+  - texte: "Combien font 75 % de 200 ?"
+    nom: "150"
+    explication: "75 %, c'est 75 pour 100 : 200 × 75 ÷ 100 = 150."
+    pieges:
+      - { texte: "125", pourquoi: "200 − 75 : on n'enlève pas 75, on prend 75 parts sur 100." }
+      - { texte: "75", pourquoi: "75, c'est le pourcentage, pas le résultat." }

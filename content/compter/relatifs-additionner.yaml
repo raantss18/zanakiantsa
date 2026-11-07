@@ -1,0 +1,76 @@
+id: relatifs-additionner
+titre: "Additionner des nombres relatifs"
+niveau: 5e
+prerequis: ["relatifs-comparer"]
+programme: { source: cycle4, texte: "Additionner deux nombres décimaux relatifs." }
+activite: quiz
+parametres: {}
+idee: "Ajouter un positif fait avancer sur la droite graduée, ajouter un négatif fait reculer. Parti de −5, avancer de 3 mène à −2."
+phrases:
+  consigne: "Compte sur la droite graduée dans ta tête, puis touche le résultat."
+  question: "{texte}"
+  indice: "Pars du premier nombre : un positif fait avancer, un négatif fait reculer."
+  exemple: "(−5) + 3 : parti de −5, on avance de 3, on arrive à −2."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "(−5) + 3 = ?"
+    nom: "−2"
+    explication: "Sur la droite graduée : on part de −5 et on avance de 3. On arrive à −2."
+    pieges:
+      - { texte: "2", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "8", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "4 + (−9) = ?"
+    nom: "−5"
+    explication: "Sur la droite graduée : on part de 4 et on recule de 9. On arrive à −5."
+    pieges:
+      - { texte: "5", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "13", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "(−6) + (−2) = ?"
+    nom: "−8"
+    explication: "Sur la droite graduée : on part de −6 et on recule de 2. On arrive à −8."
+    pieges:
+      - { texte: "8", pourquoi: "Les deux nombres sont négatifs : le résultat aussi." }
+      - { texte: "−4", pourquoi: "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence." }
+  - texte: "7 + (−3) = ?"
+    nom: "4"
+    explication: "Sur la droite graduée : on part de 7 et on recule de 3. On arrive à 4."
+    pieges:
+      - { texte: "−4", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "10", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "(−8) + 8 = ?"
+    nom: "0"
+    explication: "Sur la droite graduée : on part de −8 et on avance de 8. On arrive à 0."
+    pieges:
+      - { texte: "16", pourquoi: "Deux opposés s'annulent : on revient à zéro." }
+      - { texte: "−16", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "(−4) + (−7) = ?"
+    nom: "−11"
+    explication: "Sur la droite graduée : on part de −4 et on recule de 7. On arrive à −11."
+    pieges:
+      - { texte: "11", pourquoi: "Les deux nombres sont négatifs : le résultat aussi." }
+      - { texte: "3", pourquoi: "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence." }
+  - texte: "(−12) + 5 = ?"
+    nom: "−7"
+    explication: "Sur la droite graduée : on part de −12 et on avance de 5. On arrive à −7."
+    pieges:
+      - { texte: "7", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "17", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "9 + (−15) = ?"
+    nom: "−6"
+    explication: "Sur la droite graduée : on part de 9 et on recule de 15. On arrive à −6."
+    pieges:
+      - { texte: "6", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "24", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }
+  - texte: "(−3) + (−3) = ?"
+    nom: "−6"
+    explication: "Sur la droite graduée : on part de −3 et on recule de 3. On arrive à −6."
+    pieges:
+      - { texte: "6", pourquoi: "Les deux nombres sont négatifs : le résultat aussi." }
+      - { texte: "0", pourquoi: "Les deux sont négatifs : on recule deux fois, on ne fait pas la différence." }
+  - texte: "6 + (−11) = ?"
+    nom: "−5"
+    explication: "Sur la droite graduée : on part de 6 et on recule de 11. On arrive à −5."
+    pieges:
+      - { texte: "5", pourquoi: "Le résultat a le signe du nombre le plus éloigné de zéro." }
+      - { texte: "17", pourquoi: "Les signes sont différents : on ne s'éloigne pas, on revient vers zéro." }

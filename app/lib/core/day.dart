@@ -24,6 +24,19 @@ const devDayShift = int.fromEnvironment('DEV_DAY');
 /// Jours écoulés depuis une date fixe, en date locale : change à minuit, pas toutes les 24 h.
 int dayNumber(DateTime d) => DateTime.utc(d.year, d.month, d.day).difference(DateTime.utc(2026)).inDays;
 
+/// La journée d'un grand (ADR 0057) : un domaine dont le plus haut niveau est à 3 classes ou plus sous la sienne laisse la
+/// place au domaine le plus avancé pas encore dans la journée. Il reste ouvert dans « Tout explorer ».
+List<String> adaptGroup(List<String> group, Map<String, int> tops, int classe) {
+  final out = [...group];
+  final others = [for (final t in tops.keys) if (!group.contains(t)) t]..sort((a, b) => tops[b]!.compareTo(tops[a]!));
+  for (final (i, t) in group.indexed) {
+    if (others.isEmpty) break;
+    final top = tops[t];
+    if (top != null && classe - top >= 3 && tops[others.first]! > top) out[i] = others.removeAt(0);
+  }
+  return out;
+}
+
 class DayItem {
   const DayItem(this.theme, this.done, this.target);
   final String theme;
@@ -44,8 +57,9 @@ class DayPlan {
   DayItem item(String theme) => items.firstWhere((i) => i.theme == theme);
 
   /// [sessions] : tout le journal des séances ; seules celles commencées aujourd'hui comptent.
-  factory DayPlan.of(DateTime now, List<SessionLog> sessions, {int minutes = defaultDailyMinutes}) {
-    final group = dayGroups[(dayNumber(now) + devDayShift) % dayGroups.length];
+  /// [tops] : le plus haut niveau de chaque domaine ; [classe] : celle de l'enfant (voir [adaptGroup]).
+  factory DayPlan.of(DateTime now, List<SessionLog> sessions, {int minutes = defaultDailyMinutes, Map<String, int> tops = const {}, int classe = 0}) {
+    final group = adaptGroup(dayGroups[(dayNumber(now) + devDayShift) % dayGroups.length], tops, classe);
     final today = DateTime(now.year, now.month, now.day);
     final target = Duration(minutes: minutes ~/ group.length);
     Duration spent(String theme) => sessions

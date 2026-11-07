@@ -45,6 +45,8 @@ const activities = {
   'blocs': {'mode'},
   // ADR 0056 (fractions)
   'fraction': {'mode', 'denominateurs'},
+  // ADR 0057 (questions écrites, collège)
+  'quiz': <String>{},
 };
 const sceneTargets = {
   'planetes': {'mercure', 'venus', 'terre', 'mars', 'jupiter', 'saturne', 'uranus', 'neptune'},
@@ -52,7 +54,7 @@ const sceneTargets = {
 };
 const solidIds = {'cube', 'pave', 'boule', 'cylindre', 'cone', 'pyramide'};
 /// Activités dont les questions sont écrites dans `items`.
-const withItems = {'choisir', 'dessin', 'planetes', 'corps', 'syllabes', 'probleme'};
+const withItems = {'choisir', 'dessin', 'planetes', 'corps', 'syllabes', 'probleme', 'quiz'};
 const letterModes = {'nom', 'casse', 'cursive', 'initiale', 'syllabe'};
 const dimensions = {'hauteur', 'intensite', 'duree', 'tempo'};
 const pieces = {'r', 'b', 'q', 'k', 'n', 'p'};
@@ -106,6 +108,20 @@ void checkItems(String where, String act, List items) {
         if (it[k] is! String) fail(w, '$k manquant');
       }
       if (it['traits'] is! int) fail(w, 'traits : nombre minimum de traits');
+    }
+    if (act == 'quiz') {
+      // ADR 0057 : chaque mauvaise réponse dit ce qu'elle montre.
+      for (final k in ['nom', 'explication']) {
+        if (it[k] is! String) fail(w, '$k manquant');
+      }
+      final traps = it['pieges'] as List? ?? const [];
+      if (traps.length < 2) fail(w, 'au moins deux pièges');
+      for (final t in traps) {
+        if (t is! Map || t['texte'] is! String || t['pourquoi'] is! String) fail(w, 'piège : texte et pourquoi');
+      }
+      final all = [it['nom'], for (final t in traps) if (t is Map) t['texte']];
+      if (all.toSet().length != all.length) fail(w, 'deux fois la même réponse');
+      continue;
     }
     if (act != 'choisir') continue;
     final pics = [it['bonne'], ...(it['autres'] as List? ?? const [])];

@@ -1,0 +1,82 @@
+id: puissances-carre
+titre: "Les carrés"
+niveau: 5e
+prerequis: ["tables-8-9"]
+programme: { source: cycle4, texte: "Connaitre les carrés des entiers de 0 à 12." }
+activite: quiz
+parametres: {}
+idee: "Le carré d'un nombre, c'est ce nombre multiplié par lui-même : 5² = 5 × 5 = 25."
+phrases:
+  consigne: "Multiplie le nombre par lui-même, puis touche le résultat."
+  question: "{texte}"
+  indice: "Le petit 2 dit : multiplie le nombre par lui-même."
+  exemple: "7² = 7 × 7 = 49, pas 7 × 2."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Combien fait 2² ?"
+    nom: "4"
+    explication: "2² = 2 × 2 = 4."
+    pieges:
+      - { texte: "6", pourquoi: "2², c'est 2 × 2, sans rien ajouter." }
+      - { texte: "5", pourquoi: "Calcule le nombre multiplié par lui-même." }
+  - texte: "Combien fait 3² ?"
+    nom: "9"
+    explication: "3² = 3 × 3 = 9."
+    pieges:
+      - { texte: "6", pourquoi: "6, c'est 3 × 2. Le carré, c'est 3 × 3." }
+      - { texte: "12", pourquoi: "3², c'est 3 × 3, sans rien ajouter." }
+  - texte: "Combien fait 4² ?"
+    nom: "16"
+    explication: "4² = 4 × 4 = 16."
+    pieges:
+      - { texte: "8", pourquoi: "8, c'est 4 × 2. Le carré, c'est 4 × 4." }
+      - { texte: "20", pourquoi: "4², c'est 4 × 4, sans rien ajouter." }
+  - texte: "Combien fait 5² ?"
+    nom: "25"
+    explication: "5² = 5 × 5 = 25."
+    pieges:
+      - { texte: "10", pourquoi: "10, c'est 5 × 2. Le carré, c'est 5 × 5." }
+      - { texte: "30", pourquoi: "5², c'est 5 × 5, sans rien ajouter." }
+  - texte: "Combien fait 6² ?"
+    nom: "36"
+    explication: "6² = 6 × 6 = 36."
+    pieges:
+      - { texte: "12", pourquoi: "12, c'est 6 × 2. Le carré, c'est 6 × 6." }
+      - { texte: "42", pourquoi: "6², c'est 6 × 6, sans rien ajouter." }
+  - texte: "Combien fait 7² ?"
+    nom: "49"
+    explication: "7² = 7 × 7 = 49."
+    pieges:
+      - { texte: "14", pourquoi: "14, c'est 7 × 2. Le carré, c'est 7 × 7." }
+      - { texte: "56", pourquoi: "7², c'est 7 × 7, sans rien ajouter." }
+  - texte: "Combien fait 8² ?"
+    nom: "64"
+    explication: "8² = 8 × 8 = 64."
+    pieges:
+      - { texte: "16", pourquoi: "16, c'est 8 × 2. Le carré, c'est 8 × 8." }
+      - { texte: "72", pourquoi: "8², c'est 8 × 8, sans rien ajouter." }
+  - texte: "Combien fait 9² ?"
+    nom: "81"
+    explication: "9² = 9 × 9 = 81."
+    pieges:
+      - { texte: "18", pourquoi: "18, c'est 9 × 2. Le carré, c'est 9 × 9." }
+      - { texte: "90", pourquoi: "9², c'est 9 × 9, sans rien ajouter." }
+  - texte: "Combien fait 10² ?"
+    nom: "100"
+    explication: "10² = 10 × 10 = 100."
+    pieges:
+      - { texte: "20", pourquoi: "20, c'est 10 × 2. Le carré, c'est 10 × 10." }
+      - { texte: "110", pourquoi: "10², c'est 10 × 10, sans rien ajouter." }
+  - texte: "Combien fait 11² ?"
+    nom: "121"
+    explication: "11² = 11 × 11 = 121."
+    pieges:
+      - { texte: "22", pourquoi: "22, c'est 11 × 2. Le carré, c'est 11 × 11." }
+      - { texte: "132", pourquoi: "11², c'est 11 × 11, sans rien ajouter." }
+  - texte: "Combien fait 12² ?"
+    nom: "144"
+    explication: "12² = 12 × 12 = 144."
+    pieges:
+      - { texte: "24", pourquoi: "24, c'est 12 × 2. Le carré, c'est 12 × 12." }
+      - { texte: "156", pourquoi: "12², c'est 12 × 12, sans rien ajouter." }

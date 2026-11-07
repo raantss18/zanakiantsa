@@ -42,6 +42,18 @@ class AppState extends ChangeNotifier {
   /// Âge de l'enfant, réglé dans l'espace parent (ADR 0006). ⚠ 5 ans par défaut.
   int age = 5;
 
+  /// Classe choisie par le parent ; null : celle de l'âge (ADR 0057).
+  int? chosenClass;
+
+  /// La classe de l'enfant, qui décide où commencent les leçons.
+  int get schoolClass => chosenClass ?? classForAge(age);
+
+  /// Le plus haut niveau de chaque domaine.
+  late final Map<String, int> topLevels = {for (final t in topics) t.id: t.skills.map((s) => s.ref.level).fold(0, max)};
+
+  /// La classe la plus avancée pour laquelle l'app a des leçons.
+  int get highestLevel => topLevels.values.fold(0, max);
+
   /// Genre saisi par le parent (ADR 0014) : null tant que l'app n'est pas préparée.
   bool? boy;
   String? universeId;
@@ -130,6 +142,7 @@ class AppState extends ChangeNotifier {
       ..voiceOn = await store.get('voix') != 'non'
       ..soundOn = await store.get('musique') != 'non';
     age = int.tryParse(await store.get('age') ?? '') ?? 5;
+    chosenClass = int.tryParse(await store.get('classe') ?? '');
     final g = await store.get('genre');
     boy = g == null ? null : g == 'garcon';
     universeId = await store.get('univers');
@@ -200,7 +213,7 @@ class AppState extends ChangeNotifier {
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
   Progress progressOf(Topic t) =>
-      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelForAge(age), placed: placed);
+      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelIn([for (final s in t.skills) s.ref], startLevelForClass(schoolClass)), placed: placed);
 
   /// Note les compétences réussies au test de départ.
   Future<void> place(Iterable<String> ids) async {
@@ -209,7 +222,7 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes);
+  DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions, minutes: dailyMinutes, tops: topLevels, classe: schoolClass);
 
   Future<void> logSession(SessionLog s) async {
     await store.addSession(s);
@@ -249,6 +262,14 @@ class AppState extends ChangeNotifier {
   Future<void> setAge(int years) async {
     await store.set('age', '$years');
     age = years;
+    notifyListeners();
+  }
+
+  /// [classe] null, ou celle de son âge : la classe suit de nouveau l'âge.
+  Future<void> chooseClass(int? classe) async {
+    final chosen = classe == classForAge(age) ? null : classe;
+    await store.set('classe', chosen == null ? '' : '$chosen');
+    chosenClass = chosen;
     notifyListeners();
   }
 

@@ -2,7 +2,7 @@
 
 ## En une phrase
 
-Une application hors ligne où un enfant de 5 à 10 ans apprend **seul**, chaque jour, 10 à 15 minutes ⚠, en
+Une application hors ligne où chacun, dès 5 ans et sans âge maximum (ADR 0057), apprend **seul**, chaque jour, 10 à 15 minutes ⚠, en
 français, en jouant à des activités courtes qui le font réfléchir.
 
 ## Pour qui

@@ -1,6 +1,6 @@
 # Zanak'i Antsa
 
-Application éducative hors ligne pour enfants de 5 à 10 ans (GS → CM2), en français, avec l'anglais parmi les thèmes.
+Application éducative hors ligne, dès 5 ans et sans limite d'âge (de la GS au collège, et plus à mesure des versions), en français, avec l'anglais parmi les thèmes.
 Sans compte, sans pub, sans achat intégré, sans pistage.
 
 **Télécharger, découvrir, lire les nouvelles : https://raantss18.github.io/zanakiantsa/**

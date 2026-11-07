@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('33 compétences, prérequis connus et placés avant', () {
+    test('40 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 33);
+      expect(t.skills.length, 40);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -61,6 +61,8 @@ void main() {
               expect(q.a, inInclusiveRange(2, s.p('paquets_max')));
               expect(q.n, lessThanOrEqualTo(s.p('total_max')));
               expect(s.expected(q), q.a);
+            case 'quiz': // test/levels_test.dart
+              expect(q.n, inInclusiveRange(0, s.items.length - 1));
             case 'fraction': // test/fractions_test.dart
               expect(q.b, greaterThanOrEqualTo(2));
             case 'groupes' || 'tables' || 'partage':
