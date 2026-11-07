@@ -47,36 +47,35 @@
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
         Télécharger pour Android
       </a>
-      <a class="lien-simple" href="#guide">Voir le guide en vidéo</a>
+      <a class="lien-simple" href="#telecharger">Les étapes écrites</a>
     </div>
     <p class="sous-bouton">Version {{VERSION}}, {{TAILLE}}. Pour Android 7 ou plus récent.</p>
   </div>
-  <figure class="tablette">
-    <span class="autocollant">Sans internet, sans pub</span>
-    <div class="cadre">
-      <img src="img/accueil-900.webp" srcset="img/accueil-900.webp 900w, img/accueil-1600.webp 1600w" sizes="(min-width: 900px) 55vw, 92vw" width="1600" height="984" alt="L'accueil de l'application sur une tablette : trois activités du jour, Lire et écrire, Les suites et Les sons, avec la fée Lila qui accueille l'enfant.">
-    </div>
-    <figcaption>L'accueil propose trois activités par jour. L'enfant choisit son monde (fées, robots, voitures…) une fois pour toutes.</figcaption>
-  </figure>
-</section>
-
-<section class="bloc guide" id="guide" aria-labelledby="t-guide">
-  <h2 id="t-guide">Le guide en vidéo, pas à pas</h2>
-  <p>Quatre minutes sur une vraie tablette : télécharger, installer, préparer l'espace parent, jouer, explorer et mettre à jour. Un petit doigt montre chaque bouton à toucher. La vidéo se lit ici, sans rien télécharger.</p>
-  <figure class="ecran-video">
-    <video controls playsinline preload="metadata" poster="video/guide-affiche.jpg" width="1280" height="720">
-      <source src="video/guide-installation.mp4" type="video/mp4">
-      Votre navigateur ne sait pas lire cette vidéo : <a href="video/guide-installation.mp4">ouvrez-la directement</a>.
-    </video>
-  </figure>
-  <ol class="chapitres" aria-label="Chapitres de la vidéo">
-    <li><button type="button" data-t="5.5">Télécharger</button></li>
-    <li><button type="button" data-t="35.7">Installer</button></li>
-    <li><button type="button" data-t="96.8">L'espace parent</button></li>
-    <li><button type="button" data-t="131.9">Jouer</button></li>
-    <li><button type="button" data-t="167">Explorer</button></li>
-    <li><button type="button" data-t="198.6">Mettre à jour</button></li>
-  </ol>
+  <div class="video-accueil" id="guide">
+    <figure class="tablette">
+      <span class="autocollant">Sans internet, sans pub</span>
+      <div class="cadre">
+        <video autoplay muted loop playsinline controls preload="auto" poster="video/guide-affiche.jpg" width="1280" height="720"
+               aria-label="Guide vidéo : installer et utiliser Zanak'i Antsa, pas à pas, sur une vraie tablette">
+          <source src="video/guide-installation.mp4" type="video/mp4">
+          Votre navigateur ne sait pas lire cette vidéo : <a href="video/guide-installation.mp4">ouvrez-la directement</a>.
+        </video>
+        <button class="son" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="onde" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="barre" d="M16 9l6 6M22 9l-6 6"/></svg>
+          <span>Activer le son</span>
+        </button>
+      </div>
+      <figcaption>Le guide en vidéo : télécharger, installer, régler, jouer et mettre à jour, sur une vraie tablette. Un petit doigt montre chaque bouton. Choisissez une étape :</figcaption>
+    </figure>
+    <ol class="chapitres" aria-label="Chapitres de la vidéo">
+      <li><button type="button" data-t="5.5">Télécharger</button></li>
+      <li><button type="button" data-t="35.7">Installer</button></li>
+      <li><button type="button" data-t="96.8">L'espace parent</button></li>
+      <li><button type="button" data-t="131.9">Jouer</button></li>
+      <li><button type="button" data-t="167">Explorer</button></li>
+      <li><button type="button" data-t="198.6">Mettre à jour</button></li>
+    </ol>
+  </div>
 </section>
 
 <section class="bloc deux" id="journee" aria-labelledby="t-journee">

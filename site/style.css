@@ -204,15 +204,31 @@ h3 { font-size: 1.3rem; line-height: var(--u); margin-bottom: 0; }
 
 .visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* Le guide vidéo : mis en avant juste sous l'accueil, dans un cadre de tablette. */
-.guide { text-align: left; }
-.ecran-video { margin: 0 0 24px; padding: clamp(8px, 1.4vw, 14px); background: #1c1830; border-radius: clamp(18px, 3vw, 32px); box-shadow: 0 34px 60px -28px rgba(43, 20, 88, .55); }
-.ecran-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: clamp(10px, 2vw, 20px); background: var(--papier); }
-.chapitres { list-style: none; margin: 0 0 var(--u); padding: 0; display: flex; flex-wrap: wrap; gap: 12px; counter-reset: chap; }
+/* Le guide vidéo, en tête de page à la place d'une capture : il démarre sans le son, le parent l'active s'il veut. */
+.accueil.deux.gauche-large { align-items: center; }
+@media (min-width: 900px) { .accueil.deux.gauche-large { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 40px; } }
+.video-accueil .autocollant { display: none; } /* le texte le dit déjà ; sur la vidéo il cachait les chapitres */
+.video-accueil .tablette video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--papier); }
+.video-accueil .cadre { position: relative; }
+.son {
+  position: absolute; left: 14px; top: 14px; z-index: 1; display: inline-flex; align-items: center; gap: 10px;
+  min-height: 52px; padding: 0 20px 0 14px; border-radius: 999px; border: 3px solid #fff; cursor: pointer;
+  background: var(--violet); color: #fff; font: 700 1.05rem/1 var(--sans); box-shadow: 0 6px 16px -4px rgba(43, 20, 88, .6);
+}
+.son:hover { background: var(--violet-fonce); }
+.son svg { width: 26px; height: 26px; }
+.son .onde { display: none; }
+.son[aria-pressed="true"] .onde { display: inline; }
+.son[aria-pressed="true"] .barre { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .son[aria-pressed="false"] { animation: appel 2.4s ease-in-out 1.5s 3; }
+}
+@keyframes appel { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+.chapitres { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; counter-reset: chap; }
 .chapitres li { counter-increment: chap; }
 .chapitres button {
-  min-height: 48px; padding: 0 18px 0 8px; border-radius: 999px; border: 2px solid var(--encre); background: #fff; color: var(--encre);
-  font: 700 1rem/1 var(--sans); cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 0 16px 0 7px; border-radius: 999px; border: 2px solid var(--encre); background: #fff; color: var(--encre);
+  font: 700 .98rem/1 var(--sans); cursor: pointer; display: inline-flex; align-items: center; gap: 9px;
 }
 .chapitres button::before { content: counter(chap); width: 32px; height: 32px; border-radius: 50%; background: var(--violet); color: #fff; display: grid; place-items: center; font: 400 1.1rem/1 var(--serif); }
 .chapitres button:hover { background: var(--soleil); }
@@ -222,8 +238,13 @@ h3 { font-size: 1.3rem; line-height: var(--u); margin-bottom: 0; }
   .bloc { padding: 32px 0 64px; }
   .entete { min-height: 0; padding-bottom: 8px; }
   .entete .logo { width: 128px; }
-  .entete nav ul { gap: 0 20px; }
+  .entete nav ul { gap: 0 16px; }
+  .entete nav a { min-height: 44px; line-height: 44px; font-size: .95rem; }
   .bouton { width: 100%; font-size: 1.1rem; padding: 0 20px; }
   .fiche { grid-template-columns: 1fr; padding: 16px; }
   .fiche dd { margin-bottom: 8px; }
+  /* Sur téléphone, la vidéo passe en tête, avant le texte ; son bouton se fait plus petit pour ne pas la cacher. */
+  .accueil .video-accueil { order: -1; }
+  .son { min-height: 44px; padding: 0 14px 0 10px; font-size: .9rem; left: 8px; top: 8px; border-width: 2px; }
+  .son svg { width: 22px; height: 22px; }
 }

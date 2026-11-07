@@ -12,15 +12,32 @@
   });
 })();
 
-// Les chapitres du guide vidéo : un bouton par étape, qui lance la vidéo à cet endroit.
+// Le guide vidéo en tête de page : il tourne sans le son ; le bouton violet l'active ou le coupe. Les chapitres le placent
+// sur une étape. Si l'appareil demande moins d'animations, il ne démarre pas seul.
 (function () {
   var video = document.querySelector('#guide video');
   if (!video) return;
+  var son = document.querySelector('#guide .son');
+  var texte = son.querySelector('span');
+  function montre() {
+    son.setAttribute('aria-pressed', String(!video.muted));
+    texte.textContent = video.muted ? 'Activer le son' : 'Couper le son';
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.removeAttribute('autoplay');
+    video.pause();
+  }
+  son.addEventListener('click', function () {
+    video.muted = !video.muted;
+    if (!video.muted) video.play();
+    montre();
+  });
+  video.addEventListener('volumechange', montre);
   document.querySelectorAll('.chapitres button').forEach(function (b) {
     b.addEventListener('click', function () {
       video.currentTime = parseFloat(b.dataset.t);
       video.play();
-      video.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
+  montre();
 })();
