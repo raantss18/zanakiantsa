@@ -3,7 +3,23 @@
 > Une seule liste, tenue à jour à chaque tâche. Statuts : ✅ fait · 🔄 en cours · ⏳ à faire · ❓ décision d'Antsa.
 > Une tâche n'est ✅ qu'après tests + essai réel sur les tablettes (`CLAUDE.md`).
 
+## ✅ Français / anglais (ADR 0064)
+
+- ✅ Interrupteur dans l'espace parent : toute l'app, leçons comprises ; 10 domaines sur 10 traduits. Essayé sur la SM-X135G
+  avec `tool/ecoute.py` : la voix suit la langue (en-GB / fr-FR), les mots étudiés gardent leur langue (« no » en fr-FR).
+
+## ⭐ Priorité suivante (demande d'Antsa, 2026-11-07)
+
+- ⏳ **Ajouter du contenu pour tous les niveaux** (CP → lycée, ADR 0057) : maths, livres et tous les autres domaines.
+  À faire juste après la correction en cours (porte parent en paysage + essai FR/EN sur la tablette).
+
 ## 0. Erreurs signalées
+
+- ✅ Corrigé (2026-11-07, SM-X135G en paysage, texte système à 150 %) : le clavier laisse ~200 dp et la fenêtre du calcul parent
+  cachait la question et le champ. Fenêtre compacte ; protégé par `test/parent_gate_test.dart` (paysage, densité 1,75, texte × 1,5).
+- ✅ Corrigé (même jour, signalé par Antsa) : en paysage, la fin de la bulle de Robi était cachée (zone qui défilait sans le
+  montrer) et « Mes livres » tombait à moins de la moitié de sa taille ; la présentation d'un domaine passait sous « C'est parti ! » ;
+  « Explore everything » se coupait. Essayé sur la tablette. ⏳ Reste : un test d'accueil en paysage (l'accueil demande l'état complet de l'app).
 
 - ✅ Corrigé (trouvé le 2026-11-07, versions 0.9.0 et 0.10.0) : au format SM-X135G, la bonne réponse au calcul n'ouvrait plus l'espace
   parent : le clavier réorganise l'accueil, le bouton disparaît, `context.mounted` devenait faux. Donc plus de mise à jour depuis

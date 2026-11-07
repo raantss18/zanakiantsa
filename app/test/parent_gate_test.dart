@@ -51,4 +51,32 @@ void main() {
     await t.pumpAndSettle();
     expect(find.text('Espace ouvert'), findsNothing);
   });
+
+  // Défaut trouvé sur la SM-X135G en paysage (2026-11-07) : le clavier laisse ~360 px et la question disparaissait.
+  testWidgets('en paysage, avec le clavier, la question, le champ et « Entrer » restent visibles', (t) async {
+    t.view.physicalSize = const Size(1340, 800);
+    t.view.devicePixelRatio = 1.75; // densité 280 de la SM-X135G : 766 × 457 dp
+    t.view.viewInsets = const FakeViewPadding(bottom: 440);
+    t.platformDispatcher.textScaleFactorTestValue = 1.5; // texte agrandi à 150 % sur la tablette de référence
+    addTearDown(t.view.reset);
+    addTearDown(t.platformDispatcher.clearTextScaleFactorTestValue);
+    await t.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: Builder(
+          builder: (context) => TextButton(onPressed: () => openParentSpace(context, page: (_) => const Text('Espace ouvert')), child: const Text('Cadenas')),
+        ),
+      ),
+    ));
+    await t.tap(find.text('Cadenas'));
+    await t.pumpAndSettle();
+    final visible = t.getRect(find.descendant(of: find.byType(Dialog), matching: find.byType(SingleChildScrollView))); // la fenêtre défile : ce qui dépasse est coupé
+    for (final f in [find.textContaining('Combien font'), find.byType(TextField), find.text('Entrer')]) {
+      final r = t.getRect(f);
+      expect(r.top, greaterThanOrEqualTo(visible.top));
+      expect(r.bottom, lessThanOrEqualTo(visible.bottom));
+      expect(r.height, greaterThan(10));
+      expect(r.bottom, lessThanOrEqualTo((800 - 440) / 1.75));
+    }
+    expect(t.takeException(), isNull);
+  });
 }
