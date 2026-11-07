@@ -29,12 +29,12 @@
   ],
   "ages": [
     4,
-    15
+    17
   ],
   "en": {
     "titre": "Discovering living things",
     "nom": "Living things",
-    "resume": "Living things, matter and energy, from nursery school to Year 10.",
+    "resume": "Living things, matter and energy, from nursery school to Year 11 (1re).",
     "intro": [
       {
         "texte": "Living things are born, grow up and change.",
@@ -64,7 +64,10 @@
     "c2": "https://eduscol.education.fr/document/50261/download",
     "c2s": "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf",
     "c3s": "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-519023.pdf",
-    "c4": "https://eduscol.education.fr/document/621/download"
+    "c4": "https://eduscol.education.fr/document/621/download",
+    "svt2de": "https://www.snes.edu/IMG/pdf/svt_annexe_2e_bo.pdf",
+    "pc2de": "https://www.snes.edu/IMG/pdf/physique_annexe_2e_bo.pdf",
+    "es1re": "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf"
   },
   "competences": [
     {
@@ -7448,6 +7451,1677 @@
               {
                 "texte": "Because they produce oxygen.",
                 "pourquoi": "Burning uses up oxygen; it doesn't produce it."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cellule-adn",
+      "titre": "Cellules spécialisées et ADN",
+      "niveau": "2de",
+      "prerequis": [
+        "cellule",
+        "reproduction"
+      ],
+      "programme": {
+        "source": "svt2de",
+        "texte": "Toutes les cellules d’un organisme sont issues d’une cellule unique à l’origine de cet organisme. Elles possèdent toutes initialement la même information génétique organisée en gènes constitués d’ADN (acide désoxyribonucléique)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un organisme pluricellulaire vient d'une seule cellule. Ses cellules ont la même information génétique, portée par l'ADN, mais chaque cellule spécialisée n'en exprime qu'une partie.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense aux mots clés : cellule spécialisée, tissu, organe ; ADN, double hélice, nucléotide, gène, séquence.",
+        "exemple": "Exemple : un brin d'ADN porte la séquence A T G C. En face, le brin complémentaire porte T A C G, car A s'associe à T et C s'associe à G.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Chez un organisme pluricellulaire, comment appelle-t-on un ensemble de cellules spécialisées semblables qui assurent une même fonction ?",
+          "nom": "Un tissu.",
+          "explication": "Des cellules spécialisées forment des tissus ; plusieurs tissus forment un organe, comme le cœur ou une feuille.",
+          "pieges": [
+            {
+              "texte": "Un organite.",
+              "pourquoi": "Un organite est une structure à l'intérieur d'une cellule, comme le noyau : c'est l'échelle en dessous de la cellule."
+            },
+            {
+              "texte": "Une espèce.",
+              "pourquoi": "Une espèce regroupe des organismes entiers, pas des cellules d'un même organisme."
+            }
+          ]
+        },
+        {
+          "texte": "Chez un organisme unicellulaire, comme une paramécie, qui assure toutes les fonctions (se nourrir, se déplacer, se reproduire) ?",
+          "nom": "Une seule cellule.",
+          "explication": "Chez un unicellulaire, l'organisme entier est une seule cellule : elle assure toutes les fonctions.",
+          "pieges": [
+            {
+              "texte": "Des organes spécialisés.",
+              "pourquoi": "On pense souvent qu'il faut des organes pour vivre ; un unicellulaire n'a ni tissu ni organe."
+            },
+            {
+              "texte": "Plusieurs cellules qui se partagent le travail.",
+              "pourquoi": "Le partage du travail entre cellules spécialisées est le propre des pluricellulaires."
+            }
+          ]
+        },
+        {
+          "texte": "Une cellule de peau et un neurone d'une même personne contiennent-ils la même information génétique ?",
+          "nom": "Oui : toutes ses cellules viennent de la même cellule-œuf.",
+          "explication": "Toutes les cellules d'un organisme sont issues d'une cellule unique ; elles possèdent au départ la même information génétique.",
+          "pieges": [
+            {
+              "texte": "Non : chaque type de cellule a son propre ADN.",
+              "pourquoi": "Les cellules sont différentes parce qu'elles n'utilisent pas les mêmes gènes, pas parce que leur ADN est différent."
+            },
+            {
+              "texte": "Non : seul le neurone contient de l'ADN.",
+              "pourquoi": "Les cellules à noyau de l'organisme contiennent toutes de l'ADN, pas seulement les neurones."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi une cellule de muscle et une cellule de l'estomac sont-elles si différentes, avec le même ADN ?",
+          "nom": "Parce que chaque cellule spécialisée n'exprime qu'une partie de son ADN.",
+          "explication": "Les cellules spécialisées n'utilisent pas toutes les mêmes gènes : leur forme et leur fonction en dépendent.",
+          "pieges": [
+            {
+              "texte": "Parce qu'elles ont perdu les gènes qui ne leur servent pas.",
+              "pourquoi": "C'est une idée fréquente : en réalité les gènes restent présents, ils ne sont simplement pas exprimés."
+            },
+            {
+              "texte": "Parce qu'elles ne viennent pas de la même cellule de départ.",
+              "pourquoi": "Toutes les cellules d'un organisme viennent de la même cellule-œuf."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la forme de la molécule d'ADN ?",
+          "nom": "Une double hélice.",
+          "explication": "L'ADN est formé de deux brins enroulés l'un autour de l'autre : c'est la double hélice.",
+          "pieges": [
+            {
+              "texte": "Une sphère pleine.",
+              "pourquoi": "L'ADN est une très longue molécule en chaîne, pas une boule."
+            },
+            {
+              "texte": "Un seul brin droit.",
+              "pourquoi": "L'ADN compte deux brins, associés par leurs nucléotides complémentaires."
+            }
+          ]
+        },
+        {
+          "texte": "Quels sont les quatre nucléotides de l'ADN ?",
+          "nom": "Adénine, thymine, cytosine, guanine (A, T, C, G).",
+          "explication": "L'information génétique est écrite avec ces quatre nucléotides, notés A, T, C et G.",
+          "pieges": [
+            {
+              "texte": "Les vitamines A, B, C et D.",
+              "pourquoi": "Les vitamines sont apportées par l'alimentation : elles ne forment pas l'ADN."
+            },
+            {
+              "texte": "Le noyau, la membrane, le cytoplasme et la paroi.",
+              "pourquoi": "Ce sont des parties de la cellule, à une échelle bien plus grande que la molécule d'ADN."
+            }
+          ]
+        },
+        {
+          "texte": "Un brin d'ADN porte la séquence A A C G T. Quelle est la séquence du brin complémentaire, en face ?",
+          "nom": "T T G C A.",
+          "explication": "A s'associe toujours à T, et C à G : on remplace chaque lettre par sa complémentaire.",
+          "pieges": [
+            {
+              "texte": "A A C G T.",
+              "pourquoi": "Le second brin n'est pas une copie identique : il est complémentaire, lettre par lettre."
+            },
+            {
+              "texte": "T G C A A.",
+              "pourquoi": "C'est la séquence complémentaire lue à l'envers : il faut garder le même ordre, face à face."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'un gène ?",
+          "nom": "Une portion d'ADN dont la séquence porte une information.",
+          "explication": "C'est l'ordre des nucléotides, la séquence, qui porte l'information génétique d'un gène.",
+          "pieges": [
+            {
+              "texte": "Une cellule entière.",
+              "pourquoi": "Un gène est bien plus petit qu'une cellule : c'est un morceau d'une molécule d'ADN."
+            },
+            {
+              "texte": "Un caractère visible, comme la couleur des yeux.",
+              "pourquoi": "On confond souvent le gène et le caractère : le gène est un morceau d'ADN, le caractère est ce qu'on observe."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Specialised cells and DNA",
+        "idee": "A multicellular organism comes from a single cell. Its cells have the same genetic information, carried by DNA, but each specialised cell uses only part of it.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of the key words: specialised cell, tissue, organ; DNA, double helix, nucleotide, gene, sequence.",
+          "exemple": "Example: one strand of DNA carries the sequence A T G C. Opposite it, the complementary strand carries T A C G, because A pairs with T and C pairs with G.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In a multicellular organism, what do we call a group of similar specialised cells that carry out the same function?",
+            "nom": "A tissue.",
+            "explication": "Specialised cells form tissues; several tissues form an organ, such as the heart or a leaf.",
+            "pieges": [
+              {
+                "texte": "An organelle.",
+                "pourquoi": "An organelle is a structure inside a cell, like the nucleus: it's the scale below the cell."
+              },
+              {
+                "texte": "A species.",
+                "pourquoi": "A species groups whole organisms, not the cells of one organism."
+              }
+            ]
+          },
+          {
+            "texte": "In a single-celled organism, such as a paramecium, what carries out all the functions (feeding, moving, reproducing)?",
+            "nom": "A single cell.",
+            "explication": "In a single-celled organism, the whole organism is one cell: it carries out every function.",
+            "pieges": [
+              {
+                "texte": "Specialised organs.",
+                "pourquoi": "People often think organs are needed to live; a single-celled organism has no tissues or organs."
+              },
+              {
+                "texte": "Several cells sharing the work.",
+                "pourquoi": "Sharing the work between specialised cells is what multicellular organisms do."
+              }
+            ]
+          },
+          {
+            "texte": "Do a skin cell and a nerve cell from the same person contain the same genetic information?",
+            "nom": "Yes: all their cells come from the same fertilised egg.",
+            "explication": "All the cells of an organism come from a single cell; at the start they all have the same genetic information.",
+            "pieges": [
+              {
+                "texte": "No: each type of cell has its own DNA.",
+                "pourquoi": "Cells differ because they don't use the same genes, not because their DNA is different."
+              },
+              {
+                "texte": "No: only the nerve cell contains DNA.",
+                "pourquoi": "All the body's cells with a nucleus contain DNA, not just nerve cells."
+              }
+            ]
+          },
+          {
+            "texte": "Why are a muscle cell and a stomach cell so different, with the same DNA?",
+            "nom": "Because each specialised cell uses only part of its DNA.",
+            "explication": "Specialised cells don't all use the same genes: their shape and function depend on it.",
+            "pieges": [
+              {
+                "texte": "Because they have lost the genes they don't need.",
+                "pourquoi": "That's a common idea: in fact the genes are still there, they just aren't used."
+              },
+              {
+                "texte": "Because they don't come from the same starting cell.",
+                "pourquoi": "All the cells of an organism come from the same fertilised egg."
+              }
+            ]
+          },
+          {
+            "texte": "What shape is the DNA molecule?",
+            "nom": "A double helix.",
+            "explication": "DNA is made of two strands wound around each other: that's the double helix.",
+            "pieges": [
+              {
+                "texte": "A solid sphere.",
+                "pourquoi": "DNA is a very long chain molecule, not a ball."
+              },
+              {
+                "texte": "A single straight strand.",
+                "pourquoi": "DNA has two strands, joined by their complementary nucleotides."
+              }
+            ]
+          },
+          {
+            "texte": "What are the four nucleotides of DNA?",
+            "nom": "Adenine, thymine, cytosine, guanine (A, T, C, G).",
+            "explication": "Genetic information is written with these four nucleotides, labelled A, T, C and G.",
+            "pieges": [
+              {
+                "texte": "Vitamins A, B, C and D.",
+                "pourquoi": "Vitamins come from food: they don't make up DNA."
+              },
+              {
+                "texte": "The nucleus, the membrane, the cytoplasm and the cell wall.",
+                "pourquoi": "Those are parts of the cell, at a much larger scale than the DNA molecule."
+              }
+            ]
+          },
+          {
+            "texte": "One strand of DNA carries the sequence A A C G T. What is the sequence of the complementary strand opposite it?",
+            "nom": "T T G C A.",
+            "explication": "A always pairs with T, and C with G: replace each letter with its partner.",
+            "pieges": [
+              {
+                "texte": "A A C G T.",
+                "pourquoi": "The second strand isn't an identical copy: it is complementary, letter by letter."
+              },
+              {
+                "texte": "T G C A A.",
+                "pourquoi": "That's the complementary sequence read backwards: keep the same order, face to face."
+              }
+            ]
+          },
+          {
+            "texte": "What is a gene?",
+            "nom": "A section of DNA whose sequence carries information.",
+            "explication": "It's the order of the nucleotides, the sequence, that carries a gene's genetic information.",
+            "pieges": [
+              {
+                "texte": "A whole cell.",
+                "pourquoi": "A gene is far smaller than a cell: it's a piece of a DNA molecule."
+              },
+              {
+                "texte": "A visible trait, such as eye colour.",
+                "pourquoi": "People often mix up the gene and the trait: the gene is a piece of DNA, the trait is what we observe."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "biodiversite-evolution",
+      "titre": "Biodiversité et évolution",
+      "niveau": "2de",
+      "prerequis": [
+        "cellule-adn"
+      ],
+      "programme": {
+        "source": "svt2de",
+        "texte": "L’évolution de la biodiversité au cours du temps s’explique par des forces évolutives s’exerçant au niveau des populations"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La biodiversité se voit à trois échelles : gènes, espèces, écosystèmes. Elle change sans cesse sous l'effet de la sélection naturelle, de la dérive génétique et de la séparation des populations.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense aux mots clés : allèle, mutation, sélection naturelle, dérive génétique, spéciation, crise biologique.",
+        "exemple": "Exemple : on traite une population de moustiques avec un insecticide. Les rares moustiques porteurs d'un allèle de résistance survivent et ont plus de descendants : la fréquence de cet allèle augmente. C'est la sélection naturelle.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelles sont les trois échelles de la biodiversité ?",
+          "nom": "La diversité génétique, la diversité des espèces, la diversité des écosystèmes.",
+          "explication": "La biodiversité va des différences entre individus d'une même espèce jusqu'aux écosystèmes de la biosphère.",
+          "pieges": [
+            {
+              "texte": "Seulement le nombre d'espèces.",
+              "pourquoi": "On réduit souvent la biodiversité aux espèces ; elle compte aussi la diversité au sein d'une espèce et celle des écosystèmes."
+            },
+            {
+              "texte": "Les animaux, les plantes et les roches.",
+              "pourquoi": "Les roches ne sont pas vivantes : la biodiversité ne concerne que le vivant et ses milieux."
+            }
+          ]
+        },
+        {
+          "texte": "D'où viennent les différents allèles d'un même gène dans une population ?",
+          "nom": "De mutations survenues au cours des générations.",
+          "explication": "Une mutation modifie la séquence de l'ADN ; elle peut créer un nouvel allèle, transmis ensuite aux descendants.",
+          "pieges": [
+            {
+              "texte": "Des efforts faits par les individus pendant leur vie.",
+              "pourquoi": "C'est une idée ancienne : ce qu'un individu acquiert par l'effort ne modifie pas son ADN ni celui de ses enfants."
+            },
+            {
+              "texte": "De la nourriture qu'ils mangent.",
+              "pourquoi": "Les aliments ne fabriquent pas d'allèles : les allèles naissent de mutations de l'ADN."
+            }
+          ]
+        },
+        {
+          "texte": "Dans un champ traité aux insecticides, la proportion de moustiques résistants augmente. Pourquoi ?",
+          "nom": "Les moustiques déjà résistants survivent et ont plus de descendants.",
+          "explication": "La sélection naturelle trie des variations qui existaient déjà : les porteurs de l'allèle de résistance laissent plus de descendants.",
+          "pieges": [
+            {
+              "texte": "Les moustiques deviennent résistants pour s'adapter au poison.",
+              "pourquoi": "C'est la conception la plus répandue : les individus ne changent pas leur ADN pour s'adapter ; la résistance existait déjà chez quelques-uns."
+            },
+            {
+              "texte": "L'insecticide crée la résistance chez tous les moustiques.",
+              "pourquoi": "L'insecticide ne crée pas la résistance : il élimine les moustiques sensibles."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que la dérive génétique ?",
+          "nom": "Une modification au hasard de la fréquence des allèles d'une génération à l'autre.",
+          "explication": "La dérive génétique est aléatoire ; elle est plus rapide quand la population est petite.",
+          "pieges": [
+            {
+              "texte": "Un tri des individus les mieux adaptés au milieu.",
+              "pourquoi": "Ça, c'est la sélection naturelle : la dérive, elle, ne dépend pas de l'avantage d'un allèle."
+            },
+            {
+              "texte": "Le déplacement des continents.",
+              "pourquoi": "Le mot « dérive » fait penser à la dérive des continents, mais ici il s'agit des allèles d'une population."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la dérive génétique est-elle plus forte dans une petite population ?",
+          "nom": "Parce que le hasard pèse davantage quand il y a peu d'individus.",
+          "explication": "Avec peu d'individus, quelques naissances ou morts dues au hasard suffisent à faire varier fortement la fréquence d'un allèle.",
+          "pieges": [
+            {
+              "texte": "Parce que les mutations y sont plus nombreuses.",
+              "pourquoi": "Une petite population a au contraire moins de mutations au total : c'est l'effet du hasard qui y est plus fort."
+            },
+            {
+              "texte": "Parce que les individus y sont mieux adaptés.",
+              "pourquoi": "L'adaptation relève de la sélection naturelle, pas de la dérive."
+            }
+          ]
+        },
+        {
+          "texte": "Deux populations d'une même espèce sont séparées par une montagne pendant très longtemps. Que peut-il se passer ?",
+          "nom": "Elles peuvent devenir deux espèces différentes : c'est la spéciation.",
+          "explication": "Séparées, les populations accumulent des différences génétiques ; elles peuvent finir par ne plus pouvoir se reproduire entre elles.",
+          "pieges": [
+            {
+              "texte": "Rien : une espèce ne change jamais.",
+              "pourquoi": "La biodiversité évolue en permanence : les fossiles et les exemples actuels le montrent."
+            },
+            {
+              "texte": "Elles redeviennent identiques.",
+              "pourquoi": "Sans échanges entre elles, rien ne les ramène vers le même état : leurs différences s'accumulent."
+            }
+          ]
+        },
+        {
+          "texte": "Il y a environ 66 millions d'années, à la limite Crétacé-Paléogène, de nombreux groupes disparaissent, dont les dinosaures non aviens. Comment appelle-t-on cet événement ?",
+          "nom": "Une crise biologique, ou extinction de masse.",
+          "explication": "Une crise biologique est une extinction massive suivie d'une diversification. Ses causes probables : un impact de météorite et un volcanisme intense.",
+          "pieges": [
+            {
+              "texte": "Une spéciation.",
+              "pourquoi": "La spéciation fait apparaître des espèces ; ici, beaucoup disparaissent d'un coup."
+            },
+            {
+              "texte": "Une dérive génétique.",
+              "pourquoi": "La dérive agit dans une population ; une crise touche une grande partie du vivant de la planète."
+            }
+          ]
+        },
+        {
+          "texte": "Les espèces qui vivent aujourd'hui représentent-elles la plupart des espèces ayant existé ?",
+          "nom": "Non : elles ne sont qu'une infime partie des êtres vivants ayant existé.",
+          "explication": "Les fossiles montrent que la biodiversité actuelle n'est qu'une étape de l'histoire du vivant.",
+          "pieges": [
+            {
+              "texte": "Oui, presque toutes les espèces existent encore.",
+              "pourquoi": "Les fossiles montrent au contraire d'innombrables espèces disparues."
+            },
+            {
+              "texte": "Oui, car les espèces ne disparaissent jamais.",
+              "pourquoi": "Les extinctions sont fréquentes ; on parle même aujourd'hui d'une « 6e crise biologique » liée aux activités humaines."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Biodiversity and evolution",
+        "idee": "Biodiversity is seen at three scales: genes, species, ecosystems. It changes constantly through natural selection, genetic drift and the separation of populations.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of the key words: allele, mutation, natural selection, genetic drift, speciation, biological crisis.",
+          "exemple": "Example: a population of mosquitoes is sprayed with insecticide. The rare mosquitoes carrying a resistance allele survive and have more offspring: the frequency of that allele rises. That's natural selection.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What are the three scales of biodiversity?",
+            "nom": "Genetic diversity, species diversity, ecosystem diversity.",
+            "explication": "Biodiversity ranges from differences between individuals of the same species to the ecosystems of the biosphere.",
+            "pieges": [
+              {
+                "texte": "Only the number of species.",
+                "pourquoi": "Biodiversity is often reduced to species; it also includes diversity within a species and between ecosystems."
+              },
+              {
+                "texte": "Animals, plants and rocks.",
+                "pourquoi": "Rocks aren't alive: biodiversity is only about living things and their environments."
+              }
+            ]
+          },
+          {
+            "texte": "Where do the different alleles of the same gene in a population come from?",
+            "nom": "From mutations that happened over the generations.",
+            "explication": "A mutation changes the DNA sequence; it can create a new allele, then passed on to offspring.",
+            "pieges": [
+              {
+                "texte": "From the efforts individuals make during their lives.",
+                "pourquoi": "That's an old idea: what an individual gains through effort doesn't change its DNA or its children's."
+              },
+              {
+                "texte": "From the food they eat.",
+                "pourquoi": "Food doesn't make alleles: alleles arise from DNA mutations."
+              }
+            ]
+          },
+          {
+            "texte": "In a field sprayed with insecticide, the share of resistant mosquitoes rises. Why?",
+            "nom": "The mosquitoes that were already resistant survive and have more offspring.",
+            "explication": "Natural selection sorts variations that already existed: carriers of the resistance allele leave more offspring.",
+            "pieges": [
+              {
+                "texte": "The mosquitoes become resistant to adapt to the poison.",
+                "pourquoi": "That's the most common misconception: individuals don't change their DNA to adapt; resistance already existed in a few."
+              },
+              {
+                "texte": "The insecticide creates resistance in every mosquito.",
+                "pourquoi": "The insecticide doesn't create resistance: it kills the sensitive mosquitoes."
+              }
+            ]
+          },
+          {
+            "texte": "What is genetic drift?",
+            "nom": "A random change in allele frequencies from one generation to the next.",
+            "explication": "Genetic drift is random; it's faster when the population is small.",
+            "pieges": [
+              {
+                "texte": "A sorting of the individuals best suited to their environment.",
+                "pourquoi": "That's natural selection: drift doesn't depend on whether an allele is an advantage."
+              },
+              {
+                "texte": "The movement of the continents.",
+                "pourquoi": "The word « drift » brings continental drift to mind, but here it's about the alleles of a population."
+              }
+            ]
+          },
+          {
+            "texte": "Why is genetic drift stronger in a small population?",
+            "nom": "Because chance matters more when there are few individuals.",
+            "explication": "With few individuals, a few births or deaths due to chance are enough to change an allele's frequency a lot.",
+            "pieges": [
+              {
+                "texte": "Because there are more mutations in it.",
+                "pourquoi": "A small population actually has fewer mutations in total: it's the effect of chance that is stronger."
+              },
+              {
+                "texte": "Because its individuals are better adapted.",
+                "pourquoi": "Adaptation comes from natural selection, not drift."
+              }
+            ]
+          },
+          {
+            "texte": "Two populations of the same species are separated by a mountain range for a very long time. What can happen?",
+            "nom": "They can become two different species: that's speciation.",
+            "explication": "Once separated, the populations build up genetic differences; in the end they may no longer be able to breed together.",
+            "pieges": [
+              {
+                "texte": "Nothing: a species never changes.",
+                "pourquoi": "Biodiversity is always changing: fossils and present-day examples show it."
+              },
+              {
+                "texte": "They become identical again.",
+                "pourquoi": "With no exchanges between them, nothing brings them back to the same state: their differences build up."
+              }
+            ]
+          },
+          {
+            "texte": "About 66 million years ago, at the Cretaceous-Paleogene boundary, many groups disappear, including the non-avian dinosaurs. What do we call this event?",
+            "nom": "A biological crisis, or mass extinction.",
+            "explication": "A biological crisis is a mass extinction followed by diversification. Its likely causes: a meteorite impact and intense volcanic activity.",
+            "pieges": [
+              {
+                "texte": "A speciation.",
+                "pourquoi": "Speciation makes new species appear; here, many disappear at once."
+              },
+              {
+                "texte": "A genetic drift.",
+                "pourquoi": "Drift acts within one population; a crisis affects a large part of life on the planet."
+              }
+            ]
+          },
+          {
+            "texte": "Do the species living today make up most of the species that have ever existed?",
+            "nom": "No: they are only a tiny fraction of the living things that have existed.",
+            "explication": "Fossils show that today's biodiversity is just one stage in the history of life.",
+            "pieges": [
+              {
+                "texte": "Yes, almost every species still exists.",
+                "pourquoi": "Fossils show, on the contrary, countless extinct species."
+              },
+              {
+                "texte": "Yes, because species never die out.",
+                "pourquoi": "Extinctions are common; today people even speak of a « 6th biological crisis » linked to human activity."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "atome-tableau",
+      "titre": "L'atome et le tableau périodique",
+      "niveau": "2de",
+      "prerequis": [
+        "transformation-chimique"
+      ],
+      "programme": {
+        "source": "pc2de",
+        "texte": "Déterminer les électrons de valence d’un atome (Z ⩽ 18) à partir de sa configuration électronique à l’état fondamental ou de sa position dans le tableau périodique."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un atome a un noyau minuscule (protons et neutrons) entouré d'électrons. Le numéro atomique Z, nombre de protons, définit l'élément. Sa configuration électronique donne sa place dans le tableau périodique.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Rappel : Z = nombre de protons ; A = nombre de nucléons (protons + neutrons). Les couches se remplissent dans l'ordre 1s, 2s, 2p, 3s, 3p.",
+        "exemple": "Exemple : le sodium a Z = 11. Sa configuration est 1s² 2s² 2p⁶ 3s¹. Sa dernière couche est la 3e : il est dans la 3e ligne du tableau, 1re colonne, avec 1 électron de valence.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Où se trouve presque toute la masse d'un atome ?",
+          "nom": "Dans son noyau.",
+          "explication": "Protons et neutrons ont une masse environ 1 800 fois plus grande que celle d'un électron : la masse est concentrée dans le noyau.",
+          "pieges": [
+            {
+              "texte": "Dans ses électrons.",
+              "pourquoi": "Les électrons occupent presque tout le volume de l'atome, mais leur masse est très faible."
+            },
+            {
+              "texte": "Répartie également partout dans l'atome.",
+              "pourquoi": "On imagine souvent l'atome comme une bille pleine ; en réalité, il est surtout fait de vide autour d'un noyau très dense."
+            }
+          ]
+        },
+        {
+          "texte": "Un atome mesure environ 10⁻¹⁰ m et son noyau environ 10⁻¹⁵ m. Combien de fois l'atome est-il plus grand que son noyau ?",
+          "nom": "Environ 100 000 fois.",
+          "explication": "10⁻¹⁰ divisé par 10⁻¹⁵ donne 10⁵, soit 100 000 : l'atome est essentiellement fait de vide.",
+          "pieges": [
+            {
+              "texte": "Environ 5 fois.",
+              "pourquoi": "On a soustrait les exposants au lieu de calculer la puissance de 10 : 10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵."
+            },
+            {
+              "texte": "Environ 10 fois.",
+              "pourquoi": "Chaque unité d'exposant vaut un facteur 10 : un écart de 5 dans l'exposant donne un facteur 100 000."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qui définit un élément chimique, par exemple le carbone ?",
+          "nom": "Son numéro atomique Z, c'est-à-dire son nombre de protons.",
+          "explication": "Tous les atomes de carbone ont 6 protons ; le nombre de neutrons peut varier.",
+          "pieges": [
+            {
+              "texte": "Son nombre de neutrons.",
+              "pourquoi": "Deux atomes de carbone peuvent avoir 6 ou 8 neutrons : ils restent du carbone."
+            },
+            {
+              "texte": "Son nombre d'électrons.",
+              "pourquoi": "Un ion a gagné ou perdu des électrons sans changer d'élément : Na⁺ reste du sodium."
+            }
+          ]
+        },
+        {
+          "texte": "Le noyau de carbone 12 s'écrit ¹²₆C. Combien a-t-il de protons et de neutrons ?",
+          "nom": "6 protons et 6 neutrons.",
+          "explication": "Z = 6 protons ; A = 12 nucléons ; donc 12 − 6 = 6 neutrons.",
+          "pieges": [
+            {
+              "texte": "12 protons et 6 neutrons.",
+              "pourquoi": "Le nombre du haut, A, compte tous les nucléons, pas seulement les protons."
+            },
+            {
+              "texte": "6 protons et 12 neutrons.",
+              "pourquoi": "A = 12 compte protons et neutrons ensemble : il faut retirer les 6 protons."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un atome est-il électriquement neutre ?",
+          "nom": "Parce qu'il a autant d'électrons que de protons.",
+          "explication": "Chaque proton porte la charge +e et chaque électron la charge −e : en nombre égal, les charges se compensent.",
+          "pieges": [
+            {
+              "texte": "Parce que ses neutrons annulent les charges.",
+              "pourquoi": "Les neutrons n'ont pas de charge : ils n'annulent rien."
+            },
+            {
+              "texte": "Parce qu'il n'a aucune particule chargée.",
+              "pourquoi": "Protons et électrons sont chargés ; c'est leur égalité en nombre qui rend l'atome neutre."
+            }
+          ]
+        },
+        {
+          "texte": "Le chlore a Z = 17. Sa configuration électronique est 1s² 2s² 2p⁶ 3s² 3p⁵. Combien a-t-il d'électrons de valence ?",
+          "nom": "7.",
+          "explication": "Les électrons de valence sont ceux de la dernière couche, la 3e : 3s² 3p⁵, soit 2 + 5 = 7.",
+          "pieges": [
+            {
+              "texte": "17.",
+              "pourquoi": "17 est le nombre total d'électrons ; seuls ceux de la dernière couche sont des électrons de valence."
+            },
+            {
+              "texte": "5.",
+              "pourquoi": "On n'a compté que la sous-couche 3p ; la sous-couche 3s fait aussi partie de la dernière couche."
+            }
+          ]
+        },
+        {
+          "texte": "L'hélium, le néon et l'argon forment la famille des gaz nobles. Qu'ont-ils de particulier ?",
+          "nom": "Ils sont très stables chimiquement et ne forment presque pas de liaisons.",
+          "explication": "Leur couche de valence est complète ; les autres atomes tendent à prendre la configuration du gaz noble le plus proche.",
+          "pieges": [
+            {
+              "texte": "Ce sont des métaux précieux.",
+              "pourquoi": "Le mot « noble » trompe : ce sont des gaz, pas des métaux comme l'or."
+            },
+            {
+              "texte": "Ils réagissent avec tous les autres éléments.",
+              "pourquoi": "C'est l'inverse : leur stabilité vient de leur couche de valence complète."
+            }
+          ]
+        },
+        {
+          "texte": "Le sodium (Z = 11) a un seul électron de valence. Quel ion forme-t-il ?",
+          "nom": "L'ion Na⁺, en perdant cet électron.",
+          "explication": "En perdant son électron de valence, le sodium prend la configuration du néon, 1s² 2s² 2p⁶ : il devient Na⁺.",
+          "pieges": [
+            {
+              "texte": "L'ion Na⁻, en gagnant un électron.",
+              "pourquoi": "Gagner un électron l'éloignerait d'un gaz noble ; il est plus simple d'en perdre un."
+            },
+            {
+              "texte": "L'ion Na²⁺, en perdant deux électrons.",
+              "pourquoi": "Après la perte d'un électron, sa couche externe est déjà celle du néon : il s'arrête là."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The atom and the periodic table",
+        "idee": "An atom has a tiny nucleus (protons and neutrons) surrounded by electrons. The atomic number Z, the number of protons, defines the element. Its electron configuration gives its place in the periodic table.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Reminder: Z = number of protons; A = number of nucleons (protons + neutrons). Shells fill in the order 1s, 2s, 2p, 3s, 3p.",
+          "exemple": "Example: sodium has Z = 11. Its configuration is 1s² 2s² 2p⁶ 3s¹. Its outer shell is the 3rd: it's in the 3rd row of the table, 1st column, with 1 valence electron.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Where is almost all the mass of an atom?",
+            "nom": "In its nucleus.",
+            "explication": "Protons and neutrons are about 1,800 times heavier than an electron: the mass is concentrated in the nucleus.",
+            "pieges": [
+              {
+                "texte": "In its electrons.",
+                "pourquoi": "Electrons take up almost all of the atom's volume, but their mass is very small."
+              },
+              {
+                "texte": "Spread evenly throughout the atom.",
+                "pourquoi": "People often picture the atom as a solid marble; in fact it is mostly empty space around a very dense nucleus."
+              }
+            ]
+          },
+          {
+            "texte": "An atom is about 10⁻¹⁰ m across and its nucleus about 10⁻¹⁵ m. How many times bigger is the atom than its nucleus?",
+            "nom": "About 100,000 times.",
+            "explication": "10⁻¹⁰ divided by 10⁻¹⁵ gives 10⁵, that is 100,000: the atom is mostly empty space.",
+            "pieges": [
+              {
+                "texte": "About 5 times.",
+                "pourquoi": "The exponents were subtracted instead of working out the power of 10: 10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵."
+              },
+              {
+                "texte": "About 10 times.",
+                "pourquoi": "Each step in the exponent is a factor of 10: a gap of 5 in the exponent gives a factor of 100,000."
+              }
+            ]
+          },
+          {
+            "texte": "What defines a chemical element, for example carbon?",
+            "nom": "Its atomic number Z, that is, its number of protons.",
+            "explication": "Every carbon atom has 6 protons; the number of neutrons can vary.",
+            "pieges": [
+              {
+                "texte": "Its number of neutrons.",
+                "pourquoi": "Two carbon atoms can have 6 or 8 neutrons: they are still carbon."
+              },
+              {
+                "texte": "Its number of electrons.",
+                "pourquoi": "An ion has gained or lost electrons without changing element: Na⁺ is still sodium."
+              }
+            ]
+          },
+          {
+            "texte": "The carbon-12 nucleus is written ¹²₆C. How many protons and neutrons does it have?",
+            "nom": "6 protons and 6 neutrons.",
+            "explication": "Z = 6 protons; A = 12 nucleons; so 12 − 6 = 6 neutrons.",
+            "pieges": [
+              {
+                "texte": "12 protons and 6 neutrons.",
+                "pourquoi": "The top number, A, counts all the nucleons, not just the protons."
+              },
+              {
+                "texte": "6 protons and 12 neutrons.",
+                "pourquoi": "A = 12 counts protons and neutrons together: take away the 6 protons."
+              }
+            ]
+          },
+          {
+            "texte": "Why is an atom electrically neutral?",
+            "nom": "Because it has as many electrons as protons.",
+            "explication": "Each proton carries the charge +e and each electron the charge −e: in equal numbers, the charges cancel out.",
+            "pieges": [
+              {
+                "texte": "Because its neutrons cancel the charges.",
+                "pourquoi": "Neutrons have no charge: they don't cancel anything."
+              },
+              {
+                "texte": "Because it has no charged particles.",
+                "pourquoi": "Protons and electrons are charged; it's their equal numbers that make the atom neutral."
+              }
+            ]
+          },
+          {
+            "texte": "Chlorine has Z = 17. Its electron configuration is 1s² 2s² 2p⁶ 3s² 3p⁵. How many valence electrons does it have?",
+            "nom": "7.",
+            "explication": "Valence electrons are those in the outer shell, the 3rd: 3s² 3p⁵, so 2 + 5 = 7.",
+            "pieges": [
+              {
+                "texte": "17.",
+                "pourquoi": "17 is the total number of electrons; only those in the outer shell are valence electrons."
+              },
+              {
+                "texte": "5.",
+                "pourquoi": "Only the 3p subshell was counted; the 3s subshell is also part of the outer shell."
+              }
+            ]
+          },
+          {
+            "texte": "Helium, neon and argon form the noble gas family. What is special about them?",
+            "nom": "They are chemically very stable and hardly form any bonds.",
+            "explication": "Their valence shell is full; other atoms tend to take on the configuration of the nearest noble gas.",
+            "pieges": [
+              {
+                "texte": "They are precious metals.",
+                "pourquoi": "The word « noble » is misleading: they are gases, not metals like gold."
+              },
+              {
+                "texte": "They react with every other element.",
+                "pourquoi": "It's the opposite: their stability comes from their full valence shell."
+              }
+            ]
+          },
+          {
+            "texte": "Sodium (Z = 11) has a single valence electron. Which ion does it form?",
+            "nom": "The Na⁺ ion, by losing that electron.",
+            "explication": "By losing its valence electron, sodium takes on neon's configuration, 1s² 2s² 2p⁶: it becomes Na⁺.",
+            "pieges": [
+              {
+                "texte": "The Na⁻ ion, by gaining an electron.",
+                "pourquoi": "Gaining an electron would take it further from a noble gas; it's simpler to lose one."
+              },
+              {
+                "texte": "The Na²⁺ ion, by losing two electrons.",
+                "pourquoi": "Once one electron is lost, its outer shell is already neon's: it stops there."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mouvement-vitesse",
+      "titre": "Mouvement, référentiel et vitesse",
+      "niveau": "2de",
+      "prerequis": [],
+      "programme": {
+        "source": "pc2de",
+        "texte": "Choisir un référentiel pour décrire le mouvement d’un système."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un mouvement se décrit toujours par rapport à un référentiel. La vitesse moyenne est la distance parcourue divisée par la durée ; le vecteur vitesse donne aussi la direction et le sens.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi d'abord : par rapport à quoi ? Puis, vitesse moyenne v = d ÷ Δt, en m/s ; 1 m/s = 3,6 km/h.",
+        "exemple": "Exemple : un cycliste parcourt 1 500 m en 300 s. Sa vitesse moyenne vaut v = 1 500 ÷ 300 = 5 m/s, soit 5 × 3,6 = 18 km/h.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Assis dans un train qui roule, tu ne bouges pas de ton siège. Es-tu immobile ?",
+          "nom": "Oui par rapport au train, non par rapport au quai.",
+          "explication": "Le mouvement dépend du référentiel : immobile dans le référentiel du train, en mouvement dans le référentiel terrestre.",
+          "pieges": [
+            {
+              "texte": "Oui, dans tous les cas.",
+              "pourquoi": "On croit souvent qu'immobile est absolu ; vu du quai, tu te déplaces avec le train."
+            },
+            {
+              "texte": "Non, dans tous les cas.",
+              "pourquoi": "Par rapport au wagon, ta position ne change pas : tu y es immobile."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'un référentiel ?",
+          "nom": "L'objet de référence par rapport auquel on décrit le mouvement, avec une horloge.",
+          "explication": "Pour décrire un mouvement, on choisit un objet de référence (le sol, le train…) et on mesure le temps.",
+          "pieges": [
+            {
+              "texte": "L'objet dont on étudie le mouvement.",
+              "pourquoi": "Celui-ci s'appelle le système ; le référentiel sert de point de comparaison."
+            },
+            {
+              "texte": "La trajectoire suivie par l'objet.",
+              "pourquoi": "La trajectoire dépend elle-même du référentiel choisi."
+            }
+          ]
+        },
+        {
+          "texte": "Une valve de roue de vélo, vue depuis le cadre du vélo, décrit un cercle. Vue depuis le trottoir, que décrit-elle ?",
+          "nom": "Une courbe qui avance en formant des arches.",
+          "explication": "La trajectoire dépend du référentiel : cercle par rapport au vélo, courbe en arches par rapport au sol.",
+          "pieges": [
+            {
+              "texte": "Le même cercle.",
+              "pourquoi": "Vu du trottoir, le vélo avance : le cercle est « étiré » le long de la route."
+            },
+            {
+              "texte": "Une droite.",
+              "pourquoi": "Le moyeu de la roue avance en ligne droite, mais la valve tourne aussi autour de lui."
+            }
+          ]
+        },
+        {
+          "texte": "Un coureur parcourt 100 m en 10 s. Quelle est sa vitesse moyenne ?",
+          "nom": "10 m/s, soit 36 km/h.",
+          "explication": "v = d ÷ Δt = 100 ÷ 10 = 10 m/s ; et 10 × 3,6 = 36 km/h.",
+          "pieges": [
+            {
+              "texte": "1 000 m/s.",
+              "pourquoi": "On a multiplié la distance par la durée au lieu de la diviser."
+            },
+            {
+              "texte": "10 km/h.",
+              "pourquoi": "Le calcul donne des mètres par seconde ; pour passer en km/h, il faut multiplier par 3,6."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'indique le vecteur vitesse d'un point, en plus de la valeur de la vitesse ?",
+          "nom": "La direction et le sens du mouvement.",
+          "explication": "Un vecteur a une direction, un sens et une norme ; la norme du vecteur vitesse est la valeur de la vitesse.",
+          "pieges": [
+            {
+              "texte": "La masse de l'objet.",
+              "pourquoi": "La masse ne dépend pas du mouvement : elle n'apparaît pas dans le vecteur vitesse."
+            },
+            {
+              "texte": "Rien de plus que la valeur.",
+              "pourquoi": "C'est justement l'intérêt du vecteur : il dit aussi où va l'objet."
+            }
+          ]
+        },
+        {
+          "texte": "Une voiture roule tout droit, toujours à 90 km/h. Comment qualifie-t-on ce mouvement ?",
+          "nom": "Rectiligne uniforme.",
+          "explication": "Rectiligne : la trajectoire est une droite. Uniforme : la valeur de la vitesse ne change pas.",
+          "pieges": [
+            {
+              "texte": "Rectiligne accéléré.",
+              "pourquoi": "Accéléré voudrait dire que la valeur de la vitesse augmente ; ici elle reste à 90 km/h."
+            },
+            {
+              "texte": "Circulaire uniforme.",
+              "pourquoi": "Circulaire supposerait une trajectoire en cercle ; la voiture va tout droit."
+            }
+          ]
+        },
+        {
+          "texte": "Un palet glisse sur la glace : les forces qui s'exercent sur lui se compensent. D'après le principe d'inertie, que fait-il ?",
+          "nom": "Il garde un mouvement rectiligne uniforme.",
+          "explication": "Si les forces se compensent, le vecteur vitesse ne change pas : immobile, il reste immobile ; en mouvement, il continue tout droit à la même vitesse.",
+          "pieges": [
+            {
+              "texte": "Il ralentit puis s'arrête, car rien ne le pousse plus.",
+              "pourquoi": "C'est l'idée la plus répandue : un objet n'a pas besoin d'être poussé pour avancer ; s'il ralentit, c'est qu'une force, comme un frottement, agit."
+            },
+            {
+              "texte": "Il accélère.",
+              "pourquoi": "Pour changer la vitesse, il faut des forces qui ne se compensent pas."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi une balle lâchée sans vitesse initiale va-t-elle de plus en plus vite en tombant ?",
+          "nom": "Parce qu'une force non compensée, son poids, agit sur elle.",
+          "explication": "En chute libre, seul le poids agit : la somme des forces n'est pas nulle, donc le vecteur vitesse varie.",
+          "pieges": [
+            {
+              "texte": "Parce qu'elle garde la force donnée par la main.",
+              "pourquoi": "Lâchée sans élan, la balle n'a rien reçu de la main ; c'est son poids qui la fait accélérer."
+            },
+            {
+              "texte": "Parce que l'air la pousse vers le bas.",
+              "pourquoi": "L'air freine la balle, il ne la pousse pas : en chute libre, on le néglige."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Motion, frame of reference and speed",
+        "idee": "Motion is always described relative to a frame of reference. Average speed is the distance travelled divided by the time taken; the velocity vector also gives the direction.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "First ask: relative to what? Then, average speed v = d ÷ Δt, in m/s; 1 m/s = 3.6 km/h.",
+          "exemple": "Example: a cyclist covers 1,500 m in 300 s. Their average speed is v = 1,500 ÷ 300 = 5 m/s, that is 5 × 3.6 = 18 km/h.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Sitting in a moving train, you don't leave your seat. Are you still?",
+            "nom": "Yes relative to the train, no relative to the platform.",
+            "explication": "Motion depends on the frame of reference: still in the train's frame, moving in the Earth's frame.",
+            "pieges": [
+              {
+                "texte": "Yes, in every case.",
+                "pourquoi": "People often think being still is absolute; seen from the platform, you move with the train."
+              },
+              {
+                "texte": "No, in every case.",
+                "pourquoi": "Relative to the carriage, your position doesn't change: you are still in it."
+              }
+            ]
+          },
+          {
+            "texte": "What is a frame of reference?",
+            "nom": "The reference object relative to which motion is described, with a clock.",
+            "explication": "To describe motion, we choose a reference object (the ground, the train…) and measure time.",
+            "pieges": [
+              {
+                "texte": "The object whose motion we study.",
+                "pourquoi": "That's called the system; the frame of reference is what we compare it with."
+              },
+              {
+                "texte": "The path followed by the object.",
+                "pourquoi": "The path itself depends on the chosen frame of reference."
+              }
+            ]
+          },
+          {
+            "texte": "Seen from the bike's frame, a bicycle wheel's valve moves in a circle. Seen from the pavement, what does it trace?",
+            "nom": "A curve moving forward in a series of arches.",
+            "explication": "The path depends on the frame of reference: a circle relative to the bike, an arched curve relative to the ground.",
+            "pieges": [
+              {
+                "texte": "The same circle.",
+                "pourquoi": "Seen from the pavement, the bike moves forward: the circle is « stretched » along the road."
+              },
+              {
+                "texte": "A straight line.",
+                "pourquoi": "The wheel's hub moves in a straight line, but the valve also turns around it."
+              }
+            ]
+          },
+          {
+            "texte": "A runner covers 100 m in 10 s. What is their average speed?",
+            "nom": "10 m/s, that is 36 km/h.",
+            "explication": "v = d ÷ Δt = 100 ÷ 10 = 10 m/s; and 10 × 3.6 = 36 km/h.",
+            "pieges": [
+              {
+                "texte": "1,000 m/s.",
+                "pourquoi": "The distance was multiplied by the time instead of divided."
+              },
+              {
+                "texte": "10 km/h.",
+                "pourquoi": "The calculation gives metres per second; to convert to km/h, multiply by 3.6."
+              }
+            ]
+          },
+          {
+            "texte": "Besides the speed, what does a point's velocity vector show?",
+            "nom": "The direction of the motion.",
+            "explication": "A vector has a direction and a length; the length of the velocity vector is the speed.",
+            "pieges": [
+              {
+                "texte": "The object's mass.",
+                "pourquoi": "Mass doesn't depend on motion: it doesn't appear in the velocity vector."
+              },
+              {
+                "texte": "Nothing more than the speed.",
+                "pourquoi": "That's the whole point of the vector: it also says where the object is going."
+              }
+            ]
+          },
+          {
+            "texte": "A car drives in a straight line, always at 90 km/h. How do we describe this motion?",
+            "nom": "Uniform straight-line motion.",
+            "explication": "Straight-line: the path is a straight line. Uniform: the speed doesn't change.",
+            "pieges": [
+              {
+                "texte": "Accelerated straight-line motion.",
+                "pourquoi": "Accelerated would mean the speed increases; here it stays at 90 km/h."
+              },
+              {
+                "texte": "Uniform circular motion.",
+                "pourquoi": "Circular would mean a path in a circle; the car goes straight."
+              }
+            ]
+          },
+          {
+            "texte": "A puck slides on ice: the forces acting on it balance out. According to the principle of inertia, what does it do?",
+            "nom": "It keeps moving in a straight line at constant speed.",
+            "explication": "If the forces balance, the velocity vector doesn't change: at rest, it stays at rest; moving, it carries on straight at the same speed.",
+            "pieges": [
+              {
+                "texte": "It slows down and stops, because nothing pushes it any more.",
+                "pourquoi": "That's the most common idea: an object doesn't need a push to keep moving; if it slows down, a force such as friction is acting."
+              },
+              {
+                "texte": "It speeds up.",
+                "pourquoi": "To change the velocity, the forces must not balance."
+              }
+            ]
+          },
+          {
+            "texte": "Why does a ball dropped from rest go faster and faster as it falls?",
+            "nom": "Because an unbalanced force, its weight, acts on it.",
+            "explication": "In free fall, only weight acts: the sum of the forces isn't zero, so the velocity vector changes.",
+            "pieges": [
+              {
+                "texte": "Because it keeps the force given by the hand.",
+                "pourquoi": "Dropped without a push, the ball got nothing from the hand; it's its weight that makes it speed up."
+              },
+              {
+                "texte": "Because the air pushes it down.",
+                "pourquoi": "Air slows the ball down, it doesn't push it: in free fall, we ignore it."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "son-musique",
+      "titre": "Son, musique et numérisation",
+      "niveau": "1re",
+      "prerequis": [],
+      "programme": {
+        "source": "es1re",
+        "texte": "Un signal périodique de fréquence f se décompose en une somme de signaux sinusoïdaux de fréquences multiples entières de f. Le son associé à ce signal est un son composé. f est appelé fréquence fondamentale, les autres fréquences sont appelées harmoniques."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un son pur est sinusoïdal. Un son musical est composé : une fréquence fondamentale f et des harmoniques 2f, 3f… Deux notes à l'octave ont des fréquences dans le rapport 2.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Harmoniques : multiples entiers de la fondamentale (2f, 3f, 4f…). Octave : fréquence × 2. Décibels : + 10 dB, intensité × 10.",
+        "exemple": "Exemple : le la d'un diapason vibre à 440 Hz. Le la de l'octave au-dessus vibre à 2 × 440 = 880 Hz. Un son de fondamentale 440 Hz a pour harmoniques 880 Hz, 1 320 Hz, 1 760 Hz…",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'un son pur ?",
+          "nom": "Un son dont le signal varie de façon sinusoïdale dans le temps.",
+          "explication": "Un son pur a une seule fréquence ; son spectre ne montre qu'un seul pic.",
+          "pieges": [
+            {
+              "texte": "Un son très fort.",
+              "pourquoi": "« Pur » ne parle pas de l'intensité : un son pur peut être faible ou fort."
+            },
+            {
+              "texte": "Le son d'un instrument de musique.",
+              "pourquoi": "On croit souvent qu'une note d'instrument est un son pur ; c'est un son composé, avec des harmoniques."
+            }
+          ]
+        },
+        {
+          "texte": "La fondamentale d'un son composé vaut 200 Hz. Quelles sont ses premières harmoniques ?",
+          "nom": "400 Hz, 600 Hz, 800 Hz…",
+          "explication": "Les harmoniques ont des fréquences multiples entières de la fondamentale : 2 × 200, 3 × 200, 4 × 200…",
+          "pieges": [
+            {
+              "texte": "100 Hz, 50 Hz, 25 Hz…",
+              "pourquoi": "Les harmoniques sont des multiples de la fondamentale, pas des divisions."
+            },
+            {
+              "texte": "300 Hz, 400 Hz, 500 Hz…",
+              "pourquoi": "On a ajouté 100 Hz à chaque fois ; il faut ajouter la fondamentale elle-même, 200 Hz."
+            }
+          ]
+        },
+        {
+          "texte": "Une note vibre à 330 Hz. Quelle est la fréquence de la même note, une octave plus haut ?",
+          "nom": "660 Hz.",
+          "explication": "Deux notes à l'octave ont des fréquences dans le rapport 2/1 : 2 × 330 = 660 Hz.",
+          "pieges": [
+            {
+              "texte": "338 Hz.",
+              "pourquoi": "On a pensé aux 8 notes de l'octave et ajouté 8 ; l'octave double la fréquence."
+            },
+            {
+              "texte": "165 Hz.",
+              "pourquoi": "En divisant par 2, on obtient la même note une octave plus bas."
+            }
+          ]
+        },
+        {
+          "texte": "Sur une guitare, on appuie sur une corde pour raccourcir la partie qui vibre. Que devient le son ?",
+          "nom": "Il devient plus aigu : sa fréquence fondamentale augmente.",
+          "explication": "La fréquence fondamentale d'une corde dépend de sa longueur, de sa tension et de sa masse par unité de longueur ; plus courte, elle vibre plus vite.",
+          "pieges": [
+            {
+              "texte": "Il devient plus grave.",
+              "pourquoi": "C'est l'inverse : les cordes longues donnent les sons graves."
+            },
+            {
+              "texte": "Il devient plus fort, avec la même hauteur.",
+              "pourquoi": "La longueur de la corde change la hauteur, c'est-à-dire la fréquence, pas l'intensité."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un piano et une flûte qui jouent la même note à 440 Hz ne sonnent-ils pas pareil ?",
+          "nom": "Parce que leurs harmoniques n'ont pas les mêmes amplitudes : leur timbre diffère.",
+          "explication": "Même fondamentale, donc même hauteur ; mais le spectre, la part de chaque harmonique, change d'un instrument à l'autre.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils ne jouent pas à la même fréquence.",
+              "pourquoi": "Ils jouent la même note, donc la même fondamentale : c'est la répartition des harmoniques qui diffère."
+            },
+            {
+              "texte": "Parce que le son de la flûte va moins vite.",
+              "pourquoi": "Dans l'air, tous les sons se propagent à la même vitesse, environ 340 m/s."
+            }
+          ]
+        },
+        {
+          "texte": "Le niveau d'intensité sonore passe de 60 dB à 70 dB. Comment a changé l'intensité sonore ?",
+          "nom": "Elle a été multipliée par 10.",
+          "explication": "L'échelle des décibels est logarithmique : chaque fois qu'on ajoute 10 dB, l'intensité est multipliée par 10.",
+          "pieges": [
+            {
+              "texte": "Elle a augmenté d'environ 17 %, comme 70 par rapport à 60.",
+              "pourquoi": "On lit souvent les décibels comme une échelle ordinaire ; elle est logarithmique, pas proportionnelle."
+            },
+            {
+              "texte": "Elle a doublé.",
+              "pourquoi": "Doubler l'intensité n'ajoute qu'environ 3 dB ; + 10 dB, c'est × 10."
+            }
+          ]
+        },
+        {
+          "texte": "Pour numériser un son, on prélève sa valeur à intervalles réguliers. Que se passe-t-il si on augmente la fréquence d'échantillonnage ?",
+          "nom": "La numérisation est plus fidèle, mais le fichier est plus gros.",
+          "explication": "Plus d'échantillons par seconde décrivent mieux le signal, mais demandent plus de données à stocker.",
+          "pieges": [
+            {
+              "texte": "Le fichier devient plus petit.",
+              "pourquoi": "Plus d'échantillons, c'est plus de nombres à enregistrer : le fichier grossit."
+            },
+            {
+              "texte": "Le son devient plus aigu.",
+              "pourquoi": "L'échantillonnage change la précision de l'enregistrement, pas la hauteur du son."
+            }
+          ]
+        },
+        {
+          "texte": "Un format audio compressé « avec perte », comme le MP3, rend le fichier plus petit. Que supprime-t-il ?",
+          "nom": "Des informations sonores auxquelles l'oreille est peu sensible.",
+          "explication": "La compression avec perte élimine ce que l'oreille perçoit mal : le fichier est plus léger, la différence est peu audible.",
+          "pieges": [
+            {
+              "texte": "La moitié des notes de la musique.",
+              "pourquoi": "La mélodie reste entière : ce sont des détails peu audibles qui disparaissent."
+            },
+            {
+              "texte": "Rien : on peut toujours retrouver le son d'origine exact.",
+              "pourquoi": "Ce serait une compression sans perte ; « avec perte » veut dire que des informations sont définitivement supprimées."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Sound, music and digitisation",
+        "idee": "A pure sound is sinusoidal. A musical sound is complex: a fundamental frequency f and harmonics 2f, 3f… Two notes an octave apart have frequencies in the ratio 2.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Harmonics: whole-number multiples of the fundamental (2f, 3f, 4f…). Octave: frequency × 2. Decibels: + 10 dB, intensity × 10.",
+          "exemple": "Example: a tuning fork's A vibrates at 440 Hz. The A an octave higher vibrates at 2 × 440 = 880 Hz. A sound with a 440 Hz fundamental has harmonics at 880 Hz, 1,320 Hz, 1,760 Hz…",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a pure sound?",
+            "nom": "A sound whose signal varies sinusoidally over time.",
+            "explication": "A pure sound has a single frequency; its spectrum shows just one peak.",
+            "pieges": [
+              {
+                "texte": "A very loud sound.",
+                "pourquoi": "« Pure » isn't about intensity: a pure sound can be quiet or loud."
+              },
+              {
+                "texte": "The sound of a musical instrument.",
+                "pourquoi": "People often think an instrument's note is a pure sound; it's a complex sound, with harmonics."
+              }
+            ]
+          },
+          {
+            "texte": "The fundamental of a complex sound is 200 Hz. What are its first harmonics?",
+            "nom": "400 Hz, 600 Hz, 800 Hz…",
+            "explication": "Harmonics have frequencies that are whole-number multiples of the fundamental: 2 × 200, 3 × 200, 4 × 200…",
+            "pieges": [
+              {
+                "texte": "100 Hz, 50 Hz, 25 Hz…",
+                "pourquoi": "Harmonics are multiples of the fundamental, not divisions."
+              },
+              {
+                "texte": "300 Hz, 400 Hz, 500 Hz…",
+                "pourquoi": "100 Hz was added each time; you must add the fundamental itself, 200 Hz."
+              }
+            ]
+          },
+          {
+            "texte": "A note vibrates at 330 Hz. What is the frequency of the same note one octave higher?",
+            "nom": "660 Hz.",
+            "explication": "Two notes an octave apart have frequencies in the ratio 2/1: 2 × 330 = 660 Hz.",
+            "pieges": [
+              {
+                "texte": "338 Hz.",
+                "pourquoi": "This thinks of the 8 notes in an octave and adds 8; an octave doubles the frequency."
+              },
+              {
+                "texte": "165 Hz.",
+                "pourquoi": "Dividing by 2 gives the same note one octave lower."
+              }
+            ]
+          },
+          {
+            "texte": "On a guitar, you press a string to shorten the part that vibrates. What happens to the sound?",
+            "nom": "It becomes higher: its fundamental frequency increases.",
+            "explication": "A string's fundamental frequency depends on its length, its tension and its mass per unit length; shorter, it vibrates faster.",
+            "pieges": [
+              {
+                "texte": "It becomes lower.",
+                "pourquoi": "It's the opposite: long strings give low sounds."
+              },
+              {
+                "texte": "It becomes louder, at the same pitch.",
+                "pourquoi": "The string's length changes the pitch, that is, the frequency, not the intensity."
+              }
+            ]
+          },
+          {
+            "texte": "Why don't a piano and a flute playing the same 440 Hz note sound the same?",
+            "nom": "Because their harmonics don't have the same amplitudes: their timbre differs.",
+            "explication": "Same fundamental, so same pitch; but the spectrum, the share of each harmonic, changes from one instrument to another.",
+            "pieges": [
+              {
+                "texte": "Because they aren't playing at the same frequency.",
+                "pourquoi": "They play the same note, so the same fundamental: it's the mix of harmonics that differs."
+              },
+              {
+                "texte": "Because the flute's sound travels more slowly.",
+                "pourquoi": "In air, all sounds travel at the same speed, about 340 m/s."
+              }
+            ]
+          },
+          {
+            "texte": "The sound intensity level goes from 60 dB to 70 dB. How has the sound intensity changed?",
+            "nom": "It has been multiplied by 10.",
+            "explication": "The decibel scale is logarithmic: each time you add 10 dB, the intensity is multiplied by 10.",
+            "pieges": [
+              {
+                "texte": "It has risen by about 17 %, like 70 compared with 60.",
+                "pourquoi": "Decibels are often read like an ordinary scale; it's logarithmic, not proportional."
+              },
+              {
+                "texte": "It has doubled.",
+                "pourquoi": "Doubling the intensity only adds about 3 dB; + 10 dB means × 10."
+              }
+            ]
+          },
+          {
+            "texte": "To digitise a sound, its value is sampled at regular intervals. What happens if the sampling frequency is increased?",
+            "nom": "The digitisation is more faithful, but the file is bigger.",
+            "explication": "More samples per second describe the signal better, but need more data to store.",
+            "pieges": [
+              {
+                "texte": "The file gets smaller.",
+                "pourquoi": "More samples means more numbers to record: the file grows."
+              },
+              {
+                "texte": "The sound gets higher.",
+                "pourquoi": "Sampling changes the precision of the recording, not the pitch of the sound."
+              }
+            ]
+          },
+          {
+            "texte": "A « lossy » compressed audio format, such as MP3, makes the file smaller. What does it remove?",
+            "nom": "Sound information the ear is not very sensitive to.",
+            "explication": "Lossy compression removes what the ear hardly perceives: the file is lighter, and the difference is barely audible.",
+            "pieges": [
+              {
+                "texte": "Half the notes of the music.",
+                "pourquoi": "The melody stays whole: it's barely audible details that disappear."
+              },
+              {
+                "texte": "Nothing: the exact original sound can always be recovered.",
+                "pourquoi": "That would be lossless compression; « lossy » means information is removed for good."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilan-radiatif",
+      "titre": "Énergie solaire, effet de serre et climat",
+      "niveau": "1re",
+      "prerequis": [
+        "energie"
+      ],
+      "programme": {
+        "source": "es1re",
+        "texte": "Une partie de cette puissance est absorbée par l’atmosphère, qui elle-même émet un rayonnement infrarouge vers l’espace et vers la surface terrestre (effet de serre)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La Terre reçoit l'énergie du Soleil et en renvoie une partie (l'albédo). Le sol chauffé émet de l'infrarouge ; l'atmosphère en absorbe et en renvoie vers le sol : c'est l'effet de serre.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : puissance solaire moyenne au sommet de l'atmosphère ≈ 340 W/m² ; albédo moyen ≈ 0,3 ; sans effet de serre, ≈ −18 °C en moyenne.",
+        "exemple": "Exemple : en moyenne, 340 W/m² arrivent du Soleil au sommet de l'atmosphère. Avec un albédo de 0,3, 30 % sont renvoyés : 0,3 × 340 ≈ 100 W/m². Il reste environ 240 W/m² absorbés.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce que l'albédo de la Terre ?",
+          "nom": "La fraction du rayonnement solaire reçu qui est renvoyée vers l'espace.",
+          "explication": "L'albédo moyen de la Terre vaut environ 0,3 : environ 30 % de l'énergie solaire reçue est diffusée vers l'espace.",
+          "pieges": [
+            {
+              "texte": "La température moyenne de la Terre.",
+              "pourquoi": "L'albédo est une proportion, sans unité, pas une température."
+            },
+            {
+              "texte": "La part de l'énergie solaire absorbée par le sol.",
+              "pourquoi": "C'est l'inverse : l'albédo mesure la part renvoyée, pas la part absorbée."
+            }
+          ]
+        },
+        {
+          "texte": "La puissance solaire moyenne au sommet de l'atmosphère vaut environ 340 W/m² et l'albédo 0,3. Quelle puissance est absorbée par mètre carré ?",
+          "nom": "Environ 240 W/m².",
+          "explication": "On renvoie 0,3 × 340 ≈ 100 W/m² ; il reste 340 − 100 ≈ 240 W/m² absorbés par l'atmosphère, les continents et les océans.",
+          "pieges": [
+            {
+              "texte": "Environ 100 W/m².",
+              "pourquoi": "100 W/m² est la part renvoyée vers l'espace ; la part absorbée est le reste."
+            },
+            {
+              "texte": "340,3 W/m².",
+              "pourquoi": "L'albédo est une fraction à multiplier, pas un nombre à ajouter."
+            }
+          ]
+        },
+        {
+          "texte": "Une neige fraîche a un albédo d'environ 0,8 ; un océan sombre, beaucoup moins. Si la banquise fond et laisse place à l'océan, que se passe-t-il ?",
+          "nom": "La surface absorbe plus d'énergie solaire, ce qui renforce le réchauffement.",
+          "explication": "La glace claire renvoie beaucoup de rayonnement ; l'océan sombre en absorbe davantage. La fonte entretient donc le réchauffement.",
+          "pieges": [
+            {
+              "texte": "La surface renvoie plus d'énergie, ce qui refroidit la région.",
+              "pourquoi": "Une surface sombre a un albédo plus faible : elle renvoie moins, et absorbe plus."
+            },
+            {
+              "texte": "Rien ne change, l'albédo ne dépend pas de la surface.",
+              "pourquoi": "L'albédo dépend justement de la nature de la surface : glace, océan, forêt, désert…"
+            }
+          ]
+        },
+        {
+          "texte": "Dans quel domaine de rayonnement la surface de la Terre émet-elle de l'énergie ?",
+          "nom": "Dans l'infrarouge.",
+          "explication": "La surface terrestre émet un rayonnement infrarouge, invisible, dont la puissance augmente avec la température.",
+          "pieges": [
+            {
+              "texte": "Dans la lumière visible, comme le Soleil.",
+              "pourquoi": "Le Soleil, très chaud, émet surtout du visible ; la Terre, bien plus froide, émet dans l'infrarouge."
+            },
+            {
+              "texte": "Elle n'émet rien, elle ne fait que recevoir.",
+              "pourquoi": "Tout corps chaud émet un rayonnement : la Terre aussi, et d'autant plus qu'elle est chaude."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que l'effet de serre ?",
+          "nom": "L'atmosphère absorbe une partie de l'infrarouge émis par le sol et en renvoie vers la surface.",
+          "explication": "Des gaz comme la vapeur d'eau, le CO₂ et le méthane absorbent l'infrarouge ; l'atmosphère réémet vers l'espace et vers le sol, qui reçoit ainsi plus d'énergie.",
+          "pieges": [
+            {
+              "texte": "Un trou dans la couche d'ozone qui laisse entrer la chaleur.",
+              "pourquoi": "C'est une confusion très fréquente : la couche d'ozone filtre les ultraviolets, c'est un autre phénomène."
+            },
+            {
+              "texte": "La chaleur produite par les usines et les voitures.",
+              "pourquoi": "Ces activités rejettent des gaz à effet de serre, mais l'effet de serre lui-même est le renvoi d'infrarouge par l'atmosphère."
+            }
+          ]
+        },
+        {
+          "texte": "Sans effet de serre, la température moyenne de la surface terrestre serait d'environ −18 °C. Que faut-il en conclure ?",
+          "nom": "L'effet de serre naturel est indispensable à la vie telle qu'on la connaît.",
+          "explication": "Grâce à l'effet de serre naturel, la température moyenne est d'environ 15 °C. Le problème actuel est son renforcement par les activités humaines.",
+          "pieges": [
+            {
+              "texte": "L'effet de serre est toujours néfaste.",
+              "pourquoi": "On le présente souvent comme une pollution ; naturel, il rend la Terre habitable. C'est son renforcement qui pose problème."
+            },
+            {
+              "texte": "L'effet de serre n'a aucun effet sur la température.",
+              "pourquoi": "L'écart entre −18 °C et environ 15 °C montre au contraire son rôle majeur."
+            }
+          ]
+        },
+        {
+          "texte": "Quand la température moyenne de la surface reste constante, que peut-on dire de la puissance qu'elle reçoit et de celle qu'elle émet ?",
+          "nom": "Elles sont égales en moyenne : c'est un équilibre dynamique.",
+          "explication": "La surface reçoit l'énergie du Soleil et de l'atmosphère, et en émet autant : la température ne varie plus.",
+          "pieges": [
+            {
+              "texte": "La surface ne reçoit plus d'énergie.",
+              "pourquoi": "Équilibre ne veut pas dire absence d'échanges : la surface reçoit et émet sans cesse."
+            },
+            {
+              "texte": "Elle reçoit beaucoup plus qu'elle n'émet.",
+              "pourquoi": "Dans ce cas, elle se réchaufferait : la température ne resterait pas constante."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le CO₂ rejeté par les activités humaines réchauffe-t-il le climat ?",
+          "nom": "Il renforce l'effet de serre : l'atmosphère renvoie plus d'infrarouge vers la surface.",
+          "explication": "Plus de CO₂ absorbe plus d'infrarouge ; la surface reçoit plus d'énergie et se réchauffe jusqu'à un nouvel équilibre.",
+          "pieges": [
+            {
+              "texte": "Parce que le CO₂ est chaud quand il sort des cheminées.",
+              "pourquoi": "La chaleur des fumées est négligeable ; c'est l'absorption de l'infrarouge par le CO₂ qui compte."
+            },
+            {
+              "texte": "Parce que le CO₂ augmente l'albédo.",
+              "pourquoi": "Le CO₂ est transparent à la lumière visible : il agit sur l'infrarouge, pas sur l'albédo."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Solar energy, the greenhouse effect and climate",
+        "idee": "The Earth receives energy from the Sun and sends part of it back (the albedo). The warmed ground emits infrared; the atmosphere absorbs some and sends it back to the ground: that's the greenhouse effect.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: average solar power at the top of the atmosphere ≈ 340 W/m²; average albedo ≈ 0.3; without the greenhouse effect, ≈ −18 °C on average.",
+          "exemple": "Example: on average, 340 W/m² arrives from the Sun at the top of the atmosphere. With an albedo of 0.3, 30 % is sent back: 0.3 × 340 ≈ 100 W/m². About 240 W/m² is left to be absorbed.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the Earth's albedo?",
+            "nom": "The fraction of the solar radiation received that is sent back into space.",
+            "explication": "The Earth's average albedo is about 0.3: about 30 % of the solar energy received is scattered back into space.",
+            "pieges": [
+              {
+                "texte": "The Earth's average temperature.",
+                "pourquoi": "Albedo is a proportion, with no unit, not a temperature."
+              },
+              {
+                "texte": "The share of solar energy absorbed by the ground.",
+                "pourquoi": "It's the opposite: albedo measures the share sent back, not the share absorbed."
+              }
+            ]
+          },
+          {
+            "texte": "The average solar power at the top of the atmosphere is about 340 W/m² and the albedo is 0.3. How much power is absorbed per square metre?",
+            "nom": "About 240 W/m².",
+            "explication": "0.3 × 340 ≈ 100 W/m² is sent back; 340 − 100 ≈ 240 W/m² is left, absorbed by the atmosphere, the land and the oceans.",
+            "pieges": [
+              {
+                "texte": "About 100 W/m².",
+                "pourquoi": "100 W/m² is the share sent back into space; the absorbed share is what remains."
+              },
+              {
+                "texte": "340.3 W/m².",
+                "pourquoi": "Albedo is a fraction to multiply by, not a number to add."
+              }
+            ]
+          },
+          {
+            "texte": "Fresh snow has an albedo of about 0.8; a dark ocean, much less. If sea ice melts and gives way to ocean, what happens?",
+            "nom": "The surface absorbs more solar energy, which strengthens the warming.",
+            "explication": "Light-coloured ice sends back a lot of radiation; dark ocean absorbs more. So melting keeps the warming going.",
+            "pieges": [
+              {
+                "texte": "The surface sends back more energy, which cools the region.",
+                "pourquoi": "A dark surface has a lower albedo: it sends back less and absorbs more."
+              },
+              {
+                "texte": "Nothing changes, albedo doesn't depend on the surface.",
+                "pourquoi": "Albedo depends precisely on the type of surface: ice, ocean, forest, desert…"
+              }
+            ]
+          },
+          {
+            "texte": "In which kind of radiation does the Earth's surface give off energy?",
+            "nom": "In the infrared.",
+            "explication": "The Earth's surface gives off invisible infrared radiation, whose power increases with temperature.",
+            "pieges": [
+              {
+                "texte": "In visible light, like the Sun.",
+                "pourquoi": "The very hot Sun gives off mostly visible light; the much colder Earth gives off infrared."
+              },
+              {
+                "texte": "It gives off nothing, it only receives.",
+                "pourquoi": "Every warm body gives off radiation: the Earth does too, and more so the warmer it is."
+              }
+            ]
+          },
+          {
+            "texte": "What is the greenhouse effect?",
+            "nom": "The atmosphere absorbs part of the infrared given off by the ground and sends some back to the surface.",
+            "explication": "Gases such as water vapour, CO₂ and methane absorb infrared; the atmosphere re-emits towards space and towards the ground, which so receives more energy.",
+            "pieges": [
+              {
+                "texte": "A hole in the ozone layer that lets heat in.",
+                "pourquoi": "That's a very common mix-up: the ozone layer filters ultraviolet; it's a different phenomenon."
+              },
+              {
+                "texte": "The heat produced by factories and cars.",
+                "pourquoi": "These activities release greenhouse gases, but the greenhouse effect itself is the atmosphere sending infrared back."
+              }
+            ]
+          },
+          {
+            "texte": "Without the greenhouse effect, the Earth's average surface temperature would be about −18 °C. What should we conclude?",
+            "nom": "The natural greenhouse effect is essential to life as we know it.",
+            "explication": "Thanks to the natural greenhouse effect, the average temperature is about 15 °C. Today's problem is its strengthening by human activity.",
+            "pieges": [
+              {
+                "texte": "The greenhouse effect is always harmful.",
+                "pourquoi": "It's often presented as pollution; the natural effect makes the Earth habitable. It's its strengthening that is the problem."
+              },
+              {
+                "texte": "The greenhouse effect has no effect on temperature.",
+                "pourquoi": "The gap between −18 °C and about 15 °C shows, on the contrary, its major role."
+              }
+            ]
+          },
+          {
+            "texte": "When the surface's average temperature stays constant, what can we say about the power it receives and the power it gives off?",
+            "nom": "They are equal on average: it's a dynamic equilibrium.",
+            "explication": "The surface receives energy from the Sun and the atmosphere, and gives off as much: the temperature no longer changes.",
+            "pieges": [
+              {
+                "texte": "The surface no longer receives any energy.",
+                "pourquoi": "Equilibrium doesn't mean no exchanges: the surface keeps receiving and giving off energy."
+              },
+              {
+                "texte": "It receives much more than it gives off.",
+                "pourquoi": "In that case it would warm up: the temperature wouldn't stay constant."
+              }
+            ]
+          },
+          {
+            "texte": "Why does the CO₂ released by human activity warm the climate?",
+            "nom": "It strengthens the greenhouse effect: the atmosphere sends more infrared back to the surface.",
+            "explication": "More CO₂ absorbs more infrared; the surface receives more energy and warms up until a new equilibrium.",
+            "pieges": [
+              {
+                "texte": "Because CO₂ is hot when it leaves the chimneys.",
+                "pourquoi": "The heat of the fumes is negligible; what counts is CO₂ absorbing infrared."
+              },
+              {
+                "texte": "Because CO₂ increases the albedo.",
+                "pourquoi": "CO₂ is transparent to visible light: it acts on infrared, not on albedo."
               }
             ]
           }

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/shapes.dart';
 import 'package:zanakiantsa/audio/sfx.dart';
@@ -53,7 +54,7 @@ void main() {
           final ws = Words(singular: o[0], plural: o[1], feminine: o[2] == 'f', container: w['contenant'], firstName: w['prenom']);
           for (final s in topic.skills) {
             for (final k in s.phrases.keys) {
-              expect(s.say(k, const Question(n: 5, a: 2, b: 3), words: ws), isNot(contains('{')), reason: '${s.id}.$k');
+              expect(s.say(k, const Question(n: 5, a: 2, b: 3), words: ws), isNot(contains(unfilled)), reason: '${s.id}.$k');
             }
           }
         }

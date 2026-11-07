@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/fractions.dart';
 import 'package:zanakiantsa/content/content.dart';
@@ -126,7 +127,7 @@ void main() {
             expect(q.n >= 1 && q.n < q.b || q.n == 1, isTrue);
         }
         for (final k in ['question', 'consigne', 'indice', 'exemple', 'demonstration', 'bravo']) {
-          expect(s.say(k, q), isNot(contains('{')), reason: '${s.id}/$k');
+          expect(s.say(k, q), isNot(contains(unfilled)), reason: '${s.id}/$k');
         }
       }
     }

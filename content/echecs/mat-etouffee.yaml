@@ -1,0 +1,92 @@
+id: mat-etouffee
+titre: "Le mat à l’étouffée"
+niveau: 5e
+prerequis: [mat-couloir]
+programme: { source: fide, texte: "3.1 : It is not permitted to move a piece to a square occupied by a piece of the same colour." }
+activite: probleme
+parametres: { theme: mat }
+idee: "Le roi noir est entouré de ses propres pièces : elles l’étouffent. Un seul échec de cavalier suffit, car le cavalier saute et on ne peut pas se mettre entre lui et le roi."
+phrases:
+  consigne: "Le roi noir est collé à ses propres pièces. Trouve le saut du cavalier qui lui fait échec sur une case où personne ne peut le prendre."
+  question: "{texte}"
+  indice: "Compte les cases autour du roi noir : elles sont toutes occupées par des pièces noires. Cherche la case d’où ton cavalier touche le roi."
+  exemple: "Regarde les cases autour du roi noir, puis les sauts de ton cavalier."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "6rk/6pp/8/6N1/8/8/5PPP/6K1 w - - 0 1"
+    coups: [g5f7]
+    explication: "Le cavalier saute en f7 : échec. Le roi noir est entouré par sa tour en g8, son pion en g7 et son pion en h7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "kr6/pp6/8/1N6/8/8/PPP5/1K6 w - - 0 1"
+    coups: [b5c7]
+    explication: "Le cavalier saute en c7 : échec. Le roi noir est entouré par sa tour en b8, son pion en a7 et son pion en b7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "6rk/6pp/3N4/8/8/8/6PP/Q5K1 w - - 0 1"
+    coups: [d6f7]
+    explication: "Le cavalier saute en f7 : échec. Le roi noir est entouré par sa tour en g8, son pion en g7 et son pion en h7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "kr6/pp6/4N3/8/8/8/5PPP/3R2K1 w - - 0 1"
+    coups: [e6c7]
+    explication: "Le cavalier saute en c7 : échec. Le roi noir est entouré par sa tour en b8, son pion en a7 et son pion en b7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "6rk/6bp/7N/8/8/8/PP6/K7 w - - 0 1"
+    coups: [h6f7]
+    explication: "Le cavalier saute en f7 : échec. Le roi noir est entouré par sa tour en g8, son fou en g7 et son pion en h7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "kr6/pb6/4N3/8/8/8/5PPP/2R3K1 w - - 0 1"
+    coups: [e6c7]
+    explication: "Le cavalier saute en c7 : échec. Le roi noir est entouré par sa tour en b8, son pion en a7 et son fou en b7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "q5rk/6pp/8/4N3/8/2B5/6PP/6K1 w - - 0 1"
+    coups: [e5f7]
+    explication: "Le cavalier saute en f7 : échec. Le roi noir est entouré par sa tour en g8, son pion en g7 et son pion en h7. Il ne peut aller nulle part : mat."
+  - texte: "Étouffe le roi noir avec ton cavalier !"
+    fen: "6rk/6pp/4p3/4N3/8/8/1Q4PP/6K1 w - - 0 1"
+    coups: [e5f7]
+    explication: "Le cavalier saute en f7 : échec. Le roi noir est entouré par sa tour en g8, son pion en g7 et son pion en h7. Il ne peut aller nulle part : mat."
+
+en:
+  titre: "The smothered mate"
+  idee: "The black king is surrounded by its own pieces: they smother it. A single knight check is enough, because the knight jumps and nothing can be put between it and the king."
+  phrases:
+    consigne: "The black king is stuck against its own pieces. Find the knight jump that checks it on a square where nobody can take the knight."
+    question: "{texte}"
+    indice: "Count the squares around the black king: they are all taken by black pieces. Look for the square from which your knight touches the king."
+    exemple: "Look at the squares around the black king, then at your knight’s jumps."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Smother the black king with your knight!"
+      fen: "6rk/6pp/8/6N1/8/8/5PPP/6K1 w - - 0 1"
+      coups: [g5f7]
+      explication: "The knight jumps to f7: check. The black king is surrounded by its rook on g8, its pawn on g7 and its pawn on h7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "kr6/pp6/8/1N6/8/8/PPP5/1K6 w - - 0 1"
+      coups: [b5c7]
+      explication: "The knight jumps to c7: check. The black king is surrounded by its rook on b8, its pawn on a7 and its pawn on b7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "6rk/6pp/3N4/8/8/8/6PP/Q5K1 w - - 0 1"
+      coups: [d6f7]
+      explication: "The knight jumps to f7: check. The black king is surrounded by its rook on g8, its pawn on g7 and its pawn on h7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "kr6/pp6/4N3/8/8/8/5PPP/3R2K1 w - - 0 1"
+      coups: [e6c7]
+      explication: "The knight jumps to c7: check. The black king is surrounded by its rook on b8, its pawn on a7 and its pawn on b7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "6rk/6bp/7N/8/8/8/PP6/K7 w - - 0 1"
+      coups: [h6f7]
+      explication: "The knight jumps to f7: check. The black king is surrounded by its rook on g8, its bishop on g7 and its pawn on h7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "kr6/pb6/4N3/8/8/8/5PPP/2R3K1 w - - 0 1"
+      coups: [e6c7]
+      explication: "The knight jumps to c7: check. The black king is surrounded by its rook on b8, its pawn on a7 and its bishop on b7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "q5rk/6pp/8/4N3/8/2B5/6PP/6K1 w - - 0 1"
+      coups: [e5f7]
+      explication: "The knight jumps to f7: check. The black king is surrounded by its rook on g8, its pawn on g7 and its pawn on h7. It cannot go anywhere: checkmate."
+    - texte: "Smother the black king with your knight!"
+      fen: "6rk/6pp/4p3/4N3/8/8/1Q4PP/6K1 w - - 0 1"
+      coups: [e5f7]
+      explication: "The knight jumps to f7: check. The black king is surrounded by its rook on g8, its pawn on g7 and its pawn on h7. It cannot go anywhere: checkmate."

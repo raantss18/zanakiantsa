@@ -1,0 +1,137 @@
+id: comprendre-recit
+titre: "Lire un récit : narrateur, ordre des faits, sentiments"
+niveau: 5e
+prerequis: ["essentiel-texte"]
+programme: { source: cycle4, texte: "Poursuivre son apprentissage de lecteur autonome, contrôler sa compréhension." }
+activite: quiz
+parametres: {}
+idee: "Pour comprendre un récit, on se demande : qui raconte (le narrateur), dans quel ordre se passent les faits (les temps, « la veille »), et ce que ressentent les personnages, même quand ce n’est pas écrit."
+phrases:
+  consigne: "Lis le récit, puis la question. Appuie-toi sur des mots précis du texte."
+  question: "{texte}"
+  indice: "Qui dit « je » ? Quels mots marquent le temps ? Quels gestes montrent un sentiment ?"
+  exemple: "« J’avais douze ans. » Le narrateur dit « je » et emploie l’imparfait : il raconte un souvenir, il est donc plus âgé aujourd’hui."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Qui raconte l’histoire ?"
+    nom: "un narrateur qui a vécu l’histoire"
+    explication: "Le narrateur dit « je » et participe à l’histoire : c’est à lui que grand-père confie la pirogue."
+    pieges:
+      - { texte: "le grand-père", pourquoi: "Le grand-père est un personnage ; « je », c’est celui à qui il confie la pirogue." }
+      - { texte: "un narrateur extérieur à l’histoire", pourquoi: "Le narrateur dit « je » et pousse lui-même la pirogue : il n’est pas extérieur." }
+  - texte: "Lis : « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Le narrateur a-t-il douze ans au moment où il raconte ?"
+    nom: "Non : il est plus âgé, il raconte un souvenir."
+    explication: "« Je n’oublierai jamais » et « J’avais douze ans » montrent qu’il se souvient d’un moment passé."
+    pieges:
+      - { texte: "Oui, il a douze ans.", pourquoi: "« J’avais douze ans » est à l’imparfait : c’était dans le passé." }
+      - { texte: "On ne peut pas le savoir.", pourquoi: "« Je n’oublierai jamais » et l’imparfait « j’avais » montrent qu’il raconte un souvenir." }
+  - texte: "Lis : « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Quel fait s’est passé en premier ?"
+    nom: "Grand-père lui montre comment lire les nuages."
+    explication: "« La veille » et le plus-que-parfait « m’avait montré » placent cette leçon avant le matin du départ."
+    pieges:
+      - { texte: "Il pousse la pirogue sur le lagon.", pourquoi: "Cela se passe « ce matin-là », donc après « la veille »." }
+      - { texte: "Il voit que le ciel est clair.", pourquoi: "C’est le matin du départ ; la leçon de grand-père a eu lieu « la veille »." }
+  - texte: "Lis : « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Comment se sent le narrateur en partant ?"
+    nom: "ému et un peu inquiet"
+    explication: "« le cœur battant » montre une forte émotion : la fierté de la confiance reçue, mêlée d’un peu de peur."
+    pieges:
+      - { texte: "indifférent", pourquoi: "On n’a pas « le cœur battant » quand rien ne nous touche ; et il n’oubliera « jamais » ce jour." }
+      - { texte: "en colère", pourquoi: "Rien ne montre la colère : grand-père lui fait confiance, et il part sur le lagon." }
+  - texte: "Lis : « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Pourquoi le narrateur précise-t-il que le ciel était clair ?"
+    nom: "Il applique la leçon de grand-père : le ciel lui dit qu’il peut partir."
+    explication: "La veille, il a appris à lire les nuages ; le matin, il regarde le ciel avant de partir. Les deux phrases se répondent."
+    pieges:
+      - { texte: "Pour dire qu’il faisait nuit.", pourquoi: "Le texte dit « ce matin-là » et « le ciel était clair » : il fait jour." }
+      - { texte: "Parce qu’il ne sait pas lire les nuages.", pourquoi: "Il a appris la veille : justement, il utilise cette leçon." }
+  - texte: "Lis : « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Qui a sans doute écrit la lettre ?"
+    nom: "son fils"
+    explication: "La lettre annonce le retour du fils : c’est sans doute lui qui l’a écrite."
+    pieges:
+      - { texte: "ses voisins", pourquoi: "Elle appelle ses voisins après avoir lu la lettre : ils apprennent la nouvelle par elle." }
+      - { texte: "Mme Rasoa", pourquoi: "Mme Rasoa ouvre et lit la lettre : elle la reçoit, elle ne l’a pas écrite." }
+  - texte: "Lis : « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Comment Mme Rasoa reçoit-elle la nouvelle ?"
+    nom: "avec une grande joie"
+    explication: "Elle relit la lettre, la serre contre son cœur, court prévenir ses voisins : ces gestes montrent sa joie."
+    pieges:
+      - { texte: "avec inquiétude", pourquoi: "Elle serre la lettre contre son cœur et prévient tout le monde, puis on prépare une fête : c’est de la joie." }
+      - { texte: "avec indifférence", pourquoi: "On ne court pas à la fenêtre pour une nouvelle qui ne nous touche pas." }
+  - texte: "Lis : « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Que montre le mot « enfin » ?"
+    nom: "Elle attendait ce retour depuis longtemps."
+    explication: "« enfin » marque la fin d’une longue attente : le fils était parti depuis longtemps."
+    pieges:
+      - { texte: "Le fils arrive en avance.", pourquoi: "« enfin » dit le contraire : on a attendu longtemps." }
+      - { texte: "C’est la dernière phrase de l’histoire.", pourquoi: "Ici, « enfin » ne marque pas la fin du texte : il montre une longue attente." }
+  - texte: "Lis : « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Pourquoi toute la rue prépare-t-elle une fête ?"
+    nom: "Les voisins partagent la joie du retour du fils."
+    explication: "La fête suit l’annonce du retour : les voisins se réjouissent avec Mme Rasoa."
+    pieges:
+      - { texte: "C’est l’anniversaire de Mme Rasoa.", pourquoi: "Le texte n’en parle pas : la fête suit l’annonce du retour du fils." }
+      - { texte: "Le facteur l’a demandé.", pourquoi: "Le texte ne parle pas du facteur. C’est Mme Rasoa qui prévient ses voisins." }
+
+en:
+  langue: "fr"
+  titre: "French: reading a story, narrator, order of events, feelings"
+  idee: "To understand a story, ask: who is telling it (the narrator), in what order things happen (tenses, « la veille »), and what the characters feel, even when it isn't written."
+  phrases:
+    consigne: "Read the French story, then the question. Use precise words from the text."
+    question: "{texte}"
+    indice: "Who says « je »? Which words mark time? Which actions show a feeling?"
+    exemple: "« J’avais douze ans. » The narrator says « je » and uses the imperfect tense: he's telling a memory, so he's older now."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Read: « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Who is telling the story?"
+      nom: "a narrator who lived the story"
+      explication: "The narrator says « je » and takes part in the story: Grandfather trusts him with the canoe."
+      pieges:
+        - { texte: "the grandfather", pourquoi: "The grandfather is a character; « je » is the one he trusts with the canoe." }
+        - { texte: "a narrator outside the story", pourquoi: "The narrator says « je » and pushes the canoe himself: he isn't outside the story." }
+    - texte: "Read: « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Is the narrator twelve when he tells the story?"
+      nom: "No: he's older, he's telling a memory."
+      explication: "« Je n’oublierai jamais » (I'll never forget) and « J’avais douze ans » (I was twelve) show he's remembering the past."
+      pieges:
+        - { texte: "Yes, he's twelve.", pourquoi: "« J’avais douze ans » is in the imperfect tense: it was in the past." }
+        - { texte: "We can't tell.", pourquoi: "« Je n’oublierai jamais » and the imperfect « j’avais » show he's telling a memory." }
+    - texte: "Read: « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » What happened first?"
+      nom: "Grandfather shows him how to read the clouds."
+      explication: "« La veille » (the day before) and the pluperfect « m’avait montré » put this lesson before the morning he set off."
+      pieges:
+        - { texte: "He pushes the canoe onto the lagoon.", pourquoi: "That happens « ce matin-là », so after « la veille »." }
+        - { texte: "He sees that the sky is clear.", pourquoi: "That's the morning he sets off; Grandfather's lesson was « la veille »." }
+    - texte: "Read: « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » How does the narrator feel as he sets off?"
+      nom: "moved and a little nervous"
+      explication: "« le cœur battant » (heart pounding) shows strong feeling: pride at being trusted, mixed with a little fear."
+      pieges:
+        - { texte: "indifferent", pourquoi: "Your heart doesn't pound when nothing matters to you; and he'll « never » forget that day." }
+        - { texte: "angry", pourquoi: "Nothing shows anger: Grandfather trusts him, and he sets off on the lagoon." }
+    - texte: "Read: « Je n’oublierai jamais le jour où grand-père m’a confié sa pirogue. J’avais douze ans. La veille, il m’avait montré comment lire les nuages. Ce matin-là, le ciel était clair. Je poussai la pirogue sur le lagon, le cœur battant. » Why does the narrator say the sky was clear?"
+      nom: "He's using Grandfather's lesson: the sky tells him he can go."
+      explication: "The day before, he learned to read the clouds; in the morning, he checks the sky before leaving. The two sentences answer each other."
+      pieges:
+        - { texte: "To say it was night.", pourquoi: "The text says « ce matin-là » and « le ciel était clair »: it's daytime." }
+        - { texte: "Because he can't read the clouds.", pourquoi: "He learned the day before: in fact, he's using that lesson." }
+    - texte: "Read: « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Who probably wrote the letter?"
+      nom: "her son"
+      explication: "The letter announces her son's return: he probably wrote it."
+      pieges:
+        - { texte: "her neighbours", pourquoi: "She calls her neighbours after reading the letter: they learn the news from her." }
+        - { texte: "Mrs Rasoa", pourquoi: "Mrs Rasoa opens and reads the letter: she receives it, she didn't write it." }
+    - texte: "Read: « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » How does Mrs Rasoa take the news?"
+      nom: "with great joy"
+      explication: "She rereads the letter, holds it to her heart, runs to tell her neighbours: these actions show her joy."
+      pieges:
+        - { texte: "with worry", pourquoi: "She holds the letter to her heart and tells everyone, then a party is prepared: that's joy." }
+        - { texte: "with indifference", pourquoi: "You don't run to the window for news that doesn't matter to you." }
+    - texte: "Read: « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » What does the word « enfin » show?"
+      nom: "She had been waiting a long time for him to come back."
+      explication: "« enfin » (at last) marks the end of a long wait: her son had been away a long time."
+      pieges:
+        - { texte: "The son is arriving early.", pourquoi: "« enfin » says the opposite: they waited a long time." }
+        - { texte: "It's the last sentence of the story.", pourquoi: "Here « enfin » doesn't mark the end of the text: it shows a long wait." }
+    - texte: "Read: « Mme Rasoa ouvrit la lettre. Elle la lut deux fois, puis la serra contre son cœur. Elle courut à la fenêtre et appela ses voisins : son fils rentrait enfin du Canada. Le soir même, toute la rue préparait une fête. » Why is the whole street preparing a party?"
+      nom: "The neighbours share the joy of the son's return."
+      explication: "The party follows the news of the return: the neighbours celebrate with Mrs Rasoa."
+      pieges:
+        - { texte: "It's Mrs Rasoa's birthday.", pourquoi: "The text doesn't say so: the party follows the news of her son's return." }
+        - { texte: "The postman asked for it.", pourquoi: "The text doesn't mention the postman. Mrs Rasoa is the one who tells her neighbours." }

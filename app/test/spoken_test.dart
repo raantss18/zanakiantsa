@@ -50,4 +50,16 @@ void main() {
     }
     expect(fr('pi'), 'pi');
   });
+
+  test('chimie et unités', () {
+    expect(fr('1s² 2s² 2p⁶ 3s¹'), '1s 2 2s 2 2p 6 3s 1');
+    expect(fr('L’ion Na⁺ et l’ion Cl⁻.'), 'L’ion Na plus et l’ion Cl moins.');
+    expect(fr('Ca²⁺'), 'Ca 2 plus');
+    expect(fr('¹²₆C'), 'C, nombre de masse 12, numéro atomique 6');
+    expect(fr('≈ 340 W/m²'), 'environ 340 watts par mètre carré');
+    expect(en('about 340 W/m²'), 'about 340 watts per square metre');
+    expect(fr('90 km/h, soit 25 m/s'), '90 kilomètres par heure, soit 25 mètres par seconde');
+    expect(fr('15 °C'), '15 degrés Celsius');
+    expect(fr('10⁻¹⁰ m'), '10 puissance moins 10 m');
+  });
 }

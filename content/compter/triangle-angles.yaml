@@ -1,0 +1,136 @@
+id: triangle-angles
+titre: "Les angles d'un triangle"
+niveau: 5e
+prerequis: ["angles-degres"]
+programme: { source: cycle4, texte: "Connaitre la somme des angles d’un triangle, calculer le 3e angle d’un triangle connaissant les mesures des deux autres." }
+activite: quiz
+parametres: {}
+idee: "Dans tout triangle, la somme des trois angles vaut 180°, comme un angle plat. Si on connaît deux angles, le troisième vaut 180° moins leur somme."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Additionne les angles connus, puis enlève le résultat à 180°."
+  exemple: "Un triangle a des angles de 50° et 70°. 50 + 70 = 120, et 180 − 120 = 60 : le troisième angle mesure 60°. Vérification : 50 + 70 + 60 = 180."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Un triangle a deux angles de 40° et 60°. Combien mesure le troisième ?"
+    nom: "80°"
+    explication: "40 + 60 = 100, et 180 − 100 = 80°."
+    pieges:
+      - { texte: "100°", pourquoi: "100°, c'est la somme des deux angles connus : il reste 180 − 100." }
+      - { texte: "260°", pourquoi: "360 − 100 : la somme des angles d'un triangle vaut 180°, pas 360°." }
+  - texte: "Un triangle a un angle droit et un angle de 35°. Combien mesure le troisième ?"
+    nom: "55°"
+    explication: "L'angle droit mesure 90°. 90 + 35 = 125, et 180 − 125 = 55°."
+    pieges:
+      - { texte: "145°", pourquoi: "180 − 35 : l'angle droit de 90° a été oublié." }
+      - { texte: "125°", pourquoi: "125°, c'est la somme des deux angles connus : il reste 180 − 125." }
+  - texte: "Un triangle a ses trois angles égaux. Combien mesure chacun ?"
+    nom: "60°"
+    explication: "180 ÷ 3 = 60° : c'est un triangle équilatéral."
+    pieges:
+      - { texte: "90°", pourquoi: "Trois angles de 90° feraient 270°, plus que 180°." }
+      - { texte: "120°", pourquoi: "360 ÷ 3 : la somme vaut 180°, pas 360°." }
+  - texte: "Un triangle isocèle a un angle principal de 40°. Ses deux autres angles sont égaux. Combien mesure chacun ?"
+    nom: "70°"
+    explication: "180 − 40 = 140° pour les deux angles ensemble, et 140 ÷ 2 = 70°."
+    pieges:
+      - { texte: "140°", pourquoi: "140°, ce sont les deux angles ensemble : on partage en 2." }
+      - { texte: "40°", pourquoi: "Les deux autres angles sont égaux entre eux, pas égaux à 40° : 40 + 40 + 40 = 120, pas 180." }
+  - texte: "Complète : 25° + 105° + …° = 180°"
+    nom: "50"
+    explication: "25 + 105 = 130, et 180 − 130 = 50."
+    pieges:
+      - { texte: "130", pourquoi: "130, c'est la somme des deux angles donnés : il reste 180 − 130." }
+      - { texte: "230", pourquoi: "360 − 130 : la somme des angles d'un triangle vaut 180°." }
+  - texte: "Un triangle rectangle a un angle de 30°. Combien mesure le troisième angle ?"
+    nom: "60°"
+    explication: "90 + 30 = 120, et 180 − 120 = 60°."
+    pieges:
+      - { texte: "150°", pourquoi: "180 − 30 : l'angle droit de 90° compte aussi." }
+      - { texte: "30°", pourquoi: "Les deux angles aigus ne sont pas forcément égaux : 90 + 30 + 30 = 150, pas 180." }
+  - texte: "Peut-on construire un triangle qui a un angle de 100° et un angle de 90° ?"
+    nom: "Non, car 100 + 90 dépasse déjà 180."
+    explication: "100 + 90 = 190, plus que 180 : il ne reste aucune place pour le troisième angle."
+    pieges:
+      - { texte: "Oui, le troisième angle mesure −10°.", pourquoi: "Un angle de triangle ne peut pas être négatif." }
+      - { texte: "Oui, le troisième angle mesure 170°.", pourquoi: "360 − 190 : la somme vaut 180°, pas 360°." }
+  - texte: "Pourquoi un triangle ne peut-il pas avoir deux angles droits ?"
+    nom: "Parce que 90 + 90 = 180 : il ne resterait rien pour le troisième angle."
+    explication: "La somme des trois angles vaut 180°. Deux angles droits la prennent déjà toute."
+    pieges:
+      - { texte: "Parce que ses côtés seraient trop longs.", pourquoi: "Les angles ne dépendent pas de la longueur des côtés." }
+      - { texte: "Parce qu'un triangle n'a jamais d'angle droit.", pourquoi: "Un triangle rectangle en a un, de 90°." }
+  - texte: "Les angles d'un triangle valent 2 parts, 3 parts et 4 parts d'une même mesure. Combien mesure le plus petit angle ?"
+    nom: "40°"
+    explication: "Schéma : 2 + 3 + 4 = 9 barres égales pour 180°. Une barre vaut 180 ÷ 9 = 20°. Le plus petit angle a 2 barres : 40°."
+    pieges:
+      - { texte: "20°", pourquoi: "20° est la valeur d'une part : le plus petit angle en a 2." }
+      - { texte: "60°", pourquoi: "180 ÷ 3 : les trois angles ne sont pas égaux, il y a 9 parts en tout." }
+
+en:
+  titre: "The angles of a triangle"
+  idee: "In any triangle, the three angles add up to 180°, like a straight angle. If you know two angles, the third is 180° minus their sum."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Add the known angles, then take the result away from 180°."
+    exemple: "A triangle has angles of 50° and 70°. 50 + 70 = 120, and 180 − 120 = 60: the third angle measures 60°. Check: 50 + 70 + 60 = 180."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "A triangle has two angles of 40° and 60°. How big is the third?"
+      nom: "80°"
+      explication: "40 + 60 = 100, and 180 − 100 = 80°."
+      pieges:
+        - { texte: "100°", pourquoi: "100° is the sum of the two known angles: what is left is 180 − 100." }
+        - { texte: "260°", pourquoi: "360 − 100: the angles of a triangle add up to 180°, not 360°." }
+    - texte: "A triangle has a right angle and an angle of 35°. How big is the third?"
+      nom: "55°"
+      explication: "A right angle measures 90°. 90 + 35 = 125, and 180 − 125 = 55°."
+      pieges:
+        - { texte: "145°", pourquoi: "180 − 35: the 90° right angle was forgotten." }
+        - { texte: "125°", pourquoi: "125° is the sum of the two known angles: what is left is 180 − 125." }
+    - texte: "A triangle has three equal angles. How big is each one?"
+      nom: "60°"
+      explication: "180 ÷ 3 = 60°: it is an equilateral triangle."
+      pieges:
+        - { texte: "90°", pourquoi: "Three angles of 90° would make 270°, more than 180°." }
+        - { texte: "120°", pourquoi: "360 ÷ 3: the sum is 180°, not 360°." }
+    - texte: "An isosceles triangle has a main angle of 40°. Its other two angles are equal. How big is each one?"
+      nom: "70°"
+      explication: "180 − 40 = 140° for the two angles together, and 140 ÷ 2 = 70°."
+      pieges:
+        - { texte: "140°", pourquoi: "140° is the two angles together: share it into 2." }
+        - { texte: "40°", pourquoi: "The other two angles are equal to each other, not to 40°: 40 + 40 + 40 = 120, not 180." }
+    - texte: "Fill in: 25° + 105° + …° = 180°"
+      nom: "50"
+      explication: "25 + 105 = 130, and 180 − 130 = 50."
+      pieges:
+        - { texte: "130", pourquoi: "130 is the sum of the two given angles: what is left is 180 − 130." }
+        - { texte: "230", pourquoi: "360 − 130: the angles of a triangle add up to 180°." }
+    - texte: "A right-angled triangle has an angle of 30°. How big is the third angle?"
+      nom: "60°"
+      explication: "90 + 30 = 120, and 180 − 120 = 60°."
+      pieges:
+        - { texte: "150°", pourquoi: "180 − 30: the 90° right angle counts too." }
+        - { texte: "30°", pourquoi: "The two acute angles are not always equal: 90 + 30 + 30 = 150, not 180." }
+    - texte: "Can you draw a triangle with an angle of 100° and an angle of 90°?"
+      nom: "No, because 100 + 90 is already more than 180."
+      explication: "100 + 90 = 190, more than 180: there is no room left for the third angle."
+      pieges:
+        - { texte: "Yes, the third angle is −10°.", pourquoi: "An angle of a triangle cannot be negative." }
+        - { texte: "Yes, the third angle is 170°.", pourquoi: "360 − 190: the sum is 180°, not 360°." }
+    - texte: "Why can a triangle not have two right angles?"
+      nom: "Because 90 + 90 = 180: nothing would be left for the third angle."
+      explication: "The three angles add up to 180°. Two right angles already use it all."
+      pieges:
+        - { texte: "Because its sides would be too long.", pourquoi: "Angles do not depend on the length of the sides." }
+        - { texte: "Because a triangle never has a right angle.", pourquoi: "A right-angled triangle has one, of 90°." }
+    - texte: "The angles of a triangle are 2 parts, 3 parts and 4 parts of the same size. How big is the smallest angle?"
+      nom: "40°"
+      explication: "Bar model: 2 + 3 + 4 = 9 equal bars for 180°. One bar is 180 ÷ 9 = 20°. The smallest angle has 2 bars: 40°."
+      pieges:
+        - { texte: "20°", pourquoi: "20° is the size of one part: the smallest angle has 2." }
+        - { texte: "60°", pourquoi: "180 ÷ 3: the three angles are not equal, there are 9 parts in all." }

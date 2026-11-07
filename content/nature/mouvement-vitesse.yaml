@@ -1,0 +1,124 @@
+id: mouvement-vitesse
+titre: "Mouvement, référentiel et vitesse"
+niveau: 2de
+prerequis: []
+programme: { source: pc2de, texte: "Choisir un référentiel pour décrire le mouvement d’un système." }
+activite: quiz
+parametres: {}
+idee: "Un mouvement se décrit toujours par rapport à un référentiel. La vitesse moyenne est la distance parcourue divisée par la durée ; le vecteur vitesse donne aussi la direction et le sens."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi d'abord : par rapport à quoi ? Puis, vitesse moyenne v = d ÷ Δt, en m/s ; 1 m/s = 3,6 km/h."
+  exemple: "Exemple : un cycliste parcourt 1 500 m en 300 s. Sa vitesse moyenne vaut v = 1 500 ÷ 300 = 5 m/s, soit 5 × 3,6 = 18 km/h."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Assis dans un train qui roule, tu ne bouges pas de ton siège. Es-tu immobile ?"
+    nom: "Oui par rapport au train, non par rapport au quai."
+    explication: "Le mouvement dépend du référentiel : immobile dans le référentiel du train, en mouvement dans le référentiel terrestre."
+    pieges:
+      - { texte: "Oui, dans tous les cas.", pourquoi: "On croit souvent qu'immobile est absolu ; vu du quai, tu te déplaces avec le train." }
+      - { texte: "Non, dans tous les cas.", pourquoi: "Par rapport au wagon, ta position ne change pas : tu y es immobile." }
+  - texte: "Qu'est-ce qu'un référentiel ?"
+    nom: "L'objet de référence par rapport auquel on décrit le mouvement, avec une horloge."
+    explication: "Pour décrire un mouvement, on choisit un objet de référence (le sol, le train…) et on mesure le temps."
+    pieges:
+      - { texte: "L'objet dont on étudie le mouvement.", pourquoi: "Celui-ci s'appelle le système ; le référentiel sert de point de comparaison." }
+      - { texte: "La trajectoire suivie par l'objet.", pourquoi: "La trajectoire dépend elle-même du référentiel choisi." }
+  - texte: "Une valve de roue de vélo, vue depuis le cadre du vélo, décrit un cercle. Vue depuis le trottoir, que décrit-elle ?"
+    nom: "Une courbe qui avance en formant des arches."
+    explication: "La trajectoire dépend du référentiel : cercle par rapport au vélo, courbe en arches par rapport au sol."
+    pieges:
+      - { texte: "Le même cercle.", pourquoi: "Vu du trottoir, le vélo avance : le cercle est « étiré » le long de la route." }
+      - { texte: "Une droite.", pourquoi: "Le moyeu de la roue avance en ligne droite, mais la valve tourne aussi autour de lui." }
+  - texte: "Un coureur parcourt 100 m en 10 s. Quelle est sa vitesse moyenne ?"
+    nom: "10 m/s, soit 36 km/h."
+    explication: "v = d ÷ Δt = 100 ÷ 10 = 10 m/s ; et 10 × 3,6 = 36 km/h."
+    pieges:
+      - { texte: "1 000 m/s.", pourquoi: "On a multiplié la distance par la durée au lieu de la diviser." }
+      - { texte: "10 km/h.", pourquoi: "Le calcul donne des mètres par seconde ; pour passer en km/h, il faut multiplier par 3,6." }
+  - texte: "Qu'indique le vecteur vitesse d'un point, en plus de la valeur de la vitesse ?"
+    nom: "La direction et le sens du mouvement."
+    explication: "Un vecteur a une direction, un sens et une norme ; la norme du vecteur vitesse est la valeur de la vitesse."
+    pieges:
+      - { texte: "La masse de l'objet.", pourquoi: "La masse ne dépend pas du mouvement : elle n'apparaît pas dans le vecteur vitesse." }
+      - { texte: "Rien de plus que la valeur.", pourquoi: "C'est justement l'intérêt du vecteur : il dit aussi où va l'objet." }
+  - texte: "Une voiture roule tout droit, toujours à 90 km/h. Comment qualifie-t-on ce mouvement ?"
+    nom: "Rectiligne uniforme."
+    explication: "Rectiligne : la trajectoire est une droite. Uniforme : la valeur de la vitesse ne change pas."
+    pieges:
+      - { texte: "Rectiligne accéléré.", pourquoi: "Accéléré voudrait dire que la valeur de la vitesse augmente ; ici elle reste à 90 km/h." }
+      - { texte: "Circulaire uniforme.", pourquoi: "Circulaire supposerait une trajectoire en cercle ; la voiture va tout droit." }
+  - texte: "Un palet glisse sur la glace : les forces qui s'exercent sur lui se compensent. D'après le principe d'inertie, que fait-il ?"
+    nom: "Il garde un mouvement rectiligne uniforme."
+    explication: "Si les forces se compensent, le vecteur vitesse ne change pas : immobile, il reste immobile ; en mouvement, il continue tout droit à la même vitesse."
+    pieges:
+      - { texte: "Il ralentit puis s'arrête, car rien ne le pousse plus.", pourquoi: "C'est l'idée la plus répandue : un objet n'a pas besoin d'être poussé pour avancer ; s'il ralentit, c'est qu'une force, comme un frottement, agit." }
+      - { texte: "Il accélère.", pourquoi: "Pour changer la vitesse, il faut des forces qui ne se compensent pas." }
+  - texte: "Pourquoi une balle lâchée sans vitesse initiale va-t-elle de plus en plus vite en tombant ?"
+    nom: "Parce qu'une force non compensée, son poids, agit sur elle."
+    explication: "En chute libre, seul le poids agit : la somme des forces n'est pas nulle, donc le vecteur vitesse varie."
+    pieges:
+      - { texte: "Parce qu'elle garde la force donnée par la main.", pourquoi: "Lâchée sans élan, la balle n'a rien reçu de la main ; c'est son poids qui la fait accélérer." }
+      - { texte: "Parce que l'air la pousse vers le bas.", pourquoi: "L'air freine la balle, il ne la pousse pas : en chute libre, on le néglige." }
+
+en:
+  titre: "Motion, frame of reference and speed"
+  idee: "Motion is always described relative to a frame of reference. Average speed is the distance travelled divided by the time taken; the velocity vector also gives the direction."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "First ask: relative to what? Then, average speed v = d ÷ Δt, in m/s; 1 m/s = 3.6 km/h."
+    exemple: "Example: a cyclist covers 1,500 m in 300 s. Their average speed is v = 1,500 ÷ 300 = 5 m/s, that is 5 × 3.6 = 18 km/h."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Sitting in a moving train, you don't leave your seat. Are you still?"
+      nom: "Yes relative to the train, no relative to the platform."
+      explication: "Motion depends on the frame of reference: still in the train's frame, moving in the Earth's frame."
+      pieges:
+        - { texte: "Yes, in every case.", pourquoi: "People often think being still is absolute; seen from the platform, you move with the train." }
+        - { texte: "No, in every case.", pourquoi: "Relative to the carriage, your position doesn't change: you are still in it." }
+    - texte: "What is a frame of reference?"
+      nom: "The reference object relative to which motion is described, with a clock."
+      explication: "To describe motion, we choose a reference object (the ground, the train…) and measure time."
+      pieges:
+        - { texte: "The object whose motion we study.", pourquoi: "That's called the system; the frame of reference is what we compare it with." }
+        - { texte: "The path followed by the object.", pourquoi: "The path itself depends on the chosen frame of reference." }
+    - texte: "Seen from the bike's frame, a bicycle wheel's valve moves in a circle. Seen from the pavement, what does it trace?"
+      nom: "A curve moving forward in a series of arches."
+      explication: "The path depends on the frame of reference: a circle relative to the bike, an arched curve relative to the ground."
+      pieges:
+        - { texte: "The same circle.", pourquoi: "Seen from the pavement, the bike moves forward: the circle is « stretched » along the road." }
+        - { texte: "A straight line.", pourquoi: "The wheel's hub moves in a straight line, but the valve also turns around it." }
+    - texte: "A runner covers 100 m in 10 s. What is their average speed?"
+      nom: "10 m/s, that is 36 km/h."
+      explication: "v = d ÷ Δt = 100 ÷ 10 = 10 m/s; and 10 × 3.6 = 36 km/h."
+      pieges:
+        - { texte: "1,000 m/s.", pourquoi: "The distance was multiplied by the time instead of divided." }
+        - { texte: "10 km/h.", pourquoi: "The calculation gives metres per second; to convert to km/h, multiply by 3.6." }
+    - texte: "Besides the speed, what does a point's velocity vector show?"
+      nom: "The direction of the motion."
+      explication: "A vector has a direction and a length; the length of the velocity vector is the speed."
+      pieges:
+        - { texte: "The object's mass.", pourquoi: "Mass doesn't depend on motion: it doesn't appear in the velocity vector." }
+        - { texte: "Nothing more than the speed.", pourquoi: "That's the whole point of the vector: it also says where the object is going." }
+    - texte: "A car drives in a straight line, always at 90 km/h. How do we describe this motion?"
+      nom: "Uniform straight-line motion."
+      explication: "Straight-line: the path is a straight line. Uniform: the speed doesn't change."
+      pieges:
+        - { texte: "Accelerated straight-line motion.", pourquoi: "Accelerated would mean the speed increases; here it stays at 90 km/h." }
+        - { texte: "Uniform circular motion.", pourquoi: "Circular would mean a path in a circle; the car goes straight." }
+    - texte: "A puck slides on ice: the forces acting on it balance out. According to the principle of inertia, what does it do?"
+      nom: "It keeps moving in a straight line at constant speed."
+      explication: "If the forces balance, the velocity vector doesn't change: at rest, it stays at rest; moving, it carries on straight at the same speed."
+      pieges:
+        - { texte: "It slows down and stops, because nothing pushes it any more.", pourquoi: "That's the most common idea: an object doesn't need a push to keep moving; if it slows down, a force such as friction is acting." }
+        - { texte: "It speeds up.", pourquoi: "To change the velocity, the forces must not balance." }
+    - texte: "Why does a ball dropped from rest go faster and faster as it falls?"
+      nom: "Because an unbalanced force, its weight, acts on it."
+      explication: "In free fall, only weight acts: the sum of the forces isn't zero, so the velocity vector changes."
+      pieges:
+        - { texte: "Because it keeps the force given by the hand.", pourquoi: "Dropped without a push, the ball got nothing from the hand; it's its weight that makes it speed up." }
+        - { texte: "Because the air pushes it down.", pourquoi: "Air slows the ball down, it doesn't push it: in free fall, we ignore it." }

@@ -1,0 +1,156 @@
+id: reading-terminale
+titre: "Lire des textes du monde anglophone (terminale)"
+niveau: Terminale
+prerequis: [linkers, reading-1re]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES) : tableau des descripteurs
+# de la réception, colonne B2 (niveau visé en fin de terminale en LVA) ; axes 3, 8, 5 et 6. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Réception, B2 : peut reconnaître si un texte donne de l’information factuelle ou bien s’il cherche à convaincre les lecteurs. Peut reconnaître la structuration d’un texte. Axes : Art et pouvoir ; Territoire et mémoire ; Fictions et réalités ; Innovations scientifiques et responsabilité." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Demande-toi aussi ce que fait le texte : informe-t-il (dates, chiffres) ou cherche-t-il à convaincre (impératifs, superlatifs) ? Les connecteurs montrent son plan."
+phrases:
+  consigne: "Lis le texte en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis la phrase qui répond. Pour le but du texte, cherche les faits vérifiables, ou au contraire les impératifs et les jugements."
+  exemple: "« Come to Edinburgh: the best festival in the world! » Le texte cherche à convaincre : un impératif, « Come », et un superlatif, « the best »."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« Banksy is a street artist from England whose real identity is still unknown. His works, often painted on walls at night, criticise war, consumerism and those in power. » Que sait-on de l'identité de Banksy ?"
+    nom: "Elle reste inconnue."
+    explication: "« whose real identity is still unknown » : sa véritable identité reste inconnue."
+    pieges:
+      - { texte: "C'est un artiste américain.", pourquoi: "Le texte dit « from England » : il vient d'Angleterre." }
+      - { texte: "Il signe de son vrai nom.", pourquoi: "« real identity is still unknown » : son vrai nom n'est pas connu." }
+  - texte: "« His works, often painted on walls at night, criticise war, consumerism and those in power. » Que désigne « those in power » ?"
+    nom: "les gens qui ont le pouvoir"
+    explication: "« those in power » : ceux qui sont au pouvoir, les dirigeants."
+    pieges:
+      - { texte: "les murs", pourquoi: "Les murs, « walls », sont le support des œuvres ; « those » désigne des personnes." }
+      - { texte: "les guerres", pourquoi: "La guerre, « war », est citée à part ; « those in power » désigne des personnes." }
+  - texte: "« His works, often painted on walls at night… » Quand peint-il souvent ?"
+    nom: "la nuit"
+    explication: "« often painted … at night » : souvent la nuit."
+    pieges:
+      - { texte: "le matin", pourquoi: "Le texte dit « at night » : la nuit." }
+      - { texte: "pendant les guerres", pourquoi: "La guerre est un thème de ses œuvres, pas le moment où il peint." }
+  - texte: "« Text A: The Golden Gate Bridge opened in 1937. It is about 2.7 kilometres long. Text B: Visit San Francisco this summer: you simply can't miss the most beautiful bridge in the world! » Quel texte cherche à convaincre ?"
+    nom: "le texte B"
+    explication: "Le texte B pousse à venir : « Visit », « can't miss », « the most beautiful »."
+    pieges:
+      - { texte: "le texte A", pourquoi: "Le texte A donne des faits vérifiables : une date, 1937, et une longueur." }
+      - { texte: "les deux textes", pourquoi: "Le texte A ne donne que des faits : il informe sans chercher à convaincre." }
+  - texte: "« Visit San Francisco this summer: you simply can't miss the most beautiful bridge in the world! » Pourquoi peut-on dire que ce texte cherche à convaincre ?"
+    nom: "Il emploie un impératif, « Visit », et un superlatif qui juge, « the most beautiful »."
+    explication: "Un ordre adressé au lecteur et un jugement présenté comme évident : c'est un texte qui veut convaincre."
+    pieges:
+      - { texte: "Parce qu'il donne la date d'ouverture du pont.", pourquoi: "La date est dans le texte A : c'est un fait vérifiable, pas un argument." }
+      - { texte: "Parce qu'il cite une ville.", pourquoi: "Un texte informatif peut aussi citer une ville. Ce sont « Visit » et « the most beautiful » qui cherchent à convaincre." }
+  - texte: "« Every year on 11 November, people in Britain wear red poppies to remember soldiers who died in war. The poppy became a symbol because these flowers grew on the battlefields of northern France and Belgium after the First World War. » Pourquoi le coquelicot est-il devenu un symbole ?"
+    nom: "Il poussait sur les champs de bataille."
+    explication: "« because these flowers grew on the battlefields » : parce qu'ils poussaient sur les champs de bataille."
+    pieges:
+      - { texte: "Il fleurit le 11 novembre.", pourquoi: "Le 11 novembre est le jour où on le porte. La raison vient après « because » : les champs de bataille." }
+      - { texte: "Il est rouge comme le drapeau britannique.", pourquoi: "Le texte ne parle pas du drapeau. La raison est après « because »." }
+  - texte: "« Every year on 11 November, people in Britain wear red poppies to remember soldiers who died in war. » Que font les Britanniques le 11 novembre ?"
+    nom: "Ils portent un coquelicot pour se souvenir des soldats morts."
+    explication: "« wear red poppies to remember soldiers who died in war » : ils portent un coquelicot rouge en mémoire des soldats."
+    pieges:
+      - { texte: "Ils plantent des coquelicots en France.", pourquoi: "« wear » veut dire porter, sur soi : pas planter." }
+      - { texte: "Ils fêtent la fin de l'été.", pourquoi: "« to remember soldiers who died in war » : c'est un jour de mémoire." }
+  - texte: "« Firstly, dystopian novels such as Nineteen Eighty-Four warn us about the dangers of total control. Secondly, they make readers think about their own society. Therefore, they are still worth reading today. » Quelle est la conclusion de l'auteur ?"
+    nom: "Ces romans valent encore la peine d'être lus."
+    explication: "« Therefore » annonce la conclusion : « they are still worth reading today »."
+    pieges:
+      - { texte: "Ces romans sont dangereux.", pourquoi: "Ce sont les dangers du contrôle total que les romans dénoncent, pas les romans eux-mêmes." }
+      - { texte: "Ces romans font réfléchir sur la société.", pourquoi: "C'est le deuxième argument, « Secondly ». La conclusion suit « Therefore »." }
+  - texte: "« Firstly, … Secondly, … Therefore, … » Quel est le rôle de « Therefore » ?"
+    nom: "Il introduit la conclusion."
+    explication: "« Firstly » et « Secondly » donnent les arguments ; « Therefore », donc, tire la conclusion."
+    pieges:
+      - { texte: "Il introduit un exemple.", pourquoi: "L'exemple est introduit par « such as » : « such as Nineteen Eighty-Four »." }
+      - { texte: "Il introduit une opposition.", pourquoi: "Une opposition serait annoncée par « However » ou « On the other hand »." }
+en:
+  titre: "Reading texts from the English-speaking world (Year 12)"
+  idee: "Also ask what the text does: does it inform (dates, figures) or try to persuade (imperatives, superlatives)? Linking words show its structure."
+  phrases:
+    consigne: "Read the text, then touch the right answer."
+    question: "{texte}"
+    indice: "Read again the sentence that answers. For the purpose of the text, look for facts you can check, or for imperatives and judgements."
+    exemple: "“Come to Edinburgh: the best festival in the world!” The text tries to persuade: an imperative, Come, and a superlative, the best."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“Banksy is a street artist from England whose real identity is still unknown. His works, often painted on walls at night, criticise war, consumerism and those in power.” What do we know about Banksy's identity?"
+      nom: "It is still unknown."
+      explication: "“whose real identity is still unknown”."
+      pieges:
+        - texte: "He is an American artist."
+          pourquoi: "The text says “from England”."
+        - texte: "He signs with his real name."
+          pourquoi: "“real identity is still unknown”: his real name isn't known."
+    - texte: "“His works, often painted on walls at night, criticise war, consumerism and those in power.” Who are “those in power”?"
+      nom: "the people who have power"
+      explication: "“those in power”: the people who rule."
+      pieges:
+        - texte: "the walls"
+          pourquoi: "The walls are where the works are painted; “those” refers to people."
+        - texte: "the wars"
+          pourquoi: "War is listed separately; “those in power” refers to people."
+    - texte: "“His works, often painted on walls at night…” When does he often paint?"
+      nom: "at night"
+      explication: "“often painted … at night”."
+      pieges:
+        - texte: "in the morning"
+          pourquoi: "The text says at night."
+        - texte: "during wars"
+          pourquoi: "War is a theme of his works, not when he paints."
+    - texte: "“Text A: The Golden Gate Bridge opened in 1937. It is about 2.7 kilometres long. Text B: Visit San Francisco this summer: you simply can't miss the most beautiful bridge in the world!” Which text tries to persuade?"
+      nom: "text B"
+      explication: "Text B urges you to come: Visit, can't miss, the most beautiful."
+      pieges:
+        - texte: "text A"
+          pourquoi: "Text A gives facts you can check: a date, 1937, and a length."
+        - texte: "both texts"
+          pourquoi: "Text A only gives facts: it informs without trying to persuade."
+    - texte: "“Visit San Francisco this summer: you simply can't miss the most beautiful bridge in the world!” Why can we say this text tries to persuade?"
+      nom: "It uses an imperative, Visit, and a superlative that judges, the most beautiful."
+      explication: "An order to the reader and a judgement presented as obvious: the text wants to persuade."
+      pieges:
+        - texte: "Because it gives the date the bridge opened."
+          pourquoi: "The date is in text A: it's a fact you can check, not an argument."
+        - texte: "Because it names a city."
+          pourquoi: "An informative text can also name a city. Visit and the most beautiful are what persuade."
+    - texte: "“Every year on 11 November, people in Britain wear red poppies to remember soldiers who died in war. The poppy became a symbol because these flowers grew on the battlefields of northern France and Belgium after the First World War.” Why did the poppy become a symbol?"
+      nom: "It grew on the battlefields."
+      explication: "“because these flowers grew on the battlefields”."
+      pieges:
+        - texte: "It flowers on 11 November."
+          pourquoi: "11 November is the day people wear it. The reason comes after because: the battlefields."
+        - texte: "It is red like the British flag."
+          pourquoi: "The text doesn't mention the flag. The reason comes after because."
+    - texte: "“Every year on 11 November, people in Britain wear red poppies to remember soldiers who died in war.” What do people in Britain do on 11 November?"
+      nom: "They wear a poppy to remember the soldiers who died."
+      explication: "“wear red poppies to remember soldiers who died in war”."
+      pieges:
+        - texte: "They plant poppies in France."
+          pourquoi: "“wear” means having it on you, not planting."
+        - texte: "They celebrate the end of summer."
+          pourquoi: "“to remember soldiers who died in war”: it's a day of remembrance."
+    - texte: "“Firstly, dystopian novels such as Nineteen Eighty-Four warn us about the dangers of total control. Secondly, they make readers think about their own society. Therefore, they are still worth reading today.” What is the writer's conclusion?"
+      nom: "These novels are still worth reading."
+      explication: "Therefore introduces the conclusion: “they are still worth reading today”."
+      pieges:
+        - texte: "These novels are dangerous."
+          pourquoi: "The novels warn about the dangers of total control; they aren't dangerous themselves."
+        - texte: "These novels make readers think about society."
+          pourquoi: "That's the second argument, Secondly. The conclusion follows Therefore."
+    - texte: "“Firstly, … Secondly, … Therefore, …” What does “Therefore” do?"
+      nom: "It introduces the conclusion."
+      explication: "Firstly and Secondly give the arguments; Therefore draws the conclusion."
+      pieges:
+        - texte: "It introduces an example."
+          pourquoi: "The example is introduced by such as: “such as Nineteen Eighty-Four”."
+        - texte: "It introduces a contrast."
+          pourquoi: "A contrast would be introduced by However or On the other hand."

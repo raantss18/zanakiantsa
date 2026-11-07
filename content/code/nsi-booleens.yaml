@@ -1,0 +1,136 @@
+id: nsi-booleens
+titre: "Booléens et tables de vérité"
+niveau: 1re
+prerequis: [python-si]
+programme: { source: nsi1, texte: "Valeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes. Dresser la table d’une expression booléenne. […] L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens." }
+activite: quiz
+parametres: {}
+idee: "Un booléen vaut True ou False. a and b est vrai si les deux le sont ; a or b, si au moins l’un l’est ; not a inverse a. Une table de vérité essaie toutes les combinaisons."
+phrases:
+  consigne: "Remplace chaque morceau par True ou False, du plus intérieur au plus extérieur, puis conclus."
+  question: "{texte}"
+  indice: "and : vrai seulement si les deux sont vrais. or : faux seulement si les deux sont faux. not : l’inverse."
+  exemple: "Table de a and b : (False, False) → False ; (False, True) → False ; (True, False) → False ; (True, True) → True. Une seule ligne vraie."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\nprint(True and False)"
+    nom: "False"
+    explication: "and demande que les deux soient vrais. Le second est faux : le résultat est False."
+    pieges:
+      - { texte: "True", pourquoi: "Un seul vrai suffit pour or, pas pour and : ici, le second est faux." }
+      - { texte: "0", pourquoi: "print affiche un booléen par son nom : True ou False." }
+  - texte: "Que va afficher ce programme ?\nprint(not (3 > 5) or False)"
+    nom: "True"
+    explication: "3 > 5 est faux, donc not (3 > 5) est vrai. True or False donne True."
+    pieges:
+      - { texte: "False", pourquoi: "not inverse 3 > 5, qui est faux : on obtient True, et un seul vrai suffit pour or." }
+      - { texte: "Une erreur", pourquoi: "Python accepte cette expression : il calcule not, puis or." }
+  - texte: "La table de vérité de a or b a 4 lignes. Combien valent True ?"
+    nom: "3"
+    explication: "Seule la ligne (False, False) donne False. Les 3 autres ont au moins un True."
+    pieges:
+      - { texte: "1", pourquoi: "C’est la table de and. or est vrai dès qu’au moins un des deux l’est." }
+      - { texte: "2", pourquoi: "La ligne (True, True) compte aussi : or est vrai quand les deux sont vrais." }
+  - texte: "Combien de lignes a la table de vérité d’une expression à 3 variables a, b et c ?"
+    nom: "8"
+    explication: "Chaque variable vaut True ou False : 2 × 2 × 2 = 8 combinaisons, une par ligne."
+    pieges:
+      - { texte: "6", pourquoi: "Chaque variable double le nombre de lignes : 2 × 2 × 2, pas 2 + 2 + 2." }
+      - { texte: "3", pourquoi: "Il faut une ligne par combinaison de valeurs, pas une par variable." }
+  - texte: "Que va afficher ce programme ?\na = True\nb = False\nprint(a != b)"
+    nom: "True"
+    explication: "a != b est vrai quand a et b sont différents. C’est le « ou exclusif » (xor) : l’un ou l’autre, mais pas les deux."
+    pieges:
+      - { texte: "False", pourquoi: "a vaut True et b vaut False : ils sont différents, donc a != b est vrai." }
+      - { texte: "1", pourquoi: "Une comparaison donne un booléen, que print affiche True ou False." }
+  - texte: "Pour quelles valeurs de a et b l’expression (not a) and b vaut-elle True ?"
+    nom: "a = False et b = True"
+    explication: "not a est vrai seulement si a est faux, et and demande aussi b vrai. Une seule ligne de la table convient."
+    pieges:
+      - { texte: "a = True et b = True", pourquoi: "not a vaut alors False, et False and b donne False." }
+      - { texte: "a = False et b = False", pourquoi: "not a vaut True, mais b est faux : and donne False." }
+  - texte: "Que va afficher ce programme ?\nL = []\nprint(len(L) > 0 and L[0] == 5)"
+    nom: "False"
+    explication: "len(L) > 0 est faux : and s’arrête là, sans lire L[0]. Les opérateurs and et or s’évaluent de gauche à droite."
+    pieges:
+      - { texte: "Une erreur (IndexError)", pourquoi: "L[0] n’existe pas, mais il n’est jamais lu : and s’arrête dès que la partie gauche est fausse." }
+      - { texte: "True", pourquoi: "La liste est vide : len(L) > 0 est faux, donc l’expression entière est fausse." }
+  - texte: "Pourquoi print(False and 1 / 0) affiche-t-il False, sans erreur ?"
+    nom: "and s’arrête dès que la partie gauche est fausse"
+    explication: "False and … est faux quoi qu’il y ait à droite. Python ne calcule donc pas 1 / 0, qui provoquerait une erreur."
+    pieges:
+      - { texte: "Parce que 1 / 0 vaut 0 en Python", pourquoi: "1 / 0 provoque une erreur (ZeroDivisionError). Ici, il n’est jamais calculé." }
+      - { texte: "Parce que print ignore les erreurs", pourquoi: "print n’ignore rien : c’est and qui ne lit pas sa partie droite." }
+  - texte: "Pour additionner deux bits a et b, le bit des unités vaut « a xor b ». Combien vaut-il pour a = 1 et b = 1 ?"
+    nom: "0"
+    explication: "1 + 1 = 10 en base 2 : on pose 0 et on retient 1. xor vaut 1 seulement si les deux bits sont différents."
+    pieges:
+      - { texte: "2", pourquoi: "Un bit vaut 0 ou 1. 2 s’écrit 10 : on pose 0, et la retenue 1 va à gauche." }
+      - { texte: "1", pourquoi: "xor vaut 1 seulement si les bits sont différents. Ici, ils sont égaux." }
+
+en:
+  titre: "Booleans and truth tables"
+  idee: "A boolean is True or False. a and b is true if both are; a or b, if at least one is; not a reverses a. A truth table tries every combination."
+  phrases:
+    consigne: "Replace each part with True or False, from the innermost to the outermost, then conclude."
+    question: "{texte}"
+    indice: "and: true only if both are true. or: false only if both are false. not: the opposite."
+    exemple: "Table of a and b: (False, False) → False; (False, True) → False; (True, False) → False; (True, True) → True. Only one true row."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\nprint(True and False)"
+      nom: "False"
+      explication: "and needs both to be true. The second one is false: the result is False."
+      pieges:
+        - { texte: "True", pourquoi: "One true value is enough for or, not for and: here, the second one is false." }
+        - { texte: "0", pourquoi: "print shows a boolean by its name: True or False." }
+    - texte: "What will this program display?\nprint(not (3 > 5) or False)"
+      nom: "True"
+      explication: "3 > 5 is false, so not (3 > 5) is true. True or False gives True."
+      pieges:
+        - { texte: "False", pourquoi: "not reverses 3 > 5, which is false: we get True, and one true value is enough for or." }
+        - { texte: "An error", pourquoi: "Python accepts this expression: it works out not, then or." }
+    - texte: "The truth table of a or b has 4 rows. How many are True?"
+      nom: "3"
+      explication: "Only the row (False, False) gives False. The other 3 have at least one True."
+      pieges:
+        - { texte: "1", pourquoi: "That is the table of and. or is true as soon as at least one of the two is." }
+        - { texte: "2", pourquoi: "The row (True, True) counts too: or is true when both are true." }
+    - texte: "How many rows does the truth table of an expression with 3 variables a, b and c have?"
+      nom: "8"
+      explication: "Each variable is True or False: 2 × 2 × 2 = 8 combinations, one per row."
+      pieges:
+        - { texte: "6", pourquoi: "Each variable doubles the number of rows: 2 × 2 × 2, not 2 + 2 + 2." }
+        - { texte: "3", pourquoi: "You need one row per combination of values, not one per variable." }
+    - texte: "What will this program display?\na = True\nb = False\nprint(a != b)"
+      nom: "True"
+      explication: "a != b is true when a and b are different. That is the “exclusive or” (xor): one or the other, but not both."
+      pieges:
+        - { texte: "False", pourquoi: "a is True and b is False: they are different, so a != b is true." }
+        - { texte: "1", pourquoi: "A comparison gives a boolean, which print shows as True or False." }
+    - texte: "For which values of a and b is the expression (not a) and b True?"
+      nom: "a = False and b = True"
+      explication: "not a is true only if a is false, and and also needs b to be true. Only one row of the table fits."
+      pieges:
+        - { texte: "a = True and b = True", pourquoi: "not a is then False, and False and b gives False." }
+        - { texte: "a = False and b = False", pourquoi: "not a is True, but b is false: and gives False." }
+    - texte: "What will this program display?\nL = []\nprint(len(L) > 0 and L[0] == 5)"
+      nom: "False"
+      explication: "len(L) > 0 is false: and stops there, without reading L[0]. The operators and and or are evaluated from left to right."
+      pieges:
+        - { texte: "An error (IndexError)", pourquoi: "L[0] does not exist, but it is never read: and stops as soon as the left part is false." }
+        - { texte: "True", pourquoi: "The list is empty: len(L) > 0 is false, so the whole expression is false." }
+    - texte: "Why does print(False and 1 / 0) display False, with no error?"
+      nom: "and stops as soon as the left part is false"
+      explication: "False and … is false whatever is on the right. So Python does not work out 1 / 0, which would cause an error."
+      pieges:
+        - { texte: "Because 1 / 0 is 0 in Python", pourquoi: "1 / 0 causes an error (ZeroDivisionError). Here, it is never worked out." }
+        - { texte: "Because print ignores errors", pourquoi: "print ignores nothing: it is and that does not read its right part." }
+    - texte: "To add two bits a and b, the units bit is “a xor b”. What is it for a = 1 and b = 1?"
+      nom: "0"
+      explication: "1 + 1 = 10 in base 2: write 0 and carry 1. xor is 1 only if the two bits are different."
+      pieges:
+        - { texte: "2", pourquoi: "A bit is 0 or 1. 2 is written 10: write 0, and the carry 1 goes to the left." }
+        - { texte: "1", pourquoi: "xor is 1 only if the bits are different. Here, they are equal." }

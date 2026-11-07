@@ -1,0 +1,86 @@
+id: feelings
+titre: "Les émotions en anglais"
+niveau: CE1
+prerequis: [family]
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), même citation que
+# toys.yaml (lue le 2026-11-07 par le rédacteur de cette leçon-là) : la sphère immédiate de l'enfant.
+programme: { source: lver_c2, texte: "CP : reconnaitre les mots familiers pour parler de soi, de sa sphère immédiate et des thématiques culturelles et disciplinaires travaillées en classe ; exemple cité : « I love playing with my ball »." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche le visage qui va avec."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit comment on se sent."
+  exemple: "Un exemple : « happy », c'est le visage content. Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "happy"
+    bonne: ["1f600", "le visage content"]
+    autres: [["1f620", "le visage en colère"], ["1f62e", "le visage surpris"]]
+    explication: "« happy », c'est se sentir content."
+  - texte: "sad"
+    bonne: ["1f622", "le visage triste"]
+    autres: [["1f628", "le visage qui a peur"], ["1f634", "le visage fatigué"]]
+    explication: "« sad », c'est se sentir triste."
+  - texte: "angry"
+    bonne: ["1f620", "le visage en colère"]
+    autres: [["1f62e", "le visage surpris"], ["1f912", "le visage malade"]]
+    explication: "« angry », c'est se sentir en colère."
+  - texte: "scared"
+    bonne: ["1f628", "le visage qui a peur"]
+    autres: [["1f634", "le visage fatigué"], ["1f600", "le visage content"]]
+    explication: "« scared », c'est avoir peur."
+  - texte: "surprised"
+    bonne: ["1f62e", "le visage surpris"]
+    autres: [["1f912", "le visage malade"], ["1f622", "le visage triste"]]
+    explication: "« surprised », c'est se sentir surpris."
+  - texte: "tired"
+    bonne: ["1f634", "le visage fatigué"]
+    autres: [["1f600", "le visage content"], ["1f620", "le visage en colère"]]
+    explication: "« tired », c'est se sentir fatigué."
+  - texte: "ill"
+    bonne: ["1f912", "le visage malade"]
+    autres: [["1f622", "le visage triste"], ["1f628", "le visage qui a peur"]]
+    explication: "« ill », c'est se sentir malade."
+en:
+  titre: "Feelings in English"
+  phrases:
+    consigne: "Listen to the word and touch the face that matches."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word says how someone feels."
+    exemple: "An example: happy is the happy face. Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "happy"
+      bonne: ["1f600", "happy"]
+      autres: [["1f620", "angry"], ["1f62e", "surprised"]]
+      explication: "happy — well done!"
+    - texte: "sad"
+      bonne: ["1f622", "sad"]
+      autres: [["1f628", "scared"], ["1f634", "tired"]]
+      explication: "sad — well done!"
+    - texte: "angry"
+      bonne: ["1f620", "angry"]
+      autres: [["1f62e", "surprised"], ["1f912", "ill"]]
+      explication: "angry — well done!"
+    - texte: "scared"
+      bonne: ["1f628", "scared"]
+      autres: [["1f634", "tired"], ["1f600", "happy"]]
+      explication: "scared — well done!"
+    - texte: "surprised"
+      bonne: ["1f62e", "surprised"]
+      autres: [["1f912", "ill"], ["1f622", "sad"]]
+      explication: "surprised — well done!"
+    - texte: "tired"
+      bonne: ["1f634", "tired"]
+      autres: [["1f600", "happy"], ["1f620", "angry"]]
+      explication: "tired — well done!"
+    - texte: "ill"
+      bonne: ["1f912", "ill"]
+      autres: [["1f622", "sad"], ["1f628", "scared"]]
+      explication: "ill — well done!"

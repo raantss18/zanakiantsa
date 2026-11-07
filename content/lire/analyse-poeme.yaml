@@ -1,0 +1,149 @@
+id: analyse-poeme
+titre: "Analyser un poème : « Le Dormeur du val »"
+niveau: 3e
+prerequis: ["implicite-texte", "sens-propre-figure"]
+programme: { source: cycle4, texte: "Percevoir des effets esthétiques et significatifs de la langue littéraire." }
+activite: quiz
+parametres: {}
+idee: "Pour analyser un poème, on relève des indices (mots, images, place dans le vers) et on les relie pour comprendre ce qu’il dit sans l’écrire. On nomme chaque figure de style et on explique son effet."
+phrases:
+  consigne: "Lis les vers de Rimbaud, cherche les indices et leur effet, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quel mot, quelle image ou quelle place dans le vers attire l’attention ? Que suggère-t-il, avec les autres indices ?"
+  exemple: "« C’est un trou de verdure où chante une rivière » : la rivière « chante » comme une personne, c’est une personnification ; elle rend la nature vivante et joyeuse."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Rimbaud, « Le Dormeur du val » (1870), vers 4 : « c’est un petit val qui mousse de rayons ». Quelle figure de style dans « qui mousse de rayons » ?"
+    nom: "une métaphore"
+    explication: "La lumière est présentée comme une mousse, sans outil de comparaison : c’est une métaphore. Le val semble déborder de soleil."
+    pieges:
+      - { texte: "une comparaison", pourquoi: "Il n’y a pas d’outil de comparaison (comme, tel, semblable à) : c’est une métaphore." }
+      - { texte: "une hyperbole", pourquoi: "Il n’y a pas d’exagération chiffrée ou excessive : c’est une image, la lumière vue comme une mousse." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 5 à 7 : « Un soldat jeune, bouche ouverte, tête nue, / Et la nuque baignant dans le frais cresson bleu, / Dort ». Quel mot est mis en valeur, seul au début du vers 7 ?"
+    nom: "Dort"
+    explication: "Le verbe « Dort » est rejeté au début du vers suivant : isolé, il attire l’attention. Le lecteur se demande s’il dort vraiment."
+    pieges:
+      - { texte: "soldat", pourquoi: "« soldat » est au milieu du vers 5. C’est « Dort » qui est rejeté, seul, au début du vers 7." }
+      - { texte: "cresson", pourquoi: "« cresson » est à l’intérieur du vers 6. C’est « Dort » qui est isolé au début du vers 7." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 9 et 10 : « Souriant comme / Sourirait un enfant malade, il fait un somme ». Quelle figure de style ?"
+    nom: "une comparaison"
+    explication: "L’outil « comme » rapproche le sourire du soldat de celui d’un enfant malade : c’est une comparaison."
+    pieges:
+      - { texte: "une métaphore", pourquoi: "Il y a l’outil « comme » : c’est une comparaison, pas une métaphore." }
+      - { texte: "une personnification", pourquoi: "Le soldat est déjà une personne : on ne lui prête pas des traits humains, on le compare à un enfant malade." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 9 et 10 : « Souriant comme / Sourirait un enfant malade ». Que suggère « un enfant malade » ?"
+    nom: "Le soldat ne va pas bien : c’est un indice inquiétant."
+    explication: "Le mot « malade » jette une ombre sur le sommeil paisible : il prépare la révélation finale."
+    pieges:
+      - { texte: "Le soldat est un enfant.", pourquoi: "C’est une comparaison : le soldat est « jeune », mais il n’est pas un enfant." }
+      - { texte: "Le soldat est très heureux.", pourquoi: "Il sourit, mais comme un malade : son sourire est faible, inquiétant." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 11 : « Nature, berce-le chaudement : il a froid. » Pourquoi le soldat a-t-il froid, en plein soleil ?"
+    nom: "Parce qu’il est mort : son corps se refroidit."
+    explication: "Le soleil « luit », pourtant il a froid : ce contraste est un indice de la mort."
+    pieges:
+      - { texte: "Parce que l’eau du cresson est fraîche.", pourquoi: "Il est « dans le soleil » : la fraîcheur du cresson n’explique pas ce froid. C’est un indice de la mort." }
+      - { texte: "Parce que c’est l’hiver.", pourquoi: "Il y a de la verdure, des glaïeuls, du soleil : ce n’est pas l’hiver." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 12 : « Les parfums ne font pas frissonner sa narine ». Que comprend-on ?"
+    nom: "Il ne respire plus."
+    explication: "Sa narine ne bouge pas, même devant les parfums : il ne respire plus, autre indice de la mort."
+    pieges:
+      - { texte: "Il n’aime pas les fleurs.", pourquoi: "Le vers ne parle pas de goûts : une narine immobile est un signe physique, il ne respire plus." }
+      - { texte: "Il est enrhumé.", pourquoi: "Le texte ne parle pas de rhume : avec les autres indices (pâle, froid), on comprend qu’il ne respire plus." }
+  - texte: "Rimbaud, « Le Dormeur du val », vers 13 et 14 : « Il dort dans le soleil, la main sur sa poitrine / Tranquille. Il a deux trous rouges au côté droit. » Que révèle le dernier vers ?"
+    nom: "Le soldat est mort, tué par deux balles."
+    explication: "Les « deux trous rouges » sont des blessures : le dernier vers confirme tous les indices, le soldat est mort."
+    pieges:
+      - { texte: "Le soldat est blessé mais il dort.", pourquoi: "Tous les indices (pâleur, froid, plus de souffle) montrent qu’il ne dort pas : il est mort." }
+      - { texte: "Ce sont deux fleurs rouges.", pourquoi: "Les « trous » sont « au côté droit » du soldat : ce sont des blessures, pas des fleurs." }
+  - texte: "Dans « Le Dormeur du val », le poète écrit « il dort » plutôt que « il est mort ». Comment s’appelle la figure qui adoucit une réalité pénible ?"
+    nom: "un euphémisme"
+    explication: "Dire « il dort » pour « il est mort », c’est atténuer une réalité cruelle : c’est un euphémisme."
+    pieges:
+      - { texte: "une hyperbole", pourquoi: "L’hyperbole exagère ; ici, au contraire, on atténue la réalité." }
+      - { texte: "une métaphore", pourquoi: "Ce qui compte ici, c’est l’effet d’adoucissement : on évite le mot « mort ». C’est un euphémisme." }
+  - texte: "« Le Dormeur du val » : pourquoi Rimbaud attend-il le dernier vers pour révéler la mort du soldat ?"
+    nom: "Pour créer un choc : le lecteur découvre la vérité d’un coup, après un décor paisible."
+    explication: "Le poème montre d’abord une nature lumineuse, puis sème des indices ; la chute finale frappe le lecteur."
+    pieges:
+      - { texte: "Parce qu’il a oublié de le dire avant.", pourquoi: "Les indices sont placés tout au long du poème : la révélation finale est voulue." }
+      - { texte: "Pour que le poème finisse de façon joyeuse.", pourquoi: "La fin est tragique : le contraste entre la nature joyeuse et la mort la rend plus forte." }
+  - texte: "« Le Dormeur du val » est daté du 7 octobre 1870, pendant la guerre franco-allemande. Que dénonce le poème, sans le dire ?"
+    nom: "la guerre, qui tue des jeunes gens"
+    explication: "Un « soldat jeune » mort dans une nature pleine de vie : le contraste dénonce la guerre."
+    pieges:
+      - { texte: "la pollution de la nature", pourquoi: "La nature est belle et intacte dans le poème : c’est la mort du soldat qui choque." }
+      - { texte: "la paresse des soldats", pourquoi: "Le soldat ne dort pas par paresse : il est mort, tué par deux balles." }
+
+en:
+  langue: "fr"
+  titre: "French: analysing a poem, « Le Dormeur du val »"
+  idee: "To analyse a poem, pick out clues (words, images, where words sit in the line) and link them to understand what the poem says without writing it. A figure of speech creates an effect: name it and explain it."
+  phrases:
+    consigne: "Read Rimbaud's lines in French, look for the clues and their effect, then touch the right answer."
+    question: "{texte}"
+    indice: "Which word, image or position in the line catches your eye? What does it suggest, together with the other clues?"
+    exemple: "« C’est un trou de verdure où chante une rivière »: the river « chante », sings, like a person: it's personification; it makes nature feel alive and joyful."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Rimbaud, « Le Dormeur du val » (1870), line 4: « c’est un petit val qui mousse de rayons ». Which figure of speech is « qui mousse de rayons »?"
+      nom: "a metaphor"
+      explication: "The light is shown as foam, with no comparison word: it's a metaphor. The valley seems to overflow with sunshine."
+      pieges:
+        - { texte: "a simile", pourquoi: "There's no comparison word (« comme », « tel », « semblable à »): it's a metaphor." }
+        - { texte: "a hyperbole", pourquoi: "Nothing is exaggerated: it's an image, light seen as foam." }
+    - texte: "Rimbaud, « Le Dormeur du val », lines 5 to 7: « Un soldat jeune, bouche ouverte, tête nue, / Et la nuque baignant dans le frais cresson bleu, / Dort ». Which word stands out, alone at the start of line 7?"
+      nom: "Dort"
+      explication: "The verb « Dort » (sleeps) is pushed to the start of the next line: on its own, it draws attention. The reader wonders if he's really asleep."
+      pieges:
+        - { texte: "soldat", pourquoi: "« soldat » is in the middle of line 5. It's « Dort » that is pushed, alone, to the start of line 7." }
+        - { texte: "cresson", pourquoi: "« cresson » is inside line 6. It's « Dort » that stands alone at the start of line 7." }
+    - texte: "Rimbaud, « Le Dormeur du val », lines 9 and 10: « Souriant comme / Sourirait un enfant malade, il fait un somme ». Which figure of speech?"
+      nom: "a simile"
+      explication: "The word « comme » (like) compares the soldier's smile to a sick child's: it's a simile."
+      pieges:
+        - { texte: "a metaphor", pourquoi: "There's the comparison word « comme »: it's a simile, not a metaphor." }
+        - { texte: "personification", pourquoi: "The soldier is already a person: he isn't given human features, he's compared to a sick child." }
+    - texte: "Rimbaud, « Le Dormeur du val », lines 9 and 10: « Souriant comme / Sourirait un enfant malade ». What does « un enfant malade » suggest?"
+      nom: "The soldier isn't well: it's a worrying clue."
+      explication: "The word « malade » (sick) casts a shadow over the peaceful sleep: it prepares the final revelation."
+      pieges:
+        - { texte: "The soldier is a child.", pourquoi: "It's a simile: the soldier is « jeune », young, but he isn't a child." }
+        - { texte: "The soldier is very happy.", pourquoi: "He smiles, but like someone sick: his smile is weak and worrying." }
+    - texte: "Rimbaud, « Le Dormeur du val », line 11: « Nature, berce-le chaudement : il a froid. » Why is the soldier cold, in full sunshine?"
+      nom: "Because he's dead: his body is going cold."
+      explication: "The sun « luit », shines, yet he's cold: this contrast is a clue that he's dead."
+      pieges:
+        - { texte: "Because the watercress is cool.", pourquoi: "He's « dans le soleil », in the sun: the cool watercress doesn't explain this cold. It's a clue that he's dead." }
+        - { texte: "Because it's winter.", pourquoi: "There's greenery, gladioli, sunshine: it isn't winter." }
+    - texte: "Rimbaud, « Le Dormeur du val », line 12: « Les parfums ne font pas frissonner sa narine ». What do we understand?"
+      nom: "He isn't breathing any more."
+      explication: "His nostril doesn't move, even with the scents around: he isn't breathing, another clue that he's dead."
+      pieges:
+        - { texte: "He doesn't like flowers.", pourquoi: "The line isn't about likes: a still nostril is a physical sign, he isn't breathing." }
+        - { texte: "He has a cold.", pourquoi: "The text doesn't mention a cold: with the other clues (pale, cold), we understand he isn't breathing." }
+    - texte: "Rimbaud, « Le Dormeur du val », lines 13 and 14: « Il dort dans le soleil, la main sur sa poitrine / Tranquille. Il a deux trous rouges au côté droit. » What does the last line reveal?"
+      nom: "The soldier is dead, killed by two bullets."
+      explication: "The « deux trous rouges », two red holes, are wounds: the last line confirms all the clues, the soldier is dead."
+      pieges:
+        - { texte: "The soldier is wounded but asleep.", pourquoi: "All the clues (pale, cold, not breathing) show he isn't asleep: he's dead." }
+        - { texte: "They are two red flowers.", pourquoi: "The « trous » are in the soldier's « côté droit », his right side: they're wounds, not flowers." }
+    - texte: "In « Le Dormeur du val », the poet writes « il dort » rather than « il est mort ». What is the figure called that softens a painful reality?"
+      nom: "a euphemism"
+      explication: "Saying « il dort » (he's asleep) for « il est mort » (he's dead) softens a cruel reality: it's a euphemism."
+      pieges:
+        - { texte: "a hyperbole", pourquoi: "A hyperbole exaggerates; here, on the contrary, reality is softened." }
+        - { texte: "a metaphor", pourquoi: "What matters here is the softening effect: the word « mort » is avoided. It's a euphemism." }
+    - texte: "« Le Dormeur du val »: why does Rimbaud wait until the last line to reveal the soldier's death?"
+      nom: "To create a shock: the reader discovers the truth all at once, after a peaceful setting."
+      explication: "The poem first shows bright nature, then scatters clues; the final twist hits the reader."
+      pieges:
+        - { texte: "Because he forgot to say it before.", pourquoi: "The clues are placed all through the poem: the final revelation is deliberate." }
+        - { texte: "So that the poem ends happily.", pourquoi: "The ending is tragic: the contrast between joyful nature and death makes it stronger." }
+    - texte: "« Le Dormeur du val » is dated 7 October 1870, during the Franco-Prussian War. What does the poem condemn, without saying so?"
+      nom: "war, which kills young people"
+      explication: "A « soldat jeune », a young soldier, dead in a nature full of life: the contrast condemns war."
+      pieges:
+        - { texte: "pollution of nature", pourquoi: "Nature is beautiful and untouched in the poem: it's the soldier's death that shocks." }
+        - { texte: "lazy soldiers", pourquoi: "The soldier isn't sleeping out of laziness: he's dead, killed by two bullets." }

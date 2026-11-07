@@ -1,0 +1,170 @@
+id: present-perfect-continuous
+titre: "Le present perfect continu : I have been waiting"
+niveau: 1re
+prerequis: [present-perfect]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES), « L'étude de la langue »,
+# 2) Correction grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Correction grammaticale : à partir des documents abordés en cours, l’élève est conduit à découvrir les règles d’usage de la langue, à identifier les points de syntaxe ou de morphologie constitutifs du document, afin de se les approprier pour ses propres besoins." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "have ou has been + V-ing : une activité qui a commencé dans le passé et dure jusqu'à maintenant. « I have been waiting for an hour. » Pour un résultat chiffré (three books), on garde have read."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "« depuis » + une activité qui dure encore : have ou has been + -ing. Un résultat, un nombre, ou un verbe d'état comme know : present perfect simple."
+  exemple: "« He … football since he was five. » (play) Il joue encore aujourd'hui : « He has been playing football since he was five. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I … for the bus for twenty minutes. » (wait)"
+    nom: "have been waiting"
+    explication: "L'attente a commencé il y a vingt minutes et continue : « I have been waiting for twenty minutes. »"
+    pieges:
+      - { texte: "am waiting", pourquoi: "En français, « j'attends depuis vingt minutes » est au présent ; en anglais, une durée jusqu'à maintenant demande « have been waiting »." }
+      - { texte: "have been wait", pourquoi: "Après « been », le verbe prend -ing : « have been waiting »." }
+  - texte: "Complète : « She … English since she was six. » (learn)"
+    nom: "has been learning"
+    explication: "Elle apprend depuis l'âge de six ans et continue : « She has been learning English since she was six. »"
+    pieges:
+      - { texte: "is learning", pourquoi: "« since she was six » donne une durée jusqu'à maintenant : « has been learning »." }
+      - { texte: "has been learnt", pourquoi: "« has been learnt » est un passif : l'anglais a été appris. Ici, c'est elle qui apprend : « has been learning »." }
+  - texte: "Complète : « It … all day, and now the garden is flooded. » (rain)"
+    nom: "has been raining"
+    explication: "La pluie dure depuis ce matin, et on en voit l'effet maintenant : « It has been raining all day. »"
+    pieges:
+      - { texte: "had been raining", pourquoi: "« had been raining » renvoie à avant un moment passé. Ici, « now the garden is flooded » : c'est maintenant, « has been raining »." }
+      - { texte: "is raining", pourquoi: "« all day » couvre une durée jusqu'à maintenant : « has been raining »." }
+  - texte: "Complète : « How long … been living in Leeds? »"
+    nom: "have you"
+    explication: "Question au present perfect continu : « How long have you been living in Leeds? »"
+    pieges:
+      - { texte: "are you", pourquoi: "Avec « been », l'auxiliaire est have : « have you been living »." }
+      - { texte: "did you", pourquoi: "« did » va avec la base verbale. « been living » demande have : « have you »." }
+  - texte: "Complète : « I … three books this month. » (read)"
+    nom: "have read"
+    explication: "Un résultat chiffré, trois livres finis : present perfect simple, « I have read three books this month. »"
+    pieges:
+      - { texte: "have been reading", pourquoi: "« have been reading » insiste sur l'activité. Avec un nombre de livres terminés, on dit « have read »." }
+      - { texte: "am reading", pourquoi: "« am reading » décrit ce qu'on fait en ce moment. Pour un bilan du mois : « have read »." }
+  - texte: "Complète : « Your eyes are red. Have you been … ? » (cry)"
+    nom: "crying"
+    explication: "Une activité récente dont on voit la trace : « Have you been crying? »"
+    pieges:
+      - { texte: "cried", pourquoi: "Après « have been », pour une activité, le verbe prend -ing : « crying »." }
+      - { texte: "cry", pourquoi: "Après « been », il faut la forme en -ing : « crying »." }
+  - texte: "Complète : « We have been working on this project … March. »"
+    nom: "since"
+    explication: "« since » + un point de départ, mars : « since March »."
+    pieges:
+      - { texte: "for", pourquoi: "« for » + une durée : « for three months ». Avec un point de départ, mars : « since »." }
+      - { texte: "during", pourquoi: "« during » + une période, « during the holidays » : il ne veut pas dire « depuis »." }
+  - texte: "Complète : « They have been arguing … two hours. »"
+    nom: "for"
+    explication: "« for » + une durée : « for two hours »."
+    pieges:
+      - { texte: "since", pourquoi: "« since » + un point de départ, « since 3 pm ». Avec une durée : « for »." }
+      - { texte: "ago", pourquoi: "« ago » va avec le prétérit : « two hours ago »." }
+  - texte: "Complète : « I … her for ten years. » (know)"
+    nom: "have known"
+    explication: "« know » est un verbe d'état : il ne prend pas -ing. « I have known her for ten years. »"
+    pieges:
+      - { texte: "have been knowing", pourquoi: "« know » est un verbe d'état, comme like ou want : pas de forme en -ing. On dit « have known »." }
+      - { texte: "know", pourquoi: "« for ten years » donne une durée jusqu'à maintenant : present perfect, « have known »." }
+  - texte: "Pourquoi « I have been waiting for an hour » et pas « I am waiting for an hour » ?"
+    nom: "L'attente a commencé dans le passé et dure jusqu'à maintenant : l'anglais emploie le present perfect."
+    explication: "Avec une durée jusqu'à maintenant, l'anglais emploie have been + -ing, là où le français dit « j'attends depuis »."
+    pieges:
+      - { texte: "Parce que l'attente est finie depuis longtemps.", pourquoi: "L'attente dure encore. Une attente finie avant un moment passé serait « had been waiting »." }
+      - { texte: "Parce que « wait » ne se met jamais au présent.", pourquoi: "« I am waiting » existe : je suis en train d'attendre. Mais avec « for an hour », on dit « have been waiting »." }
+en:
+  titre: "The present perfect continuous: I have been waiting"
+  idee: "have or has been + -ing: an activity that started in the past and goes on until now. “I have been waiting for an hour.” For a result with a number (three books), we keep have read."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "An activity still going on, with for or since: have or has been + -ing. A result, a number, or a state verb like know: present perfect simple."
+    exemple: "“He … football since he was five.” (play) He still plays today: “He has been playing football since he was five.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I … for the bus for twenty minutes.” (wait)"
+      nom: "have been waiting"
+      explication: "The wait started twenty minutes ago and goes on: “I have been waiting for twenty minutes.”"
+      pieges:
+        - texte: "am waiting"
+          pourquoi: "A length of time up to now needs the present perfect in English: have been waiting."
+        - texte: "have been wait"
+          pourquoi: "After been, the verb takes -ing: have been waiting."
+    - texte: "Complete: “She … English since she was six.” (learn)"
+      nom: "has been learning"
+      explication: "She started at six and still goes on: “She has been learning English since she was six.”"
+      pieges:
+        - texte: "is learning"
+          pourquoi: "“since she was six” gives a length of time up to now: has been learning."
+        - texte: "has been learnt"
+          pourquoi: "“has been learnt” is passive: English has been learnt. Here she is the one learning: has been learning."
+    - texte: "Complete: “It … all day, and now the garden is flooded.” (rain)"
+      nom: "has been raining"
+      explication: "The rain has lasted all day, and we see the result now: “It has been raining all day.”"
+      pieges:
+        - texte: "had been raining"
+          pourquoi: "“had been raining” refers to before a past moment. Here, “now the garden is flooded”: it's now, has been raining."
+        - texte: "is raining"
+          pourquoi: "“all day” covers a length of time up to now: has been raining."
+    - texte: "Complete: “How long … been living in Leeds?”"
+      nom: "have you"
+      explication: "A question in the present perfect continuous: “How long have you been living in Leeds?”"
+      pieges:
+        - texte: "are you"
+          pourquoi: "With been, the auxiliary is have: have you been living."
+        - texte: "did you"
+          pourquoi: "“did” goes with the base form. “been living” needs have: have you."
+    - texte: "Complete: “I … three books this month.” (read)"
+      nom: "have read"
+      explication: "A result with a number, three finished books: present perfect simple, “I have read three books this month.”"
+      pieges:
+        - texte: "have been reading"
+          pourquoi: "“have been reading” stresses the activity. With a number of finished books, we say have read."
+        - texte: "am reading"
+          pourquoi: "“am reading” describes what you are doing now. For this month's total: have read."
+    - texte: "Complete: “Your eyes are red. Have you been …?” (cry)"
+      nom: "crying"
+      explication: "A recent activity whose traces we can see: “Have you been crying?”"
+      pieges:
+        - texte: "cried"
+          pourquoi: "After have been, for an activity, the verb takes -ing: crying."
+        - texte: "cry"
+          pourquoi: "After been, we need the -ing form: crying."
+    - texte: "Complete: “We have been working on this project … March.”"
+      nom: "since"
+      explication: "Since + a starting point, March: since March."
+      pieges:
+        - texte: "for"
+          pourquoi: "For + a length of time: for three months. With a starting point, March: since."
+        - texte: "during"
+          pourquoi: "During + a period, during the holidays: it doesn't mean from that point until now."
+    - texte: "Complete: “They have been arguing … two hours.”"
+      nom: "for"
+      explication: "For + a length of time: for two hours."
+      pieges:
+        - texte: "since"
+          pourquoi: "Since + a starting point, since 3 pm. With a length of time: for."
+        - texte: "ago"
+          pourquoi: "Ago goes with the past simple: two hours ago."
+    - texte: "Complete: “I … her for ten years.” (know)"
+      nom: "have known"
+      explication: "Know is a state verb: it doesn't take -ing. “I have known her for ten years.”"
+      pieges:
+        - texte: "have been knowing"
+          pourquoi: "Know is a state verb, like like or want: no -ing form. We say have known."
+        - texte: "know"
+          pourquoi: "“for ten years” gives a length of time up to now: present perfect, have known."
+    - texte: "Why “I have been waiting for an hour” and not “I am waiting for an hour”?"
+      nom: "The wait started in the past and goes on until now: English uses the present perfect."
+      explication: "With a length of time up to now, English uses have been + -ing."
+      pieges:
+        - texte: "Because the wait finished long ago."
+          pourquoi: "The wait is still going on. A wait that ended before a past moment would be had been waiting."
+        - texte: "Because wait is never used in the present."
+          pourquoi: "“I am waiting” exists. But with “for an hour”, we say have been waiting."

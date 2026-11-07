@@ -1,0 +1,149 @@
+id: homophones-grammaticaux
+titre: "a ou à, et ou est, son ou sont, ces ou ses"
+niveau: CM2
+prerequis: ["classes-de-mots"]
+programme: { source: cycle3, texte: "Identifier les mots, un groupe de mots selon leur nature/classe grammaticale" }
+activite: quiz
+parametres: {}
+idee: "« a », « est », « sont » sont des verbes : on peut dire « avait », « était », « étaient ». Sinon, c’est « à » (préposition), « et » (conjonction), « son » (déterminant). « ses » : les siens ; « ces » : ceux-là."
+phrases:
+  consigne: "Lis la phrase, essaie de remplacer le mot, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Peux-tu dire « avait », « était » ou « étaient » à la place ? Si oui, c’est un verbe."
+  exemple: "« Léo ___ un vélo » : on peut dire « Léo avait un vélo », c’est le verbe avoir, on écrit « a »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète : « Léo ___ un vélo rouge. »"
+    nom: "a"
+    explication: "On peut dire « Léo avait un vélo rouge » : c’est le verbe avoir, « a »."
+    pieges:
+      - { texte: "à", pourquoi: "« à » est une préposition. Ici, on peut dire « Léo avait un vélo » : c’est le verbe avoir." }
+      - { texte: "as", pourquoi: "« as » va avec « tu » : tu as. Avec « Léo », on dit « il », donc « a »." }
+  - texte: "Complète : « Nous allons ___ la plage. »"
+    nom: "à"
+    explication: "On ne peut pas dire « nous allons avait la plage » : ce n’est pas un verbe, c’est la préposition « à »."
+    pieges:
+      - { texte: "a", pourquoi: "Essaie « avait » : « nous allons avait la plage » ne veut rien dire. Ce n’est pas le verbe avoir." }
+      - { texte: "as", pourquoi: "« as » est le verbe avoir avec « tu ». Ici, il faut un petit mot qui dit où l’on va : « à »." }
+  - texte: "Complète : « Le ciel ___ tout bleu. »"
+    nom: "est"
+    explication: "On peut dire « Le ciel était tout bleu » : c’est le verbe être, « est »."
+    pieges:
+      - { texte: "et", pourquoi: "« et » relie deux mots ou deux groupes. Ici, on peut dire « était » : c’est le verbe être." }
+      - { texte: "es", pourquoi: "« es » va avec « tu » : tu es. Avec « le ciel », on dit « il », donc « est »." }
+  - texte: "Complète : « J’achète du pain ___ du lait. »"
+    nom: "et"
+    explication: "« et » relie « du pain » et « du lait ». On ne peut pas dire « était » : ce n’est pas un verbe."
+    pieges:
+      - { texte: "est", pourquoi: "Essaie « était » : « du pain était du lait » ne veut rien dire. Il faut le mot qui relie : « et »." }
+      - { texte: "es", pourquoi: "« es » est le verbe être avec « tu ». Ici, on ajoute un mot à un autre : « et »." }
+  - texte: "Complète : « Les enfants ___ dans la cour. »"
+    nom: "sont"
+    explication: "On peut dire « Les enfants étaient dans la cour » : c’est le verbe être, « sont »."
+    pieges:
+      - { texte: "son", pourquoi: "« son » est un déterminant possessif, placé devant un nom (son chat). Ici, on peut dire « étaient » : c’est le verbe être." }
+      - { texte: "ont", pourquoi: "« ont » est le verbe avoir : « les enfants avaient dans la cour » ne veut rien dire. Il faut le verbe être." }
+  - texte: "Complète : « Tina range ___ cartable. »"
+    nom: "son"
+    explication: "C’est le cartable de Tina, un seul : le déterminant possessif « son »."
+    pieges:
+      - { texte: "sont", pourquoi: "Essaie « étaient » : « Tina range étaient cartable » ne veut rien dire. Ce n’est pas le verbe être." }
+      - { texte: "ses", pourquoi: "« ses » est pour plusieurs choses. Ici, il y a un seul cartable : « son »." }
+  - texte: "Complète : « Marc prête ___ livres à sa sœur. »"
+    nom: "ses"
+    explication: "Ce sont les livres de Marc, les siens : le déterminant possessif « ses »."
+    pieges:
+      - { texte: "ces", pourquoi: "« ces » montre des choses : « ces livres-là ». Ici, ce sont les livres de Marc, les siens : « ses »." }
+      - { texte: "son", pourquoi: "« son » est pour une seule chose. « livres » est au pluriel : « ses »." }
+  - texte: "Complète : « Regarde ___ nuages, là-bas ! »"
+    nom: "ces"
+    explication: "On montre les nuages, « ces nuages-là » : le déterminant démonstratif « ces »."
+    pieges:
+      - { texte: "ses", pourquoi: "« ses » veut dire « les siens ». Les nuages ne sont à personne : on les montre, « ces nuages-là »." }
+      - { texte: "c’est", pourquoi: "« c’est » veut dire « cela est ». Devant le nom « nuages », il faut un déterminant : « ces »." }
+  - texte: "Dans « Mia a un chat », pourquoi écrit-on « a » sans accent ?"
+    nom: "On peut dire « Mia avait un chat » : c’est le verbe avoir."
+    explication: "Le remplacement par « avait » prouve que c’est le verbe avoir : « a », sans accent."
+    pieges:
+      - { texte: "Parce que « a » est devant un nom.", pourquoi: "« à » aussi peut être devant un nom (à Paris). Ce qui compte, c’est qu’on peut dire « avait »." }
+      - { texte: "Parce que Mia est une fille.", pourquoi: "Le féminin ne change rien ici. On vérifie qu’on peut dire « avait »." }
+  - texte: "Dans « Ils sont partis », pourquoi écrit-on « sont » ?"
+    nom: "On peut dire « ils étaient partis » : c’est le verbe être."
+    explication: "Le remplacement par « étaient » prouve que c’est le verbe être : « sont »."
+    pieges:
+      - { texte: "Parce que « sont » est un déterminant.", pourquoi: "Un déterminant se place devant un nom. « sont » est un verbe : on le remplace par « étaient »." }
+      - { texte: "Parce qu’on entend « son ».", pourquoi: "« son » et « sont » se disent pareil. C’est le remplacement par « étaient » qui permet de choisir." }
+
+en:
+  langue: "fr"
+  titre: "French: a or à, et or est, son or sont, ces or ses"
+  idee: "« a », « est », « sont » are verbs: you can say « avait », « était », « étaient » instead. If not, it's « à » (preposition), « et » (and) or « son » (his/her). « ses »: his/hers; « ces »: those."
+  phrases:
+    consigne: "Read the French sentence, try swapping the word, then touch the right answer."
+    question: "{texte}"
+    indice: "Can you say « avait », « était » or « étaient » instead? If so, it's a verb."
+    exemple: "« Léo ___ un vélo »: you can say « Léo avait un vélo », so it's the verb « avoir », written « a »."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Fill in the gap: « Léo ___ un vélo rouge. »"
+      nom: "a"
+      explication: "You can say « Léo avait un vélo rouge »: it's the verb « avoir », « a »."
+      pieges:
+        - { texte: "à", pourquoi: "« à » is a preposition. Here you can say « Léo avait un vélo »: it's the verb « avoir »." }
+        - { texte: "as", pourquoi: "« as » goes with « tu »: « tu as ». With « Léo » you'd say « il », so « a »." }
+    - texte: "Fill in the gap: « Nous allons ___ la plage. »"
+      nom: "à"
+      explication: "You can't say « nous allons avait la plage »: it isn't a verb, it's the preposition « à »."
+      pieges:
+        - { texte: "a", pourquoi: "Try « avait »: « nous allons avait la plage » makes no sense. It isn't the verb « avoir »." }
+        - { texte: "as", pourquoi: "« as » is the verb « avoir » with « tu ». Here you need a little word that says where you're going: « à »." }
+    - texte: "Fill in the gap: « Le ciel ___ tout bleu. »"
+      nom: "est"
+      explication: "You can say « Le ciel était tout bleu »: it's the verb « être », « est »."
+      pieges:
+        - { texte: "et", pourquoi: "« et » joins two words or groups. Here you can say « était »: it's the verb « être »." }
+        - { texte: "es", pourquoi: "« es » goes with « tu »: « tu es ». With « le ciel » you'd say « il », so « est »." }
+    - texte: "Fill in the gap: « J’achète du pain ___ du lait. »"
+      nom: "et"
+      explication: "« et » joins « du pain » and « du lait ». You can't say « était »: it isn't a verb."
+      pieges:
+        - { texte: "est", pourquoi: "Try « était »: « du pain était du lait » makes no sense. You need the joining word: « et »." }
+        - { texte: "es", pourquoi: "« es » is the verb « être » with « tu ». Here you're adding one thing to another: « et »." }
+    - texte: "Fill in the gap: « Les enfants ___ dans la cour. »"
+      nom: "sont"
+      explication: "You can say « Les enfants étaient dans la cour »: it's the verb « être », « sont »."
+      pieges:
+        - { texte: "son", pourquoi: "« son » is a possessive determiner, placed before a noun (« son chat »). Here you can say « étaient »: it's the verb « être »." }
+        - { texte: "ont", pourquoi: "« ont » is the verb « avoir »: « les enfants avaient dans la cour » makes no sense. You need the verb « être »." }
+    - texte: "Fill in the gap: « Tina range ___ cartable. »"
+      nom: "son"
+      explication: "It's Tina's school bag, just one: the possessive determiner « son »."
+      pieges:
+        - { texte: "sont", pourquoi: "Try « étaient »: « Tina range étaient cartable » makes no sense. It isn't the verb « être »." }
+        - { texte: "ses", pourquoi: "« ses » is for several things. Here there's only one bag: « son »." }
+    - texte: "Fill in the gap: « Marc prête ___ livres à sa sœur. »"
+      nom: "ses"
+      explication: "They are Marc's books, his own: the possessive determiner « ses »."
+      pieges:
+        - { texte: "ces", pourquoi: "« ces » points things out: « ces livres-là », those books. Here they are Marc's own books: « ses »." }
+        - { texte: "son", pourquoi: "« son » is for one thing only. « livres » is plural: « ses »." }
+    - texte: "Fill in the gap: « Regarde ___ nuages, là-bas ! »"
+      nom: "ces"
+      explication: "We're pointing at the clouds, « ces nuages-là »: the demonstrative determiner « ces »."
+      pieges:
+        - { texte: "ses", pourquoi: "« ses » means « his or hers ». The clouds belong to nobody: we're pointing at them, « ces nuages-là »." }
+        - { texte: "c’est", pourquoi: "« c’est » means « it is ». Before the noun « nuages » you need a determiner: « ces »." }
+    - texte: "In « Mia a un chat », why is « a » written without an accent?"
+      nom: "You can say « Mia avait un chat »: it's the verb « avoir »."
+      explication: "Swapping in « avait » proves it's the verb « avoir »: « a », with no accent."
+      pieges:
+        - { texte: "Because « a » comes before a noun.", pourquoi: "« à » can also come before a noun (« à Paris »). What matters is that you can say « avait »." }
+        - { texte: "Because Mia is a girl.", pourquoi: "Being feminine changes nothing here. Check whether you can say « avait »." }
+    - texte: "In « Ils sont partis », why do we write « sont »?"
+      nom: "You can say « ils étaient partis »: it's the verb « être »."
+      explication: "Swapping in « étaient » proves it's the verb « être »: « sont »."
+      pieges:
+        - { texte: "Because « sont » is a determiner.", pourquoi: "A determiner goes before a noun. « sont » is a verb: you can swap it for « étaient »." }
+        - { texte: "Because it sounds like « son ».", pourquoi: "« son » and « sont » sound the same. Swapping in « étaient » is what lets you choose." }

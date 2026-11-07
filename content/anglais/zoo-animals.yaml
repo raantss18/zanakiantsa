@@ -1,0 +1,96 @@
+id: zoo-animals
+titre: "Les animaux sauvages, en anglais"
+niveau: CE1
+prerequis: [animals]
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), CE1, « Suivre le fil
+# d'une histoire » : objectif et exemple de réussite (album From Head to Toe d'Eric Carle). Lu le 2026-11-07.
+programme: { source: lver_c2, texte: "CE1 : reconnaitre les mots familiers (A1) ou repérer les champs lexicaux qui permettent (pré-A1) de parler de soi, de sa sphère immédiate (A1) et des thématiques culturelles et disciplinaires travaillées en classe ; exemple cité : « I am a penguin and I turn my head. »" }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "Chaque animal se présente : « I am a penguin », je suis un manchot. Écoute le nom de l'animal, à la fin de la phrase."
+phrases:
+  consigne: "Écoute l'animal se présenter en anglais, puis touche son image."
+  question: "« {texte} »."
+  indice: "Écoute le dernier mot : c'est le nom de l'animal."
+  exemple: "Un exemple : « I am a bear », je suis un ours. Écoute encore la phrase, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "I am a penguin"
+    bonne: ["1f427", "le manchot"]
+    autres: [["1f992", "la girafe"], ["1f40d", "le serpent"]]
+    explication: "« I am a penguin » : je suis un manchot."
+  - texte: "I am a giraffe"
+    bonne: ["1f992", "la girafe"]
+    autres: [["1f993", "le zèbre"], ["1f418", "l'éléphant"]]
+    explication: "« I am a giraffe » : je suis une girafe."
+  - texte: "I am a monkey"
+    bonne: ["1f412", "le singe"]
+    autres: [["1f981", "le lion"], ["1f427", "le manchot"]]
+    explication: "« I am a monkey » : je suis un singe."
+  - texte: "I am an elephant"
+    bonne: ["1f418", "l'éléphant"]
+    autres: [["1f40a", "le crocodile"], ["1f412", "le singe"]]
+    explication: "« I am an elephant » : je suis un éléphant."
+  - texte: "I am a crocodile"
+    bonne: ["1f40a", "le crocodile"]
+    autres: [["1f40d", "le serpent"], ["1f992", "la girafe"]]
+    explication: "« I am a crocodile » : je suis un crocodile."
+  - texte: "I am a lion"
+    bonne: ["1f981", "le lion"]
+    autres: [["1f993", "le zèbre"], ["1f418", "l'éléphant"]]
+    explication: "« I am a lion » : je suis un lion."
+  - texte: "I am a zebra"
+    bonne: ["1f993", "le zèbre"]
+    autres: [["1f427", "le manchot"], ["1f981", "le lion"]]
+    explication: "« I am a zebra » : je suis un zèbre."
+  - texte: "I am a snake"
+    bonne: ["1f40d", "le serpent"]
+    autres: [["1f40a", "le crocodile"], ["1f412", "le singe"]]
+    explication: "« I am a snake » : je suis un serpent."
+en:
+  titre: "Wild animals in English"
+  idee: "Each animal introduces itself: “I am a penguin.” Listen to the name of the animal at the end of the sentence."
+  phrases:
+    consigne: "Listen to the animal introduce itself, then touch its picture."
+    question: "{texte}."
+    indice: "Listen to the last word: it is the name of the animal."
+    exemple: "An example: “I am a bear.” Listen to the sentence again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "I am a penguin"
+      bonne: ["1f427", "the penguin"]
+      autres: [["1f992", "the giraffe"], ["1f40d", "the snake"]]
+      explication: "I am a penguin — well done!"
+    - texte: "I am a giraffe"
+      bonne: ["1f992", "the giraffe"]
+      autres: [["1f993", "the zebra"], ["1f418", "the elephant"]]
+      explication: "I am a giraffe — well done!"
+    - texte: "I am a monkey"
+      bonne: ["1f412", "the monkey"]
+      autres: [["1f981", "the lion"], ["1f427", "the penguin"]]
+      explication: "I am a monkey — well done!"
+    - texte: "I am an elephant"
+      bonne: ["1f418", "the elephant"]
+      autres: [["1f40a", "the crocodile"], ["1f412", "the monkey"]]
+      explication: "I am an elephant — well done!"
+    - texte: "I am a crocodile"
+      bonne: ["1f40a", "the crocodile"]
+      autres: [["1f40d", "the snake"], ["1f992", "the giraffe"]]
+      explication: "I am a crocodile — well done!"
+    - texte: "I am a lion"
+      bonne: ["1f981", "the lion"]
+      autres: [["1f993", "the zebra"], ["1f418", "the elephant"]]
+      explication: "I am a lion — well done!"
+    - texte: "I am a zebra"
+      bonne: ["1f993", "the zebra"]
+      autres: [["1f427", "the penguin"], ["1f981", "the lion"]]
+      explication: "I am a zebra — well done!"
+    - texte: "I am a snake"
+      bonne: ["1f40d", "the snake"]
+      autres: [["1f40a", "the crocodile"], ["1f412", "the monkey"]]
+      explication: "I am a snake — well done!"

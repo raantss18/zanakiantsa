@@ -1,0 +1,136 @@
+id: nsi-types-construits
+titre: "Tuples, tableaux et dictionnaires"
+niveau: 1re
+prerequis: [python-listes]
+programme: { source: nsi1, texte: "Écrire une fonction renvoyant un p-uplet de valeurs. […] Lire et modifier les éléments d’un tableau grâce à leurs index. Construire un tableau par compréhension. […] Construire une entrée de dictionnaire. Itérer sur les éléments d’un dictionnaire." }
+activite: quiz
+parametres: {}
+idee: "Un tuple (3, 5) ne se modifie pas. Une liste [3, 5] se modifie : L[0] = 7. Un dictionnaire range des valeurs par clé : avec d = {'nom': 'Rado'}, d['nom'] donne 'Rado'."
+phrases:
+  consigne: "Repère le type de chaque valeur (tuple, liste ou dictionnaire), puis suis le programme ligne à ligne."
+  question: "{texte}"
+  indice: "Parenthèses : tuple. Crochets : liste. Accolades avec clé : valeur : dictionnaire. Les indices commencent à 0."
+  exemple: "p = (2, 9) : p[0] vaut 2. m = [[1, 2], [3, 4]] : m[1][0] vaut 3 (ligne 1, puis élément 0). d = {'a': 1} ; d['b'] = 2 ajoute une entrée."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\np = (4, 7, 1)\nprint(p[1])"
+    nom: "7"
+    explication: "Indice 0 : 4. Indice 1 : 7. Un tuple se lit par indice, comme une liste."
+    pieges:
+      - { texte: "4", pourquoi: "Les indices commencent à 0 : p[1] est le deuxième élément." }
+      - { texte: "(4, 7)", pourquoi: "p[1] donne un seul élément, pas le début du tuple." }
+  - texte: "Que se passe-t-il ?\np = (4, 7, 1)\np[0] = 9"
+    nom: "Une erreur : un tuple ne se modifie pas"
+    explication: "Python signale TypeError : on ne change pas un élément d’un tuple. Il faut en créer un nouveau, ou utiliser une liste."
+    pieges:
+      - { texte: "p devient (9, 7, 1)", pourquoi: "C’est ce que ferait une liste. Un tuple est non modifiable." }
+      - { texte: "p devient (4, 7, 1, 9)", pourquoi: "p[0] = … vise l’élément d’indice 0 ; et de toute façon, un tuple ne se modifie pas." }
+  - texte: "Que va afficher ce programme ?\ndef minmax(L): return (min(L), max(L))\na, b = minmax([5, 2, 8])\nprint(b)"
+    nom: "8"
+    explication: "minmax renvoie le tuple (2, 8). a, b = … le décompose : a reçoit 2, b reçoit 8."
+    pieges:
+      - { texte: "2", pourquoi: "a reçoit le premier élément du tuple (le minimum), b le second (le maximum)." }
+      - { texte: "(2, 8)", pourquoi: "Le tuple est décomposé en deux variables : b ne reçoit qu’une valeur." }
+  - texte: "Que va afficher ce programme ?\nm = [[1, 2, 3], [4, 5, 6]]\nprint(m[1][2])"
+    nom: "6"
+    explication: "m[1] est la deuxième ligne, [4, 5, 6]. Puis [2] prend son élément d’indice 2 : 6."
+    pieges:
+      - { texte: "2", pourquoi: "m[1] n’est pas le nombre 2 : c’est la ligne d’indice 1, [4, 5, 6]." }
+      - { texte: "5", pourquoi: "L’indice 2 désigne le troisième élément de [4, 5, 6], soit 6." }
+  - texte: "Que va afficher ce programme ?\nL = [x * 2 for x in range(4)]\nprint(L)"
+    nom: "[0, 2, 4, 6]"
+    explication: "range(4) donne 0, 1, 2, 3. La liste en compréhension prend le double de chacun : [0, 2, 4, 6]."
+    pieges:
+      - { texte: "[2, 4, 6, 8]", pourquoi: "range(4) commence à 0 : le premier double est 0." }
+      - { texte: "[0, 1, 2, 3, 0, 1, 2, 3]", pourquoi: "x * 2 double chaque nombre ; la liste n’est pas répétée deux fois." }
+  - texte: "Que va afficher ce programme ?\nd = {'pomme': 3, 'kiwi': 5}\nprint(d['kiwi'])"
+    nom: "5"
+    explication: "Dans un dictionnaire, on lit une valeur par sa clé : la clé 'kiwi' est associée à 5."
+    pieges:
+      - { texte: "1", pourquoi: "On lit par la clé, pas par la position : d['kiwi'] donne la valeur 5." }
+      - { texte: "kiwi", pourquoi: "d['kiwi'] donne la valeur associée à la clé, pas la clé elle-même." }
+  - texte: "Que va afficher ce programme ?\nd = {'a': 1}\nd['b'] = 2\nd['a'] = 5\nprint(d)"
+    nom: "{'a': 5, 'b': 2}"
+    explication: "d['b'] = 2 ajoute une entrée. d['a'] = 5 remplace la valeur de la clé 'a', qui existe déjà."
+    pieges:
+      - { texte: "{'a': 1, 'b': 2, 'a': 5}", pourquoi: "Une clé est unique dans un dictionnaire : d['a'] = 5 remplace l’ancienne valeur." }
+      - { texte: "{'a': 1, 'b': 2}", pourquoi: "d['a'] = 5 change bien la valeur associée à la clé 'a'." }
+  - texte: "Que va afficher ce programme ?\nd = {'x': 2, 'y': 3}\ns = 0\nfor k, v in d.items(): s = s + v\nprint(s)"
+    nom: "5"
+    explication: "items() donne les couples (clé, valeur) : ('x', 2), puis ('y', 3). On additionne les valeurs : 2 + 3 = 5."
+    pieges:
+      - { texte: "xy", pourquoi: "On additionne v, les valeurs ; k, les clés, ne sont pas utilisées." }
+      - { texte: "2", pourquoi: "La boucle passe sur toutes les entrées du dictionnaire : 2, puis 3." }
+  - texte: "Pourquoi ranger les numéros de téléphone de ses amis dans un dictionnaire plutôt que dans une liste ?"
+    nom: "On retrouve un numéro par le nom (la clé), sans chercher sa position"
+    explication: "Avec tel = {'Rado': '034…'}, tel['Rado'] donne le numéro directement. Dans une liste, il faudrait la parcourir pour trouver le nom."
+    pieges:
+      - { texte: "Un dictionnaire range les noms par ordre alphabétique", pourquoi: "Un dictionnaire ne trie pas ses clés : il associe une valeur à chaque clé." }
+      - { texte: "Une liste ne peut pas contenir de texte", pourquoi: "Une liste peut contenir du texte ; mais pour trouver un nom, il faudrait la parcourir." }
+
+en:
+  titre: "Tuples, arrays and dictionaries"
+  idee: "A tuple (3, 5) cannot be changed. A list [3, 5] can: L[0] = 7. A dictionary stores values by key: with d = {'name': 'Rado'}, d['name'] gives 'Rado'."
+  phrases:
+    consigne: "Spot the type of each value (tuple, list or dictionary), then follow the program line by line."
+    question: "{texte}"
+    indice: "Round brackets: tuple. Square brackets: list. Curly brackets with key: value: dictionary. Indices start at 0."
+    exemple: "p = (2, 9): p[0] is 2. m = [[1, 2], [3, 4]]: m[1][0] is 3 (row 1, then item 0). d = {'a': 1}; d['b'] = 2 adds an entry."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\np = (4, 7, 1)\nprint(p[1])"
+      nom: "7"
+      explication: "Index 0: 4. Index 1: 7. A tuple is read by index, like a list."
+      pieges:
+        - { texte: "4", pourquoi: "Indices start at 0: p[1] is the second item." }
+        - { texte: "(4, 7)", pourquoi: "p[1] gives a single item, not the start of the tuple." }
+    - texte: "What happens?\np = (4, 7, 1)\np[0] = 9"
+      nom: "An error: a tuple cannot be changed"
+      explication: "Python reports TypeError: you cannot change an item of a tuple. You must make a new one, or use a list."
+      pieges:
+        - { texte: "p becomes (9, 7, 1)", pourquoi: "That is what a list would do. A tuple cannot be changed." }
+        - { texte: "p becomes (4, 7, 1, 9)", pourquoi: "p[0] = … targets the item at index 0; and anyway, a tuple cannot be changed." }
+    - texte: "What will this program display?\ndef minmax(L): return (min(L), max(L))\na, b = minmax([5, 2, 8])\nprint(b)"
+      nom: "8"
+      explication: "minmax returns the tuple (2, 8). a, b = … unpacks it: a gets 2, b gets 8."
+      pieges:
+        - { texte: "2", pourquoi: "a gets the first item of the tuple (the minimum), b the second (the maximum)." }
+        - { texte: "(2, 8)", pourquoi: "The tuple is unpacked into two variables: b only gets one value." }
+    - texte: "What will this program display?\nm = [[1, 2, 3], [4, 5, 6]]\nprint(m[1][2])"
+      nom: "6"
+      explication: "m[1] is the second row, [4, 5, 6]. Then [2] takes its item at index 2: 6."
+      pieges:
+        - { texte: "2", pourquoi: "m[1] is not the number 2: it is the row at index 1, [4, 5, 6]." }
+        - { texte: "5", pourquoi: "Index 2 means the third item of [4, 5, 6], which is 6." }
+    - texte: "What will this program display?\nL = [x * 2 for x in range(4)]\nprint(L)"
+      nom: "[0, 2, 4, 6]"
+      explication: "range(4) gives 0, 1, 2, 3. The list comprehension takes double each one: [0, 2, 4, 6]."
+      pieges:
+        - { texte: "[2, 4, 6, 8]", pourquoi: "range(4) starts at 0: the first double is 0." }
+        - { texte: "[0, 1, 2, 3, 0, 1, 2, 3]", pourquoi: "x * 2 doubles each number; the list is not repeated twice." }
+    - texte: "What will this program display?\nd = {'apple': 3, 'kiwi': 5}\nprint(d['kiwi'])"
+      nom: "5"
+      explication: "In a dictionary, you read a value by its key: the key 'kiwi' is linked to 5."
+      pieges:
+        - { texte: "1", pourquoi: "You read by key, not by position: d['kiwi'] gives the value 5." }
+        - { texte: "kiwi", pourquoi: "d['kiwi'] gives the value linked to the key, not the key itself." }
+    - texte: "What will this program display?\nd = {'a': 1}\nd['b'] = 2\nd['a'] = 5\nprint(d)"
+      nom: "{'a': 5, 'b': 2}"
+      explication: "d['b'] = 2 adds an entry. d['a'] = 5 replaces the value of the key 'a', which already exists."
+      pieges:
+        - { texte: "{'a': 1, 'b': 2, 'a': 5}", pourquoi: "A key is unique in a dictionary: d['a'] = 5 replaces the old value." }
+        - { texte: "{'a': 1, 'b': 2}", pourquoi: "d['a'] = 5 does change the value linked to the key 'a'." }
+    - texte: "What will this program display?\nd = {'x': 2, 'y': 3}\ns = 0\nfor k, v in d.items(): s = s + v\nprint(s)"
+      nom: "5"
+      explication: "items() gives the (key, value) pairs: ('x', 2), then ('y', 3). The values are added: 2 + 3 = 5."
+      pieges:
+        - { texte: "xy", pourquoi: "v, the values, are added; k, the keys, are not used." }
+        - { texte: "2", pourquoi: "The loop goes over every entry of the dictionary: 2, then 3." }
+    - texte: "Why store your friends’ phone numbers in a dictionary rather than in a list?"
+      nom: "You find a number by the name (the key), without looking for its position"
+      explication: "With tel = {'Rado': '034…'}, tel['Rado'] gives the number directly. In a list, you would have to go through it to find the name."
+      pieges:
+        - { texte: "A dictionary keeps the names in alphabetical order", pourquoi: "A dictionary does not sort its keys: it links a value to each key." }
+        - { texte: "A list cannot hold text", pourquoi: "A list can hold text; but to find a name, you would have to go through it." }

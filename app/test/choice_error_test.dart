@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/choose.dart';
 import 'package:zanakiantsa/content/content.dart';
@@ -22,7 +23,7 @@ void main() {
         for (final p in it.others) {
           final q = Question(n: i);
           final why = choiceError(s, (k) => s.say(k, q), p);
-          expect(why, isNot(contains('{')), reason: '${s.id} : $why');
+          expect(why, isNot(contains(unfilled)), reason: '${s.id} : $why');
           expect(why, contains(p.name.replaceFirst(RegExp(r"^(le |la |les |l'|un |une )"), '')), reason: '${s.id} : $why');
           // L'explication ne nomme jamais la bonne réponse (le mot de la question, lui, peut revenir : « orange »).
           expect(why.replaceAll(it.text, '').contains(it.right!.name) && it.right!.name != p.name && !p.name.contains(it.right!.name), isFalse,

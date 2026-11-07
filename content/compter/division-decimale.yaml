@@ -1,0 +1,136 @@
+id: division-decimale
+titre: "La division décimale"
+niveau: CM2
+prerequis: ["division-posee", "decimaux-ecriture"]
+programme: { source: cycle3, texte: "Poser et effectuer des divisions décimales avec un dividende entier et un diviseur à un chiffre" }
+activite: quiz
+parametres: {}
+idee: "Quand il reste quelque chose, on continue : on écrit la virgule au quotient, on change le reste en dixièmes, puis en centièmes, et on divise encore."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quand le reste n'est pas 0, écris la virgule au quotient et change le reste en dixièmes."
+  exemple: "7 ÷ 4 : en 7, il y a 1 fois 4, reste 3. On écrit la virgule. 3 unités = 30 dixièmes ; 30 ÷ 4 = 7, reste 2. 2 dixièmes = 20 centièmes ; 20 ÷ 4 = 5, reste 0. Donc 7 ÷ 4 = 1,75. Vérification : 4 × 1,75 = 7."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 9 ÷ 2 ?"
+    nom: "4,5"
+    explication: "9 ÷ 2 = 4, reste 1. 1 unité = 10 dixièmes, et 10 ÷ 2 = 5 dixièmes : 4,5. Vérification : 2 × 4,5 = 9."
+    pieges:
+      - { texte: "4 reste 1", pourquoi: "C'est la division euclidienne : ici on continue après la virgule, le reste 1 devient 10 dixièmes." }
+      - { texte: "4,1", pourquoi: "On a écrit le reste après la virgule : le reste 1 vaut 10 dixièmes, et 10 ÷ 2 = 5 dixièmes." }
+  - texte: "Combien font 15 ÷ 4 ?"
+    nom: "3,75"
+    explication: "15 ÷ 4 = 3, reste 3. 30 dixièmes ÷ 4 = 7, reste 2. 20 centièmes ÷ 4 = 5. Donc 3,75. Vérification : 4 × 3,75 = 15."
+    pieges:
+      - { texte: "3,3", pourquoi: "On a écrit le reste 3 après la virgule : il faut encore le diviser par 4." }
+      - { texte: "3,7", pourquoi: "On s'est arrêté trop tôt : il reste 2 dixièmes, soit 20 centièmes, et 20 ÷ 4 = 5." }
+  - texte: "Combien font 6 ÷ 8 ?"
+    nom: "0,75"
+    explication: "En 6, il y a 0 fois 8 : on écrit 0, puis la virgule. 60 dixièmes ÷ 8 = 7, reste 4. 40 centièmes ÷ 8 = 5. Donc 0,75."
+    pieges:
+      - { texte: "environ 1,33", pourquoi: "C'est à peu près 8 ÷ 6 : on a inversé. 6 est plus petit que 8, donc le quotient est plus petit que 1." }
+      - { texte: "0,7", pourquoi: "On s'est arrêté trop tôt : il reste 4 centièmes à partager, 40 ÷ 8 = 5." }
+  - texte: "Combien font 23 ÷ 5 ?"
+    nom: "4,6"
+    explication: "23 ÷ 5 = 4, reste 3. 30 dixièmes ÷ 5 = 6. Donc 4,6. Vérification : 5 × 4,6 = 23."
+    pieges:
+      - { texte: "4,3", pourquoi: "On a écrit le reste 3 après la virgule : 3 unités = 30 dixièmes, et 30 ÷ 5 = 6." }
+      - { texte: "46", pourquoi: "La virgule a été oubliée : 5 × 46 = 230, pas 23." }
+  - texte: "Complète : 13 ÷ 4 = 3,… Quels chiffres manquent après la virgule ?"
+    nom: "25"
+    explication: "13 ÷ 4 = 3, reste 1. 10 dixièmes ÷ 4 = 2, reste 2. 20 centièmes ÷ 4 = 5. Donc 13 ÷ 4 = 3,25."
+    pieges:
+      - { texte: "1", pourquoi: "C'est le reste : il faut encore le diviser, 1 unité = 10 dixièmes." }
+      - { texte: "2", pourquoi: "On s'est arrêté aux dixièmes : il reste 2 dixièmes, soit 20 centièmes, et 20 ÷ 4 = 5." }
+  - texte: "On partage 18 m de ruban en 4 morceaux de même longueur. Combien mesure chaque morceau ?"
+    nom: "4,5 m"
+    explication: "Schéma : une barre de 18 m coupée en 4 parts égales. 18 ÷ 4 = 4, reste 2 ; 20 dixièmes ÷ 4 = 5. Chaque morceau mesure 4,5 m."
+    pieges:
+      - { texte: "4,2 m", pourquoi: "On a écrit le reste 2 après la virgule : 2 m = 20 dixièmes de mètre, et 20 ÷ 4 = 5." }
+      - { texte: "72 m", pourquoi: "18 × 4 : un partage en parts égales se calcule par une division." }
+  - texte: "Combien font 3 ÷ 8 ?"
+    nom: "0,375"
+    explication: "30 dixièmes ÷ 8 = 3, reste 6. 60 centièmes ÷ 8 = 7, reste 4. 40 millièmes ÷ 8 = 5. Donc 0,375."
+    pieges:
+      - { texte: "0,37", pourquoi: "On s'est arrêté trop tôt : il reste 4 centièmes, soit 40 millièmes, et 40 ÷ 8 = 5." }
+      - { texte: "3,8", pourquoi: "On a seulement collé les deux nombres : 3 est plus petit que 8, donc le quotient est plus petit que 1." }
+  - texte: "Pourquoi 7 ÷ 2 = 3,5 et pas 3,1 ?"
+    nom: "Parce que le reste 1 vaut 10 dixièmes, et 10 ÷ 2 = 5."
+    explication: "7 ÷ 2 = 3, reste 1. On ne recopie pas le reste : 1 unité = 10 dixièmes, partagés en 2, cela fait 5 dixièmes."
+    pieges:
+      - { texte: "Parce que 3,5 est plus grand que 3,1.", pourquoi: "C'est vrai, mais cela ne dit pas d'où vient le 5 : il vient du reste, 1 unité = 10 dixièmes." }
+      - { texte: "Parce qu'on ajoute toujours 5 après la virgule.", pourquoi: "9 ÷ 4 = 2,25 : le chiffre après la virgule dépend du reste et du diviseur." }
+  - texte: "5 amis se partagent 12 € en parts égales. Combien reçoit chacun ?"
+    nom: "2,40 €"
+    explication: "12 ÷ 5 = 2, reste 2. 2 € = 20 dixièmes d'euro, et 20 ÷ 5 = 4 dixièmes. Chacun reçoit 2,4 €, soit 2,40 €."
+    pieges:
+      - { texte: "2,20 €", pourquoi: "On a écrit le reste 2 après la virgule : il faut encore le partager en 5." }
+      - { texte: "2,04 €", pourquoi: "20 dixièmes ÷ 5 donne 4 dixièmes, pas 4 centièmes : 2,4 €." }
+
+en:
+  titre: "Decimal division"
+  idee: "When something is left over, keep going: write the decimal point in the quotient, change the remainder into tenths, then hundredths, and divide again."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "When the remainder is not 0, write the decimal point in the quotient and change the remainder into tenths."
+    exemple: "7 ÷ 4: 4 goes into 7 once, remainder 3. Write the decimal point. 3 ones = 30 tenths; 30 ÷ 4 = 7, remainder 2. 2 tenths = 20 hundredths; 20 ÷ 4 = 5, remainder 0. So 7 ÷ 4 = 1.75. Check: 4 × 1.75 = 7."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 9 ÷ 2?"
+      nom: "4.5"
+      explication: "9 ÷ 2 = 4, remainder 1. 1 one = 10 tenths, and 10 ÷ 2 = 5 tenths: 4.5. Check: 2 × 4.5 = 9."
+      pieges:
+        - { texte: "4 remainder 1", pourquoi: "That is whole-number division: here we carry on after the decimal point, and the remainder 1 becomes 10 tenths." }
+        - { texte: "4.1", pourquoi: "The remainder was written after the point: the remainder 1 is 10 tenths, and 10 ÷ 2 = 5 tenths." }
+    - texte: "What is 15 ÷ 4?"
+      nom: "3.75"
+      explication: "15 ÷ 4 = 3, remainder 3. 30 tenths ÷ 4 = 7, remainder 2. 20 hundredths ÷ 4 = 5. So 3.75. Check: 4 × 3.75 = 15."
+      pieges:
+        - { texte: "3.3", pourquoi: "The remainder 3 was written after the point: it still has to be divided by 4." }
+        - { texte: "3.7", pourquoi: "Stopped too early: 2 tenths are left, which is 20 hundredths, and 20 ÷ 4 = 5." }
+    - texte: "What is 6 ÷ 8?"
+      nom: "0.75"
+      explication: "8 goes into 6 zero times: write 0, then the point. 60 tenths ÷ 8 = 7, remainder 4. 40 hundredths ÷ 8 = 5. So 0.75."
+      pieges:
+        - { texte: "about 1.33", pourquoi: "That is roughly 8 ÷ 6: the numbers were swapped. 6 is smaller than 8, so the quotient is less than 1." }
+        - { texte: "0.7", pourquoi: "Stopped too early: 4 hundredths are still to share, 40 ÷ 8 = 5." }
+    - texte: "What is 23 ÷ 5?"
+      nom: "4.6"
+      explication: "23 ÷ 5 = 4, remainder 3. 30 tenths ÷ 5 = 6. So 4.6. Check: 5 × 4.6 = 23."
+      pieges:
+        - { texte: "4.3", pourquoi: "The remainder 3 was written after the point: 3 ones = 30 tenths, and 30 ÷ 5 = 6." }
+        - { texte: "46", pourquoi: "The decimal point was left out: 5 × 46 = 230, not 23." }
+    - texte: "Fill in: 13 ÷ 4 = 3.… Which digits are missing after the point?"
+      nom: "25"
+      explication: "13 ÷ 4 = 3, remainder 1. 10 tenths ÷ 4 = 2, remainder 2. 20 hundredths ÷ 4 = 5. So 13 ÷ 4 = 3.25."
+      pieges:
+        - { texte: "1", pourquoi: "That is the remainder: it still has to be divided, 1 one = 10 tenths." }
+        - { texte: "2", pourquoi: "Stopped at the tenths: 2 tenths are left, which is 20 hundredths, and 20 ÷ 4 = 5." }
+    - texte: "18 m of ribbon is cut into 4 pieces of the same length. How long is each piece?"
+      nom: "4.5 m"
+      explication: "Bar model: a bar of 18 m cut into 4 equal parts. 18 ÷ 4 = 4, remainder 2; 20 tenths ÷ 4 = 5. Each piece is 4.5 m long."
+      pieges:
+        - { texte: "4.2 m", pourquoi: "The remainder 2 was written after the point: 2 m = 20 tenths of a metre, and 20 ÷ 4 = 5." }
+        - { texte: "72 m", pourquoi: "18 × 4: sharing into equal parts is worked out with a division." }
+    - texte: "What is 3 ÷ 8?"
+      nom: "0.375"
+      explication: "30 tenths ÷ 8 = 3, remainder 6. 60 hundredths ÷ 8 = 7, remainder 4. 40 thousandths ÷ 8 = 5. So 0.375."
+      pieges:
+        - { texte: "0.37", pourquoi: "Stopped too early: 4 hundredths are left, which is 40 thousandths, and 40 ÷ 8 = 5." }
+        - { texte: "3.8", pourquoi: "The two numbers were just stuck together: 3 is smaller than 8, so the quotient is less than 1." }
+    - texte: "Why is 7 ÷ 2 = 3.5 and not 3.1?"
+      nom: "Because the remainder 1 is 10 tenths, and 10 ÷ 2 = 5."
+      explication: "7 ÷ 2 = 3, remainder 1. We do not copy the remainder: 1 one = 10 tenths, shared between 2, gives 5 tenths."
+      pieges:
+        - { texte: "Because 3.5 is bigger than 3.1.", pourquoi: "True, but it does not say where the 5 comes from: it comes from the remainder, 1 one = 10 tenths." }
+        - { texte: "Because you always put 5 after the point.", pourquoi: "9 ÷ 4 = 2.25: the digit after the point depends on the remainder and the divisor." }
+    - texte: "5 friends share €12 equally. How much does each one get?"
+      nom: "€2.40"
+      explication: "12 ÷ 5 = 2, remainder 2. €2 = 20 tenths of a euro, and 20 ÷ 5 = 4 tenths. Each gets €2.4, that is €2.40."
+      pieges:
+        - { texte: "€2.20", pourquoi: "The remainder 2 was written after the point: it still has to be shared between 5." }
+        - { texte: "€2.04", pourquoi: "20 tenths ÷ 5 gives 4 tenths, not 4 hundredths: €2.4." }

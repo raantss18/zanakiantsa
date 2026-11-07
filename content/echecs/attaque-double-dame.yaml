@@ -1,0 +1,92 @@
+id: attaque-double-dame
+titre: "L’attaque double de la dame"
+niveau: 4e
+prerequis: [fourchette]
+programme: { source: fide, texte: "3.4 : The queen may move to any square along the file, the rank or a diagonal on which it stands." }
+activite: probleme
+parametres: { theme: fourchette }
+idee: "La dame va tout droit et en biais : d’une seule case, elle peut faire échec au roi et attaquer une tour. Le roi doit se sauver d’abord, la tour est perdue."
+phrases:
+  consigne: "Trouve la case d’où ta dame fait échec au roi noir et attaque en même temps la tour, sans pouvoir être prise."
+  question: "{texte}"
+  indice: "Trace les lignes et les diagonales qui partent du roi noir, puis celles qui partent de la tour. Cherche une case où elles se croisent."
+  exemple: "Regarde les lignes du roi noir et celles de la tour."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "1k3r2/8/8/3Q4/1K6/8/8/8 w - - 0 1"
+    coups: [d5d6]
+    explication: "La dame va en d6 : échec au roi, et elle attaque en même temps la tour en f8. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "4k3/8/1Q5K/4r3/8/8/8/8 w - - 0 1"
+    coups: [b6b8]
+    explication: "La dame va en b8 : échec au roi, et elle attaque en même temps la tour en e5. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "6r1/8/8/6p1/7k/8/8/2Q3K1 w - - 0 1"
+    coups: [c1c4]
+    explication: "La dame va en c4 : échec au roi, et elle attaque en même temps la tour en g8. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "3k4/8/8/8/6Q1/8/3K4/r7 w - - 0 1"
+    coups: [g4d4]
+    explication: "La dame va en d4 : échec au roi, et elle attaque en même temps la tour en a1. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "7r/8/2k5/8/8/8/3Q4/5K2 w - - 0 1"
+    coups: [d2c3]
+    explication: "La dame va en c3 : échec au roi, et elle attaque en même temps la tour en h8. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "8/3k4/Q7/8/8/5r2/7K/8 w - - 0 1"
+    coups: [a6b7]
+    explication: "La dame va en b7 : échec au roi, et elle attaque en même temps la tour en f3. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "4r3/2K5/8/8/k7/5Q2/8/8 w - - 0 1"
+    coups: [f3c6]
+    explication: "La dame va en c6 : échec au roi, et elle attaque en même temps la tour en e8. Le roi doit se sauver : la tour est prise."
+  - texte: "Attaque deux pièces à la fois avec ta dame !"
+    fen: "8/8/3k4/6Q1/8/6K1/2r5/8 w - - 0 1"
+    coups: [g5g6]
+    explication: "La dame va en g6 : échec au roi, et elle attaque en même temps la tour en c2. Le roi doit se sauver : la tour est prise."
+
+en:
+  titre: "The queen’s double attack"
+  idee: "The queen moves straight and diagonally: from a single square, it can check the king and attack a rook. The king must escape first, the rook is lost."
+  phrases:
+    consigne: "Find the square from which your queen checks the black king and attacks the rook at the same time, without being taken."
+    question: "{texte}"
+    indice: "Draw the lines and diagonals from the black king, then those from the rook. Look for a square where they cross."
+    exemple: "Look at the black king’s lines and the rook’s lines."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "1k3r2/8/8/3Q4/1K6/8/8/8 w - - 0 1"
+      coups: [d5d6]
+      explication: "The queen goes to d6: check to the king, and at the same time it attacks the rook on f8. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "4k3/8/1Q5K/4r3/8/8/8/8 w - - 0 1"
+      coups: [b6b8]
+      explication: "The queen goes to b8: check to the king, and at the same time it attacks the rook on e5. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "6r1/8/8/6p1/7k/8/8/2Q3K1 w - - 0 1"
+      coups: [c1c4]
+      explication: "The queen goes to c4: check to the king, and at the same time it attacks the rook on g8. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "3k4/8/8/8/6Q1/8/3K4/r7 w - - 0 1"
+      coups: [g4d4]
+      explication: "The queen goes to d4: check to the king, and at the same time it attacks the rook on a1. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "7r/8/2k5/8/8/8/3Q4/5K2 w - - 0 1"
+      coups: [d2c3]
+      explication: "The queen goes to c3: check to the king, and at the same time it attacks the rook on h8. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "8/3k4/Q7/8/8/5r2/7K/8 w - - 0 1"
+      coups: [a6b7]
+      explication: "The queen goes to b7: check to the king, and at the same time it attacks the rook on f3. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "4r3/2K5/8/8/k7/5Q2/8/8 w - - 0 1"
+      coups: [f3c6]
+      explication: "The queen goes to c6: check to the king, and at the same time it attacks the rook on e8. The king must escape: the rook is taken."
+    - texte: "Attack two pieces at once with your queen!"
+      fen: "8/8/3k4/6Q1/8/6K1/2r5/8 w - - 0 1"
+      coups: [g5g6]
+      explication: "The queen goes to g6: check to the king, and at the same time it attacks the rook on c2. The king must escape: the rook is taken."

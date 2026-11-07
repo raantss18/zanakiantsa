@@ -1,0 +1,157 @@
+id: reading-1re
+titre: "Lire des textes du monde anglophone (première)"
+niveau: 1re
+prerequis: [reading-2de, present-perfect-continuous]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES) : tableau des descripteurs
+# de la réception, colonne B1 ; axes 4, 1, 6 et 7 de « Gestes fondateurs et mondes en mouvement ». Lu le 2026-11-07.
+# L'enquête du journal du lycée et le robot écossais sont des fictions écrites pour la leçon.
+programme: { source: lycee_ct, texte: "Réception, B1 : peut localiser une information recherchée dans un texte long et peut réunir des informations provenant de différents parties du texte, ou de textes différents, afin d’accomplir une tâche précise. Axes : Citoyenneté et mondes virtuels ; Identités et échanges ; Innovations scientifiques et responsabilité ; Diversité et inclusion." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Cherche dans le texte la phrase qui répond, puis vérifie les petits mots qui changent le sens : most, only, both, if, will."
+phrases:
+  consigne: "Lis le texte en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis la phrase qui répond et pèse chaque petit mot : most, la plupart ; only one in four, un sur quatre seulement ; both, les deux."
+  exemple: "« Most students walk to school, but only a few cycle. » Que font la plupart ? « Most » : la plupart vont à pied."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« Our school newspaper asked 120 students how they get the news. Most of them said they use social media, but only one in four said they trusted what they read there. » Combien d'élèves font confiance à ce qu'ils lisent sur les réseaux ?"
+    nom: "un sur quatre"
+    explication: "« only one in four said they trusted what they read there » : un sur quatre seulement."
+    pieges:
+      - { texte: "la plupart", pourquoi: "« Most » dit combien utilisent les réseaux, pas combien leur font confiance." }
+      - { texte: "les 120", pourquoi: "120, c'est le nombre d'élèves interrogés." }
+  - texte: "« Our school newspaper asked 120 students how they get the news. Most of them said they use social media, but only one in four said they trusted what they read there. » Que dit le texte de la plupart des élèves ?"
+    nom: "Ils s'informent sur les réseaux sociaux."
+    explication: "« Most of them said they use social media » : la plupart s'informent sur les réseaux."
+    pieges:
+      - { texte: "Ils font confiance à ce qu'ils lisent.", pourquoi: "« but only one in four » : un sur quatre seulement leur fait confiance." }
+      - { texte: "Ils lisent le journal du lycée.", pourquoi: "Le journal du lycée a posé la question ; le texte ne dit pas qu'ils le lisent pour s'informer." }
+  - texte: "« Ellis Island, in New York Harbor, was the main immigration station of the United States from 1892 to 1954. Millions of immigrants had their papers checked there before they were allowed to enter the country. » Qu'était Ellis Island ?"
+    nom: "le principal poste d'immigration des États-Unis"
+    explication: "« the main immigration station of the United States » : le principal poste d'immigration."
+    pieges:
+      - { texte: "une prison", pourquoi: "Le texte parle d'« immigration station » : on y contrôlait les immigrants." }
+      - { texte: "un port de commerce", pourquoi: "L'île est dans le port, « in New York Harbor », mais c'était un poste d'immigration." }
+  - texte: "« Millions of immigrants had their papers checked there before they were allowed to enter the country. » Que se passait-il avant d'entrer dans le pays ?"
+    nom: "On contrôlait leurs papiers."
+    explication: "« had their papers checked » : on faisait contrôler leurs papiers."
+    pieges:
+      - { texte: "Ils construisaient la station.", pourquoi: "« had their papers checked » parle de papiers contrôlés, pas d'une construction." }
+      - { texte: "Ils repartaient chez eux.", pourquoi: "« before they were allowed to enter » : ensuite, ils avaient le droit d'entrer." }
+  - texte: "« Scientists in Scotland have been testing a robot that collects plastic from rivers. If the tests are successful, the robot will be used in other countries next year. » Que fait le robot ?"
+    nom: "Il ramasse le plastique des rivières."
+    explication: "« a robot that collects plastic from rivers » : il ramasse le plastique dans les rivières."
+    pieges:
+      - { texte: "Il fabrique du plastique.", pourquoi: "« collects » veut dire ramasser, collecter, pas fabriquer." }
+      - { texte: "Il nettoie les océans.", pourquoi: "Le texte dit « rivers », les rivières, pas les océans." }
+  - texte: "« If the tests are successful, the robot will be used in other countries next year. » Le robot sera-t-il utilisé ailleurs ?"
+    nom: "Oui, si les essais réussissent."
+    explication: "« If the tests are successful » : à condition que les essais réussissent."
+    pieges:
+      - { texte: "Oui, il l'est déjà.", pourquoi: "« will be used … next year » : c'est pour l'an prochain, pas encore." }
+      - { texte: "Non, jamais.", pourquoi: "Le texte prévoit un usage dans d'autres pays, « if the tests are successful »." }
+  - texte: "« Wales has two official languages, Welsh and English. Road signs are written in both languages. » En quelles langues sont les panneaux ?"
+    nom: "en gallois et en anglais"
+    explication: "« in both languages » : dans les deux langues, le gallois et l'anglais."
+    pieges:
+      - { texte: "en anglais seulement", pourquoi: "« both » veut dire les deux : gallois et anglais." }
+      - { texte: "en gallois seulement", pourquoi: "« both » veut dire les deux : gallois et anglais." }
+  - texte: "« Road signs are written in both languages. » Que veut dire « both » ?"
+    nom: "les deux"
+    explication: "« both languages » : les deux langues."
+    pieges:
+      - { texte: "aucune des deux", pourquoi: "Aucune des deux se dirait « neither »." }
+      - { texte: "l'une ou l'autre", pourquoi: "L'une ou l'autre se dirait « either »." }
+  - texte: "« Scientists in Scotland have been testing a robot… » Pourquoi « have been testing » ?"
+    nom: "Les essais ont commencé dans le passé et continuent maintenant."
+    explication: "have been + -ing : une activité commencée dans le passé qui dure encore."
+    pieges:
+      - { texte: "Parce que les essais sont finis depuis longtemps.", pourquoi: "Des essais finis avant un moment passé seraient « had been testing ». Ici, ils continuent." }
+      - { texte: "Parce que les essais commenceront l'an prochain.", pourquoi: "« next year » concerne l'usage dans d'autres pays. Les essais ont déjà commencé." }
+en:
+  titre: "Reading texts from the English-speaking world (Year 11)"
+  idee: "Find the sentence in the text that answers, then check the small words that change the meaning: most, only, both, if, will."
+  phrases:
+    consigne: "Read the text, then touch the right answer."
+    question: "{texte}"
+    indice: "Read again the sentence that answers and weigh each small word: most, only one in four, both."
+    exemple: "“Most students walk to school, but only a few cycle.” What do most of them do? Most: they walk."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“Our school newspaper asked 120 students how they get the news. Most of them said they use social media, but only one in four said they trusted what they read there.” How many students trust what they read on social media?"
+      nom: "one in four"
+      explication: "“only one in four said they trusted what they read there”."
+      pieges:
+        - texte: "most of them"
+          pourquoi: "“Most” says how many use social media, not how many trust it."
+        - texte: "all 120"
+          pourquoi: "120 is the number of students who were asked."
+    - texte: "“Our school newspaper asked 120 students how they get the news. Most of them said they use social media, but only one in four said they trusted what they read there.” What does the text say about most students?"
+      nom: "They get the news on social media."
+      explication: "“Most of them said they use social media.”"
+      pieges:
+        - texte: "They trust what they read."
+          pourquoi: "“but only one in four”: only one in four trusts it."
+        - texte: "They read the school newspaper."
+          pourquoi: "The school newspaper asked the question; the text doesn't say they read it for the news."
+    - texte: "“Ellis Island, in New York Harbor, was the main immigration station of the United States from 1892 to 1954. Millions of immigrants had their papers checked there before they were allowed to enter the country.” What was Ellis Island?"
+      nom: "the main immigration station of the United States"
+      explication: "“the main immigration station of the United States”."
+      pieges:
+        - texte: "a prison"
+          pourquoi: "The text talks about an immigration station: immigrants were checked there."
+        - texte: "a trading port"
+          pourquoi: "The island is in the harbour, but it was an immigration station."
+    - texte: "“Millions of immigrants had their papers checked there before they were allowed to enter the country.” What happened before they entered the country?"
+      nom: "Their papers were checked."
+      explication: "“had their papers checked”."
+      pieges:
+        - texte: "They built the station."
+          pourquoi: "“had their papers checked” is about papers, not building."
+        - texte: "They went back home."
+          pourquoi: "“before they were allowed to enter”: afterwards, they could enter."
+    - texte: "“Scientists in Scotland have been testing a robot that collects plastic from rivers. If the tests are successful, the robot will be used in other countries next year.” What does the robot do?"
+      nom: "It collects plastic from rivers."
+      explication: "“a robot that collects plastic from rivers”."
+      pieges:
+        - texte: "It makes plastic."
+          pourquoi: "“collects” means picks up, not makes."
+        - texte: "It cleans the oceans."
+          pourquoi: "The text says rivers, not oceans."
+    - texte: "“If the tests are successful, the robot will be used in other countries next year.” Will the robot be used elsewhere?"
+      nom: "Yes, if the tests are successful."
+      explication: "“If the tests are successful”: only on that condition."
+      pieges:
+        - texte: "Yes, it already is."
+          pourquoi: "“will be used … next year”: that's next year, not yet."
+        - texte: "No, never."
+          pourquoi: "The text plans to use it in other countries, if the tests are successful."
+    - texte: "“Wales has two official languages, Welsh and English. Road signs are written in both languages.” Which languages are road signs written in?"
+      nom: "Welsh and English"
+      explication: "“in both languages”: Welsh and English."
+      pieges:
+        - texte: "English only"
+          pourquoi: "“both” means the two of them: Welsh and English."
+        - texte: "Welsh only"
+          pourquoi: "“both” means the two of them: Welsh and English."
+    - texte: "“Road signs are written in both languages.” What does “both” mean?"
+      nom: "the two of them"
+      explication: "“both languages”: the two languages."
+      pieges:
+        - texte: "neither of them"
+          pourquoi: "That would be “neither”."
+        - texte: "one or the other"
+          pourquoi: "That would be “either”."
+    - texte: "“Scientists in Scotland have been testing a robot…” Why “have been testing”?"
+      nom: "The tests started in the past and are still going on."
+      explication: "have been + -ing: an activity that started in the past and goes on."
+      pieges:
+        - texte: "Because the tests finished long ago."
+          pourquoi: "Tests that ended before a past moment would be had been testing. Here they go on."
+        - texte: "Because the tests will start next year."
+          pourquoi: "“next year” is about using it in other countries. The tests have already started."

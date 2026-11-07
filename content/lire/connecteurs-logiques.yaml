@@ -1,0 +1,137 @@
+id: connecteurs-logiques
+titre: "Choisir le bon connecteur logique"
+niveau: 3e
+prerequis: ["texte-argumentatif"]
+programme: { source: cycle4, texte: "Employer des connecteurs logiques variés pour assurer la progression logique d’un texte." }
+activite: quiz
+parametres: {}
+idee: "Les connecteurs relient les idées : addition (de plus), cause (car, en effet), conséquence (donc, par conséquent), opposition (mais, pourtant, cependant), conclusion (bref, enfin)."
+phrases:
+  consigne: "Lis les deux idées, trouve le lien entre elles, puis touche le connecteur qui convient."
+  question: "{texte}"
+  indice: "La deuxième idée ajoute-t-elle, explique-t-elle, découle-t-elle de la première, ou s’y oppose-t-elle ?"
+  exemple: "« Il fait froid. ___, je mets un manteau. » : mettre un manteau découle du froid, c’est une conséquence : « Donc »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète : « Il a beaucoup révisé. ___, il a réussi son examen. »"
+    nom: "Par conséquent"
+    explication: "La réussite découle des révisions : c’est une conséquence."
+    pieges:
+      - { texte: "Pourtant", pourquoi: "« Pourtant » oppose deux idées. Ici, la réussite est le résultat attendu des révisions." }
+      - { texte: "En effet", pourquoi: "« En effet » annonce une explication. Ici, la deuxième idée est le résultat de la première." }
+  - texte: "Complète : « Il a beaucoup révisé. ___, il a échoué. »"
+    nom: "Pourtant"
+    explication: "Échouer après avoir révisé est inattendu : on marque une opposition."
+    pieges:
+      - { texte: "Donc", pourquoi: "Échouer n’est pas le résultat attendu des révisions : il faut une opposition." }
+      - { texte: "De plus", pourquoi: "« De plus » ajoute une idée qui va dans le même sens ; ici, les deux idées s’opposent." }
+  - texte: "Complète : « Je reste à la maison ___ je suis malade. »"
+    nom: "car"
+    explication: "Être malade est la raison de rester à la maison : « car » annonce la cause."
+    pieges:
+      - { texte: "donc", pourquoi: "« donc » annonce une conséquence. Ici, être malade est la cause." }
+      - { texte: "mais", pourquoi: "« mais » oppose deux idées ; ici, la deuxième explique la première." }
+  - texte: "Complète : « Le sport est bon pour la santé. ___, il permet de se faire des amis. »"
+    nom: "De plus"
+    explication: "La deuxième idée ajoute un avantage du sport : c’est une addition."
+    pieges:
+      - { texte: "Cependant", pourquoi: "Les deux idées vont dans le même sens : on ajoute, on n’oppose pas." }
+      - { texte: "Car", pourquoi: "Se faire des amis n’explique pas que le sport soit bon pour la santé : c’est un avantage de plus." }
+  - texte: "Complète : « Les écrans peuvent fatiguer les yeux. ___, ils permettent d’apprendre beaucoup de choses. »"
+    nom: "Cependant"
+    explication: "Un inconvénient, puis un avantage : la deuxième idée s’oppose à la première."
+    pieges:
+      - { texte: "Ainsi", pourquoi: "« Ainsi » annonce une conséquence ; ici, la deuxième idée s’oppose à la première." }
+      - { texte: "En effet", pourquoi: "« En effet » explique l’idée d’avant ; ici, la deuxième idée la contredit." }
+  - texte: "Complète : « La forêt protège les sols. ___, les racines des arbres retiennent la terre quand il pleut. »"
+    nom: "En effet"
+    explication: "La deuxième phrase explique comment la forêt protège les sols : « En effet » annonce une explication."
+    pieges:
+      - { texte: "Pourtant", pourquoi: "Les deux idées ne s’opposent pas : la deuxième explique la première." }
+      - { texte: "Donc", pourquoi: "« Donc » annonce une conséquence ; ici, la phrase explique pourquoi la forêt protège les sols." }
+  - texte: "Quel connecteur ne marque PAS une opposition ?"
+    nom: "c’est pourquoi"
+    explication: "« c’est pourquoi » annonce une conséquence."
+    pieges:
+      - { texte: "néanmoins", pourquoi: "« néanmoins » marque bien une opposition, comme « pourtant »." }
+      - { texte: "en revanche", pourquoi: "« en revanche » marque bien une opposition entre deux idées." }
+  - texte: "Complète : « Il faut lire, écouter, se tromper et recommencer. ___, apprendre demande de la patience. »"
+    nom: "Bref"
+    explication: "La dernière phrase résume tout ce qui précède : « Bref » annonce une conclusion."
+    pieges:
+      - { texte: "Car", pourquoi: "« Car » annonce une cause ; ici, on résume ce qui vient d’être dit." }
+      - { texte: "Pourtant", pourquoi: "La dernière phrase ne s’oppose pas aux autres : elle les résume." }
+  - texte: "Pourquoi « mais » ne convient-il pas dans « Il fait froid, ___ je mets un manteau. » ?"
+    nom: "Mettre un manteau est la conséquence du froid, pas une opposition."
+    explication: "Le lien est une conséquence : il faut « donc », pas « mais »."
+    pieges:
+      - { texte: "Parce que « mais » ne s’emploie jamais après une virgule.", pourquoi: "« mais » suit souvent une virgule (« Il fait froid, mais je sors ») : c’est le sens qui ne va pas." }
+      - { texte: "Parce que « mais » marque une cause.", pourquoi: "« mais » marque une opposition, pas une cause." }
+
+en:
+  langue: "fr"
+  titre: "French: choosing the right connective"
+  idee: "Connectives link ideas: adding (« de plus »), cause (« car », « en effet »), result (« donc », « par conséquent »), contrast (« mais », « pourtant », « cependant »), conclusion (« bref », « enfin »)."
+  phrases:
+    consigne: "Read the two ideas, find the link between them, then touch the right French connective."
+    question: "{texte}"
+    indice: "Does the second idea add to, explain, follow from, or contrast with the first?"
+    exemple: "« Il fait froid. ___, je mets un manteau. »: putting on a coat follows from the cold, it's a result: « Donc »."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Fill in the gap: « Il a beaucoup révisé. ___, il a réussi son examen. »"
+      nom: "Par conséquent"
+      explication: "Passing follows from revising: it's a result."
+      pieges:
+        - { texte: "Pourtant", pourquoi: "« Pourtant » contrasts two ideas. Here, passing is the expected result of revising." }
+        - { texte: "En effet", pourquoi: "« En effet » introduces an explanation. Here, the second idea is the result of the first." }
+    - texte: "Fill in the gap: « Il a beaucoup révisé. ___, il a échoué. »"
+      nom: "Pourtant"
+      explication: "Failing after revising is unexpected: you mark a contrast."
+      pieges:
+        - { texte: "Donc", pourquoi: "Failing isn't the expected result of revising: you need a contrast." }
+        - { texte: "De plus", pourquoi: "« De plus » adds an idea pointing the same way; here the two ideas contrast." }
+    - texte: "Fill in the gap: « Je reste à la maison ___ je suis malade. »"
+      nom: "car"
+      explication: "Being ill is the reason for staying at home: « car » introduces the cause."
+      pieges:
+        - { texte: "donc", pourquoi: "« donc » introduces a result. Here, being ill is the cause." }
+        - { texte: "mais", pourquoi: "« mais » contrasts two ideas; here the second explains the first." }
+    - texte: "Fill in the gap: « Le sport est bon pour la santé. ___, il permet de se faire des amis. »"
+      nom: "De plus"
+      explication: "The second idea adds another benefit of sport: it's an addition."
+      pieges:
+        - { texte: "Cependant", pourquoi: "Both ideas point the same way: you add, you don't contrast." }
+        - { texte: "Car", pourquoi: "Making friends doesn't explain why sport is healthy: it's an extra benefit." }
+    - texte: "Fill in the gap: « Les écrans peuvent fatiguer les yeux. ___, ils permettent d’apprendre beaucoup de choses. »"
+      nom: "Cependant"
+      explication: "A drawback, then a benefit: the second idea contrasts with the first."
+      pieges:
+        - { texte: "Ainsi", pourquoi: "« Ainsi » introduces a result; here the second idea contrasts with the first." }
+        - { texte: "En effet", pourquoi: "« En effet » explains the idea before; here the second idea goes against it." }
+    - texte: "Fill in the gap: « La forêt protège les sols. ___, les racines des arbres retiennent la terre quand il pleut. »"
+      nom: "En effet"
+      explication: "The second sentence explains how the forest protects the soil: « En effet » introduces an explanation."
+      pieges:
+        - { texte: "Pourtant", pourquoi: "The two ideas don't contrast: the second explains the first." }
+        - { texte: "Donc", pourquoi: "« Donc » introduces a result; here the sentence explains why the forest protects the soil." }
+    - texte: "Which connective does NOT mark a contrast?"
+      nom: "c’est pourquoi"
+      explication: "« c’est pourquoi » (that's why) introduces a result."
+      pieges:
+        - { texte: "néanmoins", pourquoi: "« néanmoins » does mark a contrast, like « pourtant »." }
+        - { texte: "en revanche", pourquoi: "« en revanche » does mark a contrast between two ideas." }
+    - texte: "Fill in the gap: « Il faut lire, écouter, se tromper et recommencer. ___, apprendre demande de la patience. »"
+      nom: "Bref"
+      explication: "The last sentence sums up everything before it: « Bref » introduces a conclusion."
+      pieges:
+        - { texte: "Car", pourquoi: "« Car » introduces a cause; here we're summing up what has just been said." }
+        - { texte: "Pourtant", pourquoi: "The last sentence doesn't contrast with the others: it sums them up." }
+    - texte: "Why doesn't « mais » fit in « Il fait froid, ___ je mets un manteau. »?"
+      nom: "Putting on a coat is a result of the cold, not a contrast."
+      explication: "The link is a result: you need « donc », not « mais »."
+      pieges:
+        - { texte: "Because « mais » is never used after a comma.", pourquoi: "« mais » often follows a comma (« Il fait froid, mais je sors »): it's the meaning that doesn't fit." }
+        - { texte: "Because « mais » marks a cause.", pourquoi: "« mais » marks a contrast, not a cause." }

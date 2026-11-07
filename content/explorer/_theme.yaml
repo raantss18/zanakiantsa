@@ -2,9 +2,9 @@ id: explorer
 titre: Explorer en 3D
 nom: "Explorer"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Le corps humain, la Terre et l'espace, les solides, puis l'histoire et la géographie jusqu'à la 3e."
+resume: "Le corps humain, la Terre et l'espace, les solides, puis l'histoire et la géographie jusqu'à la 1re."
 icone: "1f52d"
-ages: [4, 15]
+ages: [4, 17]
 # Corps : maternelle consolidée p. 59-60. Solides : programme de mathématiques du cycle 2 (CP), « Les solides ».
 # Planètes : NASA Science, « Planets » (ordre, tailles), consulté le 2026-11-03 ; thème du programme de cycle 3
 # (« situer la Terre dans le système solaire »), texte du programme non relu. Scènes 3D : ADR 0024.
@@ -25,7 +25,12 @@ sources:
   # Programme du cycle 4 en vigueur à la rentrée 2020 (BOEN n° 31 du 30 juillet 2020), Éduscol : histoire et géographie
   # p. 79-91, physique-chimie p. 98-104. Lu le 2026-11-07.
   c4: "https://eduscol.education.fr/document/621/download"
-ordre: [corps-parties, solides-nommer, solides-reconnaitre, planetes, muscles-articulations, coeur-souffle, grandes-periodes, continents-oceans, lire-carte, terre-soleil, jour-nuit, saisons, moyen-age, univers-distances, revolution-empire, republique-xixe, guerres-mondiales, france-outre-mer]
+  # Lycée, programmes d'histoire-géographie du BO spécial n° 1 du 22 janvier 2019 (2de : annexe 1 ; 1re générale : annexe 2).
+  # Les pages du BO renvoient 403 aux robots : texte lu dans des copies fidèles des annexes publiées par le SNES-FSU
+  # (en-tête et pied de page du ministère), le 2026-11-07. Aucun nouveau programme de lycée trouvé à cette date.
+  hg2de: "https://www.snes.edu/IMG/pdf/hist-geog_annexe-1_2e_bo.pdf"
+  hg1re: "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf"
+ordre: [corps-parties, solides-nommer, solides-reconnaitre, planetes, muscles-articulations, coeur-souffle, grandes-periodes, continents-oceans, lire-carte, terre-soleil, jour-nuit, saisons, moyen-age, univers-distances, revolution-empire, republique-xixe, guerres-mondiales, france-outre-mer, mediterranee-antique-medievale, renaissance-humanisme, societes-environnements, mobilites-migrations, europe-revolutions, grande-guerre-lycee, metropolisation]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -39,7 +44,7 @@ intro:
 en:
   titre: "Exploring in 3D"
   nom: "Explore"
-  resume: "The human body, the Earth and space, solid shapes, then history and geography up to Year 10."
+  resume: "The human body, the Earth and space, solid shapes, then history and geography up to Year 11 (1re)."
   intro:
     - texte: "Turn the objects with your finger."
       images: ["1f446", "1f30d"]

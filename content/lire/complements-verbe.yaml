@@ -1,0 +1,149 @@
+id: complements-verbe
+titre: "COD, COI ou complément circonstanciel ?"
+niveau: CM2
+prerequis: ["sujet-et-verbe"]
+programme: { source: cycle3, texte: "Différencier complément d’objet direct et complément d’objet indirect" }
+activite: quiz
+parametres: {}
+idee: "Le COD est relié au verbe sans préposition. Le COI est relié au verbe par une préposition (à, de). Le complément circonstanciel dit où, quand ou pourquoi : on peut le déplacer ou le supprimer."
+phrases:
+  consigne: "Trouve le verbe, puis regarde comment le groupe s’y rattache. Touche sa fonction."
+  question: "{texte}"
+  indice: "Y a-t-il une préposition (à, de) ? Le groupe dit-il où, quand, pourquoi ? Peut-on le déplacer ?"
+  exemple: "« Sami parle à son frère » : « à son frère » est relié au verbe « parle » par la préposition « à », c’est un COI."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « Léa mange une mangue. », quelle est la fonction de « une mangue » ?"
+    nom: "COD"
+    explication: "Léa mange quoi ? Une mangue. Le groupe est relié au verbe sans préposition : c’est un COD."
+    pieges:
+      - { texte: "COI", pourquoi: "Un COI est relié au verbe par une préposition (à, de). Ici, il n’y en a pas." }
+      - { texte: "complément circonstanciel", pourquoi: "Il ne dit ni où, ni quand, ni pourquoi : il dit ce que Léa mange." }
+  - texte: "Dans « Sami parle à son frère. », quelle est la fonction de « à son frère » ?"
+    nom: "COI"
+    explication: "Sami parle à qui ? À son frère. Le groupe est relié au verbe par la préposition « à » : c’est un COI."
+    pieges:
+      - { texte: "COD", pourquoi: "Un COD est relié au verbe sans préposition. Ici, il y a « à »." }
+      - { texte: "complément circonstanciel", pourquoi: "Il ne dit ni où, ni quand, ni pourquoi : il dit à qui Sami parle." }
+  - texte: "Dans « Le soir, nous lisons une histoire. », quelle est la fonction de « Le soir » ?"
+    nom: "complément circonstanciel"
+    explication: "« Le soir » dit quand ; on peut le déplacer (« Nous lisons une histoire le soir ») ou le supprimer."
+    pieges:
+      - { texte: "COD", pourquoi: "Nous lisons quoi ? Une histoire : c’est « une histoire », le COD. « Le soir » dit quand." }
+      - { texte: "COI", pourquoi: "Un COI est relié au verbe par une préposition (à, de). « Le soir » dit quand, et on peut le déplacer." }
+  - texte: "Dans « Il pense à ses vacances. », quelle est la fonction de « à ses vacances » ?"
+    nom: "COI"
+    explication: "Il pense à quoi ? À ses vacances. Le groupe est relié au verbe par « à », et on ne peut pas le déplacer : c’est un COI."
+    pieges:
+      - { texte: "COD", pourquoi: "Un COD est relié au verbe sans préposition. Ici, il y a « à »." }
+      - { texte: "complément circonstanciel", pourquoi: "On ne peut ni le déplacer ni le supprimer sans changer le sens : « Il pense » seul ne dit pas la même chose." }
+  - texte: "Dans « Les enfants jouent dans la cour. », quelle est la fonction de « dans la cour » ?"
+    nom: "complément circonstanciel"
+    explication: "« dans la cour » dit où ; on peut le déplacer (« Dans la cour, les enfants jouent ») ou le supprimer."
+    pieges:
+      - { texte: "COD", pourquoi: "Un COD est relié au verbe sans préposition. Ici, « dans la cour » dit où." }
+      - { texte: "COI", pourquoi: "On peut déplacer ou supprimer « dans la cour » : ce n’est pas un COI, c’est un complément circonstanciel de lieu." }
+  - texte: "Dans « Mon frère regarde les étoiles. », quelle est la fonction de « les étoiles » ?"
+    nom: "COD"
+    explication: "Mon frère regarde quoi ? Les étoiles. Le groupe est relié au verbe sans préposition : c’est un COD."
+    pieges:
+      - { texte: "COI", pourquoi: "Un COI est relié au verbe par une préposition (à, de). Ici, il n’y en a pas." }
+      - { texte: "complément circonstanciel", pourquoi: "Il ne dit ni où, ni quand, ni pourquoi : il dit ce que mon frère regarde." }
+  - texte: "Dans « Ils sont restés à la maison à cause de la pluie. », quel complément circonstanciel donne la cause ?"
+    nom: "à cause de la pluie"
+    explication: "Pourquoi sont-ils restés ? À cause de la pluie : c’est le complément circonstanciel de cause."
+    pieges:
+      - { texte: "à la maison", pourquoi: "« à la maison » dit où ils sont restés : c’est un complément de lieu." }
+      - { texte: "Ils", pourquoi: "« Ils » est le sujet du verbe « sont restés »." }
+  - texte: "Dans « Chaque matin, Tom promène son chien dans le parc. », quelle sorte de complément circonstanciel est « dans le parc » ?"
+    nom: "de lieu"
+    explication: "« dans le parc » dit où Tom promène son chien : c’est un complément circonstanciel de lieu."
+    pieges:
+      - { texte: "de temps", pourquoi: "« dans le parc » dit où, pas quand. C’est « Chaque matin » qui dit quand." }
+      - { texte: "de cause", pourquoi: "Rien ne dit pourquoi Tom promène son chien. « dans le parc » dit où." }
+  - texte: "Dans « Nina se souvient de son voyage. », quelle est la fonction de « de son voyage » ?"
+    nom: "COI"
+    explication: "Nina se souvient de quoi ? De son voyage. Le groupe est relié au verbe par la préposition « de » : c’est un COI."
+    pieges:
+      - { texte: "COD", pourquoi: "Un COD est relié au verbe sans préposition. Ici, il y a « de »." }
+      - { texte: "complément circonstanciel", pourquoi: "Il ne dit ni où, ni quand, ni pourquoi, et on ne peut pas le supprimer : on se souvient toujours de quelque chose." }
+  - texte: "Dans « Le matin, Léo boit du lait. », pourquoi « Le matin » est-il un complément circonstanciel ?"
+    nom: "Il dit quand, et on peut le déplacer ou le supprimer."
+    explication: "« Léo boit du lait le matin », « Léo boit du lait » : la phrase reste juste. C’est un complément circonstanciel de temps."
+    pieges:
+      - { texte: "Parce qu’il est au début de la phrase.", pourquoi: "La place ne suffit pas : on vérifie qu’il dit quand, où ou pourquoi, et qu’on peut le déplacer ou le supprimer." }
+      - { texte: "Parce qu’il répond à la question « quoi ? ».", pourquoi: "C’est « du lait » qui répond à « Léo boit quoi ? » : c’est le COD." }
+
+en:
+  langue: "fr"
+  titre: "French: direct object, indirect object or adverbial?"
+  idee: "The direct object (COD) joins the verb with no preposition. The indirect object (COI) joins it with a preposition (« à », « de »). An adverbial says where, when or why: you can move it or remove it."
+  phrases:
+    consigne: "Find the verb, then see how the group is attached to it. Touch its function."
+    question: "{texte}"
+    indice: "Is there a preposition (« à », « de »)? Does the group say where, when, why? Can you move it?"
+    exemple: "« Sami parle à son frère »: « à son frère » joins the verb « parle » with the preposition « à », so it's an indirect object (COI)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "In « Léa mange une mangue. », what is the function of « une mangue »?"
+      nom: "direct object (COD)"
+      explication: "Léa eats what? « une mangue ». The group joins the verb with no preposition: it's a direct object."
+      pieges:
+        - { texte: "indirect object (COI)", pourquoi: "An indirect object joins the verb with a preposition (« à », « de »). There isn't one here." }
+        - { texte: "adverbial", pourquoi: "It doesn't say where, when or why: it says what Léa eats." }
+    - texte: "In « Sami parle à son frère. », what is the function of « à son frère »?"
+      nom: "indirect object (COI)"
+      explication: "Sami talks to whom? « à son frère ». The group joins the verb with the preposition « à »: it's an indirect object."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "A direct object joins the verb with no preposition. Here there's « à »." }
+        - { texte: "adverbial", pourquoi: "It doesn't say where, when or why: it says who Sami is talking to." }
+    - texte: "In « Le soir, nous lisons une histoire. », what is the function of « Le soir »?"
+      nom: "adverbial"
+      explication: "« Le soir » says when; you can move it (« Nous lisons une histoire le soir ») or remove it."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "We read what? « une histoire »: that's the direct object. « Le soir » says when." }
+        - { texte: "indirect object (COI)", pourquoi: "An indirect object joins the verb with a preposition (« à », « de »). « Le soir » says when, and you can move it." }
+    - texte: "In « Il pense à ses vacances. », what is the function of « à ses vacances »?"
+      nom: "indirect object (COI)"
+      explication: "He's thinking about what? « à ses vacances ». The group joins the verb with « à », and you can't move it: it's an indirect object."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "A direct object joins the verb with no preposition. Here there's « à »." }
+        - { texte: "adverbial", pourquoi: "You can't move or remove it without changing the meaning: « Il pense » alone doesn't say the same thing." }
+    - texte: "In « Les enfants jouent dans la cour. », what is the function of « dans la cour »?"
+      nom: "adverbial"
+      explication: "« dans la cour » says where; you can move it (« Dans la cour, les enfants jouent ») or remove it."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "A direct object joins the verb with no preposition. Here « dans la cour » says where." }
+        - { texte: "indirect object (COI)", pourquoi: "You can move or remove « dans la cour »: it isn't an indirect object, it's an adverbial of place." }
+    - texte: "In « Mon frère regarde les étoiles. », what is the function of « les étoiles »?"
+      nom: "direct object (COD)"
+      explication: "My brother looks at what? « les étoiles ». The group joins the verb with no preposition: it's a direct object."
+      pieges:
+        - { texte: "indirect object (COI)", pourquoi: "An indirect object joins the verb with a preposition (« à », « de »). There isn't one here." }
+        - { texte: "adverbial", pourquoi: "It doesn't say where, when or why: it says what my brother is looking at." }
+    - texte: "In « Ils sont restés à la maison à cause de la pluie. », which adverbial gives the reason?"
+      nom: "à cause de la pluie"
+      explication: "Why did they stay? « à cause de la pluie », because of the rain: it's the adverbial of cause."
+      pieges:
+        - { texte: "à la maison", pourquoi: "« à la maison » says where they stayed: it's an adverbial of place." }
+        - { texte: "Ils", pourquoi: "« Ils » is the subject of the verb « sont restés »." }
+    - texte: "In « Chaque matin, Tom promène son chien dans le parc. », what kind of adverbial is « dans le parc »?"
+      nom: "of place"
+      explication: "« dans le parc » says where Tom walks his dog: it's an adverbial of place."
+      pieges:
+        - { texte: "of time", pourquoi: "« dans le parc » says where, not when. It's « Chaque matin » that says when." }
+        - { texte: "of cause", pourquoi: "Nothing says why Tom walks his dog. « dans le parc » says where." }
+    - texte: "In « Nina se souvient de son voyage. », what is the function of « de son voyage »?"
+      nom: "indirect object (COI)"
+      explication: "Nina remembers what? « de son voyage ». The group joins the verb with the preposition « de »: it's an indirect object."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "A direct object joins the verb with no preposition. Here there's « de »." }
+        - { texte: "adverbial", pourquoi: "It doesn't say where, when or why, and you can't remove it: you always remember something." }
+    - texte: "In « Le matin, Léo boit du lait. », why is « Le matin » an adverbial?"
+      nom: "It says when, and you can move it or remove it."
+      explication: "« Léo boit du lait le matin », « Léo boit du lait »: the sentence still works. It's an adverbial of time."
+      pieges:
+        - { texte: "Because it's at the start of the sentence.", pourquoi: "Position isn't enough: check that it says when, where or why, and that you can move or remove it." }
+        - { texte: "Because it answers the question « what? ».", pourquoi: "It's « du lait » that answers « Léo drinks what? »: that's the direct object." }

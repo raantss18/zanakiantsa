@@ -1,0 +1,124 @@
+id: biodiversite-evolution
+titre: "Biodiversité et évolution"
+niveau: 2de
+prerequis: [cellule-adn]
+programme: { source: svt2de, texte: "L’évolution de la biodiversité au cours du temps s’explique par des forces évolutives s’exerçant au niveau des populations" }
+activite: quiz
+parametres: {}
+idee: "La biodiversité se voit à trois échelles : gènes, espèces, écosystèmes. Elle change sans cesse sous l'effet de la sélection naturelle, de la dérive génétique et de la séparation des populations."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense aux mots clés : allèle, mutation, sélection naturelle, dérive génétique, spéciation, crise biologique."
+  exemple: "Exemple : on traite une population de moustiques avec un insecticide. Les rares moustiques porteurs d'un allèle de résistance survivent et ont plus de descendants : la fréquence de cet allèle augmente. C'est la sélection naturelle."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelles sont les trois échelles de la biodiversité ?"
+    nom: "La diversité génétique, la diversité des espèces, la diversité des écosystèmes."
+    explication: "La biodiversité va des différences entre individus d'une même espèce jusqu'aux écosystèmes de la biosphère."
+    pieges:
+      - { texte: "Seulement le nombre d'espèces.", pourquoi: "On réduit souvent la biodiversité aux espèces ; elle compte aussi la diversité au sein d'une espèce et celle des écosystèmes." }
+      - { texte: "Les animaux, les plantes et les roches.", pourquoi: "Les roches ne sont pas vivantes : la biodiversité ne concerne que le vivant et ses milieux." }
+  - texte: "D'où viennent les différents allèles d'un même gène dans une population ?"
+    nom: "De mutations survenues au cours des générations."
+    explication: "Une mutation modifie la séquence de l'ADN ; elle peut créer un nouvel allèle, transmis ensuite aux descendants."
+    pieges:
+      - { texte: "Des efforts faits par les individus pendant leur vie.", pourquoi: "C'est une idée ancienne : ce qu'un individu acquiert par l'effort ne modifie pas son ADN ni celui de ses enfants." }
+      - { texte: "De la nourriture qu'ils mangent.", pourquoi: "Les aliments ne fabriquent pas d'allèles : les allèles naissent de mutations de l'ADN." }
+  - texte: "Dans un champ traité aux insecticides, la proportion de moustiques résistants augmente. Pourquoi ?"
+    nom: "Les moustiques déjà résistants survivent et ont plus de descendants."
+    explication: "La sélection naturelle trie des variations qui existaient déjà : les porteurs de l'allèle de résistance laissent plus de descendants."
+    pieges:
+      - { texte: "Les moustiques deviennent résistants pour s'adapter au poison.", pourquoi: "C'est la conception la plus répandue : les individus ne changent pas leur ADN pour s'adapter ; la résistance existait déjà chez quelques-uns." }
+      - { texte: "L'insecticide crée la résistance chez tous les moustiques.", pourquoi: "L'insecticide ne crée pas la résistance : il élimine les moustiques sensibles." }
+  - texte: "Qu'est-ce que la dérive génétique ?"
+    nom: "Une modification au hasard de la fréquence des allèles d'une génération à l'autre."
+    explication: "La dérive génétique est aléatoire ; elle est plus rapide quand la population est petite."
+    pieges:
+      - { texte: "Un tri des individus les mieux adaptés au milieu.", pourquoi: "Ça, c'est la sélection naturelle : la dérive, elle, ne dépend pas de l'avantage d'un allèle." }
+      - { texte: "Le déplacement des continents.", pourquoi: "Le mot « dérive » fait penser à la dérive des continents, mais ici il s'agit des allèles d'une population." }
+  - texte: "Pourquoi la dérive génétique est-elle plus forte dans une petite population ?"
+    nom: "Parce que le hasard pèse davantage quand il y a peu d'individus."
+    explication: "Avec peu d'individus, quelques naissances ou morts dues au hasard suffisent à faire varier fortement la fréquence d'un allèle."
+    pieges:
+      - { texte: "Parce que les mutations y sont plus nombreuses.", pourquoi: "Une petite population a au contraire moins de mutations au total : c'est l'effet du hasard qui y est plus fort." }
+      - { texte: "Parce que les individus y sont mieux adaptés.", pourquoi: "L'adaptation relève de la sélection naturelle, pas de la dérive." }
+  - texte: "Deux populations d'une même espèce sont séparées par une montagne pendant très longtemps. Que peut-il se passer ?"
+    nom: "Elles peuvent devenir deux espèces différentes : c'est la spéciation."
+    explication: "Séparées, les populations accumulent des différences génétiques ; elles peuvent finir par ne plus pouvoir se reproduire entre elles."
+    pieges:
+      - { texte: "Rien : une espèce ne change jamais.", pourquoi: "La biodiversité évolue en permanence : les fossiles et les exemples actuels le montrent." }
+      - { texte: "Elles redeviennent identiques.", pourquoi: "Sans échanges entre elles, rien ne les ramène vers le même état : leurs différences s'accumulent." }
+  - texte: "Il y a environ 66 millions d'années, à la limite Crétacé-Paléogène, de nombreux groupes disparaissent, dont les dinosaures non aviens. Comment appelle-t-on cet événement ?"
+    nom: "Une crise biologique, ou extinction de masse."
+    explication: "Une crise biologique est une extinction massive suivie d'une diversification. Ses causes probables : un impact de météorite et un volcanisme intense."
+    pieges:
+      - { texte: "Une spéciation.", pourquoi: "La spéciation fait apparaître des espèces ; ici, beaucoup disparaissent d'un coup." }
+      - { texte: "Une dérive génétique.", pourquoi: "La dérive agit dans une population ; une crise touche une grande partie du vivant de la planète." }
+  - texte: "Les espèces qui vivent aujourd'hui représentent-elles la plupart des espèces ayant existé ?"
+    nom: "Non : elles ne sont qu'une infime partie des êtres vivants ayant existé."
+    explication: "Les fossiles montrent que la biodiversité actuelle n'est qu'une étape de l'histoire du vivant."
+    pieges:
+      - { texte: "Oui, presque toutes les espèces existent encore.", pourquoi: "Les fossiles montrent au contraire d'innombrables espèces disparues." }
+      - { texte: "Oui, car les espèces ne disparaissent jamais.", pourquoi: "Les extinctions sont fréquentes ; on parle même aujourd'hui d'une « 6e crise biologique » liée aux activités humaines." }
+
+en:
+  titre: "Biodiversity and evolution"
+  idee: "Biodiversity is seen at three scales: genes, species, ecosystems. It changes constantly through natural selection, genetic drift and the separation of populations."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of the key words: allele, mutation, natural selection, genetic drift, speciation, biological crisis."
+    exemple: "Example: a population of mosquitoes is sprayed with insecticide. The rare mosquitoes carrying a resistance allele survive and have more offspring: the frequency of that allele rises. That's natural selection."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What are the three scales of biodiversity?"
+      nom: "Genetic diversity, species diversity, ecosystem diversity."
+      explication: "Biodiversity ranges from differences between individuals of the same species to the ecosystems of the biosphere."
+      pieges:
+        - { texte: "Only the number of species.", pourquoi: "Biodiversity is often reduced to species; it also includes diversity within a species and between ecosystems." }
+        - { texte: "Animals, plants and rocks.", pourquoi: "Rocks aren't alive: biodiversity is only about living things and their environments." }
+    - texte: "Where do the different alleles of the same gene in a population come from?"
+      nom: "From mutations that happened over the generations."
+      explication: "A mutation changes the DNA sequence; it can create a new allele, then passed on to offspring."
+      pieges:
+        - { texte: "From the efforts individuals make during their lives.", pourquoi: "That's an old idea: what an individual gains through effort doesn't change its DNA or its children's." }
+        - { texte: "From the food they eat.", pourquoi: "Food doesn't make alleles: alleles arise from DNA mutations." }
+    - texte: "In a field sprayed with insecticide, the share of resistant mosquitoes rises. Why?"
+      nom: "The mosquitoes that were already resistant survive and have more offspring."
+      explication: "Natural selection sorts variations that already existed: carriers of the resistance allele leave more offspring."
+      pieges:
+        - { texte: "The mosquitoes become resistant to adapt to the poison.", pourquoi: "That's the most common misconception: individuals don't change their DNA to adapt; resistance already existed in a few." }
+        - { texte: "The insecticide creates resistance in every mosquito.", pourquoi: "The insecticide doesn't create resistance: it kills the sensitive mosquitoes." }
+    - texte: "What is genetic drift?"
+      nom: "A random change in allele frequencies from one generation to the next."
+      explication: "Genetic drift is random; it's faster when the population is small."
+      pieges:
+        - { texte: "A sorting of the individuals best suited to their environment.", pourquoi: "That's natural selection: drift doesn't depend on whether an allele is an advantage." }
+        - { texte: "The movement of the continents.", pourquoi: "The word « drift » brings continental drift to mind, but here it's about the alleles of a population." }
+    - texte: "Why is genetic drift stronger in a small population?"
+      nom: "Because chance matters more when there are few individuals."
+      explication: "With few individuals, a few births or deaths due to chance are enough to change an allele's frequency a lot."
+      pieges:
+        - { texte: "Because there are more mutations in it.", pourquoi: "A small population actually has fewer mutations in total: it's the effect of chance that is stronger." }
+        - { texte: "Because its individuals are better adapted.", pourquoi: "Adaptation comes from natural selection, not drift." }
+    - texte: "Two populations of the same species are separated by a mountain range for a very long time. What can happen?"
+      nom: "They can become two different species: that's speciation."
+      explication: "Once separated, the populations build up genetic differences; in the end they may no longer be able to breed together."
+      pieges:
+        - { texte: "Nothing: a species never changes.", pourquoi: "Biodiversity is always changing: fossils and present-day examples show it." }
+        - { texte: "They become identical again.", pourquoi: "With no exchanges between them, nothing brings them back to the same state: their differences build up." }
+    - texte: "About 66 million years ago, at the Cretaceous-Paleogene boundary, many groups disappear, including the non-avian dinosaurs. What do we call this event?"
+      nom: "A biological crisis, or mass extinction."
+      explication: "A biological crisis is a mass extinction followed by diversification. Its likely causes: a meteorite impact and intense volcanic activity."
+      pieges:
+        - { texte: "A speciation.", pourquoi: "Speciation makes new species appear; here, many disappear at once." }
+        - { texte: "A genetic drift.", pourquoi: "Drift acts within one population; a crisis affects a large part of life on the planet." }
+    - texte: "Do the species living today make up most of the species that have ever existed?"
+      nom: "No: they are only a tiny fraction of the living things that have existed."
+      explication: "Fossils show that today's biodiversity is just one stage in the history of life."
+      pieges:
+        - { texte: "Yes, almost every species still exists.", pourquoi: "Fossils show, on the contrary, countless extinct species." }
+        - { texte: "Yes, because species never die out.", pourquoi: "Extinctions are common; today people even speak of a « 6th biological crisis » linked to human activity." }

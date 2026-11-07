@@ -1,0 +1,149 @@
+id: valeurs-temps-recit
+titre: "Imparfait et passé simple dans le récit"
+niveau: 4e
+prerequis: ["identifier-temps"]
+programme: { source: cycle4, texte: "Approfondir l’emploi des valeurs aspectuelles des temps étudiés précédemment : borné et non borné, accompli et non accompli." }
+activite: quiz
+parametres: {}
+idee: "Dans un récit au passé, le passé simple raconte les actions de premier plan, bornées, qui font avancer l’histoire. L’imparfait peint l’arrière-plan : décor, habitudes, actions en cours, non bornées."
+phrases:
+  consigne: "Repère le temps du verbe, puis demande-toi ce qu’il montre dans le récit. Touche la bonne réponse."
+  question: "{texte}"
+  indice: "L’action fait-elle avancer l’histoire (passé simple) ? Décrit-elle, se répète-t-elle, est-elle en cours (imparfait) ? Est-elle déjà accomplie (temps composé) ?"
+  exemple: "« Il pleuvait. Soudain, la porte s’ouvrit. » : « pleuvait » (imparfait) peint le décor, sans début ni fin ; « s’ouvrit » (passé simple) est un événement bref qui fait avancer l’histoire."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Il pleuvait depuis le matin. Soudain, la porte s’ouvrit. » Quelle action fait avancer l’histoire ?"
+    nom: "la porte s’ouvrit"
+    explication: "« s’ouvrit » est au passé simple : un événement bref, au premier plan, annoncé par « Soudain »."
+    pieges:
+      - { texte: "il pleuvait", pourquoi: "« pleuvait » est à l’imparfait : il peint le décor, l’arrière-plan, sans début ni fin." }
+      - { texte: "depuis le matin", pourquoi: "Ce n’est pas une action : c’est un complément qui dit depuis quand il pleut." }
+  - texte: "« Chaque dimanche, nous allions au marché. » Que montre l’imparfait « allions » ?"
+    nom: "une habitude"
+    explication: "« Chaque dimanche » montre une action répétée : l’imparfait exprime ici l’habitude."
+    pieges:
+      - { texte: "une action brève et unique", pourquoi: "« Chaque dimanche » montre une action qui se répète : ce n’est pas une action unique." }
+      - { texte: "une action future", pourquoi: "L’imparfait est un temps du passé ; ici, il raconte ce qui se faisait autrefois." }
+  - texte: "« La mer était calme ; des mouettes tournaient au-dessus du port. » Que montrent ces imparfaits ?"
+    nom: "une description du décor"
+    explication: "Ces verbes peignent le décor, en arrière-plan, sans dire quand cela commence ni finit."
+    pieges:
+      - { texte: "des actions de premier plan", pourquoi: "Rien n’avance dans l’histoire : on décrit la mer et les mouettes. Le premier plan est au passé simple." }
+      - { texte: "une habitude", pourquoi: "Aucun mot ne montre une répétition (« chaque jour », « souvent ») : c’est une description." }
+  - texte: "« Il lisait quand le téléphone sonna. » Que montre l’imparfait « lisait » ?"
+    nom: "une action en cours, interrompue par une autre"
+    explication: "« lisait » montre l’action en train de se dérouler ; « sonna », au passé simple, vient l’interrompre."
+    pieges:
+      - { texte: "une action terminée", pourquoi: "L’imparfait montre l’action en train de se dérouler : elle n’est pas présentée comme finie." }
+      - { texte: "une habitude", pourquoi: "Rien ne dit que l’action se répète : c’est un moment précis, interrompu par le téléphone." }
+  - texte: "Choisis la forme qui convient : « Nous marchions depuis une heure quand un orage (éclater). »"
+    nom: "éclata"
+    explication: "L’orage arrive d’un coup et interrompt la marche : action brève de premier plan, au passé simple."
+    pieges:
+      - { texte: "éclatait", pourquoi: "L’orage arrive d’un coup et interrompt la marche : c’est une action brève de premier plan, au passé simple." }
+      - { texte: "éclate", pourquoi: "Le récit est déjà au passé (« marchions ») : on garde les temps du passé." }
+  - texte: "« Elle ouvrit la fenêtre, regarda la rue, puis sortit. » Que montre cette suite de passés simples ?"
+    nom: "des actions qui se suivent, chacune terminée"
+    explication: "Chaque passé simple est une action bornée ; elles s’enchaînent et font avancer l’histoire."
+    pieges:
+      - { texte: "des actions qui durent en même temps", pourquoi: "« puis » montre un ordre : les actions se suivent, elles ne se déroulent pas en même temps." }
+      - { texte: "une description du décor", pourquoi: "Le décor est peint à l’imparfait ; ici, le personnage agit." }
+  - texte: "« Quand il eut fini son repas, il sortit. » Que montre le passé antérieur « eut fini » ?"
+    nom: "une action accomplie juste avant une autre"
+    explication: "« eut fini » est un temps composé : l’action est achevée avant « sortit »."
+    pieges:
+      - { texte: "une action en cours", pourquoi: "Le passé antérieur montre une action déjà achevée, pas en train de se dérouler." }
+      - { texte: "une habitude", pourquoi: "Rien ne montre de répétition : c’est un moment précis, avant la sortie." }
+  - texte: "« Il avait plu toute la nuit ; les chemins étaient boueux. » Que montre le plus-que-parfait « avait plu » ?"
+    nom: "une action accomplie avant le moment du récit"
+    explication: "La pluie est terminée ; on en voit le résultat, les chemins boueux."
+    pieges:
+      - { texte: "une action future", pourquoi: "Le plus-que-parfait est un temps du passé : l’action a eu lieu avant." }
+      - { texte: "une action en cours au moment du récit", pourquoi: "L’action est terminée : on en voit le résultat, les chemins boueux." }
+  - texte: "« Le village dormait. Un cri déchira la nuit. » Pourquoi « déchira » est-il au passé simple ?"
+    nom: "C’est un événement bref qui rompt le décor et fait avancer l’histoire."
+    explication: "« dormait » peint le décor ; « déchira » est un événement soudain, au premier plan."
+    pieges:
+      - { texte: "Parce que le cri dure longtemps.", pourquoi: "Une action vue sans début ni fin serait à l’imparfait ; le cri est un événement soudain." }
+      - { texte: "Parce que le passé simple sert à décrire.", pourquoi: "La description est le rôle de l’imparfait, comme « Le village dormait »." }
+  - texte: "Pourquoi dit-on que l’imparfait présente l’action comme « non bornée » ?"
+    nom: "Il ne montre ni le début ni la fin de l’action."
+    explication: "L’imparfait montre l’action de l’intérieur, en train de se dérouler, sans ses limites."
+    pieges:
+      - { texte: "Parce qu’il parle du présent.", pourquoi: "L’imparfait est un temps du passé ; « non borné » parle des limites de l’action, pas de l’époque." }
+      - { texte: "Parce que l’action est toujours très longue.", pourquoi: "Une action à l’imparfait peut être courte (« il lisait quand… ») : c’est la façon de la montrer, sans limites, qui compte." }
+
+en:
+  langue: "fr"
+  titre: "French: imperfect and past historic in a story"
+  idee: "In a story told in the past, the past historic (« passé simple ») tells the main events, with clear limits. The imperfect paints the background: setting, habits, actions in progress, with no limits."
+  phrases:
+    consigne: "Spot the tense of the French verb, then ask what it shows in the story. Touch the right answer."
+    question: "{texte}"
+    indice: "Does the action move the story on (past historic)? Does it describe, repeat, or show something in progress (imperfect)? Is it already finished (compound tense)?"
+    exemple: "« Il pleuvait. Soudain, la porte s’ouvrit. »: « pleuvait » (imperfect) paints the setting, with no start or end; « s’ouvrit » (past historic) is a sudden event that moves the story on."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "« Il pleuvait depuis le matin. Soudain, la porte s’ouvrit. » Which action moves the story on?"
+      nom: "la porte s’ouvrit"
+      explication: "« s’ouvrit » is in the past historic: a sudden main event, announced by « Soudain »."
+      pieges:
+        - { texte: "il pleuvait", pourquoi: "« pleuvait » is in the imperfect: it paints the setting, the background, with no start or end." }
+        - { texte: "depuis le matin", pourquoi: "That isn't an action: it's an adverbial saying since when it has been raining." }
+    - texte: "« Chaque dimanche, nous allions au marché. » What does the imperfect « allions » show?"
+      nom: "a habit"
+      explication: "« Chaque dimanche » (every Sunday) shows a repeated action: here the imperfect expresses a habit."
+      pieges:
+        - { texte: "a single, short action", pourquoi: "« Chaque dimanche » shows an action that repeats: it isn't a single action." }
+        - { texte: "a future action", pourquoi: "The imperfect is a past tense; here it tells what used to happen." }
+    - texte: "« La mer était calme ; des mouettes tournaient au-dessus du port. » What do these imperfects show?"
+      nom: "a description of the setting"
+      explication: "These verbs paint the setting, in the background, without saying when it starts or ends."
+      pieges:
+        - { texte: "main events", pourquoi: "Nothing moves the story on: we're describing the sea and the gulls. Main events are in the past historic." }
+        - { texte: "a habit", pourquoi: "No word shows repetition (« chaque jour », « souvent »): it's a description." }
+    - texte: "« Il lisait quand le téléphone sonna. » What does the imperfect « lisait » show?"
+      nom: "an action in progress, interrupted by another"
+      explication: "« lisait » shows the action going on; « sonna », in the past historic, interrupts it."
+      pieges:
+        - { texte: "a finished action", pourquoi: "The imperfect shows the action going on: it isn't presented as finished." }
+        - { texte: "a habit", pourquoi: "Nothing says the action repeats: it's one moment, interrupted by the phone." }
+    - texte: "Choose the right form: « Nous marchions depuis une heure quand un orage (éclater). »"
+      nom: "éclata"
+      explication: "The storm breaks suddenly and interrupts the walk: a short main event, in the past historic."
+      pieges:
+        - { texte: "éclatait", pourquoi: "The storm breaks suddenly and interrupts the walk: it's a short main event, in the past historic." }
+        - { texte: "éclate", pourquoi: "The story is already in the past (« marchions »): keep to past tenses." }
+    - texte: "« Elle ouvrit la fenêtre, regarda la rue, puis sortit. » What does this string of past historics show?"
+      nom: "actions that follow each other, each one finished"
+      explication: "Each past historic is an action with clear limits; they follow one another and move the story on."
+      pieges:
+        - { texte: "actions lasting at the same time", pourquoi: "« puis » (then) shows an order: the actions follow each other, they don't happen at the same time." }
+        - { texte: "a description of the setting", pourquoi: "The setting is painted in the imperfect; here the character acts." }
+    - texte: "« Quand il eut fini son repas, il sortit. » What does the past anterior « eut fini » show?"
+      nom: "an action completed just before another"
+      explication: "« eut fini » is a compound tense: the action is finished before « sortit »."
+      pieges:
+        - { texte: "an action in progress", pourquoi: "The past anterior shows an action already finished, not one going on." }
+        - { texte: "a habit", pourquoi: "Nothing shows repetition: it's one precise moment, before he goes out." }
+    - texte: "« Il avait plu toute la nuit ; les chemins étaient boueux. » What does the pluperfect « avait plu » show?"
+      nom: "an action completed before the time of the story"
+      explication: "The rain is over; we see its result, the muddy paths."
+      pieges:
+        - { texte: "a future action", pourquoi: "The pluperfect is a past tense: the action happened before." }
+        - { texte: "an action going on at the time of the story", pourquoi: "The action is over: we see its result, the muddy paths." }
+    - texte: "« Le village dormait. Un cri déchira la nuit. » Why is « déchira » in the past historic?"
+      nom: "It's a sudden event that breaks the setting and moves the story on."
+      explication: "« dormait » paints the setting; « déchira » is a sudden main event."
+      pieges:
+        - { texte: "Because the cry lasts a long time.", pourquoi: "An action seen with no start or end would be in the imperfect; the cry is a sudden event." }
+        - { texte: "Because the past historic is for describing.", pourquoi: "Describing is the imperfect's job, as in « Le village dormait »." }
+    - texte: "Why do we say the imperfect shows an action « with no limits »?"
+      nom: "It shows neither the start nor the end of the action."
+      explication: "The imperfect shows the action from the inside, going on, without its limits."
+      pieges:
+        - { texte: "Because it's about the present.", pourquoi: "The imperfect is a past tense; « no limits » is about the action's boundaries, not when it happened." }
+        - { texte: "Because the action is always very long.", pourquoi: "An action in the imperfect can be short (« il lisait quand… »): what counts is that it's shown without limits." }

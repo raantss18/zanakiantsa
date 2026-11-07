@@ -1,0 +1,156 @@
+id: relative-clauses
+titre: "Les propositions relatives : who, which, whose, where"
+niveau: 1re
+prerequis: [possessives]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES), « L'étude de la langue »,
+# 2) Correction grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Correction grammaticale : une meilleure maîtrise de la grammaire donne sens et cohérence aux énoncés produits." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "who pour une personne, which pour une chose, whose pour la possession (dont le, dont la), where pour un lieu, when pour un moment. Après une virgule, jamais that."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Que reprend le pronom : une personne (who), une chose (which), un lieu (where), un moment (when) ? Un nom possédé juste après : whose."
+  exemple: "« The man … repaired my bike is my uncle. » Le pronom reprend « the man », une personne : « The man who repaired my bike is my uncle. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « The woman … lives next door is a nurse. »"
+    nom: "who"
+    explication: "« the woman » est une personne : « The woman who lives next door is a nurse. »"
+    pieges:
+      - { texte: "which", pourquoi: "« which » reprend une chose. Pour une personne, « the woman » : « who »." }
+      - { texte: "whose", pourquoi: "« whose » est suivi du nom possédé, « whose car ». Ici, le verbe suit : « who lives »." }
+  - texte: "Complète : « This is the film … won the Oscar. »"
+    nom: "which"
+    explication: "« the film » est une chose : « This is the film which won the Oscar. »"
+    pieges:
+      - { texte: "who", pourquoi: "« who » reprend une personne. Un film est une chose : « which »." }
+      - { texte: "where", pourquoi: "« where » reprend un lieu. Ici, c'est le film qui a gagné : « which »." }
+  - texte: "Complète : « That's the boy … mother is a pilot. »"
+    nom: "whose"
+    explication: "La mère appartient au garçon : « whose mother », dont la mère. « That's the boy whose mother is a pilot. »"
+    pieges:
+      - { texte: "who's", pourquoi: "« who's » veut dire « who is ». « the boy who is mother » n'a pas de sens : il faut « whose », dont la." }
+      - { texte: "who", pourquoi: "Un nom possédé suit le pronom, « mother » : c'est « whose »." }
+  - texte: "Complète : « Stratford-upon-Avon is the town … Shakespeare was born. »"
+    nom: "where"
+    explication: "Un lieu où quelque chose s'est passé : « the town where Shakespeare was born »."
+    pieges:
+      - { texte: "which", pourquoi: "Avec « which », il faudrait « in » : « the town in which he was born ». Sans « in » : « where »." }
+      - { texte: "who", pourquoi: "« who » reprend une personne. La ville est un lieu : « where »." }
+  - texte: "Complète : « Nelson Mandela, … spent 27 years in prison, became president in 1994. »"
+    nom: "who"
+    explication: "Une personne, après une virgule : « Nelson Mandela, who spent 27 years in prison, became president in 1994. »"
+    pieges:
+      - { texte: "that", pourquoi: "Après une virgule (une relative qui ajoute une information), on n'emploie pas « that » : « who »." }
+      - { texte: "which", pourquoi: "« which » reprend une chose. Nelson Mandela est une personne : « who »." }
+  - texte: "Complète : « The Thames, … flows through London, is about 346 km long. »"
+    nom: "which"
+    explication: "Une chose, après une virgule : « The Thames, which flows through London, … »"
+    pieges:
+      - { texte: "that", pourquoi: "Après une virgule, on n'emploie pas « that » : « which »." }
+      - { texte: "where", pourquoi: "« where » introduit un lieu où l'on fait quelque chose. Ici, la Tamise est le sujet de « flows » : « which »." }
+  - texte: "Complète : « 2012 was the year … London hosted the Olympic Games. »"
+    nom: "when"
+    explication: "Un moment : « the year when London hosted the Olympic Games »."
+    pieges:
+      - { texte: "where", pourquoi: "« where » reprend un lieu. « the year » est un moment : « when »." }
+      - { texte: "which", pourquoi: "Avec « which », il faudrait « in » : « the year in which ». Sans « in » : « when »." }
+  - texte: "Quelle phrase est juste ?"
+    nom: "The book I bought is great."
+    explication: "Le pronom complément peut disparaître : « The book (which) I bought is great. »"
+    pieges:
+      - { texte: "The book I bought it is great.", pourquoi: "La relative reprend déjà « the book » : on ne répète pas « it »." }
+      - { texte: "The book who I bought is great.", pourquoi: "« who » reprend une personne. Pour un livre : « which », ou rien." }
+  - texte: "Pourquoi « whose » dans « She's the singer whose song I love » ?"
+    nom: "La chanson appartient à la chanteuse : whose + nom exprime la possession, « dont la chanson »."
+    explication: "« whose » + nom : « the singer whose song », la chanteuse dont la chanson."
+    pieges:
+      - { texte: "Parce que « whose » veut dire « qui est ».", pourquoi: "« qui est », c'est « who's », la contraction de « who is »." }
+      - { texte: "Parce que « whose » s'emploie pour toutes les personnes.", pourquoi: "Pour une personne, on emploie « who ». « whose » marque la possession et il est suivi d'un nom." }
+en:
+  titre: "Relative clauses: who, which, whose, where"
+  idee: "who for a person, which for a thing, whose for possession, where for a place, when for a time. After a comma, never that."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "What does the pronoun refer to: a person (who), a thing (which), a place (where), a time (when)? A possessed noun right after it: whose."
+    exemple: "“The man … repaired my bike is my uncle.” The pronoun refers to the man, a person: “The man who repaired my bike is my uncle.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “The woman … lives next door is a nurse.”"
+      nom: "who"
+      explication: "The woman is a person: “The woman who lives next door is a nurse.”"
+      pieges:
+        - texte: "which"
+          pourquoi: "“which” refers to a thing. For a person, the woman: who."
+        - texte: "whose"
+          pourquoi: "“whose” is followed by the possessed noun, whose car. Here the verb follows: who lives."
+    - texte: "Complete: “This is the film … won the Oscar.”"
+      nom: "which"
+      explication: "The film is a thing: “This is the film which won the Oscar.”"
+      pieges:
+        - texte: "who"
+          pourquoi: "“who” refers to a person. A film is a thing: which."
+        - texte: "where"
+          pourquoi: "“where” refers to a place. Here, the film is the one that won: which."
+    - texte: "Complete: “That's the boy … mother is a pilot.”"
+      nom: "whose"
+      explication: "The mother belongs to the boy: whose mother. “That's the boy whose mother is a pilot.”"
+      pieges:
+        - texte: "who's"
+          pourquoi: "“who's” means who is. “the boy who is mother” makes no sense: we need whose."
+        - texte: "who"
+          pourquoi: "A possessed noun follows the pronoun, mother: it's whose."
+    - texte: "Complete: “Stratford-upon-Avon is the town … Shakespeare was born.”"
+      nom: "where"
+      explication: "A place where something happened: “the town where Shakespeare was born”."
+      pieges:
+        - texte: "which"
+          pourquoi: "With which, we would need in: “the town in which he was born”. Without in: where."
+        - texte: "who"
+          pourquoi: "“who” refers to a person. The town is a place: where."
+    - texte: "Complete: “Nelson Mandela, … spent 27 years in prison, became president in 1994.”"
+      nom: "who"
+      explication: "A person, after a comma: “Nelson Mandela, who spent 27 years in prison, became president in 1994.”"
+      pieges:
+        - texte: "that"
+          pourquoi: "After a comma (a clause that adds information), we don't use that: who."
+        - texte: "which"
+          pourquoi: "“which” refers to a thing. Nelson Mandela is a person: who."
+    - texte: "Complete: “The Thames, … flows through London, is about 346 km long.”"
+      nom: "which"
+      explication: "A thing, after a comma: “The Thames, which flows through London, …”"
+      pieges:
+        - texte: "that"
+          pourquoi: "After a comma, we don't use that: which."
+        - texte: "where"
+          pourquoi: "“where” introduces a place where something happens. Here, the Thames is the subject of flows: which."
+    - texte: "Complete: “2012 was the year … London hosted the Olympic Games.”"
+      nom: "when"
+      explication: "A time: “the year when London hosted the Olympic Games”."
+      pieges:
+        - texte: "where"
+          pourquoi: "“where” refers to a place. The year is a time: when."
+        - texte: "which"
+          pourquoi: "With which, we would need in: “the year in which”. Without in: when."
+    - texte: "Which sentence is correct?"
+      nom: "The book I bought is great."
+      explication: "The object pronoun can be left out: “The book (which) I bought is great.”"
+      pieges:
+        - texte: "The book I bought it is great."
+          pourquoi: "The clause already refers to the book: we don't repeat it."
+        - texte: "The book who I bought is great."
+          pourquoi: "“who” refers to a person. For a book: which, or nothing."
+    - texte: "Why “whose” in “She's the singer whose song I love”?"
+      nom: "The song belongs to the singer: whose + noun shows possession."
+      explication: "whose + noun: “the singer whose song”."
+      pieges:
+        - texte: "Because whose means who is."
+          pourquoi: "“who is” is who's, the short form."
+        - texte: "Because whose is used for every person."
+          pourquoi: "For a person, we use who. “whose” shows possession and is followed by a noun."

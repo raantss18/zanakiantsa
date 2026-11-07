@@ -1,0 +1,137 @@
+id: texte-argumentatif
+titre: "Lire un texte qui argumente"
+niveau: 4e
+prerequis: ["comprendre-recit"]
+programme: { source: cycle4, texte: "Mettre en relation des informations pour comprendre l’implicite." }
+activite: quiz
+parametres: {}
+idee: "Un texte qui argumente veut convaincre. On cherche l’opinion de l’auteur, même quand il ne dit pas « je pense », en reliant ses raisons et les mots de liaison (pourtant, en effet, donc, de plus)."
+phrases:
+  consigne: "Lis le court texte, puis la question. Relie les phrases entre elles pour répondre."
+  question: "{texte}"
+  indice: "Quelle idée l’auteur rejette-t-il ? Quelles raisons donne-t-il ? Quel mot relie les phrases ?"
+  exemple: "« On dit que le vélo est réservé aux beaux jours. Pourtant, il ne pollue pas. » : « Pourtant » montre que l’auteur rejette l’idée d’avant ; il pense que le vélo est utile toute l’année."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » Quelle est l’opinion de l’auteur ?"
+    nom: "Le vélo est un bon moyen de se déplacer, en toute saison."
+    explication: "L’auteur rejette l’idée de départ avec « Pourtant », puis ne donne que des raisons en faveur du vélo."
+    pieges:
+      - { texte: "Le vélo est réservé aux beaux jours.", pourquoi: "C’est l’idée que l’auteur rejette : « Pourtant » annonce qu’il n’est pas d’accord." }
+      - { texte: "La voiture est toujours plus rapide.", pourquoi: "Le texte dit l’inverse : en ville, le vélo est souvent plus rapide aux heures de pointe." }
+  - texte: "Lis : « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » Que montre le mot « Pourtant » ?"
+    nom: "L’auteur s’oppose à l’idée qui précède."
+    explication: "« Pourtant » marque une opposition : l’auteur conteste ce qu’« on dit souvent »."
+    pieges:
+      - { texte: "L’auteur donne un exemple.", pourquoi: "Un exemple s’annonce avec « par exemple » ; « Pourtant » marque une opposition." }
+      - { texte: "L’auteur annonce une conséquence.", pourquoi: "Une conséquence s’annonce avec « donc » ; « Pourtant » marque une opposition." }
+  - texte: "Lis : « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » Combien de raisons l’auteur donne-t-il en faveur du vélo ?"
+    nom: "quatre"
+    explication: "Il ne coûte presque rien, il ne pollue pas, il garde en forme, et (« De plus ») il est rapide en ville."
+    pieges:
+      - { texte: "trois", pourquoi: "Relis la dernière phrase : « De plus » ajoute une quatrième raison, la rapidité en ville." }
+      - { texte: "une", pourquoi: "La deuxième phrase en donne déjà trois, et « De plus » en ajoute une autre." }
+  - texte: "Lis : « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » Quel est le rôle de « De plus » ?"
+    nom: "Il ajoute une raison."
+    explication: "« De plus » marque une addition : une nouvelle raison qui va dans le même sens."
+    pieges:
+      - { texte: "Il marque une opposition.", pourquoi: "La rapidité va dans le même sens que les raisons d’avant : on ajoute, on n’oppose pas." }
+      - { texte: "Il annonce la conclusion.", pourquoi: "Une conclusion s’annonce avec « enfin », « bref », « donc ». « De plus » ajoute." }
+  - texte: "Lis : « Certains élèves trouvent la lecture ennuyeuse. Mais ont-ils déjà ouvert un roman d’aventures ? Un bon livre fait voyager sans quitter sa chambre. Il suffit souvent de trouver le bon. » Que pense l’auteur, sans l’écrire en toutes lettres ?"
+    nom: "Lire peut être passionnant, si l’on choisit bien son livre."
+    explication: "« Mais » rejette l’avis de certains élèves ; « un bon livre fait voyager » et « trouver le bon » montrent sa pensée."
+    pieges:
+      - { texte: "La lecture est ennuyeuse.", pourquoi: "C’est l’avis de « certains élèves », que l’auteur conteste avec « Mais »." }
+      - { texte: "Il ne faut lire que des romans d’aventures.", pourquoi: "Le roman d’aventures est un exemple : l’auteur dit qu’il faut trouver « le bon » livre, pour chacun." }
+  - texte: "Lis : « Certains élèves trouvent la lecture ennuyeuse. Mais ont-ils déjà ouvert un roman d’aventures ? Un bon livre fait voyager sans quitter sa chambre. Il suffit souvent de trouver le bon. » Pourquoi l’auteur pose-t-il la question « Mais ont-ils déjà ouvert un roman d’aventures ? » ?"
+    nom: "Pour suggérer qu’ils ne l’ont pas fait, et faire réfléchir le lecteur."
+    explication: "C’est une question oratoire : l’auteur n’attend pas de réponse ; il sous-entend que ces élèves n’ont pas essayé."
+    pieges:
+      - { texte: "Parce qu’il ne sait pas et attend une réponse.", pourquoi: "Personne ne peut répondre dans le texte : la question sert à convaincre, pas à s’informer." }
+      - { texte: "Parce qu’il trouve les romans d’aventures ennuyeux.", pourquoi: "Il dit le contraire : « Un bon livre fait voyager sans quitter sa chambre »." }
+  - texte: "Lis : « Jeter du pain, c’est jeter de l’argent. En effet, le pain acheté en trop finit à la poubelle. Il faut donc acheter seulement ce qu’on va manger. » Que marque « En effet » ?"
+    nom: "Il annonce une explication de l’idée qui précède."
+    explication: "« En effet » explique pourquoi jeter du pain revient à jeter de l’argent : le pain payé finit à la poubelle."
+    pieges:
+      - { texte: "Il marque une opposition.", pourquoi: "La deuxième phrase va dans le même sens que la première : elle l’explique." }
+      - { texte: "Il annonce une conséquence.", pourquoi: "C’est « donc », plus loin, qui annonce la conséquence ; « En effet » explique." }
+  - texte: "Lis : « Jeter du pain, c’est jeter de l’argent. En effet, le pain acheté en trop finit à la poubelle. Il faut donc acheter seulement ce qu’on va manger. » Que conseille l’auteur ?"
+    nom: "acheter seulement ce qu’on va manger"
+    explication: "C’est écrit après « donc » : la conclusion du raisonnement est un conseil."
+    pieges:
+      - { texte: "ne plus acheter de pain", pourquoi: "L’auteur ne dit pas d’arrêter le pain, mais d’en acheter juste assez." }
+      - { texte: "jeter le pain dur", pourquoi: "C’est justement ce que l’auteur veut éviter : « Jeter du pain, c’est jeter de l’argent »." }
+  - texte: "Lis : « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » L’auteur n’écrit jamais « je pense que ». Pourquoi peut-on quand même trouver son opinion ?"
+    nom: "Il rejette une idée avec « Pourtant » et donne des raisons qui vont toutes dans le même sens."
+    explication: "En reliant le connecteur et les raisons, on comprend l’opinion implicite de l’auteur."
+    pieges:
+      - { texte: "Parce que le titre la donne.", pourquoi: "Il n’y a pas de titre : on relie le connecteur et les raisons." }
+      - { texte: "On ne peut pas la trouver.", pourquoi: "Les raisons et le connecteur « Pourtant » la montrent clairement." }
+
+en:
+  langue: "fr"
+  titre: "French: reading a text that argues a point"
+  idee: "A text that argues wants to convince. Find the author's opinion, even when they never say « je pense », by linking their reasons and the linking words (« pourtant », « en effet », « donc », « de plus »)."
+  phrases:
+    consigne: "Read the short French text, then the question. Link the sentences together to answer."
+    question: "{texte}"
+    indice: "Which idea does the author reject? What reasons do they give? Which word links the sentences?"
+    exemple: "« On dit que le vélo est réservé aux beaux jours. Pourtant, il ne pollue pas. »: « Pourtant » (yet) shows the author rejects the first idea; they think cycling is useful all year round."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Read: « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » What is the author's opinion?"
+      nom: "Cycling is a good way to get around, in every season."
+      explication: "The author rejects the first idea with « Pourtant », then gives only reasons in favour of cycling."
+      pieges:
+        - { texte: "Cycling is only for fine weather.", pourquoi: "That's the idea the author rejects: « Pourtant » shows they disagree." }
+        - { texte: "Cars are always faster.", pourquoi: "The text says the opposite: in town, a bike is often faster at rush hour." }
+    - texte: "Read: « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » What does the word « Pourtant » show?"
+      nom: "The author disagrees with the idea before it."
+      explication: "« Pourtant » (yet) marks a contrast: the author challenges what « on dit souvent », what people often say."
+      pieges:
+        - { texte: "The author gives an example.", pourquoi: "An example is introduced by « par exemple »; « Pourtant » marks a contrast." }
+        - { texte: "The author announces a consequence.", pourquoi: "A consequence is introduced by « donc »; « Pourtant » marks a contrast." }
+    - texte: "Read: « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » How many reasons does the author give in favour of cycling?"
+      nom: "four"
+      explication: "It costs almost nothing, it doesn't pollute, it keeps you fit, and (« De plus ») it's fast in town."
+      pieges:
+        - { texte: "three", pourquoi: "Read the last sentence again: « De plus » adds a fourth reason, speed in town." }
+        - { texte: "one", pourquoi: "The second sentence already gives three, and « De plus » adds another." }
+    - texte: "Read: « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » What is the job of « De plus »?"
+      nom: "It adds a reason."
+      explication: "« De plus » (what's more) marks an addition: a new reason pointing the same way."
+      pieges:
+        - { texte: "It marks a contrast.", pourquoi: "Speed points the same way as the earlier reasons: it adds, it doesn't contrast." }
+        - { texte: "It introduces the conclusion.", pourquoi: "A conclusion is introduced by « enfin », « bref », « donc ». « De plus » adds." }
+    - texte: "Read: « Certains élèves trouvent la lecture ennuyeuse. Mais ont-ils déjà ouvert un roman d’aventures ? Un bon livre fait voyager sans quitter sa chambre. Il suffit souvent de trouver le bon. » What does the author think, without spelling it out?"
+      nom: "Reading can be exciting, if you choose the right book."
+      explication: "« Mais » rejects some pupils' view; « un bon livre fait voyager » and « trouver le bon » show what the author thinks."
+      pieges:
+        - { texte: "Reading is boring.", pourquoi: "That's the view of « certains élèves », which the author challenges with « Mais »." }
+        - { texte: "You should only read adventure novels.", pourquoi: "The adventure novel is an example: the author says you need to find « le bon » book, for each person." }
+    - texte: "Read: « Certains élèves trouvent la lecture ennuyeuse. Mais ont-ils déjà ouvert un roman d’aventures ? Un bon livre fait voyager sans quitter sa chambre. Il suffit souvent de trouver le bon. » Why does the author ask « Mais ont-ils déjà ouvert un roman d’aventures ? »?"
+      nom: "To suggest they haven't, and make the reader think."
+      explication: "It's a rhetorical question: the author expects no answer; it hints that these pupils haven't tried."
+      pieges:
+        - { texte: "Because they don't know and want an answer.", pourquoi: "Nobody can answer inside the text: the question is there to convince, not to find out." }
+        - { texte: "Because they find adventure novels boring.", pourquoi: "They say the opposite: « Un bon livre fait voyager sans quitter sa chambre »." }
+    - texte: "Read: « Jeter du pain, c’est jeter de l’argent. En effet, le pain acheté en trop finit à la poubelle. Il faut donc acheter seulement ce qu’on va manger. » What does « En effet » mark?"
+      nom: "It introduces an explanation of the idea before it."
+      explication: "« En effet » (indeed) explains why throwing bread away is throwing money away: bread you paid for ends up in the bin."
+      pieges:
+        - { texte: "It marks a contrast.", pourquoi: "The second sentence points the same way as the first: it explains it." }
+        - { texte: "It introduces a consequence.", pourquoi: "It's « donc », later on, that introduces the consequence; « En effet » explains." }
+    - texte: "Read: « Jeter du pain, c’est jeter de l’argent. En effet, le pain acheté en trop finit à la poubelle. Il faut donc acheter seulement ce qu’on va manger. » What does the author advise?"
+      nom: "buying only what you're going to eat"
+      explication: "It's written after « donc »: the conclusion of the reasoning is a piece of advice."
+      pieges:
+        - { texte: "not buying bread any more", pourquoi: "The author doesn't say to stop buying bread, but to buy just enough." }
+        - { texte: "throwing away stale bread", pourquoi: "That's exactly what the author wants to avoid: « Jeter du pain, c’est jeter de l’argent »." }
+    - texte: "Read: « On dit souvent que le vélo est réservé aux beaux jours. Pourtant, il ne coûte presque rien, il ne pollue pas et il garde en forme. De plus, en ville, il est souvent plus rapide que la voiture aux heures de pointe. » The author never writes « je pense que ». Why can we still find their opinion?"
+      nom: "They reject an idea with « Pourtant » and give reasons that all point the same way."
+      explication: "By linking the connective and the reasons, we understand the author's unstated opinion."
+      pieges:
+        - { texte: "Because the title gives it.", pourquoi: "There's no title: we link the connective and the reasons." }
+        - { texte: "We can't find it.", pourquoi: "The reasons and the connective « Pourtant » show it clearly." }

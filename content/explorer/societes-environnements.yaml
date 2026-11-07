@@ -1,0 +1,124 @@
+id: societes-environnements
+titre: "Sociétés et environnements : risques, ressources, durabilité"
+niveau: 2de
+prerequis: [france-outre-mer]
+programme: { source: hg2de, texte: "Les enjeux liés à un approvisionnement durable en ressources pèsent de manière croissante et différenciée." }
+activite: quiz
+parametres: {}
+idee: "Un risque naît de la rencontre d'un aléa et d'une société vulnérable. Les ressources comme l'eau sont sous pression. Le développement durable cherche à répondre aux besoins d'aujourd'hui sans sacrifier ceux de demain."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Mots clés : aléa, vulnérabilité, risque ; ressource, conflit d'usage ; développement durable, transition."
+  exemple: "Exemple : un séisme dans un désert vide ne fait pas de victimes. Le même séisme sous une ville aux bâtiments fragiles est une catastrophe. L'aléa est le même ; c'est la vulnérabilité qui change le risque."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "En géographie, qu'est-ce qu'un risque ?"
+    nom: "La rencontre possible d'un aléa et d'une société exposée et vulnérable."
+    explication: "Sans habitants ni biens exposés, un aléa (séisme, crue, cyclone) ne crée pas de risque pour une société."
+    pieges:
+      - { texte: "Un phénomène naturel dangereux, quel que soit le lieu.", pourquoi: "C'est la définition de l'aléa ; le risque suppose aussi des personnes et des biens exposés." }
+      - { texte: "Une catastrophe qui a déjà eu lieu.", pourquoi: "Le risque est une possibilité ; la catastrophe est sa réalisation." }
+  - texte: "Deux séismes de même puissance frappent un pays riche et un pays pauvre. Pourquoi le bilan est-il souvent plus lourd dans le pays pauvre ?"
+    nom: "Parce que la vulnérabilité y est plus forte : constructions moins solides, secours moins préparés."
+    explication: "Normes de construction, alerte et secours réduisent la vulnérabilité : le même aléa fait alors moins de victimes."
+    pieges:
+      - { texte: "Parce que la terre y tremble plus fort.", pourquoi: "L'énoncé dit que les séismes ont la même puissance : c'est la vulnérabilité qui diffère." }
+      - { texte: "Parce que les pays riches ne connaissent pas de séismes.", pourquoi: "Le Japon, pays riche, connaît de nombreux séismes : il s'y est préparé." }
+  - texte: "Comment le rapport Brundtland, en 1987, définit-il le développement durable ?"
+    nom: "Un développement qui répond aux besoins du présent sans compromettre ceux des générations futures."
+    explication: "Le développement durable cherche à concilier économie, société et environnement, sur le long terme."
+    pieges:
+      - { texte: "Un développement qui dure le plus longtemps possible, quoi qu'il en coûte.", pourquoi: "« Durable » ne veut pas dire seulement « long » : il s'agit de préserver les besoins des générations futures." }
+      - { texte: "L'arrêt de toute activité économique pour protéger la nature.", pourquoi: "Le développement durable veut concilier économie et environnement, pas supprimer l'économie." }
+  - texte: "Le programme parle de « transition ». Que désigne ce mot ?"
+    nom: "Une phase de changements majeurs, qui peut évoluer de façons diverses selon les lieux."
+    explication: "La transition n'est pas le passage simple d'un état stable à un autre : elle n'a rien de linéaire."
+    pieges:
+      - { texte: "Un retour à la situation d'avant.", pourquoi: "Une transition est un changement, pas un retour en arrière." }
+      - { texte: "Un changement identique partout dans le monde.", pourquoi: "Les trajectoires sont diverses selon les contextes : il n'y a pas un modèle unique." }
+  - texte: "Dans une région sèche, agriculteurs, villes et industries prélèvent la même eau. Comment appelle-t-on cette situation ?"
+    nom: "Un conflit d'usage autour d'une ressource sous pression."
+    explication: "Quand une ressource est limitée, plusieurs usages entrent en concurrence : il faut alors des choix de gestion."
+    pieges:
+      - { texte: "Une ressource illimitée.", pourquoi: "Si l'eau était illimitée, il n'y aurait pas de concurrence entre les usages." }
+      - { texte: "Un aléa naturel.", pourquoi: "La sécheresse peut être un aléa, mais la concurrence entre usagers est un fait de société." }
+  - texte: "Pourquoi dit-on que l'Arctique est à la fois fragile et attractif ?"
+    nom: "La fonte de la glace menace ses milieux, mais ouvre des routes maritimes et un accès à des ressources."
+    explication: "Le réchauffement fragilise la banquise et les écosystèmes ; il attire aussi navires et compagnies minières ou pétrolières."
+    pieges:
+      - { texte: "Parce que personne ne s'y intéresse.", pourquoi: "Plusieurs États et entreprises convoitent ses routes et ses ressources." }
+      - { texte: "Parce que la glace y augmente chaque année.", pourquoi: "La banquise arctique recule : c'est ce recul qui crée à la fois menaces et convoitises." }
+  - texte: "Pourquoi la forêt amazonienne est-elle un environnement fragile soumis à des pressions ?"
+    nom: "Parce qu'elle recule sous l'effet de la déforestation pour l'agriculture et l'élevage."
+    explication: "La déforestation menace une biodiversité très riche et les peuples qui y vivent ; elle libère aussi du CO₂."
+    pieges:
+      - { texte: "Parce qu'elle est trop petite pour compter.", pourquoi: "C'est la plus grande forêt tropicale du monde." }
+      - { texte: "Parce qu'aucune activité humaine ne s'y déroule.", pourquoi: "Ce sont justement les activités humaines qui la font reculer." }
+  - texte: "Combien la France compte-t-elle de parcs nationaux pour protéger ses milieux ?"
+    nom: "11 : 8 en métropole et 3 en outre-mer."
+    explication: "Les parcs nationaux protègent des milieux riches et fragiles, comme les Calanques, la Guyane ou les Cévennes. Le plus récent, le parc des Forêts, date de 2019."
+    pieges:
+      - { texte: "Aucun.", pourquoi: "La France protège ses milieux depuis le premier parc national, la Vanoise, créé en 1963." }
+      - { texte: "Un par département.", pourquoi: "Il y a bien moins de parcs nationaux que de départements : ils couvrent des espaces exceptionnels." }
+
+en:
+  titre: "Societies and environments: risks, resources, sustainability"
+  idee: "A risk arises when a hazard meets a vulnerable society. Resources such as water are under pressure. Sustainable development aims to meet today's needs without sacrificing tomorrow's."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Key words: hazard, vulnerability, risk; resource, competing uses; sustainable development, transition."
+    exemple: "Example: an earthquake in an empty desert causes no victims. The same earthquake under a city of fragile buildings is a disaster. The hazard is the same; it's the vulnerability that changes the risk."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In geography, what is a risk?"
+      nom: "The possible meeting of a hazard and an exposed, vulnerable society."
+      explication: "With no people or property exposed, a hazard (earthquake, flood, cyclone) creates no risk for a society."
+      pieges:
+        - { texte: "A dangerous natural phenomenon, wherever it is.", pourquoi: "That's the definition of a hazard; a risk also needs people and property exposed." }
+        - { texte: "A disaster that has already happened.", pourquoi: "A risk is a possibility; the disaster is when it happens." }
+    - texte: "Two earthquakes of the same strength hit a rich country and a poor one. Why is the toll often heavier in the poor country?"
+      nom: "Because vulnerability is greater there: less solid buildings, less prepared rescue services."
+      explication: "Building standards, warnings and rescue services reduce vulnerability: the same hazard then causes fewer victims."
+      pieges:
+        - { texte: "Because the ground shakes harder there.", pourquoi: "The question says the earthquakes have the same strength: it's the vulnerability that differs." }
+        - { texte: "Because rich countries have no earthquakes.", pourquoi: "Japan, a rich country, has many earthquakes: it has prepared for them." }
+    - texte: "How does the Brundtland Report, in 1987, define sustainable development?"
+      nom: "Development that meets the needs of the present without compromising those of future generations."
+      explication: "Sustainable development aims to reconcile the economy, society and the environment, in the long term."
+      pieges:
+        - { texte: "Development that lasts as long as possible, whatever the cost.", pourquoi: "« Sustainable » doesn't just mean « long-lasting »: it's about protecting the needs of future generations." }
+        - { texte: "Stopping all economic activity to protect nature.", pourquoi: "Sustainable development aims to reconcile the economy and the environment, not to abolish the economy." }
+    - texte: "The curriculum speaks of « transition ». What does the word mean?"
+      nom: "A phase of major change, which can unfold in different ways from place to place."
+      explication: "A transition isn't a simple move from one stable state to another: it is not linear at all."
+      pieges:
+        - { texte: "A return to how things were before.", pourquoi: "A transition is a change, not a step back." }
+        - { texte: "A change that is the same everywhere in the world.", pourquoi: "Paths differ with the context: there is no single model." }
+    - texte: "In a dry region, farmers, towns and industries draw on the same water. What do we call this situation?"
+      nom: "Competing uses of a resource under pressure."
+      explication: "When a resource is limited, several uses compete: management choices are then needed."
+      pieges:
+        - { texte: "An unlimited resource.", pourquoi: "If water were unlimited, there would be no competition between uses." }
+        - { texte: "A natural hazard.", pourquoi: "Drought can be a hazard, but competition between users is a social fact." }
+    - texte: "Why do we say the Arctic is both fragile and attractive?"
+      nom: "Melting ice threatens its environments, but opens sea routes and access to resources."
+      explication: "Warming weakens the sea ice and ecosystems; it also attracts ships and mining or oil companies."
+      pieges:
+        - { texte: "Because nobody is interested in it.", pourquoi: "Several states and companies covet its routes and its resources." }
+        - { texte: "Because the ice there grows every year.", pourquoi: "Arctic sea ice is shrinking: that shrinking creates both threats and ambitions." }
+    - texte: "Why is the Amazon rainforest a fragile environment under pressure?"
+      nom: "Because it is shrinking due to deforestation for farming and cattle ranching."
+      explication: "Deforestation threatens very rich biodiversity and the peoples who live there; it also releases CO₂."
+      pieges:
+        - { texte: "Because it is too small to matter.", pourquoi: "It's the largest tropical forest in the world." }
+        - { texte: "Because no human activity takes place there.", pourquoi: "It's precisely human activity that makes it shrink." }
+    - texte: "How many national parks does France have to protect its environments?"
+      nom: "11: 8 in mainland France and 3 overseas."
+      explication: "National parks protect rich, fragile environments, such as the Calanques, French Guiana or the Cévennes. The newest, the Forêts national park, dates from 2019."
+      pieges:
+        - { texte: "None.", pourquoi: "France has protected its environments since its first national park, the Vanoise, created in 1963." }
+        - { texte: "One per department.", pourquoi: "There are far fewer national parks than departments: they cover exceptional areas." }

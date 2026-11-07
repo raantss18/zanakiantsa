@@ -1,0 +1,137 @@
+id: expansions-nom
+titre: "Les expansions du nom"
+niveau: 4e
+prerequis: ["accord-groupe-nominal"]
+programme: { source: cycle4, texte: "Approfondir l’analyse de la structure du groupe nominal étendu et de ses différentes fonctions grammaticales." }
+activite: quiz
+parametres: {}
+idee: "Le nom noyau peut être enrichi par des expansions : un adjectif épithète (une robe rouge), un complément du nom (une robe de soie), une proposition subordonnée relative (une robe qu’elle aime)."
+phrases:
+  consigne: "Trouve le nom noyau, puis regarde ce qui le complète. Touche la bonne réponse."
+  question: "{texte}"
+  indice: "Un seul mot qui s’accorde : adjectif. Une préposition (de, à, en) : complément du nom. Un pronom relatif et un verbe conjugué : relative."
+  exemple: "« une tasse en verre » : le noyau est « tasse » ; « en verre » commence par la préposition « en », c’est un complément du nom."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « une vieille maison en pierre », quel est le nom noyau ?"
+    nom: "maison"
+    explication: "« vieille » et « en pierre » complètent « maison » : c’est le nom noyau du groupe."
+    pieges:
+      - { texte: "pierre", pourquoi: "« pierre » est dans le complément du nom « en pierre » : il précise la maison." }
+      - { texte: "vieille", pourquoi: "« vieille » est un adjectif épithète : il complète le nom « maison »." }
+  - texte: "Dans « un chien qui aboie », quelle est la nature de « qui aboie » ?"
+    nom: "proposition subordonnée relative"
+    explication: "« qui » reprend « chien » et le verbe « aboie » est conjugué : c’est une relative."
+    pieges:
+      - { texte: "complément du nom", pourquoi: "Un complément du nom commence par une préposition (de, à, en). Ici, il y a un pronom relatif et un verbe conjugué." }
+      - { texte: "adjectif épithète", pourquoi: "Un adjectif est un seul mot, sans verbe conjugué. « qui aboie » contient le verbe « aboie »." }
+  - texte: "Dans « un verre à pied », quelle est la nature de « à pied » ?"
+    nom: "complément du nom"
+    explication: "« à pied » commence par la préposition « à » et complète le nom « verre » : c’est un complément du nom."
+    pieges:
+      - { texte: "proposition subordonnée relative", pourquoi: "Il n’y a ni pronom relatif ni verbe conjugué." }
+      - { texte: "adjectif épithète", pourquoi: "« à pied » n’est pas un adjectif : c’est un groupe introduit par la préposition « à »." }
+  - texte: "Dans « des fruits mûrs », quelle est la fonction de « mûrs » ?"
+    nom: "adjectif épithète"
+    explication: "« mûrs » est un adjectif placé à côté du nom « fruits », sans verbe : il est épithète et s’accorde au masculin pluriel."
+    pieges:
+      - { texte: "complément du nom", pourquoi: "Il n’y a pas de préposition : « mûrs » est un adjectif, accordé avec « fruits »." }
+      - { texte: "proposition subordonnée relative", pourquoi: "Il n’y a ni pronom relatif ni verbe conjugué." }
+  - texte: "Dans « le livre dont je t’ai parlé », quelle est la nature de « dont je t’ai parlé » ?"
+    nom: "proposition subordonnée relative"
+    explication: "« dont » reprend « le livre » et « ai parlé » est conjugué : c’est une relative."
+    pieges:
+      - { texte: "complément du nom", pourquoi: "« dont » n’est pas une préposition : c’est un pronom relatif, suivi d’un verbe conjugué." }
+      - { texte: "adjectif épithète", pourquoi: "Un adjectif est un seul mot. Ici, il y a un pronom relatif et un verbe conjugué." }
+  - texte: "Dans « une tasse de thé brûlant », quel nom l’adjectif « brûlant » complète-t-il ?"
+    nom: "thé"
+    explication: "« brûlant » est au masculin singulier : il s’accorde avec « thé ». C’est le thé qui brûle."
+    pieges:
+      - { texte: "tasse", pourquoi: "« tasse » est féminin ; avec elle, on écrirait « brûlante ». « brûlant » va avec « thé »." }
+      - { texte: "une", pourquoi: "« une » est un déterminant ; un adjectif complète un nom." }
+  - texte: "Combien d’expansions complètent le nom « robe » dans « la belle robe de ma sœur que j’ai empruntée » ?"
+    nom: "trois"
+    explication: "L’adjectif « belle », le complément du nom « de ma sœur » et la relative « que j’ai empruntée »."
+    pieges:
+      - { texte: "deux", pourquoi: "Compte encore : l’adjectif « belle », le complément du nom « de ma sœur » et la relative « que j’ai empruntée »." }
+      - { texte: "une", pourquoi: "Il y a un adjectif, un complément du nom et une relative : trois expansions." }
+  - texte: "Dans « Le garçon aux cheveux roux court vite. », supprime l’expansion du nom « garçon ». Que reste-t-il ?"
+    nom: "Le garçon court vite."
+    explication: "« aux cheveux roux » est le complément du nom « garçon » : on le supprime en entier, la phrase reste correcte."
+    pieges:
+      - { texte: "Le garçon aux cheveux court vite.", pourquoi: "« roux » complète « cheveux », qui fait partie du complément du nom : on supprime tout « aux cheveux roux »." }
+      - { texte: "Les cheveux roux courent vite.", pourquoi: "Le noyau est « garçon » : c’est lui qui court. On ne garde pas l’expansion à sa place." }
+  - texte: "Dans « un pull en laine », pourquoi « en laine » est-il un complément du nom ?"
+    nom: "C’est un groupe introduit par une préposition, « en », qui complète le nom « pull »."
+    explication: "La préposition est la marque du complément du nom : « en laine », « de soie », « à rayures »."
+    pieges:
+      - { texte: "Parce qu’il est placé après le nom.", pourquoi: "Un adjectif ou une relative peuvent aussi être placés après le nom : c’est la préposition qui compte." }
+      - { texte: "Parce qu’il s’accorde avec « pull ».", pourquoi: "Un complément du nom ne s’accorde pas : « des pulls en laine », « laine » ne change pas." }
+
+en:
+  langue: "fr"
+  titre: "French: building up the noun phrase"
+  idee: "The head noun can be expanded: by an adjective (« une robe rouge »), a noun complement with a preposition (« une robe de soie ») or a relative clause (« une robe qu’elle aime »)."
+  phrases:
+    consigne: "Find the head noun, then look at what adds to it. Touch the right answer."
+    question: "{texte}"
+    indice: "One word that agrees: adjective. A preposition (« de », « à », « en »): noun complement. A relative pronoun and a conjugated verb: relative clause."
+    exemple: "« une tasse en verre »: the head noun is « tasse »; « en verre » begins with the preposition « en », so it's a noun complement."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "In « une vieille maison en pierre », what is the head noun?"
+      nom: "maison"
+      explication: "« vieille » and « en pierre » add to « maison »: it's the head noun of the group."
+      pieges:
+        - { texte: "pierre", pourquoi: "« pierre » is inside the noun complement « en pierre »: it tells you more about the house." }
+        - { texte: "vieille", pourquoi: "« vieille » is an attributive adjective: it adds to the noun « maison »." }
+    - texte: "In « un chien qui aboie », what kind of group is « qui aboie »?"
+      nom: "relative clause"
+      explication: "« qui » stands for « chien » and the verb « aboie » is conjugated: it's a relative clause."
+      pieges:
+        - { texte: "noun complement", pourquoi: "A noun complement begins with a preposition (« de », « à », « en »). Here there's a relative pronoun and a conjugated verb." }
+        - { texte: "attributive adjective", pourquoi: "An adjective is a single word, with no conjugated verb. « qui aboie » contains the verb « aboie »." }
+    - texte: "In « un verre à pied », what kind of group is « à pied »?"
+      nom: "noun complement"
+      explication: "« à pied » begins with the preposition « à » and adds to the noun « verre »: it's a noun complement."
+      pieges:
+        - { texte: "relative clause", pourquoi: "There's no relative pronoun and no conjugated verb." }
+        - { texte: "attributive adjective", pourquoi: "« à pied » isn't an adjective: it's a group introduced by the preposition « à »." }
+    - texte: "In « des fruits mûrs », what is the function of « mûrs »?"
+      nom: "attributive adjective"
+      explication: "« mûrs » is an adjective next to the noun « fruits », with no verb: it's attributive and agrees in the masculine plural."
+      pieges:
+        - { texte: "noun complement", pourquoi: "There's no preposition: « mûrs » is an adjective, agreeing with « fruits »." }
+        - { texte: "relative clause", pourquoi: "There's no relative pronoun and no conjugated verb." }
+    - texte: "In « le livre dont je t’ai parlé », what kind of group is « dont je t’ai parlé »?"
+      nom: "relative clause"
+      explication: "« dont » stands for « le livre » and « ai parlé » is conjugated: it's a relative clause."
+      pieges:
+        - { texte: "noun complement", pourquoi: "« dont » isn't a preposition: it's a relative pronoun, followed by a conjugated verb." }
+        - { texte: "attributive adjective", pourquoi: "An adjective is a single word. Here there's a relative pronoun and a conjugated verb." }
+    - texte: "In « une tasse de thé brûlant », which noun does the adjective « brûlant » go with?"
+      nom: "thé"
+      explication: "« brûlant » is masculine singular: it agrees with « thé ». It's the tea that's scalding."
+      pieges:
+        - { texte: "tasse", pourquoi: "« tasse » is feminine; with it, you'd write « brûlante ». « brûlant » goes with « thé »." }
+        - { texte: "une", pourquoi: "« une » is a determiner; an adjective adds to a noun." }
+    - texte: "How many expansions add to the noun « robe » in « la belle robe de ma sœur que j’ai empruntée »?"
+      nom: "three"
+      explication: "The adjective « belle », the noun complement « de ma sœur » and the relative clause « que j’ai empruntée »."
+      pieges:
+        - { texte: "two", pourquoi: "Count again: the adjective « belle », the noun complement « de ma sœur » and the relative clause « que j’ai empruntée »." }
+        - { texte: "one", pourquoi: "There's an adjective, a noun complement and a relative clause: three expansions." }
+    - texte: "In « Le garçon aux cheveux roux court vite. », remove what adds to the noun « garçon ». What's left?"
+      nom: "Le garçon court vite."
+      explication: "« aux cheveux roux » is the noun complement of « garçon »: remove all of it, and the sentence is still correct."
+      pieges:
+        - { texte: "Le garçon aux cheveux court vite.", pourquoi: "« roux » adds to « cheveux », which is part of the noun complement: remove the whole of « aux cheveux roux »." }
+        - { texte: "Les cheveux roux courent vite.", pourquoi: "The head noun is « garçon »: he's the one running. You don't keep the expansion in its place." }
+    - texte: "In « un pull en laine », why is « en laine » a noun complement?"
+      nom: "It's a group introduced by a preposition, « en », that adds to the noun « pull »."
+      explication: "The preposition is the sign of a noun complement: « en laine », « de soie », « à rayures »."
+      pieges:
+        - { texte: "Because it comes after the noun.", pourquoi: "An adjective or a relative clause can also come after the noun: the preposition is what counts." }
+        - { texte: "Because it agrees with « pull ».", pourquoi: "A noun complement doesn't agree: « des pulls en laine », « laine » doesn't change." }

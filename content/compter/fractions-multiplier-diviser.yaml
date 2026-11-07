@@ -1,0 +1,136 @@
+id: fractions-multiplier-diviser
+titre: "Multiplier et diviser des fractions"
+niveau: 4e
+prerequis: ["fraction-entier"]
+programme: { source: cycle4, texte: "Résoudre des problèmes mobilisant les opérations sur les fractions : addition, soustraction, multiplication, division, inverse." }
+activite: quiz
+parametres: {}
+idee: "Pour multiplier deux fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux. Diviser par une fraction, c'est multiplier par son inverse : l'inverse de 2/3 est 3/2."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Produit : numérateur × numérateur, dénominateur × dénominateur. Quotient : retourne la fraction par laquelle on divise, puis multiplie."
+  exemple: "2/3 × 4/5 = (2 × 4)/(3 × 5) = 8/15. Et 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8 : on a retourné 2/5."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 2/5 × 3/7 ?"
+    nom: "6/35"
+    explication: "(2 × 3)/(5 × 7) = 6/35."
+    pieges:
+      - { texte: "5/12", pourquoi: "On a additionné les numérateurs et les dénominateurs : pour un produit, on les multiplie." }
+      - { texte: "6/7", pourquoi: "On a gardé un seul dénominateur, comme pour une somme : pour un produit, 5 × 7 = 35." }
+  - texte: "Combien font 3/4 × 5/2 ?"
+    nom: "15/8"
+    explication: "(3 × 5)/(4 × 2) = 15/8."
+    pieges:
+      - { texte: "8/6", pourquoi: "On a additionné : 3 + 5 et 4 + 2. Pour un produit, on multiplie." }
+      - { texte: "15/4", pourquoi: "Le dénominateur 2 a été oublié : 4 × 2 = 8." }
+  - texte: "Quel est l'inverse de 5/3 ?"
+    nom: "3/5"
+    explication: "5/3 × 3/5 = 15/15 = 1 : l'inverse est la fraction retournée."
+    pieges:
+      - { texte: "−5/3", pourquoi: "−5/3 est l'opposé : la somme fait 0. L'inverse donne 1 quand on multiplie." }
+      - { texte: "−3/5", pourquoi: "Le signe ne change pas : 5/3 × (−3/5) = −1, pas 1." }
+  - texte: "Combien font 1/2 ÷ 3/5 ?"
+    nom: "5/6"
+    explication: "On multiplie par l'inverse de 3/5 : 1/2 × 5/3 = 5/6."
+    pieges:
+      - { texte: "3/10", pourquoi: "On a multiplié par 3/5 sans la retourner : diviser, c'est multiplier par l'inverse." }
+      - { texte: "6/5", pourquoi: "On a retourné la première fraction : c'est celle par laquelle on divise qu'on retourne." }
+  - texte: "Combien font 4/7 ÷ 2/3 ?"
+    nom: "6/7"
+    explication: "4/7 × 3/2 = 12/14 = 6/7."
+    pieges:
+      - { texte: "8/21", pourquoi: "On a multiplié par 2/3 sans la retourner." }
+      - { texte: "14/12", pourquoi: "On a retourné la première fraction au lieu de la seconde." }
+  - texte: "Combien font les 2/3 de 3/4 ?"
+    nom: "1/2"
+    explication: "Prendre les 2/3 de 3/4, c'est multiplier : 2/3 × 3/4 = 6/12 = 1/2."
+    pieges:
+      - { texte: "17/12", pourquoi: "On a additionné les deux fractions : « les 2/3 de » se traduit par une multiplication." }
+      - { texte: "8/9", pourquoi: "On a divisé 2/3 par 3/4 : « de » se traduit par ×." }
+  - texte: "Complète : 3/5 × … = 1"
+    nom: "5/3"
+    explication: "Le nombre qui, multiplié par 3/5, donne 1, est son inverse : 3/5 × 5/3 = 15/15 = 1."
+    pieges:
+      - { texte: "2/5", pourquoi: "3/5 + 2/5 = 1 : c'est vrai pour une somme. Pour un produit, il faut l'inverse." }
+      - { texte: "−3/5", pourquoi: "3/5 + (−3/5) = 0 : l'opposé annule une somme, pas un produit." }
+  - texte: "Pourquoi diviser par 1/2 revient-il à multiplier par 2 ?"
+    nom: "Parce que dans 1, il y a 2 moitiés : l'inverse de 1/2 est 2."
+    explication: "3 ÷ 1/2 demande combien de moitiés il y a dans 3 : 6, c'est-à-dire 3 × 2."
+    pieges:
+      - { texte: "Parce que diviser rend toujours plus petit.", pourquoi: "Diviser par un nombre plus petit que 1 donne un résultat plus grand : 3 ÷ 1/2 = 6." }
+      - { texte: "Parce que 1/2 = 2.", pourquoi: "1/2 = 0,5 : c'est l'inverse de 2, pas 2." }
+  - texte: "Une bouteille de 3/4 L remplit des verres de 1/8 L. Combien de verres remplit-elle ?"
+    nom: "6"
+    explication: "On cherche combien de fois 1/8 entre dans 3/4 : 3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6 verres."
+    pieges:
+      - { texte: "3/32", pourquoi: "On a multiplié 3/4 par 1/8 : on cherche combien de verres, c'est une division." }
+      - { texte: "3", pourquoi: "3/4 = 6/8 : la bouteille contient 6 huitièmes, pas 3." }
+
+en:
+  titre: "Multiplying and dividing fractions"
+  idee: "To multiply two fractions, multiply the numerators together and the denominators together. Dividing by a fraction means multiplying by its reciprocal: the reciprocal of 2/3 is 3/2."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Product: numerator × numerator, denominator × denominator. Quotient: turn over the fraction you divide by, then multiply."
+    exemple: "2/3 × 4/5 = (2 × 4)/(3 × 5) = 8/15. And 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8: 2/5 was turned over."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 2/5 × 3/7?"
+      nom: "6/35"
+      explication: "(2 × 3)/(5 × 7) = 6/35."
+      pieges:
+        - { texte: "5/12", pourquoi: "The numerators and denominators were added: for a product, multiply them." }
+        - { texte: "6/7", pourquoi: "Only one denominator was kept, as for a sum: for a product, 5 × 7 = 35." }
+    - texte: "What is 3/4 × 5/2?"
+      nom: "15/8"
+      explication: "(3 × 5)/(4 × 2) = 15/8."
+      pieges:
+        - { texte: "8/6", pourquoi: "This adds 3 + 5 and 4 + 2. For a product, multiply." }
+        - { texte: "15/4", pourquoi: "The denominator 2 was forgotten: 4 × 2 = 8." }
+    - texte: "What is the reciprocal of 5/3?"
+      nom: "3/5"
+      explication: "5/3 × 3/5 = 15/15 = 1: the reciprocal is the fraction turned over."
+      pieges:
+        - { texte: "−5/3", pourquoi: "−5/3 is the opposite: the sum is 0. The reciprocal gives 1 when you multiply." }
+        - { texte: "−3/5", pourquoi: "The sign does not change: 5/3 × (−3/5) = −1, not 1." }
+    - texte: "What is 1/2 ÷ 3/5?"
+      nom: "5/6"
+      explication: "Multiply by the reciprocal of 3/5: 1/2 × 5/3 = 5/6."
+      pieges:
+        - { texte: "3/10", pourquoi: "This multiplies by 3/5 without turning it over: dividing means multiplying by the reciprocal." }
+        - { texte: "6/5", pourquoi: "The first fraction was turned over: you turn over the one you divide by." }
+    - texte: "What is 4/7 ÷ 2/3?"
+      nom: "6/7"
+      explication: "4/7 × 3/2 = 12/14 = 6/7."
+      pieges:
+        - { texte: "8/21", pourquoi: "This multiplies by 2/3 without turning it over." }
+        - { texte: "14/12", pourquoi: "The first fraction was turned over instead of the second." }
+    - texte: "What is 2/3 of 3/4?"
+      nom: "1/2"
+      explication: "Taking 2/3 of 3/4 means multiplying: 2/3 × 3/4 = 6/12 = 1/2."
+      pieges:
+        - { texte: "17/12", pourquoi: "The two fractions were added: 2/3 of means multiply." }
+        - { texte: "8/9", pourquoi: "2/3 was divided by 3/4: of means ×." }
+    - texte: "Fill in: 3/5 × … = 1"
+      nom: "5/3"
+      explication: "The number that gives 1 when multiplied by 3/5 is its reciprocal: 3/5 × 5/3 = 15/15 = 1."
+      pieges:
+        - { texte: "2/5", pourquoi: "3/5 + 2/5 = 1: that works for a sum. For a product, you need the reciprocal." }
+        - { texte: "−3/5", pourquoi: "3/5 + (−3/5) = 0: the opposite cancels a sum, not a product." }
+    - texte: "Why does dividing by 1/2 mean multiplying by 2?"
+      nom: "Because there are 2 halves in 1: the reciprocal of 1/2 is 2."
+      explication: "3 ÷ 1/2 asks how many halves there are in 3: 6, that is 3 × 2."
+      pieges:
+        - { texte: "Because dividing always makes things smaller.", pourquoi: "Dividing by a number less than 1 gives a bigger result: 3 ÷ 1/2 = 6." }
+        - { texte: "Because 1/2 = 2.", pourquoi: "1/2 = 0.5: it is the reciprocal of 2, not 2." }
+    - texte: "A 3/4 L bottle fills glasses of 1/8 L. How many glasses does it fill?"
+      nom: "6"
+      explication: "How many times does 1/8 go into 3/4? 3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6 glasses."
+      pieges:
+        - { texte: "3/32", pourquoi: "3/4 was multiplied by 1/8: we want how many glasses, which is a division." }
+        - { texte: "3", pourquoi: "3/4 = 6/8: the bottle holds 6 eighths, not 3." }

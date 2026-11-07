@@ -4,7 +4,7 @@ nom: "Les échecs"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Les leçons pas à pas, puis de vraies parties contre le robot ou à deux."
 icone: "265f"
-ages: [5, 12]
+ages: [5, 15]
 # Les échecs se jouent et s'apprennent à tout âge : jamais cachés par le plancher de classe (ADR 0065).
 sans_age: true
 # Règles officielles : FIDE Laws of Chess (1er janvier 2023), article 3 « The moves of the pieces ». Hors programme
@@ -19,7 +19,12 @@ sources:
   # decouverte, double) : positions vérifiées aussi avec python-chess (légalité, coups gagnants = « coups »). Règle du
   # carré : pas de source officielle trouvée ; chaque réponse est calculée par une recherche complète de la course
   # roi contre pion. Articles FIDE cités relus le 2026-11-07.
-ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir, mat-escalier, mat-baiser, clouage, enfilade, ouverture, decouverte, double-echec, regle-carre]
+  # Collège (2026-11-07) : mat à l'étouffée (thème mat), attaque double de la dame (thème fourchette), déviation (thème
+  # deviation : échec, toutes les réponses noires prennent la pièce offerte, puis mat en un ; c'est aussi le seul coup qui
+  # force le mat en deux) : légalité et solutions vérifiées avec python-chess 1.11. Roi et tour contre roi : chaque mat et
+  # chaque pat cité vérifié avec python-chess ; « le mat se fait au bord » vérifié sur toutes les positions (216 mats).
+  # La méthode (la boîte) n'a pas de source officielle : vocabulaire usuel des joueurs.
+ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir, mat-escalier, mat-baiser, clouage, enfilade, ouverture, decouverte, double-echec, regle-carre, finale-tour-roi, mat-etouffee, attaque-double-dame, deviation]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

@@ -1,0 +1,124 @@
+id: europe-revolutions
+titre: "L'Europe face aux révolutions (1789-1848)"
+niveau: 1re
+prerequis: [revolution-empire]
+programme: { source: hg1re, texte: "Ce chapitre vise à montrer l’ampleur de la rupture révolutionnaire avec « l’Ancien Régime » et les tentatives de reconstruction d’un ordre politique stable." }
+activite: quiz
+parametres: {}
+idee: "La Révolution fait de la nation la source du pouvoir. Elle se radicalise dans la guerre et la Terreur. Napoléon impose un ordre autoritaire, diffuse le Code civil, puis se heurte aux peuples et aux monarchies d'Europe."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1789, souveraineté nationale ; janvier 1793, exécution de Louis XVI ; 1793-1794, la Terreur ; 1804, Code civil ; 1808, soulèvement de Madrid ; 1814-1815, congrès de Vienne ; 1848, « printemps des peuples »."
+  exemple: "Exemple : l'article 3 de la Déclaration de 1789 dit que la souveraineté réside dans la Nation. Le roi ne gouverne donc plus par la volonté de Dieu, mais au nom de la nation."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Selon la Déclaration des droits de l'homme et du citoyen de 1789, où réside le principe de toute souveraineté ?"
+    nom: "Dans la Nation."
+    explication: "C'est la souveraineté nationale : le pouvoir vient de la nation et non plus du roi de droit divin."
+    pieges:
+      - { texte: "Dans la personne du roi, choisi par Dieu.", pourquoi: "C'est le principe de la monarchie absolue de droit divin, que la Révolution rejette." }
+      - { texte: "Dans l'Église.", pourquoi: "La Déclaration ne fonde pas le pouvoir sur la religion, mais sur la nation." }
+  - texte: "Qui sont les sans-culottes ?"
+    nom: "Des révolutionnaires parisiens issus du peuple : artisans, boutiquiers, ouvriers."
+    explication: "Ils portent le pantalon et non la culotte des nobles ; ils pèsent sur les journées révolutionnaires et réclament des mesures radicales."
+    pieges:
+      - { texte: "Des nobles émigrés.", pourquoi: "Les émigrés ont fui la Révolution ; les sans-culottes la soutiennent et la poussent plus loin." }
+      - { texte: "Les soldats de la Grande Armée de Napoléon.", pourquoi: "La Grande Armée date de l'Empire ; les sans-culottes agissent surtout en 1792-1794." }
+  - texte: "De décembre 1792 à janvier 1793, qui juge Louis XVI ?"
+    nom: "La Convention, l'assemblée élue de la République."
+    explication: "Jugé coupable de trahison par les représentants de la nation, Louis XVI est guillotiné le 21 janvier 1793."
+    pieges:
+      - { texte: "Le pape.", pourquoi: "Le pape n'a aucun pouvoir de justice en France : ce sont les représentants de la nation qui jugent le roi." }
+      - { texte: "Napoléon Bonaparte.", pourquoi: "Bonaparte n'est alors qu'un jeune officier ; il prend le pouvoir en 1799." }
+  - texte: "Madame Roland, figure de la Révolution, anime un salon politique proche des Girondins. Que lui arrive-t-il en novembre 1793 ?"
+    nom: "Elle est guillotinée pendant la Terreur."
+    explication: "Les Girondins sont éliminés par les Montagnards en 1793 ; Madame Roland, comme d'autres, est exécutée sous la Terreur."
+    pieges:
+      - { texte: "Elle devient la première femme élue députée.", pourquoi: "Les femmes n'ont alors ni le droit de vote ni celui d'être élues ; c'est en 1945 que des femmes entrent à l'Assemblée." }
+      - { texte: "Elle devient reine de France.", pourquoi: "La royauté est abolie depuis 1792 : il n'y a plus de reine." }
+  - texte: "Pourquoi la Terreur est-elle mise en place en 1793-1794 ?"
+    nom: "Pour défendre la République menacée par la guerre extérieure et les révoltes intérieures."
+    explication: "Le gouvernement révolutionnaire suspend les libertés et fait exécuter des milliers de suspects ; la Terreur prend fin avec la chute de Robespierre, en juillet 1794."
+    pieges:
+      - { texte: "Pour rétablir la monarchie.", pourquoi: "Les partisans de la Terreur sont au contraire des républicains qui combattent les royalistes." }
+      - { texte: "Parce que la France était en paix et voulait conquérir l'Europe.", pourquoi: "La France est alors en guerre contre une coalition de monarchies européennes et menacée d'invasion." }
+  - texte: "En 1804, le Code civil est promulgué. Quel principe de la Révolution conserve-t-il ?"
+    nom: "L'égalité devant la loi."
+    explication: "Le Code civil abolit les privilèges de naissance dans le droit ; il est appliqué dans les pays conquis et connaît un rayonnement européen."
+    pieges:
+      - { texte: "L'égalité entre hommes et femmes.", pourquoi: "Le Code civil place au contraire la femme mariée sous l'autorité de son mari." }
+      - { texte: "Le retour des privilèges de la noblesse.", pourquoi: "Le Code civil confirme l'abolition des privilèges de 1789." }
+  - texte: "En 1808, les habitants de Madrid se soulèvent contre les troupes françaises. Que montre cette révolte ?"
+    nom: "L'éveil des sentiments nationaux contre la domination napoléonienne."
+    explication: "En Espagne comme ailleurs, la domination de Napoléon fait naître des résistances nationales qui fragilisent l'Empire."
+    pieges:
+      - { texte: "L'adhésion des Espagnols à l'Empire.", pourquoi: "Une révolte armée montre au contraire un rejet de l'occupant." }
+      - { texte: "Le début de la Révolution française.", pourquoi: "La Révolution commence en France en 1789 ; en 1808, c'est l'Empire qui est contesté." }
+  - texte: "Que cherche à faire le congrès de Vienne, en 1814-1815 ?"
+    nom: "Rétablir l'ordre monarchique en Europe et redessiner ses frontières après Napoléon."
+    explication: "Les monarchies victorieuses restaurent les rois. Mais les idées de nation et de liberté demeurent et ressurgissent dans les révolutions de 1830 et de 1848."
+    pieges:
+      - { texte: "Proclamer la République dans toute l'Europe.", pourquoi: "Le congrès réunit des monarchies qui veulent au contraire effacer la Révolution." }
+      - { texte: "Couronner Napoléon empereur d'Europe.", pourquoi: "Le congrès se réunit après la défaite de Napoléon, pour organiser l'Europe sans lui." }
+
+en:
+  titre: "Europe in the age of revolutions (1789-1848)"
+  idee: "The Revolution makes the nation the source of power. It becomes more radical through war and the Terror. Napoleon imposes an authoritarian order, spreads the Civil Code, then runs up against Europe's peoples and monarchies."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1789, national sovereignty; January 1793, execution of Louis XVI; 1793-1794, the Terror; 1804, Civil Code; 1808, Madrid uprising; 1814-1815, Congress of Vienna; 1848, « Springtime of Peoples »."
+    exemple: "Example: Article 3 of the 1789 Declaration says sovereignty lies in the Nation. So the king no longer rules by the will of God, but in the name of the nation."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "According to the 1789 Declaration of the Rights of Man and of the Citizen, where does the principle of all sovereignty lie?"
+      nom: "In the Nation."
+      explication: "That's national sovereignty: power comes from the nation, no longer from a king ruling by divine right."
+      pieges:
+        - { texte: "In the person of the king, chosen by God.", pourquoi: "That's the principle of absolute monarchy by divine right, which the Revolution rejects." }
+        - { texte: "In the Church.", pourquoi: "The Declaration doesn't base power on religion, but on the nation." }
+    - texte: "Who are the sans-culottes?"
+      nom: "Parisian revolutionaries from the common people: craftsmen, shopkeepers, workers."
+      explication: "They wear trousers rather than the nobles' breeches; they weigh on the revolutionary days and call for radical measures."
+      pieges:
+        - { texte: "Émigré nobles.", pourquoi: "The émigrés fled the Revolution; the sans-culottes support it and push it further." }
+        - { texte: "The soldiers of Napoleon's Grande Armée.", pourquoi: "The Grande Armée dates from the Empire; the sans-culottes are active mainly in 1792-1794." }
+    - texte: "From December 1792 to January 1793, who tries Louis XVI?"
+      nom: "The Convention, the Republic's elected assembly."
+      explication: "Found guilty of treason by the nation's representatives, Louis XVI is guillotined on 21 January 1793."
+      pieges:
+        - { texte: "The pope.", pourquoi: "The pope has no judicial power in France: it's the nation's representatives who try the king." }
+        - { texte: "Napoleon Bonaparte.", pourquoi: "Bonaparte is then only a young officer; he takes power in 1799." }
+    - texte: "Madame Roland, a figure of the Revolution, hosts a political salon close to the Girondins. What happens to her in November 1793?"
+      nom: "She is guillotined during the Terror."
+      explication: "The Girondins are eliminated by the Montagnards in 1793; Madame Roland, like others, is executed under the Terror."
+      pieges:
+        - { texte: "She becomes the first woman elected as a deputy.", pourquoi: "Women then have neither the right to vote nor to be elected; women first enter the Assembly in 1945." }
+        - { texte: "She becomes queen of France.", pourquoi: "The monarchy was abolished in 1792: there is no queen any more." }
+    - texte: "Why is the Terror set up in 1793-1794?"
+      nom: "To defend the Republic, threatened by foreign war and revolts at home."
+      explication: "The revolutionary government suspends freedoms and has thousands of suspects executed; the Terror ends with Robespierre's fall, in July 1794."
+      pieges:
+        - { texte: "To bring back the monarchy.", pourquoi: "Supporters of the Terror are, on the contrary, republicans fighting the royalists." }
+        - { texte: "Because France was at peace and wanted to conquer Europe.", pourquoi: "France is then at war with a coalition of European monarchies and under threat of invasion." }
+    - texte: "In 1804, the Civil Code is enacted. Which principle of the Revolution does it keep?"
+      nom: "Equality before the law."
+      explication: "The Civil Code removes privileges of birth from the law; it is applied in conquered countries and has a Europe-wide influence."
+      pieges:
+        - { texte: "Equality between men and women.", pourquoi: "On the contrary, the Civil Code places a married woman under her husband's authority." }
+        - { texte: "The return of the nobility's privileges.", pourquoi: "The Civil Code confirms the abolition of privileges of 1789." }
+    - texte: "In 1808, the people of Madrid rise up against French troops. What does this revolt show?"
+      nom: "The awakening of national feeling against Napoleonic rule."
+      explication: "In Spain as elsewhere, Napoleon's rule gives rise to national resistance that weakens the Empire."
+      pieges:
+        - { texte: "The Spanish people's support for the Empire.", pourquoi: "An armed revolt shows, on the contrary, a rejection of the occupier." }
+        - { texte: "The start of the French Revolution.", pourquoi: "The Revolution starts in France in 1789; in 1808, it's the Empire that is challenged." }
+    - texte: "What does the Congress of Vienna, in 1814-1815, seek to do?"
+      nom: "Restore the monarchical order in Europe and redraw its borders after Napoleon."
+      explication: "The victorious monarchies restore the kings. But the ideas of nation and liberty remain and resurface in the revolutions of 1830 and 1848."
+      pieges:
+        - { texte: "Proclaim the Republic all over Europe.", pourquoi: "The congress brings together monarchies that want, on the contrary, to erase the Revolution." }
+        - { texte: "Crown Napoleon emperor of Europe.", pourquoi: "The congress meets after Napoleon's defeat, to organise Europe without him." }

@@ -1,0 +1,149 @@
+id: circonstancielles-mode
+titre: "Indicatif ou subjonctif dans la subordonnée circonstancielle ?"
+niveau: 3e
+prerequis: ["subordonnees", "subjonctif-present"]
+programme: { source: cycle4, texte: "Maitriser l’emploi des voix, des modes (emplois élargis du subjonctif après certaines conjonctions) et des valeurs aspectuelles et temporelles des temps." }
+activite: quiz
+parametres: {}
+idee: "Cause et conséquence réelles : indicatif (parce que, puisque, si bien que, tant… que). But, concession, avant que : subjonctif (pour que, afin que, bien que, quoique, avant que)."
+phrases:
+  consigne: "Repère la conjonction de subordination et le rapport qu’elle exprime, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Cause ou conséquence réelle : indicatif. But, concession ou « avant que » : subjonctif."
+  exemple: "« Bien qu’il (pleuvoir), nous sortons » : « bien que » exprime la concession, il demande le subjonctif : bien qu’il pleuve."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Choisis la bonne forme : Je t’explique la règle pour que tu la (comprendre)."
+    nom: "comprennes"
+    explication: "« pour que » exprime le but : subjonctif présent, « que tu comprennes »."
+    pieges:
+      - { texte: "comprends", pourquoi: "C’est l’indicatif présent. « pour que » exprime le but et demande le subjonctif." }
+      - { texte: "comprendras", pourquoi: "C’est le futur de l’indicatif. Après « pour que », on emploie le subjonctif." }
+  - texte: "Choisis la bonne forme : Il reste à l’intérieur parce qu’il (pleuvoir)."
+    nom: "pleut"
+    explication: "« parce que » exprime une cause réelle : indicatif présent, « il pleut »."
+    pieges:
+      - { texte: "pleuve", pourquoi: "C’est le subjonctif. « parce que » donne une cause réelle et demande l’indicatif." }
+      - { texte: "pleuvrait", pourquoi: "C’est le conditionnel : il présenterait la pluie comme imaginée. Ici, elle est réelle." }
+  - texte: "Choisis la bonne forme : Bien qu’elle (être) fatiguée, elle continue."
+    nom: "soit"
+    explication: "« bien que » exprime la concession : subjonctif présent, « qu’elle soit »."
+    pieges:
+      - { texte: "est", pourquoi: "C’est l’indicatif présent. « bien que » (concession) demande le subjonctif." }
+      - { texte: "sera", pourquoi: "C’est le futur de l’indicatif. Après « bien que », on emploie le subjonctif." }
+  - texte: "Choisis la bonne forme : Il a tant travaillé qu’il (réussir) son examen."
+    nom: "a réussi"
+    explication: "« tant… que » exprime une conséquence réelle : indicatif, ici au passé composé, « il a réussi »."
+    pieges:
+      - { texte: "ait réussi", pourquoi: "C’est le subjonctif passé. « tant… que » exprime une conséquence réelle et demande l’indicatif." }
+      - { texte: "réussisse", pourquoi: "C’est le subjonctif présent. La réussite est un fait réel : indicatif." }
+  - texte: "Choisis la bonne forme : Rentre avant qu’il (faire) nuit."
+    nom: "fasse"
+    explication: "« avant que » demande le subjonctif : la nuit n’est pas encore là, « avant qu’il fasse nuit »."
+    pieges:
+      - { texte: "fait", pourquoi: "C’est l’indicatif présent. « avant que » demande le subjonctif." }
+      - { texte: "fera", pourquoi: "C’est le futur de l’indicatif. Après « avant que », on emploie le subjonctif." }
+  - texte: "Choisis la bonne forme : Puisque tu (savoir) la réponse, dis-la."
+    nom: "sais"
+    explication: "« puisque » donne une cause connue de tous : indicatif présent, « tu sais »."
+    pieges:
+      - { texte: "saches", pourquoi: "C’est le subjonctif. « puisque » donne une cause réelle et demande l’indicatif." }
+      - { texte: "sauras", pourquoi: "C’est le futur. La cause est vraie maintenant : indicatif présent." }
+  - texte: "Choisis la bonne forme : Quoiqu’il (avoir) peur, il saute du plongeoir."
+    nom: "ait"
+    explication: "« quoique » exprime la concession : subjonctif présent, « qu’il ait »."
+    pieges:
+      - { texte: "a", pourquoi: "C’est l’indicatif présent. « quoique » (concession) demande le subjonctif." }
+      - { texte: "aura", pourquoi: "C’est le futur de l’indicatif. Après « quoique », on emploie le subjonctif." }
+  - texte: "Choisis la bonne forme : Parle plus fort afin qu’on t’(entendre)."
+    nom: "entende"
+    explication: "« afin que » exprime le but : subjonctif présent, « qu’on t’entende »."
+    pieges:
+      - { texte: "entend", pourquoi: "C’est l’indicatif présent. « afin que » exprime le but et demande le subjonctif." }
+      - { texte: "entendra", pourquoi: "C’est le futur de l’indicatif. Après « afin que », on emploie le subjonctif." }
+  - texte: "Pourquoi dit-on « bien qu’il pleuve » mais « parce qu’il pleut » ?"
+    nom: "« bien que » (concession) demande le subjonctif ; « parce que » (cause réelle) demande l’indicatif."
+    explication: "Le mode n’est pas libre : c’est la conjonction de subordination qui l’impose."
+    pieges:
+      - { texte: "Parce que la pluie est plus forte avec « bien que ».", pourquoi: "La pluie est la même : c’est la conjonction qui impose le mode, pas le sens du verbe." }
+      - { texte: "Les deux modes sont possibles dans les deux phrases.", pourquoi: "Le mode n’est pas libre : chaque conjonction impose le sien." }
+  - texte: "Pourquoi « pour que » est-il suivi du subjonctif ?"
+    nom: "Le but est une action visée, pas encore réalisée."
+    explication: "Le subjonctif présente une action envisagée, non comme un fait : c’est le cas du but."
+    pieges:
+      - { texte: "Parce que la subordonnée est en début de phrase.", pourquoi: "La place ne change rien : « pour que » demande le subjonctif où qu’il soit." }
+      - { texte: "Parce que l’action a déjà eu lieu.", pourquoi: "Au contraire : le but n’est pas encore atteint." }
+
+en:
+  langue: "fr"
+  titre: "French: indicative or subjunctive in adverbial clauses?"
+  idee: "Real cause or result: indicative (« parce que », « puisque », « si bien que », « tant… que »). Purpose, concession, « avant que »: subjunctive (« pour que », « afin que », « bien que », « quoique »)."
+  phrases:
+    consigne: "Spot the conjunction and the link it expresses, then touch the right form."
+    question: "{texte}"
+    indice: "Real cause or result: indicative. Purpose, concession or « avant que »: subjunctive."
+    exemple: "« Bien qu’il (pleuvoir), nous sortons »: « bien que » expresses concession and needs the subjunctive: « bien qu’il pleuve »."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Choose the right form: « Je t’explique la règle pour que tu la (comprendre). »"
+      nom: "comprennes"
+      explication: "« pour que » expresses purpose: present subjunctive, « que tu comprennes »."
+      pieges:
+        - { texte: "comprends", pourquoi: "That's the present indicative. « pour que » expresses purpose and needs the subjunctive." }
+        - { texte: "comprendras", pourquoi: "That's the future indicative. After « pour que », use the subjunctive." }
+    - texte: "Choose the right form: « Il reste à l’intérieur parce qu’il (pleuvoir). »"
+      nom: "pleut"
+      explication: "« parce que » gives a real cause: present indicative, « il pleut »."
+      pieges:
+        - { texte: "pleuve", pourquoi: "That's the subjunctive. « parce que » gives a real cause and needs the indicative." }
+        - { texte: "pleuvrait", pourquoi: "That's the conditional: it would make the rain imaginary. Here it's real." }
+    - texte: "Choose the right form: « Bien qu’elle (être) fatiguée, elle continue. »"
+      nom: "soit"
+      explication: "« bien que » expresses concession: present subjunctive, « qu’elle soit »."
+      pieges:
+        - { texte: "est", pourquoi: "That's the present indicative. « bien que » (concession) needs the subjunctive." }
+        - { texte: "sera", pourquoi: "That's the future indicative. After « bien que », use the subjunctive." }
+    - texte: "Choose the right form: « Il a tant travaillé qu’il (réussir) son examen. »"
+      nom: "a réussi"
+      explication: "« tant… que » expresses a real result: indicative, here in the perfect, « il a réussi »."
+      pieges:
+        - { texte: "ait réussi", pourquoi: "That's the past subjunctive. « tant… que » expresses a real result and needs the indicative." }
+        - { texte: "réussisse", pourquoi: "That's the present subjunctive. Passing is a real fact: indicative." }
+    - texte: "Choose the right form: « Rentre avant qu’il (faire) nuit. »"
+      nom: "fasse"
+      explication: "« avant que » needs the subjunctive: night hasn't come yet, « avant qu’il fasse nuit »."
+      pieges:
+        - { texte: "fait", pourquoi: "That's the present indicative. « avant que » needs the subjunctive." }
+        - { texte: "fera", pourquoi: "That's the future indicative. After « avant que », use the subjunctive." }
+    - texte: "Choose the right form: « Puisque tu (savoir) la réponse, dis-la. »"
+      nom: "sais"
+      explication: "« puisque » gives a cause everyone knows: present indicative, « tu sais »."
+      pieges:
+        - { texte: "saches", pourquoi: "That's the subjunctive. « puisque » gives a real cause and needs the indicative." }
+        - { texte: "sauras", pourquoi: "That's the future. The cause is true now: present indicative." }
+    - texte: "Choose the right form: « Quoiqu’il (avoir) peur, il saute du plongeoir. »"
+      nom: "ait"
+      explication: "« quoique » expresses concession: present subjunctive, « qu’il ait »."
+      pieges:
+        - { texte: "a", pourquoi: "That's the present indicative. « quoique » (concession) needs the subjunctive." }
+        - { texte: "aura", pourquoi: "That's the future indicative. After « quoique », use the subjunctive." }
+    - texte: "Choose the right form: « Parle plus fort afin qu’on t’(entendre). »"
+      nom: "entende"
+      explication: "« afin que » expresses purpose: present subjunctive, « qu’on t’entende »."
+      pieges:
+        - { texte: "entend", pourquoi: "That's the present indicative. « afin que » expresses purpose and needs the subjunctive." }
+        - { texte: "entendra", pourquoi: "That's the future indicative. After « afin que », use the subjunctive." }
+    - texte: "Why do we say « bien qu’il pleuve » but « parce qu’il pleut »?"
+      nom: "« bien que » (concession) needs the subjunctive; « parce que » (real cause) needs the indicative."
+      explication: "The mood isn't a free choice: the conjunction decides it."
+      pieges:
+        - { texte: "Because the rain is heavier with « bien que ».", pourquoi: "The rain is the same: the conjunction decides the mood, not the meaning of the verb." }
+        - { texte: "Both moods work in both sentences.", pourquoi: "The mood isn't a free choice: each conjunction requires its own." }
+    - texte: "Why is « pour que » followed by the subjunctive?"
+      nom: "A purpose is something aimed at, not yet done."
+      explication: "The subjunctive presents an action as intended, not as a fact: that's what a purpose is."
+      pieges:
+        - { texte: "Because the clause comes at the start of the sentence.", pourquoi: "Position changes nothing: « pour que » needs the subjunctive wherever it is." }
+        - { texte: "Because the action has already happened.", pourquoi: "On the contrary: the purpose hasn't been reached yet." }

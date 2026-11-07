@@ -1,0 +1,170 @@
+id: linkers
+titre: "Les connecteurs logiques : however, although, therefore"
+niveau: Terminale
+prerequis: [reading-1re]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES) : tableaux des descripteurs,
+# production écrite colonne B1 et réception colonne B2. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Production, B1 : peut écrire un texte sur un sujet actuel en rapport avec son centre d’intérêt, en utilisant un langage simple pour lister les avantages et les inconvénients, donner et justifier son opinion. Réception, B2 : peut reconnaître la structuration d’un texte." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Les connecteurs organisent un texte : however (cependant), although (bien que) + sujet et verbe, despite (malgré) + nom, therefore (donc), whereas (alors que), moreover (de plus)."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quel lien entre les deux idées : opposition, cause, conséquence, ajout ? Puis regarde ce qui suit : un nom, ou un sujet et un verbe ?"
+  exemple: "« Trains are fast. …, they are expensive. » Les deux idées s'opposent : « Trains are fast. However, they are expensive. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « Electric cars are cleaner. …, they are still expensive. »"
+    nom: "However"
+    explication: "Deux idées qui s'opposent : « However », cependant."
+    pieges:
+      - { texte: "Therefore", pourquoi: "« Therefore », donc, annonce une conséquence. Ici, les idées s'opposent : « However »." }
+      - { texte: "Moreover", pourquoi: "« Moreover », de plus, ajoute un argument dans le même sens. Ici, c'est une opposition." }
+  - texte: "Complète : « … it was raining, they played the match. »"
+    nom: "Although"
+    explication: "Opposition + sujet et verbe (« it was raining ») : « Although », bien que."
+    pieges:
+      - { texte: "Despite", pourquoi: "« Despite » est suivi d'un nom ou d'un -ing : « despite the rain ». Avec « it was raining » : « Although »." }
+      - { texte: "Because", pourquoi: "« Because » annonce une cause. Jouer sous la pluie, c'est une opposition : « Although »." }
+  - texte: "Complète : « … the rain, they played the match. »"
+    nom: "Despite"
+    explication: "Opposition + un nom (« the rain ») : « Despite », malgré."
+    pieges:
+      - { texte: "Although", pourquoi: "« Although » demande un sujet et un verbe : « although it was raining ». Avec un nom : « Despite »." }
+      - { texte: "However", pourquoi: "« However » relie deux phrases complètes, souvent suivi d'une virgule. Devant un nom : « Despite »." }
+  - texte: "Complète : « Many people now work from home. …, city-centre cafés have fewer customers. »"
+    nom: "As a result"
+    explication: "La deuxième idée est une conséquence de la première : « As a result », par conséquent."
+    pieges:
+      - { texte: "On the other hand", pourquoi: "« On the other hand » présente l'autre face d'une question. Ici, c'est une conséquence." }
+      - { texte: "For example", pourquoi: "« For example » donne un exemple. Moins de clients est une conséquence du télétravail." }
+  - texte: "Complète : « Some people love social media, … others find it stressful. »"
+    nom: "whereas"
+    explication: "Deux groupes comparés qui s'opposent : « whereas », alors que."
+    pieges:
+      - { texte: "so", pourquoi: "« so » annonce une conséquence. Les deux avis s'opposent : « whereas »." }
+      - { texte: "unless", pourquoi: "« unless » pose une condition, sauf si. Ici, on oppose deux avis : « whereas »." }
+  - texte: "Complète : « Recycling saves energy. …, it reduces waste. »"
+    nom: "Moreover"
+    explication: "Un deuxième argument dans le même sens : « Moreover », de plus."
+    pieges:
+      - { texte: "However", pourquoi: "« However » annonce une opposition. Les deux idées vont dans le même sens : « Moreover »." }
+      - { texte: "Instead", pourquoi: "« Instead », à la place, remplace une idée par une autre. Ici, on en ajoute une : « Moreover »." }
+  - texte: "Complète : « She stayed at home … she was ill. »"
+    nom: "because"
+    explication: "Une cause + sujet et verbe : « because she was ill »."
+    pieges:
+      - { texte: "because of", pourquoi: "« because of » est suivi d'un nom : « because of her illness ». Avec « she was ill » : « because »." }
+      - { texte: "so", pourquoi: "« so » annonce une conséquence. Être malade est la cause : « because »." }
+  - texte: "Complète : « He trained every day … he could run the London Marathon. »"
+    nom: "so that"
+    explication: "Un but : « so that », pour que, afin de pouvoir."
+    pieges:
+      - { texte: "such as", pourquoi: "« such as » introduit des exemples, « sports such as running ». Pour un but : « so that »." }
+      - { texte: "even though", pourquoi: "« even though », même si, marque une opposition. S'entraîner pour courir, c'est un but : « so that »." }
+  - texte: "« Online shopping is convenient. However, it can harm local shops. » Quel rôle joue « However » ?"
+    nom: "Il introduit une opposition."
+    explication: "« However » oppose un inconvénient, « harm local shops », à un avantage, « convenient »."
+    pieges:
+      - { texte: "Il introduit une conséquence.", pourquoi: "Une conséquence serait annoncée par « Therefore » ou « As a result »." }
+      - { texte: "Il introduit un exemple.", pourquoi: "Un exemple serait annoncé par « For example » ou « such as »." }
+  - texte: "Pourquoi « Despite » et pas « Although » dans « Despite the cold, we went out » ?"
+    nom: "« Despite » est suivi d'un nom (the cold) ; « Although » demande un sujet et un verbe."
+    explication: "Même sens d'opposition, construction différente : « despite the cold », « although it was cold »."
+    pieges:
+      - { texte: "Parce que les deux mots n'ont pas le même sens.", pourquoi: "Les deux marquent l'opposition. C'est ce qui les suit qui change : un nom ou une proposition." }
+      - { texte: "Parce que « Although » ne se met jamais en début de phrase.", pourquoi: "« Although it was cold, we went out » est juste : « Although » peut ouvrir la phrase." }
+en:
+  titre: "Linking words: however, although, therefore"
+  idee: "Linking words organise a text: however, although + subject and verb, despite + noun, therefore, whereas, moreover."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "What is the link between the two ideas: contrast, cause, consequence, addition? Then look at what follows: a noun, or a subject and a verb?"
+    exemple: "“Trains are fast. …, they are expensive.” The two ideas contrast: “Trains are fast. However, they are expensive.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “Electric cars are cleaner. …, they are still expensive.”"
+      nom: "However"
+      explication: "Two contrasting ideas: However."
+      pieges:
+        - texte: "Therefore"
+          pourquoi: "“Therefore” introduces a consequence. Here the ideas contrast: However."
+        - texte: "Moreover"
+          pourquoi: "“Moreover” adds a point in the same direction. Here it's a contrast."
+    - texte: "Complete: “… it was raining, they played the match.”"
+      nom: "Although"
+      explication: "Contrast + subject and verb (it was raining): Although."
+      pieges:
+        - texte: "Despite"
+          pourquoi: "“Despite” is followed by a noun or -ing: despite the rain. With “it was raining”: Although."
+        - texte: "Because"
+          pourquoi: "“Because” gives a cause. Playing in the rain is a contrast: Although."
+    - texte: "Complete: “… the rain, they played the match.”"
+      nom: "Despite"
+      explication: "Contrast + a noun (the rain): Despite."
+      pieges:
+        - texte: "Although"
+          pourquoi: "“Although” needs a subject and a verb: although it was raining. With a noun: Despite."
+        - texte: "However"
+          pourquoi: "“However” links two full sentences, usually with a comma. Before a noun: Despite."
+    - texte: "Complete: “Many people now work from home. …, city-centre cafés have fewer customers.”"
+      nom: "As a result"
+      explication: "The second idea is a consequence of the first: As a result."
+      pieges:
+        - texte: "On the other hand"
+          pourquoi: "“On the other hand” gives the other side of a question. Here it's a consequence."
+        - texte: "For example"
+          pourquoi: "“For example” gives an example. Fewer customers is a consequence of working from home."
+    - texte: "Complete: “Some people love social media, … others find it stressful.”"
+      nom: "whereas"
+      explication: "Two groups compared in contrast: whereas."
+      pieges:
+        - texte: "so"
+          pourquoi: "“so” introduces a consequence. The two opinions contrast: whereas."
+        - texte: "unless"
+          pourquoi: "“unless” sets a condition. Here we contrast two opinions: whereas."
+    - texte: "Complete: “Recycling saves energy. …, it reduces waste.”"
+      nom: "Moreover"
+      explication: "A second point in the same direction: Moreover."
+      pieges:
+        - texte: "However"
+          pourquoi: "“However” introduces a contrast. Both ideas go the same way: Moreover."
+        - texte: "Instead"
+          pourquoi: "“Instead” replaces one idea with another. Here we add one: Moreover."
+    - texte: "Complete: “She stayed at home … she was ill.”"
+      nom: "because"
+      explication: "A cause + subject and verb: because she was ill."
+      pieges:
+        - texte: "because of"
+          pourquoi: "“because of” is followed by a noun: because of her illness. With “she was ill”: because."
+        - texte: "so"
+          pourquoi: "“so” introduces a consequence. Being ill is the cause: because."
+    - texte: "Complete: “He trained every day … he could run the London Marathon.”"
+      nom: "so that"
+      explication: "A purpose: so that."
+      pieges:
+        - texte: "such as"
+          pourquoi: "“such as” introduces examples, sports such as running. For a purpose: so that."
+        - texte: "even though"
+          pourquoi: "“even though” is a contrast. Training in order to run is a purpose: so that."
+    - texte: "“Online shopping is convenient. However, it can harm local shops.” What does “However” do?"
+      nom: "It introduces a contrast."
+      explication: "“However” sets a drawback, harm local shops, against an advantage, convenient."
+      pieges:
+        - texte: "It introduces a consequence."
+          pourquoi: "A consequence would be introduced by Therefore or As a result."
+        - texte: "It introduces an example."
+          pourquoi: "An example would be introduced by For example or such as."
+    - texte: "Why “Despite” and not “Although” in “Despite the cold, we went out”?"
+      nom: "Despite is followed by a noun (the cold); although needs a subject and a verb."
+      explication: "Same contrast, different structure: despite the cold, although it was cold."
+      pieges:
+        - texte: "Because the two words don't mean the same thing."
+          pourquoi: "Both express contrast. What changes is what follows: a noun or a clause."
+        - texte: "Because although never starts a sentence."
+          pourquoi: "“Although it was cold, we went out” is correct: although can start the sentence."

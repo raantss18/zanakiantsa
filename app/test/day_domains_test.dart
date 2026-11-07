@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/activities/ce1.dart';
 import 'package:zanakiantsa/activities/numbers.dart';
@@ -72,7 +73,7 @@ void main() {
             last = q;
             // « erreur » a {choisi}, rempli par l'image touchée (test/choice_error_test.dart).
             for (final k in s.phrases.keys.where((k) => k != 'erreur')) {
-              expect(s.say(k, q, words: w), isNot(contains('{')), reason: '${s.id}.$k');
+              expect(s.say(k, q, words: w), isNot(contains(unfilled)), reason: '${s.id}.$k');
             }
           }
         }
@@ -306,7 +307,7 @@ void main() {
         for (var i = 0; i < 50; i++) {
           final q = sk(id).draw(r);
           expect(sk(id).letterOf(q), isNotEmpty);
-          expect(sk(id).say('question', q), isNot(contains('{')), reason: id);
+          expect(sk(id).say('question', q), isNot(contains(unfilled)), reason: id);
         }
       }
     });
@@ -336,7 +337,7 @@ void main() {
       for (var i = 0; i < 8; i++) {
         final q = s.draw(r, avoid: seen);
         expect(seen.add(s.signature(q)), isTrue);
-        expect(s.say('question', q, words: w), isNot(contains('{')));
+        expect(s.say('question', q, words: w), isNot(contains(unfilled)));
       }
       expect(s.variants, isNotEmpty);
     });
@@ -348,7 +349,7 @@ void main() {
       final r = Random(5);
       for (final s in topics().expand((t) => t.skills).where((s) => s.idea != null)) {
         final q = s.draw(r);
-        expect(fill(s.idea!, q, w, vars: s.vars(q)), isNot(contains('{')), reason: s.id);
+        expect(fill(s.idea!, q, w, vars: s.vars(q)), isNot(contains(unfilled)), reason: s.id);
       }
     });
     test('les erreurs typiques sont nommées', () {

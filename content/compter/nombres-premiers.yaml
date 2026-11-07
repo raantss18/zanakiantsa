@@ -1,0 +1,136 @@
+id: nombres-premiers
+titre: "Nombres premiers et décomposition"
+niveau: 3e
+prerequis: ["diviseurs-multiples", "puissances-produit"]
+programme: { source: cycle4, texte: "Factoriser un nombre entier positif : 60 = 2² × 3 × 5." }
+activite: quiz
+parametres: {}
+idee: "Un nombre premier a exactement deux diviseurs : 1 et lui-même (2, 3, 5, 7, 11…). Tout entier plus grand que 1 s'écrit comme un produit de nombres premiers : 60 = 2² × 3 × 5."
+phrases:
+  consigne: "Cherche, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Divise par 2 tant que tu peux, puis par 3, puis par 5, par 7… jusqu'à obtenir 1."
+  exemple: "84 ÷ 2 = 42, 42 ÷ 2 = 21, 21 ÷ 3 = 7, et 7 est premier. Donc 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Lequel de ces nombres est premier ?"
+    nom: "13"
+    explication: "13 n'a que deux diviseurs : 1 et 13."
+    pieges:
+      - { texte: "9", pourquoi: "9 = 3 × 3 : il a un diviseur de plus, 3." }
+      - { texte: "1", pourquoi: "1 n'a qu'un seul diviseur : un nombre premier en a exactement deux." }
+  - texte: "Lequel de ces nombres n'est pas premier ?"
+    nom: "51"
+    explication: "51 = 3 × 17 : 3 est un diviseur de 51 (5 + 1 = 6, un multiple de 3)."
+    pieges:
+      - { texte: "53", pourquoi: "53 n'est divisible ni par 2, ni par 3, ni par 5, ni par 7 : il est premier." }
+      - { texte: "2", pourquoi: "2 a exactement deux diviseurs, 1 et 2 : c'est le seul nombre premier pair." }
+  - texte: "Décompose 12 en produit de nombres premiers."
+    nom: "2² × 3"
+    explication: "12 ÷ 2 = 6, 6 ÷ 2 = 3, et 3 est premier : 12 = 2 × 2 × 3 = 2² × 3."
+    pieges:
+      - { texte: "3 × 4", pourquoi: "4 = 2 × 2 n'est pas premier : on continue à décomposer." }
+      - { texte: "2 × 6", pourquoi: "6 = 2 × 3 n'est pas premier : on continue à décomposer." }
+  - texte: "Décompose 90 en produit de nombres premiers."
+    nom: "2 × 3² × 5"
+    explication: "90 ÷ 2 = 45, 45 ÷ 3 = 15, 15 ÷ 3 = 5 : 90 = 2 × 3 × 3 × 5 = 2 × 3² × 5."
+    pieges:
+      - { texte: "2 × 3 × 5", pourquoi: "2 × 3 × 5 = 30 : il manque un facteur 3." }
+      - { texte: "9 × 10", pourquoi: "9 et 10 ne sont pas premiers : 9 = 3² et 10 = 2 × 5." }
+  - texte: "Décompose 72 en produit de nombres premiers."
+    nom: "2³ × 3²"
+    explication: "72 ÷ 2 = 36, 36 ÷ 2 = 18, 18 ÷ 2 = 9, 9 ÷ 3 = 3, 3 ÷ 3 = 1 : 72 = 2³ × 3² = 8 × 9."
+    pieges:
+      - { texte: "2² × 3³", pourquoi: "Les exposants sont échangés : 2² × 3³ = 4 × 27 = 108." }
+      - { texte: "8 × 9", pourquoi: "8 × 9 = 72, mais 8 et 9 ne sont pas premiers : 8 = 2³ et 9 = 3²." }
+  - texte: "Complète : 60 = 2² × 3 × …"
+    nom: "5"
+    explication: "2² × 3 = 12, et 60 ÷ 12 = 5, qui est premier."
+    pieges:
+      - { texte: "10", pourquoi: "4 × 3 × 10 = 120, et 10 = 2 × 5 n'est pas premier." }
+      - { texte: "6", pourquoi: "4 × 3 × 6 = 72 : on cherche 60 ÷ 12 = 5." }
+  - texte: "Quel est le plus grand diviseur commun à 24 et à 36 ?"
+    nom: "12"
+    explication: "24 = 2³ × 3 et 36 = 2² × 3². Facteurs communs : 2² × 3 = 12."
+    pieges:
+      - { texte: "6", pourquoi: "6 divise bien 24 et 36, mais 12 aussi, et il est plus grand." }
+      - { texte: "72", pourquoi: "72 est un multiple commun, pas un diviseur : un diviseur de 24 n'est pas plus grand que 24." }
+  - texte: "Pourquoi 1 n'est-il pas un nombre premier ?"
+    nom: "Parce qu'il n'a qu'un seul diviseur : lui-même."
+    explication: "Un nombre premier a exactement deux diviseurs distincts. 1 n'en a qu'un."
+    pieges:
+      - { texte: "Parce qu'il est impair.", pourquoi: "3, 5 et 7 sont impairs et premiers." }
+      - { texte: "Parce qu'il est trop petit.", pourquoi: "2 est premier : ce n'est pas la taille qui compte, c'est le nombre de diviseurs." }
+  - texte: "91 est-il premier ?"
+    nom: "Non, car 91 = 7 × 13."
+    explication: "91 n'est divisible ni par 2, ni par 3, ni par 5, mais 91 ÷ 7 = 13."
+    pieges:
+      - { texte: "Oui, car il n'est divisible ni par 2, ni par 3, ni par 5.", pourquoi: "Il faut essayer aussi 7 : 7 × 13 = 91." }
+      - { texte: "Non, car 9 + 1 = 10.", pourquoi: "La somme des chiffres sert pour 3 et 9 : 10 n'est pas un multiple de 3, cela ne prouve rien." }
+
+en:
+  titre: "Prime numbers and factorising"
+  idee: "A prime number has exactly two factors: 1 and itself (2, 3, 5, 7, 11…). Every whole number greater than 1 can be written as a product of primes: 60 = 2² × 3 × 5."
+  phrases:
+    consigne: "Find it, then touch the right answer."
+    question: "{texte}"
+    indice: "Divide by 2 as long as you can, then by 3, then by 5, by 7… until you reach 1."
+    exemple: "84 ÷ 2 = 42, 42 ÷ 2 = 21, 21 ÷ 3 = 7, and 7 is prime. So 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Which of these numbers is prime?"
+      nom: "13"
+      explication: "13 has only two factors: 1 and 13."
+      pieges:
+        - { texte: "9", pourquoi: "9 = 3 × 3: it has one more factor, 3." }
+        - { texte: "1", pourquoi: "1 has only one factor: a prime number has exactly two." }
+    - texte: "Which of these numbers is not prime?"
+      nom: "51"
+      explication: "51 = 3 × 17: 3 is a factor of 51 (5 + 1 = 6, a multiple of 3)."
+      pieges:
+        - { texte: "53", pourquoi: "53 cannot be divided by 2, 3, 5 or 7: it is prime." }
+        - { texte: "2", pourquoi: "2 has exactly two factors, 1 and 2: it is the only even prime." }
+    - texte: "Write 12 as a product of prime numbers."
+      nom: "2² × 3"
+      explication: "12 ÷ 2 = 6, 6 ÷ 2 = 3, and 3 is prime: 12 = 2 × 2 × 3 = 2² × 3."
+      pieges:
+        - { texte: "3 × 4", pourquoi: "4 = 2 × 2 is not prime: keep breaking it down." }
+        - { texte: "2 × 6", pourquoi: "6 = 2 × 3 is not prime: keep breaking it down." }
+    - texte: "Write 90 as a product of prime numbers."
+      nom: "2 × 3² × 5"
+      explication: "90 ÷ 2 = 45, 45 ÷ 3 = 15, 15 ÷ 3 = 5: 90 = 2 × 3 × 3 × 5 = 2 × 3² × 5."
+      pieges:
+        - { texte: "2 × 3 × 5", pourquoi: "2 × 3 × 5 = 30: one factor of 3 is missing." }
+        - { texte: "9 × 10", pourquoi: "9 and 10 are not prime: 9 = 3² and 10 = 2 × 5." }
+    - texte: "Write 72 as a product of prime numbers."
+      nom: "2³ × 3²"
+      explication: "72 ÷ 2 = 36, 36 ÷ 2 = 18, 18 ÷ 2 = 9, 9 ÷ 3 = 3, 3 ÷ 3 = 1: 72 = 2³ × 3² = 8 × 9."
+      pieges:
+        - { texte: "2² × 3³", pourquoi: "The indices are swapped: 2² × 3³ = 4 × 27 = 108." }
+        - { texte: "8 × 9", pourquoi: "8 × 9 = 72, but 8 and 9 are not prime: 8 = 2³ and 9 = 3²." }
+    - texte: "Fill in: 60 = 2² × 3 × …"
+      nom: "5"
+      explication: "2² × 3 = 12, and 60 ÷ 12 = 5, which is prime."
+      pieges:
+        - { texte: "10", pourquoi: "4 × 3 × 10 = 120, and 10 = 2 × 5 is not prime." }
+        - { texte: "6", pourquoi: "4 × 3 × 6 = 72: we want 60 ÷ 12 = 5." }
+    - texte: "What is the highest common factor of 24 and 36?"
+      nom: "12"
+      explication: "24 = 2³ × 3 and 36 = 2² × 3². Common factors: 2² × 3 = 12."
+      pieges:
+        - { texte: "6", pourquoi: "6 does divide 24 and 36, but so does 12, and it is bigger." }
+        - { texte: "72", pourquoi: "72 is a common multiple, not a factor: a factor of 24 is not bigger than 24." }
+    - texte: "Why is 1 not a prime number?"
+      nom: "Because it has only one factor: itself."
+      explication: "A prime number has exactly two different factors. 1 has only one."
+      pieges:
+        - { texte: "Because it is odd.", pourquoi: "3, 5 and 7 are odd and prime." }
+        - { texte: "Because it is too small.", pourquoi: "2 is prime: size does not matter, the number of factors does." }
+    - texte: "Is 91 prime?"
+      nom: "No, because 91 = 7 × 13."
+      explication: "91 cannot be divided by 2, 3 or 5, but 91 ÷ 7 = 13."
+      pieges:
+        - { texte: "Yes, because it cannot be divided by 2, 3 or 5.", pourquoi: "You must also try 7: 7 × 13 = 91." }
+        - { texte: "No, because 9 + 1 = 10.", pourquoi: "The digit sum is a test for 3 and 9: 10 is not a multiple of 3, so it proves nothing." }

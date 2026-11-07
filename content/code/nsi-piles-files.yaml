@@ -1,0 +1,136 @@
+id: nsi-piles-files
+titre: "Piles et files"
+niveau: Terminale
+prerequis: [nsi-types-construits]
+programme: { source: nsiT, texte: "Listes, piles, files : structures linéaires. […] Distinguer des structures par le jeu des méthodes qui les caractérisent. Choisir une structure de données adaptée à la situation à modéliser. […] On distingue les modes FIFO (first in first out) et LIFO (last in first out) des piles et des files." }
+activite: quiz
+parametres: {}
+idee: "Une pile (LIFO) : on retire le dernier élément posé, comme dans une pile d’assiettes. Une file (FIFO) : on retire le premier arrivé, comme dans une file d’attente."
+phrases:
+  consigne: "Dessine la pile ou la file, et mets-la à jour à chaque instruction."
+  question: "{texte}"
+  indice: "Pile : on ajoute et on retire au même bout, le sommet. File : on ajoute à la fin et on retire au début."
+  exemple: "Pile : on empile 1, 2, 3 ; dépiler donne 3. File : on enfile 1, 2, 3 ; défiler donne 1. En Python : append ajoute à la fin, pop() retire à la fin, pop(0) retire au début."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\np = []\np.append(1)\np.append(2)\np.append(3)\nprint(p.pop())"
+    nom: "3"
+    explication: "pop() retire et renvoie le dernier élément ajouté : 3. La liste sert de pile (LIFO)."
+    pieges:
+      - { texte: "1", pourquoi: "pop() retire à la fin de la liste, là où append a posé le dernier élément." }
+      - { texte: "[1, 2]", pourquoi: "pop() renvoie l’élément retiré ; c’est la pile qui devient [1, 2]." }
+  - texte: "Que va afficher ce programme ?\nf = [1, 2, 3]\nf.append(4)\nprint(f.pop(0))"
+    nom: "1"
+    explication: "pop(0) retire et renvoie l’élément d’indice 0, le premier arrivé. La liste sert de file (FIFO)."
+    pieges:
+      - { texte: "4", pourquoi: "pop(0) retire au début ; 4 vient d’arriver à la fin." }
+      - { texte: "0", pourquoi: "pop(0) ne renvoie pas l’indice : il renvoie l’élément qui était à l’indice 0." }
+  - texte: "Que va afficher ce programme ?\np = [5, 8]\np.append(2)\np.pop()\np.pop()\nprint(p)"
+    nom: "[5]"
+    explication: "Après append(2) : [5, 8, 2]. Le premier pop() retire 2, le second retire 8. Il reste [5]."
+    pieges:
+      - { texte: "[2]", pourquoi: "Chaque pop() retire le dernier élément : d’abord 2, puis 8." }
+      - { texte: "[8, 2]", pourquoi: "pop() retire à la fin, pas au début." }
+  - texte: "On empile A, puis B, puis C. On dépile une fois, puis on empile D. Quel élément est au sommet ?"
+    nom: "D"
+    explication: "Après A, B, C, dépiler retire C. Il reste A, B ; on empile D : le sommet est D."
+    pieges:
+      - { texte: "C", pourquoi: "C a été dépilé : il n’est plus dans la pile." }
+      - { texte: "A", pourquoi: "A est au fond : le premier posé sera le dernier à sortir." }
+  - texte: "On enfile A, puis B, puis C. On défile une fois. Quel élément sortira au prochain défilement ?"
+    nom: "B"
+    explication: "Défiler retire A, le premier arrivé. Il reste B, C : B sortira ensuite."
+    pieges:
+      - { texte: "C", pourquoi: "C est le dernier arrivé : dans une file, il sortira en dernier." }
+      - { texte: "A", pourquoi: "A est déjà sorti au premier défilement." }
+  - texte: "Que va afficher ce programme ?\nmot = 'ROC'\np = []\nfor c in mot: p.append(c)\nprint(p.pop() + p.pop() + p.pop())"
+    nom: "COR"
+    explication: "On empile R, O, C. On dépile C, puis O, puis R : COR. Une pile rend les éléments dans l’ordre inverse."
+    pieges:
+      - { texte: "ROC", pourquoi: "Une pile rend les éléments à l’envers : le dernier empilé, C, sort le premier." }
+      - { texte: "CRO", pourquoi: "Après C, le sommet est O, empilé juste avant ; R est au fond." }
+  - texte: "Le bouton « Précédent » d’un navigateur ramène aux pages vues avant. Quelle structure convient pour les garder ?"
+    nom: "Une pile : on revient d’abord à la dernière page vue"
+    explication: "Chaque page visitée est empilée. « Précédent » dépile : on retrouve la plus récente, puis celle d’avant."
+    pieges:
+      - { texte: "Une file : on revient d’abord à la première page vue", pourquoi: "« Précédent » ramène à la page la plus récente, pas à la toute première." }
+      - { texte: "Un dictionnaire : chaque page a une adresse", pourquoi: "Il faut garder l’ordre des visites et reprendre la plus récente : c’est le rôle d’une pile." }
+  - texte: "Une imprimante reçoit les documents de plusieurs personnes. Quelle structure lui faut-il ?"
+    nom: "Une file : les documents sortent dans l’ordre d’arrivée"
+    explication: "Le premier document envoyé est le premier imprimé (FIFO) : personne n’attend plus que nécessaire."
+    pieges:
+      - { texte: "Une pile : le dernier arrivé est imprimé d’abord", pourquoi: "Avec une pile, le premier document envoyé pourrait attendre très longtemps." }
+      - { texte: "Un tuple : la liste des documents ne change pas", pourquoi: "Des documents arrivent et partent sans cesse : un tuple ne se modifie pas." }
+  - texte: "Pourquoi dit-on qu’une file est FIFO ?"
+    nom: "First in, first out : le premier entré est le premier sorti"
+    explication: "Comme dans une file d’attente : qui arrive le premier est servi le premier. La pile, elle, est LIFO : last in, first out."
+    pieges:
+      - { texte: "First in, final out : le premier entré sort à la fin", pourquoi: "Le premier entré sorti en dernier, c’est la pile (LIFO : last in, first out)." }
+      - { texte: "Fast in, fast out : on ajoute et on retire vite", pourquoi: "FIFO décrit l’ordre de sortie, pas la vitesse." }
+
+en:
+  titre: "Stacks and queues"
+  idee: "A stack (LIFO): you take off the last item put on, like a stack of plates. A queue (FIFO): you take off the first to arrive, like a waiting line."
+  phrases:
+    consigne: "Draw the stack or the queue, and update it at each instruction."
+    question: "{texte}"
+    indice: "Stack: you add and remove at the same end, the top. Queue: you add at the end and remove at the start."
+    exemple: "Stack: push 1, 2, 3; popping gives 3. Queue: enqueue 1, 2, 3; dequeuing gives 1. In Python: append adds at the end, pop() removes at the end, pop(0) removes at the start."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\np = []\np.append(1)\np.append(2)\np.append(3)\nprint(p.pop())"
+      nom: "3"
+      explication: "pop() removes and returns the last item added: 3. The list is used as a stack (LIFO)."
+      pieges:
+        - { texte: "1", pourquoi: "pop() removes at the end of the list, where append put the last item." }
+        - { texte: "[1, 2]", pourquoi: "pop() returns the removed item; it is the stack that becomes [1, 2]." }
+    - texte: "What will this program display?\nf = [1, 2, 3]\nf.append(4)\nprint(f.pop(0))"
+      nom: "1"
+      explication: "pop(0) removes and returns the item at index 0, the first to arrive. The list is used as a queue (FIFO)."
+      pieges:
+        - { texte: "4", pourquoi: "pop(0) removes at the start; 4 has just arrived at the end." }
+        - { texte: "0", pourquoi: "pop(0) does not return the index: it returns the item that was at index 0." }
+    - texte: "What will this program display?\np = [5, 8]\np.append(2)\np.pop()\np.pop()\nprint(p)"
+      nom: "[5]"
+      explication: "After append(2): [5, 8, 2]. The first pop() removes 2, the second removes 8. [5] is left."
+      pieges:
+        - { texte: "[2]", pourquoi: "Each pop() removes the last item: first 2, then 8." }
+        - { texte: "[8, 2]", pourquoi: "pop() removes at the end, not at the start." }
+    - texte: "We push A, then B, then C. We pop once, then push D. Which item is on top?"
+      nom: "D"
+      explication: "After A, B, C, popping removes C. A, B are left; we push D: the top is D."
+      pieges:
+        - { texte: "C", pourquoi: "C was popped: it is no longer in the stack." }
+        - { texte: "A", pourquoi: "A is at the bottom: the first put on will be the last to leave." }
+    - texte: "We enqueue A, then B, then C. We dequeue once. Which item will leave at the next dequeue?"
+      nom: "B"
+      explication: "Dequeuing removes A, the first to arrive. B, C are left: B will leave next."
+      pieges:
+        - { texte: "C", pourquoi: "C is the last to arrive: in a queue, it will leave last." }
+        - { texte: "A", pourquoi: "A already left at the first dequeue." }
+    - texte: "What will this program display?\nword = 'ROC'\np = []\nfor c in word: p.append(c)\nprint(p.pop() + p.pop() + p.pop())"
+      nom: "COR"
+      explication: "We push R, O, C. We pop C, then O, then R: COR. A stack gives the items back in reverse order."
+      pieges:
+        - { texte: "ROC", pourquoi: "A stack gives items back reversed: the last pushed, C, comes out first." }
+        - { texte: "CRO", pourquoi: "After C, the top is O, pushed just before; R is at the bottom." }
+    - texte: "A browser’s “Back” button takes you to the pages seen before. Which structure suits keeping them?"
+      nom: "A stack: you go back to the last page seen first"
+      explication: "Each page visited is pushed. “Back” pops: you find the most recent one, then the one before."
+      pieges:
+        - { texte: "A queue: you go back to the first page seen first", pourquoi: "“Back” takes you to the most recent page, not the very first one." }
+        - { texte: "A dictionary: each page has an address", pourquoi: "You must keep the order of visits and take back the most recent: that is the job of a stack." }
+    - texte: "A printer receives documents from several people. Which structure does it need?"
+      nom: "A queue: documents come out in the order they arrived"
+      explication: "The first document sent is the first printed (FIFO): nobody waits longer than needed."
+      pieges:
+        - { texte: "A stack: the last to arrive is printed first", pourquoi: "With a stack, the first document sent could wait a very long time." }
+        - { texte: "A tuple: the list of documents does not change", pourquoi: "Documents keep arriving and leaving: a tuple cannot be changed." }
+    - texte: "Why is a queue called FIFO?"
+      nom: "First in, first out: the first one in is the first one out"
+      explication: "As in a waiting line: whoever arrives first is served first. The stack is LIFO: last in, first out."
+      pieges:
+        - { texte: "First in, final out: the first one in leaves at the end", pourquoi: "First in and out last is the stack (LIFO: last in, first out)." }
+        - { texte: "Fast in, fast out: you add and remove quickly", pourquoi: "FIFO describes the order of leaving, not the speed." }

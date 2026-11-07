@@ -1,0 +1,136 @@
+id: diviseurs-multiples
+titre: "Diviseurs et multiples"
+niveau: CM2
+prerequis: ["division-posee"]
+programme: { source: cycle3, texte: "Déterminer tous les diviseurs d’un nombre entier inférieur ou égal à 30" }
+activite: quiz
+parametres: {}
+idee: "3 est un diviseur de 12 car 12 = 3 × 4 : la division tombe juste, sans reste. On dit aussi que 12 est un multiple de 3. Les diviseurs vont par paires."
+phrases:
+  consigne: "Cherche, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Cherche les paires : 1 × …, 2 × …, 3 × … ; arrête-toi quand les deux facteurs se rejoignent."
+  exemple: "Les diviseurs de 18 : 1 × 18, 2 × 9, 3 × 6. 4 et 5 ne divisent pas 18, car il reste quelque chose. Ensuite vient 6, déjà trouvé : on s'arrête. Diviseurs de 18 : 1, 2, 3, 6, 9, 18."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Quels sont tous les diviseurs de 12 ?"
+    nom: "1, 2, 3, 4, 6, 12"
+    explication: "Les paires : 1 × 12, 2 × 6, 3 × 4. Diviseurs de 12 : 1, 2, 3, 4, 6, 12."
+    pieges:
+      - { texte: "2, 3, 4, 6", pourquoi: "1 et 12 sont aussi des diviseurs : 1 × 12 = 12." }
+      - { texte: "1, 2, 3, 4, 6, 12, 24", pourquoi: "24 est un multiple de 12, pas un diviseur : un diviseur n'est jamais plus grand que le nombre." }
+  - texte: "Quels sont tous les diviseurs de 20 ?"
+    nom: "1, 2, 4, 5, 10, 20"
+    explication: "Les paires : 1 × 20, 2 × 10, 4 × 5. 3 ne divise pas 20. Diviseurs de 20 : 1, 2, 4, 5, 10, 20."
+    pieges:
+      - { texte: "1, 2, 5, 10, 20", pourquoi: "4 manque : 4 × 5 = 20." }
+      - { texte: "1, 2, 3, 4, 5, 10, 20", pourquoi: "3 ne divise pas 20 : 20 ÷ 3 = 6, reste 2." }
+  - texte: "Quels sont tous les diviseurs de 30 ?"
+    nom: "1, 2, 3, 5, 6, 10, 15, 30"
+    explication: "Les paires : 1 × 30, 2 × 15, 3 × 10, 5 × 6. Diviseurs de 30 : 1, 2, 3, 5, 6, 10, 15, 30."
+    pieges:
+      - { texte: "1, 2, 3, 5, 10, 15, 30", pourquoi: "6 manque : 5 × 6 = 30." }
+      - { texte: "1, 2, 3, 4, 5, 6, 10, 15, 30", pourquoi: "4 ne divise pas 30 : 30 ÷ 4 = 7, reste 2." }
+  - texte: "Lequel de ces nombres est un multiple de 7 ?"
+    nom: "42"
+    explication: "42 = 6 × 7 : la division de 42 par 7 tombe juste."
+    pieges:
+      - { texte: "27", pourquoi: "27 se termine par 7, mais 27 = 3 × 7 + 6 : il reste 6." }
+      - { texte: "17", pourquoi: "17 = 2 × 7 + 3 : il reste 3." }
+  - texte: "Quels sont les diviseurs communs à 12 et à 18 ?"
+    nom: "1, 2, 3, 6"
+    explication: "Diviseurs de 12 : 1, 2, 3, 4, 6, 12. Diviseurs de 18 : 1, 2, 3, 6, 9, 18. Ceux qui sont dans les deux listes : 1, 2, 3, 6."
+    pieges:
+      - { texte: "2, 3", pourquoi: "1 et 6 divisent aussi 12 et 18 : 12 = 2 × 6 et 18 = 3 × 6." }
+      - { texte: "1, 2, 3, 4, 6, 9", pourquoi: "On a mis les deux listes ensemble : 4 ne divise pas 18, et 9 ne divise pas 12." }
+  - texte: "Quel est le plus petit multiple commun à 4 et à 6, autre que 0 ?"
+    nom: "12"
+    explication: "Multiples de 4 : 4, 8, 12… Multiples de 6 : 6, 12… Le premier commun est 12 = 3 × 4 = 2 × 6."
+    pieges:
+      - { texte: "24", pourquoi: "24 est bien un multiple commun, mais 12 l'est aussi, et il est plus petit." }
+      - { texte: "10", pourquoi: "4 + 6 = 10, mais 10 n'est un multiple ni de 4 ni de 6." }
+  - texte: "Complète : 28 = 4 × … , donc 4 est un diviseur de 28."
+    nom: "7"
+    explication: "4 × 7 = 28 : la division de 28 par 4 tombe juste, 28 ÷ 4 = 7."
+    pieges:
+      - { texte: "24", pourquoi: "28 − 4 = 24 : on cherche un facteur, pas une différence." }
+      - { texte: "6", pourquoi: "4 × 6 = 24, pas 28." }
+  - texte: "Pourquoi 5 n'est-il pas un diviseur de 22 ?"
+    nom: "Parce que 22 ÷ 5 donne 4, reste 2."
+    explication: "5 × 4 = 20 et 5 × 5 = 25 : 22 n'est pas dans la table de 5, la division ne tombe pas juste."
+    pieges:
+      - { texte: "Parce que 22 est pair.", pourquoi: "10 est pair, et 5 divise 10 : être pair ne dit rien sur 5." }
+      - { texte: "Parce que 5 est plus petit que 22.", pourquoi: "5 est aussi plus petit que 20, et 20 = 4 × 5." }
+  - texte: "Combien le nombre 16 a-t-il de diviseurs ?"
+    nom: "5"
+    explication: "Les paires : 1 × 16, 2 × 8, 4 × 4. Diviseurs : 1, 2, 4, 8, 16. Il y en a 5."
+    pieges:
+      - { texte: "4", pourquoi: "4 a été oublié : 4 × 4 = 16, le même facteur deux fois." }
+      - { texte: "6", pourquoi: "4 a été compté deux fois : dans 4 × 4, c'est un seul diviseur." }
+
+en:
+  titre: "Factors and multiples"
+  idee: "3 is a factor of 12 because 12 = 3 × 4: the division works exactly, with no remainder. We also say 12 is a multiple of 3. Factors come in pairs."
+  phrases:
+    consigne: "Find it, then touch the right answer."
+    question: "{texte}"
+    indice: "Look for pairs: 1 × …, 2 × …, 3 × …; stop when the two factors meet."
+    exemple: "The factors of 18: 1 × 18, 2 × 9, 3 × 6. 4 and 5 do not divide 18, because something is left over. Next comes 6, already found: stop. Factors of 18: 1, 2, 3, 6, 9, 18."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What are all the factors of 12?"
+      nom: "1, 2, 3, 4, 6, 12"
+      explication: "The pairs: 1 × 12, 2 × 6, 3 × 4. Factors of 12: 1, 2, 3, 4, 6, 12."
+      pieges:
+        - { texte: "2, 3, 4, 6", pourquoi: "1 and 12 are factors too: 1 × 12 = 12." }
+        - { texte: "1, 2, 3, 4, 6, 12, 24", pourquoi: "24 is a multiple of 12, not a factor: a factor is never bigger than the number." }
+    - texte: "What are all the factors of 20?"
+      nom: "1, 2, 4, 5, 10, 20"
+      explication: "The pairs: 1 × 20, 2 × 10, 4 × 5. 3 does not divide 20. Factors of 20: 1, 2, 4, 5, 10, 20."
+      pieges:
+        - { texte: "1, 2, 5, 10, 20", pourquoi: "4 is missing: 4 × 5 = 20." }
+        - { texte: "1, 2, 3, 4, 5, 10, 20", pourquoi: "3 does not divide 20: 20 ÷ 3 = 6, remainder 2." }
+    - texte: "What are all the factors of 30?"
+      nom: "1, 2, 3, 5, 6, 10, 15, 30"
+      explication: "The pairs: 1 × 30, 2 × 15, 3 × 10, 5 × 6. Factors of 30: 1, 2, 3, 5, 6, 10, 15, 30."
+      pieges:
+        - { texte: "1, 2, 3, 5, 10, 15, 30", pourquoi: "6 is missing: 5 × 6 = 30." }
+        - { texte: "1, 2, 3, 4, 5, 6, 10, 15, 30", pourquoi: "4 does not divide 30: 30 ÷ 4 = 7, remainder 2." }
+    - texte: "Which of these numbers is a multiple of 7?"
+      nom: "42"
+      explication: "42 = 6 × 7: 42 divided by 7 works exactly."
+      pieges:
+        - { texte: "27", pourquoi: "27 ends in 7, but 27 = 3 × 7 + 6: 6 is left over." }
+        - { texte: "17", pourquoi: "17 = 2 × 7 + 3: 3 is left over." }
+    - texte: "What are the common factors of 12 and 18?"
+      nom: "1, 2, 3, 6"
+      explication: "Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18. Those in both lists: 1, 2, 3, 6."
+      pieges:
+        - { texte: "2, 3", pourquoi: "1 and 6 also divide 12 and 18: 12 = 2 × 6 and 18 = 3 × 6." }
+        - { texte: "1, 2, 3, 4, 6, 9", pourquoi: "The two lists were put together: 4 does not divide 18, and 9 does not divide 12." }
+    - texte: "What is the smallest common multiple of 4 and 6, other than 0?"
+      nom: "12"
+      explication: "Multiples of 4: 4, 8, 12… Multiples of 6: 6, 12… The first one in common is 12 = 3 × 4 = 2 × 6."
+      pieges:
+        - { texte: "24", pourquoi: "24 is a common multiple, but so is 12, and it is smaller." }
+        - { texte: "10", pourquoi: "4 + 6 = 10, but 10 is a multiple of neither 4 nor 6." }
+    - texte: "Fill in: 28 = 4 × … , so 4 is a factor of 28."
+      nom: "7"
+      explication: "4 × 7 = 28: 28 divided by 4 works exactly, 28 ÷ 4 = 7."
+      pieges:
+        - { texte: "24", pourquoi: "28 − 4 = 24: we are looking for a factor, not a difference." }
+        - { texte: "6", pourquoi: "4 × 6 = 24, not 28." }
+    - texte: "Why is 5 not a factor of 22?"
+      nom: "Because 22 ÷ 5 gives 4, remainder 2."
+      explication: "5 × 4 = 20 and 5 × 5 = 25: 22 is not in the 5 times table, so the division does not work exactly."
+      pieges:
+        - { texte: "Because 22 is even.", pourquoi: "10 is even, and 5 divides 10: being even tells us nothing about 5." }
+        - { texte: "Because 5 is smaller than 22.", pourquoi: "5 is also smaller than 20, and 20 = 4 × 5." }
+    - texte: "How many factors does 16 have?"
+      nom: "5"
+      explication: "The pairs: 1 × 16, 2 × 8, 4 × 4. Factors: 1, 2, 4, 8, 16. There are 5."
+      pieges:
+        - { texte: "4", pourquoi: "4 was forgotten: 4 × 4 = 16, the same factor twice." }
+        - { texte: "6", pourquoi: "4 was counted twice: in 4 × 4, it is only one factor." }

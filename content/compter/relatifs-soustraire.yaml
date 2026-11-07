@@ -1,0 +1,136 @@
+id: relatifs-soustraire
+titre: "Soustraire des nombres relatifs"
+niveau: 5e
+prerequis: ["relatifs-additionner"]
+programme: { source: cycle4, texte: "Soustraire deux nombres décimaux relatifs." }
+activite: quiz
+parametres: {}
+idee: "Soustraire un nombre, c'est ajouter son opposé : 3 − (−5) = 3 + 5 = 8. Sur la droite graduée, soustraire un nombre positif, c'est reculer vers la gauche."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Remplace « − (…) » par « + l'opposé », puis additionne comme d'habitude. Pense à la droite graduée."
+  exemple: "−2 − 6 = −2 + (−6) = −8 : sur la droite graduée, on part de −2 et on recule de 6. Et 4 − (−3) = 4 + 3 = 7 : soustraire −3, c'est avancer de 3."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 5 − 8 ?"
+    nom: "−3"
+    explication: "Sur la droite graduée, on part de 5 et on recule de 8 : on passe zéro et on arrive à −3."
+    pieges:
+      - { texte: "3", pourquoi: "C'est 8 − 5 : en reculant de 8 depuis 5, on passe sous zéro." }
+      - { texte: "−13", pourquoi: "On a ajouté 5 et 8 : on part de 5, on ne recule que de 8." }
+  - texte: "Combien font −4 − 3 ?"
+    nom: "−7"
+    explication: "−4 − 3 = −4 + (−3) : on part de −4 et on recule encore de 3, on arrive à −7."
+    pieges:
+      - { texte: "−1", pourquoi: "C'est −4 + 3 : soustraire 3, c'est reculer encore, on s'éloigne de zéro." }
+      - { texte: "7", pourquoi: "On part de −4 et on va vers la gauche : le résultat reste négatif." }
+  - texte: "Combien font 6 − (−2) ?"
+    nom: "8"
+    explication: "Soustraire −2, c'est ajouter son opposé, 2 : 6 + 2 = 8."
+    pieges:
+      - { texte: "4", pourquoi: "C'est 6 − 2 : soustraire −2, c'est ajouter 2." }
+      - { texte: "−8", pourquoi: "6 + 2 = 8, positif : partir de 6 et avancer de 2 ne mène pas sous zéro." }
+  - texte: "Combien font −5 − (−9) ?"
+    nom: "4"
+    explication: "−5 − (−9) = −5 + 9 : on part de −5 et on avance de 9, on arrive à 4."
+    pieges:
+      - { texte: "−14", pourquoi: "C'est −5 + (−9) : l'opposé de −9 est 9, pas −9." }
+      - { texte: "−4", pourquoi: "−5 + 9 : on avance de 9, plus que les 5 qui séparent −5 de zéro, donc on dépasse zéro." }
+  - texte: "Complète : 7 − (−3) = 7 + …"
+    nom: "3"
+    explication: "Soustraire un nombre, c'est ajouter son opposé : l'opposé de −3 est 3. 7 + 3 = 10."
+    pieges:
+      - { texte: "−3", pourquoi: "On ajoute l'opposé de −3, c'est-à-dire 3." }
+      - { texte: "−7", pourquoi: "On prend l'opposé du nombre soustrait, −3, pas celui de 7." }
+  - texte: "À midi, il fait 4 °C. La nuit, il fait −6 °C. De combien de degrés la température a-t-elle baissé ?"
+    nom: "10 degrés"
+    explication: "4 − (−6) = 4 + 6 = 10. Sur le thermomètre : 4 degrés de 4 à 0, puis 6 degrés de 0 à −6."
+    pieges:
+      - { texte: "2 degrés", pourquoi: "C'est 6 − 4 : de 4 à 0 il y a déjà 4 degrés, puis 6 de plus jusqu'à −6." }
+      - { texte: "6 degrés", pourquoi: "On n'a compté que de 0 à −6 : il faut aussi les 4 degrés de 4 à 0." }
+  - texte: "Combien font −1,5 − 2,5 ?"
+    nom: "−4"
+    explication: "On part de −1,5 et on recule de 2,5 : −1,5 + (−2,5) = −4."
+    pieges:
+      - { texte: "1", pourquoi: "C'est −1,5 + 2,5 : soustraire 2,5, c'est reculer." }
+      - { texte: "−1", pourquoi: "En reculant depuis un nombre négatif, on s'éloigne de zéro : les distances s'ajoutent, 1,5 + 2,5 = 4." }
+  - texte: "Pourquoi 3 − (−4) = 7 ?"
+    nom: "Parce que soustraire −4, c'est ajouter son opposé, 4."
+    explication: "3 − (−4) = 3 + 4 = 7 : sur la droite graduée, on avance de 4 depuis 3."
+    pieges:
+      - { texte: "Parce que deux signes moins donnent toujours un plus.", pourquoi: "−3 − 4 a deux signes moins et vaut −7 : il faut ajouter l'opposé du nombre soustrait." }
+      - { texte: "Parce qu'on ajoute les nombres sans regarder les signes.", pourquoi: "3 − 4 = −1 : les signes comptent toujours." }
+  - texte: "Un plongeur est à −30 m, un oiseau vole à 20 m au-dessus de l'eau. Quelle distance les sépare ?"
+    nom: "50 m"
+    explication: "20 − (−30) = 20 + 30 = 50 m : 30 m de −30 à 0, puis 20 m de 0 à 20."
+    pieges:
+      - { texte: "10 m", pourquoi: "C'est 30 − 20 : il y a 30 m de −30 à 0, puis encore 20 m." }
+      - { texte: "−50 m", pourquoi: "On a calculé −30 − 20 : on soustrait la position la plus basse de la plus haute, et une distance est positive." }
+
+en:
+  titre: "Subtracting negative numbers"
+  idee: "Subtracting a number means adding its opposite: 3 − (−5) = 3 + 5 = 8. On the number line, subtracting a positive number means moving back to the left."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Replace − (…) with + the opposite, then add as usual. Think of the number line."
+    exemple: "−2 − 6 = −2 + (−6) = −8: on the number line, start at −2 and move back 6. And 4 − (−3) = 4 + 3 = 7: subtracting −3 means moving forward 3."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 5 − 8?"
+      nom: "−3"
+      explication: "On the number line, start at 5 and move back 8: you pass zero and land on −3."
+      pieges:
+        - { texte: "3", pourquoi: "That is 8 − 5: moving back 8 from 5 takes you below zero." }
+        - { texte: "−13", pourquoi: "5 and 8 were added: you start at 5 and move back only 8." }
+    - texte: "What is −4 − 3?"
+      nom: "−7"
+      explication: "−4 − 3 = −4 + (−3): start at −4 and move back another 3, you land on −7."
+      pieges:
+        - { texte: "−1", pourquoi: "That is −4 + 3: subtracting 3 means moving back again, further from zero." }
+        - { texte: "7", pourquoi: "You start at −4 and move left: the result stays negative." }
+    - texte: "What is 6 − (−2)?"
+      nom: "8"
+      explication: "Subtracting −2 means adding its opposite, 2: 6 + 2 = 8."
+      pieges:
+        - { texte: "4", pourquoi: "That is 6 − 2: subtracting −2 means adding 2." }
+        - { texte: "−8", pourquoi: "6 + 2 = 8, positive: starting at 6 and moving forward 2 does not go below zero." }
+    - texte: "What is −5 − (−9)?"
+      nom: "4"
+      explication: "−5 − (−9) = −5 + 9: start at −5 and move forward 9, you land on 4."
+      pieges:
+        - { texte: "−14", pourquoi: "That is −5 + (−9): the opposite of −9 is 9, not −9." }
+        - { texte: "−4", pourquoi: "−5 + 9: you move forward 9, more than the 5 between −5 and zero, so you go past zero." }
+    - texte: "Fill in: 7 − (−3) = 7 + …"
+      nom: "3"
+      explication: "Subtracting a number means adding its opposite: the opposite of −3 is 3. 7 + 3 = 10."
+      pieges:
+        - { texte: "−3", pourquoi: "We add the opposite of −3, which is 3." }
+        - { texte: "−7", pourquoi: "We take the opposite of the number being subtracted, −3, not of 7." }
+    - texte: "At midday it is 4 °C. At night it is −6 °C. By how many degrees has the temperature fallen?"
+      nom: "10 degrees"
+      explication: "4 − (−6) = 4 + 6 = 10. On the thermometer: 4 degrees from 4 to 0, then 6 degrees from 0 to −6."
+      pieges:
+        - { texte: "2 degrees", pourquoi: "That is 6 − 4: from 4 to 0 is already 4 degrees, then 6 more down to −6." }
+        - { texte: "6 degrees", pourquoi: "Only 0 to −6 was counted: the 4 degrees from 4 to 0 count too." }
+    - texte: "What is −1.5 − 2.5?"
+      nom: "−4"
+      explication: "Start at −1.5 and move back 2.5: −1.5 + (−2.5) = −4."
+      pieges:
+        - { texte: "1", pourquoi: "That is −1.5 + 2.5: subtracting 2.5 means moving back." }
+        - { texte: "−1", pourquoi: "Moving back from a negative number takes you further from zero: the distances add up, 1.5 + 2.5 = 4." }
+    - texte: "Why is 3 − (−4) = 7?"
+      nom: "Because subtracting −4 means adding its opposite, 4."
+      explication: "3 − (−4) = 3 + 4 = 7: on the number line, move forward 4 from 3."
+      pieges:
+        - { texte: "Because two minus signs always make a plus.", pourquoi: "−3 − 4 has two minus signs and equals −7: you add the opposite of the number being subtracted." }
+        - { texte: "Because you add the numbers and ignore the signs.", pourquoi: "3 − 4 = −1: the signs always matter." }
+    - texte: "A diver is at −30 m, a bird is flying 20 m above the water. How far apart are they?"
+      nom: "50 m"
+      explication: "20 − (−30) = 20 + 30 = 50 m: 30 m from −30 to 0, then 20 m from 0 to 20."
+      pieges:
+        - { texte: "10 m", pourquoi: "That is 30 − 20: there are 30 m from −30 to 0, then another 20 m." }
+        - { texte: "−50 m", pourquoi: "This is −30 − 20: subtract the lower position from the higher one, and a distance is positive." }

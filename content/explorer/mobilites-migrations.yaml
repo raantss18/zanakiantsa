@@ -1,0 +1,124 @@
+id: mobilites-migrations
+titre: "Des mobilités généralisées : migrations et tourisme"
+niveau: 2de
+prerequis: [continents-oceans]
+programme: { source: hg2de, texte: "Le monde est profondément transformé par les mobilités." }
+activite: quiz
+parametres: {}
+idee: "On se déplace pour fuir un danger, travailler, étudier ou visiter. Les migrations internationales et le tourisme transforment les lieux de départ comme les lieux d'arrivée."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Mots clés : migrant, réfugié, flux, pôle d'attraction, distance-temps. Repère : environ 281 millions de migrants internationaux, soit environ 3,6 % de l'humanité."
+  exemple: "Exemple : Paris et Lyon sont à environ 400 km à vol d'oiseau, mais à environ 2 heures en TGV. La distance-temps compte souvent plus que les kilomètres pour choisir de se déplacer."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Selon les estimations de l'ONU, combien de personnes vivent dans un autre pays que leur pays de naissance ?"
+    nom: "Environ 281 millions, soit environ 3,6 % de la population mondiale."
+    explication: "Les migrants internationaux sont nombreux, mais la très grande majorité des humains vit dans son pays de naissance."
+    pieges:
+      - { texte: "La moitié de la population mondiale.", pourquoi: "On surestime souvent les migrations : moins de 4 humains sur 100 sont des migrants internationaux." }
+      - { texte: "Quelques milliers seulement.", pourquoi: "Il s'agit de centaines de millions de personnes : un phénomène mondial." }
+  - texte: "Quelles raisons peuvent pousser une personne à migrer ?"
+    nom: "Fuir un danger, travailler, étudier, rejoindre sa famille, vivre mieux."
+    explication: "Les mobilités ont des motifs très variés ; souvent, plusieurs se combinent."
+    pieges:
+      - { texte: "Uniquement la recherche d'un travail.", pourquoi: "Le travail compte beaucoup, mais on migre aussi pour étudier, rejoindre sa famille ou fuir une guerre." }
+      - { texte: "Uniquement le tourisme.", pourquoi: "Le touriste revient chez lui : il n'est pas un migrant." }
+  - texte: "Qu'est-ce qu'un réfugié ?"
+    nom: "Une personne qui a fui son pays par crainte de persécutions et qui reçoit une protection internationale."
+    explication: "Le statut de réfugié est défini par la convention de Genève de 1951 : c'est une migration forcée."
+    pieges:
+      - { texte: "N'importe quel touriste étranger.", pourquoi: "Le touriste se déplace par choix et pour un temps court ; le réfugié a été contraint de fuir." }
+      - { texte: "Une personne qui part étudier à l'étranger.", pourquoi: "L'étudiant choisit de partir ; le réfugié fuit un danger." }
+  - texte: "La plupart des migrants vont-ils des pays pauvres vers l'Europe ?"
+    nom: "Non : une grande part des migrations se fait entre pays du Sud, souvent voisins."
+    explication: "Beaucoup de migrants s'installent dans un pays proche du leur, dans la même région du monde."
+    pieges:
+      - { texte: "Oui, presque tous viennent en Europe.", pourquoi: "C'est une idée répandue par la médiatisation ; en réalité, beaucoup de migrations restent régionales." }
+      - { texte: "Oui, car aucun pays du Sud n'accueille de migrants.", pourquoi: "De nombreux pays du Sud accueillent des migrants et des réfugiés, souvent en grand nombre." }
+  - texte: "Pourquoi la mer Méditerranée est-elle un bassin migratoire ?"
+    nom: "Parce qu'elle sépare des pays aux niveaux de vie très différents et que de nombreux migrants tentent de la traverser."
+    explication: "Entre l'Afrique, le Proche-Orient et l'Europe, les traversées sont nombreuses et souvent dangereuses ; les États mènent des politiques de contrôle."
+    pieges:
+      - { texte: "Parce que personne ne la traverse.", pourquoi: "Elle est au contraire traversée chaque année par de nombreux migrants et touristes." }
+      - { texte: "Parce qu'elle n'a aucune frontière.", pourquoi: "Elle est bordée de nombreux États, dont les frontières sont contrôlées." }
+  - texte: "Plus de 1,4 milliard d'arrivées de touristes internationaux ont été comptées en 2024. Quel pays est la première destination mondiale ?"
+    nom: "La France, avec environ 100 millions d'arrivées."
+    explication: "La France attire par son patrimoine, ses paysages, ses littoraux et ses montagnes ; l'Espagne et les États-Unis la suivent."
+    pieges:
+      - { texte: "La Chine.", pourquoi: "La Chine est un grand pays de départ de touristes, mais elle n'est pas la première destination." }
+      - { texte: "Dubaï.", pourquoi: "Dubaï est un pôle touristique important, mais c'est une ville, loin des chiffres de la France." }
+  - texte: "Pourquoi dit-on que Dubaï est à la fois un pôle touristique et un pôle migratoire ?"
+    nom: "Parce qu'elle attire des touristes du monde entier et de très nombreux travailleurs étrangers."
+    explication: "Une grande majorité de ses habitants sont étrangers, venus notamment d'Asie du Sud pour travailler ; ses hôtels et son aéroport accueillent des millions de visiteurs."
+    pieges:
+      - { texte: "Parce que ses habitants partent tous à l'étranger.", pourquoi: "C'est l'inverse : Dubaï attire des populations venues d'ailleurs." }
+      - { texte: "Parce qu'elle est fermée aux étrangers.", pourquoi: "Son économie repose justement sur l'accueil d'étrangers, travailleurs et touristes." }
+  - texte: "Pourquoi la distance-temps est-elle souvent plus utile que la distance en kilomètres pour comprendre les mobilités ?"
+    nom: "Parce que la vitesse des transports rapproche certains lieux et en éloigne d'autres."
+    explication: "Une ville bien desservie par le TGV ou l'avion est « proche » de Paris ; un village isolé peut être plus loin en temps, même s'il est plus près en kilomètres."
+    pieges:
+      - { texte: "Parce que les kilomètres changent selon les années.", pourquoi: "La distance en kilomètres ne change pas ; c'est le temps de trajet qui varie avec les transports." }
+      - { texte: "Parce que tout le monde se déplace à pied.", pourquoi: "C'est justement la diversité des modes de transport qui rend la distance-temps utile." }
+
+en:
+  titre: "Widespread mobility: migration and tourism"
+  idee: "People move to flee danger, work, study or visit. International migration and tourism transform both the places people leave and the places they arrive in."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Key words: migrant, refugee, flow, centre of attraction, time-distance. Landmark: about 281 million international migrants, about 3.6 % of humanity."
+    exemple: "Example: Paris and Lyon are about 400 km apart as the crow flies, but about 2 hours apart by TGV. Time-distance often matters more than kilometres in deciding to travel."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "According to UN estimates, how many people live in a country other than the one they were born in?"
+      nom: "About 281 million, that is about 3.6 % of the world's population."
+      explication: "International migrants are numerous, but the vast majority of people live in their country of birth."
+      pieges:
+        - { texte: "Half the world's population.", pourquoi: "Migration is often overestimated: fewer than 4 people in 100 are international migrants." }
+        - { texte: "Only a few thousand.", pourquoi: "It's hundreds of millions of people: a worldwide phenomenon." }
+    - texte: "What reasons can lead a person to migrate?"
+      nom: "Fleeing danger, working, studying, joining family, living better."
+      explication: "People move for very varied reasons; often, several combine."
+      pieges:
+        - { texte: "Only looking for work.", pourquoi: "Work matters a lot, but people also migrate to study, join family or flee a war." }
+        - { texte: "Only tourism.", pourquoi: "A tourist goes back home: they are not a migrant." }
+    - texte: "What is a refugee?"
+      nom: "A person who has fled their country for fear of persecution and receives international protection."
+      explication: "Refugee status is defined by the 1951 Geneva Convention: it's forced migration."
+      pieges:
+        - { texte: "Any foreign tourist.", pourquoi: "A tourist travels by choice and for a short time; a refugee was forced to flee." }
+        - { texte: "Someone who goes abroad to study.", pourquoi: "A student chooses to leave; a refugee flees danger." }
+    - texte: "Do most migrants go from poor countries to Europe?"
+      nom: "No: a large share of migration happens between countries of the South, often neighbours."
+      explication: "Many migrants settle in a country close to their own, in the same region of the world."
+      pieges:
+        - { texte: "Yes, almost all of them come to Europe.", pourquoi: "That's a widespread idea fed by the media; in fact, much migration stays regional." }
+        - { texte: "Yes, because no country of the South takes in migrants.", pourquoi: "Many countries of the South take in migrants and refugees, often in large numbers." }
+    - texte: "Why is the Mediterranean Sea a migration basin?"
+      nom: "Because it separates countries with very different living standards and many migrants try to cross it."
+      explication: "Between Africa, the Middle East and Europe, crossings are frequent and often dangerous; states run border-control policies."
+      pieges:
+        - { texte: "Because nobody crosses it.", pourquoi: "On the contrary, it is crossed every year by many migrants and tourists." }
+        - { texte: "Because it has no borders.", pourquoi: "It is surrounded by many states, whose borders are controlled." }
+    - texte: "More than 1.4 billion international tourist arrivals were counted in 2024. Which country is the world's top destination?"
+      nom: "France, with about 100 million arrivals."
+      explication: "France attracts visitors with its heritage, landscapes, coasts and mountains; Spain and the United States follow."
+      pieges:
+        - { texte: "China.", pourquoi: "China is a major source of tourists, but it isn't the top destination." }
+        - { texte: "Dubai.", pourquoi: "Dubai is an important tourist hub, but it's a city, far from France's figures." }
+    - texte: "Why do we say Dubai is both a tourist hub and a migration hub?"
+      nom: "Because it attracts tourists from all over the world and a great many foreign workers."
+      explication: "A large majority of its inhabitants are foreigners, many from South Asia who came to work; its hotels and airport welcome millions of visitors."
+      pieges:
+        - { texte: "Because all its inhabitants move abroad.", pourquoi: "It's the opposite: Dubai attracts people from elsewhere." }
+        - { texte: "Because it is closed to foreigners.", pourquoi: "Its economy relies precisely on welcoming foreigners, workers and tourists." }
+    - texte: "Why is time-distance often more useful than distance in kilometres for understanding mobility?"
+      nom: "Because the speed of transport brings some places closer and pushes others further away."
+      explication: "A city well served by TGV or plane is « close » to Paris; an isolated village can be further in time, even if it is nearer in kilometres."
+      pieges:
+        - { texte: "Because kilometres change from year to year.", pourquoi: "Distance in kilometres doesn't change; it's the travel time that varies with transport." }
+        - { texte: "Because everyone travels on foot.", pourquoi: "It's precisely the variety of means of transport that makes time-distance useful." }

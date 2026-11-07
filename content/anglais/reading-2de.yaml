@@ -1,0 +1,157 @@
+id: reading-2de
+titre: "Lire des textes du monde anglophone (seconde)"
+niveau: 2de
+prerequis: [reading-3e, past-perfect]
+# Programme de 2de (BO spécial n° 1 du 22 janvier 2019, annexe 1, copie SNES) : tableau des descripteurs de la
+# réception, colonne B1 ; axes 1, 5, 3 et 7 de « l'art de vivre ensemble ». Lu le 2026-11-07.
+# Les textes de Bristol, de la grand-mère et de la bibliothèque sont des fictions écrites pour la leçon.
+programme: { source: lycee_2de, texte: "Réception, B1 : peut comprendre la description de lieux, d’événements, de sentiments explicitement exprimés dans des articles de magazines rédigés dans un langage courant. Axes : Vivre entre générations ; Sports et société ; Le village, le quartier, la ville ; Sauver la planète, penser les futurs possibles." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Repère d'abord le type de texte (article, avis, témoignage), puis les mots de temps (at first, now, before) et les nombres : ils portent souvent la réponse."
+phrases:
+  consigne: "Lis le texte en anglais, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Relis la phrase du texte qui répond. Attention aux mots de temps : at first, now, before, instead of."
+  exemple: "« At first only ten people came, but now a hundred come every week. » Combien viennent aujourd'hui ? « now », maintenant : cent."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« In 2019, a group of teenagers in Bristol started a litter pick on the beach. At first only five people came, but now more than fifty volunteers join them every Saturday. » Combien étaient-ils au début ?"
+    nom: "cinq"
+    explication: "« At first only five people came » : au début, cinq personnes seulement."
+    pieges:
+      - { texte: "plus de cinquante", pourquoi: "Ça, c'est maintenant : « now more than fifty volunteers »." }
+      - { texte: "2019", pourquoi: "2019 est l'année du début, pas le nombre de personnes." }
+  - texte: "« In 2019, a group of teenagers in Bristol started a litter pick on the beach. At first only five people came, but now more than fifty volunteers join them every Saturday. » Quand ramassent-ils les déchets ?"
+    nom: "tous les samedis"
+    explication: "« every Saturday » : tous les samedis."
+    pieges:
+      - { texte: "seulement en 2019", pourquoi: "2019, c'est l'année où ils ont commencé ; « now … every Saturday » montre qu'ils continuent." }
+      - { texte: "une fois par mois", pourquoi: "Le texte dit « every Saturday », chaque samedi." }
+  - texte: "« Wimbledon, the oldest tennis tournament in the world, is held in London every summer. Players must wear white, a rule that dates back to the nineteenth century. » Quelle règle les joueurs doivent-ils suivre ?"
+    nom: "s'habiller en blanc"
+    explication: "« Players must wear white » : les joueurs doivent porter du blanc."
+    pieges:
+      - { texte: "jouer seulement en été", pourquoi: "Le tournoi a lieu en été, « every summer », mais la règle des joueurs est « must wear white »." }
+      - { texte: "habiter à Londres", pourquoi: "Londres est le lieu du tournoi, pas une règle pour les joueurs." }
+  - texte: "« Wimbledon, the oldest tennis tournament in the world… » Que veut dire « the oldest » ?"
+    nom: "le plus ancien"
+    explication: "« old » + -est : le superlatif, « le plus ancien »."
+    pieges:
+      - { texte: "le plus grand", pourquoi: "Le plus grand se dirait « the biggest » ; « the oldest » vient de « old », vieux." }
+      - { texte: "le plus récent", pourquoi: "Le plus récent, c'est « the newest » : le contraire de « the oldest »." }
+  - texte: "« My grandmother grew up in Jamaica and moved to Birmingham in 1962. She had never seen snow before her first winter in England. Today she teaches me the songs she sang as a child. » Qu'est-ce qu'elle n'avait jamais vu avant son premier hiver ?"
+    nom: "la neige"
+    explication: "« She had never seen snow » : elle n'avait jamais vu la neige."
+    pieges:
+      - { texte: "la Jamaïque", pourquoi: "Elle a grandi en Jamaïque, « grew up in Jamaica » : elle la connaissait." }
+      - { texte: "Birmingham", pourquoi: "Le texte dit qu'elle s'y est installée ; ce qu'elle n'avait jamais vu, c'est « snow »." }
+  - texte: "« My grandmother grew up in Jamaica and moved to Birmingham in 1962. She had never seen snow before her first winter in England. Today she teaches me the songs she sang as a child. » Que fait-elle aujourd'hui ?"
+    nom: "Elle apprend à son petit-enfant les chansons de son enfance."
+    explication: "« Today she teaches me the songs she sang as a child » : elle m'apprend les chansons qu'elle chantait enfant."
+    pieges:
+      - { texte: "Elle retourne vivre en Jamaïque.", pourquoi: "Le texte ne parle pas d'un retour en Jamaïque." }
+      - { texte: "Elle apprend des chansons anglaises.", pourquoi: "« teaches me » : c'est elle qui apprend à l'enfant, et ce sont les chansons de son enfance." }
+  - texte: "« Notice: From Monday, the library on King Street will open at 8 am instead of 10 am. The café on the ground floor will stay closed until further notice. » À quelle heure la bibliothèque ouvrira-t-elle ?"
+    nom: "à 8 heures"
+    explication: "« will open at 8 am instead of 10 am » : à 8 heures au lieu de 10 heures."
+    pieges:
+      - { texte: "à 10 heures", pourquoi: "« instead of 10 am » : au lieu de 10 heures. C'était l'ancien horaire." }
+      - { texte: "Elle restera fermée.", pourquoi: "C'est le café qui reste fermé : « The café … will stay closed »." }
+  - texte: "« Notice: From Monday, the library on King Street will open at 8 am instead of 10 am. » Quel type de texte est-ce ?"
+    nom: "un avis pratique"
+    explication: "« Notice » et des informations pratiques (jour, heure) : c'est un avis."
+    pieges:
+      - { texte: "une lettre personnelle", pourquoi: "Une lettre commencerait par « Dear… ». Ici, « Notice » annonce un avis." }
+      - { texte: "un récit", pourquoi: "Un récit raconte une histoire. Ici, on donne un horaire : c'est un avis." }
+  - texte: "« She had never seen snow before her first winter in England. » Pourquoi « had seen » ?"
+    nom: "Avant son premier hiver, déjà passé, elle n'avait jamais vu de neige : antériorité dans le passé."
+    explication: "had + participe passé : une action, ou ici une absence d'action, antérieure à un moment passé."
+    pieges:
+      - { texte: "Parce qu'elle voit la neige en ce moment.", pourquoi: "Pour le moment présent, on aurait le présent. « had seen » renvoie à avant un moment passé." }
+      - { texte: "Parce que l'action se passe dans le futur.", pourquoi: "« had » est la forme passée de have : la phrase parle du passé." }
+en:
+  titre: "Reading texts from the English-speaking world (Year 10)"
+  idee: "First spot the type of text (article, notice, personal story), then the time words (at first, now, before) and the numbers: they often hold the answer."
+  phrases:
+    consigne: "Read the text, then touch the right answer."
+    question: "{texte}"
+    indice: "Read again the sentence that answers. Watch the time words: at first, now, before, instead of."
+    exemple: "“At first only ten people came, but now a hundred come every week.” How many come today? Now: a hundred."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“In 2019, a group of teenagers in Bristol started a litter pick on the beach. At first only five people came, but now more than fifty volunteers join them every Saturday.” How many were there at first?"
+      nom: "five"
+      explication: "“At first only five people came.”"
+      pieges:
+        - texte: "more than fifty"
+          pourquoi: "That's now: “now more than fifty volunteers”."
+        - texte: "2019"
+          pourquoi: "2019 is the year they started, not the number of people."
+    - texte: "“In 2019, a group of teenagers in Bristol started a litter pick on the beach. At first only five people came, but now more than fifty volunteers join them every Saturday.” When do they pick up litter?"
+      nom: "every Saturday"
+      explication: "“every Saturday”."
+      pieges:
+        - texte: "only in 2019"
+          pourquoi: "2019 is when they started; “now … every Saturday” shows they still do it."
+        - texte: "once a month"
+          pourquoi: "The text says every Saturday."
+    - texte: "“Wimbledon, the oldest tennis tournament in the world, is held in London every summer. Players must wear white, a rule that dates back to the nineteenth century.” What rule must players follow?"
+      nom: "wear white"
+      explication: "“Players must wear white.”"
+      pieges:
+        - texte: "only play in summer"
+          pourquoi: "The tournament takes place every summer, but the players' rule is “must wear white”."
+        - texte: "live in London"
+          pourquoi: "London is where the tournament is held, not a rule for players."
+    - texte: "“Wimbledon, the oldest tennis tournament in the world…” What does “the oldest” mean?"
+      nom: "older than all the others"
+      explication: "old + -est: the superlative, older than all the others."
+      pieges:
+        - texte: "bigger than all the others"
+          pourquoi: "That would be “the biggest”; “the oldest” comes from old."
+        - texte: "newer than all the others"
+          pourquoi: "That is “the newest”: the opposite of the oldest."
+    - texte: "“My grandmother grew up in Jamaica and moved to Birmingham in 1962. She had never seen snow before her first winter in England. Today she teaches me the songs she sang as a child.” What had she never seen before her first winter?"
+      nom: "snow"
+      explication: "“She had never seen snow.”"
+      pieges:
+        - texte: "Jamaica"
+          pourquoi: "She grew up in Jamaica: she knew it well."
+        - texte: "Birmingham"
+          pourquoi: "The text says she moved there; what she had never seen is snow."
+    - texte: "“My grandmother grew up in Jamaica and moved to Birmingham in 1962. She had never seen snow before her first winter in England. Today she teaches me the songs she sang as a child.” What does she do today?"
+      nom: "She teaches her grandchild the songs of her childhood."
+      explication: "“Today she teaches me the songs she sang as a child.”"
+      pieges:
+        - texte: "She goes back to live in Jamaica."
+          pourquoi: "The text doesn't talk about going back to Jamaica."
+        - texte: "She learns English songs."
+          pourquoi: "“teaches me”: she is the one who teaches, and they are the songs of her childhood."
+    - texte: "“Notice: From Monday, the library on King Street will open at 8 am instead of 10 am. The café on the ground floor will stay closed until further notice.” What time will the library open?"
+      nom: "at 8 am"
+      explication: "“will open at 8 am instead of 10 am”."
+      pieges:
+        - texte: "at 10 am"
+          pourquoi: "“instead of 10 am”: that was the old time."
+        - texte: "It will stay closed."
+          pourquoi: "It's the café that stays closed: “The café … will stay closed”."
+    - texte: "“Notice: From Monday, the library on King Street will open at 8 am instead of 10 am.” What kind of text is it?"
+      nom: "a practical notice"
+      explication: "“Notice” and practical information (day, time): it's a notice."
+      pieges:
+        - texte: "a personal letter"
+          pourquoi: "A letter would start with “Dear…”. Here, “Notice” announces a notice."
+        - texte: "a story"
+          pourquoi: "A story tells what happened. Here, it gives opening times: it's a notice."
+    - texte: "“She had never seen snow before her first winter in England.” Why “had seen”?"
+      nom: "Before her first winter, already in the past, she had never seen snow: something earlier in the past."
+      explication: "had + past participle: an action, or here no action, before a past moment."
+      pieges:
+        - texte: "Because she is seeing snow right now."
+          pourquoi: "For right now, we would use the present. “had seen” refers to before a past moment."
+        - texte: "Because the action is in the future."
+          pourquoi: "“had” is the past form of have: the sentence is about the past."

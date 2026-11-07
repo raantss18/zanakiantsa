@@ -1,0 +1,137 @@
+id: discours-rapporte
+titre: "Discours direct et discours indirect"
+niveau: 5e
+prerequis: ["types-de-phrases"]
+programme: { source: cycle4, texte: "Identifier des paroles rapportées aux discours direct et indirect." }
+activite: quiz
+parametres: {}
+idee: "Au discours direct, on cite les paroles telles quelles, après deux-points et entre guillemets. Au discours indirect, elles deviennent une subordonnée après un verbe de parole : il dit qu’il viendra."
+phrases:
+  consigne: "Cherche le verbe de parole, la ponctuation et les pronoms, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Deux-points et guillemets : discours direct. « que », « si » ou « de » après le verbe de parole : discours indirect."
+  exemple: "Tom dit : « Je suis fatigué. » devient Tom dit qu’il est fatigué. Les guillemets disparaissent, « que » ouvre la subordonnée et « je » devient « il »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Léa dit : « J’ai faim. » Comment les paroles sont-elles rapportées ?"
+    nom: "au discours direct"
+    explication: "Les paroles de Léa sont citées telles quelles, après deux-points et entre guillemets : c’est le discours direct."
+    pieges:
+      - { texte: "au discours indirect", pourquoi: "Au discours indirect, il n’y a ni deux-points ni guillemets : on écrirait « Léa dit qu’elle a faim »." }
+      - { texte: "il n’y a pas de paroles", pourquoi: "Le verbe « dit » et les guillemets montrent des paroles : celles de Léa." }
+  - texte: "Léa dit qu’elle a faim. Comment les paroles sont-elles rapportées ?"
+    nom: "au discours indirect"
+    explication: "Les paroles sont dans la subordonnée « qu’elle a faim », après le verbe de parole « dit » : c’est le discours indirect."
+    pieges:
+      - { texte: "au discours direct", pourquoi: "Il n’y a ni deux-points ni guillemets : les paroles sont dans une subordonnée introduite par « qu’ »." }
+      - { texte: "il n’y a pas de paroles", pourquoi: "Le verbe « dit » rapporte bien des paroles de Léa." }
+  - texte: "Mets au discours indirect : Tom dit : « Je suis fatigué. »"
+    nom: "Tom dit qu’il est fatigué."
+    explication: "Les guillemets disparaissent, « qu’ » ouvre la subordonnée, et « je » (Tom) devient « il »."
+    pieges:
+      - { texte: "Tom dit que je suis fatigué.", pourquoi: "Ici, « je » désignerait le narrateur, pas Tom. Au discours indirect, Tom devient « il »." }
+      - { texte: "Tom dit qu’il était fatigué.", pourquoi: "Le verbe « dit » est au présent : le temps des paroles ne change pas, « il est fatigué »." }
+  - texte: "Mets au discours indirect : Sara me demande : « Viens-tu ? »"
+    nom: "Sara me demande si je viens."
+    explication: "La question devient une subordonnée introduite par « si » ; Sara me parle, donc son « tu » devient « je »."
+    pieges:
+      - { texte: "Sara me demande si tu viens.", pourquoi: "Sara parle à « moi » : son « tu », c’est moi. Au discours indirect, il devient « je »." }
+      - { texte: "Sara me demande de venir.", pourquoi: "« de » + infinitif rapporte un ordre ou une demande. Sara pose une question : elle devient une subordonnée avec « si »." }
+  - texte: "Dans « Le maître annonce que la sortie est annulée. », quel mot introduit les paroles rapportées ?"
+    nom: "que"
+    explication: "« que » ouvre la subordonnée « que la sortie est annulée », qui rapporte les paroles du maître."
+    pieges:
+      - { texte: "annonce", pourquoi: "« annonce » est le verbe de parole ; le mot qui ouvre la subordonnée est « que »." }
+      - { texte: "la sortie", pourquoi: "« la sortie » est le sujet dans la subordonnée ; c’est « que » qui l’introduit." }
+  - texte: "Dans un discours direct, à quoi servent les guillemets ?"
+    nom: "À montrer où commencent et où finissent les paroles citées."
+    explication: "Les guillemets encadrent les paroles telles qu’elles ont été dites."
+    pieges:
+      - { texte: "À montrer une question.", pourquoi: "C’est le rôle du point d’interrogation. Les guillemets encadrent les paroles, questions ou non." }
+      - { texte: "À donner le nom de celui qui parle.", pourquoi: "Le nom de celui qui parle est dans le récit, avant ou après : « Léa dit »." }
+  - texte: "Mets au discours direct : Nina dit qu’elle aime la mer."
+    nom: "Nina dit : « J’aime la mer. »"
+    explication: "On cite les paroles telles quelles : Nina parle d’elle-même, donc « je » (« J’aime »)."
+    pieges:
+      - { texte: "Nina dit : « Elle aime la mer. »", pourquoi: "Nina parle d’elle-même : dans ses propres paroles, elle dit « je », pas « elle »." }
+      - { texte: "Nina dit qu’elle aime la mer.", pourquoi: "C’est la phrase de départ, au discours indirect. On veut les paroles citées, avec deux-points et guillemets." }
+  - texte: "Mets au discours indirect : Le guide dit aux enfants : « Restez ici. »"
+    nom: "Le guide dit aux enfants de rester ici."
+    explication: "C’est un ordre à l’impératif : au discours indirect, il devient « de » + infinitif."
+    pieges:
+      - { texte: "Le guide demande aux enfants s’ils restent ici.", pourquoi: "« si » introduit une question. Le guide donne un ordre : « de rester »." }
+      - { texte: "Le guide dit aux enfants qu’ils restent ici.", pourquoi: "Cette phrase constate un fait ; le guide, lui, donne un ordre : « de rester »." }
+  - texte: "Tom dit : « Je pars. » devient Tom dit qu’il part. Pourquoi « je » devient-il « il » ?"
+    nom: "Au discours indirect, c’est le narrateur qui parle de Tom : il le désigne par « il »."
+    explication: "Celui qui parle a changé : ce n’est plus Tom, c’est le narrateur. Les pronoms suivent ce changement."
+    pieges:
+      - { texte: "Parce que le verbe change de temps.", pourquoi: "Ici, le temps reste le présent ; c’est la personne qui change, car celui qui parle n’est plus Tom." }
+      - { texte: "Parce que « je » est interdit après « que ».", pourquoi: "« je » est possible après « que » (« Je dis que je pars ») : il change parce que ce n’est plus Tom qui parle." }
+
+en:
+  langue: "fr"
+  titre: "French: direct and reported speech"
+  idee: "In direct speech, the words are quoted as they were said, after a colon and inside quotation marks. In reported speech, they become a clause after a speech verb: « il dit qu’il viendra »."
+  phrases:
+    consigne: "Look for the speech verb, the punctuation and the pronouns, then touch the right answer."
+    question: "{texte}"
+    indice: "Colon and quotation marks: direct speech. « que », « si » or « de » after the speech verb: reported speech."
+    exemple: "« Tom dit : “Je suis fatigué.” » becomes « Tom dit qu’il est fatigué. » The quotation marks go, « que » opens the clause and « je » becomes « il »."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "« Léa dit : “J’ai faim.” » How are the words given?"
+      nom: "as direct speech"
+      explication: "Léa's words are quoted as they were said, after a colon and inside quotation marks: it's direct speech."
+      pieges:
+        - { texte: "as reported speech", pourquoi: "Reported speech has no colon or quotation marks: you'd write « Léa dit qu’elle a faim »." }
+        - { texte: "there are no spoken words", pourquoi: "The verb « dit » and the quotation marks show spoken words: Léa's." }
+    - texte: "« Léa dit qu’elle a faim. » How are the words given?"
+      nom: "as reported speech"
+      explication: "The words are in the clause « qu’elle a faim », after the speech verb « dit »: it's reported speech."
+      pieges:
+        - { texte: "as direct speech", pourquoi: "There's no colon and no quotation marks: the words are in a clause introduced by « qu’ »." }
+        - { texte: "there are no spoken words", pourquoi: "The verb « dit » does report Léa's words." }
+    - texte: "Put into reported speech: « Tom dit : “Je suis fatigué.” »"
+      nom: "Tom dit qu’il est fatigué."
+      explication: "The quotation marks go, « qu’ » opens the clause, and « je » (Tom) becomes « il »."
+      pieges:
+        - { texte: "Tom dit que je suis fatigué.", pourquoi: "Here « je » would mean the narrator, not Tom. In reported speech, Tom becomes « il »." }
+        - { texte: "Tom dit qu’il était fatigué.", pourquoi: "The verb « dit » is in the present: the tense of the words doesn't change, « il est fatigué »." }
+    - texte: "Put into reported speech: « Sara me demande : “Viens-tu ?” »"
+      nom: "Sara me demande si je viens."
+      explication: "The question becomes a clause introduced by « si »; Sara is talking to me, so her « tu » becomes « je »."
+      pieges:
+        - { texte: "Sara me demande si tu viens.", pourquoi: "Sara is talking to « me »: her « tu » is me. In reported speech it becomes « je »." }
+        - { texte: "Sara me demande de venir.", pourquoi: "« de » + infinitive reports an order or a request. Sara is asking a question: it becomes a clause with « si »." }
+    - texte: "In « Le maître annonce que la sortie est annulée. », which word introduces the reported words?"
+      nom: "que"
+      explication: "« que » opens the clause « que la sortie est annulée », which reports the teacher's words."
+      pieges:
+        - { texte: "annonce", pourquoi: "« annonce » is the speech verb; the word that opens the clause is « que »." }
+        - { texte: "la sortie", pourquoi: "« la sortie » is the subject inside the clause; « que » is what introduces it." }
+    - texte: "In direct speech, what are the quotation marks for?"
+      nom: "To show where the quoted words begin and end."
+      explication: "Quotation marks frame the words exactly as they were said."
+      pieges:
+        - { texte: "To show a question.", pourquoi: "That's the job of the question mark. Quotation marks frame the words, questions or not." }
+        - { texte: "To give the speaker's name.", pourquoi: "The speaker's name is in the narrative, before or after: « Léa dit »." }
+    - texte: "Put into direct speech: « Nina dit qu’elle aime la mer. »"
+      nom: "Nina dit : « J’aime la mer. »"
+      explication: "You quote the words as they were said: Nina is talking about herself, so « je » (« J’aime »)."
+      pieges:
+        - { texte: "Nina dit : « Elle aime la mer. »", pourquoi: "Nina is talking about herself: in her own words she says « je », not « elle »." }
+        - { texte: "Nina dit qu’elle aime la mer.", pourquoi: "That's the starting sentence, in reported speech. You want the quoted words, with a colon and quotation marks." }
+    - texte: "Put into reported speech: « Le guide dit aux enfants : “Restez ici.” »"
+      nom: "Le guide dit aux enfants de rester ici."
+      explication: "It's an order in the imperative: in reported speech it becomes « de » + infinitive."
+      pieges:
+        - { texte: "Le guide demande aux enfants s’ils restent ici.", pourquoi: "« si » introduces a question. The guide is giving an order: « de rester »." }
+        - { texte: "Le guide dit aux enfants qu’ils restent ici.", pourquoi: "That sentence states a fact; the guide is giving an order: « de rester »." }
+    - texte: "« Tom dit : “Je pars.” » becomes « Tom dit qu’il part. » Why does « je » become « il »?"
+      nom: "In reported speech, the narrator is talking about Tom, so calls him « il »."
+      explication: "The speaker has changed: it isn't Tom any more, it's the narrator. The pronouns follow that change."
+      pieges:
+        - { texte: "Because the verb changes tense.", pourquoi: "Here the tense stays in the present; it's the person that changes, because the speaker is no longer Tom." }
+        - { texte: "Because « je » isn't allowed after « que ».", pourquoi: "« je » is fine after « que » (« Je dis que je pars »): it changes because Tom is no longer the speaker." }

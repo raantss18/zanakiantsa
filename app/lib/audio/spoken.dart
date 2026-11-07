@@ -61,6 +61,23 @@ String spoken(String text, String lang) {
     },
   );
 
+  // Chimie et physique, avant les indices et les puissances (ADR 0067) : ¹²₆C, 1s², Na⁺, W/m², m/s, km/h.
+  s = s.replaceAllMapped(
+    RegExp('([⁰¹²³⁴⁵⁶⁷⁸⁹]+)([₀-₉]+)([A-Z][a-z]?)'),
+    (m) => w('${m[3]}, nombre de masse ${_map(m[1]!, _sup)}, numéro atomique ${_map(m[2]!, _sub)}',
+        '${m[3]}, mass number ${_map(m[1]!, _sup)}, atomic number ${_map(m[2]!, _sub)}'),
+  );
+  s = s.replaceAllMapped(RegExp('([1-7])([spdf])([⁰¹²³⁴⁵⁶⁷⁸⁹]+)'), (m) => '${m[1]}${m[2]} ${_map(m[3]!, _sup)}');
+  s = s.replaceAllMapped(RegExp('\\b([A-Z][a-z]?)([¹²³⁴⁵⁶⁷⁸⁹]?)([⁺⁻])'), (m) {
+    final n = m[2]!.isEmpty ? '' : '${_map(m[2]!, _sup)} ';
+    return '${m[1]} $n${m[3] == '⁺' ? 'plus' : w('moins', 'minus')}';
+  });
+  s = s
+      .replaceAll(RegExp(r'\bW/m²'), w('watts par mètre carré', 'watts per square metre'))
+      .replaceAll(RegExp(r'\bkm/h\b'), w('kilomètres par heure', 'kilometres per hour'))
+      .replaceAll(RegExp(r'\bm/s\b'), w('mètres par seconde', 'metres per second'))
+      .replaceAll(RegExp(r'°C\b'), w(' degrés Celsius', ' degrees Celsius'));
+
   // Indices : uₙ₊₁ → u indice n+1.
   s = s.replaceAllMapped(
     RegExp('([A-Za-z])([₀-₉ₙₖ₊₋]+)'),

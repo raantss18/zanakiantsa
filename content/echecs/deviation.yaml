@@ -1,0 +1,84 @@
+id: deviation
+titre: "La déviation"
+niveau: 3e
+prerequis: [mat-etouffee, clouage]
+programme: { source: fide, texte: "3.9.2 : No piece can be moved that will either expose the king of the same colour to check or leave that king in check." }
+activite: probleme
+parametres: { theme: deviation }
+idee: "Une pièce noire garde une case ou une ligne. Tu lui offres une pièce avec échec : elle est obligée de la prendre, et quitte son poste. Au coup suivant, tu fais mat."
+phrases:
+  consigne: "Trouve le premier coup : un échec avec une pièce offerte, que les Noirs sont obligés de prendre. Le mat suit au coup d’après."
+  question: "{texte}"
+  indice: "Repère la pièce noire qui empêche le mat. Cherche un échec sur une case où elle seule peut prendre ta pièce."
+  exemple: "Cherche d’abord le mat que les Noirs empêchent, puis la pièce noire qui l’empêche."
+  demonstration: "Regarde : {explication}"
+  bravo: "Bravo ! {explication}"
+items:
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "5r1k/6pp/5p1N/8/2Q4q/8/5PP1/R5K1 w - - 0 1"
+    coups: [c4g8]
+    explication: "La dame va en g8 : échec. Le roi ne peut pas la prendre, ton cavalier h6 la protège : la tour f8 doit la prendre. Elle bouche alors g8. Le cavalier va en f7 : mat à l’étouffée."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "7k/5Rpp/2R1bp2/8/8/5Q2/7P/6K1 w - - 0 1"
+    coups: [c6c8]
+    explication: "La tour va en c8 : échec. Le fou e6 doit la prendre. Il ne peut plus venir se placer en g8 : la tour f7 va en f8, mat."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "k1N5/pp6/8/8/2R5/8/PPP1r2Q/1K6 w - - 0 1"
+    coups: [c8b6]
+    explication: "Le cavalier va en b6 : échec. Le pion a7 doit le prendre, et la colonne a s’ouvre. Ta dame garde b8. La tour va en a4 : mat."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "k1q5/ppp5/1Q6/8/8/5B2/PP4R1/1K6 w - - 0 1"
+    coups: [b6b7]
+    explication: "La dame prend le pion b7 : échec. Le roi ne peut pas la prendre, ton fou f3 la protège : la dame noire doit la prendre. Elle quitte la 8e rangée, et en b7 elle est clouée par ton fou. La tour va en g8 : mat."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "6k1/5ppp/8/8/4b3/R7/6PP/4R1K1 w - - 0 1"
+    coups: [a3a8]
+    explication: "La tour va en a8 : échec. Le fou e4 doit la prendre : il quitte la colonne e. L’autre tour va en e8 : mat du couloir."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "k7/ppp5/3b4/8/8/5R2/PP1Q4/1K6 w - - 0 1"
+    coups: [f3f8]
+    explication: "La tour va en f8 : échec. Le fou d6 doit la prendre : il quitte la colonne d. La dame va en d8 : mat."
+  - texte: "Attire une pièce noire loin de sa case, puis fais mat !"
+    fen: "kr6/pp1N4/8/8/8/7Q/1PPR4/1K4n1 w - - 0 1"
+    coups: [d7b6]
+    explication: "Le cavalier va en b6 : échec. Le pion a7 doit le prendre, et la colonne a s’ouvre. La dame va en a3 : mat."
+
+en:
+  titre: "Deflection"
+  idee: "A black piece guards a square or a line. You offer it a piece with check: it must take it, and leaves its post. On the next move, you give mate."
+  phrases:
+    consigne: "Find the first move: a check with a piece offered, which Black is forced to take. The mate comes on the move after."
+    question: "{texte}"
+    indice: "Spot the black piece that stops the mate. Look for a check on a square where only that piece can take yours."
+    exemple: "First look for the mate that Black is stopping, then for the black piece that stops it."
+    demonstration: "Look: {explication}"
+    bravo: "Well done! {explication}"
+  items:
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "5r1k/6pp/5p1N/8/2Q4q/8/5PP1/R5K1 w - - 0 1"
+      coups: [c4g8]
+      explication: "The queen goes to g8: check. The king cannot take it, your knight on h6 protects it: the rook on f8 must take it. It then blocks g8. The knight goes to f7: smothered mate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "7k/5Rpp/2R1bp2/8/8/5Q2/7P/6K1 w - - 0 1"
+      coups: [c6c8]
+      explication: "The rook goes to c8: check. The bishop on e6 must take it. It can no longer come and stand on g8: the rook on f7 goes to f8, checkmate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "k1N5/pp6/8/8/2R5/8/PPP1r2Q/1K6 w - - 0 1"
+      coups: [c8b6]
+      explication: "The knight goes to b6: check. The pawn on a7 must take it, and the a-file opens. Your queen guards b8. The rook goes to a4: checkmate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "k1q5/ppp5/1Q6/8/8/5B2/PP4R1/1K6 w - - 0 1"
+      coups: [b6b7]
+      explication: "The queen takes the pawn on b7: check. The king cannot take it, your bishop on f3 protects it: the black queen must take it. It leaves the 8th rank, and on b7 it is pinned by your bishop. The rook goes to g8: checkmate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "6k1/5ppp/8/8/4b3/R7/6PP/4R1K1 w - - 0 1"
+      coups: [a3a8]
+      explication: "The rook goes to a8: check. The bishop on e4 must take it: it leaves the e-file. The other rook goes to e8: back-rank mate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "k7/ppp5/3b4/8/8/5R2/PP1Q4/1K6 w - - 0 1"
+      coups: [f3f8]
+      explication: "The rook goes to f8: check. The bishop on d6 must take it: it leaves the d-file. The queen goes to d8: checkmate."
+    - texte: "Lure a black piece away from its square, then give mate!"
+      fen: "kr6/pp1N4/8/8/8/7Q/1PPR4/1K4n1 w - - 0 1"
+      coups: [d7b6]
+      explication: "The knight goes to b6: check. The pawn on a7 must take it, and the a-file opens. The queen goes to a3: checkmate."

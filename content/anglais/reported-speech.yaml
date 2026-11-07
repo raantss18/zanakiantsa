@@ -1,0 +1,170 @@
+id: reported-speech
+titre: "Le discours indirect : she said she was tired"
+niveau: 1re
+prerequis: [past-perfect]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES), « À l'articulation des
+# activités langagières : la médiation ». Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "La médiation introduite dans le CECRL consiste à expliciter un discours lu et entendu à quelqu’un qui ne peut le comprendre. En termes scolaires, elle se traduit en une série d’exercices qui vont de la paraphrase à la traduction." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Pour rapporter des paroles avec said ou told, on recule d'un temps : « I am tired » devient « She said she was tired ». Pronoms et repères changent aussi : tomorrow devient the next day."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Verbe introducteur au passé ? On recule d'un temps : présent → prétérit, prétérit ou present perfect → had + participe, will → would."
+  exemple: "« I like pizza », said Tom. Rapporté : « Tom said he liked pizza. » like recule au prétérit, I devient he."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« I am tired. » Rapporte : « She said that she … tired. »"
+    nom: "was"
+    explication: "said au passé : am recule à was, et I devient she. « She said that she was tired. »"
+    pieges:
+      - { texte: "am", pourquoi: "« am » va avec I. Ici le sujet est she, et le temps recule : « was »." }
+      - { texte: "were", pourquoi: "« were » va avec you, we, they. Avec she : « was »." }
+  - texte: "« I will help you. » Rapporte : « He said he … help me. »"
+    nom: "would"
+    explication: "will recule à would : « He said he would help me. »"
+    pieges:
+      - { texte: "won't", pourquoi: "« won't » veut dire « will not » : il change le sens. La promesse était positive : « would »." }
+      - { texte: "would to", pourquoi: "Après un modal comme would, pas de to : « would help »." }
+  - texte: "« Where do you live? » Rapporte : « She asked me where … »"
+    nom: "I lived"
+    explication: "Dans une question rapportée, l'ordre est sujet + verbe, sans do : « She asked me where I lived. »"
+    pieges:
+      - { texte: "did I live", pourquoi: "La question indirecte n'a ni inversion ni did : « where I lived »." }
+      - { texte: "do I live", pourquoi: "Pas d'inversion ni de do dans une question rapportée, et le temps recule : « where I lived »." }
+  - texte: "« Are you coming? » Rapporte : « He asked me … I was coming. »"
+    nom: "if"
+    explication: "Une question fermée, oui ou non, se rapporte avec if (ou whether) : « He asked me if I was coming. »"
+    pieges:
+      - { texte: "that", pourquoi: "« that » rapporte une affirmation. Pour une question oui/non : « if »." }
+      - { texte: "what", pourquoi: "« what » rapporte une question sur une chose, « what I wanted ». Pour oui/non : « if »." }
+  - texte: "« Close the window. » Rapporte : « The teacher told us … the window. »"
+    nom: "to close"
+    explication: "Un ordre rapporté : told + personne + to + base verbale. « The teacher told us to close the window. »"
+    pieges:
+      - { texte: "close", pourquoi: "Après « told us », l'ordre se rapporte avec to : « to close »." }
+      - { texte: "closing", pourquoi: "Après « told us », on emploie to + base, pas -ing : « to close »." }
+  - texte: "« Don't be late. » Rapporte : « Mum told me … late. »"
+    nom: "not to be"
+    explication: "Un ordre négatif rapporté : not to + base. « Mum told me not to be late. »"
+    pieges:
+      - { texte: "don't be", pourquoi: "L'impératif disparaît dans le discours indirect : « not to be »." }
+      - { texte: "not be", pourquoi: "Après « told me », il faut to : « not to be »." }
+  - texte: "« I have finished. » Rapporte : « She said she … finished. »"
+    nom: "had"
+    explication: "Le present perfect recule au past perfect : « She said she had finished. »"
+    pieges:
+      - { texte: "have", pourquoi: "« have » va avec I, you, we, they, et le temps recule : « had »." }
+      - { texte: "was", pourquoi: "« finished » se construit ici avec have, pas avec be : « had finished »." }
+  - texte: "Complète : « She … me that she was leaving. »"
+    nom: "told"
+    explication: "« tell » est suivi de la personne : « She told me that she was leaving. »"
+    pieges:
+      - { texte: "said", pourquoi: "« say » n'est pas suivi directement de la personne : « She said that… » ou « She said to me that… ». Avec « me » : « told »." }
+      - { texte: "spoke", pourquoi: "« speak » ne sert pas à rapporter des paroles avec that : « told »." }
+  - texte: "« I saw him yesterday. » Rapporté plus tard : « She said she had seen him … »"
+    nom: "the day before"
+    explication: "« yesterday » devient « the day before », la veille : « She said she had seen him the day before. »"
+    pieges:
+      - { texte: "yesterday", pourquoi: "« yesterday » était le repère de la personne qui parlait. Rapporté plus tard, c'est « the day before »." }
+      - { texte: "the next day", pourquoi: "« the next day » veut dire le lendemain : c'est le contraire de « yesterday »." }
+  - texte: "Pourquoi « She said she was tired », alors qu'elle avait dit « I am tired » ?"
+    nom: "Les paroles sont rapportées avec un verbe au passé : on recule d'un temps, am devient was."
+    explication: "Avec « said », le temps des paroles recule d'un cran : « am » devient « was »."
+    pieges:
+      - { texte: "Parce que « she » va toujours avec « was ».", pourquoi: "« she is » existe. C'est le recul des temps après « said » qui donne « was »." }
+      - { texte: "Parce que « said » est au présent.", pourquoi: "« said » est le prétérit de « say » : c'est justement pour ça qu'on recule d'un temps." }
+en:
+  titre: "Reported speech: she said she was tired"
+  idee: "To report words with said or told, we go one tense back: “I am tired” becomes “She said she was tired”. Pronouns and time words change too: tomorrow becomes the next day."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Reporting verb in the past? Go one tense back: present → past simple, past simple or present perfect → had + past participle, will → would."
+    exemple: "“I like pizza,” said Tom. Reported: “Tom said he liked pizza.” like goes back to the past, I becomes he."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“I am tired.” Report it: “She said that she … tired.”"
+      nom: "was"
+      explication: "said is past: am goes back to was, and I becomes she. “She said that she was tired.”"
+      pieges:
+        - texte: "am"
+          pourquoi: "“am” goes with I. Here the subject is she, and the tense goes back: was."
+        - texte: "were"
+          pourquoi: "“were” goes with you, we, they. With she: was."
+    - texte: "“I will help you.” Report it: “He said he … help me.”"
+      nom: "would"
+      explication: "will goes back to would: “He said he would help me.”"
+      pieges:
+        - texte: "won't"
+          pourquoi: "“won't” means will not: it changes the meaning. The promise was positive: would."
+        - texte: "would to"
+          pourquoi: "After a modal like would, no to: would help."
+    - texte: "“Where do you live?” Report it: “She asked me where …”"
+      nom: "I lived"
+      explication: "In a reported question, the order is subject + verb, with no do: “She asked me where I lived.”"
+      pieges:
+        - texte: "did I live"
+          pourquoi: "A reported question has no inversion and no did: where I lived."
+        - texte: "do I live"
+          pourquoi: "No inversion or do in a reported question, and the tense goes back: where I lived."
+    - texte: "“Are you coming?” Report it: “He asked me … I was coming.”"
+      nom: "if"
+      explication: "A yes/no question is reported with if (or whether): “He asked me if I was coming.”"
+      pieges:
+        - texte: "that"
+          pourquoi: "“that” reports a statement. For a yes/no question: if."
+        - texte: "what"
+          pourquoi: "“what” reports a question about a thing, what I wanted. For yes/no: if."
+    - texte: "“Close the window.” Report it: “The teacher told us … the window.”"
+      nom: "to close"
+      explication: "A reported order: told + person + to + base form. “The teacher told us to close the window.”"
+      pieges:
+        - texte: "close"
+          pourquoi: "After told us, the order is reported with to: to close."
+        - texte: "closing"
+          pourquoi: "After told us, we use to + base form, not -ing: to close."
+    - texte: "“Don't be late.” Report it: “Mum told me … late.”"
+      nom: "not to be"
+      explication: "A negative reported order: not to + base form. “Mum told me not to be late.”"
+      pieges:
+        - texte: "don't be"
+          pourquoi: "The imperative disappears in reported speech: not to be."
+        - texte: "not be"
+          pourquoi: "After told me, we need to: not to be."
+    - texte: "“I have finished.” Report it: “She said she … finished.”"
+      nom: "had"
+      explication: "The present perfect goes back to the past perfect: “She said she had finished.”"
+      pieges:
+        - texte: "have"
+          pourquoi: "“have” goes with I, you, we, they, and the tense goes back: had."
+        - texte: "was"
+          pourquoi: "“finished” is built with have here, not be: had finished."
+    - texte: "Complete: “She … me that she was leaving.”"
+      nom: "told"
+      explication: "tell is followed by the person: “She told me that she was leaving.”"
+      pieges:
+        - texte: "said"
+          pourquoi: "say isn't followed directly by the person: “She said that…” or “She said to me that…”. With me: told."
+        - texte: "spoke"
+          pourquoi: "speak isn't used to report words with that: told."
+    - texte: "“I saw him yesterday.” Reported later: “She said she had seen him …”"
+      nom: "the day before"
+      explication: "yesterday becomes the day before: “She said she had seen him the day before.”"
+      pieges:
+        - texte: "yesterday"
+          pourquoi: "“yesterday” was the speaker's reference point. Reported later, it's the day before."
+        - texte: "the next day"
+          pourquoi: "“the next day” is the day after: the opposite of yesterday."
+    - texte: "Why “She said she was tired”, when she said “I am tired”?"
+      nom: "The words are reported with a past verb: we go one tense back, am becomes was."
+      explication: "With said, the tense of the words goes back one step: am becomes was."
+      pieges:
+        - texte: "Because she always goes with was."
+          pourquoi: "“she is” exists. It's going back a tense after said that gives was."
+        - texte: "Because said is in the present."
+          pourquoi: "“said” is the past simple of say: that's exactly why we go back a tense."

@@ -1,0 +1,124 @@
+id: atome-tableau
+titre: "L'atome et le tableau périodique"
+niveau: 2de
+prerequis: [transformation-chimique]
+programme: { source: pc2de, texte: "Déterminer les électrons de valence d’un atome (Z ⩽ 18) à partir de sa configuration électronique à l’état fondamental ou de sa position dans le tableau périodique." }
+activite: quiz
+parametres: {}
+idee: "Un atome a un noyau minuscule (protons et neutrons) entouré d'électrons. Le numéro atomique Z, nombre de protons, définit l'élément. Sa configuration électronique donne sa place dans le tableau périodique."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Rappel : Z = nombre de protons ; A = nombre de nucléons (protons + neutrons). Les couches se remplissent dans l'ordre 1s, 2s, 2p, 3s, 3p."
+  exemple: "Exemple : le sodium a Z = 11. Sa configuration est 1s² 2s² 2p⁶ 3s¹. Sa dernière couche est la 3e : il est dans la 3e ligne du tableau, 1re colonne, avec 1 électron de valence."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Où se trouve presque toute la masse d'un atome ?"
+    nom: "Dans son noyau."
+    explication: "Protons et neutrons ont une masse environ 1 800 fois plus grande que celle d'un électron : la masse est concentrée dans le noyau."
+    pieges:
+      - { texte: "Dans ses électrons.", pourquoi: "Les électrons occupent presque tout le volume de l'atome, mais leur masse est très faible." }
+      - { texte: "Répartie également partout dans l'atome.", pourquoi: "On imagine souvent l'atome comme une bille pleine ; en réalité, il est surtout fait de vide autour d'un noyau très dense." }
+  - texte: "Un atome mesure environ 10⁻¹⁰ m et son noyau environ 10⁻¹⁵ m. Combien de fois l'atome est-il plus grand que son noyau ?"
+    nom: "Environ 100 000 fois."
+    explication: "10⁻¹⁰ divisé par 10⁻¹⁵ donne 10⁵, soit 100 000 : l'atome est essentiellement fait de vide."
+    pieges:
+      - { texte: "Environ 5 fois.", pourquoi: "On a soustrait les exposants au lieu de calculer la puissance de 10 : 10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵." }
+      - { texte: "Environ 10 fois.", pourquoi: "Chaque unité d'exposant vaut un facteur 10 : un écart de 5 dans l'exposant donne un facteur 100 000." }
+  - texte: "Qu'est-ce qui définit un élément chimique, par exemple le carbone ?"
+    nom: "Son numéro atomique Z, c'est-à-dire son nombre de protons."
+    explication: "Tous les atomes de carbone ont 6 protons ; le nombre de neutrons peut varier."
+    pieges:
+      - { texte: "Son nombre de neutrons.", pourquoi: "Deux atomes de carbone peuvent avoir 6 ou 8 neutrons : ils restent du carbone." }
+      - { texte: "Son nombre d'électrons.", pourquoi: "Un ion a gagné ou perdu des électrons sans changer d'élément : Na⁺ reste du sodium." }
+  - texte: "Le noyau de carbone 12 s'écrit ¹²₆C. Combien a-t-il de protons et de neutrons ?"
+    nom: "6 protons et 6 neutrons."
+    explication: "Z = 6 protons ; A = 12 nucléons ; donc 12 − 6 = 6 neutrons."
+    pieges:
+      - { texte: "12 protons et 6 neutrons.", pourquoi: "Le nombre du haut, A, compte tous les nucléons, pas seulement les protons." }
+      - { texte: "6 protons et 12 neutrons.", pourquoi: "A = 12 compte protons et neutrons ensemble : il faut retirer les 6 protons." }
+  - texte: "Pourquoi un atome est-il électriquement neutre ?"
+    nom: "Parce qu'il a autant d'électrons que de protons."
+    explication: "Chaque proton porte la charge +e et chaque électron la charge −e : en nombre égal, les charges se compensent."
+    pieges:
+      - { texte: "Parce que ses neutrons annulent les charges.", pourquoi: "Les neutrons n'ont pas de charge : ils n'annulent rien." }
+      - { texte: "Parce qu'il n'a aucune particule chargée.", pourquoi: "Protons et électrons sont chargés ; c'est leur égalité en nombre qui rend l'atome neutre." }
+  - texte: "Le chlore a Z = 17. Sa configuration électronique est 1s² 2s² 2p⁶ 3s² 3p⁵. Combien a-t-il d'électrons de valence ?"
+    nom: "7."
+    explication: "Les électrons de valence sont ceux de la dernière couche, la 3e : 3s² 3p⁵, soit 2 + 5 = 7."
+    pieges:
+      - { texte: "17.", pourquoi: "17 est le nombre total d'électrons ; seuls ceux de la dernière couche sont des électrons de valence." }
+      - { texte: "5.", pourquoi: "On n'a compté que la sous-couche 3p ; la sous-couche 3s fait aussi partie de la dernière couche." }
+  - texte: "L'hélium, le néon et l'argon forment la famille des gaz nobles. Qu'ont-ils de particulier ?"
+    nom: "Ils sont très stables chimiquement et ne forment presque pas de liaisons."
+    explication: "Leur couche de valence est complète ; les autres atomes tendent à prendre la configuration du gaz noble le plus proche."
+    pieges:
+      - { texte: "Ce sont des métaux précieux.", pourquoi: "Le mot « noble » trompe : ce sont des gaz, pas des métaux comme l'or." }
+      - { texte: "Ils réagissent avec tous les autres éléments.", pourquoi: "C'est l'inverse : leur stabilité vient de leur couche de valence complète." }
+  - texte: "Le sodium (Z = 11) a un seul électron de valence. Quel ion forme-t-il ?"
+    nom: "L'ion Na⁺, en perdant cet électron."
+    explication: "En perdant son électron de valence, le sodium prend la configuration du néon, 1s² 2s² 2p⁶ : il devient Na⁺."
+    pieges:
+      - { texte: "L'ion Na⁻, en gagnant un électron.", pourquoi: "Gagner un électron l'éloignerait d'un gaz noble ; il est plus simple d'en perdre un." }
+      - { texte: "L'ion Na²⁺, en perdant deux électrons.", pourquoi: "Après la perte d'un électron, sa couche externe est déjà celle du néon : il s'arrête là." }
+
+en:
+  titre: "The atom and the periodic table"
+  idee: "An atom has a tiny nucleus (protons and neutrons) surrounded by electrons. The atomic number Z, the number of protons, defines the element. Its electron configuration gives its place in the periodic table."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Reminder: Z = number of protons; A = number of nucleons (protons + neutrons). Shells fill in the order 1s, 2s, 2p, 3s, 3p."
+    exemple: "Example: sodium has Z = 11. Its configuration is 1s² 2s² 2p⁶ 3s¹. Its outer shell is the 3rd: it's in the 3rd row of the table, 1st column, with 1 valence electron."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Where is almost all the mass of an atom?"
+      nom: "In its nucleus."
+      explication: "Protons and neutrons are about 1,800 times heavier than an electron: the mass is concentrated in the nucleus."
+      pieges:
+        - { texte: "In its electrons.", pourquoi: "Electrons take up almost all of the atom's volume, but their mass is very small." }
+        - { texte: "Spread evenly throughout the atom.", pourquoi: "People often picture the atom as a solid marble; in fact it is mostly empty space around a very dense nucleus." }
+    - texte: "An atom is about 10⁻¹⁰ m across and its nucleus about 10⁻¹⁵ m. How many times bigger is the atom than its nucleus?"
+      nom: "About 100,000 times."
+      explication: "10⁻¹⁰ divided by 10⁻¹⁵ gives 10⁵, that is 100,000: the atom is mostly empty space."
+      pieges:
+        - { texte: "About 5 times.", pourquoi: "The exponents were subtracted instead of working out the power of 10: 10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵." }
+        - { texte: "About 10 times.", pourquoi: "Each step in the exponent is a factor of 10: a gap of 5 in the exponent gives a factor of 100,000." }
+    - texte: "What defines a chemical element, for example carbon?"
+      nom: "Its atomic number Z, that is, its number of protons."
+      explication: "Every carbon atom has 6 protons; the number of neutrons can vary."
+      pieges:
+        - { texte: "Its number of neutrons.", pourquoi: "Two carbon atoms can have 6 or 8 neutrons: they are still carbon." }
+        - { texte: "Its number of electrons.", pourquoi: "An ion has gained or lost electrons without changing element: Na⁺ is still sodium." }
+    - texte: "The carbon-12 nucleus is written ¹²₆C. How many protons and neutrons does it have?"
+      nom: "6 protons and 6 neutrons."
+      explication: "Z = 6 protons; A = 12 nucleons; so 12 − 6 = 6 neutrons."
+      pieges:
+        - { texte: "12 protons and 6 neutrons.", pourquoi: "The top number, A, counts all the nucleons, not just the protons." }
+        - { texte: "6 protons and 12 neutrons.", pourquoi: "A = 12 counts protons and neutrons together: take away the 6 protons." }
+    - texte: "Why is an atom electrically neutral?"
+      nom: "Because it has as many electrons as protons."
+      explication: "Each proton carries the charge +e and each electron the charge −e: in equal numbers, the charges cancel out."
+      pieges:
+        - { texte: "Because its neutrons cancel the charges.", pourquoi: "Neutrons have no charge: they don't cancel anything." }
+        - { texte: "Because it has no charged particles.", pourquoi: "Protons and electrons are charged; it's their equal numbers that make the atom neutral." }
+    - texte: "Chlorine has Z = 17. Its electron configuration is 1s² 2s² 2p⁶ 3s² 3p⁵. How many valence electrons does it have?"
+      nom: "7."
+      explication: "Valence electrons are those in the outer shell, the 3rd: 3s² 3p⁵, so 2 + 5 = 7."
+      pieges:
+        - { texte: "17.", pourquoi: "17 is the total number of electrons; only those in the outer shell are valence electrons." }
+        - { texte: "5.", pourquoi: "Only the 3p subshell was counted; the 3s subshell is also part of the outer shell." }
+    - texte: "Helium, neon and argon form the noble gas family. What is special about them?"
+      nom: "They are chemically very stable and hardly form any bonds."
+      explication: "Their valence shell is full; other atoms tend to take on the configuration of the nearest noble gas."
+      pieges:
+        - { texte: "They are precious metals.", pourquoi: "The word « noble » is misleading: they are gases, not metals like gold." }
+        - { texte: "They react with every other element.", pourquoi: "It's the opposite: their stability comes from their full valence shell." }
+    - texte: "Sodium (Z = 11) has a single valence electron. Which ion does it form?"
+      nom: "The Na⁺ ion, by losing that electron."
+      explication: "By losing its valence electron, sodium takes on neon's configuration, 1s² 2s² 2p⁶: it becomes Na⁺."
+      pieges:
+        - { texte: "The Na⁻ ion, by gaining an electron.", pourquoi: "Gaining an electron would take it further from a noble gas; it's simpler to lose one." }
+        - { texte: "The Na²⁺ ion, by losing two electrons.", pourquoi: "Once one electron is lost, its outer shell is already neon's: it stops there." }

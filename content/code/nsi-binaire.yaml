@@ -1,0 +1,136 @@
+id: nsi-binaire
+titre: "Les entiers en binaire et en hexadécimal"
+niveau: 1re
+prerequis: [python-fonctions]
+programme: { source: nsi1, texte: "Passer de la représentation d’une base dans une autre. […] Les bases 2, 10 et 16 sont privilégiées. Évaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier." }
+activite: quiz
+parametres: {}
+idee: "En base 2, chaque chiffre (un bit) a un poids : 1, 2, 4, 8, 16… de droite à gauche. 1101 vaut 8 + 4 + 1 = 13. En base 16, A à F valent 10 à 15, et un chiffre vaut 4 bits."
+phrases:
+  consigne: "Écris le poids de chaque chiffre au-dessus de lui, puis additionne les poids des chiffres qui comptent."
+  question: "{texte}"
+  indice: "En base 2, les poids sont 1, 2, 4, 8, 16, 32… en partant de la droite. En base 16 : 1, puis 16, puis 256."
+  exemple: "1011 en base 2 : poids 8, 4, 2, 1. On garde 8 + 2 + 1 = 11. Et 2F en base 16 : 2 × 16 + 15 = 47."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Combien vaut 1101 écrit en base 2 ?"
+    nom: "13"
+    explication: "Poids 8, 4, 2, 1 : 8 + 4 + 1 = 13. Le 0 est sur le poids 2, qui ne compte pas."
+    pieges:
+      - { texte: "1101", pourquoi: "C’est l’écriture en base 2. En base 10, ce nombre vaut 8 + 4 + 1." }
+      - { texte: "11", pourquoi: "Tu as lu les poids de gauche à droite (1 + 2 + 8). Le poids 1 est celui du chiffre de droite." }
+  - texte: "Que va afficher ce programme ?\nprint(bin(10))"
+    nom: "0b1010"
+    explication: "10 = 8 + 2 : les bits de poids 8 et 2 valent 1, soit 1010. bin ajoute 0b devant, pour dire « base 2 »."
+    pieges:
+      - { texte: "1010", pourquoi: "bin renvoie une chaîne qui commence par 0b, le signe de la base 2." }
+      - { texte: "0b0101", pourquoi: "Les bits sont écrits à l’envers : le bit de poids 8 est à gauche, 10 s’écrit 1010." }
+  - texte: "Que va afficher ce programme ?\nprint(int('11111111', 2))"
+    nom: "255"
+    explication: "int(…, 2) lit le texte en base 2. Huit bits à 1 : 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255."
+    pieges:
+      - { texte: "256", pourquoi: "256 = 2⁸ s’écrit 100000000 : il lui faut un neuvième bit. Huit bits à 1 font 255." }
+      - { texte: "8", pourquoi: "8 est le nombre de bits ; la valeur est la somme de leurs poids." }
+  - texte: "Combien de bits faut-il au minimum pour écrire 100 en base 2 ?"
+    nom: "7"
+    explication: "2⁶ = 64 ≤ 100 < 128 = 2⁷ : il faut 7 bits. 100 s’écrit 1100100."
+    pieges:
+      - { texte: "6", pourquoi: "Avec 6 bits, on écrit au plus 111111, c’est-à-dire 63." }
+      - { texte: "3", pourquoi: "3 est le nombre de chiffres de 100 en base 10, pas en base 2." }
+  - texte: "Que va afficher ce programme ?\nprint(hex(255))"
+    nom: "0xff"
+    explication: "255 = 15 × 16 + 15. 15 s’écrit f en base 16, donc ff. hex ajoute 0x devant."
+    pieges:
+      - { texte: "0x255", pourquoi: "hex convertit en base 16 : il ne recopie pas les chiffres de la base 10." }
+      - { texte: "ff", pourquoi: "hex ajoute le préfixe 0x, le signe de la base 16." }
+  - texte: "Combien vaut 2A écrit en base 16 ?"
+    nom: "42"
+    explication: "A vaut 10. Le 2 est sur le poids 16 : 2 × 16 + 10 = 42."
+    pieges:
+      - { texte: "210", pourquoi: "Tu as collé 2 et 10. En base 16, le 2 vaut 2 × 16." }
+      - { texte: "12", pourquoi: "Tu as additionné les chiffres 2 + 10. Le 2 a le poids 16." }
+  - texte: "Écris en base 16 le nombre 10110110 (base 2)."
+    nom: "B6"
+    explication: "On coupe en paquets de 4 bits depuis la droite : 1011 = 11 = B, et 0110 = 6. Donc B6."
+    pieges:
+      - { texte: "116", pourquoi: "1011 vaut 11, qui s’écrit en un seul chiffre hexadécimal : B." }
+      - { texte: "6B", pourquoi: "Le paquet de gauche donne le chiffre de gauche : B, puis 6." }
+  - texte: "Que va afficher ce programme ?\nprint(0b101 + 0b11)"
+    nom: "8"
+    explication: "0b101 vaut 5 et 0b11 vaut 3. 5 + 3 = 8, et print affiche les entiers en base 10."
+    pieges:
+      - { texte: "0b1000", pourquoi: "print affiche un entier en base 10 ; 0b sert seulement à l’écrire dans le programme." }
+      - { texte: "112", pourquoi: "Ce n’est pas une addition posée en base 10 : 0b101 vaut 5, 0b11 vaut 3." }
+  - texte: "Pourquoi un octet (8 bits) peut-il prendre 256 valeurs, de 0 à 255 ?"
+    nom: "Chaque bit a 2 choix : 2⁸ = 256 combinaisons"
+    explication: "1 bit : 2 valeurs. Chaque bit de plus double le nombre : 2 × 2 × … × 2, huit fois, soit 256. La plus petite est 0, la plus grande 255."
+    pieges:
+      - { texte: "Parce que 8 × 32 = 256", pourquoi: "Le nombre de valeurs ne se multiplie pas par 8 : il double à chaque bit ajouté." }
+      - { texte: "Parce que 255 est le plus grand nombre à 3 chiffres", pourquoi: "999 est le plus grand nombre à 3 chiffres. 255 est le plus grand nombre de 8 bits, 11111111." }
+
+en:
+  titre: "Integers in binary and hexadecimal"
+  idee: "In base 2, each digit (a bit) has a weight: 1, 2, 4, 8, 16… from right to left. 1101 is 8 + 4 + 1 = 13. In base 16, A to F stand for 10 to 15, and one digit is 4 bits."
+  phrases:
+    consigne: "Write the weight of each digit above it, then add the weights of the digits that count."
+    question: "{texte}"
+    indice: "In base 2, the weights are 1, 2, 4, 8, 16, 32… starting from the right. In base 16: 1, then 16, then 256."
+    exemple: "1011 in base 2: weights 8, 4, 2, 1. Keep 8 + 2 + 1 = 11. And 2F in base 16: 2 × 16 + 15 = 47."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What is 1101 written in base 2 worth?"
+      nom: "13"
+      explication: "Weights 8, 4, 2, 1: 8 + 4 + 1 = 13. The 0 is on weight 2, which does not count."
+      pieges:
+        - { texte: "1101", pourquoi: "That is how it is written in base 2. In base 10, this number is 8 + 4 + 1." }
+        - { texte: "11", pourquoi: "You read the weights from left to right (1 + 2 + 8). Weight 1 belongs to the rightmost digit." }
+    - texte: "What will this program display?\nprint(bin(10))"
+      nom: "0b1010"
+      explication: "10 = 8 + 2: the bits with weights 8 and 2 are 1, giving 1010. bin puts 0b in front, meaning “base 2”."
+      pieges:
+        - { texte: "1010", pourquoi: "bin returns a string that starts with 0b, the sign for base 2." }
+        - { texte: "0b0101", pourquoi: "The bits are written backwards: the weight-8 bit is on the left, 10 is 1010." }
+    - texte: "What will this program display?\nprint(int('11111111', 2))"
+      nom: "255"
+      explication: "int(…, 2) reads the text in base 2. Eight bits set to 1: 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255."
+      pieges:
+        - { texte: "256", pourquoi: "256 = 2⁸ is written 100000000: it needs a ninth bit. Eight bits set to 1 make 255." }
+        - { texte: "8", pourquoi: "8 is the number of bits; the value is the sum of their weights." }
+    - texte: "What is the smallest number of bits needed to write 100 in base 2?"
+      nom: "7"
+      explication: "2⁶ = 64 ≤ 100 < 128 = 2⁷: 7 bits are needed. 100 is written 1100100."
+      pieges:
+        - { texte: "6", pourquoi: "With 6 bits, the largest number is 111111, that is 63." }
+        - { texte: "3", pourquoi: "3 is the number of digits of 100 in base 10, not in base 2." }
+    - texte: "What will this program display?\nprint(hex(255))"
+      nom: "0xff"
+      explication: "255 = 15 × 16 + 15. 15 is written f in base 16, so ff. hex puts 0x in front."
+      pieges:
+        - { texte: "0x255", pourquoi: "hex converts to base 16: it does not copy the base-10 digits." }
+        - { texte: "ff", pourquoi: "hex adds the prefix 0x, the sign for base 16." }
+    - texte: "What is 2A written in base 16 worth?"
+      nom: "42"
+      explication: "A stands for 10. The 2 is on weight 16: 2 × 16 + 10 = 42."
+      pieges:
+        - { texte: "210", pourquoi: "You stuck 2 and 10 together. In base 16, the 2 is worth 2 × 16." }
+        - { texte: "12", pourquoi: "You added the digits 2 + 10. The 2 has weight 16." }
+    - texte: "Write the number 10110110 (base 2) in base 16."
+      nom: "B6"
+      explication: "Cut it into groups of 4 bits from the right: 1011 = 11 = B, and 0110 = 6. So B6."
+      pieges:
+        - { texte: "116", pourquoi: "1011 is 11, which is written as a single hexadecimal digit: B." }
+        - { texte: "6B", pourquoi: "The left group gives the left digit: B, then 6." }
+    - texte: "What will this program display?\nprint(0b101 + 0b11)"
+      nom: "8"
+      explication: "0b101 is 5 and 0b11 is 3. 5 + 3 = 8, and print shows integers in base 10."
+      pieges:
+        - { texte: "0b1000", pourquoi: "print shows an integer in base 10; 0b is only used to write it in the program." }
+        - { texte: "112", pourquoi: "This is not a base-10 column addition: 0b101 is 5, 0b11 is 3." }
+    - texte: "Why can a byte (8 bits) take 256 values, from 0 to 255?"
+      nom: "Each bit has 2 choices: 2⁸ = 256 combinations"
+      explication: "1 bit: 2 values. Each extra bit doubles the count: 2 × 2 × … × 2, eight times, which is 256. The smallest is 0, the largest 255."
+      pieges:
+        - { texte: "Because 8 × 32 = 256", pourquoi: "The number of values is not multiplied by 8: it doubles with each extra bit." }
+        - { texte: "Because 255 is the largest 3-digit number", pourquoi: "999 is the largest 3-digit number. 255 is the largest 8-bit number, 11111111." }

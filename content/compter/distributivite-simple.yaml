@@ -1,0 +1,136 @@
+id: distributivite-simple
+titre: "La distributivité"
+niveau: 5e
+prerequis: ["priorites-operatoires"]
+programme: { source: cycle4, texte: "Connaitre et utiliser la distributivité simple sur des exemples numériques." }
+activite: quiz
+parametres: {}
+idee: "k × (a + b) = k × a + k × b. Un rectangle de largeur k coupé en deux le montre : l'aire totale est la somme des deux aires. Pratique de tête : 7 × 102 = 700 + 14."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Coupe le nombre en morceaux faciles (100 + 2, 100 − 1), multiplie chaque morceau, puis ajoute ou soustrais."
+  exemple: "6 × 103 = 6 × (100 + 3) = 6 × 100 + 6 × 3 = 600 + 18 = 618. Le 6 multiplie chaque morceau."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien font 7 × 102 ?"
+    nom: "714"
+    explication: "7 × 102 = 7 × (100 + 2) = 700 + 14 = 714."
+    pieges:
+      - { texte: "702", pourquoi: "7 × 100 + 2 : le 7 multiplie aussi le 2, 7 × 2 = 14." }
+      - { texte: "709", pourquoi: "700 + 7 + 2 : on a ajouté 7 au lieu de calculer 7 × 2." }
+  - texte: "Combien font 9 × 21 ?"
+    nom: "189"
+    explication: "9 × 21 = 9 × (20 + 1) = 180 + 9 = 189."
+    pieges:
+      - { texte: "181", pourquoi: "9 × 20 + 1 : le 9 multiplie aussi le 1, 9 × 1 = 9." }
+      - { texte: "180", pourquoi: "9 × 20 seulement : le morceau 9 × 1 a été oublié." }
+  - texte: "Combien font 6 × 99 ?"
+    nom: "594"
+    explication: "6 × 99 = 6 × (100 − 1) = 600 − 6 = 594."
+    pieges:
+      - { texte: "606", pourquoi: "99 = 100 − 1 : on enlève 6 × 1, on ne l'ajoute pas." }
+      - { texte: "599", pourquoi: "600 − 1 : le 6 multiplie aussi le 1, on enlève 6." }
+  - texte: "Complète : 5 × (8 + 4) = 5 × 8 + …"
+    nom: "5 × 4"
+    explication: "Le 5 multiplie chaque terme : 5 × 8 + 5 × 4 = 40 + 20 = 60, comme 5 × 12."
+    pieges:
+      - { texte: "4", pourquoi: "40 + 4 = 44, pas 60 : le 5 multiplie aussi le 4." }
+      - { texte: "5 + 4", pourquoi: "5 + 4 = 9 : on multiplie 4 par 5, on ne l'ajoute pas." }
+  - texte: "Complète : 3 × 17 + 3 × 13 = 3 × …"
+    nom: "30"
+    explication: "Le facteur 3 est commun : 3 × (17 + 13) = 3 × 30 = 90."
+    pieges:
+      - { texte: "4", pourquoi: "17 − 13 = 4 : les deux produits s'ajoutent, on garde 17 + 13." }
+      - { texte: "221", pourquoi: "17 × 13 : entre les deux produits il y a un +, on additionne 17 et 13." }
+  - texte: "Combien font 4 × 2,5 + 4 × 7,5 ?"
+    nom: "40"
+    explication: "Le facteur 4 est commun : 4 × (2,5 + 7,5) = 4 × 10 = 40."
+    pieges:
+      - { texte: "80", pourquoi: "4 + 4 = 8 : le facteur commun ne compte qu'une fois, 4 × 10 = 40." }
+      - { texte: "17,5", pourquoi: "4 × 2,5 + 7,5 : 7,5 doit aussi être multiplié par 4." }
+  - texte: "Calcule 25 × 12 en écrivant 12 = 10 + 2."
+    nom: "300"
+    explication: "25 × 12 = 25 × 10 + 25 × 2 = 250 + 50 = 300."
+    pieges:
+      - { texte: "252", pourquoi: "250 + 2 : le 25 multiplie aussi le 2, 25 × 2 = 50." }
+      - { texte: "270", pourquoi: "250 + 20 : on a calculé 2 × 10 au lieu de 25 × 2." }
+  - texte: "Pourquoi 8 × (10 + 3) n'est-il pas égal à 8 × 10 + 3 ?"
+    nom: "Parce que le 8 multiplie aussi le 3."
+    explication: "8 × (10 + 3) = 80 + 24 = 104, alors que 8 × 10 + 3 = 83."
+    pieges:
+      - { texte: "Parce que les parenthèses ne servent à rien.", pourquoi: "Elles servent : sans elles, on calcule 80 + 3 = 83." }
+      - { texte: "Parce qu'il faut calculer 8 × 10 × 3.", pourquoi: "8 × 10 × 3 = 240 : on multiplie chaque terme par 8, puis on additionne." }
+  - texte: "Un rectangle de largeur 6 cm est coupé en deux rectangles de longueurs 10 cm et 4 cm. Quelle est l'aire du grand rectangle ?"
+    nom: "84 cm²"
+    explication: "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm²."
+    pieges:
+      - { texte: "64 cm²", pourquoi: "60 + 4 : le petit rectangle a une aire de 6 × 4 = 24 cm²." }
+      - { texte: "40 cm", pourquoi: "C'est le périmètre, 2 × (6 + 14) : l'aire se calcule par une multiplication." }
+
+en:
+  titre: "The distributive law"
+  idee: "k × (a + b) = k × a + k × b. A rectangle of width k cut in two shows it: the total area is the sum of the two areas. Handy in your head: 7 × 102 = 700 + 14."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Split the number into easy pieces (100 + 2, 100 − 1), multiply each piece, then add or subtract."
+    exemple: "6 × 103 = 6 × (100 + 3) = 6 × 100 + 6 × 3 = 600 + 18 = 618. The 6 multiplies each piece."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 7 × 102?"
+      nom: "714"
+      explication: "7 × 102 = 7 × (100 + 2) = 700 + 14 = 714."
+      pieges:
+        - { texte: "702", pourquoi: "7 × 100 + 2: the 7 also multiplies the 2, 7 × 2 = 14." }
+        - { texte: "709", pourquoi: "700 + 7 + 2: 7 was added instead of working out 7 × 2." }
+    - texte: "What is 9 × 21?"
+      nom: "189"
+      explication: "9 × 21 = 9 × (20 + 1) = 180 + 9 = 189."
+      pieges:
+        - { texte: "181", pourquoi: "9 × 20 + 1: the 9 also multiplies the 1, 9 × 1 = 9." }
+        - { texte: "180", pourquoi: "Only 9 × 20: the piece 9 × 1 was forgotten." }
+    - texte: "What is 6 × 99?"
+      nom: "594"
+      explication: "6 × 99 = 6 × (100 − 1) = 600 − 6 = 594."
+      pieges:
+        - { texte: "606", pourquoi: "99 = 100 − 1: we take away 6 × 1, we do not add it." }
+        - { texte: "599", pourquoi: "600 − 1: the 6 also multiplies the 1, so we take away 6." }
+    - texte: "Fill in: 5 × (8 + 4) = 5 × 8 + …"
+      nom: "5 × 4"
+      explication: "The 5 multiplies each term: 5 × 8 + 5 × 4 = 40 + 20 = 60, just like 5 × 12."
+      pieges:
+        - { texte: "4", pourquoi: "40 + 4 = 44, not 60: the 5 also multiplies the 4." }
+        - { texte: "5 + 4", pourquoi: "5 + 4 = 9: we multiply 4 by 5, we do not add it." }
+    - texte: "Fill in: 3 × 17 + 3 × 13 = 3 × …"
+      nom: "30"
+      explication: "3 is a common factor: 3 × (17 + 13) = 3 × 30 = 90."
+      pieges:
+        - { texte: "4", pourquoi: "17 − 13 = 4: the two products are added, so we keep 17 + 13." }
+        - { texte: "221", pourquoi: "17 × 13: there is a + between the two products, so we add 17 and 13." }
+    - texte: "What is 4 × 2.5 + 4 × 7.5?"
+      nom: "40"
+      explication: "4 is a common factor: 4 × (2.5 + 7.5) = 4 × 10 = 40."
+      pieges:
+        - { texte: "80", pourquoi: "4 + 4 = 8: the common factor counts only once, 4 × 10 = 40." }
+        - { texte: "17.5", pourquoi: "4 × 2.5 + 7.5: 7.5 must also be multiplied by 4." }
+    - texte: "Work out 25 × 12 by writing 12 = 10 + 2."
+      nom: "300"
+      explication: "25 × 12 = 25 × 10 + 25 × 2 = 250 + 50 = 300."
+      pieges:
+        - { texte: "252", pourquoi: "250 + 2: the 25 also multiplies the 2, 25 × 2 = 50." }
+        - { texte: "270", pourquoi: "250 + 20: 2 × 10 was worked out instead of 25 × 2." }
+    - texte: "Why is 8 × (10 + 3) not equal to 8 × 10 + 3?"
+      nom: "Because the 8 also multiplies the 3."
+      explication: "8 × (10 + 3) = 80 + 24 = 104, whereas 8 × 10 + 3 = 83."
+      pieges:
+        - { texte: "Because the brackets are pointless.", pourquoi: "They matter: without them, we work out 80 + 3 = 83." }
+        - { texte: "Because you must work out 8 × 10 × 3.", pourquoi: "8 × 10 × 3 = 240: multiply each term by 8, then add." }
+    - texte: "A rectangle 6 cm wide is cut into two rectangles 10 cm and 4 cm long. What is the area of the large rectangle?"
+      nom: "84 cm²"
+      explication: "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm²."
+      pieges:
+        - { texte: "64 cm²", pourquoi: "60 + 4: the small rectangle has an area of 6 × 4 = 24 cm²." }
+        - { texte: "40 cm", pourquoi: "That is the perimeter, 2 × (6 + 14): area is worked out by multiplying." }

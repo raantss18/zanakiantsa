@@ -2,9 +2,9 @@ id: anglais
 titre: Anglais — des premiers mots à la grammaire du collège
 nom: "L'anglais"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Des premiers mots (couleurs, nombres, animaux) à la grammaire du collège : présent, passé, futur, comparatifs, modaux, et de courts textes à comprendre."
+resume: "Des premiers mots (couleurs, jouets, animaux, consignes de la classe) à la grammaire du lycée : temps, passif, discours indirect, conditionnels, connecteurs, et des textes du monde anglophone à comprendre."
 icone: "1f1ec-1f1e7"
-ages: [5, 15]
+ages: [5, 18]
 # Projet de programmes de langues vivantes étrangères et régionales du cycle 2 (Conseil supérieur des programmes,
 # juin 2025) : « ce projet n'engage pas, à ce stade, le ministère ». Version publiée au BO à vérifier (ADR 0022).
 # Consulté le 2026-11-03.
@@ -20,7 +20,16 @@ sources:
   # linguistiques » et « Compréhension de l'oral et de l'écrit » de chaque classe ; niveaux LVA (en bleu dans le texte).
   # Application en 4e et 3e : calendrier à vérifier (eduscol, illisible d'ici). Lu le 2026-11-07.
   college: "https://www.education.gouv.fr/sites/default/files/ensel621_annexe3.pdf"
-ordre: [colours, numbers, animals, body, weather, simon-says, food, clothes, reading-hello, house, to-be, plurals, days-months, present-simple, have-got, prepositions, possessives, there-is-are, telling-time, reading-6e, present-continuous, can-must, past-simple-regular, past-simple-irregular, comparatives, present-perfect, future, modals-advice, reading-3e]
+  # 2de : « Programme de langues vivantes de seconde générale et technologique, enseignements commun et optionnel »
+  # (annexe 1 de l'arrêté du BO spécial n° 1 du 22 janvier 2019) : « L'étude de la langue », axes, tableaux des
+  # descripteurs. Copie hébergée par le SNES-FSU (le BO sur education.gouv.fr renvoie 403 aux robots). Lu le 2026-11-07.
+  # Un nouveau programme de lycée paru au BO n° 22 du 29 mai 2025 est signalé par eduscol : non lu, à vérifier.
+  lycee_2de: "https://www.snes.edu/IMG/pdf/lv_com_opt_annexe-1_2e_bo.pdf"
+  # 1re-Terminale : « Programme de langues vivantes de première et terminale générales et technologiques, enseignements
+  # commun et optionnel » (annexe 2 du même arrêté) : « L'étude de la langue », médiation, axes de la thématique
+  # « Gestes fondateurs et mondes en mouvement », tableaux des descripteurs. Copie SNES-FSU. Lu le 2026-11-07.
+  lycee_ct: "https://www.snes.edu/wp-content/uploads/spe585_annexe2corr_1063703.pdf"
+ordre: [colours, numbers, animals, body, family, toys, lunch-box, weather, simon-says, feelings, school-things, classroom-language, zoo-animals, food, clothes, reading-hello, house, to-be, plurals, days-months, present-simple, have-got, prepositions, possessives, there-is-are, telling-time, reading-6e, present-continuous, can-must, past-simple-regular, past-simple-irregular, comparatives, present-perfect, future, modals-advice, reading-3e, past-perfect, passive-voice, reading-2de, present-perfect-continuous, relative-clauses, reported-speech, reading-1re, conditionals, modals-deduction, linkers, reading-terminale]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -33,7 +42,7 @@ intro:
 en:
   titre: "English — from first words to secondary-school grammar"
   nom: "English"
-  resume: "From first words (colours, numbers, animals) to secondary-school grammar: present, past, future, comparatives, modals, and short texts to understand."
+  resume: "From first words (colours, toys, animals, classroom instructions) to sixth-form grammar: tenses, the passive, reported speech, conditionals, linking words, and texts from the English-speaking world to understand."
   intro:
     - texte: "Listen to the word."
       images: ["1f1ec-1f1e7", "1f442"]

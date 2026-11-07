@@ -1,0 +1,136 @@
+id: developper-reduire
+titre: "Développer et réduire"
+niveau: 4e
+prerequis: ["distributivite-simple"]
+programme: { source: cycle4, texte: "Connaitre et utiliser la distributivité simple pour développer et factoriser une expression algébrique." }
+activite: quiz
+parametres: {}
+idee: "Développer, c'est transformer un produit en somme : 3(x + 2) = 3x + 6. Réduire, c'est regrouper les termes de même nature : 3x + 2x = 5x, et les nombres ensemble."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Multiplie chaque terme de la parenthèse par le facteur devant, puis regroupe les x ensemble et les nombres ensemble."
+  exemple: "4(x + 3) + 2x = 4x + 12 + 2x = 6x + 12. Vérification avec x = 1 : 4 × 4 + 2 = 18, et 6 + 12 = 18."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Développe 5(x + 4)."
+    nom: "5x + 20"
+    explication: "5 × x + 5 × 4 = 5x + 20."
+    pieges:
+      - { texte: "5x + 4", pourquoi: "Le 5 multiplie aussi le 4 : 5 × 4 = 20." }
+      - { texte: "9x", pourquoi: "5 + 4 : on multiplie chaque terme par 5, et on ne mélange pas les x avec les nombres." }
+  - texte: "Réduis 3x + 7x."
+    nom: "10x"
+    explication: "3 fois x plus 7 fois x, cela fait 10 fois x : 10x."
+    pieges:
+      - { texte: "21x", pourquoi: "3 × 7 : on additionne les x, 3x + 7x = 10x." }
+      - { texte: "10x²", pourquoi: "x + x = 2x, pas x² : x² vient de x × x." }
+  - texte: "Réduis 4x + 3 + 2x + 5."
+    nom: "6x + 8"
+    explication: "Les x ensemble : 4x + 2x = 6x. Les nombres ensemble : 3 + 5 = 8. Donc 6x + 8."
+    pieges:
+      - { texte: "14x", pourquoi: "On a mêlé les x et les nombres : 6x + 8 ne se réduit plus." }
+      - { texte: "6x + 15", pourquoi: "3 × 5 : les nombres s'ajoutent, 3 + 5 = 8." }
+  - texte: "Développe 2(3x − 5)."
+    nom: "6x − 10"
+    explication: "2 × 3x − 2 × 5 = 6x − 10."
+    pieges:
+      - { texte: "6x − 5", pourquoi: "Le 2 multiplie aussi le 5 : 2 × 5 = 10." }
+      - { texte: "5x − 10", pourquoi: "2 × 3x = 6x : on multiplie 2 par 3, on ne les ajoute pas." }
+  - texte: "Développe puis réduis 3(x + 2) + 4x."
+    nom: "7x + 6"
+    explication: "3(x + 2) = 3x + 6. Puis 3x + 6 + 4x = 7x + 6."
+    pieges:
+      - { texte: "7x + 2", pourquoi: "Le 3 multiplie aussi le 2 : 3 × 2 = 6." }
+      - { texte: "13x", pourquoi: "7x + 6 ne se réduit plus : on ne regroupe pas des x avec des nombres." }
+  - texte: "Complète pour factoriser : 6x + 9 = 3(2x + …)"
+    nom: "3"
+    explication: "6x = 3 × 2x et 9 = 3 × 3 : 6x + 9 = 3(2x + 3). Vérification : 3 × 2x + 3 × 3 = 6x + 9."
+    pieges:
+      - { texte: "9", pourquoi: "3 × 9 = 27, pas 9 : on divise 9 par 3." }
+      - { texte: "6", pourquoi: "3 × 6 = 18 : chaque terme est divisé par 3, et 9 ÷ 3 = 3." }
+  - texte: "Développe −2(x − 4)."
+    nom: "−2x + 8"
+    explication: "(−2) × x + (−2) × (−4) = −2x + 8."
+    pieges:
+      - { texte: "−2x − 8", pourquoi: "(−2) × (−4) = +8 : deux facteurs négatifs donnent un produit positif." }
+      - { texte: "−2x − 4", pourquoi: "Le −2 multiplie aussi le −4." }
+  - texte: "Pourquoi 2x + 3 n'est-il pas égal à 5x ?"
+    nom: "Parce qu'on ne regroupe que les termes de même nature : les x avec les x."
+    explication: "Avec x = 2 : 2 × 2 + 3 = 7, mais 5 × 2 = 10. 2x + 3 ne se réduit pas."
+    pieges:
+      - { texte: "Parce que 2 + 3 ne fait pas 5.", pourquoi: "2 + 3 fait bien 5 : la raison est qu'on mêlerait des x et un nombre." }
+      - { texte: "Parce qu'il faut écrire 6x.", pourquoi: "2 × 3 = 6, mais il n'y a pas de multiplication : 2x + 3 reste tel quel." }
+  - texte: "Un rectangle a pour largeur 4 et pour longueur x + 5. Quelle expression donne son aire ?"
+    nom: "4x + 20"
+    explication: "Aire = 4(x + 5) = 4x + 20."
+    pieges:
+      - { texte: "4x + 5", pourquoi: "Le 4 multiplie aussi le 5 : 4 × 5 = 20." }
+      - { texte: "2x + 18", pourquoi: "C'est le périmètre, 2(4 + x + 5) : l'aire est largeur × longueur." }
+
+en:
+  titre: "Expanding and simplifying"
+  idee: "Expanding turns a product into a sum: 3(x + 2) = 3x + 6. Simplifying means collecting like terms: 3x + 2x = 5x, and the numbers together."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Multiply each term in the bracket by the factor in front, then collect the x terms together and the numbers together."
+    exemple: "4(x + 3) + 2x = 4x + 12 + 2x = 6x + 12. Check with x = 1: 4 × 4 + 2 = 18, and 6 + 12 = 18."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Expand 5(x + 4)."
+      nom: "5x + 20"
+      explication: "5 × x + 5 × 4 = 5x + 20."
+      pieges:
+        - { texte: "5x + 4", pourquoi: "The 5 also multiplies the 4: 5 × 4 = 20." }
+        - { texte: "9x", pourquoi: "5 + 4: each term is multiplied by 5, and x terms are not mixed with numbers." }
+    - texte: "Simplify 3x + 7x."
+      nom: "10x"
+      explication: "3 lots of x plus 7 lots of x make 10 lots of x: 10x."
+      pieges:
+        - { texte: "21x", pourquoi: "3 × 7: the x terms are added, 3x + 7x = 10x." }
+        - { texte: "10x²", pourquoi: "x + x = 2x, not x²: x² comes from x × x." }
+    - texte: "Simplify 4x + 3 + 2x + 5."
+      nom: "6x + 8"
+      explication: "The x terms together: 4x + 2x = 6x. The numbers together: 3 + 5 = 8. So 6x + 8."
+      pieges:
+        - { texte: "14x", pourquoi: "The x terms and the numbers were mixed: 6x + 8 cannot be simplified further." }
+        - { texte: "6x + 15", pourquoi: "3 × 5: the numbers are added, 3 + 5 = 8." }
+    - texte: "Expand 2(3x − 5)."
+      nom: "6x − 10"
+      explication: "2 × 3x − 2 × 5 = 6x − 10."
+      pieges:
+        - { texte: "6x − 5", pourquoi: "The 2 also multiplies the 5: 2 × 5 = 10." }
+        - { texte: "5x − 10", pourquoi: "2 × 3x = 6x: 2 and 3 are multiplied, not added." }
+    - texte: "Expand and simplify 3(x + 2) + 4x."
+      nom: "7x + 6"
+      explication: "3(x + 2) = 3x + 6. Then 3x + 6 + 4x = 7x + 6."
+      pieges:
+        - { texte: "7x + 2", pourquoi: "The 3 also multiplies the 2: 3 × 2 = 6." }
+        - { texte: "13x", pourquoi: "7x + 6 cannot be simplified further: x terms do not combine with numbers." }
+    - texte: "Fill in to factorise: 6x + 9 = 3(2x + …)"
+      nom: "3"
+      explication: "6x = 3 × 2x and 9 = 3 × 3: 6x + 9 = 3(2x + 3). Check: 3 × 2x + 3 × 3 = 6x + 9."
+      pieges:
+        - { texte: "9", pourquoi: "3 × 9 = 27, not 9: divide 9 by 3." }
+        - { texte: "6", pourquoi: "3 × 6 = 18: each term is divided by 3, and 9 ÷ 3 = 3." }
+    - texte: "Expand −2(x − 4)."
+      nom: "−2x + 8"
+      explication: "(−2) × x + (−2) × (−4) = −2x + 8."
+      pieges:
+        - { texte: "−2x − 8", pourquoi: "(−2) × (−4) = +8: two negative factors give a positive product." }
+        - { texte: "−2x − 4", pourquoi: "The −2 also multiplies the −4." }
+    - texte: "Why is 2x + 3 not equal to 5x?"
+      nom: "Because only like terms are collected: x terms with x terms."
+      explication: "With x = 2: 2 × 2 + 3 = 7, but 5 × 2 = 10. 2x + 3 cannot be simplified."
+      pieges:
+        - { texte: "Because 2 + 3 does not make 5.", pourquoi: "2 + 3 does make 5: the reason is that it would mix an x term with a number." }
+        - { texte: "Because you should write 6x.", pourquoi: "2 × 3 = 6, but there is no multiplication: 2x + 3 stays as it is." }
+    - texte: "A rectangle is 4 wide and x + 5 long. Which expression gives its area?"
+      nom: "4x + 20"
+      explication: "Area = 4(x + 5) = 4x + 20."
+      pieges:
+        - { texte: "4x + 5", pourquoi: "The 4 also multiplies the 5: 4 × 5 = 20." }
+        - { texte: "2x + 18", pourquoi: "That is the perimeter, 2(4 + x + 5): area is width × length." }

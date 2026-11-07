@@ -1,0 +1,170 @@
+id: modals-deduction
+titre: "Les modaux de déduction : must, can't, might"
+niveau: Terminale
+prerequis: [modals-advice, present-perfect]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES), « L'étude de la langue »,
+# 2) Correction grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Correction grammaticale : l’élève est conduit à mobiliser ses connaissances de la langue française et des autres langues qu’il connaît afin de mieux saisir la différence ou la proximité avec la langue étudiée." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "must : c'est sûrement vrai. can't : c'est sûrement faux. might, may, could : c'est possible. Pour le passé : modal + have + participe. « It must have rained. »"
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quelle certitude ? Presque sûr : must. Impossible : can't. Peut-être : might. Pour le passé, ajoute have + participe passé."
+  exemple: "« Her lights are off and her car is gone. She … be at home. » Presque sûrement faux : « She can't be at home. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "« She's been working for twelve hours. » Complète : « She … be exhausted. »"
+    nom: "must"
+    explication: "Douze heures de travail : c'est presque sûr. « She must be exhausted. »"
+    pieges:
+      - { texte: "mustn't", pourquoi: "« mustn't » exprime une interdiction, pas une déduction : « You mustn't smoke here »." }
+      - { texte: "can't", pourquoi: "« can't » dirait que c'est impossible. Après douze heures, c'est presque sûr : « must »." }
+  - texte: "« Tom is in Australia this week. » Complète : « That … be Tom at the door. »"
+    nom: "can't"
+    explication: "Tom est en Australie : ce ne peut pas être lui. « That can't be Tom. »"
+    pieges:
+      - { texte: "mustn't", pourquoi: "« mustn't » exprime une interdiction. Pour dire « impossible » : « can't »." }
+      - { texte: "must", pourquoi: "« must » dirait que c'est sûrement lui. Il est en Australie : « can't »." }
+  - texte: "« Take an umbrella: it … rain later. » (c'est possible)"
+    nom: "might"
+    explication: "Une possibilité : « it might rain later », il se peut qu'il pleuve."
+    pieges:
+      - { texte: "must", pourquoi: "« must » exprime une quasi-certitude. Ici, c'est seulement possible : « might »." }
+      - { texte: "can't", pourquoi: "« can't » dirait que c'est impossible. Alors pourquoi prendre un parapluie ? « might »." }
+  - texte: "« The ground is wet. It … rained last night. »"
+    nom: "must have"
+    explication: "Une déduction sur le passé : must have + participe passé. « It must have rained last night. »"
+    pieges:
+      - { texte: "must", pourquoi: "Pour le passé, il faut « have » + participe : « must have rained »." }
+      - { texte: "can't have", pourquoi: "« can't have » dirait qu'il n'a sûrement pas plu. Le sol est mouillé : « must have »." }
+  - texte: "« She didn't answer: her phone was on silent. » Complète : « She … have heard it. »"
+    nom: "can't"
+    explication: "Téléphone en silencieux : elle ne l'a sûrement pas entendu. « She can't have heard it. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must have heard » dirait qu'elle l'a sûrement entendu. Il était en silencieux : « can't »." }
+      - { texte: "mustn't", pourquoi: "« mustn't » exprime une interdiction, pas une déduction : « can't have »." }
+  - texte: "« I can't find my keys. I … have left them at school, but I'm not sure. »"
+    nom: "might"
+    explication: "« I'm not sure » : c'est seulement possible. « I might have left them at school. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must » exprime une quasi-certitude ; « I'm not sure » demande « might »." }
+      - { texte: "can't", pourquoi: "« can't have » dirait que c'est impossible ; ici, c'est possible : « might »." }
+  - texte: "Complète : « He looks very happy. He must … the good news. » (hear)"
+    nom: "have heard"
+    explication: "Après un modal, have reste à la base : « He must have heard the good news. »"
+    pieges:
+      - { texte: "has heard", pourquoi: "Après un modal comme must, le verbe reste à la base : « have », jamais « has »." }
+      - { texte: "had heard", pourquoi: "Après un modal, on emploie la base « have », pas « had »." }
+  - texte: "Que veut dire « You must be joking! » ?"
+    nom: "Tu plaisantes sûrement !"
+    explication: "Ici, « must » est une déduction : je suis presque sûr que tu plaisantes."
+    pieges:
+      - { texte: "Tu dois plaisanter, c'est obligatoire.", pourquoi: "Ici, « must » exprime une déduction, pas une obligation." }
+      - { texte: "Tu as peut-être plaisanté.", pourquoi: "« peut-être » se dirait avec « might », et le passé avec « have been » : « you might have been joking »." }
+  - texte: "« An old legend says that giants built Stonehenge. Archaeologists have shown that people built it. » Complète : « Giants … have built it. »"
+    nom: "can't"
+    explication: "Les archéologues ont montré le contraire : c'est impossible. « Giants can't have built it. »"
+    pieges:
+      - { texte: "must", pourquoi: "« must have built » dirait que c'est presque sûr. Les archéologues montrent le contraire : « can't »." }
+      - { texte: "should", pourquoi: "« should » sert au conseil ou à ce qui serait normal, pas à dire qu'une chose est impossible : « can't »." }
+  - texte: "Pourquoi « must have been » dans « The film must have been sad: everyone was crying » ?"
+    nom: "C'est une déduction presque sûre sur le passé : must have + participe passé."
+    explication: "Tout le monde pleurait : on en déduit, sur le passé, « must have been »."
+    pieges:
+      - { texte: "Parce que regarder le film était obligatoire.", pourquoi: "Ici, « must » exprime une déduction, pas une obligation." }
+      - { texte: "Parce que le film sera triste.", pourquoi: "« have been » renvoie au passé, pas au futur." }
+en:
+  titre: "Modals of deduction: must, can't, might"
+  idee: "must: it's almost certainly true. can't: it's almost certainly false. might, may, could: it's possible. For the past: modal + have + past participle. “It must have rained.”"
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "How sure are you? Almost sure: must. Impossible: can't. Maybe: might. For the past, add have + past participle."
+    exemple: "“Her lights are off and her car is gone. She … be at home.” Almost certainly false: “She can't be at home.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "“She's been working for twelve hours.” Complete: “She … be exhausted.”"
+      nom: "must"
+      explication: "Twelve hours of work: it's almost certain. “She must be exhausted.”"
+      pieges:
+        - texte: "mustn't"
+          pourquoi: "“mustn't” is a prohibition, not a deduction: “You mustn't smoke here”."
+        - texte: "can't"
+          pourquoi: "“can't” would say it's impossible. After twelve hours, it's almost certain: must."
+    - texte: "“Tom is in Australia this week.” Complete: “That … be Tom at the door.”"
+      nom: "can't"
+      explication: "Tom is in Australia: it can't be him. “That can't be Tom.”"
+      pieges:
+        - texte: "mustn't"
+          pourquoi: "“mustn't” is a prohibition. To say impossible: can't."
+        - texte: "must"
+          pourquoi: "“must” would say it's surely him. He's in Australia: can't."
+    - texte: "“Take an umbrella: it … rain later.” (it's possible)"
+      nom: "might"
+      explication: "A possibility: “it might rain later”."
+      pieges:
+        - texte: "must"
+          pourquoi: "“must” means almost certain. Here it's only possible: might."
+        - texte: "can't"
+          pourquoi: "“can't” would say it's impossible. Then why take an umbrella? might."
+    - texte: "“The ground is wet. It … rained last night.”"
+      nom: "must have"
+      explication: "A deduction about the past: must have + past participle. “It must have rained last night.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "For the past, we need have + past participle: must have rained."
+        - texte: "can't have"
+          pourquoi: "“can't have” would say it surely didn't rain. The ground is wet: must have."
+    - texte: "“She didn't answer: her phone was on silent.” Complete: “She … have heard it.”"
+      nom: "can't"
+      explication: "Phone on silent: she surely didn't hear it. “She can't have heard it.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must have heard” would say she surely heard it. It was on silent: can't."
+        - texte: "mustn't"
+          pourquoi: "“mustn't” is a prohibition, not a deduction: can't have."
+    - texte: "“I can't find my keys. I … have left them at school, but I'm not sure.”"
+      nom: "might"
+      explication: "“I'm not sure”: it's only possible. “I might have left them at school.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must” means almost certain; “I'm not sure” needs might."
+        - texte: "can't"
+          pourquoi: "“can't have” would say it's impossible; here it's possible: might."
+    - texte: "Complete: “He looks very happy. He must … the good news.” (hear)"
+      nom: "have heard"
+      explication: "After a modal, have stays in the base form: “He must have heard the good news.”"
+      pieges:
+        - texte: "has heard"
+          pourquoi: "After a modal like must, the verb stays in the base form: have, never has."
+        - texte: "had heard"
+          pourquoi: "After a modal, we use the base form have, not had."
+    - texte: "What does “You must be joking!” mean?"
+      nom: "I'm almost sure you're joking."
+      explication: "Here, must is a deduction: I'm almost sure you're joking."
+      pieges:
+        - texte: "You are obliged to joke."
+          pourquoi: "Here, must is a deduction, not an obligation."
+        - texte: "Maybe you were joking."
+          pourquoi: "“Maybe” would be might, and the past would need have been: “you might have been joking”."
+    - texte: "“An old legend says that giants built Stonehenge. Archaeologists have shown that people built it.” Complete: “Giants … have built it.”"
+      nom: "can't"
+      explication: "Archaeologists have shown the opposite: it's impossible. “Giants can't have built it.”"
+      pieges:
+        - texte: "must"
+          pourquoi: "“must have built” would say it's almost certain. Archaeologists show the opposite: can't."
+        - texte: "should"
+          pourquoi: "“should” is for advice or what would be normal, not for saying something is impossible: can't."
+    - texte: "Why “must have been” in “The film must have been sad: everyone was crying”?"
+      nom: "It's an almost certain deduction about the past: must have + past participle."
+      explication: "Everyone was crying: we deduce, about the past, must have been."
+      pieges:
+        - texte: "Because watching the film was compulsory."
+          pourquoi: "Here, must is a deduction, not an obligation."
+        - texte: "Because the film will be sad."
+          pourquoi: "“have been” refers to the past, not the future."

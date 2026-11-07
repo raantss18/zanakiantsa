@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart' hide paints;
 import 'package:zanakiantsa/activities/draw.dart';
 import 'package:zanakiantsa/activities/explore.dart';
@@ -76,7 +77,7 @@ void main() {
     expect(colorWhy(0, 3, 8), 'You have coloured 0 parts out of 8. We need more.');
     expect(unitCompareWhy(3, 5), startsWith('One fifth is smaller than one third'));
     for (final s in additionSteps(78, 65)) {
-      expect('${s.prompt} ${s.why}', isNot(contains('{')));
+      expect('${s.prompt} ${s.why}', isNot(contains(unfilled)));
       expect(s.prompt, isNot(contains('Écris')));
     }
     expect(pieceName('n'), 'the knight');

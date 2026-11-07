@@ -1,0 +1,136 @@
+id: puissances-produit
+titre: "Les puissances"
+niveau: 4e
+prerequis: ["puissances-carre"]
+programme: { source: cycle4, texte: "Multiplier des puissances d’exposant entier naturel d’un même nombre entre elles." }
+activite: quiz
+parametres: {}
+idee: "aⁿ, c'est n facteurs a multipliés : 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. Pour multiplier deux puissances du même nombre, on ajoute les exposants : 10² × 10³ = 10⁵."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Écris les facteurs : combien de fois le nombre est-il multiplié par lui-même ?"
+  exemple: "3² × 3³ = (3 × 3) × (3 × 3 × 3) : il y a 2 + 3 = 5 facteurs 3, donc 3² × 3³ = 3⁵ = 243."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien vaut 2⁴ ?"
+    nom: "16"
+    explication: "2⁴ = 2 × 2 × 2 × 2 = 16."
+    pieges:
+      - { texte: "8", pourquoi: "2 × 4 : l'exposant dit combien de facteurs 2 on multiplie, pas par quoi multiplier." }
+      - { texte: "6", pourquoi: "2 + 4 : une puissance est une multiplication répétée." }
+  - texte: "Combien vaut 10⁴ ?"
+    nom: "10 000"
+    explication: "10⁴ = 10 × 10 × 10 × 10 = 10 000 : un 1 suivi de 4 zéros."
+    pieges:
+      - { texte: "40", pourquoi: "10 × 4 : il faut 4 facteurs 10." }
+      - { texte: "1 000", pourquoi: "1 000 = 10³ : 10⁴ s'écrit avec 4 zéros." }
+  - texte: "Combien vaut 3³ ?"
+    nom: "27"
+    explication: "3³ = 3 × 3 × 3 = 9 × 3 = 27."
+    pieges:
+      - { texte: "9", pourquoi: "9 = 3² : il faut trois facteurs 3." }
+      - { texte: "81", pourquoi: "81 = 3⁴ : un facteur 3 de trop." }
+  - texte: "Écris 10² × 10³ sous la forme d'une seule puissance de 10."
+    nom: "10⁵"
+    explication: "(10 × 10) × (10 × 10 × 10) : 2 + 3 = 5 facteurs 10, donc 10⁵ = 100 000."
+    pieges:
+      - { texte: "10⁶", pourquoi: "2 × 3 : les exposants s'ajoutent, 2 + 3 = 5." }
+      - { texte: "100⁵", pourquoi: "Le nombre multiplié reste 10 : seuls les exposants s'ajoutent." }
+  - texte: "Écris 2³ × 2⁴ sous la forme d'une seule puissance de 2."
+    nom: "2⁷"
+    explication: "3 facteurs 2, puis 4 facteurs 2 : 3 + 4 = 7 facteurs 2, donc 2⁷ = 128."
+    pieges:
+      - { texte: "2¹²", pourquoi: "3 × 4 : on compte les facteurs, 3 + 4 = 7." }
+      - { texte: "4⁷", pourquoi: "On ne multiplie pas les deux nombres 2 entre eux : le nombre reste 2." }
+  - texte: "Complète : 5³ × 5ⁿ = 5⁸, donc n = …"
+    nom: "5"
+    explication: "Les exposants s'ajoutent : 3 + n = 8, donc n = 5."
+    pieges:
+      - { texte: "11", pourquoi: "3 + 8 : on cherche ce qu'on ajoute à 3 pour obtenir 8." }
+      - { texte: "24", pourquoi: "3 × 8 : les exposants s'ajoutent, ils ne se multiplient pas." }
+  - texte: "Combien vaut (−2)³ ?"
+    nom: "−8"
+    explication: "(−2) × (−2) × (−2) = 4 × (−2) = −8 : trois facteurs négatifs donnent un produit négatif."
+    pieges:
+      - { texte: "8", pourquoi: "Avec trois facteurs négatifs, le produit est négatif." }
+      - { texte: "−6", pourquoi: "−2 × 3 : il faut multiplier −2 trois fois par lui-même." }
+  - texte: "Pourquoi 10³ × 10⁴ = 10⁷ ?"
+    nom: "Parce qu'il y a 3 + 4 = 7 facteurs 10 en tout."
+    explication: "10³ a 3 facteurs 10, 10⁴ en a 4 : ensemble, 7 facteurs 10."
+    pieges:
+      - { texte: "Parce que 3 × 4 = 7.", pourquoi: "3 × 4 = 12 : ici on compte les facteurs, on les ajoute." }
+      - { texte: "Parce qu'on multiplie les deux 10 entre eux.", pourquoi: "10 × 10 = 100 : le nombre multiplié reste 10." }
+  - texte: "On plie une feuille en deux, 5 fois de suite. Combien d'épaisseurs obtient-on ?"
+    nom: "32"
+    explication: "Chaque pliage double les épaisseurs : 2 × 2 × 2 × 2 × 2 = 2⁵ = 32."
+    pieges:
+      - { texte: "10", pourquoi: "2 × 5 : chaque pliage double, cela fait 2⁵." }
+      - { texte: "25", pourquoi: "5² = 25 : le nombre qui se répète est 2, et l'exposant est 5." }
+
+en:
+  titre: "Powers"
+  idee: "aⁿ means n factors of a multiplied together: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. To multiply two powers of the same number, add the indices: 10² × 10³ = 10⁵."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Write out the factors: how many times is the number multiplied by itself?"
+    exemple: "3² × 3³ = (3 × 3) × (3 × 3 × 3): there are 2 + 3 = 5 factors of 3, so 3² × 3³ = 3⁵ = 243."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "What is 2⁴?"
+      nom: "16"
+      explication: "2⁴ = 2 × 2 × 2 × 2 = 16."
+      pieges:
+        - { texte: "8", pourquoi: "2 × 4: the index says how many factors of 2 to multiply, not what to multiply by." }
+        - { texte: "6", pourquoi: "2 + 4: a power is repeated multiplication." }
+    - texte: "What is 10⁴?"
+      nom: "10,000"
+      explication: "10⁴ = 10 × 10 × 10 × 10 = 10,000: a 1 followed by 4 zeros."
+      pieges:
+        - { texte: "40", pourquoi: "10 × 4: we need 4 factors of 10." }
+        - { texte: "1,000", pourquoi: "1,000 = 10³: 10⁴ is written with 4 zeros." }
+    - texte: "What is 3³?"
+      nom: "27"
+      explication: "3³ = 3 × 3 × 3 = 9 × 3 = 27."
+      pieges:
+        - { texte: "9", pourquoi: "9 = 3²: we need three factors of 3." }
+        - { texte: "81", pourquoi: "81 = 3⁴: one factor of 3 too many." }
+    - texte: "Write 10² × 10³ as a single power of 10."
+      nom: "10⁵"
+      explication: "(10 × 10) × (10 × 10 × 10): 2 + 3 = 5 factors of 10, so 10⁵ = 100,000."
+      pieges:
+        - { texte: "10⁶", pourquoi: "2 × 3: the indices are added, 2 + 3 = 5." }
+        - { texte: "100⁵", pourquoi: "The number being multiplied stays 10: only the indices are added." }
+    - texte: "Write 2³ × 2⁴ as a single power of 2."
+      nom: "2⁷"
+      explication: "3 factors of 2, then 4 factors of 2: 3 + 4 = 7 factors of 2, so 2⁷ = 128."
+      pieges:
+        - { texte: "2¹²", pourquoi: "3 × 4: we count the factors, 3 + 4 = 7." }
+        - { texte: "4⁷", pourquoi: "The two 2s are not multiplied together: the number stays 2." }
+    - texte: "Fill in: 5³ × 5ⁿ = 5⁸, so n = …"
+      nom: "5"
+      explication: "The indices add up: 3 + n = 8, so n = 5."
+      pieges:
+        - { texte: "11", pourquoi: "3 + 8: we want what to add to 3 to make 8." }
+        - { texte: "24", pourquoi: "3 × 8: the indices are added, not multiplied." }
+    - texte: "What is (−2)³?"
+      nom: "−8"
+      explication: "(−2) × (−2) × (−2) = 4 × (−2) = −8: three negative factors give a negative product."
+      pieges:
+        - { texte: "8", pourquoi: "With three negative factors, the product is negative." }
+        - { texte: "−6", pourquoi: "−2 × 3: −2 must be multiplied by itself three times." }
+    - texte: "Why is 10³ × 10⁴ = 10⁷?"
+      nom: "Because there are 3 + 4 = 7 factors of 10 in all."
+      explication: "10³ has 3 factors of 10, 10⁴ has 4: together, 7 factors of 10."
+      pieges:
+        - { texte: "Because 3 × 4 = 7.", pourquoi: "3 × 4 = 12: here we count the factors, so we add them." }
+        - { texte: "Because the two 10s are multiplied together.", pourquoi: "10 × 10 = 100: the number being multiplied stays 10." }
+    - texte: "A sheet of paper is folded in half 5 times in a row. How many layers are there?"
+      nom: "32"
+      explication: "Each fold doubles the layers: 2 × 2 × 2 × 2 × 2 = 2⁵ = 32."
+      pieges:
+        - { texte: "10", pourquoi: "2 × 5: each fold doubles, which makes 2⁵." }
+        - { texte: "25", pourquoi: "5² = 25: the number repeated is 2, and the index is 5." }

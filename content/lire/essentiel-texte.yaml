@@ -1,0 +1,137 @@
+id: essentiel-texte
+titre: "Comprendre un récit : ce qui est écrit et ce qu’on devine"
+niveau: CM2
+prerequis: ["implicite-texte", "reprises-texte"]
+programme: { source: cycle3, texte: "Restituer l’essentiel d’un texte qui contient des informations explicites et des informations implicites" }
+activite: quiz
+parametres: {}
+idee: "Une information explicite est écrite dans le texte. Une information implicite ne l’est pas : on la devine en reliant plusieurs indices. Pour résumer, on garde l’essentiel : qui, quoi, pourquoi."
+phrases:
+  consigne: "Lis le texte en entier, puis la question. La réponse est-elle écrite, ou faut-il la deviner ?"
+  question: "{texte}"
+  indice: "Cherche la phrase qui répond. Si elle n’existe pas, relie plusieurs indices du texte."
+  exemple: "« Fara arriva en retard. Ses chaussures étaient couvertes de boue. » Le retard est écrit (explicite) ; la pluie sur le chemin se devine grâce à la boue (implicite)."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Lis : « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Qui tend son goûter à Fara ?"
+    nom: "Tojo"
+    explication: "C’est écrit : « son ami Tojo lui tendit son goûter ». C’est une information explicite."
+    pieges:
+      - { texte: "la maîtresse", pourquoi: "Le texte ne parle pas de la maîtresse. Relis la phrase sur la récréation." }
+      - { texte: "Fara", pourquoi: "Fara reçoit le goûter : « lui tendit », c’est à elle qu’on le donne." }
+  - texte: "Lis : « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Quel temps faisait-il sur le chemin ?"
+    nom: "Il pleuvait."
+    explication: "Ce n’est pas écrit, mais la boue et le cartable qui dégouline sont des indices de pluie : c’est implicite."
+    pieges:
+      - { texte: "Il faisait très chaud.", pourquoi: "La boue et l’eau qui coule du cartable ne vont pas avec la chaleur : ce sont des indices de pluie." }
+      - { texte: "Il neigeait.", pourquoi: "Le texte parle de boue et d’eau qui coule, pas de neige." }
+  - texte: "Lis : « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Comment se sent Fara en arrivant ?"
+    nom: "mal à l’aise"
+    explication: "En retard, trempée, elle se tait et baisse les yeux : ces indices montrent qu’elle est mal à l’aise."
+    pieges:
+      - { texte: "joyeuse", pourquoi: "Une personne joyeuse parle ou sourit. Fara se tait et baisse les yeux ; elle ne sourit qu’à la fin." }
+      - { texte: "en colère", pourquoi: "Rien ne montre la colère : elle ne crie pas, elle se tait et baisse les yeux." }
+  - texte: "Lis : « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Pourquoi Fara sourit-elle à la fin ?"
+    nom: "Son ami a été gentil avec elle."
+    explication: "Elle sourit juste après que Tojo lui a donné son goûter : ce geste d’amitié la réconforte."
+    pieges:
+      - { texte: "Elle n’est plus en retard.", pourquoi: "Le texte n’en parle pas. Il dit que Tojo lui tend son goûter juste avant qu’elle sourie." }
+      - { texte: "Il ne pleut plus.", pourquoi: "Le texte ne dit rien du temps à la récréation. Le sourire suit le geste de Tojo." }
+  - texte: "Lis : « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Quelle phrase résume le mieux le texte ?"
+    nom: "Fara arrive trempée et triste, puis un ami la console."
+    explication: "Le résumé garde l’essentiel : qui (Fara, Tojo), ce qui se passe (arrivée difficile, geste d’amitié) et la fin (le sourire)."
+    pieges:
+      - { texte: "Fara aime marcher dans la boue.", pourquoi: "Le texte ne dit pas qu’elle aime la boue ; et ce n’est qu’un détail, pas l’essentiel." }
+      - { texte: "Tojo mange son goûter.", pourquoi: "Tojo ne le mange pas : il le donne à Fara. Et cela ne résume pas toute l’histoire." }
+  - texte: "Lis : « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Où Rabe attend-il ?"
+    nom: "à la gare"
+    explication: "C’est écrit : « À la gare, il regardait sans cesse l’horloge »."
+    pieges:
+      - { texte: "dans sa boutique", pourquoi: "Il a fermé sa boutique plus tôt : il n’y est plus." }
+      - { texte: "chez le pâtissier", pourquoi: "Il a acheté un gâteau, mais il attend à la gare, devant l’horloge." }
+  - texte: "Lis : « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Que fait Rabe à la gare ?"
+    nom: "Il attend quelqu’un qu’il aime."
+    explication: "Belle chemise, gâteau, impatience, bras levés quand le train arrive : il accueille quelqu’un de cher."
+    pieges:
+      - { texte: "Il part en voyage.", pourquoi: "Rien ne parle d’un bagage ; il lève les bras quand le train arrive : il accueille quelqu’un." }
+      - { texte: "Il vend des gâteaux.", pourquoi: "Il a acheté un gâteau, il ne le vend pas ; et sa boutique est fermée." }
+  - texte: "Lis : « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Pourquoi regarde-t-il sans cesse l’horloge ?"
+    nom: "Il est impatient."
+    explication: "Regarder « sans cesse » l’heure, c’est avoir hâte que le train arrive."
+    pieges:
+      - { texte: "Il veut réparer l’horloge.", pourquoi: "Le texte ne dit pas que l’horloge est cassée : il la regarde parce qu’il a hâte." }
+      - { texte: "Il est en retard.", pourquoi: "Il a fermé plus tôt que d’habitude : il est en avance, et il attend." }
+  - texte: "Lis : « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Le texte n’écrit pas que Rabe est heureux. Pourquoi peut-on le dire ?"
+    nom: "Il met sa plus belle chemise, achète un gâteau et lève les bras en souriant."
+    explication: "On relie plusieurs indices du texte : ensemble, ils montrent sa joie."
+    pieges:
+      - { texte: "Parce qu’il ferme sa boutique.", pourquoi: "Fermer sa boutique peut avoir beaucoup de raisons : seul, ce n’est pas un indice de joie." }
+      - { texte: "Le texte dit « Rabe est heureux ».", pourquoi: "Ces mots ne sont pas dans le texte : on le devine grâce aux indices." }
+
+en:
+  langue: "fr"
+  titre: "French: understanding a story, what's written and what we work out"
+  idee: "Explicit information is written in the text. Implicit information isn't: you work it out by linking several clues. To sum up, keep the essentials: who, what, why."
+  phrases:
+    consigne: "Read the whole French text, then the question. Is the answer written, or do you have to work it out?"
+    question: "{texte}"
+    indice: "Look for the sentence that answers. If there isn't one, link several clues from the text."
+    exemple: "« Fara arriva en retard. Ses chaussures étaient couvertes de boue. » Being late is written (explicit); the rain on the way is worked out from the mud (implicit)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Read: « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Who gives Fara his snack?"
+      nom: "Tojo"
+      explication: "It's written: « son ami Tojo lui tendit son goûter ». That's explicit information."
+      pieges:
+        - { texte: "the teacher", pourquoi: "The text doesn't mention the teacher. Read the sentence about break time again." }
+        - { texte: "Fara", pourquoi: "Fara receives the snack: « lui tendit » means it is handed to her." }
+    - texte: "Read: « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » What was the weather like on the way?"
+      nom: "It was raining."
+      explication: "It isn't written, but the mud and the dripping school bag are clues of rain: it's implicit."
+      pieges:
+        - { texte: "It was very hot.", pourquoi: "Mud and water dripping from the bag don't go with heat: they are clues of rain." }
+        - { texte: "It was snowing.", pourquoi: "The text talks about mud and dripping water, not snow." }
+    - texte: "Read: « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » How does Fara feel when she arrives?"
+      nom: "uncomfortable"
+      explication: "Late and soaked, she says nothing and looks down: these clues show she feels uncomfortable."
+      pieges:
+        - { texte: "happy", pourquoi: "A happy person talks or smiles. Fara says nothing and looks down; she only smiles at the end." }
+        - { texte: "angry", pourquoi: "Nothing shows anger: she doesn't shout, she keeps quiet and looks down." }
+    - texte: "Read: « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Why does Fara smile at the end?"
+      nom: "Her friend was kind to her."
+      explication: "She smiles just after Tojo gives her his snack: this friendly act comforts her."
+      pieges:
+        - { texte: "She isn't late any more.", pourquoi: "The text doesn't say so. It says Tojo hands her his snack just before she smiles." }
+        - { texte: "It has stopped raining.", pourquoi: "The text says nothing about the weather at break time. The smile follows Tojo's gesture." }
+    - texte: "Read: « Ce matin-là, Fara arriva en retard à l’école. Ses chaussures étaient couvertes de boue et son cartable dégoulinait. Elle s’assit sans un mot, les yeux baissés. À la récréation, son ami Tojo lui tendit son goûter. Fara sourit enfin. » Which sentence sums up the text best?"
+      nom: "Fara arrives soaked and sad, then a friend comforts her."
+      explication: "The summary keeps the essentials: who (Fara, Tojo), what happens (a hard arrival, a friendly act) and the end (the smile)."
+      pieges:
+        - { texte: "Fara likes walking in the mud.", pourquoi: "The text doesn't say she likes mud; and it's only a detail, not the essentials." }
+        - { texte: "Tojo eats his snack.", pourquoi: "Tojo doesn't eat it: he gives it to Fara. And that doesn't sum up the whole story." }
+    - texte: "Read: « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Where is Rabe waiting?"
+      nom: "at the station"
+      explication: "It's written: « À la gare, il regardait sans cesse l’horloge »."
+      pieges:
+        - { texte: "in his shop", pourquoi: "He closed his shop early: he isn't there any more." }
+        - { texte: "at the baker's", pourquoi: "He bought a cake, but he's waiting at the station, watching the clock." }
+    - texte: "Read: « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » What is Rabe doing at the station?"
+      nom: "He's waiting for someone he loves."
+      explication: "Best shirt, a cake, impatience, arms raised when the train arrives: he is welcoming someone dear to him."
+      pieges:
+        - { texte: "He's going on a journey.", pourquoi: "Nothing mentions luggage; he raises his arms when the train arrives: he's welcoming someone." }
+        - { texte: "He's selling cakes.", pourquoi: "He bought a cake, he isn't selling it; and his shop is closed." }
+    - texte: "Read: « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » Why does he keep looking at the clock?"
+      nom: "He's impatient."
+      explication: "Looking at the time « sans cesse », again and again, means he can't wait for the train to arrive."
+      pieges:
+        - { texte: "He wants to mend the clock.", pourquoi: "The text doesn't say the clock is broken: he looks at it because he can't wait." }
+        - { texte: "He's late.", pourquoi: "He closed earlier than usual: he's early, and he's waiting." }
+    - texte: "Read: « Le vieux Rabe ferma sa boutique plus tôt que d’habitude. Il mit sa plus belle chemise et acheta un gros gâteau. À la gare, il regardait sans cesse l’horloge. Quand le train entra en gare, il leva les bras en souriant. » The text doesn't say Rabe is happy. How can we tell?"
+      nom: "He puts on his best shirt, buys a cake and raises his arms, smiling."
+      explication: "We link several clues from the text: together, they show his joy."
+      pieges:
+        - { texte: "Because he closes his shop.", pourquoi: "You can close a shop for many reasons: on its own, it isn't a clue of joy." }
+        - { texte: "The text says « Rabe est heureux ».", pourquoi: "Those words aren't in the text: we work it out from the clues." }

@@ -1,0 +1,124 @@
+id: angles-degres
+titre: "Les angles en degrés"
+niveau: CM2
+prerequis: ["fractions-quantite"]
+programme: { source: cycle3, texte: "Savoir qu’un angle droit mesure 90°" }
+activite: quiz
+parametres: {}
+idee: "On mesure un angle en degrés (°). L'angle droit, comme le coin d'une feuille, mesure 90°. Un angle plus petit est aigu ; un angle plus grand est obtus."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Compare à l'angle droit, 90°. La moitié d'un angle droit mesure 45°."
+  exemple: "On plie le coin d'une feuille en deux : chaque moitié mesure 90 ÷ 2 = 45°. Deux angles droits côte à côte font 90 + 90 = 180°."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Combien mesure un angle droit ?"
+    nom: "90°"
+    explication: "Un angle droit, comme le coin d'une feuille, mesure 90°."
+    pieges:
+      - { texte: "100°", pourquoi: "100 est un nombre rond, mais l'angle droit mesure 90°." }
+      - { texte: "180°", pourquoi: "180°, ce sont deux angles droits côte à côte : un angle plat." }
+  - texte: "On plie un angle droit en deux parts égales. Combien mesure chaque part ?"
+    nom: "45°"
+    explication: "Chaque part est la moitié de 90° : 90 ÷ 2 = 45°."
+    pieges:
+      - { texte: "90°", pourquoi: "90° est l'angle entier : chaque part en est la moitié." }
+      - { texte: "50°", pourquoi: "50 est la moitié de 100, pas de 90 : 90 ÷ 2 = 45." }
+  - texte: "Un angle mesure le tiers d'un angle droit. Combien mesure-t-il ?"
+    nom: "30°"
+    explication: "Le tiers de 90° : 90 ÷ 3 = 30°."
+    pieges:
+      - { texte: "60°", pourquoi: "60°, ce sont deux tiers d'un angle droit : 2 × 30." }
+      - { texte: "270°", pourquoi: "90 × 3 : prendre le tiers, c'est diviser par 3." }
+  - texte: "Un angle mesure 3 fois un angle de 20°. Combien mesure-t-il ?"
+    nom: "60°"
+    explication: "3 angles de 20° mis côte à côte : 3 × 20 = 60°."
+    pieges:
+      - { texte: "23°", pourquoi: "20 + 3 : « 3 fois », c'est multiplier par 3." }
+      - { texte: "40°", pourquoi: "20 + 20 : ce sont 2 angles de 20°, il en faut 3." }
+  - texte: "On place côte à côte un angle de 30° et un angle de 45°. Combien mesure le grand angle obtenu ?"
+    nom: "75°"
+    explication: "Les angles s'ajoutent : 30 + 45 = 75°."
+    pieges:
+      - { texte: "15°", pourquoi: "45 − 30 : mis côte à côte, les angles s'ajoutent." }
+      - { texte: "65°", pourquoi: "Recompte : 30 + 40 = 70, puis 70 + 5 = 75." }
+  - texte: "Lequel de ces angles est aigu, c'est-à-dire plus petit qu'un angle droit ?"
+    nom: "70°"
+    explication: "70° est plus petit que 90° : l'angle est aigu."
+    pieges:
+      - { texte: "120°", pourquoi: "120° est plus grand que 90° : cet angle est obtus." }
+      - { texte: "90°", pourquoi: "90°, c'est exactement l'angle droit : il n'est pas plus petit." }
+  - texte: "Complète : 90° = 60° + …°"
+    nom: "30"
+    explication: "90 − 60 = 30 : un angle droit, c'est 60° et 30° côte à côte."
+    pieges:
+      - { texte: "150", pourquoi: "60 + 90 : on cherche ce qui manque à 60 pour faire 90." }
+      - { texte: "40", pourquoi: "40, c'est ce qui manque à 60 pour faire 100, pas 90." }
+  - texte: "Pourquoi un angle de 100° n'est-il pas un angle droit ?"
+    nom: "Parce qu'un angle droit mesure exactement 90°."
+    explication: "100° est plus grand que 90° : c'est un angle obtus."
+    pieges:
+      - { texte: "Parce que ses côtés sont trop longs.", pourquoi: "La longueur des côtés ne change pas un angle : seul l'écartement compte." }
+      - { texte: "Parce que 100 est un nombre rond.", pourquoi: "Le nombre rond ne compte pas : c'est la mesure exacte, 90°, qui fait l'angle droit." }
+
+en:
+  titre: "Angles in degrees"
+  idee: "We measure an angle in degrees (°). A right angle, like the corner of a sheet of paper, measures 90°. A smaller angle is acute; a bigger one is obtuse."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Compare with a right angle, 90°. Half a right angle measures 45°."
+    exemple: "Fold the corner of a sheet in half: each half measures 90 ÷ 2 = 45°. Two right angles side by side make 90 + 90 = 180°."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "How big is a right angle?"
+      nom: "90°"
+      explication: "A right angle, like the corner of a sheet of paper, measures 90°."
+      pieges:
+        - { texte: "100°", pourquoi: "100 is a round number, but a right angle measures 90°." }
+        - { texte: "180°", pourquoi: "180° is two right angles side by side: a straight angle." }
+    - texte: "A right angle is folded into two equal parts. How big is each part?"
+      nom: "45°"
+      explication: "Each part is half of 90°: 90 ÷ 2 = 45°."
+      pieges:
+        - { texte: "90°", pourquoi: "90° is the whole angle: each part is half of it." }
+        - { texte: "50°", pourquoi: "50 is half of 100, not of 90: 90 ÷ 2 = 45." }
+    - texte: "An angle is one third of a right angle. How big is it?"
+      nom: "30°"
+      explication: "A third of 90°: 90 ÷ 3 = 30°."
+      pieges:
+        - { texte: "60°", pourquoi: "60° is two thirds of a right angle: 2 × 30." }
+        - { texte: "270°", pourquoi: "90 × 3: taking a third means dividing by 3." }
+    - texte: "An angle is 3 times an angle of 20°. How big is it?"
+      nom: "60°"
+      explication: "3 angles of 20° side by side: 3 × 20 = 60°."
+      pieges:
+        - { texte: "23°", pourquoi: "20 + 3: 3 times means multiply by 3." }
+        - { texte: "40°", pourquoi: "20 + 20: that is 2 angles of 20°, we need 3." }
+    - texte: "An angle of 30° and an angle of 45° are placed side by side. How big is the large angle they make?"
+      nom: "75°"
+      explication: "The angles add up: 30 + 45 = 75°."
+      pieges:
+        - { texte: "15°", pourquoi: "45 − 30: side by side, the angles add up." }
+        - { texte: "65°", pourquoi: "Count again: 30 + 40 = 70, then 70 + 5 = 75." }
+    - texte: "Which of these angles is acute, that is, smaller than a right angle?"
+      nom: "70°"
+      explication: "70° is smaller than 90°: the angle is acute."
+      pieges:
+        - { texte: "120°", pourquoi: "120° is bigger than 90°: this angle is obtuse." }
+        - { texte: "90°", pourquoi: "90° is exactly a right angle: it is not smaller." }
+    - texte: "Fill in: 90° = 60° + …°"
+      nom: "30"
+      explication: "90 − 60 = 30: a right angle is 60° and 30° side by side."
+      pieges:
+        - { texte: "150", pourquoi: "60 + 90: we want what 60 needs to make 90." }
+        - { texte: "40", pourquoi: "40 is what 60 needs to make 100, not 90." }
+    - texte: "Why is an angle of 100° not a right angle?"
+      nom: "Because a right angle measures exactly 90°."
+      explication: "100° is bigger than 90°: it is an obtuse angle."
+      pieges:
+        - { texte: "Because its sides are too long.", pourquoi: "The length of the sides does not change an angle: only the opening counts." }
+        - { texte: "Because 100 is a round number.", pourquoi: "Round numbers do not matter: the exact measure, 90°, is what makes a right angle." }

@@ -1,0 +1,94 @@
+id: toys
+titre: "Les jouets en anglais"
+niveau: CP
+prerequis: []
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), CP, « Suivre le fil
+# d'une histoire » : objectif et exemple de réussite (album Funny Face). Lu le 2026-11-07.
+programme: { source: lver_c2, texte: "CP : reconnaitre les mots familiers pour parler de soi, de sa sphère immédiate et des thématiques culturelles et disciplinaires travaillées en classe ; exemple cité : « I love playing with my ball »." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche le bon jouet."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit un jouet."
+  exemple: "Un exemple : « doll », c'est la poupée. Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "ball"
+    bonne: ["26bd", "le ballon"]
+    autres: [["1f697", "la voiture"], ["1f9e9", "le puzzle"]]
+    explication: "« ball », c'est le ballon."
+  - texte: "car"
+    bonne: ["1f697", "la voiture"]
+    autres: [["1f6b2", "le vélo"], ["1f916", "le robot"]]
+    explication: "« car », c'est la voiture."
+  - texte: "robot"
+    bonne: ["1f916", "le robot"]
+    autres: [["1f680", "la fusée"], ["26bd", "le ballon"]]
+    explication: "« robot », c'est le robot."
+  - texte: "puzzle"
+    bonne: ["1f9e9", "le puzzle"]
+    autres: [["1f3ae", "le jeu vidéo"], ["1f3b8", "la guitare"]]
+    explication: "« puzzle », c'est le puzzle."
+  - texte: "bike"
+    bonne: ["1f6b2", "le vélo"]
+    autres: [["1f697", "la voiture"], ["1f680", "la fusée"]]
+    explication: "« bike », c'est le vélo."
+  - texte: "rocket"
+    bonne: ["1f680", "la fusée"]
+    autres: [["1f916", "le robot"], ["1f6b2", "le vélo"]]
+    explication: "« rocket », c'est la fusée."
+  - texte: "guitar"
+    bonne: ["1f3b8", "la guitare"]
+    autres: [["1f9e9", "le puzzle"], ["26bd", "le ballon"]]
+    explication: "« guitar », c'est la guitare."
+  - texte: "video game"
+    bonne: ["1f3ae", "le jeu vidéo"]
+    autres: [["1f3b8", "la guitare"], ["1f697", "la voiture"]]
+    explication: "« video game », c'est le jeu vidéo."
+en:
+  titre: "Toys in English"
+  phrases:
+    consigne: "Listen to the word and touch the right toy."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is a toy."
+    exemple: "An example: doll is a doll. Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "ball"
+      bonne: ["26bd", "the ball"]
+      autres: [["1f697", "the car"], ["1f9e9", "the puzzle"]]
+      explication: "ball — well done!"
+    - texte: "car"
+      bonne: ["1f697", "the car"]
+      autres: [["1f6b2", "the bike"], ["1f916", "the robot"]]
+      explication: "car — well done!"
+    - texte: "robot"
+      bonne: ["1f916", "the robot"]
+      autres: [["1f680", "the rocket"], ["26bd", "the ball"]]
+      explication: "robot — well done!"
+    - texte: "puzzle"
+      bonne: ["1f9e9", "the puzzle"]
+      autres: [["1f3ae", "the video game"], ["1f3b8", "the guitar"]]
+      explication: "puzzle — well done!"
+    - texte: "bike"
+      bonne: ["1f6b2", "the bike"]
+      autres: [["1f697", "the car"], ["1f680", "the rocket"]]
+      explication: "bike — well done!"
+    - texte: "rocket"
+      bonne: ["1f680", "the rocket"]
+      autres: [["1f916", "the robot"], ["1f6b2", "the bike"]]
+      explication: "rocket — well done!"
+    - texte: "guitar"
+      bonne: ["1f3b8", "the guitar"]
+      autres: [["1f9e9", "the puzzle"], ["26bd", "the ball"]]
+      explication: "guitar — well done!"
+    - texte: "video game"
+      bonne: ["1f3ae", "the video game"]
+      autres: [["1f3b8", "the guitar"], ["1f697", "the car"]]
+      explication: "video game — well done!"

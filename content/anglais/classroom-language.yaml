@@ -1,0 +1,104 @@
+id: classroom-language
+titre: "Les consignes de la classe, en anglais"
+niveau: CE1
+prerequis: [simon-says]
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), CE1 : attendu de fin
+# d'année (« Comprendre quelques mots familiers ») et objectif de « Comprendre et agir ». Lu le 2026-11-07.
+programme: { source: lver_c2, texte: "CE1 : (A1) il peut comprendre les consignes données en classe ; reconnaitre quelques formes courantes de l’impératif pour réagir à des consignes et instructions simples (consignes de la classe, instructions de jeu ou étapes d’une recette, etc.)." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "En classe d'anglais, la maîtresse ou le maître donne des consignes : « Listen », écoute ; « Open your book », ouvre ton livre."
+phrases:
+  consigne: "Écoute la consigne en anglais, puis touche l'image qui va avec."
+  question: "« {texte} »."
+  indice: "Écoute le premier mot : c'est l'action. Listen, écouter ; look, regarder ; open, ouvrir ; sing, chanter."
+  exemple: "Un exemple : « Draw a cat », dessine un chat. Écoute encore la consigne, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "Listen!"
+    bonne: ["1f442", "écouter"]
+    autres: [["1f440", "regarder"], ["1f3a4", "chanter"]]
+    explication: "« Listen! » : écoute !"
+  - texte: "Look!"
+    bonne: ["1f440", "regarder"]
+    autres: [["1f442", "écouter"], ["270b", "lever la main"]]
+    explication: "« Look! » : regarde !"
+  - texte: "Open your book"
+    bonne: ["1f4d6", "le livre ouvert"]
+    autres: [["270f", "le crayon"], ["1f6aa", "la porte"]]
+    explication: "« Open your book » : ouvre ton livre."
+  - texte: "Take your pencil"
+    bonne: ["270f", "le crayon"]
+    autres: [["1f4d6", "le livre ouvert"], ["1f522", "compter"]]
+    explication: "« Take your pencil » : prends ton crayon."
+  - texte: "Raise your hand"
+    bonne: ["270b", "lever la main"]
+    autres: [["1fa91", "s'asseoir"], ["1f440", "regarder"]]
+    explication: "« Raise your hand » : lève la main."
+  - texte: "Sing a song"
+    bonne: ["1f3a4", "chanter"]
+    autres: [["1f442", "écouter"], ["1f522", "compter"]]
+    explication: "« Sing a song » : chante une chanson."
+  - texte: "Count to ten"
+    bonne: ["1f522", "compter"]
+    autres: [["1f3a4", "chanter"], ["270f", "le crayon"]]
+    explication: "« Count to ten » : compte jusqu'à dix."
+  - texte: "Sit down, please"
+    bonne: ["1fa91", "s'asseoir"]
+    autres: [["270b", "lever la main"], ["1f6aa", "la porte"]]
+    explication: "« Sit down, please » : assieds-toi, s'il te plaît."
+  - texte: "Close the door"
+    bonne: ["1f6aa", "la porte"]
+    autres: [["1fa91", "s'asseoir"], ["1f4d6", "le livre ouvert"]]
+    explication: "« Close the door » : ferme la porte."
+en:
+  titre: "Classroom instructions"
+  idee: "In the English lesson, the teacher gives instructions: “Listen”, “Open your book”."
+  phrases:
+    consigne: "Listen to the instruction, then touch the picture that goes with it."
+    question: "{texte}"
+    indice: "Listen to the first word: it is the action. Listen, look, open, sing."
+    exemple: "An example: “Draw a cat.” Listen to the instruction again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "Listen!"
+      bonne: ["1f442", "listening"]
+      autres: [["1f440", "looking"], ["1f3a4", "singing"]]
+      explication: "Listen! — well done!"
+    - texte: "Look!"
+      bonne: ["1f440", "looking"]
+      autres: [["1f442", "listening"], ["270b", "raising your hand"]]
+      explication: "Look! — well done!"
+    - texte: "Open your book"
+      bonne: ["1f4d6", "the open book"]
+      autres: [["270f", "the pencil"], ["1f6aa", "the door"]]
+      explication: "Open your book — well done!"
+    - texte: "Take your pencil"
+      bonne: ["270f", "the pencil"]
+      autres: [["1f4d6", "the open book"], ["1f522", "counting"]]
+      explication: "Take your pencil — well done!"
+    - texte: "Raise your hand"
+      bonne: ["270b", "raising your hand"]
+      autres: [["1fa91", "sitting down"], ["1f440", "looking"]]
+      explication: "Raise your hand — well done!"
+    - texte: "Sing a song"
+      bonne: ["1f3a4", "singing"]
+      autres: [["1f442", "listening"], ["1f522", "counting"]]
+      explication: "Sing a song — well done!"
+    - texte: "Count to ten"
+      bonne: ["1f522", "counting"]
+      autres: [["1f3a4", "singing"], ["270f", "the pencil"]]
+      explication: "Count to ten — well done!"
+    - texte: "Sit down, please"
+      bonne: ["1fa91", "sitting down"]
+      autres: [["270b", "raising your hand"], ["1f6aa", "the door"]]
+      explication: "Sit down, please — well done!"
+    - texte: "Close the door"
+      bonne: ["1f6aa", "the door"]
+      autres: [["1fa91", "sitting down"], ["1f4d6", "the open book"]]
+      explication: "Close the door — well done!"

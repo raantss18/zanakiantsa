@@ -1,0 +1,124 @@
+id: cellule-adn
+titre: "Cellules spécialisées et ADN"
+niveau: 2de
+prerequis: [cellule, reproduction]
+programme: { source: svt2de, texte: "Toutes les cellules d’un organisme sont issues d’une cellule unique à l’origine de cet organisme. Elles possèdent toutes initialement la même information génétique organisée en gènes constitués d’ADN (acide désoxyribonucléique)." }
+activite: quiz
+parametres: {}
+idee: "Un organisme pluricellulaire vient d'une seule cellule. Ses cellules ont la même information génétique, portée par l'ADN, mais chaque cellule spécialisée n'en exprime qu'une partie."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense aux mots clés : cellule spécialisée, tissu, organe ; ADN, double hélice, nucléotide, gène, séquence."
+  exemple: "Exemple : un brin d'ADN porte la séquence A T G C. En face, le brin complémentaire porte T A C G, car A s'associe à T et C s'associe à G."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Chez un organisme pluricellulaire, comment appelle-t-on un ensemble de cellules spécialisées semblables qui assurent une même fonction ?"
+    nom: "Un tissu."
+    explication: "Des cellules spécialisées forment des tissus ; plusieurs tissus forment un organe, comme le cœur ou une feuille."
+    pieges:
+      - { texte: "Un organite.", pourquoi: "Un organite est une structure à l'intérieur d'une cellule, comme le noyau : c'est l'échelle en dessous de la cellule." }
+      - { texte: "Une espèce.", pourquoi: "Une espèce regroupe des organismes entiers, pas des cellules d'un même organisme." }
+  - texte: "Chez un organisme unicellulaire, comme une paramécie, qui assure toutes les fonctions (se nourrir, se déplacer, se reproduire) ?"
+    nom: "Une seule cellule."
+    explication: "Chez un unicellulaire, l'organisme entier est une seule cellule : elle assure toutes les fonctions."
+    pieges:
+      - { texte: "Des organes spécialisés.", pourquoi: "On pense souvent qu'il faut des organes pour vivre ; un unicellulaire n'a ni tissu ni organe." }
+      - { texte: "Plusieurs cellules qui se partagent le travail.", pourquoi: "Le partage du travail entre cellules spécialisées est le propre des pluricellulaires." }
+  - texte: "Une cellule de peau et un neurone d'une même personne contiennent-ils la même information génétique ?"
+    nom: "Oui : toutes ses cellules viennent de la même cellule-œuf."
+    explication: "Toutes les cellules d'un organisme sont issues d'une cellule unique ; elles possèdent au départ la même information génétique."
+    pieges:
+      - { texte: "Non : chaque type de cellule a son propre ADN.", pourquoi: "Les cellules sont différentes parce qu'elles n'utilisent pas les mêmes gènes, pas parce que leur ADN est différent." }
+      - { texte: "Non : seul le neurone contient de l'ADN.", pourquoi: "Les cellules à noyau de l'organisme contiennent toutes de l'ADN, pas seulement les neurones." }
+  - texte: "Pourquoi une cellule de muscle et une cellule de l'estomac sont-elles si différentes, avec le même ADN ?"
+    nom: "Parce que chaque cellule spécialisée n'exprime qu'une partie de son ADN."
+    explication: "Les cellules spécialisées n'utilisent pas toutes les mêmes gènes : leur forme et leur fonction en dépendent."
+    pieges:
+      - { texte: "Parce qu'elles ont perdu les gènes qui ne leur servent pas.", pourquoi: "C'est une idée fréquente : en réalité les gènes restent présents, ils ne sont simplement pas exprimés." }
+      - { texte: "Parce qu'elles ne viennent pas de la même cellule de départ.", pourquoi: "Toutes les cellules d'un organisme viennent de la même cellule-œuf." }
+  - texte: "Quelle est la forme de la molécule d'ADN ?"
+    nom: "Une double hélice."
+    explication: "L'ADN est formé de deux brins enroulés l'un autour de l'autre : c'est la double hélice."
+    pieges:
+      - { texte: "Une sphère pleine.", pourquoi: "L'ADN est une très longue molécule en chaîne, pas une boule." }
+      - { texte: "Un seul brin droit.", pourquoi: "L'ADN compte deux brins, associés par leurs nucléotides complémentaires." }
+  - texte: "Quels sont les quatre nucléotides de l'ADN ?"
+    nom: "Adénine, thymine, cytosine, guanine (A, T, C, G)."
+    explication: "L'information génétique est écrite avec ces quatre nucléotides, notés A, T, C et G."
+    pieges:
+      - { texte: "Les vitamines A, B, C et D.", pourquoi: "Les vitamines sont apportées par l'alimentation : elles ne forment pas l'ADN." }
+      - { texte: "Le noyau, la membrane, le cytoplasme et la paroi.", pourquoi: "Ce sont des parties de la cellule, à une échelle bien plus grande que la molécule d'ADN." }
+  - texte: "Un brin d'ADN porte la séquence A A C G T. Quelle est la séquence du brin complémentaire, en face ?"
+    nom: "T T G C A."
+    explication: "A s'associe toujours à T, et C à G : on remplace chaque lettre par sa complémentaire."
+    pieges:
+      - { texte: "A A C G T.", pourquoi: "Le second brin n'est pas une copie identique : il est complémentaire, lettre par lettre." }
+      - { texte: "T G C A A.", pourquoi: "C'est la séquence complémentaire lue à l'envers : il faut garder le même ordre, face à face." }
+  - texte: "Qu'est-ce qu'un gène ?"
+    nom: "Une portion d'ADN dont la séquence porte une information."
+    explication: "C'est l'ordre des nucléotides, la séquence, qui porte l'information génétique d'un gène."
+    pieges:
+      - { texte: "Une cellule entière.", pourquoi: "Un gène est bien plus petit qu'une cellule : c'est un morceau d'une molécule d'ADN." }
+      - { texte: "Un caractère visible, comme la couleur des yeux.", pourquoi: "On confond souvent le gène et le caractère : le gène est un morceau d'ADN, le caractère est ce qu'on observe." }
+
+en:
+  titre: "Specialised cells and DNA"
+  idee: "A multicellular organism comes from a single cell. Its cells have the same genetic information, carried by DNA, but each specialised cell uses only part of it."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of the key words: specialised cell, tissue, organ; DNA, double helix, nucleotide, gene, sequence."
+    exemple: "Example: one strand of DNA carries the sequence A T G C. Opposite it, the complementary strand carries T A C G, because A pairs with T and C pairs with G."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In a multicellular organism, what do we call a group of similar specialised cells that carry out the same function?"
+      nom: "A tissue."
+      explication: "Specialised cells form tissues; several tissues form an organ, such as the heart or a leaf."
+      pieges:
+        - { texte: "An organelle.", pourquoi: "An organelle is a structure inside a cell, like the nucleus: it's the scale below the cell." }
+        - { texte: "A species.", pourquoi: "A species groups whole organisms, not the cells of one organism." }
+    - texte: "In a single-celled organism, such as a paramecium, what carries out all the functions (feeding, moving, reproducing)?"
+      nom: "A single cell."
+      explication: "In a single-celled organism, the whole organism is one cell: it carries out every function."
+      pieges:
+        - { texte: "Specialised organs.", pourquoi: "People often think organs are needed to live; a single-celled organism has no tissues or organs." }
+        - { texte: "Several cells sharing the work.", pourquoi: "Sharing the work between specialised cells is what multicellular organisms do." }
+    - texte: "Do a skin cell and a nerve cell from the same person contain the same genetic information?"
+      nom: "Yes: all their cells come from the same fertilised egg."
+      explication: "All the cells of an organism come from a single cell; at the start they all have the same genetic information."
+      pieges:
+        - { texte: "No: each type of cell has its own DNA.", pourquoi: "Cells differ because they don't use the same genes, not because their DNA is different." }
+        - { texte: "No: only the nerve cell contains DNA.", pourquoi: "All the body's cells with a nucleus contain DNA, not just nerve cells." }
+    - texte: "Why are a muscle cell and a stomach cell so different, with the same DNA?"
+      nom: "Because each specialised cell uses only part of its DNA."
+      explication: "Specialised cells don't all use the same genes: their shape and function depend on it."
+      pieges:
+        - { texte: "Because they have lost the genes they don't need.", pourquoi: "That's a common idea: in fact the genes are still there, they just aren't used." }
+        - { texte: "Because they don't come from the same starting cell.", pourquoi: "All the cells of an organism come from the same fertilised egg." }
+    - texte: "What shape is the DNA molecule?"
+      nom: "A double helix."
+      explication: "DNA is made of two strands wound around each other: that's the double helix."
+      pieges:
+        - { texte: "A solid sphere.", pourquoi: "DNA is a very long chain molecule, not a ball." }
+        - { texte: "A single straight strand.", pourquoi: "DNA has two strands, joined by their complementary nucleotides." }
+    - texte: "What are the four nucleotides of DNA?"
+      nom: "Adenine, thymine, cytosine, guanine (A, T, C, G)."
+      explication: "Genetic information is written with these four nucleotides, labelled A, T, C and G."
+      pieges:
+        - { texte: "Vitamins A, B, C and D.", pourquoi: "Vitamins come from food: they don't make up DNA." }
+        - { texte: "The nucleus, the membrane, the cytoplasm and the cell wall.", pourquoi: "Those are parts of the cell, at a much larger scale than the DNA molecule." }
+    - texte: "One strand of DNA carries the sequence A A C G T. What is the sequence of the complementary strand opposite it?"
+      nom: "T T G C A."
+      explication: "A always pairs with T, and C with G: replace each letter with its partner."
+      pieges:
+        - { texte: "A A C G T.", pourquoi: "The second strand isn't an identical copy: it is complementary, letter by letter." }
+        - { texte: "T G C A A.", pourquoi: "That's the complementary sequence read backwards: keep the same order, face to face." }
+    - texte: "What is a gene?"
+      nom: "A section of DNA whose sequence carries information."
+      explication: "It's the order of the nucleotides, the sequence, that carries a gene's genetic information."
+      pieges:
+        - { texte: "A whole cell.", pourquoi: "A gene is far smaller than a cell: it's a piece of a DNA molecule." }
+        - { texte: "A visible trait, such as eye colour.", pourquoi: "People often mix up the gene and the trait: the gene is a piece of DNA, the trait is what we observe." }

@@ -1,0 +1,149 @@
+id: familles-de-mots
+titre: "Familles de mots : radical, préfixe, suffixe"
+niveau: CM2
+prerequis: ["synonymes-contraires"]
+programme: { source: cycle3, texte: "Approfondir les relations morphologiques et sémantiques entre les mots" }
+activite: quiz
+parametres: {}
+idee: "Les mots d’une même famille ont le même radical : terre, terrain, enterrer. Le préfixe se place avant le radical (re-, dé-, in-) ; le suffixe se place après (-age, -eur, -ette)."
+phrases:
+  consigne: "Découpe le mot en morceaux : radical, préfixe, suffixe. Puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Cherche le mot de base, le radical. Ce qui est collé avant est un préfixe ; ce qui est collé après est un suffixe."
+  exemple: "« replanter » : le radical est « plant », le préfixe « re- » veut dire « encore ». Replanter, c’est planter encore."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Quel mot est de la même famille que « terre » ?"
+    nom: "enterrer"
+    explication: "« enterrer », c’est mettre en terre : on y retrouve le radical « terr »."
+    pieges:
+      - { texte: "tarte", pourquoi: "« tarte » ressemble un peu à l’oreille, mais n’a rien à voir avec la terre : ce n’est pas le même radical." }
+      - { texte: "sol", pourquoi: "« sol » a un sens proche, mais pas le même radical : c’est presque un synonyme, pas un mot de la famille." }
+  - texte: "Dans « relire », quel est le préfixe ?"
+    nom: "re-"
+    explication: "« re- » est placé avant le radical « lire » : relire, c’est lire encore."
+    pieges:
+      - { texte: "lire", pourquoi: "« lire » est le mot de base, le radical. Le préfixe est le morceau collé avant." }
+      - { texte: "-re", pourquoi: "« -re » est la fin du verbe à l’infinitif. Un préfixe se place avant le radical." }
+  - texte: "Dans « jardinier », quel est le suffixe ?"
+    nom: "-ier"
+    explication: "« -ier » est collé après le radical « jardin » : le jardinier, c’est celui qui s’occupe du jardin."
+    pieges:
+      - { texte: "jardin", pourquoi: "« jardin » est le mot de base, le radical. Le suffixe est le morceau collé après." }
+      - { texte: "jar-", pourquoi: "« jar » n’est ni un préfixe ni un mot : le radical est « jardin » en entier." }
+  - texte: "Que veut dire le préfixe « im- » dans « impossible » ?"
+    nom: "le contraire : pas possible"
+    explication: "« im- » (ou « in- ») donne le contraire : impossible, c’est « pas possible »."
+    pieges:
+      - { texte: "encore une fois", pourquoi: "C’est le sens de « re- », comme dans « refaire »." }
+      - { texte: "avant", pourquoi: "C’est le sens de « pré- », comme dans « prévoir » : voir avant." }
+  - texte: "Que veut dire le suffixe « -ette » dans « maisonnette » ?"
+    nom: "petit : une petite maison"
+    explication: "Le suffixe « -ette » rend plus petit : une maisonnette, c’est une petite maison."
+    pieges:
+      - { texte: "celui qui fait", pourquoi: "C’est le sens de « -eur », comme dans « chanteur », celui qui chante." }
+      - { texte: "le contraire", pourquoi: "Le contraire se fait avec un préfixe, placé avant, comme « in- » ou « dé- »." }
+  - texte: "Quel mot n’est PAS de la famille de « dent » ?"
+    nom: "danse"
+    explication: "« danse » se dit presque comme « dent », mais n’a rien à voir avec les dents : ce n’est pas le même radical."
+    pieges:
+      - { texte: "dentiste", pourquoi: "« dentiste » a le radical « dent » : c’est celui qui soigne les dents." }
+      - { texte: "dentifrice", pourquoi: "Le dentifrice sert à laver les dents : il a le radical « dent »." }
+  - texte: "« chant », « chanter », « chanteur », « chantonner » : quel est le radical commun ?"
+    nom: "chant"
+    explication: "On retrouve « chant » dans les quatre mots : c’est le radical de la famille."
+    pieges:
+      - { texte: "-eur", pourquoi: "« -eur » est un suffixe : il n’est que dans « chanteur »." }
+      - { texte: "chanteur", pourquoi: "« chanteur » est un mot de la famille, formé avec le radical « chant » et le suffixe « -eur »." }
+  - texte: "Quel mot est formé avec un préfixe ET un suffixe ?"
+    nom: "démontable"
+    explication: "« dé- » (préfixe) + « mont » (radical) + « -able » (suffixe) : qu’on peut démonter."
+    pieges:
+      - { texte: "monter", pourquoi: "« monter » n’a ni préfixe ni suffixe : c’est le verbe de base, avec sa terminaison." }
+      - { texte: "remonter", pourquoi: "« remonter » a un préfixe, « re- », mais pas de suffixe." }
+  - texte: "Pourquoi écrit-on « grand » avec un d à la fin ?"
+    nom: "On l’entend dans les mots de sa famille : grande, grandir."
+    explication: "Le d est muet dans « grand », mais il s’entend dans « grande » et « grandir » : la famille aide à écrire."
+    pieges:
+      - { texte: "Parce que tous les adjectifs finissent par d.", pourquoi: "Ce n’est pas vrai : « petit » finit par t. On cherche un mot de la famille où la lettre s’entend." }
+      - { texte: "Parce qu’on l’entend dans « grand ».", pourquoi: "Le d final de « grand » est muet : on ne l’entend pas dans ce mot seul." }
+  - texte: "Tu ne connais pas le mot « illisible ». Pourquoi peux-tu deviner qu’il veut dire « qu’on ne peut pas lire » ?"
+    nom: "Il a le préfixe « il- » (le contraire), le radical de « lire » et le suffixe « -ible » (qu’on peut)."
+    explication: "En découpant le mot, on retrouve son sens ; ensuite, on peut vérifier dans le dictionnaire."
+    pieges:
+      - { texte: "Parce qu’il ressemble à « île ».", pourquoi: "« île » n’a rien à voir : on découpe le mot en préfixe, radical et suffixe." }
+      - { texte: "On ne peut pas le deviner sans dictionnaire.", pourquoi: "La formation du mot permet souvent de deviner ; le dictionnaire sert ensuite à vérifier." }
+
+en:
+  langue: "fr"
+  titre: "French: word families, roots, prefixes and suffixes"
+  idee: "Words in the same family share a root: « terre », « terrain », « enterrer ». A prefix goes before the root (« re- », « dé- », « in- »); a suffix goes after (« -age », « -eur », « -ette »)."
+  phrases:
+    consigne: "Split the French word into pieces: root, prefix, suffix. Then touch the right answer."
+    question: "{texte}"
+    indice: "Look for the base word, the root. What's stuck on before is a prefix; what's stuck on after is a suffix."
+    exemple: "« replanter »: the root is « plant », and the prefix « re- » means « again ». « replanter » means to plant again."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Which word is in the same family as « terre » (earth)?"
+      nom: "enterrer"
+      explication: "« enterrer » means to put in the earth: you can find the root « terr » in it."
+      pieges:
+        - { texte: "tarte", pourquoi: "« tarte » sounds a little similar, but has nothing to do with earth: it isn't the same root." }
+        - { texte: "sol", pourquoi: "« sol » (ground) has a close meaning but not the same root: it's almost a synonym, not a family member." }
+    - texte: "In « relire », what is the prefix?"
+      nom: "re-"
+      explication: "« re- » comes before the root « lire »: « relire » means to read again."
+      pieges:
+        - { texte: "lire", pourquoi: "« lire » is the base word, the root. The prefix is the piece stuck on before it." }
+        - { texte: "-re", pourquoi: "« -re » is the end of the infinitive verb. A prefix goes before the root." }
+    - texte: "In « jardinier », what is the suffix?"
+      nom: "-ier"
+      explication: "« -ier » is stuck on after the root « jardin »: a « jardinier » is the person who looks after the garden."
+      pieges:
+        - { texte: "jardin", pourquoi: "« jardin » is the base word, the root. The suffix is the piece stuck on after it." }
+        - { texte: "jar-", pourquoi: "« jar » is neither a prefix nor a word: the root is the whole of « jardin »." }
+    - texte: "What does the prefix « im- » mean in « impossible »?"
+      nom: "the opposite: not possible"
+      explication: "« im- » (or « in- ») gives the opposite: « impossible » means « not possible »."
+      pieges:
+        - { texte: "once more", pourquoi: "That's the meaning of « re- », as in « refaire », to do again." }
+        - { texte: "before", pourquoi: "That's the meaning of « pré- », as in « prévoir », to see before." }
+    - texte: "What does the suffix « -ette » mean in « maisonnette »?"
+      nom: "small: a little house"
+      explication: "The suffix « -ette » makes things smaller: a « maisonnette » is a little house."
+      pieges:
+        - { texte: "the person who does it", pourquoi: "That's the meaning of « -eur », as in « chanteur », the person who sings." }
+        - { texte: "the opposite", pourquoi: "Opposites are made with a prefix, placed before, like « in- » or « dé- »." }
+    - texte: "Which word is NOT in the « dent » (tooth) family?"
+      nom: "danse"
+      explication: "« danse » sounds almost like « dent », but has nothing to do with teeth: it isn't the same root."
+      pieges:
+        - { texte: "dentiste", pourquoi: "« dentiste » has the root « dent »: it's the person who looks after teeth." }
+        - { texte: "dentifrice", pourquoi: "« dentifrice » (toothpaste) is for cleaning teeth: it has the root « dent »." }
+    - texte: "« chant », « chanter », « chanteur », « chantonner »: what root do they share?"
+      nom: "chant"
+      explication: "« chant » appears in all four words: it's the root of the family."
+      pieges:
+        - { texte: "-eur", pourquoi: "« -eur » is a suffix: it's only in « chanteur »." }
+        - { texte: "chanteur", pourquoi: "« chanteur » is a member of the family, made from the root « chant » and the suffix « -eur »." }
+    - texte: "Which word is made with a prefix AND a suffix?"
+      nom: "démontable"
+      explication: "« dé- » (prefix) + « mont » (root) + « -able » (suffix): something you can take apart."
+      pieges:
+        - { texte: "monter", pourquoi: "« monter » has neither prefix nor suffix: it's the base verb, with its ending." }
+        - { texte: "remonter", pourquoi: "« remonter » has a prefix, « re- », but no suffix." }
+    - texte: "Why is « grand » written with a d at the end?"
+      nom: "You can hear it in words of its family: « grande », « grandir »."
+      explication: "The d is silent in « grand », but you hear it in « grande » and « grandir »: the family helps you spell."
+      pieges:
+        - { texte: "Because all adjectives end in d.", pourquoi: "That isn't true: « petit » ends in t. Look for a family word where you can hear the letter." }
+        - { texte: "Because you can hear it in « grand ».", pourquoi: "The final d of « grand » is silent: you can't hear it in that word on its own." }
+    - texte: "You don't know the word « illisible ». Why can you guess it means « that can't be read »?"
+      nom: "It has the prefix « il- » (the opposite), the root of « lire » and the suffix « -ible » (that can be)."
+      explication: "Splitting the word up gives you its meaning; then you can check in the dictionary."
+      pieges:
+        - { texte: "Because it looks like « île ».", pourquoi: "« île » (island) has nothing to do with it: split the word into prefix, root and suffix." }
+        - { texte: "You can't guess it without a dictionary.", pourquoi: "How a word is built often lets you guess; the dictionary is then for checking." }

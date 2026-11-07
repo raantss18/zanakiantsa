@@ -1,0 +1,136 @@
+id: problemes-etapes
+titre: "Problèmes à plusieurs étapes"
+niveau: CM2
+prerequis: ["problemes-comparaison", "division-posee"]
+programme: { source: cycle3, texte: "Résoudre des problèmes mixtes en plusieurs étapes" }
+activite: quiz
+parametres: {}
+idee: "Un problème à étapes cache une question intermédiaire. On dessine le modèle en barres, on cherche d'abord ce qui manque, puis on répond à la question posée."
+phrases:
+  consigne: "Calcule étape par étape, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quelle question faut-il résoudre d'abord ? Dessine les barres : des barres égales, ou des parties et le tout."
+  exemple: "Emma achète 3 cahiers à 4 € et un stylo à 2 €. Elle paie avec 20 €. Étape 1, barres égales : 3 × 4 = 12 €. Étape 2, parties et tout : 12 + 2 = 14 €. Étape 3 : 20 − 14 = 6 €. On lui rend 6 €."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Un fermier a 5 caisses de 24 œufs. Il en casse 7. Combien d'œufs lui reste-t-il ?"
+    nom: "113"
+    explication: "Étape 1, barres égales : 5 × 24 = 120 œufs. Étape 2 : 120 − 7 = 113 œufs."
+    pieges:
+      - { texte: "120", pourquoi: "C'est seulement la première étape : il faut encore enlever les 7 œufs cassés." }
+      - { texte: "17", pourquoi: "24 − 7 : il y a 5 caisses, pas une seule." }
+  - texte: "Tom a 35 €. Sa sœur a 12 € de plus que lui. Combien ont-ils ensemble ?"
+    nom: "82 €"
+    explication: "Étape 1, comparaison : la barre de la sœur dépasse de 12, 35 + 12 = 47 €. Étape 2, parties et tout : 35 + 47 = 82 €."
+    pieges:
+      - { texte: "47 €", pourquoi: "47 €, c'est ce qu'a la sœur : la question demande ce qu'ils ont ensemble." }
+      - { texte: "23 €", pourquoi: "35 − 12 : « 12 € de plus » veut dire que la sœur en a davantage que Tom." }
+  - texte: "Lina lit 12 pages par jour pendant 5 jours, puis 20 pages le sixième jour. Combien de pages a-t-elle lues ?"
+    nom: "80"
+    explication: "Étape 1, barres égales : 5 × 12 = 60 pages. Étape 2 : 60 + 20 = 80 pages."
+    pieges:
+      - { texte: "37", pourquoi: "12 + 5 + 20 : 12 pages pendant 5 jours, c'est 5 × 12." }
+      - { texte: "32", pourquoi: "12 + 20 : il y a 5 jours à 12 pages, pas un seul." }
+  - texte: "Un paquet de 6 yaourts coûte 3 €. Combien coûtent 4 yaourts ?"
+    nom: "2 €"
+    explication: "Étape 1, un yaourt : 3 ÷ 6 = 0,50 €. Étape 2 : 4 × 0,50 = 2 €."
+    pieges:
+      - { texte: "0,50 €", pourquoi: "C'est le prix d'un seul yaourt : il en faut 4." }
+      - { texte: "12 €", pourquoi: "3 × 4 : ce serait le prix de 4 paquets, pas de 4 yaourts." }
+  - texte: "Un vélo et un casque coûtent 120 € ensemble. Le vélo coûte 3 fois plus que le casque. Combien coûte le casque ?"
+    nom: "30 €"
+    explication: "Schéma : le casque, 1 barre ; le vélo, 3 barres pareilles. En tout 4 barres = 120 €, donc une barre = 120 ÷ 4 = 30 €."
+    pieges:
+      - { texte: "40 €", pourquoi: "120 ÷ 3 : la barre du casque compte aussi, cela fait 4 barres en tout." }
+      - { texte: "90 €", pourquoi: "90 €, c'est le prix du vélo, 3 barres : le casque n'en a qu'une." }
+  - texte: "Max a 50 €. Il achète 2 livres à 12,50 € chacun. Combien lui reste-t-il ?"
+    nom: "25 €"
+    explication: "Étape 1 : 2 × 12,50 = 25 €. Étape 2 : 50 − 25 = 25 €."
+    pieges:
+      - { texte: "37,50 €", pourquoi: "On n'a enlevé qu'un livre : il en achète 2." }
+      - { texte: "75 €", pourquoi: "50 + 25 : quand on achète, l'argent qui reste diminue." }
+  - texte: "Complète : 4 boîtes de 15 crayons, on en donne 18. Il reste 4 × 15 − 18 = …"
+    nom: "42"
+    explication: "4 × 15 = 60, puis 60 − 18 = 42 crayons."
+    pieges:
+      - { texte: "78", pourquoi: "On a ajouté 18 : les crayons donnés s'enlèvent." }
+      - { texte: "52", pourquoi: "Recompte la soustraction : 60 − 18 = 60 − 20 + 2 = 42." }
+  - texte: "« 3 cahiers à 4 € et un stylo à 2 € ». Pourquoi calcule-t-on 3 × 4 avant d'ajouter 2 ?"
+    nom: "Parce qu'il faut d'abord le prix des 3 cahiers."
+    explication: "La question intermédiaire est « combien coûtent les cahiers ? » : 12 €. Ensuite on ajoute le stylo, 12 + 2 = 14 €."
+    pieges:
+      - { texte: "Parce que, dans un problème, on multiplie toujours en premier.", pourquoi: "C'est l'histoire qui décide de l'ordre des étapes : parfois on ajoute d'abord." }
+      - { texte: "Parce que 3 × 4 est plus grand que 2.", pourquoi: "La taille des nombres ne dit pas dans quel ordre calculer." }
+  - texte: "Une citerne contient 500 L. On remplit 8 seaux de 12 L, puis 3 arrosoirs de 15 L. Combien de litres reste-t-il dans la citerne ?"
+    nom: "359 L"
+    explication: "Étape 1 : 8 × 12 = 96 L. Étape 2 : 3 × 15 = 45 L. Étape 3 : 96 + 45 = 141 L. Étape 4 : 500 − 141 = 359 L."
+    pieges:
+      - { texte: "404 L", pourquoi: "500 − 96 : on a oublié les 3 arrosoirs." }
+      - { texte: "141 L", pourquoi: "141 L, c'est ce qu'on a pris : la question demande ce qui reste." }
+
+en:
+  titre: "Multi-step problems"
+  idee: "A multi-step problem hides an in-between question. Draw the bar model, find what is missing first, then answer the question asked."
+  phrases:
+    consigne: "Work it out step by step, then touch the right answer."
+    question: "{texte}"
+    indice: "Which question must you answer first? Draw the bars: equal bars, or parts and the whole."
+    exemple: "Emma buys 3 exercise books at €4 and a pen at €2. She pays with €20. Step 1, equal bars: 3 × 4 = €12. Step 2, parts and whole: 12 + 2 = €14. Step 3: 20 − 14 = €6. She gets €6 change."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "A farmer has 5 boxes of 24 eggs. He breaks 7. How many eggs does he have left?"
+      nom: "113"
+      explication: "Step 1, equal bars: 5 × 24 = 120 eggs. Step 2: 120 − 7 = 113 eggs."
+      pieges:
+        - { texte: "120", pourquoi: "That is only the first step: the 7 broken eggs still have to be taken away." }
+        - { texte: "17", pourquoi: "24 − 7: there are 5 boxes, not just one." }
+    - texte: "Tom has €35. His sister has €12 more than him. How much do they have altogether?"
+      nom: "€82"
+      explication: "Step 1, comparison: the sister's bar is 12 longer, 35 + 12 = €47. Step 2, parts and whole: 35 + 47 = €82."
+      pieges:
+        - { texte: "€47", pourquoi: "€47 is what the sister has: the question asks how much they have together." }
+        - { texte: "€23", pourquoi: "35 − 12: €12 more means the sister has more than Tom." }
+    - texte: "Lina reads 12 pages a day for 5 days, then 20 pages on the sixth day. How many pages has she read?"
+      nom: "80"
+      explication: "Step 1, equal bars: 5 × 12 = 60 pages. Step 2: 60 + 20 = 80 pages."
+      pieges:
+        - { texte: "37", pourquoi: "12 + 5 + 20: 12 pages for 5 days is 5 × 12." }
+        - { texte: "32", pourquoi: "12 + 20: there are 5 days of 12 pages, not just one." }
+    - texte: "A pack of 6 yoghurts costs €3. How much do 4 yoghurts cost?"
+      nom: "€2"
+      explication: "Step 1, one yoghurt: 3 ÷ 6 = €0.50. Step 2: 4 × 0.50 = €2."
+      pieges:
+        - { texte: "€0.50", pourquoi: "That is the price of one yoghurt: we need 4." }
+        - { texte: "€12", pourquoi: "3 × 4: that would be the price of 4 packs, not 4 yoghurts." }
+    - texte: "A bike and a helmet cost €120 together. The bike costs 3 times as much as the helmet. How much does the helmet cost?"
+      nom: "€30"
+      explication: "Bar model: the helmet, 1 bar; the bike, 3 equal bars. 4 bars in all = €120, so one bar = 120 ÷ 4 = €30."
+      pieges:
+        - { texte: "€40", pourquoi: "120 ÷ 3: the helmet's bar counts too, which makes 4 bars in all." }
+        - { texte: "€90", pourquoi: "€90 is the price of the bike, 3 bars: the helmet has only one." }
+    - texte: "Max has €50. He buys 2 books at €12.50 each. How much does he have left?"
+      nom: "€25"
+      explication: "Step 1: 2 × 12.50 = €25. Step 2: 50 − 25 = €25."
+      pieges:
+        - { texte: "€37.50", pourquoi: "Only one book was taken away: he buys 2." }
+        - { texte: "€75", pourquoi: "50 + 25: when you buy things, the money left goes down." }
+    - texte: "Fill in: 4 boxes of 15 pencils, 18 are given away. There are 4 × 15 − 18 = … left."
+      nom: "42"
+      explication: "4 × 15 = 60, then 60 − 18 = 42 pencils."
+      pieges:
+        - { texte: "78", pourquoi: "18 was added: the pencils given away are taken off." }
+        - { texte: "52", pourquoi: "Check the subtraction: 60 − 18 = 60 − 20 + 2 = 42." }
+    - texte: "3 exercise books at €4 and a pen at €2. Why do we work out 3 × 4 before adding 2?"
+      nom: "Because we first need the price of the 3 books."
+      explication: "The in-between question is: how much do the books cost? €12. Then we add the pen, 12 + 2 = €14."
+      pieges:
+        - { texte: "Because in a problem you always multiply first.", pourquoi: "The story decides the order of the steps: sometimes you add first." }
+        - { texte: "Because 3 × 4 is bigger than 2.", pourquoi: "The size of the numbers does not tell you the order of the calculation." }
+    - texte: "A tank holds 500 L. 8 buckets of 12 L are filled, then 3 watering cans of 15 L. How many litres are left in the tank?"
+      nom: "359 L"
+      explication: "Step 1: 8 × 12 = 96 L. Step 2: 3 × 15 = 45 L. Step 3: 96 + 45 = 141 L. Step 4: 500 − 141 = 359 L."
+      pieges:
+        - { texte: "404 L", pourquoi: "500 − 96: the 3 watering cans were forgotten." }
+        - { texte: "141 L", pourquoi: "141 L is what was taken: the question asks what is left." }

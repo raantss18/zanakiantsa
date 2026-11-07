@@ -2,9 +2,9 @@ id: nature
 titre: Découvrir le monde du vivant
 nom: "Le vivant"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Le vivant, la matière et l'énergie, de la maternelle à la 3e."
+resume: "Le vivant, la matière et l'énergie, de la maternelle à la 1re."
 icone: "1f331"
-ages: [4, 15]
+ages: [4, 17]
 # Programme d'enseignement de l'école maternelle, version consolidée (BO n° 41 du 31 octobre 2024 et n° 19 du
 # 7 mai 2026), « Découvrir le monde du vivant », p. 58-60. Consulté le 2026-11-03.
 sources:
@@ -20,7 +20,17 @@ sources:
   # Programme du cycle 4 en vigueur à la rentrée 2020 (BOEN n° 31 du 30 juillet 2020), Éduscol : physique-chimie p. 98-104,
   # SVT. Le programme ne répartit pas ces notions par classe : la classe choisie suit ses « repères de progressivité ». Lu le 2026-11-07.
   c4: "https://eduscol.education.fr/document/621/download"
-ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, etats-eau, fondre-geler, chaine-alimentaire, solide-liquide, reseau-alimentaire, melanges, changements-etat, circuit-electrique, temperatures-etat, cellule, vegetaux-producteurs, digestion, seismes-volcans, transformation-chimique, reproduction, energie]
+  # Lycée, programmes du BO spécial n° 1 du 22 janvier 2019. Les pages du BO renvoient 403 aux robots : texte lu dans des copies
+  # fidèles de l'annexe publiées par le SNES-FSU (en-tête et pied de page du ministère), le 2026-11-07.
+  # SVT de 2de (annexe, « L'organisme pluricellulaire… », « Biodiversité, résultat et étape de l'évolution »).
+  svt2de: "https://www.snes.edu/IMG/pdf/svt_annexe_2e_bo.pdf"
+  # Physique-chimie de 2de (annexe : « Constitution et transformations de la matière », « Mouvement et interactions »).
+  pc2de: "https://www.snes.edu/IMG/pdf/physique_annexe_2e_bo.pdf"
+  # Enseignement scientifique de 1re, version modifiée en vigueur depuis la rentrée 2023 (BO n° 25 du 22 juin 2023,
+  # arrêté du 30-5-2023, https://www.education.gouv.fr/bo/2023/Hebdo25/MENE2312806A, 403 aux robots). Texte lu dans une copie
+  # de l'annexe du BO (vivelessvt.com), parties 2.2 et 4.1, le 2026-11-07.
+  es1re: "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf"
+ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, etats-eau, fondre-geler, chaine-alimentaire, solide-liquide, reseau-alimentaire, melanges, changements-etat, circuit-electrique, temperatures-etat, cellule, vegetaux-producteurs, digestion, seismes-volcans, transformation-chimique, reproduction, energie, cellule-adn, biodiversite-evolution, atome-tableau, mouvement-vitesse, son-musique, bilan-radiatif]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -34,7 +44,7 @@ intro:
 en:
   titre: "Discovering living things"
   nom: "Living things"
-  resume: "Living things, matter and energy, from nursery school to Year 10."
+  resume: "Living things, matter and energy, from nursery school to Year 11 (1re)."
   intro:
     - texte: "Living things are born, grow up and change."
       images: ["1f95a", "1f423", "1f414"]

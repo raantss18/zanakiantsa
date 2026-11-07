@@ -1,0 +1,149 @@
+id: participe-passe-avoir
+titre: "Le participe passé avec avoir"
+niveau: 5e
+prerequis: ["participe-passe-etre", "complements-verbe"]
+programme: { source: cycle4, texte: "Justifier à l'oral ou à l'écrit l'accord du participe passé employé avec l'auxiliaire être et avec l'auxiliaire avoir (COD antéposé dont pronom personnel COD, à distinguer du COI)." }
+activite: quiz
+parametres: {}
+idee: "Avec avoir, le participe passé ne s’accorde jamais avec le sujet. Il s’accorde avec le COD seulement si ce COD est placé avant le verbe : « les pommes que j’ai cueillies »."
+phrases:
+  consigne: "Cherche le COD et sa place, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Pose la question « quoi ? » ou « qui ? » après le verbe. Le COD est-il avant ou après ?"
+  exemple: "« Ta lettre, je l’ai lue » : « l’ », mis pour « ta lettre », est COD placé avant le verbe, donc « lue », au féminin singulier."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Accorde le participe passé : Elles ont (mangé) une mangue."
+    nom: "mangé"
+    explication: "Avec avoir, pas d’accord avec le sujet. Le COD « une mangue » est placé après le verbe : « mangé » ne change pas."
+    pieges:
+      - { texte: "mangées", pourquoi: "Avec avoir, on n’accorde jamais avec le sujet « Elles ». Le COD « une mangue » est placé après." }
+      - { texte: "mangée", pourquoi: "Le COD « une mangue » est placé après le verbe : il n’y a pas d’accord." }
+  - texte: "Accorde le participe passé : Les pommes que j’ai (cueilli) sont mûres."
+    nom: "cueillies"
+    explication: "Le COD « que », mis pour « les pommes », est placé avant le verbe : accord au féminin pluriel, « cueillies »."
+    pieges:
+      - { texte: "cueilli", pourquoi: "Le COD « que », mis pour « les pommes », est placé avant : il faut accorder." }
+      - { texte: "cueillis", pourquoi: "« les pommes » est féminin : on écrit -ies, pas -is." }
+  - texte: "Accorde le participe passé : Ta lettre ? Je l’ai (lu) hier."
+    nom: "lue"
+    explication: "« l’ », mis pour « ta lettre », est COD placé avant le verbe : accord au féminin singulier, « lue »."
+    pieges:
+      - { texte: "lu", pourquoi: "« l’ », mis pour « ta lettre », est un COD placé avant : il faut accorder." }
+      - { texte: "lues", pourquoi: "« ta lettre » est au singulier : pas de s." }
+  - texte: "Accorde le participe passé : Nous avons (vu) les films."
+    nom: "vu"
+    explication: "Le COD « les films » est placé après le verbe : « vu » ne change pas."
+    pieges:
+      - { texte: "vus", pourquoi: "Le COD « les films » est placé après le verbe : il n’y a pas d’accord." }
+      - { texte: "vues", pourquoi: "Avec avoir, le sujet « Nous » ne compte pas ; et le COD « les films », placé après, ne fait pas accorder." }
+  - texte: "Accorde le participe passé : Ces chansons, nous les avons (chanté) ensemble."
+    nom: "chantées"
+    explication: "« les », mis pour « ces chansons », est COD placé avant le verbe : accord au féminin pluriel, « chantées »."
+    pieges:
+      - { texte: "chanté", pourquoi: "« les », mis pour « ces chansons », est un COD placé avant : il faut accorder." }
+      - { texte: "chantés", pourquoi: "« ces chansons » est féminin : on écrit -ées." }
+  - texte: "Accorde le participe passé : Mes amies ? Je leur ai (parlé) ce matin."
+    nom: "parlé"
+    explication: "On parle à quelqu’un : « leur » est un COI, pas un COD. Il n’y a pas de COD avant le verbe, donc pas d’accord."
+    pieges:
+      - { texte: "parlées", pourquoi: "« leur » est un COI (parler à quelqu’un) : seul un COD placé avant fait accorder." }
+      - { texte: "parlés", pourquoi: "« leur » est un COI, pas un COD : le participe ne s’accorde pas." }
+  - texte: "Accorde le participe passé : Quels livres as-tu (pris) ?"
+    nom: "pris"
+    explication: "Le COD « Quels livres » est placé avant : accord au masculin pluriel. « pris » finit déjà par un s, il ne change pas."
+    pieges:
+      - { texte: "prises", pourquoi: "« livres » est masculin : on n’ajoute pas -es." }
+      - { texte: "prise", pourquoi: "« livres » est masculin pluriel, pas féminin singulier." }
+  - texte: "Accorde le participe passé : La maison qu’ils ont (construit) est grande."
+    nom: "construite"
+    explication: "Le COD « qu’ », mis pour « la maison », est placé avant le verbe : accord au féminin singulier, « construite »."
+    pieges:
+      - { texte: "construit", pourquoi: "Le COD « qu’ », mis pour « la maison », est placé avant : il faut accorder." }
+      - { texte: "construites", pourquoi: "« la maison » est au singulier : pas de s." }
+  - texte: "« Elle a acheté des fleurs. » Pourquoi « acheté » ne s’accorde-t-il pas ?"
+    nom: "Le COD « des fleurs » est placé après le verbe."
+    explication: "Avec avoir, on regarde la place du COD : après le verbe, pas d’accord."
+    pieges:
+      - { texte: "Parce que le sujet est féminin.", pourquoi: "Avec avoir, le sujet ne compte jamais pour l’accord : on regarde où est le COD." }
+      - { texte: "Parce que le verbe n’a pas de COD.", pourquoi: "Il y a un COD : elle a acheté quoi ? Des fleurs. Il est seulement placé après." }
+  - texte: "« Les fleurs qu’elle a achetées » : pourquoi écrit-on « achetées » ?"
+    nom: "Le COD « qu’ », mis pour « les fleurs », est placé avant le verbe."
+    explication: "Quand on écrit « achetées », on sait déjà de quoi on parle : les fleurs. On accorde au féminin pluriel."
+    pieges:
+      - { texte: "Parce que « elle » est féminin.", pourquoi: "Avec avoir, on n’accorde jamais avec le sujet : on écrirait aussi « les fleurs qu’il a achetées »." }
+      - { texte: "Parce que « les fleurs » est le sujet.", pourquoi: "Le sujet de « a achetées » est « elle » ; « les fleurs » est repris par le COD « qu’ »." }
+
+en:
+  langue: "fr"
+  titre: "French: the past participle with « avoir »"
+  idee: "With « avoir », the past participle never agrees with the subject. It agrees with the direct object (COD) only if that object comes before the verb: « les pommes que j’ai cueillies »."
+  phrases:
+    consigne: "Find the direct object and where it is, then touch the right form."
+    question: "{texte}"
+    indice: "Ask « what? » or « whom? » after the verb. Is the direct object before or after?"
+    exemple: "« Ta lettre, je l’ai lue »: « l’ », standing for « ta lettre », is a direct object before the verb, so « lue », feminine singular."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Make the past participle agree: « Elles ont (mangé) une mangue. »"
+      nom: "mangé"
+      explication: "With « avoir », no agreement with the subject. The direct object « une mangue » comes after the verb: « mangé » doesn't change."
+      pieges:
+        - { texte: "mangées", pourquoi: "With « avoir », you never agree with the subject « Elles ». The direct object « une mangue » comes after." }
+        - { texte: "mangée", pourquoi: "The direct object « une mangue » comes after the verb: there's no agreement." }
+    - texte: "Make the past participle agree: « Les pommes que j’ai (cueilli) sont mûres. »"
+      nom: "cueillies"
+      explication: "The direct object « que », standing for « les pommes », comes before the verb: feminine plural, « cueillies »."
+      pieges:
+        - { texte: "cueilli", pourquoi: "The direct object « que », standing for « les pommes », comes before: it must agree." }
+        - { texte: "cueillis", pourquoi: "« les pommes » is feminine: you write -ies, not -is." }
+    - texte: "Make the past participle agree: « Ta lettre ? Je l’ai (lu) hier. »"
+      nom: "lue"
+      explication: "« l’ », standing for « ta lettre », is a direct object before the verb: feminine singular, « lue »."
+      pieges:
+        - { texte: "lu", pourquoi: "« l’ », standing for « ta lettre », is a direct object before the verb: it must agree." }
+        - { texte: "lues", pourquoi: "« ta lettre » is singular: no s." }
+    - texte: "Make the past participle agree: « Nous avons (vu) les films. »"
+      nom: "vu"
+      explication: "The direct object « les films » comes after the verb: « vu » doesn't change."
+      pieges:
+        - { texte: "vus", pourquoi: "The direct object « les films » comes after the verb: there's no agreement." }
+        - { texte: "vues", pourquoi: "With « avoir », the subject « Nous » doesn't count; and « les films », after the verb, causes no agreement." }
+    - texte: "Make the past participle agree: « Ces chansons, nous les avons (chanté) ensemble. »"
+      nom: "chantées"
+      explication: "« les », standing for « ces chansons », is a direct object before the verb: feminine plural, « chantées »."
+      pieges:
+        - { texte: "chanté", pourquoi: "« les », standing for « ces chansons », is a direct object before the verb: it must agree." }
+        - { texte: "chantés", pourquoi: "« ces chansons » is feminine: you write -ées." }
+    - texte: "Make the past participle agree: « Mes amies ? Je leur ai (parlé) ce matin. »"
+      nom: "parlé"
+      explication: "You talk to someone: « leur » is an indirect object (COI), not a direct object. No direct object before the verb, so no agreement."
+      pieges:
+        - { texte: "parlées", pourquoi: "« leur » is an indirect object (talking to someone): only a direct object before the verb causes agreement." }
+        - { texte: "parlés", pourquoi: "« leur » is an indirect object, not a direct object: the participle doesn't agree." }
+    - texte: "Make the past participle agree: « Quels livres as-tu (pris) ? »"
+      nom: "pris"
+      explication: "The direct object « Quels livres » comes before: masculine plural. « pris » already ends in s, so it doesn't change."
+      pieges:
+        - { texte: "prises", pourquoi: "« livres » is masculine: you don't add -es." }
+        - { texte: "prise", pourquoi: "« livres » is masculine plural, not feminine singular." }
+    - texte: "Make the past participle agree: « La maison qu’ils ont (construit) est grande. »"
+      nom: "construite"
+      explication: "The direct object « qu’ », standing for « la maison », comes before the verb: feminine singular, « construite »."
+      pieges:
+        - { texte: "construit", pourquoi: "The direct object « qu’ », standing for « la maison », comes before: it must agree." }
+        - { texte: "construites", pourquoi: "« la maison » is singular: no s." }
+    - texte: "« Elle a acheté des fleurs. » Why doesn't « acheté » agree?"
+      nom: "The direct object « des fleurs » comes after the verb."
+      explication: "With « avoir », look at where the direct object is: after the verb, no agreement."
+      pieges:
+        - { texte: "Because the subject is feminine.", pourquoi: "With « avoir », the subject never counts for agreement: look at where the direct object is." }
+        - { texte: "Because the verb has no direct object.", pourquoi: "There is one: she bought what? « des fleurs ». It just comes after the verb." }
+    - texte: "« Les fleurs qu’elle a achetées »: why do we write « achetées »?"
+      nom: "The direct object « qu’ », standing for « les fleurs », comes before the verb."
+      explication: "When you write « achetées », you already know what is meant: the flowers. So it's feminine plural."
+      pieges:
+        - { texte: "Because « elle » is feminine.", pourquoi: "With « avoir », you never agree with the subject: you'd also write « les fleurs qu’il a achetées »." }
+        - { texte: "Because « les fleurs » is the subject.", pourquoi: "The subject of « a achetées » is « elle »; « les fleurs » is taken up by the direct object « qu’ »." }

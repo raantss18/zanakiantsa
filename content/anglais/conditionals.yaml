@@ -1,0 +1,156 @@
+id: conditionals
+titre: "Les conditionnels : if it rains, if I were, if I had known"
+niveau: Terminale
+prerequis: [future, past-perfect]
+# Programme du cycle terminal (BO spécial n° 1 du 22 janvier 2019, annexe 2, copie SNES), « L'étude de la langue »,
+# 2) Correction grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_ct, texte: "Correction grammaticale : c’est en progressant dans la compréhension des mécanismes de la langue, que l’élève devient de plus en plus autonome." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Type 1 : If + présent, will (possible). Type 2 : If + prétérit, would (imaginaire). Type 3 : If + had + participe, would have + participe (passé qui n'a pas eu lieu). Pas de will ni de would après if."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Possible (type 1), imaginaire au présent (type 2), ou passé qui n'a pas eu lieu (type 3) ? Et jamais will ni would juste après if."
+  exemple: "« If I … time, I would learn the piano. » (have) Je n'ai pas le temps : c'est imaginaire, type 2. « If I had time, I would learn the piano. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « If it rains tomorrow, we … at home. » (stay)"
+    nom: "will stay"
+    explication: "Une situation possible : If + présent, will. « If it rains tomorrow, we will stay at home. »"
+    pieges:
+      - { texte: "would stay", pourquoi: "« would » sert à l'imaginaire (type 2). La pluie demain est possible : « will stay »." }
+      - { texte: "stayed", pourquoi: "« tomorrow » renvoie au futur : dans la principale, « will stay »." }
+  - texte: "Complète : « If I … rich, I would travel round the world. » (be)"
+    nom: "were"
+    explication: "Type 2, imaginaire : If + prétérit, would. Avec be, on emploie souvent « were » : « If I were rich… »"
+    pieges:
+      - { texte: "am", pourquoi: "Avec « would » dans la principale, c'est l'imaginaire : prétérit après if, « were »." }
+      - { texte: "would be", pourquoi: "Pas de would juste après if : « If I were rich »." }
+  - texte: "Complète : « If you heat ice, it … » (melt)"
+    nom: "melts"
+    explication: "Une vérité générale : If + présent, présent. « If you heat ice, it melts. »"
+    pieges:
+      - { texte: "would melt", pourquoi: "« would » sert à l'imaginaire. Que la glace fonde quand on la chauffe est toujours vrai : présent, « melts »." }
+      - { texte: "melted", pourquoi: "« melted » est au passé. Une vérité générale se dit au présent : « melts »." }
+  - texte: "Complète : « If she had studied, she … the exam. » (pass)"
+    nom: "would have passed"
+    explication: "Type 3, un passé qui n'a pas eu lieu : If + had + participe, would have + participe. « she would have passed the exam »."
+    pieges:
+      - { texte: "will pass", pourquoi: "« had studied » parle d'un passé qui n'a pas eu lieu : « would have passed »." }
+      - { texte: "would pass", pourquoi: "L'examen est passé : avec « had studied », on emploie « would have passed »." }
+  - texte: "Complète : « If we … earlier, we wouldn't have missed the train. » (leave)"
+    nom: "had left"
+    explication: "Type 3 : après if, had + participe passé. « If we had left earlier… »"
+    pieges:
+      - { texte: "would have left", pourquoi: "Pas de would juste après if : « If we had left »." }
+      - { texte: "left", pourquoi: "Avec « wouldn't have missed » dans la principale, il faut « had left » après if." }
+  - texte: "Complète : « You won't pass … you work harder. »"
+    nom: "unless"
+    explication: "« unless » veut dire « à moins que », « sauf si » : « You won't pass unless you work harder. »"
+    pieges:
+      - { texte: "if", pourquoi: "« You won't pass if you work harder » voudrait dire que travailler plus fait échouer : le sens s'inverse." }
+      - { texte: "when", pourquoi: "« when » annonce un moment, pas une condition : « unless », sauf si." }
+  - texte: "Que veut dire « If I had known, I would have come » ?"
+    nom: "Je ne savais pas, donc je ne suis pas venu."
+    explication: "Le type 3 parle de ce qui n'a pas eu lieu : je ne savais pas, je ne suis pas venu."
+    pieges:
+      - { texte: "Je savais, donc je suis venu.", pourquoi: "Le type 3 imagine le contraire de ce qui s'est passé : en réalité, je ne savais pas." }
+      - { texte: "Si je le sais, je viendrai.", pourquoi: "Ça, c'est le type 1 : « If I know, I will come »." }
+  - texte: "Complète : « If Alexander Fleming hadn't noticed the mould in 1928, penicillin … so early. » (not discover)"
+    nom: "wouldn't have been discovered"
+    explication: "Type 3 au passif : « penicillin wouldn't have been discovered so early »."
+    pieges:
+      - { texte: "won't be discovered", pourquoi: "1928 est passé, et « hadn't noticed » imagine le contraire : « wouldn't have been discovered »." }
+      - { texte: "wouldn't be discovered", pourquoi: "Pour un passé qui n'a pas eu lieu, il faut « would have » : « wouldn't have been discovered »." }
+  - texte: "Pourquoi « If I won the lottery, I would buy a house », au prétérit ?"
+    nom: "Gagner au loto est une hypothèse imaginaire : type 2, prétérit après if et would."
+    explication: "Le prétérit après if ne parle pas du passé : il marque l'imaginaire, avec « would » dans la principale."
+    pieges:
+      - { texte: "Parce que j'ai gagné au loto hier.", pourquoi: "Ici, le prétérit n'est pas un passé : il marque une situation imaginaire." }
+      - { texte: "Parce qu'on met toujours le prétérit après if.", pourquoi: "Pas toujours : pour une situation possible, présent. « If it rains, we will stay at home »." }
+en:
+  titre: "Conditionals: if it rains, if I were, if I had known"
+  idee: "Type 1: if + present, will (possible). Type 2: if + past simple, would (imaginary). Type 3: if + had + past participle, would have + past participle (a past that didn't happen). No will or would after if."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Possible (type 1), imaginary in the present (type 2), or a past that didn't happen (type 3)? And never will or would right after if."
+    exemple: "“If I … time, I would learn the piano.” (have) I don't have time: it's imaginary, type 2. “If I had time, I would learn the piano.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “If it rains tomorrow, we … at home.” (stay)"
+      nom: "will stay"
+      explication: "A possible situation: if + present, will. “If it rains tomorrow, we will stay at home.”"
+      pieges:
+        - texte: "would stay"
+          pourquoi: "“would” is for the imaginary (type 2). Rain tomorrow is possible: will stay."
+        - texte: "stayed"
+          pourquoi: "“tomorrow” is in the future: in the main clause, will stay."
+    - texte: "Complete: “If I … rich, I would travel round the world.” (be)"
+      nom: "were"
+      explication: "Type 2, imaginary: if + past simple, would. With be, we often use were: “If I were rich…”"
+      pieges:
+        - texte: "am"
+          pourquoi: "With would in the main clause, it's imaginary: past simple after if, were."
+        - texte: "would be"
+          pourquoi: "No would right after if: “If I were rich”."
+    - texte: "Complete: “If you heat ice, it …” (melt)"
+      nom: "melts"
+      explication: "A general truth: if + present, present. “If you heat ice, it melts.”"
+      pieges:
+        - texte: "would melt"
+          pourquoi: "“would” is for the imaginary. Ice melting when heated is always true: present, melts."
+        - texte: "melted"
+          pourquoi: "“melted” is past. A general truth is in the present: melts."
+    - texte: "Complete: “If she had studied, she … the exam.” (pass)"
+      nom: "would have passed"
+      explication: "Type 3, a past that didn't happen: if + had + past participle, would have + past participle. “she would have passed the exam”."
+      pieges:
+        - texte: "will pass"
+          pourquoi: "“had studied” is about a past that didn't happen: would have passed."
+        - texte: "would pass"
+          pourquoi: "The exam is over: with had studied, we use would have passed."
+    - texte: "Complete: “If we … earlier, we wouldn't have missed the train.” (leave)"
+      nom: "had left"
+      explication: "Type 3: after if, had + past participle. “If we had left earlier…”"
+      pieges:
+        - texte: "would have left"
+          pourquoi: "No would right after if: “If we had left”."
+        - texte: "left"
+          pourquoi: "With wouldn't have missed in the main clause, we need had left after if."
+    - texte: "Complete: “You won't pass … you work harder.”"
+      nom: "unless"
+      explication: "unless means except if: “You won't pass unless you work harder.”"
+      pieges:
+        - texte: "if"
+          pourquoi: "“You won't pass if you work harder” would mean working harder makes you fail: the meaning flips."
+        - texte: "when"
+          pourquoi: "“when” gives a time, not a condition: unless, except if."
+    - texte: "What does “If I had known, I would have come” mean?"
+      nom: "I didn't know, so I didn't come."
+      explication: "Type 3 talks about what didn't happen: I didn't know, I didn't come."
+      pieges:
+        - texte: "I knew, so I came."
+          pourquoi: "Type 3 imagines the opposite of what happened: in fact, I didn't know."
+        - texte: "If I know, I will come."
+          pourquoi: "That's type 1: “If I know, I will come”."
+    - texte: "Complete: “If Alexander Fleming hadn't noticed the mould in 1928, penicillin … so early.” (not discover)"
+      nom: "wouldn't have been discovered"
+      explication: "Type 3 in the passive: “penicillin wouldn't have been discovered so early”."
+      pieges:
+        - texte: "won't be discovered"
+          pourquoi: "1928 is past, and “hadn't noticed” imagines the opposite: wouldn't have been discovered."
+        - texte: "wouldn't be discovered"
+          pourquoi: "For a past that didn't happen, we need would have: wouldn't have been discovered."
+    - texte: "Why “If I won the lottery, I would buy a house”, in the past simple?"
+      nom: "Winning the lottery is an imaginary situation: type 2, past simple after if and would."
+      explication: "The past simple after if isn't about the past: it marks the imaginary, with would in the main clause."
+      pieges:
+        - texte: "Because I won the lottery yesterday."
+          pourquoi: "Here the past simple isn't the past: it marks an imaginary situation."
+        - texte: "Because we always use the past simple after if."
+          pourquoi: "Not always: for a possible situation, present. “If it rains, we will stay at home.”"

@@ -1,0 +1,148 @@
+id: grande-guerre-lycee
+titre: "La Première Guerre mondiale : le « suicide de l'Europe »"
+niveau: 1re
+prerequis: [guerres-mondiales, europe-revolutions]
+programme: { source: hg1re, texte: "La Première Guerre mondiale : le « suicide de l’Europe » et la fin des empires européens" }
+activite: quiz
+parametres: {}
+idee: "La guerre de mouvement échoue en 1914 ; commence une longue guerre de position. Les sociétés entières sont mobilisées. La paix de 1919-1923 fait disparaître les empires et cherche un ordre fondé sur les nations."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : août-septembre 1914, Tannenberg et la Marne ; 1915, les Dardanelles ; 1916, la Somme ; 1917, grèves ; mars 1918, dernière offensive allemande ; 1919-1923, traités de paix ; 1920, le Soldat inconnu ; 1922, le passeport Nansen."
+  exemple: "Exemple : en septembre 1914, la bataille de la Marne arrête l'armée allemande qui marchait sur Paris. Faute de victoire rapide, chaque camp s'enterre dans des tranchées : la guerre de mouvement devient une guerre de position."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Que se passe-t-il à Tannenberg, en août 1914 ?"
+    nom: "L'armée allemande bat l'armée russe en Prusse orientale."
+    explication: "Sur le front de l'Est, la défaite russe de Tannenberg montre que la guerre ne se joue pas seulement à l'Ouest."
+    pieges:
+      - { texte: "Les Français arrêtent les Allemands devant Paris.", pourquoi: "C'est la bataille de la Marne, en septembre 1914, sur le front de l'Ouest." }
+      - { texte: "L'armistice est signé.", pourquoi: "L'armistice de la Première Guerre mondiale est signé le 11 novembre 1918." }
+  - texte: "Pourquoi, après 1914, la guerre devient-elle une guerre de position, dans les tranchées ?"
+    nom: "Parce que la défense, avec mitrailleuses, barbelés et artillerie, l'emporte sur l'attaque."
+    explication: "Les offensives se brisent sur des lignes bien défendues : les fronts se figent pour des années, malgré des pertes énormes."
+    pieges:
+      - { texte: "Parce que les soldats refusaient de combattre.", pourquoi: "Les refus restent limités ; c'est la puissance de feu défensive qui bloque le front." }
+      - { texte: "Parce que les armées manquaient de soldats.", pourquoi: "Les armées comptent des millions d'hommes ; c'est la supériorité de la défense qui fige le front." }
+  - texte: "En 1915, que tentent les Britanniques et les Français aux Dardanelles ?"
+    nom: "Forcer le détroit pour atteindre Constantinople et frapper l'Empire ottoman, sans succès."
+    explication: "L'offensive des Dardanelles, avec des soldats venus notamment d'Australie et de Nouvelle-Zélande, échoue face aux Ottomans."
+    pieges:
+      - { texte: "Débarquer en Normandie.", pourquoi: "Le débarquement de Normandie a lieu le 6 juin 1944, pendant la Seconde Guerre mondiale." }
+      - { texte: "Défendre Paris contre les Allemands.", pourquoi: "Les Dardanelles sont un détroit de l'Empire ottoman, loin de Paris." }
+  - texte: "Que montre la bataille de la Somme, en 1916 ?"
+    nom: "Une immense offensive franco-britannique qui coûte des centaines de milliers de victimes pour quelques kilomètres."
+    explication: "Le 1er juillet 1916, premier jour de l'offensive, est le jour le plus meurtrier de l'histoire de l'armée britannique."
+    pieges:
+      - { texte: "Une victoire rapide qui termine la guerre.", pourquoi: "La guerre dure encore plus de deux ans après la Somme." }
+      - { texte: "Une bataille sans victimes.", pourquoi: "C'est au contraire l'une des batailles les plus meurtrières de la guerre." }
+  - texte: "Pourquoi parle-t-on de guerre mondiale, et pas seulement européenne ?"
+    nom: "Parce que les empires coloniaux et d'autres continents y participent."
+    explication: "Britanniques et Français mobilisent des soldats et des travailleurs de leurs colonies ; le Japon et les États-Unis entrent aussi en guerre."
+    pieges:
+      - { texte: "Parce que tous les pays du monde y ont combattu.", pourquoi: "Certains pays sont restés neutres, comme la Suisse ou l'Espagne." }
+      - { texte: "Parce que les combats ont eu lieu sur tous les continents à égalité.", pourquoi: "L'Europe est le théâtre principal ; la guerre est mondiale par ses acteurs et ses enjeux." }
+  - texte: "Pendant la guerre, que fait Marie Curie ?"
+    nom: "Elle organise des voitures de radiologie pour soigner les blessés près du front."
+    explication: "Les rayons X permettent de repérer balles et éclats d'obus : la science participe à la guerre."
+    pieges:
+      - { texte: "Elle invente le gaz de combat.", pourquoi: "Marie Curie met la science au service des soins aux blessés, pas des armes." }
+      - { texte: "Elle commande une armée.", pourquoi: "C'est une physicienne et chimiste ; son rôle est médical." }
+  - texte: "Le 24 mai 1915, la France, le Royaume-Uni et la Russie dénoncent des « crimes contre l'humanité et la civilisation ». Contre qui ces crimes sont-ils commis ?"
+    nom: "Contre les Arméniens de l'Empire ottoman."
+    explication: "Les Arméniens de l'Empire ottoman sont victimes d'un génocide ; cette déclaration est l'une des premières dénonciations internationales."
+    pieges:
+      - { texte: "Contre les soldats allemands prisonniers.", pourquoi: "La déclaration vise les massacres de civils arméniens dans l'Empire ottoman." }
+      - { texte: "Contre les Juifs d'Europe.", pourquoi: "Le génocide des Juifs, la Shoah, a lieu pendant la Seconde Guerre mondiale." }
+  - texte: "En 1917, des ouvrières et des ouvriers font grève en France. Que montre ce mouvement ?"
+    nom: "La lassitude de l'arrière face à la guerre longue, la vie chère et les cadences."
+    explication: "Les femmes, très présentes dans les usines, réclament de meilleurs salaires : les civils sont acteurs autant que victimes de la guerre."
+    pieges:
+      - { texte: "Que la guerre est terminée.", pourquoi: "En 1917, la guerre continue ; les grèves expriment la fatigue des civils." }
+      - { texte: "Que les femmes ne travaillent pas pendant la guerre.", pourquoi: "Au contraire, les femmes remplacent les hommes mobilisés dans les usines et les champs." }
+  - texte: "Quels principes le président américain Wilson défend-il pour la paix, en 1918 ?"
+    nom: "Le droit des peuples à disposer d'eux-mêmes et une Société des Nations."
+    explication: "Ses « Quatorze points » inspirent la création de la Société des Nations ; les traités de 1919-1923 démantèlent les empires multinationaux."
+    pieges:
+      - { texte: "La reconstitution des grands empires d'avant 1914.", pourquoi: "Wilson veut au contraire un ordre fondé sur les nations ; les empires austro-hongrois et ottoman disparaissent." }
+      - { texte: "L'interdiction de toute alliance entre États.", pourquoi: "Wilson propose une organisation commune des États, la Société des Nations." }
+  - texte: "Pourquoi inhume-t-on, en 1921, un Soldat inconnu sous l'Arc de Triomphe ?"
+    nom: "Pour honorer tous les soldats morts, en particulier ceux qui n'ont jamais été identifiés."
+    explication: "Choisi à Verdun en novembre 1920, il est inhumé le 28 janvier 1921 : chaque famille en deuil peut y reconnaître les siens."
+    pieges:
+      - { texte: "Pour honorer un général célèbre.", pourquoi: "Justement, il est « inconnu » : il représente tous les soldats, pas un chef connu." }
+      - { texte: "Pour fêter le début de la guerre.", pourquoi: "C'est un lieu de deuil et de mémoire, pas de fête." }
+
+en:
+  titre: "The First World War: « Europe's suicide »"
+  idee: "The war of movement fails in 1914; a long war of position begins. Whole societies are mobilised. The peace of 1919-1923 sweeps away the empires and seeks an order based on nations."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: August-September 1914, Tannenberg and the Marne; 1915, the Dardanelles; 1916, the Somme; 1917, strikes; March 1918, the last German offensive; 1919-1923, peace treaties; 1920, the Unknown Soldier; 1922, the Nansen passport."
+    exemple: "Example: in September 1914, the Battle of the Marne stops the German army marching on Paris. With no quick victory, each side digs into trenches: the war of movement becomes a war of position."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What happens at Tannenberg, in August 1914?"
+      nom: "The German army defeats the Russian army in East Prussia."
+      explication: "On the Eastern Front, the Russian defeat at Tannenberg shows that the war isn't decided only in the West."
+      pieges:
+        - { texte: "The French stop the Germans outside Paris.", pourquoi: "That's the Battle of the Marne, in September 1914, on the Western Front." }
+        - { texte: "The armistice is signed.", pourquoi: "The First World War armistice is signed on 11 November 1918." }
+    - texte: "Why, after 1914, does the war become a war of position, in the trenches?"
+      nom: "Because defence, with machine guns, barbed wire and artillery, is stronger than attack."
+      explication: "Offensives break on well-defended lines: the fronts freeze for years, despite huge losses."
+      pieges:
+        - { texte: "Because the soldiers refused to fight.", pourquoi: "Refusals stay limited; it's defensive firepower that blocks the front." }
+        - { texte: "Because the armies were short of soldiers.", pourquoi: "The armies number millions of men; it's the superiority of defence that freezes the front." }
+    - texte: "In 1915, what do the British and French attempt at the Dardanelles?"
+      nom: "To force the strait to reach Constantinople and strike the Ottoman Empire, without success."
+      explication: "The Dardanelles offensive, with soldiers from Australia and New Zealand among others, fails against the Ottomans."
+      pieges:
+        - { texte: "To land in Normandy.", pourquoi: "The Normandy landings take place on 6 June 1944, during the Second World War." }
+        - { texte: "To defend Paris against the Germans.", pourquoi: "The Dardanelles are a strait in the Ottoman Empire, far from Paris." }
+    - texte: "What does the Battle of the Somme, in 1916, show?"
+      nom: "A huge Franco-British offensive that costs hundreds of thousands of casualties for a few kilometres."
+      explication: "1 July 1916, the first day of the offensive, is the deadliest day in the history of the British army."
+      pieges:
+        - { texte: "A quick victory that ends the war.", pourquoi: "The war goes on for more than two years after the Somme." }
+        - { texte: "A battle with no casualties.", pourquoi: "On the contrary, it's one of the deadliest battles of the war." }
+    - texte: "Why do we speak of a world war, and not just a European one?"
+      nom: "Because the colonial empires and other continents take part."
+      explication: "Britain and France mobilise soldiers and workers from their colonies; Japan and the United States also enter the war."
+      pieges:
+        - { texte: "Because every country in the world fought.", pourquoi: "Some countries stayed neutral, such as Switzerland or Spain." }
+        - { texte: "Because fighting took place equally on every continent.", pourquoi: "Europe is the main theatre; the war is worldwide through its participants and stakes." }
+    - texte: "During the war, what does Marie Curie do?"
+      nom: "She organises X-ray vehicles to treat the wounded near the front."
+      explication: "X-rays make it possible to locate bullets and shell fragments: science takes part in the war."
+      pieges:
+        - { texte: "She invents poison gas.", pourquoi: "Marie Curie puts science to work caring for the wounded, not making weapons." }
+        - { texte: "She commands an army.", pourquoi: "She is a physicist and chemist; her role is medical." }
+    - texte: "On 24 May 1915, France, Britain and Russia denounce « crimes against humanity and civilisation ». Against whom are these crimes committed?"
+      nom: "Against the Armenians of the Ottoman Empire."
+      explication: "The Armenians of the Ottoman Empire are the victims of a genocide; this declaration is one of the first international condemnations."
+      pieges:
+        - { texte: "Against German prisoners of war.", pourquoi: "The declaration concerns the massacres of Armenian civilians in the Ottoman Empire." }
+        - { texte: "Against the Jews of Europe.", pourquoi: "The genocide of the Jews, the Shoah, takes place during the Second World War." }
+    - texte: "In 1917, women and men workers go on strike in France. What does this movement show?"
+      nom: "The home front's weariness with a long war, high prices and the pace of work."
+      explication: "Women, very present in the factories, demand better wages: civilians are actors as well as victims of the war."
+      pieges:
+        - { texte: "That the war is over.", pourquoi: "In 1917, the war goes on; the strikes express civilians' fatigue." }
+        - { texte: "That women don't work during the war.", pourquoi: "On the contrary, women replace the mobilised men in factories and fields." }
+    - texte: "Which principles does US President Wilson defend for the peace, in 1918?"
+      nom: "The right of peoples to self-determination and a League of Nations."
+      explication: "His « Fourteen Points » inspire the creation of the League of Nations; the 1919-1923 treaties dismantle the multinational empires."
+      pieges:
+        - { texte: "Rebuilding the great empires of before 1914.", pourquoi: "Wilson wants, on the contrary, an order based on nations; the Austro-Hungarian and Ottoman empires disappear." }
+        - { texte: "Banning all alliances between states.", pourquoi: "Wilson proposes a common organisation of states, the League of Nations." }
+    - texte: "Why, in 1921, is an Unknown Soldier buried beneath the Arc de Triomphe?"
+      nom: "To honour all the soldiers who died, especially those who were never identified."
+      explication: "Chosen at Verdun in November 1920, he is buried on 28 January 1921: every grieving family can see their own in him."
+      pieges:
+        - { texte: "To honour a famous general.", pourquoi: "Precisely, he is « unknown »: he stands for all soldiers, not a known leader." }
+        - { texte: "To celebrate the start of the war.", pourquoi: "It's a place of mourning and memory, not of celebration." }

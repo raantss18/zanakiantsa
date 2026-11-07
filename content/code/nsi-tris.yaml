@@ -1,0 +1,136 @@
+id: nsi-tris
+titre: "Trier, puis chercher par dichotomie"
+niveau: 1re
+prerequis: [python-listes]
+programme: { source: nsi1, texte: "Tris par insertion, par sélection. Écrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection. […] On montre que leur coût est quadratique dans le pire cas. […] Recherche dichotomique dans un tableau trié. Montrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle." }
+activite: quiz
+parametres: {}
+idee: "Tri par sélection : on cherche le plus petit, on l’échange avec le premier, puis on recommence sur le reste. Tri par insertion : on glisse chaque élément à sa place parmi ceux déjà triés."
+phrases:
+  consigne: "Écris la liste après chaque passage, sans sauter d’étape."
+  question: "{texte}"
+  indice: "Sélection : un seul échange par passage. Insertion : l’élément recule tant que son voisin de gauche est plus grand. Dichotomie : regarde le milieu, puis garde une moitié."
+  exemple: "Sélection sur [5, 3, 8, 1] : le plus petit, 1, s’échange avec 5 → [1, 3, 8, 5]. 3 est déjà à sa place. Puis 5 s’échange avec 8 → [1, 3, 5, 8]."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Tri par sélection de [7, 4, 9, 2]. Quelle est la liste après le premier passage ?"
+    nom: "[2, 4, 9, 7]"
+    explication: "Le plus petit de toute la liste est 2. Il s’échange avec le premier élément, 7 : [2, 4, 9, 7]."
+    pieges:
+      - { texte: "[2, 7, 4, 9]", pourquoi: "La sélection échange deux éléments : 2 prend la place de 7, et 7 celle de 2. Les autres ne bougent pas." }
+      - { texte: "[4, 7, 9, 2]", pourquoi: "On cherche le plus petit dans toute la liste (2), pas seulement entre les deux premiers." }
+  - texte: "Tri par insertion de [5, 2, 4, 1]. Quelle est la liste après deux passages (2, puis 4 insérés) ?"
+    nom: "[2, 4, 5, 1]"
+    explication: "Passage 1 : 2 se glisse avant 5 → [2, 5, 4, 1]. Passage 2 : 4 se glisse entre 2 et 5 → [2, 4, 5, 1]. 1 attend son tour."
+    pieges:
+      - { texte: "[1, 2, 4, 5]", pourquoi: "C’est la liste triée, après trois passages : 1 n’a pas encore été inséré." }
+      - { texte: "[2, 5, 4, 1]", pourquoi: "C’est après un seul passage. Au deuxième, 4 se glisse avant 5." }
+  - texte: "Pendant un tri par sélection, après k passages, que sait-on des k premiers éléments ?"
+    nom: "Ce sont les k plus petits de la liste, dans l’ordre"
+    explication: "Chaque passage met en place le plus petit de ce qui reste. C’est l’invariant qui prouve que le tri est juste."
+    pieges:
+      - { texte: "Ce sont les k premiers éléments de départ, triés entre eux", pourquoi: "C’est l’invariant du tri par insertion. La sélection va chercher le plus petit dans tout le reste." }
+      - { texte: "Ils sont dans l’ordre, mais un plus petit peut rester derrière", pourquoi: "Chaque passage prend le plus petit du reste : aucun plus petit ne reste derrière." }
+  - texte: "Le tri par sélection de n éléments fait n(n − 1)/2 comparaisons. Si n passe de 1 000 à 2 000, ce nombre est multiplié par :"
+    nom: "Environ 4"
+    explication: "Le coût est quadratique : il varie comme n². En doublant n, on multiplie n² par 2² = 4 (499 500 comparaisons, puis 1 999 000)."
+    pieges:
+      - { texte: "Environ 2", pourquoi: "Ce serait vrai pour un coût linéaire. Ici le coût suit n² : (2n)² = 4n²." }
+      - { texte: "Environ 1 000", pourquoi: "On compare deux coûts, pas deux tailles : (2 000)² ÷ (1 000)² = 4." }
+  - texte: "Tri par insertion d’une liste déjà triée de n éléments. Combien de comparaisons ?"
+    nom: "n − 1 : une par élément inséré"
+    explication: "Chaque élément est comparé à son voisin de gauche, plus petit : il reste en place. C’est le meilleur cas, de coût linéaire."
+    pieges:
+      - { texte: "Environ n²/2, comme toujours", pourquoi: "Le coût quadratique est celui du pire cas. Sur une liste triée, chaque insertion s’arrête dès la première comparaison." }
+      - { texte: "Aucune", pourquoi: "Il faut comparer chaque élément à son voisin pour savoir qu’il est déjà à sa place." }
+  - texte: "Recherche dichotomique de 23 dans L = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91] (indices 0 à 9). Le milieu est l’indice (0 + 9) // 2. Quelle valeur regarde-t-on en premier ?"
+    nom: "16"
+    explication: "(0 + 9) // 2 = 4, et L[4] = 16. 23 > 16 : on garde la moitié droite, indices 5 à 9. On regarde ensuite 56, puis 23."
+    pieges:
+      - { texte: "12", pourquoi: "L[4] est le cinquième élément, 16 : les indices commencent à 0." }
+      - { texte: "23", pourquoi: "On ne sait pas encore où est 23 : on commence toujours par le milieu." }
+  - texte: "Une liste triée a 1 000 éléments. Combien de valeurs, au plus, la recherche dichotomique regarde-t-elle ?"
+    nom: "10"
+    explication: "À chaque regard, la zone est coupée en deux : 1 000, 500, 250, 125, 62, 31, 15, 7, 3, 1. Au plus 10 regards, car 2¹⁰ = 1 024."
+    pieges:
+      - { texte: "500", pourquoi: "La dichotomie ne parcourt pas la moitié de la liste : elle coupe la zone en deux à chaque regard." }
+      - { texte: "1 000", pourquoi: "C’est le pire cas de la recherche séquentielle, élément par élément." }
+  - texte: "Pourquoi la recherche dichotomique demande-t-elle une liste triée ?"
+    nom: "Pour jeter une moitié en étant sûr que la valeur n’y est pas"
+    explication: "Dans une liste triée, si la valeur cherchée est plus grande que le milieu, elle ne peut être qu’à droite. Sans tri, on ne sait pas de quel côté chercher."
+    pieges:
+      - { texte: "Parce que Python refuse de couper une liste non triée", pourquoi: "Python ne vérifie rien : sur une liste non triée, la recherche donne simplement de faux résultats." }
+      - { texte: "Parce qu’une liste non triée n’a pas de milieu", pourquoi: "Le milieu existe toujours ; c’est la comparaison avec lui qui ne dit plus de quel côté chercher." }
+  - texte: "Pourquoi la boucle de la recherche dichotomique s’arrête-t-elle toujours ?"
+    nom: "La taille de la zone de recherche diminue à chaque tour"
+    explication: "fin − début est un entier positif qui baisse à chaque tour (c’est un variant). Il ne peut pas baisser sans fin : la boucle s’arrête."
+    pieges:
+      - { texte: "Parce qu’on finit toujours par trouver la valeur", pourquoi: "Si la valeur est absente, on ne la trouve pas. La boucle s’arrête quand même, car la zone se vide." }
+      - { texte: "Parce que Python arrête les boucles trop longues", pourquoi: "Python n’arrête pas une boucle sans fin : ici, c’est la zone qui rétrécit." }
+
+en:
+  titre: "Sorting, then binary search"
+  idee: "Selection sort: find the smallest, swap it with the first, then start again on the rest. Insertion sort: slide each item into place among those already sorted."
+  phrases:
+    consigne: "Write the list after each pass, without skipping a step."
+    question: "{texte}"
+    indice: "Selection: one swap per pass. Insertion: the item moves back while its left neighbour is larger. Binary search: look at the middle, then keep one half."
+    exemple: "Selection on [5, 3, 8, 1]: the smallest, 1, is swapped with 5 → [1, 3, 8, 5]. 3 is already in place. Then 5 is swapped with 8 → [1, 3, 5, 8]."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Selection sort of [7, 4, 9, 2]. What is the list after the first pass?"
+      nom: "[2, 4, 9, 7]"
+      explication: "The smallest of the whole list is 2. It is swapped with the first item, 7: [2, 4, 9, 7]."
+      pieges:
+        - { texte: "[2, 7, 4, 9]", pourquoi: "Selection swaps two items: 2 takes the place of 7, and 7 that of 2. The others do not move." }
+        - { texte: "[4, 7, 9, 2]", pourquoi: "You look for the smallest in the whole list (2), not just between the first two." }
+    - texte: "Insertion sort of [5, 2, 4, 1]. What is the list after two passes (2, then 4 inserted)?"
+      nom: "[2, 4, 5, 1]"
+      explication: "Pass 1: 2 slides before 5 → [2, 5, 4, 1]. Pass 2: 4 slides between 2 and 5 → [2, 4, 5, 1]. 1 waits for its turn."
+      pieges:
+        - { texte: "[1, 2, 4, 5]", pourquoi: "That is the sorted list, after three passes: 1 has not been inserted yet." }
+        - { texte: "[2, 5, 4, 1]", pourquoi: "That is after a single pass. In the second, 4 slides before 5." }
+    - texte: "During a selection sort, after k passes, what do we know about the first k items?"
+      nom: "They are the k smallest of the list, in order"
+      explication: "Each pass puts the smallest of what is left into place. This is the invariant that proves the sort is correct."
+      pieges:
+        - { texte: "They are the first k items from the start, sorted among themselves", pourquoi: "That is the invariant of insertion sort. Selection looks for the smallest in the whole rest." }
+        - { texte: "They are in order, but a smaller one may be left behind", pourquoi: "Each pass takes the smallest of the rest: no smaller one is left behind." }
+    - texte: "Selection sort of n items makes n(n − 1)/2 comparisons. If n goes from 1,000 to 2,000, this number is multiplied by:"
+      nom: "About 4"
+      explication: "The cost is quadratic: it varies like n². Doubling n multiplies n² by 2² = 4 (499,500 comparisons, then 1,999,000)."
+      pieges:
+        - { texte: "About 2", pourquoi: "That would be true for a linear cost. Here the cost follows n²: (2n)² = 4n²." }
+        - { texte: "About 1,000", pourquoi: "You compare two costs, not two sizes: (2,000)² ÷ (1,000)² = 4." }
+    - texte: "Insertion sort of a list of n items that is already sorted. How many comparisons?"
+      nom: "n − 1: one per inserted item"
+      explication: "Each item is compared with its left neighbour, which is smaller: it stays in place. This is the best case, with a linear cost."
+      pieges:
+        - { texte: "About n²/2, as always", pourquoi: "The quadratic cost is the worst case. On a sorted list, each insertion stops at the first comparison." }
+        - { texte: "None", pourquoi: "Each item must be compared with its neighbour to know it is already in place." }
+    - texte: "Binary search for 23 in L = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91] (indices 0 to 9). The middle is index (0 + 9) // 2. Which value is looked at first?"
+      nom: "16"
+      explication: "(0 + 9) // 2 = 4, and L[4] = 16. 23 > 16: keep the right half, indices 5 to 9. Next we look at 56, then 23."
+      pieges:
+        - { texte: "12", pourquoi: "L[4] is the fifth item, 16: indices start at 0." }
+        - { texte: "23", pourquoi: "We do not know yet where 23 is: we always start with the middle." }
+    - texte: "A sorted list has 1,000 items. At most, how many values does binary search look at?"
+      nom: "10"
+      explication: "With each look, the area is cut in half: 1,000, 500, 250, 125, 62, 31, 15, 7, 3, 1. At most 10 looks, because 2¹⁰ = 1,024."
+      pieges:
+        - { texte: "500", pourquoi: "Binary search does not go through half the list: it cuts the area in two with each look." }
+        - { texte: "1,000", pourquoi: "That is the worst case of sequential search, item by item." }
+    - texte: "Why does binary search need a sorted list?"
+      nom: "To throw away one half, sure that the value is not there"
+      explication: "In a sorted list, if the value is larger than the middle, it can only be on the right. Without sorting, you do not know which side to search."
+      pieges:
+        - { texte: "Because Python refuses to cut an unsorted list", pourquoi: "Python checks nothing: on an unsorted list, the search simply gives wrong results." }
+        - { texte: "Because an unsorted list has no middle", pourquoi: "There is always a middle; it is the comparison with it that no longer tells which side to search." }
+    - texte: "Why does the binary search loop always stop?"
+      nom: "The size of the search area shrinks at each turn"
+      explication: "end − start is a positive integer that goes down at each turn (it is a variant). It cannot go down forever: the loop stops."
+      pieges:
+        - { texte: "Because the value is always found in the end", pourquoi: "If the value is missing, it is not found. The loop stops anyway, because the area becomes empty." }
+        - { texte: "Because Python stops loops that are too long", pourquoi: "Python does not stop an endless loop: here, it is the area that shrinks." }

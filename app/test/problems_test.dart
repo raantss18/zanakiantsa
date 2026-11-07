@@ -102,6 +102,19 @@ void main() {
                 }))
               m.uci,
         };
+      case 'deviation':
+        // On offre une pièce en faisant échec : toutes les réponses la prennent (pas avec le roi), et chaque prise permet
+        // un mat au coup suivant.
+        return {
+          for (final m in moves)
+            if (p.play(m).inCheck &&
+                p.play(m).legalMoves().isNotEmpty &&
+                p.play(m).legalMoves().every((r) =>
+                    r.to == m.to &&
+                    p.play(m).board[r.from] != 'k' &&
+                    p.play(m).play(r).legalMoves().any((x) => mate(p.play(m).play(r).play(x)))))
+              m.uci,
+        };
       case 'enfilade':
         // Tour, fou ou dame seule à faire échec, à l'abri ; derrière le roi, sur la même ligne, une pièce noire (pas un pion).
         return {
@@ -126,10 +139,11 @@ void main() {
     throw StateError('thème inconnu $theme');
   }
 
-  test('douze leçons de problèmes', () {
+  test('quinze leçons de problèmes', () {
     expect(problems.map((s) => s.id).toSet(), {
       'roque', 'promotion', 'en-passant', 'piece-gratuite', 'fourchette', 'mat-couloir', //
-      'mat-escalier', 'mat-baiser', 'clouage', 'enfilade', 'decouverte', 'double-echec',
+      'mat-escalier', 'mat-baiser', 'clouage', 'enfilade', 'decouverte', 'double-echec', //
+      'mat-etouffee', 'attaque-double-dame', 'deviation',
     });
   });
 

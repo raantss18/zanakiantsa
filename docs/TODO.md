@@ -16,6 +16,11 @@
 
 ## 0. Erreurs signalées
 
+- ✅ 2026-11-08 : ≈ 60 leçons de plus en français et en anglais (maths CM2–3e, français CM2–3e, anglais CP–CE1 et lycée dont
+  famille et émotions, sciences et histoire-géographie 2de–1re, NSI 1re–Terminale, échecs collège avec le thème « déviation »
+  vérifié par le moteur). Code des quiz affiché en bloc à chasse fixe ; chimie et unités dites en mots (ADR 0067).
+  ⏳ Relecture enseignant et anglophone ; faits « supposés » listés par les rédacteurs (dates d'histoire, 15 °C).
+
 - ✅ Fait (2026-11-08, demande d'Antsa) : mondes adaptés à l'âge — petits, 8–11 ans, 12 ans et plus (ADR 0066).
 
 - ✅ Corrigé (2026-11-08, signalé par Antsa) : à 12 ans, « compter 4 voitures » (diagnostic d'une notion de CM1). Plancher de

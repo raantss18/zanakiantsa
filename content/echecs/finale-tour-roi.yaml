@@ -1,0 +1,124 @@
+id: finale-tour-roi
+titre: "Roi et tour contre roi : la méthode"
+niveau: 5e
+prerequis: [mat-tour]
+programme: { source: fide, texte: "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’." }
+activite: quiz
+parametres: {}
+idee: "La tour coupe l’échiquier et enferme le roi noir dans une boîte. On rétrécit la boîte, ton roi s’approche, et le roi noir finit sur le bord : là, la tour fait mat."
+phrases:
+  consigne: "Repère la boîte que trace ta tour, puis les cases que garde ton roi. Attention au pat."
+  question: "{texte}"
+  indice: "La tour garde toute sa colonne et toute sa rangée. Ton roi garde les cases qui le touchent. Le mat se fait toujours sur un bord."
+  exemple: "Roi noir en e8, roi blanc en e6, tour en a1. La tour va en a8 : échec sur la 8e rangée. d7, e7 et f7 sont gardées par ton roi, d8 et f8 par la tour : mat."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Roi noir en e8, roi blanc en e6, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La tour va en a8"
+    explication: "La tour fait échec sur toute la 8e rangée. Le roi blanc garde d7, e7 et f7 : le roi noir n’a plus de case. Mat."
+    pieges:
+      - { texte: "La tour va en a7", pourquoi: "En a7, la tour ne fait pas échec : le roi noir reste sur la 8e rangée, libre." }
+      - { texte: "Le roi va en e7", pourquoi: "Deux rois ne peuvent jamais se toucher : e7 touche e8, ce coup est interdit." }
+  - texte: "Roi noir en h4, roi blanc en f4, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La tour va en h1"
+    explication: "La tour fait échec sur toute la colonne h. Le roi blanc garde g3, g4 et g5 : le roi noir est pris au bord. Mat."
+    pieges:
+      - { texte: "La tour va en a4", pourquoi: "La tour en a4 ferait échec sur la 4e rangée, mais le roi blanc en f4 lui barre le chemin : aucun échec." }
+      - { texte: "La tour va en g1", pourquoi: "En g1, la tour ne fait pas échec : elle garde g3, g4, g5, que ton roi garde déjà." }
+  - texte: "Roi noir en a8, roi blanc en b6, tour blanche en h1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La tour va en h8"
+    explication: "La tour fait échec sur la 8e rangée. Le roi blanc garde a7 et b7 : plus aucune case. Mat."
+    pieges:
+      - { texte: "La tour va en a1", pourquoi: "C’est un échec sur la colonne a, mais le roi noir s’échappe en b8, que personne ne garde." }
+      - { texte: "La tour va en h7", pourquoi: "En h7, la tour ne fait pas échec. Le roi noir peut encore aller en b8." }
+  - texte: "Roi noir en a8, roi blanc en c7, tour blanche en b1. Aux Blancs. Pourquoi la tour en b7 est-elle une faute ?"
+    nom: "C’est pat : le roi noir ne peut plus bouger sans être en échec, partie nulle"
+    explication: "Après tour en b7, le roi noir n’est pas en échec et n’a aucun coup permis : c’est le pat, la partie est nulle. Le mat était la tour en a1."
+    pieges:
+      - { texte: "La tour en b7 est perdue : le roi noir la prend", pourquoi: "En b7, la tour est protégée par ton roi en c7 : le roi noir ne peut pas la prendre." }
+      - { texte: "Ce n’est pas une faute : c’est échec et mat", pourquoi: "La tour en b7 ne fait pas échec au roi en a8. Sans échec, un roi bloqué, c’est pat, pas mat." }
+  - texte: "Tour blanche en d4, roi noir en f6. Dans combien de cases la tour enferme-t-elle le roi noir ?"
+    nom: "16"
+    explication: "La tour garde la colonne d et la rangée 4. Le roi noir reste à droite de d (colonnes e à h) et au-dessus de 4 (rangées 5 à 8) : 4 × 4 = 16 cases."
+    pieges:
+      - { texte: "64", pourquoi: "Le roi noir ne peut traverser ni la colonne d ni la rangée 4 : il est enfermé dans un coin de l’échiquier." }
+      - { texte: "8", pourquoi: "La boîte va de la colonne e à la colonne h, et de la rangée 5 à la rangée 8 : 4 × 4 cases." }
+  - texte: "Pourquoi le roi blanc doit-il venir aider la tour ?"
+    nom: "La tour seule ne garde pas les cases qui touchent le roi noir"
+    explication: "La tour fait échec sur une ligne, mais le roi noir peut avancer vers elle. Ton roi garde les cases devant lui : ensemble, ils font mat."
+    pieges:
+      - { texte: "Parce que le roi est la pièce la plus forte", pourquoi: "Le roi ne fait qu’un pas à la fois ; il sert ici à garder les cases devant le roi noir." }
+      - { texte: "Parce que la règle oblige à jouer le roi", pourquoi: "Aucune règle n’oblige à jouer le roi : la tour seule ne peut simplement pas faire mat." }
+  - texte: "Tu rapproches ta tour pour rétrécir la boîte. Que dois-tu vérifier avant de la poser ?"
+    nom: "Que le roi noir ne puisse pas la prendre"
+    explication: "Une tour posée à côté du roi noir, sans protection, est prise : il ne reste que deux rois, la partie est nulle. Garde-la loin, ou protégée par ton roi."
+    pieges:
+      - { texte: "Qu’elle fasse échec", pourquoi: "Un échec n’est pas utile ici : on veut rétrécir la boîte, et un échec peut même laisser sortir le roi." }
+      - { texte: "Qu’elle soit dans un coin", pourquoi: "La tour garde ses lignes de n’importe où ; c’est sa sécurité qui compte." }
+  - texte: "Où se trouve toujours le roi noir quand le roi et la tour blancs le font mat ?"
+    nom: "Sur un bord de l’échiquier"
+    explication: "Au milieu, le roi noir a des cases des deux côtés de la ligne de la tour : roi et tour ne peuvent pas toutes les garder. D’où la méthode : le pousser vers un bord."
+    pieges:
+      - { texte: "Dans un coin seulement", pourquoi: "Le coin marche, mais tout le bord aussi : roi noir en e8, roi blanc en e6, tour en a8, c’est mat." }
+      - { texte: "N’importe où", pourquoi: "Au milieu, le roi noir a toujours une case libre : il faut le pousser au bord." }
+
+en:
+  titre: "King and rook against king: the method"
+  idee: "The rook cuts the board and locks the black king in a box. You shrink the box, your king comes closer, and the black king ends up on the edge: there, the rook mates."
+  phrases:
+    consigne: "Spot the box your rook draws, then the squares your king guards. Watch out for stalemate."
+    question: "{texte}"
+    indice: "The rook guards its whole file and its whole rank. Your king guards the squares touching it. Checkmate always happens on an edge."
+    exemple: "Black king on e8, white king on e6, rook on a1. The rook goes to a8: check along the 8th rank. d7, e7 and f7 are guarded by your king, d8 and f8 by the rook: checkmate."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Black king on e8, white king on e6, white rook on a1. White to play. Which move gives checkmate?"
+      nom: "The rook goes to a8"
+      explication: "The rook gives check along the whole 8th rank. The white king guards d7, e7 and f7: the black king has no square left. Checkmate."
+      pieges:
+        - { texte: "The rook goes to a7", pourquoi: "On a7, the rook gives no check: the black king stays on the 8th rank, free." }
+        - { texte: "The king goes to e7", pourquoi: "Two kings can never touch: e7 touches e8, this move is not allowed." }
+    - texte: "Black king on h4, white king on f4, white rook on a1. White to play. Which move gives checkmate?"
+      nom: "The rook goes to h1"
+      explication: "The rook gives check along the whole h-file. The white king guards g3, g4 and g5: the black king is caught on the edge. Checkmate."
+      pieges:
+        - { texte: "The rook goes to a4", pourquoi: "The rook on a4 would check along the 4th rank, but the white king on f4 blocks its way: no check." }
+        - { texte: "The rook goes to g1", pourquoi: "On g1, the rook gives no check: it guards g3, g4, g5, which your king already guards." }
+    - texte: "Black king on a8, white king on b6, white rook on h1. White to play. Which move gives checkmate?"
+      nom: "The rook goes to h8"
+      explication: "The rook gives check along the 8th rank. The white king guards a7 and b7: no square left. Checkmate."
+      pieges:
+        - { texte: "The rook goes to a1", pourquoi: "It is check along the a-file, but the black king escapes to b8, which nobody guards." }
+        - { texte: "The rook goes to h7", pourquoi: "On h7, the rook gives no check. The black king can still go to b8." }
+    - texte: "Black king on a8, white king on c7, white rook on b1. White to play. Why is the rook to b7 a mistake?"
+      nom: "It is stalemate: the black king cannot move without being in check, a draw"
+      explication: "After the rook goes to b7, the black king is not in check and has no legal move: it is stalemate, the game is drawn. The mate was the rook to a1."
+      pieges:
+        - { texte: "The rook on b7 is lost: the black king takes it", pourquoi: "On b7, the rook is protected by your king on c7: the black king cannot take it." }
+        - { texte: "It is not a mistake: it is checkmate", pourquoi: "The rook on b7 does not check the king on a8. Without check, a stuck king is stalemate, not checkmate." }
+    - texte: "White rook on d4, black king on f6. In how many squares does the rook lock the black king?"
+      nom: "16"
+      explication: "The rook guards the d-file and the 4th rank. The black king stays right of d (files e to h) and above 4 (ranks 5 to 8): 4 × 4 = 16 squares."
+      pieges:
+        - { texte: "64", pourquoi: "The black king can cross neither the d-file nor the 4th rank: it is locked in a corner of the board." }
+        - { texte: "8", pourquoi: "The box goes from the e-file to the h-file, and from rank 5 to rank 8: 4 × 4 squares." }
+    - texte: "Why must the white king come and help the rook?"
+      nom: "The rook alone does not guard the squares touching the black king"
+      explication: "The rook gives check along a line, but the black king can walk towards it. Your king guards the squares in front of it: together, they mate."
+      pieges:
+        - { texte: "Because the king is the strongest piece", pourquoi: "The king only takes one step at a time; here it guards the squares in front of the black king." }
+        - { texte: "Because the rules force you to move the king", pourquoi: "No rule forces you to move the king: the rook alone simply cannot mate." }
+    - texte: "You bring your rook closer to shrink the box. What must you check before putting it down?"
+      nom: "That the black king cannot take it"
+      explication: "A rook placed next to the black king, unprotected, is taken: only two kings are left, the game is drawn. Keep it far away, or protected by your king."
+      pieges:
+        - { texte: "That it gives check", pourquoi: "A check is not useful here: you want to shrink the box, and a check can even let the king out." }
+        - { texte: "That it is in a corner", pourquoi: "The rook guards its lines from anywhere; what matters is its safety." }
+    - texte: "Where is the black king always when the white king and rook checkmate it?"
+      nom: "On an edge of the board"
+      explication: "In the middle, the black king has squares on both sides of the rook’s line: king and rook cannot guard them all. Hence the method: push it to an edge."
+      pieges:
+        - { texte: "In a corner only", pourquoi: "A corner works, but so does the whole edge: black king on e8, white king on e6, rook on a8, that is checkmate." }
+        - { texte: "Anywhere", pourquoi: "In the middle, the black king always has a free square: you must push it to the edge." }

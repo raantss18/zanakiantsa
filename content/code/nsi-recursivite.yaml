@@ -1,0 +1,136 @@
+id: nsi-recursivite
+titre: "La récursivité"
+niveau: Terminale
+prerequis: [python-fonctions]
+programme: { source: nsiT, texte: "Récursivité. Écrire un programme récursif. Analyser le fonctionnement d’un programme récursif." }
+activite: quiz
+parametres: {}
+idee: "Une fonction récursive s’appelle elle-même sur un problème plus petit. Il lui faut un cas de base, qui répond sans s’appeler : sinon, les appels ne s’arrêtent jamais."
+phrases:
+  consigne: "Déroule les appels un par un jusqu’au cas de base, puis remonte en calculant."
+  question: "{texte}"
+  indice: "Écris f(3) = … f(2), puis f(2) = … f(1), et ainsi de suite jusqu’au cas de base. Remplace ensuite de bas en haut."
+  exemple: "def fact(n): return 1 if n == 0 else n * fact(n - 1). fact(3) = 3 × fact(2) = 3 × 2 × fact(1) = 3 × 2 × 1 × fact(0) = 3 × 2 × 1 × 1 = 6."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Que va afficher ce programme ?\ndef fact(n): return 1 if n == 0 else n * fact(n - 1)\nprint(fact(4))"
+    nom: "24"
+    explication: "fact(4) = 4 × fact(3) = 4 × 3 × 2 × 1 × fact(0), et fact(0) vaut 1 : 24."
+    pieges:
+      - { texte: "10", pourquoi: "fact multiplie : 4 × 3 × 2 × 1. 10 est la somme 4 + 3 + 2 + 1." }
+      - { texte: "4", pourquoi: "fact(4) ne renvoie pas n : il multiplie n par fact(3), et ainsi de suite." }
+  - texte: "Que va afficher ce programme ?\ndef s(n): return 0 if n == 0 else n + s(n - 1)\nprint(s(5))"
+    nom: "15"
+    explication: "s(5) = 5 + s(4) = 5 + 4 + 3 + 2 + 1 + s(0), et s(0) vaut 0 : 15."
+    pieges:
+      - { texte: "5", pourquoi: "s(5) ajoute 5 au résultat de s(4), qui lui-même ajoute 4, et ainsi de suite." }
+      - { texte: "120", pourquoi: "s additionne avec + ; 120 serait le produit 5 × 4 × 3 × 2 × 1." }
+  - texte: "Que va afficher ce programme ?\ndef p(n): return 1 if n == 0 else 2 * p(n - 1)\nprint(p(3))"
+    nom: "8"
+    explication: "p(3) = 2 × p(2) = 2 × 2 × p(1) = 2 × 2 × 2 × p(0) = 8. p(n) calcule 2 puissance n."
+    pieges:
+      - { texte: "6", pourquoi: "Chaque appel multiplie par 2 : 2 × 2 × 2 × 1 = 8, et non 2 × 3." }
+      - { texte: "1", pourquoi: "1 est la réponse du cas de base p(0) ; p(3) multiplie encore trois fois par 2." }
+  - texte: "On appelle fact(3), avec def fact(n): return 1 if n == 0 else n * fact(n - 1). Combien d’appels de fact en tout, le premier compris ?"
+    nom: "4"
+    explication: "fact(3), fact(2), fact(1), puis fact(0), le cas de base : 4 appels."
+    pieges:
+      - { texte: "3", pourquoi: "Le cas de base fact(0) est aussi un appel de la fonction." }
+      - { texte: "6", pourquoi: "6 est la valeur de fact(3), pas le nombre d’appels." }
+  - texte: "Que se passe-t-il ?\ndef f(n): return n * f(n - 1)\nprint(f(3))"
+    nom: "Une erreur : les appels ne s’arrêtent jamais (RecursionError)"
+    explication: "Il n’y a pas de cas de base : f(3) appelle f(2), f(1), f(0), f(-1)… Python finit par s’arrêter avec RecursionError."
+    pieges:
+      - { texte: "6", pourquoi: "Sans cas de base, f(1) appelle encore f(0), qui appelle f(-1) : rien ne renvoie de valeur." }
+      - { texte: "0", pourquoi: "f(0) n’est pas un cas de base ici : il appelle encore f(-1)." }
+  - texte: "Que va afficher ce programme ?\ndef nb(n): return 1 if n < 10 else 1 + nb(n // 10)\nprint(nb(2026))"
+    nom: "4"
+    explication: "nb(2026) = 1 + nb(202) = 1 + 1 + nb(20) = 1 + 1 + 1 + nb(2), et nb(2) vaut 1 : 4. La fonction compte les chiffres."
+    pieges:
+      - { texte: "3", pourquoi: "Le cas de base nb(2) renvoie 1 : il compte aussi le dernier chiffre." }
+      - { texte: "10", pourquoi: "2 + 0 + 2 + 6 = 10 est la somme des chiffres ; ici, chaque appel ajoute 1." }
+  - texte: "Que va afficher ce programme ?\ndef somme(L): return 0 if L == [] else L[0] + somme(L[1:])\nprint(somme([4, 1, 3]))"
+    nom: "8"
+    explication: "L[1:] est la liste sans son premier élément. somme([4, 1, 3]) = 4 + somme([1, 3]) = 4 + 1 + 3 + somme([]) = 8."
+    pieges:
+      - { texte: "4", pourquoi: "On ajoute L[0] à la somme du reste de la liste, pas seulement le premier élément." }
+      - { texte: "3", pourquoi: "3 est le nombre d’éléments ; la fonction additionne leurs valeurs." }
+  - texte: "Que va afficher ce programme ?\ndef f(n): return '' if n == 0 else f(n - 1) + str(n)\nprint(f(3))"
+    nom: "123"
+    explication: "f(3) = f(2) + '3' = f(1) + '2' + '3' = '' + '1' + '2' + '3'. Le chiffre est collé après le résultat de l’appel : 123."
+    pieges:
+      - { texte: "321", pourquoi: "str(n) est collé après f(n - 1) : le 3 arrive en dernier, à droite." }
+      - { texte: "6", pourquoi: "str(n) transforme n en texte : + colle les textes, sans les additionner." }
+  - texte: "Pourquoi une fonction récursive a-t-elle besoin d’un cas de base ?"
+    nom: "Pour que la suite des appels s’arrête"
+    explication: "Chaque appel attend la réponse du suivant. Le cas de base répond sans appel : alors toutes les réponses peuvent remonter."
+    pieges:
+      - { texte: "Pour que Python accepte de définir la fonction", pourquoi: "Python accepte la définition sans cas de base ; l’erreur n’arrive qu’à l’exécution." }
+      - { texte: "Pour que la fonction aille plus vite", pourquoi: "Sans cas de base, elle ne finit jamais : ce n’est pas une question de vitesse." }
+
+en:
+  titre: "Recursion"
+  idee: "A recursive function calls itself on a smaller problem. It needs a base case, which answers without calling itself: otherwise, the calls never stop."
+  phrases:
+    consigne: "Unfold the calls one by one down to the base case, then work your way back up."
+    question: "{texte}"
+    indice: "Write f(3) = … f(2), then f(2) = … f(1), and so on down to the base case. Then fill in from the bottom up."
+    exemple: "def fact(n): return 1 if n == 0 else n * fact(n - 1). fact(3) = 3 × fact(2) = 3 × 2 × fact(1) = 3 × 2 × 1 × fact(0) = 3 × 2 × 1 × 1 = 6."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "What will this program display?\ndef fact(n): return 1 if n == 0 else n * fact(n - 1)\nprint(fact(4))"
+      nom: "24"
+      explication: "fact(4) = 4 × fact(3) = 4 × 3 × 2 × 1 × fact(0), and fact(0) is 1: 24."
+      pieges:
+        - { texte: "10", pourquoi: "fact multiplies: 4 × 3 × 2 × 1. 10 is the sum 4 + 3 + 2 + 1." }
+        - { texte: "4", pourquoi: "fact(4) does not return n: it multiplies n by fact(3), and so on." }
+    - texte: "What will this program display?\ndef s(n): return 0 if n == 0 else n + s(n - 1)\nprint(s(5))"
+      nom: "15"
+      explication: "s(5) = 5 + s(4) = 5 + 4 + 3 + 2 + 1 + s(0), and s(0) is 0: 15."
+      pieges:
+        - { texte: "5", pourquoi: "s(5) adds 5 to the result of s(4), which itself adds 4, and so on." }
+        - { texte: "120", pourquoi: "s adds with +; 120 would be the product 5 × 4 × 3 × 2 × 1." }
+    - texte: "What will this program display?\ndef p(n): return 1 if n == 0 else 2 * p(n - 1)\nprint(p(3))"
+      nom: "8"
+      explication: "p(3) = 2 × p(2) = 2 × 2 × p(1) = 2 × 2 × 2 × p(0) = 8. p(n) works out 2 to the power n."
+      pieges:
+        - { texte: "6", pourquoi: "Each call multiplies by 2: 2 × 2 × 2 × 1 = 8, not 2 × 3." }
+        - { texte: "1", pourquoi: "1 is the answer of the base case p(0); p(3) multiplies by 2 three more times." }
+    - texte: "We call fact(3), with def fact(n): return 1 if n == 0 else n * fact(n - 1). How many calls of fact in all, the first one included?"
+      nom: "4"
+      explication: "fact(3), fact(2), fact(1), then fact(0), the base case: 4 calls."
+      pieges:
+        - { texte: "3", pourquoi: "The base case fact(0) is also a call of the function." }
+        - { texte: "6", pourquoi: "6 is the value of fact(3), not the number of calls." }
+    - texte: "What happens?\ndef f(n): return n * f(n - 1)\nprint(f(3))"
+      nom: "An error: the calls never stop (RecursionError)"
+      explication: "There is no base case: f(3) calls f(2), f(1), f(0), f(-1)… Python ends up stopping with RecursionError."
+      pieges:
+        - { texte: "6", pourquoi: "Without a base case, f(1) still calls f(0), which calls f(-1): nothing returns a value." }
+        - { texte: "0", pourquoi: "f(0) is not a base case here: it still calls f(-1)." }
+    - texte: "What will this program display?\ndef nb(n): return 1 if n < 10 else 1 + nb(n // 10)\nprint(nb(2026))"
+      nom: "4"
+      explication: "nb(2026) = 1 + nb(202) = 1 + 1 + nb(20) = 1 + 1 + 1 + nb(2), and nb(2) is 1: 4. The function counts the digits."
+      pieges:
+        - { texte: "3", pourquoi: "The base case nb(2) returns 1: it counts the last digit too." }
+        - { texte: "10", pourquoi: "2 + 0 + 2 + 6 = 10 is the sum of the digits; here, each call adds 1." }
+    - texte: "What will this program display?\ndef total(L): return 0 if L == [] else L[0] + total(L[1:])\nprint(total([4, 1, 3]))"
+      nom: "8"
+      explication: "L[1:] is the list without its first item. total([4, 1, 3]) = 4 + total([1, 3]) = 4 + 1 + 3 + total([]) = 8."
+      pieges:
+        - { texte: "4", pourquoi: "L[0] is added to the total of the rest of the list, not just the first item." }
+        - { texte: "3", pourquoi: "3 is the number of items; the function adds their values." }
+    - texte: "What will this program display?\ndef f(n): return '' if n == 0 else f(n - 1) + str(n)\nprint(f(3))"
+      nom: "123"
+      explication: "f(3) = f(2) + '3' = f(1) + '2' + '3' = '' + '1' + '2' + '3'. The digit is stuck after the result of the call: 123."
+      pieges:
+        - { texte: "321", pourquoi: "str(n) is stuck after f(n - 1): the 3 comes last, on the right." }
+        - { texte: "6", pourquoi: "str(n) turns n into text: + joins texts, without adding them." }
+    - texte: "Why does a recursive function need a base case?"
+      nom: "So that the chain of calls stops"
+      explication: "Each call waits for the answer of the next one. The base case answers without a call: then all the answers can travel back up."
+      pieges:
+        - { texte: "So that Python accepts the function definition", pourquoi: "Python accepts the definition without a base case; the error only comes when it runs." }
+        - { texte: "So that the function runs faster", pourquoi: "Without a base case, it never finishes: it is not a question of speed." }

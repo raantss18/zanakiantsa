@@ -27,12 +27,12 @@
   ],
   "ages": [
     4,
-    15
+    17
   ],
   "en": {
     "titre": "Exploring in 3D",
     "nom": "Explore",
-    "resume": "The human body, the Earth and space, solid shapes, then history and geography up to Year 10.",
+    "resume": "The human body, the Earth and space, solid shapes, then history and geography up to Year 11 (1re).",
     "intro": [
       {
         "texte": "Turn the objects with your finger.",
@@ -62,7 +62,9 @@
     "c2s": "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf",
     "c3s": "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-519023.pdf",
     "c3hg": "https://eduscol.education.fr/document/50990/download",
-    "c4": "https://eduscol.education.fr/document/621/download"
+    "c4": "https://eduscol.education.fr/document/621/download",
+    "hg2de": "https://www.snes.edu/IMG/pdf/hist-geog_annexe-1_2e_bo.pdf",
+    "hg1re": "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf"
   },
   "competences": [
     {
@@ -4469,6 +4471,2020 @@
               {
                 "texte": "Because they all have the same climate as Paris.",
                 "pourquoi": "Most have a tropical climate, very different from Paris."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mediterranee-antique-medievale",
+      "titre": "La Méditerranée, de l'Antiquité au Moyen Âge",
+      "niveau": "2de",
+      "prerequis": [
+        "moyen-age"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Le monde méditerranéen : empreintes de l’Antiquité et du Moyen Âge"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Athènes invente la démocratie, Rome bâtit un immense empire qui devient chrétien. Au Moyen Âge, chrétiens latins, Byzantins et musulmans se côtoient, échangent et s'affrontent en Méditerranée.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : Ve siècle av. J.-C., Périclès à Athènes ; 27 av. J.-C., Auguste ; 313 et 330, Constantin ; 1146, Bernard de Clairvaux prêche la deuxième croisade.",
+        "exemple": "Exemple : à Athènes, au temps de Périclès, les citoyens votent les lois à l'assemblée, l'ecclésia. Mais les femmes, les esclaves et les étrangers résidents, les métèques, n'en font pas partie.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans l'Athènes de Périclès, au Ve siècle av. J.-C., qui peut voter à l'assemblée ?",
+          "nom": "Les citoyens : des hommes libres, nés de parents athéniens.",
+          "explication": "La démocratie athénienne est le pouvoir des citoyens, une minorité de la population : femmes, esclaves et métèques en sont exclus.",
+          "pieges": [
+            {
+              "texte": "Tous les habitants d'Athènes, hommes et femmes.",
+              "pourquoi": "On projette souvent notre démocratie sur Athènes ; les femmes, les esclaves et les métèques ne votaient pas."
+            },
+            {
+              "texte": "Seulement le roi et les nobles.",
+              "pourquoi": "Athènes n'a plus de roi : à l'assemblée, chaque citoyen, riche ou pauvre, peut voter."
+            }
+          ]
+        },
+        {
+          "texte": "Comment Athènes devient-elle, au Ve siècle av. J.-C., une puissance qui domine d'autres cités ?",
+          "nom": "Par sa flotte de guerre et la ligue de Délos, dont les alliés lui versent un tribut.",
+          "explication": "La démocratie athénienne s'appuie sur un empire maritime : sa flotte domine la mer Égée et ses alliés paient pour elle.",
+          "pieges": [
+            {
+              "texte": "En conquérant toute l'Europe par la terre.",
+              "pourquoi": "C'est plutôt le modèle romain : Athènes domine par la mer, pas par un vaste territoire."
+            },
+            {
+              "texte": "En refusant toute guerre.",
+              "pourquoi": "Athènes est une puissance militaire ; démocratie et domination sur d'autres cités vont ensemble."
+            }
+          ]
+        },
+        {
+          "texte": "En 27 av. J.-C., Octave reçoit le titre d'Auguste. Quel régime met-il en place ?",
+          "nom": "Le principat : il concentre les pouvoirs tout en gardant l'apparence de la République.",
+          "explication": "Auguste se présente comme le « premier des citoyens », le princeps, mais il tient l'armée et les principaux pouvoirs : c'est la naissance de l'Empire romain.",
+          "pieges": [
+            {
+              "texte": "Une démocratie comme celle d'Athènes.",
+              "pourquoi": "Le peuple romain ne gouverne pas : le pouvoir réel est entre les mains d'Auguste."
+            },
+            {
+              "texte": "Une monarchie où il se proclame roi.",
+              "pourquoi": "Les Romains rejetaient le titre de roi ; Auguste prend soin de ne pas l'utiliser."
+            }
+          ]
+        },
+        {
+          "texte": "Quel rôle Constantin joue-t-il dans l'histoire de l'Empire romain ?",
+          "nom": "Il favorise le christianisme et fonde Constantinople.",
+          "explication": "En 313, les chrétiens obtiennent la liberté de culte ; en 330, Constantin inaugure Constantinople, nouvelle capitale à l'est.",
+          "pieges": [
+            {
+              "texte": "Il interdit le christianisme et persécute les chrétiens.",
+              "pourquoi": "Les grandes persécutions ont lieu avant lui ; Constantin soutient au contraire l'Église."
+            },
+            {
+              "texte": "Il fonde la ville de Rome.",
+              "pourquoi": "Rome existe depuis des siècles ; Constantin fonde une nouvelle capitale, Constantinople."
+            }
+          ]
+        },
+        {
+          "texte": "Au Moyen Âge, quelles sont les trois grandes civilisations qui se partagent la Méditerranée ?",
+          "nom": "L'Occident chrétien latin, l'Empire byzantin et le monde musulman.",
+          "explication": "Ces trois civilisations sont marquées par les monothéismes juif, chrétien et musulman, et sont elles-mêmes diverses.",
+          "pieges": [
+            {
+              "texte": "Les Grecs, les Romains et les Égyptiens.",
+              "pourquoi": "Ce sont des civilisations de l'Antiquité, pas du Moyen Âge."
+            },
+            {
+              "texte": "La France, l'Angleterre et l'Espagne seules.",
+              "pourquoi": "Ces royaumes font tous partie de l'Occident chrétien : il manque Byzance et le monde musulman."
+            }
+          ]
+        },
+        {
+          "texte": "En 1146, à Vézelay, que fait Bernard de Clairvaux ?",
+          "nom": "Il prêche la deuxième croisade.",
+          "explication": "À l'appel du pape, Bernard de Clairvaux appelle les chrétiens à partir en croisade ; l'expédition échoue devant Damas en 1148.",
+          "pieges": [
+            {
+              "texte": "Il signe la paix entre chrétiens et musulmans.",
+              "pourquoi": "Il appelle au contraire à la guerre contre les musulmans en Orient."
+            },
+            {
+              "texte": "Il prend Jérusalem.",
+              "pourquoi": "Jérusalem est prise par les croisés en 1099, lors de la première croisade ; Bernard est un moine prédicateur."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi Venise devient-elle une grande puissance au Moyen Âge ?",
+          "nom": "Grâce à sa flotte et à son commerce entre l'Orient et l'Europe.",
+          "explication": "Ses marchands rapportent d'Orient épices et soieries par la Méditerranée et les revendent en Europe ; ses comptoirs jalonnent les routes maritimes.",
+          "pieges": [
+            {
+              "texte": "Grâce à ses grandes plaines agricoles.",
+              "pourquoi": "Venise est bâtie sur une lagune : sa richesse vient de la mer et du commerce."
+            },
+            {
+              "texte": "Grâce à une armée de terre qui conquiert l'Europe.",
+              "pourquoi": "Sa puissance est maritime et commerciale, pas terrestre."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que la Méditerranée médiévale est un espace d'échanges et de conflits à la fois ?",
+          "nom": "Parce que marchandises, personnes et idées y circulent, même en temps de guerre.",
+          "explication": "Croisades et conflits n'empêchent pas le commerce et les échanges savants entre chrétiens, musulmans et Byzantins.",
+          "pieges": [
+            {
+              "texte": "Parce que les conflits ont arrêté tous les échanges.",
+              "pourquoi": "On imagine souvent des mondes fermés ; le commerce continue pendant les croisades."
+            },
+            {
+              "texte": "Parce qu'il n'y a jamais eu de guerre en Méditerranée.",
+              "pourquoi": "Les croisades et les guerres entre Byzance et ses voisins montrent le contraire."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The Mediterranean, from Antiquity to the Middle Ages",
+        "idee": "Athens invents democracy, Rome builds a huge empire that becomes Christian. In the Middle Ages, Latin Christians, Byzantines and Muslims live side by side, trade and clash in the Mediterranean.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 5th century BC, Pericles in Athens; 27 BC, Augustus; 313 and 330, Constantine; 1146, Bernard of Clairvaux preaches the Second Crusade.",
+          "exemple": "Example: in Athens, in Pericles's time, citizens vote the laws in the assembly, the ecclesia. But women, slaves and resident foreigners, the metics, are not part of it.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In Pericles's Athens, in the 5th century BC, who can vote in the assembly?",
+            "nom": "The citizens: free men born of Athenian parents.",
+            "explication": "Athenian democracy is rule by the citizens, a minority of the population: women, slaves and metics are excluded.",
+            "pieges": [
+              {
+                "texte": "All the inhabitants of Athens, men and women.",
+                "pourquoi": "We often project our own democracy onto Athens; women, slaves and metics did not vote."
+              },
+              {
+                "texte": "Only the king and the nobles.",
+                "pourquoi": "Athens no longer has a king: in the assembly, every citizen, rich or poor, can vote."
+              }
+            ]
+          },
+          {
+            "texte": "How does Athens become, in the 5th century BC, a power that dominates other cities?",
+            "nom": "Through its war fleet and the Delian League, whose allies pay it tribute.",
+            "explication": "Athenian democracy rests on a maritime empire: its fleet rules the Aegean Sea and its allies pay for it.",
+            "pieges": [
+              {
+                "texte": "By conquering all of Europe over land.",
+                "pourquoi": "That's more the Roman model: Athens rules by sea, not over a vast territory."
+              },
+              {
+                "texte": "By refusing all war.",
+                "pourquoi": "Athens is a military power; democracy and rule over other cities go together."
+              }
+            ]
+          },
+          {
+            "texte": "In 27 BC, Octavian receives the title Augustus. What regime does he set up?",
+            "nom": "The principate: he gathers the powers while keeping the appearance of the Republic.",
+            "explication": "Augustus presents himself as the « first citizen », the princeps, but he holds the army and the main powers: it's the birth of the Roman Empire.",
+            "pieges": [
+              {
+                "texte": "A democracy like Athens's.",
+                "pourquoi": "The Roman people don't govern: real power is in Augustus's hands."
+              },
+              {
+                "texte": "A monarchy in which he proclaims himself king.",
+                "pourquoi": "The Romans rejected the title of king; Augustus takes care not to use it."
+              }
+            ]
+          },
+          {
+            "texte": "What part does Constantine play in the history of the Roman Empire?",
+            "nom": "He favours Christianity and founds Constantinople.",
+            "explication": "In 313, Christians gain freedom of worship; in 330, Constantine inaugurates Constantinople, a new capital in the east.",
+            "pieges": [
+              {
+                "texte": "He bans Christianity and persecutes Christians.",
+                "pourquoi": "The great persecutions take place before him; Constantine, on the contrary, supports the Church."
+              },
+              {
+                "texte": "He founds the city of Rome.",
+                "pourquoi": "Rome had existed for centuries; Constantine founds a new capital, Constantinople."
+              }
+            ]
+          },
+          {
+            "texte": "In the Middle Ages, which three great civilisations share the Mediterranean?",
+            "nom": "The Latin Christian West, the Byzantine Empire and the Muslim world.",
+            "explication": "These three civilisations are shaped by the Jewish, Christian and Muslim monotheisms, and are themselves diverse.",
+            "pieges": [
+              {
+                "texte": "The Greeks, the Romans and the Egyptians.",
+                "pourquoi": "Those are civilisations of Antiquity, not of the Middle Ages."
+              },
+              {
+                "texte": "France, England and Spain alone.",
+                "pourquoi": "These kingdoms are all part of the Christian West: Byzantium and the Muslim world are missing."
+              }
+            ]
+          },
+          {
+            "texte": "In 1146, at Vézelay, what does Bernard of Clairvaux do?",
+            "nom": "He preaches the Second Crusade.",
+            "explication": "At the Pope's call, Bernard of Clairvaux urges Christians to go on crusade; the expedition fails before Damascus in 1148.",
+            "pieges": [
+              {
+                "texte": "He signs a peace between Christians and Muslims.",
+                "pourquoi": "On the contrary, he calls for war against the Muslims in the East."
+              },
+              {
+                "texte": "He captures Jerusalem.",
+                "pourquoi": "Jerusalem is taken by the crusaders in 1099, during the First Crusade; Bernard is a preaching monk."
+              }
+            ]
+          },
+          {
+            "texte": "Why does Venice become a great power in the Middle Ages?",
+            "nom": "Thanks to its fleet and its trade between the East and Europe.",
+            "explication": "Its merchants bring spices and silks from the East across the Mediterranean and sell them on in Europe; its trading posts line the sea routes.",
+            "pieges": [
+              {
+                "texte": "Thanks to its great farming plains.",
+                "pourquoi": "Venice is built on a lagoon: its wealth comes from the sea and trade."
+              },
+              {
+                "texte": "Thanks to a land army that conquers Europe.",
+                "pourquoi": "Its power is maritime and commercial, not on land."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say the medieval Mediterranean is a space of both exchange and conflict?",
+            "nom": "Because goods, people and ideas travel across it, even in wartime.",
+            "explication": "Crusades and conflicts don't stop trade and scholarly exchanges between Christians, Muslims and Byzantines.",
+            "pieges": [
+              {
+                "texte": "Because the conflicts stopped all exchanges.",
+                "pourquoi": "People often imagine closed worlds; trade carries on during the crusades."
+              },
+              {
+                "texte": "Because there was never any war in the Mediterranean.",
+                "pourquoi": "The crusades and the wars between Byzantium and its neighbours show the opposite."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "renaissance-humanisme",
+      "titre": "Renaissance, humanisme et réformes",
+      "niveau": "2de",
+      "prerequis": [
+        "mediterranee-antique-medievale"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Ce chapitre vise à montrer comment l’effervescence intellectuelle et artistique de l’époque aboutit à la volonté de rompre avec le « Moyen Âge » et de faire retour à l’Antiquité."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Aux XVe et XVIe siècles, l'imprimerie diffuse les livres. Les humanistes relisent les textes antiques et placent l'être humain au centre. Les réformes protestante et catholique divisent la chrétienté occidentale.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : vers 1450, l'imprimerie de Gutenberg ; 1508, Michel-Ange à la chapelle Sixtine ; 1511, l'Éloge de la folie d'Érasme ; 1517, Luther ; 1545-1563, le concile de Trente.",
+        "exemple": "Exemple : un humaniste ne se contente pas d'une traduction latine de la Bible. Il veut lire le texte dans sa langue d'origine, le grec ou l'hébreu, pour retrouver son sens exact.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Vers 1450, à Mayence, Gutenberg met au point l'imprimerie à caractères mobiles. Quelle en est la conséquence principale ?",
+          "nom": "Les livres deviennent plus nombreux et moins chers : les idées circulent plus vite.",
+          "explication": "Un texte imprimé est reproduit à des centaines d'exemplaires identiques : les idées humanistes et réformées se diffusent dans toute l'Europe.",
+          "pieges": [
+            {
+              "texte": "Les livres disparaissent, remplacés par les affiches.",
+              "pourquoi": "C'est l'inverse : l'imprimerie multiplie les livres."
+            },
+            {
+              "texte": "Seuls les moines peuvent désormais copier des livres.",
+              "pourquoi": "Avant l'imprimerie, les livres étaient surtout copiés à la main ; l'imprimerie met fin à ce quasi-monopole."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que l'humanisme ?",
+          "nom": "Un mouvement qui relit les textes antiques et fait confiance aux capacités de l'être humain.",
+          "explication": "Les humanistes étudient le latin, le grec et l'hébreu pour revenir aux textes originaux et veulent former l'homme par l'éducation.",
+          "pieges": [
+            {
+              "texte": "Une aide humanitaire aux pauvres.",
+              "pourquoi": "Le mot fait penser à l'humanitaire ; à la Renaissance, il désigne l'étude des textes et une confiance dans l'homme."
+            },
+            {
+              "texte": "Le rejet de toute religion.",
+              "pourquoi": "La plupart des humanistes sont chrétiens ; ils veulent relire la Bible, pas la rejeter."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi appelle-t-on Érasme le « prince des humanistes » ?",
+          "nom": "Parce que ce savant, auteur de l'Éloge de la folie, est lu et admiré dans toute l'Europe.",
+          "explication": "Érasme publie l'Éloge de la folie en 1511 et une édition du Nouveau Testament en grec ; il correspond avec les savants de toute l'Europe.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il est le fils d'un roi.",
+              "pourquoi": "Ce titre est honorifique : il salue un savant, pas un membre d'une famille royale."
+            },
+            {
+              "texte": "Parce qu'il a inventé l'imprimerie.",
+              "pourquoi": "L'imprimerie est l'œuvre de Gutenberg ; Érasme s'en sert pour diffuser ses livres."
+            }
+          ]
+        },
+        {
+          "texte": "En 1508, que commence Michel-Ange à Rome ?",
+          "nom": "Les fresques de la voûte de la chapelle Sixtine.",
+          "explication": "Commandée par le pape Jules II, la voûte est achevée en 1512 : elle montre des corps humains inspirés de la sculpture antique.",
+          "pieges": [
+            {
+              "texte": "La construction du Colisée.",
+              "pourquoi": "Le Colisée est un monument antique, bâti au Ier siècle."
+            },
+            {
+              "texte": "La peinture de la Joconde.",
+              "pourquoi": "La Joconde est une œuvre de Léonard de Vinci."
+            }
+          ]
+        },
+        {
+          "texte": "En 1517, que fait Martin Luther ?",
+          "nom": "Il critique la vente des indulgences par l'Église dans 95 thèses.",
+          "explication": "Luther conteste l'idée qu'on puisse payer pour réduire ses péchés : c'est le début de la Réforme protestante.",
+          "pieges": [
+            {
+              "texte": "Il devient pape.",
+              "pourquoi": "Luther est un moine allemand qui s'oppose au pape ; il est excommunié en 1521."
+            },
+            {
+              "texte": "Il découvre l'Amérique.",
+              "pourquoi": "C'est Christophe Colomb qui atteint l'Amérique, en 1492."
+            }
+          ]
+        },
+        {
+          "texte": "Selon Luther, comment le chrétien obtient-il son salut ?",
+          "nom": "Par la foi seule, et non en achetant des indulgences.",
+          "explication": "Pour les protestants, le salut est un don de Dieu reçu par la foi ; la Bible, lue par chacun, est la seule autorité.",
+          "pieges": [
+            {
+              "texte": "En payant l'Église.",
+              "pourquoi": "C'est précisément ce que Luther dénonce avec la vente des indulgences."
+            },
+            {
+              "texte": "En obéissant toujours au pape.",
+              "pourquoi": "Luther rejette l'autorité du pape au profit de la Bible."
+            }
+          ]
+        },
+        {
+          "texte": "Que décide l'Église catholique au concile de Trente, de 1545 à 1563 ?",
+          "nom": "Elle réaffirme ses dogmes et réforme le clergé : c'est la Réforme catholique.",
+          "explication": "L'Église catholique répond aux protestants : elle maintient le rôle du pape et des sacrements et forme mieux ses prêtres.",
+          "pieges": [
+            {
+              "texte": "Elle adopte toutes les idées de Luther.",
+              "pourquoi": "Le concile rejette les thèses protestantes : la chrétienté occidentale reste divisée."
+            },
+            {
+              "texte": "Elle supprime la messe.",
+              "pourquoi": "Le concile confirme au contraire la messe et les sacrements."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les hommes de la Renaissance parlent-ils d'un « Moyen Âge » ?",
+          "nom": "Pour désigner une période entre l'Antiquité et leur temps, qu'ils jugent en déclin, et dont ils veulent se détacher.",
+          "explication": "Le mot exprime leur volonté de rompre avec les siècles précédents et de faire « renaître » l'Antiquité. Les historiens nuancent aujourd'hui ce jugement.",
+          "pieges": [
+            {
+              "texte": "Parce que c'était le nom officiel de l'époque, déjà au XIIe siècle.",
+              "pourquoi": "Personne au XIIe siècle ne se disait « du Moyen Âge » : le terme a été inventé après coup."
+            },
+            {
+              "texte": "Parce que cette période se situe au milieu du monde.",
+              "pourquoi": "« Moyen » se rapporte au temps, entre l'Antiquité et la Renaissance, pas à l'espace."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Renaissance, humanism and reformations",
+        "idee": "In the 15th and 16th centuries, printing spreads books. Humanists reread ancient texts and put human beings at the centre. The Protestant and Catholic reformations divide Western Christendom.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: around 1450, Gutenberg's printing press; 1508, Michelangelo at the Sistine Chapel; 1511, Erasmus's Praise of Folly; 1517, Luther; 1545-1563, the Council of Trent.",
+          "exemple": "Example: a humanist isn't satisfied with a Latin translation of the Bible. He wants to read the text in its original language, Greek or Hebrew, to find its exact meaning.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Around 1450, in Mainz, Gutenberg develops printing with movable type. What is its main consequence?",
+            "nom": "Books become more numerous and cheaper: ideas travel faster.",
+            "explication": "A printed text is reproduced in hundreds of identical copies: humanist and reformed ideas spread across Europe.",
+            "pieges": [
+              {
+                "texte": "Books disappear, replaced by posters.",
+                "pourquoi": "It's the opposite: printing multiplies books."
+              },
+              {
+                "texte": "Only monks may now copy books.",
+                "pourquoi": "Before printing, books were mostly copied by hand; printing ends that near-monopoly."
+              }
+            ]
+          },
+          {
+            "texte": "What is humanism?",
+            "nom": "A movement that rereads ancient texts and trusts in the abilities of human beings.",
+            "explication": "Humanists study Latin, Greek and Hebrew to go back to the original texts and want to shape people through education.",
+            "pieges": [
+              {
+                "texte": "Humanitarian aid for the poor.",
+                "pourquoi": "The word brings humanitarian aid to mind; in the Renaissance, it means the study of texts and trust in humankind."
+              },
+              {
+                "texte": "The rejection of all religion.",
+                "pourquoi": "Most humanists are Christians; they want to reread the Bible, not reject it."
+              }
+            ]
+          },
+          {
+            "texte": "Why is Erasmus called the « prince of humanists »?",
+            "nom": "Because this scholar, author of The Praise of Folly, is read and admired all over Europe.",
+            "explication": "Erasmus publishes The Praise of Folly in 1511 and an edition of the New Testament in Greek; he writes to scholars all over Europe.",
+            "pieges": [
+              {
+                "texte": "Because he is a king's son.",
+                "pourquoi": "The title is honorary: it praises a scholar, not a member of a royal family."
+              },
+              {
+                "texte": "Because he invented printing.",
+                "pourquoi": "Printing is Gutenberg's work; Erasmus uses it to spread his books."
+              }
+            ]
+          },
+          {
+            "texte": "In 1508, what does Michelangelo begin in Rome?",
+            "nom": "The frescoes on the ceiling of the Sistine Chapel.",
+            "explication": "Commissioned by Pope Julius II, the ceiling is finished in 1512: it shows human bodies inspired by ancient sculpture.",
+            "pieges": [
+              {
+                "texte": "Building the Colosseum.",
+                "pourquoi": "The Colosseum is an ancient monument, built in the 1st century."
+              },
+              {
+                "texte": "Painting the Mona Lisa.",
+                "pourquoi": "The Mona Lisa is a work by Leonardo da Vinci."
+              }
+            ]
+          },
+          {
+            "texte": "In 1517, what does Martin Luther do?",
+            "nom": "He criticises the Church's sale of indulgences in 95 theses.",
+            "explication": "Luther challenges the idea that you can pay to reduce your sins: it's the start of the Protestant Reformation.",
+            "pieges": [
+              {
+                "texte": "He becomes pope.",
+                "pourquoi": "Luther is a German monk who opposes the pope; he is excommunicated in 1521."
+              },
+              {
+                "texte": "He discovers America.",
+                "pourquoi": "It's Christopher Columbus who reaches America, in 1492."
+              }
+            ]
+          },
+          {
+            "texte": "According to Luther, how does a Christian gain salvation?",
+            "nom": "Through faith alone, not by buying indulgences.",
+            "explication": "For Protestants, salvation is a gift from God received through faith; the Bible, read by each person, is the only authority.",
+            "pieges": [
+              {
+                "texte": "By paying the Church.",
+                "pourquoi": "That's exactly what Luther denounces with the sale of indulgences."
+              },
+              {
+                "texte": "By always obeying the pope.",
+                "pourquoi": "Luther rejects the pope's authority in favour of the Bible."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Catholic Church decide at the Council of Trent, from 1545 to 1563?",
+            "nom": "It restates its doctrines and reforms the clergy: it's the Catholic Reformation.",
+            "explication": "The Catholic Church answers the Protestants: it keeps the role of the pope and the sacraments and trains its priests better.",
+            "pieges": [
+              {
+                "texte": "It adopts all of Luther's ideas.",
+                "pourquoi": "The council rejects the Protestant theses: Western Christendom stays divided."
+              },
+              {
+                "texte": "It abolishes the Mass.",
+                "pourquoi": "On the contrary, the council confirms the Mass and the sacraments."
+              }
+            ]
+          },
+          {
+            "texte": "Why do Renaissance people speak of a « Middle Age »?",
+            "nom": "To name a period between Antiquity and their own time, which they see as a decline and want to break away from.",
+            "explication": "The word expresses their wish to break with the previous centuries and make Antiquity « reborn ». Historians today qualify this judgement.",
+            "pieges": [
+              {
+                "texte": "Because it was the period's official name, already in the 12th century.",
+                "pourquoi": "Nobody in the 12th century said they lived « in the Middle Ages »: the term was invented afterwards."
+              },
+              {
+                "texte": "Because the period lies in the middle of the world.",
+                "pourquoi": "« Middle » refers to time, between Antiquity and the Renaissance, not to space."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "societes-environnements",
+      "titre": "Sociétés et environnements : risques, ressources, durabilité",
+      "niveau": "2de",
+      "prerequis": [
+        "france-outre-mer"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Les enjeux liés à un approvisionnement durable en ressources pèsent de manière croissante et différenciée."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un risque naît de la rencontre d'un aléa et d'une société vulnérable. Les ressources comme l'eau sont sous pression. Le développement durable cherche à répondre aux besoins d'aujourd'hui sans sacrifier ceux de demain.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Mots clés : aléa, vulnérabilité, risque ; ressource, conflit d'usage ; développement durable, transition.",
+        "exemple": "Exemple : un séisme dans un désert vide ne fait pas de victimes. Le même séisme sous une ville aux bâtiments fragiles est une catastrophe. L'aléa est le même ; c'est la vulnérabilité qui change le risque.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "En géographie, qu'est-ce qu'un risque ?",
+          "nom": "La rencontre possible d'un aléa et d'une société exposée et vulnérable.",
+          "explication": "Sans habitants ni biens exposés, un aléa (séisme, crue, cyclone) ne crée pas de risque pour une société.",
+          "pieges": [
+            {
+              "texte": "Un phénomène naturel dangereux, quel que soit le lieu.",
+              "pourquoi": "C'est la définition de l'aléa ; le risque suppose aussi des personnes et des biens exposés."
+            },
+            {
+              "texte": "Une catastrophe qui a déjà eu lieu.",
+              "pourquoi": "Le risque est une possibilité ; la catastrophe est sa réalisation."
+            }
+          ]
+        },
+        {
+          "texte": "Deux séismes de même puissance frappent un pays riche et un pays pauvre. Pourquoi le bilan est-il souvent plus lourd dans le pays pauvre ?",
+          "nom": "Parce que la vulnérabilité y est plus forte : constructions moins solides, secours moins préparés.",
+          "explication": "Normes de construction, alerte et secours réduisent la vulnérabilité : le même aléa fait alors moins de victimes.",
+          "pieges": [
+            {
+              "texte": "Parce que la terre y tremble plus fort.",
+              "pourquoi": "L'énoncé dit que les séismes ont la même puissance : c'est la vulnérabilité qui diffère."
+            },
+            {
+              "texte": "Parce que les pays riches ne connaissent pas de séismes.",
+              "pourquoi": "Le Japon, pays riche, connaît de nombreux séismes : il s'y est préparé."
+            }
+          ]
+        },
+        {
+          "texte": "Comment le rapport Brundtland, en 1987, définit-il le développement durable ?",
+          "nom": "Un développement qui répond aux besoins du présent sans compromettre ceux des générations futures.",
+          "explication": "Le développement durable cherche à concilier économie, société et environnement, sur le long terme.",
+          "pieges": [
+            {
+              "texte": "Un développement qui dure le plus longtemps possible, quoi qu'il en coûte.",
+              "pourquoi": "« Durable » ne veut pas dire seulement « long » : il s'agit de préserver les besoins des générations futures."
+            },
+            {
+              "texte": "L'arrêt de toute activité économique pour protéger la nature.",
+              "pourquoi": "Le développement durable veut concilier économie et environnement, pas supprimer l'économie."
+            }
+          ]
+        },
+        {
+          "texte": "Le programme parle de « transition ». Que désigne ce mot ?",
+          "nom": "Une phase de changements majeurs, qui peut évoluer de façons diverses selon les lieux.",
+          "explication": "La transition n'est pas le passage simple d'un état stable à un autre : elle n'a rien de linéaire.",
+          "pieges": [
+            {
+              "texte": "Un retour à la situation d'avant.",
+              "pourquoi": "Une transition est un changement, pas un retour en arrière."
+            },
+            {
+              "texte": "Un changement identique partout dans le monde.",
+              "pourquoi": "Les trajectoires sont diverses selon les contextes : il n'y a pas un modèle unique."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une région sèche, agriculteurs, villes et industries prélèvent la même eau. Comment appelle-t-on cette situation ?",
+          "nom": "Un conflit d'usage autour d'une ressource sous pression.",
+          "explication": "Quand une ressource est limitée, plusieurs usages entrent en concurrence : il faut alors des choix de gestion.",
+          "pieges": [
+            {
+              "texte": "Une ressource illimitée.",
+              "pourquoi": "Si l'eau était illimitée, il n'y aurait pas de concurrence entre les usages."
+            },
+            {
+              "texte": "Un aléa naturel.",
+              "pourquoi": "La sécheresse peut être un aléa, mais la concurrence entre usagers est un fait de société."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que l'Arctique est à la fois fragile et attractif ?",
+          "nom": "La fonte de la glace menace ses milieux, mais ouvre des routes maritimes et un accès à des ressources.",
+          "explication": "Le réchauffement fragilise la banquise et les écosystèmes ; il attire aussi navires et compagnies minières ou pétrolières.",
+          "pieges": [
+            {
+              "texte": "Parce que personne ne s'y intéresse.",
+              "pourquoi": "Plusieurs États et entreprises convoitent ses routes et ses ressources."
+            },
+            {
+              "texte": "Parce que la glace y augmente chaque année.",
+              "pourquoi": "La banquise arctique recule : c'est ce recul qui crée à la fois menaces et convoitises."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la forêt amazonienne est-elle un environnement fragile soumis à des pressions ?",
+          "nom": "Parce qu'elle recule sous l'effet de la déforestation pour l'agriculture et l'élevage.",
+          "explication": "La déforestation menace une biodiversité très riche et les peuples qui y vivent ; elle libère aussi du CO₂.",
+          "pieges": [
+            {
+              "texte": "Parce qu'elle est trop petite pour compter.",
+              "pourquoi": "C'est la plus grande forêt tropicale du monde."
+            },
+            {
+              "texte": "Parce qu'aucune activité humaine ne s'y déroule.",
+              "pourquoi": "Ce sont justement les activités humaines qui la font reculer."
+            }
+          ]
+        },
+        {
+          "texte": "Combien la France compte-t-elle de parcs nationaux pour protéger ses milieux ?",
+          "nom": "11 : 8 en métropole et 3 en outre-mer.",
+          "explication": "Les parcs nationaux protègent des milieux riches et fragiles, comme les Calanques, la Guyane ou les Cévennes. Le plus récent, le parc des Forêts, date de 2019.",
+          "pieges": [
+            {
+              "texte": "Aucun.",
+              "pourquoi": "La France protège ses milieux depuis le premier parc national, la Vanoise, créé en 1963."
+            },
+            {
+              "texte": "Un par département.",
+              "pourquoi": "Il y a bien moins de parcs nationaux que de départements : ils couvrent des espaces exceptionnels."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Societies and environments: risks, resources, sustainability",
+        "idee": "A risk arises when a hazard meets a vulnerable society. Resources such as water are under pressure. Sustainable development aims to meet today's needs without sacrificing tomorrow's.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Key words: hazard, vulnerability, risk; resource, competing uses; sustainable development, transition.",
+          "exemple": "Example: an earthquake in an empty desert causes no victims. The same earthquake under a city of fragile buildings is a disaster. The hazard is the same; it's the vulnerability that changes the risk.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In geography, what is a risk?",
+            "nom": "The possible meeting of a hazard and an exposed, vulnerable society.",
+            "explication": "With no people or property exposed, a hazard (earthquake, flood, cyclone) creates no risk for a society.",
+            "pieges": [
+              {
+                "texte": "A dangerous natural phenomenon, wherever it is.",
+                "pourquoi": "That's the definition of a hazard; a risk also needs people and property exposed."
+              },
+              {
+                "texte": "A disaster that has already happened.",
+                "pourquoi": "A risk is a possibility; the disaster is when it happens."
+              }
+            ]
+          },
+          {
+            "texte": "Two earthquakes of the same strength hit a rich country and a poor one. Why is the toll often heavier in the poor country?",
+            "nom": "Because vulnerability is greater there: less solid buildings, less prepared rescue services.",
+            "explication": "Building standards, warnings and rescue services reduce vulnerability: the same hazard then causes fewer victims.",
+            "pieges": [
+              {
+                "texte": "Because the ground shakes harder there.",
+                "pourquoi": "The question says the earthquakes have the same strength: it's the vulnerability that differs."
+              },
+              {
+                "texte": "Because rich countries have no earthquakes.",
+                "pourquoi": "Japan, a rich country, has many earthquakes: it has prepared for them."
+              }
+            ]
+          },
+          {
+            "texte": "How does the Brundtland Report, in 1987, define sustainable development?",
+            "nom": "Development that meets the needs of the present without compromising those of future generations.",
+            "explication": "Sustainable development aims to reconcile the economy, society and the environment, in the long term.",
+            "pieges": [
+              {
+                "texte": "Development that lasts as long as possible, whatever the cost.",
+                "pourquoi": "« Sustainable » doesn't just mean « long-lasting »: it's about protecting the needs of future generations."
+              },
+              {
+                "texte": "Stopping all economic activity to protect nature.",
+                "pourquoi": "Sustainable development aims to reconcile the economy and the environment, not to abolish the economy."
+              }
+            ]
+          },
+          {
+            "texte": "The curriculum speaks of « transition ». What does the word mean?",
+            "nom": "A phase of major change, which can unfold in different ways from place to place.",
+            "explication": "A transition isn't a simple move from one stable state to another: it is not linear at all.",
+            "pieges": [
+              {
+                "texte": "A return to how things were before.",
+                "pourquoi": "A transition is a change, not a step back."
+              },
+              {
+                "texte": "A change that is the same everywhere in the world.",
+                "pourquoi": "Paths differ with the context: there is no single model."
+              }
+            ]
+          },
+          {
+            "texte": "In a dry region, farmers, towns and industries draw on the same water. What do we call this situation?",
+            "nom": "Competing uses of a resource under pressure.",
+            "explication": "When a resource is limited, several uses compete: management choices are then needed.",
+            "pieges": [
+              {
+                "texte": "An unlimited resource.",
+                "pourquoi": "If water were unlimited, there would be no competition between uses."
+              },
+              {
+                "texte": "A natural hazard.",
+                "pourquoi": "Drought can be a hazard, but competition between users is a social fact."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say the Arctic is both fragile and attractive?",
+            "nom": "Melting ice threatens its environments, but opens sea routes and access to resources.",
+            "explication": "Warming weakens the sea ice and ecosystems; it also attracts ships and mining or oil companies.",
+            "pieges": [
+              {
+                "texte": "Because nobody is interested in it.",
+                "pourquoi": "Several states and companies covet its routes and its resources."
+              },
+              {
+                "texte": "Because the ice there grows every year.",
+                "pourquoi": "Arctic sea ice is shrinking: that shrinking creates both threats and ambitions."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Amazon rainforest a fragile environment under pressure?",
+            "nom": "Because it is shrinking due to deforestation for farming and cattle ranching.",
+            "explication": "Deforestation threatens very rich biodiversity and the peoples who live there; it also releases CO₂.",
+            "pieges": [
+              {
+                "texte": "Because it is too small to matter.",
+                "pourquoi": "It's the largest tropical forest in the world."
+              },
+              {
+                "texte": "Because no human activity takes place there.",
+                "pourquoi": "It's precisely human activity that makes it shrink."
+              }
+            ]
+          },
+          {
+            "texte": "How many national parks does France have to protect its environments?",
+            "nom": "11: 8 in mainland France and 3 overseas.",
+            "explication": "National parks protect rich, fragile environments, such as the Calanques, French Guiana or the Cévennes. The newest, the Forêts national park, dates from 2019.",
+            "pieges": [
+              {
+                "texte": "None.",
+                "pourquoi": "France has protected its environments since its first national park, the Vanoise, created in 1963."
+              },
+              {
+                "texte": "One per department.",
+                "pourquoi": "There are far fewer national parks than departments: they cover exceptional areas."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobilites-migrations",
+      "titre": "Des mobilités généralisées : migrations et tourisme",
+      "niveau": "2de",
+      "prerequis": [
+        "continents-oceans"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Le monde est profondément transformé par les mobilités."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "On se déplace pour fuir un danger, travailler, étudier ou visiter. Les migrations internationales et le tourisme transforment les lieux de départ comme les lieux d'arrivée.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Mots clés : migrant, réfugié, flux, pôle d'attraction, distance-temps. Repère : environ 281 millions de migrants internationaux, soit environ 3,6 % de l'humanité.",
+        "exemple": "Exemple : Paris et Lyon sont à environ 400 km à vol d'oiseau, mais à environ 2 heures en TGV. La distance-temps compte souvent plus que les kilomètres pour choisir de se déplacer.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Selon les estimations de l'ONU, combien de personnes vivent dans un autre pays que leur pays de naissance ?",
+          "nom": "Environ 281 millions, soit environ 3,6 % de la population mondiale.",
+          "explication": "Les migrants internationaux sont nombreux, mais la très grande majorité des humains vit dans son pays de naissance.",
+          "pieges": [
+            {
+              "texte": "La moitié de la population mondiale.",
+              "pourquoi": "On surestime souvent les migrations : moins de 4 humains sur 100 sont des migrants internationaux."
+            },
+            {
+              "texte": "Quelques milliers seulement.",
+              "pourquoi": "Il s'agit de centaines de millions de personnes : un phénomène mondial."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles raisons peuvent pousser une personne à migrer ?",
+          "nom": "Fuir un danger, travailler, étudier, rejoindre sa famille, vivre mieux.",
+          "explication": "Les mobilités ont des motifs très variés ; souvent, plusieurs se combinent.",
+          "pieges": [
+            {
+              "texte": "Uniquement la recherche d'un travail.",
+              "pourquoi": "Le travail compte beaucoup, mais on migre aussi pour étudier, rejoindre sa famille ou fuir une guerre."
+            },
+            {
+              "texte": "Uniquement le tourisme.",
+              "pourquoi": "Le touriste revient chez lui : il n'est pas un migrant."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'un réfugié ?",
+          "nom": "Une personne qui a fui son pays par crainte de persécutions et qui reçoit une protection internationale.",
+          "explication": "Le statut de réfugié est défini par la convention de Genève de 1951 : c'est une migration forcée.",
+          "pieges": [
+            {
+              "texte": "N'importe quel touriste étranger.",
+              "pourquoi": "Le touriste se déplace par choix et pour un temps court ; le réfugié a été contraint de fuir."
+            },
+            {
+              "texte": "Une personne qui part étudier à l'étranger.",
+              "pourquoi": "L'étudiant choisit de partir ; le réfugié fuit un danger."
+            }
+          ]
+        },
+        {
+          "texte": "La plupart des migrants vont-ils des pays pauvres vers l'Europe ?",
+          "nom": "Non : une grande part des migrations se fait entre pays du Sud, souvent voisins.",
+          "explication": "Beaucoup de migrants s'installent dans un pays proche du leur, dans la même région du monde.",
+          "pieges": [
+            {
+              "texte": "Oui, presque tous viennent en Europe.",
+              "pourquoi": "C'est une idée répandue par la médiatisation ; en réalité, beaucoup de migrations restent régionales."
+            },
+            {
+              "texte": "Oui, car aucun pays du Sud n'accueille de migrants.",
+              "pourquoi": "De nombreux pays du Sud accueillent des migrants et des réfugiés, souvent en grand nombre."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la mer Méditerranée est-elle un bassin migratoire ?",
+          "nom": "Parce qu'elle sépare des pays aux niveaux de vie très différents et que de nombreux migrants tentent de la traverser.",
+          "explication": "Entre l'Afrique, le Proche-Orient et l'Europe, les traversées sont nombreuses et souvent dangereuses ; les États mènent des politiques de contrôle.",
+          "pieges": [
+            {
+              "texte": "Parce que personne ne la traverse.",
+              "pourquoi": "Elle est au contraire traversée chaque année par de nombreux migrants et touristes."
+            },
+            {
+              "texte": "Parce qu'elle n'a aucune frontière.",
+              "pourquoi": "Elle est bordée de nombreux États, dont les frontières sont contrôlées."
+            }
+          ]
+        },
+        {
+          "texte": "Plus de 1,4 milliard d'arrivées de touristes internationaux ont été comptées en 2024. Quel pays est la première destination mondiale ?",
+          "nom": "La France, avec environ 100 millions d'arrivées.",
+          "explication": "La France attire par son patrimoine, ses paysages, ses littoraux et ses montagnes ; l'Espagne et les États-Unis la suivent.",
+          "pieges": [
+            {
+              "texte": "La Chine.",
+              "pourquoi": "La Chine est un grand pays de départ de touristes, mais elle n'est pas la première destination."
+            },
+            {
+              "texte": "Dubaï.",
+              "pourquoi": "Dubaï est un pôle touristique important, mais c'est une ville, loin des chiffres de la France."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que Dubaï est à la fois un pôle touristique et un pôle migratoire ?",
+          "nom": "Parce qu'elle attire des touristes du monde entier et de très nombreux travailleurs étrangers.",
+          "explication": "Une grande majorité de ses habitants sont étrangers, venus notamment d'Asie du Sud pour travailler ; ses hôtels et son aéroport accueillent des millions de visiteurs.",
+          "pieges": [
+            {
+              "texte": "Parce que ses habitants partent tous à l'étranger.",
+              "pourquoi": "C'est l'inverse : Dubaï attire des populations venues d'ailleurs."
+            },
+            {
+              "texte": "Parce qu'elle est fermée aux étrangers.",
+              "pourquoi": "Son économie repose justement sur l'accueil d'étrangers, travailleurs et touristes."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la distance-temps est-elle souvent plus utile que la distance en kilomètres pour comprendre les mobilités ?",
+          "nom": "Parce que la vitesse des transports rapproche certains lieux et en éloigne d'autres.",
+          "explication": "Une ville bien desservie par le TGV ou l'avion est « proche » de Paris ; un village isolé peut être plus loin en temps, même s'il est plus près en kilomètres.",
+          "pieges": [
+            {
+              "texte": "Parce que les kilomètres changent selon les années.",
+              "pourquoi": "La distance en kilomètres ne change pas ; c'est le temps de trajet qui varie avec les transports."
+            },
+            {
+              "texte": "Parce que tout le monde se déplace à pied.",
+              "pourquoi": "C'est justement la diversité des modes de transport qui rend la distance-temps utile."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Widespread mobility: migration and tourism",
+        "idee": "People move to flee danger, work, study or visit. International migration and tourism transform both the places people leave and the places they arrive in.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Key words: migrant, refugee, flow, centre of attraction, time-distance. Landmark: about 281 million international migrants, about 3.6 % of humanity.",
+          "exemple": "Example: Paris and Lyon are about 400 km apart as the crow flies, but about 2 hours apart by TGV. Time-distance often matters more than kilometres in deciding to travel.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "According to UN estimates, how many people live in a country other than the one they were born in?",
+            "nom": "About 281 million, that is about 3.6 % of the world's population.",
+            "explication": "International migrants are numerous, but the vast majority of people live in their country of birth.",
+            "pieges": [
+              {
+                "texte": "Half the world's population.",
+                "pourquoi": "Migration is often overestimated: fewer than 4 people in 100 are international migrants."
+              },
+              {
+                "texte": "Only a few thousand.",
+                "pourquoi": "It's hundreds of millions of people: a worldwide phenomenon."
+              }
+            ]
+          },
+          {
+            "texte": "What reasons can lead a person to migrate?",
+            "nom": "Fleeing danger, working, studying, joining family, living better.",
+            "explication": "People move for very varied reasons; often, several combine.",
+            "pieges": [
+              {
+                "texte": "Only looking for work.",
+                "pourquoi": "Work matters a lot, but people also migrate to study, join family or flee a war."
+              },
+              {
+                "texte": "Only tourism.",
+                "pourquoi": "A tourist goes back home: they are not a migrant."
+              }
+            ]
+          },
+          {
+            "texte": "What is a refugee?",
+            "nom": "A person who has fled their country for fear of persecution and receives international protection.",
+            "explication": "Refugee status is defined by the 1951 Geneva Convention: it's forced migration.",
+            "pieges": [
+              {
+                "texte": "Any foreign tourist.",
+                "pourquoi": "A tourist travels by choice and for a short time; a refugee was forced to flee."
+              },
+              {
+                "texte": "Someone who goes abroad to study.",
+                "pourquoi": "A student chooses to leave; a refugee flees danger."
+              }
+            ]
+          },
+          {
+            "texte": "Do most migrants go from poor countries to Europe?",
+            "nom": "No: a large share of migration happens between countries of the South, often neighbours.",
+            "explication": "Many migrants settle in a country close to their own, in the same region of the world.",
+            "pieges": [
+              {
+                "texte": "Yes, almost all of them come to Europe.",
+                "pourquoi": "That's a widespread idea fed by the media; in fact, much migration stays regional."
+              },
+              {
+                "texte": "Yes, because no country of the South takes in migrants.",
+                "pourquoi": "Many countries of the South take in migrants and refugees, often in large numbers."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Mediterranean Sea a migration basin?",
+            "nom": "Because it separates countries with very different living standards and many migrants try to cross it.",
+            "explication": "Between Africa, the Middle East and Europe, crossings are frequent and often dangerous; states run border-control policies.",
+            "pieges": [
+              {
+                "texte": "Because nobody crosses it.",
+                "pourquoi": "On the contrary, it is crossed every year by many migrants and tourists."
+              },
+              {
+                "texte": "Because it has no borders.",
+                "pourquoi": "It is surrounded by many states, whose borders are controlled."
+              }
+            ]
+          },
+          {
+            "texte": "More than 1.4 billion international tourist arrivals were counted in 2024. Which country is the world's top destination?",
+            "nom": "France, with about 100 million arrivals.",
+            "explication": "France attracts visitors with its heritage, landscapes, coasts and mountains; Spain and the United States follow.",
+            "pieges": [
+              {
+                "texte": "China.",
+                "pourquoi": "China is a major source of tourists, but it isn't the top destination."
+              },
+              {
+                "texte": "Dubai.",
+                "pourquoi": "Dubai is an important tourist hub, but it's a city, far from France's figures."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say Dubai is both a tourist hub and a migration hub?",
+            "nom": "Because it attracts tourists from all over the world and a great many foreign workers.",
+            "explication": "A large majority of its inhabitants are foreigners, many from South Asia who came to work; its hotels and airport welcome millions of visitors.",
+            "pieges": [
+              {
+                "texte": "Because all its inhabitants move abroad.",
+                "pourquoi": "It's the opposite: Dubai attracts people from elsewhere."
+              },
+              {
+                "texte": "Because it is closed to foreigners.",
+                "pourquoi": "Its economy relies precisely on welcoming foreigners, workers and tourists."
+              }
+            ]
+          },
+          {
+            "texte": "Why is time-distance often more useful than distance in kilometres for understanding mobility?",
+            "nom": "Because the speed of transport brings some places closer and pushes others further away.",
+            "explication": "A city well served by TGV or plane is « close » to Paris; an isolated village can be further in time, even if it is nearer in kilometres.",
+            "pieges": [
+              {
+                "texte": "Because kilometres change from year to year.",
+                "pourquoi": "Distance in kilometres doesn't change; it's the travel time that varies with transport."
+              },
+              {
+                "texte": "Because everyone travels on foot.",
+                "pourquoi": "It's precisely the variety of means of transport that makes time-distance useful."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "europe-revolutions",
+      "titre": "L'Europe face aux révolutions (1789-1848)",
+      "niveau": "1re",
+      "prerequis": [
+        "revolution-empire"
+      ],
+      "programme": {
+        "source": "hg1re",
+        "texte": "Ce chapitre vise à montrer l’ampleur de la rupture révolutionnaire avec « l’Ancien Régime » et les tentatives de reconstruction d’un ordre politique stable."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La Révolution fait de la nation la source du pouvoir. Elle se radicalise dans la guerre et la Terreur. Napoléon impose un ordre autoritaire, diffuse le Code civil, puis se heurte aux peuples et aux monarchies d'Europe.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1789, souveraineté nationale ; janvier 1793, exécution de Louis XVI ; 1793-1794, la Terreur ; 1804, Code civil ; 1808, soulèvement de Madrid ; 1814-1815, congrès de Vienne ; 1848, « printemps des peuples ».",
+        "exemple": "Exemple : l'article 3 de la Déclaration de 1789 dit que la souveraineté réside dans la Nation. Le roi ne gouverne donc plus par la volonté de Dieu, mais au nom de la nation.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Selon la Déclaration des droits de l'homme et du citoyen de 1789, où réside le principe de toute souveraineté ?",
+          "nom": "Dans la Nation.",
+          "explication": "C'est la souveraineté nationale : le pouvoir vient de la nation et non plus du roi de droit divin.",
+          "pieges": [
+            {
+              "texte": "Dans la personne du roi, choisi par Dieu.",
+              "pourquoi": "C'est le principe de la monarchie absolue de droit divin, que la Révolution rejette."
+            },
+            {
+              "texte": "Dans l'Église.",
+              "pourquoi": "La Déclaration ne fonde pas le pouvoir sur la religion, mais sur la nation."
+            }
+          ]
+        },
+        {
+          "texte": "Qui sont les sans-culottes ?",
+          "nom": "Des révolutionnaires parisiens issus du peuple : artisans, boutiquiers, ouvriers.",
+          "explication": "Ils portent le pantalon et non la culotte des nobles ; ils pèsent sur les journées révolutionnaires et réclament des mesures radicales.",
+          "pieges": [
+            {
+              "texte": "Des nobles émigrés.",
+              "pourquoi": "Les émigrés ont fui la Révolution ; les sans-culottes la soutiennent et la poussent plus loin."
+            },
+            {
+              "texte": "Les soldats de la Grande Armée de Napoléon.",
+              "pourquoi": "La Grande Armée date de l'Empire ; les sans-culottes agissent surtout en 1792-1794."
+            }
+          ]
+        },
+        {
+          "texte": "De décembre 1792 à janvier 1793, qui juge Louis XVI ?",
+          "nom": "La Convention, l'assemblée élue de la République.",
+          "explication": "Jugé coupable de trahison par les représentants de la nation, Louis XVI est guillotiné le 21 janvier 1793.",
+          "pieges": [
+            {
+              "texte": "Le pape.",
+              "pourquoi": "Le pape n'a aucun pouvoir de justice en France : ce sont les représentants de la nation qui jugent le roi."
+            },
+            {
+              "texte": "Napoléon Bonaparte.",
+              "pourquoi": "Bonaparte n'est alors qu'un jeune officier ; il prend le pouvoir en 1799."
+            }
+          ]
+        },
+        {
+          "texte": "Madame Roland, figure de la Révolution, anime un salon politique proche des Girondins. Que lui arrive-t-il en novembre 1793 ?",
+          "nom": "Elle est guillotinée pendant la Terreur.",
+          "explication": "Les Girondins sont éliminés par les Montagnards en 1793 ; Madame Roland, comme d'autres, est exécutée sous la Terreur.",
+          "pieges": [
+            {
+              "texte": "Elle devient la première femme élue députée.",
+              "pourquoi": "Les femmes n'ont alors ni le droit de vote ni celui d'être élues ; c'est en 1945 que des femmes entrent à l'Assemblée."
+            },
+            {
+              "texte": "Elle devient reine de France.",
+              "pourquoi": "La royauté est abolie depuis 1792 : il n'y a plus de reine."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la Terreur est-elle mise en place en 1793-1794 ?",
+          "nom": "Pour défendre la République menacée par la guerre extérieure et les révoltes intérieures.",
+          "explication": "Le gouvernement révolutionnaire suspend les libertés et fait exécuter des milliers de suspects ; la Terreur prend fin avec la chute de Robespierre, en juillet 1794.",
+          "pieges": [
+            {
+              "texte": "Pour rétablir la monarchie.",
+              "pourquoi": "Les partisans de la Terreur sont au contraire des républicains qui combattent les royalistes."
+            },
+            {
+              "texte": "Parce que la France était en paix et voulait conquérir l'Europe.",
+              "pourquoi": "La France est alors en guerre contre une coalition de monarchies européennes et menacée d'invasion."
+            }
+          ]
+        },
+        {
+          "texte": "En 1804, le Code civil est promulgué. Quel principe de la Révolution conserve-t-il ?",
+          "nom": "L'égalité devant la loi.",
+          "explication": "Le Code civil abolit les privilèges de naissance dans le droit ; il est appliqué dans les pays conquis et connaît un rayonnement européen.",
+          "pieges": [
+            {
+              "texte": "L'égalité entre hommes et femmes.",
+              "pourquoi": "Le Code civil place au contraire la femme mariée sous l'autorité de son mari."
+            },
+            {
+              "texte": "Le retour des privilèges de la noblesse.",
+              "pourquoi": "Le Code civil confirme l'abolition des privilèges de 1789."
+            }
+          ]
+        },
+        {
+          "texte": "En 1808, les habitants de Madrid se soulèvent contre les troupes françaises. Que montre cette révolte ?",
+          "nom": "L'éveil des sentiments nationaux contre la domination napoléonienne.",
+          "explication": "En Espagne comme ailleurs, la domination de Napoléon fait naître des résistances nationales qui fragilisent l'Empire.",
+          "pieges": [
+            {
+              "texte": "L'adhésion des Espagnols à l'Empire.",
+              "pourquoi": "Une révolte armée montre au contraire un rejet de l'occupant."
+            },
+            {
+              "texte": "Le début de la Révolution française.",
+              "pourquoi": "La Révolution commence en France en 1789 ; en 1808, c'est l'Empire qui est contesté."
+            }
+          ]
+        },
+        {
+          "texte": "Que cherche à faire le congrès de Vienne, en 1814-1815 ?",
+          "nom": "Rétablir l'ordre monarchique en Europe et redessiner ses frontières après Napoléon.",
+          "explication": "Les monarchies victorieuses restaurent les rois. Mais les idées de nation et de liberté demeurent et ressurgissent dans les révolutions de 1830 et de 1848.",
+          "pieges": [
+            {
+              "texte": "Proclamer la République dans toute l'Europe.",
+              "pourquoi": "Le congrès réunit des monarchies qui veulent au contraire effacer la Révolution."
+            },
+            {
+              "texte": "Couronner Napoléon empereur d'Europe.",
+              "pourquoi": "Le congrès se réunit après la défaite de Napoléon, pour organiser l'Europe sans lui."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Europe in the age of revolutions (1789-1848)",
+        "idee": "The Revolution makes the nation the source of power. It becomes more radical through war and the Terror. Napoleon imposes an authoritarian order, spreads the Civil Code, then runs up against Europe's peoples and monarchies.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1789, national sovereignty; January 1793, execution of Louis XVI; 1793-1794, the Terror; 1804, Civil Code; 1808, Madrid uprising; 1814-1815, Congress of Vienna; 1848, « Springtime of Peoples ».",
+          "exemple": "Example: Article 3 of the 1789 Declaration says sovereignty lies in the Nation. So the king no longer rules by the will of God, but in the name of the nation.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "According to the 1789 Declaration of the Rights of Man and of the Citizen, where does the principle of all sovereignty lie?",
+            "nom": "In the Nation.",
+            "explication": "That's national sovereignty: power comes from the nation, no longer from a king ruling by divine right.",
+            "pieges": [
+              {
+                "texte": "In the person of the king, chosen by God.",
+                "pourquoi": "That's the principle of absolute monarchy by divine right, which the Revolution rejects."
+              },
+              {
+                "texte": "In the Church.",
+                "pourquoi": "The Declaration doesn't base power on religion, but on the nation."
+              }
+            ]
+          },
+          {
+            "texte": "Who are the sans-culottes?",
+            "nom": "Parisian revolutionaries from the common people: craftsmen, shopkeepers, workers.",
+            "explication": "They wear trousers rather than the nobles' breeches; they weigh on the revolutionary days and call for radical measures.",
+            "pieges": [
+              {
+                "texte": "Émigré nobles.",
+                "pourquoi": "The émigrés fled the Revolution; the sans-culottes support it and push it further."
+              },
+              {
+                "texte": "The soldiers of Napoleon's Grande Armée.",
+                "pourquoi": "The Grande Armée dates from the Empire; the sans-culottes are active mainly in 1792-1794."
+              }
+            ]
+          },
+          {
+            "texte": "From December 1792 to January 1793, who tries Louis XVI?",
+            "nom": "The Convention, the Republic's elected assembly.",
+            "explication": "Found guilty of treason by the nation's representatives, Louis XVI is guillotined on 21 January 1793.",
+            "pieges": [
+              {
+                "texte": "The pope.",
+                "pourquoi": "The pope has no judicial power in France: it's the nation's representatives who try the king."
+              },
+              {
+                "texte": "Napoleon Bonaparte.",
+                "pourquoi": "Bonaparte is then only a young officer; he takes power in 1799."
+              }
+            ]
+          },
+          {
+            "texte": "Madame Roland, a figure of the Revolution, hosts a political salon close to the Girondins. What happens to her in November 1793?",
+            "nom": "She is guillotined during the Terror.",
+            "explication": "The Girondins are eliminated by the Montagnards in 1793; Madame Roland, like others, is executed under the Terror.",
+            "pieges": [
+              {
+                "texte": "She becomes the first woman elected as a deputy.",
+                "pourquoi": "Women then have neither the right to vote nor to be elected; women first enter the Assembly in 1945."
+              },
+              {
+                "texte": "She becomes queen of France.",
+                "pourquoi": "The monarchy was abolished in 1792: there is no queen any more."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Terror set up in 1793-1794?",
+            "nom": "To defend the Republic, threatened by foreign war and revolts at home.",
+            "explication": "The revolutionary government suspends freedoms and has thousands of suspects executed; the Terror ends with Robespierre's fall, in July 1794.",
+            "pieges": [
+              {
+                "texte": "To bring back the monarchy.",
+                "pourquoi": "Supporters of the Terror are, on the contrary, republicans fighting the royalists."
+              },
+              {
+                "texte": "Because France was at peace and wanted to conquer Europe.",
+                "pourquoi": "France is then at war with a coalition of European monarchies and under threat of invasion."
+              }
+            ]
+          },
+          {
+            "texte": "In 1804, the Civil Code is enacted. Which principle of the Revolution does it keep?",
+            "nom": "Equality before the law.",
+            "explication": "The Civil Code removes privileges of birth from the law; it is applied in conquered countries and has a Europe-wide influence.",
+            "pieges": [
+              {
+                "texte": "Equality between men and women.",
+                "pourquoi": "On the contrary, the Civil Code places a married woman under her husband's authority."
+              },
+              {
+                "texte": "The return of the nobility's privileges.",
+                "pourquoi": "The Civil Code confirms the abolition of privileges of 1789."
+              }
+            ]
+          },
+          {
+            "texte": "In 1808, the people of Madrid rise up against French troops. What does this revolt show?",
+            "nom": "The awakening of national feeling against Napoleonic rule.",
+            "explication": "In Spain as elsewhere, Napoleon's rule gives rise to national resistance that weakens the Empire.",
+            "pieges": [
+              {
+                "texte": "The Spanish people's support for the Empire.",
+                "pourquoi": "An armed revolt shows, on the contrary, a rejection of the occupier."
+              },
+              {
+                "texte": "The start of the French Revolution.",
+                "pourquoi": "The Revolution starts in France in 1789; in 1808, it's the Empire that is challenged."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Congress of Vienna, in 1814-1815, seek to do?",
+            "nom": "Restore the monarchical order in Europe and redraw its borders after Napoleon.",
+            "explication": "The victorious monarchies restore the kings. But the ideas of nation and liberty remain and resurface in the revolutions of 1830 and 1848.",
+            "pieges": [
+              {
+                "texte": "Proclaim the Republic all over Europe.",
+                "pourquoi": "The congress brings together monarchies that want, on the contrary, to erase the Revolution."
+              },
+              {
+                "texte": "Crown Napoleon emperor of Europe.",
+                "pourquoi": "The congress meets after Napoleon's defeat, to organise Europe without him."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "grande-guerre-lycee",
+      "titre": "La Première Guerre mondiale : le « suicide de l'Europe »",
+      "niveau": "1re",
+      "prerequis": [
+        "guerres-mondiales",
+        "europe-revolutions"
+      ],
+      "programme": {
+        "source": "hg1re",
+        "texte": "La Première Guerre mondiale : le « suicide de l’Europe » et la fin des empires européens"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La guerre de mouvement échoue en 1914 ; commence une longue guerre de position. Les sociétés entières sont mobilisées. La paix de 1919-1923 fait disparaître les empires et cherche un ordre fondé sur les nations.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : août-septembre 1914, Tannenberg et la Marne ; 1915, les Dardanelles ; 1916, la Somme ; 1917, grèves ; mars 1918, dernière offensive allemande ; 1919-1923, traités de paix ; 1920, le Soldat inconnu ; 1922, le passeport Nansen.",
+        "exemple": "Exemple : en septembre 1914, la bataille de la Marne arrête l'armée allemande qui marchait sur Paris. Faute de victoire rapide, chaque camp s'enterre dans des tranchées : la guerre de mouvement devient une guerre de position.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Que se passe-t-il à Tannenberg, en août 1914 ?",
+          "nom": "L'armée allemande bat l'armée russe en Prusse orientale.",
+          "explication": "Sur le front de l'Est, la défaite russe de Tannenberg montre que la guerre ne se joue pas seulement à l'Ouest.",
+          "pieges": [
+            {
+              "texte": "Les Français arrêtent les Allemands devant Paris.",
+              "pourquoi": "C'est la bataille de la Marne, en septembre 1914, sur le front de l'Ouest."
+            },
+            {
+              "texte": "L'armistice est signé.",
+              "pourquoi": "L'armistice de la Première Guerre mondiale est signé le 11 novembre 1918."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi, après 1914, la guerre devient-elle une guerre de position, dans les tranchées ?",
+          "nom": "Parce que la défense, avec mitrailleuses, barbelés et artillerie, l'emporte sur l'attaque.",
+          "explication": "Les offensives se brisent sur des lignes bien défendues : les fronts se figent pour des années, malgré des pertes énormes.",
+          "pieges": [
+            {
+              "texte": "Parce que les soldats refusaient de combattre.",
+              "pourquoi": "Les refus restent limités ; c'est la puissance de feu défensive qui bloque le front."
+            },
+            {
+              "texte": "Parce que les armées manquaient de soldats.",
+              "pourquoi": "Les armées comptent des millions d'hommes ; c'est la supériorité de la défense qui fige le front."
+            }
+          ]
+        },
+        {
+          "texte": "En 1915, que tentent les Britanniques et les Français aux Dardanelles ?",
+          "nom": "Forcer le détroit pour atteindre Constantinople et frapper l'Empire ottoman, sans succès.",
+          "explication": "L'offensive des Dardanelles, avec des soldats venus notamment d'Australie et de Nouvelle-Zélande, échoue face aux Ottomans.",
+          "pieges": [
+            {
+              "texte": "Débarquer en Normandie.",
+              "pourquoi": "Le débarquement de Normandie a lieu le 6 juin 1944, pendant la Seconde Guerre mondiale."
+            },
+            {
+              "texte": "Défendre Paris contre les Allemands.",
+              "pourquoi": "Les Dardanelles sont un détroit de l'Empire ottoman, loin de Paris."
+            }
+          ]
+        },
+        {
+          "texte": "Que montre la bataille de la Somme, en 1916 ?",
+          "nom": "Une immense offensive franco-britannique qui coûte des centaines de milliers de victimes pour quelques kilomètres.",
+          "explication": "Le 1er juillet 1916, premier jour de l'offensive, est le jour le plus meurtrier de l'histoire de l'armée britannique.",
+          "pieges": [
+            {
+              "texte": "Une victoire rapide qui termine la guerre.",
+              "pourquoi": "La guerre dure encore plus de deux ans après la Somme."
+            },
+            {
+              "texte": "Une bataille sans victimes.",
+              "pourquoi": "C'est au contraire l'une des batailles les plus meurtrières de la guerre."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi parle-t-on de guerre mondiale, et pas seulement européenne ?",
+          "nom": "Parce que les empires coloniaux et d'autres continents y participent.",
+          "explication": "Britanniques et Français mobilisent des soldats et des travailleurs de leurs colonies ; le Japon et les États-Unis entrent aussi en guerre.",
+          "pieges": [
+            {
+              "texte": "Parce que tous les pays du monde y ont combattu.",
+              "pourquoi": "Certains pays sont restés neutres, comme la Suisse ou l'Espagne."
+            },
+            {
+              "texte": "Parce que les combats ont eu lieu sur tous les continents à égalité.",
+              "pourquoi": "L'Europe est le théâtre principal ; la guerre est mondiale par ses acteurs et ses enjeux."
+            }
+          ]
+        },
+        {
+          "texte": "Pendant la guerre, que fait Marie Curie ?",
+          "nom": "Elle organise des voitures de radiologie pour soigner les blessés près du front.",
+          "explication": "Les rayons X permettent de repérer balles et éclats d'obus : la science participe à la guerre.",
+          "pieges": [
+            {
+              "texte": "Elle invente le gaz de combat.",
+              "pourquoi": "Marie Curie met la science au service des soins aux blessés, pas des armes."
+            },
+            {
+              "texte": "Elle commande une armée.",
+              "pourquoi": "C'est une physicienne et chimiste ; son rôle est médical."
+            }
+          ]
+        },
+        {
+          "texte": "Le 24 mai 1915, la France, le Royaume-Uni et la Russie dénoncent des « crimes contre l'humanité et la civilisation ». Contre qui ces crimes sont-ils commis ?",
+          "nom": "Contre les Arméniens de l'Empire ottoman.",
+          "explication": "Les Arméniens de l'Empire ottoman sont victimes d'un génocide ; cette déclaration est l'une des premières dénonciations internationales.",
+          "pieges": [
+            {
+              "texte": "Contre les soldats allemands prisonniers.",
+              "pourquoi": "La déclaration vise les massacres de civils arméniens dans l'Empire ottoman."
+            },
+            {
+              "texte": "Contre les Juifs d'Europe.",
+              "pourquoi": "Le génocide des Juifs, la Shoah, a lieu pendant la Seconde Guerre mondiale."
+            }
+          ]
+        },
+        {
+          "texte": "En 1917, des ouvrières et des ouvriers font grève en France. Que montre ce mouvement ?",
+          "nom": "La lassitude de l'arrière face à la guerre longue, la vie chère et les cadences.",
+          "explication": "Les femmes, très présentes dans les usines, réclament de meilleurs salaires : les civils sont acteurs autant que victimes de la guerre.",
+          "pieges": [
+            {
+              "texte": "Que la guerre est terminée.",
+              "pourquoi": "En 1917, la guerre continue ; les grèves expriment la fatigue des civils."
+            },
+            {
+              "texte": "Que les femmes ne travaillent pas pendant la guerre.",
+              "pourquoi": "Au contraire, les femmes remplacent les hommes mobilisés dans les usines et les champs."
+            }
+          ]
+        },
+        {
+          "texte": "Quels principes le président américain Wilson défend-il pour la paix, en 1918 ?",
+          "nom": "Le droit des peuples à disposer d'eux-mêmes et une Société des Nations.",
+          "explication": "Ses « Quatorze points » inspirent la création de la Société des Nations ; les traités de 1919-1923 démantèlent les empires multinationaux.",
+          "pieges": [
+            {
+              "texte": "La reconstitution des grands empires d'avant 1914.",
+              "pourquoi": "Wilson veut au contraire un ordre fondé sur les nations ; les empires austro-hongrois et ottoman disparaissent."
+            },
+            {
+              "texte": "L'interdiction de toute alliance entre États.",
+              "pourquoi": "Wilson propose une organisation commune des États, la Société des Nations."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi inhume-t-on, en 1921, un Soldat inconnu sous l'Arc de Triomphe ?",
+          "nom": "Pour honorer tous les soldats morts, en particulier ceux qui n'ont jamais été identifiés.",
+          "explication": "Choisi à Verdun en novembre 1920, il est inhumé le 28 janvier 1921 : chaque famille en deuil peut y reconnaître les siens.",
+          "pieges": [
+            {
+              "texte": "Pour honorer un général célèbre.",
+              "pourquoi": "Justement, il est « inconnu » : il représente tous les soldats, pas un chef connu."
+            },
+            {
+              "texte": "Pour fêter le début de la guerre.",
+              "pourquoi": "C'est un lieu de deuil et de mémoire, pas de fête."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The First World War: « Europe's suicide »",
+        "idee": "The war of movement fails in 1914; a long war of position begins. Whole societies are mobilised. The peace of 1919-1923 sweeps away the empires and seeks an order based on nations.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: August-September 1914, Tannenberg and the Marne; 1915, the Dardanelles; 1916, the Somme; 1917, strikes; March 1918, the last German offensive; 1919-1923, peace treaties; 1920, the Unknown Soldier; 1922, the Nansen passport.",
+          "exemple": "Example: in September 1914, the Battle of the Marne stops the German army marching on Paris. With no quick victory, each side digs into trenches: the war of movement becomes a war of position.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What happens at Tannenberg, in August 1914?",
+            "nom": "The German army defeats the Russian army in East Prussia.",
+            "explication": "On the Eastern Front, the Russian defeat at Tannenberg shows that the war isn't decided only in the West.",
+            "pieges": [
+              {
+                "texte": "The French stop the Germans outside Paris.",
+                "pourquoi": "That's the Battle of the Marne, in September 1914, on the Western Front."
+              },
+              {
+                "texte": "The armistice is signed.",
+                "pourquoi": "The First World War armistice is signed on 11 November 1918."
+              }
+            ]
+          },
+          {
+            "texte": "Why, after 1914, does the war become a war of position, in the trenches?",
+            "nom": "Because defence, with machine guns, barbed wire and artillery, is stronger than attack.",
+            "explication": "Offensives break on well-defended lines: the fronts freeze for years, despite huge losses.",
+            "pieges": [
+              {
+                "texte": "Because the soldiers refused to fight.",
+                "pourquoi": "Refusals stay limited; it's defensive firepower that blocks the front."
+              },
+              {
+                "texte": "Because the armies were short of soldiers.",
+                "pourquoi": "The armies number millions of men; it's the superiority of defence that freezes the front."
+              }
+            ]
+          },
+          {
+            "texte": "In 1915, what do the British and French attempt at the Dardanelles?",
+            "nom": "To force the strait to reach Constantinople and strike the Ottoman Empire, without success.",
+            "explication": "The Dardanelles offensive, with soldiers from Australia and New Zealand among others, fails against the Ottomans.",
+            "pieges": [
+              {
+                "texte": "To land in Normandy.",
+                "pourquoi": "The Normandy landings take place on 6 June 1944, during the Second World War."
+              },
+              {
+                "texte": "To defend Paris against the Germans.",
+                "pourquoi": "The Dardanelles are a strait in the Ottoman Empire, far from Paris."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Battle of the Somme, in 1916, show?",
+            "nom": "A huge Franco-British offensive that costs hundreds of thousands of casualties for a few kilometres.",
+            "explication": "1 July 1916, the first day of the offensive, is the deadliest day in the history of the British army.",
+            "pieges": [
+              {
+                "texte": "A quick victory that ends the war.",
+                "pourquoi": "The war goes on for more than two years after the Somme."
+              },
+              {
+                "texte": "A battle with no casualties.",
+                "pourquoi": "On the contrary, it's one of the deadliest battles of the war."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we speak of a world war, and not just a European one?",
+            "nom": "Because the colonial empires and other continents take part.",
+            "explication": "Britain and France mobilise soldiers and workers from their colonies; Japan and the United States also enter the war.",
+            "pieges": [
+              {
+                "texte": "Because every country in the world fought.",
+                "pourquoi": "Some countries stayed neutral, such as Switzerland or Spain."
+              },
+              {
+                "texte": "Because fighting took place equally on every continent.",
+                "pourquoi": "Europe is the main theatre; the war is worldwide through its participants and stakes."
+              }
+            ]
+          },
+          {
+            "texte": "During the war, what does Marie Curie do?",
+            "nom": "She organises X-ray vehicles to treat the wounded near the front.",
+            "explication": "X-rays make it possible to locate bullets and shell fragments: science takes part in the war.",
+            "pieges": [
+              {
+                "texte": "She invents poison gas.",
+                "pourquoi": "Marie Curie puts science to work caring for the wounded, not making weapons."
+              },
+              {
+                "texte": "She commands an army.",
+                "pourquoi": "She is a physicist and chemist; her role is medical."
+              }
+            ]
+          },
+          {
+            "texte": "On 24 May 1915, France, Britain and Russia denounce « crimes against humanity and civilisation ». Against whom are these crimes committed?",
+            "nom": "Against the Armenians of the Ottoman Empire.",
+            "explication": "The Armenians of the Ottoman Empire are the victims of a genocide; this declaration is one of the first international condemnations.",
+            "pieges": [
+              {
+                "texte": "Against German prisoners of war.",
+                "pourquoi": "The declaration concerns the massacres of Armenian civilians in the Ottoman Empire."
+              },
+              {
+                "texte": "Against the Jews of Europe.",
+                "pourquoi": "The genocide of the Jews, the Shoah, takes place during the Second World War."
+              }
+            ]
+          },
+          {
+            "texte": "In 1917, women and men workers go on strike in France. What does this movement show?",
+            "nom": "The home front's weariness with a long war, high prices and the pace of work.",
+            "explication": "Women, very present in the factories, demand better wages: civilians are actors as well as victims of the war.",
+            "pieges": [
+              {
+                "texte": "That the war is over.",
+                "pourquoi": "In 1917, the war goes on; the strikes express civilians' fatigue."
+              },
+              {
+                "texte": "That women don't work during the war.",
+                "pourquoi": "On the contrary, women replace the mobilised men in factories and fields."
+              }
+            ]
+          },
+          {
+            "texte": "Which principles does US President Wilson defend for the peace, in 1918?",
+            "nom": "The right of peoples to self-determination and a League of Nations.",
+            "explication": "His « Fourteen Points » inspire the creation of the League of Nations; the 1919-1923 treaties dismantle the multinational empires.",
+            "pieges": [
+              {
+                "texte": "Rebuilding the great empires of before 1914.",
+                "pourquoi": "Wilson wants, on the contrary, an order based on nations; the Austro-Hungarian and Ottoman empires disappear."
+              },
+              {
+                "texte": "Banning all alliances between states.",
+                "pourquoi": "Wilson proposes a common organisation of states, the League of Nations."
+              }
+            ]
+          },
+          {
+            "texte": "Why, in 1921, is an Unknown Soldier buried beneath the Arc de Triomphe?",
+            "nom": "To honour all the soldiers who died, especially those who were never identified.",
+            "explication": "Chosen at Verdun in November 1920, he is buried on 28 January 1921: every grieving family can see their own in him.",
+            "pieges": [
+              {
+                "texte": "To honour a famous general.",
+                "pourquoi": "Precisely, he is « unknown »: he stands for all soldiers, not a known leader."
+              },
+              {
+                "texte": "To celebrate the start of the war.",
+                "pourquoi": "It's a place of mourning and memory, not of celebration."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "metropolisation",
+      "titre": "La métropolisation, dans le monde et en France",
+      "niveau": "1re",
+      "prerequis": [
+        "mobilites-migrations"
+      ],
+      "programme": {
+        "source": "hg1re",
+        "texte": "La métropolisation renforce le poids de Paris (ville primatiale) et recompose les dynamiques urbaines."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Plus de la moitié de l'humanité vit en ville. Les métropoles concentrent habitants, activités et pouvoirs de décision. En France, Paris domine, les métropoles régionales grandissent, certaines petites villes déclinent.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Mots clés : urbanisation, métropole, fonctions de commandement, étalement urbain, ville primatiale, mégalopole.",
+        "exemple": "Exemple : à La Défense, près de Paris, se concentrent des sièges de grandes entreprises. Ces centres de décision, qui dirigent des activités dans le monde entier, sont des fonctions de commandement typiques d'une métropole.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Depuis quand environ la moitié de la population mondiale vit-elle en ville ?",
+          "nom": "Depuis 2007.",
+          "explication": "Depuis 2007, la moitié de l'humanité vit en ville, et cette part continue d'augmenter.",
+          "pieges": [
+            {
+              "texte": "Depuis 1800.",
+              "pourquoi": "En 1800, la très grande majorité des humains vivait à la campagne ; l'urbanisation massive est bien plus récente."
+            },
+            {
+              "texte": "Cela n'est jamais arrivé.",
+              "pourquoi": "Le seuil de la moitié est franchi : la population urbaine continue même de progresser."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que la métropolisation ?",
+          "nom": "La concentration des populations, des activités et des fonctions de commandement dans les grandes villes.",
+          "explication": "Les métropoles attirent les sièges d'entreprises, les universités, les institutions : elles dirigent des territoires bien plus vastes qu'elles.",
+          "pieges": [
+            {
+              "texte": "Le simple fait qu'une ville ait beaucoup d'habitants.",
+              "pourquoi": "Une ville très peuplée n'est pas forcément une métropole : il faut aussi des fonctions de commandement et un rayonnement."
+            },
+            {
+              "texte": "Le départ des habitants des villes vers les campagnes.",
+              "pourquoi": "C'est le mouvement inverse : la métropolisation concentre."
+            }
+          ]
+        },
+        {
+          "texte": "Parmi ces éléments, lequel est une caractéristique métropolitaine ?",
+          "nom": "Un quartier d'affaires et un grand nœud de transports, comme un aéroport international.",
+          "explication": "Quartier d'affaires, grands équipements culturels, universités et centres de recherche, nœuds de transport : ce sont des signes de métropole.",
+          "pieges": [
+            {
+              "texte": "Une église et une mairie.",
+              "pourquoi": "Presque toutes les communes en ont : cela ne distingue pas une métropole."
+            },
+            {
+              "texte": "Des champs cultivés autour de la ville.",
+              "pourquoi": "Beaucoup de villes en ont ; ce n'est pas ce qui fait le rayonnement d'une métropole."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que l'étalement urbain ?",
+          "nom": "L'extension de la ville sur ses périphéries, souvent en lotissements et zones d'activités.",
+          "explication": "La ville grignote les espaces agricoles et naturels ; les trajets quotidiens s'allongent, souvent en voiture.",
+          "pieges": [
+            {
+              "texte": "La construction de tours au centre-ville.",
+              "pourquoi": "Construire en hauteur densifie la ville ; l'étalement, lui, l'étend en surface."
+            },
+            {
+              "texte": "La disparition des villes.",
+              "pourquoi": "C'est au contraire une croissance de la ville vers l'extérieur."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que les métropoles sont aussi des espaces d'inégalités, comme Mumbai ?",
+          "nom": "Parce que des quartiers d'affaires très riches y côtoient des bidonvilles.",
+          "explication": "La métropolisation accentue les contrastes : richesse et pauvreté se trouvent parfois à quelques rues d'écart.",
+          "pieges": [
+            {
+              "texte": "Parce que tous les habitants y sont riches.",
+              "pourquoi": "On associe souvent métropole et richesse ; une partie des habitants vit dans une grande pauvreté."
+            },
+            {
+              "texte": "Parce que tous les habitants y sont pauvres.",
+              "pourquoi": "Les métropoles concentrent aussi d'immenses richesses : ce sont les écarts qui frappent."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que Paris est une « ville primatiale » ?",
+          "nom": "Parce qu'elle domine très nettement les autres villes françaises par sa population et ses fonctions.",
+          "explication": "L'agglomération parisienne est bien plus peuplée que la deuxième ville de France et concentre pouvoirs politiques, économiques et culturels.",
+          "pieges": [
+            {
+              "texte": "Parce que c'est la plus ancienne ville de France.",
+              "pourquoi": "D'autres villes, comme Marseille, sont plus anciennes : « primatiale » parle de domination, pas d'âge."
+            },
+            {
+              "texte": "Parce qu'elle est au centre géographique de la France.",
+              "pourquoi": "Paris est au nord du pays ; le mot parle de son poids, pas de sa position."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle évolution connaissent beaucoup de métropoles régionales, comme Lyon, Toulouse ou Bordeaux ?",
+          "nom": "Elles gagnent en attractivité, mais de façon inégale, et se font concurrence.",
+          "explication": "Emplois, universités, transports rapides : les métropoles régionales grandissent, chacune avec ses atouts.",
+          "pieges": [
+            {
+              "texte": "Elles perdent toutes leurs habitants au profit de Paris.",
+              "pourquoi": "Beaucoup de métropoles régionales gagnent au contraire des habitants."
+            },
+            {
+              "texte": "Elles sont toutes identiques.",
+              "pourquoi": "Leur attractivité et leur influence diffèrent beaucoup d'une métropole à l'autre."
+            }
+          ]
+        },
+        {
+          "texte": "En 2018, l'État lance le programme « Action cœur de ville » pour 222 villes moyennes. Quel problème vise-t-il ?",
+          "nom": "La dévitalisation des centres-villes : commerces fermés, logements vides.",
+          "explication": "Certaines villes petites et moyennes sont mises à l'écart par la métropolisation ; d'autres connaissent un renouveau grâce à leur dynamisme local et leur cadre de vie.",
+          "pieges": [
+            {
+              "texte": "La surpopulation des centres-villes.",
+              "pourquoi": "Le problème est au contraire le départ d'habitants et de commerces."
+            },
+            {
+              "texte": "Le manque de métropoles en France.",
+              "pourquoi": "Le programme vise des villes moyennes, pas la création de métropoles."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Metropolisation, in the world and in France",
+        "idee": "More than half of humanity lives in towns and cities. Metropolises concentrate people, activities and decision-making power. In France, Paris dominates, regional metropolises grow, some small towns decline.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Key words: urbanisation, metropolis, command functions, urban sprawl, primate city, megalopolis.",
+          "exemple": "Example: at La Défense, near Paris, the head offices of big companies are concentrated. These decision centres, which run activities all over the world, are typical command functions of a metropolis.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Since about when has half the world's population lived in towns and cities?",
+            "nom": "Since 2007.",
+            "explication": "Since 2007, half of humanity has lived in towns and cities, and the share keeps rising.",
+            "pieges": [
+              {
+                "texte": "Since 1800.",
+                "pourquoi": "In 1800, the vast majority of people lived in the countryside; mass urbanisation is much more recent."
+              },
+              {
+                "texte": "It has never happened.",
+                "pourquoi": "The halfway mark has been passed: the urban population is still growing."
+              }
+            ]
+          },
+          {
+            "texte": "What is metropolisation?",
+            "nom": "The concentration of people, activities and command functions in big cities.",
+            "explication": "Metropolises attract company head offices, universities and institutions: they run areas much larger than themselves.",
+            "pieges": [
+              {
+                "texte": "Simply a city having many inhabitants.",
+                "pourquoi": "A very populous city isn't necessarily a metropolis: it also needs command functions and influence."
+              },
+              {
+                "texte": "People leaving cities for the countryside.",
+                "pourquoi": "That's the opposite movement: metropolisation concentrates."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these is a typical feature of a metropolis?",
+            "nom": "A business district and a major transport hub, such as an international airport.",
+            "explication": "Business district, major cultural venues, universities and research centres, transport hubs: these are signs of a metropolis.",
+            "pieges": [
+              {
+                "texte": "A church and a town hall.",
+                "pourquoi": "Almost every town has them: they don't mark out a metropolis."
+              },
+              {
+                "texte": "Farmland around the city.",
+                "pourquoi": "Many cities have it; it isn't what gives a metropolis its influence."
+              }
+            ]
+          },
+          {
+            "texte": "What is urban sprawl?",
+            "nom": "The spread of the city over its outskirts, often as housing estates and business parks.",
+            "explication": "The city eats into farmland and natural areas; daily journeys get longer, often by car.",
+            "pieges": [
+              {
+                "texte": "Building tower blocks in the city centre.",
+                "pourquoi": "Building upwards makes the city denser; sprawl spreads it outwards."
+              },
+              {
+                "texte": "Cities disappearing.",
+                "pourquoi": "On the contrary, it's the city growing outwards."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say metropolises are also places of inequality, like Mumbai?",
+            "nom": "Because very rich business districts sit next to slums.",
+            "explication": "Metropolisation sharpens contrasts: wealth and poverty are sometimes just a few streets apart.",
+            "pieges": [
+              {
+                "texte": "Because all their inhabitants are rich.",
+                "pourquoi": "Metropolises are often linked with wealth; part of their population lives in great poverty."
+              },
+              {
+                "texte": "Because all their inhabitants are poor.",
+                "pourquoi": "Metropolises also concentrate huge wealth: it's the gaps that stand out."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say Paris is a « primate city »?",
+            "nom": "Because it clearly dominates the other French cities by its population and functions.",
+            "explication": "The Paris urban area is far more populous than France's second city and concentrates political, economic and cultural power.",
+            "pieges": [
+              {
+                "texte": "Because it is the oldest city in France.",
+                "pourquoi": "Other cities, such as Marseille, are older: « primate » is about dominance, not age."
+              },
+              {
+                "texte": "Because it is at the geographical centre of France.",
+                "pourquoi": "Paris is in the north of the country; the word is about its weight, not its position."
+              }
+            ]
+          },
+          {
+            "texte": "How are many regional metropolises, such as Lyon, Toulouse or Bordeaux, changing?",
+            "nom": "They are becoming more attractive, but unevenly, and they compete with each other.",
+            "explication": "Jobs, universities, fast transport: regional metropolises are growing, each with its own strengths.",
+            "pieges": [
+              {
+                "texte": "They are all losing their inhabitants to Paris.",
+                "pourquoi": "Many regional metropolises are, on the contrary, gaining inhabitants."
+              },
+              {
+                "texte": "They are all the same.",
+                "pourquoi": "Their appeal and influence differ a lot from one metropolis to another."
+              }
+            ]
+          },
+          {
+            "texte": "In 2018, the State launches the « Action cœur de ville » programme for 222 medium-sized towns. Which problem does it target?",
+            "nom": "Declining town centres: closed shops, empty housing.",
+            "explication": "Some small and medium-sized towns are left behind by metropolisation; others enjoy a revival thanks to local dynamism and their quality of life.",
+            "pieges": [
+              {
+                "texte": "Overcrowded town centres.",
+                "pourquoi": "The problem is, on the contrary, people and shops leaving."
+              },
+              {
+                "texte": "France lacking metropolises.",
+                "pourquoi": "The programme targets medium-sized towns, not creating metropolises."
               }
             ]
           }

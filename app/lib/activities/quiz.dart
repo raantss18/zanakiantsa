@@ -55,7 +55,7 @@ class _QuizActivityState extends State<QuizActivity> {
               margin: const EdgeInsets.only(bottom: 12),
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
-              child: Text(item.text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.2)),
+              child: QuestionText(item.text),
             ),
             for (final answer in answers)
               Padding(
@@ -105,4 +105,54 @@ class _Answer extends StatelessWidget {
           ),
         ),
       );
+}
+
+
+/// Énoncé d'un quiz. Sur plusieurs lignes (programme, requête SQL, table), les lignes de texte (« Que renvoie cette
+/// requête ? », « Table eleves (nom, classe) : ») restent en police normale, centrées ; les autres forment des blocs de code
+/// alignés à gauche, en chasse fixe, sans retour à la ligne au milieu d'une instruction : un bloc trop large rétrécit au lieu
+/// d'être coupé. Avant, le code était centré et coupé n'importe où (SM-X135G, texte à 150 %, 2026-11-08).
+class QuestionText extends StatelessWidget {
+  const QuestionText(this.text, {super.key});
+  final String text;
+
+  static const _prose = TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.2);
+  static const _code = TextStyle(fontFamily: 'monospace', fontSize: 20, fontWeight: FontWeight.w600, color: ink, height: 1.35);
+
+  /// Une ligne de texte : elle finit par « ? », ou par « : » précédé d'une espace (typographie française) ; en Python,
+  /// « else: » ou « if x > 3: » n'ont pas d'espace avant les deux-points.
+  static bool isProse(String line) => RegExp(r'(\?| :)\s*$').hasMatch(line.trimRight());
+
+  @override
+  Widget build(BuildContext context) {
+    final lines = text.split('\n');
+    if (lines.length < 2) return Text(text, textAlign: TextAlign.center, style: _prose);
+    // Regroupe les lignes : texte d'un côté, suites de lignes de code de l'autre.
+    final parts = <(bool, List<String>)>[];
+    for (final (i, l) in lines.indexed) {
+      final prose = i == 0 || isProse(l);
+      if (parts.isNotEmpty && !prose && !parts.last.$1) {
+        parts.last.$2.add(l);
+      } else {
+        parts.add((prose, [l]));
+      }
+    }
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      for (final (prose, block) in parts)
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          child: prose
+              ? Text(block.join('\n'), textAlign: TextAlign.center, style: _prose)
+              : Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(color: const Color(0xFFF1F3F2), borderRadius: BorderRadius.circular(12)),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(block.join('\n'), softWrap: false, style: _code),
+                  ),
+                ),
+        ),
+    ]);
+  }
 }

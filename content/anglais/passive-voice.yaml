@@ -1,0 +1,170 @@
+id: passive-voice
+titre: "La voix passive : Hamlet was written by Shakespeare"
+niveau: 2de
+prerequis: [present-perfect]
+# Programme de 2de (BO spécial n° 1 du 22 janvier 2019, annexe 1, copie SNES), « L'étude de la langue », 2) Correction
+# grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_2de, texte: "Correction grammaticale : l’élève est conduit à mobiliser ses connaissances de la langue française et des autres langues qu’il connaît afin de mieux saisir la différence ou la proximité avec la langue étudiée." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Au passif, le sujet subit l'action : be + participe passé. « Shakespeare wrote Hamlet » devient « Hamlet was written by Shakespeare ». Le temps se lit sur be."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Le sujet fait-il l'action, ou la subit-il ? S'il la subit : be au bon temps + participe passé."
+  exemple: "« The Eiffel Tower … in 1889. » (build) La tour ne construit rien : elle a été construite. « The Eiffel Tower was built in 1889. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « English … in many countries. » (speak)"
+    nom: "is spoken"
+    explication: "L'anglais ne parle pas : on le parle. Passif au présent : « English is spoken in many countries. »"
+    pieges:
+      - { texte: "speaks", pourquoi: "« English speaks » voudrait dire que l'anglais parle lui-même. Il subit l'action : « is spoken »." }
+      - { texte: "is speaking", pourquoi: "be + -ing, c'est la forme progressive active. Le passif, c'est be + participe passé : « is spoken »." }
+  - texte: "Complète : « Hamlet … by Shakespeare around 1600. » (write)"
+    nom: "was written"
+    explication: "Vers 1600, c'est passé : be au prétérit + participe passé. « Hamlet was written by Shakespeare. »"
+    pieges:
+      - { texte: "was wrote", pourquoi: "« wrote » est le prétérit. Après be, il faut le participe passé : « written »." }
+      - { texte: "is written", pourquoi: "« around 1600 » renvoie au passé : be se met au prétérit, « was written »." }
+  - texte: "Complète : « The new bridge … next year. » (build)"
+    nom: "will be built"
+    explication: "« next year » : futur. Le pont subit l'action : « The new bridge will be built next year. »"
+    pieges:
+      - { texte: "will build", pourquoi: "« The bridge will build » voudrait dire que le pont construit. Il est construit : « will be built »." }
+      - { texte: "is built", pourquoi: "« next year » demande le futur : « will be built »." }
+  - texte: "Complète : « The match has … because of the rain. » (cancel)"
+    nom: "been cancelled"
+    explication: "Present perfect passif : has been + participe passé. « The match has been cancelled. »"
+    pieges:
+      - { texte: "cancelled", pourquoi: "« The match has cancelled » voudrait dire que le match a annulé quelque chose. Il a été annulé : « has been cancelled »." }
+      - { texte: "be cancelled", pourquoi: "Après « has », on emploie le participe passé de be : « been », puis « cancelled »." }
+  - texte: "Complète : « The windows … right now. » (clean)"
+    nom: "are being cleaned"
+    explication: "« right now » : en ce moment. Passif progressif : are being + participe passé. « The windows are being cleaned. »"
+    pieges:
+      - { texte: "are cleaning", pourquoi: "« The windows are cleaning » voudrait dire que les fenêtres nettoient. Elles sont nettoyées : « are being cleaned »." }
+      - { texte: "are been cleaned", pourquoi: "« been » s'emploie après have. Pour une action en cours : « being »." }
+  - texte: "Mets au passif : « The police arrested two men. »"
+    nom: "Two men were arrested by the police."
+    explication: "Le complément devient sujet, be prend le temps du verbe (prétérit, pluriel) : « Two men were arrested by the police. »"
+    pieges:
+      - { texte: "Two men arrested the police.", pourquoi: "Cette phrase inverse les rôles : ce sont les hommes qui arrêtent la police." }
+      - { texte: "Two men are arrested by the police.", pourquoi: "« arrested » était au prétérit : be se met au prétérit, « were arrested »." }
+  - texte: "Complète : « The Harry Potter books … into more than 80 languages. » (translate)"
+    nom: "have been translated"
+    explication: "Des livres (pluriel), traduits jusqu'à aujourd'hui : « The Harry Potter books have been translated into more than 80 languages. »"
+    pieges:
+      - { texte: "has been translated", pourquoi: "« books » est au pluriel : « have been translated »." }
+      - { texte: "have translated", pourquoi: "Les livres ne traduisent pas : ils sont traduits. « have been translated »." }
+  - texte: "Complète : « Paper … from wood. » (make)"
+    nom: "is made"
+    explication: "Une vérité générale, au présent passif : « Paper is made from wood. »"
+    pieges:
+      - { texte: "makes", pourquoi: "« Paper makes » voudrait dire que le papier fabrique quelque chose. Il est fabriqué : « is made »." }
+      - { texte: "is making", pourquoi: "be + -ing est actif. Le passif, c'est be + participe passé : « is made »." }
+  - texte: "Pourquoi « was » dans « The Mona Lisa was painted by Leonardo da Vinci » ?"
+    nom: "Le tableau a subi l'action dans le passé : be au prétérit + participe passé."
+    explication: "Au passif, be porte le temps : « was » pour le passé, puis le participe « painted »."
+    pieges:
+      - { texte: "Parce que « was » est le prétérit de « paint ».", pourquoi: "Le prétérit de « paint » est « painted ». « was » est le prétérit de be, l'auxiliaire du passif." }
+      - { texte: "Parce que le passif se fait avec have.", pourquoi: "Le passif se fait avec be. have sert au present perfect : « has painted »." }
+  - texte: "Pourquoi dit-on « I was born in 2009 » ?"
+    nom: "« be born » est un passif : on le met au passé, « was born »."
+    explication: "Naître se dit au passif en anglais : « I was born in 2009 »."
+    pieges:
+      - { texte: "Parce que « born » est un verbe au présent.", pourquoi: "« born » est un participe passé. Le verbe qui porte le temps est « was »." }
+      - { texte: "Parce qu'on peut aussi dire « I am born in 2009 ».", pourquoi: "Avec une date passée, be se met au prétérit : « I was born »." }
+en:
+  titre: "The passive: Hamlet was written by Shakespeare"
+  idee: "In the passive, the subject receives the action: be + past participle. “Shakespeare wrote Hamlet” becomes “Hamlet was written by Shakespeare”. The tense is on be."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Does the subject do the action, or receive it? If it receives it: be in the right tense + past participle."
+    exemple: "“The Eiffel Tower … in 1889.” (build) The tower doesn't build anything: it was built. “The Eiffel Tower was built in 1889.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “English … in many countries.” (speak)"
+      nom: "is spoken"
+      explication: "English doesn't speak: people speak it. Present passive: “English is spoken in many countries.”"
+      pieges:
+        - texte: "speaks"
+          pourquoi: "“English speaks” would mean English speaks by itself. It receives the action: is spoken."
+        - texte: "is speaking"
+          pourquoi: "be + -ing is the active progressive. The passive is be + past participle: is spoken."
+    - texte: "Complete: “Hamlet … by Shakespeare around 1600.” (write)"
+      nom: "was written"
+      explication: "Around 1600 is past: be in the past simple + past participle. “Hamlet was written by Shakespeare.”"
+      pieges:
+        - texte: "was wrote"
+          pourquoi: "“wrote” is the past simple. After be, we need the past participle: written."
+        - texte: "is written"
+          pourquoi: "“around 1600” is in the past: be goes into the past simple, was written."
+    - texte: "Complete: “The new bridge … next year.” (build)"
+      nom: "will be built"
+      explication: "Next year: future. The bridge receives the action: “The new bridge will be built next year.”"
+      pieges:
+        - texte: "will build"
+          pourquoi: "“The bridge will build” would mean the bridge builds something. It is built: will be built."
+        - texte: "is built"
+          pourquoi: "“next year” needs the future: will be built."
+    - texte: "Complete: “The match has … because of the rain.” (cancel)"
+      nom: "been cancelled"
+      explication: "Present perfect passive: has been + past participle. “The match has been cancelled.”"
+      pieges:
+        - texte: "cancelled"
+          pourquoi: "“The match has cancelled” would mean the match cancelled something. It was cancelled: has been cancelled."
+        - texte: "be cancelled"
+          pourquoi: "After has, we use the past participle of be: been, then cancelled."
+    - texte: "Complete: “The windows … right now.” (clean)"
+      nom: "are being cleaned"
+      explication: "Right now: in progress. Progressive passive: are being + past participle. “The windows are being cleaned.”"
+      pieges:
+        - texte: "are cleaning"
+          pourquoi: "“The windows are cleaning” would mean the windows clean. They are cleaned: are being cleaned."
+        - texte: "are been cleaned"
+          pourquoi: "“been” comes after have. For an action in progress: being."
+    - texte: "Make it passive: “The police arrested two men.”"
+      nom: "Two men were arrested by the police."
+      explication: "The object becomes the subject, and be takes the tense of the verb (past, plural): “Two men were arrested by the police.”"
+      pieges:
+        - texte: "Two men arrested the police."
+          pourquoi: "This swaps the roles: now the men arrest the police."
+        - texte: "Two men are arrested by the police."
+          pourquoi: "“arrested” was in the past simple: be goes into the past, were arrested."
+    - texte: "Complete: “The Harry Potter books … into more than 80 languages.” (translate)"
+      nom: "have been translated"
+      explication: "Books (plural), translated up to now: “The Harry Potter books have been translated into more than 80 languages.”"
+      pieges:
+        - texte: "has been translated"
+          pourquoi: "“books” is plural: have been translated."
+        - texte: "have translated"
+          pourquoi: "The books don't translate: they are translated. have been translated."
+    - texte: "Complete: “Paper … from wood.” (make)"
+      nom: "is made"
+      explication: "A general truth, in the present passive: “Paper is made from wood.”"
+      pieges:
+        - texte: "makes"
+          pourquoi: "“Paper makes” would mean paper makes something. It is made: is made."
+        - texte: "is making"
+          pourquoi: "be + -ing is active. The passive is be + past participle: is made."
+    - texte: "Why “was” in “The Mona Lisa was painted by Leonardo da Vinci”?"
+      nom: "The painting received the action in the past: be in the past simple + past participle."
+      explication: "In the passive, be carries the tense: was for the past, then the participle painted."
+      pieges:
+        - texte: "Because was is the past simple of paint."
+          pourquoi: "The past simple of paint is painted. “was” is the past of be, the auxiliary of the passive."
+        - texte: "Because the passive is made with have."
+          pourquoi: "The passive is made with be. have is for the present perfect: has painted."
+    - texte: "Why do we say “I was born in 2009”?"
+      nom: "“be born” is a passive: in the past, it is was born."
+      explication: "Being born is a passive in English: “I was born in 2009”."
+      pieges:
+        - texte: "Because born is a verb in the present."
+          pourquoi: "“born” is a past participle. The verb that carries the tense is was."
+        - texte: "Because we can also say “I am born in 2009”."
+          pourquoi: "With a past date, be goes into the past: I was born."

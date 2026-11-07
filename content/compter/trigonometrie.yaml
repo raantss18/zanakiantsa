@@ -1,0 +1,136 @@
+id: trigonometrie
+titre: "Cosinus, sinus et tangente"
+niveau: 3e
+prerequis: ["pythagore", "thales"]
+programme: { source: cycle4, texte: "Connaitre et utiliser les lignes trigonométriques dans le triangle rectangle : cosinus, sinus, tangente." }
+activite: quiz
+parametres: {}
+idee: "Dans un triangle rectangle, pour un angle aigu : cosinus = adjacent ÷ hypoténuse ; sinus = opposé ÷ hypoténuse ; tangente = opposé ÷ adjacent."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repère l'hypoténuse (face à l'angle droit), puis le côté adjacent (qui touche l'angle) et le côté opposé (en face de l'angle)."
+  exemple: "ABC est rectangle en B, AB = 4, BC = 3, AC = 5. Pour l'angle Â : adjacent AB = 4, opposé BC = 3, hypoténuse AC = 5. cos Â = 4/5 = 0,8 ; sin Â = 3/5 = 0,6 ; tan Â = 3/4 = 0,75."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut cos Â ?"
+    nom: "0,8"
+    explication: "cos Â = adjacent ÷ hypoténuse = AB ÷ AC = 8 ÷ 10 = 0,8."
+    pieges:
+      - { texte: "0,6", pourquoi: "6 ÷ 10 est le sinus : BC est le côté opposé à Â." }
+      - { texte: "1,25", pourquoi: "10 ÷ 8 : l'hypoténuse va au dénominateur." }
+  - texte: "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut sin Â ?"
+    nom: "0,6"
+    explication: "sin Â = opposé ÷ hypoténuse = BC ÷ AC = 6 ÷ 10 = 0,6."
+    pieges:
+      - { texte: "0,8", pourquoi: "8 ÷ 10 est le cosinus : AB touche l'angle Â, il est adjacent." }
+      - { texte: "0,75", pourquoi: "6 ÷ 8 est la tangente : le sinus utilise l'hypoténuse." }
+  - texte: "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut tan Â ?"
+    nom: "0,75"
+    explication: "tan Â = opposé ÷ adjacent = BC ÷ AB = 6 ÷ 8 = 0,75."
+    pieges:
+      - { texte: "environ 1,33", pourquoi: "8 ÷ 6 : la tangente est l'opposé divisé par l'adjacent." }
+      - { texte: "0,6", pourquoi: "6 ÷ 10 est le sinus : la tangente n'utilise pas l'hypoténuse." }
+  - texte: "ABC est rectangle en B, AC = 10 cm et Â = 60°. On sait que cos 60° = 0,5. Combien mesure AB ?"
+    nom: "5 cm"
+    explication: "cos Â = AB ÷ AC, donc AB = AC × cos Â = 10 × 0,5 = 5 cm."
+    pieges:
+      - { texte: "20 cm", pourquoi: "10 ÷ 0,5 : le côté adjacent est plus court que l'hypoténuse, AB = 10 × 0,5." }
+      - { texte: "9,5 cm", pourquoi: "10 − 0,5 : le cosinus est un rapport, on multiplie." }
+  - texte: "ABC est rectangle en B, AB = 6 cm et tan Â = 2. Combien mesure BC ?"
+    nom: "12 cm"
+    explication: "tan Â = BC ÷ AB, donc BC = AB × tan Â = 6 × 2 = 12 cm."
+    pieges:
+      - { texte: "3 cm", pourquoi: "6 ÷ 2 : tan Â = BC ÷ AB, donc BC = 6 × 2." }
+      - { texte: "8 cm", pourquoi: "6 + 2 : la tangente est un rapport, on multiplie." }
+  - texte: "Complète : dans ABC rectangle en B, sin Â = … ÷ AC"
+    nom: "BC"
+    explication: "Le sinus est l'opposé divisé par l'hypoténuse : le côté opposé à Â est BC."
+    pieges:
+      - { texte: "AB", pourquoi: "AB touche l'angle Â : il est adjacent. Le sinus utilise le côté opposé." }
+      - { texte: "AC", pourquoi: "AC ÷ AC = 1 : AC est l'hypoténuse, déjà au dénominateur." }
+  - texte: "Le cosinus d'un angle aigu peut-il valoir 1,2 ?"
+    nom: "Non, car l'adjacent est plus court que l'hypoténuse."
+    explication: "Le cosinus est adjacent ÷ hypoténuse, et l'hypoténuse est le plus long côté : le cosinus est plus petit que 1."
+    pieges:
+      - { texte: "Oui, si le triangle est grand.", pourquoi: "Le cosinus est un rapport : il ne dépend pas de la taille du triangle." }
+      - { texte: "Oui, si l'angle est très petit.", pourquoi: "Plus l'angle est petit, plus le cosinus s'approche de 1, sans le dépasser." }
+  - texte: "Pourquoi cos Â ne change-t-il pas quand on agrandit le triangle sans changer ses angles ?"
+    nom: "Parce que tous les côtés sont multipliés par le même nombre : leur rapport ne change pas."
+    explication: "Comme dans la configuration de Thalès, le grand triangle est un agrandissement : adjacent ÷ hypoténuse reste le même."
+    pieges:
+      - { texte: "Parce que l'hypoténuse ne change pas.", pourquoi: "Elle change aussi : tous les côtés sont agrandis." }
+      - { texte: "Parce que le cosinus ne dépend que de l'hypoténuse.", pourquoi: "Il dépend de deux côtés : l'adjacent et l'hypoténuse." }
+  - texte: "Une échelle de 5 m est appuyée contre un mur vertical. Son pied est à 3 m du mur. Quel est le cosinus de l'angle entre l'échelle et le sol ?"
+    nom: "0,6"
+    explication: "Le côté adjacent à l'angle au sol est la distance au mur, 3 m ; l'hypoténuse est l'échelle, 5 m. cos = 3 ÷ 5 = 0,6."
+    pieges:
+      - { texte: "0,8", pourquoi: "4 ÷ 5 : 4 m est la hauteur atteinte sur le mur, le côté opposé à l'angle au sol. C'est le sinus." }
+      - { texte: "environ 1,67", pourquoi: "5 ÷ 3 : l'hypoténuse va au dénominateur." }
+
+en:
+  titre: "Cosine, sine and tangent"
+  idee: "In a right-angled triangle, for an acute angle: cosine = adjacent ÷ hypotenuse; sine = opposite ÷ hypotenuse; tangent = opposite ÷ adjacent."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Find the hypotenuse (opposite the right angle), then the adjacent side (touching the angle) and the opposite side (facing the angle)."
+    exemple: "ABC is right-angled at B, AB = 4, BC = 3, AC = 5. For angle Â: adjacent AB = 4, opposite BC = 3, hypotenuse AC = 5. cos Â = 4/5 = 0.8; sin Â = 3/5 = 0.6; tan Â = 3/4 = 0.75."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is cos Â?"
+      nom: "0.8"
+      explication: "cos Â = adjacent ÷ hypotenuse = AB ÷ AC = 8 ÷ 10 = 0.8."
+      pieges:
+        - { texte: "0.6", pourquoi: "6 ÷ 10 is the sine: BC is the side opposite Â." }
+        - { texte: "1.25", pourquoi: "10 ÷ 8: the hypotenuse goes on the bottom." }
+    - texte: "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is sin Â?"
+      nom: "0.6"
+      explication: "sin Â = opposite ÷ hypotenuse = BC ÷ AC = 6 ÷ 10 = 0.6."
+      pieges:
+        - { texte: "0.8", pourquoi: "8 ÷ 10 is the cosine: AB touches angle Â, so it is adjacent." }
+        - { texte: "0.75", pourquoi: "6 ÷ 8 is the tangent: the sine uses the hypotenuse." }
+    - texte: "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is tan Â?"
+      nom: "0.75"
+      explication: "tan Â = opposite ÷ adjacent = BC ÷ AB = 6 ÷ 8 = 0.75."
+      pieges:
+        - { texte: "about 1.33", pourquoi: "8 ÷ 6: the tangent is the opposite divided by the adjacent." }
+        - { texte: "0.6", pourquoi: "6 ÷ 10 is the sine: the tangent does not use the hypotenuse." }
+    - texte: "ABC is right-angled at B, AC = 10 cm and Â = 60°. We know that cos 60° = 0.5. How long is AB?"
+      nom: "5 cm"
+      explication: "cos Â = AB ÷ AC, so AB = AC × cos Â = 10 × 0.5 = 5 cm."
+      pieges:
+        - { texte: "20 cm", pourquoi: "10 ÷ 0.5: the adjacent side is shorter than the hypotenuse, AB = 10 × 0.5." }
+        - { texte: "9.5 cm", pourquoi: "10 − 0.5: the cosine is a ratio, so multiply." }
+    - texte: "ABC is right-angled at B, AB = 6 cm and tan Â = 2. How long is BC?"
+      nom: "12 cm"
+      explication: "tan Â = BC ÷ AB, so BC = AB × tan Â = 6 × 2 = 12 cm."
+      pieges:
+        - { texte: "3 cm", pourquoi: "6 ÷ 2: tan Â = BC ÷ AB, so BC = 6 × 2." }
+        - { texte: "8 cm", pourquoi: "6 + 2: the tangent is a ratio, so multiply." }
+    - texte: "Fill in: in ABC right-angled at B, sin Â = … ÷ AC"
+      nom: "BC"
+      explication: "The sine is the opposite divided by the hypotenuse: the side opposite Â is BC."
+      pieges:
+        - { texte: "AB", pourquoi: "AB touches angle Â: it is adjacent. The sine uses the opposite side." }
+        - { texte: "AC", pourquoi: "AC ÷ AC = 1: AC is the hypotenuse, already on the bottom." }
+    - texte: "Can the cosine of an acute angle be 1.2?"
+      nom: "No, because the adjacent side is shorter than the hypotenuse."
+      explication: "The cosine is adjacent ÷ hypotenuse, and the hypotenuse is the longest side: the cosine is less than 1."
+      pieges:
+        - { texte: "Yes, if the triangle is big.", pourquoi: "The cosine is a ratio: it does not depend on the size of the triangle." }
+        - { texte: "Yes, if the angle is very small.", pourquoi: "The smaller the angle, the closer the cosine gets to 1, without going past it." }
+    - texte: "Why does cos Â stay the same when the triangle is enlarged without changing its angles?"
+      nom: "Because every side is multiplied by the same number: their ratio does not change."
+      explication: "As in the intercept theorem, the large triangle is an enlargement: adjacent ÷ hypotenuse stays the same."
+      pieges:
+        - { texte: "Because the hypotenuse does not change.", pourquoi: "It changes too: every side is enlarged." }
+        - { texte: "Because the cosine depends only on the hypotenuse.", pourquoi: "It depends on two sides: the adjacent side and the hypotenuse." }
+    - texte: "A 5 m ladder leans against a vertical wall. Its foot is 3 m from the wall. What is the cosine of the angle between the ladder and the ground?"
+      nom: "0.6"
+      explication: "The side adjacent to the angle at the ground is the distance to the wall, 3 m; the hypotenuse is the ladder, 5 m. cos = 3 ÷ 5 = 0.6."
+      pieges:
+        - { texte: "0.8", pourquoi: "4 ÷ 5: 4 m is the height reached on the wall, the side opposite the angle at the ground. That is the sine." }
+        - { texte: "about 1.67", pourquoi: "5 ÷ 3: the hypotenuse goes on the bottom." }

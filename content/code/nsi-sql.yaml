@@ -1,0 +1,136 @@
+id: nsi-sql
+titre: "Bases de données : requêtes SQL"
+niveau: Terminale
+prerequis: [nsi-types-construits]
+programme: { source: nsiT, texte: "Langage SQL : requêtes d’interrogation et de mise à jour d’une base de données. Identifier les composants d’une requête. Construire des requêtes d’interrogation à l’aide des clauses du langage SQL : SELECT, FROM, WHERE, JOIN. Construire des requêtes d’insertion et de mise à jour à l’aide de : UPDATE, INSERT, DELETE." }
+activite: quiz
+parametres: {}
+idee: "Une table range des lignes qui ont les mêmes colonnes. Dans une requête, SELECT dit quelles colonnes afficher, FROM quelle table lire, WHERE quelles lignes garder."
+phrases:
+  consigne: "Lis la requête clause par clause : FROM (quelle table), WHERE (quelles lignes), puis SELECT (quelles colonnes)."
+  question: "{texte}"
+  indice: "Barre d’abord les lignes que WHERE ne garde pas. Puis ne regarde que les colonnes écrites après SELECT."
+  exemple: "SELECT nom FROM eleves WHERE classe = '1A' : on lit la table eleves, on garde les lignes de 1A (Rado, Mialy), puis on n’affiche que leur nom."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQue renvoie cette requête ?\nSELECT nom FROM eleves WHERE note > 13;"
+    nom: "Rado et Mialy"
+    explication: "WHERE garde les lignes où note > 13 : Rado (14) et Mialy (17). SELECT nom n’affiche que leur nom."
+    pieges:
+      - { texte: "Rado, Mialy et Tiana", pourquoi: "Tiana a 12, et 12 > 13 est faux." }
+      - { texte: "14 et 17", pourquoi: "SELECT nom renvoie la colonne nom, pas la colonne note." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQue renvoie cette requête ?\nSELECT nom FROM eleves WHERE classe = '1B' AND note >= 10;"
+    nom: "Tiana"
+    explication: "Il faut être en 1B et avoir au moins 10. Lova est en 1B mais a 9 ; seule Tiana vérifie les deux conditions."
+    pieges:
+      - { texte: "Lova et Tiana", pourquoi: "Lova a 9 : avec AND, les deux conditions doivent être vraies." }
+      - { texte: "Rado, Lova, Mialy et Tiana", pourquoi: "Ce serait le résultat avec OR. Avec AND, il faut être en 1B et avoir au moins 10." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQue renvoie cette requête ?\nSELECT COUNT(*) FROM eleves WHERE classe = '1A';"
+    nom: "2"
+    explication: "WHERE garde Rado et Mialy, les deux élèves de 1A. COUNT(*) compte ces lignes : 2."
+    pieges:
+      - { texte: "4", pourquoi: "COUNT(*) compte seulement les lignes gardées par WHERE." }
+      - { texte: "Rado et Mialy", pourquoi: "COUNT(*) renvoie un nombre de lignes, pas les noms." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQuel nom cette requête donne-t-elle en premier ?\nSELECT nom FROM eleves ORDER BY note DESC;"
+    nom: "Mialy"
+    explication: "ORDER BY note DESC trie de la plus grande note à la plus petite : Mialy (17), Rado (14), Tiana (12), Lova (9)."
+    pieges:
+      - { texte: "Lova", pourquoi: "DESC trie dans l’ordre décroissant : Lova, avec 9, arrive en dernier." }
+      - { texte: "Rado", pourquoi: "Rado est la première ligne de la table, mais ORDER BY trie par note : 17 vient d’abord." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQue renvoie cette requête ?\nSELECT AVG(note) FROM eleves;"
+    nom: "13"
+    explication: "AVG fait la moyenne de la colonne : (14 + 9 + 17 + 12) ÷ 4 = 52 ÷ 4 = 13. SQLite l’écrit 13.0."
+    pieges:
+      - { texte: "52", pourquoi: "52 est la somme ; AVG la divise par le nombre de lignes, 4." }
+      - { texte: "4", pourquoi: "4 est le nombre de lignes ; AVG donne la moyenne des notes." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nTable classes (code, prof) :\n1A | Mme Rakoto\n1B | M. Randria\nQue renvoie cette requête ?\nSELECT eleves.nom FROM eleves JOIN classes ON eleves.classe = classes.code WHERE classes.prof = 'M. Randria';"
+    nom: "Lova et Tiana"
+    explication: "JOIN colle à chaque élève la ligne de sa classe. M. Randria a la 1B : Lova et Tiana."
+    pieges:
+      - { texte: "M. Randria", pourquoi: "SELECT eleves.nom renvoie le nom des élèves, pas celui du professeur." }
+      - { texte: "Rado et Mialy", pourquoi: "Rado et Mialy sont en 1A, la classe de Mme Rakoto." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nQuelle requête donne le nom des élèves qui ont moins de 10 ?"
+    nom: "SELECT nom FROM eleves WHERE note < 10;"
+    explication: "SELECT dit quelle colonne afficher (nom), FROM dans quelle table, WHERE quelles lignes garder (note < 10). Elle renvoie Lova."
+    pieges:
+      - { texte: "SELECT note FROM eleves WHERE nom < 10;", pourquoi: "La condition porte sur la colonne note, et c’est la colonne nom qu’on veut afficher." }
+      - { texte: "SELECT nom WHERE note < 10 FROM eleves;", pourquoi: "L’ordre des clauses est fixé : SELECT, puis FROM, puis WHERE. Sinon, SQLite signale une erreur." }
+  - texte: "Table eleves (nom, classe, note) :\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nOn exécute :\nUPDATE eleves SET note = 11 WHERE nom = 'Lova';\nPuis, que renvoie cette requête ?\nSELECT COUNT(*) FROM eleves WHERE note >= 10;"
+    nom: "4"
+    explication: "UPDATE change la note de Lova : 9 devient 11. Les 4 élèves ont maintenant au moins 10."
+    pieges:
+      - { texte: "3", pourquoi: "Avant UPDATE, il y en avait 3. Lova a maintenant 11, et 11 ≥ 10." }
+      - { texte: "1", pourquoi: "UPDATE ne touche que la ligne de Lova, mais COUNT(*) compte toutes les lignes qui vérifient WHERE." }
+  - texte: "Table classes (code, prof) :\n1A | Mme Rakoto\n1B | M. Randria\nPourquoi la colonne code doit-elle avoir une valeur différente à chaque ligne (c’est la clé primaire) ?"
+    nom: "Pour qu’un code de classe désigne une seule ligne"
+    explication: "Si deux lignes avaient le code 1A, la jointure ne saurait pas quel professeur donner. SQLite refuse d’ajouter un second 1A."
+    pieges:
+      - { texte: "Pour que la table reste triée", pourquoi: "Une clé primaire ne trie rien : elle identifie chaque ligne sans ambiguïté." }
+      - { texte: "Pour pouvoir écrire WHERE", pourquoi: "WHERE marche sur n’importe quelle colonne ; la clé sert à désigner une seule ligne." }
+
+en:
+  titre: "Databases: SQL queries"
+  idee: "A table stores rows that all have the same columns. In a query, SELECT says which columns to show, FROM which table to read, WHERE which rows to keep."
+  phrases:
+    consigne: "Read the query clause by clause: FROM (which table), WHERE (which rows), then SELECT (which columns)."
+    question: "{texte}"
+    indice: "First cross out the rows that WHERE does not keep. Then only look at the columns written after SELECT."
+    exemple: "SELECT name FROM students WHERE class = '1A': read the students table, keep the 1A rows (Rado, Mialy), then only show their name."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhat does this query return?\nSELECT name FROM students WHERE mark > 13;"
+      nom: "Rado and Mialy"
+      explication: "WHERE keeps the rows where mark > 13: Rado (14) and Mialy (17). SELECT name only shows their name."
+      pieges:
+        - { texte: "Rado, Mialy and Tiana", pourquoi: "Tiana has 12, and 12 > 13 is false." }
+        - { texte: "14 and 17", pourquoi: "SELECT name returns the name column, not the mark column." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhat does this query return?\nSELECT name FROM students WHERE class = '1B' AND mark >= 10;"
+      nom: "Tiana"
+      explication: "You must be in 1B and have at least 10. Lova is in 1B but has 9; only Tiana meets both conditions."
+      pieges:
+        - { texte: "Lova and Tiana", pourquoi: "Lova has 9: with AND, both conditions must be true." }
+        - { texte: "Rado, Lova, Mialy and Tiana", pourquoi: "That would be the result with OR. With AND, you must be in 1B and have at least 10." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhat does this query return?\nSELECT COUNT(*) FROM students WHERE class = '1A';"
+      nom: "2"
+      explication: "WHERE keeps Rado and Mialy, the two students in 1A. COUNT(*) counts these rows: 2."
+      pieges:
+        - { texte: "4", pourquoi: "COUNT(*) only counts the rows kept by WHERE." }
+        - { texte: "Rado and Mialy", pourquoi: "COUNT(*) returns a number of rows, not the names." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhich name does this query give first?\nSELECT name FROM students ORDER BY mark DESC;"
+      nom: "Mialy"
+      explication: "ORDER BY mark DESC sorts from the highest mark to the lowest: Mialy (17), Rado (14), Tiana (12), Lova (9)."
+      pieges:
+        - { texte: "Lova", pourquoi: "DESC sorts in decreasing order: Lova, with 9, comes last." }
+        - { texte: "Rado", pourquoi: "Rado is the first row of the table, but ORDER BY sorts by mark: 17 comes first." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhat does this query return?\nSELECT AVG(mark) FROM students;"
+      nom: "13"
+      explication: "AVG takes the mean of the column: (14 + 9 + 17 + 12) ÷ 4 = 52 ÷ 4 = 13. SQLite writes it 13.0."
+      pieges:
+        - { texte: "52", pourquoi: "52 is the sum; AVG divides it by the number of rows, 4." }
+        - { texte: "4", pourquoi: "4 is the number of rows; AVG gives the mean of the marks." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nTable classes (code, teacher):\n1A | Mrs Rakoto\n1B | Mr Randria\nWhat does this query return?\nSELECT students.name FROM students JOIN classes ON students.class = classes.code WHERE classes.teacher = 'Mr Randria';"
+      nom: "Lova and Tiana"
+      explication: "JOIN attaches to each student the row of their class. Mr Randria has 1B: Lova and Tiana."
+      pieges:
+        - { texte: "Mr Randria", pourquoi: "SELECT students.name returns the students’ names, not the teacher’s." }
+        - { texte: "Rado and Mialy", pourquoi: "Rado and Mialy are in 1A, Mrs Rakoto’s class." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWhich query gives the names of the students who have less than 10?"
+      nom: "SELECT name FROM students WHERE mark < 10;"
+      explication: "SELECT says which column to show (name), FROM which table, WHERE which rows to keep (mark < 10). It returns Lova."
+      pieges:
+        - { texte: "SELECT mark FROM students WHERE name < 10;", pourquoi: "The condition is about the mark column, and it is the name column you want to show." }
+        - { texte: "SELECT name WHERE mark < 10 FROM students;", pourquoi: "The order of the clauses is fixed: SELECT, then FROM, then WHERE. Otherwise, SQLite reports an error." }
+    - texte: "Table students (name, class, mark):\nRado | 1A | 14\nLova | 1B | 9\nMialy | 1A | 17\nTiana | 1B | 12\nWe run:\nUPDATE students SET mark = 11 WHERE name = 'Lova';\nThen, what does this query return?\nSELECT COUNT(*) FROM students WHERE mark >= 10;"
+      nom: "4"
+      explication: "UPDATE changes Lova’s mark: 9 becomes 11. All 4 students now have at least 10."
+      pieges:
+        - { texte: "3", pourquoi: "Before UPDATE, there were 3. Lova now has 11, and 11 ≥ 10." }
+        - { texte: "1", pourquoi: "UPDATE only touches Lova’s row, but COUNT(*) counts every row that meets WHERE." }
+    - texte: "Table classes (code, teacher):\n1A | Mrs Rakoto\n1B | Mr Randria\nWhy must the code column have a different value in each row (it is the primary key)?"
+      nom: "So that a class code points to a single row"
+      explication: "If two rows had the code 1A, the join would not know which teacher to give. SQLite refuses to add a second 1A."
+      pieges:
+        - { texte: "So that the table stays sorted", pourquoi: "A primary key sorts nothing: it identifies each row without any doubt." }
+        - { texte: "So that WHERE can be used", pourquoi: "WHERE works on any column; the key is there to point to a single row." }

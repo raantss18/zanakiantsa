@@ -1,0 +1,136 @@
+id: thales
+titre: "Le théorème de Thalès"
+niveau: 3e
+prerequis: ["proportionnalite-6e"]
+programme: { source: cycle4, texte: "Connaitre et appliquer le théorème de Thalès, sa réciproque, sa contraposée (configurations des triangles emboités et configuration dite du papillon)." }
+activite: quiz
+parametres: {}
+idee: "Si (MN) est parallèle à (BC), avec M sur [AB] et N sur [AC], le triangle AMN est une réduction de ABC : AM/AB = AN/AC = MN/BC."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Écris les trois rapports petit triangle sur grand triangle, remplace les longueurs connues, puis calcule avec le rapport."
+  exemple: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 3, AB = 6, BC = 10. AM/AB = 3/6 = 0,5 : le petit triangle est la moitié du grand. MN = 0,5 × 10 = 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 4, AB = 12, BC = 9. Combien mesure MN ?"
+    nom: "3"
+    explication: "MN/BC = AM/AB = 4/12 = 1/3, donc MN = 9 ÷ 3 = 3."
+    pieges:
+      - { texte: "27", pourquoi: "Le rapport est inversé : le petit triangle est plus petit, MN = 9 × 4/12." }
+      - { texte: "1", pourquoi: "On a enlevé 12 − 4 = 8 à 9 : on garde le même rapport, pas la même différence." }
+  - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 2, AB = 5, AN = 3. Combien mesure AC ?"
+    nom: "7,5"
+    explication: "AN/AC = AM/AB = 2/5, donc AC = 3 × 5 ÷ 2 = 7,5."
+    pieges:
+      - { texte: "6", pourquoi: "On a ajouté AB − AM = 3 à AN : c'est le rapport qui se conserve, pas la différence." }
+      - { texte: "1,2", pourquoi: "3 × 2/5 : AC est plus grand que AN, donc AC = 3 × 5/2." }
+  - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 6, AB = 8, AC = 12. Combien mesure AN ?"
+    nom: "9"
+    explication: "AN/AC = AM/AB = 6/8 = 0,75, donc AN = 0,75 × 12 = 9."
+    pieges:
+      - { texte: "10", pourquoi: "On a enlevé AB − AM = 2 à AC : c'est le rapport qui se conserve." }
+      - { texte: "16", pourquoi: "12 × 8/6 : AN est plus petit que AC, le rapport est 6/8." }
+  - texte: "Papillon : les droites (BM) et (CN) se coupent en A, et (BC) est parallèle à (MN). AB = 4, AM = 6, BC = 5. Combien mesure MN ?"
+    nom: "7,5"
+    explication: "AM/AB = MN/BC, donc MN = 5 × 6/4 = 7,5."
+    pieges:
+      - { texte: "7", pourquoi: "On a ajouté AM − AB = 2 à BC : c'est le rapport 6/4 qui compte." }
+      - { texte: "environ 3,3", pourquoi: "5 × 4/6 : le rapport est inversé, MN est du côté de AM, le plus long." }
+  - texte: "Complète : AM/AB = AN/… = MN/BC"
+    nom: "AC"
+    explication: "Chaque rapport compare un côté du petit triangle AMN au côté correspondant du grand ABC : AN avec AC."
+    pieges:
+      - { texte: "NC", pourquoi: "NC n'est qu'une partie de [AC] : on compare au côté entier AC." }
+      - { texte: "AB", pourquoi: "AN est sur la droite (AC) : on le compare à AC, pas à AB." }
+  - texte: "M sur [AB], N sur [AC], AM = 3, AB = 9, AN = 4, AC = 12. Les droites (MN) et (BC) sont-elles parallèles ?"
+    nom: "Oui, car 3/9 = 4/12."
+    explication: "3/9 = 1/3 et 4/12 = 1/3 : les rapports sont égaux, et les points sont dans le même ordre. D'après la réciproque de Thalès, (MN) est parallèle à (BC)."
+    pieges:
+      - { texte: "Non, car AB − AM et AC − AN sont différents.", pourquoi: "6 et 8 sont différents, mais la réciproque compare des rapports, pas des différences." }
+      - { texte: "On ne peut pas savoir sans mesurer MN.", pourquoi: "La réciproque n'utilise que AM/AB et AN/AC, qui sont égaux." }
+  - texte: "M sur [AB], N sur [AC], AM = 2, AB = 6, AN = 3, AC = 8. Les droites (MN) et (BC) sont-elles parallèles ?"
+    nom: "Non, car 2/6 et 3/8 sont différents."
+    explication: "2/6 ≈ 0,33 et 3/8 = 0,375 : les rapports ne sont pas égaux. Si les droites étaient parallèles, ils le seraient (contraposée de Thalès)."
+    pieges:
+      - { texte: "Oui, car 2/6 et 3/8 sont presque égaux.", pourquoi: "Presque ne suffit pas : il faut des rapports exactement égaux." }
+      - { texte: "Oui, car M et N sont sur les côtés du triangle.", pourquoi: "Cela ne suffit pas : il faut aussi que AM/AB = AN/AC." }
+  - texte: "Pourquoi, dans la configuration de Thalès, MN est-il plus petit que BC quand AM est plus petit que AB ?"
+    nom: "Parce que AMN est une réduction de ABC : tous les côtés sont multipliés par le même rapport."
+    explication: "Le rapport AM/AB est plus petit que 1, et MN = BC × AM/AB."
+    pieges:
+      - { texte: "Parce qu'on enlève la même longueur à chaque côté.", pourquoi: "On ne soustrait pas : on multiplie chaque côté par le même rapport." }
+      - { texte: "Parce que MN est toujours la moitié de BC.", pourquoi: "Seulement si M est le milieu de [AB] : en général, le rapport est AM/AB." }
+  - texte: "Au même moment, un bâton de 1 m fait une ombre de 1,5 m et un arbre fait une ombre de 12 m. Quelle est la hauteur de l'arbre ?"
+    nom: "8 m"
+    explication: "Les rayons du soleil sont parallèles : hauteur/ombre est le même rapport. 1/1,5 = h/12, donc h = 12 ÷ 1,5 = 8 m."
+    pieges:
+      - { texte: "18 m", pourquoi: "12 × 1,5 : l'ombre du bâton est plus longue que le bâton, donc l'arbre est plus petit que son ombre." }
+      - { texte: "11,5 m", pourquoi: "12 − 0,5 : c'est le rapport qui se conserve, pas la différence." }
+
+en:
+  titre: "The intercept theorem"
+  idee: "If (MN) is parallel to (BC), with M on [AB] and N on [AC], triangle AMN is a reduction of ABC: AM/AB = AN/AC = MN/BC."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Write the three ratios small triangle over large triangle, put in the known lengths, then work with the ratio."
+    exemple: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 3, AB = 6, BC = 10. AM/AB = 3/6 = 0.5: the small triangle is half the large one. MN = 0.5 × 10 = 5."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 4, AB = 12, BC = 9. How long is MN?"
+      nom: "3"
+      explication: "MN/BC = AM/AB = 4/12 = 1/3, so MN = 9 ÷ 3 = 3."
+      pieges:
+        - { texte: "27", pourquoi: "The ratio is upside down: the small triangle is smaller, MN = 9 × 4/12." }
+        - { texte: "1", pourquoi: "12 − 4 = 8 was taken from 9: the ratio stays the same, not the difference." }
+    - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 2, AB = 5, AN = 3. How long is AC?"
+      nom: "7.5"
+      explication: "AN/AC = AM/AB = 2/5, so AC = 3 × 5 ÷ 2 = 7.5."
+      pieges:
+        - { texte: "6", pourquoi: "AB − AM = 3 was added to AN: the ratio is kept, not the difference." }
+        - { texte: "1.2", pourquoi: "3 × 2/5: AC is longer than AN, so AC = 3 × 5/2." }
+    - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 6, AB = 8, AC = 12. How long is AN?"
+      nom: "9"
+      explication: "AN/AC = AM/AB = 6/8 = 0.75, so AN = 0.75 × 12 = 9."
+      pieges:
+        - { texte: "10", pourquoi: "AB − AM = 2 was taken from AC: the ratio is what stays the same." }
+        - { texte: "16", pourquoi: "12 × 8/6: AN is shorter than AC, the ratio is 6/8." }
+    - texte: "Butterfly: lines (BM) and (CN) cross at A, and (BC) is parallel to (MN). AB = 4, AM = 6, BC = 5. How long is MN?"
+      nom: "7.5"
+      explication: "AM/AB = MN/BC, so MN = 5 × 6/4 = 7.5."
+      pieges:
+        - { texte: "7", pourquoi: "AM − AB = 2 was added to BC: the ratio 6/4 is what counts." }
+        - { texte: "about 3.3", pourquoi: "5 × 4/6: the ratio is upside down, MN is on the side of AM, the longer one." }
+    - texte: "Fill in: AM/AB = AN/… = MN/BC"
+      nom: "AC"
+      explication: "Each ratio compares a side of the small triangle AMN with the matching side of the large ABC: AN with AC."
+      pieges:
+        - { texte: "NC", pourquoi: "NC is only part of [AC]: compare with the whole side AC." }
+        - { texte: "AB", pourquoi: "AN lies on line (AC): compare it with AC, not AB." }
+    - texte: "M on [AB], N on [AC], AM = 3, AB = 9, AN = 4, AC = 12. Are lines (MN) and (BC) parallel?"
+      nom: "Yes, because 3/9 = 4/12."
+      explication: "3/9 = 1/3 and 4/12 = 1/3: the ratios are equal, and the points are in the same order. By the converse of the theorem, (MN) is parallel to (BC)."
+      pieges:
+        - { texte: "No, because AB − AM and AC − AN are different.", pourquoi: "6 and 8 are different, but the converse compares ratios, not differences." }
+        - { texte: "You cannot tell without measuring MN.", pourquoi: "The converse only uses AM/AB and AN/AC, which are equal." }
+    - texte: "M on [AB], N on [AC], AM = 2, AB = 6, AN = 3, AC = 8. Are lines (MN) and (BC) parallel?"
+      nom: "No, because 2/6 and 3/8 are different."
+      explication: "2/6 ≈ 0.33 and 3/8 = 0.375: the ratios are not equal. If the lines were parallel, they would be (contrapositive of the theorem)."
+      pieges:
+        - { texte: "Yes, because 2/6 and 3/8 are nearly equal.", pourquoi: "Nearly is not enough: the ratios must be exactly equal." }
+        - { texte: "Yes, because M and N are on the sides of the triangle.", pourquoi: "That is not enough: AM/AB must also equal AN/AC." }
+    - texte: "In the intercept theorem set-up, why is MN shorter than BC when AM is shorter than AB?"
+      nom: "Because AMN is a reduction of ABC: every side is multiplied by the same ratio."
+      explication: "The ratio AM/AB is less than 1, and MN = BC × AM/AB."
+      pieges:
+        - { texte: "Because the same length is taken off each side.", pourquoi: "Nothing is subtracted: each side is multiplied by the same ratio." }
+        - { texte: "Because MN is always half of BC.", pourquoi: "Only if M is the midpoint of [AB]: in general, the ratio is AM/AB." }
+    - texte: "At the same moment, a 1 m stick casts a 1.5 m shadow and a tree casts a 12 m shadow. How tall is the tree?"
+      nom: "8 m"
+      explication: "The sun's rays are parallel: height/shadow is the same ratio. 1/1.5 = h/12, so h = 12 ÷ 1.5 = 8 m."
+      pieges:
+        - { texte: "18 m", pourquoi: "12 × 1.5: the stick's shadow is longer than the stick, so the tree is shorter than its shadow." }
+        - { texte: "11.5 m", pourquoi: "12 − 0.5: the ratio is kept, not the difference." }

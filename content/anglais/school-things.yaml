@@ -1,0 +1,96 @@
+id: school-things
+titre: "Les affaires d'école en anglais"
+niveau: CE1
+prerequis: []
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), CE1, « Comprendre
+# quelques mots familiers » : objectif d'apprentissage. Lu le 2026-11-07.
+programme: { source: lver_c2, texte: "CE1 : (A1) repérer les mots simples et familiers (pré-A1) accompagnés de visuels (A1) (famille et environnement immédiat)." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "En classe, on montre un objet et on dit « It's a pencil » : c'est un crayon. « It's a book » : c'est un livre."
+phrases:
+  consigne: "Écoute la phrase anglaise, puis touche le bon objet de l'école."
+  question: "Touche : « {texte} »."
+  indice: "Écoute le dernier mot : c'est le nom de l'objet."
+  exemple: "Un exemple : « It's a ruler », c'est une règle. Écoute encore la phrase, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "It's a school bag"
+    bonne: ["1f392", "le cartable"]
+    autres: [["1f4d6", "le livre"], ["1fa91", "la chaise"]]
+    explication: "« It's a school bag » : c'est un cartable."
+  - texte: "It's a book"
+    bonne: ["1f4d6", "le livre"]
+    autres: [["1f4d4", "le cahier"], ["270f", "le crayon"]]
+    explication: "« It's a book » : c'est un livre."
+  - texte: "It's a pencil"
+    bonne: ["270f", "le crayon"]
+    autres: [["1f3a8", "la peinture"], ["1f392", "le cartable"]]
+    explication: "« It's a pencil » : c'est un crayon."
+  - texte: "It's a notebook"
+    bonne: ["1f4d4", "le cahier"]
+    autres: [["1f4bb", "l'ordinateur"], ["1f4d6", "le livre"]]
+    explication: "« It's a notebook » : c'est un cahier."
+  - texte: "It's a computer"
+    bonne: ["1f4bb", "l'ordinateur"]
+    autres: [["1f6aa", "la porte"], ["1f4d4", "le cahier"]]
+    explication: "« It's a computer » : c'est un ordinateur."
+  - texte: "It's a chair"
+    bonne: ["1fa91", "la chaise"]
+    autres: [["1f392", "le cartable"], ["1f6aa", "la porte"]]
+    explication: "« It's a chair » : c'est une chaise."
+  - texte: "It's the door"
+    bonne: ["1f6aa", "la porte"]
+    autres: [["1fa91", "la chaise"], ["1f4bb", "l'ordinateur"]]
+    explication: "« It's the door » : c'est la porte."
+  - texte: "They're my paints"
+    bonne: ["1f3a8", "la peinture"]
+    autres: [["270f", "le crayon"], ["1f4d6", "le livre"]]
+    explication: "« They're my paints » : c'est ma peinture."
+en:
+  titre: "School things in English"
+  idee: "In class, we show an object and say “It's a pencil”, “It's a book”."
+  phrases:
+    consigne: "Listen to the sentence, then touch the right school thing."
+    question: "Touch: {texte}."
+    indice: "Listen to the last word: it is the name of the thing."
+    exemple: "An example: “It's a ruler.” Listen to the sentence again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "It's a school bag"
+      bonne: ["1f392", "the school bag"]
+      autres: [["1f4d6", "the book"], ["1fa91", "the chair"]]
+      explication: "It's a school bag — well done!"
+    - texte: "It's a book"
+      bonne: ["1f4d6", "the book"]
+      autres: [["1f4d4", "the notebook"], ["270f", "the pencil"]]
+      explication: "It's a book — well done!"
+    - texte: "It's a pencil"
+      bonne: ["270f", "the pencil"]
+      autres: [["1f3a8", "the paints"], ["1f392", "the school bag"]]
+      explication: "It's a pencil — well done!"
+    - texte: "It's a notebook"
+      bonne: ["1f4d4", "the notebook"]
+      autres: [["1f4bb", "the computer"], ["1f4d6", "the book"]]
+      explication: "It's a notebook — well done!"
+    - texte: "It's a computer"
+      bonne: ["1f4bb", "the computer"]
+      autres: [["1f6aa", "the door"], ["1f4d4", "the notebook"]]
+      explication: "It's a computer — well done!"
+    - texte: "It's a chair"
+      bonne: ["1fa91", "the chair"]
+      autres: [["1f392", "the school bag"], ["1f6aa", "the door"]]
+      explication: "It's a chair — well done!"
+    - texte: "It's the door"
+      bonne: ["1f6aa", "the door"]
+      autres: [["1fa91", "the chair"], ["1f4bb", "the computer"]]
+      explication: "It's the door — well done!"
+    - texte: "They're my paints"
+      bonne: ["1f3a8", "the paints"]
+      autres: [["270f", "the pencil"], ["1f4d6", "the book"]]
+      explication: "They're my paints — well done!"

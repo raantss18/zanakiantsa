@@ -1,0 +1,124 @@
+id: bilan-radiatif
+titre: "Énergie solaire, effet de serre et climat"
+niveau: 1re
+prerequis: [energie]
+programme: { source: es1re, texte: "Une partie de cette puissance est absorbée par l’atmosphère, qui elle-même émet un rayonnement infrarouge vers l’espace et vers la surface terrestre (effet de serre)." }
+activite: quiz
+parametres: {}
+idee: "La Terre reçoit l'énergie du Soleil et en renvoie une partie (l'albédo). Le sol chauffé émet de l'infrarouge ; l'atmosphère en absorbe et en renvoie vers le sol : c'est l'effet de serre."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : puissance solaire moyenne au sommet de l'atmosphère ≈ 340 W/m² ; albédo moyen ≈ 0,3 ; sans effet de serre, ≈ −18 °C en moyenne."
+  exemple: "Exemple : en moyenne, 340 W/m² arrivent du Soleil au sommet de l'atmosphère. Avec un albédo de 0,3, 30 % sont renvoyés : 0,3 × 340 ≈ 100 W/m². Il reste environ 240 W/m² absorbés."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce que l'albédo de la Terre ?"
+    nom: "La fraction du rayonnement solaire reçu qui est renvoyée vers l'espace."
+    explication: "L'albédo moyen de la Terre vaut environ 0,3 : environ 30 % de l'énergie solaire reçue est diffusée vers l'espace."
+    pieges:
+      - { texte: "La température moyenne de la Terre.", pourquoi: "L'albédo est une proportion, sans unité, pas une température." }
+      - { texte: "La part de l'énergie solaire absorbée par le sol.", pourquoi: "C'est l'inverse : l'albédo mesure la part renvoyée, pas la part absorbée." }
+  - texte: "La puissance solaire moyenne au sommet de l'atmosphère vaut environ 340 W/m² et l'albédo 0,3. Quelle puissance est absorbée par mètre carré ?"
+    nom: "Environ 240 W/m²."
+    explication: "On renvoie 0,3 × 340 ≈ 100 W/m² ; il reste 340 − 100 ≈ 240 W/m² absorbés par l'atmosphère, les continents et les océans."
+    pieges:
+      - { texte: "Environ 100 W/m².", pourquoi: "100 W/m² est la part renvoyée vers l'espace ; la part absorbée est le reste." }
+      - { texte: "340,3 W/m².", pourquoi: "L'albédo est une fraction à multiplier, pas un nombre à ajouter." }
+  - texte: "Une neige fraîche a un albédo d'environ 0,8 ; un océan sombre, beaucoup moins. Si la banquise fond et laisse place à l'océan, que se passe-t-il ?"
+    nom: "La surface absorbe plus d'énergie solaire, ce qui renforce le réchauffement."
+    explication: "La glace claire renvoie beaucoup de rayonnement ; l'océan sombre en absorbe davantage. La fonte entretient donc le réchauffement."
+    pieges:
+      - { texte: "La surface renvoie plus d'énergie, ce qui refroidit la région.", pourquoi: "Une surface sombre a un albédo plus faible : elle renvoie moins, et absorbe plus." }
+      - { texte: "Rien ne change, l'albédo ne dépend pas de la surface.", pourquoi: "L'albédo dépend justement de la nature de la surface : glace, océan, forêt, désert…" }
+  - texte: "Dans quel domaine de rayonnement la surface de la Terre émet-elle de l'énergie ?"
+    nom: "Dans l'infrarouge."
+    explication: "La surface terrestre émet un rayonnement infrarouge, invisible, dont la puissance augmente avec la température."
+    pieges:
+      - { texte: "Dans la lumière visible, comme le Soleil.", pourquoi: "Le Soleil, très chaud, émet surtout du visible ; la Terre, bien plus froide, émet dans l'infrarouge." }
+      - { texte: "Elle n'émet rien, elle ne fait que recevoir.", pourquoi: "Tout corps chaud émet un rayonnement : la Terre aussi, et d'autant plus qu'elle est chaude." }
+  - texte: "Qu'est-ce que l'effet de serre ?"
+    nom: "L'atmosphère absorbe une partie de l'infrarouge émis par le sol et en renvoie vers la surface."
+    explication: "Des gaz comme la vapeur d'eau, le CO₂ et le méthane absorbent l'infrarouge ; l'atmosphère réémet vers l'espace et vers le sol, qui reçoit ainsi plus d'énergie."
+    pieges:
+      - { texte: "Un trou dans la couche d'ozone qui laisse entrer la chaleur.", pourquoi: "C'est une confusion très fréquente : la couche d'ozone filtre les ultraviolets, c'est un autre phénomène." }
+      - { texte: "La chaleur produite par les usines et les voitures.", pourquoi: "Ces activités rejettent des gaz à effet de serre, mais l'effet de serre lui-même est le renvoi d'infrarouge par l'atmosphère." }
+  - texte: "Sans effet de serre, la température moyenne de la surface terrestre serait d'environ −18 °C. Que faut-il en conclure ?"
+    nom: "L'effet de serre naturel est indispensable à la vie telle qu'on la connaît."
+    explication: "Grâce à l'effet de serre naturel, la température moyenne est d'environ 15 °C. Le problème actuel est son renforcement par les activités humaines."
+    pieges:
+      - { texte: "L'effet de serre est toujours néfaste.", pourquoi: "On le présente souvent comme une pollution ; naturel, il rend la Terre habitable. C'est son renforcement qui pose problème." }
+      - { texte: "L'effet de serre n'a aucun effet sur la température.", pourquoi: "L'écart entre −18 °C et environ 15 °C montre au contraire son rôle majeur." }
+  - texte: "Quand la température moyenne de la surface reste constante, que peut-on dire de la puissance qu'elle reçoit et de celle qu'elle émet ?"
+    nom: "Elles sont égales en moyenne : c'est un équilibre dynamique."
+    explication: "La surface reçoit l'énergie du Soleil et de l'atmosphère, et en émet autant : la température ne varie plus."
+    pieges:
+      - { texte: "La surface ne reçoit plus d'énergie.", pourquoi: "Équilibre ne veut pas dire absence d'échanges : la surface reçoit et émet sans cesse." }
+      - { texte: "Elle reçoit beaucoup plus qu'elle n'émet.", pourquoi: "Dans ce cas, elle se réchaufferait : la température ne resterait pas constante." }
+  - texte: "Pourquoi le CO₂ rejeté par les activités humaines réchauffe-t-il le climat ?"
+    nom: "Il renforce l'effet de serre : l'atmosphère renvoie plus d'infrarouge vers la surface."
+    explication: "Plus de CO₂ absorbe plus d'infrarouge ; la surface reçoit plus d'énergie et se réchauffe jusqu'à un nouvel équilibre."
+    pieges:
+      - { texte: "Parce que le CO₂ est chaud quand il sort des cheminées.", pourquoi: "La chaleur des fumées est négligeable ; c'est l'absorption de l'infrarouge par le CO₂ qui compte." }
+      - { texte: "Parce que le CO₂ augmente l'albédo.", pourquoi: "Le CO₂ est transparent à la lumière visible : il agit sur l'infrarouge, pas sur l'albédo." }
+
+en:
+  titre: "Solar energy, the greenhouse effect and climate"
+  idee: "The Earth receives energy from the Sun and sends part of it back (the albedo). The warmed ground emits infrared; the atmosphere absorbs some and sends it back to the ground: that's the greenhouse effect."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: average solar power at the top of the atmosphere ≈ 340 W/m²; average albedo ≈ 0.3; without the greenhouse effect, ≈ −18 °C on average."
+    exemple: "Example: on average, 340 W/m² arrives from the Sun at the top of the atmosphere. With an albedo of 0.3, 30 % is sent back: 0.3 × 340 ≈ 100 W/m². About 240 W/m² is left to be absorbed."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the Earth's albedo?"
+      nom: "The fraction of the solar radiation received that is sent back into space."
+      explication: "The Earth's average albedo is about 0.3: about 30 % of the solar energy received is scattered back into space."
+      pieges:
+        - { texte: "The Earth's average temperature.", pourquoi: "Albedo is a proportion, with no unit, not a temperature." }
+        - { texte: "The share of solar energy absorbed by the ground.", pourquoi: "It's the opposite: albedo measures the share sent back, not the share absorbed." }
+    - texte: "The average solar power at the top of the atmosphere is about 340 W/m² and the albedo is 0.3. How much power is absorbed per square metre?"
+      nom: "About 240 W/m²."
+      explication: "0.3 × 340 ≈ 100 W/m² is sent back; 340 − 100 ≈ 240 W/m² is left, absorbed by the atmosphere, the land and the oceans."
+      pieges:
+        - { texte: "About 100 W/m².", pourquoi: "100 W/m² is the share sent back into space; the absorbed share is what remains." }
+        - { texte: "340.3 W/m².", pourquoi: "Albedo is a fraction to multiply by, not a number to add." }
+    - texte: "Fresh snow has an albedo of about 0.8; a dark ocean, much less. If sea ice melts and gives way to ocean, what happens?"
+      nom: "The surface absorbs more solar energy, which strengthens the warming."
+      explication: "Light-coloured ice sends back a lot of radiation; dark ocean absorbs more. So melting keeps the warming going."
+      pieges:
+        - { texte: "The surface sends back more energy, which cools the region.", pourquoi: "A dark surface has a lower albedo: it sends back less and absorbs more." }
+        - { texte: "Nothing changes, albedo doesn't depend on the surface.", pourquoi: "Albedo depends precisely on the type of surface: ice, ocean, forest, desert…" }
+    - texte: "In which kind of radiation does the Earth's surface give off energy?"
+      nom: "In the infrared."
+      explication: "The Earth's surface gives off invisible infrared radiation, whose power increases with temperature."
+      pieges:
+        - { texte: "In visible light, like the Sun.", pourquoi: "The very hot Sun gives off mostly visible light; the much colder Earth gives off infrared." }
+        - { texte: "It gives off nothing, it only receives.", pourquoi: "Every warm body gives off radiation: the Earth does too, and more so the warmer it is." }
+    - texte: "What is the greenhouse effect?"
+      nom: "The atmosphere absorbs part of the infrared given off by the ground and sends some back to the surface."
+      explication: "Gases such as water vapour, CO₂ and methane absorb infrared; the atmosphere re-emits towards space and towards the ground, which so receives more energy."
+      pieges:
+        - { texte: "A hole in the ozone layer that lets heat in.", pourquoi: "That's a very common mix-up: the ozone layer filters ultraviolet; it's a different phenomenon." }
+        - { texte: "The heat produced by factories and cars.", pourquoi: "These activities release greenhouse gases, but the greenhouse effect itself is the atmosphere sending infrared back." }
+    - texte: "Without the greenhouse effect, the Earth's average surface temperature would be about −18 °C. What should we conclude?"
+      nom: "The natural greenhouse effect is essential to life as we know it."
+      explication: "Thanks to the natural greenhouse effect, the average temperature is about 15 °C. Today's problem is its strengthening by human activity."
+      pieges:
+        - { texte: "The greenhouse effect is always harmful.", pourquoi: "It's often presented as pollution; the natural effect makes the Earth habitable. It's its strengthening that is the problem." }
+        - { texte: "The greenhouse effect has no effect on temperature.", pourquoi: "The gap between −18 °C and about 15 °C shows, on the contrary, its major role." }
+    - texte: "When the surface's average temperature stays constant, what can we say about the power it receives and the power it gives off?"
+      nom: "They are equal on average: it's a dynamic equilibrium."
+      explication: "The surface receives energy from the Sun and the atmosphere, and gives off as much: the temperature no longer changes."
+      pieges:
+        - { texte: "The surface no longer receives any energy.", pourquoi: "Equilibrium doesn't mean no exchanges: the surface keeps receiving and giving off energy." }
+        - { texte: "It receives much more than it gives off.", pourquoi: "In that case it would warm up: the temperature wouldn't stay constant." }
+    - texte: "Why does the CO₂ released by human activity warm the climate?"
+      nom: "It strengthens the greenhouse effect: the atmosphere sends more infrared back to the surface."
+      explication: "More CO₂ absorbs more infrared; the surface receives more energy and warms up until a new equilibrium."
+      pieges:
+        - { texte: "Because CO₂ is hot when it leaves the chimneys.", pourquoi: "The heat of the fumes is negligible; what counts is CO₂ absorbing infrared." }
+        - { texte: "Because CO₂ increases the albedo.", pourquoi: "CO₂ is transparent to visible light: it acts on infrared, not on albedo." }

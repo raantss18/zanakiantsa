@@ -1,0 +1,124 @@
+id: mediterranee-antique-medievale
+titre: "La Méditerranée, de l'Antiquité au Moyen Âge"
+niveau: 2de
+prerequis: [moyen-age]
+programme: { source: hg2de, texte: "Le monde méditerranéen : empreintes de l’Antiquité et du Moyen Âge" }
+activite: quiz
+parametres: {}
+idee: "Athènes invente la démocratie, Rome bâtit un immense empire qui devient chrétien. Au Moyen Âge, chrétiens latins, Byzantins et musulmans se côtoient, échangent et s'affrontent en Méditerranée."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : Ve siècle av. J.-C., Périclès à Athènes ; 27 av. J.-C., Auguste ; 313 et 330, Constantin ; 1146, Bernard de Clairvaux prêche la deuxième croisade."
+  exemple: "Exemple : à Athènes, au temps de Périclès, les citoyens votent les lois à l'assemblée, l'ecclésia. Mais les femmes, les esclaves et les étrangers résidents, les métèques, n'en font pas partie."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans l'Athènes de Périclès, au Ve siècle av. J.-C., qui peut voter à l'assemblée ?"
+    nom: "Les citoyens : des hommes libres, nés de parents athéniens."
+    explication: "La démocratie athénienne est le pouvoir des citoyens, une minorité de la population : femmes, esclaves et métèques en sont exclus."
+    pieges:
+      - { texte: "Tous les habitants d'Athènes, hommes et femmes.", pourquoi: "On projette souvent notre démocratie sur Athènes ; les femmes, les esclaves et les métèques ne votaient pas." }
+      - { texte: "Seulement le roi et les nobles.", pourquoi: "Athènes n'a plus de roi : à l'assemblée, chaque citoyen, riche ou pauvre, peut voter." }
+  - texte: "Comment Athènes devient-elle, au Ve siècle av. J.-C., une puissance qui domine d'autres cités ?"
+    nom: "Par sa flotte de guerre et la ligue de Délos, dont les alliés lui versent un tribut."
+    explication: "La démocratie athénienne s'appuie sur un empire maritime : sa flotte domine la mer Égée et ses alliés paient pour elle."
+    pieges:
+      - { texte: "En conquérant toute l'Europe par la terre.", pourquoi: "C'est plutôt le modèle romain : Athènes domine par la mer, pas par un vaste territoire." }
+      - { texte: "En refusant toute guerre.", pourquoi: "Athènes est une puissance militaire ; démocratie et domination sur d'autres cités vont ensemble." }
+  - texte: "En 27 av. J.-C., Octave reçoit le titre d'Auguste. Quel régime met-il en place ?"
+    nom: "Le principat : il concentre les pouvoirs tout en gardant l'apparence de la République."
+    explication: "Auguste se présente comme le « premier des citoyens », le princeps, mais il tient l'armée et les principaux pouvoirs : c'est la naissance de l'Empire romain."
+    pieges:
+      - { texte: "Une démocratie comme celle d'Athènes.", pourquoi: "Le peuple romain ne gouverne pas : le pouvoir réel est entre les mains d'Auguste." }
+      - { texte: "Une monarchie où il se proclame roi.", pourquoi: "Les Romains rejetaient le titre de roi ; Auguste prend soin de ne pas l'utiliser." }
+  - texte: "Quel rôle Constantin joue-t-il dans l'histoire de l'Empire romain ?"
+    nom: "Il favorise le christianisme et fonde Constantinople."
+    explication: "En 313, les chrétiens obtiennent la liberté de culte ; en 330, Constantin inaugure Constantinople, nouvelle capitale à l'est."
+    pieges:
+      - { texte: "Il interdit le christianisme et persécute les chrétiens.", pourquoi: "Les grandes persécutions ont lieu avant lui ; Constantin soutient au contraire l'Église." }
+      - { texte: "Il fonde la ville de Rome.", pourquoi: "Rome existe depuis des siècles ; Constantin fonde une nouvelle capitale, Constantinople." }
+  - texte: "Au Moyen Âge, quelles sont les trois grandes civilisations qui se partagent la Méditerranée ?"
+    nom: "L'Occident chrétien latin, l'Empire byzantin et le monde musulman."
+    explication: "Ces trois civilisations sont marquées par les monothéismes juif, chrétien et musulman, et sont elles-mêmes diverses."
+    pieges:
+      - { texte: "Les Grecs, les Romains et les Égyptiens.", pourquoi: "Ce sont des civilisations de l'Antiquité, pas du Moyen Âge." }
+      - { texte: "La France, l'Angleterre et l'Espagne seules.", pourquoi: "Ces royaumes font tous partie de l'Occident chrétien : il manque Byzance et le monde musulman." }
+  - texte: "En 1146, à Vézelay, que fait Bernard de Clairvaux ?"
+    nom: "Il prêche la deuxième croisade."
+    explication: "À l'appel du pape, Bernard de Clairvaux appelle les chrétiens à partir en croisade ; l'expédition échoue devant Damas en 1148."
+    pieges:
+      - { texte: "Il signe la paix entre chrétiens et musulmans.", pourquoi: "Il appelle au contraire à la guerre contre les musulmans en Orient." }
+      - { texte: "Il prend Jérusalem.", pourquoi: "Jérusalem est prise par les croisés en 1099, lors de la première croisade ; Bernard est un moine prédicateur." }
+  - texte: "Pourquoi Venise devient-elle une grande puissance au Moyen Âge ?"
+    nom: "Grâce à sa flotte et à son commerce entre l'Orient et l'Europe."
+    explication: "Ses marchands rapportent d'Orient épices et soieries par la Méditerranée et les revendent en Europe ; ses comptoirs jalonnent les routes maritimes."
+    pieges:
+      - { texte: "Grâce à ses grandes plaines agricoles.", pourquoi: "Venise est bâtie sur une lagune : sa richesse vient de la mer et du commerce." }
+      - { texte: "Grâce à une armée de terre qui conquiert l'Europe.", pourquoi: "Sa puissance est maritime et commerciale, pas terrestre." }
+  - texte: "Pourquoi dit-on que la Méditerranée médiévale est un espace d'échanges et de conflits à la fois ?"
+    nom: "Parce que marchandises, personnes et idées y circulent, même en temps de guerre."
+    explication: "Croisades et conflits n'empêchent pas le commerce et les échanges savants entre chrétiens, musulmans et Byzantins."
+    pieges:
+      - { texte: "Parce que les conflits ont arrêté tous les échanges.", pourquoi: "On imagine souvent des mondes fermés ; le commerce continue pendant les croisades." }
+      - { texte: "Parce qu'il n'y a jamais eu de guerre en Méditerranée.", pourquoi: "Les croisades et les guerres entre Byzance et ses voisins montrent le contraire." }
+
+en:
+  titre: "The Mediterranean, from Antiquity to the Middle Ages"
+  idee: "Athens invents democracy, Rome builds a huge empire that becomes Christian. In the Middle Ages, Latin Christians, Byzantines and Muslims live side by side, trade and clash in the Mediterranean."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 5th century BC, Pericles in Athens; 27 BC, Augustus; 313 and 330, Constantine; 1146, Bernard of Clairvaux preaches the Second Crusade."
+    exemple: "Example: in Athens, in Pericles's time, citizens vote the laws in the assembly, the ecclesia. But women, slaves and resident foreigners, the metics, are not part of it."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In Pericles's Athens, in the 5th century BC, who can vote in the assembly?"
+      nom: "The citizens: free men born of Athenian parents."
+      explication: "Athenian democracy is rule by the citizens, a minority of the population: women, slaves and metics are excluded."
+      pieges:
+        - { texte: "All the inhabitants of Athens, men and women.", pourquoi: "We often project our own democracy onto Athens; women, slaves and metics did not vote." }
+        - { texte: "Only the king and the nobles.", pourquoi: "Athens no longer has a king: in the assembly, every citizen, rich or poor, can vote." }
+    - texte: "How does Athens become, in the 5th century BC, a power that dominates other cities?"
+      nom: "Through its war fleet and the Delian League, whose allies pay it tribute."
+      explication: "Athenian democracy rests on a maritime empire: its fleet rules the Aegean Sea and its allies pay for it."
+      pieges:
+        - { texte: "By conquering all of Europe over land.", pourquoi: "That's more the Roman model: Athens rules by sea, not over a vast territory." }
+        - { texte: "By refusing all war.", pourquoi: "Athens is a military power; democracy and rule over other cities go together." }
+    - texte: "In 27 BC, Octavian receives the title Augustus. What regime does he set up?"
+      nom: "The principate: he gathers the powers while keeping the appearance of the Republic."
+      explication: "Augustus presents himself as the « first citizen », the princeps, but he holds the army and the main powers: it's the birth of the Roman Empire."
+      pieges:
+        - { texte: "A democracy like Athens's.", pourquoi: "The Roman people don't govern: real power is in Augustus's hands." }
+        - { texte: "A monarchy in which he proclaims himself king.", pourquoi: "The Romans rejected the title of king; Augustus takes care not to use it." }
+    - texte: "What part does Constantine play in the history of the Roman Empire?"
+      nom: "He favours Christianity and founds Constantinople."
+      explication: "In 313, Christians gain freedom of worship; in 330, Constantine inaugurates Constantinople, a new capital in the east."
+      pieges:
+        - { texte: "He bans Christianity and persecutes Christians.", pourquoi: "The great persecutions take place before him; Constantine, on the contrary, supports the Church." }
+        - { texte: "He founds the city of Rome.", pourquoi: "Rome had existed for centuries; Constantine founds a new capital, Constantinople." }
+    - texte: "In the Middle Ages, which three great civilisations share the Mediterranean?"
+      nom: "The Latin Christian West, the Byzantine Empire and the Muslim world."
+      explication: "These three civilisations are shaped by the Jewish, Christian and Muslim monotheisms, and are themselves diverse."
+      pieges:
+        - { texte: "The Greeks, the Romans and the Egyptians.", pourquoi: "Those are civilisations of Antiquity, not of the Middle Ages." }
+        - { texte: "France, England and Spain alone.", pourquoi: "These kingdoms are all part of the Christian West: Byzantium and the Muslim world are missing." }
+    - texte: "In 1146, at Vézelay, what does Bernard of Clairvaux do?"
+      nom: "He preaches the Second Crusade."
+      explication: "At the Pope's call, Bernard of Clairvaux urges Christians to go on crusade; the expedition fails before Damascus in 1148."
+      pieges:
+        - { texte: "He signs a peace between Christians and Muslims.", pourquoi: "On the contrary, he calls for war against the Muslims in the East." }
+        - { texte: "He captures Jerusalem.", pourquoi: "Jerusalem is taken by the crusaders in 1099, during the First Crusade; Bernard is a preaching monk." }
+    - texte: "Why does Venice become a great power in the Middle Ages?"
+      nom: "Thanks to its fleet and its trade between the East and Europe."
+      explication: "Its merchants bring spices and silks from the East across the Mediterranean and sell them on in Europe; its trading posts line the sea routes."
+      pieges:
+        - { texte: "Thanks to its great farming plains.", pourquoi: "Venice is built on a lagoon: its wealth comes from the sea and trade." }
+        - { texte: "Thanks to a land army that conquers Europe.", pourquoi: "Its power is maritime and commercial, not on land." }
+    - texte: "Why do we say the medieval Mediterranean is a space of both exchange and conflict?"
+      nom: "Because goods, people and ideas travel across it, even in wartime."
+      explication: "Crusades and conflicts don't stop trade and scholarly exchanges between Christians, Muslims and Byzantines."
+      pieges:
+        - { texte: "Because the conflicts stopped all exchanges.", pourquoi: "People often imagine closed worlds; trade carries on during the crusades." }
+        - { texte: "Because there was never any war in the Mediterranean.", pourquoi: "The crusades and the wars between Byzantium and its neighbours show the opposite." }

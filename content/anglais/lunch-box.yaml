@@ -1,0 +1,104 @@
+id: lunch-box
+titre: "Ma boîte à goûter, en anglais"
+niveau: CP
+prerequis: []
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), CP, « Comprendre
+# quelques mots familiers » : objectif et exemple de réussite (jeu de la boîte-déjeuner). Lu le 2026-11-07.
+programme: { source: lver_c2, texte: "CP : repérer les mots simples et familiers accompagnés de visuels (famille et environnement immédiat) ; exemple cité : « In my lunch box, I have an apple. »" }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+idee: "« lunch box », c'est la boîte où l'on range son repas ou son goûter. « In my lunch box, I have an apple » : dans ma boîte, j'ai une pomme."
+phrases:
+  consigne: "Écoute ce qu'il y a dans la boîte à goûter, puis touche la bonne image."
+  question: "« In my lunch box, I have {texte}. »"
+  indice: "Écoute le dernier mot de la phrase : c'est ce qu'il y a dans la boîte."
+  exemple: "Un exemple : « In my lunch box, I have a sandwich », j'ai un sandwich. Écoute encore, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "an apple"
+    bonne: ["1f34e", "une pomme"]
+    autres: [["1f34c", "une banane"], ["1f955", "une carotte"]]
+    explication: "« an apple », c'est une pomme."
+  - texte: "a banana"
+    bonne: ["1f34c", "une banane"]
+    autres: [["1f34a", "une orange"], ["1f95a", "un œuf"]]
+    explication: "« a banana », c'est une banane."
+  - texte: "an orange"
+    bonne: ["1f34a", "une orange"]
+    autres: [["1f34e", "une pomme"], ["1f382", "un gâteau"]]
+    explication: "« an orange », c'est une orange."
+  - texte: "a carrot"
+    bonne: ["1f955", "une carotte"]
+    autres: [["1f352", "des cerises"], ["1f34c", "une banane"]]
+    explication: "« a carrot », c'est une carotte."
+  - texte: "an egg"
+    bonne: ["1f95a", "un œuf"]
+    autres: [["1f95b", "du lait"], ["1f34a", "une orange"]]
+    explication: "« an egg », c'est un œuf."
+  - texte: "some cherries"
+    bonne: ["1f352", "des cerises"]
+    autres: [["1f345", "une tomate"], ["1f34e", "une pomme"]]
+    explication: "« some cherries », ce sont des cerises."
+  - texte: "some milk"
+    bonne: ["1f95b", "du lait"]
+    autres: [["1f95a", "un œuf"], ["1f382", "un gâteau"]]
+    explication: "« some milk », c'est du lait."
+  - texte: "a cake"
+    bonne: ["1f382", "un gâteau"]
+    autres: [["1f955", "une carotte"], ["1f95b", "du lait"]]
+    explication: "« a cake », c'est un gâteau."
+  - texte: "a tomato"
+    bonne: ["1f345", "une tomate"]
+    autres: [["1f352", "des cerises"], ["1f34e", "une pomme"]]
+    explication: "« a tomato », c'est une tomate."
+en:
+  titre: "My lunch box"
+  idee: "A lunch box is the box where you keep your lunch or snack. “In my lunch box, I have an apple.”"
+  phrases:
+    consigne: "Listen to what is in the lunch box, then touch the right picture."
+    question: "In my lunch box, I have {texte}."
+    indice: "Listen to the last word of the sentence: it is what is in the box."
+    exemple: "An example: “In my lunch box, I have a sandwich.” Listen again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "an apple"
+      bonne: ["1f34e", "an apple"]
+      autres: [["1f34c", "a banana"], ["1f955", "a carrot"]]
+      explication: "an apple — well done!"
+    - texte: "a banana"
+      bonne: ["1f34c", "a banana"]
+      autres: [["1f34a", "an orange"], ["1f95a", "an egg"]]
+      explication: "a banana — well done!"
+    - texte: "an orange"
+      bonne: ["1f34a", "an orange"]
+      autres: [["1f34e", "an apple"], ["1f382", "a cake"]]
+      explication: "an orange — well done!"
+    - texte: "a carrot"
+      bonne: ["1f955", "a carrot"]
+      autres: [["1f352", "some cherries"], ["1f34c", "a banana"]]
+      explication: "a carrot — well done!"
+    - texte: "an egg"
+      bonne: ["1f95a", "an egg"]
+      autres: [["1f95b", "some milk"], ["1f34a", "an orange"]]
+      explication: "an egg — well done!"
+    - texte: "some cherries"
+      bonne: ["1f352", "some cherries"]
+      autres: [["1f345", "a tomato"], ["1f34e", "an apple"]]
+      explication: "some cherries — well done!"
+    - texte: "some milk"
+      bonne: ["1f95b", "some milk"]
+      autres: [["1f95a", "an egg"], ["1f382", "a cake"]]
+      explication: "some milk — well done!"
+    - texte: "a cake"
+      bonne: ["1f382", "a cake"]
+      autres: [["1f955", "a carrot"], ["1f95b", "some milk"]]
+      explication: "a cake — well done!"
+    - texte: "a tomato"
+      bonne: ["1f345", "a tomato"]
+      autres: [["1f352", "some cherries"], ["1f34e", "an apple"]]
+      explication: "a tomato — well done!"

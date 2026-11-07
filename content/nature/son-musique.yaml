@@ -1,0 +1,124 @@
+id: son-musique
+titre: "Son, musique et numérisation"
+niveau: 1re
+prerequis: []
+programme: { source: es1re, texte: "Un signal périodique de fréquence f se décompose en une somme de signaux sinusoïdaux de fréquences multiples entières de f. Le son associé à ce signal est un son composé. f est appelé fréquence fondamentale, les autres fréquences sont appelées harmoniques." }
+activite: quiz
+parametres: {}
+idee: "Un son pur est sinusoïdal. Un son musical est composé : une fréquence fondamentale f et des harmoniques 2f, 3f… Deux notes à l'octave ont des fréquences dans le rapport 2."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Harmoniques : multiples entiers de la fondamentale (2f, 3f, 4f…). Octave : fréquence × 2. Décibels : + 10 dB, intensité × 10."
+  exemple: "Exemple : le la d'un diapason vibre à 440 Hz. Le la de l'octave au-dessus vibre à 2 × 440 = 880 Hz. Un son de fondamentale 440 Hz a pour harmoniques 880 Hz, 1 320 Hz, 1 760 Hz…"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'un son pur ?"
+    nom: "Un son dont le signal varie de façon sinusoïdale dans le temps."
+    explication: "Un son pur a une seule fréquence ; son spectre ne montre qu'un seul pic."
+    pieges:
+      - { texte: "Un son très fort.", pourquoi: "« Pur » ne parle pas de l'intensité : un son pur peut être faible ou fort." }
+      - { texte: "Le son d'un instrument de musique.", pourquoi: "On croit souvent qu'une note d'instrument est un son pur ; c'est un son composé, avec des harmoniques." }
+  - texte: "La fondamentale d'un son composé vaut 200 Hz. Quelles sont ses premières harmoniques ?"
+    nom: "400 Hz, 600 Hz, 800 Hz…"
+    explication: "Les harmoniques ont des fréquences multiples entières de la fondamentale : 2 × 200, 3 × 200, 4 × 200…"
+    pieges:
+      - { texte: "100 Hz, 50 Hz, 25 Hz…", pourquoi: "Les harmoniques sont des multiples de la fondamentale, pas des divisions." }
+      - { texte: "300 Hz, 400 Hz, 500 Hz…", pourquoi: "On a ajouté 100 Hz à chaque fois ; il faut ajouter la fondamentale elle-même, 200 Hz." }
+  - texte: "Une note vibre à 330 Hz. Quelle est la fréquence de la même note, une octave plus haut ?"
+    nom: "660 Hz."
+    explication: "Deux notes à l'octave ont des fréquences dans le rapport 2/1 : 2 × 330 = 660 Hz."
+    pieges:
+      - { texte: "338 Hz.", pourquoi: "On a pensé aux 8 notes de l'octave et ajouté 8 ; l'octave double la fréquence." }
+      - { texte: "165 Hz.", pourquoi: "En divisant par 2, on obtient la même note une octave plus bas." }
+  - texte: "Sur une guitare, on appuie sur une corde pour raccourcir la partie qui vibre. Que devient le son ?"
+    nom: "Il devient plus aigu : sa fréquence fondamentale augmente."
+    explication: "La fréquence fondamentale d'une corde dépend de sa longueur, de sa tension et de sa masse par unité de longueur ; plus courte, elle vibre plus vite."
+    pieges:
+      - { texte: "Il devient plus grave.", pourquoi: "C'est l'inverse : les cordes longues donnent les sons graves." }
+      - { texte: "Il devient plus fort, avec la même hauteur.", pourquoi: "La longueur de la corde change la hauteur, c'est-à-dire la fréquence, pas l'intensité." }
+  - texte: "Pourquoi un piano et une flûte qui jouent la même note à 440 Hz ne sonnent-ils pas pareil ?"
+    nom: "Parce que leurs harmoniques n'ont pas les mêmes amplitudes : leur timbre diffère."
+    explication: "Même fondamentale, donc même hauteur ; mais le spectre, la part de chaque harmonique, change d'un instrument à l'autre."
+    pieges:
+      - { texte: "Parce qu'ils ne jouent pas à la même fréquence.", pourquoi: "Ils jouent la même note, donc la même fondamentale : c'est la répartition des harmoniques qui diffère." }
+      - { texte: "Parce que le son de la flûte va moins vite.", pourquoi: "Dans l'air, tous les sons se propagent à la même vitesse, environ 340 m/s." }
+  - texte: "Le niveau d'intensité sonore passe de 60 dB à 70 dB. Comment a changé l'intensité sonore ?"
+    nom: "Elle a été multipliée par 10."
+    explication: "L'échelle des décibels est logarithmique : chaque fois qu'on ajoute 10 dB, l'intensité est multipliée par 10."
+    pieges:
+      - { texte: "Elle a augmenté d'environ 17 %, comme 70 par rapport à 60.", pourquoi: "On lit souvent les décibels comme une échelle ordinaire ; elle est logarithmique, pas proportionnelle." }
+      - { texte: "Elle a doublé.", pourquoi: "Doubler l'intensité n'ajoute qu'environ 3 dB ; + 10 dB, c'est × 10." }
+  - texte: "Pour numériser un son, on prélève sa valeur à intervalles réguliers. Que se passe-t-il si on augmente la fréquence d'échantillonnage ?"
+    nom: "La numérisation est plus fidèle, mais le fichier est plus gros."
+    explication: "Plus d'échantillons par seconde décrivent mieux le signal, mais demandent plus de données à stocker."
+    pieges:
+      - { texte: "Le fichier devient plus petit.", pourquoi: "Plus d'échantillons, c'est plus de nombres à enregistrer : le fichier grossit." }
+      - { texte: "Le son devient plus aigu.", pourquoi: "L'échantillonnage change la précision de l'enregistrement, pas la hauteur du son." }
+  - texte: "Un format audio compressé « avec perte », comme le MP3, rend le fichier plus petit. Que supprime-t-il ?"
+    nom: "Des informations sonores auxquelles l'oreille est peu sensible."
+    explication: "La compression avec perte élimine ce que l'oreille perçoit mal : le fichier est plus léger, la différence est peu audible."
+    pieges:
+      - { texte: "La moitié des notes de la musique.", pourquoi: "La mélodie reste entière : ce sont des détails peu audibles qui disparaissent." }
+      - { texte: "Rien : on peut toujours retrouver le son d'origine exact.", pourquoi: "Ce serait une compression sans perte ; « avec perte » veut dire que des informations sont définitivement supprimées." }
+
+en:
+  titre: "Sound, music and digitisation"
+  idee: "A pure sound is sinusoidal. A musical sound is complex: a fundamental frequency f and harmonics 2f, 3f… Two notes an octave apart have frequencies in the ratio 2."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Harmonics: whole-number multiples of the fundamental (2f, 3f, 4f…). Octave: frequency × 2. Decibels: + 10 dB, intensity × 10."
+    exemple: "Example: a tuning fork's A vibrates at 440 Hz. The A an octave higher vibrates at 2 × 440 = 880 Hz. A sound with a 440 Hz fundamental has harmonics at 880 Hz, 1,320 Hz, 1,760 Hz…"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a pure sound?"
+      nom: "A sound whose signal varies sinusoidally over time."
+      explication: "A pure sound has a single frequency; its spectrum shows just one peak."
+      pieges:
+        - { texte: "A very loud sound.", pourquoi: "« Pure » isn't about intensity: a pure sound can be quiet or loud." }
+        - { texte: "The sound of a musical instrument.", pourquoi: "People often think an instrument's note is a pure sound; it's a complex sound, with harmonics." }
+    - texte: "The fundamental of a complex sound is 200 Hz. What are its first harmonics?"
+      nom: "400 Hz, 600 Hz, 800 Hz…"
+      explication: "Harmonics have frequencies that are whole-number multiples of the fundamental: 2 × 200, 3 × 200, 4 × 200…"
+      pieges:
+        - { texte: "100 Hz, 50 Hz, 25 Hz…", pourquoi: "Harmonics are multiples of the fundamental, not divisions." }
+        - { texte: "300 Hz, 400 Hz, 500 Hz…", pourquoi: "100 Hz was added each time; you must add the fundamental itself, 200 Hz." }
+    - texte: "A note vibrates at 330 Hz. What is the frequency of the same note one octave higher?"
+      nom: "660 Hz."
+      explication: "Two notes an octave apart have frequencies in the ratio 2/1: 2 × 330 = 660 Hz."
+      pieges:
+        - { texte: "338 Hz.", pourquoi: "This thinks of the 8 notes in an octave and adds 8; an octave doubles the frequency." }
+        - { texte: "165 Hz.", pourquoi: "Dividing by 2 gives the same note one octave lower." }
+    - texte: "On a guitar, you press a string to shorten the part that vibrates. What happens to the sound?"
+      nom: "It becomes higher: its fundamental frequency increases."
+      explication: "A string's fundamental frequency depends on its length, its tension and its mass per unit length; shorter, it vibrates faster."
+      pieges:
+        - { texte: "It becomes lower.", pourquoi: "It's the opposite: long strings give low sounds." }
+        - { texte: "It becomes louder, at the same pitch.", pourquoi: "The string's length changes the pitch, that is, the frequency, not the intensity." }
+    - texte: "Why don't a piano and a flute playing the same 440 Hz note sound the same?"
+      nom: "Because their harmonics don't have the same amplitudes: their timbre differs."
+      explication: "Same fundamental, so same pitch; but the spectrum, the share of each harmonic, changes from one instrument to another."
+      pieges:
+        - { texte: "Because they aren't playing at the same frequency.", pourquoi: "They play the same note, so the same fundamental: it's the mix of harmonics that differs." }
+        - { texte: "Because the flute's sound travels more slowly.", pourquoi: "In air, all sounds travel at the same speed, about 340 m/s." }
+    - texte: "The sound intensity level goes from 60 dB to 70 dB. How has the sound intensity changed?"
+      nom: "It has been multiplied by 10."
+      explication: "The decibel scale is logarithmic: each time you add 10 dB, the intensity is multiplied by 10."
+      pieges:
+        - { texte: "It has risen by about 17 %, like 70 compared with 60.", pourquoi: "Decibels are often read like an ordinary scale; it's logarithmic, not proportional." }
+        - { texte: "It has doubled.", pourquoi: "Doubling the intensity only adds about 3 dB; + 10 dB means × 10." }
+    - texte: "To digitise a sound, its value is sampled at regular intervals. What happens if the sampling frequency is increased?"
+      nom: "The digitisation is more faithful, but the file is bigger."
+      explication: "More samples per second describe the signal better, but need more data to store."
+      pieges:
+        - { texte: "The file gets smaller.", pourquoi: "More samples means more numbers to record: the file grows." }
+        - { texte: "The sound gets higher.", pourquoi: "Sampling changes the precision of the recording, not the pitch of the sound." }
+    - texte: "A « lossy » compressed audio format, such as MP3, makes the file smaller. What does it remove?"
+      nom: "Sound information the ear is not very sensitive to."
+      explication: "Lossy compression removes what the ear hardly perceives: the file is lighter, and the difference is barely audible."
+      pieges:
+        - { texte: "Half the notes of the music.", pourquoi: "The melody stays whole: it's barely audible details that disappear." }
+        - { texte: "Nothing: the exact original sound can always be recovered.", pourquoi: "That would be lossless compression; « lossy » means information is removed for good." }

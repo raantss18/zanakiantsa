@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/content/content.dart';
 import 'package:zanakiantsa/core/day.dart';
@@ -70,7 +71,7 @@ void main() {
         expect(i.traps.every((x) => x.why.isNotEmpty), isTrue);
       }
       for (final k in s.phrases.keys) {
-        expect(s.say(k, s.draw(r)), isNot(contains('{')), reason: '${s.id}.$k');
+        expect(s.say(k, s.draw(r)), isNot(contains(unfilled)), reason: '${s.id}.$k');
       }
     }
     // Quelques réponses recalculées ici, pour ne pas seulement relire le contenu.

@@ -1,0 +1,136 @@
+id: fonction-lineaire
+titre: "Les fonctions linéaires"
+niveau: 3e
+prerequis: ["proportionnalite-6e", "relatifs-multiplier"]
+programme: { source: cycle4, texte: "Définir et utiliser les fonctions linéaires." }
+activite: quiz
+parametres: {}
+idee: "Une fonction linéaire s'écrit f(x) = ax : on multiplie toujours par le même nombre a, son coefficient. Elle traduit une proportionnalité ; sa droite passe par l'origine."
+phrases:
+  consigne: "Calcule, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Image : multiplie x par a. Antécédent : divise par a. Coefficient : a = f(x) ÷ x."
+  exemple: "f(x) = 3x. L'image de 4 est f(4) = 3 × 4 = 12. L'antécédent de 15 est 15 ÷ 3 = 5, car f(5) = 15."
+  demonstration: "{explication}"
+  bravo: "Oui ! C'est la bonne réponse."
+items:
+  - texte: "f(x) = 5x. Quelle est l'image de 3 ?"
+    nom: "15"
+    explication: "f(3) = 5 × 3 = 15."
+    pieges:
+      - { texte: "8", pourquoi: "5 + 3 : une fonction linéaire multiplie par son coefficient." }
+      - { texte: "0,6", pourquoi: "3 ÷ 5 donne un antécédent : l'image s'obtient en multipliant." }
+  - texte: "f(x) = 4x. Quel est l'antécédent de 28 ?"
+    nom: "7"
+    explication: "On cherche x tel que 4x = 28 : x = 28 ÷ 4 = 7. Vérification : f(7) = 28."
+    pieges:
+      - { texte: "112", pourquoi: "4 × 28 est l'image de 28 : on cherche le nombre dont l'image est 28." }
+      - { texte: "24", pourquoi: "28 − 4 : f multiplie par 4, donc on divise par 4." }
+  - texte: "f est une fonction linéaire et f(2) = 10. Quel est son coefficient ?"
+    nom: "5"
+    explication: "a = f(2) ÷ 2 = 10 ÷ 2 = 5, donc f(x) = 5x."
+    pieges:
+      - { texte: "20", pourquoi: "2 × 10 : le coefficient est le nombre par lequel on multiplie 2 pour avoir 10." }
+      - { texte: "8", pourquoi: "10 − 2 : une fonction linéaire multiplie, a = 10 ÷ 2." }
+  - texte: "f(x) = −2x. Quelle est l'image de −6 ?"
+    nom: "12"
+    explication: "f(−6) = (−2) × (−6) = 12 : deux facteurs négatifs donnent un produit positif."
+    pieges:
+      - { texte: "−12", pourquoi: "(−2) × (−6) est positif : deux facteurs négatifs." }
+      - { texte: "3", pourquoi: "−6 ÷ (−2) = 3 donne l'antécédent de −6 : l'image s'obtient en multipliant." }
+  - texte: "Laquelle de ces fonctions est linéaire ?"
+    nom: "f(x) = 0,5x"
+    explication: "f(x) = 0,5x est de la forme ax, avec a = 0,5."
+    pieges:
+      - { texte: "f(x) = x + 3", pourquoi: "On ajoute 3 : c'est une fonction affine, et f(0) = 3, pas 0." }
+      - { texte: "f(x) = x²", pourquoi: "x × x : on ne multiplie pas toujours par le même nombre." }
+  - texte: "Les pommes coûtent 2,50 € le kilo. Quelle fonction donne le prix p(x) de x kilos ?"
+    nom: "p(x) = 2,5x"
+    explication: "Le prix est proportionnel à la masse : p(x) = 2,5 × x. Par exemple, p(2) = 5 €."
+    pieges:
+      - { texte: "p(x) = x + 2,5", pourquoi: "Avec cette formule, 2 kilos coûteraient 4,50 € : le prix est proportionnel, on multiplie." }
+      - { texte: "p(x) = 2,5 ÷ x", pourquoi: "Avec cette formule, plus on achète, moins on paie : le prix doit augmenter avec la masse." }
+  - texte: "f est linéaire et f(4) = 6. Complète : f(10) = …"
+    nom: "15"
+    explication: "a = 6 ÷ 4 = 1,5, donc f(10) = 1,5 × 10 = 15."
+    pieges:
+      - { texte: "12", pourquoi: "On a ajouté 6 aux deux nombres : une fonction linéaire multiplie, a = 6 ÷ 4 = 1,5." }
+      - { texte: "60", pourquoi: "6 × 10 : le coefficient n'est pas 6, mais 6 ÷ 4 = 1,5." }
+  - texte: "Pourquoi la droite d'une fonction linéaire passe-t-elle par l'origine ?"
+    nom: "Parce que f(0) = a × 0 = 0."
+    explication: "Le point d'abscisse 0 a pour ordonnée f(0) = 0 : c'est l'origine du repère."
+    pieges:
+      - { texte: "Parce que toutes les droites passent par l'origine.", pourquoi: "La droite de f(x) = x + 3 passe par le point (0 ; 3), pas par l'origine." }
+      - { texte: "Parce que le coefficient a est toujours positif.", pourquoi: "a peut être négatif, comme dans −2x : la droite passe quand même par l'origine." }
+  - texte: "f(x) = 1,2x. Quelle est l'image de 5 ?"
+    nom: "6"
+    explication: "f(5) = 1,2 × 5 = 6."
+    pieges:
+      - { texte: "6,2", pourquoi: "1,2 + 5 : l'image s'obtient en multipliant par 1,2." }
+      - { texte: "60", pourquoi: "12 × 5 : la virgule de 1,2 a été oubliée." }
+
+en:
+  titre: "Linear functions"
+  idee: "A linear function is written f(x) = ax: you always multiply by the same number a, its coefficient. It describes a proportion; its line goes through the origin."
+  phrases:
+    consigne: "Work it out, then touch the right answer."
+    question: "{texte}"
+    indice: "Image: multiply x by a. Pre-image: divide by a. Coefficient: a = f(x) ÷ x."
+    exemple: "f(x) = 3x. The image of 4 is f(4) = 3 × 4 = 12. The pre-image of 15 is 15 ÷ 3 = 5, because f(5) = 15."
+    demonstration: "{explication}"
+    bravo: "Yes! That's the right answer."
+  items:
+    - texte: "f(x) = 5x. What is the image of 3?"
+      nom: "15"
+      explication: "f(3) = 5 × 3 = 15."
+      pieges:
+        - { texte: "8", pourquoi: "5 + 3: a linear function multiplies by its coefficient." }
+        - { texte: "0.6", pourquoi: "3 ÷ 5 gives a pre-image: the image comes from multiplying." }
+    - texte: "f(x) = 4x. What is the pre-image of 28?"
+      nom: "7"
+      explication: "We want x such that 4x = 28: x = 28 ÷ 4 = 7. Check: f(7) = 28."
+      pieges:
+        - { texte: "112", pourquoi: "4 × 28 is the image of 28: we want the number whose image is 28." }
+        - { texte: "24", pourquoi: "28 − 4: f multiplies by 4, so divide by 4." }
+    - texte: "f is a linear function and f(2) = 10. What is its coefficient?"
+      nom: "5"
+      explication: "a = f(2) ÷ 2 = 10 ÷ 2 = 5, so f(x) = 5x."
+      pieges:
+        - { texte: "20", pourquoi: "2 × 10: the coefficient is what you multiply 2 by to get 10." }
+        - { texte: "8", pourquoi: "10 − 2: a linear function multiplies, a = 10 ÷ 2." }
+    - texte: "f(x) = −2x. What is the image of −6?"
+      nom: "12"
+      explication: "f(−6) = (−2) × (−6) = 12: two negative factors give a positive product."
+      pieges:
+        - { texte: "−12", pourquoi: "(−2) × (−6) is positive: two negative factors." }
+        - { texte: "3", pourquoi: "−6 ÷ (−2) = 3 gives the pre-image of −6: the image comes from multiplying." }
+    - texte: "Which of these functions is linear?"
+      nom: "f(x) = 0.5x"
+      explication: "f(x) = 0.5x has the form ax, with a = 0.5."
+      pieges:
+        - { texte: "f(x) = x + 3", pourquoi: "It adds 3: it is an affine function, and f(0) = 3, not 0." }
+        - { texte: "f(x) = x²", pourquoi: "x × x: it does not always multiply by the same number." }
+    - texte: "Apples cost €2.50 per kilo. Which function gives the price p(x) of x kilos?"
+      nom: "p(x) = 2.5x"
+      explication: "The price is proportional to the mass: p(x) = 2.5 × x. For example, p(2) = €5."
+      pieges:
+        - { texte: "p(x) = x + 2.5", pourquoi: "With this formula, 2 kilos would cost €4.50: the price is proportional, so multiply." }
+        - { texte: "p(x) = 2.5 ÷ x", pourquoi: "With this formula, the more you buy, the less you pay: the price must go up with the mass." }
+    - texte: "f is linear and f(4) = 6. Fill in: f(10) = …"
+      nom: "15"
+      explication: "a = 6 ÷ 4 = 1.5, so f(10) = 1.5 × 10 = 15."
+      pieges:
+        - { texte: "12", pourquoi: "6 was added to both numbers: a linear function multiplies, a = 6 ÷ 4 = 1.5." }
+        - { texte: "60", pourquoi: "6 × 10: the coefficient is not 6 but 6 ÷ 4 = 1.5." }
+    - texte: "Why does the line of a linear function go through the origin?"
+      nom: "Because f(0) = a × 0 = 0."
+      explication: "The point with x-coordinate 0 has y-coordinate f(0) = 0: that is the origin."
+      pieges:
+        - { texte: "Because every line goes through the origin.", pourquoi: "The line of f(x) = x + 3 goes through the point (0, 3), not the origin." }
+        - { texte: "Because the coefficient a is always positive.", pourquoi: "a can be negative, as in −2x: the line still goes through the origin." }
+    - texte: "f(x) = 1.2x. What is the image of 5?"
+      nom: "6"
+      explication: "f(5) = 1.2 × 5 = 6."
+      pieges:
+        - { texte: "6.2", pourquoi: "1.2 + 5: the image comes from multiplying by 1.2." }
+        - { texte: "60", pourquoi: "12 × 5: the decimal point in 1.2 was forgotten." }

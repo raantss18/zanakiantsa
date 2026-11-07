@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:cryptography/cryptography.dart';
+import 'support/unfilled.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:zanakiantsa/content/content.dart';
 import 'package:zanakiantsa/core/events.dart';
@@ -13,9 +14,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('87 compétences, prérequis connus et placés avant', () {
+    test('103 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 87);
+      expect(t.skills.length, 103);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);
@@ -55,7 +56,7 @@ void main() {
             case 'heure':
               expect(q.n, inInclusiveRange(1, 12));
               expect(List<int>.from(s.params['minutes'] as List), contains(q.b));
-              expect(clockText(q.n, q.b), isNot(contains('{')));
+              expect(clockText(q.n, q.b), isNot(contains(unfilled)));
             case 'paquets':
               expect(q.a * q.b, q.n);
               expect(q.a, inInclusiveRange(2, s.p('paquets_max')));
@@ -104,7 +105,7 @@ void main() {
       for (final s in topic().skills) {
         final q = s.draw(r);
         for (final k in s.phrases.keys) {
-          expect(s.say(k, q), isNot(contains('{')), reason: '${s.id}.$k');
+          expect(s.say(k, q), isNot(contains(unfilled)), reason: '${s.id}.$k');
         }
       }
     });

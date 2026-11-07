@@ -1,0 +1,86 @@
+id: family
+titre: "La famille en anglais"
+niveau: CP
+prerequis: []
+# Programme de LVER du cycle 2 publié (BO n° 12 du 19 mars 2026, annexe 1, copie Sgen-CFDT), même citation que
+# toys.yaml (lue le 2026-11-07 par le rédacteur de cette leçon-là) : la sphère immédiate de l'enfant.
+programme: { source: lver_c2, texte: "CP : reconnaitre les mots familiers pour parler de soi, de sa sphère immédiate et des thématiques culturelles et disciplinaires travaillées en classe ; exemple cité : « I love playing with my ball »." }
+activite: choisir
+# Les mots entre « » sont dits par la voix anglaise (ADR 0022).
+parametres: { langue: en }
+phrases:
+  consigne: "Écoute le mot anglais et touche la bonne personne."
+  question: "Touche : « {texte} »."
+  indice: "Écoute bien le mot anglais : il dit une personne de la famille."
+  exemple: "Un exemple : « mum », c'est la maman. Écoute encore le mot anglais, puis essaie une autre image."
+  demonstration: "Regarde : « {texte} », c'est {bonne}."
+  bravo: "Oui ! {explication}"
+  erreur: "Ça, c'est {choisi}. Écoute encore : « {texte} »."
+items:
+  - texte: "dad"
+    bonne: ["1f468", "le papa"]
+    autres: [["1f469", "la maman"], ["1f467", "la sœur"]]
+    explication: "« dad », c'est le papa."
+  - texte: "mum"
+    bonne: ["1f469", "la maman"]
+    autres: [["1f466", "le frère"], ["1f476", "le bébé"]]
+    explication: "« mum », c'est la maman."
+  - texte: "brother"
+    bonne: ["1f466", "le frère"]
+    autres: [["1f467", "la sœur"], ["1f474", "le grand-père"]]
+    explication: "« brother », c'est le frère."
+  - texte: "sister"
+    bonne: ["1f467", "la sœur"]
+    autres: [["1f476", "le bébé"], ["1f475", "la grand-mère"]]
+    explication: "« sister », c'est la sœur."
+  - texte: "baby"
+    bonne: ["1f476", "le bébé"]
+    autres: [["1f474", "le grand-père"], ["1f468", "le papa"]]
+    explication: "« baby », c'est le bébé."
+  - texte: "grandad"
+    bonne: ["1f474", "le grand-père"]
+    autres: [["1f475", "la grand-mère"], ["1f469", "la maman"]]
+    explication: "« grandad », c'est le grand-père."
+  - texte: "grandma"
+    bonne: ["1f475", "la grand-mère"]
+    autres: [["1f468", "le papa"], ["1f466", "le frère"]]
+    explication: "« grandma », c'est la grand-mère."
+en:
+  titre: "The family in English"
+  phrases:
+    consigne: "Listen to the word and touch the right person."
+    question: "Touch: {texte}."
+    indice: "Listen carefully: the word is someone in the family."
+    exemple: "An example: mum is the mum. Listen to the word again, then try another picture."
+    demonstration: "Look: {texte} is {bonne}."
+    bravo: "Yes! {explication}"
+    erreur: "That is {choisi}. Listen again: {texte}."
+  items:
+    - texte: "dad"
+      bonne: ["1f468", "the dad"]
+      autres: [["1f469", "the mum"], ["1f467", "the sister"]]
+      explication: "dad — well done!"
+    - texte: "mum"
+      bonne: ["1f469", "the mum"]
+      autres: [["1f466", "the brother"], ["1f476", "the baby"]]
+      explication: "mum — well done!"
+    - texte: "brother"
+      bonne: ["1f466", "the brother"]
+      autres: [["1f467", "the sister"], ["1f474", "the grandad"]]
+      explication: "brother — well done!"
+    - texte: "sister"
+      bonne: ["1f467", "the sister"]
+      autres: [["1f476", "the baby"], ["1f475", "the grandma"]]
+      explication: "sister — well done!"
+    - texte: "baby"
+      bonne: ["1f476", "the baby"]
+      autres: [["1f474", "the grandad"], ["1f468", "the dad"]]
+      explication: "baby — well done!"
+    - texte: "grandad"
+      bonne: ["1f474", "the grandad"]
+      autres: [["1f475", "the grandma"], ["1f469", "the mum"]]
+      explication: "grandad — well done!"
+    - texte: "grandma"
+      bonne: ["1f475", "the grandma"]
+      autres: [["1f468", "the dad"], ["1f466", "the brother"]]
+      explication: "grandma — well done!"

@@ -1,0 +1,156 @@
+id: past-perfect
+titre: "Le past perfect : the train had left"
+niveau: 2de
+prerequis: [past-simple-irregular]
+# Programme de 2de (BO spécial n° 1 du 22 janvier 2019, annexe 1, copie SNES), « L'étude de la langue », 2) Correction
+# grammaticale. Le programme ne donne pas de liste de points de grammaire par langue. Lu le 2026-11-07.
+programme: { source: lycee_2de, texte: "Correction grammaticale : à partir des documents abordés en cours, l’élève est conduit à découvrir les règles d’usage de la langue, à identifier les points de syntaxe ou de morphologie constitutifs du document, afin de se les approprier." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+parametres: { langue: en }
+idee: "Le past perfect (had + participe passé) dit qu'une action passée a eu lieu avant une autre action passée. « When I arrived, the train had left » : il était déjà parti."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Deux actions passées : laquelle a eu lieu en premier ? Celle-là prend had + participe passé ; l'autre reste au prétérit."
+  exemple: "« When we got to the cinema, the film … » (start). Le film a commencé avant notre arrivée : « When we got to the cinema, the film had started. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « When I arrived at the station, the train … » (leave)"
+    nom: "had left"
+    explication: "Le train est parti avant mon arrivée : « the train had left »."
+    pieges:
+      - { texte: "has left", pourquoi: "« has left » relie au présent. Ici, tout est passé : avant « arrived », on emploie « had left »." }
+      - { texte: "left", pourquoi: "« the train left » voudrait dire qu'il part au moment où j'arrive. Pour dire qu'il était déjà parti : « had left »." }
+  - texte: "Complète : « I couldn't open the door because I … my keys. » (lose)"
+    nom: "had lost"
+    explication: "Les clés ont été perdues avant le moment où je n'ai pas pu ouvrir : « I had lost my keys »."
+    pieges:
+      - { texte: "have lost", pourquoi: "« have lost » relie au présent. Le récit est au passé, « couldn't » : on recule à « had lost »." }
+      - { texte: "was losing", pourquoi: "« was losing » décrit une action en cours. La perte avait eu lieu avant : « had lost »." }
+  - texte: "Complète : « They … dinner when we arrived, so there was nothing left. » (already finish)"
+    nom: "had already finished"
+    explication: "Le repas était fini avant notre arrivée : « They had already finished dinner. »"
+    pieges:
+      - { texte: "have already finished", pourquoi: "« have finished » relie au présent. Ici, « arrived » et « was » placent tout dans le passé : « had already finished »." }
+      - { texte: "were already finishing", pourquoi: "« were finishing » veut dire « étaient en train de finir ». « nothing left » montre que c'était déjà fini : « had finished »." }
+  - texte: "Complète : « … you ever been to London before you moved there? »"
+    nom: "Had"
+    explication: "Avant un moment passé, « moved » : « Had you ever been to London before you moved there? »"
+    pieges:
+      - { texte: "Have", pourquoi: "« Have you ever been » relie au présent. Ici, on parle d'avant « moved », un moment passé : « Had »." }
+      - { texte: "Did", pourquoi: "Avec le participe « been », il faut l'auxiliaire have, ici « had ». « Did » irait avec la base « be »." }
+  - texte: "Complète : « After the guests … , we cleaned the kitchen. » (go)"
+    nom: "had gone"
+    explication: "Les invités sont partis d'abord, puis nous avons nettoyé : « After the guests had gone »."
+    pieges:
+      - { texte: "had went", pourquoi: "« went » est le prétérit. Après « had », il faut le participe passé : « gone »." }
+      - { texte: "have gone", pourquoi: "« have gone » relie au présent. Le récit est au passé, « cleaned » : « had gone »." }
+  - texte: "Quelle action a eu lieu en premier ? « When the police arrived, the thief had run away. »"
+    nom: "Le voleur s'est enfui."
+    explication: "« had run away » marque l'action antérieure : le voleur était parti quand la police est arrivée."
+    pieges:
+      - { texte: "La police est arrivée.", pourquoi: "« arrived » est au prétérit : c'est le repère. L'action d'avant porte « had » : « had run away »." }
+      - { texte: "Les deux en même temps.", pourquoi: "« had run away » marque l'antériorité. Pour « en même temps », on dirait « as the police arrived, the thief ran away »." }
+  - texte: "Complète : « By the time Martin Luther King gave his famous speech in 1963, he … many protests. » (lead)"
+    nom: "had led"
+    explication: "Les manifestations ont eu lieu avant le discours de 1963 : « he had led many protests »."
+    pieges:
+      - { texte: "had leaded", pourquoi: "« leaded » existe (leaded petrol, l'essence au plomb), mais le participe passé de « lead », mener, est « led »." }
+      - { texte: "has led", pourquoi: "« has led » relie au présent. « By the time … in 1963 » renvoie à avant un moment passé : « had led »." }
+  - texte: "Complète : « The streets were wet because it … during the night. » (rain)"
+    nom: "had rained"
+    explication: "La pluie est tombée avant le moment où les rues étaient mouillées : « it had rained during the night »."
+    pieges:
+      - { texte: "has rained", pourquoi: "« has rained » relie au présent. Le récit est au passé, « were » : « had rained »." }
+      - { texte: "rains", pourquoi: "« rains » est au présent. La pluie est tombée avant un moment passé : « had rained »." }
+  - texte: "Pourquoi « had left » dans « When I arrived, the train had left » ?"
+    nom: "Le départ du train a eu lieu avant mon arrivée, elle-même passée."
+    explication: "Deux actions passées : la plus ancienne prend had + participe passé, « had left »."
+    pieges:
+      - { texte: "Parce que le départ du train est lié au moment présent.", pourquoi: "C'est le present perfect, « has left », qui relie au présent. Ici, tout se passe dans le passé." }
+      - { texte: "Parce que « arrived » demande toujours « had » dans la même phrase.", pourquoi: "« When I arrived, the train left » existe aussi : le train part à ce moment-là. « had left » dit qu'il était parti avant." }
+en:
+  titre: "The past perfect: the train had left"
+  idee: "The past perfect (had + past participle) says that a past action happened before another past action. “When I arrived, the train had left”: it was already gone."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Two past actions: which one came first? That one takes had + past participle; the other stays in the past simple."
+    exemple: "“When we got to the cinema, the film …” (start). The film started before we arrived: “When we got to the cinema, the film had started.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “When I arrived at the station, the train …” (leave)"
+      nom: "had left"
+      explication: "The train left before I arrived: “the train had left”."
+      pieges:
+        - texte: "has left"
+          pourquoi: "“has left” links to the present. Here everything is past: before “arrived”, we use had left."
+        - texte: "left"
+          pourquoi: "“the train left” would mean it leaves as I arrive. To say it had already gone: had left."
+    - texte: "Complete: “I couldn't open the door because I … my keys.” (lose)"
+      nom: "had lost"
+      explication: "The keys were lost before I couldn't open the door: “I had lost my keys”."
+      pieges:
+        - texte: "have lost"
+          pourquoi: "“have lost” links to the present. The story is in the past, couldn't: we go back to had lost."
+        - texte: "was losing"
+          pourquoi: "“was losing” describes an action in progress. The loss happened before: had lost."
+    - texte: "Complete: “They … dinner when we arrived, so there was nothing left.” (already finish)"
+      nom: "had already finished"
+      explication: "Dinner was over before we arrived: “They had already finished dinner.”"
+      pieges:
+        - texte: "have already finished"
+          pourquoi: "“have finished” links to the present. Here, arrived and was put everything in the past: had already finished."
+        - texte: "were already finishing"
+          pourquoi: "“were finishing” means they were in the middle of finishing. “nothing left” shows it was already over: had finished."
+    - texte: "Complete: “… you ever been to London before you moved there?”"
+      nom: "Had"
+      explication: "Before a past moment, moved: “Had you ever been to London before you moved there?”"
+      pieges:
+        - texte: "Have"
+          pourquoi: "“Have you ever been” links to the present. Here we talk about before moved, a past moment: Had."
+        - texte: "Did"
+          pourquoi: "With the past participle been, we need the auxiliary have, here had. Did would go with the base form be."
+    - texte: "Complete: “After the guests …, we cleaned the kitchen.” (go)"
+      nom: "had gone"
+      explication: "The guests left first, then we cleaned: “After the guests had gone”."
+      pieges:
+        - texte: "had went"
+          pourquoi: "“went” is the past simple. After had, we need the past participle: gone."
+        - texte: "have gone"
+          pourquoi: "“have gone” links to the present. The story is in the past, cleaned: had gone."
+    - texte: "Which action came first? “When the police arrived, the thief had run away.”"
+      nom: "The thief ran away."
+      explication: "“had run away” marks the earlier action: the thief was gone when the police arrived."
+      pieges:
+        - texte: "The police arrived."
+          pourquoi: "“arrived” is in the past simple: it is the reference point. The earlier action takes had: had run away."
+        - texte: "Both at the same time."
+          pourquoi: "“had run away” shows it came before. For the same time, we would say “as the police arrived, the thief ran away”."
+    - texte: "Complete: “By the time Martin Luther King gave his famous speech in 1963, he … many protests.” (lead)"
+      nom: "had led"
+      explication: "The protests came before the 1963 speech: “he had led many protests”."
+      pieges:
+        - texte: "had leaded"
+          pourquoi: "“leaded” exists (leaded petrol), but the past participle of lead, to guide, is led."
+        - texte: "has led"
+          pourquoi: "“has led” links to the present. “By the time … in 1963” means before a past moment: had led."
+    - texte: "Complete: “The streets were wet because it … during the night.” (rain)"
+      nom: "had rained"
+      explication: "The rain fell before the streets were wet: “it had rained during the night”."
+      pieges:
+        - texte: "has rained"
+          pourquoi: "“has rained” links to the present. The story is in the past, were: had rained."
+        - texte: "rains"
+          pourquoi: "“rains” is the present. The rain fell before a past moment: had rained."
+    - texte: "Why “had left” in “When I arrived, the train had left”?"
+      nom: "The train left before I arrived, and my arrival is past too."
+      explication: "Two past actions: the earlier one takes had + past participle, had left."
+      pieges:
+        - texte: "Because the train leaving is linked to the present moment."
+          pourquoi: "The present perfect, has left, links to the present. Here everything happens in the past."
+        - texte: "Because arrived always needs had in the same sentence."
+          pourquoi: "“When I arrived, the train left” also exists: the train leaves at that moment. “had left” says it had gone before."
