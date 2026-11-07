@@ -6,6 +6,7 @@ import '../l10n/l10n.dart';
 import 'topic_intro.dart';
 import 'theme.dart';
 import 'universe.dart';
+import 'videos.dart';
 
 /// « Tout explorer » (ADR 0032) : tous les domaines, à tout moment, en plus des trois proposés du jour. Chaque carte dit
 /// combien de compétences sont maîtrisées (écrit, pas seulement une barre).
@@ -44,6 +45,40 @@ class AllTopicsPage extends StatelessWidget {
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
                 children: [
+                  // Vidéos éducatives (ADR 0068) : chaînes choisies, adaptées à l'âge, avec internet.
+                  Semantics(
+                    button: true,
+                    label: t('Vidéos'),
+                    excludeSemantics: true,
+                    child: Material(
+                      color: surface,
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(24),
+                        onTap: () async {
+                          await app.voice.stop();
+                          if (!context.mounted) return;
+                          await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const VideosPage()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                            const Art('1f3ac', size: 64),
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(t('Vidéos'), style: const TextStyle(fontFamily: 'Fredoka', fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
+                            ),
+                            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              const Icon(Icons.wifi_rounded, size: 22, color: Color(0xFF5F6B63)),
+                              const SizedBox(width: 4),
+                              Text(t('avec internet'), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+                            ]),
+                          ]),
+                        ),
+                      ),
+                    ),
+                  ),
                   for (final t in app.shownTopics)
                     Builder(builder: (context) {
                       final p = app.progressOf(t);

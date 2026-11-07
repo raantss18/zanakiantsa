@@ -9,6 +9,8 @@ on:
     paths:
       - 'site/**'
       - 'tool/build_site.py'
+      - 'tool/videos.py'
+      - 'content/videos/**'
       - '.github/workflows/site.yml'
   release:
     types: [published, edited, deleted]
@@ -57,6 +59,15 @@ jobs:
 
       - name: Construire le site
         run: python3 tool/build_site.py --releases releases.json --out _site
+
+      # Catalogue des vidéos éducatives (ADR 0068) : vidéos des chaînes choisies, filtrées, lues par l'app avec le lecteur
+      # officiel de YouTube. La clé de l'interface YouTube est un secret du dépôt ; sans elle, le catalogue est vide.
+      - name: Catalogue des vidéos
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          pip install --quiet pyyaml
+          python3 tool/videos.py --out _site/videos.json
 
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
