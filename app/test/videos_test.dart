@@ -125,6 +125,7 @@ void main() {
       reason: 'chaîne d\'un autre âge',
     );
     expect(search(pool, ' '), isEmpty);
+    expect(search(cat.forChild(age: 14, classe: lyceeRank, lang: 'fr'), 'révolution 1789').map((v) => v.id), ['d'], reason: 'les nombres comptent');
   });
 
   test('liste de départ : pas encore vues d\'abord, puis les vues ; d\'autres vidéos ensuite', () {
@@ -139,6 +140,12 @@ void main() {
     expect(more(pool, b, {'c'}).map((v) => v.id), [
       'd',
     ], reason: 'même matière, pas encore vue');
+  });
+
+  test('pas d\'âge maximum : une chaîne « jusqu\'à 18 ans » vaut aussi pour un adulte', () {
+    final c = Channel({'id': 'UCx', 'nom': 'x', 'langue': 'fr', 'ages': [15, 18], 'domaines': <String>[]});
+    expect([c.fits(14), c.fits(16), c.fits(40)], [false, true, true]);
+    expect(cat.channels[1].fits(15), isFalse, reason: 'un maximum sous 18 reste un maximum');
   });
 
   test('durée écrite', () {

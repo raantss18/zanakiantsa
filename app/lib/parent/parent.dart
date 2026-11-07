@@ -252,6 +252,10 @@ class _ParentPageState extends State<ParentPage> {
               if (release != null) _updateBanner(),
               _LanguageSwitch(app: app),
               const Divider(height: 32),
+              // Vidéos (ADR 0068) : actives sans réglage, à la demande d'Antsa ; le parent doit savoir ce qui part chez Google.
+              Text(t('Vidéos'), style: notebookTitle),
+              Text(t('Dans « Tout explorer », avec internet : des vidéos de chaînes éducatives choisies (C’est pas sorcier, Les Fondamentaux, Numberblocks…), adaptées à l’âge, de 10 minutes au plus avant le lycée. Elles passent par le lecteur officiel de YouTube : Google reçoit alors l’adresse de la tablette et la vidéo regardée, et des publicités peuvent apparaître. Sans internet, rien n’est envoyé.')),
+              const Divider(height: 32),
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
               Text(t('Enfants'), style: notebookTitle),
               Text(t('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.')),

@@ -1,0 +1,181 @@
+# Liste blanche des chaînes YouTube éducatives de Zanak'i Antsa.
+#
+# Vérifiée le 2026-11-07 :
+#  - identifiant trouvé via la page de la chaîne (<link rel="canonical">) ou la
+#    recherche YouTube filtrée « chaînes » ;
+#  - chaque identifiant contrôlé sur le flux RSS officiel
+#    https://www.youtube.com/feeds/videos.xml?channel_id=<ID> : titre de la
+#    chaîne identique, 15 dernières vidéos lues (titres éducatifs) ;
+#  - « pourquoi » et « editeur » tirés de la description « À propos » de la
+#    chaîne (et du site procidis.com / learningblocks.tv pour deux d'entre elles) ;
+#  - proportion de shorts estimée sur les 15 dernières vidéos du flux
+#    (liens /shorts/) : les chaînes à majorité de shorts ont été écartées.
+# « dernier » = date du dernier ajout lu dans le flux RSS.
+# Domaines echecs et dessin : aucune chaîne retenue (ChessKid = promotion du
+# site + streamers ; Art for Kids Hub = majorité de shorts familiaux).
+
+# ages : [min, max] ; un max de 18 veut dire « 18 ans et plus » (pas d'âge maximum, ADR 0057).
+# titre_contient : ne garder que les vidéos dont le titre contient ce texte.
+chaines:
+  # ───────────── Français ─────────────
+  - id: UCENv8pH4LkzvuSV_qHIcslg      # dernier : 2026-11-06 (3 shorts / 15)
+    nom: "C'est pas sorcier"
+    langue: fr
+    ages: [8, 15]
+    domaines: [nature, explorer]
+    editeur: "France Télévisions (francetv distribution, chaîne pilotée par boketto)"
+    pourquoi: "Chaîne officielle du magazine de science et de découverte de Jamy, Fred et Sabine, approche ludique et accessible pour toute la famille."
+
+  - id: UCPebd9faluS6fwn-Nu5sp7w      # dernier : 2024-12-06 (plus d'ajout depuis, fonds conservé)
+    nom: "C'est toujours pas sorcier"
+    langue: fr
+    ages: [8, 13]
+    domaines: [nature, explorer]
+    editeur: "France Télévisions"
+    pourquoi: "Chaîne officielle du magazine de vulgarisation scientifique destiné à tous les curieux (zones humides, peau, médicaments, orientation en mer…)."
+
+  - id: UCMsbW8TRs5i3R8K7Z9fUIXw      # dernier : 2026-11-07 (surtout des compilations longues)
+    nom: "Il était une fois... (Hello Maestro)"
+    langue: fr
+    ages: [7, 15]                      # « L'Homme » et « Les Amériques » abordent guerres et conquêtes
+    domaines: [explorer, nature]
+    editeur: "Procidis (Hello Maestro)"
+    pourquoi: "Chaîne officielle (certifiée) de toutes les séries « Il était une fois… » de Procidis : la Vie (corps humain), l'Homme, les Découvreurs, l'Espace, Notre Terre."
+
+  - id: UCww2Dlet6IoU2_eXmVL0RJQ      # dernier : 2026-11-04
+    nom: "Réseau Canopé (Les Fondamentaux)"
+    titre_contient: "Fondamentaux"   # la chaîne mêle des vidéos de formation des enseignants (ADR 0068)
+    langue: fr
+    ages: [6, 11]
+    domaines: [lire, compter, nature, explorer]
+    editeur: "Réseau Canopé, opérateur du ministère de l'Éducation nationale"
+    pourquoi: "Publie la série « Les Fondamentaux » (ex. découvrir et utiliser les sons [b], [t], [m]) ; ATTENTION la chaîne contient aussi des vidéos de formation des enseignants : ne garder que les titres « Les Fondamentaux »."
+
+  - id: UC1WjsBv5LhWUpNb242CG5Nw      # dernier : 2024-05-12 (inactive, fonds conservé)
+    nom: "Alphablocks Français"
+    langue: fr
+    ages: [5, 7]
+    domaines: [anglais]
+    editeur: "Alphablocks Ltd / Blocks Universe (série CBeebies) — chaîne liée depuis la chaîne officielle Alphablocks"
+    pourquoi: "Version française de la série phonétique de CBeebies, conçue pour apprendre aux petits l'alphabet anglais, l'assemblage de lettres et les familles de mots."
+
+  - id: UC7D8H9p5KbTnlQbJQs4uLug      # dernier : 2026-11-06 (7 shorts / 15, à filtrer)
+    nom: "Numberblocks Français"
+    langue: fr
+    ages: [5, 7]
+    domaines: [compter]
+    editeur: "Alphablocks Ltd — chaîne liée depuis la chaîne officielle Numberblocks"
+    pourquoi: "Les Numberblocks, petits blocs animés qui font compter, additionner et soustraire en s'amusant."
+
+  - id: UCrRKlEDktKeraMTgAN_DIzw      # dernier : 2026-11-06 (5 shorts / 15)
+    nom: "Le Monde De Jamy - France Télévisions"
+    langue: fr
+    ages: [10, 18]
+    domaines: [explorer, nature]
+    editeur: "France Télévisions (France 3 / France 5)"
+    pourquoi: "Documentaires « Le Monde de Jamy » et « C Jamy » de Jamy Gourmaud sur le savoir et la découverte (Venise, Romains, la Seine…)."
+
+  - id: UCaDqmzanCq4ZYhdEm0Df9Qg      # dernier : 2026-07-31 (0 short / 15)
+    nom: "Yvan Monka"
+    langue: fr
+    ages: [11, 18]
+    domaines: [compter]
+    editeur: "Yvan Monka, professeur de mathématiques en lycée (académie de Strasbourg), site maths-et-tiques.fr"
+    pourquoi: "Plus de 1900 vidéos de cours et méthodes de maths, du collège au lycée, en accès libre."
+
+  - id: UCxJOha9_0qZHuGf1d4imhyQ      # dernier : 2026-08-26 (0 short / 15)
+    nom: "KhanAcademyFrancophone"
+    langue: fr
+    ages: [11, 18]
+    domaines: [compter]
+    editeur: "Khan Academy (organisation à but non lucratif), chaîne officielle en français"
+    pourquoi: "Cours vidéo gratuits (maths, économie…) de la chaîne officielle francophone de Khan Academy."
+
+  - id: UCaNlbnghtwlsGF-KzAFThqA      # dernier : 2026-10-08 (3 shorts / 15)
+    nom: "ScienceEtonnante"
+    langue: fr
+    ages: [15, 18]
+    domaines: [nature, compter]
+    editeur: "ScienceEtonnante (vulgarisateur indépendant, blog scienceetonnante.com)"
+    pourquoi: "Vidéos qui racontent la science « étonnante, amusante, passionnante » : physique, maths, climat (El Niño, fusion, cryptographie quantique)."
+
+  - id: UCHGMBrXUzClgjEzBMei-Jdw      # dernier : 2026-11-07 (4 shorts / 15)
+    nom: "Le Dessous des Cartes - ARTE"
+    langue: fr
+    ages: [15, 18]                     # géopolitique : guerres, menaces, actualité politique
+    domaines: [explorer]
+    editeur: "ARTE"
+    pourquoi: "Magazine qui décrypte les enjeux géopolitiques du monde contemporain au moyen de cartes géographiques."
+
+  # ───────────── Anglais ─────────────
+  - id: UC_qs3c0ehDvZkbiEbOj6Drg      # dernier : 2026-11-07 (4 shorts / 15)
+    nom: "Alphablocks"
+    langue: en
+    ages: [5, 7]
+    domaines: [lire, anglais]
+    editeur: "Alphablocks Ltd / Blocks Universe (série CBeebies)"
+    pourquoi: "26 lettres vivantes qui forment des mots : série CBeebies d'apprentissage de la lecture fondée sur la phonétique."
+
+  - id: UCPlwvN0w4qFSP1FllALB92w      # dernier : 2026-11-07 (6 shorts / 15, quelques directs longs)
+    nom: "Numberblocks"
+    langue: en
+    ages: [5, 7]
+    domaines: [compter, anglais]
+    editeur: "Alphablocks Ltd"
+    pourquoi: "Petits blocs animés pour apprendre à compter, additionner et soustraire de façon ludique."
+
+  - id: UCRFIPG2u1DxKLNuE3y2SjHA      # dernier : 2025-05-27 (plus d'ajout depuis, fonds conservé)
+    nom: "SciShow Kids"
+    langue: en
+    ages: [5, 9]
+    domaines: [nature, anglais]
+    editeur: "L'équipe de SciShow"
+    pourquoi: "Jessi et le robot Squeaks expliquent des notions scientifiques (volcans, animaux…) aux jeunes esprits curieux, avec expériences et experts."
+
+  - id: UCONtPx56PSebXJOxbFv-2jQ      # dernier : 2026-10-08 (0 short / 15)
+    nom: "Crash Course Kids"
+    langue: en
+    ages: [8, 11]
+    domaines: [nature, lire, anglais]
+    editeur: "Les créateurs de Crash Course"
+    pourquoi: "Chaîne pour les CE2–CM2 (3rd–5th grade) : sciences et littérature avec des vidéos alignées sur les programmes scolaires."
+
+  - id: UCMRzqb0rmcil3OxeVFVRIMw      # dernier : 2025-06-05 (une partie des vidéos en espagnol)
+    nom: "NASA Space Place"
+    langue: en
+    ages: [8, 11]
+    domaines: [explorer, nature]
+    editeur: "NASA"
+    pourquoi: "Site de la NASA destiné aux enfants de fin de primaire : courtes vidéos sur l'espace et les sciences de la Terre."
+
+  - id: UCO_DaPp4ifhMAmiyybSLx9w      # dernier : 2026-08-23 (1 short / 15)
+    nom: "BBC Earth Kids"
+    langue: en
+    ages: [6, 11]
+    domaines: [nature]
+    editeur: "BBC"
+    pourquoi: "Faits sur les animaux et la planète, extraits des programmes d'histoire naturelle de la BBC choisis pour les jeunes curieux."
+
+  - id: UCjcQmKeifVUUH5s4E4OrMhg      # dernier : 2026-04-15 (1 short / 15)
+    nom: "Scratch Team"
+    langue: en
+    ages: [8, 14]
+    domaines: [code]
+    editeur: "Scratch Foundation (scratch.mit.edu), organisation à but non lucratif"
+    pourquoi: "Chaîne officielle de Scratch : tutoriels pour programmer histoires, jeux et animations."
+
+  - id: UCsooa4yRKGN_zEE8iknghZA      # dernier : 2026-11-05 (0 short / 15)
+    nom: "TED-Ed"
+    langue: en
+    ages: [13, 18]                     # quelques sujets « histoires qui font peur »
+    domaines: [nature, explorer, anglais]
+    editeur: "TED-Ed (TED), à but non lucratif"
+    pourquoi: "Courtes leçons animées primées, avec supports pédagogiques sur ed.ted.com."
+
+  - id: UCLA_DiR1FfKNvjuUpBHmylQ      # dernier : 2026-11-07 (1 short / 15 ; beaucoup de directs longs)
+    nom: "NASA"
+    langue: en
+    ages: [12, 18]
+    domaines: [explorer]
+    editeur: "NASA"
+    pourquoi: "Chaîne officielle de l'agence spatiale américaine : exploration spatiale, découvertes scientifiques, vie à bord de l'ISS."

@@ -360,15 +360,22 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
         onNavigationRequest: (_) => NavigationDecision.prevent,
       ),
     );
-    controller.videoStateStream.listen((s) async {
+    controller.videoStateStream.listen((s) {
       final total = widget.video.seconds;
-      if (!marked && total > 0 && s.position.inSeconds >= total * 0.6) {
-        marked = true;
-        await markSeen(app, widget.video.id);
-        final now = await seenVideos(app);
-        if (mounted) setState(() => seen = now);
-      }
+      if (total > 0 && s.position.inSeconds >= total * 0.6) _seen();
     });
+    // Vidéo finie : vue, même si la durée du catalogue était mal connue.
+    controller.listen((v) {
+      if (v.playerState == PlayerState.ended) _seen();
+    });
+  }
+
+  Future<void> _seen() async {
+    if (marked) return;
+    marked = true;
+    await markSeen(app, widget.video.id);
+    final now = await seenVideos(app);
+    if (mounted) setState(() => seen = now);
   }
 
   @override

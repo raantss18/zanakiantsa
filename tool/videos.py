@@ -80,6 +80,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
             if not token:
                 break
         excluded = set(c.get('exclure', []))
+        must = (c.get('titre_contient') or '').lower()
         for i in range(0, len(vids), 50):
             batch = [v for v in vids[i:i + 50] if v not in excluded]
             if not batch:
@@ -88,6 +89,12 @@ def build(channels: list[dict], per_channel: int) -> dict:
                 if not keep(v):
                     continue
                 sn = v['snippet']
+                if must and must not in sn['title'].lower():
+                    continue
+                # Langue de la vidéo, quand YouTube la connaît : celle de la chaîne (NASA Space Place publie aussi en espagnol).
+                spoken = sn.get('defaultAudioLanguage') or sn.get('defaultLanguage') or ''
+                if spoken and not spoken.lower().startswith(c['langue']):
+                    continue
                 videos.append({
                     'id': v['id'],
                     'c': index,

@@ -24,7 +24,8 @@ class Channel {
   final int minAge, maxAge;
   final List<String> domains;
 
-  bool fits(int age) => age >= minAge && age <= maxAge;
+  /// Un maximum de 18 veut dire « 18 ans et plus » : l'app n'a pas d'âge maximum (ADR 0057).
+  bool fits(int age) => age >= minAge && (maxAge >= 18 || age <= maxAge);
 }
 
 class Video {
@@ -96,7 +97,7 @@ String fold(String s) {
 List<Video> search(List<Video> pool, String query) {
   final words = fold(query)
       .split(RegExp(r'[^a-z0-9]+'))
-      .where((w) => w.length > 1)
+      .where((w) => w.length > 1 || RegExp(r'\d').hasMatch(w))
       .toList();
   if (words.isEmpty) return const [];
   return [

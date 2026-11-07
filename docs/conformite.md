@@ -173,3 +173,13 @@ pub, aucun achat, aucune télémétrie (journal local). Distribution : APK direc
 23. https://support.google.com/googleplay/android-developer/answer/9888379 — lu
 - Non lus : Légifrance art. 45 loi 78-17 ; https://developers.google.com/youtube/terms/required-minimum-functionality ;
   documentation Firebase data disclosure ; politique de Samsung TTS.
+
+## 7. Vidéos YouTube (ADR 0068, 2026-11-08)
+
+- **Ce qui part** : quand l'enfant regarde une vidéo, le lecteur officiel YouTube (domaine youtube-nocookie.com) reçoit
+  l'adresse IP de la tablette, l'identifiant de la vidéo et des informations techniques ; Google peut afficher des
+  publicités. La liste et la recherche, elles, se font sur l'appareil, dans un catalogue téléchargé depuis le site.
+- **Choix d'Antsa** : actif sans réglage parent ; le parent en est informé dans l'espace parent (section « Vidéos »).
+- **À vérifier** (non lu ici) : conditions YouTube API Services pour un public d'enfants (§ 1), statut « conçu pour les
+  enfants » des vidéos intégrées, déclaration éventuelle à la CMIL (§ 3) puisque des données quittent désormais l'appareil.
+
