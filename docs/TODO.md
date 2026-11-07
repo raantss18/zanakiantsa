@@ -7,7 +7,7 @@
 
 - ✅ Corrigé (trouvé le 2026-11-07, versions 0.9.0 et 0.10.0) : au format SM-X135G, la bonne réponse au calcul n'ouvrait plus l'espace
   parent : le clavier réorganise l'accueil, le bouton disparaît, `context.mounted` devenait faux. Donc plus de mise à jour depuis
-  l'app sur ces écrans : passer par le site. Protégé par `test/parent_gate_test.dart`. ⏳ À publier.
+  l'app sur ces écrans : passer par le site. Protégé par `test/parent_gate_test.dart`. Publié en 0.11.0 ; les appareils bloqués s'installent depuis le site.
 
 ## Étape 0 — Cadrage ✅
 
@@ -225,6 +225,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
+
+## Version 0.11.0 (2026-11-07) : publiée avec l'accord d'Antsa
+
+- ✅ `0.11.0+11`, build 2011, 35,8 Mo, publiée par `tool/publish.sh`. Montée 0.10.0 → 0.11.0 vérifiée sur l'émulateur (données
+  conservées, espace parent ouvert, leçon de 4e). ⏳ Pas vue sur le téléphone ni sur la vraie tablette.
 
 ## Sans âge maximum (2026-11-07, demande d'Antsa) — ADR 0057
 
