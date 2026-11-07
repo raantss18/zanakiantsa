@@ -293,6 +293,8 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'id': id,
     'titre': theme['titre'],
     'nom': theme['nom'],
+    // Noms selon la tranche d'âge (ADR 0066) : « Lire et écrire » pour les petits, « Français » pour les grands.
+    if (theme['noms'] != null) 'noms': theme['noms'],
     'icone': theme['icone'],
     'intro': intro,
     'ages': theme['ages'],

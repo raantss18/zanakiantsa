@@ -1,6 +1,8 @@
 id: anglais
 titre: Anglais — des premiers mots à la grammaire du collège
 nom: "L'anglais"
+# Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
+noms: {moyens: "L'anglais", grands: "Anglais"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Des premiers mots (couleurs, jouets, animaux, consignes de la classe) à la grammaire du lycée : temps, passif, discours indirect, conditionnels, connecteurs, et des textes du monde anglophone à comprendre."
 icone: "1f1ec-1f1e7"
@@ -42,6 +44,7 @@ intro:
 en:
   titre: "English — from first words to secondary-school grammar"
   nom: "English"
+  noms: {moyens: "English", grands: "English"}
   resume: "From first words (colours, toys, animals, classroom instructions) to sixth-form grammar: tenses, the passive, reported speech, conditionals, linking words, and texts from the English-speaking world to understand."
   intro:
     - texte: "Listen to the word."

@@ -1,6 +1,8 @@
 id: lire
 titre: Lire et écrire
 nom: "Lire et écrire"
+# Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
+noms: {moyens: "Le français", grands: "Français"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Syllabes, lettres capitales et cursives, tracé des lettres au doigt ; puis lecture suivie, conjugaison et grammaire, jusqu’à l’analyse littéraire du lycée."
 icone: "1f4d6"
@@ -39,6 +41,7 @@ intro:
 en:
   titre: "French — reading, writing and grammar"
   nom: "French"
+  noms: {moyens: "French", grands: "French"}
   resume: "French syllables, capital and joined-up letters, tracing letters with a finger; then reading comprehension, French verbs and grammar, up to sixth-form literary analysis."
   intro:
     - texte: "To read French, we listen to the sounds in the words."

@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:zanakiantsa/content/content.dart';
+import 'package:zanakiantsa/l10n/l10n.dart';
 import 'package:zanakiantsa/ui/universe.dart';
 
 // ADR 0066 (demande d'Antsa, 2026-11-08 : « adapte à la catégorie d'âge ») : à 12 ans, plus de poupées ni de Robi qui répare
@@ -34,5 +36,25 @@ void main() {
       }
       expect(u.stickers, hasLength(12), reason: u.id);
     }
+  });
+
+  test('le nom des domaines suit l\'âge : plus de « Lire et écrire » à 17 ans', () {
+    Topic load(String id) => Topic(jsonDecode(File('assets/content/$id.json').readAsStringSync()) as Map<String, dynamic>);
+    addTearDown(() {
+      topicBand = 'petits';
+      appLang = 'fr';
+    });
+    String name(String id, int age) {
+      topicBand = bandForAge(age).name;
+      return load(id).name;
+    }
+
+    expect([name('lire', 6), name('lire', 9), name('lire', 17)], ['Lire et écrire', 'Le français', 'Français']);
+    expect([name('compter', 6), name('compter', 9), name('compter', 17)], ['Les nombres', 'Les maths', 'Mathématiques']);
+    expect(name('code', 17), 'Informatique');
+    expect(name('echecs', 17), 'Les échecs', reason: 'les échecs gardent leur nom à tout âge');
+    appLang = 'en';
+    expect([name('compter', 6), name('compter', 17)], ['Numbers', 'Mathematics']);
+    expect(name('explorer', 16), 'History and geography');
   });
 }

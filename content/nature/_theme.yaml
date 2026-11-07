@@ -1,6 +1,8 @@
 id: nature
 titre: Découvrir le monde du vivant
 nom: "Le vivant"
+# Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
+noms: {moyens: "Les sciences", grands: "Sciences"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Le vivant, la matière et l'énergie, de la maternelle à la 1re."
 icone: "1f331"
@@ -44,6 +46,7 @@ intro:
 en:
   titre: "Discovering living things"
   nom: "Living things"
+  noms: {moyens: "Science", grands: "Science"}
   resume: "Living things, matter and energy, from nursery school to Year 11 (1re)."
   intro:
     - texte: "Living things are born, grow up and change."

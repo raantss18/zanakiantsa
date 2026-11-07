@@ -418,12 +418,17 @@ class Question {
   final int v;
 }
 
+/// Tranche d'âge de l'enfant actif ('petits', 'moyens', 'grands'), tenue à jour par l'état de l'app (ADR 0066) : elle
+/// choisit le nom des domaines.
+String topicBand = 'petits';
+
 class Topic {
   Topic(Map<String, dynamic> raw) : this._(localized(raw));
   Topic._(Map<String, dynamic> j)
       : id = j['id'] as String,
         title = j['titre'] as String,
-        name = j['nom'] as String,
+        _name = j['nom'] as String,
+        _names = {for (final e in (j['noms'] as Map? ?? const {}).entries) '${e.key}': '${e.value}'},
         icon = j['icone'] as String,
         intro = [for (final s in j['intro'] as List? ?? const []) IntroScene(Map<String, dynamic>.from(s as Map))],
         ageless = j['sans_age'] == true,
@@ -433,7 +438,12 @@ class Topic {
   final bool ageless;
 
   /// [title] pour le parent, [name] pour l'enfant (« Les nombres »), [icon] : code Twemoji.
-  final String id, title, name, icon;
+  final String id, title, icon;
+  final String _name;
+  final Map<String, String> _names;
+
+  /// Nom pour l'enfant, selon sa tranche d'âge (ADR 0066) : « Lire et écrire » chez les petits, « Français » chez les grands.
+  String get name => _names[topicBand] ?? _name;
 
   /// Animation de méthode jouée à l'ouverture du domaine (ADR 0033).
   final List<IntroScene> intro;

@@ -161,6 +161,7 @@ class AppState extends ChangeNotifier {
       ..voiceOn = await store.get('voix') != 'non'
       ..soundOn = await store.get('musique') != 'non';
     age = int.tryParse(await store.get('age') ?? '') ?? 5;
+    topicBand = bandForAge(age).name; // noms des domaines selon l'âge (ADR 0066)
     chosenClass = int.tryParse(await store.get('classe') ?? '');
     final g = await store.get('genre');
     boy = g == null ? null : g == 'garcon';
@@ -302,6 +303,7 @@ class AppState extends ChangeNotifier {
   Future<void> setAge(int years) async {
     await store.set('age', '$years');
     age = years;
+    topicBand = bandForAge(years).name;
     notifyListeners();
   }
 

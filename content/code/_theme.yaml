@@ -1,6 +1,8 @@
 id: code
 titre: Programmer un robot
 nom: "Le code"
+# Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
+noms: {moyens: "Le code", grands: "Informatique"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Programmer un robot avec des flèches, puis des blocs : boucles, conditions, compteur."
 icone: "1f916"
@@ -44,6 +46,7 @@ intro:
 en:
   titre: "Programming a robot"
   nom: "Coding"
+  noms: {moyens: "Coding", grands: "Computer science"}
   resume: "Program a robot with arrows, then with blocks: loops, conditions, a counter."
   intro:
     - texte: "A program is a list of instructions."

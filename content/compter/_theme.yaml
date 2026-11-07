@@ -1,6 +1,8 @@
 id: compter
 titre: Compter et calculer
 nom: "Les nombres"
+# Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
+noms: {moyens: "Les maths", grands: "Mathématiques"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Dénombrer, composer, additionner, soustraire, tables, partage, heure, opérations posées chiffre par chiffre, grands nombres, division, fractions, nombres décimaux, mesures et durées, aire, proportionnalité, pourcentages, angles, diviseurs et nombres premiers, priorités opératoires, nombres relatifs, puissances, calcul littéral, carrés et racines, équations, Pythagore, Thalès, trigonométrie, vitesses, fonctions linéaires, notation scientifique ; au lycée, fonctions, vecteurs, statistiques, probabilités, second degré, suites, dérivées, logarithme, loi binomiale."
 icone: "1f522"
@@ -33,6 +35,7 @@ intro:
 en:
   titre: "Counting and calculating"
   nom: "Numbers"
+  noms: {moyens: "Maths", grands: "Mathematics"}
   resume: "Counting, making numbers, adding, subtracting, times tables, sharing, telling the time, column methods digit by digit, large numbers, division, fractions, decimals, measures and time, area, proportion, percentages, angles, factors and prime numbers, order of operations, negative numbers, powers, algebra, squares and roots, equations, Pythagoras, the intercept theorem, trigonometry, speed, linear functions, scientific notation; at sixth-form level, functions, vectors, statistics, probability, quadratics, sequences, derivatives, logarithms, the binomial distribution."
   intro:
     - texte: "To count, touch each thing only once."
