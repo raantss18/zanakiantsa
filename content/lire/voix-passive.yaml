@@ -1,0 +1,52 @@
+id: voix-passive
+titre: "La voix passive"
+niveau: 4e
+prerequis: ["accord-sujet-verbe", "participe-passe-etre"]
+programme: { source: cycle4, texte: "Comprendre la construction de la voix passive." }
+activite: quiz
+parametres: {}
+idee: "À la voix passive, le COD devient sujet et subit l’action : « La souris est mangée par le chat. » Le verbe être prend le temps du verbe actif, et le participe s’accorde."
+phrases:
+  consigne: "Transforme la phrase dans ta tête, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Le COD devient sujet ; « être » au même temps ; le sujet devient « par… »."
+  exemple: "« Le chat mange la souris » → « La souris est mangée par le chat »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Mets à la voix passive : « Le chat mange la souris. »"
+    nom: "La souris est mangée par le chat."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La souris est mangée par le chat. »"
+    pieges:
+      - { texte: "Le chat est mangé par la souris.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "La souris est mangé par le chat.", pourquoi: "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être." }
+  - texte: "Mets à la voix passive : « Le vent a renversé les chaises. »"
+    nom: "Les chaises ont été renversées par le vent."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Les chaises ont été renversées par le vent. »"
+    pieges:
+      - { texte: "Le vent a été renversé par les chaises.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "Les chaises ont été renversé par le vent.", pourquoi: "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être." }
+  - texte: "Mets à la voix passive : « Les élèves admirent la maîtresse. »"
+    nom: "La maîtresse est admirée par les élèves."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La maîtresse est admirée par les élèves. »"
+    pieges:
+      - { texte: "Les élèves sont admirés par la maîtresse.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "La maîtresse est admiré par les élèves.", pourquoi: "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être." }
+  - texte: "Mets à la voix passive : « Le facteur apportera le colis. »"
+    nom: "Le colis sera apporté par le facteur."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Le colis sera apporté par le facteur. »"
+    pieges:
+      - { texte: "Le facteur sera apporté par le colis.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "Le colis est apporté par le facteur.", pourquoi: "Le temps change : il faut garder celui de la phrase active (l’auxiliaire être prend ce temps)." }
+  - texte: "Mets à la voix passive : « Ma sœur écrivait des lettres. »"
+    nom: "Des lettres étaient écrites par ma sœur."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Des lettres étaient écrites par ma sœur. »"
+    pieges:
+      - { texte: "Ma sœur était écrite par des lettres.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "Des lettres sont écrites par ma sœur.", pourquoi: "Le temps change : il faut garder celui de la phrase active (l’auxiliaire être prend ce temps)." }
+  - texte: "Mets à la voix passive : « Un orage a détruit la cabane. »"
+    nom: "La cabane a été détruite par un orage."
+    explication: "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La cabane a été détruite par un orage. »"
+    pieges:
+      - { texte: "Un orage a été détruit par la cabane.", pourquoi: "Le sens est inversé : c’est le COD de la phrase active qui devient sujet." }
+      - { texte: "La cabane a été détruit par un orage.", pourquoi: "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être." }

@@ -242,6 +242,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ `0.11.0+11`, build 2011, 35,8 Mo, publiée par `tool/publish.sh`. Montée 0.10.0 → 0.11.0 vérifiée sur l'émulateur (données
   conservées, espace parent ouvert, leçon de 4e). ⏳ Pas vue sur le téléphone ni sur la vraie tablette.
 
+## Version 1.0.0 (2026-11-07) : publiée avec l'accord d'Antsa
+
+- ✅ Nouvelle règle de numérotation (ADR 0062) : X.Y.Z en chiffres de 0 à 9, comme un compteur ; `tool/version.py --bump`.
+- ✅ Français 5e–3e. ⏳ Pas vue sur la vraie tablette.
+
 ## Version 0.13.0 (2026-11-07) : publiée avec l'accord d'Antsa
 
 - ✅ Français CM1–6e, diagnostic des prérequis, tableau de bord parent ; montée 0.12.0 → 0.13.0 sur l'émulateur. ⏳ Pas vue sur la vraie tablette.
@@ -257,7 +262,8 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ Première tranche 6e–4e : pourcentages, fraction d'un nombre, nombres relatifs, carrés, racine carrée (7 compétences).
 - ✅ 4e–3e (2026-11-07) : équations ax + b = c, Pythagore, fractions irréductibles, notation scientifique, identités remarquables, équations produit nul (6 compétences, programme du cycle 4). « Les nombres » : 46 compétences.
 - ✅ Français CM1–6e (ADR 0060) : imparfait, futur, passé simple, conditionnel, impératif, participe passé avec être, attribut ou COD.
-- ⏳ Lycée ; français 5e–3e, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
+- ✅ Français 5e–3e (ADR 0063) : accord sujet-verbe, temps, subjonctif, temps composés, voix passive, subordonnées.
+- ⏳ Lycée ; sciences et histoire-géographie, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
 - ⏳ Essayer avec un grand : les mondes (fées, robots…) sont gardés tels quels à sa demande ; la voix lit-elle bien « −5 » et « 3/4 » ?
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)

@@ -24,7 +24,9 @@
 9. **Le site suit l'app** (demande d'Antsa, ADR 0055) : toute mise à jour ou nouvelle de l'app se voit automatiquement sur
    https://raantss18.github.io/zanakiantsa/, sans geste à la main. Publier avec `tool/publish.sh` ; une nouvelle sans
    version va dans `site/notes.json`. Les notes de version s'affichent telles quelles : les écrire pour des parents.
-10. **Principes repris d'academik/COMIMa** : pas de vies ni de punition ; le bouton **← retour** (et le retour Android)
+10. **Numéros de version** (règle d'Antsa, ADR 0062) : X.Y.Z, Y et Z de 0 à 9, comme un compteur : 0.1.9 → 0.2.0,
+   1.9.9 → 2.0.0. Toujours `python3 tool/version.py --bump`, jamais à la main.
+11. **Principes repris d'academik/COMIMa** : pas de vies ni de punition ; le bouton **← retour** (et le retour Android)
    ≠ le bouton **Accueil** ; cibles tactiles ≥ 48 dp ; clair et sombre ; une erreur signalée est corrigée à la
    cause, puis protégée par un test.
 

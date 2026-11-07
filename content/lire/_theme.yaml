@@ -2,9 +2,9 @@ id: lire
 titre: Lire et écrire
 nom: "Lire et écrire"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Syllabes, lettres capitales et cursives, tracé des lettres au doigt ; puis conjugaison et grammaire jusqu’en 6e."
+resume: "Syllabes, lettres capitales et cursives, tracé des lettres au doigt ; puis conjugaison et grammaire jusqu’en 3e."
 icone: "1f4d6"
-ages: [4, 12]
+ages: [4, 15]
 # Maternelle (version consolidée 2026) : « Passer de l'oral à l'écrit : se préparer à apprendre à lire » p. 12-16 et
 # « … à apprendre à écrire » p. 17-20. CP-CE1 : programme de français du cycle 2 (BOENJS du 31 octobre 2024), annexe 3.
 # Syllabes comptées à l'oral ; mots ambigus écartés (lion, avion, camion). Consultés le 2026-11-03.
@@ -13,7 +13,9 @@ sources:
   cycle2: "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf"
   # CM1-6e : programme de français du cycle 3 (BO n° 16 du 17 avril 2025), « Étude de la langue », lu le 2026-11-07.
   cycle3: "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf"
-ordre: [syllabes, rimes, debut, lettres-capitales, lettres-minuscules, premiere-lettre, lettres-cursives, tracer-capitales, lire-syllabes, tracer-cursive, lire-mots, lire-phrases, present, imparfait, participe-passe-etre, futur, passe-simple, conditionnel, imperatif, attribut-ou-cod]
+  # 5e-3e : programme de français du cycle 4, annexe 1, « Étude de la langue », lu le 2026-11-07.
+  cycle4: "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20de%20fran%C3%A7ais%20pour%20le%20cycle%204-480713.pdf"
+ordre: [syllabes, rimes, debut, lettres-capitales, lettres-minuscules, premiere-lettre, lettres-cursives, tracer-capitales, lire-syllabes, tracer-cursive, lire-mots, lire-phrases, present, imparfait, participe-passe-etre, futur, passe-simple, conditionnel, imperatif, attribut-ou-cod, accord-sujet-verbe, identifier-temps, subjonctif-present, temps-composes, voix-passive, subjonctif-passe, subordonnees]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

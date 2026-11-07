@@ -1,0 +1,76 @@
+id: identifier-temps
+titre: "Reconnaître un temps"
+niveau: 5e
+prerequis: ["conditionnel", "passe-simple"]
+programme: { source: cycle4, texte: "Comprendre la morphologie des temps simples (présent, futur simple, imparfait, passé simple de l’indicatif, conditionnel et présent de l’impératif) et des temps composés (passé composé et plus-que-parfait de l’indicatif)." }
+activite: quiz
+parametres: {}
+idee: "Pour reconnaître un temps, on regarde la forme : un mot ou deux (auxiliaire + participe), puis la marque de temps (-ai-, -r-…)."
+phrases:
+  consigne: "Regarde la forme du verbe, puis touche son temps."
+  question: "{texte}"
+  indice: "Un ou deux mots ? Quelle marque de temps ?"
+  exemple: "« nous avions mangé » : avoir à l’imparfait + participe, c’est le plus-que-parfait."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« nous avions mangé » : à quel temps est ce verbe ?"
+    nom: "plus-que-parfait"
+    explication: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+    pieges:
+      - { texte: "passé composé", pourquoi: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)." }
+      - { texte: "imparfait", pourquoi: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)." }
+  - texte: "« ils sont partis » : à quel temps est ce verbe ?"
+    nom: "passé composé"
+    explication: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+    pieges:
+      - { texte: "plus-que-parfait", pourquoi: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)." }
+      - { texte: "passé simple", pourquoi: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)." }
+  - texte: "« tu finissais » : à quel temps est ce verbe ?"
+    nom: "imparfait"
+    explication: "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions."
+    pieges:
+      - { texte: "passé simple", pourquoi: "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions." }
+      - { texte: "conditionnel présent", pourquoi: "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions." }
+  - texte: "« elle prit » : à quel temps est ce verbe ?"
+    nom: "passé simple"
+    explication: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+    pieges:
+      - { texte: "imparfait", pourquoi: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes." }
+      - { texte: "passé composé", pourquoi: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes." }
+  - texte: "« vous ferez » : à quel temps est ce verbe ?"
+    nom: "futur"
+    explication: "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont."
+    pieges:
+      - { texte: "conditionnel présent", pourquoi: "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont." }
+      - { texte: "imparfait", pourquoi: "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont." }
+  - texte: "« je voudrais » : à quel temps est ce verbe ?"
+    nom: "conditionnel présent"
+    explication: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+    pieges:
+      - { texte: "futur", pourquoi: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "imparfait", pourquoi: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+  - texte: "« elles étaient venues » : à quel temps est ce verbe ?"
+    nom: "plus-que-parfait"
+    explication: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+    pieges:
+      - { texte: "passé composé", pourquoi: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)." }
+      - { texte: "imparfait", pourquoi: "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)." }
+  - texte: "« nous allâmes » : à quel temps est ce verbe ?"
+    nom: "passé simple"
+    explication: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+    pieges:
+      - { texte: "imparfait", pourquoi: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes." }
+      - { texte: "futur", pourquoi: "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes." }
+  - texte: "« tu as dit » : à quel temps est ce verbe ?"
+    nom: "passé composé"
+    explication: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+    pieges:
+      - { texte: "plus-que-parfait", pourquoi: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)." }
+      - { texte: "passé simple", pourquoi: "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)." }
+  - texte: "« ils pourraient » : à quel temps est ce verbe ?"
+    nom: "conditionnel présent"
+    explication: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+    pieges:
+      - { texte: "futur", pourquoi: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…" }
+      - { texte: "imparfait", pourquoi: "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…" }

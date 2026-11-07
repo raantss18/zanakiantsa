@@ -1,0 +1,64 @@
+id: subordonnees
+titre: "Les propositions subordonnées"
+niveau: 3e
+prerequis: ["attribut-ou-cod"]
+programme: { source: cycle4, texte: "Comprendre les fonctions grammaticales des propositions subordonnées relatives et conjonctives." }
+activite: quiz
+parametres: {}
+idee: "Une relative complète un nom que le pronom relatif reprend (« le livre que… »). Une complétive est COD du verbe (« je pense que… »). Une circonstancielle dit quand, pourquoi… (« quand il pleut »)."
+phrases:
+  consigne: "Repère le mot qui introduit la subordonnée, puis touche sa nature."
+  question: "{texte}"
+  indice: "Le mot reprend-il un nom ? Est-ce le COD du verbe ? Ou dit-il quand, pourquoi ?"
+  exemple: "« Le livre que tu m’as prêté » : « que » reprend « le livre », c’est une relative."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Dans « Le livre que tu m’as prêté est passionnant. », quelle est la nature de « que tu m’as prêté » ?"
+    nom: "subordonnée relative"
+    explication: "« que » reprend « le livre » (son antécédent) : c’est un pronom relatif."
+    pieges:
+      - { texte: "subordonnée conjonctive complétive", pourquoi: "Une complétive est COD du verbe ; « que » ne reprend aucun nom." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+  - texte: "Dans « Je pense que tu as raison. », quelle est la nature de « que tu as raison » ?"
+    nom: "subordonnée conjonctive complétive"
+    explication: "« que » ne reprend aucun nom ; la subordonnée est COD de « pense » : c’est une complétive."
+    pieges:
+      - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+  - texte: "Dans « Nous sortirons quand la pluie cessera. », quelle est la nature de « quand la pluie cessera » ?"
+    nom: "subordonnée circonstancielle"
+    explication: "Elle dit quand se passe l’action ; on peut la déplacer : c’est une circonstancielle de temps."
+    pieges:
+      - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
+      - { texte: "subordonnée conjonctive complétive", pourquoi: "Une complétive est COD du verbe ; « que » ne reprend aucun nom." }
+  - texte: "Dans « La maison où j’habite est ancienne. », quelle est la nature de « où j’habite » ?"
+    nom: "subordonnée relative"
+    explication: "« où » reprend « la maison » : c’est un pronom relatif."
+    pieges:
+      - { texte: "subordonnée conjonctive complétive", pourquoi: "Une complétive est COD du verbe ; « que » ne reprend aucun nom." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+  - texte: "Dans « Il espère que le train arrivera à l’heure. », quelle est la nature de « que le train arrivera à l’heure » ?"
+    nom: "subordonnée conjonctive complétive"
+    explication: "La subordonnée est COD de « espère » : c’est une complétive."
+    pieges:
+      - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+  - texte: "Dans « Je reste à la maison parce qu’il fait froid. », quelle est la nature de « parce qu’il fait froid » ?"
+    nom: "subordonnée circonstancielle"
+    explication: "Elle donne la cause ; on peut la déplacer : c’est une circonstancielle de cause."
+    pieges:
+      - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
+      - { texte: "subordonnée conjonctive complétive", pourquoi: "Une complétive est COD du verbe ; « que » ne reprend aucun nom." }
+  - texte: "Dans « L’ami qui m’a aidé s’appelle Hery. », quelle est la nature de « qui m’a aidé » ?"
+    nom: "subordonnée relative"
+    explication: "« qui » reprend « l’ami » : c’est un pronom relatif."
+    pieges:
+      - { texte: "subordonnée conjonctive complétive", pourquoi: "Une complétive est COD du verbe ; « que » ne reprend aucun nom." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }
+  - texte: "Dans « Elle a dit qu’elle viendrait demain. », quelle est la nature de « qu’elle viendrait demain » ?"
+    nom: "subordonnée conjonctive complétive"
+    explication: "La subordonnée est COD de « a dit » : c’est une complétive."
+    pieges:
+      - { texte: "subordonnée relative", pourquoi: "Une relative complète un nom (son antécédent) que le pronom reprend." }
+      - { texte: "subordonnée circonstancielle", pourquoi: "Une circonstancielle dit quand, pourquoi, comment… et se déplace." }

@@ -3,7 +3,8 @@
 Seul Antsa publie. La clé privée Ed25519 est dans `release-keys/ed25519.pem` (hors de Git) : **la sauvegarder
 ailleurs** — sans elle, plus aucune mise à jour ne peut être signée et les apps installées refuseront toute autre clé.
 
-1. Monter la version dans `app/pubspec.yaml` (`version: x.y.z+n`, `n` toujours croissant).
+1. Monter la version : `python3 tool/version.py --bump`. Règle (ADR 0062) : trois chiffres de 0 à 9 qui se retiennent
+   comme un compteur, 0.1.9 → 0.2.0, 1.9.9 → 2.0.0 ; le build (`+n`) augmente toujours de 1.
 2. `cd app && flutter test && tool/release.sh "Ce que la version permet de faire."`
    → `release-out/` : l'APK arm64, `release.json` (build = versionCode réel de l'APK, Flutter ajoute 2000 pour
    arm64), `release.json.sig`. `flutter test test/release_out_test.dart` vérifie la signature avec la clé de l'app.

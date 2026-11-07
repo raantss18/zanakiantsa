@@ -1,0 +1,52 @@
+id: subjonctif-passe
+titre: "Le subjonctif passé"
+niveau: 3e
+prerequis: ["subjonctif-present", "temps-composes"]
+programme: { source: cycle4, texte: "Employer et identifier le présent et le passé du subjonctif à l’écrit et à l’oral. Connaitre la morphologie du passé du subjonctif." }
+activite: quiz
+parametres: {}
+idee: "Le subjonctif passé, c’est l’auxiliaire au subjonctif présent + le participe passé : « que tu aies réussi », « qu’elle soit partie »."
+phrases:
+  consigne: "Lis le début de la phrase, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Auxiliaire au subjonctif (aie, ait, soit, soyons…) + participe passé."
+  exemple: "« Je suis content que tu aies réussi. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète au subjonctif passé : Je suis content que tu (réussir) ton examen."
+    nom: "aies réussi"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : aies réussi."
+    pieges:
+      - { texte: "as réussi", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "aurais réussi", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }
+  - texte: "Complète au subjonctif passé : Il faut que vous (finir) avant midi."
+    nom: "ayez fini"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : ayez fini."
+    pieges:
+      - { texte: "avez fini", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "aurez fini", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }
+  - texte: "Complète au subjonctif passé : Je regrette qu’elle (partir) si tôt."
+    nom: "soit partie"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : soit partie."
+    pieges:
+      - { texte: "est partie", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "serait partie", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }
+  - texte: "Complète au subjonctif passé : Bien qu’il (pleuvoir), nous sommes sortis."
+    nom: "ait plu"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : ait plu."
+    pieges:
+      - { texte: "a plu", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "aurait plu", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }
+  - texte: "Complète au subjonctif passé : Je doute qu’ils (comprendre)."
+    nom: "aient compris"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : aient compris."
+    pieges:
+      - { texte: "ont compris", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "auraient compris", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }
+  - texte: "Complète au subjonctif passé : Il faut que nous (arriver) avant la nuit."
+    nom: "soyons arrivés"
+    explication: "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : soyons arrivés."
+    pieges:
+      - { texte: "sommes arrivés", pourquoi: "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)." }
+      - { texte: "serons arrivés", pourquoi: "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif." }

@@ -1,0 +1,64 @@
+id: accord-sujet-verbe
+titre: "L’accord sujet-verbe"
+niveau: 5e
+prerequis: ["present"]
+programme: { source: cycle4, texte: "Maitriser les cas complexes de l’accord sujet-verbe (sujet séparé du verbe par un complément, sujet comportant plusieurs noms)." }
+activite: quiz
+parametres: {}
+idee: "Le verbe s’accorde avec son sujet, même quand un complément les sépare : « Les fleurs du jardin poussent. » Deux noms reliés par « et » font un pluriel."
+phrases:
+  consigne: "Trouve le vrai sujet, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Demande « qui est-ce qui … ? » avant le verbe."
+  exemple: "« Le chat des voisins dort » : c’est le chat qui dort."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Accorde le verbe au présent : Les fleurs du jardin (pousser) vite."
+    nom: "poussent"
+    explication: "Le sujet est « les fleurs », pas « jardin » : le complément « du jardin » n’accorde pas le verbe."
+    pieges:
+      - { texte: "pousse", pourquoi: "Le sujet est « les fleurs », pas « jardin » : le complément « du jardin » n’accorde pas le verbe." }
+      - { texte: "pousses", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Le chat des voisins (dormir) au soleil."
+    nom: "dort"
+    explication: "Le sujet est « le chat » : « des voisins » est un complément du nom."
+    pieges:
+      - { texte: "dorment", pourquoi: "Le sujet est « le chat » : « des voisins » est un complément du nom." }
+      - { texte: "dors", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Paul et sa sœur (jouer) dehors."
+    nom: "jouent"
+    explication: "Deux noms sujets reliés par « et » : le verbe se met au pluriel."
+    pieges:
+      - { texte: "joue", pourquoi: "Deux noms sujets reliés par « et » : le verbe se met au pluriel." }
+      - { texte: "joues", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Les élèves de la classe (écouter) la maîtresse."
+    nom: "écoutent"
+    explication: "Le sujet est « les élèves », pas « la classe »."
+    pieges:
+      - { texte: "écoute", pourquoi: "Le sujet est « les élèves », pas « la classe »." }
+      - { texte: "écoutes", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : La couleur de ces fruits (changer) en été."
+    nom: "change"
+    explication: "Le sujet est « la couleur », singulier : « de ces fruits » est un complément."
+    pieges:
+      - { texte: "changent", pourquoi: "Le sujet est « la couleur », singulier : « de ces fruits » est un complément." }
+      - { texte: "changes", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Toi et moi (partir) demain."
+    nom: "partons"
+    explication: "« Toi et moi », c’est « nous » : le verbe se met à la 1re personne du pluriel."
+    pieges:
+      - { texte: "partent", pourquoi: "« Toi et moi », c’est « nous » : le verbe se met à la 1re personne du pluriel." }
+      - { texte: "partez", pourquoi: "Ça, c’est la forme avec « vous » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Les livres que je lis (être) passionnants."
+    nom: "sont"
+    explication: "Le sujet est « les livres », pluriel."
+    pieges:
+      - { texte: "est", pourquoi: "Le sujet est « les livres », pluriel." }
+      - { texte: "êtes", pourquoi: "Ça, c’est la forme avec « vous » : le sujet n’est pas à cette personne." }
+  - texte: "Accorde le verbe au présent : Le bruit des vagues (calmer) les enfants."
+    nom: "calme"
+    explication: "Le sujet est « le bruit », singulier."
+    pieges:
+      - { texte: "calment", pourquoi: "Le sujet est « le bruit », singulier." }
+      - { texte: "calmes", pourquoi: "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne." }

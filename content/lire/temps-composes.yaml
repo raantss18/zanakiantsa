@@ -1,0 +1,52 @@
+id: temps-composes
+titre: "Les temps composés"
+niveau: 4e
+prerequis: ["identifier-temps"]
+programme: { source: cycle4, texte: "Découvrir, comprendre et mémoriser les éléments qui caractérisent les temps composés (plus-que-parfait, passé antérieur, futur antérieur et conditionnel passé de l’indicatif)." }
+activite: quiz
+parametres: {}
+idee: "Un temps composé, c’est un auxiliaire (avoir ou être) + le participe passé. Le temps de l’auxiliaire donne le nom : futur → futur antérieur, imparfait → plus-que-parfait, conditionnel → conditionnel passé."
+phrases:
+  consigne: "Choisis le temps de l’auxiliaire, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Quel temps pour l’auxiliaire ?"
+  exemple: "Finir, avec « nous », au futur antérieur : nous aurons fini."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Conjugue « finir » au futur antérieur, avec « nous »."
+    nom: "nous aurons fini"
+    explication: "Le futur antérieur, c’est l’auxiliaire au futur + le participe passé : nous aurons fini."
+    pieges:
+      - { texte: "nous avions fini", pourquoi: "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait." }
+      - { texte: "nous aurions fini", pourquoi: "Ça, c’est le conditionnel passé : auxiliaire au conditionnel." }
+  - texte: "Conjugue « partir » au plus-que-parfait, avec « elle »."
+    nom: "elle était partie"
+    explication: "Le plus-que-parfait, c’est l’auxiliaire à l’imparfait + le participe passé : elle était partie."
+    pieges:
+      - { texte: "elle sera partie", pourquoi: "Ça, c’est le futur antérieur : auxiliaire au futur." }
+      - { texte: "elle est partie", pourquoi: "Ça, c’est le passé composé : auxiliaire au présent." }
+  - texte: "Conjugue « voir » au conditionnel passé, avec « tu »."
+    nom: "tu aurais vu"
+    explication: "Le conditionnel passé, c’est l’auxiliaire au conditionnel présent + le participe passé : tu aurais vu."
+    pieges:
+      - { texte: "tu auras vu", pourquoi: "Ça, c’est le futur antérieur : auxiliaire au futur." }
+      - { texte: "tu avais vu", pourquoi: "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait." }
+  - texte: "Conjugue « faire » au futur antérieur, avec « ils »."
+    nom: "ils auront fait"
+    explication: "Le futur antérieur, c’est l’auxiliaire au futur + le participe passé : ils auront fait."
+    pieges:
+      - { texte: "ils auraient fait", pourquoi: "Ça, c’est le conditionnel passé : auxiliaire au conditionnel." }
+      - { texte: "ils avaient fait", pourquoi: "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait." }
+  - texte: "Conjugue « venir » au plus-que-parfait, avec « je »."
+    nom: "j’étais venu"
+    explication: "Le plus-que-parfait, c’est l’auxiliaire à l’imparfait + le participe passé : j’étais venu."
+    pieges:
+      - { texte: "je serai venu", pourquoi: "Ça, c’est le futur antérieur : auxiliaire au futur." }
+      - { texte: "je suis venu", pourquoi: "Ça, c’est le passé composé : auxiliaire au présent." }
+  - texte: "Conjugue « prendre » au conditionnel passé, avec « vous »."
+    nom: "vous auriez pris"
+    explication: "Le conditionnel passé, c’est l’auxiliaire au conditionnel présent + le participe passé : vous auriez pris."
+    pieges:
+      - { texte: "vous aurez pris", pourquoi: "Ça, c’est le futur antérieur : auxiliaire au futur." }
+      - { texte: "vous aviez pris", pourquoi: "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait." }

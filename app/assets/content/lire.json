@@ -27,12 +27,13 @@
   ],
   "ages": [
     4,
-    12
+    15
   ],
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
     "cycle2": "https://education.gouv.fr/sites/default/files/ensel135_annexe3.pdf",
-    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf"
+    "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf",
+    "cycle4": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20de%20fran%C3%A7ais%20pour%20le%20cycle%204-480713.pdf"
   },
   "competences": [
     {
@@ -2947,6 +2948,964 @@
             {
               "texte": "complément d’objet direct (COD)",
               "pourquoi": "« dans le jardin » ne répond pas à « quoi ? » mais à « où ? »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accord-sujet-verbe",
+      "titre": "L’accord sujet-verbe",
+      "niveau": "5e",
+      "prerequis": [
+        "present"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Maitriser les cas complexes de l’accord sujet-verbe (sujet séparé du verbe par un complément, sujet comportant plusieurs noms)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le verbe s’accorde avec son sujet, même quand un complément les sépare : « Les fleurs du jardin poussent. » Deux noms reliés par « et » font un pluriel.",
+      "phrases": {
+        "consigne": "Trouve le vrai sujet, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Demande « qui est-ce qui … ? » avant le verbe.",
+        "exemple": "« Le chat des voisins dort » : c’est le chat qui dort.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Accorde le verbe au présent : Les fleurs du jardin (pousser) vite.",
+          "nom": "poussent",
+          "explication": "Le sujet est « les fleurs », pas « jardin » : le complément « du jardin » n’accorde pas le verbe.",
+          "pieges": [
+            {
+              "texte": "pousse",
+              "pourquoi": "Le sujet est « les fleurs », pas « jardin » : le complément « du jardin » n’accorde pas le verbe."
+            },
+            {
+              "texte": "pousses",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Le chat des voisins (dormir) au soleil.",
+          "nom": "dort",
+          "explication": "Le sujet est « le chat » : « des voisins » est un complément du nom.",
+          "pieges": [
+            {
+              "texte": "dorment",
+              "pourquoi": "Le sujet est « le chat » : « des voisins » est un complément du nom."
+            },
+            {
+              "texte": "dors",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Paul et sa sœur (jouer) dehors.",
+          "nom": "jouent",
+          "explication": "Deux noms sujets reliés par « et » : le verbe se met au pluriel.",
+          "pieges": [
+            {
+              "texte": "joue",
+              "pourquoi": "Deux noms sujets reliés par « et » : le verbe se met au pluriel."
+            },
+            {
+              "texte": "joues",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Les élèves de la classe (écouter) la maîtresse.",
+          "nom": "écoutent",
+          "explication": "Le sujet est « les élèves », pas « la classe ».",
+          "pieges": [
+            {
+              "texte": "écoute",
+              "pourquoi": "Le sujet est « les élèves », pas « la classe »."
+            },
+            {
+              "texte": "écoutes",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : La couleur de ces fruits (changer) en été.",
+          "nom": "change",
+          "explication": "Le sujet est « la couleur », singulier : « de ces fruits » est un complément.",
+          "pieges": [
+            {
+              "texte": "changent",
+              "pourquoi": "Le sujet est « la couleur », singulier : « de ces fruits » est un complément."
+            },
+            {
+              "texte": "changes",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Toi et moi (partir) demain.",
+          "nom": "partons",
+          "explication": "« Toi et moi », c’est « nous » : le verbe se met à la 1re personne du pluriel.",
+          "pieges": [
+            {
+              "texte": "partent",
+              "pourquoi": "« Toi et moi », c’est « nous » : le verbe se met à la 1re personne du pluriel."
+            },
+            {
+              "texte": "partez",
+              "pourquoi": "Ça, c’est la forme avec « vous » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Les livres que je lis (être) passionnants.",
+          "nom": "sont",
+          "explication": "Le sujet est « les livres », pluriel.",
+          "pieges": [
+            {
+              "texte": "est",
+              "pourquoi": "Le sujet est « les livres », pluriel."
+            },
+            {
+              "texte": "êtes",
+              "pourquoi": "Ça, c’est la forme avec « vous » : le sujet n’est pas à cette personne."
+            }
+          ]
+        },
+        {
+          "texte": "Accorde le verbe au présent : Le bruit des vagues (calmer) les enfants.",
+          "nom": "calme",
+          "explication": "Le sujet est « le bruit », singulier.",
+          "pieges": [
+            {
+              "texte": "calment",
+              "pourquoi": "Le sujet est « le bruit », singulier."
+            },
+            {
+              "texte": "calmes",
+              "pourquoi": "Ça, c’est la forme avec « tu » : le sujet n’est pas à cette personne."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identifier-temps",
+      "titre": "Reconnaître un temps",
+      "niveau": "5e",
+      "prerequis": [
+        "conditionnel",
+        "passe-simple"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Comprendre la morphologie des temps simples (présent, futur simple, imparfait, passé simple de l’indicatif, conditionnel et présent de l’impératif) et des temps composés (passé composé et plus-que-parfait de l’indicatif)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour reconnaître un temps, on regarde la forme : un mot ou deux (auxiliaire + participe), puis la marque de temps (-ai-, -r-…).",
+      "phrases": {
+        "consigne": "Regarde la forme du verbe, puis touche son temps.",
+        "question": "{texte}",
+        "indice": "Un ou deux mots ? Quelle marque de temps ?",
+        "exemple": "« nous avions mangé » : avoir à l’imparfait + participe, c’est le plus-que-parfait.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "« nous avions mangé » : à quel temps est ce verbe ?",
+          "nom": "plus-que-parfait",
+          "explication": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…).",
+          "pieges": [
+            {
+              "texte": "passé composé",
+              "pourquoi": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+            },
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+            }
+          ]
+        },
+        {
+          "texte": "« ils sont partis » : à quel temps est ce verbe ?",
+          "nom": "passé composé",
+          "explication": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…).",
+          "pieges": [
+            {
+              "texte": "plus-que-parfait",
+              "pourquoi": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+            },
+            {
+              "texte": "passé simple",
+              "pourquoi": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+            }
+          ]
+        },
+        {
+          "texte": "« tu finissais » : à quel temps est ce verbe ?",
+          "nom": "imparfait",
+          "explication": "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions.",
+          "pieges": [
+            {
+              "texte": "passé simple",
+              "pourquoi": "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions."
+            },
+            {
+              "texte": "conditionnel présent",
+              "pourquoi": "L’imparfait est en un mot, avec -ai- ou -i- : je faisais, nous faisions."
+            }
+          ]
+        },
+        {
+          "texte": "« elle prit » : à quel temps est ce verbe ?",
+          "nom": "passé simple",
+          "explication": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes.",
+          "pieges": [
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+            },
+            {
+              "texte": "passé composé",
+              "pourquoi": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+            }
+          ]
+        },
+        {
+          "texte": "« vous ferez » : à quel temps est ce verbe ?",
+          "nom": "futur",
+          "explication": "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont.",
+          "pieges": [
+            {
+              "texte": "conditionnel présent",
+              "pourquoi": "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont."
+            },
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le futur a la marque -r- et les terminaisons -ai, -as, -a, -ons, -ez, -ont."
+            }
+          ]
+        },
+        {
+          "texte": "« je voudrais » : à quel temps est ce verbe ?",
+          "nom": "conditionnel présent",
+          "explication": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…",
+          "pieges": [
+            {
+              "texte": "futur",
+              "pourquoi": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            }
+          ]
+        },
+        {
+          "texte": "« elles étaient venues » : à quel temps est ce verbe ?",
+          "nom": "plus-que-parfait",
+          "explication": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…).",
+          "pieges": [
+            {
+              "texte": "passé composé",
+              "pourquoi": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+            },
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le plus-que-parfait : auxiliaire à l’imparfait + participe passé (avais, étaient…)."
+            }
+          ]
+        },
+        {
+          "texte": "« nous allâmes » : à quel temps est ce verbe ?",
+          "nom": "passé simple",
+          "explication": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes.",
+          "pieges": [
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+            },
+            {
+              "texte": "futur",
+              "pourquoi": "Le passé simple est en un mot, sans -ai- de l’imparfait : il prit, nous allâmes."
+            }
+          ]
+        },
+        {
+          "texte": "« tu as dit » : à quel temps est ce verbe ?",
+          "nom": "passé composé",
+          "explication": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…).",
+          "pieges": [
+            {
+              "texte": "plus-que-parfait",
+              "pourquoi": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+            },
+            {
+              "texte": "passé simple",
+              "pourquoi": "Le passé composé : auxiliaire au présent + participe passé (ai, as, est, sont…)."
+            }
+          ]
+        },
+        {
+          "texte": "« ils pourraient » : à quel temps est ce verbe ?",
+          "nom": "conditionnel présent",
+          "explication": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…",
+          "pieges": [
+            {
+              "texte": "futur",
+              "pourquoi": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            },
+            {
+              "texte": "imparfait",
+              "pourquoi": "Le conditionnel a la marque -r- et les terminaisons de l’imparfait : -ais, -ait, -ions…"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subjonctif-present",
+      "titre": "Le subjonctif présent",
+      "niveau": "4e",
+      "prerequis": [
+        "present"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Identifier les valeurs du mode subjonctif."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le subjonctif exprime un souhait, une obligation, un doute : « Il faut que tu viennes. » Il suit souvent « que ».",
+      "phrases": {
+        "consigne": "Lis le début de la phrase, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Après « il faut que », « je veux que » : le subjonctif.",
+        "exemple": "« Il faut que tu viennes », et non « que tu viens ».",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Complète au subjonctif présent : Il faut que tu (venir).",
+          "nom": "viennes",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : viennes.",
+          "pieges": [
+            {
+              "texte": "viens",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "viendras",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Je veux que vous (faire) attention.",
+          "nom": "fassiez",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : fassiez.",
+          "pieges": [
+            {
+              "texte": "faites",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "ferez",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Il faut que nous (partir).",
+          "nom": "partions",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : partions.",
+          "pieges": [
+            {
+              "texte": "partons",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "partirons",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Je souhaite qu’il (pouvoir) venir.",
+          "nom": "puisse",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : puisse.",
+          "pieges": [
+            {
+              "texte": "peut",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "pourra",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Il faut qu’elle (prendre) son sac.",
+          "nom": "prenne",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : prenne.",
+          "pieges": [
+            {
+              "texte": "prend",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "prendra",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Je doute qu’ils (savoir) la réponse.",
+          "nom": "sachent",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : sachent.",
+          "pieges": [
+            {
+              "texte": "savent",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "sauront",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Il faut que tu (être) prêt.",
+          "nom": "sois",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : sois.",
+          "pieges": [
+            {
+              "texte": "es",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "seras",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif présent : Il faut que j’(aller) au marché.",
+          "nom": "aille",
+          "explication": "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : aille.",
+          "pieges": [
+            {
+              "texte": "vais",
+              "pourquoi": "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif."
+            },
+            {
+              "texte": "irai",
+              "pourquoi": "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temps-composes",
+      "titre": "Les temps composés",
+      "niveau": "4e",
+      "prerequis": [
+        "identifier-temps"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Découvrir, comprendre et mémoriser les éléments qui caractérisent les temps composés (plus-que-parfait, passé antérieur, futur antérieur et conditionnel passé de l’indicatif)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un temps composé, c’est un auxiliaire (avoir ou être) + le participe passé. Le temps de l’auxiliaire donne le nom : futur → futur antérieur, imparfait → plus-que-parfait, conditionnel → conditionnel passé.",
+      "phrases": {
+        "consigne": "Choisis le temps de l’auxiliaire, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Quel temps pour l’auxiliaire ?",
+        "exemple": "Finir, avec « nous », au futur antérieur : nous aurons fini.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Conjugue « finir » au futur antérieur, avec « nous ».",
+          "nom": "nous aurons fini",
+          "explication": "Le futur antérieur, c’est l’auxiliaire au futur + le participe passé : nous aurons fini.",
+          "pieges": [
+            {
+              "texte": "nous avions fini",
+              "pourquoi": "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait."
+            },
+            {
+              "texte": "nous aurions fini",
+              "pourquoi": "Ça, c’est le conditionnel passé : auxiliaire au conditionnel."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « partir » au plus-que-parfait, avec « elle ».",
+          "nom": "elle était partie",
+          "explication": "Le plus-que-parfait, c’est l’auxiliaire à l’imparfait + le participe passé : elle était partie.",
+          "pieges": [
+            {
+              "texte": "elle sera partie",
+              "pourquoi": "Ça, c’est le futur antérieur : auxiliaire au futur."
+            },
+            {
+              "texte": "elle est partie",
+              "pourquoi": "Ça, c’est le passé composé : auxiliaire au présent."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « voir » au conditionnel passé, avec « tu ».",
+          "nom": "tu aurais vu",
+          "explication": "Le conditionnel passé, c’est l’auxiliaire au conditionnel présent + le participe passé : tu aurais vu.",
+          "pieges": [
+            {
+              "texte": "tu auras vu",
+              "pourquoi": "Ça, c’est le futur antérieur : auxiliaire au futur."
+            },
+            {
+              "texte": "tu avais vu",
+              "pourquoi": "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « faire » au futur antérieur, avec « ils ».",
+          "nom": "ils auront fait",
+          "explication": "Le futur antérieur, c’est l’auxiliaire au futur + le participe passé : ils auront fait.",
+          "pieges": [
+            {
+              "texte": "ils auraient fait",
+              "pourquoi": "Ça, c’est le conditionnel passé : auxiliaire au conditionnel."
+            },
+            {
+              "texte": "ils avaient fait",
+              "pourquoi": "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « venir » au plus-que-parfait, avec « je ».",
+          "nom": "j’étais venu",
+          "explication": "Le plus-que-parfait, c’est l’auxiliaire à l’imparfait + le participe passé : j’étais venu.",
+          "pieges": [
+            {
+              "texte": "je serai venu",
+              "pourquoi": "Ça, c’est le futur antérieur : auxiliaire au futur."
+            },
+            {
+              "texte": "je suis venu",
+              "pourquoi": "Ça, c’est le passé composé : auxiliaire au présent."
+            }
+          ]
+        },
+        {
+          "texte": "Conjugue « prendre » au conditionnel passé, avec « vous ».",
+          "nom": "vous auriez pris",
+          "explication": "Le conditionnel passé, c’est l’auxiliaire au conditionnel présent + le participe passé : vous auriez pris.",
+          "pieges": [
+            {
+              "texte": "vous aurez pris",
+              "pourquoi": "Ça, c’est le futur antérieur : auxiliaire au futur."
+            },
+            {
+              "texte": "vous aviez pris",
+              "pourquoi": "Ça, c’est le plus-que-parfait : auxiliaire à l’imparfait."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voix-passive",
+      "titre": "La voix passive",
+      "niveau": "4e",
+      "prerequis": [
+        "accord-sujet-verbe",
+        "participe-passe-etre"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Comprendre la construction de la voix passive."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "À la voix passive, le COD devient sujet et subit l’action : « La souris est mangée par le chat. » Le verbe être prend le temps du verbe actif, et le participe s’accorde.",
+      "phrases": {
+        "consigne": "Transforme la phrase dans ta tête, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Le COD devient sujet ; « être » au même temps ; le sujet devient « par… ».",
+        "exemple": "« Le chat mange la souris » → « La souris est mangée par le chat ».",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Mets à la voix passive : « Le chat mange la souris. »",
+          "nom": "La souris est mangée par le chat.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La souris est mangée par le chat. »",
+          "pieges": [
+            {
+              "texte": "Le chat est mangé par la souris.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "La souris est mangé par le chat.",
+              "pourquoi": "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être."
+            }
+          ]
+        },
+        {
+          "texte": "Mets à la voix passive : « Le vent a renversé les chaises. »",
+          "nom": "Les chaises ont été renversées par le vent.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Les chaises ont été renversées par le vent. »",
+          "pieges": [
+            {
+              "texte": "Le vent a été renversé par les chaises.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "Les chaises ont été renversé par le vent.",
+              "pourquoi": "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être."
+            }
+          ]
+        },
+        {
+          "texte": "Mets à la voix passive : « Les élèves admirent la maîtresse. »",
+          "nom": "La maîtresse est admirée par les élèves.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La maîtresse est admirée par les élèves. »",
+          "pieges": [
+            {
+              "texte": "Les élèves sont admirés par la maîtresse.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "La maîtresse est admiré par les élèves.",
+              "pourquoi": "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être."
+            }
+          ]
+        },
+        {
+          "texte": "Mets à la voix passive : « Le facteur apportera le colis. »",
+          "nom": "Le colis sera apporté par le facteur.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Le colis sera apporté par le facteur. »",
+          "pieges": [
+            {
+              "texte": "Le facteur sera apporté par le colis.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "Le colis est apporté par le facteur.",
+              "pourquoi": "Le temps change : il faut garder celui de la phrase active (l’auxiliaire être prend ce temps)."
+            }
+          ]
+        },
+        {
+          "texte": "Mets à la voix passive : « Ma sœur écrivait des lettres. »",
+          "nom": "Des lettres étaient écrites par ma sœur.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « Des lettres étaient écrites par ma sœur. »",
+          "pieges": [
+            {
+              "texte": "Ma sœur était écrite par des lettres.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "Des lettres sont écrites par ma sœur.",
+              "pourquoi": "Le temps change : il faut garder celui de la phrase active (l’auxiliaire être prend ce temps)."
+            }
+          ]
+        },
+        {
+          "texte": "Mets à la voix passive : « Un orage a détruit la cabane. »",
+          "nom": "La cabane a été détruite par un orage.",
+          "explication": "Le COD devient sujet, le sujet devient complément d’agent (« par… »), et le verbe prend être au même temps : « La cabane a été détruite par un orage. »",
+          "pieges": [
+            {
+              "texte": "Un orage a été détruit par la cabane.",
+              "pourquoi": "Le sens est inversé : c’est le COD de la phrase active qui devient sujet."
+            },
+            {
+              "texte": "La cabane a été détruit par un orage.",
+              "pourquoi": "Le participe passé s’accorde avec le nouveau sujet, comme avec l’auxiliaire être."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subjonctif-passe",
+      "titre": "Le subjonctif passé",
+      "niveau": "3e",
+      "prerequis": [
+        "subjonctif-present",
+        "temps-composes"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Employer et identifier le présent et le passé du subjonctif à l’écrit et à l’oral. Connaitre la morphologie du passé du subjonctif."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le subjonctif passé, c’est l’auxiliaire au subjonctif présent + le participe passé : « que tu aies réussi », « qu’elle soit partie ».",
+      "phrases": {
+        "consigne": "Lis le début de la phrase, puis touche la bonne forme.",
+        "question": "{texte}",
+        "indice": "Auxiliaire au subjonctif (aie, ait, soit, soyons…) + participe passé.",
+        "exemple": "« Je suis content que tu aies réussi. »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Complète au subjonctif passé : Je suis content que tu (réussir) ton examen.",
+          "nom": "aies réussi",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : aies réussi.",
+          "pieges": [
+            {
+              "texte": "as réussi",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "aurais réussi",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif passé : Il faut que vous (finir) avant midi.",
+          "nom": "ayez fini",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : ayez fini.",
+          "pieges": [
+            {
+              "texte": "avez fini",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "aurez fini",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif passé : Je regrette qu’elle (partir) si tôt.",
+          "nom": "soit partie",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : soit partie.",
+          "pieges": [
+            {
+              "texte": "est partie",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "serait partie",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif passé : Bien qu’il (pleuvoir), nous sommes sortis.",
+          "nom": "ait plu",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : ait plu.",
+          "pieges": [
+            {
+              "texte": "a plu",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "aurait plu",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif passé : Je doute qu’ils (comprendre).",
+          "nom": "aient compris",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : aient compris.",
+          "pieges": [
+            {
+              "texte": "ont compris",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "auraient compris",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        },
+        {
+          "texte": "Complète au subjonctif passé : Il faut que nous (arriver) avant la nuit.",
+          "nom": "soyons arrivés",
+          "explication": "Le subjonctif passé : l’auxiliaire au subjonctif présent + le participe passé : soyons arrivés.",
+          "pieges": [
+            {
+              "texte": "sommes arrivés",
+              "pourquoi": "Ça, c’est le passé composé de l’indicatif : l’auxiliaire doit être au subjonctif (aie, ait, soit…)."
+            },
+            {
+              "texte": "serons arrivés",
+              "pourquoi": "Ça, c’est le conditionnel passé ou le futur antérieur : l’auxiliaire doit être au subjonctif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subordonnees",
+      "titre": "Les propositions subordonnées",
+      "niveau": "3e",
+      "prerequis": [
+        "attribut-ou-cod"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Comprendre les fonctions grammaticales des propositions subordonnées relatives et conjonctives."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une relative complète un nom que le pronom relatif reprend (« le livre que… »). Une complétive est COD du verbe (« je pense que… »). Une circonstancielle dit quand, pourquoi… (« quand il pleut »).",
+      "phrases": {
+        "consigne": "Repère le mot qui introduit la subordonnée, puis touche sa nature.",
+        "question": "{texte}",
+        "indice": "Le mot reprend-il un nom ? Est-ce le COD du verbe ? Ou dit-il quand, pourquoi ?",
+        "exemple": "« Le livre que tu m’as prêté » : « que » reprend « le livre », c’est une relative.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Dans « Le livre que tu m’as prêté est passionnant. », quelle est la nature de « que tu m’as prêté » ?",
+          "nom": "subordonnée relative",
+          "explication": "« que » reprend « le livre » (son antécédent) : c’est un pronom relatif.",
+          "pieges": [
+            {
+              "texte": "subordonnée conjonctive complétive",
+              "pourquoi": "Une complétive est COD du verbe ; « que » ne reprend aucun nom."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Je pense que tu as raison. », quelle est la nature de « que tu as raison » ?",
+          "nom": "subordonnée conjonctive complétive",
+          "explication": "« que » ne reprend aucun nom ; la subordonnée est COD de « pense » : c’est une complétive.",
+          "pieges": [
+            {
+              "texte": "subordonnée relative",
+              "pourquoi": "Une relative complète un nom (son antécédent) que le pronom reprend."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Nous sortirons quand la pluie cessera. », quelle est la nature de « quand la pluie cessera » ?",
+          "nom": "subordonnée circonstancielle",
+          "explication": "Elle dit quand se passe l’action ; on peut la déplacer : c’est une circonstancielle de temps.",
+          "pieges": [
+            {
+              "texte": "subordonnée relative",
+              "pourquoi": "Une relative complète un nom (son antécédent) que le pronom reprend."
+            },
+            {
+              "texte": "subordonnée conjonctive complétive",
+              "pourquoi": "Une complétive est COD du verbe ; « que » ne reprend aucun nom."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « La maison où j’habite est ancienne. », quelle est la nature de « où j’habite » ?",
+          "nom": "subordonnée relative",
+          "explication": "« où » reprend « la maison » : c’est un pronom relatif.",
+          "pieges": [
+            {
+              "texte": "subordonnée conjonctive complétive",
+              "pourquoi": "Une complétive est COD du verbe ; « que » ne reprend aucun nom."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Il espère que le train arrivera à l’heure. », quelle est la nature de « que le train arrivera à l’heure » ?",
+          "nom": "subordonnée conjonctive complétive",
+          "explication": "La subordonnée est COD de « espère » : c’est une complétive.",
+          "pieges": [
+            {
+              "texte": "subordonnée relative",
+              "pourquoi": "Une relative complète un nom (son antécédent) que le pronom reprend."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Je reste à la maison parce qu’il fait froid. », quelle est la nature de « parce qu’il fait froid » ?",
+          "nom": "subordonnée circonstancielle",
+          "explication": "Elle donne la cause ; on peut la déplacer : c’est une circonstancielle de cause.",
+          "pieges": [
+            {
+              "texte": "subordonnée relative",
+              "pourquoi": "Une relative complète un nom (son antécédent) que le pronom reprend."
+            },
+            {
+              "texte": "subordonnée conjonctive complétive",
+              "pourquoi": "Une complétive est COD du verbe ; « que » ne reprend aucun nom."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « L’ami qui m’a aidé s’appelle Hery. », quelle est la nature de « qui m’a aidé » ?",
+          "nom": "subordonnée relative",
+          "explication": "« qui » reprend « l’ami » : c’est un pronom relatif.",
+          "pieges": [
+            {
+              "texte": "subordonnée conjonctive complétive",
+              "pourquoi": "Une complétive est COD du verbe ; « que » ne reprend aucun nom."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Elle a dit qu’elle viendrait demain. », quelle est la nature de « qu’elle viendrait demain » ?",
+          "nom": "subordonnée conjonctive complétive",
+          "explication": "La subordonnée est COD de « a dit » : c’est une complétive.",
+          "pieges": [
+            {
+              "texte": "subordonnée relative",
+              "pourquoi": "Une relative complète un nom (son antécédent) que le pronom reprend."
+            },
+            {
+              "texte": "subordonnée circonstancielle",
+              "pourquoi": "Une circonstancielle dit quand, pourquoi, comment… et se déplace."
             }
           ]
         }

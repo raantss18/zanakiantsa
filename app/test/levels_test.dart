@@ -98,6 +98,13 @@ void main() {
     expect(answer('passe-simple', 'Conjugue « faire » au passé simple, avec « ils ».'), 'ils firent');
     expect(answer('imperatif', 'Donne l’ordre avec « aller », à la personne « tu ».'), 'Va');
     expect(answer('participe-passe-etre', 'Accorde le participe passé : Paul et Léa sont (sorti).'), 'sortis');
+    expect(answer('subjonctif-present', 'Complète au subjonctif présent : Il faut que tu (venir).'), 'viennes');
+    expect(answer('subjonctif-passe', 'Complète au subjonctif passé : Je regrette qu’elle (partir) si tôt.'), 'soit partie');
+    expect(answer('temps-composes', 'Conjugue « finir » au futur antérieur, avec « nous ».'), 'nous aurons fini');
+    expect(answer('voix-passive', 'Mets à la voix passive : « Le chat mange la souris. »'), 'La souris est mangée par le chat.');
+    expect(answer('accord-sujet-verbe', 'Accorde le verbe au présent : Le chat des voisins (dormir) au soleil.'), 'dort');
+    expect(answer('identifier-temps', '« nous avions mangé » : à quel temps est ce verbe ?'), 'plus-que-parfait');
+    expect(answer('subordonnees', 'Dans « Je pense que tu as raison. », quelle est la nature de « que tu as raison » ?'), 'subordonnée conjonctive complétive');
     expect(answer('attribut-ou-cod', 'Dans « Le chat semble fatigué. », quelle est la fonction de « fatigué » ?'), 'attribut du sujet');
   });
 }

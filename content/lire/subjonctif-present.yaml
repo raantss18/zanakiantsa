@@ -1,0 +1,64 @@
+id: subjonctif-present
+titre: "Le subjonctif présent"
+niveau: 4e
+prerequis: ["present"]
+programme: { source: cycle4, texte: "Identifier les valeurs du mode subjonctif." }
+activite: quiz
+parametres: {}
+idee: "Le subjonctif exprime un souhait, une obligation, un doute : « Il faut que tu viennes. » Il suit souvent « que »."
+phrases:
+  consigne: "Lis le début de la phrase, puis touche la bonne forme."
+  question: "{texte}"
+  indice: "Après « il faut que », « je veux que » : le subjonctif."
+  exemple: "« Il faut que tu viennes », et non « que tu viens »."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Complète au subjonctif présent : Il faut que tu (venir)."
+    nom: "viennes"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : viennes."
+    pieges:
+      - { texte: "viens", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "viendras", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Je veux que vous (faire) attention."
+    nom: "fassiez"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : fassiez."
+    pieges:
+      - { texte: "faites", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "ferez", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Il faut que nous (partir)."
+    nom: "partions"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : partions."
+    pieges:
+      - { texte: "partons", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "partirons", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Je souhaite qu’il (pouvoir) venir."
+    nom: "puisse"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : puisse."
+    pieges:
+      - { texte: "peut", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "pourra", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Il faut qu’elle (prendre) son sac."
+    nom: "prenne"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : prenne."
+    pieges:
+      - { texte: "prend", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "prendra", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Je doute qu’ils (savoir) la réponse."
+    nom: "sachent"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : sachent."
+    pieges:
+      - { texte: "savent", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "sauront", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Il faut que tu (être) prêt."
+    nom: "sois"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : sois."
+    pieges:
+      - { texte: "es", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "seras", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
+  - texte: "Complète au subjonctif présent : Il faut que j’(aller) au marché."
+    nom: "aille"
+    explication: "Après « il faut que », « je veux que », « je souhaite que », « je doute que », on emploie le subjonctif : aille."
+    pieges:
+      - { texte: "vais", pourquoi: "Ça, c’est l’indicatif présent. Après « il faut que », « je veux que »… : le subjonctif." }
+      - { texte: "irai", pourquoi: "Ça, c’est le futur. Le subjonctif se forme sans la marque -r-." }
