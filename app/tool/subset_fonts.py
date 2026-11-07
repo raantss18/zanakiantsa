@@ -14,7 +14,7 @@ used = set()
 for f in glob.glob('assets/content/*.json') + ['assets/livres/catalogue.json'] + glob.glob('lib/**/*.dart', recursive=True):
     used |= {ord(c) for c in Path(f).read_text(encoding='utf-8')}
 unicodes = (set(range(0x20, 0x7F)) | set(range(0xA0, 0x180)) | set(range(0x2010, 0x2028)) | set(range(0x2030, 0x205F))
-            | {0x20AC, 0x2212, 0x2260, 0x2264, 0x2265, 0x2248} | {u for u in used if u > 0x7E})
+            | {0x20AC, 0x2212, 0x2260, 0x2264, 0x2265, 0x2248, 0xB2, 0xB3, 0xB9} | set(range(0x2070, 0x208F)) | {u for u in used if u > 0x7E})
 for name in ['Andika-Regular', 'Andika-Bold']:
     src = Path(f'../design/fonts/{name}.ttf')
     font = TTFont(src)

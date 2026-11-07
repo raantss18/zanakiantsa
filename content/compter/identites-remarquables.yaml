@@ -1,0 +1,76 @@
+id: identites-remarquables
+titre: "Les identités remarquables"
+niveau: 3e
+prerequis: ["equation-premier-degre"]
+programme: { source: cycle4, texte: "Manipuler les trois identités remarquables pour développer et factoriser." }
+activite: quiz
+parametres: {}
+idee: "(a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b², et (a − b)(a + b) = a² − b²."
+phrases:
+  consigne: "Reconnais l’identité, puis touche le développement."
+  question: "{texte}"
+  indice: "Quelle identité ? Repère a et b, puis applique la formule."
+  exemple: "(x + 3)² = x² + 6x + 9."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Développe (x + 3)²"
+    nom: "x² + 6x + 9"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 3 + 3² = x² + 6x + 9."
+    pieges:
+      - { texte: "x² + 9", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 3x + 9", pourquoi: "Le terme du milieu est le double produit : 2 × x × 3." }
+  - texte: "Développe (x + 5)²"
+    nom: "x² + 10x + 25"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 5 + 5² = x² + 10x + 25."
+    pieges:
+      - { texte: "x² + 25", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 5x + 25", pourquoi: "Le terme du milieu est le double produit : 2 × x × 5." }
+  - texte: "Développe (x + 4)²"
+    nom: "x² + 8x + 16"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 4 + 4² = x² + 8x + 16."
+    pieges:
+      - { texte: "x² + 16", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 4x + 16", pourquoi: "Le terme du milieu est le double produit : 2 × x × 4." }
+  - texte: "Développe (x + 7)²"
+    nom: "x² + 14x + 49"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 7 + 7² = x² + 14x + 49."
+    pieges:
+      - { texte: "x² + 49", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 7x + 49", pourquoi: "Le terme du milieu est le double produit : 2 × x × 7." }
+  - texte: "Développe (x + 2)²"
+    nom: "x² + 4x + 4"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 2 + 2² = x² + 4x + 4."
+    pieges:
+      - { texte: "x² + 4", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 2x + 4", pourquoi: "Le terme du milieu est le double produit : 2 × x × 2." }
+  - texte: "Développe (x + 6)²"
+    nom: "x² + 12x + 36"
+    explication: "(a + b)² = a² + 2ab + b² : x² + 2 × x × 6 + 6² = x² + 12x + 36."
+    pieges:
+      - { texte: "x² + 36", pourquoi: "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²." }
+      - { texte: "x² + 6x + 36", pourquoi: "Le terme du milieu est le double produit : 2 × x × 6." }
+  - texte: "Développe (x − 4)(x + 4)"
+    nom: "x² − 16"
+    explication: "(a − b)(a + b) = a² − b² : x² − 4² = x² − 16."
+    pieges:
+      - { texte: "x² + 16", pourquoi: "Le signe moins reste : (a − b)(a + b) = a² − b²." }
+      - { texte: "x² − 8x − 16", pourquoi: "Les termes en x s’annulent : −4x + 4x = 0." }
+  - texte: "Développe (x − 3)(x + 3)"
+    nom: "x² − 9"
+    explication: "(a − b)(a + b) = a² − b² : x² − 3² = x² − 9."
+    pieges:
+      - { texte: "x² + 9", pourquoi: "Le signe moins reste : (a − b)(a + b) = a² − b²." }
+      - { texte: "x² − 6x − 9", pourquoi: "Les termes en x s’annulent : −3x + 3x = 0." }
+  - texte: "Développe (x − 6)(x + 6)"
+    nom: "x² − 36"
+    explication: "(a − b)(a + b) = a² − b² : x² − 6² = x² − 36."
+    pieges:
+      - { texte: "x² + 36", pourquoi: "Le signe moins reste : (a − b)(a + b) = a² − b²." }
+      - { texte: "x² − 12x − 36", pourquoi: "Les termes en x s’annulent : −6x + 6x = 0." }
+  - texte: "Développe (x − 5)(x + 5)"
+    nom: "x² − 25"
+    explication: "(a − b)(a + b) = a² − b² : x² − 5² = x² − 25."
+    pieges:
+      - { texte: "x² + 25", pourquoi: "Le signe moins reste : (a − b)(a + b) = a² − b²." }
+      - { texte: "x² − 10x − 25", pourquoi: "Les termes en x s’annulent : −5x + 5x = 0." }

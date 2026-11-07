@@ -242,7 +242,8 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 
 - ✅ Réglage âge et classe dans l'espace parent, journée et point de départ adaptés, activité `quiz` (leçons écrites dans le contenu).
 - ✅ Première tranche 6e–4e : pourcentages, fraction d'un nombre, nombres relatifs, carrés, racine carrée (7 compétences).
-- ⏳ 3e et lycée ; français, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
+- ✅ 4e–3e (2026-11-07) : équations ax + b = c, Pythagore, fractions irréductibles, notation scientifique, identités remarquables, équations produit nul (6 compétences, programme du cycle 4). « Les nombres » : 46 compétences.
+- ⏳ Lycée ; français, sciences, histoire-géographie, anglais au collège (la leçon s'écrit en YAML, source obligatoire).
 - ⏳ Essayer avec un grand : les mondes (fées, robots…) sont gardés tels quels à sa demande ; la voix lit-elle bien « −5 » et « 3/4 » ?
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)

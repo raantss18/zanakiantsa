@@ -1,0 +1,76 @@
+id: pythagore
+titre: "Le théorème de Pythagore"
+niveau: 4e
+prerequis: ["racine-carree"]
+programme: { source: cycle4, texte: "Connaitre le théorème de Pythagore, sa réciproque, sa contraposée." }
+activite: quiz
+parametres: {}
+idee: "Dans un triangle rectangle, le carré de l’hypoténuse (le côté face à l’angle droit) est égal à la somme des carrés des deux autres côtés."
+phrases:
+  consigne: "Calcule, puis touche la longueur."
+  question: "{texte}"
+  indice: "Fais la somme des carrés des deux côtés de l’angle droit, puis la racine carrée."
+  exemple: "3 et 4 : 9 + 16 = 25, donc l’hypoténuse mesure 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 3 cm et 4 cm. Combien mesure l’hypoténuse ?"
+    nom: "5 cm"
+    explication: "3² + 4² = 9 + 16 = 25, et 5 × 5 = 25 : l’hypoténuse mesure 5 cm."
+    pieges:
+      - { texte: "7 cm", pourquoi: "3 + 4 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "25 cm", pourquoi: "25, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 6 cm et 8 cm. Combien mesure l’hypoténuse ?"
+    nom: "10 cm"
+    explication: "6² + 8² = 36 + 64 = 100, et 10 × 10 = 100 : l’hypoténuse mesure 10 cm."
+    pieges:
+      - { texte: "14 cm", pourquoi: "6 + 8 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "100 cm", pourquoi: "100, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 5 cm et 12 cm. Combien mesure l’hypoténuse ?"
+    nom: "13 cm"
+    explication: "5² + 12² = 25 + 144 = 169, et 13 × 13 = 169 : l’hypoténuse mesure 13 cm."
+    pieges:
+      - { texte: "17 cm", pourquoi: "5 + 12 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "169 cm", pourquoi: "169, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 9 cm et 12 cm. Combien mesure l’hypoténuse ?"
+    nom: "15 cm"
+    explication: "9² + 12² = 81 + 144 = 225, et 15 × 15 = 225 : l’hypoténuse mesure 15 cm."
+    pieges:
+      - { texte: "21 cm", pourquoi: "9 + 12 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "225 cm", pourquoi: "225, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 8 cm et 15 cm. Combien mesure l’hypoténuse ?"
+    nom: "17 cm"
+    explication: "8² + 15² = 64 + 225 = 289, et 17 × 17 = 289 : l’hypoténuse mesure 17 cm."
+    pieges:
+      - { texte: "23 cm", pourquoi: "8 + 15 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "289 cm", pourquoi: "289, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 12 cm et 16 cm. Combien mesure l’hypoténuse ?"
+    nom: "20 cm"
+    explication: "12² + 16² = 144 + 256 = 400, et 20 × 20 = 400 : l’hypoténuse mesure 20 cm."
+    pieges:
+      - { texte: "28 cm", pourquoi: "12 + 16 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "400 cm", pourquoi: "400, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 7 cm et 24 cm. Combien mesure l’hypoténuse ?"
+    nom: "25 cm"
+    explication: "7² + 24² = 49 + 576 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm."
+    pieges:
+      - { texte: "31 cm", pourquoi: "7 + 24 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "625 cm", pourquoi: "625, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 15 cm et 20 cm. Combien mesure l’hypoténuse ?"
+    nom: "25 cm"
+    explication: "15² + 20² = 225 + 400 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm."
+    pieges:
+      - { texte: "35 cm", pourquoi: "15 + 20 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "625 cm", pourquoi: "625, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 20 cm et 21 cm. Combien mesure l’hypoténuse ?"
+    nom: "29 cm"
+    explication: "20² + 21² = 400 + 441 = 841, et 29 × 29 = 841 : l’hypoténuse mesure 29 cm."
+    pieges:
+      - { texte: "41 cm", pourquoi: "20 + 21 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "841 cm", pourquoi: "841, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }
+  - texte: "Un triangle rectangle a des côtés de l’angle droit de 10 cm et 24 cm. Combien mesure l’hypoténuse ?"
+    nom: "26 cm"
+    explication: "10² + 24² = 100 + 576 = 676, et 26 × 26 = 676 : l’hypoténuse mesure 26 cm."
+    pieges:
+      - { texte: "34 cm", pourquoi: "10 + 24 : on additionne les carrés des côtés, pas les côtés." }
+      - { texte: "676 cm", pourquoi: "676, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée." }

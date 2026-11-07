@@ -1,0 +1,76 @@
+id: fraction-irreductible
+titre: "Fractions irréductibles"
+niveau: 3e
+prerequis: ["fraction-entier"]
+programme: { source: cycle4, texte: "Rendre irréductible une fraction." }
+activite: quiz
+parametres: {}
+idee: "Une fraction est irréductible quand on ne peut plus diviser le numérateur et le dénominateur par un même nombre. 12/18 = 2/3, car 12 et 18 se divisent par 6."
+phrases:
+  consigne: "Simplifie jusqu’au bout, puis touche la réponse."
+  question: "{texte}"
+  indice: "Cherche le plus grand nombre qui divise le haut et le bas."
+  exemple: "24/36 : on divise par 12, on obtient 2/3."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Rends irréductible la fraction 12/18."
+    nom: "2/3"
+    explication: "12 et 18 se divisent tous les deux par 6 : 12/18 = 2/3."
+    pieges:
+      - { texte: "6/9", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 3." }
+      - { texte: "3/2", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 15/35."
+    nom: "3/7"
+    explication: "15 et 35 se divisent tous les deux par 5 : 15/35 = 3/7."
+    pieges:
+      - { texte: "7/3", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+      - { texte: "10/30", pourquoi: "On divise le haut et le bas par le même nombre ; on ne soustrait pas." }
+  - texte: "Rends irréductible la fraction 24/36."
+    nom: "2/3"
+    explication: "24 et 36 se divisent tous les deux par 12 : 24/36 = 2/3."
+    pieges:
+      - { texte: "12/18", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 6." }
+      - { texte: "3/2", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 63/14."
+    nom: "9/2"
+    explication: "63 et 14 se divisent tous les deux par 7 : 63/14 = 9/2."
+    pieges:
+      - { texte: "2/9", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+      - { texte: "56/7", pourquoi: "On divise le haut et le bas par le même nombre ; on ne soustrait pas." }
+  - texte: "Rends irréductible la fraction 20/45."
+    nom: "4/9"
+    explication: "20 et 45 se divisent tous les deux par 5 : 20/45 = 4/9."
+    pieges:
+      - { texte: "9/4", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+      - { texte: "15/40", pourquoi: "On divise le haut et le bas par le même nombre ; on ne soustrait pas." }
+  - texte: "Rends irréductible la fraction 18/42."
+    nom: "3/7"
+    explication: "18 et 42 se divisent tous les deux par 6 : 18/42 = 3/7."
+    pieges:
+      - { texte: "9/21", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 3." }
+      - { texte: "7/3", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 30/48."
+    nom: "5/8"
+    explication: "30 et 48 se divisent tous les deux par 6 : 30/48 = 5/8."
+    pieges:
+      - { texte: "15/24", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 3." }
+      - { texte: "8/5", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 28/70."
+    nom: "2/5"
+    explication: "28 et 70 se divisent tous les deux par 14 : 28/70 = 2/5."
+    pieges:
+      - { texte: "14/35", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 7." }
+      - { texte: "5/2", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 45/60."
+    nom: "3/4"
+    explication: "45 et 60 se divisent tous les deux par 15 : 45/60 = 3/4."
+    pieges:
+      - { texte: "15/20", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 5." }
+      - { texte: "4/3", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }
+  - texte: "Rends irréductible la fraction 16/40."
+    nom: "2/5"
+    explication: "16 et 40 se divisent tous les deux par 8 : 16/40 = 2/5."
+    pieges:
+      - { texte: "8/20", pourquoi: "C’est plus simple, mais on peut encore simplifier : divise par 4." }
+      - { texte: "5/2", pourquoi: "Le numérateur reste en haut : seul le dénominateur va en bas." }

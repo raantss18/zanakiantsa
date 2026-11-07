@@ -81,5 +81,11 @@ void main() {
     expect(answer('relatifs-multiplier', '(−7) × (−2) = ?'), '14');
     expect(answer('puissances-carre', 'Combien fait 7² ?'), '49');
     expect(answer('racine-carree', 'Quelle est la racine carrée de 144 ?'), '12');
+    expect(answer('equation-premier-degre', 'Résous : 3x + 4 = 19'), 'x = 5');
+    expect(answer('pythagore', 'Un triangle rectangle a des côtés de l’angle droit de 6 cm et 8 cm. Combien mesure l’hypoténuse ?'), '10 cm');
+    expect(answer('fraction-irreductible', 'Rends irréductible la fraction 24/36.'), '2/3');
+    expect(answer('notation-scientifique', 'Écris 45 000 en notation scientifique.'), '4,5 × 10⁴');
+    expect(answer('identites-remarquables', 'Développe (x + 3)²'), 'x² + 6x + 9');
+    expect(answer('equation-produit-nul', 'Résous : (x − 2)(x + 5) = 0'), 'x = 2 ou x = −5');
   });
 }

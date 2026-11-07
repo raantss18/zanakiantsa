@@ -1,0 +1,76 @@
+id: equation-premier-degre
+titre: "Résoudre une équation"
+niveau: 4e
+prerequis: ["relatifs-multiplier"]
+programme: { source: cycle4, texte: "Résoudre une équation du premier degré du type ax + b = c." }
+activite: quiz
+parametres: {}
+idee: "Pour trouver x, on défait les opérations dans l’ordre inverse : on enlève d’abord le nombre ajouté, puis on divise."
+phrases:
+  consigne: "Défais les opérations une à une, puis touche la solution."
+  question: "{texte}"
+  indice: "Enlève d’abord le nombre ajouté aux deux côtés, puis divise."
+  exemple: "3x + 4 = 19 : 3x = 15, donc x = 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Résous : 3x + 4 = 19"
+    nom: "x = 5"
+    explication: "3x = 19 − 4 = 15, puis x = 15 ÷ 3 = 5."
+    pieges:
+      - { texte: "x = 23/3", pourquoi: "On enlève 4 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = 15", pourquoi: "15, c’est 3x : il faut encore diviser par 3." }
+  - texte: "Résous : 2x + 7 = 19"
+    nom: "x = 6"
+    explication: "2x = 19 − 7 = 12, puis x = 12 ÷ 2 = 6."
+    pieges:
+      - { texte: "x = 13", pourquoi: "On enlève 7 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = 12", pourquoi: "12, c’est 2x : il faut encore diviser par 2." }
+  - texte: "Résous : 5x − 3 = 17"
+    nom: "x = 4"
+    explication: "5x = 17 − (−3) = 20, puis x = 20 ÷ 5 = 4."
+    pieges:
+      - { texte: "x = 14/5", pourquoi: "On ajoute 3 des deux côtés, on ne l’enlève pas." }
+      - { texte: "x = 20", pourquoi: "20, c’est 5x : il faut encore diviser par 5." }
+  - texte: "Résous : 4x + 9 = 1"
+    nom: "x = −2"
+    explication: "4x = 1 − 9 = −8, puis x = −8 ÷ 4 = −2."
+    pieges:
+      - { texte: "x = 5/2", pourquoi: "On enlève 9 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = −8", pourquoi: "−8, c’est 4x : il faut encore diviser par 4." }
+  - texte: "Résous : 6x + 1 = 19"
+    nom: "x = 3"
+    explication: "6x = 19 − 1 = 18, puis x = 18 ÷ 6 = 3."
+    pieges:
+      - { texte: "x = 10/3", pourquoi: "On enlève 1 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = 18", pourquoi: "18, c’est 6x : il faut encore diviser par 6." }
+  - texte: "Résous : 7x − 5 = 9"
+    nom: "x = 2"
+    explication: "7x = 9 − (−5) = 14, puis x = 14 ÷ 7 = 2."
+    pieges:
+      - { texte: "x = 4/7", pourquoi: "On ajoute 5 des deux côtés, on ne l’enlève pas." }
+      - { texte: "x = 14", pourquoi: "14, c’est 7x : il faut encore diviser par 7." }
+  - texte: "Résous : 2x − 8 = 10"
+    nom: "x = 9"
+    explication: "2x = 10 − (−8) = 18, puis x = 18 ÷ 2 = 9."
+    pieges:
+      - { texte: "x = 1", pourquoi: "On ajoute 8 des deux côtés, on ne l’enlève pas." }
+      - { texte: "x = 18", pourquoi: "18, c’est 2x : il faut encore diviser par 2." }
+  - texte: "Résous : 3x + 12 = 0"
+    nom: "x = −4"
+    explication: "3x = 0 − 12 = −12, puis x = −12 ÷ 3 = −4."
+    pieges:
+      - { texte: "x = 4", pourquoi: "On enlève 12 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = −12", pourquoi: "−12, c’est 3x : il faut encore diviser par 3." }
+  - texte: "Résous : 9x + 2 = 11"
+    nom: "x = 1"
+    explication: "9x = 11 − 2 = 9, puis x = 9 ÷ 9 = 1."
+    pieges:
+      - { texte: "x = 13/9", pourquoi: "On enlève 2 des deux côtés, on ne l’ajoute pas." }
+      - { texte: "x = 9", pourquoi: "9, c’est 9x : il faut encore diviser par 9." }
+  - texte: "Résous : 4x − 6 = 14"
+    nom: "x = 5"
+    explication: "4x = 14 − (−6) = 20, puis x = 20 ÷ 4 = 5."
+    pieges:
+      - { texte: "x = 2", pourquoi: "On ajoute 6 des deux côtés, on ne l’enlève pas." }
+      - { texte: "x = 20", pourquoi: "20, c’est 4x : il faut encore diviser par 4." }

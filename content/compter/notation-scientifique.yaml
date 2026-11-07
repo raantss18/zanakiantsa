@@ -1,0 +1,76 @@
+id: notation-scientifique
+titre: "La notation scientifique"
+niveau: 3e
+prerequis: ["puissances-carre"]
+programme: { source: cycle4, texte: "Déterminer la notation scientifique d’un nombre." }
+activite: quiz
+parametres: {}
+idee: "En notation scientifique, un nombre s’écrit a × 10ⁿ, avec a entre 1 et 10 (un seul chiffre avant la virgule). 45 000 = 4,5 × 10⁴."
+phrases:
+  consigne: "Place la virgule, compte les rangs, puis touche l’écriture."
+  question: "{texte}"
+  indice: "Un seul chiffre non nul avant la virgule, puis la puissance de 10."
+  exemple: "45 000 : 4,5, la virgule a bougé de 4 rangs, donc 4,5 × 10⁴."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Écris 45 000 en notation scientifique."
+    nom: "4,5 × 10⁴"
+    explication: "On place la virgule après le premier chiffre : 4,5, puis on compte de combien de rangs elle a bougé : 4."
+    pieges:
+      - { texte: "4,5 × 10⁵", pourquoi: "La virgule a bougé de 4 rangs seulement : compte-les un par un." }
+      - { texte: "45 × 10³", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 320 000 en notation scientifique."
+    nom: "3,2 × 10⁵"
+    explication: "On place la virgule après le premier chiffre : 3,2, puis on compte de combien de rangs elle a bougé : 5."
+    pieges:
+      - { texte: "3,2 × 10⁶", pourquoi: "La virgule a bougé de 5 rangs seulement : compte-les un par un." }
+      - { texte: "32 × 10⁴", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 7 000 en notation scientifique."
+    nom: "7 × 10³"
+    explication: "On place la virgule après le premier chiffre : 7, puis on compte de combien de rangs elle a bougé : 3."
+    pieges:
+      - { texte: "7 × 10⁴", pourquoi: "La virgule a bougé de 3 rangs seulement : compte-les un par un." }
+      - { texte: "70 × 10²", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 1 250 000 en notation scientifique."
+    nom: "1,25 × 10⁶"
+    explication: "On place la virgule après le premier chiffre : 1,25, puis on compte de combien de rangs elle a bougé : 6."
+    pieges:
+      - { texte: "1,25 × 10⁷", pourquoi: "La virgule a bougé de 6 rangs seulement : compte-les un par un." }
+      - { texte: "12,5 × 10⁵", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 608 en notation scientifique."
+    nom: "6,08 × 10²"
+    explication: "On place la virgule après le premier chiffre : 6,08, puis on compte de combien de rangs elle a bougé : 2."
+    pieges:
+      - { texte: "6,08 × 10³", pourquoi: "La virgule a bougé de 2 rangs seulement : compte-les un par un." }
+      - { texte: "60,8 × 10¹", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 99 000 000 en notation scientifique."
+    nom: "9,9 × 10⁷"
+    explication: "On place la virgule après le premier chiffre : 9,9, puis on compte de combien de rangs elle a bougé : 7."
+    pieges:
+      - { texte: "9,9 × 10⁸", pourquoi: "La virgule a bougé de 7 rangs seulement : compte-les un par un." }
+      - { texte: "99 × 10⁶", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 2 400 en notation scientifique."
+    nom: "2,4 × 10³"
+    explication: "On place la virgule après le premier chiffre : 2,4, puis on compte de combien de rangs elle a bougé : 3."
+    pieges:
+      - { texte: "2,4 × 10⁴", pourquoi: "La virgule a bougé de 3 rangs seulement : compte-les un par un." }
+      - { texte: "24 × 10²", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 50 100 en notation scientifique."
+    nom: "5,01 × 10⁴"
+    explication: "On place la virgule après le premier chiffre : 5,01, puis on compte de combien de rangs elle a bougé : 4."
+    pieges:
+      - { texte: "5,01 × 10⁵", pourquoi: "La virgule a bougé de 4 rangs seulement : compte-les un par un." }
+      - { texte: "50,1 × 10³", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 8 000 000 en notation scientifique."
+    nom: "8 × 10⁶"
+    explication: "On place la virgule après le premier chiffre : 8, puis on compte de combien de rangs elle a bougé : 6."
+    pieges:
+      - { texte: "8 × 10⁷", pourquoi: "La virgule a bougé de 6 rangs seulement : compte-les un par un." }
+      - { texte: "80 × 10⁵", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }
+  - texte: "Écris 37 en notation scientifique."
+    nom: "3,7 × 10¹"
+    explication: "On place la virgule après le premier chiffre : 3,7, puis on compte de combien de rangs elle a bougé : 1."
+    pieges:
+      - { texte: "3,7 × 10²", pourquoi: "La virgule a bougé de 1 rang seulement : compte-les un par un." }
+      - { texte: "37 × 10⁰", pourquoi: "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule." }

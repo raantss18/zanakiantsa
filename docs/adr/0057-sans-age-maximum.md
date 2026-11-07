@@ -18,3 +18,4 @@
   (lu le 2026-11-07). ⚠ Ce texte cite 5e, 4e, 3e ; l'année d'application de chaque classe n'est pas vérifiée.
 - **Vérifié** : tests ; émulateur : réglage à 14 et 20 ans, classe choisie à la main, accueil à 14 ans, 7 leçons. Réponses
   calculées par programme à l'écriture. **Pas vérifié** : un grand devant l'app ; la lecture de « −5 » par la voix.
+- **2026-11-07** : 6 leçons de 4e–3e de plus ; puissances écrites en exposants (10⁴), toutes les petites puissances gardées dans la police (`tool/subset_fonts.py`).

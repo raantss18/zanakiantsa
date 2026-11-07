@@ -35,7 +35,7 @@
   ],
   "ages": [
     5,
-    14
+    15
   ],
   "sources": {
     "cycle1": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20pour%20l%E2%80%99acquisition%20des%20premiers%20outils%20math%C3%A9matiques%20du%20cycle%201-403815.pdf",
@@ -2336,6 +2336,1026 @@
             {
               "texte": "13",
               "pourquoi": "13 × 13 = 169, pas 144."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equation-premier-degre",
+      "titre": "Résoudre une équation",
+      "niveau": "4e",
+      "prerequis": [
+        "relatifs-multiplier"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Résoudre une équation du premier degré du type ax + b = c."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour trouver x, on défait les opérations dans l’ordre inverse : on enlève d’abord le nombre ajouté, puis on divise.",
+      "phrases": {
+        "consigne": "Défais les opérations une à une, puis touche la solution.",
+        "question": "{texte}",
+        "indice": "Enlève d’abord le nombre ajouté aux deux côtés, puis divise.",
+        "exemple": "3x + 4 = 19 : 3x = 15, donc x = 5.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Résous : 3x + 4 = 19",
+          "nom": "x = 5",
+          "explication": "3x = 19 − 4 = 15, puis x = 15 ÷ 3 = 5.",
+          "pieges": [
+            {
+              "texte": "x = 23/3",
+              "pourquoi": "On enlève 4 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = 15",
+              "pourquoi": "15, c’est 3x : il faut encore diviser par 3."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 2x + 7 = 19",
+          "nom": "x = 6",
+          "explication": "2x = 19 − 7 = 12, puis x = 12 ÷ 2 = 6.",
+          "pieges": [
+            {
+              "texte": "x = 13",
+              "pourquoi": "On enlève 7 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = 12",
+              "pourquoi": "12, c’est 2x : il faut encore diviser par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 5x − 3 = 17",
+          "nom": "x = 4",
+          "explication": "5x = 17 − (−3) = 20, puis x = 20 ÷ 5 = 4.",
+          "pieges": [
+            {
+              "texte": "x = 14/5",
+              "pourquoi": "On ajoute 3 des deux côtés, on ne l’enlève pas."
+            },
+            {
+              "texte": "x = 20",
+              "pourquoi": "20, c’est 5x : il faut encore diviser par 5."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 4x + 9 = 1",
+          "nom": "x = −2",
+          "explication": "4x = 1 − 9 = −8, puis x = −8 ÷ 4 = −2.",
+          "pieges": [
+            {
+              "texte": "x = 5/2",
+              "pourquoi": "On enlève 9 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = −8",
+              "pourquoi": "−8, c’est 4x : il faut encore diviser par 4."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 6x + 1 = 19",
+          "nom": "x = 3",
+          "explication": "6x = 19 − 1 = 18, puis x = 18 ÷ 6 = 3.",
+          "pieges": [
+            {
+              "texte": "x = 10/3",
+              "pourquoi": "On enlève 1 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = 18",
+              "pourquoi": "18, c’est 6x : il faut encore diviser par 6."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 7x − 5 = 9",
+          "nom": "x = 2",
+          "explication": "7x = 9 − (−5) = 14, puis x = 14 ÷ 7 = 2.",
+          "pieges": [
+            {
+              "texte": "x = 4/7",
+              "pourquoi": "On ajoute 5 des deux côtés, on ne l’enlève pas."
+            },
+            {
+              "texte": "x = 14",
+              "pourquoi": "14, c’est 7x : il faut encore diviser par 7."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 2x − 8 = 10",
+          "nom": "x = 9",
+          "explication": "2x = 10 − (−8) = 18, puis x = 18 ÷ 2 = 9.",
+          "pieges": [
+            {
+              "texte": "x = 1",
+              "pourquoi": "On ajoute 8 des deux côtés, on ne l’enlève pas."
+            },
+            {
+              "texte": "x = 18",
+              "pourquoi": "18, c’est 2x : il faut encore diviser par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 3x + 12 = 0",
+          "nom": "x = −4",
+          "explication": "3x = 0 − 12 = −12, puis x = −12 ÷ 3 = −4.",
+          "pieges": [
+            {
+              "texte": "x = 4",
+              "pourquoi": "On enlève 12 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = −12",
+              "pourquoi": "−12, c’est 3x : il faut encore diviser par 3."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 9x + 2 = 11",
+          "nom": "x = 1",
+          "explication": "9x = 11 − 2 = 9, puis x = 9 ÷ 9 = 1.",
+          "pieges": [
+            {
+              "texte": "x = 13/9",
+              "pourquoi": "On enlève 2 des deux côtés, on ne l’ajoute pas."
+            },
+            {
+              "texte": "x = 9",
+              "pourquoi": "9, c’est 9x : il faut encore diviser par 9."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : 4x − 6 = 14",
+          "nom": "x = 5",
+          "explication": "4x = 14 − (−6) = 20, puis x = 20 ÷ 4 = 5.",
+          "pieges": [
+            {
+              "texte": "x = 2",
+              "pourquoi": "On ajoute 6 des deux côtés, on ne l’enlève pas."
+            },
+            {
+              "texte": "x = 20",
+              "pourquoi": "20, c’est 4x : il faut encore diviser par 4."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pythagore",
+      "titre": "Le théorème de Pythagore",
+      "niveau": "4e",
+      "prerequis": [
+        "racine-carree"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Connaitre le théorème de Pythagore, sa réciproque, sa contraposée."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans un triangle rectangle, le carré de l’hypoténuse (le côté face à l’angle droit) est égal à la somme des carrés des deux autres côtés.",
+      "phrases": {
+        "consigne": "Calcule, puis touche la longueur.",
+        "question": "{texte}",
+        "indice": "Fais la somme des carrés des deux côtés de l’angle droit, puis la racine carrée.",
+        "exemple": "3 et 4 : 9 + 16 = 25, donc l’hypoténuse mesure 5.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 3 cm et 4 cm. Combien mesure l’hypoténuse ?",
+          "nom": "5 cm",
+          "explication": "3² + 4² = 9 + 16 = 25, et 5 × 5 = 25 : l’hypoténuse mesure 5 cm.",
+          "pieges": [
+            {
+              "texte": "7 cm",
+              "pourquoi": "3 + 4 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "25 cm",
+              "pourquoi": "25, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 6 cm et 8 cm. Combien mesure l’hypoténuse ?",
+          "nom": "10 cm",
+          "explication": "6² + 8² = 36 + 64 = 100, et 10 × 10 = 100 : l’hypoténuse mesure 10 cm.",
+          "pieges": [
+            {
+              "texte": "14 cm",
+              "pourquoi": "6 + 8 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "100 cm",
+              "pourquoi": "100, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 5 cm et 12 cm. Combien mesure l’hypoténuse ?",
+          "nom": "13 cm",
+          "explication": "5² + 12² = 25 + 144 = 169, et 13 × 13 = 169 : l’hypoténuse mesure 13 cm.",
+          "pieges": [
+            {
+              "texte": "17 cm",
+              "pourquoi": "5 + 12 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "169 cm",
+              "pourquoi": "169, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 9 cm et 12 cm. Combien mesure l’hypoténuse ?",
+          "nom": "15 cm",
+          "explication": "9² + 12² = 81 + 144 = 225, et 15 × 15 = 225 : l’hypoténuse mesure 15 cm.",
+          "pieges": [
+            {
+              "texte": "21 cm",
+              "pourquoi": "9 + 12 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "225 cm",
+              "pourquoi": "225, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 8 cm et 15 cm. Combien mesure l’hypoténuse ?",
+          "nom": "17 cm",
+          "explication": "8² + 15² = 64 + 225 = 289, et 17 × 17 = 289 : l’hypoténuse mesure 17 cm.",
+          "pieges": [
+            {
+              "texte": "23 cm",
+              "pourquoi": "8 + 15 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "289 cm",
+              "pourquoi": "289, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 12 cm et 16 cm. Combien mesure l’hypoténuse ?",
+          "nom": "20 cm",
+          "explication": "12² + 16² = 144 + 256 = 400, et 20 × 20 = 400 : l’hypoténuse mesure 20 cm.",
+          "pieges": [
+            {
+              "texte": "28 cm",
+              "pourquoi": "12 + 16 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "400 cm",
+              "pourquoi": "400, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 7 cm et 24 cm. Combien mesure l’hypoténuse ?",
+          "nom": "25 cm",
+          "explication": "7² + 24² = 49 + 576 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm.",
+          "pieges": [
+            {
+              "texte": "31 cm",
+              "pourquoi": "7 + 24 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "625 cm",
+              "pourquoi": "625, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 15 cm et 20 cm. Combien mesure l’hypoténuse ?",
+          "nom": "25 cm",
+          "explication": "15² + 20² = 225 + 400 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm.",
+          "pieges": [
+            {
+              "texte": "35 cm",
+              "pourquoi": "15 + 20 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "625 cm",
+              "pourquoi": "625, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 20 cm et 21 cm. Combien mesure l’hypoténuse ?",
+          "nom": "29 cm",
+          "explication": "20² + 21² = 400 + 441 = 841, et 29 × 29 = 841 : l’hypoténuse mesure 29 cm.",
+          "pieges": [
+            {
+              "texte": "41 cm",
+              "pourquoi": "20 + 21 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "841 cm",
+              "pourquoi": "841, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Un triangle rectangle a des côtés de l’angle droit de 10 cm et 24 cm. Combien mesure l’hypoténuse ?",
+          "nom": "26 cm",
+          "explication": "10² + 24² = 100 + 576 = 676, et 26 × 26 = 676 : l’hypoténuse mesure 26 cm.",
+          "pieges": [
+            {
+              "texte": "34 cm",
+              "pourquoi": "10 + 24 : on additionne les carrés des côtés, pas les côtés."
+            },
+            {
+              "texte": "676 cm",
+              "pourquoi": "676, c’est le carré de l’hypoténuse : il reste à prendre la racine carrée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction-irreductible",
+      "titre": "Fractions irréductibles",
+      "niveau": "3e",
+      "prerequis": [
+        "fraction-entier"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Rendre irréductible une fraction."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une fraction est irréductible quand on ne peut plus diviser le numérateur et le dénominateur par un même nombre. 12/18 = 2/3, car 12 et 18 se divisent par 6.",
+      "phrases": {
+        "consigne": "Simplifie jusqu’au bout, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Cherche le plus grand nombre qui divise le haut et le bas.",
+        "exemple": "24/36 : on divise par 12, on obtient 2/3.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Rends irréductible la fraction 12/18.",
+          "nom": "2/3",
+          "explication": "12 et 18 se divisent tous les deux par 6 : 12/18 = 2/3.",
+          "pieges": [
+            {
+              "texte": "6/9",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 3."
+            },
+            {
+              "texte": "3/2",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 15/35.",
+          "nom": "3/7",
+          "explication": "15 et 35 se divisent tous les deux par 5 : 15/35 = 3/7.",
+          "pieges": [
+            {
+              "texte": "7/3",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            },
+            {
+              "texte": "10/30",
+              "pourquoi": "On divise le haut et le bas par le même nombre ; on ne soustrait pas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 24/36.",
+          "nom": "2/3",
+          "explication": "24 et 36 se divisent tous les deux par 12 : 24/36 = 2/3.",
+          "pieges": [
+            {
+              "texte": "12/18",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 6."
+            },
+            {
+              "texte": "3/2",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 63/14.",
+          "nom": "9/2",
+          "explication": "63 et 14 se divisent tous les deux par 7 : 63/14 = 9/2.",
+          "pieges": [
+            {
+              "texte": "2/9",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            },
+            {
+              "texte": "56/7",
+              "pourquoi": "On divise le haut et le bas par le même nombre ; on ne soustrait pas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 20/45.",
+          "nom": "4/9",
+          "explication": "20 et 45 se divisent tous les deux par 5 : 20/45 = 4/9.",
+          "pieges": [
+            {
+              "texte": "9/4",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            },
+            {
+              "texte": "15/40",
+              "pourquoi": "On divise le haut et le bas par le même nombre ; on ne soustrait pas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 18/42.",
+          "nom": "3/7",
+          "explication": "18 et 42 se divisent tous les deux par 6 : 18/42 = 3/7.",
+          "pieges": [
+            {
+              "texte": "9/21",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 3."
+            },
+            {
+              "texte": "7/3",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 30/48.",
+          "nom": "5/8",
+          "explication": "30 et 48 se divisent tous les deux par 6 : 30/48 = 5/8.",
+          "pieges": [
+            {
+              "texte": "15/24",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 3."
+            },
+            {
+              "texte": "8/5",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 28/70.",
+          "nom": "2/5",
+          "explication": "28 et 70 se divisent tous les deux par 14 : 28/70 = 2/5.",
+          "pieges": [
+            {
+              "texte": "14/35",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 7."
+            },
+            {
+              "texte": "5/2",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 45/60.",
+          "nom": "3/4",
+          "explication": "45 et 60 se divisent tous les deux par 15 : 45/60 = 3/4.",
+          "pieges": [
+            {
+              "texte": "15/20",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 5."
+            },
+            {
+              "texte": "4/3",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        },
+        {
+          "texte": "Rends irréductible la fraction 16/40.",
+          "nom": "2/5",
+          "explication": "16 et 40 se divisent tous les deux par 8 : 16/40 = 2/5.",
+          "pieges": [
+            {
+              "texte": "8/20",
+              "pourquoi": "C’est plus simple, mais on peut encore simplifier : divise par 4."
+            },
+            {
+              "texte": "5/2",
+              "pourquoi": "Le numérateur reste en haut : seul le dénominateur va en bas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "notation-scientifique",
+      "titre": "La notation scientifique",
+      "niveau": "3e",
+      "prerequis": [
+        "puissances-carre"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Déterminer la notation scientifique d’un nombre."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "En notation scientifique, un nombre s’écrit a × 10ⁿ, avec a entre 1 et 10 (un seul chiffre avant la virgule). 45 000 = 4,5 × 10⁴.",
+      "phrases": {
+        "consigne": "Place la virgule, compte les rangs, puis touche l’écriture.",
+        "question": "{texte}",
+        "indice": "Un seul chiffre non nul avant la virgule, puis la puissance de 10.",
+        "exemple": "45 000 : 4,5, la virgule a bougé de 4 rangs, donc 4,5 × 10⁴.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Écris 45 000 en notation scientifique.",
+          "nom": "4,5 × 10⁴",
+          "explication": "On place la virgule après le premier chiffre : 4,5, puis on compte de combien de rangs elle a bougé : 4.",
+          "pieges": [
+            {
+              "texte": "4,5 × 10⁵",
+              "pourquoi": "La virgule a bougé de 4 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "45 × 10³",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 320 000 en notation scientifique.",
+          "nom": "3,2 × 10⁵",
+          "explication": "On place la virgule après le premier chiffre : 3,2, puis on compte de combien de rangs elle a bougé : 5.",
+          "pieges": [
+            {
+              "texte": "3,2 × 10⁶",
+              "pourquoi": "La virgule a bougé de 5 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "32 × 10⁴",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 7 000 en notation scientifique.",
+          "nom": "7 × 10³",
+          "explication": "On place la virgule après le premier chiffre : 7, puis on compte de combien de rangs elle a bougé : 3.",
+          "pieges": [
+            {
+              "texte": "7 × 10⁴",
+              "pourquoi": "La virgule a bougé de 3 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "70 × 10²",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 1 250 000 en notation scientifique.",
+          "nom": "1,25 × 10⁶",
+          "explication": "On place la virgule après le premier chiffre : 1,25, puis on compte de combien de rangs elle a bougé : 6.",
+          "pieges": [
+            {
+              "texte": "1,25 × 10⁷",
+              "pourquoi": "La virgule a bougé de 6 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "12,5 × 10⁵",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 608 en notation scientifique.",
+          "nom": "6,08 × 10²",
+          "explication": "On place la virgule après le premier chiffre : 6,08, puis on compte de combien de rangs elle a bougé : 2.",
+          "pieges": [
+            {
+              "texte": "6,08 × 10³",
+              "pourquoi": "La virgule a bougé de 2 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "60,8 × 10¹",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 99 000 000 en notation scientifique.",
+          "nom": "9,9 × 10⁷",
+          "explication": "On place la virgule après le premier chiffre : 9,9, puis on compte de combien de rangs elle a bougé : 7.",
+          "pieges": [
+            {
+              "texte": "9,9 × 10⁸",
+              "pourquoi": "La virgule a bougé de 7 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "99 × 10⁶",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 2 400 en notation scientifique.",
+          "nom": "2,4 × 10³",
+          "explication": "On place la virgule après le premier chiffre : 2,4, puis on compte de combien de rangs elle a bougé : 3.",
+          "pieges": [
+            {
+              "texte": "2,4 × 10⁴",
+              "pourquoi": "La virgule a bougé de 3 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "24 × 10²",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 50 100 en notation scientifique.",
+          "nom": "5,01 × 10⁴",
+          "explication": "On place la virgule après le premier chiffre : 5,01, puis on compte de combien de rangs elle a bougé : 4.",
+          "pieges": [
+            {
+              "texte": "5,01 × 10⁵",
+              "pourquoi": "La virgule a bougé de 4 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "50,1 × 10³",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 8 000 000 en notation scientifique.",
+          "nom": "8 × 10⁶",
+          "explication": "On place la virgule après le premier chiffre : 8, puis on compte de combien de rangs elle a bougé : 6.",
+          "pieges": [
+            {
+              "texte": "8 × 10⁷",
+              "pourquoi": "La virgule a bougé de 6 rangs seulement : compte-les un par un."
+            },
+            {
+              "texte": "80 × 10⁵",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        },
+        {
+          "texte": "Écris 37 en notation scientifique.",
+          "nom": "3,7 × 10¹",
+          "explication": "On place la virgule après le premier chiffre : 3,7, puis on compte de combien de rangs elle a bougé : 1.",
+          "pieges": [
+            {
+              "texte": "3,7 × 10²",
+              "pourquoi": "La virgule a bougé de 1 rang seulement : compte-les un par un."
+            },
+            {
+              "texte": "37 × 10⁰",
+              "pourquoi": "Le premier nombre doit être entre 1 et 10 : un seul chiffre avant la virgule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identites-remarquables",
+      "titre": "Les identités remarquables",
+      "niveau": "3e",
+      "prerequis": [
+        "equation-premier-degre"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Manipuler les trois identités remarquables pour développer et factoriser."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "(a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b², et (a − b)(a + b) = a² − b².",
+      "phrases": {
+        "consigne": "Reconnais l’identité, puis touche le développement.",
+        "question": "{texte}",
+        "indice": "Quelle identité ? Repère a et b, puis applique la formule.",
+        "exemple": "(x + 3)² = x² + 6x + 9.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Développe (x + 3)²",
+          "nom": "x² + 6x + 9",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 3 + 3² = x² + 6x + 9.",
+          "pieges": [
+            {
+              "texte": "x² + 9",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 3x + 9",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 3."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x + 5)²",
+          "nom": "x² + 10x + 25",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 5 + 5² = x² + 10x + 25.",
+          "pieges": [
+            {
+              "texte": "x² + 25",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 5x + 25",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 5."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x + 4)²",
+          "nom": "x² + 8x + 16",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 4 + 4² = x² + 8x + 16.",
+          "pieges": [
+            {
+              "texte": "x² + 16",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 4x + 16",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 4."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x + 7)²",
+          "nom": "x² + 14x + 49",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 7 + 7² = x² + 14x + 49.",
+          "pieges": [
+            {
+              "texte": "x² + 49",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 7x + 49",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 7."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x + 2)²",
+          "nom": "x² + 4x + 4",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 2 + 2² = x² + 4x + 4.",
+          "pieges": [
+            {
+              "texte": "x² + 4",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 2x + 4",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 2."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x + 6)²",
+          "nom": "x² + 12x + 36",
+          "explication": "(a + b)² = a² + 2ab + b² : x² + 2 × x × 6 + 6² = x² + 12x + 36.",
+          "pieges": [
+            {
+              "texte": "x² + 36",
+              "pourquoi": "Il manque le double produit 2ab : (a + b)² n’est pas a² + b²."
+            },
+            {
+              "texte": "x² + 6x + 36",
+              "pourquoi": "Le terme du milieu est le double produit : 2 × x × 6."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x − 4)(x + 4)",
+          "nom": "x² − 16",
+          "explication": "(a − b)(a + b) = a² − b² : x² − 4² = x² − 16.",
+          "pieges": [
+            {
+              "texte": "x² + 16",
+              "pourquoi": "Le signe moins reste : (a − b)(a + b) = a² − b²."
+            },
+            {
+              "texte": "x² − 8x − 16",
+              "pourquoi": "Les termes en x s’annulent : −4x + 4x = 0."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x − 3)(x + 3)",
+          "nom": "x² − 9",
+          "explication": "(a − b)(a + b) = a² − b² : x² − 3² = x² − 9.",
+          "pieges": [
+            {
+              "texte": "x² + 9",
+              "pourquoi": "Le signe moins reste : (a − b)(a + b) = a² − b²."
+            },
+            {
+              "texte": "x² − 6x − 9",
+              "pourquoi": "Les termes en x s’annulent : −3x + 3x = 0."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x − 6)(x + 6)",
+          "nom": "x² − 36",
+          "explication": "(a − b)(a + b) = a² − b² : x² − 6² = x² − 36.",
+          "pieges": [
+            {
+              "texte": "x² + 36",
+              "pourquoi": "Le signe moins reste : (a − b)(a + b) = a² − b²."
+            },
+            {
+              "texte": "x² − 12x − 36",
+              "pourquoi": "Les termes en x s’annulent : −6x + 6x = 0."
+            }
+          ]
+        },
+        {
+          "texte": "Développe (x − 5)(x + 5)",
+          "nom": "x² − 25",
+          "explication": "(a − b)(a + b) = a² − b² : x² − 5² = x² − 25.",
+          "pieges": [
+            {
+              "texte": "x² + 25",
+              "pourquoi": "Le signe moins reste : (a − b)(a + b) = a² − b²."
+            },
+            {
+              "texte": "x² − 10x − 25",
+              "pourquoi": "Les termes en x s’annulent : −5x + 5x = 0."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equation-produit-nul",
+      "titre": "Équations produit nul",
+      "niveau": "3e",
+      "prerequis": [
+        "identites-remarquables"
+      ],
+      "programme": {
+        "source": "cycle4",
+        "texte": "Résoudre une équation produit nul."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un produit est nul si et seulement si l’un de ses facteurs est nul. (x − 2)(x + 5) = 0 donne x = 2 ou x = −5.",
+      "phrases": {
+        "consigne": "Annule chaque facteur, puis touche les solutions.",
+        "question": "{texte}",
+        "indice": "Écris « premier facteur = 0 » et « second facteur = 0 ».",
+        "exemple": "(x − 2)(x + 5) = 0 : x = 2 ou x = −5.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Résous : (x − 2)(x + 5) = 0",
+          "nom": "x = 2 ou x = −5",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x − 2 = 0 ou x + 5 = 0, donc x = 2 ou x = −5.",
+          "pieges": [
+            {
+              "texte": "x = −2 ou x = 5",
+              "pourquoi": "Attention au signe : x − 2 = 0 donne x = 2."
+            },
+            {
+              "texte": "x = 2",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x + 3)(x − 4) = 0",
+          "nom": "x = −3 ou x = 4",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x + 3 = 0 ou x − 4 = 0, donc x = −3 ou x = 4.",
+          "pieges": [
+            {
+              "texte": "x = 3 ou x = −4",
+              "pourquoi": "Attention au signe : x + 3 = 0 donne x = −3."
+            },
+            {
+              "texte": "x = −3",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x − 1)(x − 6) = 0",
+          "nom": "x = 1 ou x = 6",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x − 1 = 0 ou x − 6 = 0, donc x = 1 ou x = 6.",
+          "pieges": [
+            {
+              "texte": "x = −1 ou x = −6",
+              "pourquoi": "Attention au signe : x − 1 = 0 donne x = 1."
+            },
+            {
+              "texte": "x = 1",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x + 7)(x + 2) = 0",
+          "nom": "x = −7 ou x = −2",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x + 7 = 0 ou x + 2 = 0, donc x = −7 ou x = −2.",
+          "pieges": [
+            {
+              "texte": "x = 7 ou x = 2",
+              "pourquoi": "Attention au signe : x + 7 = 0 donne x = −7."
+            },
+            {
+              "texte": "x = −7",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x − 5)(x − 3) = 0",
+          "nom": "x = 5 ou x = 3",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x − 5 = 0 ou x − 3 = 0, donc x = 5 ou x = 3.",
+          "pieges": [
+            {
+              "texte": "x = −5 ou x = −3",
+              "pourquoi": "Attention au signe : x − 5 = 0 donne x = 5."
+            },
+            {
+              "texte": "x = 5",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x + 4)(x − 1) = 0",
+          "nom": "x = −4 ou x = 1",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x + 4 = 0 ou x − 1 = 0, donc x = −4 ou x = 1.",
+          "pieges": [
+            {
+              "texte": "x = 4 ou x = −1",
+              "pourquoi": "Attention au signe : x + 4 = 0 donne x = −4."
+            },
+            {
+              "texte": "x = −4",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x − 8)(x + 6) = 0",
+          "nom": "x = 8 ou x = −6",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x − 8 = 0 ou x + 6 = 0, donc x = 8 ou x = −6.",
+          "pieges": [
+            {
+              "texte": "x = −8 ou x = 6",
+              "pourquoi": "Attention au signe : x − 8 = 0 donne x = 8."
+            },
+            {
+              "texte": "x = 8",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
+            }
+          ]
+        },
+        {
+          "texte": "Résous : (x + 1)(x + 9) = 0",
+          "nom": "x = −1 ou x = −9",
+          "explication": "Un produit est nul si l’un des facteurs est nul : x + 1 = 0 ou x + 9 = 0, donc x = −1 ou x = −9.",
+          "pieges": [
+            {
+              "texte": "x = 1 ou x = 9",
+              "pourquoi": "Attention au signe : x + 1 = 0 donne x = −1."
+            },
+            {
+              "texte": "x = −1",
+              "pourquoi": "Il y a deux solutions : un facteur ou l’autre peut être nul."
             }
           ]
         }

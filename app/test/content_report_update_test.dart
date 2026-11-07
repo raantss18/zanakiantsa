@@ -13,9 +13,9 @@ Topic topic() => Topic(jsonDecode(File('assets/content/compter.json').readAsStri
 
 void main() {
   group('Contenu compilé', () {
-    test('40 compétences, prérequis connus et placés avant', () {
+    test('46 compétences, prérequis connus et placés avant', () {
       final t = topic();
-      expect(t.skills.length, 40);
+      expect(t.skills.length, 46);
       final seen = <String>{};
       for (final s in t.skills) {
         expect(seen.containsAll(s.prerequisites), isTrue, reason: s.id);

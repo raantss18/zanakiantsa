@@ -1,0 +1,64 @@
+id: equation-produit-nul
+titre: "Équations produit nul"
+niveau: 3e
+prerequis: ["identites-remarquables"]
+programme: { source: cycle4, texte: "Résoudre une équation produit nul." }
+activite: quiz
+parametres: {}
+idee: "Un produit est nul si et seulement si l’un de ses facteurs est nul. (x − 2)(x + 5) = 0 donne x = 2 ou x = −5."
+phrases:
+  consigne: "Annule chaque facteur, puis touche les solutions."
+  question: "{texte}"
+  indice: "Écris « premier facteur = 0 » et « second facteur = 0 »."
+  exemple: "(x − 2)(x + 5) = 0 : x = 2 ou x = −5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Résous : (x − 2)(x + 5) = 0"
+    nom: "x = 2 ou x = −5"
+    explication: "Un produit est nul si l’un des facteurs est nul : x − 2 = 0 ou x + 5 = 0, donc x = 2 ou x = −5."
+    pieges:
+      - { texte: "x = −2 ou x = 5", pourquoi: "Attention au signe : x − 2 = 0 donne x = 2." }
+      - { texte: "x = 2", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x + 3)(x − 4) = 0"
+    nom: "x = −3 ou x = 4"
+    explication: "Un produit est nul si l’un des facteurs est nul : x + 3 = 0 ou x − 4 = 0, donc x = −3 ou x = 4."
+    pieges:
+      - { texte: "x = 3 ou x = −4", pourquoi: "Attention au signe : x + 3 = 0 donne x = −3." }
+      - { texte: "x = −3", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x − 1)(x − 6) = 0"
+    nom: "x = 1 ou x = 6"
+    explication: "Un produit est nul si l’un des facteurs est nul : x − 1 = 0 ou x − 6 = 0, donc x = 1 ou x = 6."
+    pieges:
+      - { texte: "x = −1 ou x = −6", pourquoi: "Attention au signe : x − 1 = 0 donne x = 1." }
+      - { texte: "x = 1", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x + 7)(x + 2) = 0"
+    nom: "x = −7 ou x = −2"
+    explication: "Un produit est nul si l’un des facteurs est nul : x + 7 = 0 ou x + 2 = 0, donc x = −7 ou x = −2."
+    pieges:
+      - { texte: "x = 7 ou x = 2", pourquoi: "Attention au signe : x + 7 = 0 donne x = −7." }
+      - { texte: "x = −7", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x − 5)(x − 3) = 0"
+    nom: "x = 5 ou x = 3"
+    explication: "Un produit est nul si l’un des facteurs est nul : x − 5 = 0 ou x − 3 = 0, donc x = 5 ou x = 3."
+    pieges:
+      - { texte: "x = −5 ou x = −3", pourquoi: "Attention au signe : x − 5 = 0 donne x = 5." }
+      - { texte: "x = 5", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x + 4)(x − 1) = 0"
+    nom: "x = −4 ou x = 1"
+    explication: "Un produit est nul si l’un des facteurs est nul : x + 4 = 0 ou x − 1 = 0, donc x = −4 ou x = 1."
+    pieges:
+      - { texte: "x = 4 ou x = −1", pourquoi: "Attention au signe : x + 4 = 0 donne x = −4." }
+      - { texte: "x = −4", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x − 8)(x + 6) = 0"
+    nom: "x = 8 ou x = −6"
+    explication: "Un produit est nul si l’un des facteurs est nul : x − 8 = 0 ou x + 6 = 0, donc x = 8 ou x = −6."
+    pieges:
+      - { texte: "x = −8 ou x = 6", pourquoi: "Attention au signe : x − 8 = 0 donne x = 8." }
+      - { texte: "x = 8", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
+  - texte: "Résous : (x + 1)(x + 9) = 0"
+    nom: "x = −1 ou x = −9"
+    explication: "Un produit est nul si l’un des facteurs est nul : x + 1 = 0 ou x + 9 = 0, donc x = −1 ou x = −9."
+    pieges:
+      - { texte: "x = 1 ou x = 9", pourquoi: "Attention au signe : x + 1 = 0 donne x = −1." }
+      - { texte: "x = −1", pourquoi: "Il y a deux solutions : un facteur ou l’autre peut être nul." }
