@@ -216,4 +216,7 @@ const en = <String, String>{
   'Toutes les leçons de ce domaine : choisis celle que tu veux faire.': 'All the lessons in this subject: choose the one you want to do.',
   'Après ta classe : finis d\'abord les leçons de ta classe.': 'Above your year: finish your year’s lessons first.',
   'Les leçons commencent au niveau {start}. Celles sous le niveau {floor} ne sont plus proposées (trop faciles pour sa classe). Une fois sa classe finie, {name} peut monter plus haut.': 'Lessons start at {start}. Those before {floor} are no longer offered (too easy for their year). Once their year is finished, {name} can move higher.',
+  // Mondes par tranche d'âge (ADR 0066)
+  'De 8 à 11 ans, les mondes sont les mêmes pour tous : l’expédition, le laboratoire, l’océan.': 'From 8 to 11, the worlds are the same for everyone: the expedition, the lab, the ocean.',
+  'À partir de 12 ans, les mondes sont les mêmes pour tous : mission Mars, le studio, le tour du monde.': 'From 12, the worlds are the same for everyone: Mission Mars, the studio, around the world.',
 };

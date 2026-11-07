@@ -34,12 +34,12 @@ void main() {
 
   group('Univers', () {
     final words = (jsonDecode(File('assets/content/univers.json').readAsStringSync()) as Map)['univers'] as Map;
-    test('3 univers par genre ; mots et dessins présents pour chacun', () {
-      expect(universes.where((u) => u.boy).length, 3);
-      expect(universes.where((u) => !u.boy).length, 3);
+    test('chez les petits, 3 univers par genre ; mots et dessins présents pour chacun', () {
+      expect(universes.where((u) => u.band == Band.petits && u.boy == true).length, 3);
+      expect(universes.where((u) => u.band == Band.petits && u.boy == false).length, 3);
       for (final u in universes) {
         expect(words.containsKey(u.id), isTrue, reason: u.id);
-        expect((words[u.id] as Map)['genre'], u.boy ? 'garcon' : 'fille', reason: u.id);
+        expect((words[u.id] as Map)['genre'], switch (u.boy) { true => 'garcon', false => 'fille', null => 'mixte' }, reason: u.id);
         expect(u.stickers.length, stickersPerUniverse, reason: u.id);
         for (final code in {u.mascot, u.container, ...u.objects, ...u.stickers, ...u.decor, u.scene.hero, ...u.scene.burst}) {
           expect(File('assets/art/$code.svg').existsSync(), isTrue, reason: '${u.id} : $code.svg');

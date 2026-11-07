@@ -61,7 +61,7 @@ la règle « aucune dépendance non OSI » de l'ADR 0001. **Exception accordée 
 | `assets/livres/catalogue.json`, étagère « Classiques » (livres 900001 et suivants, texte seul) | Textes transcrits par Wikisource (https://fr.wikisource.org), auteur, traducteur, édition et URL exacte dans chaque livre (`auteur`, `credits`, `source`, page « Fin ») ; liste ci-dessous | Domaine public (auteurs et traducteurs morts avant 1956, `app/tool/import_classiques.py`) |
 | `assets/echecs/*.svg` (pièces d'échecs) | Cburnett, Wikimedia Commons | CC BY-SA 3.0 (`assets/echecs/LICENCE.txt`) |
 | `assets/audio/sfx/*.wav` (bruitages) | synthétisés par code (`lib/audio/sfx.dart`, `tool/build_sounds.dart`) | original |
-| Illustrations Twemoji v17.0.3 (157 SVG, `app/assets/art/`) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
+| Illustrations Twemoji v17.0.3 (SVG de `app/assets/art/`, dont 49 ajoutés le 2026-11-08 pour les mondes par âge, ADR 0066) | CC BY 4.0, attribution dans l'espace parent et `assets/art/LICENCE.txt` (https://github.com/jdecked/twemoji, lu le 2026-11-02) | réutilisables |
 
 ## Polices
 

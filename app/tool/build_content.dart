@@ -307,9 +307,17 @@ Map<String, dynamic> buildTheme(Directory dir) {
 /// Univers (ADR 0014) : genre connu, deux objets [singulier, pluriel, m/f], contenant, intro et histoire présents.
 void checkUniverses(Map<String, dynamic> u) {
   final all = Map<String, dynamic>.from(u['univers'] as Map);
+  // ADR 0066 : trois tranches d'âge ; les petits ont 3 mondes par genre (ADR 0014), les autres 3 mondes mixtes.
   for (final g in ['garcon', 'fille']) {
-    if (all.values.where((v) => (v as Map)['genre'] == g).length != 3) fail('univers.yaml', '3 univers attendus pour « $g »');
+    if (all.values.where((v) => (v as Map)['tranche'] == 'petits' && v['genre'] == g).length != 3) fail('univers.yaml', '3 univers de petits attendus pour « $g »');
   }
+  for (final t in ['moyens', 'grands']) {
+    if (all.values.where((v) => (v as Map)['tranche'] == t && v['genre'] == 'mixte').length != 3) fail('univers.yaml', '3 univers mixtes attendus pour « $t »');
+  }
+  all.forEach((id, v) {
+    if (!{'petits', 'moyens', 'grands'}.contains((v as Map)['tranche'])) fail('univers.yaml/$id', 'tranche : petits, moyens ou grands');
+    if (!{'garcon', 'fille', 'mixte'}.contains(v['genre'])) fail('univers.yaml/$id', 'genre : garcon, fille ou mixte');
+  });
   all.forEach((id, v) {
     final m = Map<String, dynamic>.from(v as Map);
     for (final k in ['genre', 'prenom', 'nom', 'mascotte', 'objets', 'contenant', 'intro']) {

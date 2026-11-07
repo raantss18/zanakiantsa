@@ -170,14 +170,17 @@ class AppState extends ChangeNotifier {
 
   bool get ready => boy != null;
 
-  /// Univers courant, toujours du genre de l'enfant (ADR 0014).
+  /// Tranche d'âge de l'enfant (ADR 0066) : elle décide des mondes proposés.
+  Band get band => bandForAge(age);
+
+  /// Univers courant : de sa tranche d'âge, et pour les petits du genre de l'enfant (ADR 0014, 0066). Quand l'enfant
+  /// grandit et change de tranche, il passe au premier monde de la nouvelle tranche (il peut en changer).
   Universe get universe {
     final u = universeById(universeId);
-    if (boy == null || u.boy == boy) return u;
-    return universes.firstWhere((x) => x.boy == boy);
+    return choices.contains(u) ? u : choices.first;
   }
 
-  List<Universe> get choices => [for (final u in universes) if (boy == null || u.boy == boy) u];
+  List<Universe> get choices => worldsFor(age, boy);
 
   UniverseWords get universeWords => words[universe.id]!;
 
@@ -313,13 +316,13 @@ class AppState extends ChangeNotifier {
   Future<void> setGender(bool isBoy) async {
     await store.set('genre', isBoy ? 'garcon' : 'fille');
     boy = isBoy;
-    if (universeById(universeId).boy != isBoy) await setUniverse(universes.firstWhere((u) => u.boy == isBoy).id);
+    if (!choices.contains(universeById(universeId))) await setUniverse(choices.first.id);
     notifyListeners();
   }
 
   Future<void> setUniverse(String id) async {
     final u = universeById(id);
-    if (boy != null && u.boy != boy) return; // jamais un univers de l'autre genre (ADR 0014)
+    if (!choices.contains(u)) return; // jamais un monde d'une autre tranche ni, chez les petits, de l'autre genre (ADR 0014, 0066)
     await store.set('univers', id);
     universeId = id;
     notifyListeners();

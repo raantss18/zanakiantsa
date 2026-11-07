@@ -15,6 +15,8 @@
 
 ## 0. Erreurs signalées
 
+- ✅ Fait (2026-11-08, demande d'Antsa) : mondes adaptés à l'âge — petits, 8–11 ans, 12 ans et plus (ADR 0066).
+
 - ✅ Corrigé (2026-11-08, signalé par Antsa) : à 12 ans, « compter 4 voitures » (diagnostic d'une notion de CM1). Plancher de
   classe, choix de la leçon dans Explorer (ADR 0065), protégé par `test/floor_test.dart`.
 

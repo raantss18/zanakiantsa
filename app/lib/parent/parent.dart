@@ -13,6 +13,7 @@ import '../core/rules.dart';
 import '../ui/adaptive.dart';
 import '../content/content.dart';
 import '../l10n/l10n.dart';
+import '../ui/universe.dart';
 import 'dashboard.dart';
 import 'notebook_style.dart';
 import '../update/updater.dart';
@@ -273,7 +274,12 @@ class _ParentPageState extends State<ParentPage> {
               ]),
               const Divider(height: 32),
               Text(tf('{name} est', {'name': app.current.label}), style: notebookTitle),
-              Text(t('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.')),
+              // Les mondes suivent l'âge (ADR 0066) : selon le genre chez les petits, mixtes ensuite.
+              Text(switch (app.band) {
+                Band.petits => t('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.'),
+                Band.moyens => t('De 8 à 11 ans, les mondes sont les mêmes pour tous : l’expédition, le laboratoire, l’océan.'),
+                Band.grands => t('À partir de 12 ans, les mondes sont les mêmes pour tous : mission Mars, le studio, le tour du monde.'),
+              }),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [
                 for (final (boy, label) in [(true, t('un garçon')), (false, t('une fille'))])

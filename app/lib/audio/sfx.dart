@@ -45,6 +45,19 @@ final Map<String, List<_Note>> _sounds = {
   'mode': [const _Note(0, 0.12, _g5, _triangle), const _Note(0.15, 0.4, _c6, _triangle, decay: 5)],
   // glissando de harpe
   'princesses': [for (final (i, f) in [_c5, _e5, _g5, _c6, _e6].indexed) _Note(i * 0.07, 0.3, f, _pluck, decay: 9)],
+  // ——— mondes des 8–11 ans et des 12 ans et plus (ADR 0066) ———
+  // cor d'expédition : deux notes qui s'ouvrent
+  'expedition': [const _Note(0, 0.16, 392.0, _triangle), const _Note(0.18, 0.38, _c5, _triangle, decay: 4)],
+  // bulles d'éprouvette qui montent
+  'laboratoire': [for (final (i, f) in [_e6, _g6, _c7].indexed) _Note(i * 0.12, 0.1, f, _sine, f1: f * 1.3, decay: 10)],
+  // vague : glissement qui descend en ondulant
+  'ocean': [const _Note(0, 0.55, 900, _sine, f1: 300, tremolo: 8)],
+  // fusée qui gronde et monte
+  'mars': [const _Note(0, 0.55, 80, _saw, f1: 320, tremolo: 25)],
+  // accord plaqué de studio
+  'studio': [for (final f in [_c5, _e5, _g5]) _Note(0, 0.5, f, _pluck, decay: 6)],
+  // carillon d'aéroport
+  'monde': [const _Note(0, 0.25, _e6, _sine, decay: 4), const _Note(0.25, 0.33, _c6, _sine, decay: 4)],
   // fin de séance, commune aux mondes
   'fanfare': [
     for (final (i, f) in [_c5, _e5, _g5].indexed) _Note(i * 0.1, 0.09, f, _triangle),
@@ -134,6 +147,13 @@ const _ambiences = <String, (List<double>, double, _Wave, double)>{
   'fees': ([1174.66, 1318.51, 1479.98, 1760.0, 1975.53], 0.5, _sine, 5.0),
   'mode': ([349.23, 392.0, 440.0, 523.25, 587.33], 0.6, _triangle, 2.5),
   'princesses': ([523.25, 587.33, 659.25, 783.99, 880.0], 0.5, _pluck, 3.5),
+  // ADR 0066 : plus posées pour les grands (pas plus lent que l'ambiance de l'espace, plus grave).
+  'expedition': ([392.0, 440.0, 493.88, 587.33, 659.25], 0.6, _pluck, 2.5),
+  'laboratoire': ([659.25, 739.99, 830.61, 987.77, 1108.73], 0.45, _sine, 4.0),
+  'ocean': ([261.63, 293.66, 329.63, 392.0, 440.0], 1.2, _sine, 0.9),
+  'mars': ([220.0, 261.63, 293.66, 329.63, 392.0], 1.0, _sine, 1.0),
+  'studio': ([329.63, 392.0, 440.0, 493.88, 587.33], 0.5, _triangle, 2.0),
+  'monde': ([440.0, 493.88, 554.37, 659.25, 739.99], 0.6, _pluck, 3.0),
 };
 
 Iterable<String> get ambienceNames => _ambiences.keys;

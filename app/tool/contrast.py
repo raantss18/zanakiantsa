@@ -19,6 +19,13 @@ U = {
     "fees":       dict(bg1="#F6E8F8", bg2="#E3F4FB", primary="#7B1FA2", accent="#2E7D32"),
     "mode":       dict(bg1="#FDE7EF", bg2="#FFF6E0", primary="#AD1457", accent="#6A1B9A"),
     "princesses": dict(bg1="#EEE8F8", bg2="#FFF7CC", primary="#5E2A8C", accent="#9A6700"),
+    # Mondes par tranche d'âge (ADR 0066)
+    "expedition": dict(bg1="#E8F5E9", bg2="#C8E6C9", primary="#2E7D32", accent="#2E7D32"),
+    "laboratoire": dict(bg1="#E0F2F1", bg2="#B2DFDB", primary="#00695C", accent="#00695C"),
+    "ocean":      dict(bg1="#E1F5FE", bg2="#B3E5FC", primary="#01579B", accent="#01579B"),
+    "mars":       dict(bg1="#2B1410", bg2="#4A1F14", primary="#FF8A50", accent="#B23C17", on="#1B211D"),
+    "studio":     dict(bg1="#1E1B2E", bg2="#2D2350", primary="#4DD0E1", accent="#6A1B9A", on="#1B211D"),
+    "monde":      dict(bg1="#FFF8E1", bg2="#FFECB3", primary="#BF360C", accent="#BF360C"),
 }
 ok = True
 for name, p in U.items():

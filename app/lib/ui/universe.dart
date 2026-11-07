@@ -74,9 +74,15 @@ class Scene {
   final List<String> burst;
 }
 
+/// Tranche d'âge d'un monde (ADR 0066) : petits jusqu'à 7 ans, moyens de 8 à 11, grands à partir de 12.
+enum Band { petits, moyens, grands }
+
+Band bandForAge(int age) => age <= 7 ? Band.petits : age <= 11 ? Band.moyens : Band.grands;
+
 class Universe {
   const Universe({
     required this.id,
+    this.band = Band.petits,
     required this.boy,
     required this.mascot,
     required this.objects,
@@ -96,7 +102,10 @@ class Universe {
   final Scene scene;
 
   final String id;
-  final bool boy;
+  final Band band;
+
+  /// Genre du monde (ADR 0014) ; null : monde mixte (moyens et grands).
+  final bool? boy;
 
   /// Codes Twemoji : mascotte, objets (petits / grands nombres), contenant, autocollants (12), décor (6).
   final String mascot, container;
@@ -203,7 +212,113 @@ const universes = <Universe>[
     stickers: ['1f478', '1f3f0', '1f451', '1f984', '1f48e', '1f3a0', '1f339', '1f438', '1f9a2', '1f381', '1f3b6', '1f4dc'],
     decor: ['1f3f0', '1f339', '1f984', '1f3b6', '1f48e', '1f3a0'],
   ),
+  // ——— 8 à 11 ans (ADR 0066) ———
+  Universe(
+    id: 'expedition',
+    band: Band.moyens,
+    scene: Scene('1f9ed', Motion.spin, ['1f5fa', '1f3d4', '2728']),
+    boy: null,
+    mascot: '1f9d7-200d-2640-fe0f',
+    objects: ['1f5fa', '1f41a'],
+    container: '1f392',
+    bg1: Color(0xFFE8F5E9),
+    bg2: Color(0xFFC8E6C9),
+    primary: Color(0xFF2E7D32),
+    onPrimary: Colors.white,
+    onCard: Color(0xFF2E7D32),
+    stickers: ['1f9ed', '1f5fa', '1f3d5', '1f3d4', '1f30b', '1f334', '1f98e', '1f99c', '1f40a', '1f3dd', '1f6f6', '1f392'],
+    decor: ['1f334', '1f3d4', '1f9ed', '1f30b', '1f6f6', '1f3d5'],
+  ),
+  Universe(
+    id: 'laboratoire',
+    band: Band.moyens,
+    scene: Scene('1f4a1', Motion.spin, ['2697', '1f9ec', '2728']),
+    boy: null,
+    mascot: '1f9d1-200d-1f52c',
+    objects: ['1f9ea', '1f9f2'],
+    container: '1f52c',
+    bg1: Color(0xFFE0F2F1),
+    bg2: Color(0xFFB2DFDB),
+    primary: Color(0xFF00695C),
+    onPrimary: Colors.white,
+    onCard: Color(0xFF00695C),
+    stickers: ['1f9d1-200d-1f52c', '1f9ea', '1f9f2', '1f52c', '1f4a1', '2697', '1f9ec', '1f9eb', '1f50b', '2699', '1f321', '1f4d0'],
+    decor: ['1f9ea', '2697', '1f9ec', '1f52c', '1f4a1', '1f4d0'],
+  ),
+  Universe(
+    id: 'ocean',
+    band: Band.moyens,
+    scene: Scene('1f42c', Motion.cross, ['1f30a', '1fae7', '2728']),
+    boy: null,
+    mascot: '1f93f',
+    objects: ['1f41f', '1f980'],
+    container: '1f6a2',
+    bg1: Color(0xFFE1F5FE),
+    bg2: Color(0xFFB3E5FC),
+    primary: Color(0xFF01579B),
+    onPrimary: Colors.white,
+    onCard: Color(0xFF01579B),
+    stickers: ['1f93f', '1f42c', '1f41f', '1f980', '1f419', '1fab8', '1f420', '1f421', '1f433', '1f30a', '1fae7', '1f6a2'],
+    decor: ['1f30a', '1fae7', '1f420', '1fab8', '1f41a', '1f419'],
+  ),
+  // ——— 12 ans et plus (ADR 0066) ———
+  Universe(
+    id: 'mars',
+    band: Band.grands,
+    scene: Scene('1f680', Motion.rise, ['1f534', '2728', '1f30c']),
+    boy: null,
+    mascot: '1f469-200d-1f680',
+    objects: ['1f4e1', '1faa8'],
+    container: '1f6f0',
+    bg1: Color(0xFF2B1410),
+    bg2: Color(0xFF4A1F14),
+    primary: Color(0xFFFF8A50),
+    onPrimary: Color(0xFF1B211D),
+    onCard: Color(0xFFB23C17),
+    stickers: ['1f469-200d-1f680', '1f680', '1f6f0', '1f4e1', '1faa8', '1f534', '1f52d', '1f30c', '1f6f8', '2604', '1f30d', '1f4a0'],
+    decor: ['1f534', '1f6f0', '1f4e1', '2604', '1f30c', '1f52d'],
+    night: true,
+  ),
+  Universe(
+    id: 'studio',
+    band: Band.grands,
+    scene: Scene('1f3b8', Motion.spin, ['1f3b5', '1f3b6', '2728']),
+    boy: null,
+    mascot: '1f3a7',
+    objects: ['1f3b5', '1f3ae'],
+    container: '1f3b9',
+    bg1: Color(0xFF1E1B2E),
+    bg2: Color(0xFF2D2350),
+    primary: Color(0xFF4DD0E1),
+    onPrimary: Color(0xFF1B211D),
+    onCard: Color(0xFF6A1B9A),
+    stickers: ['1f3a7', '1f3b5', '1f3ae', '1f3b9', '1f3b8', '1f3b6', '1f3a4', '1f39a', '1f3ac', '1f4f7', '1f3a8', '1f4bb'],
+    decor: ['1f3b5', '1f3b6', '1f3ae', '1f39a', '1f3ac', '1f3b9'],
+    night: true,
+  ),
+  Universe(
+    id: 'monde',
+    band: Band.grands,
+    scene: Scene('2708', Motion.cross, ['1f30d', '1f4f8', '2728']),
+    boy: null,
+    mascot: '1f30d',
+    objects: ['1f9f3', '1f4f7'],
+    container: '1f4d4',
+    bg1: Color(0xFFFFF8E1),
+    bg2: Color(0xFFFFECB3),
+    primary: Color(0xFFBF360C),
+    onPrimary: Colors.white,
+    onCard: Color(0xFFBF360C),
+    stickers: ['1f30d', '2708', '1f9f3', '1f4f7', '1f4d4', '1f5fc', '1f5fd', '1f3ef', '1f3db', '1f6e9', '1f686', '1f3ab'],
+    decor: ['2708', '1f5fc', '1f5fd', '1f3ef', '1f30d', '1f686'],
+  ),
 ];
+
+/// Les mondes proposés à un enfant (ADR 0014, 0066) : ceux de sa tranche d'âge ; chez les petits, ceux de son genre.
+List<Universe> worldsFor(int age, bool? boy) => [
+      for (final u in universes)
+        if (u.band == bandForAge(age) && (u.boy == null || boy == null || u.boy == boy)) u,
+    ];
 
 Universe universeById(String? id) => universes.firstWhere((u) => u.id == id, orElse: () => universes.first);
 
