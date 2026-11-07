@@ -226,6 +226,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 4. ✅ Version 0.8.0 publiée (2026-11-05, build 2008), avec l'accord d'Antsa. Montée 0.7.0 → 0.8.0 vérifiée sur
    l'émulateur : réponses et test de départ conservés.
 
+## Version 0.12.0 (2026-11-07) : publiée avec l'accord d'Antsa
+
+- ✅ Six leçons de 4e et 3e ; installée et lancée sur l'émulateur. ⏳ Pas vue sur la vraie tablette.
+
 ## Versions 0.11.1 et 0.11.2 (2026-11-07) : publiées avec l'accord d'Antsa
 
 - ✅ 0.11.1 : « À propos » (contacts, code QR), recherche automatique des mises à jour à l'entrée de l'espace parent ; mise à jour
