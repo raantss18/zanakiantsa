@@ -173,6 +173,16 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 13. ✅ Version 0.7.0 publiée (2026-11-03, build 2007) ; montée 0.6.0 → 0.7.0 vérifiée sur l'émulateur (réglages,
     temps joué et réponses repris, base v4), publiée avec l'accord d'Antsa.
 
+## Version 0.10.0 (2026-11-07) : préparée, pas publiée
+
+- ✅ Préparée : `0.10.0+10`, APK signé `release-out/zanakiantsa-0.10.0-arm64-v8a.apk` (build 2010, 35,8 Mo), signature de
+  `release.json` vérifiée par `release_out_test`. Contenu : analyse fine des parties avec Stockfish 11 (ADR 0053),
+  activités agrandies et texte à côté en paysage, pages de listes centrées (ADR 0054).
+- ✅ Vérifié sur l'émulateur : montée 0.9.0 → 0.10.0 (partie enregistrée conservée, analyse affinée par Stockfish à
+  l'ouverture, moteur arrêté ensuite). ⏳ Pas vu sur le téléphone ni sur la vraie tablette ; ⏳ durée de l'analyse sur du
+  vrai matériel.
+- ⏳ À publier avec l'accord d'Antsa : `gh release create app-v0.10.0 release-out/zanakiantsa-0.10.0-arm64-v8a.apk release-out/release.json release-out/release.json.sig`.
+
 ## Version 0.9.0 (2026-11-05) : publiée
 
 - ✅ Préparée : `0.9.0+9`, APK signé `release-out/zanakiantsa-0.9.0-arm64-v8a.apk` (build 2009, 35,4 Mo), signature de
