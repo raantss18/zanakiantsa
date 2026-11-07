@@ -9,8 +9,9 @@ ailleurs** — sans elle, plus aucune mise à jour ne peut être signée et les 
    arm64), `release.json.sig`. `flutter test test/release_out_test.dart` vérifie la signature avec la clé de l'app.
 3. Essai sur l'émulateur `zanakiantsa_tab` (`adb -s <série> install -r release-out/*.apk`), en portrait et en
    paysage (voir `CLAUDE.md`).
-4. Publication (action publique, à la main) :
-   `gh release create app-vX.Y.Z release-out/* --title "Zanak'i Antsa X.Y.Z" --notes "…"`.
+4. Publication (action publique, à la main) : `tool/publish.sh`. Le script publie la version avec les notes de `release.json`,
+   attend la reconstruction du site, puis vérifie que https://raantss18.github.io/zanakiantsa/ annonce bien cette version
+   (ADR 0055). Les notes s'y affichent telles quelles : les écrire pour des parents.
    L'app lit `https://github.com/raantss18/zanakiantsa/releases/latest/download/release.json`.
 
 Le format de `release.json` ne change jamais : toute version de l'app doit savoir lire la dernière.

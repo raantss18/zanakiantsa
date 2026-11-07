@@ -2,6 +2,7 @@ name: Site vitrine
 
 # Publie le dossier site/ sur GitHub Pages (ADR 0055). Le site est reconstruit à chaque modification du site et à chaque
 # version publiée : le numéro, la taille, l'empreinte et le lien de téléchargement viennent de la dernière version.
+# Une fois par jour aussi, au cas où un déclenchement se serait perdu : une version doit toujours finir par se voir.
 on:
   push:
     branches: [main]
@@ -11,6 +12,8 @@ on:
       - '.github/workflows/site.yml'
   release:
     types: [published, edited, deleted]
+  schedule:
+    - cron: '17 3 * * *'
   workflow_dispatch:
 
 permissions:

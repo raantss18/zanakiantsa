@@ -16,3 +16,5 @@
   Google Play, exception ML Kit, pas encore d'essai avec un groupe d'enfants, voix de synthèse.
 - **Vérifié** : en ligne (https://raantss18.github.io/zanakiantsa/, déploiement réussi, page, flux et police servis) ; rendu à 390, 768, 1360 et 1920 px, sans débordement horizontal ; polices chargées ; le flux Atom est du XML
   valide. **Pas vérifié** : lecteurs d'écran ; Safari et Firefox.
+- **Règle d'Antsa (2026-11-07)** : toute mise à jour ou nouvelle se voit automatiquement sur le site. Déclencheurs : version
+  publiée, modification de `site/`, et une reconstruction par jour en filet de sécurité. `tool/publish.sh` publie et vérifie.

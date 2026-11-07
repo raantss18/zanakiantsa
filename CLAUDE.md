@@ -21,7 +21,10 @@
    décompilé, aucun asset, texte ou personnage repris. Code AGPL (GCompris, Lichess) : inspiration d'architecture
    seulement, sauf ADR contraire.
 8. **YouTube** : jamais de téléchargeur (Snaptube, etc.), jamais de cache hors ligne ; lecteur officiel seulement.
-9. **Principes repris d'academik/COMIMa** : pas de vies ni de punition ; le bouton **← retour** (et le retour Android)
+9. **Le site suit l'app** (demande d'Antsa, ADR 0055) : toute mise à jour ou nouvelle de l'app se voit automatiquement sur
+   https://raantss18.github.io/zanakiantsa/, sans geste à la main. Publier avec `tool/publish.sh` ; une nouvelle sans
+   version va dans `site/notes.json`. Les notes de version s'affichent telles quelles : les écrire pour des parents.
+10. **Principes repris d'academik/COMIMa** : pas de vies ni de punition ; le bouton **← retour** (et le retour Android)
    ≠ le bouton **Accueil** ; cibles tactiles ≥ 48 dp ; clair et sombre ; une erreur signalée est corrigée à la
    cause, puis protégée par un test.
 
@@ -38,6 +41,7 @@ arm64 s'installe tel quel), écran 800 × 1340, densité 280 comme la SM-X135G. 
 (le GPU de l'ordinateur via gfxstream fait planter l'émulateur au redémarrage de l'app, 2026-11-03).
 Format téléphone : `adb shell wm size 1080x2400 && adb shell wm density 440` (+ `settings put system font_scale
 1.15`), puis `wm size reset`, `wm density reset`.
+⚠ D'autres projets ont leurs émulateurs sur ce poste : avant toute commande, vérifier le nom avec `adb -s <série> emu avd name`.
 ⚠ L'émulateur ne mesure ni la mémoire, ni le démarrage, ni la fluidité de la SM-X135G (GPU et CPU différents).
 
 ## Budgets (⚠ hypothèses à recaler après la première mesure)
