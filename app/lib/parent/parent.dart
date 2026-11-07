@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart'
     as mlkit;
 
@@ -11,6 +10,7 @@ import '../core/progress.dart';
 import '../core/report.dart';
 import '../core/rules.dart';
 import '../ui/adaptive.dart';
+import 'notebook_style.dart';
 import '../update/updater.dart';
 
 /// Espace parent : âge de l'enfant, rapport de la semaine, modèle d'écriture, mises à jour.
@@ -155,7 +155,7 @@ class _ParentPageState extends State<ParentPage> {
             Row(children: [
               const Icon(Icons.system_update_rounded, size: 32),
               const SizedBox(width: 12),
-              Expanded(child: Text('Nouvelle version ${release!.version} disponible', style: Theme.of(context).textTheme.titleLarge)),
+              Expanded(child: Text('Nouvelle version ${release!.version} disponible', style: notebookTitle)),
             ]),
             const SizedBox(height: 8),
             Text(release!.notes),
@@ -255,21 +255,18 @@ class _ParentPageState extends State<ParentPage> {
     // Écran adulte : boutons de taille normale (le thème enfant les agrandit), marge sous la barre de navigation.
     final base = Theme.of(context);
     return Theme(
-      // Fond clair neutre quel que soit l'univers (l'univers « espace » est sombre).
-      data: base.copyWith(
-        filledButtonTheme: const FilledButtonThemeData(),
-        scaffoldBackgroundColor: const Color(0xFFF7F8F6),
-        appBarTheme: const AppBarTheme(backgroundColor: Color(0xFFF7F8F6), foregroundColor: Color(0xFF1B211D)),
-      ),
+      // Le visuel du site (ADR 0059), quel que soit l'univers de l'enfant.
+      data: notebookTheme(base),
       child: Scaffold(
         appBar: AppBar(title: const Text('Espace parent')),
-        body: SafeArea(
+        body: SeyesPaper(
+          child: SafeArea(
           child: ListView(
-            padding: readablePadding(context, bottom: 48),
+            padding: readablePadding(context, side: 36, bottom: 48),
             children: [
               if (release != null) _updateBanner(),
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
-              Text('Enfants', style: Theme.of(context).textTheme.titleLarge),
+              Text('Enfants', style: notebookTitle),
               const Text('Les réglages ci-dessous concernent l’enfant choisi. À plusieurs, l’app demande « Qui joue ? » au lancement.'),
               const SizedBox(height: 8),
               Wrap(spacing: 8, runSpacing: 8, children: [
@@ -289,7 +286,7 @@ class _ParentPageState extends State<ParentPage> {
                 ActionChip(avatar: const Icon(Icons.person_add_alt_1_rounded), label: const Text('Ajouter un enfant'), onPressed: _addChild),
               ]),
               const Divider(height: 32),
-              Text('${app.current.label} est', style: Theme.of(context).textTheme.titleLarge),
+              Text('${app.current.label} est', style: notebookTitle),
               const Text('Choisit les mondes proposés : robots, voitures, espace ; ou fées, poupées et mode, princesses.'),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [
@@ -306,7 +303,7 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               _AgeAndClass(app: app),
               const Divider(height: 32),
-              Text('Temps de jeu proposé par jour', style: Theme.of(context).textTheme.titleLarge),
+              Text('Temps de jeu proposé par jour', style: notebookTitle),
               const Text(
                 'Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; suites, sons, échecs ; '
                 'anglais, code, explorer), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
@@ -327,7 +324,7 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               Text(
                 'Les 7 derniers jours',
-                style: Theme.of(context).textTheme.titleLarge,
+                style: notebookTitle,
               ),
               if (r == null)
                 const LinearProgressIndicator()
@@ -357,7 +354,7 @@ class _ParentPageState extends State<ParentPage> {
                 ..._frequentErrors(titles),
               ],
               const Divider(height: 32),
-              Text('La voix', style: Theme.of(context).textTheme.titleLarge),
+              Text('La voix', style: notebookTitle),
               const Text(
                 'La voix vient du moteur de synthèse vocale du téléphone. Si elle est coupée, hachée ou à l’accent '
                 'étrange, essayez-la, puis choisissez un autre moteur.',
@@ -379,7 +376,7 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               Text(
                 'Écriture et dessins au doigt',
-                style: Theme.of(context).textTheme.titleLarge,
+                style: notebookTitle,
               ),
               const Text(
                 'Un téléchargement unique (connexion nécessaire) ; ensuite tout fonctionne hors ligne. Sans le modèle '
@@ -404,7 +401,7 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               Text(
                 'Mises à jour',
-                style: Theme.of(context).textTheme.titleLarge,
+                style: notebookTitle,
               ),
               const SizedBox(height: 8),
               FilledButton.tonal(
@@ -430,23 +427,12 @@ class _ParentPageState extends State<ParentPage> {
               ],
               const Divider(height: 32),
               // À propos : une question, un souci d'installation (demande d'Antsa, vidéo d'aide).
-              Text('À propos', style: Theme.of(context).textTheme.titleLarge),
+              Text('À propos', style: notebookTitle),
               const SizedBox(height: 4),
-              Wrap(spacing: 16, runSpacing: 12, crossAxisAlignment: WrapCrossAlignment.center, children: [
-                Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(4),
-                  child: SvgPicture.asset('assets/logo/qr-site.svg', width: 128, height: 128, semanticsLabel: 'Code QR du site de l’application'),
-                ),
-                const SelectableText(
-                  'Zanak’i Antsa, par RANIRIAMANJAKA Antsa\n'
-                  'E-mail : antsa.raniriamanjaka@univ-antananarivo.mg\n'
-                  'Téléphone et WhatsApp : +261 33 43 838 82\n'
-                  'Site : raantss18.github.io/zanakiantsa',
-                ),
-              ]),
+              const SizedBox(height: 4),
+              const AboutCard(),
               const Divider(height: 32),
-              Text('Crédits', style: Theme.of(context).textTheme.titleLarge),
+              Text('Crédits', style: notebookTitle),
               const Text(
                 'Illustrations : Twemoji v17.0.3 (CC BY 4.0, github.com/jdecked/twemoji). '
                 'Polices : Andika 7.000 et Fredoka (SIL Open Font License). '
@@ -463,6 +449,7 @@ class _ParentPageState extends State<ParentPage> {
               ),
             ],
           ),
+        ),
         ),
       ),
     );
@@ -503,7 +490,7 @@ class _AgeAndClass extends StatelessWidget {
     final start = schoolLevels[startLevelForClass(classe)];
     final top = app.highestLevel;
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Âge et classe', style: Theme.of(context).textTheme.titleLarge),
+      Text('Âge et classe', style: notebookTitle),
       const SizedBox(height: 12),
       Wrap(spacing: 32, runSpacing: 16, children: [
         ValueStepper(
