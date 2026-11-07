@@ -11,8 +11,8 @@
 2. **Plan d'abord**, puis une tranche verticale minimale, puis élargissement. Jamais toutes les activités d'un coup.
 3. **Rien casser.** Une décision = un ADR ≤ 15 lignes (`docs/adr/NNNN-titre.md`). Commits courts en français
    (Conventional Commits), chemins explicites (jamais `git add -A`), `main` toujours vert.
-4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai sur l'émulateur `zanakiantsa_tab`
-   (ci-dessous) ; depuis le 2026-11-03, plus de tablette physique disponible pour les essais.
+4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai sur la tablette Samsung SM-X135G branchée
+   (`adb -s R8YYA0CZ5ZV`), sans demander. **Plus d'émulateur sur l'ordinateur** (consigne d'Antsa du 2026-11-07).
 5. **100 % hors ligne pour le cœur.** Aucun compte enfant, aucune pub, aucun achat intégré, aucune télémétrie de
    l'app : le journal d'événements reste sur l'appareil. Ni image, ni voix, ni tracé ne quitte l'appareil ;
    **exception connue** : ML Kit envoie à Google des statistiques techniques d'usage (ADR 0012, `docs/conformite.md`).
@@ -74,6 +74,8 @@ adb -s <série> install -r build/app/outputs/flutter-apk/app-arm64-v8a-release.a
 flutter build apk … --dart-define=DEV_SKILL=<id>   # essai d'une compétence précise (jamais publié)
 adb shell dumpsys meminfo mg.zanakiantsa.app       # mémoire réelle
 tool/release.sh "notes"                   # version signée (voir docs/RELEASING.md)
+~/.local/share/zanak-ecoute/bin/python ../tool/ecoute.py 15 -- adb -s R8YYA0CZ5ZV shell input tap X Y
+                                          # écoute la tablette : texte dit (Whisper) + langue de chaque phrase
 ```
 
 Paquet Android : `mg.zanakiantsa.app`, activité `mg.zanakiantsa.zanakiantsa.MainActivity`.
