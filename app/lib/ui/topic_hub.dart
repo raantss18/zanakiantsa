@@ -79,6 +79,9 @@ class _TopicHubState extends State<TopicHub> {
                         : tf('Reprendre où tu t\'es arrêté : question {n} sur {total}.', {'n': resume!.index + 1, 'total': resume!.plan.length}),
                     () => _go(SessionPage(topic: widget.topic, resume: resume)),
                   ),
+                  // Choisir sa leçon (ADR 0065) : diagnostic et cours compris.
+                  hubCard('1f9ed', t('Choisir ma leçon'), t('Toutes les leçons de ce domaine : choisis celle que tu veux faire.'),
+                      () => _go(LessonPicker(topic: widget.topic))),
                   if (p.placementPlan() case final test?)
                     hubCard(
                       '1f50d',
@@ -234,6 +237,80 @@ class NotebookPage extends StatelessWidget {
                         ? tf('{state} · {ok} réussies sur les {n} dernières', {'state': state, 'ok': ok, 'n': recent.length})
                         : tf('{state} · {ok} réussie sur les {n} dernières', {'state': state, 'ok': ok, 'n': recent.length}),
             style: const TextStyle(fontSize: 16)),
+      ),
+    );
+  }
+}
+
+
+/// Choisir sa leçon (ADR 0065, demande d'Antsa) : les leçons du domaine rangées par classe, à partir du plancher de
+/// l'enfant. Jusqu'à sa classe, toutes s'ouvrent ; au-dessus, quand il a fini celles de sa classe. La séance commence par le
+/// diagnostic des prérequis (si la leçon n'est pas acquise), puis le cours, puis les questions.
+class LessonPicker extends StatelessWidget {
+  const LessonPicker({super.key, required this.topic});
+  final String topic;
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    final tp = app.topic(topic);
+    final p = app.progressOf(tp);
+    final classe = app.schoolClass;
+    final shown = [for (final s in tp.skills) if (!p.belowFloor(s.id)) s];
+    final levels = {for (final s in shown) s.level}.toList()..sort((a, b) => levelRank(a).compareTo(levelRank(b)));
+    return Scaffold(
+      body: UniverseBackground(
+        universe: app.universe,
+        child: SafeArea(
+          child: Column(children: [
+            pageHeader(context, t('Choisir ma leçon')),
+            Expanded(
+              child: ListView(padding: readablePadding(context), children: [
+                for (final l in levels) ...[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(4, 12, 4, 8),
+                    child: Text(t(l), style: const TextStyle(fontFamily: 'Fredoka', fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
+                  ),
+                  for (final s in shown.where((s) => s.level == l)) _row(context, app, s, p, classe),
+                ],
+              ]),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  Widget _row(BuildContext context, AppState app, Skill s, Progress p, int classe) {
+    final open = p.choosable(s.id, classe);
+    final (icon, state) = !open
+        ? ('1f512', t('Après ta classe : finis d\'abord les leçons de ta classe.'))
+        : p.earned(s.id)
+            ? ('2705', t('Acquise'))
+            : p.skipped(s.id)
+                ? ('1f393', t('Déjà de ton âge'))
+                : p.answersOf(s.id).isEmpty
+                    ? ('1f195', t('Pas commencée'))
+                    : ('1f331', t('En cours'));
+    return Opacity(
+      opacity: open ? 1 : 0.6,
+      child: Card(
+        child: ListTile(
+          minTileHeight: 64,
+          enabled: open,
+          leading: Art(icon, size: 36),
+          title: Text(s.title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+          subtitle: Text(state, style: const TextStyle(fontSize: 16)),
+          trailing: open ? const Icon(Icons.play_arrow_rounded, size: 36, color: ink) : null,
+          onTap: open
+              ? () async {
+                  await app.voice.stop();
+                  if (!context.mounted) return;
+                  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionPage(topic: topic, lesson: s.id)));
+                  await app.refresh();
+                }
+              : null,
+        ),
       ),
     );
   }

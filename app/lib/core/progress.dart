@@ -33,6 +33,11 @@ int startLevelForClass(int classe) => max(0, classe - 1);
 
 int startLevelForAge(int age) => startLevelForClass(classForAge(age));
 
+/// Plancher d'une classe (ADR 0065, demande d'Antsa du 2026-11-08 : « à douze ans on ne compte plus les voitures ni les
+/// syllabes ») : une notion à deux classes ou plus sous celle de l'enfant n'est plus jamais proposée — ni en diagnostic, ni
+/// en révision, ni en entraînement, ni au défi. Elle est tenue pour acquise.
+int floorForClass(int classe) => max(0, classe - 2);
+
 /// Le point de départ dans un domaine : jamais au-delà de ce que ce domaine propose de plus avancé. Sans cela, pour un
 /// grand, toutes ses compétences compteraient comme acquises et il n'y aurait plus rien à y apprendre.
 int startLevelIn(List<SkillRef> skills, int start) => skills.isEmpty ? start : min(start, skills.map((s) => s.level).reduce(max));
@@ -44,7 +49,7 @@ const questionsPerSession = 8;
 const placementPerSkill = 2, placementSkills = 6;
 
 class Progress {
-  Progress(this.skills, List<Answer> journal, {this.sessionsDone = 0, this.startLevel = 0, this.placed = const {}}) {
+  Progress(this.skills, List<Answer> journal, {this.sessionsDone = 0, this.startLevel = 0, this.floor = 0, this.placed = const {}}) {
     for (final a in journal) {
       _bySkill.putIfAbsent(a.skill, () => []).add(a);
     }
@@ -58,6 +63,17 @@ class Progress {
 
   /// Niveau de départ de l'enfant : les compétences plus basses comptent comme acquises.
   final int startLevel;
+
+  /// Plancher : les compétences plus basses ne sont plus proposées (voir [floorForClass]).
+  final int floor;
+
+  int _level(String id) => skills.firstWhere((s) => s.id == id, orElse: () => SkillRef(id, const [], level: 99)).level;
+
+  /// Trop facile pour la classe de l'enfant : jamais proposée.
+  bool belowFloor(String id) => _level(id) < floor;
+
+  /// Les prérequis à vérifier au diagnostic : ceux qui ne sont pas sous le plancher.
+  List<String> checkable(List<String> prerequisites) => [for (final p in prerequisites) if (!belowFloor(p)) p];
 
   bool skipped(String id) => skills.firstWhere((s) => s.id == id, orElse: () => SkillRef(id, const [], level: 99)).level < startLevel;
   final Map<String, List<Answer>> _bySkill = {};
@@ -94,7 +110,7 @@ class Progress {
     final due = <(String, DateTime)>[];
     for (final s in skills) {
       final c = card(s.id);
-      if (c != null && isDue(c, now)) due.add((s.id, c.due));
+      if (c != null && isDue(c, now) && !belowFloor(s.id)) due.add((s.id, c.due));
     }
     due.sort((a, b) => a.$2.compareTo(b.$2));
     final out = [for (final d in due) d.$1];
@@ -105,7 +121,9 @@ class Progress {
     if (next == null) {
       if (reviews.isNotEmpty) return reviews;
       // Tout est acquis : de l'entraînement varié sur tout le domaine (plus jamais la même suite fixe, ADR 0030).
-      return [for (var i = 0; i < questionsPerSession; i++) skills[r.nextInt(skills.length)].id];
+      final pool = [for (final s in skills) if (!belowFloor(s.id)) s.id];
+      final from = pool.isEmpty ? [for (final s in skills) s.id] : pool;
+      return [for (var i = 0; i < questionsPerSession; i++) from[r.nextInt(from.length)]];
     }
     // Entrelacé (ADR 0037) : une question sur trois revient sur une compétence déjà acquise, au lieu de huit fois la
     // même d'affilée (Rohrer & Taylor 2007 : mélanger les types de problèmes améliore l'apprentissage).
@@ -115,7 +133,7 @@ class Progress {
   /// Défi (ADR 0042) : [n] questions mêlées de tout ce que l'enfant a acquis (et du niveau juste en dessous de son
   /// âge), chaque compétence une fois par tour, dans le désordre. null : rien d'acquis encore, pas de défi.
   List<String>? challengePlan(Random r, {int n = 10}) {
-    final pool = [for (final s in skills) if (earned(s.id) || (skipped(s.id) && s.level == startLevel - 1)) s.id];
+    final pool = [for (final s in skills) if (!belowFloor(s.id) && (earned(s.id) || (skipped(s.id) && s.level == startLevel - 1))) s.id];
     if (pool.isEmpty) return null;
     final out = <String>[];
     while (out.length < n) {
@@ -130,8 +148,22 @@ class Progress {
   /// Une compétence que l'enfant a lui-même acquise, au hasard, autre que [not] ; null s'il n'y en a pas. Pas celles
   /// tenues pour acquises à cause de l'âge : trop faciles, elles ennuieraient.
   String? practice(Random r, {String? not}) {
-    final pool = [for (final s in skills) if (s.id != not && earned(s.id)) s.id];
+    final pool = [for (final s in skills) if (s.id != not && earned(s.id) && !belowFloor(s.id)) s.id];
     return pool.isEmpty ? null : pool[r.nextInt(pool.length)];
+  }
+
+  /// Leçon choisie par l'enfant dans « Tout explorer » (ADR 0065) : les questions de cette leçon, une sur trois revenant sur
+  /// une compétence déjà acquise (entrelacé, ADR 0037).
+  List<String> focusPlan(String id, Random r) =>
+      [for (var i = 0; i < questionsPerSession; i++) (i % 3 == 2 ? practice(r, not: id) : null) ?? id];
+
+  /// Peut-on choisir cette leçon ? Jusqu'à la classe de l'enfant, oui ; au-dessus, quand toutes les leçons de sa classe et
+  /// d'en dessous sont acquises dans ce domaine (« un élève avancé peut monter quand il a fini son niveau »).
+  bool choosable(String id, int classe) {
+    final l = _level(id);
+    if (l < floor) return false;
+    if (l <= classe) return true;
+    return skills.where((s) => s.level <= classe).every((s) => mastered(s.id));
   }
 
   /// En cours de séance (ADR 0037) : la suite du plan à partir de [index], une fois la réponse enregistrée. Si

@@ -426,7 +426,11 @@ class Topic {
         name = j['nom'] as String,
         icon = j['icone'] as String,
         intro = [for (final s in j['intro'] as List? ?? const []) IntroScene(Map<String, dynamic>.from(s as Map))],
+        ageless = j['sans_age'] == true,
         skills = [for (final s in j['competences'] as List) Skill(Map<String, dynamic>.from(s as Map))];
+
+  /// Domaine pour tous les âges (le dessin libre) : le plancher de classe ne le cache jamais (ADR 0065).
+  final bool ageless;
 
   /// [title] pour le parent, [name] pour l'enfant (« Les nombres »), [icon] : code Twemoji.
   final String id, title, name, icon;

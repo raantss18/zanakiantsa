@@ -231,8 +231,16 @@ class AppState extends ChangeNotifier {
   /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
-  Progress progressOf(Topic t) =>
-      Progress([for (final s in t.skills) s.ref], journal, sessionsDone: sessionsDone, startLevel: startLevelIn([for (final s in t.skills) s.ref], startLevelForClass(schoolClass)), placed: placed);
+  Progress progressOf(Topic t) => Progress([for (final s in t.skills) s.ref], journal,
+      sessionsDone: sessionsDone,
+      startLevel: startLevelIn([for (final s in t.skills) s.ref], startLevelForClass(schoolClass)),
+      floor: t.ageless ? 0 : floorForClass(schoolClass),
+      placed: placed);
+
+  /// Les domaines proposés à cet enfant (ADR 0065) : ceux qui ont au moins une leçon au-dessus de son plancher, plus le
+  /// dessin libre. À 12 ans, plus de « Les sons » ni des suites de maternelle.
+  List<Topic> get shownTopics =>
+      [for (final t in topics) if (t.ageless || t.skills.any((s) => s.ref.level >= floorForClass(schoolClass))) t];
 
   /// Note les compétences réussies au test de départ.
   Future<void> place(Iterable<String> ids) async {
@@ -242,7 +250,16 @@ class AppState extends ChangeNotifier {
   }
 
   DayPlan dayPlan([DateTime? now]) => DayPlan.of(now ?? DateTime.now(), sessions,
-      minutes: dailyMinutes, tops: topLevels, classe: schoolClass, visible: [for (final t in topics) t.id]);
+      minutes: dailyMinutes, tops: topLevels, classe: schoolClass, visible: dayDomains);
+
+  /// Les domaines que la journée peut proposer (ADR 0065, « même les trois thèmes proposés doivent être adaptés au
+  /// niveau de l'enfant ») : d'abord ceux où il a encore une leçon à apprendre à son niveau, les plus avancés d'abord ;
+  /// les autres domaines proposés (dessin, domaines finis) seulement s'il en manque pour faire trois.
+  List<String> get dayDomains => dayCandidates(
+        [for (final t in shownTopics) t.id],
+        learning: {for (final t in shownTopics) if (!t.ageless && progressOf(t).newSkill != null) t.id},
+        tops: topLevels,
+      );
 
   Future<void> logSession(SessionLog s) async {
     await store.addSession(s);

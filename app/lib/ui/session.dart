@@ -309,8 +309,12 @@ const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false, this.placement = false});
+  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false, this.placement = false, this.lesson});
   final String topic;
+
+  /// Leçon choisie par l'enfant dans « Tout explorer » (ADR 0065) : diagnostic de ses prérequis tant qu'elle n'est pas
+  /// acquise, puis toujours le cours (idée et exemple résolu), puis ses questions.
+  final String? lesson;
 
   /// Test de départ (ADR 0045) : deux questions par compétence pas encore acquise, dans l'ordre ; réussies du premier
   /// coup, elle est notée comme sue ; à la première hésitation, le test s'arrête et c'est là que l'enfant commence.
@@ -334,10 +338,12 @@ class _SessionPageState extends State<SessionPage> {
           ? app.progressOf(app.topic(widget.topic)).challengePlan(Random()) ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
           : widget.placement
               ? app.progressOf(app.topic(widget.topic)).placementPlan() ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
-              : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
+              : widget.lesson != null
+                  ? app.progressOf(app.topic(widget.topic)).focusPlan(widget.lesson!, Random())
+                  : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
-  late String? _target = widget.challenge || widget.placement ? null : app.progressOf(app.topic(widget.topic)).newSkill;
+  late String? _target = widget.challenge || widget.placement ? null : widget.lesson ?? app.progressOf(app.topic(widget.topic)).newSkill;
 
   /// Test de départ : les compétences sues, et celle où il s'est arrêté (null : rien manqué).
   final _known = <String>[];
@@ -415,10 +421,15 @@ class _SessionPageState extends State<SessionPage> {
     }
     final skill = app.skill(plan[index]);
     // Notion nouvelle : d'abord ses prérequis (ADR 0061), une seule fois par séance, jamais pendant un défi ou un test.
-    final first = !_oneGo && !_introduced.contains(skill.id) && app.journal.every((x) => x.skill != skill.id || x.challenge);
+    final topic = app.topic(widget.topic);
+    final progress = app.progressOf(topic);
+    final never = app.journal.every((x) => x.skill != skill.id || x.challenge);
+    // Leçon choisie : diagnostic tant qu'elle n'est pas acquise, même si elle a déjà été commencée.
+    final chosen = skill.id == widget.lesson;
+    final first = !_oneGo && !_introduced.contains(skill.id) && (never || (chosen && !progress.earned(skill.id)));
     if (first && _diagnosed.add(skill.id)) {
-      final topic = app.topic(widget.topic);
-      final pre = prerequisitesToCheck(skill.ref, [for (final s in topic.skills) s.ref]);
+      // Les prérequis sous le plancher de la classe ne sont jamais vérifiés : ils sont tenus pour acquis (ADR 0065).
+      final pre = progress.checkable(prerequisitesToCheck(skill.ref, [for (final s in topic.skills) s.ref]));
       if (pre.isNotEmpty) {
         _diagnostic = Diagnostic(pre);
         return _step(_diagnostic!.next()!);
@@ -428,7 +439,8 @@ class _SessionPageState extends State<SessionPage> {
     _last = q;
     app.remember(skill.id, skill.signature(q));
     // Première rencontre (rien au journal hors défi et test de départ) : d'abord l'idée et un exemple résolu.
-    final example = !_oneGo && _introduced.add(skill.id) && app.journal.every((x) => x.skill != skill.id || x.challenge);
+    // Leçon choisie : le cours à chaque fois, puisque l'enfant vient la (re)travailler.
+    final example = !_oneGo && _introduced.add(skill.id) && (never || chosen);
     late final Attempt a;
     a = Attempt(app, skill, q, _advance, () => setState(() {
           stars++;
@@ -459,7 +471,7 @@ class _SessionPageState extends State<SessionPage> {
     }
     if (widget.placement) await _placementStep();
     if (index + 1 >= plan.length || _stoppedAt != null) {
-      if (devSkill.isEmpty && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
+      if (devSkill.isEmpty && widget.lesson == null && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
       if (widget.challenge) await _endChallenge();
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
@@ -487,7 +499,8 @@ class _SessionPageState extends State<SessionPage> {
     old?.dispose();
     _music();
     // Le point de reprise : si l'enfant sort maintenant, il reviendra à cette question.
-    if (devSkill.isEmpty && !_oneGo) SessionResume(plan, index, stars).save(app, widget.topic);
+    // Une leçon choisie ne remplace pas le point de reprise du parcours.
+    if (devSkill.isEmpty && !_oneGo && widget.lesson == null) SessionResume(plan, index, stars).save(app, widget.topic);
   }
 
   /// Test de départ, après chaque question : hésitation (essai manqué) → on s'arrête là ; dernière question d'une

@@ -5,6 +5,8 @@ nom: "Le dessin"
 resume: "Dessiner un sujet précis. L'application regarde si elle le reconnaît et dit ce qu'il manque."
 icone: "1f3a8"
 ages: [3, 10]
+# Dessin libre : pour tous les âges, jamais caché par le plancher de classe (ADR 0065).
+sans_age: true
 # Programme de l'école maternelle, version consolidée, « Arts visuels — Dessiner », p. 26-27. Consulté le 2026-11-03.
 sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"

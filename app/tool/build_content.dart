@@ -298,6 +298,8 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'ages': theme['ages'],
     if (theme['en'] != null) 'en': theme['en'],
     'sources': sources,
+    // Domaine pour tous les âges (dessin libre) : jamais caché par le plancher de classe (ADR 0065).
+    if (theme['sans_age'] == true) 'sans_age': true,
     'competences': [for (final sid in order) if (skills[sid] != null) skills[sid]],
   };
 }

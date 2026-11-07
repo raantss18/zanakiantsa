@@ -211,4 +211,9 @@ const en = <String, String>{
   '1re': 'Year 11 (1re)',
   'Terminale': 'Year 12 (Terminale)',
   'Après le lycée': 'After secondary school',
+  // Choisir sa leçon (ADR 0065)
+  'Choisir ma leçon': 'Choose my lesson',
+  'Toutes les leçons de ce domaine : choisis celle que tu veux faire.': 'All the lessons in this subject: choose the one you want to do.',
+  'Après ta classe : finis d\'abord les leçons de ta classe.': 'Above your year: finish your year’s lessons first.',
+  'Les leçons commencent au niveau {start}. Celles sous le niveau {floor} ne sont plus proposées (trop faciles pour sa classe). Une fois sa classe finie, {name} peut monter plus haut.': 'Lessons start at {start}. Those before {floor} are no longer offered (too easy for their year). Once their year is finished, {name} can move higher.',
 };

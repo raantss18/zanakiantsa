@@ -15,6 +15,9 @@
 
 ## 0. Erreurs signalées
 
+- ✅ Corrigé (2026-11-08, signalé par Antsa) : à 12 ans, « compter 4 voitures » (diagnostic d'une notion de CM1). Plancher de
+  classe, choix de la leçon dans Explorer (ADR 0065), protégé par `test/floor_test.dart`.
+
 - ✅ Corrigé (2026-11-07, SM-X135G en paysage, texte système à 150 %) : le clavier laisse ~200 dp et la fenêtre du calcul parent
   cachait la question et le champ. Fenêtre compacte ; protégé par `test/parent_gate_test.dart` (paysage, densité 1,75, texte × 1,5).
 - ✅ Corrigé (même jour, signalé par Antsa) : en paysage, la fin de la bulle de Robi était cachée (zone qui défilait sans le

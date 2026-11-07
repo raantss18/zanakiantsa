@@ -37,6 +37,13 @@ List<String> adaptGroup(List<String> group, Map<String, int> tops, int classe) {
   return out;
 }
 
+/// Les domaines que la journée peut proposer (ADR 0065) : d'abord ceux de [shown] où l'enfant a encore une leçon à
+/// apprendre à son niveau ([learning]), les plus avancés d'abord ; les autres seulement s'il en manque pour faire trois.
+List<String> dayCandidates(List<String> shown, {required Set<String> learning, required Map<String, int> tops}) {
+  final learn = [for (final t in shown) if (learning.contains(t)) t]..sort((a, b) => (tops[b] ?? 0).compareTo(tops[a] ?? 0));
+  return learn.length >= 3 ? learn : [...learn, for (final t in shown) if (!learn.contains(t)) t];
+}
+
 /// En anglais, seuls les domaines traduits existent (ADR 0064) : ceux de la journée qui manquent sont remplacés par les
 /// premiers domaines proposés qui n'y sont pas déjà. Sans liste (toutes les langues traduites), rien ne change.
 List<String> onlyVisible(List<String> group, List<String>? visible) {

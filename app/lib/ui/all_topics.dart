@@ -44,14 +44,16 @@ class AllTopicsPage extends StatelessWidget {
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
                 children: [
-                  for (final t in app.topics)
+                  for (final t in app.shownTopics)
                     Builder(builder: (context) {
                       final p = app.progressOf(t);
                       // Seules les compétences vraiment maîtrisées comptent (pas celles tenues pour acquises par l'âge).
-                      final done = t.skills.where((s) => p.earned(s.id)).length;
+                      // Sur les leçons proposées à sa classe seulement (pas celles sous le plancher, ADR 0065).
+                      final offered = [for (final s in t.skills) if (!p.belowFloor(s.id)) s];
+                      final done = offered.where((s) => p.earned(s.id)).length;
                       return Semantics(
                         button: true,
-                        label: tf('{name}, {done} compétences maîtrisées sur {total}', {'name': t.name, 'done': done, 'total': t.skills.length}),
+                        label: tf('{name}, {done} compétences maîtrisées sur {total}', {'name': t.name, 'done': done, 'total': offered.length}),
                         excludeSemantics: true,
                         child: Material(
                           color: surface,
@@ -71,7 +73,7 @@ class AllTopicsPage extends StatelessWidget {
                                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                                   const Art('2b50', size: 22),
                                   const SizedBox(width: 4),
-                                  Text('$done / ${t.skills.length}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
+                                  Text('$done / ${offered.length}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: Color(0xFF5F6B63))),
                                 ]),
                               ]),
                             ),

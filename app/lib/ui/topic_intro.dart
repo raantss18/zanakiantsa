@@ -7,6 +7,7 @@ import '../activities/draw.dart';
 import '../app_state.dart';
 import '../audio/voice.dart';
 import '../content/content.dart';
+import '../core/progress.dart';
 import '../l10n/l10n.dart';
 import 'session.dart';
 import 'topic_hub.dart';
@@ -17,6 +18,10 @@ import 'universe.dart';
 /// puis l'activité.
 /// [hub] : depuis « Tout explorer », l'accueil du domaine (apprendre, défi, carnet, ADR 0042) ; depuis les activités
 /// du jour, la séance directement (l'enfant seul n'a qu'un bouton à toucher). Les échecs ont toujours leur accueil.
+/// L'animation d'un domaine convient-elle à cette classe ? Oui tant que sa première leçon n'est pas sous le plancher.
+bool introFits(Topic t, int classe) =>
+    t.ageless || t.skills.isEmpty || t.skills.map((s) => s.ref.level).reduce(min) >= floorForClass(classe);
+
 Future<void> openTopic(BuildContext context, AppState app, String topicId, {bool hub = false}) async {
   await app.voice.stop();
   if (!context.mounted) return;
@@ -24,7 +29,10 @@ Future<void> openTopic(BuildContext context, AppState app, String topicId, {bool
   final today = DateTime.now().toIso8601String().substring(0, 10);
   final seen = await app.store.get('intro_$topicId') == today;
   if (!context.mounted) return;
-  if (!seen && t.intro.isNotEmpty) {
+  // L'animation de méthode est écrite pour les premières leçons du domaine (« on touche chaque objet une seule fois ») :
+  // plus de raison de la montrer quand ces leçons sont sous le plancher de la classe (ADR 0065, un enfant de 12 ans voyait
+  // compter des pommes).
+  if (!seen && t.intro.isNotEmpty && introFits(t, app.schoolClass)) {
     await app.store.set('intro_$topicId', today);
     if (!context.mounted) return;
     final go = await Navigator.of(context).push<bool>(MaterialPageRoute(builder: (_) => TopicIntro(topic: t)));

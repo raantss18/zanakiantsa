@@ -474,7 +474,9 @@ class _AgeAndClass extends StatelessWidget {
       Text(
         classe - 1 > top
             ? tf('Les leçons vont pour l’instant jusqu’à la classe de {level} : {name} commence par les plus avancées. D’autres arrivent à chaque mise à jour.', {'level': t(schoolLevels[top]), 'name': name})
-            : tf('Les leçons commencent au niveau {start}. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que {name} connaît.', {'start': t(start), 'name': name}),
+            : floorForClass(classe) > 0
+                ? tf('Les leçons commencent au niveau {start}. Celles sous le niveau {floor} ne sont plus proposées (trop faciles pour sa classe). Une fois sa classe finie, {name} peut monter plus haut.', {'start': t(start), 'floor': t(schoolLevels[floorForClass(classe)]), 'name': name})
+                : tf('Les leçons commencent au niveau {start}. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que {name} connaît.', {'start': t(start), 'name': name}),
       ),
       const SizedBox(height: 4),
       Text(
