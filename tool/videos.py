@@ -5,13 +5,14 @@ Passe par l'interface officielle YouTube Data API v3 (clé dans la variable YOUT
 jamais dans Git). Ne télécharge aucune vidéo : seulement leurs identifiants, titres et durées ; l'app les lit ensuite avec
 le lecteur officiel de YouTube.
 
-Garde une vidéo si elle est publique, intégrable, sans restriction d'âge, pas en direct, et dure de 1 à 60 min (pas de
-limite plus courte : les vidéos longues sont permises à tout âge, ADR 0068). Coût : ≈ 10 unités de quota par chaîne (10 000 par jour offertes).
+Garde une vidéo si elle passe le filtre `reject` (publique, intégrable, sans restriction d'âge, ni short, ni direct, ni
+promotion, ni IA, 1 à 90 min ; les vidéos longues sont permises à tout âge, ADR 0068). Coût : ≈ 10 unités de quota par chaîne (10 000 par jour offertes).
 
   YOUTUBE_API_KEY=… python3 tool/videos.py --out site/videos.json [--par-chaine 200]
 Sans clé : écrit un catalogue vide (l'app affiche alors « pas encore de vidéos »), sans échouer.
 """
 import argparse
+import collections
 import datetime as dt
 import json
 import os
@@ -58,16 +59,55 @@ def made_by_ai(v: dict) -> bool:
     return v.get('status', {}).get('containsSyntheticMedia', False) or bool(MADE_BY_AI.search(text))
 
 
-def keep(v: dict) -> bool:
+# Filtre de chaque vidéo, même dans une chaîne choisie (ADR 0068). Rend la raison du refus, ou None si la vidéo est gardée.
+# - shorts : formats verticaux de quelques secondes, faits pour défiler, pas pour apprendre ;
+# - anciens directs (liveStreamingDetails), bandes-annonces, promotions, concours, déballages, webinaires : hors sujet ;
+# - catégorie « Jeux vidéo » (20) : jamais ;
+# - durée de 1 min à 90 min (`duree_max` par chaîne pour changer le maximum) ; pas d'autre limite, à aucun âge ;
+# - `titre_contient` (un texte ou une liste : au moins un) et `titre_exclut` (liste) par chaîne.
+OFF_TOPIC = re.compile(
+    r"bande[- ]annonce|\bteaser\b|\btrailer\b|unboxing|déballage|giveaway|\bconcours\b|code promo|promo code"
+    r"|\bsponsoris|webinaire|\bwebinar\b|\bpublicité\b|\bpub\b|#ad\b",
+    re.IGNORECASE)
+SHORT = re.compile(r"#shorts?\b", re.IGNORECASE)
+NEVER_CATEGORIES = {'20'}  # Gaming
+
+
+def as_list(x) -> list[str]:
+    return [x] if isinstance(x, str) else list(x or [])
+
+
+def reject(v: dict, c: dict) -> str | None:
     st, cd, sn = v.get('status', {}), v.get('contentDetails', {}), v.get('snippet', {})
-    return (
-        not made_by_ai(v)
-        and st.get('privacyStatus') == 'public'
-        and st.get('embeddable', False)
-        and cd.get('contentRating', {}).get('ytRating') != 'ytAgeRestricted'
-        and sn.get('liveBroadcastContent', 'none') == 'none'
-        and 60 <= seconds(cd.get('duration')) <= 3600
-    )
+    title = sn.get('title', '')
+    text = ' '.join([title, sn.get('description', ''), ' '.join(sn.get('tags', []))])
+    d = seconds(cd.get('duration'))
+    if made_by_ai(v):
+        return 'IA'
+    if (st.get('privacyStatus') != 'public' or not st.get('embeddable', False)
+            or cd.get('contentRating', {}).get('ytRating') == 'ytAgeRestricted'):
+        return 'non intégrable'
+    if sn.get('liveBroadcastContent', 'none') != 'none' or 'liveStreamingDetails' in v:
+        return 'direct'
+    if SHORT.search(text) or d < 60:
+        return 'short'
+    if d > c.get('duree_max', 5400):
+        return 'trop longue'
+    if sn.get('categoryId') in NEVER_CATEGORIES:
+        return 'jeux vidéo'
+    if OFF_TOPIC.search(title):
+        return 'hors sujet'
+    low = title.lower()
+    must = [m.lower() for m in as_list(c.get('titre_contient'))]
+    if must and not any(m in low for m in must):
+        return 'titre'
+    if any(x.lower() in low for x in as_list(c.get('titre_exclut'))):
+        return 'titre'
+    # Langue de la vidéo, quand YouTube la connaît : celle de la chaîne (NASA Space Place publie aussi en espagnol).
+    spoken = sn.get('defaultAudioLanguage') or sn.get('defaultLanguage') or ''
+    if spoken and not spoken.lower().startswith(c['langue']):
+        return 'langue'
+    return None
 
 
 def words(sn: dict) -> str:
@@ -91,7 +131,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
             continue
         index = len(out_channels)
         out_channels.append({k: c[k] for k in ('id', 'nom', 'langue', 'ages', 'domaines')})
-        before, ai = len(videos), 0
+        before = len(videos)
         vids, token = [], None
         wanted = c.get('profondeur', per_channel)
         while len(vids) < wanted:
@@ -102,22 +142,19 @@ def build(channels: list[dict], per_channel: int) -> dict:
             if not token:
                 break
         excluded = set(c.get('exclure', []))
-        must = (c.get('titre_contient') or '').lower()
+        why, cats = collections.Counter(), collections.Counter()
         for i in range(0, len(vids), 50):
             batch = [v for v in vids[i:i + 50] if v not in excluded]
             if not batch:
                 continue
-            for v in get('videos', part='snippet,contentDetails,status', id=','.join(batch)).get('items', []):
-                ai += made_by_ai(v)
-                if not keep(v):
+            for v in get('videos', part='snippet,contentDetails,status,liveStreamingDetails',
+                         id=','.join(batch)).get('items', []):
+                cats[v['snippet'].get('categoryId')] += 1
+                r = reject(v, c)
+                if r:
+                    why[r] += 1
                     continue
                 sn = v['snippet']
-                if must and must not in sn['title'].lower():
-                    continue
-                # Langue de la vidéo, quand YouTube la connaît : celle de la chaîne (NASA Space Place publie aussi en espagnol).
-                spoken = sn.get('defaultAudioLanguage') or sn.get('defaultLanguage') or ''
-                if spoken and not spoken.lower().startswith(c['langue']):
-                    continue
                 videos.append({
                     'id': v['id'],
                     'c': index,
@@ -128,8 +165,10 @@ def build(channels: list[dict], per_channel: int) -> dict:
                 })
         mine = videos[before:]
         short = sum(v['d'] <= 600 for v in mine)
-        print(f"{c['nom'][:40]:40} {c['langue']} {str(c['ages']):8} lues {len(vids):4}  gardées {len(mine):4}  ≤10 min {short:4}  IA écartées {ai}",
-              file=sys.stderr)
+        refus = ', '.join(f'{k} {n}' for k, n in why.most_common()) or '-'
+        cat = ' '.join(f'{k}:{n}' for k, n in cats.most_common(4))
+        print(f"{c['nom'][:34]:34} {c['langue']} {str(c['ages']):8} lues {len(vids):4} gardées {len(mine):4} "
+              f"(≤10 min {short}) | refusées : {refus} | catégories {cat}", file=sys.stderr)
     return {'genere': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'chaines': out_channels, 'videos': videos}
 
 

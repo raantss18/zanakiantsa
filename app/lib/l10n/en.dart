@@ -228,6 +228,7 @@ const en = <String, String>{
   ', déjà vue': ', already watched',
   "D'autres vidéos": 'More videos',
   'Plein écran': 'Full screen',
+  'Masquer': 'Hide',
   'Quitter le plein écran': 'Exit full screen',
   'Revenir à ma vidéo': 'Back to my video',
   'Revoir': 'Watch again',

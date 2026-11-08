@@ -1,0 +1,31 @@
+name: Découverte de chaînes vidéo
+
+# La liste blanche n'est pas figée (ADR 0068) : chaque lundi, cherche de nouvelles chaînes éducatives (tool/videos_decouverte.py)
+# et publie les candidates dans un ticket. Aucune n'entre seule dans l'app : relecture, puis ajout à la main à
+# content/videos/chaines.yaml (ou ecartees.yaml).
+on:
+  schedule:
+    - cron: '41 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  decouverte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Chercher et examiner
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          pip install --quiet pyyaml
+          python3 tool/videos_decouverte.py --out rapport.md
+      - name: Ticket
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "${{ github.repository }}" \
+            --title "Vidéos : chaînes candidates du $(date +%F)" --body-file rapport.md

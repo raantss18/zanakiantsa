@@ -10,8 +10,21 @@ import 'parent.dart';
 /// Le navigateur est pris avant d'ouvrir la fenêtre : le clavier fait réorganiser l'accueil (ADR 0052), et le bouton qui a
 /// ouvert la porte peut ne plus exister à la bonne réponse. On vérifiait `context.mounted` : la page ne s'ouvrait alors
 /// jamais, et les mises à jour, qui passent par elle, devenaient inaccessibles.
-Future<void> openParentSpace(BuildContext context, {WidgetBuilder? page}) async {
+Future<void> openParentSpace(
+  BuildContext context, {
+  WidgetBuilder? page,
+}) async {
   final navigator = Navigator.of(context);
+  final ok = await askParent(context);
+  if (ok && navigator.mounted) {
+    await navigator.push(
+      MaterialPageRoute(builder: page ?? (_) => const ParentPage()),
+    );
+  }
+}
+
+/// La question de la porte parent seule : vrai si la bonne réponse est donnée (sert aussi à masquer une vidéo).
+Future<bool> askParent(BuildContext context) async {
   final r = Random();
   final a = 6 + r.nextInt(4), b = 6 + r.nextInt(4);
   final field = TextEditingController();
@@ -25,7 +38,14 @@ Future<void> openParentSpace(BuildContext context, {WidgetBuilder? page}) async 
         child: Text(t('Annuler')),
       );
       final enter = FilledButton(
-        style: FilledButton.styleFrom(minimumSize: const Size(112, 52), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 20, fontWeight: FontWeight.w700)),
+        style: FilledButton.styleFrom(
+          minimumSize: const Size(112, 52),
+          textStyle: const TextStyle(
+            fontFamily: 'Andika',
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
         onPressed: submit,
         child: Text(t('Entrer')),
       );
@@ -39,35 +59,61 @@ Future<void> openParentSpace(BuildContext context, {WidgetBuilder? page}) async 
       );
       // En paysage, le clavier laisse environ 360 px : la fenêtre classique (titre, question, champ, boutons) écrasait la
       // question à zéro. Quand la place manque, le champ et les boutons tiennent sur une ligne.
-      final compact = MediaQuery.sizeOf(ctx).height - MediaQuery.viewInsetsOf(ctx).bottom < 420;
+      final compact =
+          MediaQuery.sizeOf(ctx).height - MediaQuery.viewInsetsOf(ctx).bottom <
+          420;
       return Dialog(
-        insetPadding: compact ? const EdgeInsets.symmetric(horizontal: 40, vertical: 8) : const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
+        insetPadding: compact
+            ? const EdgeInsets.symmetric(horizontal: 40, vertical: 8)
+            : const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
         child: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: compact ? 680 : 520),
           child: SingleChildScrollView(
-            padding: compact ? const EdgeInsets.fromLTRB(20, 10, 20, 10) : const EdgeInsets.all(24),
-            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-              // En compact, le titre cède sa ligne (il reste lu par le lecteur d'écran) : la question suffit.
-              if (!compact) ...[Text(t('Espace parent'), style: Theme.of(ctx).textTheme.titleLarge), const SizedBox(height: 8)],
-              Text(
-                tf('Combien font {a} × {b} ?', {'a': a, 'b': b}),
-                semanticsLabel: '${t('Espace parent')}${english ? ':' : ' :'} ${tf('Combien font {a} × {b} ?', {'a': a, 'b': b})}',
-                style: TextStyle(fontSize: compact ? 18 : 22),
-              ),
-              if (compact)
-                Row(children: [Expanded(child: input), const SizedBox(width: 8), cancel, const SizedBox(width: 8), enter])
-              else ...[
-                input,
-                const SizedBox(height: 16),
-                Row(mainAxisAlignment: MainAxisAlignment.end, children: [cancel, const SizedBox(width: 8), enter]),
+            padding: compact
+                ? const EdgeInsets.fromLTRB(20, 10, 20, 10)
+                : const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // En compact, le titre cède sa ligne (il reste lu par le lecteur d'écran) : la question suffit.
+                if (!compact) ...[
+                  Text(
+                    t('Espace parent'),
+                    style: Theme.of(ctx).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 8),
+                ],
+                Text(
+                  tf('Combien font {a} × {b} ?', {'a': a, 'b': b}),
+                  semanticsLabel:
+                      '${t('Espace parent')}${english ? ':' : ' :'} ${tf('Combien font {a} × {b} ?', {'a': a, 'b': b})}',
+                  style: TextStyle(fontSize: compact ? 18 : 22),
+                ),
+                if (compact)
+                  Row(
+                    children: [
+                      Expanded(child: input),
+                      const SizedBox(width: 8),
+                      cancel,
+                      const SizedBox(width: 8),
+                      enter,
+                    ],
+                  )
+                else ...[
+                  input,
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [cancel, const SizedBox(width: 8), enter],
+                  ),
+                ],
               ],
-            ]),
+            ),
           ),
         ),
       );
     },
   );
-  if (ok == true && navigator.mounted) {
-    await navigator.push(MaterialPageRoute(builder: page ?? (_) => const ParentPage()));
-  }
+  return ok == true;
 }

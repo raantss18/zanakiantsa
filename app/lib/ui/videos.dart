@@ -12,6 +12,7 @@ import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import '../app_state.dart';
 import '../l10n/l10n.dart';
+import '../parent/gate.dart';
 import '../videos/catalog.dart';
 import 'adaptive.dart';
 import 'chess_play.dart' show pageHeader;
@@ -44,6 +45,18 @@ Future<Set<String>> seenVideos(AppState app) async {
   return raw == null ? {} : Set<String>.from(jsonDecode(raw) as List);
 }
 
+/// Vidéos masquées par un parent (derrière la porte parent) : l'enfant ne les revoit plus, ni dans la liste ni en recherche.
+Future<Set<String>> hiddenVideos(AppState app) async {
+  final raw = await app.store.get('videos_masquees');
+  return raw == null ? {} : Set<String>.from(jsonDecode(raw) as List);
+}
+
+Future<void> hideVideo(AppState app, String id) async {
+  final hidden = await hiddenVideos(app)
+    ..add(id);
+  await app.store.set('videos_masquees', jsonEncode(hidden.toList()));
+}
+
 Future<void> markSeen(AppState app, String id) async {
   final seen = await seenVideos(app)
     ..add(id);
@@ -60,7 +73,7 @@ class _VideosPageState extends State<VideosPage> {
   late final AppState app = AppScope.of(context);
   Catalogue? catalogue;
   bool loading = true;
-  Set<String> seen = {};
+  Set<String> seen = {}, hidden = {};
   String query = '';
 
   @override
@@ -73,17 +86,22 @@ class _VideosPageState extends State<VideosPage> {
     await app.voice.stopAll();
     final c = await loadCatalogue(app);
     final s = await seenVideos(app);
+    final h = await hiddenVideos(app);
     if (mounted) {
       setState(() {
         catalogue = c;
         seen = s;
+        hidden = h;
         loading = false;
       });
     }
   }
 
-  List<Video> get pool =>
-      catalogue?.forChild(age: app.age, lang: appLang) ?? const [];
+  List<Video> get pool => [
+    for (final v
+        in catalogue?.forChild(age: app.age, lang: appLang) ?? const <Video>[])
+      if (!hidden.contains(v.id)) v,
+  ];
 
   Future<void> _play(Video v) async {
     await Navigator.of(context).push(
@@ -92,7 +110,13 @@ class _VideosPageState extends State<VideosPage> {
       ),
     );
     final s = await seenVideos(app);
-    if (mounted) setState(() => seen = s);
+    final h = await hiddenVideos(app);
+    if (mounted) {
+      setState(() {
+        seen = s;
+        hidden = h;
+      });
+    }
   }
 
   @override
@@ -395,6 +419,13 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     if (mounted) setState(() => blocked = true);
   }
 
+  Future<void> _hide() async {
+    await controller.pauseVideo();
+    if (!mounted || !await askParent(context)) return;
+    await hideVideo(app, widget.video.id);
+    if (mounted) Navigator.of(context).pop();
+  }
+
   Future<void> _back() async {
     setState(() => blocked = false);
     await controller.loadVideoById(videoId: widget.video.id);
@@ -407,7 +438,10 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     );
     SystemChrome.setPreferredOrientations(
       on
-          ? const [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]
+          ? const [
+              DeviceOrientation.landscapeLeft,
+              DeviceOrientation.landscapeRight,
+            ]
           : const [],
     );
   }
@@ -416,9 +450,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   /// l'app cache les vidéos que YouTube propose ; on y relance la lecture, et on entre ou sort du plein écran.
   Widget _controls(BuildContext context, bool fullScreen) {
     final cover =
-        blocked ||
-        state == PlayerState.paused ||
-        state == PlayerState.ended;
+        blocked || state == PlayerState.paused || state == PlayerState.ended;
     final full = Semantics(
       button: true,
       label: fullScreen ? t('Quitter le plein écran') : t('Plein écran'),
@@ -524,22 +556,36 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Align(
-                      alignment: AlignmentDirectional.centerStart,
-                      child: FilledButton.icon(
-                        onPressed: controller.enterFullScreen,
-                        style: FilledButton.styleFrom(
-                          minimumSize: const Size(48, 52),
-                          backgroundColor: app.universe.onBackground,
-                          foregroundColor: app.universe.night ? ink : Colors.white,
-                          textStyle: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
+                    Row(
+                      children: [
+                        FilledButton.icon(
+                          onPressed: controller.enterFullScreen,
+                          style: FilledButton.styleFrom(
+                            minimumSize: const Size(48, 52),
+                            backgroundColor: app.universe.onBackground,
+                            foregroundColor: app.universe.night
+                                ? ink
+                                : Colors.white,
+                            textStyle: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
+                          icon: const Icon(Icons.fullscreen, size: 28),
+                          label: Text(t('Plein écran')),
                         ),
-                        icon: const Icon(Icons.fullscreen, size: 28),
-                        label: Text(t('Plein écran')),
-                      ),
+                        const Spacer(),
+                        // Pour les parents (porte parent) : cette vidéo ne sera plus proposée sur cette tablette.
+                        TextButton.icon(
+                          onPressed: _hide,
+                          style: TextButton.styleFrom(
+                            minimumSize: const Size(48, 52),
+                            foregroundColor: app.universe.onBackground,
+                          ),
+                          icon: const Icon(Icons.visibility_off_outlined),
+                          label: Text(t('Masquer')),
+                        ),
+                      ],
                     ),
                     const SizedBox(height: 10),
                     Text(
