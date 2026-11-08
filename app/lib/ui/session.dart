@@ -262,8 +262,20 @@ class Attempt extends ChangeNotifier {
     });
   }
 
+  /// Fermée (question suivante, retour) : les suites encore en route (voix, aide, minuteur) ne touchent plus à rien.
+  /// Vu sur la tablette le 2026-11-08 : « A Attempt was used after being disposed », quand l'enfant passe à la suite
+  /// pendant que la voix parle encore.
+  bool _closed = false;
+  bool get closed => _closed;
+
+  @override
+  void notifyListeners() {
+    if (!_closed) super.notifyListeners();
+  }
+
   @override
   void dispose() {
+    _closed = true;
     _helpTimer?.cancel();
     speech.close();
     super.dispose();
