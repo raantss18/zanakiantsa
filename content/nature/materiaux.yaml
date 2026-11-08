@@ -1,0 +1,108 @@
+id: materiaux
+titre: "De quoi sont faits les objets ?"
+niveau: GS
+prerequis: []
+programme: { source: c1, texte: "Différencier des matériaux en fonction de leurs propriétés et différencier un objet du matériau qui le constitue." }
+activite: choisir
+parametres: {}
+idee: "Les objets sont faits de matériaux : le bois, le métal, le papier, le tissu, le verre. Chaque matériau a ses propriétés : dur ou doux, transparent ou non."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Regarde l'objet et pense à ce que tu sentirais en le touchant : est-il dur, doux, lisse ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel objet est en papier ?"
+    bonne: ["1f4d6", "le livre"]
+    autres: [["1f527", "la clé à molette"], ["1faa8", "le caillou"]]
+    explication: "Les pages du livre sont en papier."
+  - texte: "Quel objet est en métal ?"
+    bonne: ["1f527", "la clé à molette"]
+    autres: [["1f457", "la robe"], ["1f4d6", "le livre"]]
+    explication: "La clé à molette est en métal : elle est dure et solide."
+  - texte: "Quel objet est en bois ?"
+    bonne: ["1fa91", "la chaise"]
+    autres: [["1f9ca", "le glaçon"], ["1f457", "la robe"]]
+    explication: "Cette chaise est en bois."
+  - texte: "Quel objet est en tissu ?"
+    bonne: ["1f457", "la robe"]
+    autres: [["1f527", "la clé à molette"], ["1fa9e", "le miroir"]]
+    explication: "La robe est en tissu : elle est souple et douce."
+  - texte: "Quel objet est en verre ?"
+    bonne: ["1fa9e", "le miroir"]
+    autres: [["1f4d6", "le livre"], ["1f457", "la robe"]]
+    explication: "Le miroir est en verre : il est dur et lisse, et il peut se casser."
+  - texte: "À travers quel objet peut-on voir ?"
+    bonne: ["1f50d", "la loupe"]
+    autres: [["1f6aa", "la porte"], ["1faa8", "le caillou"]]
+    explication: "La loupe est transparente : on voit à travers."
+  - texte: "Qu'est-ce que l'aimant attire ?"
+    bonne: ["1f529", "le boulon en fer"]
+    autres: [["1f4d6", "le livre"], ["1fa91", "la chaise en bois"]]
+    explication: "L'aimant attire le fer. Il n'attire ni le papier ni le bois."
+  - texte: "Qu'est-ce qui est doux quand on le touche ?"
+    bonne: ["1f411", "la laine du mouton"]
+    autres: [["1faa8", "le caillou"], ["1f527", "la clé à molette"]]
+    explication: "La laine est douce quand on la touche."
+  - texte: "Qu'est-ce qui est dur ?"
+    bonne: ["1faa8", "le caillou"]
+    autres: [["1f411", "la laine du mouton"], ["1f457", "la robe"]]
+    explication: "Le caillou est dur : on ne peut pas l'écraser avec les doigts."
+  - texte: "La chaise et le crayon sont en bois. D'où vient le bois ?"
+    bonne: ["1f333", "de l'arbre"]
+    autres: [["1faa8", "du caillou"], ["1f411", "du mouton"]]
+    explication: "Le bois vient des arbres. Avec ce matériau, on fabrique des objets : des chaises, des crayons."
+
+en:
+  titre: "What are things made of?"
+  idee: "Things are made of materials: wood, metal, paper, fabric, glass. Each material has its own properties: hard or soft, see-through or not."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Look at the object and think about how it would feel to touch: is it hard, soft, smooth?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which object is made of paper?"
+      bonne: ["1f4d6", "the book"]
+      autres: [["1f527", "the spanner"], ["1faa8", "the pebble"]]
+      explication: "The pages of the book are made of paper."
+    - texte: "Which object is made of metal?"
+      bonne: ["1f527", "the spanner"]
+      autres: [["1f457", "the dress"], ["1f4d6", "the book"]]
+      explication: "The spanner is made of metal: it is hard and strong."
+    - texte: "Which object is made of wood?"
+      bonne: ["1fa91", "the chair"]
+      autres: [["1f9ca", "the ice cube"], ["1f457", "the dress"]]
+      explication: "This chair is made of wood."
+    - texte: "Which object is made of fabric?"
+      bonne: ["1f457", "the dress"]
+      autres: [["1f527", "the spanner"], ["1fa9e", "the mirror"]]
+      explication: "The dress is made of fabric: it is soft and bendy."
+    - texte: "Which object is made of glass?"
+      bonne: ["1fa9e", "the mirror"]
+      autres: [["1f4d6", "the book"], ["1f457", "the dress"]]
+      explication: "The mirror is made of glass: it is hard and smooth, and it can break."
+    - texte: "Which object can you see through?"
+      bonne: ["1f50d", "the magnifying glass"]
+      autres: [["1f6aa", "the door"], ["1faa8", "the pebble"]]
+      explication: "The magnifying glass is see-through: you can see through it."
+    - texte: "What does the magnet pull?"
+      bonne: ["1f529", "the iron bolt"]
+      autres: [["1f4d6", "the book"], ["1fa91", "the wooden chair"]]
+      explication: "A magnet pulls iron. It doesn't pull paper or wood."
+    - texte: "What feels soft when you touch it?"
+      bonne: ["1f411", "the sheep's wool"]
+      autres: [["1faa8", "the pebble"], ["1f527", "the spanner"]]
+      explication: "Wool feels soft when you touch it."
+    - texte: "What is hard?"
+      bonne: ["1faa8", "the pebble"]
+      autres: [["1f411", "the sheep's wool"], ["1f457", "the dress"]]
+      explication: "The pebble is hard: you can't squash it with your fingers."
+    - texte: "The chair and the pencil are made of wood. Where does wood come from?"
+      bonne: ["1f333", "from trees"]
+      autres: [["1faa8", "from pebbles"], ["1f411", "from sheep"]]
+      explication: "Wood comes from trees. With this material, we make things: chairs, pencils."

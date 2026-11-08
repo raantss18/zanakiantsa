@@ -1,0 +1,100 @@
+id: objets-besoins
+titre: "À quoi servent les objets ?"
+niveau: CP
+prerequis: [materiaux]
+programme: { source: c2s, texte: "Identifier qu’un objet technique est obtenu par intervention des êtres humains. Identifier des activités de la vie quotidienne faisant appel à des objets techniques répondant à un besoin." }
+activite: choisir
+parametres: {}
+idee: "Les humains fabriquent des objets pour répondre à un besoin : se protéger de la pluie, se déplacer, écrire. Ils les fabriquent avec des matériaux, comme le bois ou la laine."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ce que tu fais avec cet objet : à quoi te sert-il ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Il pleut. Quel objet te protège de la pluie ?"
+    bonne: ["2602", "le parapluie"]
+    autres: [["1f453", "les lunettes"], ["26bd", "le ballon"]]
+    explication: "Le parapluie répond à un besoin : rester au sec sous la pluie."
+  - texte: "Pour venir à l'école, quel objet t'aide à te déplacer ?"
+    bonne: ["1f6b2", "le vélo"]
+    autres: [["1f4d6", "le livre"], ["270f", "le crayon"]]
+    explication: "Le vélo répond à un besoin : se déplacer."
+  - texte: "Pour écrire ou dessiner, quel objet utilises-tu ?"
+    bonne: ["270f", "le crayon"]
+    autres: [["2602", "le parapluie"], ["1f6b2", "le vélo"]]
+    explication: "Le crayon sert à écrire et à dessiner."
+  - texte: "Il fait nuit. Quel objet t'aide à voir ?"
+    bonne: ["1f4a1", "l'ampoule"]
+    autres: [["2602", "le parapluie"], ["26bd", "le ballon"]]
+    explication: "L'ampoule éclaire : elle répond au besoin de voir quand il fait noir."
+  - texte: "Quel objet protège tes pieds quand tu marches ?"
+    bonne: ["1f45f", "la chaussure"]
+    autres: [["1f453", "les lunettes"], ["270f", "le crayon"]]
+    explication: "La chaussure protège les pieds quand on marche."
+  - texte: "Lequel est un objet fabriqué par les humains ?"
+    bonne: ["1f392", "le cartable"]
+    autres: [["1f333", "l'arbre"], ["1faa8", "le caillou"]]
+    explication: "Le cartable a été fabriqué par des humains, pour porter ses affaires."
+  - texte: "Lequel n'a pas été fabriqué par les humains ?"
+    bonne: ["1faa8", "le caillou"]
+    autres: [["270f", "le crayon"], ["1f392", "le cartable"]]
+    explication: "Le caillou se trouve dans la nature : personne ne l'a fabriqué."
+  - texte: "Avec quoi fabrique-t-on un pull en laine ?"
+    bonne: ["1f411", "la laine du mouton"]
+    autres: [["1faa8", "le caillou"], ["1f4a7", "l'eau"]]
+    explication: "On tond la laine du mouton, puis on la file et on la tricote pour faire un pull."
+  - texte: "Avec quoi fabrique-t-on une cuillère en bois ?"
+    bonne: ["1f333", "le bois d'un arbre"]
+    autres: [["1f9ca", "la glace"], ["1f411", "la laine"]]
+    explication: "On taille la cuillère dans du bois, qui vient des arbres."
+
+en:
+  titre: "What are objects for?"
+  idee: "People make objects to meet a need: keeping dry in the rain, getting around, writing. They make them from materials, like wood or wool."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Think about what you do with this object: what is it for?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "It's raining. Which object keeps the rain off you?"
+      bonne: ["2602", "the umbrella"]
+      autres: [["1f453", "the glasses"], ["26bd", "the ball"]]
+      explication: "An umbrella meets a need: staying dry in the rain."
+    - texte: "To get to school, which object helps you get around?"
+      bonne: ["1f6b2", "the bike"]
+      autres: [["1f4d6", "the book"], ["270f", "the pencil"]]
+      explication: "A bike meets a need: getting around."
+    - texte: "To write or draw, which object do you use?"
+      bonne: ["270f", "the pencil"]
+      autres: [["2602", "the umbrella"], ["1f6b2", "the bike"]]
+      explication: "A pencil is for writing and drawing."
+    - texte: "It's night-time. Which object helps you see?"
+      bonne: ["1f4a1", "the light bulb"]
+      autres: [["2602", "the umbrella"], ["26bd", "the ball"]]
+      explication: "A light bulb gives light: it meets the need to see when it's dark."
+    - texte: "Which object protects your feet when you walk?"
+      bonne: ["1f45f", "the shoe"]
+      autres: [["1f453", "the glasses"], ["270f", "the pencil"]]
+      explication: "A shoe protects your feet when you walk."
+    - texte: "Which one is an object made by people?"
+      bonne: ["1f392", "the school bag"]
+      autres: [["1f333", "the tree"], ["1faa8", "the pebble"]]
+      explication: "The school bag was made by people, to carry your things."
+    - texte: "Which one was not made by people?"
+      bonne: ["1faa8", "the pebble"]
+      autres: [["270f", "the pencil"], ["1f392", "the school bag"]]
+      explication: "A pebble is found in nature: nobody made it."
+    - texte: "What do we make a woolly jumper from?"
+      bonne: ["1f411", "sheep's wool"]
+      autres: [["1faa8", "a pebble"], ["1f4a7", "water"]]
+      explication: "We shear the sheep's wool, then spin it and knit it to make a jumper."
+    - texte: "What do we make a wooden spoon from?"
+      bonne: ["1f333", "wood from a tree"]
+      autres: [["1f9ca", "ice"], ["1f411", "wool"]]
+      explication: "The spoon is carved from wood, which comes from trees."

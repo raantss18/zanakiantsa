@@ -4,7 +4,7 @@ nom: "Le vivant"
 # Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
 noms: {moyens: "Les sciences", grands: "Sciences"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Le vivant, la matière et l'énergie, de la maternelle à la 1re."
+resume: "Le vivant, la matière et l'énergie, de la maternelle à la terminale."
 icone: "1f331"
 ages: [4, 17]
 # Programme d'enseignement de l'école maternelle, version consolidée (BO n° 41 du 31 octobre 2024 et n° 19 du
@@ -13,8 +13,9 @@ sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
   # Éduscol, « Questionner le monde », cycle 2, progression « La matière » (mai 2023). Lu le 2026-11-03.
   c2: "https://eduscol.education.fr/document/50261/download"
-  # Programme de sciences et technologie du cycle 2 (BO n° 24 du 11 juin 2026, annexe 1), CE2. Lu le 2026-11-07.
-  # Arrêté du 5-6-2026, art. 3 : en application au CE2 à la rentrée 2027-2028 (le programme de 2020 reste en 2026-2027).
+  # Programme de sciences et technologie du cycle 2 (BO n° 24 du 11 juin 2026, annexe 1), CP, CE1, CE2. Lu le 2026-11-07 et le 2026-11-08.
+  # Arrêté du 5-6-2026, art. 3 (lu dans le BO n° 24, https://www.education.gouv.fr/sites/default/files/document/bulletin-officiel-ndeg-24-du-11-juin-2026-519026.pdf) :
+  # en application au CP à la rentrée 2026-2027, au CE1 et au CE2 à la rentrée 2027-2028 (le programme de 2020 y reste en 2026-2027).
   c2s: "https://www.education.gouv.fr/sites/default/files/document/annexe-1-programme-de-sciences-et-technologie-du-cycle-2-519020.pdf"
   # Programme de sciences et technologie du cycle 3 (BO n° 24 du 11 juin 2026, annexe 2), CM1, CM2, 6e. Lu le 2026-11-07.
   # En application au CM1 à la rentrée 2026-2027, au CM2 et en 6e à la rentrée 2027-2028 (même arrêté, art. 3).
@@ -32,7 +33,12 @@ sources:
   # arrêté du 30-5-2023, https://www.education.gouv.fr/bo/2023/Hebdo25/MENE2312806A, 403 aux robots). Texte lu dans une copie
   # de l'annexe du BO (vivelessvt.com), parties 2.2 et 4.1, le 2026-11-07.
   es1re: "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf"
-ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, etats-eau, fondre-geler, chaine-alimentaire, solide-liquide, reseau-alimentaire, melanges, changements-etat, circuit-electrique, temperatures-etat, cellule, vegetaux-producteurs, digestion, seismes-volcans, transformation-chimique, reproduction, energie, cellule-adn, biodiversite-evolution, atome-tableau, mouvement-vitesse, son-musique, bilan-radiatif]
+  # Enseignement scientifique de terminale, version modifiée publiée au BO n° 25 du 22 juin 2023 (annexe « Programme
+  # d'enseignement scientifique de terminale générale »). Les pages du BO et d'education.gouv.fr renvoient 403 aux robots :
+  # texte lu dans une copie fidèle de l'annexe (en-tête « Bulletin officiel n° 25 du 22 juin 2023 », pied de page du
+  # ministère) publiée par groupe-reussite.fr, parties 1.1, 1.2 et 2.2, le 2026-11-08.
+  estle: "https://groupe-reussite.fr/ressources/wp-content/uploads/2026/09/programme-enseignement-scientifique-terminale-.pdf"
+ordre: [sens, deplacements, milieux, oeufs, besoins, cycle, materiaux, vivant-non-vivant, objets-besoins, etats-eau, regimes-alimentaires, plante-besoins, fondre-geler, chaine-alimentaire, solide-liquide, reseau-alimentaire, melanges, changements-etat, circuit-electrique, temperatures-etat, cellule, vegetaux-producteurs, digestion, seismes-volcans, transformation-chimique, reproduction, energie, cellule-adn, biodiversite-evolution, atome-tableau, mouvement-vitesse, son-musique, bilan-radiatif, atmosphere-vie, systeme-climatique, electricite-sans-combustion]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -47,7 +53,7 @@ en:
   titre: "Discovering living things"
   nom: "Living things"
   noms: {moyens: "Science", grands: "Science"}
-  resume: "Living things, matter and energy, from nursery school to Year 11 (1re)."
+  resume: "Living things, matter and energy, from nursery school to the final year of lycée (Terminale)."
   intro:
     - texte: "Living things are born, grow up and change."
       images: ["1f95a", "1f423", "1f414"]

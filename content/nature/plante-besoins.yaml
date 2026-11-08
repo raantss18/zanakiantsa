@@ -1,0 +1,85 @@
+id: plante-besoins
+titre: "Les parties de la plante et ses besoins"
+niveau: CE1
+prerequis: [besoins]
+# Objectifs du CE1 dans le programme de 2026 (en application au CE1 à la rentrée 2027-2028 ; cf. _theme.yaml, c2s).
+programme: { source: c2s, texte: "Déterminer des besoins essentiels pour la croissance d’une plante (eau et lumière) par une démarche expérimentale. Décrire les différents organes végétatifs d’une plante (racine, tige, feuille)." }
+activite: choisir
+parametres: {}
+idee: "Une plante a des racines dans la terre, une tige et des feuilles. Pour bien pousser, elle a besoin d'eau et de lumière."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "La racine est dans la terre, la tige porte les feuilles. Une plante a besoin d'eau et de lumière."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle partie de la plante est cachée dans la terre ?"
+    bonne: ["1f955", "la racine"]
+    autres: [["1f33f", "les feuilles"], ["1f337", "la fleur"]]
+    explication: "La racine est dans la terre : elle tient la plante et puise l'eau du sol."
+  - texte: "Quand on mange une carotte, quelle partie de la plante mange-t-on ?"
+    bonne: ["1f955", "la racine"]
+    autres: [["1f34e", "le fruit"], ["1f337", "la fleur"]]
+    explication: "La carotte que l'on mange est la racine de la plante."
+  - texte: "Chez le bambou, quelle partie longue et droite porte les feuilles ?"
+    bonne: ["1f38d", "la tige"]
+    autres: [["1f955", "la racine"], ["1f337", "la fleur"]]
+    explication: "La tige porte les feuilles : elle relie les racines aux feuilles."
+  - texte: "Quelle partie de la plante est souvent verte et plate ?"
+    bonne: ["1f33f", "les feuilles"]
+    autres: [["1f955", "la racine"], ["1f34e", "le fruit"]]
+    explication: "Les feuilles sont souvent vertes et plates."
+  - texte: "On range une plante dans un placard tout noir. De quoi manque-t-elle ?"
+    bonne: ["2600", "de lumière"]
+    autres: [["1f9ca", "de glace"], ["1f32c", "de vent"]]
+    explication: "Dans le noir, la plante manque de lumière : elle pousse mal."
+  - texte: "On oublie d'arroser une plante pendant très longtemps. De quoi manque-t-elle ?"
+    bonne: ["1f4a7", "d'eau"]
+    autres: [["1f32c", "de vent"], ["1f356", "de viande"]]
+    explication: "Sans eau, la plante se dessèche et finit par mourir."
+  - texte: "Deux plantes sont bien arrosées. L'une est à la lumière, l'autre dans le noir. Laquelle pousse bien ?"
+    bonne: ["2600", "celle qui est à la lumière"]
+    autres: [["1f319", "celle qui est dans le noir"], ["1f9ca", "celle qui est dans la glace"]]
+    explication: "La plante qui reçoit de la lumière pousse bien : la lumière est un besoin de la plante."
+
+en:
+  titre: "The parts of a plant and what it needs"
+  idee: "A plant has roots in the soil, a stem and leaves. To grow well, it needs water and light."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "The root is in the soil, the stem holds the leaves. A plant needs water and light."
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which part of the plant is hidden in the soil?"
+      bonne: ["1f955", "the root"]
+      autres: [["1f33f", "the leaves"], ["1f337", "the flower"]]
+      explication: "The root is in the soil: it holds the plant and takes up water from the ground."
+    - texte: "When we eat a carrot, which part of the plant are we eating?"
+      bonne: ["1f955", "the root"]
+      autres: [["1f34e", "the fruit"], ["1f337", "the flower"]]
+      explication: "The carrot we eat is the plant's root."
+    - texte: "On a bamboo, which long, straight part holds the leaves?"
+      bonne: ["1f38d", "the stem"]
+      autres: [["1f955", "the root"], ["1f337", "the flower"]]
+      explication: "The stem holds the leaves: it joins the roots to the leaves."
+    - texte: "Which part of the plant is often green and flat?"
+      bonne: ["1f33f", "the leaves"]
+      autres: [["1f955", "the root"], ["1f34e", "the fruit"]]
+      explication: "Leaves are often green and flat."
+    - texte: "We put a plant in a completely dark cupboard. What is it missing?"
+      bonne: ["2600", "light"]
+      autres: [["1f9ca", "ice"], ["1f32c", "wind"]]
+      explication: "In the dark, the plant has no light: it grows badly."
+    - texte: "We forget to water a plant for a very long time. What is it missing?"
+      bonne: ["1f4a7", "water"]
+      autres: [["1f32c", "wind"], ["1f356", "meat"]]
+      explication: "Without water, the plant dries out and in the end it dies."
+    - texte: "Two plants are watered well. One is in the light, the other in the dark. Which one grows well?"
+      bonne: ["2600", "the one in the light"]
+      autres: [["1f319", "the one in the dark"], ["1f9ca", "the one in the ice"]]
+      explication: "The plant that gets light grows well: light is something a plant needs."

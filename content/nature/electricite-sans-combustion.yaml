@@ -1,0 +1,136 @@
+id: electricite-sans-combustion
+titre: "Produire et transporter l'électricité"
+niveau: Terminale
+prerequis: [energie]
+programme: { source: estle, texte: "Trois méthodes permettent d’obtenir de l’énergie électrique sans nécessiter de combustion : la conversion d’énergie mécanique […] ; la conversion de l’énergie radiative reçue du Soleil (panneaux photovoltaïques) ; la conversion électrochimique (piles ou accumulateurs conventionnels, piles à hydrogène)." }
+activite: quiz
+parametres: {}
+idee: "Sans combustion, on obtient de l'électricité par conversion mécanique (alternateur), radiative (photovoltaïque) ou électrochimique. La haute tension limite les pertes par effet Joule."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : puissance P = U × I ; pertes par effet Joule dans une ligne de résistance R : R × I²."
+  exemple: "Exemple : à puissance P fixée, si la tension U est multipliée par 10, l'intensité I = P / U est divisée par 10, et les pertes R × I² sont divisées par 10² = 100."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel phénomène physique exploitent les alternateurs électriques ?"
+    nom: "L'induction électromagnétique, découverte par Faraday puis théorisée par Maxwell."
+    explication: "Une source de champ magnétique et un fil conducteur en mouvement relatif : c'est le principe de l'alternateur."
+    pieges:
+      - { texte: "L'effet photovoltaïque.", pourquoi: "Il concerne les capteurs à semi-conducteurs, pas les alternateurs." }
+      - { texte: "La combustion d'un carburant.", pourquoi: "Une combustion peut faire tourner une turbine, mais l'alternateur, lui, exploite l'induction." }
+  - texte: "Quelle conversion d'énergie réalise un alternateur ?"
+    nom: "D'énergie mécanique en énergie électrique, avec un rendement qui peut être proche de 1."
+    explication: "Le rotor en mouvement fournit l'énergie mécanique ; l'alternateur la convertit presque entièrement en énergie électrique."
+    pieges:
+      - { texte: "D'énergie chimique en énergie électrique.", pourquoi: "C'est la conversion des piles et des accumulateurs." }
+      - { texte: "D'énergie radiative en énergie électrique.", pourquoi: "C'est la conversion des panneaux photovoltaïques." }
+  - texte: "Lequel de ces moyens produit de l'électricité sans combustion ?"
+    nom: "Une éolienne."
+    explication: "L'éolienne convertit directement l'énergie mécanique du vent en énergie électrique."
+    pieges:
+      - { texte: "Une centrale au charbon.", pourquoi: "On y brûle du charbon pour produire de la vapeur : c'est une combustion." }
+      - { texte: "Une centrale au gaz naturel.", pourquoi: "On y brûle du gaz : c'est une combustion, qui rejette du CO₂." }
+  - texte: "Dans une centrale nucléaire, comment l'électricité est-elle obtenue ?"
+    nom: "Indirectement : l'énergie thermique produit un mouvement qui entraîne un alternateur."
+    explication: "Le programme range les centrales nucléaires parmi les conversions indirectes d'énergie mécanique, à partir d'énergie thermique."
+    pieges:
+      - { texte: "En brûlant de l'uranium.", pourquoi: "L'uranium ne brûle pas : la chaleur vient de la fission des noyaux, sans combustion." }
+      - { texte: "En convertissant directement un rayonnement en électricité.", pourquoi: "C'est le principe du photovoltaïque ; la centrale passe par la chaleur, puis par un mouvement." }
+  - texte: "Que font les capteurs photovoltaïques ?"
+    nom: "Ils absorbent l'énergie radiative et la convertissent partiellement en énergie électrique."
+    explication: "Faits de matériaux semi-conducteurs, en particulier le silicium, ils convertissent une partie du rayonnement reçu."
+    pieges:
+      - { texte: "Ils convertissent toute l'énergie lumineuse reçue en électricité.", pourquoi: "La conversion n'est que partielle : une partie de l'énergie reçue n'est pas convertie." }
+      - { texte: "Ils chauffent de l'eau pour faire tourner une turbine.", pourquoi: "Cela décrit une centrale solaire thermique ; le photovoltaïque convertit directement le rayonnement." }
+  - texte: "Pourquoi transporte-t-on l'électricité sous haute tension ?"
+    nom: "À puissance transportée fixée, une tension plus haute réduit l'intensité, donc les pertes par effet Joule."
+    explication: "P = U × I : plus U est grande, plus I est petite ; or les pertes dans la ligne valent R × I²."
+    pieges:
+      - { texte: "Pour transporter plus d'énergie sans rien changer d'autre.", pourquoi: "La puissance transportée est fixée : la haute tension limite seulement les pertes." }
+      - { texte: "Parce que les pertes par effet Joule diminuent quand l'intensité augmente.", pourquoi: "C'est l'inverse : les pertes R × I² augmentent avec l'intensité." }
+  - texte: "À puissance transportée fixée, on multiplie la tension d'une ligne par 10. Comment évoluent les pertes par effet Joule ?"
+    nom: "Elles sont divisées par 100."
+    explication: "L'intensité est divisée par 10 ; les pertes varient comme I², donc elles sont divisées par 10² = 100."
+    pieges:
+      - { texte: "Elles sont divisées par 10.", pourquoi: "L'intensité est bien divisée par 10, mais les pertes varient comme son carré." }
+      - { texte: "Elles sont multipliées par 10.", pourquoi: "À puissance fixée, plus de tension veut dire moins d'intensité, donc moins de pertes." }
+  - texte: "Comment faire face à l'intermittence de certains modes de production, comme l'éolien ou le solaire ?"
+    nom: "Convertir l'énergie électrique sous une forme stockable : chimique, mécanique ou électromagnétique."
+    explication: "On peut aussi mobiliser des réserves, ou ajuster la consommation ou la production."
+    pieges:
+      - { texte: "Laisser l'électricité en réserve dans les câbles du réseau.", pourquoi: "Le réseau transporte l'énergie électrique : pour la garder, il faut la convertir sous une forme stockable." }
+      - { texte: "Il n'existe aucune solution.", pourquoi: "Stockage, réserves, ajustement de la consommation ou de la production : plusieurs solutions existent." }
+  - texte: "Les méthodes de production sans combustion sont-elles sans effet sur l'environnement ?"
+    nom: "Non : elles ont aussi des effets sur l'environnement et la biodiversité, ou des risques spécifiques."
+    explication: "Pollution chimique, déchets radioactifs, accidents industriels : chaque méthode a ses effets et ses risques à évaluer."
+    pieges:
+      - { texte: "Oui : sans combustion, il n'y a aucun effet.", pourquoi: "Le programme rappelle leurs effets sur l'environnement et la biodiversité, et leurs risques spécifiques." }
+      - { texte: "Seules les éoliennes ont un effet.", pourquoi: "Toutes en ont : par exemple, les déchets radioactifs des centrales nucléaires." }
+
+en:
+  titre: "Producing and transporting electricity"
+  idee: "Without combustion, electricity comes from mechanical conversion (alternator), radiative conversion (photovoltaics) or electrochemical conversion. High voltage limits Joule heating losses."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: power P = U × I; Joule heating losses in a line of resistance R: R × I²."
+    exemple: "Example: at a fixed power P, if the voltage U is multiplied by 10, the current I = P / U is divided by 10, and the losses R × I² are divided by 10² = 100."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which physical phenomenon do electric alternators use?"
+      nom: "Electromagnetic induction, discovered by Faraday and then explained in theory by Maxwell."
+      explication: "A source of magnetic field and a conducting wire in relative motion: that's how an alternator works."
+      pieges:
+        - { texte: "The photovoltaic effect.", pourquoi: "That concerns semiconductor cells, not alternators." }
+        - { texte: "Burning a fuel.", pourquoi: "Combustion can turn a turbine, but the alternator itself uses induction." }
+    - texte: "Which energy conversion does an alternator carry out?"
+      nom: "From mechanical energy to electrical energy, with an efficiency that can be close to 1."
+      explication: "The moving rotor supplies mechanical energy; the alternator converts almost all of it into electrical energy."
+      pieges:
+        - { texte: "From chemical energy to electrical energy.", pourquoi: "That's the conversion done by batteries and cells." }
+        - { texte: "From radiant energy to electrical energy.", pourquoi: "That's the conversion done by solar panels." }
+    - texte: "Which of these produces electricity without combustion?"
+      nom: "A wind turbine."
+      explication: "A wind turbine directly converts the wind's mechanical energy into electrical energy."
+      pieges:
+        - { texte: "A coal-fired power station.", pourquoi: "Coal is burned there to make steam: that's combustion." }
+        - { texte: "A natural gas power station.", pourquoi: "Gas is burned there: that's combustion, which gives off CO₂." }
+    - texte: "In a nuclear power station, how is electricity obtained?"
+      nom: "Indirectly: thermal energy produces motion that drives an alternator."
+      explication: "The syllabus lists nuclear power stations among the indirect conversions of mechanical energy, starting from thermal energy."
+      pieges:
+        - { texte: "By burning uranium.", pourquoi: "Uranium doesn't burn: the heat comes from the fission of nuclei, without combustion." }
+        - { texte: "By turning radiation directly into electricity.", pourquoi: "That's how photovoltaics work; the power station goes through heat, then motion." }
+    - texte: "What do photovoltaic cells do?"
+      nom: "They absorb radiant energy and convert part of it into electrical energy."
+      explication: "Made of semiconductor materials, especially silicon, they convert part of the radiation they receive."
+      pieges:
+        - { texte: "They convert all the light energy they receive into electricity.", pourquoi: "The conversion is only partial: part of the energy received is not converted." }
+        - { texte: "They heat water to turn a turbine.", pourquoi: "That describes a solar thermal power station; photovoltaics convert the radiation directly." }
+    - texte: "Why is electricity carried at high voltage?"
+      nom: "For a fixed power, a higher voltage lowers the current, and so the Joule heating losses."
+      explication: "P = U × I: the bigger U is, the smaller I is; and the losses in the line are R × I²."
+      pieges:
+        - { texte: "To carry more energy without changing anything else.", pourquoi: "The power carried is fixed: high voltage only limits the losses." }
+        - { texte: "Because Joule heating losses go down when the current goes up.", pourquoi: "It's the opposite: the losses R × I² go up with the current." }
+    - texte: "For a fixed power carried, a line's voltage is multiplied by 10. How do the Joule heating losses change?"
+      nom: "They are divided by 100."
+      explication: "The current is divided by 10; the losses vary as I², so they are divided by 10² = 100."
+      pieges:
+        - { texte: "They are divided by 10.", pourquoi: "The current is indeed divided by 10, but the losses vary as its square." }
+        - { texte: "They are multiplied by 10.", pourquoi: "At fixed power, more voltage means less current, so fewer losses." }
+    - texte: "How can we cope with the intermittency of some kinds of production, such as wind or solar?"
+      nom: "Convert electrical energy into a form that can be stored: chemical, mechanical or electromagnetic."
+      explication: "We can also call on reserves, or adjust consumption or production."
+      pieges:
+        - { texte: "Keep the electricity in reserve in the grid's cables.", pourquoi: "The grid carries electrical energy: to keep it, it must be converted into a form that can be stored." }
+        - { texte: "There is no solution at all.", pourquoi: "Storage, reserves, adjusting consumption or production: several solutions exist." }
+    - texte: "Do methods of production without combustion have no effect on the environment?"
+      nom: "No: they also affect the environment and biodiversity, or carry specific risks."
+      explication: "Chemical pollution, radioactive waste, industrial accidents: each method has its effects and risks to weigh up."
+      pieges:
+        - { texte: "Yes: without combustion, there is no effect at all.", pourquoi: "The syllabus points out their effects on the environment and biodiversity, and their specific risks." }
+        - { texte: "Only wind turbines have an effect.", pourquoi: "They all do: for example, the radioactive waste from nuclear power stations." }

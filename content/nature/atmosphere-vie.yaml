@@ -1,0 +1,124 @@
+id: atmosphere-vie
+titre: "L'atmosphère terrestre et la vie"
+niveau: Terminale
+prerequis: [bilan-radiatif]
+programme: { source: estle, texte: "Il y a environ 4,6 milliards d’années, l’atmosphère primitive était composée de N2, CO2 et H2O. Sa composition actuelle est d’environ 78 % de N2 et 21 % de O2, avec des traces d’autres gaz (dont H2O, CO2, CH4, N2O)." }
+activite: quiz
+parametres: {}
+idee: "L'atmosphère primitive (N₂, CO₂, H₂O) a changé : la vapeur d'eau s'est condensée en océans, puis la photosynthèse a apporté le dioxygène, d'où l'ozone qui filtre les ultraviolets."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : Terre formée il y a ≈ 4,6 milliards d'années ; premières bactéries photosynthétiques il y a au moins 3,5 milliards d'années ; oxygénation de l'atmosphère il y a ≈ 2,4 milliards d'années."
+  exemple: "Exemple : la photosynthèse produit du dioxygène, la respiration et les combustions en consomment. L'ozone (O₃) de la stratosphère se forme à partir du dioxygène, sous l'effet des ultraviolets."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle est la composition approximative de l'atmosphère actuelle ?"
+    nom: "Environ 78 % de diazote (N₂) et 21 % de dioxygène (O₂), avec des traces d'autres gaz."
+    explication: "Le diazote est majoritaire ; le CO₂, le méthane ou la vapeur d'eau ne sont présents qu'à l'état de traces."
+    pieges:
+      - { texte: "Environ 78 % de dioxygène et 21 % de diazote.", pourquoi: "Les proportions sont inversées : c'est le diazote qui est majoritaire." }
+      - { texte: "Surtout du dioxyde de carbone (CO₂).", pourquoi: "Dans l'atmosphère actuelle, le CO₂ n'est présent qu'à l'état de traces." }
+  - texte: "Il y a environ 4,6 milliards d'années, de quels gaz l'atmosphère primitive était-elle composée ?"
+    nom: "De diazote, de dioxyde de carbone et de vapeur d'eau (N₂, CO₂, H₂O)."
+    explication: "L'atmosphère primitive ne contenait pas de dioxygène en quantité : il s'est accumulé bien plus tard."
+    pieges:
+      - { texte: "De 21 % de dioxygène, comme aujourd'hui.", pourquoi: "Le dioxygène s'est accumulé bien plus tard, grâce à la photosynthèse." }
+      - { texte: "De dioxygène et d'ozone.", pourquoi: "L'ozone se forme à partir du dioxygène : l'un comme l'autre sont venus après la photosynthèse." }
+  - texte: "Que s'est-il passé quand la surface de la Terre primitive s'est refroidie ?"
+    nom: "La vapeur d'eau de l'atmosphère s'est liquéfiée très rapidement, formant l'hydrosphère."
+    explication: "Rapidement à l'échelle des temps géologiques, la vapeur d'eau s'est condensée ; c'est dans cette hydrosphère que la vie s'est développée."
+    pieges:
+      - { texte: "Toute l'eau est devenue de la glace, pour toujours.", pourquoi: "La température et la pression de surface permettent l'eau liquide : c'est elle qui forme l'hydrosphère." }
+      - { texte: "Le dioxyde de carbone s'est changé en dioxygène.", pourquoi: "Le refroidissement ne produit pas de dioxygène : c'est la photosynthèse qui en produit." }
+  - texte: "De quand datent les premières traces de bactéries photosynthétiques ?"
+    nom: "D'au moins 3,5 milliards d'années."
+    explication: "Ces bactéries sont apparues bien avant l'oxygénation de l'atmosphère, datée d'il y a environ 2,4 milliards d'années."
+    pieges:
+      - { texte: "D'environ 4,6 milliards d'années.", pourquoi: "C'est l'âge de la formation de la Terre ; la vie s'est développée ensuite, dans l'eau liquide." }
+      - { texte: "D'environ 2,4 milliards d'années.", pourquoi: "C'est la date de l'oxygénation de l'atmosphère : les bactéries photosynthétiques existaient déjà depuis longtemps." }
+  - texte: "Par quel mécanisme des bactéries ont-elles contribué à oxygéner l'atmosphère, il y a environ 2,4 milliards d'années ?"
+    nom: "Par la photosynthèse, qui libère du dioxygène."
+    explication: "Leur métabolisme photosynthétique a libéré du dioxygène, qui s'est peu à peu accumulé dans l'atmosphère."
+    pieges:
+      - { texte: "Par la respiration, qui libère du dioxygène.", pourquoi: "La respiration consomme du dioxygène et rejette du CO₂ : c'est l'inverse." }
+      - { texte: "Par des combustions.", pourquoi: "Une combustion consomme du dioxygène ; elle n'en produit pas." }
+  - texte: "Aujourd'hui, à quoi sont essentiellement liés les sources et les puits de dioxygène atmosphérique ?"
+    nom: "Aux êtres vivants (photosynthèse et respiration) et aux combustions."
+    explication: "La photosynthèse produit du dioxygène ; la respiration et les combustions en consomment."
+    pieges:
+      - { texte: "Aux volcans, qui rejettent du dioxygène.", pourquoi: "Le dioxygène de l'air n'est pas d'origine volcanique : sa source est la photosynthèse." }
+      - { texte: "À l'océan, qui fabrique du dioxygène sans aucun être vivant.", pourquoi: "Dans l'océan aussi, ce sont des êtres vivants chlorophylliens qui produisent le dioxygène." }
+  - texte: "Comment se forme l'ozone de la stratosphère ?"
+    nom: "Le rayonnement ultraviolet solaire dissocie du dioxygène, ce qui aboutit à la formation d'ozone (O₃)."
+    explication: "Sous l'effet des ultraviolets, une transformation chimique à partir du dioxygène produit l'ozone stratosphérique."
+    pieges:
+      - { texte: "Par les gaz d'échappement des voitures.", pourquoi: "La pollution peut former de l'ozone près du sol, dans la troposphère ; l'ozone stratosphérique vient du dioxygène et des ultraviolets." }
+      - { texte: "Par l'évaporation de l'eau des océans.", pourquoi: "L'ozone (O₃) n'est fait que d'atomes d'oxygène : il se forme à partir du dioxygène, pas de la vapeur d'eau." }
+  - texte: "Pourquoi l'ozone stratosphérique protège-t-il les êtres vivants ?"
+    nom: "Il absorbe une partie du rayonnement ultraviolet solaire, dont les effets sont mutagènes."
+    explication: "Les ultraviolets peuvent endommager l'ADN ; l'ozone en absorbe une partie avant qu'ils n'atteignent la surface."
+    pieges:
+      - { texte: "Il retient l'infrarouge, comme l'effet de serre.", pourquoi: "Son rôle protecteur vient de l'absorption des ultraviolets, pas de l'infrarouge." }
+      - { texte: "Il fournit le dioxygène que nous respirons.", pourquoi: "Le dioxygène respiré vient de la photosynthèse ; l'ozone est une autre molécule, O₃." }
+
+en:
+  titre: "The Earth's atmosphere and life"
+  idee: "The early atmosphere (N₂, CO₂, H₂O) changed: water vapour condensed into oceans, then photosynthesis brought oxygen, and with it the ozone that filters ultraviolet."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: Earth formed ≈ 4.6 billion years ago; first photosynthetic bacteria at least 3.5 billion years ago; oxygenation of the atmosphere ≈ 2.4 billion years ago."
+    exemple: "Example: photosynthesis produces oxygen; respiration and combustion use it up. Ozone (O₃) in the stratosphere forms from oxygen, under the effect of ultraviolet light."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the approximate composition of today's atmosphere?"
+      nom: "About 78 % nitrogen (N₂) and 21 % oxygen (O₂), with traces of other gases."
+      explication: "Nitrogen is the main gas; CO₂, methane and water vapour are only present as traces."
+      pieges:
+        - { texte: "About 78 % oxygen and 21 % nitrogen.", pourquoi: "The proportions are the wrong way round: nitrogen is the main gas." }
+        - { texte: "Mostly carbon dioxide (CO₂).", pourquoi: "In today's atmosphere, CO₂ is only present as a trace gas." }
+    - texte: "About 4.6 billion years ago, which gases made up the early atmosphere?"
+      nom: "Nitrogen, carbon dioxide and water vapour (N₂, CO₂, H₂O)."
+      explication: "The early atmosphere contained no significant oxygen: it built up much later."
+      pieges:
+        - { texte: "21 % oxygen, as today.", pourquoi: "Oxygen built up much later, thanks to photosynthesis." }
+        - { texte: "Oxygen and ozone.", pourquoi: "Ozone forms from oxygen: both came after photosynthesis." }
+    - texte: "What happened when the surface of the early Earth cooled down?"
+      nom: "The water vapour in the atmosphere turned to liquid very quickly, forming the hydrosphere."
+      explication: "Quickly on the geological time scale, the water vapour condensed; life developed in this hydrosphere."
+      pieges:
+        - { texte: "All the water turned to ice, for ever.", pourquoi: "Surface temperature and pressure allow liquid water: that is what forms the hydrosphere." }
+        - { texte: "The carbon dioxide turned into oxygen.", pourquoi: "Cooling doesn't produce oxygen: photosynthesis does." }
+    - texte: "How old are the first traces of photosynthetic bacteria?"
+      nom: "At least 3.5 billion years old."
+      explication: "These bacteria appeared long before the oxygenation of the atmosphere, dated to about 2.4 billion years ago."
+      pieges:
+        - { texte: "About 4.6 billion years old.", pourquoi: "That is the age of the Earth's formation; life developed later, in liquid water." }
+        - { texte: "About 2.4 billion years old.", pourquoi: "That is the date of the oxygenation of the atmosphere: photosynthetic bacteria had already existed for a long time." }
+    - texte: "By what process did bacteria help oxygenate the atmosphere, about 2.4 billion years ago?"
+      nom: "By photosynthesis, which releases oxygen."
+      explication: "Their photosynthetic metabolism released oxygen, which gradually built up in the atmosphere."
+      pieges:
+        - { texte: "By respiration, which releases oxygen.", pourquoi: "Respiration uses up oxygen and gives off CO₂: it's the opposite." }
+        - { texte: "By combustion.", pourquoi: "Combustion uses up oxygen; it doesn't produce any." }
+    - texte: "Today, what are the sources and sinks of atmospheric oxygen mainly linked to?"
+      nom: "Living things (photosynthesis and respiration) and combustion."
+      explication: "Photosynthesis produces oxygen; respiration and combustion use it up."
+      pieges:
+        - { texte: "Volcanoes, which give off oxygen.", pourquoi: "The oxygen in the air doesn't come from volcanoes: its source is photosynthesis." }
+        - { texte: "The ocean, which makes oxygen without any living things.", pourquoi: "In the ocean too, it is chlorophyll-bearing living things that produce oxygen." }
+    - texte: "How does ozone form in the stratosphere?"
+      nom: "Ultraviolet radiation from the Sun splits oxygen molecules, which leads to the formation of ozone (O₃)."
+      explication: "Under ultraviolet light, a chemical change starting from oxygen produces stratospheric ozone."
+      pieges:
+        - { texte: "From car exhaust fumes.", pourquoi: "Pollution can form ozone near the ground, in the troposphere; stratospheric ozone comes from oxygen and ultraviolet light." }
+        - { texte: "From water evaporating from the oceans.", pourquoi: "Ozone (O₃) is made only of oxygen atoms: it forms from oxygen, not from water vapour." }
+    - texte: "Why does stratospheric ozone protect living things?"
+      nom: "It absorbs part of the Sun's ultraviolet radiation, which causes mutations."
+      explication: "Ultraviolet light can damage DNA; ozone absorbs part of it before it reaches the surface."
+      pieges:
+        - { texte: "It traps infrared, like the greenhouse effect.", pourquoi: "Its protective role comes from absorbing ultraviolet, not infrared." }
+        - { texte: "It provides the oxygen we breathe.", pourquoi: "The oxygen we breathe comes from photosynthesis; ozone is a different molecule, O₃." }
