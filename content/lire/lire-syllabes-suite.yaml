@@ -1,0 +1,29 @@
+id: lire-syllabes-suite
+titre: "Lire des syllabes avec p, t, b, d, ch, j"
+niveau: CP
+prerequis: [lire-syllabes]
+# La maternelle s'arrête aux lettres « hormis les occlusives » (source c1, voir premiere-lettre) : p, t, b, d viennent au
+# CP, avec ch (deux lettres, un son) et j. Programme de français du cycle 2, CP, « En milieu d'année », lu le 2026-11-08.
+programme: { source: cycle2, texte: "Décoder et encoder de 25 à 30 CGP." }
+activite: lettre
+parametres: { mode: syllabe, consonnes: [p, t, b, d, ch, j], voyelles: [a, i, o, u, é] }
+idee: "On lit une syllabe de gauche à droite : la consonne, puis la voyelle. p et a, ça fait « pa ». Les deux lettres c et h font un seul son : ch et a, ça fait « cha »."
+phrases:
+  consigne: "Écoute la syllabe, puis touche-la parmi les trois. Attention : b, d et p se ressemblent."
+  question: "Touche la syllabe « {lettre} »."
+  indice: "Regarde bien la première lettre (b et d n'ont pas leur rond du même côté), puis la voyelle qui suit."
+  exemple: "Essaie une autre syllabe."
+  demonstration: "Regarde : « {lettre} » s'écrit comme ça."
+  bravo: "Oui ! Tu as lu « {lettre} »."
+
+en:
+  langue: fr
+  titre: "French: reading syllables with p, t, b, d, ch, j"
+  idee: "We read a syllable from left to right: the consonant, then the vowel. « p » and « a » make « pa ». The two letters « c » and « h » make just one sound: « ch » and « a » make « cha »."
+  phrases:
+    consigne: "Listen to the syllable, then touch it. There are three to choose from. Careful: « b », « d » and « p » look alike."
+    question: "Touch the syllable « {lettre} »."
+    indice: "Look carefully at the first letter (« b » and « d » have their round part on different sides), then at the vowel after it."
+    exemple: "Try another syllable."
+    demonstration: "Look: this is how you write « {lettre} »."
+    bravo: "Yes! You read « {lettre} »."

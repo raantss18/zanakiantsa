@@ -2016,6 +2016,59 @@
       }
     },
     {
+      "id": "lire-syllabes-suite",
+      "titre": "Lire des syllabes avec p, t, b, d, ch, j",
+      "niveau": "CP",
+      "prerequis": [
+        "lire-syllabes"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Décoder et encoder de 25 à 30 CGP."
+      },
+      "activite": "lettre",
+      "parametres": {
+        "mode": "syllabe",
+        "consonnes": [
+          "p",
+          "t",
+          "b",
+          "d",
+          "ch",
+          "j"
+        ],
+        "voyelles": [
+          "a",
+          "i",
+          "o",
+          "u",
+          "é"
+        ]
+      },
+      "idee": "On lit une syllabe de gauche à droite : la consonne, puis la voyelle. p et a, ça fait « pa ». Les deux lettres c et h font un seul son : ch et a, ça fait « cha ».",
+      "phrases": {
+        "consigne": "Écoute la syllabe, puis touche-la parmi les trois. Attention : b, d et p se ressemblent.",
+        "question": "Touche la syllabe « {lettre} ».",
+        "indice": "Regarde bien la première lettre (b et d n'ont pas leur rond du même côté), puis la voyelle qui suit.",
+        "exemple": "Essaie une autre syllabe.",
+        "demonstration": "Regarde : « {lettre} » s'écrit comme ça.",
+        "bravo": "Oui ! Tu as lu « {lettre} »."
+      },
+      "en": {
+        "langue": "fr",
+        "titre": "French: reading syllables with p, t, b, d, ch, j",
+        "idee": "We read a syllable from left to right: the consonant, then the vowel. « p » and « a » make « pa ». The two letters « c » and « h » make just one sound: « ch » and « a » make « cha ».",
+        "phrases": {
+          "consigne": "Listen to the syllable, then touch it. There are three to choose from. Careful: « b », « d » and « p » look alike.",
+          "question": "Touch the syllable « {lettre} ».",
+          "indice": "Look carefully at the first letter (« b » and « d » have their round part on different sides), then at the vowel after it.",
+          "exemple": "Try another syllable.",
+          "demonstration": "Look: this is how you write « {lettre} ».",
+          "bravo": "Yes! You read « {lettre} »."
+        }
+      }
+    },
+    {
       "id": "tracer-cursive",
       "titre": "Tracer les lettres attachées",
       "niveau": "GS",
@@ -2537,6 +2590,721 @@
               [
                 "1f916",
                 "le robot"
+              ]
+            ],
+            "explication": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "ecrire-mots",
+      "titre": "Écrire un mot qu'on entend",
+      "niveau": "CP",
+      "prerequis": [
+        "lire-mots",
+        "lire-syllabes-suite"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Encoder des syllabes simples puis des mots selon la progression des CGP."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour écrire un mot, on le dit lentement et on écrit ses sons dans l'ordre. Une lettre muette ne s'entend pas : un mot de la même famille aide à la trouver.",
+      "phrases": {
+        "consigne": "Écoute la devinette et trouve le mot. Puis touche le mot bien écrit.",
+        "question": "{texte}",
+        "indice": "Dis le mot très lentement : quel son entends-tu au début ? Et après ?",
+        "exemple": "« ami » : on entend « a », puis « m », puis « i ». On écrit a, m, i.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! On écrit « {bonne} »."
+      },
+      "items": [
+        {
+          "texte": "L'animal qui fait « miaou » : comment s'écrit son nom ?",
+          "nom": "chat",
+          "explication": "On entend « ch », puis « a » : on écrit c, h, a. Le t ne s'entend pas, mais il s'écrit, comme dans « chaton ».",
+          "pieges": [
+            {
+              "texte": "cha",
+              "pourquoi": "Il manque une lettre muette : pense à « chaton », on y entend le t."
+            },
+            {
+              "texte": "sat",
+              "pourquoi": "s fait « sss » ; au début on entend « ch » : il faut c et h."
+            }
+          ]
+        },
+        {
+          "texte": "Elle brille la nuit dans le ciel : comment s'écrit son nom ?",
+          "nom": "lune",
+          "explication": "On entend « l », puis « u », puis « n » : on écrit l, u, n, e.",
+          "pieges": [
+            {
+              "texte": "lume",
+              "pourquoi": "m fait « mmm » ; à la fin on entend « nnn » : il faut n."
+            },
+            {
+              "texte": "nule",
+              "pourquoi": "Les sons ne sont pas dans l'ordre : on entend d'abord « l », puis « u », puis « n »."
+            }
+          ]
+        },
+        {
+          "texte": "On roule dessus, avec deux roues et des pédales : comment s'écrit son nom ?",
+          "nom": "vélo",
+          "explication": "On entend « v », « é », « l », « o » : on écrit v, é, l, o.",
+          "pieges": [
+            {
+              "texte": "félo",
+              "pourquoi": "f fait « fff » ; au début on entend « vvv » : il faut v."
+            },
+            {
+              "texte": "vélu",
+              "pourquoi": "u fait « u » ; à la fin on entend « o » : il faut o."
+            }
+          ]
+        },
+        {
+          "texte": "Un fruit jaune et long : comment s'écrit son nom ?",
+          "nom": "banane",
+          "explication": "On entend « ba », puis « na », puis « n » : on écrit b, a, n, a, n, e.",
+          "pieges": [
+            {
+              "texte": "danane",
+              "pourquoi": "d ressemble à b, mais au début on entend « ba » : il faut b."
+            },
+            {
+              "texte": "banne",
+              "pourquoi": "Il manque un son : on entend « ba », puis « na »."
+            }
+          ]
+        },
+        {
+          "texte": "Un fruit rouge qu'on mange en salade : comment s'écrit son nom ?",
+          "nom": "tomate",
+          "explication": "On entend « to », puis « ma », puis « t » : on écrit t, o, m, a, t, e.",
+          "pieges": [
+            {
+              "texte": "domate",
+              "pourquoi": "d fait « d » ; au début on entend « t » : il faut t."
+            },
+            {
+              "texte": "tonate",
+              "pourquoi": "n fait « nnn » ; au milieu on entend « mmm » : il faut m."
+            }
+          ]
+        },
+        {
+          "texte": "Elle a deux roues et un moteur : comment s'écrit son nom ?",
+          "nom": "moto",
+          "explication": "On entend « mo », puis « to » : on écrit m, o, t, o.",
+          "pieges": [
+            {
+              "texte": "noto",
+              "pourquoi": "n fait « nnn » ; au début on entend « mmm » : il faut m."
+            },
+            {
+              "texte": "mito",
+              "pourquoi": "i fait « i » ; on entend « mo » : il faut o."
+            }
+          ]
+        },
+        {
+          "texte": "On dort dedans, le soir : comment s'écrit son nom ?",
+          "nom": "lit",
+          "explication": "On entend « l », puis « i » : on écrit l, i. Le t ne s'entend pas, mais il s'écrit, comme dans « literie ».",
+          "pieges": [
+            {
+              "texte": "li",
+              "pourquoi": "Il manque une lettre muette : pense à « literie », on y entend le t."
+            },
+            {
+              "texte": "rit",
+              "pourquoi": "r fait « rrr » ; au début on entend « lll » : il faut l."
+            }
+          ]
+        },
+        {
+          "texte": "Il ressemble à une grosse souris : comment s'écrit son nom ?",
+          "nom": "rat",
+          "explication": "On entend « r », puis « a » : on écrit r, a. Le t ne s'entend pas, mais il s'écrit, comme dans « raton ».",
+          "pieges": [
+            {
+              "texte": "ra",
+              "pourquoi": "Il manque une lettre muette : pense à « raton », on y entend le t."
+            },
+            {
+              "texte": "lat",
+              "pourquoi": "l fait « lll » ; au début on entend « rrr » : il faut r."
+            }
+          ]
+        },
+        {
+          "texte": "Une machine qui bouge toute seule : comment s'écrit son nom ?",
+          "nom": "robot",
+          "explication": "On entend « ro », puis « bo » : on écrit r, o, b, o, t. Le t de la fin ne s'entend pas.",
+          "pieges": [
+            {
+              "texte": "rodot",
+              "pourquoi": "d ressemble à b, mais on entend « bo » : il faut b."
+            },
+            {
+              "texte": "robo",
+              "pourquoi": "Il manque une lettre muette : à la fin de « robot », il y a un t qu'on n'entend pas."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: writing a word you hear",
+        "idee": "To write a French word, say it slowly and write its sounds in order. A silent letter can't be heard: a word from the same family helps you find it.",
+        "phrases": {
+          "consigne": "Listen to the riddle and find the word. Then touch the word that is spelt correctly in French.",
+          "question": "{texte}",
+          "indice": "Say the French word very slowly: which sound do you hear at the start? And next?",
+          "exemple": "« ami »: you hear « a », then « m », then « i ». You write a, m, i.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! In French, you write « {bonne} »."
+        },
+        "items": [
+          {
+            "texte": "The animal that goes « miaou »: how do you write its French name?",
+            "nom": "chat",
+            "explication": "You hear « ch », then « a »: you write c, h, a. The t is silent, but it is written, as in « chaton ».",
+            "pieges": [
+              {
+                "texte": "cha",
+                "pourquoi": "A silent letter is missing: think of « chaton », where you can hear the t."
+              },
+              {
+                "texte": "sat",
+                "pourquoi": "« s » goes « sss »; at the start you hear « ch »: you need c and h."
+              }
+            ]
+          },
+          {
+            "texte": "It shines in the sky at night: how do you write its French name?",
+            "nom": "lune",
+            "explication": "You hear « l », then « u », then « n »: you write l, u, n, e.",
+            "pieges": [
+              {
+                "texte": "lume",
+                "pourquoi": "« m » goes « mmm »; at the end you hear « nnn »: you need n."
+              },
+              {
+                "texte": "nule",
+                "pourquoi": "The sounds are in the wrong order: first you hear « l », then « u », then « n »."
+              }
+            ]
+          },
+          {
+            "texte": "You ride on it, with two wheels and pedals: how do you write its French name?",
+            "nom": "vélo",
+            "explication": "You hear « v », « é », « l », « o »: you write v, é, l, o.",
+            "pieges": [
+              {
+                "texte": "félo",
+                "pourquoi": "« f » goes « fff »; at the start you hear « vvv »: you need v."
+              },
+              {
+                "texte": "vélu",
+                "pourquoi": "« u » goes « u »; at the end you hear « o »: you need o."
+              }
+            ]
+          },
+          {
+            "texte": "A long yellow fruit: how do you write its French name?",
+            "nom": "banane",
+            "explication": "You hear « ba », then « na », then « n »: you write b, a, n, a, n, e.",
+            "pieges": [
+              {
+                "texte": "danane",
+                "pourquoi": "« d » looks like « b », but at the start you hear « ba »: you need b."
+              },
+              {
+                "texte": "banne",
+                "pourquoi": "A sound is missing: you hear « ba », then « na »."
+              }
+            ]
+          },
+          {
+            "texte": "A red fruit you eat in a salad: how do you write its French name?",
+            "nom": "tomate",
+            "explication": "You hear « to », then « ma », then « t »: you write t, o, m, a, t, e.",
+            "pieges": [
+              {
+                "texte": "domate",
+                "pourquoi": "« d » goes « d »; at the start you hear « t »: you need t."
+              },
+              {
+                "texte": "tonate",
+                "pourquoi": "« n » goes « nnn »; in the middle you hear « mmm »: you need m."
+              }
+            ]
+          },
+          {
+            "texte": "It has two wheels and an engine: how do you write its French name?",
+            "nom": "moto",
+            "explication": "You hear « mo », then « to »: you write m, o, t, o.",
+            "pieges": [
+              {
+                "texte": "noto",
+                "pourquoi": "« n » goes « nnn »; at the start you hear « mmm »: you need m."
+              },
+              {
+                "texte": "mito",
+                "pourquoi": "« i » goes « i »; you hear « mo »: you need o."
+              }
+            ]
+          },
+          {
+            "texte": "You sleep in it at night: how do you write its French name?",
+            "nom": "lit",
+            "explication": "You hear « l », then « i »: you write l, i. The t is silent, but it is written, as in « literie ».",
+            "pieges": [
+              {
+                "texte": "li",
+                "pourquoi": "A silent letter is missing: think of « literie », where you can hear the t."
+              },
+              {
+                "texte": "rit",
+                "pourquoi": "« r » goes « rrr »; at the start you hear « lll »: you need l."
+              }
+            ]
+          },
+          {
+            "texte": "It looks like a big mouse: how do you write its French name?",
+            "nom": "rat",
+            "explication": "You hear « r », then « a »: you write r, a. The t is silent, but it is written, as in « raton ».",
+            "pieges": [
+              {
+                "texte": "ra",
+                "pourquoi": "A silent letter is missing: think of « raton », where you can hear the t."
+              },
+              {
+                "texte": "lat",
+                "pourquoi": "« l » goes « lll »; at the start you hear « rrr »: you need r."
+              }
+            ]
+          },
+          {
+            "texte": "A machine that moves by itself: how do you write its French name?",
+            "nom": "robot",
+            "explication": "You hear « ro », then « bo »: you write r, o, b, o, t. The t at the end is silent.",
+            "pieges": [
+              {
+                "texte": "rodot",
+                "pourquoi": "« d » looks like « b », but you hear « bo »: you need b."
+              },
+              {
+                "texte": "robo",
+                "pourquoi": "A silent letter is missing: at the end of « robot » there is a t you can't hear."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lire-petites-phrases",
+      "titre": "Lire une petite phrase",
+      "niveau": "CP",
+      "prerequis": [
+        "lire-mots"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "L’élève est capable de lire à voix haute des syllabes, des mots et de courtes phrases."
+      },
+      "activite": "choisir",
+      "parametres": {
+        "lire": true
+      },
+      "idee": "Une phrase se lit jusqu'au point. Les petits mots comptent : « pas » change tout le sens de la phrase.",
+      "phrases": {
+        "consigne": "Lis la phrase toute seule, à voix basse, jusqu'au point. Puis touche l'image qui va avec.",
+        "question": "Lis cette phrase.",
+        "indice": "Relis la phrase mot à mot, jusqu'au point. As-tu vu le mot « pas » ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : la phrase parle de {bonne}.",
+        "bravo": "Oui ! Tu as lu : « {texte} »",
+        "erreur": "Ça, c'est {choisi}. Relis la phrase jusqu'au point."
+      },
+      "items": [
+        {
+          "texte": "Lola a vu la lune.",
+          "bonne": [
+            "1f319",
+            "la lune"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le soleil"
+            ],
+            [
+              "1f332",
+              "le sapin"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Papa a une moto.",
+          "bonne": [
+            "1f3cd",
+            "la moto"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f916",
+              "le robot"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Sami a une tomate.",
+          "bonne": [
+            "1f345",
+            "la tomate"
+          ],
+          "autres": [
+            [
+              "1f34e",
+              "la pomme"
+            ],
+            [
+              "1f34c",
+              "la banane"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Ce n'est pas un chat : c'est un rat.",
+          "bonne": [
+            "1f400",
+            "le rat"
+          ],
+          "autres": [
+            [
+              "1f408",
+              "le chat"
+            ],
+            [
+              "1f407",
+              "le lapin"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Lili a lu un livre.",
+          "bonne": [
+            "1f4d6",
+            "le livre"
+          ],
+          "autres": [
+            [
+              "1f45c",
+              "le sac"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Nina a une robe.",
+          "bonne": [
+            "1f457",
+            "la robe"
+          ],
+          "autres": [
+            [
+              "1f3a9",
+              "le chapeau"
+            ],
+            [
+              "1f45f",
+              "la chaussure"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Il fait nuit : Tom dort dans son lit.",
+          "bonne": [
+            "1f6cf",
+            "le lit"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "2600",
+              "le soleil"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Mila a une pomme, pas une banane.",
+          "bonne": [
+            "1f34e",
+            "la pomme"
+          ],
+          "autres": [
+            [
+              "1f34c",
+              "la banane"
+            ],
+            [
+              "1f345",
+              "la tomate"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Rémi a vu un lama.",
+          "bonne": [
+            "1f999",
+            "le lama"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f40e",
+              "le cheval"
+            ]
+          ],
+          "explication": ""
+        },
+        {
+          "texte": "Tom a un robot.",
+          "bonne": [
+            "1f916",
+            "le robot"
+          ],
+          "autres": [
+            [
+              "1f3cd",
+              "la moto"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": ""
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: reading a short sentence",
+        "idee": "A sentence is read right up to the full stop. Little words matter: « pas » (not) changes the whole meaning of the sentence.",
+        "phrases": {
+          "consigne": "Read the French sentence by yourself, quietly, up to the full stop. Then touch the picture that goes with it.",
+          "question": "Read this sentence.",
+          "indice": "Read the sentence again word by word, up to the full stop. Did you see the word « pas »?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: the sentence is about « {bonne} ».",
+          "bravo": "Yes! You read: « {texte} »",
+          "erreur": "That one is « {choisi} ». Read the sentence again, up to the full stop."
+        },
+        "items": [
+          {
+            "texte": "Lola a vu la lune.",
+            "bonne": [
+              "1f319",
+              "la lune"
+            ],
+            "autres": [
+              [
+                "2600",
+                "le soleil"
+              ],
+              [
+                "1f332",
+                "le sapin"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Papa a une moto.",
+            "bonne": [
+              "1f3cd",
+              "la moto"
+            ],
+            "autres": [
+              [
+                "1f6b2",
+                "le vélo"
+              ],
+              [
+                "1f916",
+                "le robot"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Sami a une tomate.",
+            "bonne": [
+              "1f345",
+              "la tomate"
+            ],
+            "autres": [
+              [
+                "1f34e",
+                "la pomme"
+              ],
+              [
+                "1f34c",
+                "la banane"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Ce n'est pas un chat : c'est un rat.",
+            "bonne": [
+              "1f400",
+              "le rat"
+            ],
+            "autres": [
+              [
+                "1f408",
+                "le chat"
+              ],
+              [
+                "1f407",
+                "le lapin"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Lili a lu un livre.",
+            "bonne": [
+              "1f4d6",
+              "le livre"
+            ],
+            "autres": [
+              [
+                "1f45c",
+                "le sac"
+              ],
+              [
+                "26bd",
+                "le ballon"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Nina a une robe.",
+            "bonne": [
+              "1f457",
+              "la robe"
+            ],
+            "autres": [
+              [
+                "1f3a9",
+                "le chapeau"
+              ],
+              [
+                "1f45f",
+                "la chaussure"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Il fait nuit : Tom dort dans son lit.",
+            "bonne": [
+              "1f6cf",
+              "le lit"
+            ],
+            "autres": [
+              [
+                "1f6b2",
+                "le vélo"
+              ],
+              [
+                "2600",
+                "le soleil"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Mila a une pomme, pas une banane.",
+            "bonne": [
+              "1f34e",
+              "la pomme"
+            ],
+            "autres": [
+              [
+                "1f34c",
+                "la banane"
+              ],
+              [
+                "1f345",
+                "la tomate"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Rémi a vu un lama.",
+            "bonne": [
+              "1f999",
+              "le lama"
+            ],
+            "autres": [
+              [
+                "1f404",
+                "la vache"
+              ],
+              [
+                "1f40e",
+                "le cheval"
+              ]
+            ],
+            "explication": ""
+          },
+          {
+            "texte": "Tom a un robot.",
+            "bonne": [
+              "1f916",
+              "le robot"
+            ],
+            "autres": [
+              [
+                "1f3cd",
+                "la moto"
+              ],
+              [
+                "26bd",
+                "le ballon"
               ]
             ],
             "explication": ""

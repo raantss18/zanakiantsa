@@ -1,0 +1,29 @@
+id: fleches-plan
+titre: "Prévoir un long trajet avec des flèches"
+niveau: CE1
+prerequis: [robot-rochers]
+# Programme de mathématiques du cycle 2, CE1, « Le repérage dans l'espace », lu le 2026-11-08 : l'élève code un
+# déplacement qu'un autre suit ensuite. Ici, les flèches (comme en GS), mais sur un plus grand quadrillage, avec des
+# rochers et jusqu'à douze flèches : il faut prévoir tout le chemin avant de lancer le programme.
+programme: { source: cycle2, texte: "L’élève sait coder un déplacement qu’un autre élève doit tracer ensuite sur un plan." }
+activite: programmer
+parametres: { mode: fleches, grille: 7, min: 7, max: 12, rochers: 8 }
+idee: "Avant d'écrire, on trace tout le chemin des yeux, en évitant les rochers. Puis on compte les cases de chaque ligne droite : une flèche par case."
+phrases:
+  consigne: "Trouve d'abord le chemin avec ton doigt. Puis touche les flèches dans l'ordre, une par case, et le bouton vert. C'est réussi quand tu arrives sur l'objet sans passer sur un rocher."
+  question: "Prévois tout le chemin jusqu'à l'objet, puis écris-le avec les flèches."
+  indice: "Coupe le chemin en lignes droites. Combien de cases dans la première ? Dans la suivante ?"
+  exemple: "Trois cases vers la droite, puis deux vers le haut : trois flèches à droite, puis deux flèches en haut."
+  demonstration: "Regarde ce programme : il évite les rochers jusqu'à l'objet."
+  bravo: "Bravo ! Tu avais prévu le bon chemin."
+
+en:
+  titre: "Planning a long route with arrows"
+  idee: "Before writing anything, trace the whole path with your eyes, avoiding the rocks. Then count the squares in each straight line: one arrow per square."
+  phrases:
+    consigne: "First find the path with your finger. Then touch the arrows in order, one for each square, and the green button. You've done it when you reach the object without going over a rock."
+    question: "Plan the whole path to the object, then write it with arrows."
+    indice: "Cut the path into straight lines. How many squares in the first one? In the next one?"
+    exemple: "Three squares to the right, then two up: three right arrows, then two up arrows."
+    demonstration: "Look at this program: it avoids the rocks all the way to the object."
+    bravo: "Well done! You planned the right path."

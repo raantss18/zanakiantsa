@@ -1,0 +1,114 @@
+id: lire-petites-phrases
+titre: "Lire une petite phrase"
+niveau: CP
+prerequis: [lire-mots]
+# Programme de français du cycle 2, CP, « Lire à voix haute », « Dès le début de l'année », lu le 2026-11-08. Phrases
+# courtes, faites de mots déjà déchiffrés dans lire-mots et lire-syllabes-suite ; deux phrases avec « pas » demandent de
+# lire jusqu'au bout (une des images fausses est nommée dans la phrase).
+programme: { source: cycle2, texte: "L’élève est capable de lire à voix haute des syllabes, des mots et de courtes phrases." }
+activite: choisir
+parametres: { lire: true }
+idee: "Une phrase se lit jusqu'au point. Les petits mots comptent : « pas » change tout le sens de la phrase."
+phrases:
+  consigne: "Lis la phrase toute seule, à voix basse, jusqu'au point. Puis touche l'image qui va avec."
+  question: "Lis cette phrase."
+  indice: "Relis la phrase mot à mot, jusqu'au point. As-tu vu le mot « pas » ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : la phrase parle de {bonne}."
+  bravo: "Oui ! Tu as lu : « {texte} »"
+  erreur: "Ça, c'est {choisi}. Relis la phrase jusqu'au point."
+items:
+  - texte: "Lola a vu la lune."
+    bonne: ["1f319", "la lune"]
+    autres: [["2600", "le soleil"], ["1f332", "le sapin"]]
+    explication: ""
+  - texte: "Papa a une moto."
+    bonne: ["1f3cd", "la moto"]
+    autres: [["1f6b2", "le vélo"], ["1f916", "le robot"]]
+    explication: ""
+  - texte: "Sami a une tomate."
+    bonne: ["1f345", "la tomate"]
+    autres: [["1f34e", "la pomme"], ["1f34c", "la banane"]]
+    explication: ""
+  - texte: "Ce n'est pas un chat : c'est un rat."
+    bonne: ["1f400", "le rat"]
+    autres: [["1f408", "le chat"], ["1f407", "le lapin"]]
+    explication: ""
+  - texte: "Lili a lu un livre."
+    bonne: ["1f4d6", "le livre"]
+    autres: [["1f45c", "le sac"], ["26bd", "le ballon"]]
+    explication: ""
+  - texte: "Nina a une robe."
+    bonne: ["1f457", "la robe"]
+    autres: [["1f3a9", "le chapeau"], ["1f45f", "la chaussure"]]
+    explication: ""
+  - texte: "Il fait nuit : Tom dort dans son lit."
+    bonne: ["1f6cf", "le lit"]
+    autres: [["1f6b2", "le vélo"], ["2600", "le soleil"]]
+    explication: ""
+  - texte: "Mila a une pomme, pas une banane."
+    bonne: ["1f34e", "la pomme"]
+    autres: [["1f34c", "la banane"], ["1f345", "la tomate"]]
+    explication: ""
+  - texte: "Rémi a vu un lama."
+    bonne: ["1f999", "le lama"]
+    autres: [["1f404", "la vache"], ["1f40e", "le cheval"]]
+    explication: ""
+  - texte: "Tom a un robot."
+    bonne: ["1f916", "le robot"]
+    autres: [["1f3cd", "la moto"], ["26bd", "le ballon"]]
+    explication: ""
+
+en:
+  langue: "fr"
+  titre: "French: reading a short sentence"
+  idee: "A sentence is read right up to the full stop. Little words matter: « pas » (not) changes the whole meaning of the sentence."
+  phrases:
+    consigne: "Read the French sentence by yourself, quietly, up to the full stop. Then touch the picture that goes with it."
+    question: "Read this sentence."
+    indice: "Read the sentence again word by word, up to the full stop. Did you see the word « pas »?"
+    exemple: "Try another picture."
+    demonstration: "Look: the sentence is about « {bonne} »."
+    bravo: "Yes! You read: « {texte} »"
+    erreur: "That one is « {choisi} ». Read the sentence again, up to the full stop."
+  items:
+    - texte: "Lola a vu la lune."
+      bonne: ["1f319", "la lune"]
+      autres: [["2600", "le soleil"], ["1f332", "le sapin"]]
+      explication: ""
+    - texte: "Papa a une moto."
+      bonne: ["1f3cd", "la moto"]
+      autres: [["1f6b2", "le vélo"], ["1f916", "le robot"]]
+      explication: ""
+    - texte: "Sami a une tomate."
+      bonne: ["1f345", "la tomate"]
+      autres: [["1f34e", "la pomme"], ["1f34c", "la banane"]]
+      explication: ""
+    - texte: "Ce n'est pas un chat : c'est un rat."
+      bonne: ["1f400", "le rat"]
+      autres: [["1f408", "le chat"], ["1f407", "le lapin"]]
+      explication: ""
+    - texte: "Lili a lu un livre."
+      bonne: ["1f4d6", "le livre"]
+      autres: [["1f45c", "le sac"], ["26bd", "le ballon"]]
+      explication: ""
+    - texte: "Nina a une robe."
+      bonne: ["1f457", "la robe"]
+      autres: [["1f3a9", "le chapeau"], ["1f45f", "la chaussure"]]
+      explication: ""
+    - texte: "Il fait nuit : Tom dort dans son lit."
+      bonne: ["1f6cf", "le lit"]
+      autres: [["1f6b2", "le vélo"], ["2600", "le soleil"]]
+      explication: ""
+    - texte: "Mila a une pomme, pas une banane."
+      bonne: ["1f34e", "la pomme"]
+      autres: [["1f34c", "la banane"], ["1f345", "la tomate"]]
+      explication: ""
+    - texte: "Rémi a vu un lama."
+      bonne: ["1f999", "le lama"]
+      autres: [["1f404", "la vache"], ["1f40e", "le cheval"]]
+      explication: ""
+    - texte: "Tom a un robot."
+      bonne: ["1f916", "le robot"]
+      autres: [["1f3cd", "la moto"], ["26bd", "le ballon"]]
+      explication: ""
