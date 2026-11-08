@@ -1,0 +1,29 @@
+id: robot-long-trajet
+titre: "Un long trajet, quatre virages"
+niveau: CE1
+prerequis: [fleches-plan]
+# Programme de mathématiques du cycle 2, CE1, « Le repérage dans l'espace », lu le 2026-11-08 : au CP, dix instructions
+# dont deux virages (robot-rochers) ; au CE1, quinze dont quatre. Le programme parle d'« avancer de » (plusieurs cases) ;
+# l'app n'a que « avancer d'une case » : on répète le bloc. La boucle (« répéter ») vient ensuite, en CE2 (boucle-repeter).
+programme: { source: cycle2, texte: "Pour ces déplacements, il dispose des instructions « avancer de », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche ». Les déplacements à programmer comprennent au maximum quinze instructions, dont quatre virages." }
+activite: programmer
+parametres: { mode: tourner, grille: 7, min: 8, max: 15, rochers: 9, virages_max: 4 }
+idee: "Un long programme se prépare morceau par morceau : une ligne droite, un virage, une ligne droite… Avant chaque virage, regarde où pointe la flèche du robot."
+phrases:
+  consigne: "Touche les blocs dans l'ordre, puis le bouton vert. C'est réussi quand le robot arrive sur l'objet sans passer sur un rocher."
+  question: "Programme le robot pour un long trajet jusqu'à l'objet, sans toucher les rochers."
+  indice: "Suis le chemin avec ton doigt et dis à voix haute : avancer, avancer, pivoter… Où regarde le robot après chaque virage ?"
+  exemple: "Pas plus de quatre virages : va tout droit le plus longtemps possible avant de pivoter."
+  demonstration: "Regarde ce programme : il évite les rochers jusqu'à l'objet."
+  bravo: "Bravo ! Ton long programme est juste."
+
+en:
+  titre: "A long route with four turns"
+  idee: "A long program is prepared piece by piece: a straight line, a turn, a straight line… Before each turn, look where the robot's arrow is pointing."
+  phrases:
+    consigne: "Touch the blocks in order, then the green button. You've done it when the robot reaches the object without going over a rock."
+    question: "Program the robot for a long route to the object, without touching the rocks."
+    indice: "Follow the path with your finger and say out loud: move forward, move forward, turn… Which way is the robot facing after each turn?"
+    exemple: "No more than four turns: go straight for as long as you can before turning."
+    demonstration: "Look at this program: it avoids the rocks all the way to the object."
+    bravo: "Well done! Your long program is right."

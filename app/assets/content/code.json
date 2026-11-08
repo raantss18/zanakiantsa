@@ -199,11 +199,94 @@
       }
     },
     {
+      "id": "fleches-plan",
+      "titre": "Prévoir un long trajet avec des flèches",
+      "niveau": "CE1",
+      "prerequis": [
+        "robot-rochers"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "L’élève sait coder un déplacement qu’un autre élève doit tracer ensuite sur un plan."
+      },
+      "activite": "programmer",
+      "parametres": {
+        "mode": "fleches",
+        "grille": 7,
+        "min": 7,
+        "max": 12,
+        "rochers": 8
+      },
+      "idee": "Avant d'écrire, on trace tout le chemin des yeux, en évitant les rochers. Puis on compte les cases de chaque ligne droite : une flèche par case.",
+      "phrases": {
+        "consigne": "Trouve d'abord le chemin avec ton doigt. Puis touche les flèches dans l'ordre, une par case, et le bouton vert. C'est réussi quand tu arrives sur l'objet sans passer sur un rocher.",
+        "question": "Prévois tout le chemin jusqu'à l'objet, puis écris-le avec les flèches.",
+        "indice": "Coupe le chemin en lignes droites. Combien de cases dans la première ? Dans la suivante ?",
+        "exemple": "Trois cases vers la droite, puis deux vers le haut : trois flèches à droite, puis deux flèches en haut.",
+        "demonstration": "Regarde ce programme : il évite les rochers jusqu'à l'objet.",
+        "bravo": "Bravo ! Tu avais prévu le bon chemin."
+      },
+      "en": {
+        "titre": "Planning a long route with arrows",
+        "idee": "Before writing anything, trace the whole path with your eyes, avoiding the rocks. Then count the squares in each straight line: one arrow per square.",
+        "phrases": {
+          "consigne": "First find the path with your finger. Then touch the arrows in order, one for each square, and the green button. You've done it when you reach the object without going over a rock.",
+          "question": "Plan the whole path to the object, then write it with arrows.",
+          "indice": "Cut the path into straight lines. How many squares in the first one? In the next one?",
+          "exemple": "Three squares to the right, then two up: three right arrows, then two up arrows.",
+          "demonstration": "Look at this program: it avoids the rocks all the way to the object.",
+          "bravo": "Well done! You planned the right path."
+        }
+      }
+    },
+    {
+      "id": "robot-long-trajet",
+      "titre": "Un long trajet, quatre virages",
+      "niveau": "CE1",
+      "prerequis": [
+        "fleches-plan"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Pour ces déplacements, il dispose des instructions « avancer de », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche ». Les déplacements à programmer comprennent au maximum quinze instructions, dont quatre virages."
+      },
+      "activite": "programmer",
+      "parametres": {
+        "mode": "tourner",
+        "grille": 7,
+        "min": 8,
+        "max": 15,
+        "rochers": 9,
+        "virages_max": 4
+      },
+      "idee": "Un long programme se prépare morceau par morceau : une ligne droite, un virage, une ligne droite… Avant chaque virage, regarde où pointe la flèche du robot.",
+      "phrases": {
+        "consigne": "Touche les blocs dans l'ordre, puis le bouton vert. C'est réussi quand le robot arrive sur l'objet sans passer sur un rocher.",
+        "question": "Programme le robot pour un long trajet jusqu'à l'objet, sans toucher les rochers.",
+        "indice": "Suis le chemin avec ton doigt et dis à voix haute : avancer, avancer, pivoter… Où regarde le robot après chaque virage ?",
+        "exemple": "Pas plus de quatre virages : va tout droit le plus longtemps possible avant de pivoter.",
+        "demonstration": "Regarde ce programme : il évite les rochers jusqu'à l'objet.",
+        "bravo": "Bravo ! Ton long programme est juste."
+      },
+      "en": {
+        "titre": "A long route with four turns",
+        "idee": "A long program is prepared piece by piece: a straight line, a turn, a straight line… Before each turn, look where the robot's arrow is pointing.",
+        "phrases": {
+          "consigne": "Touch the blocks in order, then the green button. You've done it when the robot reaches the object without going over a rock.",
+          "question": "Program the robot for a long route to the object, without touching the rocks.",
+          "indice": "Follow the path with your finger and say out loud: move forward, move forward, turn… Which way is the robot facing after each turn?",
+          "exemple": "No more than four turns: go straight for as long as you can before turning.",
+          "demonstration": "Look at this program: it avoids the rocks all the way to the object.",
+          "bravo": "Well done! Your long program is right."
+        }
+      }
+    },
+    {
       "id": "boucle-repeter",
       "titre": "La boucle : répéter",
       "niveau": "CE2",
       "prerequis": [
-        "robot-rochers"
+        "robot-long-trajet"
       ],
       "programme": {
         "source": "prog",

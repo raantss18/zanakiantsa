@@ -295,7 +295,7 @@ void main() {
       }
     });
     test('rimes et débuts : la bonne image n\'est jamais une des autres', () {
-      for (final id in ['rimes', 'debut', 'lire-mots']) {
+      for (final id in ['rimes', 'debut', 'lire-mots', 'lire-petites-phrases']) {
         for (final it in sk(id).items) {
           expect(it.others.map((p) => p.art), isNot(contains(it.right!.art)), reason: '$id ${it.text}');
         }
@@ -303,7 +303,7 @@ void main() {
     });
     test('lettres et syllabes tirées : la lettre dite existe dans les choix possibles', () {
       final r = Random(4);
-      for (final id in ['lettres-capitales', 'lettres-minuscules', 'lettres-cursives', 'premiere-lettre', 'lire-syllabes', 'tracer-capitales', 'tracer-cursive']) {
+      for (final id in ['lettres-capitales', 'lettres-minuscules', 'lettres-cursives', 'premiere-lettre', 'lire-syllabes', 'lire-syllabes-suite', 'tracer-capitales', 'tracer-cursive']) {
         for (var i = 0; i < 50; i++) {
           final q = sk(id).draw(r);
           expect(sk(id).letterOf(q), isNotEmpty);
