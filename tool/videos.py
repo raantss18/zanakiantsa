@@ -41,10 +41,28 @@ def seconds(iso: str) -> int:
     return ((d * 24 + h) * 60 + mi) * 60 + s
 
 
+# Aucune vidéo générée par IA (règle d'Antsa, 2026-11-08). La liste blanche ne retient que des chaînes faites par des
+# équipes humaines identifiées ; en plus, on écarte toute vidéo que son auteur déclare « contenu altéré ou synthétique »
+# (status.containsSyntheticMedia, https://developers.google.com/youtube/v3/docs/videos) ou dont le titre, la description
+# ou les mots-clés disent qu'elle a été faite par une IA. Une vidéo qui parle de l'IA reste permise.
+MADE_BY_AI = re.compile(
+    r"(générée?s?|créée?s?|faite?s?|réalisée?s?|animée?s?)\s+(par|avec)\s+(une\s+|l'|l’)?(ia|intelligence artificielle)\b"
+    r"|\bai[- ]generated\b|\b(made|created|generated|animated)\s+(with|by|using)\s+(an\s+)?(ai|artificial intelligence)\b"
+    r"|#ai(art|generated|video|animation)?\b|#ia\b|\b(midjourney|sora|kling|suno)\b",
+    re.IGNORECASE)
+
+
+def made_by_ai(v: dict) -> bool:
+    sn = v.get('snippet', {})
+    text = ' '.join([sn.get('title', ''), sn.get('description', ''), ' '.join(sn.get('tags', []))])
+    return v.get('status', {}).get('containsSyntheticMedia', False) or bool(MADE_BY_AI.search(text))
+
+
 def keep(v: dict) -> bool:
     st, cd, sn = v.get('status', {}), v.get('contentDetails', {}), v.get('snippet', {})
     return (
-        st.get('privacyStatus') == 'public'
+        not made_by_ai(v)
+        and st.get('privacyStatus') == 'public'
         and st.get('embeddable', False)
         and cd.get('contentRating', {}).get('ytRating') != 'ytAgeRestricted'
         and sn.get('liveBroadcastContent', 'none') == 'none'
@@ -73,7 +91,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
             continue
         index = len(out_channels)
         out_channels.append({k: c[k] for k in ('id', 'nom', 'langue', 'ages', 'domaines')})
-        before = len(videos)
+        before, ai = len(videos), 0
         vids, token = [], None
         wanted = c.get('profondeur', per_channel)
         while len(vids) < wanted:
@@ -90,6 +108,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
             if not batch:
                 continue
             for v in get('videos', part='snippet,contentDetails,status', id=','.join(batch)).get('items', []):
+                ai += made_by_ai(v)
                 if not keep(v):
                     continue
                 sn = v['snippet']
@@ -109,7 +128,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
                 })
         mine = videos[before:]
         short = sum(v['d'] <= 600 for v in mine)
-        print(f"{c['nom'][:40]:40} {c['langue']} {str(c['ages']):8} lues {len(vids):4}  gardées {len(mine):4}  ≤10 min {short:4}",
+        print(f"{c['nom'][:40]:40} {c['langue']} {str(c['ages']):8} lues {len(vids):4}  gardées {len(mine):4}  ≤10 min {short:4}  IA écartées {ai}",
               file=sys.stderr)
     return {'genere': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'chaines': out_channels, 'videos': videos}
 

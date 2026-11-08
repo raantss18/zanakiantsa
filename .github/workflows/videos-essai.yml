@@ -1,0 +1,26 @@
+name: Essai de chaînes vidéo
+
+# Mesure des chaînes candidates (ADR 0068) avant de les ajouter à content/videos/chaines.yaml : pour chaque chaîne ou
+# playlist, combien de vidéos sont gardées et combien durent 10 min au plus. Ne publie rien ; le résultat est dans le
+# journal. Lancement : gh workflow run videos-essai.yml -f fichier=content/videos/candidats.yaml
+on:
+  workflow_dispatch:
+    inputs:
+      fichier:
+        description: 'Liste à mesurer'
+        default: 'content/videos/candidats.yaml'
+
+permissions:
+  contents: read
+
+jobs:
+  mesure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          FICHIER: ${{ inputs.fichier }}
+        run: |
+          pip install --quiet pyyaml
+          python3 tool/videos.py --chaines "$FICHIER" --out /tmp/essai.json
