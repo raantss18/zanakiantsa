@@ -93,6 +93,20 @@ const activityMaxScale = 1.6;
 /// proportion. Jamais moins de 1 : sur un petit écran, l'activité reste telle quelle.
 double activityScale(Size area) => min(area.width / activityDesignSize.width, area.height / activityDesignSize.height).clamp(1.0, activityMaxScale);
 
+/// Réduction la plus forte quand la place manque en hauteur : en dessous, les cibles tactiles passeraient sous 48 dp.
+const activityMinScale = 0.72;
+
+/// L'échelle d'une activité dans sa zone. Quand la hauteur manque (pendant l'exemple résolu, la place du bouton « J'ai
+/// compris » est gardée), elle rétrécit pour tenir en entier au lieu d'être coupée en bas — vu sur la tablette le 2026-11-08 :
+/// réponses à moitié cachées pendant l'exemple. Les quiz défilent (et montrent seuls la bonne réponse) : ils ne rétrécissent pas.
+double activityScaleFor(Size area, String activity) {
+  if (activitiesThatFill.contains(activity)) return 1;
+  if (activity != 'quiz' && area.height < activityDesignSize.height) {
+    return max(activityMinScale, area.height / activityDesignSize.height);
+  }
+  return activityScale(area);
+}
+
 /// Ces activités remplissent déjà leur zone (échiquier, grille, scène, zone de tracé) : les agrandir réduirait au contraire leur
 /// élément principal, qui prendrait moins de place à côté de boutons plus gros.
 const activitiesThatFill = {'echecs', 'probleme', 'programmer', 'blocs', 'planetes', 'corps', 'solide', 'tracer', 'denombrer', 'composer'};

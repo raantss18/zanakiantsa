@@ -111,6 +111,12 @@ void main() {
       expect(activityScale(const Size(393, 600)), 1.0, reason: 'téléphone');
       expect(activityScale(const Size(457, 550)), 1.0, reason: 'SM-X135G');
       expect(activityScale(const Size(800, 300)), 1.0, reason: 'large mais basse');
+      // Pendant l'exemple résolu, la zone perd la place du bouton « J'ai compris » : l'activité rétrécit pour tenir.
+      expect(activityScaleFor(const Size(457, 400), 'groupes'), closeTo(400 / 520, 0.001));
+      expect(activityScaleFor(const Size(457, 200), 'groupes'), activityMinScale, reason: 'jamais sous 72 %');
+      expect(activityScaleFor(const Size(457, 370), 'quiz'), 1.0, reason: 'le quiz défile');
+      expect(activityScaleFor(const Size(457, 370), 'echecs'), 1.0, reason: 'l\'échiquier remplit déjà sa zone');
+      expect(activityScaleFor(const Size(745, 680), 'groupes'), activityScale(const Size(745, 680)));
     });
 
     test('grandes tablettes : plus grand, sans dépasser le plafond ni la zone', () {

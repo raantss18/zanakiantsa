@@ -60,11 +60,14 @@ class _QuizActivityState extends State<QuizActivity> {
             for (final answer in answers)
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
-                child: _Answer(
-                  text: answer,
-                  tried: tried.contains(answer),
-                  highlight: shown && answer == item.name,
-                  onTap: a.busy || a.finished ? null : () => _tap(answer),
+                child: RevealWhen(
+                  show: shown && answer == item.name,
+                  child: _Answer(
+                    text: answer,
+                    tried: tried.contains(answer),
+                    highlight: shown && answer == item.name,
+                    onTap: a.busy || a.finished ? null : () => _tap(answer),
+                  ),
                 ),
               ),
           ]),
@@ -96,7 +99,7 @@ class _Answer extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               child: Row(children: [
-                Expanded(child: Text(text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink))),
+                Expanded(child: Text(keepTogether(text), textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink))),
                 // La forme en plus de la couleur (docs/design.md).
                 if (tried) const Icon(Icons.close_rounded, size: 28, color: ink),
                 if (highlight) const Icon(Icons.check_circle_rounded, size: 32, color: gold),
@@ -132,7 +135,7 @@ class QuestionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lines = text.split('\n');
-    if (lines.length < 2) return Text(text, textAlign: TextAlign.center, style: _prose);
+    if (lines.length < 2) return Text(keepTogether(text), textAlign: TextAlign.center, style: _prose);
     // Regroupe les lignes : texte d'un côté, suites de lignes de code de l'autre.
     final parts = <(bool, List<String>)>[];
     for (final (i, l) in lines.indexed) {
@@ -148,7 +151,7 @@ class QuestionText extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: prose
-              ? Text(block.join('\n'), textAlign: TextAlign.center, style: _prose)
+              ? Text(keepTogether(block.join('\n')), textAlign: TextAlign.center, style: _prose)
               : Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(color: const Color(0xFFF1F3F2), borderRadius: BorderRadius.circular(12)),

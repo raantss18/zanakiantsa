@@ -64,7 +64,7 @@ class _ChooseActivityState extends State<ChooseActivity> {
                 child: Art(p.art, size: size * 0.62),
               ),
               if (!reading) const SizedBox(height: 6),
-              if (!reading) SizedBox(width: size, child: Text(p.name, textAlign: TextAlign.center, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink))),
+              if (!reading) WholeWords(p.name, width: size, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink)),
             ]),
         ];
         return Center(

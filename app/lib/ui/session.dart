@@ -305,6 +305,10 @@ class SessionResume {
       final r = SessionResume(List<String>.from(j['plan'] as List), j['index'] as int, j['stars'] as int);
       final ids = {for (final s in app.topic(topic).skills) s.id};
       if (r.index <= 0 || r.index >= r.plan.length || !r.plan.every(ids.contains)) return null;
+      // L'âge ou la classe ont changé depuis (vu sur la tablette le 2026-11-08 : à 9 ans, la séance gardée à 5 ans reprenait
+      // sur « Touche la syllabe ra ») : une séance qui contient des leçons devenues trop faciles ne reprend pas.
+      final p = app.progressOf(app.topic(topic));
+      if (r.plan.skip(r.index).any(p.belowFloor)) return null;
       return r;
     } catch (_) {
       return null;
@@ -628,7 +632,7 @@ class _SessionPageState extends State<SessionPage> {
               k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : a.diagnostic && !side ? 52 : 0),
             );
             final fills = activitiesThatFill.contains(a.skill.activity);
-            final scale = fills ? 1.0 : activityScale(area);
+            final scale = activityScaleFor(area, a.skill.activity);
             // Centrée en hauteur seulement là où elle est agrandie ou à côté du texte : ailleurs, rien ne change.
             final room = !fills && (scale > 1 || side) ? (area.height - 8) / scale : null;
             final content = over
