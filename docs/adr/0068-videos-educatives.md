@@ -11,6 +11,10 @@
     restriction d'âge, 1–60 min. L'app garde 10 min au plus avant la 2de, la langue de l'app et les chaînes de son âge.
   - Liste de départ (matières du jour, pas vues d'abord), recherche limitée aux vidéos permises, « Vu » à 60 %, d'autres
     vidéos proposées ensuite. Avec internet seulement ; le catalogue est gardé pour s'afficher hors connexion.
+  - Liste blanche stricte dans le lecteur (2026-11-08) : vidéo hors liste arrêtée ; en pause et à la fin, un écran de l'app
+    couvre les vidéos proposées par YouTube. Plein écran (bouton, ou tablette tournée) ; la SM-X135G ignore les demandes
+    d'orientation des apps (`ignoreOrientationRequest=true`).
 - **Confidentialité** : regarder une vidéo envoie des données à Google (YouTube) ; à écrire dans `docs/conformite.md` et
   dans l'espace parent. ⚠ Activé sans réglage parent, à la demande d'Antsa.
-- **Vérifié** : `test/videos_test.dart`, `test/books_test.dart`. **Reste à tester** : catalogue réel (clé), lecteur sur la tablette.
+- **Vérifié** : `test/videos_test.dart`, `test/books_test.dart`. Catalogue réel (2 506 vidéos, 20 chaînes) et lecteur
+  essayés sur la tablette le 2026-11-08. **Reste à tester** : plein écran tablette tournée à la main.
