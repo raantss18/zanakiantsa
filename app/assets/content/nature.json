@@ -42,7 +42,7 @@
       "moyens": "Science",
       "grands": "Science"
     },
-    "resume": "Living things, matter and energy, from nursery school to Year 11 (1re).",
+    "resume": "Living things, matter and energy, from nursery school to the final year of lycée (Terminale).",
     "intro": [
       {
         "texte": "Living things are born, grow up and change.",
@@ -75,7 +75,8 @@
     "c4": "https://eduscol.education.fr/document/621/download",
     "svt2de": "https://www.snes.edu/IMG/pdf/svt_annexe_2e_bo.pdf",
     "pc2de": "https://www.snes.edu/IMG/pdf/physique_annexe_2e_bo.pdf",
-    "es1re": "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf"
+    "es1re": "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf",
+    "estle": "https://groupe-reussite.fr/ressources/wp-content/uploads/2026/09/programme-enseignement-scientifique-terminale-.pdf"
   },
   "competences": [
     {
@@ -2719,6 +2720,1093 @@
       }
     },
     {
+      "id": "materiaux",
+      "titre": "De quoi sont faits les objets ?",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Différencier des matériaux en fonction de leurs propriétés et différencier un objet du matériau qui le constitue."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Les objets sont faits de matériaux : le bois, le métal, le papier, le tissu, le verre. Chaque matériau a ses propriétés : dur ou doux, transparent ou non.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Regarde l'objet et pense à ce que tu sentirais en le touchant : est-il dur, doux, lisse ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel objet est en papier ?",
+          "bonne": [
+            "1f4d6",
+            "le livre"
+          ],
+          "autres": [
+            [
+              "1f527",
+              "la clé à molette"
+            ],
+            [
+              "1faa8",
+              "le caillou"
+            ]
+          ],
+          "explication": "Les pages du livre sont en papier."
+        },
+        {
+          "texte": "Quel objet est en métal ?",
+          "bonne": [
+            "1f527",
+            "la clé à molette"
+          ],
+          "autres": [
+            [
+              "1f457",
+              "la robe"
+            ],
+            [
+              "1f4d6",
+              "le livre"
+            ]
+          ],
+          "explication": "La clé à molette est en métal : elle est dure et solide."
+        },
+        {
+          "texte": "Quel objet est en bois ?",
+          "bonne": [
+            "1fa91",
+            "la chaise"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "le glaçon"
+            ],
+            [
+              "1f457",
+              "la robe"
+            ]
+          ],
+          "explication": "Cette chaise est en bois."
+        },
+        {
+          "texte": "Quel objet est en tissu ?",
+          "bonne": [
+            "1f457",
+            "la robe"
+          ],
+          "autres": [
+            [
+              "1f527",
+              "la clé à molette"
+            ],
+            [
+              "1fa9e",
+              "le miroir"
+            ]
+          ],
+          "explication": "La robe est en tissu : elle est souple et douce."
+        },
+        {
+          "texte": "Quel objet est en verre ?",
+          "bonne": [
+            "1fa9e",
+            "le miroir"
+          ],
+          "autres": [
+            [
+              "1f4d6",
+              "le livre"
+            ],
+            [
+              "1f457",
+              "la robe"
+            ]
+          ],
+          "explication": "Le miroir est en verre : il est dur et lisse, et il peut se casser."
+        },
+        {
+          "texte": "À travers quel objet peut-on voir ?",
+          "bonne": [
+            "1f50d",
+            "la loupe"
+          ],
+          "autres": [
+            [
+              "1f6aa",
+              "la porte"
+            ],
+            [
+              "1faa8",
+              "le caillou"
+            ]
+          ],
+          "explication": "La loupe est transparente : on voit à travers."
+        },
+        {
+          "texte": "Qu'est-ce que l'aimant attire ?",
+          "bonne": [
+            "1f529",
+            "le boulon en fer"
+          ],
+          "autres": [
+            [
+              "1f4d6",
+              "le livre"
+            ],
+            [
+              "1fa91",
+              "la chaise en bois"
+            ]
+          ],
+          "explication": "L'aimant attire le fer. Il n'attire ni le papier ni le bois."
+        },
+        {
+          "texte": "Qu'est-ce qui est doux quand on le touche ?",
+          "bonne": [
+            "1f411",
+            "la laine du mouton"
+          ],
+          "autres": [
+            [
+              "1faa8",
+              "le caillou"
+            ],
+            [
+              "1f527",
+              "la clé à molette"
+            ]
+          ],
+          "explication": "La laine est douce quand on la touche."
+        },
+        {
+          "texte": "Qu'est-ce qui est dur ?",
+          "bonne": [
+            "1faa8",
+            "le caillou"
+          ],
+          "autres": [
+            [
+              "1f411",
+              "la laine du mouton"
+            ],
+            [
+              "1f457",
+              "la robe"
+            ]
+          ],
+          "explication": "Le caillou est dur : on ne peut pas l'écraser avec les doigts."
+        },
+        {
+          "texte": "La chaise et le crayon sont en bois. D'où vient le bois ?",
+          "bonne": [
+            "1f333",
+            "de l'arbre"
+          ],
+          "autres": [
+            [
+              "1faa8",
+              "du caillou"
+            ],
+            [
+              "1f411",
+              "du mouton"
+            ]
+          ],
+          "explication": "Le bois vient des arbres. Avec ce matériau, on fabrique des objets : des chaises, des crayons."
+        }
+      ],
+      "en": {
+        "titre": "What are things made of?",
+        "idee": "Things are made of materials: wood, metal, paper, fabric, glass. Each material has its own properties: hard or soft, see-through or not.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Look at the object and think about how it would feel to touch: is it hard, soft, smooth?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which object is made of paper?",
+            "bonne": [
+              "1f4d6",
+              "the book"
+            ],
+            "autres": [
+              [
+                "1f527",
+                "the spanner"
+              ],
+              [
+                "1faa8",
+                "the pebble"
+              ]
+            ],
+            "explication": "The pages of the book are made of paper."
+          },
+          {
+            "texte": "Which object is made of metal?",
+            "bonne": [
+              "1f527",
+              "the spanner"
+            ],
+            "autres": [
+              [
+                "1f457",
+                "the dress"
+              ],
+              [
+                "1f4d6",
+                "the book"
+              ]
+            ],
+            "explication": "The spanner is made of metal: it is hard and strong."
+          },
+          {
+            "texte": "Which object is made of wood?",
+            "bonne": [
+              "1fa91",
+              "the chair"
+            ],
+            "autres": [
+              [
+                "1f9ca",
+                "the ice cube"
+              ],
+              [
+                "1f457",
+                "the dress"
+              ]
+            ],
+            "explication": "This chair is made of wood."
+          },
+          {
+            "texte": "Which object is made of fabric?",
+            "bonne": [
+              "1f457",
+              "the dress"
+            ],
+            "autres": [
+              [
+                "1f527",
+                "the spanner"
+              ],
+              [
+                "1fa9e",
+                "the mirror"
+              ]
+            ],
+            "explication": "The dress is made of fabric: it is soft and bendy."
+          },
+          {
+            "texte": "Which object is made of glass?",
+            "bonne": [
+              "1fa9e",
+              "the mirror"
+            ],
+            "autres": [
+              [
+                "1f4d6",
+                "the book"
+              ],
+              [
+                "1f457",
+                "the dress"
+              ]
+            ],
+            "explication": "The mirror is made of glass: it is hard and smooth, and it can break."
+          },
+          {
+            "texte": "Which object can you see through?",
+            "bonne": [
+              "1f50d",
+              "the magnifying glass"
+            ],
+            "autres": [
+              [
+                "1f6aa",
+                "the door"
+              ],
+              [
+                "1faa8",
+                "the pebble"
+              ]
+            ],
+            "explication": "The magnifying glass is see-through: you can see through it."
+          },
+          {
+            "texte": "What does the magnet pull?",
+            "bonne": [
+              "1f529",
+              "the iron bolt"
+            ],
+            "autres": [
+              [
+                "1f4d6",
+                "the book"
+              ],
+              [
+                "1fa91",
+                "the wooden chair"
+              ]
+            ],
+            "explication": "A magnet pulls iron. It doesn't pull paper or wood."
+          },
+          {
+            "texte": "What feels soft when you touch it?",
+            "bonne": [
+              "1f411",
+              "the sheep's wool"
+            ],
+            "autres": [
+              [
+                "1faa8",
+                "the pebble"
+              ],
+              [
+                "1f527",
+                "the spanner"
+              ]
+            ],
+            "explication": "Wool feels soft when you touch it."
+          },
+          {
+            "texte": "What is hard?",
+            "bonne": [
+              "1faa8",
+              "the pebble"
+            ],
+            "autres": [
+              [
+                "1f411",
+                "the sheep's wool"
+              ],
+              [
+                "1f457",
+                "the dress"
+              ]
+            ],
+            "explication": "The pebble is hard: you can't squash it with your fingers."
+          },
+          {
+            "texte": "The chair and the pencil are made of wood. Where does wood come from?",
+            "bonne": [
+              "1f333",
+              "from trees"
+            ],
+            "autres": [
+              [
+                "1faa8",
+                "from pebbles"
+              ],
+              [
+                "1f411",
+                "from sheep"
+              ]
+            ],
+            "explication": "Wood comes from trees. With this material, we make things: chairs, pencils."
+          }
+        ]
+      }
+    },
+    {
+      "id": "vivant-non-vivant",
+      "titre": "Vivant ou non vivant ?",
+      "niveau": "CP",
+      "prerequis": [
+        "besoins"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Caractériser et justifier à l’aide de critères simples ce qui est vivant, non vivant ou élaboré par des êtres vivants."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Un être vivant se nourrit, grandit et fait des petits. Le caillou n'est pas vivant. Certaines choses sont fabriquées par des êtres vivants : le lait, les œufs, le miel.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Demande-toi : est-ce qu'il mange ? est-ce qu'il grandit ? est-ce qu'il fait des petits ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Lequel est vivant ?",
+          "bonne": [
+            "1f40c",
+            "l'escargot"
+          ],
+          "autres": [
+            [
+              "1faa8",
+              "le caillou"
+            ],
+            [
+              "1f697",
+              "la voiture"
+            ]
+          ],
+          "explication": "L'escargot est vivant : il mange, il grandit et il fait des petits."
+        },
+        {
+          "texte": "Lequel n'est pas vivant ?",
+          "bonne": [
+            "1faa8",
+            "le caillou"
+          ],
+          "autres": [
+            [
+              "1f333",
+              "l'arbre"
+            ],
+            [
+              "1f426",
+              "l'oiseau"
+            ]
+          ],
+          "explication": "Le caillou ne mange pas, ne grandit pas et ne fait pas de petits : il n'est pas vivant."
+        },
+        {
+          "texte": "Lequel est vivant, même s'il ne se déplace pas ?",
+          "bonne": [
+            "1f333",
+            "l'arbre"
+          ],
+          "autres": [
+            [
+              "1f697",
+              "la voiture"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": "L'arbre ne se déplace pas, mais il est vivant : il a besoin d'eau, il grandit et il fait des graines."
+        },
+        {
+          "texte": "Qu'est-ce qui bouge, mais n'est pas vivant ?",
+          "bonne": [
+            "1f697",
+            "la voiture"
+          ],
+          "autres": [
+            [
+              "1f408",
+              "le chat"
+            ],
+            [
+              "1f41f",
+              "le poisson"
+            ]
+          ],
+          "explication": "La voiture roule grâce à son moteur, mais elle ne mange pas, ne grandit pas et ne fait pas de petits."
+        },
+        {
+          "texte": "Qui fabrique le lait ?",
+          "bonne": [
+            "1f404",
+            "la vache"
+          ],
+          "autres": [
+            [
+              "1faa8",
+              "le caillou"
+            ],
+            [
+              "2601",
+              "le nuage"
+            ]
+          ],
+          "explication": "Le lait est fabriqué par la vache, pour nourrir son veau."
+        },
+        {
+          "texte": "Qui pond les œufs ?",
+          "bonne": [
+            "1f414",
+            "la poule"
+          ],
+          "autres": [
+            [
+              "1f697",
+              "la voiture"
+            ],
+            [
+              "1faa8",
+              "le caillou"
+            ]
+          ],
+          "explication": "L'œuf est fabriqué par la poule : c'est un être vivant qui l'a fait."
+        },
+        {
+          "texte": "Qui fabrique le miel ?",
+          "bonne": [
+            "1f41d",
+            "l'abeille"
+          ],
+          "autres": [
+            [
+              "1f40c",
+              "l'escargot"
+            ],
+            [
+              "2600",
+              "le soleil"
+            ]
+          ],
+          "explication": "Les abeilles fabriquent le miel avec ce qu'elles récoltent dans les fleurs."
+        },
+        {
+          "texte": "Qui fabrique les fils de soie ?",
+          "bonne": [
+            "1f41b",
+            "la chenille du ver à soie"
+          ],
+          "autres": [
+            [
+              "1f41f",
+              "le poisson"
+            ],
+            [
+              "2600",
+              "le soleil"
+            ]
+          ],
+          "explication": "La chenille du ver à soie fabrique un fil de soie pour faire son cocon."
+        }
+      ],
+      "en": {
+        "titre": "Living or not living?",
+        "idee": "A living thing feeds, grows and has young. A pebble is not alive. Some things are made by living things: milk, eggs, honey.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Ask yourself: does it eat? does it grow? does it have young?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which one is alive?",
+            "bonne": [
+              "1f40c",
+              "the snail"
+            ],
+            "autres": [
+              [
+                "1faa8",
+                "the pebble"
+              ],
+              [
+                "1f697",
+                "the car"
+              ]
+            ],
+            "explication": "The snail is alive: it eats, it grows and it has young."
+          },
+          {
+            "texte": "Which one is not alive?",
+            "bonne": [
+              "1faa8",
+              "the pebble"
+            ],
+            "autres": [
+              [
+                "1f333",
+                "the tree"
+              ],
+              [
+                "1f426",
+                "the bird"
+              ]
+            ],
+            "explication": "A pebble doesn't eat, doesn't grow and doesn't have young: it is not alive."
+          },
+          {
+            "texte": "Which one is alive, even though it doesn't move around?",
+            "bonne": [
+              "1f333",
+              "the tree"
+            ],
+            "autres": [
+              [
+                "1f697",
+                "the car"
+              ],
+              [
+                "26bd",
+                "the ball"
+              ]
+            ],
+            "explication": "A tree doesn't move around, but it is alive: it needs water, it grows and it makes seeds."
+          },
+          {
+            "texte": "What moves, but is not alive?",
+            "bonne": [
+              "1f697",
+              "the car"
+            ],
+            "autres": [
+              [
+                "1f408",
+                "the cat"
+              ],
+              [
+                "1f41f",
+                "the fish"
+              ]
+            ],
+            "explication": "A car drives thanks to its engine, but it doesn't eat, doesn't grow and doesn't have young."
+          },
+          {
+            "texte": "Who makes milk?",
+            "bonne": [
+              "1f404",
+              "the cow"
+            ],
+            "autres": [
+              [
+                "1faa8",
+                "the pebble"
+              ],
+              [
+                "2601",
+                "the cloud"
+              ]
+            ],
+            "explication": "Milk is made by the cow, to feed her calf."
+          },
+          {
+            "texte": "Who lays eggs?",
+            "bonne": [
+              "1f414",
+              "the hen"
+            ],
+            "autres": [
+              [
+                "1f697",
+                "the car"
+              ],
+              [
+                "1faa8",
+                "the pebble"
+              ]
+            ],
+            "explication": "An egg is made by the hen: a living thing made it."
+          },
+          {
+            "texte": "Who makes honey?",
+            "bonne": [
+              "1f41d",
+              "the bee"
+            ],
+            "autres": [
+              [
+                "1f40c",
+                "the snail"
+              ],
+              [
+                "2600",
+                "the sun"
+              ]
+            ],
+            "explication": "Bees make honey from what they collect in flowers."
+          },
+          {
+            "texte": "Who makes silk threads?",
+            "bonne": [
+              "1f41b",
+              "the silkworm caterpillar"
+            ],
+            "autres": [
+              [
+                "1f41f",
+                "the fish"
+              ],
+              [
+                "2600",
+                "the sun"
+              ]
+            ],
+            "explication": "The silkworm caterpillar makes a silk thread to build its cocoon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "objets-besoins",
+      "titre": "À quoi servent les objets ?",
+      "niveau": "CP",
+      "prerequis": [
+        "materiaux"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Identifier qu’un objet technique est obtenu par intervention des êtres humains. Identifier des activités de la vie quotidienne faisant appel à des objets techniques répondant à un besoin."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Les humains fabriquent des objets pour répondre à un besoin : se protéger de la pluie, se déplacer, écrire. Ils les fabriquent avec des matériaux, comme le bois ou la laine.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Pense à ce que tu fais avec cet objet : à quoi te sert-il ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Il pleut. Quel objet te protège de la pluie ?",
+          "bonne": [
+            "2602",
+            "le parapluie"
+          ],
+          "autres": [
+            [
+              "1f453",
+              "les lunettes"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": "Le parapluie répond à un besoin : rester au sec sous la pluie."
+        },
+        {
+          "texte": "Pour venir à l'école, quel objet t'aide à te déplacer ?",
+          "bonne": [
+            "1f6b2",
+            "le vélo"
+          ],
+          "autres": [
+            [
+              "1f4d6",
+              "le livre"
+            ],
+            [
+              "270f",
+              "le crayon"
+            ]
+          ],
+          "explication": "Le vélo répond à un besoin : se déplacer."
+        },
+        {
+          "texte": "Pour écrire ou dessiner, quel objet utilises-tu ?",
+          "bonne": [
+            "270f",
+            "le crayon"
+          ],
+          "autres": [
+            [
+              "2602",
+              "le parapluie"
+            ],
+            [
+              "1f6b2",
+              "le vélo"
+            ]
+          ],
+          "explication": "Le crayon sert à écrire et à dessiner."
+        },
+        {
+          "texte": "Il fait nuit. Quel objet t'aide à voir ?",
+          "bonne": [
+            "1f4a1",
+            "l'ampoule"
+          ],
+          "autres": [
+            [
+              "2602",
+              "le parapluie"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": "L'ampoule éclaire : elle répond au besoin de voir quand il fait noir."
+        },
+        {
+          "texte": "Quel objet protège tes pieds quand tu marches ?",
+          "bonne": [
+            "1f45f",
+            "la chaussure"
+          ],
+          "autres": [
+            [
+              "1f453",
+              "les lunettes"
+            ],
+            [
+              "270f",
+              "le crayon"
+            ]
+          ],
+          "explication": "La chaussure protège les pieds quand on marche."
+        },
+        {
+          "texte": "Lequel est un objet fabriqué par les humains ?",
+          "bonne": [
+            "1f392",
+            "le cartable"
+          ],
+          "autres": [
+            [
+              "1f333",
+              "l'arbre"
+            ],
+            [
+              "1faa8",
+              "le caillou"
+            ]
+          ],
+          "explication": "Le cartable a été fabriqué par des humains, pour porter ses affaires."
+        },
+        {
+          "texte": "Lequel n'a pas été fabriqué par les humains ?",
+          "bonne": [
+            "1faa8",
+            "le caillou"
+          ],
+          "autres": [
+            [
+              "270f",
+              "le crayon"
+            ],
+            [
+              "1f392",
+              "le cartable"
+            ]
+          ],
+          "explication": "Le caillou se trouve dans la nature : personne ne l'a fabriqué."
+        },
+        {
+          "texte": "Avec quoi fabrique-t-on un pull en laine ?",
+          "bonne": [
+            "1f411",
+            "la laine du mouton"
+          ],
+          "autres": [
+            [
+              "1faa8",
+              "le caillou"
+            ],
+            [
+              "1f4a7",
+              "l'eau"
+            ]
+          ],
+          "explication": "On tond la laine du mouton, puis on la file et on la tricote pour faire un pull."
+        },
+        {
+          "texte": "Avec quoi fabrique-t-on une cuillère en bois ?",
+          "bonne": [
+            "1f333",
+            "le bois d'un arbre"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "la glace"
+            ],
+            [
+              "1f411",
+              "la laine"
+            ]
+          ],
+          "explication": "On taille la cuillère dans du bois, qui vient des arbres."
+        }
+      ],
+      "en": {
+        "titre": "What are objects for?",
+        "idee": "People make objects to meet a need: keeping dry in the rain, getting around, writing. They make them from materials, like wood or wool.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Think about what you do with this object: what is it for?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "It's raining. Which object keeps the rain off you?",
+            "bonne": [
+              "2602",
+              "the umbrella"
+            ],
+            "autres": [
+              [
+                "1f453",
+                "the glasses"
+              ],
+              [
+                "26bd",
+                "the ball"
+              ]
+            ],
+            "explication": "An umbrella meets a need: staying dry in the rain."
+          },
+          {
+            "texte": "To get to school, which object helps you get around?",
+            "bonne": [
+              "1f6b2",
+              "the bike"
+            ],
+            "autres": [
+              [
+                "1f4d6",
+                "the book"
+              ],
+              [
+                "270f",
+                "the pencil"
+              ]
+            ],
+            "explication": "A bike meets a need: getting around."
+          },
+          {
+            "texte": "To write or draw, which object do you use?",
+            "bonne": [
+              "270f",
+              "the pencil"
+            ],
+            "autres": [
+              [
+                "2602",
+                "the umbrella"
+              ],
+              [
+                "1f6b2",
+                "the bike"
+              ]
+            ],
+            "explication": "A pencil is for writing and drawing."
+          },
+          {
+            "texte": "It's night-time. Which object helps you see?",
+            "bonne": [
+              "1f4a1",
+              "the light bulb"
+            ],
+            "autres": [
+              [
+                "2602",
+                "the umbrella"
+              ],
+              [
+                "26bd",
+                "the ball"
+              ]
+            ],
+            "explication": "A light bulb gives light: it meets the need to see when it's dark."
+          },
+          {
+            "texte": "Which object protects your feet when you walk?",
+            "bonne": [
+              "1f45f",
+              "the shoe"
+            ],
+            "autres": [
+              [
+                "1f453",
+                "the glasses"
+              ],
+              [
+                "270f",
+                "the pencil"
+              ]
+            ],
+            "explication": "A shoe protects your feet when you walk."
+          },
+          {
+            "texte": "Which one is an object made by people?",
+            "bonne": [
+              "1f392",
+              "the school bag"
+            ],
+            "autres": [
+              [
+                "1f333",
+                "the tree"
+              ],
+              [
+                "1faa8",
+                "the pebble"
+              ]
+            ],
+            "explication": "The school bag was made by people, to carry your things."
+          },
+          {
+            "texte": "Which one was not made by people?",
+            "bonne": [
+              "1faa8",
+              "the pebble"
+            ],
+            "autres": [
+              [
+                "270f",
+                "the pencil"
+              ],
+              [
+                "1f392",
+                "the school bag"
+              ]
+            ],
+            "explication": "A pebble is found in nature: nobody made it."
+          },
+          {
+            "texte": "What do we make a woolly jumper from?",
+            "bonne": [
+              "1f411",
+              "sheep's wool"
+            ],
+            "autres": [
+              [
+                "1faa8",
+                "a pebble"
+              ],
+              [
+                "1f4a7",
+                "water"
+              ]
+            ],
+            "explication": "We shear the sheep's wool, then spin it and knit it to make a jumper."
+          },
+          {
+            "texte": "What do we make a wooden spoon from?",
+            "bonne": [
+              "1f333",
+              "wood from a tree"
+            ],
+            "autres": [
+              [
+                "1f9ca",
+                "ice"
+              ],
+              [
+                "1f411",
+                "wool"
+              ]
+            ],
+            "explication": "The spoon is carved from wood, which comes from trees."
+          }
+        ]
+      }
+    },
+    {
       "id": "etats-eau",
       "titre": "L'eau liquide et l'eau solide",
       "niveau": "CP",
@@ -3041,6 +4129,624 @@
               ]
             ],
             "explication": "Shower water is liquid: it flows."
+          }
+        ]
+      }
+    },
+    {
+      "id": "regimes-alimentaires",
+      "titre": "Herbivore, carnivore ou omnivore ?",
+      "niveau": "CE1",
+      "prerequis": [
+        "vivant-non-vivant"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Identifier le régime alimentaire d’animaux."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Un herbivore mange des végétaux, comme la vache. Un carnivore mange d'autres animaux, comme le lion. Un omnivore mange des deux, comme l'ours brun.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Herbivore : il mange des plantes. Carnivore : il mange des animaux. Omnivore : il mange des deux.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel animal est herbivore : il ne mange que des végétaux ?",
+          "bonne": [
+            "1f993",
+            "le zèbre"
+          ],
+          "autres": [
+            [
+              "1f981",
+              "le lion"
+            ],
+            [
+              "1f988",
+              "le requin"
+            ]
+          ],
+          "explication": "Le zèbre mange de l'herbe : il est herbivore."
+        },
+        {
+          "texte": "Quel animal est carnivore : il mange d'autres animaux ?",
+          "bonne": [
+            "1f981",
+            "le lion"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f40e",
+              "le cheval"
+            ]
+          ],
+          "explication": "Le lion chasse d'autres animaux pour les manger : il est carnivore."
+        },
+        {
+          "texte": "Quel animal est omnivore : il mange des végétaux et des animaux ?",
+          "bonne": [
+            "1f43b",
+            "l'ours brun"
+          ],
+          "autres": [
+            [
+              "1f993",
+              "le zèbre"
+            ],
+            [
+              "1f418",
+              "l'éléphant"
+            ]
+          ],
+          "explication": "L'ours brun mange des fruits, des racines, mais aussi des poissons et des insectes : il est omnivore."
+        },
+        {
+          "texte": "Que mange un animal herbivore ?",
+          "bonne": [
+            "1f33f",
+            "des plantes"
+          ],
+          "autres": [
+            [
+              "1f356",
+              "de la viande"
+            ],
+            [
+              "1f41f",
+              "du poisson"
+            ]
+          ],
+          "explication": "Un herbivore mange des végétaux : de l'herbe, des feuilles, des fruits."
+        },
+        {
+          "texte": "Que mange un animal carnivore ?",
+          "bonne": [
+            "1f356",
+            "de la viande"
+          ],
+          "autres": [
+            [
+              "1f33f",
+              "des plantes"
+            ],
+            [
+              "1f34e",
+              "des pommes"
+            ]
+          ],
+          "explication": "Un carnivore mange d'autres animaux."
+        },
+        {
+          "texte": "Lequel est carnivore ?",
+          "bonne": [
+            "1f988",
+            "le requin"
+          ],
+          "autres": [
+            [
+              "1f40e",
+              "le cheval"
+            ],
+            [
+              "1f418",
+              "l'éléphant"
+            ]
+          ],
+          "explication": "Le requin mange d'autres animaux, comme des poissons : il est carnivore."
+        },
+        {
+          "texte": "La poule mange des graines, mais aussi des vers et des insectes. Quel animal est omnivore comme elle ?",
+          "bonne": [
+            "1f416",
+            "le cochon"
+          ],
+          "autres": [
+            [
+              "1f404",
+              "la vache"
+            ],
+            [
+              "1f981",
+              "le lion"
+            ]
+          ],
+          "explication": "Le cochon mange des végétaux et des petits animaux : il est omnivore, comme la poule."
+        },
+        {
+          "texte": "Lequel est herbivore ?",
+          "bonne": [
+            "1f418",
+            "l'éléphant"
+          ],
+          "autres": [
+            [
+              "1f43a",
+              "le loup"
+            ],
+            [
+              "1f40a",
+              "le crocodile"
+            ]
+          ],
+          "explication": "L'éléphant mange de l'herbe, des feuilles et des branches : il est herbivore."
+        }
+      ],
+      "en": {
+        "titre": "Herbivore, carnivore or omnivore?",
+        "idee": "A herbivore eats plants, like the cow. A carnivore eats other animals, like the lion. An omnivore eats both, like the brown bear.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Herbivore: it eats plants. Carnivore: it eats animals. Omnivore: it eats both.",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which animal is a herbivore: it eats only plants?",
+            "bonne": [
+              "1f993",
+              "the zebra"
+            ],
+            "autres": [
+              [
+                "1f981",
+                "the lion"
+              ],
+              [
+                "1f988",
+                "the shark"
+              ]
+            ],
+            "explication": "The zebra eats grass: it is a herbivore."
+          },
+          {
+            "texte": "Which animal is a carnivore: it eats other animals?",
+            "bonne": [
+              "1f981",
+              "the lion"
+            ],
+            "autres": [
+              [
+                "1f404",
+                "the cow"
+              ],
+              [
+                "1f40e",
+                "the horse"
+              ]
+            ],
+            "explication": "The lion hunts other animals to eat them: it is a carnivore."
+          },
+          {
+            "texte": "Which animal is an omnivore: it eats plants and animals?",
+            "bonne": [
+              "1f43b",
+              "the brown bear"
+            ],
+            "autres": [
+              [
+                "1f993",
+                "the zebra"
+              ],
+              [
+                "1f418",
+                "the elephant"
+              ]
+            ],
+            "explication": "The brown bear eats fruit and roots, but also fish and insects: it is an omnivore."
+          },
+          {
+            "texte": "What does a herbivore eat?",
+            "bonne": [
+              "1f33f",
+              "plants"
+            ],
+            "autres": [
+              [
+                "1f356",
+                "meat"
+              ],
+              [
+                "1f41f",
+                "fish"
+              ]
+            ],
+            "explication": "A herbivore eats plants: grass, leaves, fruit."
+          },
+          {
+            "texte": "What does a carnivore eat?",
+            "bonne": [
+              "1f356",
+              "meat"
+            ],
+            "autres": [
+              [
+                "1f33f",
+                "plants"
+              ],
+              [
+                "1f34e",
+                "apples"
+              ]
+            ],
+            "explication": "A carnivore eats other animals."
+          },
+          {
+            "texte": "Which one is a carnivore?",
+            "bonne": [
+              "1f988",
+              "the shark"
+            ],
+            "autres": [
+              [
+                "1f40e",
+                "the horse"
+              ],
+              [
+                "1f418",
+                "the elephant"
+              ]
+            ],
+            "explication": "The shark eats other animals, such as fish: it is a carnivore."
+          },
+          {
+            "texte": "The hen eats seeds, but also worms and insects. Which animal is an omnivore like her?",
+            "bonne": [
+              "1f416",
+              "the pig"
+            ],
+            "autres": [
+              [
+                "1f404",
+                "the cow"
+              ],
+              [
+                "1f981",
+                "the lion"
+              ]
+            ],
+            "explication": "The pig eats plants and small animals: it is an omnivore, like the hen."
+          },
+          {
+            "texte": "Which one is a herbivore?",
+            "bonne": [
+              "1f418",
+              "the elephant"
+            ],
+            "autres": [
+              [
+                "1f43a",
+                "the wolf"
+              ],
+              [
+                "1f40a",
+                "the crocodile"
+              ]
+            ],
+            "explication": "The elephant eats grass, leaves and branches: it is a herbivore."
+          }
+        ]
+      }
+    },
+    {
+      "id": "plante-besoins",
+      "titre": "Les parties de la plante et ses besoins",
+      "niveau": "CE1",
+      "prerequis": [
+        "besoins"
+      ],
+      "programme": {
+        "source": "c2s",
+        "texte": "Déterminer des besoins essentiels pour la croissance d’une plante (eau et lumière) par une démarche expérimentale. Décrire les différents organes végétatifs d’une plante (racine, tige, feuille)."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Une plante a des racines dans la terre, une tige et des feuilles. Pour bien pousser, elle a besoin d'eau et de lumière.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "La racine est dans la terre, la tige porte les feuilles. Une plante a besoin d'eau et de lumière.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle partie de la plante est cachée dans la terre ?",
+          "bonne": [
+            "1f955",
+            "la racine"
+          ],
+          "autres": [
+            [
+              "1f33f",
+              "les feuilles"
+            ],
+            [
+              "1f337",
+              "la fleur"
+            ]
+          ],
+          "explication": "La racine est dans la terre : elle tient la plante et puise l'eau du sol."
+        },
+        {
+          "texte": "Quand on mange une carotte, quelle partie de la plante mange-t-on ?",
+          "bonne": [
+            "1f955",
+            "la racine"
+          ],
+          "autres": [
+            [
+              "1f34e",
+              "le fruit"
+            ],
+            [
+              "1f337",
+              "la fleur"
+            ]
+          ],
+          "explication": "La carotte que l'on mange est la racine de la plante."
+        },
+        {
+          "texte": "Chez le bambou, quelle partie longue et droite porte les feuilles ?",
+          "bonne": [
+            "1f38d",
+            "la tige"
+          ],
+          "autres": [
+            [
+              "1f955",
+              "la racine"
+            ],
+            [
+              "1f337",
+              "la fleur"
+            ]
+          ],
+          "explication": "La tige porte les feuilles : elle relie les racines aux feuilles."
+        },
+        {
+          "texte": "Quelle partie de la plante est souvent verte et plate ?",
+          "bonne": [
+            "1f33f",
+            "les feuilles"
+          ],
+          "autres": [
+            [
+              "1f955",
+              "la racine"
+            ],
+            [
+              "1f34e",
+              "le fruit"
+            ]
+          ],
+          "explication": "Les feuilles sont souvent vertes et plates."
+        },
+        {
+          "texte": "On range une plante dans un placard tout noir. De quoi manque-t-elle ?",
+          "bonne": [
+            "2600",
+            "de lumière"
+          ],
+          "autres": [
+            [
+              "1f9ca",
+              "de glace"
+            ],
+            [
+              "1f32c",
+              "de vent"
+            ]
+          ],
+          "explication": "Dans le noir, la plante manque de lumière : elle pousse mal."
+        },
+        {
+          "texte": "On oublie d'arroser une plante pendant très longtemps. De quoi manque-t-elle ?",
+          "bonne": [
+            "1f4a7",
+            "d'eau"
+          ],
+          "autres": [
+            [
+              "1f32c",
+              "de vent"
+            ],
+            [
+              "1f356",
+              "de viande"
+            ]
+          ],
+          "explication": "Sans eau, la plante se dessèche et finit par mourir."
+        },
+        {
+          "texte": "Deux plantes sont bien arrosées. L'une est à la lumière, l'autre dans le noir. Laquelle pousse bien ?",
+          "bonne": [
+            "2600",
+            "celle qui est à la lumière"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "celle qui est dans le noir"
+            ],
+            [
+              "1f9ca",
+              "celle qui est dans la glace"
+            ]
+          ],
+          "explication": "La plante qui reçoit de la lumière pousse bien : la lumière est un besoin de la plante."
+        }
+      ],
+      "en": {
+        "titre": "The parts of a plant and what it needs",
+        "idee": "A plant has roots in the soil, a stem and leaves. To grow well, it needs water and light.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "The root is in the soil, the stem holds the leaves. A plant needs water and light.",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which part of the plant is hidden in the soil?",
+            "bonne": [
+              "1f955",
+              "the root"
+            ],
+            "autres": [
+              [
+                "1f33f",
+                "the leaves"
+              ],
+              [
+                "1f337",
+                "the flower"
+              ]
+            ],
+            "explication": "The root is in the soil: it holds the plant and takes up water from the ground."
+          },
+          {
+            "texte": "When we eat a carrot, which part of the plant are we eating?",
+            "bonne": [
+              "1f955",
+              "the root"
+            ],
+            "autres": [
+              [
+                "1f34e",
+                "the fruit"
+              ],
+              [
+                "1f337",
+                "the flower"
+              ]
+            ],
+            "explication": "The carrot we eat is the plant's root."
+          },
+          {
+            "texte": "On a bamboo, which long, straight part holds the leaves?",
+            "bonne": [
+              "1f38d",
+              "the stem"
+            ],
+            "autres": [
+              [
+                "1f955",
+                "the root"
+              ],
+              [
+                "1f337",
+                "the flower"
+              ]
+            ],
+            "explication": "The stem holds the leaves: it joins the roots to the leaves."
+          },
+          {
+            "texte": "Which part of the plant is often green and flat?",
+            "bonne": [
+              "1f33f",
+              "the leaves"
+            ],
+            "autres": [
+              [
+                "1f955",
+                "the root"
+              ],
+              [
+                "1f34e",
+                "the fruit"
+              ]
+            ],
+            "explication": "Leaves are often green and flat."
+          },
+          {
+            "texte": "We put a plant in a completely dark cupboard. What is it missing?",
+            "bonne": [
+              "2600",
+              "light"
+            ],
+            "autres": [
+              [
+                "1f9ca",
+                "ice"
+              ],
+              [
+                "1f32c",
+                "wind"
+              ]
+            ],
+            "explication": "In the dark, the plant has no light: it grows badly."
+          },
+          {
+            "texte": "We forget to water a plant for a very long time. What is it missing?",
+            "bonne": [
+              "1f4a7",
+              "water"
+            ],
+            "autres": [
+              [
+                "1f32c",
+                "wind"
+              ],
+              [
+                "1f356",
+                "meat"
+              ]
+            ],
+            "explication": "Without water, the plant dries out and in the end it dies."
+          },
+          {
+            "texte": "Two plants are watered well. One is in the light, the other in the dark. Which one grows well?",
+            "bonne": [
+              "2600",
+              "the one in the light"
+            ],
+            "autres": [
+              [
+                "1f319",
+                "the one in the dark"
+              ],
+              [
+                "1f9ca",
+                "the one in the ice"
+              ]
+            ],
+            "explication": "The plant that gets light grows well: light is something a plant needs."
           }
         ]
       }
@@ -9130,6 +10836,903 @@
               {
                 "texte": "Because CO₂ increases the albedo.",
                 "pourquoi": "CO₂ is transparent to visible light: it acts on infrared, not on albedo."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "atmosphere-vie",
+      "titre": "L'atmosphère terrestre et la vie",
+      "niveau": "Terminale",
+      "prerequis": [
+        "bilan-radiatif"
+      ],
+      "programme": {
+        "source": "estle",
+        "texte": "Il y a environ 4,6 milliards d’années, l’atmosphère primitive était composée de N2, CO2 et H2O. Sa composition actuelle est d’environ 78 % de N2 et 21 % de O2, avec des traces d’autres gaz (dont H2O, CO2, CH4, N2O)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'atmosphère primitive (N₂, CO₂, H₂O) a changé : la vapeur d'eau s'est condensée en océans, puis la photosynthèse a apporté le dioxygène, d'où l'ozone qui filtre les ultraviolets.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : Terre formée il y a ≈ 4,6 milliards d'années ; premières bactéries photosynthétiques il y a au moins 3,5 milliards d'années ; oxygénation de l'atmosphère il y a ≈ 2,4 milliards d'années.",
+        "exemple": "Exemple : la photosynthèse produit du dioxygène, la respiration et les combustions en consomment. L'ozone (O₃) de la stratosphère se forme à partir du dioxygène, sous l'effet des ultraviolets.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle est la composition approximative de l'atmosphère actuelle ?",
+          "nom": "Environ 78 % de diazote (N₂) et 21 % de dioxygène (O₂), avec des traces d'autres gaz.",
+          "explication": "Le diazote est majoritaire ; le CO₂, le méthane ou la vapeur d'eau ne sont présents qu'à l'état de traces.",
+          "pieges": [
+            {
+              "texte": "Environ 78 % de dioxygène et 21 % de diazote.",
+              "pourquoi": "Les proportions sont inversées : c'est le diazote qui est majoritaire."
+            },
+            {
+              "texte": "Surtout du dioxyde de carbone (CO₂).",
+              "pourquoi": "Dans l'atmosphère actuelle, le CO₂ n'est présent qu'à l'état de traces."
+            }
+          ]
+        },
+        {
+          "texte": "Il y a environ 4,6 milliards d'années, de quels gaz l'atmosphère primitive était-elle composée ?",
+          "nom": "De diazote, de dioxyde de carbone et de vapeur d'eau (N₂, CO₂, H₂O).",
+          "explication": "L'atmosphère primitive ne contenait pas de dioxygène en quantité : il s'est accumulé bien plus tard.",
+          "pieges": [
+            {
+              "texte": "De 21 % de dioxygène, comme aujourd'hui.",
+              "pourquoi": "Le dioxygène s'est accumulé bien plus tard, grâce à la photosynthèse."
+            },
+            {
+              "texte": "De dioxygène et d'ozone.",
+              "pourquoi": "L'ozone se forme à partir du dioxygène : l'un comme l'autre sont venus après la photosynthèse."
+            }
+          ]
+        },
+        {
+          "texte": "Que s'est-il passé quand la surface de la Terre primitive s'est refroidie ?",
+          "nom": "La vapeur d'eau de l'atmosphère s'est liquéfiée très rapidement, formant l'hydrosphère.",
+          "explication": "Rapidement à l'échelle des temps géologiques, la vapeur d'eau s'est condensée ; c'est dans cette hydrosphère que la vie s'est développée.",
+          "pieges": [
+            {
+              "texte": "Toute l'eau est devenue de la glace, pour toujours.",
+              "pourquoi": "La température et la pression de surface permettent l'eau liquide : c'est elle qui forme l'hydrosphère."
+            },
+            {
+              "texte": "Le dioxyde de carbone s'est changé en dioxygène.",
+              "pourquoi": "Le refroidissement ne produit pas de dioxygène : c'est la photosynthèse qui en produit."
+            }
+          ]
+        },
+        {
+          "texte": "De quand datent les premières traces de bactéries photosynthétiques ?",
+          "nom": "D'au moins 3,5 milliards d'années.",
+          "explication": "Ces bactéries sont apparues bien avant l'oxygénation de l'atmosphère, datée d'il y a environ 2,4 milliards d'années.",
+          "pieges": [
+            {
+              "texte": "D'environ 4,6 milliards d'années.",
+              "pourquoi": "C'est l'âge de la formation de la Terre ; la vie s'est développée ensuite, dans l'eau liquide."
+            },
+            {
+              "texte": "D'environ 2,4 milliards d'années.",
+              "pourquoi": "C'est la date de l'oxygénation de l'atmosphère : les bactéries photosynthétiques existaient déjà depuis longtemps."
+            }
+          ]
+        },
+        {
+          "texte": "Par quel mécanisme des bactéries ont-elles contribué à oxygéner l'atmosphère, il y a environ 2,4 milliards d'années ?",
+          "nom": "Par la photosynthèse, qui libère du dioxygène.",
+          "explication": "Leur métabolisme photosynthétique a libéré du dioxygène, qui s'est peu à peu accumulé dans l'atmosphère.",
+          "pieges": [
+            {
+              "texte": "Par la respiration, qui libère du dioxygène.",
+              "pourquoi": "La respiration consomme du dioxygène et rejette du CO₂ : c'est l'inverse."
+            },
+            {
+              "texte": "Par des combustions.",
+              "pourquoi": "Une combustion consomme du dioxygène ; elle n'en produit pas."
+            }
+          ]
+        },
+        {
+          "texte": "Aujourd'hui, à quoi sont essentiellement liés les sources et les puits de dioxygène atmosphérique ?",
+          "nom": "Aux êtres vivants (photosynthèse et respiration) et aux combustions.",
+          "explication": "La photosynthèse produit du dioxygène ; la respiration et les combustions en consomment.",
+          "pieges": [
+            {
+              "texte": "Aux volcans, qui rejettent du dioxygène.",
+              "pourquoi": "Le dioxygène de l'air n'est pas d'origine volcanique : sa source est la photosynthèse."
+            },
+            {
+              "texte": "À l'océan, qui fabrique du dioxygène sans aucun être vivant.",
+              "pourquoi": "Dans l'océan aussi, ce sont des êtres vivants chlorophylliens qui produisent le dioxygène."
+            }
+          ]
+        },
+        {
+          "texte": "Comment se forme l'ozone de la stratosphère ?",
+          "nom": "Le rayonnement ultraviolet solaire dissocie du dioxygène, ce qui aboutit à la formation d'ozone (O₃).",
+          "explication": "Sous l'effet des ultraviolets, une transformation chimique à partir du dioxygène produit l'ozone stratosphérique.",
+          "pieges": [
+            {
+              "texte": "Par les gaz d'échappement des voitures.",
+              "pourquoi": "La pollution peut former de l'ozone près du sol, dans la troposphère ; l'ozone stratosphérique vient du dioxygène et des ultraviolets."
+            },
+            {
+              "texte": "Par l'évaporation de l'eau des océans.",
+              "pourquoi": "L'ozone (O₃) n'est fait que d'atomes d'oxygène : il se forme à partir du dioxygène, pas de la vapeur d'eau."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l'ozone stratosphérique protège-t-il les êtres vivants ?",
+          "nom": "Il absorbe une partie du rayonnement ultraviolet solaire, dont les effets sont mutagènes.",
+          "explication": "Les ultraviolets peuvent endommager l'ADN ; l'ozone en absorbe une partie avant qu'ils n'atteignent la surface.",
+          "pieges": [
+            {
+              "texte": "Il retient l'infrarouge, comme l'effet de serre.",
+              "pourquoi": "Son rôle protecteur vient de l'absorption des ultraviolets, pas de l'infrarouge."
+            },
+            {
+              "texte": "Il fournit le dioxygène que nous respirons.",
+              "pourquoi": "Le dioxygène respiré vient de la photosynthèse ; l'ozone est une autre molécule, O₃."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The Earth's atmosphere and life",
+        "idee": "The early atmosphere (N₂, CO₂, H₂O) changed: water vapour condensed into oceans, then photosynthesis brought oxygen, and with it the ozone that filters ultraviolet.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: Earth formed ≈ 4.6 billion years ago; first photosynthetic bacteria at least 3.5 billion years ago; oxygenation of the atmosphere ≈ 2.4 billion years ago.",
+          "exemple": "Example: photosynthesis produces oxygen; respiration and combustion use it up. Ozone (O₃) in the stratosphere forms from oxygen, under the effect of ultraviolet light.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the approximate composition of today's atmosphere?",
+            "nom": "About 78 % nitrogen (N₂) and 21 % oxygen (O₂), with traces of other gases.",
+            "explication": "Nitrogen is the main gas; CO₂, methane and water vapour are only present as traces.",
+            "pieges": [
+              {
+                "texte": "About 78 % oxygen and 21 % nitrogen.",
+                "pourquoi": "The proportions are the wrong way round: nitrogen is the main gas."
+              },
+              {
+                "texte": "Mostly carbon dioxide (CO₂).",
+                "pourquoi": "In today's atmosphere, CO₂ is only present as a trace gas."
+              }
+            ]
+          },
+          {
+            "texte": "About 4.6 billion years ago, which gases made up the early atmosphere?",
+            "nom": "Nitrogen, carbon dioxide and water vapour (N₂, CO₂, H₂O).",
+            "explication": "The early atmosphere contained no significant oxygen: it built up much later.",
+            "pieges": [
+              {
+                "texte": "21 % oxygen, as today.",
+                "pourquoi": "Oxygen built up much later, thanks to photosynthesis."
+              },
+              {
+                "texte": "Oxygen and ozone.",
+                "pourquoi": "Ozone forms from oxygen: both came after photosynthesis."
+              }
+            ]
+          },
+          {
+            "texte": "What happened when the surface of the early Earth cooled down?",
+            "nom": "The water vapour in the atmosphere turned to liquid very quickly, forming the hydrosphere.",
+            "explication": "Quickly on the geological time scale, the water vapour condensed; life developed in this hydrosphere.",
+            "pieges": [
+              {
+                "texte": "All the water turned to ice, for ever.",
+                "pourquoi": "Surface temperature and pressure allow liquid water: that is what forms the hydrosphere."
+              },
+              {
+                "texte": "The carbon dioxide turned into oxygen.",
+                "pourquoi": "Cooling doesn't produce oxygen: photosynthesis does."
+              }
+            ]
+          },
+          {
+            "texte": "How old are the first traces of photosynthetic bacteria?",
+            "nom": "At least 3.5 billion years old.",
+            "explication": "These bacteria appeared long before the oxygenation of the atmosphere, dated to about 2.4 billion years ago.",
+            "pieges": [
+              {
+                "texte": "About 4.6 billion years old.",
+                "pourquoi": "That is the age of the Earth's formation; life developed later, in liquid water."
+              },
+              {
+                "texte": "About 2.4 billion years old.",
+                "pourquoi": "That is the date of the oxygenation of the atmosphere: photosynthetic bacteria had already existed for a long time."
+              }
+            ]
+          },
+          {
+            "texte": "By what process did bacteria help oxygenate the atmosphere, about 2.4 billion years ago?",
+            "nom": "By photosynthesis, which releases oxygen.",
+            "explication": "Their photosynthetic metabolism released oxygen, which gradually built up in the atmosphere.",
+            "pieges": [
+              {
+                "texte": "By respiration, which releases oxygen.",
+                "pourquoi": "Respiration uses up oxygen and gives off CO₂: it's the opposite."
+              },
+              {
+                "texte": "By combustion.",
+                "pourquoi": "Combustion uses up oxygen; it doesn't produce any."
+              }
+            ]
+          },
+          {
+            "texte": "Today, what are the sources and sinks of atmospheric oxygen mainly linked to?",
+            "nom": "Living things (photosynthesis and respiration) and combustion.",
+            "explication": "Photosynthesis produces oxygen; respiration and combustion use it up.",
+            "pieges": [
+              {
+                "texte": "Volcanoes, which give off oxygen.",
+                "pourquoi": "The oxygen in the air doesn't come from volcanoes: its source is photosynthesis."
+              },
+              {
+                "texte": "The ocean, which makes oxygen without any living things.",
+                "pourquoi": "In the ocean too, it is chlorophyll-bearing living things that produce oxygen."
+              }
+            ]
+          },
+          {
+            "texte": "How does ozone form in the stratosphere?",
+            "nom": "Ultraviolet radiation from the Sun splits oxygen molecules, which leads to the formation of ozone (O₃).",
+            "explication": "Under ultraviolet light, a chemical change starting from oxygen produces stratospheric ozone.",
+            "pieges": [
+              {
+                "texte": "From car exhaust fumes.",
+                "pourquoi": "Pollution can form ozone near the ground, in the troposphere; stratospheric ozone comes from oxygen and ultraviolet light."
+              },
+              {
+                "texte": "From water evaporating from the oceans.",
+                "pourquoi": "Ozone (O₃) is made only of oxygen atoms: it forms from oxygen, not from water vapour."
+              }
+            ]
+          },
+          {
+            "texte": "Why does stratospheric ozone protect living things?",
+            "nom": "It absorbs part of the Sun's ultraviolet radiation, which causes mutations.",
+            "explication": "Ultraviolet light can damage DNA; ozone absorbs part of it before it reaches the surface.",
+            "pieges": [
+              {
+                "texte": "It traps infrared, like the greenhouse effect.",
+                "pourquoi": "Its protective role comes from absorbing ultraviolet, not infrared."
+              },
+              {
+                "texte": "It provides the oxygen we breathe.",
+                "pourquoi": "The oxygen we breathe comes from photosynthesis; ozone is a different molecule, O₃."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "systeme-climatique",
+      "titre": "La complexité du système climatique",
+      "niveau": "Terminale",
+      "prerequis": [
+        "bilan-radiatif"
+      ],
+      "programme": {
+        "source": "estle",
+        "texte": "Depuis un siècle et demi, on mesure un réchauffement climatique global (environ +1°C). Celui-ci est la réponse du système climatique à l’augmentation du forçage radiatif (différence entre l’énergie radiative reçue et l’énergie radiative émise) due aux émissions de gaz à effet de serre (GES) dans l’atmosphère."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le climat s'étudie sur des années, la météo sur des jours. Les gaz à effet de serre perturbent l'équilibre radiatif ; l'océan stocke l'énergie, et des rétroactions amplifient le réchauffement.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : réchauffement global mesuré ≈ +1 °C depuis un siècle et demi ; forçage radiatif = énergie radiative reçue − énergie radiative émise.",
+        "exemple": "Exemple : quand la glace fond, la surface devient plus sombre ; l'albédo baisse, la Terre absorbe plus d'énergie et se réchauffe encore. C'est une rétroaction positive : elle amplifie le changement.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qui distingue la météorologie de la climatologie ?",
+          "nom": "La météorologie prévoit les phénomènes à court terme (jours, semaines) ; la climatologie étudie le climat sur des années, des siècles, des millénaires.",
+          "explication": "Les deux sciences diffèrent par l'échelle de temps étudiée.",
+          "pieges": [
+            {
+              "texte": "Ce sont deux noms pour la même science.",
+              "pourquoi": "Elles diffèrent par l'échelle de temps : jours et semaines pour la météo, années et plus pour le climat."
+            },
+            {
+              "texte": "La météorologie étudie le climat sur des siècles, la climatologie le temps de demain.",
+              "pourquoi": "C'est l'inverse : la météo travaille à court terme, la climatologie à moyen ou long terme."
+            }
+          ]
+        },
+        {
+          "texte": "Un hiver très froid dans une région prouve-t-il qu'il n'y a pas de réchauffement climatique ?",
+          "nom": "Non : un épisode météorologique isolé ne dit rien de la tendance climatique à long terme.",
+          "explication": "Le climat a une variabilité naturelle ; on juge une tendance sur des moyennes de longue durée, pas sur une saison.",
+          "pieges": [
+            {
+              "texte": "Oui, car le climat se juge jour après jour.",
+              "pourquoi": "Un hiver relève de la météo ; le climat se juge sur des moyennes de plusieurs années."
+            },
+            {
+              "texte": "Oui, car avec un réchauffement, il ne peut plus faire froid.",
+              "pourquoi": "La variabilité naturelle rend possibles des épisodes froids, même quand la tendance est au réchauffement."
+            }
+          ]
+        },
+        {
+          "texte": "De combien la température moyenne de la Terre a-t-elle augmenté depuis un siècle et demi ?",
+          "nom": "D'environ 1 °C.",
+          "explication": "Mesurée sur le terrain et par satellite, la hausse est d'environ 1 °C : c'est la réponse du système climatique au forçage radiatif.",
+          "pieges": [
+            {
+              "texte": "D'environ 10 °C.",
+              "pourquoi": "L'ordre de grandeur mesuré est d'environ 1 °C, dix fois moins."
+            },
+            {
+              "texte": "Elle n'a pas changé.",
+              "pourquoi": "Les mesures de terrain et par satellite montrent un réchauffement global d'environ 1 °C."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on forçage radiatif ?",
+          "nom": "La différence entre l'énergie radiative reçue et l'énergie radiative émise.",
+          "explication": "Les émissions de gaz à effet de serre augmentent ce forçage : la surface reçoit plus qu'elle n'émet, et se réchauffe.",
+          "pieges": [
+            {
+              "texte": "La force du vent dans l'atmosphère.",
+              "pourquoi": "Malgré le mot « forçage », c'est un bilan d'énergie radiative, pas une force mécanique."
+            },
+            {
+              "texte": "L'énergie émise par le Soleil, à elle seule.",
+              "pourquoi": "Le forçage compare ce qui est reçu et ce qui est émis : c'est une différence."
+            }
+          ]
+        },
+        {
+          "texte": "Où l'énergie supplémentaire due au forçage radiatif est-elle surtout stockée ?",
+          "nom": "Essentiellement dans les océans, mais aussi dans l'air et les sols.",
+          "explication": "Cette énergie stockée fait monter la température moyenne à la surface et le niveau des océans.",
+          "pieges": [
+            {
+              "texte": "Dans l'espace, où elle repart aussitôt.",
+              "pourquoi": "Si elle repartait aussitôt, il n'y aurait pas de déséquilibre : elle s'accumule surtout dans l'océan."
+            },
+            {
+              "texte": "Dans les glaciers, qui la gardent sous forme de glace.",
+              "pourquoi": "Les glaces fondent sous l'effet de cette énergie, mais c'est l'océan qui en stocke l'essentiel."
+            }
+          ]
+        },
+        {
+          "texte": "Parmi ces effets, lequel est une rétroaction positive (amplificatrice) ?",
+          "nom": "La fonte des glaces diminue l'albédo terrestre : la Terre absorbe plus d'énergie solaire.",
+          "explication": "Moins de surface glacée, c'est moins de rayonnement renvoyé, donc un réchauffement renforcé.",
+          "pieges": [
+            {
+              "texte": "Les organismes chlorophylliens absorbent du CO₂.",
+              "pourquoi": "À court terme, c'est un puits de CO₂ : une rétroaction négative, stabilisatrice."
+            },
+            {
+              "texte": "L'océan absorbe une partie du CO₂ émis.",
+              "pourquoi": "C'est un rôle d'amortisseur : il limite la hausse du CO₂ dans l'air."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le dégel partiel du permafrost amplifie-t-il le réchauffement ?",
+          "nom": "Il libère des gaz à effet de serre dans l'atmosphère.",
+          "explication": "Ces GES renforcent l'effet de serre, ce qui entretient le réchauffement : c'est une rétroaction positive.",
+          "pieges": [
+            {
+              "texte": "Il refroidit l'air en absorbant de la chaleur.",
+              "pourquoi": "Le programme le range parmi les effets amplificateurs : il libère des gaz à effet de serre."
+            },
+            {
+              "texte": "Il fait baisser le niveau des océans.",
+              "pourquoi": "Le permafrost est un sol gelé ; son dégel agit par les gaz qu'il libère."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le niveau moyen des océans monte-t-il ?",
+          "nom": "L'eau se dilate en se réchauffant, et la fusion des glaces continentales ajoute de l'eau.",
+          "explication": "La dilatation thermique et la fusion des glaces posées sur les continents élèvent le niveau des océans.",
+          "pieges": [
+            {
+              "texte": "Surtout parce que la banquise, la glace de mer, fond.",
+              "pourquoi": "La banquise flotte déjà sur l'océan : c'est la fusion des glaces continentales qui ajoute de l'eau."
+            },
+            {
+              "texte": "Parce qu'il pleut davantage.",
+              "pourquoi": "La pluie vient d'eau déjà évaporée : elle n'ajoute pas d'eau au total. Les causes sont la dilatation et la fusion des glaces continentales."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le changement climatique est-il irréversible à l'échelle de plusieurs siècles ?",
+          "nom": "Parce que l'énergie accumulée dans les océans ne se dissipe que très lentement.",
+          "explication": "L'océan absorbe une grande part de l'énergie supplémentaire ; cette accumulation rend le changement durable pendant des siècles.",
+          "pieges": [
+            {
+              "texte": "Parce que les modèles climatiques ne peuvent rien prévoir.",
+              "pourquoi": "Les modèles produisent des projections ; l'irréversibilité vient de l'inertie de l'océan."
+            },
+            {
+              "texte": "Parce que le CO₂ ne quitte jamais l'atmosphère.",
+              "pourquoi": "Une partie du CO₂ est absorbée par l'océan et les végétaux ; c'est l'énergie stockée par l'océan qui rend le changement durable."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The complexity of the climate system",
+        "idee": "Climate is studied over years, weather over days. Greenhouse gases upset the radiative balance; the ocean stores the energy, and feedbacks amplify the warming.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: global warming measured ≈ +1 °C over the past century and a half; radiative forcing = radiative energy received − radiative energy emitted.",
+          "exemple": "Example: when ice melts, the surface gets darker; the albedo falls, the Earth absorbs more energy and warms up even more. That's a positive feedback: it amplifies the change.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the difference between meteorology and climatology?",
+            "nom": "Meteorology forecasts short-term events (days, weeks); climatology studies climate over years, centuries, millennia.",
+            "explication": "The two sciences differ by the time scale they study.",
+            "pieges": [
+              {
+                "texte": "They are two names for the same science.",
+                "pourquoi": "They differ by time scale: days and weeks for weather, years and more for climate."
+              },
+              {
+                "texte": "Meteorology studies climate over centuries, climatology tomorrow's weather.",
+                "pourquoi": "It's the other way round: meteorology works in the short term, climatology in the medium or long term."
+              }
+            ]
+          },
+          {
+            "texte": "Does a very cold winter in one region prove there is no global warming?",
+            "nom": "No: a single weather event says nothing about the long-term climate trend.",
+            "explication": "Climate varies naturally; a trend is judged on long-term averages, not on one season.",
+            "pieges": [
+              {
+                "texte": "Yes, because climate is judged day by day.",
+                "pourquoi": "A winter is weather; climate is judged on averages over several years."
+              },
+              {
+                "texte": "Yes, because with warming it can never be cold any more.",
+                "pourquoi": "Natural variability still allows cold spells, even when the trend is warming."
+              }
+            ]
+          },
+          {
+            "texte": "By how much has the Earth's average temperature risen over the past century and a half?",
+            "nom": "By about 1 °C.",
+            "explication": "Measured on the ground and by satellite, the rise is about 1 °C: it is the climate system's response to radiative forcing.",
+            "pieges": [
+              {
+                "texte": "By about 10 °C.",
+                "pourquoi": "The measured order of magnitude is about 1 °C, ten times less."
+              },
+              {
+                "texte": "It hasn't changed.",
+                "pourquoi": "Ground and satellite measurements show global warming of about 1 °C."
+              }
+            ]
+          },
+          {
+            "texte": "What is radiative forcing?",
+            "nom": "The difference between the radiative energy received and the radiative energy emitted.",
+            "explication": "Greenhouse gas emissions increase this forcing: the surface receives more than it emits, and warms up.",
+            "pieges": [
+              {
+                "texte": "The strength of the wind in the atmosphere.",
+                "pourquoi": "Despite the word \"forcing\", it's a radiative energy balance, not a mechanical force."
+              },
+              {
+                "texte": "The energy emitted by the Sun, on its own.",
+                "pourquoi": "Forcing compares what is received and what is emitted: it's a difference."
+              }
+            ]
+          },
+          {
+            "texte": "Where is the extra energy from radiative forcing mainly stored?",
+            "nom": "Mostly in the oceans, but also in the air and the ground.",
+            "explication": "This stored energy raises the average surface temperature and the sea level.",
+            "pieges": [
+              {
+                "texte": "In space, where it leaves straight away.",
+                "pourquoi": "If it left straight away, there would be no imbalance: it builds up mainly in the ocean."
+              },
+              {
+                "texte": "In glaciers, which keep it as ice.",
+                "pourquoi": "Ice melts because of this energy, but it's the ocean that stores most of it."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these effects is a positive (amplifying) feedback?",
+            "nom": "Melting ice lowers the Earth's albedo: the Earth absorbs more solar energy.",
+            "explication": "Less icy surface means less radiation sent back, so stronger warming.",
+            "pieges": [
+              {
+                "texte": "Chlorophyll-bearing organisms absorb CO₂.",
+                "pourquoi": "In the short term, that's a CO₂ sink: a negative, stabilising feedback."
+              },
+              {
+                "texte": "The ocean absorbs part of the CO₂ emitted.",
+                "pourquoi": "That's a buffering role: it limits the rise of CO₂ in the air."
+              }
+            ]
+          },
+          {
+            "texte": "Why does the partial thawing of permafrost amplify warming?",
+            "nom": "It releases greenhouse gases into the atmosphere.",
+            "explication": "These greenhouse gases strengthen the greenhouse effect, which keeps the warming going: it's a positive feedback.",
+            "pieges": [
+              {
+                "texte": "It cools the air by absorbing heat.",
+                "pourquoi": "The syllabus lists it among the amplifying effects: it releases greenhouse gases."
+              },
+              {
+                "texte": "It lowers the sea level.",
+                "pourquoi": "Permafrost is frozen ground; its thawing acts through the gases it releases."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the average sea level rising?",
+            "nom": "Water expands as it warms, and melting land ice adds water.",
+            "explication": "Thermal expansion and the melting of ice that sits on land raise the sea level.",
+            "pieges": [
+              {
+                "texte": "Mainly because sea ice is melting.",
+                "pourquoi": "Sea ice already floats on the ocean: it's melting land ice that adds water."
+              },
+              {
+                "texte": "Because it rains more.",
+                "pourquoi": "Rain comes from water that has already evaporated: it adds no water overall. The causes are expansion and melting land ice."
+              }
+            ]
+          },
+          {
+            "texte": "Why is climate change irreversible over several centuries?",
+            "nom": "Because the energy built up in the oceans goes away only very slowly.",
+            "explication": "The ocean absorbs a large share of the extra energy; this build-up makes the change last for centuries.",
+            "pieges": [
+              {
+                "texte": "Because climate models can't predict anything.",
+                "pourquoi": "Models produce projections; the irreversibility comes from the ocean's inertia."
+              },
+              {
+                "texte": "Because CO₂ never leaves the atmosphere.",
+                "pourquoi": "Part of the CO₂ is absorbed by the ocean and plants; it's the energy stored by the ocean that makes the change last."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "electricite-sans-combustion",
+      "titre": "Produire et transporter l'électricité",
+      "niveau": "Terminale",
+      "prerequis": [
+        "energie"
+      ],
+      "programme": {
+        "source": "estle",
+        "texte": "Trois méthodes permettent d’obtenir de l’énergie électrique sans nécessiter de combustion : la conversion d’énergie mécanique […] ; la conversion de l’énergie radiative reçue du Soleil (panneaux photovoltaïques) ; la conversion électrochimique (piles ou accumulateurs conventionnels, piles à hydrogène)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Sans combustion, on obtient de l'électricité par conversion mécanique (alternateur), radiative (photovoltaïque) ou électrochimique. La haute tension limite les pertes par effet Joule.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : puissance P = U × I ; pertes par effet Joule dans une ligne de résistance R : R × I².",
+        "exemple": "Exemple : à puissance P fixée, si la tension U est multipliée par 10, l'intensité I = P / U est divisée par 10, et les pertes R × I² sont divisées par 10² = 100.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel phénomène physique exploitent les alternateurs électriques ?",
+          "nom": "L'induction électromagnétique, découverte par Faraday puis théorisée par Maxwell.",
+          "explication": "Une source de champ magnétique et un fil conducteur en mouvement relatif : c'est le principe de l'alternateur.",
+          "pieges": [
+            {
+              "texte": "L'effet photovoltaïque.",
+              "pourquoi": "Il concerne les capteurs à semi-conducteurs, pas les alternateurs."
+            },
+            {
+              "texte": "La combustion d'un carburant.",
+              "pourquoi": "Une combustion peut faire tourner une turbine, mais l'alternateur, lui, exploite l'induction."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle conversion d'énergie réalise un alternateur ?",
+          "nom": "D'énergie mécanique en énergie électrique, avec un rendement qui peut être proche de 1.",
+          "explication": "Le rotor en mouvement fournit l'énergie mécanique ; l'alternateur la convertit presque entièrement en énergie électrique.",
+          "pieges": [
+            {
+              "texte": "D'énergie chimique en énergie électrique.",
+              "pourquoi": "C'est la conversion des piles et des accumulateurs."
+            },
+            {
+              "texte": "D'énergie radiative en énergie électrique.",
+              "pourquoi": "C'est la conversion des panneaux photovoltaïques."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel de ces moyens produit de l'électricité sans combustion ?",
+          "nom": "Une éolienne.",
+          "explication": "L'éolienne convertit directement l'énergie mécanique du vent en énergie électrique.",
+          "pieges": [
+            {
+              "texte": "Une centrale au charbon.",
+              "pourquoi": "On y brûle du charbon pour produire de la vapeur : c'est une combustion."
+            },
+            {
+              "texte": "Une centrale au gaz naturel.",
+              "pourquoi": "On y brûle du gaz : c'est une combustion, qui rejette du CO₂."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une centrale nucléaire, comment l'électricité est-elle obtenue ?",
+          "nom": "Indirectement : l'énergie thermique produit un mouvement qui entraîne un alternateur.",
+          "explication": "Le programme range les centrales nucléaires parmi les conversions indirectes d'énergie mécanique, à partir d'énergie thermique.",
+          "pieges": [
+            {
+              "texte": "En brûlant de l'uranium.",
+              "pourquoi": "L'uranium ne brûle pas : la chaleur vient de la fission des noyaux, sans combustion."
+            },
+            {
+              "texte": "En convertissant directement un rayonnement en électricité.",
+              "pourquoi": "C'est le principe du photovoltaïque ; la centrale passe par la chaleur, puis par un mouvement."
+            }
+          ]
+        },
+        {
+          "texte": "Que font les capteurs photovoltaïques ?",
+          "nom": "Ils absorbent l'énergie radiative et la convertissent partiellement en énergie électrique.",
+          "explication": "Faits de matériaux semi-conducteurs, en particulier le silicium, ils convertissent une partie du rayonnement reçu.",
+          "pieges": [
+            {
+              "texte": "Ils convertissent toute l'énergie lumineuse reçue en électricité.",
+              "pourquoi": "La conversion n'est que partielle : une partie de l'énergie reçue n'est pas convertie."
+            },
+            {
+              "texte": "Ils chauffent de l'eau pour faire tourner une turbine.",
+              "pourquoi": "Cela décrit une centrale solaire thermique ; le photovoltaïque convertit directement le rayonnement."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi transporte-t-on l'électricité sous haute tension ?",
+          "nom": "À puissance transportée fixée, une tension plus haute réduit l'intensité, donc les pertes par effet Joule.",
+          "explication": "P = U × I : plus U est grande, plus I est petite ; or les pertes dans la ligne valent R × I².",
+          "pieges": [
+            {
+              "texte": "Pour transporter plus d'énergie sans rien changer d'autre.",
+              "pourquoi": "La puissance transportée est fixée : la haute tension limite seulement les pertes."
+            },
+            {
+              "texte": "Parce que les pertes par effet Joule diminuent quand l'intensité augmente.",
+              "pourquoi": "C'est l'inverse : les pertes R × I² augmentent avec l'intensité."
+            }
+          ]
+        },
+        {
+          "texte": "À puissance transportée fixée, on multiplie la tension d'une ligne par 10. Comment évoluent les pertes par effet Joule ?",
+          "nom": "Elles sont divisées par 100.",
+          "explication": "L'intensité est divisée par 10 ; les pertes varient comme I², donc elles sont divisées par 10² = 100.",
+          "pieges": [
+            {
+              "texte": "Elles sont divisées par 10.",
+              "pourquoi": "L'intensité est bien divisée par 10, mais les pertes varient comme son carré."
+            },
+            {
+              "texte": "Elles sont multipliées par 10.",
+              "pourquoi": "À puissance fixée, plus de tension veut dire moins d'intensité, donc moins de pertes."
+            }
+          ]
+        },
+        {
+          "texte": "Comment faire face à l'intermittence de certains modes de production, comme l'éolien ou le solaire ?",
+          "nom": "Convertir l'énergie électrique sous une forme stockable : chimique, mécanique ou électromagnétique.",
+          "explication": "On peut aussi mobiliser des réserves, ou ajuster la consommation ou la production.",
+          "pieges": [
+            {
+              "texte": "Laisser l'électricité en réserve dans les câbles du réseau.",
+              "pourquoi": "Le réseau transporte l'énergie électrique : pour la garder, il faut la convertir sous une forme stockable."
+            },
+            {
+              "texte": "Il n'existe aucune solution.",
+              "pourquoi": "Stockage, réserves, ajustement de la consommation ou de la production : plusieurs solutions existent."
+            }
+          ]
+        },
+        {
+          "texte": "Les méthodes de production sans combustion sont-elles sans effet sur l'environnement ?",
+          "nom": "Non : elles ont aussi des effets sur l'environnement et la biodiversité, ou des risques spécifiques.",
+          "explication": "Pollution chimique, déchets radioactifs, accidents industriels : chaque méthode a ses effets et ses risques à évaluer.",
+          "pieges": [
+            {
+              "texte": "Oui : sans combustion, il n'y a aucun effet.",
+              "pourquoi": "Le programme rappelle leurs effets sur l'environnement et la biodiversité, et leurs risques spécifiques."
+            },
+            {
+              "texte": "Seules les éoliennes ont un effet.",
+              "pourquoi": "Toutes en ont : par exemple, les déchets radioactifs des centrales nucléaires."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Producing and transporting electricity",
+        "idee": "Without combustion, electricity comes from mechanical conversion (alternator), radiative conversion (photovoltaics) or electrochemical conversion. High voltage limits Joule heating losses.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: power P = U × I; Joule heating losses in a line of resistance R: R × I².",
+          "exemple": "Example: at a fixed power P, if the voltage U is multiplied by 10, the current I = P / U is divided by 10, and the losses R × I² are divided by 10² = 100.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which physical phenomenon do electric alternators use?",
+            "nom": "Electromagnetic induction, discovered by Faraday and then explained in theory by Maxwell.",
+            "explication": "A source of magnetic field and a conducting wire in relative motion: that's how an alternator works.",
+            "pieges": [
+              {
+                "texte": "The photovoltaic effect.",
+                "pourquoi": "That concerns semiconductor cells, not alternators."
+              },
+              {
+                "texte": "Burning a fuel.",
+                "pourquoi": "Combustion can turn a turbine, but the alternator itself uses induction."
+              }
+            ]
+          },
+          {
+            "texte": "Which energy conversion does an alternator carry out?",
+            "nom": "From mechanical energy to electrical energy, with an efficiency that can be close to 1.",
+            "explication": "The moving rotor supplies mechanical energy; the alternator converts almost all of it into electrical energy.",
+            "pieges": [
+              {
+                "texte": "From chemical energy to electrical energy.",
+                "pourquoi": "That's the conversion done by batteries and cells."
+              },
+              {
+                "texte": "From radiant energy to electrical energy.",
+                "pourquoi": "That's the conversion done by solar panels."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these produces electricity without combustion?",
+            "nom": "A wind turbine.",
+            "explication": "A wind turbine directly converts the wind's mechanical energy into electrical energy.",
+            "pieges": [
+              {
+                "texte": "A coal-fired power station.",
+                "pourquoi": "Coal is burned there to make steam: that's combustion."
+              },
+              {
+                "texte": "A natural gas power station.",
+                "pourquoi": "Gas is burned there: that's combustion, which gives off CO₂."
+              }
+            ]
+          },
+          {
+            "texte": "In a nuclear power station, how is electricity obtained?",
+            "nom": "Indirectly: thermal energy produces motion that drives an alternator.",
+            "explication": "The syllabus lists nuclear power stations among the indirect conversions of mechanical energy, starting from thermal energy.",
+            "pieges": [
+              {
+                "texte": "By burning uranium.",
+                "pourquoi": "Uranium doesn't burn: the heat comes from the fission of nuclei, without combustion."
+              },
+              {
+                "texte": "By turning radiation directly into electricity.",
+                "pourquoi": "That's how photovoltaics work; the power station goes through heat, then motion."
+              }
+            ]
+          },
+          {
+            "texte": "What do photovoltaic cells do?",
+            "nom": "They absorb radiant energy and convert part of it into electrical energy.",
+            "explication": "Made of semiconductor materials, especially silicon, they convert part of the radiation they receive.",
+            "pieges": [
+              {
+                "texte": "They convert all the light energy they receive into electricity.",
+                "pourquoi": "The conversion is only partial: part of the energy received is not converted."
+              },
+              {
+                "texte": "They heat water to turn a turbine.",
+                "pourquoi": "That describes a solar thermal power station; photovoltaics convert the radiation directly."
+              }
+            ]
+          },
+          {
+            "texte": "Why is electricity carried at high voltage?",
+            "nom": "For a fixed power, a higher voltage lowers the current, and so the Joule heating losses.",
+            "explication": "P = U × I: the bigger U is, the smaller I is; and the losses in the line are R × I².",
+            "pieges": [
+              {
+                "texte": "To carry more energy without changing anything else.",
+                "pourquoi": "The power carried is fixed: high voltage only limits the losses."
+              },
+              {
+                "texte": "Because Joule heating losses go down when the current goes up.",
+                "pourquoi": "It's the opposite: the losses R × I² go up with the current."
+              }
+            ]
+          },
+          {
+            "texte": "For a fixed power carried, a line's voltage is multiplied by 10. How do the Joule heating losses change?",
+            "nom": "They are divided by 100.",
+            "explication": "The current is divided by 10; the losses vary as I², so they are divided by 10² = 100.",
+            "pieges": [
+              {
+                "texte": "They are divided by 10.",
+                "pourquoi": "The current is indeed divided by 10, but the losses vary as its square."
+              },
+              {
+                "texte": "They are multiplied by 10.",
+                "pourquoi": "At fixed power, more voltage means less current, so fewer losses."
+              }
+            ]
+          },
+          {
+            "texte": "How can we cope with the intermittency of some kinds of production, such as wind or solar?",
+            "nom": "Convert electrical energy into a form that can be stored: chemical, mechanical or electromagnetic.",
+            "explication": "We can also call on reserves, or adjust consumption or production.",
+            "pieges": [
+              {
+                "texte": "Keep the electricity in reserve in the grid's cables.",
+                "pourquoi": "The grid carries electrical energy: to keep it, it must be converted into a form that can be stored."
+              },
+              {
+                "texte": "There is no solution at all.",
+                "pourquoi": "Storage, reserves, adjusting consumption or production: several solutions exist."
+              }
+            ]
+          },
+          {
+            "texte": "Do methods of production without combustion have no effect on the environment?",
+            "nom": "No: they also affect the environment and biodiversity, or carry specific risks.",
+            "explication": "Chemical pollution, radioactive waste, industrial accidents: each method has its effects and risks to weigh up.",
+            "pieges": [
+              {
+                "texte": "Yes: without combustion, there is no effect at all.",
+                "pourquoi": "The syllabus points out their effects on the environment and biodiversity, and their specific risks."
+              },
+              {
+                "texte": "Only wind turbines have an effect.",
+                "pourquoi": "They all do: for example, the radioactive waste from nuclear power stations."
               }
             ]
           }

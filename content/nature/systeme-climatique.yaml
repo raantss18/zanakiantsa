@@ -1,0 +1,136 @@
+id: systeme-climatique
+titre: "La complexité du système climatique"
+niveau: Terminale
+prerequis: [bilan-radiatif]
+programme: { source: estle, texte: "Depuis un siècle et demi, on mesure un réchauffement climatique global (environ +1°C). Celui-ci est la réponse du système climatique à l’augmentation du forçage radiatif (différence entre l’énergie radiative reçue et l’énergie radiative émise) due aux émissions de gaz à effet de serre (GES) dans l’atmosphère." }
+activite: quiz
+parametres: {}
+idee: "Le climat s'étudie sur des années, la météo sur des jours. Les gaz à effet de serre perturbent l'équilibre radiatif ; l'océan stocke l'énergie, et des rétroactions amplifient le réchauffement."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : réchauffement global mesuré ≈ +1 °C depuis un siècle et demi ; forçage radiatif = énergie radiative reçue − énergie radiative émise."
+  exemple: "Exemple : quand la glace fond, la surface devient plus sombre ; l'albédo baisse, la Terre absorbe plus d'énergie et se réchauffe encore. C'est une rétroaction positive : elle amplifie le changement."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qui distingue la météorologie de la climatologie ?"
+    nom: "La météorologie prévoit les phénomènes à court terme (jours, semaines) ; la climatologie étudie le climat sur des années, des siècles, des millénaires."
+    explication: "Les deux sciences diffèrent par l'échelle de temps étudiée."
+    pieges:
+      - { texte: "Ce sont deux noms pour la même science.", pourquoi: "Elles diffèrent par l'échelle de temps : jours et semaines pour la météo, années et plus pour le climat." }
+      - { texte: "La météorologie étudie le climat sur des siècles, la climatologie le temps de demain.", pourquoi: "C'est l'inverse : la météo travaille à court terme, la climatologie à moyen ou long terme." }
+  - texte: "Un hiver très froid dans une région prouve-t-il qu'il n'y a pas de réchauffement climatique ?"
+    nom: "Non : un épisode météorologique isolé ne dit rien de la tendance climatique à long terme."
+    explication: "Le climat a une variabilité naturelle ; on juge une tendance sur des moyennes de longue durée, pas sur une saison."
+    pieges:
+      - { texte: "Oui, car le climat se juge jour après jour.", pourquoi: "Un hiver relève de la météo ; le climat se juge sur des moyennes de plusieurs années." }
+      - { texte: "Oui, car avec un réchauffement, il ne peut plus faire froid.", pourquoi: "La variabilité naturelle rend possibles des épisodes froids, même quand la tendance est au réchauffement." }
+  - texte: "De combien la température moyenne de la Terre a-t-elle augmenté depuis un siècle et demi ?"
+    nom: "D'environ 1 °C."
+    explication: "Mesurée sur le terrain et par satellite, la hausse est d'environ 1 °C : c'est la réponse du système climatique au forçage radiatif."
+    pieges:
+      - { texte: "D'environ 10 °C.", pourquoi: "L'ordre de grandeur mesuré est d'environ 1 °C, dix fois moins." }
+      - { texte: "Elle n'a pas changé.", pourquoi: "Les mesures de terrain et par satellite montrent un réchauffement global d'environ 1 °C." }
+  - texte: "Qu'appelle-t-on forçage radiatif ?"
+    nom: "La différence entre l'énergie radiative reçue et l'énergie radiative émise."
+    explication: "Les émissions de gaz à effet de serre augmentent ce forçage : la surface reçoit plus qu'elle n'émet, et se réchauffe."
+    pieges:
+      - { texte: "La force du vent dans l'atmosphère.", pourquoi: "Malgré le mot « forçage », c'est un bilan d'énergie radiative, pas une force mécanique." }
+      - { texte: "L'énergie émise par le Soleil, à elle seule.", pourquoi: "Le forçage compare ce qui est reçu et ce qui est émis : c'est une différence." }
+  - texte: "Où l'énergie supplémentaire due au forçage radiatif est-elle surtout stockée ?"
+    nom: "Essentiellement dans les océans, mais aussi dans l'air et les sols."
+    explication: "Cette énergie stockée fait monter la température moyenne à la surface et le niveau des océans."
+    pieges:
+      - { texte: "Dans l'espace, où elle repart aussitôt.", pourquoi: "Si elle repartait aussitôt, il n'y aurait pas de déséquilibre : elle s'accumule surtout dans l'océan." }
+      - { texte: "Dans les glaciers, qui la gardent sous forme de glace.", pourquoi: "Les glaces fondent sous l'effet de cette énergie, mais c'est l'océan qui en stocke l'essentiel." }
+  - texte: "Parmi ces effets, lequel est une rétroaction positive (amplificatrice) ?"
+    nom: "La fonte des glaces diminue l'albédo terrestre : la Terre absorbe plus d'énergie solaire."
+    explication: "Moins de surface glacée, c'est moins de rayonnement renvoyé, donc un réchauffement renforcé."
+    pieges:
+      - { texte: "Les organismes chlorophylliens absorbent du CO₂.", pourquoi: "À court terme, c'est un puits de CO₂ : une rétroaction négative, stabilisatrice." }
+      - { texte: "L'océan absorbe une partie du CO₂ émis.", pourquoi: "C'est un rôle d'amortisseur : il limite la hausse du CO₂ dans l'air." }
+  - texte: "Pourquoi le dégel partiel du permafrost amplifie-t-il le réchauffement ?"
+    nom: "Il libère des gaz à effet de serre dans l'atmosphère."
+    explication: "Ces GES renforcent l'effet de serre, ce qui entretient le réchauffement : c'est une rétroaction positive."
+    pieges:
+      - { texte: "Il refroidit l'air en absorbant de la chaleur.", pourquoi: "Le programme le range parmi les effets amplificateurs : il libère des gaz à effet de serre." }
+      - { texte: "Il fait baisser le niveau des océans.", pourquoi: "Le permafrost est un sol gelé ; son dégel agit par les gaz qu'il libère." }
+  - texte: "Pourquoi le niveau moyen des océans monte-t-il ?"
+    nom: "L'eau se dilate en se réchauffant, et la fusion des glaces continentales ajoute de l'eau."
+    explication: "La dilatation thermique et la fusion des glaces posées sur les continents élèvent le niveau des océans."
+    pieges:
+      - { texte: "Surtout parce que la banquise, la glace de mer, fond.", pourquoi: "La banquise flotte déjà sur l'océan : c'est la fusion des glaces continentales qui ajoute de l'eau." }
+      - { texte: "Parce qu'il pleut davantage.", pourquoi: "La pluie vient d'eau déjà évaporée : elle n'ajoute pas d'eau au total. Les causes sont la dilatation et la fusion des glaces continentales." }
+  - texte: "Pourquoi le changement climatique est-il irréversible à l'échelle de plusieurs siècles ?"
+    nom: "Parce que l'énergie accumulée dans les océans ne se dissipe que très lentement."
+    explication: "L'océan absorbe une grande part de l'énergie supplémentaire ; cette accumulation rend le changement durable pendant des siècles."
+    pieges:
+      - { texte: "Parce que les modèles climatiques ne peuvent rien prévoir.", pourquoi: "Les modèles produisent des projections ; l'irréversibilité vient de l'inertie de l'océan." }
+      - { texte: "Parce que le CO₂ ne quitte jamais l'atmosphère.", pourquoi: "Une partie du CO₂ est absorbée par l'océan et les végétaux ; c'est l'énergie stockée par l'océan qui rend le changement durable." }
+
+en:
+  titre: "The complexity of the climate system"
+  idee: "Climate is studied over years, weather over days. Greenhouse gases upset the radiative balance; the ocean stores the energy, and feedbacks amplify the warming."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: global warming measured ≈ +1 °C over the past century and a half; radiative forcing = radiative energy received − radiative energy emitted."
+    exemple: "Example: when ice melts, the surface gets darker; the albedo falls, the Earth absorbs more energy and warms up even more. That's a positive feedback: it amplifies the change."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the difference between meteorology and climatology?"
+      nom: "Meteorology forecasts short-term events (days, weeks); climatology studies climate over years, centuries, millennia."
+      explication: "The two sciences differ by the time scale they study."
+      pieges:
+        - { texte: "They are two names for the same science.", pourquoi: "They differ by time scale: days and weeks for weather, years and more for climate." }
+        - { texte: "Meteorology studies climate over centuries, climatology tomorrow's weather.", pourquoi: "It's the other way round: meteorology works in the short term, climatology in the medium or long term." }
+    - texte: "Does a very cold winter in one region prove there is no global warming?"
+      nom: "No: a single weather event says nothing about the long-term climate trend."
+      explication: "Climate varies naturally; a trend is judged on long-term averages, not on one season."
+      pieges:
+        - { texte: "Yes, because climate is judged day by day.", pourquoi: "A winter is weather; climate is judged on averages over several years." }
+        - { texte: "Yes, because with warming it can never be cold any more.", pourquoi: "Natural variability still allows cold spells, even when the trend is warming." }
+    - texte: "By how much has the Earth's average temperature risen over the past century and a half?"
+      nom: "By about 1 °C."
+      explication: "Measured on the ground and by satellite, the rise is about 1 °C: it is the climate system's response to radiative forcing."
+      pieges:
+        - { texte: "By about 10 °C.", pourquoi: "The measured order of magnitude is about 1 °C, ten times less." }
+        - { texte: "It hasn't changed.", pourquoi: "Ground and satellite measurements show global warming of about 1 °C." }
+    - texte: "What is radiative forcing?"
+      nom: "The difference between the radiative energy received and the radiative energy emitted."
+      explication: "Greenhouse gas emissions increase this forcing: the surface receives more than it emits, and warms up."
+      pieges:
+        - { texte: "The strength of the wind in the atmosphere.", pourquoi: "Despite the word \"forcing\", it's a radiative energy balance, not a mechanical force." }
+        - { texte: "The energy emitted by the Sun, on its own.", pourquoi: "Forcing compares what is received and what is emitted: it's a difference." }
+    - texte: "Where is the extra energy from radiative forcing mainly stored?"
+      nom: "Mostly in the oceans, but also in the air and the ground."
+      explication: "This stored energy raises the average surface temperature and the sea level."
+      pieges:
+        - { texte: "In space, where it leaves straight away.", pourquoi: "If it left straight away, there would be no imbalance: it builds up mainly in the ocean." }
+        - { texte: "In glaciers, which keep it as ice.", pourquoi: "Ice melts because of this energy, but it's the ocean that stores most of it." }
+    - texte: "Which of these effects is a positive (amplifying) feedback?"
+      nom: "Melting ice lowers the Earth's albedo: the Earth absorbs more solar energy."
+      explication: "Less icy surface means less radiation sent back, so stronger warming."
+      pieges:
+        - { texte: "Chlorophyll-bearing organisms absorb CO₂.", pourquoi: "In the short term, that's a CO₂ sink: a negative, stabilising feedback." }
+        - { texte: "The ocean absorbs part of the CO₂ emitted.", pourquoi: "That's a buffering role: it limits the rise of CO₂ in the air." }
+    - texte: "Why does the partial thawing of permafrost amplify warming?"
+      nom: "It releases greenhouse gases into the atmosphere."
+      explication: "These greenhouse gases strengthen the greenhouse effect, which keeps the warming going: it's a positive feedback."
+      pieges:
+        - { texte: "It cools the air by absorbing heat.", pourquoi: "The syllabus lists it among the amplifying effects: it releases greenhouse gases." }
+        - { texte: "It lowers the sea level.", pourquoi: "Permafrost is frozen ground; its thawing acts through the gases it releases." }
+    - texte: "Why is the average sea level rising?"
+      nom: "Water expands as it warms, and melting land ice adds water."
+      explication: "Thermal expansion and the melting of ice that sits on land raise the sea level."
+      pieges:
+        - { texte: "Mainly because sea ice is melting.", pourquoi: "Sea ice already floats on the ocean: it's melting land ice that adds water." }
+        - { texte: "Because it rains more.", pourquoi: "Rain comes from water that has already evaporated: it adds no water overall. The causes are expansion and melting land ice." }
+    - texte: "Why is climate change irreversible over several centuries?"
+      nom: "Because the energy built up in the oceans goes away only very slowly."
+      explication: "The ocean absorbs a large share of the extra energy; this build-up makes the change last for centuries."
+      pieges:
+        - { texte: "Because climate models can't predict anything.", pourquoi: "Models produce projections; the irreversibility comes from the ocean's inertia." }
+        - { texte: "Because CO₂ never leaves the atmosphere.", pourquoi: "Part of the CO₂ is absorbed by the ocean and plants; it's the energy stored by the ocean that makes the change last." }

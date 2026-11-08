@@ -1,0 +1,93 @@
+id: regimes-alimentaires
+titre: "Herbivore, carnivore ou omnivore ?"
+niveau: CE1
+prerequis: [vivant-non-vivant]
+# Objectif du CE1 dans le programme de 2026 (en application au CE1 à la rentrée 2027-2028 ; cf. _theme.yaml, c2s).
+programme: { source: c2s, texte: "Identifier le régime alimentaire d’animaux." }
+activite: choisir
+parametres: {}
+idee: "Un herbivore mange des végétaux, comme la vache. Un carnivore mange d'autres animaux, comme le lion. Un omnivore mange des deux, comme l'ours brun."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Herbivore : il mange des plantes. Carnivore : il mange des animaux. Omnivore : il mange des deux."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel animal est herbivore : il ne mange que des végétaux ?"
+    bonne: ["1f993", "le zèbre"]
+    autres: [["1f981", "le lion"], ["1f988", "le requin"]]
+    explication: "Le zèbre mange de l'herbe : il est herbivore."
+  - texte: "Quel animal est carnivore : il mange d'autres animaux ?"
+    bonne: ["1f981", "le lion"]
+    autres: [["1f404", "la vache"], ["1f40e", "le cheval"]]
+    explication: "Le lion chasse d'autres animaux pour les manger : il est carnivore."
+  - texte: "Quel animal est omnivore : il mange des végétaux et des animaux ?"
+    bonne: ["1f43b", "l'ours brun"]
+    autres: [["1f993", "le zèbre"], ["1f418", "l'éléphant"]]
+    explication: "L'ours brun mange des fruits, des racines, mais aussi des poissons et des insectes : il est omnivore."
+  - texte: "Que mange un animal herbivore ?"
+    bonne: ["1f33f", "des plantes"]
+    autres: [["1f356", "de la viande"], ["1f41f", "du poisson"]]
+    explication: "Un herbivore mange des végétaux : de l'herbe, des feuilles, des fruits."
+  - texte: "Que mange un animal carnivore ?"
+    bonne: ["1f356", "de la viande"]
+    autres: [["1f33f", "des plantes"], ["1f34e", "des pommes"]]
+    explication: "Un carnivore mange d'autres animaux."
+  - texte: "Lequel est carnivore ?"
+    bonne: ["1f988", "le requin"]
+    autres: [["1f40e", "le cheval"], ["1f418", "l'éléphant"]]
+    explication: "Le requin mange d'autres animaux, comme des poissons : il est carnivore."
+  - texte: "La poule mange des graines, mais aussi des vers et des insectes. Quel animal est omnivore comme elle ?"
+    bonne: ["1f416", "le cochon"]
+    autres: [["1f404", "la vache"], ["1f981", "le lion"]]
+    explication: "Le cochon mange des végétaux et des petits animaux : il est omnivore, comme la poule."
+  - texte: "Lequel est herbivore ?"
+    bonne: ["1f418", "l'éléphant"]
+    autres: [["1f43a", "le loup"], ["1f40a", "le crocodile"]]
+    explication: "L'éléphant mange de l'herbe, des feuilles et des branches : il est herbivore."
+
+en:
+  titre: "Herbivore, carnivore or omnivore?"
+  idee: "A herbivore eats plants, like the cow. A carnivore eats other animals, like the lion. An omnivore eats both, like the brown bear."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Herbivore: it eats plants. Carnivore: it eats animals. Omnivore: it eats both."
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which animal is a herbivore: it eats only plants?"
+      bonne: ["1f993", "the zebra"]
+      autres: [["1f981", "the lion"], ["1f988", "the shark"]]
+      explication: "The zebra eats grass: it is a herbivore."
+    - texte: "Which animal is a carnivore: it eats other animals?"
+      bonne: ["1f981", "the lion"]
+      autres: [["1f404", "the cow"], ["1f40e", "the horse"]]
+      explication: "The lion hunts other animals to eat them: it is a carnivore."
+    - texte: "Which animal is an omnivore: it eats plants and animals?"
+      bonne: ["1f43b", "the brown bear"]
+      autres: [["1f993", "the zebra"], ["1f418", "the elephant"]]
+      explication: "The brown bear eats fruit and roots, but also fish and insects: it is an omnivore."
+    - texte: "What does a herbivore eat?"
+      bonne: ["1f33f", "plants"]
+      autres: [["1f356", "meat"], ["1f41f", "fish"]]
+      explication: "A herbivore eats plants: grass, leaves, fruit."
+    - texte: "What does a carnivore eat?"
+      bonne: ["1f356", "meat"]
+      autres: [["1f33f", "plants"], ["1f34e", "apples"]]
+      explication: "A carnivore eats other animals."
+    - texte: "Which one is a carnivore?"
+      bonne: ["1f988", "the shark"]
+      autres: [["1f40e", "the horse"], ["1f418", "the elephant"]]
+      explication: "The shark eats other animals, such as fish: it is a carnivore."
+    - texte: "The hen eats seeds, but also worms and insects. Which animal is an omnivore like her?"
+      bonne: ["1f416", "the pig"]
+      autres: [["1f404", "the cow"], ["1f981", "the lion"]]
+      explication: "The pig eats plants and small animals: it is an omnivore, like the hen."
+    - texte: "Which one is a herbivore?"
+      bonne: ["1f418", "the elephant"]
+      autres: [["1f43a", "the wolf"], ["1f40a", "the crocodile"]]
+      explication: "The elephant eats grass, leaves and branches: it is a herbivore."

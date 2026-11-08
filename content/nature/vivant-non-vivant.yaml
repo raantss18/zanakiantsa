@@ -1,0 +1,92 @@
+id: vivant-non-vivant
+titre: "Vivant ou non vivant ?"
+niveau: CP
+prerequis: [besoins]
+programme: { source: c2s, texte: "Caractériser et justifier à l’aide de critères simples ce qui est vivant, non vivant ou élaboré par des êtres vivants." }
+activite: choisir
+parametres: {}
+idee: "Un être vivant se nourrit, grandit et fait des petits. Le caillou n'est pas vivant. Certaines choses sont fabriquées par des êtres vivants : le lait, les œufs, le miel."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Demande-toi : est-ce qu'il mange ? est-ce qu'il grandit ? est-ce qu'il fait des petits ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Lequel est vivant ?"
+    bonne: ["1f40c", "l'escargot"]
+    autres: [["1faa8", "le caillou"], ["1f697", "la voiture"]]
+    explication: "L'escargot est vivant : il mange, il grandit et il fait des petits."
+  - texte: "Lequel n'est pas vivant ?"
+    bonne: ["1faa8", "le caillou"]
+    autres: [["1f333", "l'arbre"], ["1f426", "l'oiseau"]]
+    explication: "Le caillou ne mange pas, ne grandit pas et ne fait pas de petits : il n'est pas vivant."
+  - texte: "Lequel est vivant, même s'il ne se déplace pas ?"
+    bonne: ["1f333", "l'arbre"]
+    autres: [["1f697", "la voiture"], ["26bd", "le ballon"]]
+    explication: "L'arbre ne se déplace pas, mais il est vivant : il a besoin d'eau, il grandit et il fait des graines."
+  - texte: "Qu'est-ce qui bouge, mais n'est pas vivant ?"
+    bonne: ["1f697", "la voiture"]
+    autres: [["1f408", "le chat"], ["1f41f", "le poisson"]]
+    explication: "La voiture roule grâce à son moteur, mais elle ne mange pas, ne grandit pas et ne fait pas de petits."
+  - texte: "Qui fabrique le lait ?"
+    bonne: ["1f404", "la vache"]
+    autres: [["1faa8", "le caillou"], ["2601", "le nuage"]]
+    explication: "Le lait est fabriqué par la vache, pour nourrir son veau."
+  - texte: "Qui pond les œufs ?"
+    bonne: ["1f414", "la poule"]
+    autres: [["1f697", "la voiture"], ["1faa8", "le caillou"]]
+    explication: "L'œuf est fabriqué par la poule : c'est un être vivant qui l'a fait."
+  - texte: "Qui fabrique le miel ?"
+    bonne: ["1f41d", "l'abeille"]
+    autres: [["1f40c", "l'escargot"], ["2600", "le soleil"]]
+    explication: "Les abeilles fabriquent le miel avec ce qu'elles récoltent dans les fleurs."
+  - texte: "Qui fabrique les fils de soie ?"
+    bonne: ["1f41b", "la chenille du ver à soie"]
+    autres: [["1f41f", "le poisson"], ["2600", "le soleil"]]
+    explication: "La chenille du ver à soie fabrique un fil de soie pour faire son cocon."
+
+en:
+  titre: "Living or not living?"
+  idee: "A living thing feeds, grows and has young. A pebble is not alive. Some things are made by living things: milk, eggs, honey."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Ask yourself: does it eat? does it grow? does it have young?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which one is alive?"
+      bonne: ["1f40c", "the snail"]
+      autres: [["1faa8", "the pebble"], ["1f697", "the car"]]
+      explication: "The snail is alive: it eats, it grows and it has young."
+    - texte: "Which one is not alive?"
+      bonne: ["1faa8", "the pebble"]
+      autres: [["1f333", "the tree"], ["1f426", "the bird"]]
+      explication: "A pebble doesn't eat, doesn't grow and doesn't have young: it is not alive."
+    - texte: "Which one is alive, even though it doesn't move around?"
+      bonne: ["1f333", "the tree"]
+      autres: [["1f697", "the car"], ["26bd", "the ball"]]
+      explication: "A tree doesn't move around, but it is alive: it needs water, it grows and it makes seeds."
+    - texte: "What moves, but is not alive?"
+      bonne: ["1f697", "the car"]
+      autres: [["1f408", "the cat"], ["1f41f", "the fish"]]
+      explication: "A car drives thanks to its engine, but it doesn't eat, doesn't grow and doesn't have young."
+    - texte: "Who makes milk?"
+      bonne: ["1f404", "the cow"]
+      autres: [["1faa8", "the pebble"], ["2601", "the cloud"]]
+      explication: "Milk is made by the cow, to feed her calf."
+    - texte: "Who lays eggs?"
+      bonne: ["1f414", "the hen"]
+      autres: [["1f697", "the car"], ["1faa8", "the pebble"]]
+      explication: "An egg is made by the hen: a living thing made it."
+    - texte: "Who makes honey?"
+      bonne: ["1f41d", "the bee"]
+      autres: [["1f40c", "the snail"], ["2600", "the sun"]]
+      explication: "Bees make honey from what they collect in flowers."
+    - texte: "Who makes silk threads?"
+      bonne: ["1f41b", "the silkworm caterpillar"]
+      autres: [["1f41f", "the fish"], ["2600", "the sun"]]
+      explication: "The silkworm caterpillar makes a silk thread to build its cocoon."
