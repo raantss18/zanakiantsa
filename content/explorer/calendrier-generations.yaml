@@ -1,0 +1,108 @@
+id: calendrier-generations
+titre: "Le temps qui passe : calendrier et générations"
+niveau: CE1
+prerequis: [jour-semaine-saisons]
+programme: { source: c2qm, texte: "Se situer dans le temps : l’alternance jour/nuit ; le caractère cyclique des jours, des semaines, des mois, des saisons ; prendre conscience que le temps qui passe est irréversible ; le temps des parents ; les générations vivantes et la mémoire familiale ; l’évolution des sociétés à travers des modes de vie et des techniques à diverses époques." }
+activite: choisir
+parametres: {}
+idee: "Les jours, les semaines, les mois et les saisons reviennent toujours. Mais le temps qui passe ne revient pas : les grands-parents sont nés avant les parents, et les parents avant les enfants."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ta famille : qui est né le premier ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans une famille, qui appartient à la génération la plus ancienne ?"
+    bonne: ["1f475", "la grand-mère"]
+    autres: [["1f469", "la maman"], ["1f467", "la fille"]]
+    explication: "Les grands-parents sont nés avant les parents, et les parents avant les enfants : cela fait trois générations."
+  - texte: "Qui est né en dernier ?"
+    bonne: ["1f476", "le bébé"]
+    autres: [["1f474", "le grand-père"], ["1f466", "le garçon"]]
+    explication: "Le bébé est né le dernier : il appartient à la génération la plus jeune."
+  - texte: "Le papa de ta maman, qui est-ce pour toi ?"
+    bonne: ["1f474", "le grand-père"]
+    autres: [["1f466", "le frère"], ["1f476", "le bébé"]]
+    explication: "Le papa de ta maman est ton grand-père. Les parents de tes parents sont tes grands-parents."
+  - texte: "Combien de jours y a-t-il dans une semaine ?"
+    bonne: ["37-20e3", "sept"]
+    autres: [["35-20e3", "cinq"], ["1f51f", "dix"]]
+    explication: "Une semaine compte sept jours ; après dimanche revient lundi."
+  - texte: "Combien de saisons y a-t-il dans une année, en France ?"
+    bonne: ["34-20e3", "quatre"]
+    autres: [["32-20e3", "deux"], ["36-20e3", "six"]]
+    explication: "Printemps, été, automne, hiver : les quatre saisons reviennent chaque année."
+  - texte: "La nuit, quand le ciel est sans nuages, que voit-on briller ?"
+    bonne: ["2b50", "les étoiles"]
+    autres: [["2600", "le Soleil"], ["1f308", "l'arc-en-ciel"]]
+    explication: "Le jour et la nuit se suivent toujours. La nuit, le Soleil ne nous éclaire plus : on voit les étoiles."
+  - texte: "Qu'est-ce qui revient une fois par an, à la même date ?"
+    bonne: ["1f382", "l'anniversaire"]
+    autres: [["2615", "le petit déjeuner"], ["1f634", "la nuit"]]
+    explication: "L'anniversaire revient chaque année à la même date ; on peut le marquer sur le calendrier."
+  - texte: "Lequel existait déjà il y a très longtemps, bien avant les voitures ?"
+    bonne: ["1f3f0", "le château fort"]
+    autres: [["1f697", "la voiture"], ["1f4bb", "l'ordinateur"]]
+    explication: "Les châteaux forts datent du Moyen Âge, il y a plusieurs siècles. Les voitures et les ordinateurs sont bien plus récents."
+  - texte: "Avant les voitures, avec quel animal voyageait-on souvent ?"
+    bonne: ["1f40e", "le cheval"]
+    autres: [["2708", "l'avion"], ["1f697", "la voiture"]]
+    explication: "Autrefois, on voyageait à pied, à cheval ou dans des voitures tirées par des chevaux."
+  - texte: "Quand tes grands-parents étaient petits, quel objet n'existait pas encore chez eux ?"
+    bonne: ["1f4bb", "l'ordinateur portable"]
+    autres: [["1f6b2", "le vélo"], ["1f4d6", "le livre"]]
+    explication: "Les vélos et les livres existaient déjà. Les ordinateurs portables sont arrivés dans les maisons bien plus tard."
+
+en:
+  titre: "Time passing: the calendar and generations"
+  idee: "Days, weeks, months and seasons always come back. But time that has passed never comes back: grandparents were born before parents, and parents before children."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Think about your family: who was born first?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In a family, who belongs to the oldest generation?"
+      bonne: ["1f475", "grandma"]
+      autres: [["1f469", "mum"], ["1f467", "the daughter"]]
+      explication: "Grandparents were born before parents, and parents before children: that makes three generations."
+    - texte: "Who was born last?"
+      bonne: ["1f476", "the baby"]
+      autres: [["1f474", "grandad"], ["1f466", "the boy"]]
+      explication: "The baby was born last: he belongs to the youngest generation."
+    - texte: "Your mum's dad: who is he to you?"
+      bonne: ["1f474", "grandad"]
+      autres: [["1f466", "your brother"], ["1f476", "the baby"]]
+      explication: "Your mum's dad is your grandad. Your parents' parents are your grandparents."
+    - texte: "How many days are there in a week?"
+      bonne: ["37-20e3", "seven"]
+      autres: [["35-20e3", "five"], ["1f51f", "ten"]]
+      explication: "A week has seven days; after Sunday, Monday comes back."
+    - texte: "How many seasons are there in a year, in France?"
+      bonne: ["34-20e3", "four"]
+      autres: [["32-20e3", "two"], ["36-20e3", "six"]]
+      explication: "Spring, summer, autumn, winter: the four seasons come back every year."
+    - texte: "At night, when the sky is clear, what do we see shining?"
+      bonne: ["2b50", "the stars"]
+      autres: [["2600", "the Sun"], ["1f308", "the rainbow"]]
+      explication: "Day and night always follow each other. At night, the Sun no longer lights us up: we see the stars."
+    - texte: "What comes back once a year, on the same date?"
+      bonne: ["1f382", "your birthday"]
+      autres: [["2615", "breakfast"], ["1f634", "the night"]]
+      explication: "Your birthday comes back every year on the same date; you can mark it on the calendar."
+    - texte: "Which one already existed a very long time ago, well before cars?"
+      bonne: ["1f3f0", "the castle"]
+      autres: [["1f697", "the car"], ["1f4bb", "the computer"]]
+      explication: "Castles date from the Middle Ages, several centuries ago. Cars and computers are much more recent."
+    - texte: "Before cars, which animal did people often travel with?"
+      bonne: ["1f40e", "the horse"]
+      autres: [["2708", "the plane"], ["1f697", "the car"]]
+      explication: "Long ago, people travelled on foot, on horseback or in carriages pulled by horses."
+    - texte: "When your grandparents were little, which object didn't exist in their homes yet?"
+      bonne: ["1f4bb", "the laptop"]
+      autres: [["1f6b2", "the bike"], ["1f4d6", "the book"]]
+      explication: "Bikes and books already existed. Laptops arrived in homes much later."

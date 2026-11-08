@@ -1,0 +1,140 @@
+id: jour-semaine-saisons
+titre: "Le jour, la nuit, la semaine, les saisons"
+niveau: GS
+prerequis: []
+programme: { source: c1, texte: "Se repérer dans le temps : différencier le matin et le soir, le jour et la nuit ; savoir que la semaine est une suite de sept jours ; connaitre les saisons ; comprendre progressivement qu’il existe un temps long, des évènements antérieurs à notre propre vie." }
+activite: choisir
+parametres: {}
+idee: "Le jour, le Soleil nous éclaire ; la nuit, on dort. Une semaine a sept jours. Une année a quatre saisons : le printemps, l'été, l'automne et l'hiver."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Pense à ce que tu fais chaque jour, du matin jusqu'au soir."
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qui nous éclaire pendant le jour ?"
+    bonne: ["2600", "le Soleil"]
+    autres: [["1f319", "la Lune"], ["2601", "le nuage"]]
+    explication: "Le jour, c'est le Soleil qui nous éclaire."
+  - texte: "Qu'est-ce qu'on voit souvent dans le ciel, la nuit ?"
+    bonne: ["1f319", "la Lune"]
+    autres: [["2600", "le Soleil"], ["1f308", "l'arc-en-ciel"]]
+    explication: "La nuit, le ciel est noir : on voit souvent la Lune et les étoiles."
+  - texte: "Que fait-on, la nuit ?"
+    bonne: ["1f634", "dormir"]
+    autres: [["1f392", "aller à l'école"], ["26bd", "jouer au ballon"]]
+    explication: "La nuit, on dort pour se reposer."
+  - texte: "Le matin, en se levant, que prend-on ?"
+    bonne: ["2615", "le petit déjeuner"]
+    autres: [["1f382", "le gâteau d'anniversaire"], ["1f6cf", "le lit"]]
+    explication: "Le matin, on se lève et on prend le petit déjeuner."
+  - texte: "Le soir, quand il fait nuit, où va-t-on ?"
+    bonne: ["1f6cf", "au lit"]
+    autres: [["1f392", "à l'école"], ["1f3dd", "à la plage"]]
+    explication: "Le soir, on va au lit."
+  - texte: "Le matin, après le petit déjeuner, où vont les enfants ?"
+    bonne: ["1f392", "à l'école"]
+    autres: [["1f6cf", "au lit"], ["1f634", "dormir"]]
+    explication: "D'abord on se lève, ensuite on prend le petit déjeuner, puis on va à l'école."
+  - texte: "Combien de jours y a-t-il dans une semaine ?"
+    bonne: ["37-20e3", "sept"]
+    autres: [["35-20e3", "cinq"], ["33-20e3", "trois"]]
+    explication: "Une semaine, c'est sept jours : lundi, mardi, mercredi, jeudi, vendredi, samedi et dimanche."
+  - texte: "Qu'est-ce qu'on fête une fois chaque année ?"
+    bonne: ["1f382", "l'anniversaire"]
+    autres: [["2615", "le petit déjeuner"], ["1f634", "la nuit"]]
+    explication: "L'anniversaire revient une fois par an : c'est le jour où l'on est né."
+  - texte: "Combien y a-t-il de saisons dans une année, en France ?"
+    bonne: ["34-20e3", "quatre"]
+    autres: [["32-20e3", "deux"], ["37-20e3", "sept"]]
+    explication: "En France, il y a quatre saisons : le printemps, l'été, l'automne et l'hiver."
+  - texte: "En hiver, quand il fait très froid et qu'il neige, que peut-on faire ?"
+    bonne: ["2603", "un bonhomme de neige"]
+    autres: [["1f337", "cueillir des fleurs"], ["1f3dd", "aller à la plage"]]
+    explication: "En hiver, il fait froid ; parfois il neige, et on peut faire un bonhomme de neige."
+  - texte: "Quelle saison vient juste après l'hiver ?"
+    bonne: ["1f337", "le printemps"]
+    autres: [["2600", "l'été"], ["2744", "l'hiver"]]
+    explication: "Après l'hiver vient le printemps : il fait plus doux et les fleurs poussent."
+  - texte: "En France, quelle saison est la plus chaude ?"
+    bonne: ["2600", "l'été"]
+    autres: [["2744", "l'hiver"], ["1f337", "le printemps"]]
+    explication: "En France, l'été est la saison la plus chaude."
+  - texte: "Qui est né il y a très longtemps, bien avant les autres ?"
+    bonne: ["1f474", "le grand-père"]
+    autres: [["1f476", "le bébé"], ["1f9d2", "l'enfant"]]
+    explication: "Le grand-père est né il y a très longtemps, bien avant l'enfant et le bébé."
+  - texte: "Qui est le plus jeune ? Il est né après tous les autres."
+    bonne: ["1f476", "le bébé"]
+    autres: [["1f468", "le papa"], ["1f475", "la grand-mère"]]
+    explication: "Le bébé est né le dernier : c'est le plus jeune."
+
+en:
+  titre: "Day, night, the week, the seasons"
+  idee: "In the daytime, the Sun gives us light; at night, we sleep. A week has seven days. A year has four seasons: spring, summer, autumn and winter."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Think about what you do every day, from morning to evening."
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What gives us light in the daytime?"
+      bonne: ["2600", "the Sun"]
+      autres: [["1f319", "the Moon"], ["2601", "the cloud"]]
+      explication: "In the daytime, the Sun gives us light."
+    - texte: "What do we often see in the sky at night?"
+      bonne: ["1f319", "the Moon"]
+      autres: [["2600", "the Sun"], ["1f308", "the rainbow"]]
+      explication: "At night, the sky is dark: we often see the Moon and the stars."
+    - texte: "What do we do at night?"
+      bonne: ["1f634", "sleep"]
+      autres: [["1f392", "go to school"], ["26bd", "play football"]]
+      explication: "At night, we sleep to rest."
+    - texte: "In the morning, when we get up, what do we have?"
+      bonne: ["2615", "breakfast"]
+      autres: [["1f382", "a birthday cake"], ["1f6cf", "the bed"]]
+      explication: "In the morning, we get up and have breakfast."
+    - texte: "In the evening, when it's dark, where do we go?"
+      bonne: ["1f6cf", "to bed"]
+      autres: [["1f392", "to school"], ["1f3dd", "to the beach"]]
+      explication: "In the evening, we go to bed."
+    - texte: "In the morning, after breakfast, where do children go?"
+      bonne: ["1f392", "to school"]
+      autres: [["1f6cf", "to bed"], ["1f634", "to sleep"]]
+      explication: "First we get up, next we have breakfast, then we go to school."
+    - texte: "How many days are there in a week?"
+      bonne: ["37-20e3", "seven"]
+      autres: [["35-20e3", "five"], ["33-20e3", "three"]]
+      explication: "A week is seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday."
+    - texte: "What do we celebrate once every year?"
+      bonne: ["1f382", "your birthday"]
+      autres: [["2615", "breakfast"], ["1f634", "the night"]]
+      explication: "Your birthday comes once a year: it's the day you were born."
+    - texte: "How many seasons are there in a year, in France?"
+      bonne: ["34-20e3", "four"]
+      autres: [["32-20e3", "two"], ["37-20e3", "seven"]]
+      explication: "In France, there are four seasons: spring, summer, autumn and winter."
+    - texte: "In winter, when it's very cold and snowing, what can we do?"
+      bonne: ["2603", "build a snowman"]
+      autres: [["1f337", "pick flowers"], ["1f3dd", "go to the beach"]]
+      explication: "In winter, it's cold; sometimes it snows, and we can build a snowman."
+    - texte: "Which season comes just after winter?"
+      bonne: ["1f337", "spring"]
+      autres: [["2600", "summer"], ["2744", "winter"]]
+      explication: "After winter comes spring: it gets milder and flowers grow."
+    - texte: "In France, which season is the hottest?"
+      bonne: ["2600", "summer"]
+      autres: [["2744", "winter"], ["1f337", "spring"]]
+      explication: "In France, summer is the hottest season."
+    - texte: "Who was born a very long time ago, well before the others?"
+      bonne: ["1f474", "grandad"]
+      autres: [["1f476", "the baby"], ["1f9d2", "the child"]]
+      explication: "Grandad was born a very long time ago, well before the child and the baby."
+    - texte: "Who is the youngest? He was born after all the others."
+      bonne: ["1f476", "the baby"]
+      autres: [["1f468", "dad"], ["1f475", "grandma"]]
+      explication: "The baby was born last: he's the youngest."

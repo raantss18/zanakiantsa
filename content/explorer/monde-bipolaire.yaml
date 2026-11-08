@@ -1,0 +1,160 @@
+id: monde-bipolaire
+titre: "Un nouvel ordre mondial et un monde bipolaire (1945-1970)"
+niveau: Terminale
+prerequis: [grande-guerre-lycee]
+programme: { source: hgtle, texte: "La multiplication des acteurs internationaux dans un monde bipolaire (de 1945 au début des années 1970) : la fin de la Seconde Guerre mondiale et les débuts d’un nouvel ordre mondial ; une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde" }
+activite: quiz
+parametres: {}
+idee: "En 1945 naît un nouvel ordre international : ONU, Nuremberg, Bretton Woods. Vite, États-Unis et URSS s'opposent : c'est la guerre froide. La décolonisation fait naître de nouveaux États."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1944, Bretton Woods et programme du CNR ; 1945, ONU ; 1945-1946, Nuremberg ; 1948, coup de Prague et naissance d'Israël ; 1949, Chine populaire ; 1954, Diên Biên Phu ; 1955, Bandung ; 1962, Cuba."
+  exemple: "Exemple : en février 1948, le « coup de Prague » donne tout le pouvoir aux communistes en Tchécoslovaquie. Pour l'Ouest, il confirme que l'URSS contrôle l'Europe de l'Est : les deux blocs se figent."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle organisation est créée en 1945 pour maintenir la paix et la sécurité internationales ?"
+    nom: "L'Organisation des Nations unies (ONU)"
+    explication: "La Charte des Nations unies est signée à San Francisco le 26 juin 1945 ; l'ONU remplace la Société des Nations."
+    pieges:
+      - { texte: "La Société des Nations (SDN)", pourquoi: "La SDN naît après la Première Guerre mondiale ; elle n'a pas empêché la Seconde, et l'ONU la remplace." }
+      - { texte: "L'OTAN", pourquoi: "L'OTAN est une alliance militaire occidentale, créée en 1949, pas une organisation mondiale." }
+  - texte: "Qui le tribunal militaire international de Nuremberg juge-t-il, en 1945-1946 ?"
+    nom: "Les principaux dirigeants nazis, notamment pour crimes contre l'humanité."
+    explication: "Pour la première fois, des dirigeants sont jugés par une justice internationale pour crimes contre la paix, crimes de guerre et crimes contre l'humanité."
+    pieges:
+      - { texte: "Les principaux dirigeants japonais.", pourquoi: "Ils sont jugés par un autre tribunal international, à Tokyo." }
+      - { texte: "Les chefs de l'Armée rouge.", pourquoi: "L'URSS fait partie des Alliés qui organisent le tribunal ; elle juge, elle n'est pas jugée." }
+  - texte: "Que mettent en place les accords de Bretton Woods, en juillet 1944 ?"
+    nom: "Un système monétaire international fondé sur le dollar, avec le FMI et la Banque mondiale."
+    explication: "Les États-Unis, première puissance économique, organisent un système de changes stables autour du dollar."
+    pieges:
+      - { texte: "Le partage de l'Allemagne en zones d'occupation.", pourquoi: "Ce partage est décidé par les Alliés lors des conférences de Yalta et de Potsdam, en 1945." }
+      - { texte: "La création de la Communauté économique européenne.", pourquoi: "La CEE naît du traité de Rome, en 1957." }
+  - texte: "Que prévoit le programme du Conseil national de la Résistance (CNR), adopté le 15 mars 1944 ?"
+    nom: "Notamment un plan complet de sécurité sociale et des nationalisations."
+    explication: "Ce programme inspire les réformes de la Libération : la Sécurité sociale et les nationalisations posent les bases de l'État-providence en France."
+    pieges:
+      - { texte: "La création de la Ve République.", pourquoi: "La Ve République naît de la Constitution de 1958." }
+      - { texte: "L'indépendance de l'Algérie.", pourquoi: "L'Algérie devient indépendante en 1962, après une longue guerre." }
+  - texte: "Que se passe-t-il lors du « coup de Prague », en février 1948 ?"
+    nom: "Les communistes prennent tout le pouvoir en Tchécoslovaquie."
+    explication: "Pour les Occidentaux, c'est la preuve que l'URSS impose des régimes communistes en Europe de l'Est."
+    pieges:
+      - { texte: "L'armée soviétique écrase l'insurrection de Budapest.", pourquoi: "C'est en Hongrie, en 1956." }
+      - { texte: "Le mur de Berlin est construit.", pourquoi: "Le mur est construit en 1961, à Berlin." }
+  - texte: "Quel État est proclamé au Proche-Orient le 14 mai 1948 ?"
+    nom: "L'État d'Israël"
+    explication: "Sa proclamation est suivie d'une première guerre israélo-arabe : le Proche-Orient devient un foyer durable de conflits."
+    pieges:
+      - { texte: "Un État palestinien indépendant", pourquoi: "Le plan de partage de l'ONU de 1947 prévoyait un État juif et un État arabe ; en 1948, seul Israël est proclamé." }
+      - { texte: "L'Égypte", pourquoi: "L'Égypte est déjà un État indépendant ; ce n'est pas elle qui naît en 1948." }
+  - texte: "Que signifie l'expression « monde bipolaire » ?"
+    nom: "Un monde dominé par deux superpuissances, les États-Unis et l'URSS, chacune à la tête d'un bloc."
+    explication: "Les deux Grands s'opposent par leurs modèles, leurs alliances et la course aux armements, sans s'affronter directement : c'est la guerre froide."
+    pieges:
+      - { texte: "Un monde partagé entre le pôle Nord et le pôle Sud.", pourquoi: "Ici, les « pôles » sont des puissances, pas des lieux géographiques." }
+      - { texte: "Un monde dominé par la France et le Royaume-Uni.", pourquoi: "Après 1945, ces deux pays ne sont plus les premières puissances ; ce sont les États-Unis et l'URSS." }
+  - texte: "Que proclame Mao Zedong le 1er octobre 1949 ?"
+    nom: "La République populaire de Chine"
+    explication: "La victoire des communistes chinois fait de la Chine un nouvel acteur international."
+    pieges:
+      - { texte: "La fin de l'Empire chinois", pourquoi: "L'empire est renversé par la révolution de 1911, bien avant." }
+      - { texte: "L'indépendance de l'Inde", pourquoi: "L'Inde devient indépendante en 1947, et Mao est chinois." }
+  - texte: "Quelle bataille, en 1954, conduit la France à quitter l'Indochine ?"
+    nom: "Diên Biên Phu"
+    explication: "La défaite française de Diên Biên Phu, en mai 1954, précède les accords de Genève, qui mettent fin à la guerre d'Indochine."
+    pieges:
+      - { texte: "Verdun", pourquoi: "Verdun est une bataille de la Première Guerre mondiale, en 1916." }
+      - { texte: "La bataille d'Alger", pourquoi: "Elle a lieu en 1957, pendant la guerre d'Algérie." }
+  - texte: "Que montre la conférence de Bandung, en 1955 ?"
+    nom: "Des pays d'Asie et d'Afrique, souvent nouvellement indépendants, condamnent le colonialisme et veulent peser sur la scène internationale."
+    explication: "Bandung marque l'émergence du tiers-monde, qui refuse d'être un simple enjeu entre les deux blocs."
+    pieges:
+      - { texte: "Les États-Unis et l'URSS y signent la fin de la guerre froide.", pourquoi: "La guerre froide dure jusqu'à la fin des années 1980 ; les deux Grands ne sont pas invités à Bandung." }
+      - { texte: "Les pays européens y créent l'OTAN.", pourquoi: "L'OTAN naît à Washington, en 1949." }
+  - texte: "Pourquoi la crise des missiles de Cuba, en octobre 1962, est-elle si grave ?"
+    nom: "L'URSS installe à Cuba des missiles nucléaires capables de frapper les États-Unis : le monde frôle la guerre nucléaire."
+    explication: "Après un blocus américain et des négociations, l'URSS retire ses missiles ; les deux Grands installent ensuite une ligne directe entre Washington et Moscou."
+    pieges:
+      - { texte: "Les États-Unis et l'URSS se font la guerre directement.", pourquoi: "Justement, ils ne s'affrontent jamais directement : la crise se règle par la négociation." }
+      - { texte: "Cuba envahit la Floride.", pourquoi: "Il n'y a aucune invasion : la crise porte sur des missiles soviétiques installés à Cuba." }
+
+en:
+  titre: "A new world order and a bipolar world (1945-1970)"
+  idee: "In 1945, a new international order is born: the UN, Nuremberg, Bretton Woods. Soon, the US and the USSR clash: this is the Cold War. Decolonisation gives birth to new states."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1944, Bretton Woods and the CNR programme; 1945, the UN; 1945-1946, Nuremberg; 1948, the Prague coup and the birth of Israel; 1949, the People's Republic of China; 1954, Dien Bien Phu; 1955, Bandung; 1962, Cuba."
+    exemple: "Example: in February 1948, the « Prague coup » gives the communists full power in Czechoslovakia. For the West, it confirms that the USSR controls Eastern Europe: the two blocs harden."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which organisation is created in 1945 to maintain international peace and security?"
+      nom: "The United Nations (UN)"
+      explication: "The UN Charter is signed in San Francisco on 26 June 1945; the UN replaces the League of Nations."
+      pieges:
+        - { texte: "The League of Nations", pourquoi: "The League was born after the First World War; it didn't prevent the Second, and the UN replaces it." }
+        - { texte: "NATO", pourquoi: "NATO is a Western military alliance, created in 1949, not a world organisation." }
+    - texte: "Whom does the International Military Tribunal at Nuremberg try, in 1945-1946?"
+      nom: "The main Nazi leaders, notably for crimes against humanity."
+      explication: "For the first time, leaders are tried by an international court for crimes against peace, war crimes and crimes against humanity."
+      pieges:
+        - { texte: "The main Japanese leaders.", pourquoi: "They are tried by another international tribunal, in Tokyo." }
+        - { texte: "The commanders of the Red Army.", pourquoi: "The USSR is one of the Allies that set up the tribunal; it judges, it isn't judged." }
+    - texte: "What do the Bretton Woods agreements, in July 1944, set up?"
+      nom: "An international monetary system based on the dollar, with the IMF and the World Bank."
+      explication: "The United States, the leading economic power, organises a system of stable exchange rates around the dollar."
+      pieges:
+        - { texte: "The division of Germany into occupation zones.", pourquoi: "That division is decided by the Allies at the Yalta and Potsdam conferences, in 1945." }
+        - { texte: "The creation of the European Economic Community.", pourquoi: "The EEC is born from the Treaty of Rome, in 1957." }
+    - texte: "What does the programme of the National Council of the Resistance (CNR), adopted on 15 March 1944, plan?"
+      nom: "Among other things, a full social security plan and nationalisations."
+      explication: "This programme inspires the reforms of the Liberation: Social Security and nationalisations lay the foundations of the welfare state in France."
+      pieges:
+        - { texte: "The creation of the Fifth Republic.", pourquoi: "The Fifth Republic is born from the 1958 Constitution." }
+        - { texte: "Algerian independence.", pourquoi: "Algeria becomes independent in 1962, after a long war." }
+    - texte: "What happens during the « Prague coup », in February 1948?"
+      nom: "The communists take full power in Czechoslovakia."
+      explication: "For the West, it proves that the USSR is imposing communist regimes in Eastern Europe."
+      pieges:
+        - { texte: "The Soviet army crushes the Budapest uprising.", pourquoi: "That's in Hungary, in 1956." }
+        - { texte: "The Berlin Wall is built.", pourquoi: "The Wall is built in 1961, in Berlin." }
+    - texte: "Which state is proclaimed in the Middle East on 14 May 1948?"
+      nom: "The State of Israel"
+      explication: "Its proclamation is followed by a first Arab-Israeli war: the Middle East becomes a lasting centre of conflict."
+      pieges:
+        - { texte: "An independent Palestinian state", pourquoi: "The 1947 UN partition plan provided for a Jewish state and an Arab state; in 1948, only Israel is proclaimed." }
+        - { texte: "Egypt", pourquoi: "Egypt is already an independent state; it isn't born in 1948." }
+    - texte: "What does the expression « bipolar world » mean?"
+      nom: "A world dominated by two superpowers, the United States and the USSR, each leading a bloc."
+      explication: "The two superpowers oppose each other through their models, alliances and the arms race, without fighting directly: this is the Cold War."
+      pieges:
+        - { texte: "A world divided between the North Pole and the South Pole.", pourquoi: "Here, the « poles » are powers, not geographical places." }
+        - { texte: "A world dominated by France and the United Kingdom.", pourquoi: "After 1945, these two countries are no longer the leading powers; the US and the USSR are." }
+    - texte: "What does Mao Zedong proclaim on 1 October 1949?"
+      nom: "The People's Republic of China"
+      explication: "The Chinese communists' victory makes China a new international player."
+      pieges:
+        - { texte: "The end of the Chinese Empire", pourquoi: "The empire is overthrown by the 1911 revolution, well before." }
+        - { texte: "The independence of India", pourquoi: "India becomes independent in 1947, and Mao is Chinese." }
+    - texte: "Which battle, in 1954, leads France to leave Indochina?"
+      nom: "Dien Bien Phu"
+      explication: "The French defeat at Dien Bien Phu, in May 1954, comes before the Geneva Accords, which end the Indochina War."
+      pieges:
+        - { texte: "Verdun", pourquoi: "Verdun is a First World War battle, in 1916." }
+        - { texte: "The Battle of Algiers", pourquoi: "It takes place in 1957, during the Algerian War." }
+    - texte: "What does the Bandung Conference, in 1955, show?"
+      nom: "Asian and African countries, often newly independent, condemn colonialism and want a say on the international stage."
+      explication: "Bandung marks the emergence of the Third World, which refuses to be a mere stake between the two blocs."
+      pieges:
+        - { texte: "The US and the USSR sign the end of the Cold War there.", pourquoi: "The Cold War lasts until the late 1980s; the two superpowers aren't invited to Bandung." }
+        - { texte: "European countries create NATO there.", pourquoi: "NATO is born in Washington, in 1949." }
+    - texte: "Why is the Cuban Missile Crisis, in October 1962, so serious?"
+      nom: "The USSR installs nuclear missiles in Cuba able to strike the United States: the world comes close to nuclear war."
+      explication: "After a US blockade and negotiations, the USSR withdraws its missiles; the two superpowers then set up a direct line between Washington and Moscow."
+      pieges:
+        - { texte: "The US and the USSR go to war directly.", pourquoi: "Precisely, they never fight each other directly: the crisis is settled by negotiation." }
+        - { texte: "Cuba invades Florida.", pourquoi: "There is no invasion: the crisis is about Soviet missiles installed in Cuba." }

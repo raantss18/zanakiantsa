@@ -1,0 +1,148 @@
+id: france-carte
+titre: "La France sur une carte"
+niveau: CE1
+prerequis: [paysages-proches-lointains]
+programme: { source: c2qm, texte: "Lire des plans, se repérer sur des cartes : éléments constitutifs d’une carte (titre, échelle, orientation, légende). Repérer la position de sa région, de la France, de l’Europe et des autres continents. Une carte thématique simple des villes en France." }
+activite: quiz
+parametres: {}
+idee: "Une carte a un titre, une légende et une orientation : le nord est souvent en haut. La France métropolitaine est en Europe ; sa capitale est Paris."
+phrases:
+  consigne: "Écoute ou lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense à la carte de France de la classe : le titre, la légende, le nord en haut."
+  exemple: "Exemple : sur la carte de France, Paris est marquée par un gros point, parce que c'est la plus grande ville et la capitale."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle est la capitale de la France ?"
+    nom: "Paris"
+    explication: "Paris est la capitale de la France : le président de la République et le gouvernement y travaillent."
+    pieges:
+      - { texte: "Lyon", pourquoi: "Lyon est une grande ville de France, mais la capitale est Paris." }
+      - { texte: "Marseille", pourquoi: "Marseille est une grande ville au bord de la Méditerranée, mais la capitale est Paris." }
+  - texte: "Sur quel continent se trouve la France métropolitaine ?"
+    nom: "L'Europe"
+    explication: "La France métropolitaine, celle de l'hexagone et de la Corse, est en Europe."
+    pieges:
+      - { texte: "L'Afrique", pourquoi: "L'Afrique est au sud, de l'autre côté de la mer Méditerranée." }
+      - { texte: "L'Amérique", pourquoi: "La Guyane, en Amérique du Sud, est française, mais la France métropolitaine est en Europe." }
+  - texte: "Sur une carte, à quoi sert la légende ?"
+    nom: "À expliquer ce que veulent dire les couleurs et les symboles."
+    explication: "La légende explique les couleurs et les symboles de la carte : un point pour une ville, un trait bleu pour un fleuve…"
+    pieges:
+      - { texte: "À dire ce que montre la carte.", pourquoi: "C'est le rôle du titre." }
+      - { texte: "À montrer où est le nord.", pourquoi: "C'est le rôle de l'orientation, souvent une flèche marquée N." }
+  - texte: "Sur la plupart des cartes, où se trouve le nord ?"
+    nom: "En haut"
+    explication: "Sur la plupart des cartes, le nord est en haut, le sud en bas, l'est à droite et l'ouest à gauche."
+    pieges:
+      - { texte: "En bas", pourquoi: "En bas, c'est le sud." }
+      - { texte: "À droite", pourquoi: "À droite, c'est l'est." }
+  - texte: "Sur une carte des villes de France, comment montre-t-on souvent une ville ?"
+    nom: "Par un point, plus gros pour une grande ville."
+    explication: "Une ville est souvent un point : plus la ville est grande, plus le point est gros. La légende le dit."
+    pieges:
+      - { texte: "Par un trait bleu.", pourquoi: "Un trait bleu montre souvent un fleuve ou une rivière." }
+      - { texte: "Par une flèche.", pourquoi: "Une flèche sert souvent à montrer le nord." }
+  - texte: "Quelles mers et quel océan bordent la France métropolitaine ?"
+    nom: "La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée."
+    explication: "La France métropolitaine a des côtes au nord (Manche, mer du Nord), à l'ouest (Atlantique) et au sud (Méditerranée)."
+    pieges:
+      - { texte: "Seulement la mer Méditerranée.", pourquoi: "La Méditerranée borde le sud ; la Manche, la mer du Nord et l'Atlantique bordent le nord et l'ouest." }
+      - { texte: "L'océan Pacifique.", pourquoi: "La France métropolitaine ne touche pas le Pacifique ; seuls des territoires d'outre-mer, comme la Polynésie française, s'y trouvent." }
+  - texte: "Quel est le plus long fleuve de France ?"
+    nom: "La Loire"
+    explication: "La Loire est le plus long fleuve de France : elle se jette dans l'océan Atlantique."
+    pieges:
+      - { texte: "La Seine", pourquoi: "La Seine traverse Paris, mais elle est moins longue que la Loire." }
+      - { texte: "Le Rhône", pourquoi: "Le Rhône naît en Suisse ; sa partie française est moins longue que la Loire." }
+  - texte: "Quelle est la plus haute montagne de France ?"
+    nom: "Le mont Blanc, dans les Alpes."
+    explication: "Le mont Blanc, dans les Alpes, est le plus haut sommet de France."
+    pieges:
+      - { texte: "Le puy de Dôme, dans le Massif central.", pourquoi: "C'est un ancien volcan du Massif central, bien moins haut que le mont Blanc." }
+      - { texte: "Le Vignemale, dans les Pyrénées.", pourquoi: "C'est le plus haut sommet des Pyrénées françaises, mais il est moins haut que le mont Blanc." }
+  - texte: "Quel pays a une frontière avec la France métropolitaine ?"
+    nom: "L'Espagne"
+    explication: "L'Espagne est au sud-ouest de la France ; les Pyrénées marquent la frontière."
+    pieges:
+      - { texte: "Le Japon", pourquoi: "Le Japon est en Asie, très loin de la France." }
+      - { texte: "L'Australie", pourquoi: "L'Australie est en Océanie, de l'autre côté de la Terre." }
+  - texte: "Dans quelle mer se trouve l'île de Corse ?"
+    nom: "La mer Méditerranée"
+    explication: "La Corse est une île française de la mer Méditerranée, au sud-est de la France métropolitaine."
+    pieges:
+      - { texte: "La Manche", pourquoi: "La Manche sépare la France du Royaume-Uni, au nord-ouest." }
+      - { texte: "La mer du Nord", pourquoi: "La mer du Nord est au nord ; la Corse est au sud-est, en Méditerranée." }
+
+en:
+  titre: "France on a map"
+  idee: "A map has a title, a key and an orientation: north is often at the top. Metropolitan France is in Europe; its capital is Paris."
+  phrases:
+    consigne: "Listen to or read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think of the map of France in the classroom: the title, the key, north at the top."
+    exemple: "Example: on the map of France, Paris is marked with a big dot, because it's the largest city and the capital."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the capital of France?"
+      nom: "Paris"
+      explication: "Paris is the capital of France: the President of the Republic and the government work there."
+      pieges:
+        - { texte: "Lyon", pourquoi: "Lyon is a big city in France, but the capital is Paris." }
+        - { texte: "Marseille", pourquoi: "Marseille is a big city on the Mediterranean, but the capital is Paris." }
+    - texte: "Which continent is metropolitan France on?"
+      nom: "Europe"
+      explication: "Metropolitan France, the mainland and Corsica, is in Europe."
+      pieges:
+        - { texte: "Africa", pourquoi: "Africa is to the south, across the Mediterranean Sea." }
+        - { texte: "America", pourquoi: "French Guiana, in South America, is French, but metropolitan France is in Europe." }
+    - texte: "On a map, what is the key for?"
+      nom: "To explain what the colours and symbols mean."
+      explication: "The key explains the map's colours and symbols: a dot for a town, a blue line for a river…"
+      pieges:
+        - { texte: "To say what the map shows.", pourquoi: "That's the job of the title." }
+        - { texte: "To show where north is.", pourquoi: "That's the job of the orientation, often an arrow marked N." }
+    - texte: "On most maps, where is north?"
+      nom: "At the top"
+      explication: "On most maps, north is at the top, south at the bottom, east on the right and west on the left."
+      pieges:
+        - { texte: "At the bottom", pourquoi: "At the bottom is south." }
+        - { texte: "On the right", pourquoi: "On the right is east." }
+    - texte: "On a map of the towns of France, how is a town often shown?"
+      nom: "With a dot, bigger for a big town."
+      explication: "A town is often a dot: the bigger the town, the bigger the dot. The key says so."
+      pieges:
+        - { texte: "With a blue line.", pourquoi: "A blue line often shows a river." }
+        - { texte: "With an arrow.", pourquoi: "An arrow is often used to show north." }
+    - texte: "Which seas and which ocean border metropolitan France?"
+      nom: "The English Channel, the North Sea, the Atlantic Ocean and the Mediterranean Sea."
+      explication: "Metropolitan France has coasts in the north (Channel, North Sea), the west (Atlantic) and the south (Mediterranean)."
+      pieges:
+        - { texte: "Only the Mediterranean Sea.", pourquoi: "The Mediterranean borders the south; the Channel, the North Sea and the Atlantic border the north and west." }
+        - { texte: "The Pacific Ocean.", pourquoi: "Metropolitan France doesn't touch the Pacific; only overseas territories, such as French Polynesia, are there." }
+    - texte: "What is the longest river in France?"
+      nom: "The Loire"
+      explication: "The Loire is the longest river in France: it flows into the Atlantic Ocean."
+      pieges:
+        - { texte: "The Seine", pourquoi: "The Seine flows through Paris, but it's shorter than the Loire." }
+        - { texte: "The Rhône", pourquoi: "The Rhône rises in Switzerland; its French part is shorter than the Loire." }
+    - texte: "What is the highest mountain in France?"
+      nom: "Mont Blanc, in the Alps."
+      explication: "Mont Blanc, in the Alps, is the highest peak in France."
+      pieges:
+        - { texte: "The Puy de Dôme, in the Massif Central.", pourquoi: "It's an old volcano in the Massif Central, much lower than Mont Blanc." }
+        - { texte: "The Vignemale, in the Pyrenees.", pourquoi: "It's the highest peak of the French Pyrenees, but it's lower than Mont Blanc." }
+    - texte: "Which country shares a border with metropolitan France?"
+      nom: "Spain"
+      explication: "Spain is to the south-west of France; the Pyrenees mark the border."
+      pieges:
+        - { texte: "Japan", pourquoi: "Japan is in Asia, very far from France." }
+        - { texte: "Australia", pourquoi: "Australia is in Oceania, on the other side of the Earth." }
+    - texte: "Which sea is the island of Corsica in?"
+      nom: "The Mediterranean Sea"
+      explication: "Corsica is a French island in the Mediterranean Sea, to the south-east of metropolitan France."
+      pieges:
+        - { texte: "The English Channel", pourquoi: "The Channel separates France from the United Kingdom, to the north-west." }
+        - { texte: "The North Sea", pourquoi: "The North Sea is to the north; Corsica is to the south-east, in the Mediterranean." }

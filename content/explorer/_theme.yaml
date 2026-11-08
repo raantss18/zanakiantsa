@@ -4,7 +4,7 @@ nom: "Explorer"
 # Nom selon la tranche d'âge (ADR 0066) : à 17 ans, plus de « Lire et écrire » sur l'accueil.
 noms: {moyens: "Histoire et monde", grands: "Histoire-géographie"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Le corps humain, la Terre et l'espace, les solides, puis l'histoire et la géographie jusqu'à la 1re."
+resume: "Le corps humain, la Terre et l'espace, les solides, puis l'histoire et la géographie jusqu'en Terminale."
 icone: "1f52d"
 ages: [4, 17]
 # Corps : maternelle consolidée p. 59-60. Solides : programme de mathématiques du cycle 2 (CP), « Les solides ».
@@ -32,7 +32,18 @@ sources:
   # (en-tête et pied de page du ministère), le 2026-11-07. Aucun nouveau programme de lycée trouvé à cette date.
   hg2de: "https://www.snes.edu/IMG/pdf/hist-geog_annexe-1_2e_bo.pdf"
   hg1re: "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf"
-ordre: [corps-parties, solides-nommer, solides-reconnaitre, planetes, muscles-articulations, coeur-souffle, grandes-periodes, continents-oceans, lire-carte, terre-soleil, jour-nuit, saisons, moyen-age, univers-distances, revolution-empire, republique-xixe, guerres-mondiales, france-outre-mer, mediterranee-antique-medievale, renaissance-humanisme, societes-environnements, mobilites-migrations, europe-revolutions, grande-guerre-lycee, metropolisation]
+  # Cycle 2, « Questionner l'espace et le temps » (programme du cycle 2 en vigueur à la rentrée 2020, d'après le BOEN n° 31
+  # du 30 juillet 2020, p. 51-55 : se situer dans l'espace, dans le temps, explorer les organisations du monde). Éduscol
+  # (eduscol.education.gouv.fr/4770, page non lue : 403) indique que cet ancien programme reste en vigueur au CE1 en
+  # 2026-2027 (information relevée dans un moteur de recherche, non vérifiée). Texte lu le 2026-11-08 dans la copie publiée
+  # par la circonscription de Montbéliard 1 (académie de Besançon), en-tête et pied de page Éduscol ; l'original Éduscol
+  # n'a pas pu être téléchargé.
+  c2qm: "https://montbeliard1.circo25.ac-besancon.fr/wp-content/uploads/sites/20/2020/08/Cycle-2-avec-modifications-apparentes.pdf"
+  # Terminale générale : programme d'histoire-géographie, annexe 1 de l'arrêté du BO spécial n° 8 du 25 juillet 2019
+  # (PDF Éduscol). Lu le 2026-11-08 : thème 2 d'histoire (1945-années 1970), thème 4 chapitre 3 (la République française),
+  # thème 1 de géographie (mers et océans). Aucun programme plus récent trouvé à cette date.
+  hgtle: "https://eduscol.education.fr/document/23416/download"
+ordre: [corps-parties, jour-semaine-saisons, terre-mer-globe, solides-nommer, solides-reconnaitre, calendrier-generations, paysages-proches-lointains, france-carte, planetes, muscles-articulations, coeur-souffle, grandes-periodes, continents-oceans, lire-carte, terre-soleil, jour-nuit, saisons, moyen-age, univers-distances, revolution-empire, republique-xixe, guerres-mondiales, france-outre-mer, mediterranee-antique-medievale, renaissance-humanisme, societes-environnements, mobilites-migrations, europe-revolutions, grande-guerre-lycee, metropolisation, monde-bipolaire, cinquieme-republique, mers-oceans]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -47,7 +58,7 @@ en:
   titre: "Exploring in 3D"
   nom: "Explore"
   noms: {moyens: "The world", grands: "History and geography"}
-  resume: "The human body, the Earth and space, solid shapes, then history and geography up to Year 11 (1re)."
+  resume: "The human body, the Earth and space, solid shapes, then history and geography up to Year 12 (Terminale)."
   intro:
     - texte: "Turn the objects with your finger."
       images: ["1f446", "1f30d"]

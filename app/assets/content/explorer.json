@@ -40,7 +40,7 @@
       "moyens": "The world",
       "grands": "History and geography"
     },
-    "resume": "The human body, the Earth and space, solid shapes, then history and geography up to Year 11 (1re).",
+    "resume": "The human body, the Earth and space, solid shapes, then history and geography up to Year 12 (Terminale).",
     "intro": [
       {
         "texte": "Turn the objects with your finger.",
@@ -72,7 +72,9 @@
     "c3hg": "https://eduscol.education.fr/document/50990/download",
     "c4": "https://eduscol.education.fr/document/621/download",
     "hg2de": "https://www.snes.edu/IMG/pdf/hist-geog_annexe-1_2e_bo.pdf",
-    "hg1re": "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf"
+    "hg1re": "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf",
+    "c2qm": "https://montbeliard1.circo25.ac-besancon.fr/wp-content/uploads/sites/20/2020/08/Cycle-2-avec-modifications-apparentes.pdf",
+    "hgtle": "https://eduscol.education.fr/document/23416/download"
   },
   "competences": [
     {
@@ -303,6 +305,1016 @@
       }
     },
     {
+      "id": "jour-semaine-saisons",
+      "titre": "Le jour, la nuit, la semaine, les saisons",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Se repérer dans le temps : différencier le matin et le soir, le jour et la nuit ; savoir que la semaine est une suite de sept jours ; connaitre les saisons ; comprendre progressivement qu’il existe un temps long, des évènements antérieurs à notre propre vie."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Le jour, le Soleil nous éclaire ; la nuit, on dort. Une semaine a sept jours. Une année a quatre saisons : le printemps, l'été, l'automne et l'hiver.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Pense à ce que tu fais chaque jour, du matin jusqu'au soir.",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qui nous éclaire pendant le jour ?",
+          "bonne": [
+            "2600",
+            "le Soleil"
+          ],
+          "autres": [
+            [
+              "1f319",
+              "la Lune"
+            ],
+            [
+              "2601",
+              "le nuage"
+            ]
+          ],
+          "explication": "Le jour, c'est le Soleil qui nous éclaire."
+        },
+        {
+          "texte": "Qu'est-ce qu'on voit souvent dans le ciel, la nuit ?",
+          "bonne": [
+            "1f319",
+            "la Lune"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le Soleil"
+            ],
+            [
+              "1f308",
+              "l'arc-en-ciel"
+            ]
+          ],
+          "explication": "La nuit, le ciel est noir : on voit souvent la Lune et les étoiles."
+        },
+        {
+          "texte": "Que fait-on, la nuit ?",
+          "bonne": [
+            "1f634",
+            "dormir"
+          ],
+          "autres": [
+            [
+              "1f392",
+              "aller à l'école"
+            ],
+            [
+              "26bd",
+              "jouer au ballon"
+            ]
+          ],
+          "explication": "La nuit, on dort pour se reposer."
+        },
+        {
+          "texte": "Le matin, en se levant, que prend-on ?",
+          "bonne": [
+            "2615",
+            "le petit déjeuner"
+          ],
+          "autres": [
+            [
+              "1f382",
+              "le gâteau d'anniversaire"
+            ],
+            [
+              "1f6cf",
+              "le lit"
+            ]
+          ],
+          "explication": "Le matin, on se lève et on prend le petit déjeuner."
+        },
+        {
+          "texte": "Le soir, quand il fait nuit, où va-t-on ?",
+          "bonne": [
+            "1f6cf",
+            "au lit"
+          ],
+          "autres": [
+            [
+              "1f392",
+              "à l'école"
+            ],
+            [
+              "1f3dd",
+              "à la plage"
+            ]
+          ],
+          "explication": "Le soir, on va au lit."
+        },
+        {
+          "texte": "Le matin, après le petit déjeuner, où vont les enfants ?",
+          "bonne": [
+            "1f392",
+            "à l'école"
+          ],
+          "autres": [
+            [
+              "1f6cf",
+              "au lit"
+            ],
+            [
+              "1f634",
+              "dormir"
+            ]
+          ],
+          "explication": "D'abord on se lève, ensuite on prend le petit déjeuner, puis on va à l'école."
+        },
+        {
+          "texte": "Combien de jours y a-t-il dans une semaine ?",
+          "bonne": [
+            "37-20e3",
+            "sept"
+          ],
+          "autres": [
+            [
+              "35-20e3",
+              "cinq"
+            ],
+            [
+              "33-20e3",
+              "trois"
+            ]
+          ],
+          "explication": "Une semaine, c'est sept jours : lundi, mardi, mercredi, jeudi, vendredi, samedi et dimanche."
+        },
+        {
+          "texte": "Qu'est-ce qu'on fête une fois chaque année ?",
+          "bonne": [
+            "1f382",
+            "l'anniversaire"
+          ],
+          "autres": [
+            [
+              "2615",
+              "le petit déjeuner"
+            ],
+            [
+              "1f634",
+              "la nuit"
+            ]
+          ],
+          "explication": "L'anniversaire revient une fois par an : c'est le jour où l'on est né."
+        },
+        {
+          "texte": "Combien y a-t-il de saisons dans une année, en France ?",
+          "bonne": [
+            "34-20e3",
+            "quatre"
+          ],
+          "autres": [
+            [
+              "32-20e3",
+              "deux"
+            ],
+            [
+              "37-20e3",
+              "sept"
+            ]
+          ],
+          "explication": "En France, il y a quatre saisons : le printemps, l'été, l'automne et l'hiver."
+        },
+        {
+          "texte": "En hiver, quand il fait très froid et qu'il neige, que peut-on faire ?",
+          "bonne": [
+            "2603",
+            "un bonhomme de neige"
+          ],
+          "autres": [
+            [
+              "1f337",
+              "cueillir des fleurs"
+            ],
+            [
+              "1f3dd",
+              "aller à la plage"
+            ]
+          ],
+          "explication": "En hiver, il fait froid ; parfois il neige, et on peut faire un bonhomme de neige."
+        },
+        {
+          "texte": "Quelle saison vient juste après l'hiver ?",
+          "bonne": [
+            "1f337",
+            "le printemps"
+          ],
+          "autres": [
+            [
+              "2600",
+              "l'été"
+            ],
+            [
+              "2744",
+              "l'hiver"
+            ]
+          ],
+          "explication": "Après l'hiver vient le printemps : il fait plus doux et les fleurs poussent."
+        },
+        {
+          "texte": "En France, quelle saison est la plus chaude ?",
+          "bonne": [
+            "2600",
+            "l'été"
+          ],
+          "autres": [
+            [
+              "2744",
+              "l'hiver"
+            ],
+            [
+              "1f337",
+              "le printemps"
+            ]
+          ],
+          "explication": "En France, l'été est la saison la plus chaude."
+        },
+        {
+          "texte": "Qui est né il y a très longtemps, bien avant les autres ?",
+          "bonne": [
+            "1f474",
+            "le grand-père"
+          ],
+          "autres": [
+            [
+              "1f476",
+              "le bébé"
+            ],
+            [
+              "1f9d2",
+              "l'enfant"
+            ]
+          ],
+          "explication": "Le grand-père est né il y a très longtemps, bien avant l'enfant et le bébé."
+        },
+        {
+          "texte": "Qui est le plus jeune ? Il est né après tous les autres.",
+          "bonne": [
+            "1f476",
+            "le bébé"
+          ],
+          "autres": [
+            [
+              "1f468",
+              "le papa"
+            ],
+            [
+              "1f475",
+              "la grand-mère"
+            ]
+          ],
+          "explication": "Le bébé est né le dernier : c'est le plus jeune."
+        }
+      ],
+      "en": {
+        "titre": "Day, night, the week, the seasons",
+        "idee": "In the daytime, the Sun gives us light; at night, we sleep. A week has seven days. A year has four seasons: spring, summer, autumn and winter.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Think about what you do every day, from morning to evening.",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What gives us light in the daytime?",
+            "bonne": [
+              "2600",
+              "the Sun"
+            ],
+            "autres": [
+              [
+                "1f319",
+                "the Moon"
+              ],
+              [
+                "2601",
+                "the cloud"
+              ]
+            ],
+            "explication": "In the daytime, the Sun gives us light."
+          },
+          {
+            "texte": "What do we often see in the sky at night?",
+            "bonne": [
+              "1f319",
+              "the Moon"
+            ],
+            "autres": [
+              [
+                "2600",
+                "the Sun"
+              ],
+              [
+                "1f308",
+                "the rainbow"
+              ]
+            ],
+            "explication": "At night, the sky is dark: we often see the Moon and the stars."
+          },
+          {
+            "texte": "What do we do at night?",
+            "bonne": [
+              "1f634",
+              "sleep"
+            ],
+            "autres": [
+              [
+                "1f392",
+                "go to school"
+              ],
+              [
+                "26bd",
+                "play football"
+              ]
+            ],
+            "explication": "At night, we sleep to rest."
+          },
+          {
+            "texte": "In the morning, when we get up, what do we have?",
+            "bonne": [
+              "2615",
+              "breakfast"
+            ],
+            "autres": [
+              [
+                "1f382",
+                "a birthday cake"
+              ],
+              [
+                "1f6cf",
+                "the bed"
+              ]
+            ],
+            "explication": "In the morning, we get up and have breakfast."
+          },
+          {
+            "texte": "In the evening, when it's dark, where do we go?",
+            "bonne": [
+              "1f6cf",
+              "to bed"
+            ],
+            "autres": [
+              [
+                "1f392",
+                "to school"
+              ],
+              [
+                "1f3dd",
+                "to the beach"
+              ]
+            ],
+            "explication": "In the evening, we go to bed."
+          },
+          {
+            "texte": "In the morning, after breakfast, where do children go?",
+            "bonne": [
+              "1f392",
+              "to school"
+            ],
+            "autres": [
+              [
+                "1f6cf",
+                "to bed"
+              ],
+              [
+                "1f634",
+                "to sleep"
+              ]
+            ],
+            "explication": "First we get up, next we have breakfast, then we go to school."
+          },
+          {
+            "texte": "How many days are there in a week?",
+            "bonne": [
+              "37-20e3",
+              "seven"
+            ],
+            "autres": [
+              [
+                "35-20e3",
+                "five"
+              ],
+              [
+                "33-20e3",
+                "three"
+              ]
+            ],
+            "explication": "A week is seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday."
+          },
+          {
+            "texte": "What do we celebrate once every year?",
+            "bonne": [
+              "1f382",
+              "your birthday"
+            ],
+            "autres": [
+              [
+                "2615",
+                "breakfast"
+              ],
+              [
+                "1f634",
+                "the night"
+              ]
+            ],
+            "explication": "Your birthday comes once a year: it's the day you were born."
+          },
+          {
+            "texte": "How many seasons are there in a year, in France?",
+            "bonne": [
+              "34-20e3",
+              "four"
+            ],
+            "autres": [
+              [
+                "32-20e3",
+                "two"
+              ],
+              [
+                "37-20e3",
+                "seven"
+              ]
+            ],
+            "explication": "In France, there are four seasons: spring, summer, autumn and winter."
+          },
+          {
+            "texte": "In winter, when it's very cold and snowing, what can we do?",
+            "bonne": [
+              "2603",
+              "build a snowman"
+            ],
+            "autres": [
+              [
+                "1f337",
+                "pick flowers"
+              ],
+              [
+                "1f3dd",
+                "go to the beach"
+              ]
+            ],
+            "explication": "In winter, it's cold; sometimes it snows, and we can build a snowman."
+          },
+          {
+            "texte": "Which season comes just after winter?",
+            "bonne": [
+              "1f337",
+              "spring"
+            ],
+            "autres": [
+              [
+                "2600",
+                "summer"
+              ],
+              [
+                "2744",
+                "winter"
+              ]
+            ],
+            "explication": "After winter comes spring: it gets milder and flowers grow."
+          },
+          {
+            "texte": "In France, which season is the hottest?",
+            "bonne": [
+              "2600",
+              "summer"
+            ],
+            "autres": [
+              [
+                "2744",
+                "winter"
+              ],
+              [
+                "1f337",
+                "spring"
+              ]
+            ],
+            "explication": "In France, summer is the hottest season."
+          },
+          {
+            "texte": "Who was born a very long time ago, well before the others?",
+            "bonne": [
+              "1f474",
+              "grandad"
+            ],
+            "autres": [
+              [
+                "1f476",
+                "the baby"
+              ],
+              [
+                "1f9d2",
+                "the child"
+              ]
+            ],
+            "explication": "Grandad was born a very long time ago, well before the child and the baby."
+          },
+          {
+            "texte": "Who is the youngest? He was born after all the others.",
+            "bonne": [
+              "1f476",
+              "the baby"
+            ],
+            "autres": [
+              [
+                "1f468",
+                "dad"
+              ],
+              [
+                "1f475",
+                "grandma"
+              ]
+            ],
+            "explication": "The baby was born last: he's the youngest."
+          }
+        ]
+      }
+    },
+    {
+      "id": "terre-mer-globe",
+      "titre": "La terre, la mer et le globe",
+      "niveau": "GS",
+      "prerequis": [],
+      "programme": {
+        "source": "c1",
+        "texte": "Se repérer dans l’espace : reconnaitre quelques espaces géographiques sur un planisphère ; nommer un ou deux continents et quelques pays dans le cadre de la découverte de l’utilisation d’un globe ou d’un planisphère ; faire la différence entre la mer et la terre."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Sur le globe et sur les cartes, la mer est en bleu. La terre, ce sont les montagnes, les îles et les pays. Pour aller très loin, on prend le bateau ou l'avion.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Regarde bien : y a-t-il de l'eau, de la terre, ou les deux ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Touche la mer.",
+          "bonne": [
+            "1f30a",
+            "la mer"
+          ],
+          "autres": [
+            [
+              "1f3d4",
+              "la montagne"
+            ],
+            [
+              "1f3e0",
+              "la maison"
+            ]
+          ],
+          "explication": "Voici la mer : beaucoup d'eau salée, avec des vagues."
+        },
+        {
+          "texte": "Touche la montagne.",
+          "bonne": [
+            "1f3d4",
+            "la montagne"
+          ],
+          "autres": [
+            [
+              "1f30a",
+              "la mer"
+            ],
+            [
+              "1f3dd",
+              "l'île"
+            ]
+          ],
+          "explication": "Voici la montagne : la terre monte très haut."
+        },
+        {
+          "texte": "Quelle image montre une île, de la terre entourée d'eau ?",
+          "bonne": [
+            "1f3dd",
+            "l'île"
+          ],
+          "autres": [
+            [
+              "1f3d4",
+              "la montagne"
+            ],
+            [
+              "1f3e0",
+              "la maison"
+            ]
+          ],
+          "explication": "Une île, c'est de la terre entourée d'eau de tous les côtés."
+        },
+        {
+          "texte": "Quel objet montre toute la Terre en tout petit, en forme de boule ?",
+          "bonne": [
+            "1f30d",
+            "le globe"
+          ],
+          "autres": [
+            [
+              "1f5fa",
+              "la carte"
+            ],
+            [
+              "26bd",
+              "le ballon"
+            ]
+          ],
+          "explication": "Le globe est une boule qui montre la Terre en tout petit, avec les mers et les terres."
+        },
+        {
+          "texte": "Qu'est-ce qui montre la Terre à plat, sur une feuille ?",
+          "bonne": [
+            "1f5fa",
+            "la carte du monde"
+          ],
+          "autres": [
+            [
+              "1f30d",
+              "le globe"
+            ],
+            [
+              "1f4d6",
+              "le livre d'histoires"
+            ]
+          ],
+          "explication": "La carte du monde montre la Terre à plat : on l'appelle aussi un planisphère."
+        },
+        {
+          "texte": "Sur un globe ou une carte, de quelle couleur sont souvent les mers et les océans ?",
+          "bonne": [
+            "1f535",
+            "bleu"
+          ],
+          "autres": [
+            [
+              "1f534",
+              "rouge"
+            ],
+            [
+              "1f7e1",
+              "jaune"
+            ]
+          ],
+          "explication": "Sur les globes et les cartes, l'eau des mers et des océans est souvent en bleu."
+        },
+        {
+          "texte": "Avec quoi peut-on traverser la mer ?",
+          "bonne": [
+            "1f6a2",
+            "le bateau"
+          ],
+          "autres": [
+            [
+              "1f697",
+              "la voiture"
+            ],
+            [
+              "1f6b2",
+              "le vélo"
+            ]
+          ],
+          "explication": "Le bateau flotte et peut traverser la mer."
+        },
+        {
+          "texte": "Pour aller très loin, dans un pays de l'autre côté de l'océan, on peut prendre…",
+          "bonne": [
+            "2708",
+            "l'avion"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f697",
+              "la voiture"
+            ]
+          ],
+          "explication": "L'avion vole au-dessus des mers et des océans : il va très loin, très vite."
+        },
+        {
+          "texte": "Où trouve-t-on de la neige, même en été ?",
+          "bonne": [
+            "1f3d4",
+            "en haut des très hautes montagnes"
+          ],
+          "autres": [
+            [
+              "1f3dd",
+              "sur l'île"
+            ],
+            [
+              "1f30a",
+              "dans la mer"
+            ]
+          ],
+          "explication": "En haut des très hautes montagnes, il fait si froid que la neige reste même en été."
+        },
+        {
+          "texte": "Cette statue est dans un pays très loin, de l'autre côté de l'océan : les États-Unis. Touche-la.",
+          "bonne": [
+            "1f5fd",
+            "la statue de la Liberté"
+          ],
+          "autres": [
+            [
+              "1f5fc",
+              "la tour de Tokyo"
+            ],
+            [
+              "1f3f0",
+              "le château"
+            ]
+          ],
+          "explication": "La statue de la Liberté est à New York, aux États-Unis. C'est la France qui l'a offerte."
+        },
+        {
+          "texte": "Cette tour est dans un pays très loin, au Japon. Touche-la.",
+          "bonne": [
+            "1f5fc",
+            "la tour de Tokyo"
+          ],
+          "autres": [
+            [
+              "1f5fd",
+              "la statue de la Liberté"
+            ],
+            [
+              "1f3f0",
+              "le château"
+            ]
+          ],
+          "explication": "La tour de Tokyo est au Japon, un pays d'Asie."
+        },
+        {
+          "texte": "Où vivent les gens : sur la terre ou dans la mer ? Touche leur maison.",
+          "bonne": [
+            "1f3e0",
+            "la maison"
+          ],
+          "autres": [
+            [
+              "1f30a",
+              "la mer"
+            ],
+            [
+              "2601",
+              "le nuage"
+            ]
+          ],
+          "explication": "Les gens vivent sur la terre : dans des maisons, des villages et des villes."
+        }
+      ],
+      "en": {
+        "titre": "Land, sea and the globe",
+        "idee": "On the globe and on maps, the sea is blue. The land is mountains, islands and countries. To go very far, we take a boat or a plane.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Look carefully: is there water, land, or both?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Touch the sea.",
+            "bonne": [
+              "1f30a",
+              "the sea"
+            ],
+            "autres": [
+              [
+                "1f3d4",
+                "the mountain"
+              ],
+              [
+                "1f3e0",
+                "the house"
+              ]
+            ],
+            "explication": "Here is the sea: lots of salty water, with waves."
+          },
+          {
+            "texte": "Touch the mountain.",
+            "bonne": [
+              "1f3d4",
+              "the mountain"
+            ],
+            "autres": [
+              [
+                "1f30a",
+                "the sea"
+              ],
+              [
+                "1f3dd",
+                "the island"
+              ]
+            ],
+            "explication": "Here is the mountain: the land rises very high."
+          },
+          {
+            "texte": "Which picture shows an island, land with water all around it?",
+            "bonne": [
+              "1f3dd",
+              "the island"
+            ],
+            "autres": [
+              [
+                "1f3d4",
+                "the mountain"
+              ],
+              [
+                "1f3e0",
+                "the house"
+              ]
+            ],
+            "explication": "An island is land with water all around it."
+          },
+          {
+            "texte": "Which object shows the whole Earth, very small, shaped like a ball?",
+            "bonne": [
+              "1f30d",
+              "the globe"
+            ],
+            "autres": [
+              [
+                "1f5fa",
+                "the map"
+              ],
+              [
+                "26bd",
+                "the ball"
+              ]
+            ],
+            "explication": "A globe is a ball that shows the Earth very small, with its seas and lands."
+          },
+          {
+            "texte": "What shows the Earth flat, on a sheet of paper?",
+            "bonne": [
+              "1f5fa",
+              "the world map"
+            ],
+            "autres": [
+              [
+                "1f30d",
+                "the globe"
+              ],
+              [
+                "1f4d6",
+                "the storybook"
+              ]
+            ],
+            "explication": "A world map shows the Earth flat."
+          },
+          {
+            "texte": "On a globe or a map, what colour are seas and oceans usually?",
+            "bonne": [
+              "1f535",
+              "blue"
+            ],
+            "autres": [
+              [
+                "1f534",
+                "red"
+              ],
+              [
+                "1f7e1",
+                "yellow"
+              ]
+            ],
+            "explication": "On globes and maps, the water of seas and oceans is usually blue."
+          },
+          {
+            "texte": "What can we cross the sea with?",
+            "bonne": [
+              "1f6a2",
+              "the boat"
+            ],
+            "autres": [
+              [
+                "1f697",
+                "the car"
+              ],
+              [
+                "1f6b2",
+                "the bike"
+              ]
+            ],
+            "explication": "A boat floats and can cross the sea."
+          },
+          {
+            "texte": "To go very far, to a country on the other side of the ocean, we can take…",
+            "bonne": [
+              "2708",
+              "the plane"
+            ],
+            "autres": [
+              [
+                "1f6b2",
+                "the bike"
+              ],
+              [
+                "1f697",
+                "the car"
+              ]
+            ],
+            "explication": "A plane flies over seas and oceans: it goes very far, very fast."
+          },
+          {
+            "texte": "Where can we find snow, even in summer?",
+            "bonne": [
+              "1f3d4",
+              "at the top of very high mountains"
+            ],
+            "autres": [
+              [
+                "1f3dd",
+                "on the island"
+              ],
+              [
+                "1f30a",
+                "in the sea"
+              ]
+            ],
+            "explication": "At the top of very high mountains, it's so cold that the snow stays even in summer."
+          },
+          {
+            "texte": "This statue is in a country very far away, on the other side of the ocean: the United States. Touch it.",
+            "bonne": [
+              "1f5fd",
+              "the Statue of Liberty"
+            ],
+            "autres": [
+              [
+                "1f5fc",
+                "Tokyo Tower"
+              ],
+              [
+                "1f3f0",
+                "the castle"
+              ]
+            ],
+            "explication": "The Statue of Liberty is in New York, in the United States. France gave it as a gift."
+          },
+          {
+            "texte": "This tower is in a country very far away, in Japan. Touch it.",
+            "bonne": [
+              "1f5fc",
+              "Tokyo Tower"
+            ],
+            "autres": [
+              [
+                "1f5fd",
+                "the Statue of Liberty"
+              ],
+              [
+                "1f3f0",
+                "the castle"
+              ]
+            ],
+            "explication": "Tokyo Tower is in Japan, a country in Asia."
+          },
+          {
+            "texte": "Where do people live: on land or in the sea? Touch their home.",
+            "bonne": [
+              "1f3e0",
+              "the house"
+            ],
+            "autres": [
+              [
+                "1f30a",
+                "the sea"
+              ],
+              [
+                "2601",
+                "the cloud"
+              ]
+            ],
+            "explication": "People live on land: in houses, villages and towns."
+          }
+        ]
+      }
+    },
+    {
       "id": "solides-nommer",
       "titre": "Nommer le cube, le pavé, la boule",
       "niveau": "CP",
@@ -384,6 +1396,1143 @@
           "demonstration": "Look: this is {bonne}.",
           "bravo": "Yes! This is {bonne}."
         }
+      }
+    },
+    {
+      "id": "calendrier-generations",
+      "titre": "Le temps qui passe : calendrier et générations",
+      "niveau": "CE1",
+      "prerequis": [
+        "jour-semaine-saisons"
+      ],
+      "programme": {
+        "source": "c2qm",
+        "texte": "Se situer dans le temps : l’alternance jour/nuit ; le caractère cyclique des jours, des semaines, des mois, des saisons ; prendre conscience que le temps qui passe est irréversible ; le temps des parents ; les générations vivantes et la mémoire familiale ; l’évolution des sociétés à travers des modes de vie et des techniques à diverses époques."
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Les jours, les semaines, les mois et les saisons reviennent toujours. Mais le temps qui passe ne revient pas : les grands-parents sont nés avant les parents, et les parents avant les enfants.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Pense à ta famille : qui est né le premier ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans une famille, qui appartient à la génération la plus ancienne ?",
+          "bonne": [
+            "1f475",
+            "la grand-mère"
+          ],
+          "autres": [
+            [
+              "1f469",
+              "la maman"
+            ],
+            [
+              "1f467",
+              "la fille"
+            ]
+          ],
+          "explication": "Les grands-parents sont nés avant les parents, et les parents avant les enfants : cela fait trois générations."
+        },
+        {
+          "texte": "Qui est né en dernier ?",
+          "bonne": [
+            "1f476",
+            "le bébé"
+          ],
+          "autres": [
+            [
+              "1f474",
+              "le grand-père"
+            ],
+            [
+              "1f466",
+              "le garçon"
+            ]
+          ],
+          "explication": "Le bébé est né le dernier : il appartient à la génération la plus jeune."
+        },
+        {
+          "texte": "Le papa de ta maman, qui est-ce pour toi ?",
+          "bonne": [
+            "1f474",
+            "le grand-père"
+          ],
+          "autres": [
+            [
+              "1f466",
+              "le frère"
+            ],
+            [
+              "1f476",
+              "le bébé"
+            ]
+          ],
+          "explication": "Le papa de ta maman est ton grand-père. Les parents de tes parents sont tes grands-parents."
+        },
+        {
+          "texte": "Combien de jours y a-t-il dans une semaine ?",
+          "bonne": [
+            "37-20e3",
+            "sept"
+          ],
+          "autres": [
+            [
+              "35-20e3",
+              "cinq"
+            ],
+            [
+              "1f51f",
+              "dix"
+            ]
+          ],
+          "explication": "Une semaine compte sept jours ; après dimanche revient lundi."
+        },
+        {
+          "texte": "Combien de saisons y a-t-il dans une année, en France ?",
+          "bonne": [
+            "34-20e3",
+            "quatre"
+          ],
+          "autres": [
+            [
+              "32-20e3",
+              "deux"
+            ],
+            [
+              "36-20e3",
+              "six"
+            ]
+          ],
+          "explication": "Printemps, été, automne, hiver : les quatre saisons reviennent chaque année."
+        },
+        {
+          "texte": "La nuit, quand le ciel est sans nuages, que voit-on briller ?",
+          "bonne": [
+            "2b50",
+            "les étoiles"
+          ],
+          "autres": [
+            [
+              "2600",
+              "le Soleil"
+            ],
+            [
+              "1f308",
+              "l'arc-en-ciel"
+            ]
+          ],
+          "explication": "Le jour et la nuit se suivent toujours. La nuit, le Soleil ne nous éclaire plus : on voit les étoiles."
+        },
+        {
+          "texte": "Qu'est-ce qui revient une fois par an, à la même date ?",
+          "bonne": [
+            "1f382",
+            "l'anniversaire"
+          ],
+          "autres": [
+            [
+              "2615",
+              "le petit déjeuner"
+            ],
+            [
+              "1f634",
+              "la nuit"
+            ]
+          ],
+          "explication": "L'anniversaire revient chaque année à la même date ; on peut le marquer sur le calendrier."
+        },
+        {
+          "texte": "Lequel existait déjà il y a très longtemps, bien avant les voitures ?",
+          "bonne": [
+            "1f3f0",
+            "le château fort"
+          ],
+          "autres": [
+            [
+              "1f697",
+              "la voiture"
+            ],
+            [
+              "1f4bb",
+              "l'ordinateur"
+            ]
+          ],
+          "explication": "Les châteaux forts datent du Moyen Âge, il y a plusieurs siècles. Les voitures et les ordinateurs sont bien plus récents."
+        },
+        {
+          "texte": "Avant les voitures, avec quel animal voyageait-on souvent ?",
+          "bonne": [
+            "1f40e",
+            "le cheval"
+          ],
+          "autres": [
+            [
+              "2708",
+              "l'avion"
+            ],
+            [
+              "1f697",
+              "la voiture"
+            ]
+          ],
+          "explication": "Autrefois, on voyageait à pied, à cheval ou dans des voitures tirées par des chevaux."
+        },
+        {
+          "texte": "Quand tes grands-parents étaient petits, quel objet n'existait pas encore chez eux ?",
+          "bonne": [
+            "1f4bb",
+            "l'ordinateur portable"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f4d6",
+              "le livre"
+            ]
+          ],
+          "explication": "Les vélos et les livres existaient déjà. Les ordinateurs portables sont arrivés dans les maisons bien plus tard."
+        }
+      ],
+      "en": {
+        "titre": "Time passing: the calendar and generations",
+        "idee": "Days, weeks, months and seasons always come back. But time that has passed never comes back: grandparents were born before parents, and parents before children.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Think about your family: who was born first?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In a family, who belongs to the oldest generation?",
+            "bonne": [
+              "1f475",
+              "grandma"
+            ],
+            "autres": [
+              [
+                "1f469",
+                "mum"
+              ],
+              [
+                "1f467",
+                "the daughter"
+              ]
+            ],
+            "explication": "Grandparents were born before parents, and parents before children: that makes three generations."
+          },
+          {
+            "texte": "Who was born last?",
+            "bonne": [
+              "1f476",
+              "the baby"
+            ],
+            "autres": [
+              [
+                "1f474",
+                "grandad"
+              ],
+              [
+                "1f466",
+                "the boy"
+              ]
+            ],
+            "explication": "The baby was born last: he belongs to the youngest generation."
+          },
+          {
+            "texte": "Your mum's dad: who is he to you?",
+            "bonne": [
+              "1f474",
+              "grandad"
+            ],
+            "autres": [
+              [
+                "1f466",
+                "your brother"
+              ],
+              [
+                "1f476",
+                "the baby"
+              ]
+            ],
+            "explication": "Your mum's dad is your grandad. Your parents' parents are your grandparents."
+          },
+          {
+            "texte": "How many days are there in a week?",
+            "bonne": [
+              "37-20e3",
+              "seven"
+            ],
+            "autres": [
+              [
+                "35-20e3",
+                "five"
+              ],
+              [
+                "1f51f",
+                "ten"
+              ]
+            ],
+            "explication": "A week has seven days; after Sunday, Monday comes back."
+          },
+          {
+            "texte": "How many seasons are there in a year, in France?",
+            "bonne": [
+              "34-20e3",
+              "four"
+            ],
+            "autres": [
+              [
+                "32-20e3",
+                "two"
+              ],
+              [
+                "36-20e3",
+                "six"
+              ]
+            ],
+            "explication": "Spring, summer, autumn, winter: the four seasons come back every year."
+          },
+          {
+            "texte": "At night, when the sky is clear, what do we see shining?",
+            "bonne": [
+              "2b50",
+              "the stars"
+            ],
+            "autres": [
+              [
+                "2600",
+                "the Sun"
+              ],
+              [
+                "1f308",
+                "the rainbow"
+              ]
+            ],
+            "explication": "Day and night always follow each other. At night, the Sun no longer lights us up: we see the stars."
+          },
+          {
+            "texte": "What comes back once a year, on the same date?",
+            "bonne": [
+              "1f382",
+              "your birthday"
+            ],
+            "autres": [
+              [
+                "2615",
+                "breakfast"
+              ],
+              [
+                "1f634",
+                "the night"
+              ]
+            ],
+            "explication": "Your birthday comes back every year on the same date; you can mark it on the calendar."
+          },
+          {
+            "texte": "Which one already existed a very long time ago, well before cars?",
+            "bonne": [
+              "1f3f0",
+              "the castle"
+            ],
+            "autres": [
+              [
+                "1f697",
+                "the car"
+              ],
+              [
+                "1f4bb",
+                "the computer"
+              ]
+            ],
+            "explication": "Castles date from the Middle Ages, several centuries ago. Cars and computers are much more recent."
+          },
+          {
+            "texte": "Before cars, which animal did people often travel with?",
+            "bonne": [
+              "1f40e",
+              "the horse"
+            ],
+            "autres": [
+              [
+                "2708",
+                "the plane"
+              ],
+              [
+                "1f697",
+                "the car"
+              ]
+            ],
+            "explication": "Long ago, people travelled on foot, on horseback or in carriages pulled by horses."
+          },
+          {
+            "texte": "When your grandparents were little, which object didn't exist in their homes yet?",
+            "bonne": [
+              "1f4bb",
+              "the laptop"
+            ],
+            "autres": [
+              [
+                "1f6b2",
+                "the bike"
+              ],
+              [
+                "1f4d6",
+                "the book"
+              ]
+            ],
+            "explication": "Bikes and books already existed. Laptops arrived in homes much later."
+          }
+        ]
+      }
+    },
+    {
+      "id": "paysages-proches-lointains",
+      "titre": "Paysages proches et lointains",
+      "niveau": "CE1",
+      "prerequis": [
+        "terre-mer-globe"
+      ],
+      "programme": {
+        "source": "c2qm",
+        "texte": "Identifier des paysages : reconnaître différents paysages (les littoraux, les massifs montagneux, les campagnes, les villes, les déserts, etc.). Au CE1, comparer les milieux de l’espace proche à des milieux plus lointains et variés : comment habite-t-on, comment circule-t-on en ville, à la campagne, en France ou ailleurs ?"
+      },
+      "activite": "choisir",
+      "parametres": {},
+      "idee": "Il y a des paysages de littoral, de montagne, de campagne et de ville. On n'y vit pas et on n'y circule pas de la même façon. Une carte ou un globe aide à situer les lieux.",
+      "phrases": {
+        "consigne": "Écoute la question, puis touche la bonne image.",
+        "question": "{texte}",
+        "indice": "Imagine le paysage : y a-t-il la mer, des sommets, des champs ou des rues ?",
+        "exemple": "Essaie une autre image.",
+        "demonstration": "Regarde : c'est {bonne}. {explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel paysage est un littoral, là où la terre rencontre la mer ?",
+          "bonne": [
+            "1f30a",
+            "le bord de mer"
+          ],
+          "autres": [
+            [
+              "1f3d4",
+              "la montagne"
+            ],
+            [
+              "1f333",
+              "la forêt"
+            ]
+          ],
+          "explication": "Le littoral, c'est le bord de mer : la terre y rencontre la mer."
+        },
+        {
+          "texte": "Quel paysage est un massif montagneux ?",
+          "bonne": [
+            "1f3d4",
+            "la montagne"
+          ],
+          "autres": [
+            [
+              "1f3dd",
+              "l'île"
+            ],
+            [
+              "1f30a",
+              "le bord de mer"
+            ]
+          ],
+          "explication": "Un massif montagneux, ce sont des montagnes avec des sommets et des vallées."
+        },
+        {
+          "texte": "Quel paysage est entouré d'eau de tous les côtés ?",
+          "bonne": [
+            "1f3dd",
+            "l'île"
+          ],
+          "autres": [
+            [
+              "1f3d4",
+              "la montagne"
+            ],
+            [
+              "1f69c",
+              "la campagne"
+            ]
+          ],
+          "explication": "Une île est entourée d'eau de tous les côtés."
+        },
+        {
+          "texte": "À la campagne, quel véhicule travaille dans les champs ?",
+          "bonne": [
+            "1f69c",
+            "le tracteur"
+          ],
+          "autres": [
+            [
+              "1f68c",
+              "le bus"
+            ],
+            [
+              "26f5",
+              "le voilier"
+            ]
+          ],
+          "explication": "À la campagne, il y a des champs et des fermes : le tracteur sert à les cultiver."
+        },
+        {
+          "texte": "En ville, comment beaucoup de gens se déplacent-ils ensemble ?",
+          "bonne": [
+            "1f68c",
+            "le bus"
+          ],
+          "autres": [
+            [
+              "1f69c",
+              "le tracteur"
+            ],
+            [
+              "26f5",
+              "le voilier"
+            ]
+          ],
+          "explication": "En ville, on circule souvent en bus, en métro ou en tramway : ce sont des transports en commun."
+        },
+        {
+          "texte": "Où trouve-t-on un port avec des bateaux à voile ?",
+          "bonne": [
+            "26f5",
+            "sur le littoral"
+          ],
+          "autres": [
+            [
+              "1f3d4",
+              "en haut de la montagne"
+            ],
+            [
+              "1f333",
+              "dans la forêt"
+            ]
+          ],
+          "explication": "Les ports se trouvent au bord de l'eau, souvent sur le littoral."
+        },
+        {
+          "texte": "Quel objet indique le nord ?",
+          "bonne": [
+            "1f9ed",
+            "la boussole"
+          ],
+          "autres": [
+            [
+              "1f50d",
+              "la loupe"
+            ],
+            [
+              "1f4d0",
+              "l'équerre"
+            ]
+          ],
+          "explication": "L'aiguille de la boussole indique le nord. Sur la plupart des cartes, le nord est en haut."
+        },
+        {
+          "texte": "Qu'est-ce qui représente un lieu vu de dessus, en plus petit, sur une feuille ?",
+          "bonne": [
+            "1f5fa",
+            "la carte"
+          ],
+          "autres": [
+            [
+              "1f4f7",
+              "l'appareil photo"
+            ],
+            [
+              "1f3a8",
+              "la palette de peinture"
+            ]
+          ],
+          "explication": "Un plan ou une carte représente un lieu vu de dessus, en plus petit."
+        },
+        {
+          "texte": "Pour voir toute la Terre, ronde, avec ses océans et ses continents, on utilise…",
+          "bonne": [
+            "1f30d",
+            "le globe"
+          ],
+          "autres": [
+            [
+              "1f50d",
+              "la loupe"
+            ],
+            [
+              "1f4d6",
+              "le livre"
+            ]
+          ],
+          "explication": "Le globe représente toute la Terre, ronde, avec ses océans et ses continents."
+        },
+        {
+          "texte": "Pour aller sur un autre continent, très loin, on prend souvent…",
+          "bonne": [
+            "2708",
+            "l'avion"
+          ],
+          "autres": [
+            [
+              "1f6b2",
+              "le vélo"
+            ],
+            [
+              "1f69c",
+              "le tracteur"
+            ]
+          ],
+          "explication": "Les autres continents sont très loin, de l'autre côté des mers et des océans : on y va souvent en avion."
+        }
+      ],
+      "en": {
+        "titre": "Landscapes near and far",
+        "idee": "There are coastal, mountain, countryside and town landscapes. People don't live or travel the same way in each. A map or a globe helps to locate places.",
+        "phrases": {
+          "consigne": "Listen to the question, then touch the right picture.",
+          "question": "{texte}",
+          "indice": "Picture the landscape: is there the sea, peaks, fields or streets?",
+          "exemple": "Try another picture.",
+          "demonstration": "Look: it's {bonne}. {explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which landscape is a coast, where the land meets the sea?",
+            "bonne": [
+              "1f30a",
+              "the seaside"
+            ],
+            "autres": [
+              [
+                "1f3d4",
+                "the mountain"
+              ],
+              [
+                "1f333",
+                "the forest"
+              ]
+            ],
+            "explication": "The coast is the seaside: that's where the land meets the sea."
+          },
+          {
+            "texte": "Which landscape is a mountain range?",
+            "bonne": [
+              "1f3d4",
+              "the mountain"
+            ],
+            "autres": [
+              [
+                "1f3dd",
+                "the island"
+              ],
+              [
+                "1f30a",
+                "the seaside"
+              ]
+            ],
+            "explication": "A mountain range is made of mountains with peaks and valleys."
+          },
+          {
+            "texte": "Which landscape has water all around it?",
+            "bonne": [
+              "1f3dd",
+              "the island"
+            ],
+            "autres": [
+              [
+                "1f3d4",
+                "the mountain"
+              ],
+              [
+                "1f69c",
+                "the countryside"
+              ]
+            ],
+            "explication": "An island has water all around it."
+          },
+          {
+            "texte": "In the countryside, which vehicle works in the fields?",
+            "bonne": [
+              "1f69c",
+              "the tractor"
+            ],
+            "autres": [
+              [
+                "1f68c",
+                "the bus"
+              ],
+              [
+                "26f5",
+                "the sailing boat"
+              ]
+            ],
+            "explication": "In the countryside, there are fields and farms: the tractor is used to farm them."
+          },
+          {
+            "texte": "In town, how do lots of people travel together?",
+            "bonne": [
+              "1f68c",
+              "the bus"
+            ],
+            "autres": [
+              [
+                "1f69c",
+                "the tractor"
+              ],
+              [
+                "26f5",
+                "the sailing boat"
+              ]
+            ],
+            "explication": "In town, people often travel by bus, underground or tram: that's public transport."
+          },
+          {
+            "texte": "Where do we find a harbour with sailing boats?",
+            "bonne": [
+              "26f5",
+              "on the coast"
+            ],
+            "autres": [
+              [
+                "1f3d4",
+                "at the top of the mountain"
+              ],
+              [
+                "1f333",
+                "in the forest"
+              ]
+            ],
+            "explication": "Harbours are by the water, often on the coast."
+          },
+          {
+            "texte": "Which object shows where north is?",
+            "bonne": [
+              "1f9ed",
+              "the compass"
+            ],
+            "autres": [
+              [
+                "1f50d",
+                "the magnifying glass"
+              ],
+              [
+                "1f4d0",
+                "the set square"
+              ]
+            ],
+            "explication": "The compass needle points north. On most maps, north is at the top."
+          },
+          {
+            "texte": "What shows a place seen from above, smaller, on a sheet of paper?",
+            "bonne": [
+              "1f5fa",
+              "the map"
+            ],
+            "autres": [
+              [
+                "1f4f7",
+                "the camera"
+              ],
+              [
+                "1f3a8",
+                "the paint palette"
+              ]
+            ],
+            "explication": "A plan or a map shows a place seen from above, smaller."
+          },
+          {
+            "texte": "To see the whole Earth, round, with its oceans and continents, we use…",
+            "bonne": [
+              "1f30d",
+              "the globe"
+            ],
+            "autres": [
+              [
+                "1f50d",
+                "the magnifying glass"
+              ],
+              [
+                "1f4d6",
+                "the book"
+              ]
+            ],
+            "explication": "The globe shows the whole Earth, round, with its oceans and continents."
+          },
+          {
+            "texte": "To go to another continent, very far away, people often take…",
+            "bonne": [
+              "2708",
+              "the plane"
+            ],
+            "autres": [
+              [
+                "1f6b2",
+                "the bike"
+              ],
+              [
+                "1f69c",
+                "the tractor"
+              ]
+            ],
+            "explication": "Other continents are very far away, across seas and oceans: people often go there by plane."
+          }
+        ]
+      }
+    },
+    {
+      "id": "france-carte",
+      "titre": "La France sur une carte",
+      "niveau": "CE1",
+      "prerequis": [
+        "paysages-proches-lointains"
+      ],
+      "programme": {
+        "source": "c2qm",
+        "texte": "Lire des plans, se repérer sur des cartes : éléments constitutifs d’une carte (titre, échelle, orientation, légende). Repérer la position de sa région, de la France, de l’Europe et des autres continents. Une carte thématique simple des villes en France."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une carte a un titre, une légende et une orientation : le nord est souvent en haut. La France métropolitaine est en Europe ; sa capitale est Paris.",
+      "phrases": {
+        "consigne": "Écoute ou lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense à la carte de France de la classe : le titre, la légende, le nord en haut.",
+        "exemple": "Exemple : sur la carte de France, Paris est marquée par un gros point, parce que c'est la plus grande ville et la capitale.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle est la capitale de la France ?",
+          "nom": "Paris",
+          "explication": "Paris est la capitale de la France : le président de la République et le gouvernement y travaillent.",
+          "pieges": [
+            {
+              "texte": "Lyon",
+              "pourquoi": "Lyon est une grande ville de France, mais la capitale est Paris."
+            },
+            {
+              "texte": "Marseille",
+              "pourquoi": "Marseille est une grande ville au bord de la Méditerranée, mais la capitale est Paris."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quel continent se trouve la France métropolitaine ?",
+          "nom": "L'Europe",
+          "explication": "La France métropolitaine, celle de l'hexagone et de la Corse, est en Europe.",
+          "pieges": [
+            {
+              "texte": "L'Afrique",
+              "pourquoi": "L'Afrique est au sud, de l'autre côté de la mer Méditerranée."
+            },
+            {
+              "texte": "L'Amérique",
+              "pourquoi": "La Guyane, en Amérique du Sud, est française, mais la France métropolitaine est en Europe."
+            }
+          ]
+        },
+        {
+          "texte": "Sur une carte, à quoi sert la légende ?",
+          "nom": "À expliquer ce que veulent dire les couleurs et les symboles.",
+          "explication": "La légende explique les couleurs et les symboles de la carte : un point pour une ville, un trait bleu pour un fleuve…",
+          "pieges": [
+            {
+              "texte": "À dire ce que montre la carte.",
+              "pourquoi": "C'est le rôle du titre."
+            },
+            {
+              "texte": "À montrer où est le nord.",
+              "pourquoi": "C'est le rôle de l'orientation, souvent une flèche marquée N."
+            }
+          ]
+        },
+        {
+          "texte": "Sur la plupart des cartes, où se trouve le nord ?",
+          "nom": "En haut",
+          "explication": "Sur la plupart des cartes, le nord est en haut, le sud en bas, l'est à droite et l'ouest à gauche.",
+          "pieges": [
+            {
+              "texte": "En bas",
+              "pourquoi": "En bas, c'est le sud."
+            },
+            {
+              "texte": "À droite",
+              "pourquoi": "À droite, c'est l'est."
+            }
+          ]
+        },
+        {
+          "texte": "Sur une carte des villes de France, comment montre-t-on souvent une ville ?",
+          "nom": "Par un point, plus gros pour une grande ville.",
+          "explication": "Une ville est souvent un point : plus la ville est grande, plus le point est gros. La légende le dit.",
+          "pieges": [
+            {
+              "texte": "Par un trait bleu.",
+              "pourquoi": "Un trait bleu montre souvent un fleuve ou une rivière."
+            },
+            {
+              "texte": "Par une flèche.",
+              "pourquoi": "Une flèche sert souvent à montrer le nord."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles mers et quel océan bordent la France métropolitaine ?",
+          "nom": "La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée.",
+          "explication": "La France métropolitaine a des côtes au nord (Manche, mer du Nord), à l'ouest (Atlantique) et au sud (Méditerranée).",
+          "pieges": [
+            {
+              "texte": "Seulement la mer Méditerranée.",
+              "pourquoi": "La Méditerranée borde le sud ; la Manche, la mer du Nord et l'Atlantique bordent le nord et l'ouest."
+            },
+            {
+              "texte": "L'océan Pacifique.",
+              "pourquoi": "La France métropolitaine ne touche pas le Pacifique ; seuls des territoires d'outre-mer, comme la Polynésie française, s'y trouvent."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le plus long fleuve de France ?",
+          "nom": "La Loire",
+          "explication": "La Loire est le plus long fleuve de France : elle se jette dans l'océan Atlantique.",
+          "pieges": [
+            {
+              "texte": "La Seine",
+              "pourquoi": "La Seine traverse Paris, mais elle est moins longue que la Loire."
+            },
+            {
+              "texte": "Le Rhône",
+              "pourquoi": "Le Rhône naît en Suisse ; sa partie française est moins longue que la Loire."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la plus haute montagne de France ?",
+          "nom": "Le mont Blanc, dans les Alpes.",
+          "explication": "Le mont Blanc, dans les Alpes, est le plus haut sommet de France.",
+          "pieges": [
+            {
+              "texte": "Le puy de Dôme, dans le Massif central.",
+              "pourquoi": "C'est un ancien volcan du Massif central, bien moins haut que le mont Blanc."
+            },
+            {
+              "texte": "Le Vignemale, dans les Pyrénées.",
+              "pourquoi": "C'est le plus haut sommet des Pyrénées françaises, mais il est moins haut que le mont Blanc."
+            }
+          ]
+        },
+        {
+          "texte": "Quel pays a une frontière avec la France métropolitaine ?",
+          "nom": "L'Espagne",
+          "explication": "L'Espagne est au sud-ouest de la France ; les Pyrénées marquent la frontière.",
+          "pieges": [
+            {
+              "texte": "Le Japon",
+              "pourquoi": "Le Japon est en Asie, très loin de la France."
+            },
+            {
+              "texte": "L'Australie",
+              "pourquoi": "L'Australie est en Océanie, de l'autre côté de la Terre."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quelle mer se trouve l'île de Corse ?",
+          "nom": "La mer Méditerranée",
+          "explication": "La Corse est une île française de la mer Méditerranée, au sud-est de la France métropolitaine.",
+          "pieges": [
+            {
+              "texte": "La Manche",
+              "pourquoi": "La Manche sépare la France du Royaume-Uni, au nord-ouest."
+            },
+            {
+              "texte": "La mer du Nord",
+              "pourquoi": "La mer du Nord est au nord ; la Corse est au sud-est, en Méditerranée."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "France on a map",
+        "idee": "A map has a title, a key and an orientation: north is often at the top. Metropolitan France is in Europe; its capital is Paris.",
+        "phrases": {
+          "consigne": "Listen to or read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think of the map of France in the classroom: the title, the key, north at the top.",
+          "exemple": "Example: on the map of France, Paris is marked with a big dot, because it's the largest city and the capital.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the capital of France?",
+            "nom": "Paris",
+            "explication": "Paris is the capital of France: the President of the Republic and the government work there.",
+            "pieges": [
+              {
+                "texte": "Lyon",
+                "pourquoi": "Lyon is a big city in France, but the capital is Paris."
+              },
+              {
+                "texte": "Marseille",
+                "pourquoi": "Marseille is a big city on the Mediterranean, but the capital is Paris."
+              }
+            ]
+          },
+          {
+            "texte": "Which continent is metropolitan France on?",
+            "nom": "Europe",
+            "explication": "Metropolitan France, the mainland and Corsica, is in Europe.",
+            "pieges": [
+              {
+                "texte": "Africa",
+                "pourquoi": "Africa is to the south, across the Mediterranean Sea."
+              },
+              {
+                "texte": "America",
+                "pourquoi": "French Guiana, in South America, is French, but metropolitan France is in Europe."
+              }
+            ]
+          },
+          {
+            "texte": "On a map, what is the key for?",
+            "nom": "To explain what the colours and symbols mean.",
+            "explication": "The key explains the map's colours and symbols: a dot for a town, a blue line for a river…",
+            "pieges": [
+              {
+                "texte": "To say what the map shows.",
+                "pourquoi": "That's the job of the title."
+              },
+              {
+                "texte": "To show where north is.",
+                "pourquoi": "That's the job of the orientation, often an arrow marked N."
+              }
+            ]
+          },
+          {
+            "texte": "On most maps, where is north?",
+            "nom": "At the top",
+            "explication": "On most maps, north is at the top, south at the bottom, east on the right and west on the left.",
+            "pieges": [
+              {
+                "texte": "At the bottom",
+                "pourquoi": "At the bottom is south."
+              },
+              {
+                "texte": "On the right",
+                "pourquoi": "On the right is east."
+              }
+            ]
+          },
+          {
+            "texte": "On a map of the towns of France, how is a town often shown?",
+            "nom": "With a dot, bigger for a big town.",
+            "explication": "A town is often a dot: the bigger the town, the bigger the dot. The key says so.",
+            "pieges": [
+              {
+                "texte": "With a blue line.",
+                "pourquoi": "A blue line often shows a river."
+              },
+              {
+                "texte": "With an arrow.",
+                "pourquoi": "An arrow is often used to show north."
+              }
+            ]
+          },
+          {
+            "texte": "Which seas and which ocean border metropolitan France?",
+            "nom": "The English Channel, the North Sea, the Atlantic Ocean and the Mediterranean Sea.",
+            "explication": "Metropolitan France has coasts in the north (Channel, North Sea), the west (Atlantic) and the south (Mediterranean).",
+            "pieges": [
+              {
+                "texte": "Only the Mediterranean Sea.",
+                "pourquoi": "The Mediterranean borders the south; the Channel, the North Sea and the Atlantic border the north and west."
+              },
+              {
+                "texte": "The Pacific Ocean.",
+                "pourquoi": "Metropolitan France doesn't touch the Pacific; only overseas territories, such as French Polynesia, are there."
+              }
+            ]
+          },
+          {
+            "texte": "What is the longest river in France?",
+            "nom": "The Loire",
+            "explication": "The Loire is the longest river in France: it flows into the Atlantic Ocean.",
+            "pieges": [
+              {
+                "texte": "The Seine",
+                "pourquoi": "The Seine flows through Paris, but it's shorter than the Loire."
+              },
+              {
+                "texte": "The Rhône",
+                "pourquoi": "The Rhône rises in Switzerland; its French part is shorter than the Loire."
+              }
+            ]
+          },
+          {
+            "texte": "What is the highest mountain in France?",
+            "nom": "Mont Blanc, in the Alps.",
+            "explication": "Mont Blanc, in the Alps, is the highest peak in France.",
+            "pieges": [
+              {
+                "texte": "The Puy de Dôme, in the Massif Central.",
+                "pourquoi": "It's an old volcano in the Massif Central, much lower than Mont Blanc."
+              },
+              {
+                "texte": "The Vignemale, in the Pyrenees.",
+                "pourquoi": "It's the highest peak of the French Pyrenees, but it's lower than Mont Blanc."
+              }
+            ]
+          },
+          {
+            "texte": "Which country shares a border with metropolitan France?",
+            "nom": "Spain",
+            "explication": "Spain is to the south-west of France; the Pyrenees mark the border.",
+            "pieges": [
+              {
+                "texte": "Japan",
+                "pourquoi": "Japan is in Asia, very far from France."
+              },
+              {
+                "texte": "Australia",
+                "pourquoi": "Australia is in Oceania, on the other side of the Earth."
+              }
+            ]
+          },
+          {
+            "texte": "Which sea is the island of Corsica in?",
+            "nom": "The Mediterranean Sea",
+            "explication": "Corsica is a French island in the Mediterranean Sea, to the south-east of metropolitan France.",
+            "pieges": [
+              {
+                "texte": "The English Channel",
+                "pourquoi": "The Channel separates France from the United Kingdom, to the north-west."
+              },
+              {
+                "texte": "The North Sea",
+                "pourquoi": "The North Sea is to the north; Corsica is to the south-east, in the Mediterranean."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -6493,6 +8642,1113 @@
               {
                 "texte": "France lacking metropolises.",
                 "pourquoi": "The programme targets medium-sized towns, not creating metropolises."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "monde-bipolaire",
+      "titre": "Un nouvel ordre mondial et un monde bipolaire (1945-1970)",
+      "niveau": "Terminale",
+      "prerequis": [
+        "grande-guerre-lycee"
+      ],
+      "programme": {
+        "source": "hgtle",
+        "texte": "La multiplication des acteurs internationaux dans un monde bipolaire (de 1945 au début des années 1970) : la fin de la Seconde Guerre mondiale et les débuts d’un nouvel ordre mondial ; une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "En 1945 naît un nouvel ordre international : ONU, Nuremberg, Bretton Woods. Vite, États-Unis et URSS s'opposent : c'est la guerre froide. La décolonisation fait naître de nouveaux États.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1944, Bretton Woods et programme du CNR ; 1945, ONU ; 1945-1946, Nuremberg ; 1948, coup de Prague et naissance d'Israël ; 1949, Chine populaire ; 1954, Diên Biên Phu ; 1955, Bandung ; 1962, Cuba.",
+        "exemple": "Exemple : en février 1948, le « coup de Prague » donne tout le pouvoir aux communistes en Tchécoslovaquie. Pour l'Ouest, il confirme que l'URSS contrôle l'Europe de l'Est : les deux blocs se figent.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle organisation est créée en 1945 pour maintenir la paix et la sécurité internationales ?",
+          "nom": "L'Organisation des Nations unies (ONU)",
+          "explication": "La Charte des Nations unies est signée à San Francisco le 26 juin 1945 ; l'ONU remplace la Société des Nations.",
+          "pieges": [
+            {
+              "texte": "La Société des Nations (SDN)",
+              "pourquoi": "La SDN naît après la Première Guerre mondiale ; elle n'a pas empêché la Seconde, et l'ONU la remplace."
+            },
+            {
+              "texte": "L'OTAN",
+              "pourquoi": "L'OTAN est une alliance militaire occidentale, créée en 1949, pas une organisation mondiale."
+            }
+          ]
+        },
+        {
+          "texte": "Qui le tribunal militaire international de Nuremberg juge-t-il, en 1945-1946 ?",
+          "nom": "Les principaux dirigeants nazis, notamment pour crimes contre l'humanité.",
+          "explication": "Pour la première fois, des dirigeants sont jugés par une justice internationale pour crimes contre la paix, crimes de guerre et crimes contre l'humanité.",
+          "pieges": [
+            {
+              "texte": "Les principaux dirigeants japonais.",
+              "pourquoi": "Ils sont jugés par un autre tribunal international, à Tokyo."
+            },
+            {
+              "texte": "Les chefs de l'Armée rouge.",
+              "pourquoi": "L'URSS fait partie des Alliés qui organisent le tribunal ; elle juge, elle n'est pas jugée."
+            }
+          ]
+        },
+        {
+          "texte": "Que mettent en place les accords de Bretton Woods, en juillet 1944 ?",
+          "nom": "Un système monétaire international fondé sur le dollar, avec le FMI et la Banque mondiale.",
+          "explication": "Les États-Unis, première puissance économique, organisent un système de changes stables autour du dollar.",
+          "pieges": [
+            {
+              "texte": "Le partage de l'Allemagne en zones d'occupation.",
+              "pourquoi": "Ce partage est décidé par les Alliés lors des conférences de Yalta et de Potsdam, en 1945."
+            },
+            {
+              "texte": "La création de la Communauté économique européenne.",
+              "pourquoi": "La CEE naît du traité de Rome, en 1957."
+            }
+          ]
+        },
+        {
+          "texte": "Que prévoit le programme du Conseil national de la Résistance (CNR), adopté le 15 mars 1944 ?",
+          "nom": "Notamment un plan complet de sécurité sociale et des nationalisations.",
+          "explication": "Ce programme inspire les réformes de la Libération : la Sécurité sociale et les nationalisations posent les bases de l'État-providence en France.",
+          "pieges": [
+            {
+              "texte": "La création de la Ve République.",
+              "pourquoi": "La Ve République naît de la Constitution de 1958."
+            },
+            {
+              "texte": "L'indépendance de l'Algérie.",
+              "pourquoi": "L'Algérie devient indépendante en 1962, après une longue guerre."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il lors du « coup de Prague », en février 1948 ?",
+          "nom": "Les communistes prennent tout le pouvoir en Tchécoslovaquie.",
+          "explication": "Pour les Occidentaux, c'est la preuve que l'URSS impose des régimes communistes en Europe de l'Est.",
+          "pieges": [
+            {
+              "texte": "L'armée soviétique écrase l'insurrection de Budapest.",
+              "pourquoi": "C'est en Hongrie, en 1956."
+            },
+            {
+              "texte": "Le mur de Berlin est construit.",
+              "pourquoi": "Le mur est construit en 1961, à Berlin."
+            }
+          ]
+        },
+        {
+          "texte": "Quel État est proclamé au Proche-Orient le 14 mai 1948 ?",
+          "nom": "L'État d'Israël",
+          "explication": "Sa proclamation est suivie d'une première guerre israélo-arabe : le Proche-Orient devient un foyer durable de conflits.",
+          "pieges": [
+            {
+              "texte": "Un État palestinien indépendant",
+              "pourquoi": "Le plan de partage de l'ONU de 1947 prévoyait un État juif et un État arabe ; en 1948, seul Israël est proclamé."
+            },
+            {
+              "texte": "L'Égypte",
+              "pourquoi": "L'Égypte est déjà un État indépendant ; ce n'est pas elle qui naît en 1948."
+            }
+          ]
+        },
+        {
+          "texte": "Que signifie l'expression « monde bipolaire » ?",
+          "nom": "Un monde dominé par deux superpuissances, les États-Unis et l'URSS, chacune à la tête d'un bloc.",
+          "explication": "Les deux Grands s'opposent par leurs modèles, leurs alliances et la course aux armements, sans s'affronter directement : c'est la guerre froide.",
+          "pieges": [
+            {
+              "texte": "Un monde partagé entre le pôle Nord et le pôle Sud.",
+              "pourquoi": "Ici, les « pôles » sont des puissances, pas des lieux géographiques."
+            },
+            {
+              "texte": "Un monde dominé par la France et le Royaume-Uni.",
+              "pourquoi": "Après 1945, ces deux pays ne sont plus les premières puissances ; ce sont les États-Unis et l'URSS."
+            }
+          ]
+        },
+        {
+          "texte": "Que proclame Mao Zedong le 1er octobre 1949 ?",
+          "nom": "La République populaire de Chine",
+          "explication": "La victoire des communistes chinois fait de la Chine un nouvel acteur international.",
+          "pieges": [
+            {
+              "texte": "La fin de l'Empire chinois",
+              "pourquoi": "L'empire est renversé par la révolution de 1911, bien avant."
+            },
+            {
+              "texte": "L'indépendance de l'Inde",
+              "pourquoi": "L'Inde devient indépendante en 1947, et Mao est chinois."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle bataille, en 1954, conduit la France à quitter l'Indochine ?",
+          "nom": "Diên Biên Phu",
+          "explication": "La défaite française de Diên Biên Phu, en mai 1954, précède les accords de Genève, qui mettent fin à la guerre d'Indochine.",
+          "pieges": [
+            {
+              "texte": "Verdun",
+              "pourquoi": "Verdun est une bataille de la Première Guerre mondiale, en 1916."
+            },
+            {
+              "texte": "La bataille d'Alger",
+              "pourquoi": "Elle a lieu en 1957, pendant la guerre d'Algérie."
+            }
+          ]
+        },
+        {
+          "texte": "Que montre la conférence de Bandung, en 1955 ?",
+          "nom": "Des pays d'Asie et d'Afrique, souvent nouvellement indépendants, condamnent le colonialisme et veulent peser sur la scène internationale.",
+          "explication": "Bandung marque l'émergence du tiers-monde, qui refuse d'être un simple enjeu entre les deux blocs.",
+          "pieges": [
+            {
+              "texte": "Les États-Unis et l'URSS y signent la fin de la guerre froide.",
+              "pourquoi": "La guerre froide dure jusqu'à la fin des années 1980 ; les deux Grands ne sont pas invités à Bandung."
+            },
+            {
+              "texte": "Les pays européens y créent l'OTAN.",
+              "pourquoi": "L'OTAN naît à Washington, en 1949."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la crise des missiles de Cuba, en octobre 1962, est-elle si grave ?",
+          "nom": "L'URSS installe à Cuba des missiles nucléaires capables de frapper les États-Unis : le monde frôle la guerre nucléaire.",
+          "explication": "Après un blocus américain et des négociations, l'URSS retire ses missiles ; les deux Grands installent ensuite une ligne directe entre Washington et Moscou.",
+          "pieges": [
+            {
+              "texte": "Les États-Unis et l'URSS se font la guerre directement.",
+              "pourquoi": "Justement, ils ne s'affrontent jamais directement : la crise se règle par la négociation."
+            },
+            {
+              "texte": "Cuba envahit la Floride.",
+              "pourquoi": "Il n'y a aucune invasion : la crise porte sur des missiles soviétiques installés à Cuba."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A new world order and a bipolar world (1945-1970)",
+        "idee": "In 1945, a new international order is born: the UN, Nuremberg, Bretton Woods. Soon, the US and the USSR clash: this is the Cold War. Decolonisation gives birth to new states.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1944, Bretton Woods and the CNR programme; 1945, the UN; 1945-1946, Nuremberg; 1948, the Prague coup and the birth of Israel; 1949, the People's Republic of China; 1954, Dien Bien Phu; 1955, Bandung; 1962, Cuba.",
+          "exemple": "Example: in February 1948, the « Prague coup » gives the communists full power in Czechoslovakia. For the West, it confirms that the USSR controls Eastern Europe: the two blocs harden.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which organisation is created in 1945 to maintain international peace and security?",
+            "nom": "The United Nations (UN)",
+            "explication": "The UN Charter is signed in San Francisco on 26 June 1945; the UN replaces the League of Nations.",
+            "pieges": [
+              {
+                "texte": "The League of Nations",
+                "pourquoi": "The League was born after the First World War; it didn't prevent the Second, and the UN replaces it."
+              },
+              {
+                "texte": "NATO",
+                "pourquoi": "NATO is a Western military alliance, created in 1949, not a world organisation."
+              }
+            ]
+          },
+          {
+            "texte": "Whom does the International Military Tribunal at Nuremberg try, in 1945-1946?",
+            "nom": "The main Nazi leaders, notably for crimes against humanity.",
+            "explication": "For the first time, leaders are tried by an international court for crimes against peace, war crimes and crimes against humanity.",
+            "pieges": [
+              {
+                "texte": "The main Japanese leaders.",
+                "pourquoi": "They are tried by another international tribunal, in Tokyo."
+              },
+              {
+                "texte": "The commanders of the Red Army.",
+                "pourquoi": "The USSR is one of the Allies that set up the tribunal; it judges, it isn't judged."
+              }
+            ]
+          },
+          {
+            "texte": "What do the Bretton Woods agreements, in July 1944, set up?",
+            "nom": "An international monetary system based on the dollar, with the IMF and the World Bank.",
+            "explication": "The United States, the leading economic power, organises a system of stable exchange rates around the dollar.",
+            "pieges": [
+              {
+                "texte": "The division of Germany into occupation zones.",
+                "pourquoi": "That division is decided by the Allies at the Yalta and Potsdam conferences, in 1945."
+              },
+              {
+                "texte": "The creation of the European Economic Community.",
+                "pourquoi": "The EEC is born from the Treaty of Rome, in 1957."
+              }
+            ]
+          },
+          {
+            "texte": "What does the programme of the National Council of the Resistance (CNR), adopted on 15 March 1944, plan?",
+            "nom": "Among other things, a full social security plan and nationalisations.",
+            "explication": "This programme inspires the reforms of the Liberation: Social Security and nationalisations lay the foundations of the welfare state in France.",
+            "pieges": [
+              {
+                "texte": "The creation of the Fifth Republic.",
+                "pourquoi": "The Fifth Republic is born from the 1958 Constitution."
+              },
+              {
+                "texte": "Algerian independence.",
+                "pourquoi": "Algeria becomes independent in 1962, after a long war."
+              }
+            ]
+          },
+          {
+            "texte": "What happens during the « Prague coup », in February 1948?",
+            "nom": "The communists take full power in Czechoslovakia.",
+            "explication": "For the West, it proves that the USSR is imposing communist regimes in Eastern Europe.",
+            "pieges": [
+              {
+                "texte": "The Soviet army crushes the Budapest uprising.",
+                "pourquoi": "That's in Hungary, in 1956."
+              },
+              {
+                "texte": "The Berlin Wall is built.",
+                "pourquoi": "The Wall is built in 1961, in Berlin."
+              }
+            ]
+          },
+          {
+            "texte": "Which state is proclaimed in the Middle East on 14 May 1948?",
+            "nom": "The State of Israel",
+            "explication": "Its proclamation is followed by a first Arab-Israeli war: the Middle East becomes a lasting centre of conflict.",
+            "pieges": [
+              {
+                "texte": "An independent Palestinian state",
+                "pourquoi": "The 1947 UN partition plan provided for a Jewish state and an Arab state; in 1948, only Israel is proclaimed."
+              },
+              {
+                "texte": "Egypt",
+                "pourquoi": "Egypt is already an independent state; it isn't born in 1948."
+              }
+            ]
+          },
+          {
+            "texte": "What does the expression « bipolar world » mean?",
+            "nom": "A world dominated by two superpowers, the United States and the USSR, each leading a bloc.",
+            "explication": "The two superpowers oppose each other through their models, alliances and the arms race, without fighting directly: this is the Cold War.",
+            "pieges": [
+              {
+                "texte": "A world divided between the North Pole and the South Pole.",
+                "pourquoi": "Here, the « poles » are powers, not geographical places."
+              },
+              {
+                "texte": "A world dominated by France and the United Kingdom.",
+                "pourquoi": "After 1945, these two countries are no longer the leading powers; the US and the USSR are."
+              }
+            ]
+          },
+          {
+            "texte": "What does Mao Zedong proclaim on 1 October 1949?",
+            "nom": "The People's Republic of China",
+            "explication": "The Chinese communists' victory makes China a new international player.",
+            "pieges": [
+              {
+                "texte": "The end of the Chinese Empire",
+                "pourquoi": "The empire is overthrown by the 1911 revolution, well before."
+              },
+              {
+                "texte": "The independence of India",
+                "pourquoi": "India becomes independent in 1947, and Mao is Chinese."
+              }
+            ]
+          },
+          {
+            "texte": "Which battle, in 1954, leads France to leave Indochina?",
+            "nom": "Dien Bien Phu",
+            "explication": "The French defeat at Dien Bien Phu, in May 1954, comes before the Geneva Accords, which end the Indochina War.",
+            "pieges": [
+              {
+                "texte": "Verdun",
+                "pourquoi": "Verdun is a First World War battle, in 1916."
+              },
+              {
+                "texte": "The Battle of Algiers",
+                "pourquoi": "It takes place in 1957, during the Algerian War."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Bandung Conference, in 1955, show?",
+            "nom": "Asian and African countries, often newly independent, condemn colonialism and want a say on the international stage.",
+            "explication": "Bandung marks the emergence of the Third World, which refuses to be a mere stake between the two blocs.",
+            "pieges": [
+              {
+                "texte": "The US and the USSR sign the end of the Cold War there.",
+                "pourquoi": "The Cold War lasts until the late 1980s; the two superpowers aren't invited to Bandung."
+              },
+              {
+                "texte": "European countries create NATO there.",
+                "pourquoi": "NATO is born in Washington, in 1949."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Cuban Missile Crisis, in October 1962, so serious?",
+            "nom": "The USSR installs nuclear missiles in Cuba able to strike the United States: the world comes close to nuclear war.",
+            "explication": "After a US blockade and negotiations, the USSR withdraws its missiles; the two superpowers then set up a direct line between Washington and Moscow.",
+            "pieges": [
+              {
+                "texte": "The US and the USSR go to war directly.",
+                "pourquoi": "Precisely, they never fight each other directly: the crisis is settled by negotiation."
+              },
+              {
+                "texte": "Cuba invades Florida.",
+                "pourquoi": "There is no invasion: the crisis is about Soviet missiles installed in Cuba."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cinquieme-republique",
+      "titre": "La Ve République : naissance et évolutions",
+      "niveau": "Terminale",
+      "prerequis": [
+        "monde-bipolaire"
+      ],
+      "programme": {
+        "source": "hgtle",
+        "texte": "La France : une nouvelle place dans le monde (la crise algérienne de la République française et la naissance d’un nouveau régime ; la constitution de 1958) et la République française (la Cinquième République : un régime stable qui connaît de nombreuses réformes institutionnelles ; la réaffirmation du principe de laïcité (2004) ; parité, PACS, évolution du mariage)"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Née de la crise algérienne en 1958, la Ve République renforce le pouvoir du président, élu au suffrage universel direct depuis 1962. Régime stable, elle se réforme : quinquennat, parité, nouveaux droits.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1958, Constitution ; 1962, accords d'Évian et élection du président au suffrage universel direct ; 1999, PACS et parité ; 2000, quinquennat ; 2004, laïcité à l'école ; 2008, deux mandats consécutifs au plus ; 2013, mariage.",
+        "exemple": "Exemple : en 1958, la guerre d'Algérie fait tomber la IVe République. Le général de Gaulle revient au pouvoir et fait adopter par référendum une nouvelle Constitution, qui donne plus de pouvoirs à l'exécutif.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle crise provoque le retour au pouvoir du général de Gaulle, en 1958 ?",
+          "nom": "La crise algérienne",
+          "explication": "Le 13 mai 1958, à Alger, des partisans de l'Algérie française se soulèvent ; la IVe République, impuissante, fait appel à de Gaulle.",
+          "pieges": [
+            {
+              "texte": "La crise de 1929",
+              "pourquoi": "La crise de 1929 est une crise économique de l'entre-deux-guerres."
+            },
+            {
+              "texte": "Mai 1968",
+              "pourquoi": "Mai 68 a lieu dix ans plus tard, sous la Ve République."
+            }
+          ]
+        },
+        {
+          "texte": "Comment la Constitution de la Ve République est-elle adoptée ?",
+          "nom": "Par référendum, le 28 septembre 1958.",
+          "explication": "Les Français l'approuvent largement ; elle est promulguée le 4 octobre 1958.",
+          "pieges": [
+            {
+              "texte": "Par un vote des seuls députés.",
+              "pourquoi": "Elle est soumise directement au peuple, par référendum."
+            },
+            {
+              "texte": "Par un décret du président de la République.",
+              "pourquoi": "Une Constitution n'est pas adoptée par décret : celle de 1958 l'est par référendum."
+            }
+          ]
+        },
+        {
+          "texte": "Depuis la révision de 1962, comment le président de la République est-il élu ?",
+          "nom": "Au suffrage universel direct.",
+          "explication": "Approuvée par le référendum du 28 octobre 1962, cette réforme s'applique dès l'élection de 1965 : le président tient sa légitimité du peuple.",
+          "pieges": [
+            {
+              "texte": "Par les députés et les sénateurs réunis.",
+              "pourquoi": "C'était le cas sous la IVe République, pas sous la Ve."
+            },
+            {
+              "texte": "Par un collège d'environ 80 000 grands électeurs.",
+              "pourquoi": "C'était la règle de 1958 : de Gaulle est élu ainsi en décembre 1958, avant la réforme de 1962."
+            }
+          ]
+        },
+        {
+          "texte": "Quels accords mettent fin à la guerre d'Algérie, en mars 1962 ?",
+          "nom": "Les accords d'Évian",
+          "explication": "Signés le 18 mars 1962, ils sont suivis de l'indépendance de l'Algérie en juillet 1962.",
+          "pieges": [
+            {
+              "texte": "Les accords de Genève",
+              "pourquoi": "Ils mettent fin à la guerre d'Indochine, en 1954."
+            },
+            {
+              "texte": "Les accords de Bretton Woods",
+              "pourquoi": "Ce sont des accords monétaires internationaux de 1944."
+            }
+          ]
+        },
+        {
+          "texte": "Quel article de la Constitution de 1958 donne au président des pouvoirs exceptionnels en cas de menace grave ?",
+          "nom": "L'article 16",
+          "explication": "Quand les institutions ou l'indépendance de la nation sont menacées gravement, l'article 16 permet au président de prendre les mesures exigées par les circonstances.",
+          "pieges": [
+            {
+              "texte": "L'article 49, alinéa 3",
+              "pourquoi": "Il permet au gouvernement d'engager sa responsabilité sur le vote d'un texte."
+            },
+            {
+              "texte": "L'article 1er",
+              "pourquoi": "Il dit que la France est une République indivisible, laïque, démocratique et sociale."
+            }
+          ]
+        },
+        {
+          "texte": "Depuis le référendum de 2000, quelle est la durée du mandat du président ?",
+          "nom": "Cinq ans : c'est le quinquennat.",
+          "explication": "Le quinquennat, adopté par référendum le 24 septembre 2000, s'applique à partir de l'élection de 2002.",
+          "pieges": [
+            {
+              "texte": "Sept ans",
+              "pourquoi": "C'était le septennat, en vigueur jusqu'en 2002."
+            },
+            {
+              "texte": "Quatre ans",
+              "pourquoi": "C'est la durée du mandat du président des États-Unis, pas de la France."
+            }
+          ]
+        },
+        {
+          "texte": "Que fixe la révision constitutionnelle de 2008 pour le président ?",
+          "nom": "Il ne peut pas exercer plus de deux mandats consécutifs.",
+          "explication": "La loi constitutionnelle du 23 juillet 2008 modifie l'article 6 et renforce aussi le rôle du Parlement.",
+          "pieges": [
+            {
+              "texte": "Il est désormais élu par le Parlement.",
+              "pourquoi": "Il reste élu au suffrage universel direct, comme depuis 1962."
+            },
+            {
+              "texte": "Son mandat passe à sept ans.",
+              "pourquoi": "Le mandat reste de cinq ans depuis la réforme de 2000."
+            }
+          ]
+        },
+        {
+          "texte": "Que prévoit la loi du 15 mars 2004 sur la laïcité ?",
+          "nom": "Elle interdit aux élèves des écoles, collèges et lycées publics les signes religieux ostensibles.",
+          "explication": "Elle réaffirme le principe de laïcité à l'école publique, un siècle après la loi de 1905.",
+          "pieges": [
+            {
+              "texte": "Elle sépare les Églises et l'État.",
+              "pourquoi": "C'est la loi du 9 décembre 1905."
+            },
+            {
+              "texte": "Elle interdit toute pratique religieuse en France.",
+              "pourquoi": "La laïcité garantit au contraire la liberté de conscience et le libre exercice des cultes."
+            }
+          ]
+        },
+        {
+          "texte": "Que permet la révision constitutionnelle de 1999 sur la parité ?",
+          "nom": "La loi peut favoriser l'égal accès des femmes et des hommes aux mandats électoraux et aux fonctions électives.",
+          "explication": "La loi du 6 juin 2000 l'applique : les listes de candidats doivent compter autant de femmes que d'hommes pour plusieurs élections.",
+          "pieges": [
+            {
+              "texte": "Elle donne le droit de vote aux femmes.",
+              "pourquoi": "Les femmes obtiennent le droit de vote en 1944 et votent pour la première fois en 1945."
+            },
+            {
+              "texte": "Elle réserve certains mandats aux hommes.",
+              "pourquoi": "C'est l'inverse : elle vise l'égalité entre les femmes et les hommes."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que le pacte civil de solidarité (PACS), créé en 1999 ?",
+          "nom": "Un contrat qui organise la vie commune de deux personnes majeures, de même sexe ou de sexe différent.",
+          "explication": "Créé par la loi du 15 novembre 1999, le PACS reconnaît pour la première fois les couples de même sexe dans le droit civil.",
+          "pieges": [
+            {
+              "texte": "Un mariage religieux.",
+              "pourquoi": "Le PACS est un contrat civil, sans dimension religieuse."
+            },
+            {
+              "texte": "Un parti politique.",
+              "pourquoi": "C'est un contrat entre deux personnes, pas une organisation politique."
+            }
+          ]
+        },
+        {
+          "texte": "Que permet la loi du 17 mai 2013 ?",
+          "nom": "Le mariage des couples de personnes de même sexe.",
+          "explication": "Elle ouvre le mariage et l'adoption aux couples de même sexe : le Code civil évolue avec la société.",
+          "pieges": [
+            {
+              "texte": "Le divorce.",
+              "pourquoi": "Le divorce existe déjà : il est rétabli en France en 1884."
+            },
+            {
+              "texte": "La création du PACS.",
+              "pourquoi": "Le PACS date de 1999."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The Fifth Republic: birth and change",
+        "idee": "Born of the Algerian crisis in 1958, the Fifth Republic strengthens the president, elected by direct universal suffrage since 1962. A stable regime, it reforms itself: five-year term, parity, new rights.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1958, Constitution; 1962, Évian Accords and election of the president by direct universal suffrage; 1999, PACS and parity; 2000, five-year term; 2004, secularism at school; 2008, at most two consecutive terms; 2013, marriage.",
+          "exemple": "Example: in 1958, the Algerian War brings down the Fourth Republic. General de Gaulle returns to power and has a new Constitution adopted by referendum, giving more power to the executive.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which crisis brings General de Gaulle back to power, in 1958?",
+            "nom": "The Algerian crisis",
+            "explication": "On 13 May 1958, in Algiers, supporters of French Algeria rise up; the powerless Fourth Republic calls on de Gaulle.",
+            "pieges": [
+              {
+                "texte": "The 1929 crisis",
+                "pourquoi": "The 1929 crisis is an economic crisis of the interwar years."
+              },
+              {
+                "texte": "May 1968",
+                "pourquoi": "May 68 takes place ten years later, under the Fifth Republic."
+              }
+            ]
+          },
+          {
+            "texte": "How is the Constitution of the Fifth Republic adopted?",
+            "nom": "By referendum, on 28 September 1958.",
+            "explication": "The French approve it by a wide margin; it is promulgated on 4 October 1958.",
+            "pieges": [
+              {
+                "texte": "By a vote of the deputies alone.",
+                "pourquoi": "It is put directly to the people, by referendum."
+              },
+              {
+                "texte": "By a decree of the President of the Republic.",
+                "pourquoi": "A Constitution isn't adopted by decree: the 1958 one is adopted by referendum."
+              }
+            ]
+          },
+          {
+            "texte": "Since the 1962 revision, how is the President of the Republic elected?",
+            "nom": "By direct universal suffrage.",
+            "explication": "Approved by the referendum of 28 October 1962, this reform applies from the 1965 election: the president draws legitimacy from the people.",
+            "pieges": [
+              {
+                "texte": "By the deputies and senators together.",
+                "pourquoi": "That was the case under the Fourth Republic, not the Fifth."
+              },
+              {
+                "texte": "By an electoral college of about 80,000 electors.",
+                "pourquoi": "That was the 1958 rule: de Gaulle is elected that way in December 1958, before the 1962 reform."
+              }
+            ]
+          },
+          {
+            "texte": "Which agreements end the Algerian War, in March 1962?",
+            "nom": "The Évian Accords",
+            "explication": "Signed on 18 March 1962, they are followed by Algerian independence in July 1962.",
+            "pieges": [
+              {
+                "texte": "The Geneva Accords",
+                "pourquoi": "They end the Indochina War, in 1954."
+              },
+              {
+                "texte": "The Bretton Woods agreements",
+                "pourquoi": "They are international monetary agreements from 1944."
+              }
+            ]
+          },
+          {
+            "texte": "Which article of the 1958 Constitution gives the president emergency powers in case of serious threat?",
+            "nom": "Article 16",
+            "explication": "When the institutions or the independence of the nation are seriously threatened, Article 16 lets the president take the measures the circumstances require.",
+            "pieges": [
+              {
+                "texte": "Article 49, paragraph 3",
+                "pourquoi": "It lets the government stake its responsibility on the vote of a bill."
+              },
+              {
+                "texte": "Article 1",
+                "pourquoi": "It says that France is an indivisible, secular, democratic and social Republic."
+              }
+            ]
+          },
+          {
+            "texte": "Since the 2000 referendum, how long is the president's term?",
+            "nom": "Five years: the « quinquennat ».",
+            "explication": "The five-year term, adopted by referendum on 24 September 2000, applies from the 2002 election.",
+            "pieges": [
+              {
+                "texte": "Seven years",
+                "pourquoi": "That was the seven-year term, in force until 2002."
+              },
+              {
+                "texte": "Four years",
+                "pourquoi": "That's the term of the President of the United States, not of France."
+              }
+            ]
+          },
+          {
+            "texte": "What does the 2008 constitutional revision set for the president?",
+            "nom": "He or she can't serve more than two consecutive terms.",
+            "explication": "The constitutional law of 23 July 2008 amends Article 6 and also strengthens Parliament's role.",
+            "pieges": [
+              {
+                "texte": "He or she is now elected by Parliament.",
+                "pourquoi": "The president is still elected by direct universal suffrage, as since 1962."
+              },
+              {
+                "texte": "The term goes up to seven years.",
+                "pourquoi": "The term stays at five years since the 2000 reform."
+              }
+            ]
+          },
+          {
+            "texte": "What does the law of 15 March 2004 on secularism provide?",
+            "nom": "It bans conspicuous religious symbols for pupils in state primary and secondary schools.",
+            "explication": "It reaffirms the principle of secularism in state schools, a century after the 1905 law.",
+            "pieges": [
+              {
+                "texte": "It separates the Churches and the State.",
+                "pourquoi": "That's the law of 9 December 1905."
+              },
+              {
+                "texte": "It bans all religious practice in France.",
+                "pourquoi": "On the contrary, secularism guarantees freedom of conscience and the free exercise of worship."
+              }
+            ]
+          },
+          {
+            "texte": "What does the 1999 constitutional revision on parity allow?",
+            "nom": "The law can promote equal access for women and men to elected office.",
+            "explication": "The law of 6 June 2000 applies it: candidate lists must include as many women as men for several elections.",
+            "pieges": [
+              {
+                "texte": "It gives women the right to vote.",
+                "pourquoi": "Women obtain the right to vote in 1944 and vote for the first time in 1945."
+              },
+              {
+                "texte": "It reserves certain offices for men.",
+                "pourquoi": "The opposite: it aims at equality between women and men."
+              }
+            ]
+          },
+          {
+            "texte": "What is the civil solidarity pact (PACS), created in 1999?",
+            "nom": "A contract organising the shared life of two adults, of the same sex or of different sexes.",
+            "explication": "Created by the law of 15 November 1999, the PACS recognises same-sex couples in civil law for the first time.",
+            "pieges": [
+              {
+                "texte": "A religious marriage.",
+                "pourquoi": "The PACS is a civil contract, with no religious dimension."
+              },
+              {
+                "texte": "A political party.",
+                "pourquoi": "It's a contract between two people, not a political organisation."
+              }
+            ]
+          },
+          {
+            "texte": "What does the law of 17 May 2013 allow?",
+            "nom": "Marriage for same-sex couples.",
+            "explication": "It opens marriage and adoption to same-sex couples: the Civil Code changes with society.",
+            "pieges": [
+              {
+                "texte": "Divorce.",
+                "pourquoi": "Divorce already exists: it is reinstated in France in 1884."
+              },
+              {
+                "texte": "The creation of the PACS.",
+                "pourquoi": "The PACS dates from 1999."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mers-oceans",
+      "titre": "Mers et océans au cœur de la mondialisation",
+      "niveau": "Terminale",
+      "prerequis": [
+        "metropolisation"
+      ],
+      "programme": {
+        "source": "hgtle",
+        "texte": "Mers et océans : au cœur de la mondialisation. Mers et océans : vecteurs essentiels de la mondialisation ; entre appropriation, protection et liberté de circulation. La France : une puissance maritime ?"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La plus grande partie des marchandises voyage par mer, et l'essentiel d'internet passe par des câbles sous-marins. Les États se disputent ressources et passages : ZEE, détroits, canaux.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1982, convention de Montego Bay ; mer territoriale (12 milles) et ZEE (200 milles) ; canaux de Suez et de Panama ; détroits de Malacca et d'Ormuz ; conteneurs et câbles sous-marins.",
+        "exemple": "Exemple : un porte-conteneurs parti de Shanghai rejoint l'Europe par le détroit de Malacca, l'océan Indien, la mer Rouge et le canal de Suez. Un blocage sur ce trajet ralentit tout le commerce mondial.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Que désigne la « maritimisation » des économies ?",
+          "nom": "Le rôle croissant de la mer dans les échanges : la plus grande partie des marchandises voyage par bateau.",
+          "explication": "Porte-conteneurs, pétroliers et vraquiers transportent l'essentiel du commerce mondial en volume ; les économies se tournent vers les littoraux et les ports.",
+          "pieges": [
+            {
+              "texte": "Le fait que la plupart des marchandises voyagent en avion.",
+              "pourquoi": "L'avion transporte surtout des marchandises légères et chères ; en volume, la mer domine largement."
+            },
+            {
+              "texte": "La montée du niveau des mers.",
+              "pourquoi": "C'est une conséquence du réchauffement climatique, pas le sens de ce mot."
+            }
+          ]
+        },
+        {
+          "texte": "Quel objet a révolutionné le transport maritime depuis les années 1950-1960 ?",
+          "nom": "Le conteneur, une boîte métallique aux dimensions normalisées.",
+          "explication": "Le conteneur passe du navire au train ou au camion sans être ouvert : le transport devient plus rapide et bien moins cher.",
+          "pieges": [
+            {
+              "texte": "Le paquebot",
+              "pourquoi": "Le paquebot transporte des passagers ; il existait bien avant les années 1950."
+            },
+            {
+              "texte": "Le grand voilier",
+              "pourquoi": "La marine à voile a été remplacée par la vapeur dès le XIXe siècle."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'une zone économique exclusive (ZEE) ?",
+          "nom": "Un espace maritime, jusqu'à 200 milles marins des côtes, où l'État côtier a seul le droit d'exploiter les ressources.",
+          "explication": "Poissons, hydrocarbures, minerais des fonds : dans sa ZEE, l'État exploite seul, mais les autres navires peuvent y circuler librement.",
+          "pieges": [
+            {
+              "texte": "Un espace où aucun navire étranger ne peut passer.",
+              "pourquoi": "Dans la ZEE, la liberté de navigation des autres États demeure ; c'est l'exploitation des ressources qui est réservée."
+            },
+            {
+              "texte": "Une zone franche dans un port.",
+              "pourquoi": "Une zone franche est un espace douanier à terre ; la ZEE est un espace maritime."
+            }
+          ]
+        },
+        {
+          "texte": "Quel texte international définit la mer territoriale, la ZEE et la haute mer ?",
+          "nom": "La convention des Nations unies sur le droit de la mer, signée à Montego Bay en 1982.",
+          "explication": "Elle fixe la mer territoriale à 12 milles marins au plus et la ZEE à 200 milles au plus ; au-delà s'étend la haute mer.",
+          "pieges": [
+            {
+              "texte": "Le traité de Versailles",
+              "pourquoi": "Ce traité de 1919 règle la paix après la Première Guerre mondiale."
+            },
+            {
+              "texte": "La Charte des Nations unies",
+              "pourquoi": "La Charte de 1945 crée l'ONU ; le droit de la mer est fixé par une convention de 1982."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce que la haute mer ?",
+          "nom": "Les espaces maritimes au-delà des ZEE, qui n'appartiennent à aucun État.",
+          "explication": "En haute mer, la navigation est libre ; protéger sa biodiversité suppose une coopération entre États.",
+          "pieges": [
+            {
+              "texte": "Les eaux les plus profondes de l'océan.",
+              "pourquoi": "La haute mer se définit par la distance aux côtes et le droit, pas par la profondeur."
+            },
+            {
+              "texte": "La mer territoriale, jusqu'à 12 milles des côtes.",
+              "pourquoi": "La mer territoriale appartient à l'État côtier ; la haute mer commence au-delà des ZEE."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la France contrôle-t-elle l'une des plus vastes ZEE du monde ?",
+          "nom": "Grâce à ses territoires d'outre-mer, présents dans tous les océans.",
+          "explication": "Polynésie française, Nouvelle-Calédonie, La Réunion, Terres australes et antarctiques… : l'outre-mer donne à la France la deuxième ZEE mondiale.",
+          "pieges": [
+            {
+              "texte": "Grâce aux seules côtes de la France métropolitaine.",
+              "pourquoi": "La métropole n'apporte qu'une petite part ; l'essentiel vient de l'outre-mer."
+            },
+            {
+              "texte": "Parce que la France possède la haute mer de l'Atlantique.",
+              "pourquoi": "La haute mer n'appartient à aucun État."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles mers le canal de Suez relie-t-il ?",
+          "nom": "La mer Méditerranée et la mer Rouge.",
+          "explication": "Le canal de Suez, en Égypte, évite le tour de l'Afrique entre l'Europe et l'Asie.",
+          "pieges": [
+            {
+              "texte": "L'océan Atlantique et l'océan Pacifique.",
+              "pourquoi": "C'est le canal de Panama, en Amérique centrale."
+            },
+            {
+              "texte": "La mer Noire et la mer Méditerranée.",
+              "pourquoi": "Ce sont les détroits du Bosphore et des Dardanelles, en Turquie."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le détroit de Malacca est-il stratégique ?",
+          "nom": "Il relie l'océan Indien à la mer de Chine méridionale, sur la grande route entre l'Asie orientale, le Moyen-Orient et l'Europe.",
+          "explication": "Entre la Malaisie, Singapour et l'île indonésienne de Sumatra, c'est l'un des passages maritimes les plus fréquentés du monde.",
+          "pieges": [
+            {
+              "texte": "Il relie l'océan Atlantique à la mer Méditerranée.",
+              "pourquoi": "C'est le détroit de Gibraltar."
+            },
+            {
+              "texte": "Il relie la mer Méditerranée à la mer Rouge.",
+              "pourquoi": "C'est le canal de Suez."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le détroit d'Ormuz est-il un point de passage majeur ?",
+          "nom": "Une grande partie du pétrole exporté par les pays du golfe Arabo-Persique y passe.",
+          "explication": "Il fait communiquer le golfe Arabo-Persique avec l'océan Indien ; toute menace sur ce passage inquiète les pays importateurs.",
+          "pieges": [
+            {
+              "texte": "Il relie la mer Noire à la mer Méditerranée.",
+              "pourquoi": "Ce sont le Bosphore et les Dardanelles, en Turquie."
+            },
+            {
+              "texte": "C'est le seul accès à l'océan Arctique.",
+              "pourquoi": "Ormuz est au Moyen-Orient, entre l'Iran et la péninsule Arabique, loin de l'Arctique."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la mer de Chine méridionale est-elle un espace de fortes tensions ?",
+          "nom": "Plusieurs États, dont la Chine, le Vietnam et les Philippines, s'y disputent des îles et des espaces maritimes riches en ressources.",
+          "explication": "Ces rivalités touchent un espace de circulation majeur : l'enjeu est à la fois économique et stratégique.",
+          "pieges": [
+            {
+              "texte": "Parce que toute navigation y est interdite.",
+              "pourquoi": "C'est au contraire l'une des mers les plus fréquentées du monde."
+            },
+            {
+              "texte": "Parce qu'elle appartient à l'ONU.",
+              "pourquoi": "L'ONU ne possède aucun espace maritime ; ce sont les États qui se disputent ces eaux."
+            }
+          ]
+        },
+        {
+          "texte": "Par où passe l'essentiel des communications d'internet entre les continents ?",
+          "nom": "Par des câbles sous-marins.",
+          "explication": "Posés au fond des océans, ces câbles relient les continents ; ils deviennent un enjeu stratégique.",
+          "pieges": [
+            {
+              "texte": "Par des satellites.",
+              "pourquoi": "Les satellites servent surtout aux zones isolées ; l'essentiel du trafic passe par les câbles."
+            },
+            {
+              "texte": "Par les radios des navires.",
+              "pourquoi": "Les radios des navires servent à leurs propres communications, pas à internet entre les continents."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Seas and oceans at the heart of globalisation",
+        "idee": "Most goods travel by sea, and most of the internet runs through undersea cables. States compete for resources and passages: EEZs, straits, canals.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1982, Montego Bay convention; territorial sea (12 nautical miles) and EEZ (200 nautical miles); Suez and Panama canals; Strait of Malacca and Strait of Hormuz; containers and undersea cables.",
+          "exemple": "Example: a container ship leaving Shanghai reaches Europe via the Strait of Malacca, the Indian Ocean, the Red Sea and the Suez Canal. A blockage on this route slows down world trade.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What does the « maritimisation » of economies mean?",
+            "nom": "The growing role of the sea in trade: most goods travel by ship.",
+            "explication": "Container ships, tankers and bulk carriers carry most world trade by volume; economies turn towards coasts and ports.",
+            "pieges": [
+              {
+                "texte": "The fact that most goods travel by plane.",
+                "pourquoi": "Planes mostly carry light, expensive goods; by volume, the sea dominates by far."
+              },
+              {
+                "texte": "The rise in sea level.",
+                "pourquoi": "That's a consequence of global warming, not the meaning of this word."
+              }
+            ]
+          },
+          {
+            "texte": "Which object has revolutionised sea transport since the 1950s-1960s?",
+            "nom": "The container, a metal box of standard dimensions.",
+            "explication": "A container moves from ship to train or lorry without being opened: transport becomes faster and much cheaper.",
+            "pieges": [
+              {
+                "texte": "The ocean liner",
+                "pourquoi": "An ocean liner carries passengers; it existed long before the 1950s."
+              },
+              {
+                "texte": "The tall sailing ship",
+                "pourquoi": "Sailing ships were replaced by steam as early as the 19th century."
+              }
+            ]
+          },
+          {
+            "texte": "What is an exclusive economic zone (EEZ)?",
+            "nom": "A sea area, up to 200 nautical miles from the coast, where the coastal state alone may exploit the resources.",
+            "explication": "Fish, oil and gas, seabed minerals: in its EEZ, the state exploits alone, but other ships may sail freely.",
+            "pieges": [
+              {
+                "texte": "An area where no foreign ship may pass.",
+                "pourquoi": "In the EEZ, other states keep freedom of navigation; it's resource exploitation that is reserved."
+              },
+              {
+                "texte": "A free zone in a port.",
+                "pourquoi": "A free zone is a customs area on land; the EEZ is a sea area."
+              }
+            ]
+          },
+          {
+            "texte": "Which international text defines the territorial sea, the EEZ and the high seas?",
+            "nom": "The United Nations Convention on the Law of the Sea, signed at Montego Bay in 1982.",
+            "explication": "It sets the territorial sea at no more than 12 nautical miles and the EEZ at no more than 200; beyond lie the high seas.",
+            "pieges": [
+              {
+                "texte": "The Treaty of Versailles",
+                "pourquoi": "This 1919 treaty settles the peace after the First World War."
+              },
+              {
+                "texte": "The Charter of the United Nations",
+                "pourquoi": "The 1945 Charter creates the UN; the law of the sea is set by a 1982 convention."
+              }
+            ]
+          },
+          {
+            "texte": "What are the high seas?",
+            "nom": "The sea areas beyond the EEZs, which belong to no state.",
+            "explication": "On the high seas, navigation is free; protecting their biodiversity requires cooperation between states.",
+            "pieges": [
+              {
+                "texte": "The deepest waters of the ocean.",
+                "pourquoi": "The high seas are defined by distance from the coast and by law, not by depth."
+              },
+              {
+                "texte": "The territorial sea, up to 12 miles from the coast.",
+                "pourquoi": "The territorial sea belongs to the coastal state; the high seas begin beyond the EEZs."
+              }
+            ]
+          },
+          {
+            "texte": "Why does France control one of the largest EEZs in the world?",
+            "nom": "Thanks to its overseas territories, present in every ocean.",
+            "explication": "French Polynesia, New Caledonia, Réunion, the French Southern and Antarctic Lands…: overseas France gives the country the world's second-largest EEZ.",
+            "pieges": [
+              {
+                "texte": "Thanks to the coasts of metropolitan France alone.",
+                "pourquoi": "The mainland provides only a small share; most comes from overseas."
+              },
+              {
+                "texte": "Because France owns the high seas of the Atlantic.",
+                "pourquoi": "The high seas belong to no state."
+              }
+            ]
+          },
+          {
+            "texte": "Which seas does the Suez Canal link?",
+            "nom": "The Mediterranean Sea and the Red Sea.",
+            "explication": "The Suez Canal, in Egypt, avoids sailing around Africa between Europe and Asia.",
+            "pieges": [
+              {
+                "texte": "The Atlantic Ocean and the Pacific Ocean.",
+                "pourquoi": "That's the Panama Canal, in Central America."
+              },
+              {
+                "texte": "The Black Sea and the Mediterranean Sea.",
+                "pourquoi": "Those are the Bosphorus and Dardanelles straits, in Turkey."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Strait of Malacca strategic?",
+            "nom": "It links the Indian Ocean to the South China Sea, on the main route between East Asia, the Middle East and Europe.",
+            "explication": "Between Malaysia, Singapore and the Indonesian island of Sumatra, it's one of the busiest sea passages in the world.",
+            "pieges": [
+              {
+                "texte": "It links the Atlantic Ocean to the Mediterranean Sea.",
+                "pourquoi": "That's the Strait of Gibraltar."
+              },
+              {
+                "texte": "It links the Mediterranean Sea to the Red Sea.",
+                "pourquoi": "That's the Suez Canal."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the Strait of Hormuz a major passage?",
+            "nom": "A large share of the oil exported by the Persian Gulf countries passes through it.",
+            "explication": "It connects the Persian Gulf with the Indian Ocean; any threat to this passage worries importing countries.",
+            "pieges": [
+              {
+                "texte": "It links the Black Sea to the Mediterranean Sea.",
+                "pourquoi": "Those are the Bosphorus and the Dardanelles, in Turkey."
+              },
+              {
+                "texte": "It's the only access to the Arctic Ocean.",
+                "pourquoi": "Hormuz is in the Middle East, between Iran and the Arabian Peninsula, far from the Arctic."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the South China Sea an area of strong tensions?",
+            "nom": "Several states, including China, Vietnam and the Philippines, dispute islands and resource-rich sea areas there.",
+            "explication": "These rivalries affect a major shipping area: the stakes are both economic and strategic.",
+            "pieges": [
+              {
+                "texte": "Because all navigation is banned there.",
+                "pourquoi": "On the contrary, it's one of the busiest seas in the world."
+              },
+              {
+                "texte": "Because it belongs to the UN.",
+                "pourquoi": "The UN owns no sea area; it's states that dispute these waters."
+              }
+            ]
+          },
+          {
+            "texte": "How does most internet traffic between continents travel?",
+            "nom": "Through undersea cables.",
+            "explication": "Laid on the ocean floor, these cables link the continents; they are becoming a strategic issue.",
+            "pieges": [
+              {
+                "texte": "Through satellites.",
+                "pourquoi": "Satellites mostly serve isolated areas; most traffic goes through cables."
+              },
+              {
+                "texte": "Through ships' radios.",
+                "pourquoi": "Ships' radios are for their own communications, not for internet traffic between continents."
               }
             ]
           }
