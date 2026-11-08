@@ -12,6 +12,11 @@
 - ⏳ Plein écran en tournant la tablette à la main ; bouton « Masquer » pas essayé sur la tablette.
 - ⏳ Trous de vidéos : informatique et échecs 5-7 ans, dessin et logique en français ; Des chiffres et des lettres (officielle ?).
 - ⏳ Avis d'un enseignant sur les poids de la journée.
+- ✅ 21 leçons ajoutées (explorer GS/CE1/Terminale, sciences GS→Terminale, français CP, code CE1) ; bug « Attempt used after
+  disposed » corrigé. 🔄 Parcours de toutes les leçons sur la tablette (build d'essai DEV_SKILL installé : remettre la 1.0.8).
+- ⏳ Demande d'Antsa (2026-11-08) : chaînes Fabrizio Bucella, Neil deGrasse Tyson (StarTalk), Julien Bobroff, Micmaths (déjà
+  là), PhiloSophia, Scilabus (écartée : shorts, à revoir avec le filtre), Micode ; puis chaînes semblables ; vidéos rangées
+  par catégories, faciles à parcourir.
 
 ## ✅ Français / anglais (ADR 0064)
 
