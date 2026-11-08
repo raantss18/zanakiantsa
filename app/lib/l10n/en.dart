@@ -229,6 +229,7 @@ const en = <String, String>{
   "D'autres vidéos": 'More videos',
   'Plein écran': 'Full screen',
   'Masquer': 'Hide',
+  'Tout voir ›': 'See all ›',
   'La suite est plus bas': 'There is more below',
   'Les vidéos arrivent… La connexion est lente, encore un peu de patience.': 'The videos are on their way… The connection is slow, just a little longer.',
   "Les leçons d'avant le niveau {level} sont acquises pour ton âge : elles ne sont plus dans ton carnet.": 'Lessons before {level} count as known at your age: they are no longer in your notebook.',

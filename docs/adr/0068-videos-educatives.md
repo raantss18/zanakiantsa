@@ -17,5 +17,7 @@
     d'orientation des apps (`ignoreOrientationRequest=true`).
 - **Confidentialité** : regarder une vidéo envoie des données à Google (YouTube) ; à écrire dans `docs/conformite.md` et
   dans l'espace parent. ⚠ Activé sans réglage parent, à la demande d'Antsa.
+- - **Rangement** (2026-11-08) : la page s'ouvre sur des rangées par matière (« Pour toi », puis les matières du jour) ;
+  chaque vidéo va dans une seule matière, d'après les mots de son titre parmi celles de sa chaîne (`videoSubject`).
 - **Vérifié** : `test/videos_test.dart`, `test/books_test.dart`. Catalogue réel (2 506 vidéos, 20 chaînes) et lecteur
   essayés sur la tablette le 2026-11-08. **Reste à tester** : plein écran tablette tournée à la main.

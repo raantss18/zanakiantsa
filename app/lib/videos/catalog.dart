@@ -44,6 +44,12 @@ class Video {
 
   String get thumbnail => 'https://i.ytimg.com/vi/$id/mqdefault.jpg';
 
+  /// Le titre à montrer, sans les mots-dièse (« #science ») que certaines chaînes y ajoutent.
+  String get shownTitle {
+    final t = title.replaceAll(RegExp(r'\s*#[^\s#]+'), '').trim();
+    return t.isEmpty ? title : t;
+  }
+
   /// « 7 min », « 1 h 05 ».
   String get length {
     final m = (seconds / 60).round();
@@ -154,3 +160,51 @@ List<Video> more(
 /// lancée depuis le lecteur YouTube (fin de vidéo, vidéo suggérée) est arrêtée aussitôt.
 bool allowedVideo(String id, List<Video> pool) =>
     id.isEmpty || pool.any((v) => v.id == id);
+
+/// Mots qui disent la matière d'une vidéo (titre et mots-clés, sans accents), en français et en anglais.
+const _subjectWords = <String, List<String>>{
+  'compter': ['math', 'nombre', 'calcul', 'fraction', 'geometri', 'equation', 'fonction', 'multipli', 'addition', 'soustraction',
+    'division', 'pourcentage', 'probabilit', 'statisti', 'theoreme', 'algebre', 'angle', 'triangle', 'derivee', 'number',
+    'equation', 'geometry', 'algebra', 'multiply', 'counting', 'compter', 'tables de'],
+  'lire': ['lecture', 'lire', 'conjugaison', 'grammaire', 'orthographe', 'verbe', 'poeme', 'poesie', 'roman', 'livre',
+    'phonics', 'letter', 'reading', 'story', 'alphabet', 'mots ', 'syllabe', 'dictee', 'book'],
+  'nature': ['science', 'physique', 'chimie', 'biolog', 'corps', 'animal', 'animaux', 'plante', 'cellule', 'energie',
+    'electri', 'volcan', 'climat', 'atome', 'espece', 'dinosaure', 'insecte', 'ocean', 'physics', 'chemistry', 'animal',
+    'plant', 'cell', 'energy', 'experience', 'experiment', 'biodivers', 'foret', 'jungle', 'nature', 'cerveau', 'brain', 'virus', 'adn', 'dna', 'evolution'],
+  'explorer': ['histoire', 'guerre', 'roi ', 'revolution', 'geographi', 'pays', 'carte', 'monde', 'espace', 'planete',
+    'etoile', 'univers', 'lune', 'soleil', 'philosoph', 'antiquite', 'moyen age', 'empire', 'history', 'war', 'country',
+    'space', 'planet', 'star', 'universe', 'moon', 'ancient', 'galax', 'mars', 'nasa'],
+  'anglais': ['english', 'anglais', 'vocabulary', 'pronunciation', 'learn english'],
+  'code': ['code', 'coding', 'programm', 'informatique', 'algorithm', 'python', 'scratch', 'ordinateur', 'internet', 'cyber',
+    'computer', 'robot', 'intelligence artificielle', 'hack'],
+  'echecs': ['echec', 'chess', 'ouverture', 'gambit', 'partie'],
+  'dessin': ['dessin', 'dessiner', 'peinture', 'peindre', 'tableau', 'draw', 'paint', 'art '],
+  'sons': ['musique', 'chanson', 'instrument', 'rythme', 'music', 'song', 'orchestre', 'piano'],
+  'motifs': ['enigme', 'logique', 'puzzle', 'casse-tete', 'riddle', 'sudoku', 'quiz', 'paradox'],
+};
+
+/// La matière d'une vidéo, parmi celles de sa chaîne : celle dont les mots reviennent le plus dans son titre et ses
+/// mots-clés ; sans indice, la première de la chaîne. Une vidéo d'Alloprof sur les volcans va dans « Sciences », pas dans
+/// toutes les matières de la chaîne.
+String videoSubject(Video v) {
+  final text = ' ${fold('${v.title} ${v.words}')} ';
+  var best = v.channel.domains.isEmpty ? 'explorer' : v.channel.domains.first;
+  var top = 0;
+  for (final d in v.channel.domains) {
+    final n = (_subjectWords[d] ?? const []).where(text.contains).length;
+    if (n > top) {
+      top = n;
+      best = d;
+    }
+  }
+  return best;
+}
+
+/// Les vidéos rangées par matière, chaque rangée dans l'ordre de la liste de départ (pas vues d'abord, plus récentes).
+Map<String, List<Video>> bySubject(List<Video> pool, {required Set<String> seen}) {
+  final out = <String, List<Video>>{};
+  for (final v in suggestions(pool, seen: seen, count: pool.length)) {
+    out.putIfAbsent(videoSubject(v), () => []).add(v);
+  }
+  return out;
+}

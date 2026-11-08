@@ -161,6 +161,24 @@ void main() {
     expect(catalogueUri('fr-10').path, endsWith('/videos/fr-10.json'));
   });
 
+  test('chaque vidéo est rangée dans sa matière, parmi celles de sa chaîne', () {
+    final pool = cat.forChild(age: 9, lang: 'fr');
+    final foret = pool.firstWhere((v) => v.id == 'b');
+    expect(foret.channel.domains, ['nature', 'explorer']);
+    expect(videoSubject(foret), 'nature', reason: '« jungle biodiversité » : des mots de sciences');
+    final rev = cat.forChild(age: 14, lang: 'fr').firstWhere((v) => v.id == 'd');
+    expect(videoSubject(rev), 'explorer');
+    final rows = bySubject(cat.forChild(age: 14, lang: 'fr'), seen: {});
+    expect(rows.values.expand((r) => r).length, 3, reason: 'chaque vidéo dans une seule rangée');
+  });
+
+  test('les mots-dièse ne s\'affichent pas dans le titre', () {
+    final c = Channel({'id': 'UCx', 'nom': 'x', 'langue': 'fr', 'ages': [5, 18], 'domaines': <String>[]});
+    Video v(String t) => Video({'id': 'a', 't': t, 'd': 100, 'p': '2024-01-01', 'm': ''}, c);
+    expect(v('Gaudí a-t-il inventé la récup ? #art #design').shownTitle, 'Gaudí a-t-il inventé la récup ?');
+    expect(v('#shorts').shownTitle, '#shorts', reason: 'jamais de titre vide');
+  });
+
   test('durée écrite', () {
     expect(cat.videos.first.length, '4 min');
     expect(cat.videos.firstWhere((v) => v.id == 'd').length, '25 min');

@@ -190,22 +190,36 @@ class _VideosPageState extends State<VideosPage> {
                       )
                     : list.isEmpty
                     ? _empty()
+                    : query.trim().isEmpty
+                    // Rangées par matière (demande d'Antsa du 2026-11-08 : « facile à explorer de façon intuitive ») :
+                    // « Pour toi » d'abord, puis les matières du jour, puis les autres ; chaque rangée défile de côté.
+                    ? ListView(
+                        padding: readablePadding(context, side: 0),
+                        children: [
+                          _Shelf(
+                            art: '2b50',
+                            title: t('Pour toi'),
+                            videos: list.take(12).toList(),
+                            seen: seen,
+                            onPlay: _play,
+                            onAll: null,
+                          ),
+                          for (final e in _subjects(today))
+                            _Shelf(
+                              art: app.topic(e.key).icon,
+                              title: app.topic(e.key).name,
+                              videos: e.value.take(12).toList(),
+                              seen: seen,
+                              onPlay: _play,
+                              onAll: e.value.length > 12
+                                  ? () => _openSubject(e.key, e.value)
+                                  : null,
+                            ),
+                        ],
+                      )
                     : ListView(
                         padding: readablePadding(context),
                         children: [
-                          if (query.trim().isEmpty)
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(4, 4, 4, 8),
-                              child: Text(
-                                t('Pour toi'),
-                                style: TextStyle(
-                                  fontFamily: 'Fredoka',
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.w700,
-                                  color: u.onBackground,
-                                ),
-                              ),
-                            ),
                           for (final v in list)
                             _VideoCard(
                               video: v,
@@ -217,6 +231,30 @@ class _VideosPageState extends State<VideosPage> {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  /// Les matières qui ont des vidéos : celles du jour d'abord, puis un ordre fixe.
+  List<MapEntry<String, List<Video>>> _subjects(Set<String> today) {
+    const order = ['nature', 'explorer', 'compter', 'lire', 'anglais', 'code', 'motifs', 'echecs', 'dessin', 'sons'];
+    final rows = bySubject(pool, seen: seen);
+    final keys = [
+      for (final k in order) if (today.contains(k) && rows.containsKey(k)) k,
+      for (final k in order) if (!today.contains(k) && rows.containsKey(k)) k,
+    ];
+    return [for (final k in keys) MapEntry(k, rows[k]!)];
+  }
+
+  Future<void> _openSubject(String id, List<Video> videos) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => _SubjectPage(
+          title: app.topic(id).name,
+          videos: videos,
+          seen: seen,
+          onPlay: _play,
         ),
       ),
     );
@@ -322,7 +360,7 @@ class _VideoCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        video.title,
+                        video.shownTitle,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -624,7 +662,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      widget.video.title,
+                      widget.video.shownTitle,
                       // Sur le fond du monde, pas sur une carte : sa couleur de texte (sombre sur fond sombre sinon).
                       style: TextStyle(
                         fontSize: 22,
@@ -685,4 +723,171 @@ class _RoundButton extends StatelessWidget {
       ),
     ),
   );
+}
+
+/// Une rangée d'une matière : son image et son nom, puis des vignettes qui défilent de côté ; « Tout voir » ouvre la matière.
+class _Shelf extends StatelessWidget {
+  const _Shelf({
+    required this.art,
+    required this.title,
+    required this.videos,
+    required this.seen,
+    required this.onPlay,
+    required this.onAll,
+  });
+  final String art, title;
+  final List<Video> videos;
+  final Set<String> seen;
+  final void Function(Video) onPlay;
+  final VoidCallback? onAll;
+
+  @override
+  Widget build(BuildContext context) {
+    final u = AppScope.of(context).universe;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 4, 8, 8),
+            child: Row(
+              children: [
+                Art(art, size: 34),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    title,
+                    style: TextStyle(fontFamily: 'Fredoka', fontSize: 26, fontWeight: FontWeight.w700, color: u.onBackground),
+                  ),
+                ),
+                if (onAll != null)
+                  TextButton(
+                    onPressed: onAll,
+                    style: TextButton.styleFrom(minimumSize: const Size(48, 48), foregroundColor: u.onBackground),
+                    child: Text(t('Tout voir ›'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+                  ),
+              ],
+            ),
+          ),
+          SizedBox(
+            // Image (135) + deux lignes de titre à la taille de texte de la tablette (vu en paysage : titre coupé).
+            height: 135 + 2 * MediaQuery.textScalerOf(context).scale(17) * 1.2 + 26,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              itemCount: videos.length,
+              separatorBuilder: (_, _) => const SizedBox(width: 12),
+              itemBuilder: (_, i) => _VideoTile(video: videos[i], seen: seen.contains(videos[i].id), onTap: () => onPlay(videos[i])),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Une vignette de rangée : grande image (la durée dessus, « Vu » si elle a été regardée), puis le titre sur deux lignes.
+class _VideoTile extends StatelessWidget {
+  const _VideoTile({required this.video, required this.seen, required this.onTap});
+  final Video video;
+  final bool seen;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+        button: true,
+        label: '${video.title}, ${video.channel.name}, ${video.length}${seen ? t(', déjà vue') : ''}',
+        excludeSemantics: true,
+        child: SizedBox(
+          width: 240,
+          child: Material(
+            color: surface,
+            elevation: 2,
+            borderRadius: BorderRadius.circular(18),
+            clipBehavior: Clip.antiAlias,
+            child: InkWell(
+              onTap: onTap,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 240,
+                    height: 135,
+                    child: Stack(fit: StackFit.expand, children: [
+                      Image.network(video.thumbnail, fit: BoxFit.cover,
+                          errorBuilder: (_, _, _) => const ColoredBox(color: Color(0xFFF1F3F2))),
+                      Positioned(
+                        right: 6,
+                        bottom: 6,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(color: Colors.black87, borderRadius: BorderRadius.circular(6)),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            child: Text(video.length, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700)),
+                          ),
+                        ),
+                      ),
+                      if (seen)
+                        Positioned(
+                          left: 6,
+                          top: 6,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(color: green, borderRadius: BorderRadius.circular(6)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                              child: Row(mainAxisSize: MainAxisSize.min, children: [
+                                const Icon(Icons.check_rounded, color: Colors.white, size: 16),
+                                Text(t('Vu'), style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700)),
+                              ]),
+                            ),
+                          ),
+                        ),
+                    ]),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 8, 10, 4),
+                    child: Text(video.shownTitle,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: ink, height: 1.15)),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+}
+
+/// Toute une matière : ses vidéos en liste, pas vues d'abord.
+class _SubjectPage extends StatelessWidget {
+  const _SubjectPage({required this.title, required this.videos, required this.seen, required this.onPlay});
+  final String title;
+  final List<Video> videos;
+  final Set<String> seen;
+  final Future<void> Function(Video) onPlay;
+
+  @override
+  Widget build(BuildContext context) {
+    final app = AppScope.of(context);
+    return Scaffold(
+      body: UniverseBackground(
+        universe: app.universe,
+        child: SafeArea(
+          child: Column(children: [
+            pageHeader(context, title),
+            Expanded(
+              child: ListView(
+                padding: readablePadding(context),
+                children: [
+                  for (final v in videos) _VideoCard(video: v, seen: seen.contains(v.id), onTap: () => onPlay(v)),
+                ],
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
 }

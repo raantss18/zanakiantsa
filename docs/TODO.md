@@ -14,9 +14,13 @@
 - ⏳ Avis d'un enseignant sur les poids de la journée.
 - ✅ 21 leçons ajoutées (explorer GS/CE1/Terminale, sciences GS→Terminale, français CP, code CE1) ; bug « Attempt used after
   disposed » corrigé. 🔄 Parcours de toutes les leçons sur la tablette (build d'essai DEV_SKILL installé : remettre la 1.0.8).
-- ⏳ Demande d'Antsa (2026-11-08) : chaînes Fabrizio Bucella, Neil deGrasse Tyson (StarTalk), Julien Bobroff, Micmaths (déjà
-  là), PhiloSophia, Scilabus (écartée : shorts, à revoir avec le filtre), Micode ; puis chaînes semblables ; vidéos rangées
-  par catégories, faciles à parcourir.
+- ✅ Parcours des 352 leçons sur la tablette : rien de coupé pendant l'exemple, réponse montrée ramenée sous les yeux, flèche
+  « la suite plus bas », mots entiers sous les images, « ? » jamais seul, séance gardée abandonnée après un changement d'âge,
+  bulle de Robi lisible en paysage. Mémoire en version publiée : ≈ 196 Mo.
+- ✅ Vidéos rangées par matière (rangées qui défilent, « Tout voir ») ; 134 chaînes dont Fabrizio Bucella, Julien Bobroff,
+  La Physique Autrement, CNRS, Palais de la découverte ; Alloprof sans les vidéos pour enseignants.
+- ❓ PhiloSophia : chaîne YouTube introuvable (lien à demander à Antsa). Écartées : StarTalk, Micode, Scilabus (sponsors,
+  sujets adultes, shorts). ⏳ Vérifier que les chaînes anglaises ne passent pas en doublage automatique (lecteur en anglais).
 
 ## ✅ Français / anglais (ADR 0064)
 

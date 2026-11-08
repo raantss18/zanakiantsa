@@ -41,13 +41,17 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     final u = widget.universe;
-    // Écran étroit (portrait) : mascotte plus petite, toute la largeur possible pour le texte.
-    final narrow = MediaQuery.sizeOf(context).width < 600;
+    // La place de la bulle elle-même, pas celle de l'écran (vu en paysage le 2026-11-08 : dans la colonne de côté, le texte
+    // n'avait plus que ≈ 80 dp, un mot par ligne). Étroite : mascotte plus petite ; étroite et haute : mascotte au-dessus.
+    return LayoutBuilder(builder: (context, box) {
+    final narrow = box.maxWidth < 600;
+    final stacked = box.maxWidth < 380 && widget.height >= 200;
+    final tight = box.maxWidth < 380;
     return SizedBox(
       height: widget.height,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 4, 12, 8),
-        child: Row(children: [
+        child: Flex(direction: stacked ? Axis.vertical : Axis.horizontal, crossAxisAlignment: stacked ? CrossAxisAlignment.start : CrossAxisAlignment.center, children: [
           AnimatedBuilder(
             animation: _jump,
             builder: (_, child) {
@@ -55,19 +59,19 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
               final dy = -28 * (t < 0.5 ? Curves.easeOut.transform(t * 2) : Curves.bounceOut.transform(2 - t * 2));
               return Transform.translate(offset: Offset(0, t == 0 ? 0 : dy), child: child);
             },
-            child: Art(u.mascot, size: narrow ? 52 : 76),
+            child: Art(u.mascot, size: stacked ? 44 : tight ? 38 : narrow ? 52 : 76),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 8, height: 6),
           Expanded(
             child: Container(
-              padding: EdgeInsets.fromLTRB(narrow ? 12 : 16, 8, 0, 8),
+              padding: EdgeInsets.fromLTRB(tight ? 8 : narrow ? 12 : 16, 8, 0, 8),
               decoration: BoxDecoration(
                 color: widget.help ? const Color(0xFFFFF4DE) : surface,
                 borderRadius: BorderRadius.circular(28),
                 boxShadow: cardShadow,
               ),
               child: Row(children: [
-                if (widget.help) Padding(padding: const EdgeInsets.only(right: 8), child: Art('1f4a1', size: 34, label: t('Aide'))),
+                if (widget.help) Padding(padding: EdgeInsets.only(right: tight ? 4 : 8), child: Art('1f4a1', size: tight ? 22 : 34, label: t('Aide'))),
                 Expanded(
                   // Le texte passe à la ligne sur toute la largeur de la bulle, puis ne rétrécit que s'il dépasse
                   // en hauteur (jamais coupé ni débordant).
@@ -100,7 +104,9 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
                 ),
                 IconButton(
                   tooltip: t('Réécouter'),
-                  iconSize: narrow ? 30 : 36,
+                  iconSize: tight ? 26 : narrow ? 30 : 36,
+                  padding: tight ? EdgeInsets.zero : null,
+                  constraints: tight ? const BoxConstraints(minWidth: 48, minHeight: 48) : null,
                   onPressed: widget.onListen,
                   icon: Icon(Icons.volume_up_rounded, color: u.onCard),
                 ),
@@ -110,5 +116,6 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
         ]),
       ),
     );
+    });
   }
 }
