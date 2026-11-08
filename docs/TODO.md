@@ -3,6 +3,16 @@
 > Une seule liste, tenue à jour à chaque tâche. Statuts : ✅ fait · 🔄 en cours · ⏳ à faire · ❓ décision d'Antsa.
 > Une tâche n'est ✅ qu'après tests + essai réel sur les tablettes (`CLAUDE.md`).
 
+## 🔄 Après la 1.0.6 (2026-11-08) — pas encore publié
+
+- ✅ Niveaux (ADR 0069) : carnet sans les leçons sous le plancher ; journée selon les horaires officiels de la classe à
+  partir du CM1 ; code et échecs depuis le début (cours avant toute question) ; énoncés de code bien affichés. Essayé à 12 ans.
+- ✅ Vidéos (ADR 0068) : plein écran, liste blanche stricte dans le lecteur, pas de limite de durée, pas d'IA, filtre par
+  vidéo, masquage par un parent, 119 chaînes (`docs/videos-chaines.md`), découverte chaque lundi (ticket GitHub).
+- ⏳ Plein écran en tournant la tablette à la main ; bouton « Masquer » pas essayé sur la tablette.
+- ⏳ Trous de vidéos : informatique et échecs 5-7 ans, dessin et logique en français ; Des chiffres et des lettres (officielle ?).
+- ⏳ Avis d'un enseignant sur les poids de la journée.
+
 ## ✅ Français / anglais (ADR 0064)
 
 - ✅ Interrupteur dans l'espace parent : toute l'app, leçons comprises ; 10 domaines sur 10 traduits. Essayé sur la SM-X135G
