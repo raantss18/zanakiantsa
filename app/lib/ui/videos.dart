@@ -19,32 +19,29 @@ import 'chess_play.dart' show pageHeader;
 import 'theme.dart';
 import 'universe.dart';
 
-/// Charge le catalogue : celui du site, sinon celui gardé de la dernière fois (null : jamais chargé).
-Future<Catalogue?> loadCatalogue(AppState app) async {
-  // Le catalogue change une fois par jour (≈ 3 Mo, compressé en route) : la copie gardée sert pendant 12 h.
-  final when = DateTime.tryParse(await app.store.get('videos_catalogue_date') ?? '');
-  if (when != null && DateTime.now().difference(when) < const Duration(hours: 12)) {
-    final kept = await app.store.get('videos_catalogue');
-    if (kept != null) return Catalogue(jsonDecode(kept) as Map<String, dynamic>);
-  }
+/// Le catalogue gardé de cet enfant (langue et âge) et sa date ; null s'il n'a jamais été chargé.
+Future<(Catalogue, DateTime?)?> keptCatalogue(AppState app, String key) async {
+  final kept = await app.store.get('videos_cat_$key');
+  if (kept == null || kept.isEmpty) return null;
+  final when = DateTime.tryParse(await app.store.get('videos_cat_${key}_date') ?? '');
+  return (Catalogue(jsonDecode(kept) as Map<String, dynamic>), when);
+}
+
+/// Télécharge le catalogue de cet enfant et le garde ; null sans connexion (ou trop lente : 60 s au plus).
+Future<Catalogue?> fetchCatalogue(AppState app, String key) async {
   try {
-    final r = await http
-        .get(Uri.parse(catalogueUrl))
-        .timeout(const Duration(seconds: 12));
-    if (r.statusCode == 200) {
-      final body = utf8.decode(r.bodyBytes);
-      final c = Catalogue(jsonDecode(body) as Map<String, dynamic>);
-      await app.store.set('videos_catalogue', body);
-      await app.store.set('videos_catalogue_date', DateTime.now().toIso8601String());
-      return c;
-    }
+    final r = await http.get(catalogueUri(key)).timeout(const Duration(seconds: 60));
+    if (r.statusCode != 200) return null;
+    final body = utf8.decode(r.bodyBytes);
+    final c = Catalogue(jsonDecode(body) as Map<String, dynamic>);
+    await app.store.set('videos_cat_$key', body);
+    await app.store.set('videos_cat_${key}_date', DateTime.now().toIso8601String());
+    // L'ancien catalogue complet (1.0.6–1.0.7, ≈ 3 Mo) ne sert plus.
+    await app.store.set('videos_catalogue', '');
+    return c;
   } catch (_) {
-    // Pas de connexion : on prend la copie gardée.
+    return null;
   }
-  final kept = await app.store.get('videos_catalogue');
-  return kept == null
-      ? null
-      : Catalogue(jsonDecode(kept) as Map<String, dynamic>);
 }
 
 Future<Set<String>> seenVideos(AppState app) async {
@@ -80,6 +77,9 @@ class _VideosPageState extends State<VideosPage> {
   late final AppState app = AppScope.of(context);
   Catalogue? catalogue;
   bool loading = true;
+
+  /// Toujours rien après quelques secondes : on dit que la connexion est lente (au lieu d'un rond qui tourne seul).
+  bool slow = false;
   Set<String> seen = {}, hidden = {};
   String query = '';
 
@@ -89,19 +89,31 @@ class _VideosPageState extends State<VideosPage> {
     if (loading) _load();
   }
 
+  /// La copie gardée s'affiche tout de suite ; le site n'est interrogé que si elle a plus de 12 h, en arrière-plan.
   Future<void> _load() async {
     await app.voice.stopAll();
-    final c = await loadCatalogue(app);
+    final key = catalogueKey(appLang, app.age);
+    final kept = await keptCatalogue(app, key);
     final s = await seenVideos(app);
     final h = await hiddenVideos(app);
-    if (mounted) {
-      setState(() {
-        catalogue = c;
-        seen = s;
-        hidden = h;
-        loading = false;
-      });
-    }
+    if (!mounted) return;
+    setState(() {
+      catalogue = kept?.$1;
+      seen = s;
+      hidden = h;
+      loading = kept == null;
+    });
+    final when = kept?.$2;
+    if (when != null && DateTime.now().difference(when) < const Duration(hours: 12)) return;
+    Future.delayed(const Duration(seconds: 4), () {
+      if (mounted && loading) setState(() => slow = true);
+    });
+    final fresh = await fetchCatalogue(app, key);
+    if (!mounted) return;
+    setState(() {
+      catalogue = fresh ?? catalogue;
+      loading = false;
+    });
   }
 
   List<Video> get pool => [
@@ -159,7 +171,23 @@ class _VideosPageState extends State<VideosPage> {
               ),
               Expanded(
                 child: loading
-                    ? const Center(child: CircularProgressIndicator())
+                    ? Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const CircularProgressIndicator(),
+                            if (slow)
+                              Padding(
+                                padding: const EdgeInsets.all(24),
+                                child: Text(
+                                  t('Les vidéos arrivent… La connexion est lente, encore un peu de patience.'),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: u.onBackground),
+                                ),
+                              ),
+                          ],
+                        ),
+                      )
                     : list.isEmpty
                     ? _empty()
                     : ListView(

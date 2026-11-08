@@ -177,10 +177,28 @@ def build(channels: list[dict], per_channel: int) -> dict:
     return {'genere': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'chaines': out_channels, 'videos': videos}
 
 
+def per_age(catalogue: dict) -> dict[str, dict]:
+    """Un petit catalogue par langue et par âge (5 à 18 ; 18 = 18 ans et plus) : l'app ne télécharge que le sien. À 10 ans en
+    français, ≈ 50 Ko compressés au lieu de ≈ 850 Ko pour tout le catalogue (lent sur un téléphone, signalé le 2026-11-08)."""
+    out = {}
+    for lang in ('fr', 'en'):
+        for age in range(5, 19):
+            keep = [i for i, c in enumerate(catalogue['chaines'])
+                    if c['langue'] == lang and c['ages'][0] <= age and (c['ages'][1] >= 18 or age <= c['ages'][1])]
+            index = {i: k for k, i in enumerate(keep)}
+            out[f'{lang}-{age}'] = {
+                'genere': catalogue['genere'],
+                'chaines': [catalogue['chaines'][i] for i in keep],
+                'videos': [dict(v, c=index[v['c']], m=v['m'][:80]) for v in catalogue['videos'] if v['c'] in index],
+            }
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--chaines', default='content/videos/chaines.yaml')
     ap.add_argument('--out', required=True)
+    ap.add_argument('--par-age', help='dossier où écrire un catalogue par langue et par âge (fr-10.json…)')
     ap.add_argument('--par-chaine', type=int, default=100)  # 119 chaînes × 100 : ≈ 3,5 Mo, ≈ 1 Mo compressé
     a = ap.parse_args()
     channels = yaml.safe_load(open(a.chaines, encoding='utf8'))['chaines']
@@ -193,6 +211,12 @@ def main() -> None:
     with open(a.out, 'w', encoding='utf8') as f:
         json.dump(catalogue, f, ensure_ascii=False, separators=(',', ':'))
     print(f"{len(catalogue['videos'])} vidéos de {len(catalogue['chaines'])} chaînes → {a.out}")
+    if a.par_age:
+        os.makedirs(a.par_age, exist_ok=True)
+        for key, part in per_age(catalogue).items():
+            with open(os.path.join(a.par_age, f'{key}.json'), 'w', encoding='utf8') as f:
+                json.dump(part, f, ensure_ascii=False, separators=(',', ':'))
+        print(f"catalogues par âge → {a.par_age}")
 
 
 if __name__ == '__main__':

@@ -2,9 +2,15 @@
 /// Pur Dart, testé dans `test/videos_test.dart`. Les vidéos se lisent avec le lecteur officiel YouTube (ui/videos.dart).
 library;
 
-/// Adresse du catalogue, publié avec le site (ADR 0055).
-/// Essais seulement : `--dart-define=VIDEOS_URL=…` lit un autre catalogue (jamais dans une version publiée).
-const catalogueUrl = String.fromEnvironment('VIDEOS_URL', defaultValue: 'https://raantss18.github.io/zanakiantsa/videos.json');
+/// Dossier des catalogues, publiés avec le site (ADR 0055) : un petit fichier par langue et par âge (fr-10.json…), pour ne
+/// télécharger que le sien (≈ 50 Ko compressés à 10 ans, au lieu de ≈ 850 Ko ; lent sur un téléphone, signalé le 2026-11-08).
+/// Essais seulement : `--dart-define=VIDEOS_BASE=…` lit d'autres catalogues (jamais dans une version publiée).
+const videosBase = String.fromEnvironment('VIDEOS_BASE', defaultValue: 'https://raantss18.github.io/zanakiantsa/videos/');
+
+/// Le catalogue d'un enfant : sa langue et son âge (de 5 à 18 ; 18 vaut pour tous les plus grands).
+String catalogueKey(String lang, int age) => '$lang-${age.clamp(5, 18)}';
+
+Uri catalogueUri(String key) => Uri.parse('$videosBase$key.json');
 
 // Pas de limite de durée, à aucun âge : les vidéos longues sont acceptées tant que la chaîne est éducative (choix
 // d'Antsa, 2026-11-08, qui remplace la limite de 10 min avant le lycée). Le tri se fait par la liste blanche.

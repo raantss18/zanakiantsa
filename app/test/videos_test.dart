@@ -154,6 +154,13 @@ void main() {
     expect(allowedVideo('', pool), isTrue, reason: 'lecteur pas encore prêt : rien à bloquer');
   });
 
+  test('chaque enfant ne télécharge que le catalogue de sa langue et de son âge', () {
+    expect(catalogueKey('fr', 10), 'fr-10');
+    expect(catalogueKey('en', 3), 'en-5', reason: 'pas de catalogue avant 5 ans');
+    expect(catalogueKey('fr', 40), 'fr-18', reason: '18 vaut pour tous les plus grands');
+    expect(catalogueUri('fr-10').path, endsWith('/videos/fr-10.json'));
+  });
+
   test('durée écrite', () {
     expect(cat.videos.first.length, '4 min');
     expect(cat.videos.firstWhere((v) => v.id == 'd').length, '25 min');

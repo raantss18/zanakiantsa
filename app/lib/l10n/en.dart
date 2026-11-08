@@ -229,6 +229,7 @@ const en = <String, String>{
   "D'autres vidéos": 'More videos',
   'Plein écran': 'Full screen',
   'Masquer': 'Hide',
+  'Les vidéos arrivent… La connexion est lente, encore un peu de patience.': 'The videos are on their way… The connection is slow, just a little longer.',
   "Les leçons d'avant le niveau {level} sont acquises pour ton âge : elles ne sont plus dans ton carnet.": 'Lessons before {level} count as known at your age: they are no longer in your notebook.',
   'Le code et les échecs ne dépendent pas de la classe : tout débutant commence au début, avec le cours avant toute question (à partir de 12 ans, le code commence par les programmes écrits du collège). « Je sais déjà » saute ce qui est connu.': 'Coding and chess do not depend on the school year: every beginner starts at the beginning, with the lesson before any question (from age 12, coding starts with the written programs of middle school). “I already know” skips what is known.',
   'Quitter le plein écran': 'Exit full screen',

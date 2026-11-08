@@ -18,7 +18,8 @@ class Store {
   /// Réglages communs à la famille (les autres sont rangés sous `c<n>.`).
   static const globalKeys = {'profils', 'profil_actif', 'moteur_voix', 'langue', 'videos_catalogue'};
 
-  String _k(String k) => globalKeys.contains(k) ? k : 'c$child.$k';
+  // Les catalogues de vidéos (videos_cat_fr-10…) sont communs à tous les enfants de la tablette.
+  String _k(String k) => globalKeys.contains(k) || k.startsWith('videos_cat_') ? k : 'c$child.$k';
 
   static Future<Store> open() async {
     final db = await openDatabase(
