@@ -1,0 +1,108 @@
+id: paysages-proches-lointains
+titre: "Paysages proches et lointains"
+niveau: CE1
+prerequis: [terre-mer-globe]
+programme: { source: c2qm, texte: "Identifier des paysages : reconnaître différents paysages (les littoraux, les massifs montagneux, les campagnes, les villes, les déserts, etc.). Au CE1, comparer les milieux de l’espace proche à des milieux plus lointains et variés : comment habite-t-on, comment circule-t-on en ville, à la campagne, en France ou ailleurs ?" }
+activite: choisir
+parametres: {}
+idee: "Il y a des paysages de littoral, de montagne, de campagne et de ville. On n'y vit pas et on n'y circule pas de la même façon. Une carte ou un globe aide à situer les lieux."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Imagine le paysage : y a-t-il la mer, des sommets, des champs ou des rues ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quel paysage est un littoral, là où la terre rencontre la mer ?"
+    bonne: ["1f30a", "le bord de mer"]
+    autres: [["1f3d4", "la montagne"], ["1f333", "la forêt"]]
+    explication: "Le littoral, c'est le bord de mer : la terre y rencontre la mer."
+  - texte: "Quel paysage est un massif montagneux ?"
+    bonne: ["1f3d4", "la montagne"]
+    autres: [["1f3dd", "l'île"], ["1f30a", "le bord de mer"]]
+    explication: "Un massif montagneux, ce sont des montagnes avec des sommets et des vallées."
+  - texte: "Quel paysage est entouré d'eau de tous les côtés ?"
+    bonne: ["1f3dd", "l'île"]
+    autres: [["1f3d4", "la montagne"], ["1f69c", "la campagne"]]
+    explication: "Une île est entourée d'eau de tous les côtés."
+  - texte: "À la campagne, quel véhicule travaille dans les champs ?"
+    bonne: ["1f69c", "le tracteur"]
+    autres: [["1f68c", "le bus"], ["26f5", "le voilier"]]
+    explication: "À la campagne, il y a des champs et des fermes : le tracteur sert à les cultiver."
+  - texte: "En ville, comment beaucoup de gens se déplacent-ils ensemble ?"
+    bonne: ["1f68c", "le bus"]
+    autres: [["1f69c", "le tracteur"], ["26f5", "le voilier"]]
+    explication: "En ville, on circule souvent en bus, en métro ou en tramway : ce sont des transports en commun."
+  - texte: "Où trouve-t-on un port avec des bateaux à voile ?"
+    bonne: ["26f5", "sur le littoral"]
+    autres: [["1f3d4", "en haut de la montagne"], ["1f333", "dans la forêt"]]
+    explication: "Les ports se trouvent au bord de l'eau, souvent sur le littoral."
+  - texte: "Quel objet indique le nord ?"
+    bonne: ["1f9ed", "la boussole"]
+    autres: [["1f50d", "la loupe"], ["1f4d0", "l'équerre"]]
+    explication: "L'aiguille de la boussole indique le nord. Sur la plupart des cartes, le nord est en haut."
+  - texte: "Qu'est-ce qui représente un lieu vu de dessus, en plus petit, sur une feuille ?"
+    bonne: ["1f5fa", "la carte"]
+    autres: [["1f4f7", "l'appareil photo"], ["1f3a8", "la palette de peinture"]]
+    explication: "Un plan ou une carte représente un lieu vu de dessus, en plus petit."
+  - texte: "Pour voir toute la Terre, ronde, avec ses océans et ses continents, on utilise…"
+    bonne: ["1f30d", "le globe"]
+    autres: [["1f50d", "la loupe"], ["1f4d6", "le livre"]]
+    explication: "Le globe représente toute la Terre, ronde, avec ses océans et ses continents."
+  - texte: "Pour aller sur un autre continent, très loin, on prend souvent…"
+    bonne: ["2708", "l'avion"]
+    autres: [["1f6b2", "le vélo"], ["1f69c", "le tracteur"]]
+    explication: "Les autres continents sont très loin, de l'autre côté des mers et des océans : on y va souvent en avion."
+
+en:
+  titre: "Landscapes near and far"
+  idee: "There are coastal, mountain, countryside and town landscapes. People don't live or travel the same way in each. A map or a globe helps to locate places."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Picture the landscape: is there the sea, peaks, fields or streets?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which landscape is a coast, where the land meets the sea?"
+      bonne: ["1f30a", "the seaside"]
+      autres: [["1f3d4", "the mountain"], ["1f333", "the forest"]]
+      explication: "The coast is the seaside: that's where the land meets the sea."
+    - texte: "Which landscape is a mountain range?"
+      bonne: ["1f3d4", "the mountain"]
+      autres: [["1f3dd", "the island"], ["1f30a", "the seaside"]]
+      explication: "A mountain range is made of mountains with peaks and valleys."
+    - texte: "Which landscape has water all around it?"
+      bonne: ["1f3dd", "the island"]
+      autres: [["1f3d4", "the mountain"], ["1f69c", "the countryside"]]
+      explication: "An island has water all around it."
+    - texte: "In the countryside, which vehicle works in the fields?"
+      bonne: ["1f69c", "the tractor"]
+      autres: [["1f68c", "the bus"], ["26f5", "the sailing boat"]]
+      explication: "In the countryside, there are fields and farms: the tractor is used to farm them."
+    - texte: "In town, how do lots of people travel together?"
+      bonne: ["1f68c", "the bus"]
+      autres: [["1f69c", "the tractor"], ["26f5", "the sailing boat"]]
+      explication: "In town, people often travel by bus, underground or tram: that's public transport."
+    - texte: "Where do we find a harbour with sailing boats?"
+      bonne: ["26f5", "on the coast"]
+      autres: [["1f3d4", "at the top of the mountain"], ["1f333", "in the forest"]]
+      explication: "Harbours are by the water, often on the coast."
+    - texte: "Which object shows where north is?"
+      bonne: ["1f9ed", "the compass"]
+      autres: [["1f50d", "the magnifying glass"], ["1f4d0", "the set square"]]
+      explication: "The compass needle points north. On most maps, north is at the top."
+    - texte: "What shows a place seen from above, smaller, on a sheet of paper?"
+      bonne: ["1f5fa", "the map"]
+      autres: [["1f4f7", "the camera"], ["1f3a8", "the paint palette"]]
+      explication: "A plan or a map shows a place seen from above, smaller."
+    - texte: "To see the whole Earth, round, with its oceans and continents, we use…"
+      bonne: ["1f30d", "the globe"]
+      autres: [["1f50d", "the magnifying glass"], ["1f4d6", "the book"]]
+      explication: "The globe shows the whole Earth, round, with its oceans and continents."
+    - texte: "To go to another continent, very far away, people often take…"
+      bonne: ["2708", "the plane"]
+      autres: [["1f6b2", "the bike"], ["1f69c", "the tractor"]]
+      explication: "Other continents are very far away, across seas and oceans: people often go there by plane."

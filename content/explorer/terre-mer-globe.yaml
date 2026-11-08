@@ -1,0 +1,124 @@
+id: terre-mer-globe
+titre: "La terre, la mer et le globe"
+niveau: GS
+prerequis: []
+programme: { source: c1, texte: "Se repérer dans l’espace : reconnaitre quelques espaces géographiques sur un planisphère ; nommer un ou deux continents et quelques pays dans le cadre de la découverte de l’utilisation d’un globe ou d’un planisphère ; faire la différence entre la mer et la terre." }
+activite: choisir
+parametres: {}
+idee: "Sur le globe et sur les cartes, la mer est en bleu. La terre, ce sont les montagnes, les îles et les pays. Pour aller très loin, on prend le bateau ou l'avion."
+phrases:
+  consigne: "Écoute la question, puis touche la bonne image."
+  question: "{texte}"
+  indice: "Regarde bien : y a-t-il de l'eau, de la terre, ou les deux ?"
+  exemple: "Essaie une autre image."
+  demonstration: "Regarde : c'est {bonne}. {explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Touche la mer."
+    bonne: ["1f30a", "la mer"]
+    autres: [["1f3d4", "la montagne"], ["1f3e0", "la maison"]]
+    explication: "Voici la mer : beaucoup d'eau salée, avec des vagues."
+  - texte: "Touche la montagne."
+    bonne: ["1f3d4", "la montagne"]
+    autres: [["1f30a", "la mer"], ["1f3dd", "l'île"]]
+    explication: "Voici la montagne : la terre monte très haut."
+  - texte: "Quelle image montre une île, de la terre entourée d'eau ?"
+    bonne: ["1f3dd", "l'île"]
+    autres: [["1f3d4", "la montagne"], ["1f3e0", "la maison"]]
+    explication: "Une île, c'est de la terre entourée d'eau de tous les côtés."
+  - texte: "Quel objet montre toute la Terre en tout petit, en forme de boule ?"
+    bonne: ["1f30d", "le globe"]
+    autres: [["1f5fa", "la carte"], ["26bd", "le ballon"]]
+    explication: "Le globe est une boule qui montre la Terre en tout petit, avec les mers et les terres."
+  - texte: "Qu'est-ce qui montre la Terre à plat, sur une feuille ?"
+    bonne: ["1f5fa", "la carte du monde"]
+    autres: [["1f30d", "le globe"], ["1f4d6", "le livre d'histoires"]]
+    explication: "La carte du monde montre la Terre à plat : on l'appelle aussi un planisphère."
+  - texte: "Sur un globe ou une carte, de quelle couleur sont souvent les mers et les océans ?"
+    bonne: ["1f535", "bleu"]
+    autres: [["1f534", "rouge"], ["1f7e1", "jaune"]]
+    explication: "Sur les globes et les cartes, l'eau des mers et des océans est souvent en bleu."
+  - texte: "Avec quoi peut-on traverser la mer ?"
+    bonne: ["1f6a2", "le bateau"]
+    autres: [["1f697", "la voiture"], ["1f6b2", "le vélo"]]
+    explication: "Le bateau flotte et peut traverser la mer."
+  - texte: "Pour aller très loin, dans un pays de l'autre côté de l'océan, on peut prendre…"
+    bonne: ["2708", "l'avion"]
+    autres: [["1f6b2", "le vélo"], ["1f697", "la voiture"]]
+    explication: "L'avion vole au-dessus des mers et des océans : il va très loin, très vite."
+  - texte: "Où trouve-t-on de la neige, même en été ?"
+    bonne: ["1f3d4", "en haut des très hautes montagnes"]
+    autres: [["1f3dd", "sur l'île"], ["1f30a", "dans la mer"]]
+    explication: "En haut des très hautes montagnes, il fait si froid que la neige reste même en été."
+  - texte: "Cette statue est dans un pays très loin, de l'autre côté de l'océan : les États-Unis. Touche-la."
+    bonne: ["1f5fd", "la statue de la Liberté"]
+    autres: [["1f5fc", "la tour de Tokyo"], ["1f3f0", "le château"]]
+    explication: "La statue de la Liberté est à New York, aux États-Unis. C'est la France qui l'a offerte."
+  - texte: "Cette tour est dans un pays très loin, au Japon. Touche-la."
+    bonne: ["1f5fc", "la tour de Tokyo"]
+    autres: [["1f5fd", "la statue de la Liberté"], ["1f3f0", "le château"]]
+    explication: "La tour de Tokyo est au Japon, un pays d'Asie."
+  - texte: "Où vivent les gens : sur la terre ou dans la mer ? Touche leur maison."
+    bonne: ["1f3e0", "la maison"]
+    autres: [["1f30a", "la mer"], ["2601", "le nuage"]]
+    explication: "Les gens vivent sur la terre : dans des maisons, des villages et des villes."
+
+en:
+  titre: "Land, sea and the globe"
+  idee: "On the globe and on maps, the sea is blue. The land is mountains, islands and countries. To go very far, we take a boat or a plane."
+  phrases:
+    consigne: "Listen to the question, then touch the right picture."
+    question: "{texte}"
+    indice: "Look carefully: is there water, land, or both?"
+    exemple: "Try another picture."
+    demonstration: "Look: it's {bonne}. {explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Touch the sea."
+      bonne: ["1f30a", "the sea"]
+      autres: [["1f3d4", "the mountain"], ["1f3e0", "the house"]]
+      explication: "Here is the sea: lots of salty water, with waves."
+    - texte: "Touch the mountain."
+      bonne: ["1f3d4", "the mountain"]
+      autres: [["1f30a", "the sea"], ["1f3dd", "the island"]]
+      explication: "Here is the mountain: the land rises very high."
+    - texte: "Which picture shows an island, land with water all around it?"
+      bonne: ["1f3dd", "the island"]
+      autres: [["1f3d4", "the mountain"], ["1f3e0", "the house"]]
+      explication: "An island is land with water all around it."
+    - texte: "Which object shows the whole Earth, very small, shaped like a ball?"
+      bonne: ["1f30d", "the globe"]
+      autres: [["1f5fa", "the map"], ["26bd", "the ball"]]
+      explication: "A globe is a ball that shows the Earth very small, with its seas and lands."
+    - texte: "What shows the Earth flat, on a sheet of paper?"
+      bonne: ["1f5fa", "the world map"]
+      autres: [["1f30d", "the globe"], ["1f4d6", "the storybook"]]
+      explication: "A world map shows the Earth flat."
+    - texte: "On a globe or a map, what colour are seas and oceans usually?"
+      bonne: ["1f535", "blue"]
+      autres: [["1f534", "red"], ["1f7e1", "yellow"]]
+      explication: "On globes and maps, the water of seas and oceans is usually blue."
+    - texte: "What can we cross the sea with?"
+      bonne: ["1f6a2", "the boat"]
+      autres: [["1f697", "the car"], ["1f6b2", "the bike"]]
+      explication: "A boat floats and can cross the sea."
+    - texte: "To go very far, to a country on the other side of the ocean, we can take…"
+      bonne: ["2708", "the plane"]
+      autres: [["1f6b2", "the bike"], ["1f697", "the car"]]
+      explication: "A plane flies over seas and oceans: it goes very far, very fast."
+    - texte: "Where can we find snow, even in summer?"
+      bonne: ["1f3d4", "at the top of very high mountains"]
+      autres: [["1f3dd", "on the island"], ["1f30a", "in the sea"]]
+      explication: "At the top of very high mountains, it's so cold that the snow stays even in summer."
+    - texte: "This statue is in a country very far away, on the other side of the ocean: the United States. Touch it."
+      bonne: ["1f5fd", "the Statue of Liberty"]
+      autres: [["1f5fc", "Tokyo Tower"], ["1f3f0", "the castle"]]
+      explication: "The Statue of Liberty is in New York, in the United States. France gave it as a gift."
+    - texte: "This tower is in a country very far away, in Japan. Touch it."
+      bonne: ["1f5fc", "Tokyo Tower"]
+      autres: [["1f5fd", "the Statue of Liberty"], ["1f3f0", "the castle"]]
+      explication: "Tokyo Tower is in Japan, a country in Asia."
+    - texte: "Where do people live: on land or in the sea? Touch their home."
+      bonne: ["1f3e0", "the house"]
+      autres: [["1f30a", "the sea"], ["2601", "the cloud"]]
+      explication: "People live on land: in houses, villages and towns."

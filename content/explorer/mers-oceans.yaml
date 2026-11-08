@@ -1,0 +1,160 @@
+id: mers-oceans
+titre: "Mers et océans au cœur de la mondialisation"
+niveau: Terminale
+prerequis: [metropolisation]
+programme: { source: hgtle, texte: "Mers et océans : au cœur de la mondialisation. Mers et océans : vecteurs essentiels de la mondialisation ; entre appropriation, protection et liberté de circulation. La France : une puissance maritime ?" }
+activite: quiz
+parametres: {}
+idee: "La plus grande partie des marchandises voyage par mer, et l'essentiel d'internet passe par des câbles sous-marins. Les États se disputent ressources et passages : ZEE, détroits, canaux."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1982, convention de Montego Bay ; mer territoriale (12 milles) et ZEE (200 milles) ; canaux de Suez et de Panama ; détroits de Malacca et d'Ormuz ; conteneurs et câbles sous-marins."
+  exemple: "Exemple : un porte-conteneurs parti de Shanghai rejoint l'Europe par le détroit de Malacca, l'océan Indien, la mer Rouge et le canal de Suez. Un blocage sur ce trajet ralentit tout le commerce mondial."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Que désigne la « maritimisation » des économies ?"
+    nom: "Le rôle croissant de la mer dans les échanges : la plus grande partie des marchandises voyage par bateau."
+    explication: "Porte-conteneurs, pétroliers et vraquiers transportent l'essentiel du commerce mondial en volume ; les économies se tournent vers les littoraux et les ports."
+    pieges:
+      - { texte: "Le fait que la plupart des marchandises voyagent en avion.", pourquoi: "L'avion transporte surtout des marchandises légères et chères ; en volume, la mer domine largement." }
+      - { texte: "La montée du niveau des mers.", pourquoi: "C'est une conséquence du réchauffement climatique, pas le sens de ce mot." }
+  - texte: "Quel objet a révolutionné le transport maritime depuis les années 1950-1960 ?"
+    nom: "Le conteneur, une boîte métallique aux dimensions normalisées."
+    explication: "Le conteneur passe du navire au train ou au camion sans être ouvert : le transport devient plus rapide et bien moins cher."
+    pieges:
+      - { texte: "Le paquebot", pourquoi: "Le paquebot transporte des passagers ; il existait bien avant les années 1950." }
+      - { texte: "Le grand voilier", pourquoi: "La marine à voile a été remplacée par la vapeur dès le XIXe siècle." }
+  - texte: "Qu'est-ce qu'une zone économique exclusive (ZEE) ?"
+    nom: "Un espace maritime, jusqu'à 200 milles marins des côtes, où l'État côtier a seul le droit d'exploiter les ressources."
+    explication: "Poissons, hydrocarbures, minerais des fonds : dans sa ZEE, l'État exploite seul, mais les autres navires peuvent y circuler librement."
+    pieges:
+      - { texte: "Un espace où aucun navire étranger ne peut passer.", pourquoi: "Dans la ZEE, la liberté de navigation des autres États demeure ; c'est l'exploitation des ressources qui est réservée." }
+      - { texte: "Une zone franche dans un port.", pourquoi: "Une zone franche est un espace douanier à terre ; la ZEE est un espace maritime." }
+  - texte: "Quel texte international définit la mer territoriale, la ZEE et la haute mer ?"
+    nom: "La convention des Nations unies sur le droit de la mer, signée à Montego Bay en 1982."
+    explication: "Elle fixe la mer territoriale à 12 milles marins au plus et la ZEE à 200 milles au plus ; au-delà s'étend la haute mer."
+    pieges:
+      - { texte: "Le traité de Versailles", pourquoi: "Ce traité de 1919 règle la paix après la Première Guerre mondiale." }
+      - { texte: "La Charte des Nations unies", pourquoi: "La Charte de 1945 crée l'ONU ; le droit de la mer est fixé par une convention de 1982." }
+  - texte: "Qu'est-ce que la haute mer ?"
+    nom: "Les espaces maritimes au-delà des ZEE, qui n'appartiennent à aucun État."
+    explication: "En haute mer, la navigation est libre ; protéger sa biodiversité suppose une coopération entre États."
+    pieges:
+      - { texte: "Les eaux les plus profondes de l'océan.", pourquoi: "La haute mer se définit par la distance aux côtes et le droit, pas par la profondeur." }
+      - { texte: "La mer territoriale, jusqu'à 12 milles des côtes.", pourquoi: "La mer territoriale appartient à l'État côtier ; la haute mer commence au-delà des ZEE." }
+  - texte: "Pourquoi la France contrôle-t-elle l'une des plus vastes ZEE du monde ?"
+    nom: "Grâce à ses territoires d'outre-mer, présents dans tous les océans."
+    explication: "Polynésie française, Nouvelle-Calédonie, La Réunion, Terres australes et antarctiques… : l'outre-mer donne à la France la deuxième ZEE mondiale."
+    pieges:
+      - { texte: "Grâce aux seules côtes de la France métropolitaine.", pourquoi: "La métropole n'apporte qu'une petite part ; l'essentiel vient de l'outre-mer." }
+      - { texte: "Parce que la France possède la haute mer de l'Atlantique.", pourquoi: "La haute mer n'appartient à aucun État." }
+  - texte: "Quelles mers le canal de Suez relie-t-il ?"
+    nom: "La mer Méditerranée et la mer Rouge."
+    explication: "Le canal de Suez, en Égypte, évite le tour de l'Afrique entre l'Europe et l'Asie."
+    pieges:
+      - { texte: "L'océan Atlantique et l'océan Pacifique.", pourquoi: "C'est le canal de Panama, en Amérique centrale." }
+      - { texte: "La mer Noire et la mer Méditerranée.", pourquoi: "Ce sont les détroits du Bosphore et des Dardanelles, en Turquie." }
+  - texte: "Pourquoi le détroit de Malacca est-il stratégique ?"
+    nom: "Il relie l'océan Indien à la mer de Chine méridionale, sur la grande route entre l'Asie orientale, le Moyen-Orient et l'Europe."
+    explication: "Entre la Malaisie, Singapour et l'île indonésienne de Sumatra, c'est l'un des passages maritimes les plus fréquentés du monde."
+    pieges:
+      - { texte: "Il relie l'océan Atlantique à la mer Méditerranée.", pourquoi: "C'est le détroit de Gibraltar." }
+      - { texte: "Il relie la mer Méditerranée à la mer Rouge.", pourquoi: "C'est le canal de Suez." }
+  - texte: "Pourquoi le détroit d'Ormuz est-il un point de passage majeur ?"
+    nom: "Une grande partie du pétrole exporté par les pays du golfe Arabo-Persique y passe."
+    explication: "Il fait communiquer le golfe Arabo-Persique avec l'océan Indien ; toute menace sur ce passage inquiète les pays importateurs."
+    pieges:
+      - { texte: "Il relie la mer Noire à la mer Méditerranée.", pourquoi: "Ce sont le Bosphore et les Dardanelles, en Turquie." }
+      - { texte: "C'est le seul accès à l'océan Arctique.", pourquoi: "Ormuz est au Moyen-Orient, entre l'Iran et la péninsule Arabique, loin de l'Arctique." }
+  - texte: "Pourquoi la mer de Chine méridionale est-elle un espace de fortes tensions ?"
+    nom: "Plusieurs États, dont la Chine, le Vietnam et les Philippines, s'y disputent des îles et des espaces maritimes riches en ressources."
+    explication: "Ces rivalités touchent un espace de circulation majeur : l'enjeu est à la fois économique et stratégique."
+    pieges:
+      - { texte: "Parce que toute navigation y est interdite.", pourquoi: "C'est au contraire l'une des mers les plus fréquentées du monde." }
+      - { texte: "Parce qu'elle appartient à l'ONU.", pourquoi: "L'ONU ne possède aucun espace maritime ; ce sont les États qui se disputent ces eaux." }
+  - texte: "Par où passe l'essentiel des communications d'internet entre les continents ?"
+    nom: "Par des câbles sous-marins."
+    explication: "Posés au fond des océans, ces câbles relient les continents ; ils deviennent un enjeu stratégique."
+    pieges:
+      - { texte: "Par des satellites.", pourquoi: "Les satellites servent surtout aux zones isolées ; l'essentiel du trafic passe par les câbles." }
+      - { texte: "Par les radios des navires.", pourquoi: "Les radios des navires servent à leurs propres communications, pas à internet entre les continents." }
+
+en:
+  titre: "Seas and oceans at the heart of globalisation"
+  idee: "Most goods travel by sea, and most of the internet runs through undersea cables. States compete for resources and passages: EEZs, straits, canals."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1982, Montego Bay convention; territorial sea (12 nautical miles) and EEZ (200 nautical miles); Suez and Panama canals; Strait of Malacca and Strait of Hormuz; containers and undersea cables."
+    exemple: "Example: a container ship leaving Shanghai reaches Europe via the Strait of Malacca, the Indian Ocean, the Red Sea and the Suez Canal. A blockage on this route slows down world trade."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What does the « maritimisation » of economies mean?"
+      nom: "The growing role of the sea in trade: most goods travel by ship."
+      explication: "Container ships, tankers and bulk carriers carry most world trade by volume; economies turn towards coasts and ports."
+      pieges:
+        - { texte: "The fact that most goods travel by plane.", pourquoi: "Planes mostly carry light, expensive goods; by volume, the sea dominates by far." }
+        - { texte: "The rise in sea level.", pourquoi: "That's a consequence of global warming, not the meaning of this word." }
+    - texte: "Which object has revolutionised sea transport since the 1950s-1960s?"
+      nom: "The container, a metal box of standard dimensions."
+      explication: "A container moves from ship to train or lorry without being opened: transport becomes faster and much cheaper."
+      pieges:
+        - { texte: "The ocean liner", pourquoi: "An ocean liner carries passengers; it existed long before the 1950s." }
+        - { texte: "The tall sailing ship", pourquoi: "Sailing ships were replaced by steam as early as the 19th century." }
+    - texte: "What is an exclusive economic zone (EEZ)?"
+      nom: "A sea area, up to 200 nautical miles from the coast, where the coastal state alone may exploit the resources."
+      explication: "Fish, oil and gas, seabed minerals: in its EEZ, the state exploits alone, but other ships may sail freely."
+      pieges:
+        - { texte: "An area where no foreign ship may pass.", pourquoi: "In the EEZ, other states keep freedom of navigation; it's resource exploitation that is reserved." }
+        - { texte: "A free zone in a port.", pourquoi: "A free zone is a customs area on land; the EEZ is a sea area." }
+    - texte: "Which international text defines the territorial sea, the EEZ and the high seas?"
+      nom: "The United Nations Convention on the Law of the Sea, signed at Montego Bay in 1982."
+      explication: "It sets the territorial sea at no more than 12 nautical miles and the EEZ at no more than 200; beyond lie the high seas."
+      pieges:
+        - { texte: "The Treaty of Versailles", pourquoi: "This 1919 treaty settles the peace after the First World War." }
+        - { texte: "The Charter of the United Nations", pourquoi: "The 1945 Charter creates the UN; the law of the sea is set by a 1982 convention." }
+    - texte: "What are the high seas?"
+      nom: "The sea areas beyond the EEZs, which belong to no state."
+      explication: "On the high seas, navigation is free; protecting their biodiversity requires cooperation between states."
+      pieges:
+        - { texte: "The deepest waters of the ocean.", pourquoi: "The high seas are defined by distance from the coast and by law, not by depth." }
+        - { texte: "The territorial sea, up to 12 miles from the coast.", pourquoi: "The territorial sea belongs to the coastal state; the high seas begin beyond the EEZs." }
+    - texte: "Why does France control one of the largest EEZs in the world?"
+      nom: "Thanks to its overseas territories, present in every ocean."
+      explication: "French Polynesia, New Caledonia, Réunion, the French Southern and Antarctic Lands…: overseas France gives the country the world's second-largest EEZ."
+      pieges:
+        - { texte: "Thanks to the coasts of metropolitan France alone.", pourquoi: "The mainland provides only a small share; most comes from overseas." }
+        - { texte: "Because France owns the high seas of the Atlantic.", pourquoi: "The high seas belong to no state." }
+    - texte: "Which seas does the Suez Canal link?"
+      nom: "The Mediterranean Sea and the Red Sea."
+      explication: "The Suez Canal, in Egypt, avoids sailing around Africa between Europe and Asia."
+      pieges:
+        - { texte: "The Atlantic Ocean and the Pacific Ocean.", pourquoi: "That's the Panama Canal, in Central America." }
+        - { texte: "The Black Sea and the Mediterranean Sea.", pourquoi: "Those are the Bosphorus and Dardanelles straits, in Turkey." }
+    - texte: "Why is the Strait of Malacca strategic?"
+      nom: "It links the Indian Ocean to the South China Sea, on the main route between East Asia, the Middle East and Europe."
+      explication: "Between Malaysia, Singapore and the Indonesian island of Sumatra, it's one of the busiest sea passages in the world."
+      pieges:
+        - { texte: "It links the Atlantic Ocean to the Mediterranean Sea.", pourquoi: "That's the Strait of Gibraltar." }
+        - { texte: "It links the Mediterranean Sea to the Red Sea.", pourquoi: "That's the Suez Canal." }
+    - texte: "Why is the Strait of Hormuz a major passage?"
+      nom: "A large share of the oil exported by the Persian Gulf countries passes through it."
+      explication: "It connects the Persian Gulf with the Indian Ocean; any threat to this passage worries importing countries."
+      pieges:
+        - { texte: "It links the Black Sea to the Mediterranean Sea.", pourquoi: "Those are the Bosphorus and the Dardanelles, in Turkey." }
+        - { texte: "It's the only access to the Arctic Ocean.", pourquoi: "Hormuz is in the Middle East, between Iran and the Arabian Peninsula, far from the Arctic." }
+    - texte: "Why is the South China Sea an area of strong tensions?"
+      nom: "Several states, including China, Vietnam and the Philippines, dispute islands and resource-rich sea areas there."
+      explication: "These rivalries affect a major shipping area: the stakes are both economic and strategic."
+      pieges:
+        - { texte: "Because all navigation is banned there.", pourquoi: "On the contrary, it's one of the busiest seas in the world." }
+        - { texte: "Because it belongs to the UN.", pourquoi: "The UN owns no sea area; it's states that dispute these waters." }
+    - texte: "How does most internet traffic between continents travel?"
+      nom: "Through undersea cables."
+      explication: "Laid on the ocean floor, these cables link the continents; they are becoming a strategic issue."
+      pieges:
+        - { texte: "Through satellites.", pourquoi: "Satellites mostly serve isolated areas; most traffic goes through cables." }
+        - { texte: "Through ships' radios.", pourquoi: "Ships' radios are for their own communications, not for internet traffic between continents." }
