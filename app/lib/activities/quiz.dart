@@ -123,6 +123,12 @@ class QuestionText extends StatelessWidget {
   /// « else: » ou « if x > 3: » n'ont pas d'espace avant les deux-points.
   static bool isProse(String line) => RegExp(r'(\?| :)\s*$').hasMatch(line.trimRight());
 
+  /// La première ligne est une consigne si elle ressemble à une phrase (« Voici… », « Le lutin… ») ; une ligne de code
+  /// (« mettre x à 10 », « x = 3 », « SELECT … ») reste dans le bloc de code. Vu sur la tablette le 2026-11-08 : la première
+  /// instruction d'un programme s'affichait comme une consigne.
+  static bool leads(String line) =>
+      isProse(line) || line.trimRight().endsWith('.') || RegExp(r"^[«“]?\s*[A-ZÀ-ÖØ-Ý][a-zà-öø-ÿ']").hasMatch(line.trimLeft());
+
   @override
   Widget build(BuildContext context) {
     final lines = text.split('\n');
@@ -130,7 +136,7 @@ class QuestionText extends StatelessWidget {
     // Regroupe les lignes : texte d'un côté, suites de lignes de code de l'autre.
     final parts = <(bool, List<String>)>[];
     for (final (i, l) in lines.indexed) {
-      final prose = i == 0 || isProse(l);
+      final prose = i == 0 ? leads(l) : isProse(l);
       if (parts.isNotEmpty && !prose && !parts.last.$1) {
         parts.last.$2.add(l);
       } else {

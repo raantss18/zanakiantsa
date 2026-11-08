@@ -301,9 +301,10 @@ class _ParentPageState extends State<ParentPage> {
               const Divider(height: 32),
               Text(t('Temps de jeu proposé par jour'), style: notebookTitle),
               Text(
-                t('Partagé en trois activités qui changent chaque jour (nombres, vivant, dessin ; suites, sons, échecs ; '
-                'anglais, code, explorer), avec une pause proposée entre deux. Repère : l’OMS recommande au plus 1 h d’écran sédentaire '
-                'par jour avant 5 ans, « moins, c’est mieux ».'),
+                t('Partagé en trois activités qui changent chaque jour, avec une pause proposée entre deux. Jusqu’au CE2, la lecture '
+                'revient presque chaque jour ; à partir du CM1, les matières reviennent selon les horaires officiels de sa classe '
+                '(français, maths, sciences, histoire-géographie, anglais, informatique), seulement celles où il reste à apprendre à son niveau. '
+                'Repère : l’OMS recommande au plus 1 h d’écran sédentaire par jour avant 5 ans, « moins, c’est mieux ».'),
               ),
               const SizedBox(height: 8),
               Wrap(spacing: 8, children: [
@@ -488,6 +489,9 @@ class _AgeAndClass extends StatelessWidget {
                 ? tf('Les leçons commencent au niveau {start}. Celles sous le niveau {floor} ne sont plus proposées (trop faciles pour sa classe). Une fois sa classe finie, {name} peut monter plus haut.', {'start': t(start), 'floor': t(schoolLevels[floorForClass(classe)]), 'name': name})
                 : tf('Les leçons commencent au niveau {start}. Celles d’avant restent ouvertes, et « Je sais déjà » permet de sauter ce que {name} connaît.', {'start': t(start), 'name': name}),
       ),
+      const SizedBox(height: 4),
+      // ADR 0069 : le code et les échecs ne suivent pas la classe.
+      Text(t('Le code et les échecs ne dépendent pas de la classe : tout débutant commence au début, avec le cours avant toute question (à partir de 12 ans, le code commence par les programmes écrits du collège). « Je sais déjà » saute ce qui est connu.')),
       const SizedBox(height: 4),
       Text(
         afterLastMiss(app.age) == AfterLastMiss.demonstration

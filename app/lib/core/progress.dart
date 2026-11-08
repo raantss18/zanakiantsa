@@ -42,6 +42,22 @@ int floorForClass(int classe) => max(0, classe - 2);
 /// grand, toutes ses compétences compteraient comme acquises et il n'y aurait plus rien à y apprendre.
 int startLevelIn(List<SkillRef> skills, int start) => skills.isEmpty ? start : min(start, skills.map((s) => s.level).reduce(max));
 
+/// Plancher et point de départ d'un domaine pour un enfant (ADR 0065, 0069).
+/// - Domaine scolaire : plancher deux classes sous la sienne, départ juste sous sa classe ; ce qui est plus bas est tenu
+///   pour acquis, parce que l'école l'a enseigné.
+/// - Domaine pour tous les âges (`sans_age`, le dessin) : rien n'est caché.
+/// - Domaine « hors école » (`hors_ecole` : le code, les échecs) : l'âge ne dit pas ce que l'enfant sait. On part de
+///   l'entrée prévue pour sa tranche d'âge ([entry], le début du domaine sinon), et rien au-dessus n'est tenu pour acquis :
+///   pas de diagnostic sur une notion jamais apprise, le cours d'abord. « Je sais déjà » saute ce qu'il connaît.
+({int floor, int start}) domainLevels(List<SkillRef> skills, int classe, {bool ageless = false, bool outOfSchool = false, int? entry}) {
+  if (outOfSchool) {
+    final first = skills.isEmpty ? 0 : skills.map((s) => s.level).reduce(min);
+    final e = max(entry ?? first, first);
+    return (floor: e, start: e);
+  }
+  return (floor: ageless ? 0 : floorForClass(classe), start: startLevelIn(skills, startLevelForClass(classe)));
+}
+
 /// Questions par séance (⚠ choix produit : vise ≈ 10–15 min, à mesurer).
 const questionsPerSession = 8;
 

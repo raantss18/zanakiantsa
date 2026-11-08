@@ -7,6 +7,12 @@ noms: {moyens: "Le code", grands: "Informatique"}
 resume: "Programmer un robot avec des flèches, puis des blocs : boucles, conditions, compteur."
 icone: "1f916"
 ages: [5, 18]
+# Domaine « hors école » (ADR 0069) : les programmes de maths et de technologie parlent de programmation, mais l'âge ne
+# garantit pas qu'un enfant en ait déjà fait (supposé, non mesuré). Un grand débutant commence donc par les programmes
+# écrits du collège (6e), pas par le robot de maternelle ni par une question sur un code jamais vu ; « Je sais déjà » lui
+# permet de sauter ce qu'il connaît.
+hors_ecole: true
+entree: {petits: GS, moyens: GS, grands: 6e}
 # Maternelle (version consolidée 2026) : « Se repérer dans l'espace » p. 54-57 et « Découvrir le monde des objets »
 # p. 61. CP (programme de mathématiques du cycle 2, annexe 4) : « Le repérage dans l'espace ». Consultés le 2026-11-03.
 # Blocs inspirés de l'idée de ScratchJr (aucun code ni dessin repris, CLAUDE.md règle 7).

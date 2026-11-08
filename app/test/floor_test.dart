@@ -16,12 +16,15 @@ List<Topic> topics() => [
         if (jsonDecode(f.readAsStringSync()) case final Map<String, dynamic> j when j['competences'] != null) Topic(j),
     ];
 
+/// Comme l'app (app_state.progressOf) : plancher et départ du domaine selon la classe et la tranche d'âge.
 Progress progressFor(Topic t, int classe, [List<Answer> journal = const []]) {
   final refs = [for (final s in t.skills) s.ref];
-  return Progress(refs, journal, startLevel: startLevelIn(refs, startLevelForClass(classe)), floor: t.ageless ? 0 : floorForClass(classe));
+  final l = t.levelsFor(classe);
+  return Progress(refs, journal, startLevel: l.start, floor: l.floor);
 }
 
 void main() {
+  topicBand = 'grands'; // 12 ans (ADR 0066) : l'entrée des domaines hors école en dépend
   final all = topics();
   final classe = classForAge(12); // 5e
   final floor = floorForClass(classe); // CM2
@@ -120,5 +123,105 @@ void main() {
     }
     // Moins de trois domaines à apprendre : on complète avec les autres domaines proposés.
     expect(dayCandidates(['a', 'b', 'c'], learning: {'a'}, tops: const {}), ['a', 'b', 'c']);
+  });
+
+  // ADR 0069. Signalé par Antsa le 2026-11-08 : en informatique, à 12 ans, « la première question demande un code que
+  // l'enfant n'a jamais vu ». Le code et les échecs ne s'apprennent pas forcément à l'école : on part du début de sa tranche
+  // d'âge, le cours d'abord, sans diagnostic sur une notion jamais apprise.
+  group('domaines hors école', () {
+    final code = all.firstWhere((t) => t.id == 'code');
+    final echecs = all.firstWhere((t) => t.id == 'echecs');
+
+    test('code, 12 ans débutant : les programmes écrits de 6e, sans diagnostic sur le robot de CM2', () {
+      final p = progressFor(code, classe);
+      final first = code.skill(p.newSkill!);
+      expect(first.id, 'sequence-instructions');
+      expect(first.level, '6e');
+      expect(p.checkable(prerequisitesToCheck(first.ref, [for (final s in code.skills) s.ref])), isEmpty);
+      expect(code.levelsFor(classe), (floor: levelRank('6e'), start: levelRank('6e')));
+    });
+
+    test('code, 15 ans débutant : aussi le début des programmes écrits, pas la 3e', () {
+      expect(code.skill(progressFor(code, classForAge(15)).newSkill!).id, 'sequence-instructions');
+    });
+
+    test('code, 9 ans débutant : le robot depuis le début', () {
+      topicBand = 'moyens';
+      addTearDown(() => topicBand = 'grands');
+      expect(code.skill(progressFor(code, classForAge(9)).newSkill!).level, 'GS');
+    });
+
+    test('échecs, 12 ans débutant : la marche des pièces d\'abord, pas la règle du carré', () {
+      final p = progressFor(echecs, classe);
+      final first = echecs.skill(p.newSkill!);
+      expect(first.ref.level, echecs.skills.map((s) => s.ref.level).reduce(min));
+      expect(p.checkable(prerequisitesToCheck(first.ref, [for (final s in echecs.skills) s.ref])), isEmpty);
+    });
+
+    test('après une leçon apprise, le diagnostic vérifie ce qui a vraiment été appris', () {
+      final now = DateTime(2026, 11, 8);
+      final journal = [
+        for (var i = 0; i < 10; i++)
+          Answer(skill: 'sequence-instructions', attempts: 1, correct: true, demonstrated: false, millis: 3000, at: now.add(Duration(minutes: i))),
+      ];
+      final p = progressFor(code, classe, journal);
+      final next = code.skill(p.newSkill!);
+      final checked = p.checkable(prerequisitesToCheck(next.ref, [for (final s in code.skills) s.ref]));
+      expect(checked.every((id) => !p.belowFloor(id)), isTrue);
+    });
+  });
+
+  test('le carnet de 12 ans ne montre plus « Compter jusqu\'à 10 »', () {
+    final compter = all.firstWhere((t) => t.id == 'compter');
+    final p = progressFor(compter, classe);
+    expect(p.belowFloor('denombrer-10'), isTrue);
+    expect(compter.skill('denombrer-10').title, 'Compter jusqu\'à 10');
+  });
+
+  // ADR 0069 : à partir du CM1, la journée suit les horaires officiels de la classe.
+  group('journée selon les horaires officiels', () {
+    List<List<String>> days(int classe, List<String> candidates, int n) => [
+          for (var d = 0; d < n; d++)
+            DayPlan.of(DateTime(2026, 9, 1).add(Duration(days: d)), const [], classe: classe, visible: candidates)
+                .items
+                .map((i) => i.theme)
+                .toList(),
+        ];
+    const domains = ['lire', 'compter', 'anglais', 'nature', 'explorer', 'code', 'echecs', 'dessin'];
+
+    test('5e : chaque matière en proportion de ses heures, jamais deux fois le même jour', () {
+      final plan = days(classForAge(12), domains, 130);
+      final w = dayWeights['cycle4']!;
+      final total = w.values.reduce((a, b) => a + b);
+      final count = <String, int>{};
+      for (final d in plan) {
+        expect(d.toSet().length, 3);
+        for (final t in d) {
+          count[t] = (count[t] ?? 0) + 1;
+        }
+      }
+      for (final e in w.entries) {
+        expect(count[e.key]! / (130 * 3), closeTo(e.value / total, 0.02), reason: e.key);
+      }
+      expect(count['dessin'], isNull, reason: 'pas dans la grille du collège');
+      // Le français et les maths ne sont plus là tous les jours comme en GS-CP.
+      expect(plan.where((d) => d.contains('lire')).length, lessThan(130 * 0.8));
+    });
+
+    test('lycée : plus de sciences, le code (SNT) présent', () {
+      final plan = days(classForAge(15), domains, 60).expand((d) => d).toList();
+      expect(plan.where((t) => t == 'nature').length, greaterThan(plan.where((t) => t == 'anglais').length));
+      expect(plan, contains('code'));
+    });
+
+    test('GS-CP : le tour de 4 jours ne change pas', () {
+      final plan = days(classForAge(6), domains, 4);
+      expect(plan.where((d) => d.contains('lire')).length, 3);
+    });
+
+    test('un domaine sans leçon à son niveau n\'est pas proposé', () {
+      final plan = days(classForAge(12), ['lire', 'compter', 'anglais', 'nature'], 20).expand((d) => d);
+      expect(plan.toSet(), {'lire', 'compter', 'anglais', 'nature'});
+    });
   });
 }

@@ -302,6 +302,10 @@ Map<String, dynamic> buildTheme(Directory dir) {
     'sources': sources,
     // Domaine pour tous les âges (dessin libre) : jamais caché par le plancher de classe (ADR 0065).
     if (theme['sans_age'] == true) 'sans_age': true,
+    // Domaine que l'école n'enseigne pas (ADR 0069) : l'âge ne dit pas ce que l'enfant sait déjà ; on part de l'entrée de sa
+    // tranche d'âge (`entree`), sans rien tenir pour acquis au-dessus.
+    if (theme['hors_ecole'] == true) 'hors_ecole': true,
+    if (theme['entree'] != null) 'entree': theme['entree'],
     'competences': [for (final sid in order) if (skills[sid] != null) skills[sid]],
   };
 }
@@ -370,7 +374,11 @@ void main(List<String> args) {
   // Domaines : l'ordre de domaines.yaml ; chaque dossier doit y être, et inversement (ADR 0018).
   final domains = load(File('${root.path}/domaines.yaml'));
   final order = List<String>.from(domains['ordre'] as List);
-  final dirs = {for (final d in root.listSync().whereType<Directory>()) d.path.split('/').last: d};
+  // Un domaine = un dossier avec un _theme.yaml (content/videos/ n'en est pas un : liste des chaînes, ADR 0068).
+  final dirs = {
+    for (final d in root.listSync().whereType<Directory>())
+      if (File('${d.path}/_theme.yaml').existsSync()) d.path.split('/').last: d,
+  };
   if (order.toSet().length != order.length || !order.toSet().containsAll(dirs.keys) || !dirs.keys.toSet().containsAll(order)) {
     fail('domaines.yaml', '« ordre » doit lister chaque dossier de content/ une fois');
   }

@@ -14,4 +14,14 @@ void main() {
     expect(QuestionText.isProse('else:'), isFalse);
     expect(QuestionText.isProse('if x > 3:'), isFalse);
   });
+
+  test('la première ligne : consigne si c\'est une phrase, code sinon', () {
+    expect(QuestionText.leads('Voici un programme.'), isTrue);
+    expect(QuestionText.leads('Le lutin exécute :'), isTrue);
+    expect(QuestionText.leads('mettre x à 10'), isFalse, reason: 'vu sur la tablette : une instruction, pas une consigne');
+    expect(QuestionText.leads('x = 3'), isFalse);
+    expect(QuestionText.leads('x vaut 0.'), isTrue, reason: 'une phrase, même sans majuscule');
+    expect(QuestionText.leads("SELECT nom FROM eleves;"), isFalse);
+    expect(QuestionText.leads('def f(x):'), isFalse);
+  });
 }

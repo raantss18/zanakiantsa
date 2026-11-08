@@ -5,6 +5,9 @@ nom: "Les échecs"
 resume: "Les leçons pas à pas, puis de vraies parties contre le robot ou à deux."
 icone: "265f"
 ages: [5, 15]
+# Les échecs ne s'apprennent pas à l'école (ADR 0069) : tout débutant, quel que soit son âge, commence par la marche des
+# pièces ; « Je sais déjà » saute ce qu'il connaît.
+hors_ecole: true
 # Les échecs se jouent et s'apprennent à tout âge : jamais cachés par le plancher de classe (ADR 0065).
 sans_age: true
 # Règles officielles : FIDE Laws of Chess (1er janvier 2023), article 3 « The moves of the pieces ». Hors programme

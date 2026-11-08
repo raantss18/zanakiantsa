@@ -432,10 +432,20 @@ class Topic {
         icon = j['icone'] as String,
         intro = [for (final s in j['intro'] as List? ?? const []) IntroScene(Map<String, dynamic>.from(s as Map))],
         ageless = j['sans_age'] == true,
+        outOfSchool = j['hors_ecole'] == true,
+        _entry = {for (final e in (j['entree'] as Map? ?? const {}).entries) '${e.key}': '${e.value}'},
         skills = [for (final s in j['competences'] as List) Skill(Map<String, dynamic>.from(s as Map))];
 
   /// Domaine pour tous les âges (le dessin libre) : le plancher de classe ne le cache jamais (ADR 0065).
   final bool ageless;
+
+  /// Domaine que l'école n'enseigne pas (le code, les échecs, ADR 0069) : on part de l'entrée de la tranche d'âge.
+  final bool outOfSchool;
+  final Map<String, String> _entry;
+
+  /// Plancher et départ de ce domaine pour un enfant de cette classe (voir [domainLevels]).
+  ({int floor, int start}) levelsFor(int classe) => domainLevels([for (final s in skills) s.ref], classe,
+      ageless: ageless, outOfSchool: outOfSchool, entry: _entry[topicBand] == null ? null : levelRank(_entry[topicBand]!));
 
   /// [title] pour le parent, [name] pour l'enfant (« Les nombres »), [icon] : code Twemoji.
   final String id, title, icon;

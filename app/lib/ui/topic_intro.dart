@@ -7,7 +7,6 @@ import '../activities/draw.dart';
 import '../app_state.dart';
 import '../audio/voice.dart';
 import '../content/content.dart';
-import '../core/progress.dart';
 import '../l10n/l10n.dart';
 import 'session.dart';
 import 'topic_hub.dart';
@@ -20,7 +19,7 @@ import 'universe.dart';
 /// du jour, la séance directement (l'enfant seul n'a qu'un bouton à toucher). Les échecs ont toujours leur accueil.
 /// L'animation d'un domaine convient-elle à cette classe ? Oui tant que sa première leçon n'est pas sous le plancher.
 bool introFits(Topic t, int classe) =>
-    t.ageless || t.skills.isEmpty || t.skills.map((s) => s.ref.level).reduce(min) >= floorForClass(classe);
+    t.ageless || t.skills.isEmpty || t.skills.map((s) => s.ref.level).reduce(min) >= t.levelsFor(classe).floor;
 
 Future<void> openTopic(BuildContext context, AppState app, String topicId, {bool hub = false}) async {
   await app.voice.stop();

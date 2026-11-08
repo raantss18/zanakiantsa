@@ -178,7 +178,18 @@ class NotebookPage extends StatelessWidget {
             Expanded(
               child: ListView(padding: readablePadding(context), children: [
                 _section(tf('Mes compétences : {name}', {'name': tp.name})),
-                for (final s in tp.skills) _skillRow(s, p),
+                // Signalé par Antsa le 2026-11-08 : à 12 ans, le carnet montrait encore « Compter jusqu'à 10 ». Les leçons sous
+                // son plancher ne sont plus à son niveau (ADR 0065) : elles n'y apparaissent plus.
+                for (final s in tp.skills) if (!p.belowFloor(s.id)) _skillRow(s, p),
+                if (tp.skills.any((s) => p.belowFloor(s.id)))
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+                    child: Text(
+                      tf('Les leçons d\'avant le niveau {level} sont acquises pour ton âge : elles ne sont plus dans ton carnet.',
+                          {'level': t(schoolLevels[p.floor])}),
+                      style: TextStyle(fontSize: 18, color: u.onBackground),
+                    ),
+                  ),
                 const SizedBox(height: 16),
                 _section(t('Les erreurs qui reviennent')),
                 if (frequent.isEmpty)

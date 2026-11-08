@@ -235,16 +235,16 @@ class AppState extends ChangeNotifier {
   /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
-  Progress progressOf(Topic t) => Progress([for (final s in t.skills) s.ref], journal,
-      sessionsDone: sessionsDone,
-      startLevel: startLevelIn([for (final s in t.skills) s.ref], startLevelForClass(schoolClass)),
-      floor: t.ageless ? 0 : floorForClass(schoolClass),
-      placed: placed);
+  Progress progressOf(Topic t) {
+    final l = t.levelsFor(schoolClass);
+    return Progress([for (final s in t.skills) s.ref], journal,
+        sessionsDone: sessionsDone, startLevel: l.start, floor: l.floor, placed: placed);
+  }
 
   /// Les domaines proposés à cet enfant (ADR 0065) : ceux qui ont au moins une leçon au-dessus de son plancher, plus le
   /// dessin libre. À 12 ans, plus de « Les sons » ni des suites de maternelle.
   List<Topic> get shownTopics =>
-      [for (final t in topics) if (t.ageless || t.skills.any((s) => s.ref.level >= floorForClass(schoolClass))) t];
+      [for (final t in topics) if (t.ageless || t.skills.any((s) => s.ref.level >= t.levelsFor(schoolClass).floor)) t];
 
   /// Note les compétences réussies au test de départ.
   Future<void> place(Iterable<String> ids) async {
