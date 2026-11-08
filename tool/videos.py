@@ -70,6 +70,7 @@ OFF_TOPIC = re.compile(
     r"|\bsponsoris|webinaire|\bwebinar\b|\bpublicité\b|\bpub\b|#ad\b",
     re.IGNORECASE)
 SHORT = re.compile(r"#shorts?\b", re.IGNORECASE)
+LIVE = re.compile(r"\blive\b|en direct|\bdirect\b|\bstream", re.IGNORECASE)
 NEVER_CATEGORIES = {'20'}  # Gaming
 
 
@@ -87,13 +88,17 @@ def reject(v: dict, c: dict) -> str | None:
     if (st.get('privacyStatus') != 'public' or not st.get('embeddable', False)
             or cd.get('contentRating', {}).get('ytRating') == 'ytAgeRestricted'):
         return 'non intégrable'
-    if sn.get('liveBroadcastContent', 'none') != 'none' or 'liveStreamingDetails' in v:
+    # Directs passés : une « Première » YouTube porte aussi liveStreamingDetails ; on ne refuse donc que les vrais
+    # directs (longs, ou dits « live », « en direct » dans le titre).
+    if sn.get('liveBroadcastContent', 'none') != 'none' or (
+            'liveStreamingDetails' in v and (d > 1800 or LIVE.search(title))):
         return 'direct'
     if SHORT.search(text) or d < 60:
         return 'short'
     if d > c.get('duree_max', 5400):
         return 'trop longue'
-    if sn.get('categoryId') in NEVER_CATEGORIES:
+    # Les chaînes d'échecs sont classées « Jeux vidéo » par YouTube : permis pour elles seules.
+    if sn.get('categoryId') in NEVER_CATEGORIES and 'echecs' not in c.get('domaines', []):
         return 'jeux vidéo'
     if OFF_TOPIC.search(title):
         return 'hors sujet'
