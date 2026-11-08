@@ -408,10 +408,11 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                     const SizedBox(height: 10),
                     Text(
                       widget.video.title,
-                      style: const TextStyle(
+                      // Sur le fond du monde, pas sur une carte : sa couleur de texte (sombre sur fond sombre sinon).
+                      style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w700,
-                        color: ink,
+                        color: app.universe.onBackground,
                       ),
                     ),
                     if (next.isNotEmpty) ...[
