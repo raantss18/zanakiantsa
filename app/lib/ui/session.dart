@@ -439,7 +439,8 @@ class _SessionPageState extends State<SessionPage> {
     // Leçon choisie : diagnostic tant qu'elle n'est pas acquise, même si elle a déjà été commencée.
     final chosen = skill.id == widget.lesson;
     final first = !_oneGo && !_introduced.contains(skill.id) && (never || (chosen && !progress.earned(skill.id)));
-    if (first && _diagnosed.add(skill.id)) {
+    // Mode d'essai (DEV_SKILL, jamais publié) : chaque leçon de la liste sans son diagnostic, pour regarder chaque écran vite.
+    if (devSkill.isEmpty && first && _diagnosed.add(skill.id)) {
       // Les prérequis sous le plancher de la classe ne sont jamais vérifiés : ils sont tenus pour acquis (ADR 0065).
       final pre = progress.checkable(prerequisitesToCheck(skill.ref, [for (final s in topic.skills) s.ref]));
       if (pre.isNotEmpty) {
