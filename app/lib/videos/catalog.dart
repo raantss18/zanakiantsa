@@ -6,11 +6,8 @@ library;
 /// Essais seulement : `--dart-define=VIDEOS_URL=…` lit un autre catalogue (jamais dans une version publiée).
 const catalogueUrl = String.fromEnvironment('VIDEOS_URL', defaultValue: 'https://raantss18.github.io/zanakiantsa/videos.json');
 
-/// Durée maximale d'une vidéo, en secondes, jusqu'au collège (choix d'Antsa, 2026-11-08) ; pas de limite au lycée.
-const maxSeconds = 600;
-
-/// Rang de la 2de dans les classes (app/lib/core/progress.dart) : à partir de là, pas de limite de durée.
-const lyceeRank = 11;
+// Pas de limite de durée, à aucun âge : les vidéos longues sont acceptées tant que la chaîne est éducative (choix
+// d'Antsa, 2026-11-08, qui remplace la limite de 10 min avant le lycée). Le tri se fait par la liste blanche.
 
 class Channel {
   Channel(Map<String, dynamic> j)
@@ -67,17 +64,10 @@ class Catalogue {
   final List<Channel> channels;
   late final List<Video> videos;
 
-  /// Les vidéos pour cet enfant : chaînes de son âge et de la langue de l'app ; 10 min au plus avant le lycée.
-  List<Video> forChild({
-    required int age,
-    required int classe,
-    required String lang,
-  }) => [
+  /// Les vidéos pour cet enfant : chaînes de son âge et de la langue de l'app, quelle que soit la durée.
+  List<Video> forChild({required int age, required String lang}) => [
     for (final v in videos)
-      if (v.channel.lang == lang &&
-          v.channel.fits(age) &&
-          (classe >= lyceeRank || v.seconds <= maxSeconds))
-        v,
+      if (v.channel.lang == lang && v.channel.fits(age)) v,
   ];
 }
 

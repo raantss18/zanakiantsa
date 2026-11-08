@@ -83,12 +83,7 @@ class _VideosPageState extends State<VideosPage> {
   }
 
   List<Video> get pool =>
-      catalogue?.forChild(
-        age: app.age,
-        classe: app.schoolClass,
-        lang: appLang,
-      ) ??
-      const [];
+      catalogue?.forChild(age: app.age, lang: appLang) ?? const [];
 
   Future<void> _play(Video v) async {
     await Navigator.of(context).push(

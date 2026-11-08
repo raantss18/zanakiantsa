@@ -5,8 +5,8 @@ Passe par l'interface officielle YouTube Data API v3 (clé dans la variable YOUT
 jamais dans Git). Ne télécharge aucune vidéo : seulement leurs identifiants, titres et durées ; l'app les lit ensuite avec
 le lecteur officiel de YouTube.
 
-Garde une vidéo si elle est publique, intégrable, sans restriction d'âge, pas en direct, et dure de 1 à 60 min (l'app
-applique ensuite la limite de 10 min jusqu'au collège). Coût : ≈ 10 unités de quota par chaîne (10 000 par jour offertes).
+Garde une vidéo si elle est publique, intégrable, sans restriction d'âge, pas en direct, et dure de 1 à 60 min (pas de
+limite plus courte : les vidéos longues sont permises à tout âge, ADR 0068). Coût : ≈ 10 unités de quota par chaîne (10 000 par jour offertes).
 
   YOUTUBE_API_KEY=… python3 tool/videos.py --out site/videos.json [--par-chaine 200]
 Sans clé : écrit un catalogue vide (l'app affiche alors « pas encore de vidéos »), sans échouer.
@@ -60,8 +60,10 @@ def words(sn: dict) -> str:
 
 def build(channels: list[dict], per_channel: int) -> dict:
     out_channels, videos = [], []
-    ids = [c['id'] for c in channels]
-    uploads = {}
+    # Une entrée est une chaîne (id UC…, on lit toutes ses vidéos) ou une playlist officielle (id PL…, formats courts
+    # d'une chaîne aux épisodes longs, par exemple).
+    ids = [c['id'] for c in channels if c['id'].startswith('UC')]
+    uploads = {c['id']: c['id'] for c in channels if not c['id'].startswith('UC')}
     for i in range(0, len(ids), 50):
         for item in get('channels', part='contentDetails', id=','.join(ids[i:i + 50]), maxResults=50).get('items', []):
             uploads[item['id']] = item['contentDetails']['relatedPlaylists']['uploads']
@@ -71,8 +73,10 @@ def build(channels: list[dict], per_channel: int) -> dict:
             continue
         index = len(out_channels)
         out_channels.append({k: c[k] for k in ('id', 'nom', 'langue', 'ages', 'domaines')})
+        before = len(videos)
         vids, token = [], None
-        while len(vids) < per_channel:
+        wanted = c.get('profondeur', per_channel)
+        while len(vids) < wanted:
             page = get('playlistItems', part='contentDetails', playlistId=uploads[c['id']], maxResults=50,
                        **({'pageToken': token} if token else {}))
             vids += [it['contentDetails']['videoId'] for it in page.get('items', [])]
@@ -103,6 +107,10 @@ def build(channels: list[dict], per_channel: int) -> dict:
                     'p': sn['publishedAt'][:10],
                     'm': words(sn),
                 })
+        mine = videos[before:]
+        short = sum(v['d'] <= 600 for v in mine)
+        print(f"{c['nom'][:40]:40} {c['langue']} {str(c['ages']):8} lues {len(vids):4}  gardées {len(mine):4}  ≤10 min {short:4}",
+              file=sys.stderr)
     return {'genere': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'chaines': out_channels, 'videos': videos}
 
 

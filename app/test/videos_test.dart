@@ -93,43 +93,40 @@ void main() {
       isNot(contains('x')),
       reason: 'vidéo d\'une chaîne absente : ignorée',
     );
-    expect(cat.forChild(age: 6, classe: 2, lang: 'fr').map((v) => v.id), ['a']);
-    expect(cat.forChild(age: 6, classe: 2, lang: 'en').map((v) => v.id), ['e']);
-    expect(cat.forChild(age: 9, classe: 5, lang: 'fr').map((v) => v.id), [
-      'b',
-    ], reason: '« Les volcans » dure 15 min');
+    expect(cat.forChild(age: 6, lang: 'fr').map((v) => v.id), ['a']);
+    expect(cat.forChild(age: 6, lang: 'en').map((v) => v.id), ['e']);
+    expect(cat.forChild(age: 9, lang: 'fr').map((v) => v.id), ['b', 'c']);
   });
 
-  test('10 minutes au plus jusqu\'au collège, pas de limite au lycée', () {
-    expect(cat.forChild(age: 14, classe: 10, lang: 'fr').map((v) => v.id), [
-      'b',
-    ]);
+  test('pas de limite de durée : une longue vidéo éducative est permise même aux petits', () {
     expect(
-      cat.forChild(age: 14, classe: lyceeRank, lang: 'fr').map((v) => v.id),
-      ['b', 'c', 'd'],
+      cat.forChild(age: 9, lang: 'fr').map((v) => v.id),
+      contains('c'),
+      reason: '« Les volcans » dure 15 min',
     );
+    expect(cat.forChild(age: 14, lang: 'fr').map((v) => v.id), [
+      'b',
+      'c',
+      'd',
+    ]);
   });
 
   test('la recherche ne cherche que dans les vidéos permises, sans tenir compte des accents', () {
-    final pool = cat.forChild(age: 9, classe: 5, lang: 'fr');
+    final pool = cat.forChild(age: 9, lang: 'fr');
     expect(search(pool, 'foret').map((v) => v.id), ['b']);
     expect(search(pool, 'Biodiversité jungle').map((v) => v.id), ['b']);
-    expect(
-      search(pool, 'volcan'),
-      isEmpty,
-      reason: 'trop longue pour lui : jamais trouvée',
-    );
+    expect(search(pool, 'volcan').map((v) => v.id), ['c']);
     expect(
       search(pool, 'révolution'),
       isEmpty,
       reason: 'chaîne d\'un autre âge',
     );
     expect(search(pool, ' '), isEmpty);
-    expect(search(cat.forChild(age: 14, classe: lyceeRank, lang: 'fr'), 'révolution 1789').map((v) => v.id), ['d'], reason: 'les nombres comptent');
+    expect(search(cat.forChild(age: 14, lang: 'fr'), 'révolution 1789').map((v) => v.id), ['d'], reason: 'les nombres comptent');
   });
 
   test('liste de départ : pas encore vues d\'abord, puis les vues ; d\'autres vidéos ensuite', () {
-    final pool = cat.forChild(age: 14, classe: lyceeRank, lang: 'fr');
+    final pool = cat.forChild(age: 14, lang: 'fr');
     expect(suggestions(pool, seen: {'d'}).map((v) => v.id).first, isNot('d'));
     expect(suggestions(pool, seen: {'d'}).map((v) => v.id).last, 'd');
     expect(
@@ -149,9 +146,9 @@ void main() {
   });
 
   test('le lecteur n\'accepte que les vidéos permises à cet enfant', () {
-    final pool = cat.forChild(age: 9, classe: 5, lang: 'fr');
+    final pool = cat.forChild(age: 9, lang: 'fr');
     expect(allowedVideo('b', pool), isTrue);
-    expect(allowedVideo('c', pool), isFalse, reason: 'trop longue pour lui');
+    expect(allowedVideo('c', pool), isTrue, reason: 'longue, mais de sa liste');
     expect(allowedVideo('d', pool), isFalse, reason: 'chaîne d\'un autre âge');
     expect(allowedVideo('dQw4w9WgXcQ', pool), isFalse, reason: 'hors des chaînes choisies');
     expect(allowedVideo('', pool), isTrue, reason: 'lecteur pas encore prêt : rien à bloquer');
