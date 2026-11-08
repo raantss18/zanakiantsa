@@ -21,6 +21,12 @@ import 'universe.dart';
 
 /// Charge le catalogue : celui du site, sinon celui gardé de la dernière fois (null : jamais chargé).
 Future<Catalogue?> loadCatalogue(AppState app) async {
+  // Le catalogue change une fois par jour (≈ 3 Mo, compressé en route) : la copie gardée sert pendant 12 h.
+  final when = DateTime.tryParse(await app.store.get('videos_catalogue_date') ?? '');
+  if (when != null && DateTime.now().difference(when) < const Duration(hours: 12)) {
+    final kept = await app.store.get('videos_catalogue');
+    if (kept != null) return Catalogue(jsonDecode(kept) as Map<String, dynamic>);
+  }
   try {
     final r = await http
         .get(Uri.parse(catalogueUrl))
@@ -29,6 +35,7 @@ Future<Catalogue?> loadCatalogue(AppState app) async {
       final body = utf8.decode(r.bodyBytes);
       final c = Catalogue(jsonDecode(body) as Map<String, dynamic>);
       await app.store.set('videos_catalogue', body);
+      await app.store.set('videos_catalogue_date', DateTime.now().toIso8601String());
       return c;
     }
   } catch (_) {

@@ -8,7 +8,7 @@ le lecteur officiel de YouTube.
 Garde une vidéo si elle passe le filtre `reject` (publique, intégrable, sans restriction d'âge, ni short, ni direct, ni
 promotion, ni IA, 1 à 90 min ; les vidéos longues sont permises à tout âge, ADR 0068). Coût : ≈ 10 unités de quota par chaîne (10 000 par jour offertes).
 
-  YOUTUBE_API_KEY=… python3 tool/videos.py --out site/videos.json [--par-chaine 200]
+  YOUTUBE_API_KEY=… python3 tool/videos.py --out site/videos.json [--par-chaine 100]
 Sans clé : écrit un catalogue vide (l'app affiche alors « pas encore de vidéos »), sans échouer.
 """
 import argparse
@@ -181,7 +181,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--chaines', default='content/videos/chaines.yaml')
     ap.add_argument('--out', required=True)
-    ap.add_argument('--par-chaine', type=int, default=200)
+    ap.add_argument('--par-chaine', type=int, default=100)  # 119 chaînes × 100 : ≈ 3,5 Mo, ≈ 1 Mo compressé
     a = ap.parse_args()
     channels = yaml.safe_load(open(a.chaines, encoding='utf8'))['chaines']
     if not os.environ.get('YOUTUBE_API_KEY'):

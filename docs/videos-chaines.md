@@ -1,0 +1,55 @@
+# Chaînes vidéo de Zanak'i Antsa
+
+Généré depuis `content/videos/chaines.yaml` (119 chaînes) par `tool/videos_liste.py`. Une chaîne apparaît dans chaque tranche d'âge et chaque matière qu'elle couvre. Règles (ADR 0068) : chaînes faites par des personnes identifiées, aucune vidéo générée par IA, ni short, ni direct, ni promotion ; une vidéo hors de cette liste ne se lit jamais. Nouvelles chaînes : ticket « Vidéos : chaînes candidates » chaque lundi ; refusées : `ecartees.yaml`.
+
+## 5 à 7 ans
+
+- **Français, lecture** — en français : Alloprof, Réseau Canopé (Les Fondamentaux), Éditions Récréalire (Les Alphas) · en anglais : Alphablocks, Brightly Storytime, Dream English Kids, Jack Hartmann Kids Music Channel, Khan Academy Kids, Scratch Garden, Sesame Street
+- **Mathématiques** — en français : Alloprof, Numberblocks Français, Réseau Canopé (Les Fondamentaux), Éditions Récréalire (Les Alphas) · en anglais : Homeschool Pop, Jack Hartmann Kids Music Channel, Khan Academy Kids, Numberblocks, Scratch Garden, Sesame Street
+- **Sciences** — en français : Alloprof, Il était une fois... (Hello Maestro), Réseau Canopé (Les Fondamentaux) · en anglais : BBC Earth Kids, Free School, Homeschool Pop, Khan Academy Kids, SciShow Kids
+- **Histoire, géographie, monde** — en français : Alloprof, Il était une fois... (Hello Maestro), Réseau Canopé (Les Fondamentaux) · en anglais : Free School, Homeschool Pop
+- **Anglais** — en français : Alloprof, Alphablocks Français, Sam and Mel Anglais pour les Enfants · en anglais : Alphablocks, Brightly Storytime, Dream English Kids, Numberblocks, SciShow Kids, Scratch Garden, Sesame Street, Super Simple Songs
+- **Informatique** : aucune chaîne pour l'instant.
+- **Échecs** : aucune chaîne pour l'instant.
+- **Arts, dessin** — en français : aucune · en anglais : Colourblocks, Draw So Cute, Free School
+- **Musique** — en français : Éditions Récréalire (Les Alphas) · en anglais : Dream English Kids, Free School, Jack Hartmann Kids Music Channel, Scratch Garden, Super Simple Songs
+- **Logique, énigmes, jeux** — en français : aucune · en anglais : Colourblocks
+
+## 8 à 11 ans
+
+- **Français, lecture** — en français : 1 jour, 1 question, Alloprof, Karambolage (ARTE), Motus (France 2), Questions pour un Champion, Réseau Canopé (Les Fondamentaux), Slam (France Télévisions), Éditions Récréalire (Les Alphas) · en anglais : Brightly Storytime, Crash Course Kids, Dream English Kids, Jack Hartmann Kids Music Channel, Khan Academy Kids, Scratch Garden, The Chase, Who Wants To Be A Millionaire?
+- **Mathématiques** — en français : Alloprof, KhanAcademyFrancophone, Micmaths, Paul Olivier, Réseau Canopé (Les Fondamentaux), Yvan Monka, Éditions Récréalire (Les Alphas) · en anglais : Corbettmaths, Cracking The Cryptic, Homeschool Pop, Jack Hartmann Kids Music Channel, Khan Academy, Khan Academy Kids, Math Antics, Math with Mr. J, Scratch Garden
+- **Sciences** — en français : 1 jour, 1 question, Alloprof, C'est pas sorcier, C'est toujours pas sorcier, Il était une fois... (Hello Maestro), Le Monde De Jamy - France Télévisions, Les Débrouillards, Mon Cours De SVT, Muséum national d'Histoire naturelle, Paul Olivier, Réseau Canopé (Les Fondamentaux), e-profs Physique Chimie · en anglais : BBC Earth Kids, Crash Course Kids, Deep Look, Free School, Homeschool Pop, Khan Academy, Khan Academy Kids, MinuteEarth, Mr. DeMaio, NASA Space Place, SciShow Kids, Steve Mould
+- **Histoire, géographie, monde** — en français : 1 jour, 1 question, Alloprof, C'est pas sorcier, C'est toujours pas sorcier, Canal Éducatif à la Demande, Il était une fois... (Hello Maestro), Karambolage (ARTE), Le Monde De Jamy - France Télévisions, Questions pour un Champion, Réseau Canopé (Les Fondamentaux) · en anglais : European Space Agency, ESA, Free School, Homeschool Pop, Khan Academy, MinuteEarth, Mr. DeMaio, NASA Space Place, The Chase, Who Wants To Be A Millionaire?
+- **Anglais** — en français : Alloprof, Sam and Mel Anglais pour les Enfants · en anglais : Brightly Storytime, Crash Course Kids, Dream English Kids, SciShow Kids, Scratch Garden
+- **Informatique** — en français : aucune · en anglais : Khan Academy, Scratch Team
+- **Échecs** — en français : Progresser aux échecs (Marc Quenehen) · en anglais : aucune
+- **Arts, dessin** — en français : Canal Éducatif à la Demande · en anglais : Bob Ross, Circle Line Art School, Draw So Cute, Free School
+- **Musique** — en français : Éditions Récréalire (Les Alphas) · en anglais : Dream English Kids, Free School, Jack Hartmann Kids Music Channel, Scratch Garden
+- **Logique, énigmes, jeux** — en français : Micmaths · en anglais : Circle Line Art School, Cracking The Cryptic, Math Antics
+
+## 12 à 14 ans
+
+- **Français, lecture** — en français : 1 jour, 1 question, Alloprof, Karambolage (ARTE), Le Vortex (ARTE), Les Bons Profs, Motus (France 2), Questions pour un Champion, Slam (France Télévisions) · en anglais : BBC Bitesize – GCSE Revision, The Chase, Who Wants To Be A Millionaire?
+- **Mathématiques** — en français : Alloprof, Hans Amble – Maths au Collège, KhanAcademyFrancophone, Les Bons Profs, Mathador (vulgarisation), Micmaths, Paul Olivier, Yvan Monka · en anglais : Corbettmaths, Cracking The Cryptic, CrashCourse, Eddie Woo, Khan Academy, Math Antics, Math with Mr. J, MindYourDecisions, Numberphile, Stand-up Maths, Up and Atom, Veritasium
+- **Sciences** — en français : 1 jour, 1 question, Alloprof, Balade Mentale, C'est pas sorcier, C'est toujours pas sorcier, DirtyBiology, Il était une fois... (Hello Maestro), Le Monde De Jamy - France Télévisions, Le Vortex (ARTE), Les Débrouillards, Mon Cours De SVT, Monsieur Bidouille, Muséum national d'Histoire naturelle, Paul Olivier, e-profs Physique Chimie · en anglais : Amoeba Sisters, CrashCourse, Deep Look, Khan Academy, MinuteEarth, Mr. DeMaio, PBS Eons, Periodic Videos, Sixty Symbols, SmarterEveryDay, Steve Mould, TED-Ed, The Royal Institution, Up and Atom, Veritasium, minutephysics
+- **Histoire, géographie, monde** — en français : 1 jour, 1 question, Alloprof, Balade Mentale, C'est pas sorcier, C'est toujours pas sorcier, Canal Éducatif à la Demande, DirtyBiology, Hygiène Mentale, INA Histoire, Il était une fois... (Hello Maestro), Karambolage (ARTE), L'Histoire nous le dira, Le Monde De Jamy - France Télévisions, Le Vortex (ARTE), Les Bons Profs, Mathador (vulgarisation), Monsieur Bidouille, Musée du Louvre, Questions pour un Champion · en anglais : CGP Grey, CrashCourse, Dr. Becky, European Space Agency, ESA, Extra History, Khan Academy, Lateral with Tom Scott, Map Men, MinuteEarth, Mr. DeMaio, NASA, PBS Eons, Smarthistory, TED-Ed, The Chase, The Royal Institution, Who Wants To Be A Millionaire?
+- **Anglais** — en français : Alloprof, Les Bons Profs · en anglais : BBC Bitesize – GCSE Revision, BBC Learning English, TED-Ed
+- **Informatique** — en français : aucune · en anglais : CrashCourse, Khan Academy, Scratch Team, Sebastian Lague, The Coding Train
+- **Échecs** — en français : Progresser aux échecs (Marc Quenehen), Échecs – Blitzstream · en anglais : ChessNetwork, Hanging Pawns, John Bartholomew
+- **Arts, dessin** — en français : Canal Éducatif à la Demande, Musée du Louvre · en anglais : Bob Ross, Circle Line Art School, Smarthistory
+- **Musique** — en français : France Musique · en anglais : 12tone, Music Matters, Sound Field
+- **Logique, énigmes, jeux** — en français : Hygiène Mentale, Micmaths · en anglais : Circle Line Art School, Cracking The Cryptic, Lateral with Tom Scott, Math Antics, MindYourDecisions, Numberphile, Sebastian Lague, Stand-up Maths, The Coding Train
+
+## 15 ans et plus
+
+- **Français, lecture** — en français : Alloprof, Karambolage (ARTE), Le Vortex (ARTE), Les Bons Profs, Motus (France 2), Questions pour un Champion, Slam (France Télévisions) · en anglais : BBC Bitesize – GCSE Revision, The Chase, Who Wants To Be A Millionaire?
+- **Mathématiques** — en français : Alloprof, Hans Amble – Maths au Collège, Hans Amble – Maths au Lycée, KhanAcademyFrancophone, Les Bons Profs, Mathador (vulgarisation), Micmaths, Paul Olivier, ScienceEtonnante, Yvan Monka · en anglais : 3Blue1Brown, Corbettmaths, Cracking The Cryptic, CrashCourse, Eddie Woo, Khan Academy, Mathologer, MindYourDecisions, Numberphile, Stand-up Maths, Up and Atom, Veritasium
+- **Sciences** — en français : Alloprof, Balade Mentale, C'est pas sorcier, DirtyBiology, Il était une fois... (Hello Maestro), Le Monde De Jamy - France Télévisions, Le Réveilleur, Le Vortex (ARTE), Mon Cours De SVT, Monsieur Bidouille, Muséum national d'Histoire naturelle, Paul Olivier, ScienceEtonnante, e-profs Physique Chimie · en anglais : Amoeba Sisters, CrashCourse, Deep Look, Khan Academy, MinuteEarth, PBS Eons, PBS Space Time, Periodic Videos, Sixty Symbols, SmarterEveryDay, Steve Mould, TED-Ed, The Royal Institution, Up and Atom, Veritasium, minutephysics
+- **Histoire, géographie, monde** — en français : Alloprof, Balade Mentale, C'est pas sorcier, Canal Éducatif à la Demande, DirtyBiology, Géopolitis (RTS), Hygiène Mentale, INA Histoire, Il était une fois... (Hello Maestro), Karambolage (ARTE), L'Histoire nous le dira, Le Dessous des Cartes - ARTE, Le Monde De Jamy - France Télévisions, Le Précepteur, Le Vortex (ARTE), Les Bons Profs, Mathador (vulgarisation), Monsieur Bidouille, Monsieur Phi, Musée du Louvre, Questions pour un Champion · en anglais : CGP Grey, CrashCourse, Dr. Becky, EconplusDal, European Space Agency, ESA, Extra History, Khan Academy, Lateral with Tom Scott, Map Men, Marginal Revolution University, MinuteEarth, NASA, PBS Eons, PBS Space Time, QI, Smarthistory, TED-Ed, The Chase, The Royal Institution, Who Wants To Be A Millionaire?, Wireless Philosophy
+- **Anglais** — en français : Alloprof, Les Bons Profs · en anglais : BBC Bitesize – GCSE Revision, BBC Learning English, TED-Ed
+- **Informatique** — en français : aucune · en anglais : Ben Eater, CS50, Computerphile, CrashCourse, Khan Academy, Sebastian Lague, The Coding Train
+- **Échecs** — en français : Progresser aux échecs (Marc Quenehen), Échecs – Blitzstream · en anglais : ChessNetwork, Hanging Pawns, John Bartholomew
+- **Arts, dessin** — en français : Canal Éducatif à la Demande, Musée du Louvre · en anglais : Bob Ross, Circle Line Art School, Smarthistory
+- **Musique** — en français : France Musique · en anglais : 12tone, Music Matters, Sound Field
+- **Logique, énigmes, jeux** — en français : Hygiène Mentale, Micmaths · en anglais : 3Blue1Brown, Circle Line Art School, Cracking The Cryptic, Lateral with Tom Scott, Mathologer, MindYourDecisions, Numberphile, Sebastian Lague, Stand-up Maths, The Coding Train
