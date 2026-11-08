@@ -148,6 +148,15 @@ void main() {
     expect(cat.channels[1].fits(15), isFalse, reason: 'un maximum sous 18 reste un maximum');
   });
 
+  test('le lecteur n\'accepte que les vidéos permises à cet enfant', () {
+    final pool = cat.forChild(age: 9, classe: 5, lang: 'fr');
+    expect(allowedVideo('b', pool), isTrue);
+    expect(allowedVideo('c', pool), isFalse, reason: 'trop longue pour lui');
+    expect(allowedVideo('d', pool), isFalse, reason: 'chaîne d\'un autre âge');
+    expect(allowedVideo('dQw4w9WgXcQ', pool), isFalse, reason: 'hors des chaînes choisies');
+    expect(allowedVideo('', pool), isTrue, reason: 'lecteur pas encore prêt : rien à bloquer');
+  });
+
   test('durée écrite', () {
     expect(cat.videos.first.length, '4 min');
     expect(cat.videos.firstWhere((v) => v.id == 'd').length, '25 min');

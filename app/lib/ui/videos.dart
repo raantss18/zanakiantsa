@@ -5,6 +5,7 @@ library;
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
@@ -324,6 +325,9 @@ class _VideoCard extends StatelessWidget {
 /// Le lecteur officiel YouTube (IFrame API), en mode confidentialité renforcée (youtube-nocookie). Rien ne sort de l'app :
 /// le titre, le logo et les vidéos suggérées n'ouvrent ni YouTube ni le navigateur. Vue à 60 % : marquée « Vu ». Après,
 /// d'autres vidéos sont proposées, toujours dans les chaînes choisies.
+/// Liste blanche stricte : une vidéo hors de la liste de l'enfant lancée dans le lecteur est arrêtée aussitôt, et un écran
+/// de l'app couvre le lecteur en pause et à la fin (là où YouTube montre d'autres vidéos).
+/// Plein écran : bouton du lecteur, bouton de l'app, ou tablette tournée ; le retour Android en sort.
 class VideoPlayerPage extends StatefulWidget {
   const VideoPlayerPage({super.key, required this.video, required this.pool});
   final Video video;
@@ -342,14 +346,16 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
           privacyEnhancedMode: true,
           strictRelatedVideos: true,
           showVideoAnnotations: false,
-          showFullscreenButton: false,
+          showFullscreenButton: true,
           playsInline: true,
           interfaceLanguage: appLang,
           captionLanguage: appLang,
         ),
       );
   bool marked = false;
+  bool blocked = false;
   Set<String> seen = {};
+  PlayerState state = PlayerState.unknown;
 
   @override
   void initState() {
@@ -367,7 +373,122 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     // Vidéo finie : vue, même si la durée du catalogue était mal connue.
     controller.listen((v) {
       if (v.playerState == PlayerState.ended) _seen();
+      if (v.playerState != state) {
+        if (mounted) setState(() => state = v.playerState);
+        if (v.playerState == PlayerState.buffering ||
+            v.playerState == PlayerState.playing ||
+            v.playerState == PlayerState.unStarted) {
+          _check();
+        }
+      }
     });
+    controller.setFullScreenListener(_fullScreen);
+  }
+
+  /// Vérifie la vidéo réellement chargée dans le lecteur : hors de la liste de l'enfant, elle est arrêtée.
+  Future<void> _check() async {
+    final String id;
+    try {
+      id = (await controller.videoData).videoId;
+    } catch (_) {
+      return;
+    }
+    if (!mounted || id == widget.video.id || allowedVideo(id, widget.pool)) {
+      return;
+    }
+    await controller.stopVideo();
+    if (mounted) setState(() => blocked = true);
+  }
+
+  Future<void> _back() async {
+    setState(() => blocked = false);
+    await controller.loadVideoById(videoId: widget.video.id);
+  }
+
+  /// Plein écran : barres du système cachées, tablette en paysage ; au retour, tout redevient comme avant.
+  void _fullScreen(bool on) {
+    SystemChrome.setEnabledSystemUIMode(
+      on ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge,
+    );
+    SystemChrome.setPreferredOrientations(
+      on
+          ? const [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]
+          : const [],
+    );
+  }
+
+  /// Par-dessus le lecteur (en ligne et en plein écran) : en pause, à la fin ou sur une vidéo bloquée, un écran de
+  /// l'app cache les vidéos que YouTube propose ; on y relance la lecture, et on entre ou sort du plein écran.
+  Widget _controls(BuildContext context, bool fullScreen) {
+    final cover =
+        blocked ||
+        state == PlayerState.paused ||
+        state == PlayerState.ended;
+    final full = Semantics(
+      button: true,
+      label: fullScreen ? t('Quitter le plein écran') : t('Plein écran'),
+      child: _RoundButton(
+        icon: fullScreen ? Icons.fullscreen_exit : Icons.fullscreen,
+        onTap: controller.toggleFullScreen,
+      ),
+    );
+    if (!cover) return const SizedBox.shrink();
+    final (IconData icon, String label, VoidCallback onTap) = blocked
+        ? (Icons.replay, t('Revenir à ma vidéo'), _back)
+        : state == PlayerState.ended
+        ? (Icons.replay, t('Revoir'), () => controller.seekTo(seconds: 0))
+        : (Icons.play_arrow_rounded, t('Reprendre'), controller.playVideo);
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () {},
+      child: ColoredBox(
+        color: const Color(0xE6000000),
+        child: Stack(
+          children: [
+            Center(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (blocked)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 12),
+                          child: Text(
+                            t('Cette vidéo n\'est pas dans ta liste.'),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                      FilledButton.icon(
+                        onPressed: onTap,
+                        style: FilledButton.styleFrom(
+                          minimumSize: const Size(64, 64),
+                          backgroundColor: Colors.white,
+                          foregroundColor: ink,
+                          textStyle: const TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        icon: Icon(icon, size: 36),
+                        label: Text(label),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(right: 8, bottom: 8, child: full),
+          ],
+        ),
+      ),
+    );
   }
 
   Future<void> _seen() async {
@@ -380,6 +501,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
 
   @override
   void dispose() {
+    _fullScreen(false);
     controller.close();
     super.dispose();
   }
@@ -403,6 +525,25 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                       child: YoutubePlayer(
                         controller: controller,
                         aspectRatio: 16 / 9,
+                        controlsBuilder: _controls,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: FilledButton.icon(
+                        onPressed: controller.enterFullScreen,
+                        style: FilledButton.styleFrom(
+                          minimumSize: const Size(48, 52),
+                          backgroundColor: app.universe.onBackground,
+                          foregroundColor: app.universe.night ? ink : Colors.white,
+                          textStyle: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        icon: const Icon(Icons.fullscreen, size: 28),
+                        label: Text(t('Plein écran')),
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -448,4 +589,24 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
       ),
     );
   }
+}
+
+class _RoundButton extends StatelessWidget {
+  const _RoundButton({required this.icon, required this.onTap});
+  final IconData icon;
+  final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) => Material(
+    color: Colors.white,
+    shape: const CircleBorder(),
+    child: InkWell(
+      customBorder: const CircleBorder(),
+      onTap: onTap,
+      child: SizedBox(
+        width: 56,
+        height: 56,
+        child: Icon(icon, size: 34, color: ink),
+      ),
+    ),
+  );
 }

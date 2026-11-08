@@ -153,3 +153,8 @@ List<Video> more(
             v.channel.domains.any(after.channel.domains.contains)))
       v,
 ].take(count).toList();
+
+/// Le lecteur ne joue que les vidéos permises à cet enfant (liste blanche, son âge, sa durée) : toute autre vidéo
+/// lancée depuis le lecteur YouTube (fin de vidéo, vidéo suggérée) est arrêtée aussitôt.
+bool allowedVideo(String id, List<Video> pool) =>
+    id.isEmpty || pool.any((v) => v.id == id);
