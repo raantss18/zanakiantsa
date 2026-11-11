@@ -74,7 +74,26 @@
     "hg2de": "https://www.snes.edu/IMG/pdf/hist-geog_annexe-1_2e_bo.pdf",
     "hg1re": "https://www.snes.edu/wp-content/uploads/hist-geog_annexe-2_1eg_bo.pdf",
     "c2qm": "https://montbeliard1.circo25.ac-besancon.fr/wp-content/uploads/sites/20/2020/08/Cycle-2-avec-modifications-apparentes.pdf",
-    "hgtle": "https://eduscol.education.fr/document/23416/download"
+    "hgtle": "https://eduscol.education.fr/document/23416/download",
+    "ed6h1": "https://eduscol.education.fr/document/16750/download",
+    "ed6g1": "https://eduscol.education.fr/document/16777/download",
+    "ed4h2": "https://eduscol.education.fr/document/17854/download",
+    "ed4g1": "https://eduscol.education.fr/document/17878/download",
+    "ed3h1": "https://eduscol.education.fr/document/17860/download",
+    "ed3h1b": "https://eduscol.education.fr/document/29242/download",
+    "onu_wpp": "https://www.un.org/sustainabledevelopment/blog/2024/07/press-release-wpp2024/",
+    "onu_wup": "https://www.un.org/development/desa/en/news/population/2018-revision-of-world-urbanization-prospects.html",
+    "onu_odd2": "https://www.un.org/sustainabledevelopment/fr/hunger/",
+    "onu_odd6": "https://www.un.org/sustainabledevelopment/fr/water-and-sanitation/",
+    "onu_odd7": "https://www.un.org/sustainabledevelopment/fr/energy/",
+    "oqlf": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17570398/transition-demographique",
+    "insee_enr": "https://www.insee.fr/fr/metadonnees/definition/c1898",
+    "insee_nav": "https://www.insee.fr/fr/statistiques/fichier/2383177/fiche-depl-dom-travail.pdf",
+    "constitution": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur",
+    "loi1905": "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006070169",
+    "loi2004": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000417977",
+    "an1936": "https://www.assemblee-nationale.fr/dyn/histoire/il-y-a-90-ans-le-front-populaire-et-les-lois-sociales-de-la-republique/des-accords-de-matignon-aux-cinq-premieres-lois-adoptees",
+    "cnam1936": "https://www.cnam.fr/actualites/institutionnel/les-conges-payes-ont-90-ans"
   },
   "competences": [
     {
@@ -4931,6 +4950,564 @@
       }
     },
     {
+      "id": "premiers-etats-ecritures",
+      "titre": "Du Néolithique aux premiers États et aux premières écritures",
+      "niveau": "6e",
+      "prerequis": [
+        "grandes-periodes"
+      ],
+      "programme": {
+        "source": "c3hg",
+        "texte": "La longue histoire de l’humanité et des migrations : la « révolution » néolithique ; premiers États, premières écritures (Orient ancien : Égypte ou Mésopotamie)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Au Néolithique, les humains deviennent agriculteurs et éleveurs et vivent en villages. Puis, au Proche-Orient, naissent la ville, l'État et l'écriture, vers 3300-3000 avant J.-C.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : agriculture et élevage au milieu du IXe millénaire avant J.-C., dans le Croissant fertile ; écriture vers 3300-3000 avant J.-C., en Mésopotamie et en Égypte.",
+        "exemple": "Exemple : Uruk, en Mésopotamie. Ses grands monuments montrent qu'elle est devenue une ville vers 3500 avant J.-C. Un roi-prêtre la gouverne : c'est un État.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Au milieu du IXe millénaire avant J.-C., où apparaissent l'agriculture et l'élevage ?",
+          "nom": "Dans le Croissant fertile, au Proche-Orient.",
+          "explication": "Les découvertes situent leurs débuts dans le Croissant fertile. Ils se diffusent ensuite, lentement, vers d'autres régions.",
+          "pieges": [
+            {
+              "texte": "En Europe.",
+              "pourquoi": "En Europe, les villages d'agriculteurs s'installent plus tard, entre 7000 et 6500 avant J.-C."
+            },
+            {
+              "texte": "Nulle part : à cette époque, tous les humains sont nomades.",
+              "pourquoi": "C'est justement le Néolithique qui voit naître l'agriculture, l'élevage et les villages."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi écrit-on la « révolution » néolithique avec des guillemets ?",
+          "nom": "Parce que ce grand changement a été lent, sur plusieurs millénaires.",
+          "explication": "Le passage à l'agriculture et à l'élevage s'étale du IXe au IIIe millénaire avant J.-C. : c'est plutôt une évolution.",
+          "pieges": [
+            {
+              "texte": "Parce que les paysans se révoltent contre un roi.",
+              "pourquoi": "Ici, « révolution » veut dire grand changement de mode de vie, pas une révolte."
+            },
+            {
+              "texte": "Parce que le changement s'est fait en une seule année.",
+              "pourquoi": "C'est l'inverse : il a duré des milliers d'années."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il quand les humains se sédentarisent ?",
+          "nom": "Ils vivent en villages et la population augmente.",
+          "explication": "Se sédentariser, c'est rester au même endroit. Avec les villages, la population augmente, et la propriété des terres apparaît.",
+          "pieges": [
+            {
+              "texte": "Ils se déplacent sans cesse pour suivre le gibier.",
+              "pourquoi": "C'est le mode de vie des chasseurs-cueilleurs nomades, avant le Néolithique."
+            },
+            {
+              "texte": "Ils cessent de fabriquer des objets.",
+              "pourquoi": "Au contraire : la céramique apparaît au VIIIe millénaire avant J.-C."
+            }
+          ]
+        },
+        {
+          "texte": "Vers quand apparaît l'écriture en Mésopotamie et en Égypte ?",
+          "nom": "Vers 3300-3000 avant J.-C.",
+          "explication": "Les plus anciens témoignages viennent de Sumer, en Mésopotamie ; en Égypte, les premiers hiéroglyphes datent de la fin du IVe millénaire avant J.-C.",
+          "pieges": [
+            {
+              "texte": "Au milieu du IXe millénaire avant J.-C.",
+              "pourquoi": "C'est l'époque des débuts de l'agriculture, bien avant l'écriture."
+            },
+            {
+              "texte": "Vers l'an 1 de notre ère.",
+              "pourquoi": "C'est plus de 3 000 ans trop tard."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle l'écriture des tablettes de Mésopotamie ?",
+          "nom": "L'écriture cunéiforme.",
+          "explication": "En Mésopotamie, au IVe millénaire avant J.-C., on passe de signes sur des cachets à une écriture sur tablettes : le cunéiforme.",
+          "pieges": [
+            {
+              "texte": "Les hiéroglyphes.",
+              "pourquoi": "Les hiéroglyphes sont l'écriture de l'Égypte, pas de la Mésopotamie."
+            },
+            {
+              "texte": "L'écriture démotique.",
+              "pourquoi": "C'est une écriture d'Égypte, née bien plus tard, vers 650 avant J.-C."
+            }
+          ]
+        },
+        {
+          "texte": "Dans ces premiers États, qui sait écrire ?",
+          "nom": "Les scribes.",
+          "explication": "L'écriture est alors réservée aux scribes : on a même retrouvé leurs tablettes d'école.",
+          "pieges": [
+            {
+              "texte": "Tous les enfants du village.",
+              "pourquoi": "L'écriture est réservée aux scribes, pas à tous les habitants."
+            },
+            {
+              "texte": "Seulement les paysans, pour leurs récoltes.",
+              "pourquoi": "Ce sont les scribes qui écrivent, par exemple les comptes."
+            }
+          ]
+        },
+        {
+          "texte": "À quoi servent les plus anciens écrits ?",
+          "nom": "À compter et à faire des listes.",
+          "explication": "On y trouve des listes de mots rangés par thèmes, des documents de comptes et des exercices d'élèves scribes.",
+          "pieges": [
+            {
+              "texte": "À écrire des romans d'aventure.",
+              "pourquoi": "Les plus anciennes tablettes sont des listes, des comptes et des exercices."
+            },
+            {
+              "texte": "À rien : ce sont des dessins pour décorer.",
+              "pourquoi": "Ce sont de vrais textes : on y lit des mots et des comptes."
+            }
+          ]
+        },
+        {
+          "texte": "Pour les historiens, qu'est-ce qu'un des premiers États ?",
+          "nom": "Une autorité, comme un roi, avec des lois et une administration.",
+          "explication": "À Uruk, un roi-prêtre gouverne. L'État, c'est ce pouvoir du roi et l'organisation qui fait appliquer ses décisions.",
+          "pieges": [
+            {
+              "texte": "Un simple village de paysans.",
+              "pourquoi": "Un village n'a pas forcément de roi ni d'administration ; l'État, si."
+            },
+            {
+              "texte": "Une république où tous les habitants votent.",
+              "pourquoi": "Les premiers États sont des monarchies, comme celle du roi-prêtre d'Uruk."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "From the Neolithic to the first states and the first writing",
+        "idee": "In the Neolithic, people become farmers and herders and live in villages. Then, in the Near East, towns, states and writing appear, around 3300-3000 BC.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: farming and herding in the middle of the 9th millennium BC, in the Fertile Crescent; writing around 3300-3000 BC, in Mesopotamia and Egypt.",
+          "exemple": "Example: Uruk, in Mesopotamia. Its large monuments show that it had become a town by around 3500 BC. A priest-king rules it: it's a state.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In the middle of the 9th millennium BC, where do farming and herding appear?",
+            "nom": "In the Fertile Crescent, in the Near East.",
+            "explication": "Discoveries place their beginnings in the Fertile Crescent. They then spread slowly to other regions.",
+            "pieges": [
+              {
+                "texte": "In Europe.",
+                "pourquoi": "In Europe, farming villages settle later, between 7000 and 6500 BC."
+              },
+              {
+                "texte": "Nowhere: at that time, all humans are nomads.",
+                "pourquoi": "The Neolithic is precisely when farming, herding and villages begin."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we write the Neolithic « revolution » in quotation marks?",
+            "nom": "Because this great change was slow, over several thousand years.",
+            "explication": "The move to farming and herding stretches from the 9th to the 3rd millennium BC: it's more of an evolution.",
+            "pieges": [
+              {
+                "texte": "Because the farmers revolt against a king.",
+                "pourquoi": "Here, « revolution » means a great change in the way of life, not a revolt."
+              },
+              {
+                "texte": "Because the change happened in a single year.",
+                "pourquoi": "It's the opposite: it lasted thousands of years."
+              }
+            ]
+          },
+          {
+            "texte": "What happens when people settle down?",
+            "nom": "They live in villages and the population grows.",
+            "explication": "Settling down means staying in one place. With villages, the population grows, and land ownership appears.",
+            "pieges": [
+              {
+                "texte": "They keep moving to follow the game.",
+                "pourquoi": "That's the way of life of nomadic hunter-gatherers, before the Neolithic."
+              },
+              {
+                "texte": "They stop making objects.",
+                "pourquoi": "On the contrary: pottery appears in the 8th millennium BC."
+              }
+            ]
+          },
+          {
+            "texte": "Around when does writing appear in Mesopotamia and Egypt?",
+            "nom": "Around 3300-3000 BC.",
+            "explication": "The oldest evidence comes from Sumer, in Mesopotamia; in Egypt, the first hieroglyphs date from the end of the 4th millennium BC.",
+            "pieges": [
+              {
+                "texte": "In the middle of the 9th millennium BC.",
+                "pourquoi": "That's when farming begins, long before writing."
+              },
+              {
+                "texte": "Around the year 1 AD.",
+                "pourquoi": "That's more than 3,000 years too late."
+              }
+            ]
+          },
+          {
+            "texte": "What is the writing on the tablets of Mesopotamia called?",
+            "nom": "Cuneiform writing.",
+            "explication": "In Mesopotamia, in the 4th millennium BC, people move from signs on seals to writing on tablets: cuneiform.",
+            "pieges": [
+              {
+                "texte": "Hieroglyphs.",
+                "pourquoi": "Hieroglyphs are the writing of Egypt, not Mesopotamia."
+              },
+              {
+                "texte": "Demotic writing.",
+                "pourquoi": "It's an Egyptian script, born much later, around 650 BC."
+              }
+            ]
+          },
+          {
+            "texte": "In these first states, who knows how to write?",
+            "nom": "The scribes.",
+            "explication": "Writing is then reserved for scribes: their school tablets have even been found.",
+            "pieges": [
+              {
+                "texte": "All the village children.",
+                "pourquoi": "Writing is reserved for scribes, not for all the inhabitants."
+              },
+              {
+                "texte": "Only the farmers, for their harvests.",
+                "pourquoi": "It's the scribes who write, for example the accounts."
+              }
+            ]
+          },
+          {
+            "texte": "What are the oldest written texts used for?",
+            "nom": "For counting and making lists.",
+            "explication": "They contain lists of words grouped by theme, accounts and exercises by student scribes.",
+            "pieges": [
+              {
+                "texte": "For writing adventure novels.",
+                "pourquoi": "The oldest tablets are lists, accounts and exercises."
+              },
+              {
+                "texte": "For nothing: they're decorative drawings.",
+                "pourquoi": "They're real texts: you can read words and accounts in them."
+              }
+            ]
+          },
+          {
+            "texte": "For historians, what is one of the first states?",
+            "nom": "An authority, such as a king, with laws and an administration.",
+            "explication": "In Uruk, a priest-king rules. The state is this power of the king and the organisation that carries out his decisions.",
+            "pieges": [
+              {
+                "texte": "A simple farming village.",
+                "pourquoi": "A village doesn't necessarily have a king or an administration; a state does."
+              },
+              {
+                "texte": "A republic where all the inhabitants vote.",
+                "pourquoi": "The first states are monarchies, like the priest-king's in Uruk."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "habiter-metropole",
+      "titre": "Habiter une métropole",
+      "niveau": "6e",
+      "prerequis": [
+        "lire-carte"
+      ],
+      "programme": {
+        "source": "c3hg",
+        "texte": "Habiter une métropole : les métropoles et leurs habitants ; la ville de demain."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une métropole est une très grande ville qui attire habitants et activités. On y vit, on y travaille, on la visite : chacun l'habite à sa façon. La ville de demain cherche à être plus durable.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Une métropole : beaucoup d'habitants, des emplois, des pouvoirs de décision, des liens avec le monde, et des habitants très divers.",
+        "exemple": "Exemple : Léa vit en banlieue. Chaque matin, elle prend le train pour travailler au centre, et rentre le soir. Elle fait la navette : c'est une migrante pendulaire.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'une métropole ?",
+          "nom": "Une très grande ville qui concentre habitants, emplois et pouvoirs de décision.",
+          "explication": "Une métropole est un ensemble urbain de grande taille. Elle rassemble aussi des fonctions de commandement, d'innovation et de culture, reliées au monde.",
+          "pieges": [
+            {
+              "texte": "Un petit village à la campagne.",
+              "pourquoi": "Une métropole est un ensemble urbain de très grande taille."
+            },
+            {
+              "texte": "N'importe quelle ville qui a une mairie.",
+              "pourquoi": "Une métropole est plus que cela : elle concentre aussi des emplois et des pouvoirs de décision."
+            }
+          ]
+        },
+        {
+          "texte": "Depuis 2007, quelle part de l'humanité vit en ville ?",
+          "nom": "Plus de la moitié.",
+          "explication": "Depuis 2007, plus d'un humain sur deux habite en ville ; ce serait probablement les deux tiers vers 2050.",
+          "pieges": [
+            {
+              "texte": "Moins d'un quart.",
+              "pourquoi": "C'est beaucoup trop peu : la part des urbains dépasse la moitié."
+            },
+            {
+              "texte": "Presque tout le monde.",
+              "pourquoi": "Une grande partie vit encore hors des villes : on prévoit environ les deux tiers en ville vers 2050."
+            }
+          ]
+        },
+        {
+          "texte": "Qui habite une métropole, au sens des géographes ?",
+          "nom": "Ceux qui y vivent, ceux qui viennent y travailler, les touristes et les visiteurs.",
+          "explication": "Habiter, ce n'est pas seulement y dormir : résidents, travailleurs venus chaque jour, touristes et visiteurs pratiquent la ville chacun à leur façon.",
+          "pieges": [
+            {
+              "texte": "Seulement ceux qui y dorment.",
+              "pourquoi": "Habiter ne se réduit pas à résider : travailler ou se promener dans une ville, c'est aussi l'habiter."
+            },
+            {
+              "texte": "Seulement les touristes.",
+              "pourquoi": "Les touristes ne sont qu'une partie des habitants : il y a d'abord les résidents."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'un migrant pendulaire ?",
+          "nom": "Une personne qui fait régulièrement l'aller-retour entre son logement et son travail.",
+          "explication": "Comme le balancier d'une pendule, elle va et revient : l'Insee parle de navettes entre domicile et travail.",
+          "pieges": [
+            {
+              "texte": "Une personne qui part vivre dans un autre pays.",
+              "pourquoi": "Elle change de lieu de vie ; le pendulaire, lui, rentre chez lui chaque soir."
+            },
+            {
+              "texte": "Un touriste en vacances.",
+              "pourquoi": "Le touriste vient pour ses loisirs, puis repart ; il ne fait pas la navette pour travailler."
+            }
+          ]
+        },
+        {
+          "texte": "Pour l'ONU, une mégapole est une agglomération de plus de combien d'habitants ?",
+          "nom": "10 millions.",
+          "explication": "Au-delà de 10 millions d'habitants, on parle de mégapole. En 2018, la plus grande, Tokyo, compte environ 37 millions d'habitants.",
+          "pieges": [
+            {
+              "texte": "10 000.",
+              "pourquoi": "C'est mille fois trop peu : le seuil est de 10 millions."
+            },
+            {
+              "texte": "1 milliard.",
+              "pourquoi": "Aucune ville n'est aussi peuplée : la plus grande, Tokyo, compte environ 37 millions d'habitants."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est un problème fréquent dans les métropoles ?",
+          "nom": "La pollution de l'air et le bruit.",
+          "explication": "La croissance des métropoles pèse sur la qualité de vie : air pollué, bruit, besoins en eau et en énergie.",
+          "pieges": [
+            {
+              "texte": "Le manque d'emplois partout.",
+              "pourquoi": "Les métropoles concentrent au contraire beaucoup d'emplois."
+            },
+            {
+              "texte": "Le silence des rues.",
+              "pourquoi": "Le bruit est justement une des gênes des métropoles."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une métropole, des quartiers très riches et très pauvres vivent séparés. Comment appelle-t-on cela ?",
+          "nom": "La ségrégation.",
+          "explication": "La ségrégation sépare les habitants selon leurs moyens ; elle rend plus difficiles les rencontres et la vie ensemble.",
+          "pieges": [
+            {
+              "texte": "Le recensement.",
+              "pourquoi": "Le recensement compte les habitants ; il ne les sépare pas."
+            },
+            {
+              "texte": "Le tourisme.",
+              "pourquoi": "Le tourisme fait venir des visiteurs ; il ne désigne pas la séparation des quartiers."
+            }
+          ]
+        },
+        {
+          "texte": "Pour une ville de demain plus durable, quelle idée va dans le bon sens ?",
+          "nom": "Limiter l'étalement, qui coûte cher en énergie et en trajets.",
+          "explication": "Une ville qui s'étale allonge les trajets et augmente la dépense d'énergie. La ville de demain dépend des choix faits aujourd'hui.",
+          "pieges": [
+            {
+              "texte": "Construire toujours plus loin dans les champs.",
+              "pourquoi": "C'est l'étalement : il allonge les trajets et augmente la dépense d'énergie."
+            },
+            {
+              "texte": "Ne rien décider : la ville de demain se fera toute seule.",
+              "pourquoi": "La ville de demain résulte des choix faits aujourd'hui par les habitants et les élus."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Living in a metropolis",
+        "idee": "A metropolis is a very large city that draws people and activities. People live, work or visit there: each inhabits it in their own way. The city of tomorrow tries to be more sustainable.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A metropolis: many inhabitants, jobs, decision-making power, links with the world, and very varied inhabitants.",
+          "exemple": "Example: Léa lives in the suburbs. Every morning she takes the train to work in the centre, and comes home in the evening. She commutes: she's a daily commuter.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a metropolis?",
+            "nom": "A very large city that concentrates inhabitants, jobs and decision-making power.",
+            "explication": "A metropolis is a very large urban area. It also gathers leadership, innovation and cultural functions, linked to the world.",
+            "pieges": [
+              {
+                "texte": "A small village in the countryside.",
+                "pourquoi": "A metropolis is a very large urban area."
+              },
+              {
+                "texte": "Any town with a town hall.",
+                "pourquoi": "A metropolis is more than that: it also concentrates jobs and decision-making power."
+              }
+            ]
+          },
+          {
+            "texte": "Since 2007, what share of humanity lives in towns and cities?",
+            "nom": "More than half.",
+            "explication": "Since 2007, more than one person in two lives in a town or city; it will probably be two thirds by around 2050.",
+            "pieges": [
+              {
+                "texte": "Less than a quarter.",
+                "pourquoi": "That's far too few: the urban share is over half."
+              },
+              {
+                "texte": "Almost everyone.",
+                "pourquoi": "Many people still live outside towns: about two thirds are expected to be urban by 2050."
+              }
+            ]
+          },
+          {
+            "texte": "Who inhabits a metropolis, as geographers see it?",
+            "nom": "Those who live there, those who come to work, tourists and visitors.",
+            "explication": "Inhabiting isn't just sleeping there: residents, daily commuters, tourists and visitors all use the city in their own way.",
+            "pieges": [
+              {
+                "texte": "Only those who sleep there.",
+                "pourquoi": "Inhabiting isn't only residing: working or walking around a city is also inhabiting it."
+              },
+              {
+                "texte": "Only tourists.",
+                "pourquoi": "Tourists are only some of the inhabitants: first of all there are the residents."
+              }
+            ]
+          },
+          {
+            "texte": "What is a daily commuter (« migrant pendulaire »)?",
+            "nom": "Someone who regularly travels back and forth between home and work.",
+            "explication": "Like a clock's pendulum, they go and come back: INSEE calls these home-to-work shuttles.",
+            "pieges": [
+              {
+                "texte": "Someone who moves to live in another country.",
+                "pourquoi": "They change where they live; a commuter goes home every evening."
+              },
+              {
+                "texte": "A tourist on holiday.",
+                "pourquoi": "A tourist comes for leisure, then leaves; they don't commute to work."
+              }
+            ]
+          },
+          {
+            "texte": "For the UN, a megacity is an urban area of more than how many inhabitants?",
+            "nom": "10 million.",
+            "explication": "Above 10 million inhabitants, we speak of a megacity. In 2018, the largest, Tokyo, had about 37 million inhabitants.",
+            "pieges": [
+              {
+                "texte": "10,000.",
+                "pourquoi": "That's a thousand times too few: the threshold is 10 million."
+              },
+              {
+                "texte": "1 billion.",
+                "pourquoi": "No city is that big: the largest, Tokyo, has about 37 million inhabitants."
+              }
+            ]
+          },
+          {
+            "texte": "Which is a common problem in metropolises?",
+            "nom": "Air pollution and noise.",
+            "explication": "The growth of metropolises weighs on quality of life: polluted air, noise, needs for water and energy.",
+            "pieges": [
+              {
+                "texte": "A lack of jobs everywhere.",
+                "pourquoi": "Metropolises actually concentrate many jobs."
+              },
+              {
+                "texte": "Silent streets.",
+                "pourquoi": "Noise is precisely one of the nuisances of metropolises."
+              }
+            ]
+          },
+          {
+            "texte": "In a metropolis, very rich and very poor neighbourhoods live apart. What is this called?",
+            "nom": "Segregation.",
+            "explication": "Segregation separates people according to their means; it makes meeting and living together harder.",
+            "pieges": [
+              {
+                "texte": "The census.",
+                "pourquoi": "A census counts the inhabitants; it doesn't separate them."
+              },
+              {
+                "texte": "Tourism.",
+                "pourquoi": "Tourism brings visitors; it doesn't mean neighbourhoods are separated."
+              }
+            ]
+          },
+          {
+            "texte": "For a more sustainable city of tomorrow, which idea goes the right way?",
+            "nom": "Limiting urban sprawl, which costs a lot of energy and travel.",
+            "explication": "A sprawling city makes journeys longer and uses more energy. The city of tomorrow depends on the choices made today.",
+            "pieges": [
+              {
+                "texte": "Always building further out into the fields.",
+                "pourquoi": "That's sprawl: it makes journeys longer and uses more energy."
+              },
+              {
+                "texte": "Deciding nothing: the city of tomorrow will build itself.",
+                "pourquoi": "The city of tomorrow comes from choices made today by inhabitants and elected officials."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "moyen-age",
       "titre": "Repères du Moyen Âge à Louis XIV",
       "niveau": "5e",
@@ -5489,6 +6066,564 @@
       }
     },
     {
+      "id": "croissance-demographique",
+      "titre": "La croissance démographique et ses effets",
+      "niveau": "5e",
+      "prerequis": [
+        "habiter-metropole"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "La question démographique et l’inégal développement : la croissance démographique et ses effets."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "En 2024, la Terre compte 8,2 milliards d'humains. La population grandit encore, mais moins vite : les familles ont moins d'enfants. L'ONU prévoit un maximum au milieu des années 2080.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "La population augmente quand il y a plus de naissances que de décès. Repères de l'ONU : 8,2 milliards en 2024 ; environ 10,3 milliards au maximum, au milieu des années 2080.",
+        "exemple": "Exemple : dans un pays, il y a en un an 30 naissances et 10 décès pour 1 000 habitants. 30 moins 10 égale 20 : sans compter les migrations, la population gagne 20 personnes pour 1 000.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Selon l'ONU, combien d'humains vivent sur Terre en 2024 ?",
+          "nom": "Environ 8,2 milliards.",
+          "explication": "Les Nations unies estiment la population mondiale à 8,2 milliards de personnes en 2024.",
+          "pieges": [
+            {
+              "texte": "Environ 8,2 millions.",
+              "pourquoi": "Un milliard, c'est mille millions : 8,2 millions serait mille fois trop peu."
+            },
+            {
+              "texte": "Environ 82 milliards.",
+              "pourquoi": "C'est dix fois trop : l'ONU compte 8,2 milliards."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'ONU, quand la population mondiale devrait-elle atteindre son maximum ?",
+          "nom": "Au milieu des années 2080, vers 10,3 milliards.",
+          "explication": "L'ONU prévoit environ 10,3 milliards au milieu des années 2080, puis une légère baisse, vers 10,2 milliards en 2100.",
+          "pieges": [
+            {
+              "texte": "Jamais : elle grandira toujours.",
+              "pourquoi": "L'ONU prévoit un maximum dans ce siècle, puis une légère baisse."
+            },
+            {
+              "texte": "Elle baisse déjà depuis 1990.",
+              "pourquoi": "Elle augmente encore : 8,2 milliards en 2024."
+            }
+          ]
+        },
+        {
+          "texte": "Un pays compte en un an, pour 1 000 habitants, 35 naissances et 10 décès. Sans les migrations, que devient sa population ?",
+          "nom": "Elle augmente de 25 pour 1 000 habitants.",
+          "explication": "On soustrait les décès aux naissances : 35 moins 10 égale 25. Il y a plus de naissances que de décès, donc la population augmente.",
+          "pieges": [
+            {
+              "texte": "Elle augmente de 45 pour 1 000 habitants.",
+              "pourquoi": "On a ajouté les décès : il faut les soustraire, 35 moins 10."
+            },
+            {
+              "texte": "Elle diminue.",
+              "pourquoi": "Il y a plus de naissances que de décès : elle augmente."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on la transition démographique ?",
+          "nom": "Le passage d'une natalité et d'une mortalité élevées à une natalité et une mortalité basses.",
+          "explication": "Pendant la transition, naissances et décès quittent leurs niveaux traditionnels, élevés, pour aller vers des niveaux bas.",
+          "pieges": [
+            {
+              "texte": "Le départ des habitants de la campagne vers la ville.",
+              "pourquoi": "Ça, c'est l'urbanisation : elle parle d'où l'on vit, pas des naissances et des décès."
+            },
+            {
+              "texte": "Le passage d'un pays à un autre.",
+              "pourquoi": "Changer de pays, c'est une migration."
+            }
+          ]
+        },
+        {
+          "texte": "Dans un pays, les soins progressent et les décès baissent, mais les familles ont toujours beaucoup d'enfants. Que se passe-t-il ?",
+          "nom": "La population augmente vite.",
+          "explication": "Moins de décès et autant de naissances : l'écart entre naissances et décès grandit, donc la population augmente vite.",
+          "pieges": [
+            {
+              "texte": "La population baisse.",
+              "pourquoi": "Il y a moins de décès et autant de naissances : elle augmente."
+            },
+            {
+              "texte": "Rien ne change.",
+              "pourquoi": "L'écart entre naissances et décès grandit : la population change."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'ONU, comment a évolué le nombre d'enfants par femme depuis 1990 ?",
+          "nom": "Il a baissé : environ un enfant de moins en moyenne.",
+          "explication": "En moyenne, les femmes ont environ une naissance de moins qu'autour de 1990 ; c'est pourquoi la croissance ralentit.",
+          "pieges": [
+            {
+              "texte": "Il a doublé.",
+              "pourquoi": "C'est l'inverse : il a baissé d'environ un enfant."
+            },
+            {
+              "texte": "Il n'a pas changé.",
+              "pourquoi": "Il a baissé d'environ un enfant par femme."
+            }
+          ]
+        },
+        {
+          "texte": "En moyenne, combien d'enfants par femme faut-il pour qu'une population se renouvelle à taille égale ?",
+          "nom": "Environ 2,1.",
+          "explication": "C'est le seuil de renouvellement. D'après l'ONU, plus de la moitié des pays sont aujourd'hui en dessous.",
+          "pieges": [
+            {
+              "texte": "1.",
+              "pourquoi": "Avec un enfant pour deux parents, chaque génération est plus petite que la précédente."
+            },
+            {
+              "texte": "5.",
+              "pourquoi": "Avec 5 enfants par femme, la population grandit beaucoup."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'ONU, quelle est l'espérance de vie moyenne dans le monde en 2024 ?",
+          "nom": "Environ 73 ans.",
+          "explication": "Elle est de 73,3 ans en 2024 ; elle était descendue à 70,9 ans pendant la pandémie de Covid-19.",
+          "pieges": [
+            {
+              "texte": "Environ 37 ans.",
+              "pourquoi": "C'est environ deux fois moins que la moyenne mesurée par l'ONU : 73,3 ans."
+            },
+            {
+              "texte": "Environ 120 ans.",
+              "pourquoi": "C'est bien plus que la moyenne mesurée par l'ONU : 73,3 ans."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Population growth and its effects",
+        "idee": "In 2024, the Earth has 8.2 billion people. The population is still growing, but more slowly: families have fewer children. The UN expects a peak in the mid-2080s.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The population grows when there are more births than deaths. UN landmarks: 8.2 billion in 2024; a peak of about 10.3 billion in the mid-2080s.",
+          "exemple": "Example: in one country, in one year, there are 30 births and 10 deaths per 1,000 inhabitants. 30 minus 10 equals 20: not counting migration, the population gains 20 people per 1,000.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "According to the UN, how many people live on Earth in 2024?",
+            "nom": "About 8.2 billion.",
+            "explication": "The United Nations estimates the world population at 8.2 billion people in 2024.",
+            "pieges": [
+              {
+                "texte": "About 8.2 million.",
+                "pourquoi": "A billion is a thousand million: 8.2 million would be a thousand times too few."
+              },
+              {
+                "texte": "About 82 billion.",
+                "pourquoi": "That's ten times too many: the UN counts 8.2 billion."
+              }
+            ]
+          },
+          {
+            "texte": "According to the UN, when should the world population reach its peak?",
+            "nom": "In the mid-2080s, at about 10.3 billion.",
+            "explication": "The UN expects about 10.3 billion in the mid-2080s, then a slight fall, to about 10.2 billion in 2100.",
+            "pieges": [
+              {
+                "texte": "Never: it will keep growing forever.",
+                "pourquoi": "The UN expects a peak this century, then a slight fall."
+              },
+              {
+                "texte": "It has been falling since 1990.",
+                "pourquoi": "It is still growing: 8.2 billion in 2024."
+              }
+            ]
+          },
+          {
+            "texte": "In one year, a country has 35 births and 10 deaths per 1,000 inhabitants. Without migration, what happens to its population?",
+            "nom": "It grows by 25 per 1,000 inhabitants.",
+            "explication": "Subtract the deaths from the births: 35 minus 10 equals 25. There are more births than deaths, so the population grows.",
+            "pieges": [
+              {
+                "texte": "It grows by 45 per 1,000 inhabitants.",
+                "pourquoi": "You added the deaths: you must subtract them, 35 minus 10."
+              },
+              {
+                "texte": "It shrinks.",
+                "pourquoi": "There are more births than deaths: it grows."
+              }
+            ]
+          },
+          {
+            "texte": "What is the demographic transition?",
+            "nom": "The shift from high birth and death rates to low birth and death rates.",
+            "explication": "During the transition, births and deaths leave their traditional high levels and move towards low levels.",
+            "pieges": [
+              {
+                "texte": "People leaving the countryside for the city.",
+                "pourquoi": "That's urbanisation: it's about where people live, not births and deaths."
+              },
+              {
+                "texte": "Moving from one country to another.",
+                "pourquoi": "Changing country is migration."
+              }
+            ]
+          },
+          {
+            "texte": "In a country, healthcare improves and deaths fall, but families still have many children. What happens?",
+            "nom": "The population grows quickly.",
+            "explication": "Fewer deaths and as many births: the gap between births and deaths widens, so the population grows quickly.",
+            "pieges": [
+              {
+                "texte": "The population falls.",
+                "pourquoi": "There are fewer deaths and as many births: it grows."
+              },
+              {
+                "texte": "Nothing changes.",
+                "pourquoi": "The gap between births and deaths widens: the population changes."
+              }
+            ]
+          },
+          {
+            "texte": "According to the UN, how has the number of children per woman changed since 1990?",
+            "nom": "It has fallen: about one child fewer on average.",
+            "explication": "On average, women have about one birth fewer than around 1990; that's why growth is slowing down.",
+            "pieges": [
+              {
+                "texte": "It has doubled.",
+                "pourquoi": "It's the opposite: it has fallen by about one child."
+              },
+              {
+                "texte": "It hasn't changed.",
+                "pourquoi": "It has fallen by about one child per woman."
+              }
+            ]
+          },
+          {
+            "texte": "On average, how many children per woman does a population need to replace itself at the same size?",
+            "nom": "About 2.1.",
+            "explication": "That's the replacement level. According to the UN, more than half of all countries are now below it.",
+            "pieges": [
+              {
+                "texte": "1.",
+                "pourquoi": "With one child for two parents, each generation is smaller than the one before."
+              },
+              {
+                "texte": "5.",
+                "pourquoi": "With 5 children per woman, the population grows a lot."
+              }
+            ]
+          },
+          {
+            "texte": "According to the UN, what is the average life expectancy in the world in 2024?",
+            "nom": "About 73 years.",
+            "explication": "It is 73.3 years in 2024; it had dropped to 70.9 years during the COVID-19 pandemic.",
+            "pieges": [
+              {
+                "texte": "About 37 years.",
+                "pourquoi": "That's about half the average measured by the UN: 73.3 years."
+              },
+              {
+                "texte": "About 120 years.",
+                "pourquoi": "That's far more than the average measured by the UN: 73.3 years."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ressources-limitees",
+      "titre": "Eau, énergie, alimentation : des ressources à ménager",
+      "niveau": "5e",
+      "prerequis": [
+        "croissance-demographique"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Des ressources limitées, à gérer et à renouveler : l’énergie, l’eau, des ressources à ménager et à mieux utiliser ; l’alimentation : comment nourrir une humanité en croissance démographique ?"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'eau, l'énergie et la nourriture sont des ressources essentielles, mais tout le monde n'y a pas accès. L'ONU s'est fixé des objectifs de développement durable pour que chacun en dispose.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Objectif 2 de l'ONU : la faim. Objectif 6 : l'eau et l'assainissement. Objectif 7 : l'énergie. Une énergie renouvelable vient d'un processus naturel qui se renouvelle sans cesse.",
+        "exemple": "Exemple : le vent fait tourner une éolienne. Demain, le vent soufflera encore : l'énergie du vent est renouvelable.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'une énergie renouvelable ?",
+          "nom": "Une énergie tirée de processus naturels qui se renouvellent sans cesse.",
+          "explication": "Selon l'Insee, ce sont les énergies d'origine solaire, éolienne, hydraulique, géothermique ou végétale, comme le bois.",
+          "pieges": [
+            {
+              "texte": "Une énergie qu'on peut racheter au magasin.",
+              "pourquoi": "« Renouvelable » parle de la nature, qui la renouvelle, pas d'un achat."
+            },
+            {
+              "texte": "Une énergie qui ne s'arrête jamais de fonctionner, même en panne.",
+              "pourquoi": "Le mot parle de la source, renouvelée par la nature, pas des machines."
+            }
+          ]
+        },
+        {
+          "texte": "Laquelle de ces énergies n'est pas dans la liste des énergies renouvelables de l'Insee ?",
+          "nom": "Le pétrole.",
+          "explication": "La liste de l'Insee cite le soleil, le vent, l'eau, la chaleur de la Terre et les végétaux. Le pétrole n'y figure pas.",
+          "pieges": [
+            {
+              "texte": "Le vent.",
+              "pourquoi": "Le vent est dans la liste : l'énergie éolienne est renouvelable."
+            },
+            {
+              "texte": "Le soleil.",
+              "pourquoi": "Le soleil est dans la liste : l'énergie solaire est renouvelable."
+            }
+          ]
+        },
+        {
+          "texte": "En 2022, selon l'ONU, combien de personnes n'avaient pas d'eau potable gérée en toute sécurité ?",
+          "nom": "2,2 milliards.",
+          "explication": "Parmi elles, 703 millions n'avaient même pas un service d'eau de base. C'est l'objet de l'objectif 6 de l'ONU.",
+          "pieges": [
+            {
+              "texte": "2,2 millions.",
+              "pourquoi": "C'est mille fois trop peu : l'ONU compte 2,2 milliards de personnes."
+            },
+            {
+              "texte": "Personne : tout le monde a l'eau potable au robinet.",
+              "pourquoi": "703 millions de personnes n'ont même pas un service d'eau de base."
+            }
+          ]
+        },
+        {
+          "texte": "En 2022, selon l'ONU, combien de personnes souffraient de la faim de façon durable ?",
+          "nom": "Environ 735 millions, soit 9,2 % de l'humanité.",
+          "explication": "Environ 9 personnes sur 100 vivaient dans une faim chronique. L'objectif 2 de l'ONU vise à éliminer la faim.",
+          "pieges": [
+            {
+              "texte": "Personne : la faim a disparu.",
+              "pourquoi": "Environ 735 millions de personnes souffraient encore de la faim en 2022."
+            },
+            {
+              "texte": "La moitié de l'humanité.",
+              "pourquoi": "C'est environ 9 personnes sur 100, pas 50 sur 100."
+            }
+          ]
+        },
+        {
+          "texte": "Quel objectif de développement durable de l'ONU porte sur l'eau et l'assainissement ?",
+          "nom": "L'objectif 6.",
+          "explication": "L'objectif 6 veut garantir à tous l'accès à l'eau et à l'assainissement, gérés de façon durable.",
+          "pieges": [
+            {
+              "texte": "L'objectif 2.",
+              "pourquoi": "L'objectif 2 porte sur la faim et l'agriculture durable."
+            },
+            {
+              "texte": "L'objectif 7.",
+              "pourquoi": "L'objectif 7 porte sur l'énergie."
+            }
+          ]
+        },
+        {
+          "texte": "En 2021, selon l'ONU, quelle part de la population mondiale avait l'électricité ?",
+          "nom": "91 %.",
+          "explication": "91 personnes sur 100 avaient l'électricité ; environ 675 millions de personnes restaient sans, surtout en Afrique subsaharienne.",
+          "pieges": [
+            {
+              "texte": "100 %.",
+              "pourquoi": "Environ 675 millions de personnes restaient sans électricité."
+            },
+            {
+              "texte": "9 %.",
+              "pourquoi": "C'est l'inverse : 91 % l'avaient, 9 % ne l'avaient pas."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les campagnes et l'agriculture comptent-elles beaucoup dans ce thème ?",
+          "nom": "Elles fournissent des ressources essentielles, surtout la nourriture.",
+          "explication": "Les espaces ruraux et agricoles produisent l'alimentation, alors qu'une partie de l'humanité est encore sous-alimentée.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il n'y a plus d'agriculteurs dans le monde.",
+              "pourquoi": "Les espaces agricoles fournissent toujours l'alimentation de l'humanité."
+            },
+            {
+              "texte": "Parce qu'on y fabrique surtout des ordinateurs.",
+              "pourquoi": "Ici, le rôle des campagnes est de fournir des ressources comme la nourriture."
+            }
+          ]
+        },
+        {
+          "texte": "Le programme dit que l'eau est une ressource « à ménager ». Que veut dire « ménager » ici ?",
+          "nom": "L'utiliser avec soin, sans la gaspiller ni l'épuiser.",
+          "explication": "Ménager une ressource, c'est l'épargner et mieux l'utiliser, sans la surexploiter, pour qu'elle serve aussi demain.",
+          "pieges": [
+            {
+              "texte": "S'en servir pour faire le ménage.",
+              "pourquoi": "Ici, « ménager » veut dire épargner, utiliser avec soin."
+            },
+            {
+              "texte": "L'utiliser le plus vite possible.",
+              "pourquoi": "C'est la surexploitation, que le développement durable veut éviter."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Water, energy, food: resources to be spared",
+        "idee": "Water, energy and food are essential resources, but not everyone has access to them. The UN has set sustainable development goals so that everyone can have them.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "UN Goal 2: hunger. Goal 6: water and sanitation. Goal 7: energy. A renewable energy comes from a natural process that constantly renews itself.",
+          "exemple": "Example: the wind turns a wind turbine. Tomorrow the wind will blow again: wind energy is renewable.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a renewable energy?",
+            "nom": "An energy taken from natural processes that constantly renew themselves.",
+            "explication": "According to INSEE, these are energies from the sun, wind, water, the Earth's heat or plants, such as wood.",
+            "pieges": [
+              {
+                "texte": "An energy you can buy again in a shop.",
+                "pourquoi": "« Renewable » is about nature renewing it, not about buying it."
+              },
+              {
+                "texte": "An energy that never stops working, even when broken.",
+                "pourquoi": "The word is about the source, renewed by nature, not about machines."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these energies is not on INSEE's list of renewable energies?",
+            "nom": "Oil.",
+            "explication": "INSEE's list names the sun, wind, water, the Earth's heat and plants. Oil isn't on it.",
+            "pieges": [
+              {
+                "texte": "Wind.",
+                "pourquoi": "Wind is on the list: wind energy is renewable."
+              },
+              {
+                "texte": "The sun.",
+                "pourquoi": "The sun is on the list: solar energy is renewable."
+              }
+            ]
+          },
+          {
+            "texte": "In 2022, according to the UN, how many people lacked safely managed drinking water?",
+            "nom": "2.2 billion.",
+            "explication": "Of these, 703 million didn't even have a basic water service. This is the subject of UN Goal 6.",
+            "pieges": [
+              {
+                "texte": "2.2 million.",
+                "pourquoi": "That's a thousand times too few: the UN counts 2.2 billion people."
+              },
+              {
+                "texte": "Nobody: everyone has drinking water from the tap.",
+                "pourquoi": "703 million people don't even have a basic water service."
+              }
+            ]
+          },
+          {
+            "texte": "In 2022, according to the UN, how many people suffered from chronic hunger?",
+            "nom": "About 735 million, or 9.2% of humanity.",
+            "explication": "About 9 people in 100 lived with chronic hunger. UN Goal 2 aims to end hunger.",
+            "pieges": [
+              {
+                "texte": "Nobody: hunger has disappeared.",
+                "pourquoi": "About 735 million people still suffered from hunger in 2022."
+              },
+              {
+                "texte": "Half of humanity.",
+                "pourquoi": "It's about 9 people in 100, not 50 in 100."
+              }
+            ]
+          },
+          {
+            "texte": "Which UN sustainable development goal is about water and sanitation?",
+            "nom": "Goal 6.",
+            "explication": "Goal 6 aims to ensure access to water and sanitation for all, managed sustainably.",
+            "pieges": [
+              {
+                "texte": "Goal 2.",
+                "pourquoi": "Goal 2 is about hunger and sustainable farming."
+              },
+              {
+                "texte": "Goal 7.",
+                "pourquoi": "Goal 7 is about energy."
+              }
+            ]
+          },
+          {
+            "texte": "In 2021, according to the UN, what share of the world population had electricity?",
+            "nom": "91%.",
+            "explication": "91 people in 100 had electricity; about 675 million people were still without it, mostly in sub-Saharan Africa.",
+            "pieges": [
+              {
+                "texte": "100%.",
+                "pourquoi": "About 675 million people were still without electricity."
+              },
+              {
+                "texte": "9%.",
+                "pourquoi": "It's the opposite: 91% had it, 9% didn't."
+              }
+            ]
+          },
+          {
+            "texte": "Why do the countryside and farming matter so much in this topic?",
+            "nom": "They provide essential resources, above all food.",
+            "explication": "Rural and farming areas produce food, while part of humanity is still undernourished.",
+            "pieges": [
+              {
+                "texte": "Because there are no farmers left in the world.",
+                "pourquoi": "Farming areas still provide humanity's food."
+              },
+              {
+                "texte": "Because they mostly make computers there.",
+                "pourquoi": "Here, the role of the countryside is to provide resources such as food."
+              }
+            ]
+          },
+          {
+            "texte": "The curriculum says water is a resource « to be spared » (« à ménager »). What does that mean here?",
+            "nom": "Using it carefully, without wasting or exhausting it.",
+            "explication": "Sparing a resource means saving it and using it better, without overexploiting it, so it is still there tomorrow.",
+            "pieges": [
+              {
+                "texte": "Using it to do the housework.",
+                "pourquoi": "Here, « ménager » means to spare, to use carefully."
+              },
+              {
+                "texte": "Using it as fast as possible.",
+                "pourquoi": "That's overexploitation, which sustainable development aims to avoid."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "revolution-empire",
       "titre": "La Révolution française et l'Empire",
       "niveau": "4e",
@@ -6040,6 +7175,564 @@
               {
                 "texte": "Because polling stations were hard to find.",
                 "pourquoi": "« Conquest » means a right won by struggle, not a journey."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "revolution-industrielle",
+      "titre": "L'Europe de la « révolution industrielle »",
+      "niveau": "4e",
+      "prerequis": [
+        "revolution-empire"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "L’Europe et le monde au XIXe siècle : l’Europe de la « révolution industrielle »."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Au XIXe siècle, l'Europe s'industrialise : le charbon et la vapeur, puis l'électricité et le pétrole transforment usines, villes et campagnes. La vie des ouvriers pose la « question sociale ».",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : la révolution industrielle commence en Angleterre dans le dernier tiers du XVIIIe siècle ; la seconde révolution industrielle débute dans les années 1870.",
+        "exemple": "Exemple : une usine réunit de nombreux ouvriers payés par un patron. Chacun fait une seule tâche, avec des machines : c'est la division du travail et la mécanisation.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Où et quand commence la révolution industrielle ?",
+          "nom": "En Angleterre, dans le dernier tiers du XVIIIe siècle.",
+          "explication": "L'Angleterre est la première. La France, le nord de l'Italie et la Belgique s'industrialisent à partir des années 1820 et 1830.",
+          "pieges": [
+            {
+              "texte": "En France, en 1789.",
+              "pourquoi": "1789, c'est la Révolution française, une révolution politique ; la France s'industrialise à partir des années 1820."
+            },
+            {
+              "texte": "Au Japon, après 1870.",
+              "pourquoi": "Le Japon devient une puissance industrielle plus tard, après 1870."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quoi repose la première révolution industrielle ?",
+          "nom": "Le charbon et le moteur à vapeur.",
+          "explication": "Le charbon fait tourner les machines à vapeur ; le textile et la métallurgie du fer progressent.",
+          "pieges": [
+            {
+              "texte": "L'électricité et le pétrole.",
+              "pourquoi": "Ils marquent la seconde révolution industrielle, à partir des années 1870."
+            },
+            {
+              "texte": "Les bras et les chevaux seulement.",
+              "pourquoi": "La nouveauté, c'est justement la machine à vapeur, nourrie au charbon."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qui marque la seconde révolution industrielle, à partir des années 1870 ?",
+          "nom": "L'électricité, le pétrole et le moteur à explosion.",
+          "explication": "S'y ajoutent les progrès de l'acier et de l'aluminium. La finance et les grandes entreprises prennent plus de poids.",
+          "pieges": [
+            {
+              "texte": "Le charbon et la vapeur seulement.",
+              "pourquoi": "Ce sont les énergies de la première révolution industrielle."
+            },
+            {
+              "texte": "L'invention de l'écriture.",
+              "pourquoi": "L'écriture est bien plus ancienne : vers 3300 avant J.-C."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qui caractérise le travail dans l'industrie ?",
+          "nom": "Beaucoup de salariés, la division du travail et les machines.",
+          "explication": "L'usine réunit de nombreux ouvriers salariés ; chacun fait une partie du travail, avec des machines : c'est la mécanisation.",
+          "pieges": [
+            {
+              "texte": "Un artisan seul qui fait tout à la main.",
+              "pourquoi": "L'industrie réunit au contraire de nombreux ouvriers et des machines."
+            },
+            {
+              "texte": "Des paysans qui travaillent seulement pour se nourrir.",
+              "pourquoi": "L'ouvrier d'usine est un salarié : il reçoit un salaire."
+            }
+          ]
+        },
+        {
+          "texte": "Au XIXe siècle, pourquoi beaucoup d'Irlandais et d'Italiens émigrent-ils ?",
+          "nom": "Leurs régions se développent peu ; en Irlande, une grande famine frappe de 1845 à 1848.",
+          "explication": "Les régions qui ne s'industrialisent pas voient partir leurs habitants ; la famine irlandaise pousse beaucoup d'Irlandais vers les États-Unis.",
+          "pieges": [
+            {
+              "texte": "Pour partir en vacances.",
+              "pourquoi": "Ils partent pour vivre ailleurs, souvent vers les États-Unis, pas pour des vacances."
+            },
+            {
+              "texte": "Parce que l'Europe se vide de ses habitants.",
+              "pourquoi": "Au contraire : l'Europe est alors en croissance démographique."
+            }
+          ]
+        },
+        {
+          "texte": "Au XIXe siècle, qu'appelle-t-on la « question sociale » ?",
+          "nom": "Les dures conditions de vie et de travail des ouvriers.",
+          "explication": "Vie et travail très pénibles, misère possible à tout moment : on cherche des réponses, comme les premières lois sociales et les syndicats.",
+          "pieges": [
+            {
+              "texte": "Une question posée à un examen.",
+              "pourquoi": "Ici, c'est un grand problème de société : le sort des ouvriers."
+            },
+            {
+              "texte": "Le droit de vote des femmes.",
+              "pourquoi": "C'est un autre débat ; la « question sociale » vise le sort des ouvriers."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on que les ouvriers vivent dans l'insécurité sociale ?",
+          "nom": "Une maladie ou un accident du travail peut les faire tomber dans la misère.",
+          "explication": "Sans protection, un accident, une maladie ou une crise peut tout faire perdre. Au XXe siècle, l'État-providence tentera d'y répondre.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils sont tous riches.",
+              "pourquoi": "La plupart vivent pauvrement et peuvent basculer dans la misère."
+            },
+            {
+              "texte": "Parce qu'une assurance les protège déjà de tout.",
+              "pourquoi": "C'est au XXe siècle que l'État-providence tentera de les protéger."
+            }
+          ]
+        },
+        {
+          "texte": "En France, au XIXe siècle, quelle part des ouvriers sont des femmes ?",
+          "nom": "Environ un tiers.",
+          "explication": "Le travail des femmes est une réalité dans le monde ouvrier, surtout dans les métiers les plus mal payés, comme le textile.",
+          "pieges": [
+            {
+              "texte": "Aucune.",
+              "pourquoi": "Les femmes représentent environ un tiers des ouvriers, surtout dans le textile."
+            },
+            {
+              "texte": "Toutes.",
+              "pourquoi": "Ce sont environ un tiers des ouvriers, pas la totalité."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Europe and the « Industrial Revolution »",
+        "idee": "In the 19th century, Europe industrialises: coal and steam, then electricity and oil transform factories, towns and the countryside. Workers' lives raise the « social question ».",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: the Industrial Revolution begins in England in the last third of the 18th century; the second industrial revolution begins in the 1870s.",
+          "exemple": "Example: a factory brings together many workers paid by an employer. Each does a single task, with machines: that's the division of labour and mechanisation.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Where and when does the Industrial Revolution begin?",
+            "nom": "In England, in the last third of the 18th century.",
+            "explication": "England comes first. France, northern Italy and Belgium industrialise from the 1820s and 1830s.",
+            "pieges": [
+              {
+                "texte": "In France, in 1789.",
+                "pourquoi": "1789 is the French Revolution, a political revolution; France industrialises from the 1820s."
+              },
+              {
+                "texte": "In Japan, after 1870.",
+                "pourquoi": "Japan becomes an industrial power later, after 1870."
+              }
+            ]
+          },
+          {
+            "texte": "What is the first industrial revolution based on?",
+            "nom": "Coal and the steam engine.",
+            "explication": "Coal drives steam engines; textiles and iron-making make progress.",
+            "pieges": [
+              {
+                "texte": "Electricity and oil.",
+                "pourquoi": "They mark the second industrial revolution, from the 1870s."
+              },
+              {
+                "texte": "Only human and horse power.",
+                "pourquoi": "The new thing is precisely the steam engine, fed with coal."
+              }
+            ]
+          },
+          {
+            "texte": "What marks the second industrial revolution, from the 1870s?",
+            "nom": "Electricity, oil and the combustion engine.",
+            "explication": "Add progress in steel and aluminium. Finance and big companies become more important.",
+            "pieges": [
+              {
+                "texte": "Only coal and steam.",
+                "pourquoi": "Those are the energies of the first industrial revolution."
+              },
+              {
+                "texte": "The invention of writing.",
+                "pourquoi": "Writing is much older: around 3300 BC."
+              }
+            ]
+          },
+          {
+            "texte": "What characterises work in industry?",
+            "nom": "Many wage-earners, the division of labour and machines.",
+            "explication": "The factory brings together many paid workers; each does part of the work, with machines: that's mechanisation.",
+            "pieges": [
+              {
+                "texte": "A lone craftsman doing everything by hand.",
+                "pourquoi": "Industry, on the contrary, brings together many workers and machines."
+              },
+              {
+                "texte": "Farmers working only to feed themselves.",
+                "pourquoi": "A factory worker is a wage-earner: they receive a wage."
+              }
+            ]
+          },
+          {
+            "texte": "In the 19th century, why do many Irish and Italian people emigrate?",
+            "nom": "Their regions develop little; in Ireland, a great famine strikes from 1845 to 1848.",
+            "explication": "Regions that don't industrialise see their people leave; the Irish famine drives many Irish people to the United States.",
+            "pieges": [
+              {
+                "texte": "To go on holiday.",
+                "pourquoi": "They leave to live elsewhere, often in the United States, not for a holiday."
+              },
+              {
+                "texte": "Because Europe is emptying of people.",
+                "pourquoi": "On the contrary: Europe's population is growing."
+              }
+            ]
+          },
+          {
+            "texte": "In the 19th century, what is the « social question »?",
+            "nom": "The hard living and working conditions of workers.",
+            "explication": "Very hard living and working conditions, poverty always close: people look for answers, such as the first social laws and trade unions.",
+            "pieges": [
+              {
+                "texte": "A question asked in an exam.",
+                "pourquoi": "Here it's a big problem for society: the fate of workers."
+              },
+              {
+                "texte": "Votes for women.",
+                "pourquoi": "That's another debate; the « social question » is about workers' fate."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say that workers live with social insecurity?",
+            "nom": "An illness or a workplace accident can plunge them into poverty.",
+            "explication": "Without protection, an accident, an illness or a crisis can make them lose everything. In the 20th century, the welfare state will try to respond.",
+            "pieges": [
+              {
+                "texte": "Because they are all rich.",
+                "pourquoi": "Most live poorly and can fall into poverty."
+              },
+              {
+                "texte": "Because insurance already protects them from everything.",
+                "pourquoi": "It's in the 20th century that the welfare state will try to protect them."
+              }
+            ]
+          },
+          {
+            "texte": "In France, in the 19th century, what share of workers are women?",
+            "nom": "About a third.",
+            "explication": "Women's work is a reality in the working world, especially in the worst-paid trades, such as textiles.",
+            "pieges": [
+              {
+                "texte": "None.",
+                "pourquoi": "Women make up about a third of workers, especially in textiles."
+              },
+              {
+                "texte": "All of them.",
+                "pourquoi": "They are about a third of workers, not all of them."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "urbanisation-monde",
+      "titre": "L'urbanisation du monde",
+      "niveau": "4e",
+      "prerequis": [
+        "habiter-metropole"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "L’urbanisation du monde : espaces et paysages de l’urbanisation, géographie des centres et des périphéries ; des villes inégalement connectées aux réseaux de la mondialisation."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Depuis 1945, le monde s'urbanise très vite : plus de la moitié des humains vivent en ville. Les villes ont des centres et des périphéries, et sont plus ou moins reliées au reste du monde.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : plus de la moitié de l'humanité en ville depuis 2007 ; 55 % en 2018 et 68 % prévus en 2050 selon l'ONU ; une mégapole dépasse 10 millions d'habitants.",
+        "exemple": "Exemple : en 2018, l'ONU compte 55 % d'urbains et en prévoit 68 % en 2050. 68 moins 55 égale 13 : la part des urbains gagnerait 13 points.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Depuis quand le monde s'urbanise-t-il à grande vitesse ?",
+          "nom": "Depuis 1945.",
+          "explication": "Depuis 1945, la part des habitants des villes augmente très vite : c'est un fait majeur de la mondialisation.",
+          "pieges": [
+            {
+              "texte": "Depuis l'an 1000.",
+              "pourquoi": "Les villes sont anciennes, mais l'accélération date de la seconde moitié du XXe siècle, depuis 1945."
+            },
+            {
+              "texte": "Depuis 2020 seulement.",
+              "pourquoi": "Dès 2007, plus de la moitié de l'humanité vivait déjà en ville."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'ONU, quelle part de la population mondiale vit en ville en 2018 ?",
+          "nom": "55 %.",
+          "explication": "55 personnes sur 100 vivent en ville en 2018 ; l'ONU en prévoit 68 sur 100 en 2050.",
+          "pieges": [
+            {
+              "texte": "5 %.",
+              "pourquoi": "C'est beaucoup trop peu : plus de la moitié des humains vivent en ville."
+            },
+            {
+              "texte": "95 %.",
+              "pourquoi": "C'est trop : même en 2050, l'ONU prévoit 68 %."
+            }
+          ]
+        },
+        {
+          "texte": "Combien de mégapoles l'ONU compte-t-elle en 2018, et combien en prévoit-elle pour 2030 ?",
+          "nom": "33, puis 43.",
+          "explication": "En 2018, environ un habitant sur huit vit dans l'une des 33 mégapoles ; leur nombre devrait passer à 43 en 2030.",
+          "pieges": [
+            {
+              "texte": "43, puis 33.",
+              "pourquoi": "Le nombre de mégapoles augmente : 33 en 2018, 43 prévues en 2030."
+            },
+            {
+              "texte": "3, puis 4.",
+              "pourquoi": "C'est dix fois trop peu : 33 mégapoles en 2018."
+            }
+          ]
+        },
+        {
+          "texte": "Où trouve-t-on souvent les gratte-ciel, les sièges d'entreprises et les activités financières ?",
+          "nom": "Dans un quartier des affaires, un des centres de la ville.",
+          "explication": "Les centres concentrent les pouvoirs de décision. Ils ne sont plus forcément dans le cœur historique de la ville.",
+          "pieges": [
+            {
+              "texte": "Dans les champs, loin de la ville.",
+              "pourquoi": "Ces activités se concentrent dans les centres des villes."
+            },
+            {
+              "texte": "Toujours dans le vieux centre historique.",
+              "pourquoi": "Les centres de décision ne sont plus forcément au cœur historique."
+            }
+          ]
+        },
+        {
+          "texte": "Les villes grandissent surtout en surface, en gagnant les espaces autour d'elles. Comment appelle-t-on cela ?",
+          "nom": "L'étalement urbain.",
+          "explication": "En s'étalant, la ville intègre peu à peu des espaces de sa périphérie ; les trajets quotidiens augmentent.",
+          "pieges": [
+            {
+              "texte": "Le déclin urbain.",
+              "pourquoi": "Le déclin, c'est une ville qui perd habitants et activités, pas une ville qui s'étend."
+            },
+            {
+              "texte": "Une mégapole.",
+              "pourquoi": "Une mégapole est une agglomération de plus de 10 millions d'habitants, pas un mouvement."
+            }
+          ]
+        },
+        {
+          "texte": "Detroit, aux États-Unis, perd des habitants et des emplois ; des usines y sont abandonnées. Comment appelle-t-on ce phénomène ?",
+          "nom": "Le rétrécissement urbain : une « shrinking city ».",
+          "explication": "La ville décline : friches, quartiers délaissés, pertes d'emplois. Elle peine à se reconnecter aux réseaux de la mondialisation.",
+          "pieges": [
+            {
+              "texte": "L'étalement urbain.",
+              "pourquoi": "L'étalement, c'est une ville qui s'étend ; Detroit, elle, décline."
+            },
+            {
+              "texte": "Une ville mondiale.",
+              "pourquoi": "Une ville mondiale concentre au contraire les pouvoirs et les échanges."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles villes sont au sommet de la hiérarchie urbaine mondiale ?",
+          "nom": "Les villes mondiales, qui concentrent les grands pouvoirs politiques, économiques et culturels.",
+          "explication": "Leur rang dépend de leur place dans les réseaux d'échanges : sièges de grandes firmes, finance, innovation, culture.",
+          "pieges": [
+            {
+              "texte": "Les villes les plus anciennes.",
+              "pourquoi": "C'est la place dans les réseaux d'échanges qui compte, pas l'âge."
+            },
+            {
+              "texte": "Les villes qui perdent des habitants.",
+              "pourquoi": "Ces villes en déclin sont au contraire à l'écart des grands réseaux."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel de ces lieux montre le mieux qu'une ville est reliée au reste du monde ?",
+          "nom": "Un grand aéroport international.",
+          "explication": "Grands aéroports, quartiers d'affaires, grands ports et grandes gares relient la ville aux réseaux de la mondialisation.",
+          "pieges": [
+            {
+              "texte": "Un jardin public de quartier.",
+              "pourquoi": "Il est utile aux habitants, mais il ne relie pas la ville au reste du monde."
+            },
+            {
+              "texte": "Une petite rue du vieux centre.",
+              "pourquoi": "Elle sert surtout aux habitants du quartier, pas aux échanges mondiaux."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The urbanisation of the world",
+        "idee": "Since 1945, the world has been urbanising very fast: more than half of humans live in towns and cities. Cities have centres and outskirts, and are more or less connected to the rest of the world.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: more than half of humanity in towns and cities since 2007; 55% in 2018 and 68% expected in 2050 according to the UN; a megacity has more than 10 million inhabitants.",
+          "exemple": "Example: in 2018 the UN counts 55% urban dwellers and expects 68% in 2050. 68 minus 55 equals 13: the urban share would gain 13 points.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Since when has the world been urbanising very fast?",
+            "nom": "Since 1945.",
+            "explication": "Since 1945, the share of city dwellers has risen very fast: it's a major feature of globalisation.",
+            "pieges": [
+              {
+                "texte": "Since the year 1000.",
+                "pourquoi": "Cities are old, but the acceleration dates from the second half of the 20th century, since 1945."
+              },
+              {
+                "texte": "Only since 2020.",
+                "pourquoi": "By 2007, more than half of humanity already lived in towns and cities."
+              }
+            ]
+          },
+          {
+            "texte": "According to the UN, what share of the world population lives in towns and cities in 2018?",
+            "nom": "55%.",
+            "explication": "55 people in 100 live in towns and cities in 2018; the UN expects 68 in 100 in 2050.",
+            "pieges": [
+              {
+                "texte": "5%.",
+                "pourquoi": "That's far too few: more than half of humans live in towns and cities."
+              },
+              {
+                "texte": "95%.",
+                "pourquoi": "That's too many: even for 2050 the UN expects 68%."
+              }
+            ]
+          },
+          {
+            "texte": "How many megacities does the UN count in 2018, and how many does it expect in 2030?",
+            "nom": "33, then 43.",
+            "explication": "In 2018, about one person in eight lives in one of the 33 megacities; their number should rise to 43 by 2030.",
+            "pieges": [
+              {
+                "texte": "43, then 33.",
+                "pourquoi": "The number of megacities is rising: 33 in 2018, 43 expected in 2030."
+              },
+              {
+                "texte": "3, then 4.",
+                "pourquoi": "That's ten times too few: 33 megacities in 2018."
+              }
+            ]
+          },
+          {
+            "texte": "Where do we often find skyscrapers, company headquarters and financial activities?",
+            "nom": "In a business district, one of the city's centres.",
+            "explication": "Centres concentrate decision-making power. They are no longer always in the city's historic heart.",
+            "pieges": [
+              {
+                "texte": "In the fields, far from the city.",
+                "pourquoi": "These activities are concentrated in city centres."
+              },
+              {
+                "texte": "Always in the old historic centre.",
+                "pourquoi": "Decision-making centres are no longer necessarily in the historic heart."
+              }
+            ]
+          },
+          {
+            "texte": "Cities grow mainly in area, spreading over the land around them. What is this called?",
+            "nom": "Urban sprawl.",
+            "explication": "As it sprawls, the city gradually takes in areas on its outskirts; daily journeys increase.",
+            "pieges": [
+              {
+                "texte": "Urban decline.",
+                "pourquoi": "Decline is a city losing people and activities, not a city spreading out."
+              },
+              {
+                "texte": "A megacity.",
+                "pourquoi": "A megacity is an urban area of more than 10 million inhabitants, not a process."
+              }
+            ]
+          },
+          {
+            "texte": "Detroit, in the United States, is losing people and jobs; factories there are abandoned. What is this called?",
+            "nom": "Urban shrinking: a « shrinking city ».",
+            "explication": "The city declines: wasteland, neglected neighbourhoods, job losses. It struggles to reconnect to the networks of globalisation.",
+            "pieges": [
+              {
+                "texte": "Urban sprawl.",
+                "pourquoi": "Sprawl is a city spreading out; Detroit, on the other hand, is declining."
+              },
+              {
+                "texte": "A global city.",
+                "pourquoi": "A global city, on the contrary, concentrates power and trade."
+              }
+            ]
+          },
+          {
+            "texte": "Which cities are at the top of the world urban hierarchy?",
+            "nom": "Global cities, which concentrate major political, economic and cultural power.",
+            "explication": "Their rank depends on their place in trade networks: headquarters of big firms, finance, innovation, culture.",
+            "pieges": [
+              {
+                "texte": "The oldest cities.",
+                "pourquoi": "It's their place in trade networks that counts, not their age."
+              },
+              {
+                "texte": "Cities that are losing people.",
+                "pourquoi": "These declining cities are, on the contrary, cut off from the main networks."
+              }
+            ]
+          },
+          {
+            "texte": "Which of these places best shows that a city is connected to the rest of the world?",
+            "nom": "A large international airport.",
+            "explication": "Large airports, business districts, big ports and major stations link the city to the networks of globalisation.",
+            "pieges": [
+              {
+                "texte": "A local public garden.",
+                "pourquoi": "It's useful to residents, but it doesn't connect the city to the rest of the world."
+              },
+              {
+                "texte": "A small street in the old centre.",
+                "pourquoi": "It mainly serves local residents, not world trade."
               }
             ]
           }
@@ -6628,6 +8321,564 @@
               {
                 "texte": "Because they all have the same climate as Paris.",
                 "pourquoi": "Most have a tropical climate, very different from Paris."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "regimes-totalitaires",
+      "titre": "Démocraties fragilisées et régimes totalitaires (1918-1939)",
+      "niveau": "3e",
+      "prerequis": [
+        "guerres-mondiales"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "L’Europe, un théâtre majeur des guerres totales (1914-1945) : démocraties fragilisées et expériences totalitaires dans l’Europe de l’entre-deux-guerres."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Entre les deux guerres mondiales, des démocraties affaiblies font face à des régimes totalitaires : l'URSS de Staline et l'Allemagne d'Hitler. En France, le Front populaire de 1936 défend la démocratie.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1917, révolution russe ; 1929, crise économique ; 1933, Hitler au pouvoir ; 1936, Front populaire ; 1939, début de la Seconde Guerre mondiale.",
+        "exemple": "Exemple : en URSS, un seul chef, Staline, est célébré partout ; la police et les camps font régner la terreur. Ce sont des traits d'un régime totalitaire.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle période appelle-t-on l'entre-deux-guerres ?",
+          "nom": "De 1918 à 1939.",
+          "explication": "C'est le temps qui sépare la fin de la Première Guerre mondiale, en 1918, du début de la Seconde, en 1939.",
+          "pieges": [
+            {
+              "texte": "De 1914 à 1918.",
+              "pourquoi": "Ce sont les années de la Première Guerre mondiale elle-même."
+            },
+            {
+              "texte": "De 1939 à 1945.",
+              "pourquoi": "Ce sont les années de la Seconde Guerre mondiale."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année a lieu la révolution russe, d'où naît le régime soviétique ?",
+          "nom": "En 1917.",
+          "explication": "En 1917, pendant la Grande Guerre, la révolution bolchevique éclate en Russie ; le communisme stalinien s'installe dans les années 1920.",
+          "pieges": [
+            {
+              "texte": "En 1789.",
+              "pourquoi": "1789, c'est la Révolution française."
+            },
+            {
+              "texte": "En 1933.",
+              "pourquoi": "1933, c'est l'arrivée d'Hitler au pouvoir en Allemagne."
+            }
+          ]
+        },
+        {
+          "texte": "Qui dirige l'URSS et fait l'objet d'un véritable culte ?",
+          "nom": "Staline.",
+          "explication": "Staline exerce un pouvoir personnel et policier ; son culte s'étend jusqu'aux partis communistes d'Europe de l'Ouest.",
+          "pieges": [
+            {
+              "texte": "Hitler.",
+              "pourquoi": "Hitler dirige l'Allemagne à partir de 1933."
+            },
+            {
+              "texte": "Mussolini.",
+              "pourquoi": "Mussolini installe un régime fasciste en Italie, dans les années 1920."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année Hitler arrive-t-il au pouvoir en Allemagne ?",
+          "nom": "En 1933.",
+          "explication": "De 1933 à 1945, l'Allemagne est dirigée par Hitler. Il veut détruire le traité de Versailles et réarme le pays.",
+          "pieges": [
+            {
+              "texte": "En 1918.",
+              "pourquoi": "1918, c'est la fin de la Première Guerre mondiale."
+            },
+            {
+              "texte": "En 1939.",
+              "pourquoi": "Il déclenche la guerre le 1er septembre 1939, mais il est au pouvoir depuis 1933."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle crise économique favorise le basculement de l'Allemagne dans le nazisme ?",
+          "nom": "La crise de 1929.",
+          "explication": "La crise de 1929 provoque la récession et la détresse sociale ; elle joue un grand rôle dans le succès d'Hitler.",
+          "pieges": [
+            {
+              "texte": "La crise de 1873.",
+              "pourquoi": "C'est une crise du XIXe siècle, bien avant le nazisme."
+            },
+            {
+              "texte": "La crise de Mai 1968.",
+              "pourquoi": "Elle a lieu en France, bien après la Seconde Guerre mondiale."
+            }
+          ]
+        },
+        {
+          "texte": "Quels traits ont en commun les régimes totalitaires ?",
+          "nom": "Un chef tout-puissant, la terreur policière et l'encadrement de toute la société.",
+          "explication": "Le chef concentre le pouvoir, la police et les camps font peur, et la propagande encadre toute la population.",
+          "pieges": [
+            {
+              "texte": "Des élections libres entre plusieurs partis.",
+              "pourquoi": "C'est le propre d'une démocratie, qui accepte plusieurs partis."
+            },
+            {
+              "texte": "La liberté de la presse.",
+              "pourquoi": "C'est une liberté de la démocratie ; ces régimes encadrent au contraire la société par la propagande."
+            }
+          ]
+        },
+        {
+          "texte": "En 1936, sous le Front populaire de Léon Blum, quelle loi donne aux salariés leurs premières vacances payées ?",
+          "nom": "La loi sur les congés payés, avec 15 jours de repos payé.",
+          "explication": "La loi du 20 juin 1936 accorde pour la première fois aux salariés 15 jours de congés payés.",
+          "pieges": [
+            {
+              "texte": "La loi de 1905.",
+              "pourquoi": "La loi de 1905 sépare les Églises et l'État ; elle ne parle pas de vacances."
+            },
+            {
+              "texte": "Le droit de vote des femmes.",
+              "pourquoi": "En 1936, les Françaises ne votent pas encore : la France est alors une exception en Europe."
+            }
+          ]
+        },
+        {
+          "texte": "Le 7 juin 1936, le gouvernement, le patronat et le syndicat CGT signent des accords. Lesquels ?",
+          "nom": "Les accords de Matignon.",
+          "explication": "Signés à l'hôtel Matignon, ils sont suivis de lois sociales : congés payés, semaine de quarante heures, conventions collectives.",
+          "pieges": [
+            {
+              "texte": "Les accords d'Évian.",
+              "pourquoi": "Ils mettent fin à la guerre d'Algérie, en 1962."
+            },
+            {
+              "texte": "Le traité de Versailles.",
+              "pourquoi": "C'est le traité de paix qui suit la Première Guerre mondiale."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Weakened democracies and totalitarian regimes (1918-1939)",
+        "idee": "Between the two world wars, weakened democracies face totalitarian regimes: Stalin's USSR and Hitler's Germany. In France, the Popular Front of 1936 defends democracy.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1917, Russian Revolution; 1929, economic crisis; 1933, Hitler in power; 1936, Popular Front; 1939, start of the Second World War.",
+          "exemple": "Example: in the USSR, a single leader, Stalin, is praised everywhere; the police and the camps spread terror. These are features of a totalitarian regime.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which period is called the interwar period?",
+            "nom": "From 1918 to 1939.",
+            "explication": "It's the time between the end of the First World War, in 1918, and the start of the Second, in 1939.",
+            "pieges": [
+              {
+                "texte": "From 1914 to 1918.",
+                "pourquoi": "Those are the years of the First World War itself."
+              },
+              {
+                "texte": "From 1939 to 1945.",
+                "pourquoi": "Those are the years of the Second World War."
+              }
+            ]
+          },
+          {
+            "texte": "In which year does the Russian Revolution take place, giving birth to the Soviet regime?",
+            "nom": "In 1917.",
+            "explication": "In 1917, during the Great War, the Bolshevik revolution breaks out in Russia; Stalinist communism takes hold in the 1920s.",
+            "pieges": [
+              {
+                "texte": "In 1789.",
+                "pourquoi": "1789 is the French Revolution."
+              },
+              {
+                "texte": "In 1933.",
+                "pourquoi": "1933 is when Hitler comes to power in Germany."
+              }
+            ]
+          },
+          {
+            "texte": "Who rules the USSR and is the object of a true personality cult?",
+            "nom": "Stalin.",
+            "explication": "Stalin wields personal, police-backed power; his cult reaches even the communist parties of Western Europe.",
+            "pieges": [
+              {
+                "texte": "Hitler.",
+                "pourquoi": "Hitler rules Germany from 1933."
+              },
+              {
+                "texte": "Mussolini.",
+                "pourquoi": "Mussolini sets up a fascist regime in Italy, in the 1920s."
+              }
+            ]
+          },
+          {
+            "texte": "In which year does Hitler come to power in Germany?",
+            "nom": "In 1933.",
+            "explication": "From 1933 to 1945, Germany is ruled by Hitler. He wants to destroy the Treaty of Versailles and rearms the country.",
+            "pieges": [
+              {
+                "texte": "In 1918.",
+                "pourquoi": "1918 is the end of the First World War."
+              },
+              {
+                "texte": "In 1939.",
+                "pourquoi": "He starts the war on 1 September 1939, but he has been in power since 1933."
+              }
+            ]
+          },
+          {
+            "texte": "Which economic crisis helps Germany tip into Nazism?",
+            "nom": "The 1929 crisis.",
+            "explication": "The 1929 crisis brings recession and social distress; it plays a big part in Hitler's success.",
+            "pieges": [
+              {
+                "texte": "The 1873 crisis.",
+                "pourquoi": "That's a 19th-century crisis, long before Nazism."
+              },
+              {
+                "texte": "The May 1968 crisis.",
+                "pourquoi": "It happens in France, long after the Second World War."
+              }
+            ]
+          },
+          {
+            "texte": "What features do totalitarian regimes share?",
+            "nom": "An all-powerful leader, police terror and control over all of society.",
+            "explication": "The leader concentrates power, the police and camps spread fear, and propaganda controls the whole population.",
+            "pieges": [
+              {
+                "texte": "Free elections between several parties.",
+                "pourquoi": "That's what a democracy does, accepting several parties."
+              },
+              {
+                "texte": "Freedom of the press.",
+                "pourquoi": "That's a democratic freedom; these regimes, on the contrary, control society through propaganda."
+              }
+            ]
+          },
+          {
+            "texte": "In 1936, under Léon Blum's Popular Front, which law gives employees their first paid holidays?",
+            "nom": "The paid holidays law, with 15 days of paid rest.",
+            "explication": "The law of 20 June 1936 gives employees 15 days of paid holiday for the first time.",
+            "pieges": [
+              {
+                "texte": "The 1905 law.",
+                "pourquoi": "The 1905 law separates the Churches and the State; it says nothing about holidays."
+              },
+              {
+                "texte": "Votes for women.",
+                "pourquoi": "In 1936, French women can't vote yet: France is then an exception in Europe."
+              }
+            ]
+          },
+          {
+            "texte": "On 7 June 1936, the government, employers and the CGT union sign agreements. Which ones?",
+            "nom": "The Matignon Agreements.",
+            "explication": "Signed at the Hôtel Matignon, they are followed by social laws: paid holidays, the 40-hour week, collective agreements.",
+            "pieges": [
+              {
+                "texte": "The Évian Accords.",
+                "pourquoi": "They end the Algerian War, in 1962."
+              },
+              {
+                "texte": "The Treaty of Versailles.",
+                "pourquoi": "It's the peace treaty that follows the First World War."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "laicite-republique",
+      "titre": "La laïcité et les symboles de la République (EMC)",
+      "niveau": "3e",
+      "prerequis": [
+        "republique-xixe"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Comprendre les enjeux de la laïcité. Les principes de la laïcité : liberté de conscience et égalité des citoyens. Les lois scolaires – la loi de 1905 – la loi de 2004."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La laïcité garantit la liberté de conscience et l'égalité des citoyens, quelle que soit leur religion. La Constitution dit que la France est une République indivisible, laïque, démocratique et sociale.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Constitution, article 1er : République indivisible, laïque, démocratique et sociale. Loi du 9 décembre 1905 : liberté de conscience ; aucun culte reconnu, payé ni subventionné. Loi du 15 mars 2004 : l'école publique.",
+        "exemple": "Exemple : dans une classe, des élèves ont des religions différentes, d'autres n'en ont pas. La laïcité protège la liberté de conscience de chacun et les traite tous de façon égale.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Que dit l'article 1er de la Constitution de 1958 ?",
+          "nom": "La France est une République indivisible, laïque, démocratique et sociale.",
+          "explication": "Le même article ajoute qu'elle assure l'égalité de tous les citoyens devant la loi, sans distinction de religion, et respecte toutes les croyances.",
+          "pieges": [
+            {
+              "texte": "La France est un royaume chrétien.",
+              "pourquoi": "La France est une République, et elle est laïque."
+            },
+            {
+              "texte": "La France a une religion officielle.",
+              "pourquoi": "Elle est laïque : elle respecte toutes les croyances, sans en choisir une."
+            }
+          ]
+        },
+        {
+          "texte": "Que garantit d'abord la loi du 9 décembre 1905, dans son article 1er ?",
+          "nom": "La liberté de conscience et le libre exercice des cultes.",
+          "explication": "La République assure la liberté de conscience ; chacun peut pratiquer son culte, dans le respect de l'ordre public.",
+          "pieges": [
+            {
+              "texte": "L'interdiction de toutes les religions.",
+              "pourquoi": "Au contraire : elle garantit le libre exercice des cultes."
+            },
+            {
+              "texte": "Le droit de vote des femmes.",
+              "pourquoi": "Cette loi porte sur les religions et l'État, pas sur le vote."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'article 2 de la loi de 1905, comment la République traite-t-elle les cultes ?",
+          "nom": "Elle n'en reconnaît, n'en salarie et n'en subventionne aucun.",
+          "explication": "Les dépenses pour l'exercice des cultes sont supprimées des budgets de l'État, des départements et des communes.",
+          "pieges": [
+            {
+              "texte": "Elle paie les responsables de tous les cultes.",
+              "pourquoi": "C'est ce que la loi supprime : la République ne salarie aucun culte."
+            },
+            {
+              "texte": "Elle choisit une religion pour tous.",
+              "pourquoi": "Elle ne reconnaît aucun culte : chacun reste libre de croire ou non."
+            }
+          ]
+        },
+        {
+          "texte": "La loi de 1905 permet pourtant de payer certains services religieux. Lesquels ?",
+          "nom": "Les aumôneries, dans des lieux publics comme les lycées, les collèges ou les prisons.",
+          "explication": "Ces dépenses d'aumônerie servent à assurer le libre exercice des cultes dans des établissements publics, comme les écoles ou les prisons.",
+          "pieges": [
+            {
+              "texte": "La construction de nouveaux lieux de culte.",
+              "pourquoi": "La loi supprime les dépenses pour l'exercice des cultes ; seules les aumôneries restent possibles."
+            },
+            {
+              "texte": "Rien du tout.",
+              "pourquoi": "La loi prévoit une exception : les services d'aumônerie dans les établissements publics."
+            }
+          ]
+        },
+        {
+          "texte": "Que prévoit la loi du 15 mars 2004 ?",
+          "nom": "Dans les écoles, collèges et lycées publics, les élèves ne portent pas de signes religieux ostensibles.",
+          "explication": "Elle applique le principe de laïcité : les élèves n'y manifestent pas ostensiblement une appartenance religieuse par des signes ou des tenues.",
+          "pieges": [
+            {
+              "texte": "Elle interdit toutes les religions en France.",
+              "pourquoi": "Elle ne concerne que les élèves des écoles, collèges et lycées publics."
+            },
+            {
+              "texte": "Elle oblige les élèves à suivre une religion.",
+              "pourquoi": "C'est l'inverse : la laïcité garantit la liberté de conscience."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'article 2 de la Constitution, quelle est la devise de la République ?",
+          "nom": "« Liberté, Égalité, Fraternité ».",
+          "explication": "L'article 2 fixe aussi la langue (le français), l'emblème (le drapeau tricolore) et l'hymne (« La Marseillaise »).",
+          "pieges": [
+            {
+              "texte": "« Gouvernement du peuple, par le peuple et pour le peuple ».",
+              "pourquoi": "C'est le principe de la République, écrit lui aussi à l'article 2, pas sa devise."
+            },
+            {
+              "texte": "« Laïcité, Égalité, Solidarité ».",
+              "pourquoi": "Ce sont des valeurs de la République, mais la devise est « Liberté, Égalité, Fraternité »."
+            }
+          ]
+        },
+        {
+          "texte": "Selon l'article 2 de la Constitution, quel est l'hymne national ?",
+          "nom": "« La Marseillaise ».",
+          "explication": "L'article 2 dit : l'hymne national est « La Marseillaise ».",
+          "pieges": [
+            {
+              "texte": "Le drapeau tricolore.",
+              "pourquoi": "Le drapeau bleu, blanc, rouge est l'emblème national, pas l'hymne."
+            },
+            {
+              "texte": "Le français.",
+              "pourquoi": "Le français est la langue de la République, pas son hymne."
+            }
+          ]
+        },
+        {
+          "texte": "Selon le programme d'enseignement moral et civique, quelles sont les quatre valeurs et principes majeurs de la République ?",
+          "nom": "La liberté, l'égalité, la fraternité et la laïcité.",
+          "explication": "De ces quatre principes découlent la solidarité, l'égalité entre les femmes et les hommes et le refus de toutes les discriminations.",
+          "pieges": [
+            {
+              "texte": "La liberté, l'égalité, la fraternité et la monarchie.",
+              "pourquoi": "La France est une République : la monarchie n'en fait pas partie."
+            },
+            {
+              "texte": "La richesse, la force, la gloire et la victoire.",
+              "pourquoi": "Ce ne sont pas des principes de la République ; ses valeurs sont la liberté, l'égalité, la fraternité et la laïcité."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Secularism (laïcité) and the symbols of the Republic (civics)",
+        "idee": "Laïcité guarantees freedom of conscience and the equality of citizens, whatever their religion. The Constitution says France is an indivisible, secular, democratic and social Republic.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Constitution, Article 1: an indivisible, secular, democratic and social Republic. Law of 9 December 1905: freedom of conscience; no religion recognised, paid or subsidised. Law of 15 March 2004: state schools.",
+          "exemple": "Example: in a class, some pupils have different religions, others have none. Laïcité protects everyone's freedom of conscience and treats them all equally.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What does Article 1 of the 1958 Constitution say?",
+            "nom": "France is an indivisible, secular, democratic and social Republic.",
+            "explication": "The same article adds that it ensures the equality of all citizens before the law, regardless of religion, and respects all beliefs.",
+            "pieges": [
+              {
+                "texte": "France is a Christian kingdom.",
+                "pourquoi": "France is a Republic, and it is secular."
+              },
+              {
+                "texte": "France has an official religion.",
+                "pourquoi": "It is secular: it respects all beliefs without choosing one."
+              }
+            ]
+          },
+          {
+            "texte": "What does the law of 9 December 1905 guarantee first, in its Article 1?",
+            "nom": "Freedom of conscience and the free practice of religions.",
+            "explication": "The Republic ensures freedom of conscience; everyone may practise their religion, within public order.",
+            "pieges": [
+              {
+                "texte": "Banning all religions.",
+                "pourquoi": "On the contrary: it guarantees the free practice of religions."
+              },
+              {
+                "texte": "Votes for women.",
+                "pourquoi": "This law is about religions and the State, not voting."
+              }
+            ]
+          },
+          {
+            "texte": "According to Article 2 of the 1905 law, how does the Republic treat religions?",
+            "nom": "It recognises, pays and subsidises none of them.",
+            "explication": "Spending on the practice of religion is removed from the budgets of the State, the départements and the communes.",
+            "pieges": [
+              {
+                "texte": "It pays the leaders of every religion.",
+                "pourquoi": "That's what the law ends: the Republic pays no religion."
+              },
+              {
+                "texte": "It chooses one religion for everyone.",
+                "pourquoi": "It recognises no religion: everyone is free to believe or not."
+              }
+            ]
+          },
+          {
+            "texte": "Yet the 1905 law allows some religious services to be paid for. Which ones?",
+            "nom": "Chaplaincies, in public places such as lycées, collèges or prisons.",
+            "explication": "This chaplaincy spending ensures the free practice of religion in public institutions, such as schools or prisons.",
+            "pieges": [
+              {
+                "texte": "Building new places of worship.",
+                "pourquoi": "The law removes spending on the practice of religion; only chaplaincies remain possible."
+              },
+              {
+                "texte": "Nothing at all.",
+                "pourquoi": "The law makes an exception: chaplaincy services in public institutions."
+              }
+            ]
+          },
+          {
+            "texte": "What does the law of 15 March 2004 provide?",
+            "nom": "In state primary schools, collèges and lycées, pupils don't wear conspicuous religious signs.",
+            "explication": "It applies the principle of laïcité: pupils there don't conspicuously show a religious affiliation through signs or clothing.",
+            "pieges": [
+              {
+                "texte": "It bans all religions in France.",
+                "pourquoi": "It only concerns pupils in state schools, collèges and lycées."
+              },
+              {
+                "texte": "It makes pupils follow a religion.",
+                "pourquoi": "It's the opposite: laïcité guarantees freedom of conscience."
+              }
+            ]
+          },
+          {
+            "texte": "According to Article 2 of the Constitution, what is the motto of the Republic?",
+            "nom": "« Liberty, Equality, Fraternity ».",
+            "explication": "Article 2 also sets the language (French), the emblem (the tricolour flag) and the anthem (« La Marseillaise »).",
+            "pieges": [
+              {
+                "texte": "« Government of the people, by the people and for the people ».",
+                "pourquoi": "That's the principle of the Republic, also written in Article 2, not its motto."
+              },
+              {
+                "texte": "« Laïcité, Equality, Solidarity ».",
+                "pourquoi": "These are values of the Republic, but the motto is « Liberty, Equality, Fraternity »."
+              }
+            ]
+          },
+          {
+            "texte": "According to Article 2 of the Constitution, what is the national anthem?",
+            "nom": "« La Marseillaise ».",
+            "explication": "Article 2 says: the national anthem is « La Marseillaise ».",
+            "pieges": [
+              {
+                "texte": "The tricolour flag.",
+                "pourquoi": "The blue, white and red flag is the national emblem, not the anthem."
+              },
+              {
+                "texte": "French.",
+                "pourquoi": "French is the language of the Republic, not its anthem."
+              }
+            ]
+          },
+          {
+            "texte": "According to the civics curriculum, what are the four main values and principles of the Republic?",
+            "nom": "Liberty, equality, fraternity and laïcité.",
+            "explication": "From these four principles follow solidarity, equality between women and men, and the rejection of all discrimination.",
+            "pieges": [
+              {
+                "texte": "Liberty, equality, fraternity and monarchy.",
+                "pourquoi": "France is a Republic: monarchy is not one of them."
+              },
+              {
+                "texte": "Wealth, strength, glory and victory.",
+                "pourquoi": "These aren't principles of the Republic; its values are liberty, equality, fraternity and laïcité."
               }
             ]
           }

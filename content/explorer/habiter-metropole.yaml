@@ -1,0 +1,130 @@
+id: habiter-metropole
+titre: "Habiter une métropole"
+niveau: 6e
+prerequis: [lire-carte]
+# Faits : ressource Éduscol « Géographie / 6e, thème 1 » (source ed6g1, lue le 2026-11-11) : définition de la métropole
+# (grande taille ; fonctions de commandement, emplois, innovation, connexion aux réseaux) ; plus de la moitié de l'humanité
+# en ville depuis 2007, probablement les 2/3 en 2050 ; croissance surtout en surface (étalement) ; problèmes (air, bruit,
+# énergie de l'étalement, ségrégation) ; la ville de demain résulte de choix faits aujourd'hui. Habitants : « résidents,
+# migrants pendulaires, touristes, usagers occasionnels » (programme c3hg). Navette = aller-retour régulier domicile-travail
+# (Insee, source insee_nav). Mégapole > 10 millions d'habitants ; Tokyo ≈ 37 millions en 2018 (ONU, source onu_wup).
+programme: { source: c3hg, texte: "Habiter une métropole : les métropoles et leurs habitants ; la ville de demain." }
+activite: quiz
+parametres: {}
+idee: "Une métropole est une très grande ville qui attire habitants et activités. On y vit, on y travaille, on la visite : chacun l'habite à sa façon. La ville de demain cherche à être plus durable."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Une métropole : beaucoup d'habitants, des emplois, des pouvoirs de décision, des liens avec le monde, et des habitants très divers."
+  exemple: "Exemple : Léa vit en banlieue. Chaque matin, elle prend le train pour travailler au centre, et rentre le soir. Elle fait la navette : c'est une migrante pendulaire."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'une métropole ?"
+    nom: "Une très grande ville qui concentre habitants, emplois et pouvoirs de décision."
+    explication: "Une métropole est un ensemble urbain de grande taille. Elle rassemble aussi des fonctions de commandement, d'innovation et de culture, reliées au monde."
+    pieges:
+      - { texte: "Un petit village à la campagne.", pourquoi: "Une métropole est un ensemble urbain de très grande taille." }
+      - { texte: "N'importe quelle ville qui a une mairie.", pourquoi: "Une métropole est plus que cela : elle concentre aussi des emplois et des pouvoirs de décision." }
+  - texte: "Depuis 2007, quelle part de l'humanité vit en ville ?"
+    nom: "Plus de la moitié."
+    explication: "Depuis 2007, plus d'un humain sur deux habite en ville ; ce serait probablement les deux tiers vers 2050."
+    pieges:
+      - { texte: "Moins d'un quart.", pourquoi: "C'est beaucoup trop peu : la part des urbains dépasse la moitié." }
+      - { texte: "Presque tout le monde.", pourquoi: "Une grande partie vit encore hors des villes : on prévoit environ les deux tiers en ville vers 2050." }
+  - texte: "Qui habite une métropole, au sens des géographes ?"
+    nom: "Ceux qui y vivent, ceux qui viennent y travailler, les touristes et les visiteurs."
+    explication: "Habiter, ce n'est pas seulement y dormir : résidents, travailleurs venus chaque jour, touristes et visiteurs pratiquent la ville chacun à leur façon."
+    pieges:
+      - { texte: "Seulement ceux qui y dorment.", pourquoi: "Habiter ne se réduit pas à résider : travailler ou se promener dans une ville, c'est aussi l'habiter." }
+      - { texte: "Seulement les touristes.", pourquoi: "Les touristes ne sont qu'une partie des habitants : il y a d'abord les résidents." }
+  - texte: "Qu'est-ce qu'un migrant pendulaire ?"
+    nom: "Une personne qui fait régulièrement l'aller-retour entre son logement et son travail."
+    explication: "Comme le balancier d'une pendule, elle va et revient : l'Insee parle de navettes entre domicile et travail."
+    pieges:
+      - { texte: "Une personne qui part vivre dans un autre pays.", pourquoi: "Elle change de lieu de vie ; le pendulaire, lui, rentre chez lui chaque soir." }
+      - { texte: "Un touriste en vacances.", pourquoi: "Le touriste vient pour ses loisirs, puis repart ; il ne fait pas la navette pour travailler." }
+  - texte: "Pour l'ONU, une mégapole est une agglomération de plus de combien d'habitants ?"
+    nom: "10 millions."
+    explication: "Au-delà de 10 millions d'habitants, on parle de mégapole. En 2018, la plus grande, Tokyo, compte environ 37 millions d'habitants."
+    pieges:
+      - { texte: "10 000.", pourquoi: "C'est mille fois trop peu : le seuil est de 10 millions." }
+      - { texte: "1 milliard.", pourquoi: "Aucune ville n'est aussi peuplée : la plus grande, Tokyo, compte environ 37 millions d'habitants." }
+  - texte: "Lequel est un problème fréquent dans les métropoles ?"
+    nom: "La pollution de l'air et le bruit."
+    explication: "La croissance des métropoles pèse sur la qualité de vie : air pollué, bruit, besoins en eau et en énergie."
+    pieges:
+      - { texte: "Le manque d'emplois partout.", pourquoi: "Les métropoles concentrent au contraire beaucoup d'emplois." }
+      - { texte: "Le silence des rues.", pourquoi: "Le bruit est justement une des gênes des métropoles." }
+  - texte: "Dans une métropole, des quartiers très riches et très pauvres vivent séparés. Comment appelle-t-on cela ?"
+    nom: "La ségrégation."
+    explication: "La ségrégation sépare les habitants selon leurs moyens ; elle rend plus difficiles les rencontres et la vie ensemble."
+    pieges:
+      - { texte: "Le recensement.", pourquoi: "Le recensement compte les habitants ; il ne les sépare pas." }
+      - { texte: "Le tourisme.", pourquoi: "Le tourisme fait venir des visiteurs ; il ne désigne pas la séparation des quartiers." }
+  - texte: "Pour une ville de demain plus durable, quelle idée va dans le bon sens ?"
+    nom: "Limiter l'étalement, qui coûte cher en énergie et en trajets."
+    explication: "Une ville qui s'étale allonge les trajets et augmente la dépense d'énergie. La ville de demain dépend des choix faits aujourd'hui."
+    pieges:
+      - { texte: "Construire toujours plus loin dans les champs.", pourquoi: "C'est l'étalement : il allonge les trajets et augmente la dépense d'énergie." }
+      - { texte: "Ne rien décider : la ville de demain se fera toute seule.", pourquoi: "La ville de demain résulte des choix faits aujourd'hui par les habitants et les élus." }
+
+en:
+  titre: "Living in a metropolis"
+  idee: "A metropolis is a very large city that draws people and activities. People live, work or visit there: each inhabits it in their own way. The city of tomorrow tries to be more sustainable."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "A metropolis: many inhabitants, jobs, decision-making power, links with the world, and very varied inhabitants."
+    exemple: "Example: Léa lives in the suburbs. Every morning she takes the train to work in the centre, and comes home in the evening. She commutes: she's a daily commuter."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a metropolis?"
+      nom: "A very large city that concentrates inhabitants, jobs and decision-making power."
+      explication: "A metropolis is a very large urban area. It also gathers leadership, innovation and cultural functions, linked to the world."
+      pieges:
+        - { texte: "A small village in the countryside.", pourquoi: "A metropolis is a very large urban area." }
+        - { texte: "Any town with a town hall.", pourquoi: "A metropolis is more than that: it also concentrates jobs and decision-making power." }
+    - texte: "Since 2007, what share of humanity lives in towns and cities?"
+      nom: "More than half."
+      explication: "Since 2007, more than one person in two lives in a town or city; it will probably be two thirds by around 2050."
+      pieges:
+        - { texte: "Less than a quarter.", pourquoi: "That's far too few: the urban share is over half." }
+        - { texte: "Almost everyone.", pourquoi: "Many people still live outside towns: about two thirds are expected to be urban by 2050." }
+    - texte: "Who inhabits a metropolis, as geographers see it?"
+      nom: "Those who live there, those who come to work, tourists and visitors."
+      explication: "Inhabiting isn't just sleeping there: residents, daily commuters, tourists and visitors all use the city in their own way."
+      pieges:
+        - { texte: "Only those who sleep there.", pourquoi: "Inhabiting isn't only residing: working or walking around a city is also inhabiting it." }
+        - { texte: "Only tourists.", pourquoi: "Tourists are only some of the inhabitants: first of all there are the residents." }
+    - texte: "What is a daily commuter (« migrant pendulaire »)?"
+      nom: "Someone who regularly travels back and forth between home and work."
+      explication: "Like a clock's pendulum, they go and come back: INSEE calls these home-to-work shuttles."
+      pieges:
+        - { texte: "Someone who moves to live in another country.", pourquoi: "They change where they live; a commuter goes home every evening." }
+        - { texte: "A tourist on holiday.", pourquoi: "A tourist comes for leisure, then leaves; they don't commute to work." }
+    - texte: "For the UN, a megacity is an urban area of more than how many inhabitants?"
+      nom: "10 million."
+      explication: "Above 10 million inhabitants, we speak of a megacity. In 2018, the largest, Tokyo, had about 37 million inhabitants."
+      pieges:
+        - { texte: "10,000.", pourquoi: "That's a thousand times too few: the threshold is 10 million." }
+        - { texte: "1 billion.", pourquoi: "No city is that big: the largest, Tokyo, has about 37 million inhabitants." }
+    - texte: "Which is a common problem in metropolises?"
+      nom: "Air pollution and noise."
+      explication: "The growth of metropolises weighs on quality of life: polluted air, noise, needs for water and energy."
+      pieges:
+        - { texte: "A lack of jobs everywhere.", pourquoi: "Metropolises actually concentrate many jobs." }
+        - { texte: "Silent streets.", pourquoi: "Noise is precisely one of the nuisances of metropolises." }
+    - texte: "In a metropolis, very rich and very poor neighbourhoods live apart. What is this called?"
+      nom: "Segregation."
+      explication: "Segregation separates people according to their means; it makes meeting and living together harder."
+      pieges:
+        - { texte: "The census.", pourquoi: "A census counts the inhabitants; it doesn't separate them." }
+        - { texte: "Tourism.", pourquoi: "Tourism brings visitors; it doesn't mean neighbourhoods are separated." }
+    - texte: "For a more sustainable city of tomorrow, which idea goes the right way?"
+      nom: "Limiting urban sprawl, which costs a lot of energy and travel."
+      explication: "A sprawling city makes journeys longer and uses more energy. The city of tomorrow depends on the choices made today."
+      pieges:
+        - { texte: "Always building further out into the fields.", pourquoi: "That's sprawl: it makes journeys longer and uses more energy." }
+        - { texte: "Deciding nothing: the city of tomorrow will build itself.", pourquoi: "The city of tomorrow comes from choices made today by inhabitants and elected officials." }

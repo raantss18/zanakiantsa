@@ -1,0 +1,128 @@
+id: ressources-limitees
+titre: "Eau, énergie, alimentation : des ressources à ménager"
+niveau: 5e
+prerequis: [croissance-demographique]
+# Faits : pages « Objectifs de développement durable » des Nations unies, lues le 2026-11-11 : objectif 6 (2,2 milliards
+# sans eau potable gérée en toute sécurité en 2022, dont 703 millions sans service de base), objectif 2 (≈ 735 millions de
+# personnes dans la faim chronique en 2022, 9,2 %), objectif 7 (91 % de la population avec l'électricité en 2021, ≈ 675
+# millions sans) — sources onu_odd6, onu_odd2, onu_odd7. Énergies renouvelables : définition de l'Insee (source insee_enr).
+programme: { source: c4, texte: "Des ressources limitées, à gérer et à renouveler : l’énergie, l’eau, des ressources à ménager et à mieux utiliser ; l’alimentation : comment nourrir une humanité en croissance démographique ?" }
+activite: quiz
+parametres: {}
+idee: "L'eau, l'énergie et la nourriture sont des ressources essentielles, mais tout le monde n'y a pas accès. L'ONU s'est fixé des objectifs de développement durable pour que chacun en dispose."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Objectif 2 de l'ONU : la faim. Objectif 6 : l'eau et l'assainissement. Objectif 7 : l'énergie. Une énergie renouvelable vient d'un processus naturel qui se renouvelle sans cesse."
+  exemple: "Exemple : le vent fait tourner une éolienne. Demain, le vent soufflera encore : l'énergie du vent est renouvelable."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'une énergie renouvelable ?"
+    nom: "Une énergie tirée de processus naturels qui se renouvellent sans cesse."
+    explication: "Selon l'Insee, ce sont les énergies d'origine solaire, éolienne, hydraulique, géothermique ou végétale, comme le bois."
+    pieges:
+      - { texte: "Une énergie qu'on peut racheter au magasin.", pourquoi: "« Renouvelable » parle de la nature, qui la renouvelle, pas d'un achat." }
+      - { texte: "Une énergie qui ne s'arrête jamais de fonctionner, même en panne.", pourquoi: "Le mot parle de la source, renouvelée par la nature, pas des machines." }
+  - texte: "Laquelle de ces énergies n'est pas dans la liste des énergies renouvelables de l'Insee ?"
+    nom: "Le pétrole."
+    explication: "La liste de l'Insee cite le soleil, le vent, l'eau, la chaleur de la Terre et les végétaux. Le pétrole n'y figure pas."
+    pieges:
+      - { texte: "Le vent.", pourquoi: "Le vent est dans la liste : l'énergie éolienne est renouvelable." }
+      - { texte: "Le soleil.", pourquoi: "Le soleil est dans la liste : l'énergie solaire est renouvelable." }
+  - texte: "En 2022, selon l'ONU, combien de personnes n'avaient pas d'eau potable gérée en toute sécurité ?"
+    nom: "2,2 milliards."
+    explication: "Parmi elles, 703 millions n'avaient même pas un service d'eau de base. C'est l'objet de l'objectif 6 de l'ONU."
+    pieges:
+      - { texte: "2,2 millions.", pourquoi: "C'est mille fois trop peu : l'ONU compte 2,2 milliards de personnes." }
+      - { texte: "Personne : tout le monde a l'eau potable au robinet.", pourquoi: "703 millions de personnes n'ont même pas un service d'eau de base." }
+  - texte: "En 2022, selon l'ONU, combien de personnes souffraient de la faim de façon durable ?"
+    nom: "Environ 735 millions, soit 9,2 % de l'humanité."
+    explication: "Environ 9 personnes sur 100 vivaient dans une faim chronique. L'objectif 2 de l'ONU vise à éliminer la faim."
+    pieges:
+      - { texte: "Personne : la faim a disparu.", pourquoi: "Environ 735 millions de personnes souffraient encore de la faim en 2022." }
+      - { texte: "La moitié de l'humanité.", pourquoi: "C'est environ 9 personnes sur 100, pas 50 sur 100." }
+  - texte: "Quel objectif de développement durable de l'ONU porte sur l'eau et l'assainissement ?"
+    nom: "L'objectif 6."
+    explication: "L'objectif 6 veut garantir à tous l'accès à l'eau et à l'assainissement, gérés de façon durable."
+    pieges:
+      - { texte: "L'objectif 2.", pourquoi: "L'objectif 2 porte sur la faim et l'agriculture durable." }
+      - { texte: "L'objectif 7.", pourquoi: "L'objectif 7 porte sur l'énergie." }
+  - texte: "En 2021, selon l'ONU, quelle part de la population mondiale avait l'électricité ?"
+    nom: "91 %."
+    explication: "91 personnes sur 100 avaient l'électricité ; environ 675 millions de personnes restaient sans, surtout en Afrique subsaharienne."
+    pieges:
+      - { texte: "100 %.", pourquoi: "Environ 675 millions de personnes restaient sans électricité." }
+      - { texte: "9 %.", pourquoi: "C'est l'inverse : 91 % l'avaient, 9 % ne l'avaient pas." }
+  - texte: "Pourquoi les campagnes et l'agriculture comptent-elles beaucoup dans ce thème ?"
+    nom: "Elles fournissent des ressources essentielles, surtout la nourriture."
+    explication: "Les espaces ruraux et agricoles produisent l'alimentation, alors qu'une partie de l'humanité est encore sous-alimentée."
+    pieges:
+      - { texte: "Parce qu'il n'y a plus d'agriculteurs dans le monde.", pourquoi: "Les espaces agricoles fournissent toujours l'alimentation de l'humanité." }
+      - { texte: "Parce qu'on y fabrique surtout des ordinateurs.", pourquoi: "Ici, le rôle des campagnes est de fournir des ressources comme la nourriture." }
+  - texte: "Le programme dit que l'eau est une ressource « à ménager ». Que veut dire « ménager » ici ?"
+    nom: "L'utiliser avec soin, sans la gaspiller ni l'épuiser."
+    explication: "Ménager une ressource, c'est l'épargner et mieux l'utiliser, sans la surexploiter, pour qu'elle serve aussi demain."
+    pieges:
+      - { texte: "S'en servir pour faire le ménage.", pourquoi: "Ici, « ménager » veut dire épargner, utiliser avec soin." }
+      - { texte: "L'utiliser le plus vite possible.", pourquoi: "C'est la surexploitation, que le développement durable veut éviter." }
+
+en:
+  titre: "Water, energy, food: resources to be spared"
+  idee: "Water, energy and food are essential resources, but not everyone has access to them. The UN has set sustainable development goals so that everyone can have them."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "UN Goal 2: hunger. Goal 6: water and sanitation. Goal 7: energy. A renewable energy comes from a natural process that constantly renews itself."
+    exemple: "Example: the wind turns a wind turbine. Tomorrow the wind will blow again: wind energy is renewable."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a renewable energy?"
+      nom: "An energy taken from natural processes that constantly renew themselves."
+      explication: "According to INSEE, these are energies from the sun, wind, water, the Earth's heat or plants, such as wood."
+      pieges:
+        - { texte: "An energy you can buy again in a shop.", pourquoi: "« Renewable » is about nature renewing it, not about buying it." }
+        - { texte: "An energy that never stops working, even when broken.", pourquoi: "The word is about the source, renewed by nature, not about machines." }
+    - texte: "Which of these energies is not on INSEE's list of renewable energies?"
+      nom: "Oil."
+      explication: "INSEE's list names the sun, wind, water, the Earth's heat and plants. Oil isn't on it."
+      pieges:
+        - { texte: "Wind.", pourquoi: "Wind is on the list: wind energy is renewable." }
+        - { texte: "The sun.", pourquoi: "The sun is on the list: solar energy is renewable." }
+    - texte: "In 2022, according to the UN, how many people lacked safely managed drinking water?"
+      nom: "2.2 billion."
+      explication: "Of these, 703 million didn't even have a basic water service. This is the subject of UN Goal 6."
+      pieges:
+        - { texte: "2.2 million.", pourquoi: "That's a thousand times too few: the UN counts 2.2 billion people." }
+        - { texte: "Nobody: everyone has drinking water from the tap.", pourquoi: "703 million people don't even have a basic water service." }
+    - texte: "In 2022, according to the UN, how many people suffered from chronic hunger?"
+      nom: "About 735 million, or 9.2% of humanity."
+      explication: "About 9 people in 100 lived with chronic hunger. UN Goal 2 aims to end hunger."
+      pieges:
+        - { texte: "Nobody: hunger has disappeared.", pourquoi: "About 735 million people still suffered from hunger in 2022." }
+        - { texte: "Half of humanity.", pourquoi: "It's about 9 people in 100, not 50 in 100." }
+    - texte: "Which UN sustainable development goal is about water and sanitation?"
+      nom: "Goal 6."
+      explication: "Goal 6 aims to ensure access to water and sanitation for all, managed sustainably."
+      pieges:
+        - { texte: "Goal 2.", pourquoi: "Goal 2 is about hunger and sustainable farming." }
+        - { texte: "Goal 7.", pourquoi: "Goal 7 is about energy." }
+    - texte: "In 2021, according to the UN, what share of the world population had electricity?"
+      nom: "91%."
+      explication: "91 people in 100 had electricity; about 675 million people were still without it, mostly in sub-Saharan Africa."
+      pieges:
+        - { texte: "100%.", pourquoi: "About 675 million people were still without electricity." }
+        - { texte: "9%.", pourquoi: "It's the opposite: 91% had it, 9% didn't." }
+    - texte: "Why do the countryside and farming matter so much in this topic?"
+      nom: "They provide essential resources, above all food."
+      explication: "Rural and farming areas produce food, while part of humanity is still undernourished."
+      pieges:
+        - { texte: "Because there are no farmers left in the world.", pourquoi: "Farming areas still provide humanity's food." }
+        - { texte: "Because they mostly make computers there.", pourquoi: "Here, the role of the countryside is to provide resources such as food." }
+    - texte: "The curriculum says water is a resource « to be spared » (« à ménager »). What does that mean here?"
+      nom: "Using it carefully, without wasting or exhausting it."
+      explication: "Sparing a resource means saving it and using it better, without overexploiting it, so it is still there tomorrow."
+      pieges:
+        - { texte: "Using it to do the housework.", pourquoi: "Here, « ménager » means to spare, to use carefully." }
+        - { texte: "Using it as fast as possible.", pourquoi: "That's overexploitation, which sustainable development aims to avoid." }

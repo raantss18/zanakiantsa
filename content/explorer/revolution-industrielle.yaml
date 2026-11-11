@@ -1,0 +1,130 @@
+id: revolution-industrielle
+titre: "L'Europe de la « révolution industrielle »"
+niveau: 4e
+prerequis: [revolution-empire]
+# Faits : ressource Éduscol « Histoire / 4e, thème 2 » (source ed4h2, lue le 2026-11-11) : début en Angleterre dans le
+# dernier tiers du XVIIIe siècle ; France, nord de l'Italie, Wallonie à partir des années 1820-1830 ; Japon après 1870 ;
+# première révolution industrielle (charbon, moteur à vapeur, textile, fer), seconde à partir des années 1870
+# (électricité, pétrole, moteur à explosion, acier) ; division du travail, salariés, mécanisation ; émigration
+# (Irlande, Italie), famine irlandaise 1845-1848 vers les États-Unis ; insécurité sociale des ouvriers ; femmes = un
+# tiers des ouvriers en France ; « question sociale ». Europe en croissance démographique : programme c4.
+programme: { source: c4, texte: "L’Europe et le monde au XIXe siècle : l’Europe de la « révolution industrielle »." }
+activite: quiz
+parametres: {}
+idee: "Au XIXe siècle, l'Europe s'industrialise : le charbon et la vapeur, puis l'électricité et le pétrole transforment usines, villes et campagnes. La vie des ouvriers pose la « question sociale »."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : la révolution industrielle commence en Angleterre dans le dernier tiers du XVIIIe siècle ; la seconde révolution industrielle débute dans les années 1870."
+  exemple: "Exemple : une usine réunit de nombreux ouvriers payés par un patron. Chacun fait une seule tâche, avec des machines : c'est la division du travail et la mécanisation."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Où et quand commence la révolution industrielle ?"
+    nom: "En Angleterre, dans le dernier tiers du XVIIIe siècle."
+    explication: "L'Angleterre est la première. La France, le nord de l'Italie et la Belgique s'industrialisent à partir des années 1820 et 1830."
+    pieges:
+      - { texte: "En France, en 1789.", pourquoi: "1789, c'est la Révolution française, une révolution politique ; la France s'industrialise à partir des années 1820." }
+      - { texte: "Au Japon, après 1870.", pourquoi: "Le Japon devient une puissance industrielle plus tard, après 1870." }
+  - texte: "Sur quoi repose la première révolution industrielle ?"
+    nom: "Le charbon et le moteur à vapeur."
+    explication: "Le charbon fait tourner les machines à vapeur ; le textile et la métallurgie du fer progressent."
+    pieges:
+      - { texte: "L'électricité et le pétrole.", pourquoi: "Ils marquent la seconde révolution industrielle, à partir des années 1870." }
+      - { texte: "Les bras et les chevaux seulement.", pourquoi: "La nouveauté, c'est justement la machine à vapeur, nourrie au charbon." }
+  - texte: "Qu'est-ce qui marque la seconde révolution industrielle, à partir des années 1870 ?"
+    nom: "L'électricité, le pétrole et le moteur à explosion."
+    explication: "S'y ajoutent les progrès de l'acier et de l'aluminium. La finance et les grandes entreprises prennent plus de poids."
+    pieges:
+      - { texte: "Le charbon et la vapeur seulement.", pourquoi: "Ce sont les énergies de la première révolution industrielle." }
+      - { texte: "L'invention de l'écriture.", pourquoi: "L'écriture est bien plus ancienne : vers 3300 avant J.-C." }
+  - texte: "Qu'est-ce qui caractérise le travail dans l'industrie ?"
+    nom: "Beaucoup de salariés, la division du travail et les machines."
+    explication: "L'usine réunit de nombreux ouvriers salariés ; chacun fait une partie du travail, avec des machines : c'est la mécanisation."
+    pieges:
+      - { texte: "Un artisan seul qui fait tout à la main.", pourquoi: "L'industrie réunit au contraire de nombreux ouvriers et des machines." }
+      - { texte: "Des paysans qui travaillent seulement pour se nourrir.", pourquoi: "L'ouvrier d'usine est un salarié : il reçoit un salaire." }
+  - texte: "Au XIXe siècle, pourquoi beaucoup d'Irlandais et d'Italiens émigrent-ils ?"
+    nom: "Leurs régions se développent peu ; en Irlande, une grande famine frappe de 1845 à 1848."
+    explication: "Les régions qui ne s'industrialisent pas voient partir leurs habitants ; la famine irlandaise pousse beaucoup d'Irlandais vers les États-Unis."
+    pieges:
+      - { texte: "Pour partir en vacances.", pourquoi: "Ils partent pour vivre ailleurs, souvent vers les États-Unis, pas pour des vacances." }
+      - { texte: "Parce que l'Europe se vide de ses habitants.", pourquoi: "Au contraire : l'Europe est alors en croissance démographique." }
+  - texte: "Au XIXe siècle, qu'appelle-t-on la « question sociale » ?"
+    nom: "Les dures conditions de vie et de travail des ouvriers."
+    explication: "Vie et travail très pénibles, misère possible à tout moment : on cherche des réponses, comme les premières lois sociales et les syndicats."
+    pieges:
+      - { texte: "Une question posée à un examen.", pourquoi: "Ici, c'est un grand problème de société : le sort des ouvriers." }
+      - { texte: "Le droit de vote des femmes.", pourquoi: "C'est un autre débat ; la « question sociale » vise le sort des ouvriers." }
+  - texte: "Pourquoi dit-on que les ouvriers vivent dans l'insécurité sociale ?"
+    nom: "Une maladie ou un accident du travail peut les faire tomber dans la misère."
+    explication: "Sans protection, un accident, une maladie ou une crise peut tout faire perdre. Au XXe siècle, l'État-providence tentera d'y répondre."
+    pieges:
+      - { texte: "Parce qu'ils sont tous riches.", pourquoi: "La plupart vivent pauvrement et peuvent basculer dans la misère." }
+      - { texte: "Parce qu'une assurance les protège déjà de tout.", pourquoi: "C'est au XXe siècle que l'État-providence tentera de les protéger." }
+  - texte: "En France, au XIXe siècle, quelle part des ouvriers sont des femmes ?"
+    nom: "Environ un tiers."
+    explication: "Le travail des femmes est une réalité dans le monde ouvrier, surtout dans les métiers les plus mal payés, comme le textile."
+    pieges:
+      - { texte: "Aucune.", pourquoi: "Les femmes représentent environ un tiers des ouvriers, surtout dans le textile." }
+      - { texte: "Toutes.", pourquoi: "Ce sont environ un tiers des ouvriers, pas la totalité." }
+
+en:
+  titre: "Europe and the « Industrial Revolution »"
+  idee: "In the 19th century, Europe industrialises: coal and steam, then electricity and oil transform factories, towns and the countryside. Workers' lives raise the « social question »."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: the Industrial Revolution begins in England in the last third of the 18th century; the second industrial revolution begins in the 1870s."
+    exemple: "Example: a factory brings together many workers paid by an employer. Each does a single task, with machines: that's the division of labour and mechanisation."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Where and when does the Industrial Revolution begin?"
+      nom: "In England, in the last third of the 18th century."
+      explication: "England comes first. France, northern Italy and Belgium industrialise from the 1820s and 1830s."
+      pieges:
+        - { texte: "In France, in 1789.", pourquoi: "1789 is the French Revolution, a political revolution; France industrialises from the 1820s." }
+        - { texte: "In Japan, after 1870.", pourquoi: "Japan becomes an industrial power later, after 1870." }
+    - texte: "What is the first industrial revolution based on?"
+      nom: "Coal and the steam engine."
+      explication: "Coal drives steam engines; textiles and iron-making make progress."
+      pieges:
+        - { texte: "Electricity and oil.", pourquoi: "They mark the second industrial revolution, from the 1870s." }
+        - { texte: "Only human and horse power.", pourquoi: "The new thing is precisely the steam engine, fed with coal." }
+    - texte: "What marks the second industrial revolution, from the 1870s?"
+      nom: "Electricity, oil and the combustion engine."
+      explication: "Add progress in steel and aluminium. Finance and big companies become more important."
+      pieges:
+        - { texte: "Only coal and steam.", pourquoi: "Those are the energies of the first industrial revolution." }
+        - { texte: "The invention of writing.", pourquoi: "Writing is much older: around 3300 BC." }
+    - texte: "What characterises work in industry?"
+      nom: "Many wage-earners, the division of labour and machines."
+      explication: "The factory brings together many paid workers; each does part of the work, with machines: that's mechanisation."
+      pieges:
+        - { texte: "A lone craftsman doing everything by hand.", pourquoi: "Industry, on the contrary, brings together many workers and machines." }
+        - { texte: "Farmers working only to feed themselves.", pourquoi: "A factory worker is a wage-earner: they receive a wage." }
+    - texte: "In the 19th century, why do many Irish and Italian people emigrate?"
+      nom: "Their regions develop little; in Ireland, a great famine strikes from 1845 to 1848."
+      explication: "Regions that don't industrialise see their people leave; the Irish famine drives many Irish people to the United States."
+      pieges:
+        - { texte: "To go on holiday.", pourquoi: "They leave to live elsewhere, often in the United States, not for a holiday." }
+        - { texte: "Because Europe is emptying of people.", pourquoi: "On the contrary: Europe's population is growing." }
+    - texte: "In the 19th century, what is the « social question »?"
+      nom: "The hard living and working conditions of workers."
+      explication: "Very hard living and working conditions, poverty always close: people look for answers, such as the first social laws and trade unions."
+      pieges:
+        - { texte: "A question asked in an exam.", pourquoi: "Here it's a big problem for society: the fate of workers." }
+        - { texte: "Votes for women.", pourquoi: "That's another debate; the « social question » is about workers' fate." }
+    - texte: "Why do we say that workers live with social insecurity?"
+      nom: "An illness or a workplace accident can plunge them into poverty."
+      explication: "Without protection, an accident, an illness or a crisis can make them lose everything. In the 20th century, the welfare state will try to respond."
+      pieges:
+        - { texte: "Because they are all rich.", pourquoi: "Most live poorly and can fall into poverty." }
+        - { texte: "Because insurance already protects them from everything.", pourquoi: "It's in the 20th century that the welfare state will try to protect them." }
+    - texte: "In France, in the 19th century, what share of workers are women?"
+      nom: "About a third."
+      explication: "Women's work is a reality in the working world, especially in the worst-paid trades, such as textiles."
+      pieges:
+        - { texte: "None.", pourquoi: "Women make up about a third of workers, especially in textiles." }
+        - { texte: "All of them.", pourquoi: "They are about a third of workers, not all of them." }

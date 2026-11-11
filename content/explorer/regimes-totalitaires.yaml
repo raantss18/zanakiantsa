@@ -1,0 +1,133 @@
+id: regimes-totalitaires
+titre: "Démocraties fragilisées et régimes totalitaires (1918-1939)"
+niveau: 3e
+prerequis: [guerres-mondiales]
+# Faits : programme c4 (révolution bolchevique ; communisme stalinien dans les années 1920 ; Grande Dépression ; régime nazi ;
+# Front populaire). Ressource Éduscol « Histoire / 3e, thème 1 » (source ed3h1, lue le 2026-11-11) : repères 1917
+# (révolution russe), 1933-1945 (Allemagne d'Hitler), 1936 (Front populaire) ; rôle de la crise de 1929 dans le basculement
+# de l'Allemagne dans le nazisme ; propagande ; vote des femmes généralisé en Europe après 1918, sauf en France. Fiche
+# Éduscol « Démocraties fragilisées et expériences totalitaires » (source ed3h1b) : entre-deux-guerres = 1918-1939 ;
+# Mussolini et le fascisme à partir de 1924 ; URSS : pouvoir personnel et policier, camps, terreur, culte de Staline ;
+# Hitler au pouvoir en 1933, encadrement de la société ; guerre déclenchée le 1er septembre 1939. Front populaire :
+# Assemblée nationale (source an1936 : accords de Matignon le 7 juin 1936, lois déposées par Léon Blum) et Cnam (source
+# cnam1936 : loi du 20 juin 1936, 15 jours de congés payés).
+programme: { source: c4, texte: "L’Europe, un théâtre majeur des guerres totales (1914-1945) : démocraties fragilisées et expériences totalitaires dans l’Europe de l’entre-deux-guerres." }
+activite: quiz
+parametres: {}
+idee: "Entre les deux guerres mondiales, des démocraties affaiblies font face à des régimes totalitaires : l'URSS de Staline et l'Allemagne d'Hitler. En France, le Front populaire de 1936 défend la démocratie."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1917, révolution russe ; 1929, crise économique ; 1933, Hitler au pouvoir ; 1936, Front populaire ; 1939, début de la Seconde Guerre mondiale."
+  exemple: "Exemple : en URSS, un seul chef, Staline, est célébré partout ; la police et les camps font régner la terreur. Ce sont des traits d'un régime totalitaire."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle période appelle-t-on l'entre-deux-guerres ?"
+    nom: "De 1918 à 1939."
+    explication: "C'est le temps qui sépare la fin de la Première Guerre mondiale, en 1918, du début de la Seconde, en 1939."
+    pieges:
+      - { texte: "De 1914 à 1918.", pourquoi: "Ce sont les années de la Première Guerre mondiale elle-même." }
+      - { texte: "De 1939 à 1945.", pourquoi: "Ce sont les années de la Seconde Guerre mondiale." }
+  - texte: "En quelle année a lieu la révolution russe, d'où naît le régime soviétique ?"
+    nom: "En 1917."
+    explication: "En 1917, pendant la Grande Guerre, la révolution bolchevique éclate en Russie ; le communisme stalinien s'installe dans les années 1920."
+    pieges:
+      - { texte: "En 1789.", pourquoi: "1789, c'est la Révolution française." }
+      - { texte: "En 1933.", pourquoi: "1933, c'est l'arrivée d'Hitler au pouvoir en Allemagne." }
+  - texte: "Qui dirige l'URSS et fait l'objet d'un véritable culte ?"
+    nom: "Staline."
+    explication: "Staline exerce un pouvoir personnel et policier ; son culte s'étend jusqu'aux partis communistes d'Europe de l'Ouest."
+    pieges:
+      - { texte: "Hitler.", pourquoi: "Hitler dirige l'Allemagne à partir de 1933." }
+      - { texte: "Mussolini.", pourquoi: "Mussolini installe un régime fasciste en Italie, dans les années 1920." }
+  - texte: "En quelle année Hitler arrive-t-il au pouvoir en Allemagne ?"
+    nom: "En 1933."
+    explication: "De 1933 à 1945, l'Allemagne est dirigée par Hitler. Il veut détruire le traité de Versailles et réarme le pays."
+    pieges:
+      - { texte: "En 1918.", pourquoi: "1918, c'est la fin de la Première Guerre mondiale." }
+      - { texte: "En 1939.", pourquoi: "Il déclenche la guerre le 1er septembre 1939, mais il est au pouvoir depuis 1933." }
+  - texte: "Quelle crise économique favorise le basculement de l'Allemagne dans le nazisme ?"
+    nom: "La crise de 1929."
+    explication: "La crise de 1929 provoque la récession et la détresse sociale ; elle joue un grand rôle dans le succès d'Hitler."
+    pieges:
+      - { texte: "La crise de 1873.", pourquoi: "C'est une crise du XIXe siècle, bien avant le nazisme." }
+      - { texte: "La crise de Mai 1968.", pourquoi: "Elle a lieu en France, bien après la Seconde Guerre mondiale." }
+  - texte: "Quels traits ont en commun les régimes totalitaires ?"
+    nom: "Un chef tout-puissant, la terreur policière et l'encadrement de toute la société."
+    explication: "Le chef concentre le pouvoir, la police et les camps font peur, et la propagande encadre toute la population."
+    pieges:
+      - { texte: "Des élections libres entre plusieurs partis.", pourquoi: "C'est le propre d'une démocratie, qui accepte plusieurs partis." }
+      - { texte: "La liberté de la presse.", pourquoi: "C'est une liberté de la démocratie ; ces régimes encadrent au contraire la société par la propagande." }
+  - texte: "En 1936, sous le Front populaire de Léon Blum, quelle loi donne aux salariés leurs premières vacances payées ?"
+    nom: "La loi sur les congés payés, avec 15 jours de repos payé."
+    explication: "La loi du 20 juin 1936 accorde pour la première fois aux salariés 15 jours de congés payés."
+    pieges:
+      - { texte: "La loi de 1905.", pourquoi: "La loi de 1905 sépare les Églises et l'État ; elle ne parle pas de vacances." }
+      - { texte: "Le droit de vote des femmes.", pourquoi: "En 1936, les Françaises ne votent pas encore : la France est alors une exception en Europe." }
+  - texte: "Le 7 juin 1936, le gouvernement, le patronat et le syndicat CGT signent des accords. Lesquels ?"
+    nom: "Les accords de Matignon."
+    explication: "Signés à l'hôtel Matignon, ils sont suivis de lois sociales : congés payés, semaine de quarante heures, conventions collectives."
+    pieges:
+      - { texte: "Les accords d'Évian.", pourquoi: "Ils mettent fin à la guerre d'Algérie, en 1962." }
+      - { texte: "Le traité de Versailles.", pourquoi: "C'est le traité de paix qui suit la Première Guerre mondiale." }
+
+en:
+  titre: "Weakened democracies and totalitarian regimes (1918-1939)"
+  idee: "Between the two world wars, weakened democracies face totalitarian regimes: Stalin's USSR and Hitler's Germany. In France, the Popular Front of 1936 defends democracy."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1917, Russian Revolution; 1929, economic crisis; 1933, Hitler in power; 1936, Popular Front; 1939, start of the Second World War."
+    exemple: "Example: in the USSR, a single leader, Stalin, is praised everywhere; the police and the camps spread terror. These are features of a totalitarian regime."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which period is called the interwar period?"
+      nom: "From 1918 to 1939."
+      explication: "It's the time between the end of the First World War, in 1918, and the start of the Second, in 1939."
+      pieges:
+        - { texte: "From 1914 to 1918.", pourquoi: "Those are the years of the First World War itself." }
+        - { texte: "From 1939 to 1945.", pourquoi: "Those are the years of the Second World War." }
+    - texte: "In which year does the Russian Revolution take place, giving birth to the Soviet regime?"
+      nom: "In 1917."
+      explication: "In 1917, during the Great War, the Bolshevik revolution breaks out in Russia; Stalinist communism takes hold in the 1920s."
+      pieges:
+        - { texte: "In 1789.", pourquoi: "1789 is the French Revolution." }
+        - { texte: "In 1933.", pourquoi: "1933 is when Hitler comes to power in Germany." }
+    - texte: "Who rules the USSR and is the object of a true personality cult?"
+      nom: "Stalin."
+      explication: "Stalin wields personal, police-backed power; his cult reaches even the communist parties of Western Europe."
+      pieges:
+        - { texte: "Hitler.", pourquoi: "Hitler rules Germany from 1933." }
+        - { texte: "Mussolini.", pourquoi: "Mussolini sets up a fascist regime in Italy, in the 1920s." }
+    - texte: "In which year does Hitler come to power in Germany?"
+      nom: "In 1933."
+      explication: "From 1933 to 1945, Germany is ruled by Hitler. He wants to destroy the Treaty of Versailles and rearms the country."
+      pieges:
+        - { texte: "In 1918.", pourquoi: "1918 is the end of the First World War." }
+        - { texte: "In 1939.", pourquoi: "He starts the war on 1 September 1939, but he has been in power since 1933." }
+    - texte: "Which economic crisis helps Germany tip into Nazism?"
+      nom: "The 1929 crisis."
+      explication: "The 1929 crisis brings recession and social distress; it plays a big part in Hitler's success."
+      pieges:
+        - { texte: "The 1873 crisis.", pourquoi: "That's a 19th-century crisis, long before Nazism." }
+        - { texte: "The May 1968 crisis.", pourquoi: "It happens in France, long after the Second World War." }
+    - texte: "What features do totalitarian regimes share?"
+      nom: "An all-powerful leader, police terror and control over all of society."
+      explication: "The leader concentrates power, the police and camps spread fear, and propaganda controls the whole population."
+      pieges:
+        - { texte: "Free elections between several parties.", pourquoi: "That's what a democracy does, accepting several parties." }
+        - { texte: "Freedom of the press.", pourquoi: "That's a democratic freedom; these regimes, on the contrary, control society through propaganda." }
+    - texte: "In 1936, under Léon Blum's Popular Front, which law gives employees their first paid holidays?"
+      nom: "The paid holidays law, with 15 days of paid rest."
+      explication: "The law of 20 June 1936 gives employees 15 days of paid holiday for the first time."
+      pieges:
+        - { texte: "The 1905 law.", pourquoi: "The 1905 law separates the Churches and the State; it says nothing about holidays." }
+        - { texte: "Votes for women.", pourquoi: "In 1936, French women can't vote yet: France is then an exception in Europe." }
+    - texte: "On 7 June 1936, the government, employers and the CGT union sign agreements. Which ones?"
+      nom: "The Matignon Agreements."
+      explication: "Signed at the Hôtel Matignon, they are followed by social laws: paid holidays, the 40-hour week, collective agreements."
+      pieges:
+        - { texte: "The Évian Accords.", pourquoi: "They end the Algerian War, in 1962." }
+        - { texte: "The Treaty of Versailles.", pourquoi: "It's the peace treaty that follows the First World War." }

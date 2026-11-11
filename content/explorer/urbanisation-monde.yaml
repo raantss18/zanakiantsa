@@ -1,0 +1,130 @@
+id: urbanisation-monde
+titre: "L'urbanisation du monde"
+niveau: 4e
+prerequis: [habiter-metropole]
+# Faits : programme c4 (le monde s'urbanise à grande vitesse depuis 1945 ; plus de la moitié de l'humanité en ville depuis
+# 2007, probablement les 2/3 en 2050 ; Detroit, « shrinking cities »). Ressource Éduscol « Géographie / 4e, thème 1 »
+# (source ed4g1, lue le 2026-11-11) : centres et périphéries ; centres de décision plus forcément au cœur historique ;
+# villes mondiales au sommet de la hiérarchie urbaine ; déclin urbain (friches, pertes d'emplois) ; lieux de connexion
+# (quartiers d'affaires, grands aéroports, zones industrialo-portuaires). ONU, World Urbanization Prospects 2018 (source
+# onu_wup) : 55 % d'urbains en 2018, 68 % prévus en 2050 ; 33 mégapoles en 2018, 43 prévues en 2030.
+programme: { source: c4, texte: "L’urbanisation du monde : espaces et paysages de l’urbanisation, géographie des centres et des périphéries ; des villes inégalement connectées aux réseaux de la mondialisation." }
+activite: quiz
+parametres: {}
+idee: "Depuis 1945, le monde s'urbanise très vite : plus de la moitié des humains vivent en ville. Les villes ont des centres et des périphéries, et sont plus ou moins reliées au reste du monde."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : plus de la moitié de l'humanité en ville depuis 2007 ; 55 % en 2018 et 68 % prévus en 2050 selon l'ONU ; une mégapole dépasse 10 millions d'habitants."
+  exemple: "Exemple : en 2018, l'ONU compte 55 % d'urbains et en prévoit 68 % en 2050. 68 moins 55 égale 13 : la part des urbains gagnerait 13 points."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Depuis quand le monde s'urbanise-t-il à grande vitesse ?"
+    nom: "Depuis 1945."
+    explication: "Depuis 1945, la part des habitants des villes augmente très vite : c'est un fait majeur de la mondialisation."
+    pieges:
+      - { texte: "Depuis l'an 1000.", pourquoi: "Les villes sont anciennes, mais l'accélération date de la seconde moitié du XXe siècle, depuis 1945." }
+      - { texte: "Depuis 2020 seulement.", pourquoi: "Dès 2007, plus de la moitié de l'humanité vivait déjà en ville." }
+  - texte: "Selon l'ONU, quelle part de la population mondiale vit en ville en 2018 ?"
+    nom: "55 %."
+    explication: "55 personnes sur 100 vivent en ville en 2018 ; l'ONU en prévoit 68 sur 100 en 2050."
+    pieges:
+      - { texte: "5 %.", pourquoi: "C'est beaucoup trop peu : plus de la moitié des humains vivent en ville." }
+      - { texte: "95 %.", pourquoi: "C'est trop : même en 2050, l'ONU prévoit 68 %." }
+  - texte: "Combien de mégapoles l'ONU compte-t-elle en 2018, et combien en prévoit-elle pour 2030 ?"
+    nom: "33, puis 43."
+    explication: "En 2018, environ un habitant sur huit vit dans l'une des 33 mégapoles ; leur nombre devrait passer à 43 en 2030."
+    pieges:
+      - { texte: "43, puis 33.", pourquoi: "Le nombre de mégapoles augmente : 33 en 2018, 43 prévues en 2030." }
+      - { texte: "3, puis 4.", pourquoi: "C'est dix fois trop peu : 33 mégapoles en 2018." }
+  - texte: "Où trouve-t-on souvent les gratte-ciel, les sièges d'entreprises et les activités financières ?"
+    nom: "Dans un quartier des affaires, un des centres de la ville."
+    explication: "Les centres concentrent les pouvoirs de décision. Ils ne sont plus forcément dans le cœur historique de la ville."
+    pieges:
+      - { texte: "Dans les champs, loin de la ville.", pourquoi: "Ces activités se concentrent dans les centres des villes." }
+      - { texte: "Toujours dans le vieux centre historique.", pourquoi: "Les centres de décision ne sont plus forcément au cœur historique." }
+  - texte: "Les villes grandissent surtout en surface, en gagnant les espaces autour d'elles. Comment appelle-t-on cela ?"
+    nom: "L'étalement urbain."
+    explication: "En s'étalant, la ville intègre peu à peu des espaces de sa périphérie ; les trajets quotidiens augmentent."
+    pieges:
+      - { texte: "Le déclin urbain.", pourquoi: "Le déclin, c'est une ville qui perd habitants et activités, pas une ville qui s'étend." }
+      - { texte: "Une mégapole.", pourquoi: "Une mégapole est une agglomération de plus de 10 millions d'habitants, pas un mouvement." }
+  - texte: "Detroit, aux États-Unis, perd des habitants et des emplois ; des usines y sont abandonnées. Comment appelle-t-on ce phénomène ?"
+    nom: "Le rétrécissement urbain : une « shrinking city »."
+    explication: "La ville décline : friches, quartiers délaissés, pertes d'emplois. Elle peine à se reconnecter aux réseaux de la mondialisation."
+    pieges:
+      - { texte: "L'étalement urbain.", pourquoi: "L'étalement, c'est une ville qui s'étend ; Detroit, elle, décline." }
+      - { texte: "Une ville mondiale.", pourquoi: "Une ville mondiale concentre au contraire les pouvoirs et les échanges." }
+  - texte: "Quelles villes sont au sommet de la hiérarchie urbaine mondiale ?"
+    nom: "Les villes mondiales, qui concentrent les grands pouvoirs politiques, économiques et culturels."
+    explication: "Leur rang dépend de leur place dans les réseaux d'échanges : sièges de grandes firmes, finance, innovation, culture."
+    pieges:
+      - { texte: "Les villes les plus anciennes.", pourquoi: "C'est la place dans les réseaux d'échanges qui compte, pas l'âge." }
+      - { texte: "Les villes qui perdent des habitants.", pourquoi: "Ces villes en déclin sont au contraire à l'écart des grands réseaux." }
+  - texte: "Lequel de ces lieux montre le mieux qu'une ville est reliée au reste du monde ?"
+    nom: "Un grand aéroport international."
+    explication: "Grands aéroports, quartiers d'affaires, grands ports et grandes gares relient la ville aux réseaux de la mondialisation."
+    pieges:
+      - { texte: "Un jardin public de quartier.", pourquoi: "Il est utile aux habitants, mais il ne relie pas la ville au reste du monde." }
+      - { texte: "Une petite rue du vieux centre.", pourquoi: "Elle sert surtout aux habitants du quartier, pas aux échanges mondiaux." }
+
+en:
+  titre: "The urbanisation of the world"
+  idee: "Since 1945, the world has been urbanising very fast: more than half of humans live in towns and cities. Cities have centres and outskirts, and are more or less connected to the rest of the world."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: more than half of humanity in towns and cities since 2007; 55% in 2018 and 68% expected in 2050 according to the UN; a megacity has more than 10 million inhabitants."
+    exemple: "Example: in 2018 the UN counts 55% urban dwellers and expects 68% in 2050. 68 minus 55 equals 13: the urban share would gain 13 points."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Since when has the world been urbanising very fast?"
+      nom: "Since 1945."
+      explication: "Since 1945, the share of city dwellers has risen very fast: it's a major feature of globalisation."
+      pieges:
+        - { texte: "Since the year 1000.", pourquoi: "Cities are old, but the acceleration dates from the second half of the 20th century, since 1945." }
+        - { texte: "Only since 2020.", pourquoi: "By 2007, more than half of humanity already lived in towns and cities." }
+    - texte: "According to the UN, what share of the world population lives in towns and cities in 2018?"
+      nom: "55%."
+      explication: "55 people in 100 live in towns and cities in 2018; the UN expects 68 in 100 in 2050."
+      pieges:
+        - { texte: "5%.", pourquoi: "That's far too few: more than half of humans live in towns and cities." }
+        - { texte: "95%.", pourquoi: "That's too many: even for 2050 the UN expects 68%." }
+    - texte: "How many megacities does the UN count in 2018, and how many does it expect in 2030?"
+      nom: "33, then 43."
+      explication: "In 2018, about one person in eight lives in one of the 33 megacities; their number should rise to 43 by 2030."
+      pieges:
+        - { texte: "43, then 33.", pourquoi: "The number of megacities is rising: 33 in 2018, 43 expected in 2030." }
+        - { texte: "3, then 4.", pourquoi: "That's ten times too few: 33 megacities in 2018." }
+    - texte: "Where do we often find skyscrapers, company headquarters and financial activities?"
+      nom: "In a business district, one of the city's centres."
+      explication: "Centres concentrate decision-making power. They are no longer always in the city's historic heart."
+      pieges:
+        - { texte: "In the fields, far from the city.", pourquoi: "These activities are concentrated in city centres." }
+        - { texte: "Always in the old historic centre.", pourquoi: "Decision-making centres are no longer necessarily in the historic heart." }
+    - texte: "Cities grow mainly in area, spreading over the land around them. What is this called?"
+      nom: "Urban sprawl."
+      explication: "As it sprawls, the city gradually takes in areas on its outskirts; daily journeys increase."
+      pieges:
+        - { texte: "Urban decline.", pourquoi: "Decline is a city losing people and activities, not a city spreading out." }
+        - { texte: "A megacity.", pourquoi: "A megacity is an urban area of more than 10 million inhabitants, not a process." }
+    - texte: "Detroit, in the United States, is losing people and jobs; factories there are abandoned. What is this called?"
+      nom: "Urban shrinking: a « shrinking city »."
+      explication: "The city declines: wasteland, neglected neighbourhoods, job losses. It struggles to reconnect to the networks of globalisation."
+      pieges:
+        - { texte: "Urban sprawl.", pourquoi: "Sprawl is a city spreading out; Detroit, on the other hand, is declining." }
+        - { texte: "A global city.", pourquoi: "A global city, on the contrary, concentrates power and trade." }
+    - texte: "Which cities are at the top of the world urban hierarchy?"
+      nom: "Global cities, which concentrate major political, economic and cultural power."
+      explication: "Their rank depends on their place in trade networks: headquarters of big firms, finance, innovation, culture."
+      pieges:
+        - { texte: "The oldest cities.", pourquoi: "It's their place in trade networks that counts, not their age." }
+        - { texte: "Cities that are losing people.", pourquoi: "These declining cities are, on the contrary, cut off from the main networks." }
+    - texte: "Which of these places best shows that a city is connected to the rest of the world?"
+      nom: "A large international airport."
+      explication: "Large airports, business districts, big ports and major stations link the city to the networks of globalisation."
+      pieges:
+        - { texte: "A local public garden.", pourquoi: "It's useful to residents, but it doesn't connect the city to the rest of the world." }
+        - { texte: "A small street in the old centre.", pourquoi: "It mainly serves local residents, not world trade." }
