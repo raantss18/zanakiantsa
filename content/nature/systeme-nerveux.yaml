@@ -1,0 +1,128 @@
+id: systeme-nerveux
+titre: "Le système nerveux et le cerveau"
+niveau: 4e
+prerequis: [effort-respiration]
+# Faits : NINDS (NIH), « Brain Basics: Know Your Brain », « The Life and Death of a Neuron » et « Understanding Sleep »,
+# https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-know-your-brain,
+# https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-life-and-death-neuron,
+# https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-understanding-sleep. Lus le 2026-11-11.
+programme: { source: c4, texte: "Mettre en évidence le rôle du cerveau dans la réception et l’intégration d’informations multiples. Message nerveux, centres nerveux, nerfs, cellules nerveuses." }
+activite: quiz
+parametres: {}
+idee: "Les organes des sens envoient des messages nerveux au cerveau par des nerfs. Le cerveau les traite et commande les muscles. D'un neurone à l'autre, le message passe par une synapse."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Pense au trajet du message : un organe des sens, un nerf, le cerveau, puis un nerf vers un muscle."
+  exemple: "Exemple : tu vois un ballon arriver. Ton œil envoie un message nerveux au cerveau ; le cerveau envoie un message aux muscles de tes bras, et tu l'attrapes."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Comment s'appellent les cellules qui transmettent les messages nerveux ?"
+    nom: "Les neurones."
+    explication: "Les neurones sont les cellules nerveuses : ils envoient et reçoivent des messages, sous forme de signaux électriques et chimiques."
+    pieges:
+      - { texte: "Les globules rouges.", pourquoi: "Les globules rouges transportent le dioxygène dans le sang ; ils ne transmettent pas de messages nerveux." }
+      - { texte: "Les cellules des muscles.", pourquoi: "Elles reçoivent des messages et se contractent, mais ce sont les neurones qui les transmettent." }
+  - texte: "Quels organes forment le système nerveux central ?"
+    nom: "Le cerveau et la moelle épinière."
+    explication: "Le système nerveux central comprend le cerveau et la moelle épinière ; les nerfs les relient au reste du corps."
+    pieges:
+      - { texte: "Le cœur et les poumons.", pourquoi: "Ce sont les organes de la circulation et de la respiration, pas du système nerveux." }
+      - { texte: "Les yeux et les oreilles.", pourquoi: "Ce sont des organes des sens : ils captent des informations et les envoient au système nerveux central." }
+  - texte: "Tu vois un ballon arriver. Quel trajet suit l'information ?"
+    nom: "De l'œil au cerveau, par des neurones sensoriels."
+    explication: "Les neurones sensoriels transportent l'information des organes des sens, comme les yeux, jusqu'au cerveau."
+    pieges:
+      - { texte: "Du cerveau vers l'œil.", pourquoi: "L'information sur ce que tu vois part de l'œil : c'est l'œil qui envoie le message au cerveau." }
+      - { texte: "De l'œil directement aux muscles des bras.", pourquoi: "Le message passe d'abord par le cerveau, qui l'intègre avant de commander les muscles." }
+  - texte: "Quelle partie du cerveau traite surtout les images venues des yeux ?"
+    nom: "Les lobes occipitaux, à l'arrière du cerveau."
+    explication: "Les lobes occipitaux traitent les images venues des yeux et les relient aux images gardées en mémoire."
+    pieges:
+      - { texte: "Les lobes frontaux, derrière le front.", pourquoi: "Ils servent surtout à planifier, imaginer et raisonner ; les images sont traitées à l'arrière du cerveau." }
+      - { texte: "Le cervelet.", pourquoi: "Le cervelet coordonne les mouvements ; il ne traite pas les images." }
+  - texte: "Quand tu décides de lever le bras, qui commande le muscle ?"
+    nom: "Le cerveau, par des neurones moteurs."
+    explication: "Une zone du cerveau, le cortex moteur, prépare le mouvement ; des neurones moteurs portent le message du cerveau jusqu'aux muscles."
+    pieges:
+      - { texte: "Le muscle décide tout seul.", pourquoi: "Un muscle se contracte quand il reçoit un message nerveux : pour un mouvement voulu, ce message vient du cerveau." }
+      - { texte: "Les yeux.", pourquoi: "Les yeux envoient des informations au cerveau, mais ce n'est pas eux qui commandent les muscles." }
+  - texte: "Comment un neurone transmet-il son message à la cellule suivante ?"
+    nom: "Il libère des substances chimiques, les neurotransmetteurs, dans la synapse."
+    explication: "Entre deux neurones, il y a un tout petit espace, la synapse. Les neurotransmetteurs le traversent et se fixent sur la cellule voisine."
+    pieges:
+      - { texte: "Les neurones sont collés : le message passe sans rien libérer.", pourquoi: "Il reste un tout petit espace, la synapse ; le message le franchit grâce aux neurotransmetteurs." }
+      - { texte: "Par le sang.", pourquoi: "D'un neurone à l'autre, le message passe dans la synapse, pas par la circulation du sang." }
+  - texte: "À quoi sert le cervelet ?"
+    nom: "Il coordonne les mouvements, en particulier ceux que l'on a appris."
+    explication: "Quand tu joues d'un instrument ou que tu frappes une balle, ton cervelet coordonne tes mouvements."
+    pieges:
+      - { texte: "À voir les images.", pourquoi: "Ce sont les lobes occipitaux qui traitent les images venues des yeux." }
+      - { texte: "À pomper le sang.", pourquoi: "C'est le rôle du cœur ; le cervelet fait partie de l'encéphale." }
+  - texte: "Pourquoi le sommeil est-il important pour le cerveau ?"
+    nom: "Il l'aide à apprendre et à garder des souvenirs."
+    explication: "Sans sommeil, le cerveau forme mal les connexions qui servent à apprendre et à mémoriser. Les enfants et les adolescents ont besoin d'environ 9 heures et demie de sommeil par nuit."
+    pieges:
+      - { texte: "Il sert seulement à reposer les muscles.", pourquoi: "Le sommeil sert aussi au cerveau : il l'aide à garder ce qu'il a appris." }
+      - { texte: "Dormir peu n'a aucun effet si l'on mange bien.", pourquoi: "Rien ne remplace le sommeil : sans lui, on apprend et on retient moins bien." }
+
+en:
+  titre: "The nervous system and the brain"
+  idee: "Sense organs send nerve messages to the brain along nerves. The brain processes them and controls the muscles. From one neuron to the next, the message crosses a synapse."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Think about the message's path: a sense organ, a nerve, the brain, then a nerve to a muscle."
+    exemple: "Example: you see a ball coming. Your eye sends a nerve message to the brain; the brain sends a message to the muscles in your arms, and you catch it."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What are the cells that carry nerve messages called?"
+      nom: "Neurons."
+      explication: "Neurons are nerve cells: they send and receive messages, as electrical and chemical signals."
+      pieges:
+        - { texte: "Red blood cells.", pourquoi: "Red blood cells carry oxygen in the blood; they don't pass on nerve messages." }
+        - { texte: "Muscle cells.", pourquoi: "They receive messages and contract, but neurons are what pass the messages on." }
+    - texte: "Which organs make up the central nervous system?"
+      nom: "The brain and the spinal cord."
+      explication: "The central nervous system is the brain and the spinal cord; nerves link them to the rest of the body."
+      pieges:
+        - { texte: "The heart and the lungs.", pourquoi: "Those are the organs of circulation and breathing, not of the nervous system." }
+        - { texte: "The eyes and the ears.", pourquoi: "Those are sense organs: they pick up information and send it to the central nervous system." }
+    - texte: "You see a ball coming. What path does the information take?"
+      nom: "From the eye to the brain, through sensory neurons."
+      explication: "Sensory neurons carry information from the sense organs, such as the eyes, to the brain."
+      pieges:
+        - { texte: "From the brain to the eye.", pourquoi: "Information about what you see starts in the eye: the eye sends the message to the brain." }
+        - { texte: "From the eye straight to the arm muscles.", pourquoi: "The message goes through the brain first, which puts it together before controlling the muscles." }
+    - texte: "Which part of the brain mainly processes images from the eyes?"
+      nom: "The occipital lobes, at the back of the brain."
+      explication: "The occipital lobes process images from the eyes and link them with images stored in memory."
+      pieges:
+        - { texte: "The frontal lobes, behind the forehead.", pourquoi: "They mostly help you plan, imagine and reason; images are processed at the back of the brain." }
+        - { texte: "The cerebellum.", pourquoi: "The cerebellum coordinates movement; it doesn't process images." }
+    - texte: "When you decide to raise your arm, what controls the muscle?"
+      nom: "The brain, through motor neurons."
+      explication: "A part of the brain, the motor cortex, plans the movement; motor neurons carry the message from the brain to the muscles."
+      pieges:
+        - { texte: "The muscle decides on its own.", pourquoi: "A muscle contracts when it receives a nerve message: for a movement you choose, that message comes from the brain." }
+        - { texte: "The eyes.", pourquoi: "The eyes send information to the brain, but they don't control the muscles." }
+    - texte: "How does a neuron pass its message to the next cell?"
+      nom: "It releases chemicals, neurotransmitters, into the synapse."
+      explication: "Between two neurons there is a tiny gap, the synapse. Neurotransmitters cross it and attach to the neighbouring cell."
+      pieges:
+        - { texte: "Neurons are stuck together: the message passes without releasing anything.", pourquoi: "There is still a tiny gap, the synapse; the message crosses it thanks to neurotransmitters." }
+        - { texte: "Through the blood.", pourquoi: "From one neuron to the next, the message crosses the synapse, not the bloodstream." }
+    - texte: "What does the cerebellum do?"
+      nom: "It coordinates movement, especially learned movements."
+      explication: "When you play an instrument or hit a ball, your cerebellum coordinates your movements."
+      pieges:
+        - { texte: "It sees images.", pourquoi: "The occipital lobes are what process images from the eyes." }
+        - { texte: "It pumps blood.", pourquoi: "That's the heart's job; the cerebellum is part of the brain." }
+    - texte: "Why is sleep important for the brain?"
+      nom: "It helps it learn and keep memories."
+      explication: "Without sleep, the brain can't properly form the connections used for learning and memory. School-age children and teenagers need about 9 and a half hours of sleep a night."
+      pieges:
+        - { texte: "It's only for resting the muscles.", pourquoi: "Sleep also matters for the brain: it helps it keep what it has learned." }
+        - { texte: "Sleeping little has no effect if you eat well.", pourquoi: "Nothing replaces sleep: without it, you learn and remember less well." }

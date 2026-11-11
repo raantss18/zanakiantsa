@@ -1,0 +1,127 @@
+id: tension-intensite
+titre: "Tension et intensité : les lois des circuits"
+niveau: 4e
+prerequis: [circuit-electrique]
+# Faits : unités, appareils de mesure et branchements, lois des circuits en série et en dérivation (Éduscol,
+# physique-chimie cycle 4, classe de 4e, « Fonctionnement de la lampe dans la chambre »,
+# https://eduscol.education.fr/document/29575/download). Lu le 2026-11-11.
+programme: { source: c4, texte: "Exploiter les lois de l’électricité. Dipôles en série, dipôles en dérivation. L’intensité du courant électrique est la même en tout point d’un circuit qui ne compte que des dipôles en série. Loi d’additivité des tensions (circuit à une seule maille). Loi d’additivité des intensités (circuit à deux mailles)." }
+activite: quiz
+parametres: {}
+idee: "La tension se mesure en volts, avec un voltmètre branché en dérivation ; l'intensité, en ampères, avec un ampèremètre branché en série. Chaque type de circuit a ses lois."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi d'abord : le circuit est-il en série, une seule boucle, ou en dérivation, avec plusieurs branches ?"
+  exemple: "Exemple : une pile de 6 volts alimente deux lampes en série. Si la première lampe a une tension de 2 volts, la seconde a 6 − 2 = 4 volts."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans quelle unité s'exprime la tension électrique ?"
+    nom: "En volts."
+    explication: "La tension électrique s'exprime en volts, de symbole V, du nom du physicien Alessandro Volta."
+    pieges:
+      - { texte: "En ampères.", pourquoi: "L'ampère est l'unité de l'intensité du courant, pas de la tension." }
+      - { texte: "En watts.", pourquoi: "Le watt est l'unité de la puissance." }
+  - texte: "Comment branche-t-on un ampèremètre pour mesurer l'intensité du courant dans une lampe ?"
+    nom: "En série avec la lampe."
+    explication: "L'ampèremètre se branche en série : le courant qui traverse la lampe le traverse aussi."
+    pieges:
+      - { texte: "En dérivation aux bornes de la lampe.", pourquoi: "C'est le branchement du voltmètre, qui mesure une tension." }
+      - { texte: "Loin du circuit, sans le toucher.", pourquoi: "Pour mesurer le courant, l'ampèremètre doit faire partie du circuit, en série." }
+  - texte: "Comment branche-t-on un voltmètre pour mesurer la tension aux bornes d'une lampe ?"
+    nom: "En dérivation, aux bornes de la lampe."
+    explication: "Le voltmètre se branche en dérivation : ses deux bornes sont reliées aux deux bornes de la lampe."
+    pieges:
+      - { texte: "En série avec la lampe.", pourquoi: "C'est le branchement de l'ampèremètre, qui mesure une intensité." }
+      - { texte: "Sur une seule borne de la lampe.", pourquoi: "Une tension se mesure entre deux points : il faut relier les deux bornes." }
+  - texte: "Dans un circuit en série, l'intensité mesurée près de la pile est 0,2 ampère. Que vaut-elle entre les deux lampes ?"
+    nom: "0,2 ampère aussi."
+    explication: "Dans un circuit en série, l'intensité du courant est la même en tout point du circuit."
+    pieges:
+      - { texte: "Moins de 0,2 ampère, car la première lampe a utilisé du courant.", pourquoi: "C'est une idée très répandue, mais le courant ne s'use pas : en série, l'intensité est la même partout." }
+      - { texte: "Plus de 0,2 ampère.", pourquoi: "En série, rien ne s'ajoute : l'intensité est la même en tout point." }
+  - texte: "Une pile de 9 volts alimente deux lampes en série. La tension aux bornes de la première lampe est 4 volts. Que vaut-elle aux bornes de la seconde ?"
+    nom: "5 volts."
+    explication: "En série, la tension aux bornes du générateur est égale à la somme des tensions aux bornes des autres dipôles : 9 − 4 = 5 volts."
+    pieges:
+      - { texte: "9 volts.", pourquoi: "En série, les 9 volts de la pile se partagent entre les deux lampes." }
+      - { texte: "4 volts.", pourquoi: "Ce serait vrai si les deux tensions étaient égales ; ici, 4 + 4 ne fait pas 9." }
+  - texte: "Deux lampes sont branchées en dérivation sur un générateur de 6 volts. Quelle est la tension aux bornes de chaque lampe ?"
+    nom: "6 volts pour chacune."
+    explication: "En dérivation, la tension aux bornes de chaque dipôle est égale à la tension aux bornes du générateur."
+    pieges:
+      - { texte: "3 volts pour chacune.", pourquoi: "C'est la loi des circuits en série ; en dérivation, chaque lampe reçoit toute la tension du générateur." }
+      - { texte: "12 volts pour chacune.", pourquoi: "Les tensions ne s'additionnent pas ainsi : en dérivation, chaque lampe a la même tension que le générateur." }
+  - texte: "En dérivation, une branche est parcourue par 0,3 ampère, l'autre par 0,2 ampère. Que vaut l'intensité dans la branche principale ?"
+    nom: "0,5 ampère."
+    explication: "En dérivation, l'intensité dans la branche principale est égale à la somme des intensités des branches : 0,3 + 0,2 = 0,5 ampère."
+    pieges:
+      - { texte: "0,3 ampère.", pourquoi: "C'est seulement une des deux branches ; il faut ajouter les deux." }
+      - { texte: "0,1 ampère.", pourquoi: "On a soustrait ; dans la branche principale, les intensités des branches s'additionnent." }
+  - texte: "Dans une maison, les lampes sont branchées en dérivation. Quel avantage cela donne-t-il ?"
+    nom: "Chaque lampe reçoit la même tension que le générateur et peut fonctionner seule."
+    explication: "En dérivation, chaque branche a la même tension que le générateur ; si on éteint ou retire une lampe, les autres branches restent fermées."
+    pieges:
+      - { texte: "Le courant est le même dans toutes les lampes, comme en série.", pourquoi: "C'est la loi des circuits en série ; en dérivation, ce sont les tensions qui sont égales." }
+      - { texte: "Si une lampe grille, toutes s'éteignent.", pourquoi: "C'est ce qui arrive en série, avec une seule boucle ; en dérivation, les autres branches restent fermées." }
+
+en:
+  titre: "Voltage and current: circuit laws"
+  idee: "Voltage is measured in volts, with a voltmeter connected in parallel; current, in amperes, with an ammeter connected in series. Each type of circuit has its own laws."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "First ask yourself: is the circuit in series, a single loop, or in parallel, with several branches?"
+    exemple: "Example: a 6-volt battery powers two bulbs in series. If the first bulb has a voltage of 2 volts, the second has 6 − 2 = 4 volts."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What unit is voltage measured in?"
+      nom: "Volts."
+      explication: "Voltage is measured in volts, symbol V, named after the physicist Alessandro Volta."
+      pieges:
+        - { texte: "Amperes.", pourquoi: "The ampere is the unit of electric current, not voltage." }
+        - { texte: "Watts.", pourquoi: "The watt is the unit of power." }
+    - texte: "How do you connect an ammeter to measure the current through a bulb?"
+      nom: "In series with the bulb."
+      explication: "The ammeter is connected in series: the current that goes through the bulb goes through it too."
+      pieges:
+        - { texte: "In parallel, across the bulb.", pourquoi: "That's how a voltmeter is connected, to measure a voltage." }
+        - { texte: "Away from the circuit, without touching it.", pourquoi: "To measure the current, the ammeter must be part of the circuit, in series." }
+    - texte: "How do you connect a voltmeter to measure the voltage across a bulb?"
+      nom: "In parallel, across the bulb."
+      explication: "The voltmeter is connected in parallel: its two terminals are joined to the bulb's two terminals."
+      pieges:
+        - { texte: "In series with the bulb.", pourquoi: "That's how an ammeter is connected, to measure a current." }
+        - { texte: "To only one terminal of the bulb.", pourquoi: "A voltage is measured between two points: you must connect both terminals." }
+    - texte: "In a series circuit, the current measured near the battery is 0.2 amperes. What is it between the two bulbs?"
+      nom: "0.2 amperes too."
+      explication: "In a series circuit, the current is the same at every point in the circuit."
+      pieges:
+        - { texte: "Less than 0.2 amperes, because the first bulb used up some current.", pourquoi: "It's a very common idea, but current isn't used up: in series, the current is the same everywhere." }
+        - { texte: "More than 0.2 amperes.", pourquoi: "In series, nothing is added: the current is the same at every point." }
+    - texte: "A 9-volt battery powers two bulbs in series. The voltage across the first bulb is 4 volts. What is it across the second?"
+      nom: "5 volts."
+      explication: "In series, the voltage across the power supply equals the sum of the voltages across the other components: 9 − 4 = 5 volts."
+      pieges:
+        - { texte: "9 volts.", pourquoi: "In series, the battery's 9 volts are shared between the two bulbs." }
+        - { texte: "4 volts.", pourquoi: "That would be true if both voltages were equal; here, 4 + 4 doesn't make 9." }
+    - texte: "Two bulbs are connected in parallel to a 6-volt power supply. What is the voltage across each bulb?"
+      nom: "6 volts for each."
+      explication: "In parallel, the voltage across each component equals the voltage across the power supply."
+      pieges:
+        - { texte: "3 volts for each.", pourquoi: "That's the law for series circuits; in parallel, each bulb gets the full voltage of the supply." }
+        - { texte: "12 volts for each.", pourquoi: "Voltages don't add up like that: in parallel, each bulb has the same voltage as the supply." }
+    - texte: "In a parallel circuit, one branch carries 0.3 amperes and the other 0.2 amperes. What is the current in the main branch?"
+      nom: "0.5 amperes."
+      explication: "In parallel, the current in the main branch equals the sum of the currents in the branches: 0.3 + 0.2 = 0.5 amperes."
+      pieges:
+        - { texte: "0.3 amperes.", pourquoi: "That's just one of the two branches; you have to add both." }
+        - { texte: "0.1 amperes.", pourquoi: "That subtracts; in the main branch, the branch currents add up." }
+    - texte: "In a house, the lights are connected in parallel. What is the advantage?"
+      nom: "Each light gets the same voltage as the supply and can work on its own."
+      explication: "In parallel, each branch has the same voltage as the supply; if you switch off or remove one light, the other branches stay closed."
+      pieges:
+        - { texte: "The current is the same in every light, as in series.", pourquoi: "That's the law for series circuits; in parallel, it's the voltages that are equal." }
+        - { texte: "If one bulb blows, they all go out.", pourquoi: "That's what happens in series, with a single loop; in parallel, the other branches stay closed." }

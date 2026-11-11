@@ -1,0 +1,127 @@
+id: effort-respiration
+titre: "L'effort : muscles, cœur et respiration"
+niveau: 5e
+prerequis: [digestion]
+# Faits : NHLBI (NIH), « How the Lungs Work » (pages respiratory-system, breathing-benefits, body-controls-breathing) et
+# « How the Heart Works » (heart-beats, blood-flow), https://www.nhlbi.nih.gov/health/lungs/body-controls-breathing,
+# https://www.nhlbi.nih.gov/health/heart/heart-beats. Lus le 2026-11-11.
+programme: { source: c4, texte: "Expliquer comment le système nerveux, le système respiratoire et le système cardiovasculaire interviennent lors d’un effort musculaire, en identifiant les capacités et les limites de l’organisme." }
+activite: quiz
+parametres: {}
+idee: "Pendant un effort, les muscles ont besoin de plus de dioxygène. Le cœur bat plus vite et on respire plus souvent : le sang leur apporte alors plus de dioxygène."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Suis le trajet du dioxygène : l'air, les poumons, le sang, le cœur qui pompe, puis les muscles."
+  exemple: "Exemple : après une course, ton cœur bat plus vite et tu respires plus souvent. Tes muscles reçoivent ainsi plus de dioxygène."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Pendant une course, pourquoi ton cœur bat-il plus vite ?"
+    nom: "Pour apporter plus de dioxygène aux muscles."
+    explication: "Le cœur pompe le sang. En battant plus vite, il envoie plus de sang riche en dioxygène aux muscles qui travaillent."
+    pieges:
+      - { texte: "Pour fabriquer du dioxygène.", pourquoi: "Le cœur ne fabrique pas de dioxygène : il pompe le sang, qui se charge en dioxygène dans les poumons." }
+      - { texte: "Pour digérer plus vite.", pourquoi: "La digestion se fait dans le tube digestif ; le cœur accélère pour les muscles." }
+  - texte: "Où le dioxygène de l'air passe-t-il dans le sang ?"
+    nom: "Dans les alvéoles des poumons."
+    explication: "Les alvéoles sont de minuscules sacs d'air entourés de vaisseaux très fins, les capillaires. Le dioxygène traverse leur paroi et passe dans le sang."
+    pieges:
+      - { texte: "Dans l'estomac.", pourquoi: "L'estomac reçoit les aliments, pas l'air que l'on respire." }
+      - { texte: "Dans le cœur.", pourquoi: "Le cœur pompe le sang, mais c'est dans les poumons que le sang se charge en dioxygène." }
+  - texte: "Quel gaz le sang rapporte-t-il des cellules vers les poumons, pour qu'il soit rejeté ?"
+    nom: "Le dioxyde de carbone."
+    explication: "Les cellules rejettent du dioxyde de carbone. Le sang le transporte jusqu'aux poumons, où il passe dans l'air des alvéoles avant d'être expiré."
+    pieges:
+      - { texte: "Le dioxygène.", pourquoi: "Le dioxygène va dans l'autre sens : des poumons vers les cellules." }
+      - { texte: "Les nutriments.", pourquoi: "Les nutriments viennent de la digestion et servent aux cellules ; les poumons ne les rejettent pas." }
+  - texte: "Pourquoi les muscles ont-ils besoin de dioxygène ?"
+    nom: "Pour produire l'énergie qui leur permet de travailler."
+    explication: "Les cellules utilisent le dioxygène pour produire l'énergie dont le corps a besoin. Un muscle qui travaille en demande davantage."
+    pieges:
+      - { texte: "Ils n'en ont pas besoin : seuls les poumons l'utilisent.", pourquoi: "Les poumons font passer le dioxygène dans le sang ; ce sont les cellules de tout le corps, dont celles des muscles, qui l'utilisent." }
+      - { texte: "Pour devenir plus lourds.", pourquoi: "Le dioxygène ne sert pas à grossir : il sert à produire de l'énergie." }
+  - texte: "Pendant un effort, que devient ta respiration ?"
+    nom: "Elle devient plus rapide."
+    explication: "On respire plus souvent pendant une activité physique : plus d'air arrive dans les poumons, et plus de dioxygène peut passer dans le sang."
+    pieges:
+      - { texte: "Elle ralentit pour économiser l'air.", pourquoi: "Les muscles demandent plus de dioxygène pendant l'effort : la respiration s'accélère." }
+      - { texte: "Elle ne change pas.", pourquoi: "Observe-toi après une course : tu respires plus souvent qu'au repos." }
+  - texte: "Quel est le principal muscle de la respiration ?"
+    nom: "Le diaphragme."
+    explication: "Quand on inspire, le diaphragme, sous les poumons, se contracte et descend : la cage thoracique s'agrandit et l'air entre."
+    pieges:
+      - { texte: "Le cœur.", pourquoi: "Le cœur est bien un muscle, mais il pompe le sang : il ne fait pas entrer l'air." }
+      - { texte: "Le biceps.", pourquoi: "Le biceps sert à plier le bras, pas à respirer." }
+  - texte: "Qu'est-ce qui règle le rythme de la respiration pendant l'effort ?"
+    nom: "Des centres nerveux du cerveau, alertés par des capteurs."
+    explication: "Des capteurs mesurent le dioxygène et le dioxyde de carbone dans le sang. Ils envoient des messages aux centres de la respiration, dans le cerveau, qui commandent les muscles respiratoires."
+    pieges:
+      - { texte: "Les poumons, tout seuls.", pourquoi: "Les poumons ne décident rien : ce sont des muscles, commandés par le système nerveux, qui les font se remplir d'air." }
+      - { texte: "L'estomac.", pourquoi: "L'estomac sert à la digestion, pas à régler la respiration." }
+  - texte: "Dans quel ordre le dioxygène voyage-t-il jusqu'aux muscles ?"
+    nom: "Air, poumons, sang, cœur, muscles."
+    explication: "Le dioxygène de l'air passe dans le sang au niveau des poumons. Ce sang revient au cœur, qui le pompe vers tout le corps, dont les muscles."
+    pieges:
+      - { texte: "Air, estomac, sang, muscles.", pourquoi: "L'air que l'on respire va dans les poumons, pas dans l'estomac." }
+      - { texte: "Air, muscles, poumons, cœur.", pourquoi: "Le dioxygène doit d'abord passer dans le sang, dans les poumons, avant d'arriver aux muscles." }
+
+en:
+  titre: "Exercise: muscles, heart and breathing"
+  idee: "During exercise, muscles need more oxygen. The heart beats faster and we breathe more often, so the blood brings them more oxygen."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Follow the path of oxygen: the air, the lungs, the blood, the heart that pumps, then the muscles."
+    exemple: "Example: after a run, your heart beats faster and you breathe more often. That way your muscles get more oxygen."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "During a run, why does your heart beat faster?"
+      nom: "To bring more oxygen to the muscles."
+      explication: "The heart pumps the blood. By beating faster, it sends more oxygen-rich blood to the working muscles."
+      pieges:
+        - { texte: "To make oxygen.", pourquoi: "The heart doesn't make oxygen: it pumps the blood, which picks up oxygen in the lungs." }
+        - { texte: "To digest faster.", pourquoi: "Digestion happens in the digestive tract; the heart speeds up for the muscles." }
+    - texte: "Where does oxygen from the air pass into the blood?"
+      nom: "In the alveoli of the lungs."
+      explication: "Alveoli are tiny air sacs surrounded by very thin blood vessels, the capillaries. Oxygen crosses their walls and passes into the blood."
+      pieges:
+        - { texte: "In the stomach.", pourquoi: "The stomach receives food, not the air we breathe." }
+        - { texte: "In the heart.", pourquoi: "The heart pumps the blood, but the blood picks up oxygen in the lungs." }
+    - texte: "Which gas does the blood carry from the cells to the lungs, to be breathed out?"
+      nom: "Carbon dioxide."
+      explication: "Cells give off carbon dioxide. The blood carries it to the lungs, where it passes into the air in the alveoli before being breathed out."
+      pieges:
+        - { texte: "Oxygen.", pourquoi: "Oxygen goes the other way: from the lungs to the cells." }
+        - { texte: "Nutrients.", pourquoi: "Nutrients come from digestion and are used by the cells; the lungs don't get rid of them." }
+    - texte: "Why do muscles need oxygen?"
+      nom: "To make the energy that lets them work."
+      explication: "Cells use oxygen to make the energy the body needs. A working muscle needs more of it."
+      pieges:
+        - { texte: "They don't: only the lungs use it.", pourquoi: "The lungs pass oxygen into the blood; it's the cells all over the body, including muscle cells, that use it." }
+        - { texte: "To get heavier.", pourquoi: "Oxygen isn't for gaining weight: it's for making energy." }
+    - texte: "During exercise, what happens to your breathing?"
+      nom: "It gets faster."
+      explication: "We breathe more often during physical activity: more air reaches the lungs, so more oxygen can pass into the blood."
+      pieges:
+        - { texte: "It slows down to save air.", pourquoi: "Muscles need more oxygen during exercise: breathing speeds up." }
+        - { texte: "It doesn't change.", pourquoi: "Watch yourself after a run: you breathe more often than at rest." }
+    - texte: "What is the main breathing muscle?"
+      nom: "The diaphragm."
+      explication: "When we breathe in, the diaphragm, below the lungs, contracts and moves down: the chest gets bigger and air comes in."
+      pieges:
+        - { texte: "The heart.", pourquoi: "The heart is a muscle, but it pumps blood: it doesn't bring air in." }
+        - { texte: "The biceps.", pourquoi: "The biceps bends the arm; it isn't used for breathing." }
+    - texte: "What sets the pace of breathing during exercise?"
+      nom: "Breathing centres in the brain, alerted by sensors."
+      explication: "Sensors measure oxygen and carbon dioxide in the blood. They send messages to the breathing centres in the brain, which control the breathing muscles."
+      pieges:
+        - { texte: "The lungs, on their own.", pourquoi: "The lungs don't decide anything: muscles, controlled by the nervous system, make them fill with air." }
+        - { texte: "The stomach.", pourquoi: "The stomach is for digestion, not for controlling breathing." }
+    - texte: "In what order does oxygen travel to the muscles?"
+      nom: "Air, lungs, blood, heart, muscles."
+      explication: "Oxygen from the air passes into the blood in the lungs. This blood goes back to the heart, which pumps it all over the body, including the muscles."
+      pieges:
+        - { texte: "Air, stomach, blood, muscles.", pourquoi: "The air we breathe goes into the lungs, not the stomach." }
+        - { texte: "Air, muscles, lungs, heart.", pourquoi: "Oxygen first has to pass into the blood, in the lungs, before it reaches the muscles." }
