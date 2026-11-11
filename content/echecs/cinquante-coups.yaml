@@ -1,0 +1,100 @@
+id: cinquante-coups
+titre: "Mater à temps : la règle des 50 coups"
+niveau: Terminale
+prerequis: [finale-dame-roi, mauvais-fou]
+programme: { source: fide, texte: "9.3 : The game is drawn, upon a correct claim by a player having the move, if: […] 9.3.2 the last 50 moves by each player have been completed without the movement of any pawn and without any capture." }
+activite: quiz
+parametres: {}
+idee: "Après 50 coups de chaque joueur sans prise ni coup de pion, celui qui a le trait peut réclamer la nulle (article 9.3). Roi et dame matent en 10 coups au plus, roi et tour en 16 : il faut mater sans traîner."
+phrases:
+  consigne: "Compte les coups depuis la dernière prise ou le dernier coup de pion."
+  question: "{texte}"
+  indice: "Une prise ou un coup de pion remet le compte à zéro. Il faut 50 coups de chaque joueur, pas 50 coups en tout."
+  exemple: "La dernière pièce noire vient d’être prise : le compte repart de zéro. Avec roi et tour contre roi, le mat le plus long demande 16 coups : bien moins que 50, si tu connais la méthode."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "D’après l’article 9.3 des règles de la FIDE, quand peut-on réclamer la nulle ?"
+    nom: "Après 50 coups de chaque joueur sans coup de pion ni prise"
+    explication: "L’article 9.3 compte les 50 derniers coups de chaque joueur, sans coup de pion et sans prise. C’est le joueur qui a le trait qui réclame."
+    pieges:
+      - { texte: "Après 50 coups en tout, Blancs et Noirs ensemble", pourquoi: "L’article dit « by each player » : 50 coups des Blancs et 50 coups des Noirs." }
+      - { texte: "Après 50 coups sans échec", pourquoi: "Les échecs ne comptent pas : seuls les coups de pion et les prises remettent le compte à zéro." }
+  - texte: "Après 30 coups de chaque joueur sans prise ni coup de pion, un pion avance. Où en est le compte ?"
+    nom: "Il repart de zéro"
+    explication: "L’article 9.3 compte les derniers coups joués sans coup de pion : le coup de pion remet le compte à zéro, pour les deux joueurs."
+    pieges:
+      - { texte: "Il continue : 31", pourquoi: "Un coup de pion interrompt la série : les 50 coups se comptent à partir de lui." }
+      - { texte: "Il repart de zéro, pour les Blancs seulement", pourquoi: "La série compte les coups des deux joueurs depuis ce coup de pion : elle repart de zéro pour tous les deux." }
+  - texte: "Roi et tour contre roi : combien de coups faut-il au plus pour mater, si les Noirs se défendent au mieux ?"
+    nom: "16"
+    explication: "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 16 coups blancs."
+    pieges:
+      - { texte: "10", pourquoi: "10 coups, c’est le mat le plus long avec roi et dame : la tour va moins vite." }
+      - { texte: "50", pourquoi: "Bien moins : avec la meilleure méthode, 16 coups suffisent toujours." }
+  - texte: "Roi et dame contre roi : combien de coups faut-il au plus pour mater ?"
+    nom: "10"
+    explication: "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs."
+    pieges:
+      - { texte: "16", pourquoi: "16 coups, c’est le mat le plus long avec roi et tour." }
+      - { texte: "5", pourquoi: "Depuis le centre, il faut d’abord pousser le roi noir au bord : 5 coups ne suffisent pas toujours." }
+  - texte: "Tu as roi et tour contre roi. 45 coups de chaque joueur ont déjà été joués sans prise ni coup de pion. Es-tu sûr de mater à temps ?"
+    nom: "Non : il peut falloir jusqu’à 16 coups, et il n’en reste que 5"
+    explication: "Après 5 coups de plus de chaque joueur, la série atteint 50 : l’adversaire pourra réclamer la nulle. Le mat peut demander jusqu’à 16 coups."
+    pieges:
+      - { texte: "Oui : 16 coups suffisent toujours", pourquoi: "16 coups, oui, mais il n’en reste que 5 avant que la nulle puisse être réclamée." }
+      - { texte: "Oui : la règle ne compte pas quand on a plus de pièces", pourquoi: "L’article 9.3 ne regarde pas le matériel : seulement les prises et les coups de pion." }
+  - texte: "Que dit l’article 9.6.2 des règles de la FIDE ?"
+    nom: "Après 75 coups de chaque joueur sans coup de pion ni prise, la partie est nulle, sans réclamation"
+    explication: "À 50 coups, il faut réclamer la nulle (9.3). À 75 coups, elle est automatique (9.6.2) ; seul un mat au dernier coup passe avant."
+    pieges:
+      - { texte: "Après 75 coups, celui qui a le plus de pièces gagne", pourquoi: "Le matériel ne compte pas : après 75 coups sans prise ni coup de pion, c’est nulle." }
+      - { texte: "Après 75 coups, il faut encore réclamer la nulle", pourquoi: "La réclamation, c’est à 50 coups (9.3) ; à 75 coups, la nulle vient sans réclamation." }
+
+en:
+  titre: "Mate in time: the 50-move rule"
+  idee: "After 50 moves by each player with no capture and no pawn move, the player to move may claim a draw (Article 9.3). King and queen mate in at most 10 moves, king and rook in 16: you must mate without dawdling."
+  phrases:
+    consigne: "Count the moves since the last capture or the last pawn move."
+    question: "{texte}"
+    indice: "A capture or a pawn move resets the count to zero. It takes 50 moves by each player, not 50 moves in all."
+    exemple: "The last black piece has just been captured: the count starts again from zero. With king and rook against king, the longest mate takes 16 moves: far fewer than 50, if you know the method."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "According to Article 9.3 of the FIDE Laws, when can a draw be claimed?"
+      nom: "After 50 moves by each player with no pawn move and no capture"
+      explication: "Article 9.3 counts the last 50 moves by each player, with no pawn move and no capture. The player having the move makes the claim."
+      pieges:
+        - { texte: "After 50 moves in all, White and Black together", pourquoi: "The Article says “by each player”: 50 White moves and 50 Black moves." }
+        - { texte: "After 50 moves without a check", pourquoi: "Checks do not count: only pawn moves and captures reset the count." }
+    - texte: "After 30 moves by each player with no capture and no pawn move, a pawn moves. Where does the count stand?"
+      nom: "It starts again from zero"
+      explication: "Article 9.3 counts the last moves played with no pawn move: the pawn move resets the count, for both players."
+      pieges:
+        - { texte: "It goes on: 31", pourquoi: "A pawn move breaks the series: the 50 moves are counted from it." }
+        - { texte: "It starts again from zero, for White only", pourquoi: "The series counts both players’ moves since that pawn move: it starts again from zero for both." }
+    - texte: "King and rook against king: at most how many moves does it take to mate, if Black defends as well as possible?"
+      nom: "16"
+      explication: "Computed over every position with White to play: the longest mate takes 16 White moves."
+      pieges:
+        - { texte: "10", pourquoi: "10 moves is the longest mate with king and queen: the rook is slower." }
+        - { texte: "50", pourquoi: "Far fewer: with the best method, 16 moves are always enough." }
+    - texte: "King and queen against king: at most how many moves does it take to mate?"
+      nom: "10"
+      explication: "Computed over every position with White to play: the longest mate takes 10 White moves."
+      pieges:
+        - { texte: "16", pourquoi: "16 moves is the longest mate with king and rook." }
+        - { texte: "5", pourquoi: "From the centre, you first have to push the black king to the edge: 5 moves are not always enough." }
+    - texte: "You have king and rook against king. 45 moves by each player have already been played with no capture and no pawn move. Are you sure to mate in time?"
+      nom: "No: it can take up to 16 moves, and only 5 are left"
+      explication: "After 5 more moves by each player, the series reaches 50: your opponent may claim a draw. The mate can take up to 16 moves."
+      pieges:
+        - { texte: "Yes: 16 moves are always enough", pourquoi: "16 moves, yes, but only 5 are left before a draw can be claimed." }
+        - { texte: "Yes: the rule does not count when you have more pieces", pourquoi: "Article 9.3 does not look at material: only at captures and pawn moves." }
+    - texte: "What does Article 9.6.2 of the FIDE Laws say?"
+      nom: "After 75 moves by each player with no pawn move and no capture, the game is drawn, with no claim"
+      explication: "At 50 moves, a draw must be claimed (9.3). At 75 moves, it is automatic (9.6.2); only a checkmate on the last move comes first."
+      pieges:
+        - { texte: "After 75 moves, the side with more pieces wins", pourquoi: "Material does not count: after 75 moves with no capture and no pawn move, it is a draw." }
+        - { texte: "After 75 moves, a draw must still be claimed", pourquoi: "The claim is at 50 moves (9.3); at 75 moves, the draw comes with no claim." }

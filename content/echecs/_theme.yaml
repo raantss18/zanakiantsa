@@ -4,7 +4,7 @@ nom: "Les échecs"
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
 resume: "Les leçons pas à pas, puis de vraies parties contre le robot ou à deux."
 icone: "265f"
-ages: [5, 15]
+ages: [5, 18]
 # Les échecs ne s'apprennent pas à l'école (ADR 0069) : tout débutant, quel que soit son âge, commence par la marche des
 # pièces ; « Je sais déjà » saute ce qu'il connaît.
 hors_ecole: true
@@ -27,7 +27,13 @@ sources:
   # force le mat en deux) : légalité et solutions vérifiées avec python-chess 1.11. Roi et tour contre roi : chaque mat et
   # chaque pat cité vérifié avec python-chess ; « le mat se fait au bord » vérifié sur toutes les positions (216 mats).
   # La méthode (la boîte) n'a pas de source officielle : vocabulaire usuel des joueurs.
-ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir, mat-escalier, mat-baiser, clouage, enfilade, ouverture, decouverte, double-echec, regle-carre, finale-tour-roi, mat-etouffee, attaque-double-dame, deviation]
+  # Lycée (2026-11-11) : roi et dame contre roi, opposition, cases clés, pion tour, mauvais fou, règle des 50 coups. Pas
+  # de Stockfish ni de python-chess sur le poste : chaque position et chaque réponse ont été calculées par une analyse
+  # rétrograde complète (finales R+D/R+T/R+P contre R, et R+F+pion a contre R) qui s'appuie sur le générateur de coups
+  # de l'app (app/lib/core/game.dart). Mats les plus longs calculés : 10 coups (dame), 16 coups (tour). Opposition,
+  # cases clés, « mauvais fou » : vocabulaire usuel des joueurs, pas de source officielle ; seules les règles (pat 5.2.1,
+  # promotion 3.7.3.3, 50 et 75 coups 9.3 et 9.6.2) viennent de la FIDE, relues le 2026-11-11.
+ordre: [tour, fou, dame, roi, cavalier, pion, pion-prise, prise-tour, prise-cavalier, echec-dame, echec-cavalier, mat-dame, mat-tour, roque, promotion, en-passant, piece-gratuite, fourchette, mat-couloir, mat-escalier, mat-baiser, clouage, enfilade, ouverture, decouverte, double-echec, regle-carre, finale-tour-roi, mat-etouffee, attaque-double-dame, deviation, finale-dame-roi, opposition, cases-cles, pion-tour, mauvais-fou, cinquante-coups]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

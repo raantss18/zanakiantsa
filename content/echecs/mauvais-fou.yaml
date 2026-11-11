@@ -1,0 +1,100 @@
+id: mauvais-fou
+titre: "Fou et pion tour contre roi : le mauvais fou"
+niveau: 1re
+prerequis: [pion-tour]
+programme: { source: fide, texte: "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’." }
+activite: quiz
+parametres: {}
+idee: "Fou et pion tour contre roi : si le fou n’a pas la couleur de la case de promotion, il ne peut jamais chasser le roi noir du coin. C’est nulle, malgré la pièce de plus : on l’appelle le mauvais fou."
+phrases:
+  consigne: "Regarde la couleur de la case de promotion du pion, puis celle des cases de ton fou."
+  question: "{texte}"
+  indice: "a8 est une case blanche, h8 une case noire. Un fou reste toujours sur des cases de la même couleur."
+  exemple: "Pion en a5, roi blanc en c5, roi noir en a8, aux Blancs. Avec un fou en d3 (cases blanches), les Blancs gagnent. Avec un fou en d2 (cases noires), c’est nulle : le fou ne garde jamais a8."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Pion blanc en a5, roi blanc en b6, fou blanc en e1, roi noir en a8. Aux Blancs. Quel est le résultat ?"
+    nom: "Nulle"
+    explication: "Le fou en e1 va sur les cases noires ; a8 est blanche. Le roi noir reste dans le coin. Calculé : aucun coup blanc ne gagne."
+    pieges:
+      - { texte: "Les Blancs gagnent : ils ont un fou et un pion de plus", pourquoi: "Le fou de cases noires ne garde jamais a8, une case blanche : le roi noir ne quitte pas le coin." }
+      - { texte: "Les Blancs gagnent en poussant le pion", pourquoi: "Calculé : aucun coup blanc ne gagne, pousser le pion compris." }
+  - texte: "Pion blanc en a5, roi blanc en b6, fou blanc en f1, roi noir en a8. Aux Blancs. Quel est le résultat ?"
+    nom: "Les Blancs gagnent"
+    explication: "Le fou en f1 va sur les cases blanches, comme a8. Par exemple, le fou va en g2 : échec par la grande diagonale, et le roi noir doit quitter le coin. Calculé : gain blanc."
+    pieges:
+      - { texte: "Nulle : le roi noir est dans le coin", pourquoi: "Le coin ne protège que contre le mauvais fou ; ici, le fou attaque a8." }
+      - { texte: "Nulle : un fou ne peut pas faire mat", pourquoi: "Le fou aide le pion à aller à dame ; c’est la nouvelle dame qui fera mat." }
+  - texte: "Pion blanc en a5, roi blanc en b3, fou blanc en g1, roi noir en c7. Aux Noirs. Où va le roi noir ?"
+    nom: "En b8, vers le coin a8"
+    explication: "Le fou en g1 va sur les cases noires : il ne garde pas a8. Le roi noir file vers le coin, c’est nulle. Calculé : c8, b8 et b7 font nulle ; d7 et d6 perdent."
+    pieges:
+      - { texte: "En d6, vers le centre", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
+      - { texte: "En d7", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
+  - texte: "Pion blanc en a5, roi blanc en c4, fou blanc en f1, roi noir en d6. Aux Noirs. Peuvent-ils faire nulle ?"
+    nom: "Non : tous les coups noirs perdent"
+    explication: "Le fou en f1 va sur les cases blanches : il peut garder a8. Calculé : chaque coup noir perd."
+    pieges:
+      - { texte: "Oui : le roi va vers le coin a8", pourquoi: "Avec un fou de cases blanches, le coin a8 ne sauve plus le roi noir. Calculé : tous les coups noirs perdent." }
+      - { texte: "Oui : un fou et un pion ne peuvent pas gagner", pourquoi: "Avec le bon fou, ils gagnent : le fou protège le chemin du pion." }
+  - texte: "Pion blanc sur la colonne h, roi noir dans le coin h8. Avec quel fou les Blancs ne peuvent-ils pas le chasser du coin ?"
+    nom: "Un fou de cases blanches"
+    explication: "h8 est une case noire. Un fou de cases blanches ne l’attaque jamais : c’est le mauvais fou pour le pion h. (Calculé sur la colonne a ; la colonne h en est le reflet, avec les couleurs inversées.)"
+    pieges:
+      - { texte: "Un fou de cases noires", pourquoi: "h8 est noire : ce fou peut l’attaquer et chasser le roi du coin." }
+      - { texte: "Aucun : un fou chasse toujours le roi", pourquoi: "Un fou reste sur sa couleur : s’il n’a pas celle du coin, il ne l’attaque jamais." }
+  - texte: "Pourquoi dit-on « le mauvais fou » ?"
+    nom: "Il n’a pas la couleur de la case de promotion du pion tour"
+    explication: "Un fou reste toujours sur sa couleur. S’il n’a pas celle de la case de promotion, il ne peut ni la garder ni chasser le roi noir qui s’y installe."
+    pieges:
+      - { texte: "C’est un fou qui a déjà été pris", pourquoi: "Le mauvais fou est bien sur l’échiquier ; c’est sa couleur de cases qui pose problème." }
+      - { texte: "C’est le fou placé du côté du roi", pourquoi: "Son côté de départ ne compte pas : seule la couleur de ses cases compte." }
+
+en:
+  titre: "Bishop and rook pawn against king: the wrong bishop"
+  idee: "Bishop and rook pawn against king: if the bishop does not have the colour of the promotion square, it can never drive the black king out of the corner. It is a draw, despite the extra piece: this is the wrong bishop."
+  phrases:
+    consigne: "Look at the colour of the pawn’s promotion square, then at the colour of your bishop’s squares."
+    question: "{texte}"
+    indice: "a8 is a light square, h8 a dark square. A bishop always stays on squares of the same colour."
+    exemple: "Pawn on a5, white king on c5, black king on a8, White to play. With a bishop on d3 (light squares), White wins. With a bishop on d2 (dark squares), it is a draw: the bishop never guards a8."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "White pawn on a5, white king on b6, white bishop on e1, black king on a8. White to play. What is the result?"
+      nom: "Draw"
+      explication: "The bishop on e1 moves on dark squares; a8 is light. The black king stays in the corner. Computed: no White move wins."
+      pieges:
+        - { texte: "White wins: they have an extra bishop and pawn", pourquoi: "The dark-squared bishop never guards a8, a light square: the black king does not leave the corner." }
+        - { texte: "White wins by pushing the pawn", pourquoi: "Computed: no White move wins, pawn moves included." }
+    - texte: "White pawn on a5, white king on b6, white bishop on f1, black king on a8. White to play. What is the result?"
+      nom: "White wins"
+      explication: "The bishop on f1 moves on light squares, like a8. For example, the bishop goes to g2: check along the long diagonal, and the black king must leave the corner. Computed: White wins."
+      pieges:
+        - { texte: "Draw: the black king is in the corner", pourquoi: "The corner only protects against the wrong bishop; here, the bishop attacks a8." }
+        - { texte: "Draw: a bishop cannot give checkmate", pourquoi: "The bishop helps the pawn to queen; the new queen gives checkmate." }
+    - texte: "White pawn on a5, white king on b3, white bishop on g1, black king on c7. Black to play. Where does the black king go?"
+      nom: "To b8, towards the a8 corner"
+      explication: "The bishop on g1 moves on dark squares: it does not guard a8. The black king heads for the corner, it is a draw. Computed: c8, b8 and b7 draw; d7 and d6 lose."
+      pieges:
+        - { texte: "To d6, towards the centre", pourquoi: "The black king moves away from the corner. Computed: White wins." }
+        - { texte: "To d7", pourquoi: "The black king moves away from the corner. Computed: White wins." }
+    - texte: "White pawn on a5, white king on c4, white bishop on f1, black king on d6. Black to play. Can Black draw?"
+      nom: "No: every Black move loses"
+      explication: "The bishop on f1 moves on light squares: it can guard a8. Computed: every Black move loses."
+      pieges:
+        - { texte: "Yes: the king heads for the a8 corner", pourquoi: "With a light-squared bishop, the a8 corner no longer saves the black king. Computed: every Black move loses." }
+        - { texte: "Yes: a bishop and a pawn cannot win", pourquoi: "With the right bishop, they win: the bishop protects the pawn’s path." }
+    - texte: "White pawn on the h-file, black king in the h8 corner. With which bishop can White not drive it out of the corner?"
+      nom: "A light-squared bishop"
+      explication: "h8 is a dark square. A light-squared bishop never attacks it: it is the wrong bishop for the h-pawn. (Computed on the a-file; the h-file is its mirror image, with the colours swapped.)"
+      pieges:
+        - { texte: "A dark-squared bishop", pourquoi: "h8 is dark: this bishop can attack it and drive the king out of the corner." }
+        - { texte: "None: a bishop always drives the king out", pourquoi: "A bishop stays on its colour: if it is not the corner’s colour, it never attacks it." }
+    - texte: "Why do we say “the wrong bishop”?"
+      nom: "It does not have the colour of the rook pawn’s promotion square"
+      explication: "A bishop always stays on its colour. If it is not the colour of the promotion square, it can neither guard it nor drive out the black king sitting there."
+      pieges:
+        - { texte: "It is a bishop that has already been captured", pourquoi: "The wrong bishop is on the board; the colour of its squares is the problem." }
+        - { texte: "It is the bishop on the king’s side", pourquoi: "Its starting side does not matter: only the colour of its squares does." }

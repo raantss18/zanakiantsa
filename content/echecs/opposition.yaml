@@ -1,0 +1,100 @@
+id: opposition
+titre: "Roi et pion contre roi : l’opposition"
+niveau: 4e
+prerequis: [regle-carre]
+programme: { source: fide, texte: "3.9.2 : No piece can be moved that will either expose the king of the same colour to check or leave that king in check." }
+activite: quiz
+parametres: {}
+idee: "Deux rois face à face, une case entre eux : aucun ne peut avancer vers l’autre. Celui qui doit jouer doit s’écarter. Avoir l’opposition, c’est créer ce face-à-face quand c’est à l’autre de jouer."
+phrases:
+  consigne: "Roi et pion contre roi : cherche le coup de roi qui met les deux rois face à face, une case entre eux."
+  question: "{texte}"
+  indice: "Rois face à face sur une colonne, une case entre eux : celui qui doit jouer cède le passage. Ne pousse pas le pion trop tôt."
+  exemple: "Roi blanc en f4, pion en e3, roi noir en e6. Aux Blancs. Le roi va en e4 : face au roi noir, une case entre eux. Les Noirs doivent s’écarter, et ton roi avance devant son pion."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Roi blanc en e4, roi noir en e6, aux Noirs de jouer. Qui a l’opposition ?"
+    nom: "Les Blancs"
+    explication: "Les rois sont face à face, une case entre eux, et ce sont les Noirs qui doivent jouer : ils doivent s’écarter. L’opposition est aux Blancs."
+    pieges:
+      - { texte: "Les Noirs", pourquoi: "Ici, avoir le trait est un désavantage : le roi noir doit céder le passage." }
+      - { texte: "Personne : il faudrait que les rois se touchent", pourquoi: "Deux rois ne peuvent jamais se toucher, l’un serait en échec (article 3.9.2) : l’opposition, c’est une case entre eux." }
+  - texte: "Roi blanc en d4, pion blanc en e3, roi noir en e6. Aux Blancs. Quel coup gagne ?"
+    nom: "Le roi va en e4"
+    explication: "Face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent s’écarter, et ton roi avance. Calculé : c’est le seul coup qui gagne."
+    pieges:
+      - { texte: "Le pion va en e4", pourquoi: "Le pion avance trop tôt : le roi noir reste devant lui. Calculé : c’est nulle." }
+      - { texte: "Le roi va en c5", pourquoi: "Ton roi quitte le face-à-face : le roi noir prend l’opposition. Calculé : c’est nulle." }
+  - texte: "Roi blanc en d5, pion blanc en e3, roi noir en e7. Aux Blancs. Quel coup gagne ?"
+    nom: "Le roi va en e5"
+    explication: "Ton roi se place face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent céder une case. Calculé : c’est le seul coup qui gagne."
+    pieges:
+      - { texte: "Le pion va en e4", pourquoi: "Le pion prend la case dont ton roi a besoin. Calculé : c’est nulle." }
+      - { texte: "Le roi va en d4", pourquoi: "Ton roi recule : le roi noir vient en e5 ou d5 et prend l’opposition. Calculé : c’est nulle." }
+  - texte: "Roi blanc en f6, pion blanc en e5, roi noir en e8. Aux Blancs. Quel coup gagne ?"
+    nom: "Le roi va en e6"
+    explication: "Opposition : le roi noir doit s’écarter. S’il va en d8, ton roi va en f7, et le pion passe. Calculé : c’est le seul coup qui gagne."
+    pieges:
+      - { texte: "Le pion va en e6", pourquoi: "Le roi noir se place devant le pion, et c’est toi qui dois jouer. Calculé : c’est nulle." }
+      - { texte: "Le roi va en g6", pourquoi: "Ton roi s’écarte du pion : le roi noir garde ses cases. Calculé : c’est nulle." }
+  - texte: "Roi noir en e5, roi blanc en d3, pion blanc en d2. Aux Noirs. Quel coup fait nulle ?"
+    nom: "Le roi va en d5"
+    explication: "Face au roi blanc, une case entre eux, et c’est aux Blancs de jouer : le roi noir garde l’opposition. Calculé : c’est le seul coup qui fait nulle."
+    pieges:
+      - { texte: "Le roi va en e6", pourquoi: "Le roi noir recule et laisse l’opposition au roi blanc. Calculé : les Blancs gagnent." }
+      - { texte: "Le roi va en f4", pourquoi: "Le roi noir s’écarte de la colonne du pion. Calculé : les Blancs gagnent." }
+  - texte: "Dans les positions de cette leçon, pourquoi faut-il jouer le roi avant le pion ?"
+    nom: "Le roi doit d’abord gagner de la place devant son pion"
+    explication: "Dans chaque position de la leçon, pousser le pion tout de suite donne nulle : le roi noir le bloque. Ton roi prend l’opposition, avance, et le pion suit."
+    pieges:
+      - { texte: "Le pion ne peut pas avancer si le roi noir est loin", pourquoi: "Le pion peut toujours avancer si sa case est libre ; c’est la nulle qui vient, pas l’interdiction." }
+      - { texte: "La règle interdit de pousser le pion", pourquoi: "Aucune règle ne l’interdit : c’est une question de méthode." }
+
+en:
+  titre: "King and pawn against king: the opposition"
+  idee: "Two kings face to face, one square between them: neither can step towards the other. The one who must move has to step aside. Having the opposition means creating that face-off when it is the other side’s move."
+  phrases:
+    consigne: "King and pawn against king: look for the king move that puts both kings face to face, one square between them."
+    question: "{texte}"
+    indice: "Kings face to face on a file, one square between them: the side to move gives way. Do not push the pawn too early."
+    exemple: "White king on f4, pawn on e3, black king on e6. White to play. The king goes to e4: facing the black king, one square between them. Black must step aside, and your king moves ahead of its pawn."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "White king on e4, black king on e6, Black to play. Who has the opposition?"
+      nom: "White"
+      explication: "The kings are face to face, one square between them, and Black has to move: Black must step aside. White has the opposition."
+      pieges:
+        - { texte: "Black", pourquoi: "Here, having the move is a drawback: the black king has to give way." }
+        - { texte: "Nobody: the kings would have to touch", pourquoi: "Two kings can never touch, one would be in check (Article 3.9.2): the opposition means one square between them." }
+    - texte: "White king on d4, white pawn on e3, black king on e6. White to play. Which move wins?"
+      nom: "The king goes to e4"
+      explication: "Facing the black king, one square between them, and Black has to move: Black must step aside, and your king moves forward. Computed: it is the only winning move."
+      pieges:
+        - { texte: "The pawn goes to e4", pourquoi: "The pawn moves too early: the black king stays in front of it. Computed: it is a draw." }
+        - { texte: "The king goes to c5", pourquoi: "Your king leaves the face-off: the black king takes the opposition. Computed: it is a draw." }
+    - texte: "White king on d5, white pawn on e3, black king on e7. White to play. Which move wins?"
+      nom: "The king goes to e5"
+      explication: "Your king faces the black king, one square between them, and Black has to move: Black must give up a square. Computed: it is the only winning move."
+      pieges:
+        - { texte: "The pawn goes to e4", pourquoi: "The pawn takes the square your king needs. Computed: it is a draw." }
+        - { texte: "The king goes to d4", pourquoi: "Your king steps back: the black king comes to e5 or d5 and takes the opposition. Computed: it is a draw." }
+    - texte: "White king on f6, white pawn on e5, black king on e8. White to play. Which move wins?"
+      nom: "The king goes to e6"
+      explication: "Opposition: the black king must step aside. If it goes to d8, your king goes to f7, and the pawn gets through. Computed: it is the only winning move."
+      pieges:
+        - { texte: "The pawn goes to e6", pourquoi: "The black king stands in front of the pawn, and you are the one who must move. Computed: it is a draw." }
+        - { texte: "The king goes to g6", pourquoi: "Your king moves away from the pawn: the black king keeps its squares. Computed: it is a draw." }
+    - texte: "Black king on e5, white king on d3, white pawn on d2. Black to play. Which move draws?"
+      nom: "The king goes to d5"
+      explication: "Facing the white king, one square between them, and White has to move: the black king keeps the opposition. Computed: it is the only drawing move."
+      pieges:
+        - { texte: "The king goes to e6", pourquoi: "The black king steps back and hands the opposition to the white king. Computed: White wins." }
+        - { texte: "The king goes to f4", pourquoi: "The black king leaves the pawn’s file. Computed: White wins." }
+    - texte: "In the positions of this lesson, why must you play the king before the pawn?"
+      nom: "The king must first win space in front of its pawn"
+      explication: "In every position of the lesson, pushing the pawn at once leads to a draw: the black king blocks it. Your king takes the opposition, moves forward, and the pawn follows."
+      pieges:
+        - { texte: "The pawn cannot move if the black king is far away", pourquoi: "The pawn can always move if its square is free; what follows is a draw, not a ban." }
+        - { texte: "The rules forbid pushing the pawn", pourquoi: "No rule forbids it: it is a question of method." }

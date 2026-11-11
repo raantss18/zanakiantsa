@@ -5322,6 +5322,120 @@ deviation.items.5;Attire une pièce noire loin de sa case, puis fais mat !
 deviation.items.5.explication;La tour va en f8 : échec. Le fou d6 doit la prendre : il quitte la colonne d. La dame va en d8 : mat.
 deviation.items.6;Attire une pièce noire loin de sa case, puis fais mat !
 deviation.items.6.explication;Le cavalier va en b6 : échec. Le pion a7 doit le prendre, et la colonne a s’ouvre. La dame va en a3 : mat.
+finale-dame-roi.consigne;Regarde les cases que garde ta dame, puis celles que garde ton roi. Attention au pat.
+finale-dame-roi.question;{texte}
+finale-dame-roi.indice;La dame garde sa colonne, sa rangée et ses deux diagonales. Si le roi noir n’est pas en échec et ne peut plus bouger, c’est pat : partie nulle.
+finale-dame-roi.exemple;Roi noir en h8, roi blanc en f7, dame en g1. La dame va en g7, protégée par ton roi : mat. La dame en g6, elle, serait pat : pas d’échec, et plus aucune case pour le roi noir.
+finale-dame-roi.demonstration;{explication}
+finale-dame-roi.bravo;Oui ! La réponse est : {bonne}.
+finale-dame-roi.idee;La dame enferme le roi noir comme la tour, mais plus vite. Le roi noir finit au bord, ton roi s’approche, et la dame fait mat. Avant chaque coup, vérifie qu’il reste une case au roi noir : sinon, c’est pat.
+finale-dame-roi.items.0;Roi noir en h8, roi blanc en g6, dame blanche en b1. Aux Blancs. Quel coup fait échec et mat ?
+finale-dame-roi.items.0.explication;La dame fait échec sur toute la 8e rangée et garde g8. Ton roi garde g7 et h7 : le roi noir n’a plus de case. Mat.
+finale-dame-roi.items.1;Roi noir en a8, roi blanc en c7, dame blanche en b1. Aux Blancs. Pourquoi la dame en b6 est-elle une faute ?
+finale-dame-roi.items.1.explication;En b6, la dame garde a7 et b7 ; ton roi garde b7 et b8. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle. La dame en b7, protégée par ton roi, faisait mat.
+finale-dame-roi.items.2;Roi noir en e8, roi blanc en e6, dame blanche en h1. Aux Blancs. Quel coup fait échec et mat ?
+finale-dame-roi.items.2.explication;La dame fait échec sur la 8e rangée et garde d8 et f8. Ton roi garde d7, e7 et f7 : mat. (La dame en a8 fait mat aussi.)
+finale-dame-roi.items.3;Roi noir en a8, roi blanc en b6, dame blanche en c1. Aux Blancs. Quel coup fait échec et mat ?
+finale-dame-roi.items.3.explication;La dame fait échec sur la 8e rangée et garde b8. Ton roi garde a7 et b7 : mat.
+finale-dame-roi.items.4;Avec roi et dame contre roi, combien de coups faut-il au plus pour faire mat, si les Noirs se défendent au mieux ?
+finale-dame-roi.items.4.explication;Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs. Avec roi et tour, il en faut jusqu’à 16.
+finale-dame-roi.items.5;Peut-on faire mat avec la dame seule, sans l’aide de son roi ?
+finale-dame-roi.items.5.explication;Calculé sur tous les mats de roi et dame contre roi : ton roi est toujours à deux pas du roi noir. Il garde les cases que la dame ne garde pas, ou protège la dame collée au roi noir.
+opposition.consigne;Roi et pion contre roi : cherche le coup de roi qui met les deux rois face à face, une case entre eux.
+opposition.question;{texte}
+opposition.indice;Rois face à face sur une colonne, une case entre eux : celui qui doit jouer cède le passage. Ne pousse pas le pion trop tôt.
+opposition.exemple;Roi blanc en f4, pion en e3, roi noir en e6. Aux Blancs. Le roi va en e4 : face au roi noir, une case entre eux. Les Noirs doivent s’écarter, et ton roi avance devant son pion.
+opposition.demonstration;{explication}
+opposition.bravo;Oui ! La réponse est : {bonne}.
+opposition.idee;Deux rois face à face, une case entre eux : aucun ne peut avancer vers l’autre. Celui qui doit jouer doit s’écarter. Avoir l’opposition, c’est créer ce face-à-face quand c’est à l’autre de jouer.
+opposition.items.0;Roi blanc en e4, roi noir en e6, aux Noirs de jouer. Qui a l’opposition ?
+opposition.items.0.explication;Les rois sont face à face, une case entre eux, et ce sont les Noirs qui doivent jouer : ils doivent s’écarter. L’opposition est aux Blancs.
+opposition.items.1;Roi blanc en d4, pion blanc en e3, roi noir en e6. Aux Blancs. Quel coup gagne ?
+opposition.items.1.explication;Face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent s’écarter, et ton roi avance. Calculé : c’est le seul coup qui gagne.
+opposition.items.2;Roi blanc en d5, pion blanc en e3, roi noir en e7. Aux Blancs. Quel coup gagne ?
+opposition.items.2.explication;Ton roi se place face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent céder une case. Calculé : c’est le seul coup qui gagne.
+opposition.items.3;Roi blanc en f6, pion blanc en e5, roi noir en e8. Aux Blancs. Quel coup gagne ?
+opposition.items.3.explication;Opposition : le roi noir doit s’écarter. S’il va en d8, ton roi va en f7, et le pion passe. Calculé : c’est le seul coup qui gagne.
+opposition.items.4;Roi noir en e5, roi blanc en d3, pion blanc en d2. Aux Noirs. Quel coup fait nulle ?
+opposition.items.4.explication;Face au roi blanc, une case entre eux, et c’est aux Blancs de jouer : le roi noir garde l’opposition. Calculé : c’est le seul coup qui fait nulle.
+opposition.items.5;Dans les positions de cette leçon, pourquoi faut-il jouer le roi avant le pion ?
+opposition.items.5.explication;Dans chaque position de la leçon, pousser le pion tout de suite donne nulle : le roi noir le bloque. Ton roi prend l’opposition, avance, et le pion suit.
+cases-cles.consigne;Trouve les cases clés du pion, puis cherche comment ton roi peut y arriver.
+cases-cles.question;{texte}
+cases-cles.indice;Pion en 2e, 3e ou 4e rangée : deux rangées devant lui, sur sa colonne et les deux voisines. Pion en 5e ou 6e rangée : les trois cases juste devant lui, et les trois d’après.
+cases-cles.exemple;Pion en e4 : ses cases clés sont d6, e6 et f6. Roi blanc en f6, roi noir en e8 : les Blancs gagnent, qu’ils aient le trait ou non.
+cases-cles.demonstration;{explication}
+cases-cles.bravo;Oui ! La réponse est : {bonne}.
+cases-cles.idee;Chaque pion a ses cases clés : si ton roi s’y pose, tu gagnes, que ce soit à toi de jouer ou non. Pion en 2e, 3e ou 4e rangée : les trois cases deux rangées devant lui. Le pion tour fait exception.
+cases-cles.items.0;Pion blanc en e3. Quelles sont ses cases clés ?
+cases-cles.items.0.explication;Deux rangées devant le pion, sur sa colonne et les deux voisines : d5, e5 et f5.
+cases-cles.items.1;Pion blanc en d4. Quelles sont ses cases clés ?
+cases-cles.items.1.explication;Deux rangées devant le pion, sur les colonnes c, d et e : c6, d6 et e6.
+cases-cles.items.2;Pion blanc en e5. Combien a-t-il de cases clés ?
+cases-cles.items.2.explication;En 5e rangée, les trois cases juste devant lui (d6, e6, f6) et les trois d’après (d7, e7, f7).
+cases-cles.items.3;Roi blanc en f4, pion blanc en e2, roi noir en e6. Aux Noirs. Qui gagne ?
+cases-cles.items.3.explication;Les cases clés du pion e2 sont d4, e4 et f4 : ton roi y est déjà. Les Blancs gagnent, même si ce sont les Noirs qui jouent.
+cases-cles.items.4;Pion blanc en c6. Sur laquelle de ces cases ton roi gagne-t-il à coup sûr ?
+cases-cles.items.4.explication;Pion en 6e rangée : ses cases clés sont b7, c7, d7, b8, c8 et d8. d7 en fait partie.
+cases-cles.items.5;Ton roi est sur une case clé. Faut-il encore regarder qui a le trait ?
+cases-cles.items.5.explication;Calculé sur toutes les positions de ces pions : roi blanc sur une case clé et pion à l’abri, les Blancs gagnent quel que soit le trait. Hors des cases clés, c’est l’opposition qui décide.
+pion-tour.consigne;Pion sur la colonne a ou h : regarde d’abord si le roi noir peut atteindre le coin devant le pion.
+pion-tour.question;{texte}
+pion-tour.indice;Roi noir dans le coin devant le pion tour : c’est nulle. Le roi blanc doit l’empêcher d’y entrer, ou le roi noir doit y courir.
+pion-tour.exemple;Roi blanc en c5, pion en a5, roi noir en a8, aux Blancs. Le roi noir est dans le coin devant le pion : quel que soit le coup blanc, c’est nulle.
+pion-tour.demonstration;{explication}
+pion-tour.bravo;Oui ! La réponse est : {bonne}.
+pion-tour.idee;Le pion tour (colonne a ou h) fait exception : si le roi noir atteint le coin devant lui, rien ne l’en chasse, c’est nulle. Pousser le pion peut même donner pat. Le roi blanc doit lui barrer la route du coin.
+pion-tour.items.0;Roi blanc en b6, pion blanc en a5, roi noir en a8. Aux Blancs. Quel est le résultat avec le meilleur jeu ?
+pion-tour.items.0.explication;Le roi noir est dans le coin devant le pion tour. Calculé : aucun coup blanc ne gagne.
+pion-tour.items.1;Roi blanc en b6, pion blanc en a6, roi noir en a8. Aux Blancs. Que se passe-t-il si le pion va en a7 ?
+pion-tour.items.1.explication;Le pion en a7 garde b8, ton roi garde b7 et protège le pion. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle.
+pion-tour.items.2;Roi blanc en b6, pion blanc en a5, roi noir en c8. Aux Noirs. Quel coup fait nulle ?
+pion-tour.items.2.explication;Le roi noir reste collé au coin a8. Calculé : c’est le seul coup qui fait nulle.
+pion-tour.items.3;Roi blanc en a7, pion blanc en a6, roi noir en c8. Aux Noirs. Quel coup fait nulle ?
+pion-tour.items.3.explication;Le roi blanc est enfermé devant son pion : il ne peut plus aller qu’en a8, et le pion est bloqué. Calculé : c’est le seul coup qui fait nulle.
+pion-tour.items.4;Roi blanc en b7, pion blanc en a5, roi noir en d6. Aux Noirs. Qui gagne ?
+pion-tour.items.4.explication;Le roi blanc en b7 interdit le coin a8 au roi noir. Calculé : roi blanc en b7 et pion en a5 ou a6, les Blancs gagnent toujours, si le pion n’est pas pris tout de suite.
+pion-tour.items.5;Roi blanc en f5, pion blanc en h5, roi noir en h8. Aux Blancs. Quel est le résultat ?
+pion-tour.items.5.explication;Même idée sur la colonne h : le roi noir est dans le coin devant le pion. Calculé : aucun coup blanc ne gagne.
+mauvais-fou.consigne;Regarde la couleur de la case de promotion du pion, puis celle des cases de ton fou.
+mauvais-fou.question;{texte}
+mauvais-fou.indice;a8 est une case blanche, h8 une case noire. Un fou reste toujours sur des cases de la même couleur.
+mauvais-fou.exemple;Pion en a5, roi blanc en c5, roi noir en a8, aux Blancs. Avec un fou en d3 (cases blanches), les Blancs gagnent. Avec un fou en d2 (cases noires), c’est nulle : le fou ne garde jamais a8.
+mauvais-fou.demonstration;{explication}
+mauvais-fou.bravo;Oui ! La réponse est : {bonne}.
+mauvais-fou.idee;Fou et pion tour contre roi : si le fou n’a pas la couleur de la case de promotion, il ne peut jamais chasser le roi noir du coin. C’est nulle, malgré la pièce de plus : on l’appelle le mauvais fou.
+mauvais-fou.items.0;Pion blanc en a5, roi blanc en b6, fou blanc en e1, roi noir en a8. Aux Blancs. Quel est le résultat ?
+mauvais-fou.items.0.explication;Le fou en e1 va sur les cases noires ; a8 est blanche. Le roi noir reste dans le coin. Calculé : aucun coup blanc ne gagne.
+mauvais-fou.items.1;Pion blanc en a5, roi blanc en b6, fou blanc en f1, roi noir en a8. Aux Blancs. Quel est le résultat ?
+mauvais-fou.items.1.explication;Le fou en f1 va sur les cases blanches, comme a8. Par exemple, le fou va en g2 : échec par la grande diagonale, et le roi noir doit quitter le coin. Calculé : gain blanc.
+mauvais-fou.items.2;Pion blanc en a5, roi blanc en b3, fou blanc en g1, roi noir en c7. Aux Noirs. Où va le roi noir ?
+mauvais-fou.items.2.explication;Le fou en g1 va sur les cases noires : il ne garde pas a8. Le roi noir file vers le coin, c’est nulle. Calculé : c8, b8 et b7 font nulle ; d7 et d6 perdent.
+mauvais-fou.items.3;Pion blanc en a5, roi blanc en c4, fou blanc en f1, roi noir en d6. Aux Noirs. Peuvent-ils faire nulle ?
+mauvais-fou.items.3.explication;Le fou en f1 va sur les cases blanches : il peut garder a8. Calculé : chaque coup noir perd.
+mauvais-fou.items.4;Pion blanc sur la colonne h, roi noir dans le coin h8. Avec quel fou les Blancs ne peuvent-ils pas le chasser du coin ?
+mauvais-fou.items.4.explication;h8 est une case noire. Un fou de cases blanches ne l’attaque jamais : c’est le mauvais fou pour le pion h. (Calculé sur la colonne a ; la colonne h en est le reflet, avec les couleurs inversées.)
+mauvais-fou.items.5;Pourquoi dit-on « le mauvais fou » ?
+mauvais-fou.items.5.explication;Un fou reste toujours sur sa couleur. S’il n’a pas celle de la case de promotion, il ne peut ni la garder ni chasser le roi noir qui s’y installe.
+cinquante-coups.consigne;Compte les coups depuis la dernière prise ou le dernier coup de pion.
+cinquante-coups.question;{texte}
+cinquante-coups.indice;Une prise ou un coup de pion remet le compte à zéro. Il faut 50 coups de chaque joueur, pas 50 coups en tout.
+cinquante-coups.exemple;La dernière pièce noire vient d’être prise : le compte repart de zéro. Avec roi et tour contre roi, le mat le plus long demande 16 coups : bien moins que 50, si tu connais la méthode.
+cinquante-coups.demonstration;{explication}
+cinquante-coups.bravo;Oui ! La réponse est : {bonne}.
+cinquante-coups.idee;Après 50 coups de chaque joueur sans prise ni coup de pion, celui qui a le trait peut réclamer la nulle (article 9.3). Roi et dame matent en 10 coups au plus, roi et tour en 16 : il faut mater sans traîner.
+cinquante-coups.items.0;D’après l’article 9.3 des règles de la FIDE, quand peut-on réclamer la nulle ?
+cinquante-coups.items.0.explication;L’article 9.3 compte les 50 derniers coups de chaque joueur, sans coup de pion et sans prise. C’est le joueur qui a le trait qui réclame.
+cinquante-coups.items.1;Après 30 coups de chaque joueur sans prise ni coup de pion, un pion avance. Où en est le compte ?
+cinquante-coups.items.1.explication;L’article 9.3 compte les derniers coups joués sans coup de pion : le coup de pion remet le compte à zéro, pour les deux joueurs.
+cinquante-coups.items.2;Roi et tour contre roi : combien de coups faut-il au plus pour mater, si les Noirs se défendent au mieux ?
+cinquante-coups.items.2.explication;Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 16 coups blancs.
+cinquante-coups.items.3;Roi et dame contre roi : combien de coups faut-il au plus pour mater ?
+cinquante-coups.items.3.explication;Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs.
+cinquante-coups.items.4;Tu as roi et tour contre roi. 45 coups de chaque joueur ont déjà été joués sans prise ni coup de pion. Es-tu sûr de mater à temps ?
+cinquante-coups.items.4.explication;Après 5 coups de plus de chaque joueur, la série atteint 50 : l’adversaire pourra réclamer la nulle. Le mat peut demander jusqu’à 16 coups.
+cinquante-coups.items.5;Que dit l’article 9.6.2 des règles de la FIDE ?
+cinquante-coups.items.5.explication;À 50 coups, il faut réclamer la nulle (9.3). À 75 coups, elle est automatique (9.6.2) ; seul un mat au dernier coup passe avant.
 anglais.intro.0;Écoute le mot en anglais.
 anglais.intro.1;Regarde bien les images.
 anglais.intro.2;Touche celle qui va avec le mot !

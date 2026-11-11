@@ -1,0 +1,100 @@
+id: cases-cles
+titre: "Roi et pion contre roi : les cases clés"
+niveau: 3e
+prerequis: [opposition]
+programme: { source: fide, texte: "3.7.3.3 : When a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn as part of the same move for a new queen, rook, bishop or knight of the same colour." }
+activite: quiz
+parametres: {}
+idee: "Chaque pion a ses cases clés : si ton roi s’y pose, tu gagnes, que ce soit à toi de jouer ou non. Pion en 2e, 3e ou 4e rangée : les trois cases deux rangées devant lui. Le pion tour fait exception."
+phrases:
+  consigne: "Trouve les cases clés du pion, puis cherche comment ton roi peut y arriver."
+  question: "{texte}"
+  indice: "Pion en 2e, 3e ou 4e rangée : deux rangées devant lui, sur sa colonne et les deux voisines. Pion en 5e ou 6e rangée : les trois cases juste devant lui, et les trois d’après."
+  exemple: "Pion en e4 : ses cases clés sont d6, e6 et f6. Roi blanc en f6, roi noir en e8 : les Blancs gagnent, qu’ils aient le trait ou non."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Pion blanc en e3. Quelles sont ses cases clés ?"
+    nom: "d5, e5 et f5"
+    explication: "Deux rangées devant le pion, sur sa colonne et les deux voisines : d5, e5 et f5."
+    pieges:
+      - { texte: "d4, e4 et f4", pourquoi: "Une rangée trop près : les cases clés sont deux rangées devant le pion, en 5e rangée." }
+      - { texte: "e4, e5 et e6", pourquoi: "Les cases clés sont côte à côte, sur la colonne du pion et les deux voisines." }
+  - texte: "Pion blanc en d4. Quelles sont ses cases clés ?"
+    nom: "c6, d6 et e6"
+    explication: "Deux rangées devant le pion, sur les colonnes c, d et e : c6, d6 et e6."
+    pieges:
+      - { texte: "c5, d5 et e5", pourquoi: "Une rangée trop près : pour un pion en 4e rangée, les cases clés sont en 6e rangée." }
+      - { texte: "d6 seulement", pourquoi: "Les deux colonnes voisines comptent aussi : c6 et e6." }
+  - texte: "Pion blanc en e5. Combien a-t-il de cases clés ?"
+    nom: "6"
+    explication: "En 5e rangée, les trois cases juste devant lui (d6, e6, f6) et les trois d’après (d7, e7, f7)."
+    pieges:
+      - { texte: "3", pourquoi: "En 5e rangée, la rangée d’après compte aussi : d7, e7 et f7 s’ajoutent à d6, e6 et f6." }
+      - { texte: "8", pourquoi: "Les cases clés sont sur trois colonnes seulement : celle du pion et ses deux voisines." }
+  - texte: "Roi blanc en f4, pion blanc en e2, roi noir en e6. Aux Noirs. Qui gagne ?"
+    nom: "Les Blancs"
+    explication: "Les cases clés du pion e2 sont d4, e4 et f4 : ton roi y est déjà. Les Blancs gagnent, même si ce sont les Noirs qui jouent."
+    pieges:
+      - { texte: "Nulle : les Noirs ont le trait", pourquoi: "Sur une case clé, le trait ne compte plus : le roi blanc gagne dans les deux cas." }
+      - { texte: "Nulle : le pion est encore loin de la promotion", pourquoi: "Ce qui compte, c’est la place du roi blanc, pas la distance du pion." }
+  - texte: "Pion blanc en c6. Sur laquelle de ces cases ton roi gagne-t-il à coup sûr ?"
+    nom: "d7"
+    explication: "Pion en 6e rangée : ses cases clés sont b7, c7, d7, b8, c8 et d8. d7 en fait partie."
+    pieges:
+      - { texte: "c5", pourquoi: "c5 est derrière le pion : le roi noir peut encore se placer devant lui." }
+      - { texte: "a6", pourquoi: "Trop loin sur le côté : les cases clés sont sur les colonnes b, c et d." }
+  - texte: "Ton roi est sur une case clé. Faut-il encore regarder qui a le trait ?"
+    nom: "Non : tu gagnes dans les deux cas, si le pion n’est pas pris tout de suite"
+    explication: "Calculé sur toutes les positions de ces pions : roi blanc sur une case clé et pion à l’abri, les Blancs gagnent quel que soit le trait. Hors des cases clés, c’est l’opposition qui décide."
+    pieges:
+      - { texte: "Oui : il faut toujours avoir l’opposition", pourquoi: "L’opposition sert à atteindre une case clé ; une fois dessus, tu gagnes de toute façon." }
+      - { texte: "Oui : celui qui a le trait gagne", pourquoi: "Sur une case clé, le trait ne change rien : les Blancs gagnent dans les deux cas." }
+
+en:
+  titre: "King and pawn against king: the key squares"
+  idee: "Every pawn has its key squares: if your king stands on one, you win, whether it is your move or not. Pawn on the 2nd, 3rd or 4th rank: the three squares two ranks ahead of it. The rook pawn is the exception."
+  phrases:
+    consigne: "Find the pawn’s key squares, then look for a way for your king to get there."
+    question: "{texte}"
+    indice: "Pawn on the 2nd, 3rd or 4th rank: two ranks ahead of it, on its file and the two next to it. Pawn on the 5th or 6th rank: the three squares just ahead of it, and the three after them."
+    exemple: "Pawn on e4: its key squares are d6, e6 and f6. White king on f6, black king on e8: White wins, whether it is White’s move or not."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "White pawn on e3. What are its key squares?"
+      nom: "d5, e5 and f5"
+      explication: "Two ranks ahead of the pawn, on its file and the two next to it: d5, e5 and f5."
+      pieges:
+        - { texte: "d4, e4 and f4", pourquoi: "One rank too close: the key squares are two ranks ahead of the pawn, on the 5th rank." }
+        - { texte: "e4, e5 and e6", pourquoi: "The key squares lie side by side, on the pawn’s file and the two next to it." }
+    - texte: "White pawn on d4. What are its key squares?"
+      nom: "c6, d6 and e6"
+      explication: "Two ranks ahead of the pawn, on the c-, d- and e-files: c6, d6 and e6."
+      pieges:
+        - { texte: "c5, d5 and e5", pourquoi: "One rank too close: for a pawn on the 4th rank, the key squares are on the 6th rank." }
+        - { texte: "d6 only", pourquoi: "The two neighbouring files count too: c6 and e6." }
+    - texte: "White pawn on e5. How many key squares does it have?"
+      nom: "6"
+      explication: "On the 5th rank, the three squares just ahead of it (d6, e6, f6) and the three after them (d7, e7, f7)."
+      pieges:
+        - { texte: "3", pourquoi: "On the 5th rank, the next rank counts too: d7, e7 and f7 are added to d6, e6 and f6." }
+        - { texte: "8", pourquoi: "The key squares lie on three files only: the pawn’s file and the two next to it." }
+    - texte: "White king on f4, white pawn on e2, black king on e6. Black to play. Who wins?"
+      nom: "White"
+      explication: "The key squares of the e2 pawn are d4, e4 and f4: your king is already there. White wins, even though Black has the move."
+      pieges:
+        - { texte: "Draw: Black has the move", pourquoi: "On a key square, the move no longer matters: the white king wins either way." }
+        - { texte: "Draw: the pawn is still far from promotion", pourquoi: "What matters is where the white king stands, not how far the pawn has to go." }
+    - texte: "White pawn on c6. On which of these squares does your king win for sure?"
+      nom: "d7"
+      explication: "Pawn on the 6th rank: its key squares are b7, c7, d7, b8, c8 and d8. d7 is one of them."
+      pieges:
+        - { texte: "c5", pourquoi: "c5 is behind the pawn: the black king can still stand in front of it." }
+        - { texte: "a6", pourquoi: "Too far to the side: the key squares are on the b-, c- and d-files." }
+    - texte: "Your king stands on a key square. Do you still need to check whose move it is?"
+      nom: "No: you win either way, as long as the pawn is not taken at once"
+      explication: "Computed over every position of these pawns: white king on a key square and the pawn safe, White wins whoever has the move. Off the key squares, the opposition decides."
+      pieges:
+        - { texte: "Yes: you always need the opposition", pourquoi: "The opposition helps you reach a key square; once there, you win anyway." }
+        - { texte: "Yes: the side to move wins", pourquoi: "On a key square, the move changes nothing: White wins either way." }

@@ -25,7 +25,7 @@
   ],
   "ages": [
     5,
-    15
+    18
   ],
   "en": {
     "titre": "Chess — a step-by-step course",
@@ -3513,6 +3513,1321 @@
               "d7b6"
             ],
             "explication": "The knight goes to b6: check. The pawn on a7 must take it, and the a-file opens. The queen goes to a3: checkmate."
+          }
+        ]
+      }
+    },
+    {
+      "id": "finale-dame-roi",
+      "titre": "Roi et dame contre roi : mater sans pat",
+      "niveau": "4e",
+      "prerequis": [
+        "finale-tour-roi"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La dame enferme le roi noir comme la tour, mais plus vite. Le roi noir finit au bord, ton roi s’approche, et la dame fait mat. Avant chaque coup, vérifie qu’il reste une case au roi noir : sinon, c’est pat.",
+      "phrases": {
+        "consigne": "Regarde les cases que garde ta dame, puis celles que garde ton roi. Attention au pat.",
+        "question": "{texte}",
+        "indice": "La dame garde sa colonne, sa rangée et ses deux diagonales. Si le roi noir n’est pas en échec et ne peut plus bouger, c’est pat : partie nulle.",
+        "exemple": "Roi noir en h8, roi blanc en f7, dame en g1. La dame va en g7, protégée par ton roi : mat. La dame en g6, elle, serait pat : pas d’échec, et plus aucune case pour le roi noir.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Roi noir en h8, roi blanc en g6, dame blanche en b1. Aux Blancs. Quel coup fait échec et mat ?",
+          "nom": "La dame va en b8",
+          "explication": "La dame fait échec sur toute la 8e rangée et garde g8. Ton roi garde g7 et h7 : le roi noir n’a plus de case. Mat.",
+          "pieges": [
+            {
+              "texte": "La dame va en b3",
+              "pourquoi": "La dame garde g8, ton roi garde g7 et h7, mais le roi noir n’est pas en échec : c’est pat, partie nulle."
+            },
+            {
+              "texte": "Le roi va en f7",
+              "pourquoi": "Ton roi garde g7 et g8, ta dame garde h7, mais il n’y a pas d’échec : c’est pat."
+            }
+          ]
+        },
+        {
+          "texte": "Roi noir en a8, roi blanc en c7, dame blanche en b1. Aux Blancs. Pourquoi la dame en b6 est-elle une faute ?",
+          "nom": "C’est pat : le roi noir n’est pas en échec et n’a plus de case",
+          "explication": "En b6, la dame garde a7 et b7 ; ton roi garde b7 et b8. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle. La dame en b7, protégée par ton roi, faisait mat.",
+          "pieges": [
+            {
+              "texte": "Le roi noir prend la dame",
+              "pourquoi": "b6 ne touche pas a8 : le roi noir ne peut pas l’atteindre."
+            },
+            {
+              "texte": "Ce n’est pas une faute : c’est mat",
+              "pourquoi": "La dame en b6 ne fait pas échec au roi en a8. Sans échec, un roi bloqué, c’est pat."
+            }
+          ]
+        },
+        {
+          "texte": "Roi noir en e8, roi blanc en e6, dame blanche en h1. Aux Blancs. Quel coup fait échec et mat ?",
+          "nom": "La dame va en h8",
+          "explication": "La dame fait échec sur la 8e rangée et garde d8 et f8. Ton roi garde d7, e7 et f7 : mat. (La dame en a8 fait mat aussi.)",
+          "pieges": [
+            {
+              "texte": "La dame va en h5",
+              "pourquoi": "C’est un échec en diagonale, mais le roi noir s’échappe en d8 ou en f8."
+            },
+            {
+              "texte": "La dame va en c6",
+              "pourquoi": "C’est un échec en diagonale, mais le roi noir s’échappe en d8 ou en f8."
+            }
+          ]
+        },
+        {
+          "texte": "Roi noir en a8, roi blanc en b6, dame blanche en c1. Aux Blancs. Quel coup fait échec et mat ?",
+          "nom": "La dame va en c8",
+          "explication": "La dame fait échec sur la 8e rangée et garde b8. Ton roi garde a7 et b7 : mat.",
+          "pieges": [
+            {
+              "texte": "La dame va en c7",
+              "pourquoi": "La dame garde b8 et b7, ton roi garde a7, mais il n’y a pas d’échec : c’est pat."
+            },
+            {
+              "texte": "La dame va en a3",
+              "pourquoi": "C’est échec sur la colonne a, mais le roi noir s’échappe en b8."
+            }
+          ]
+        },
+        {
+          "texte": "Avec roi et dame contre roi, combien de coups faut-il au plus pour faire mat, si les Noirs se défendent au mieux ?",
+          "nom": "10",
+          "explication": "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs. Avec roi et tour, il en faut jusqu’à 16.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "16 coups, c’est le mat le plus long avec roi et tour : la dame va plus vite."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "Quand le roi noir est au centre, il faut d’abord le pousser au bord : 3 coups ne suffisent pas toujours."
+            }
+          ]
+        },
+        {
+          "texte": "Peut-on faire mat avec la dame seule, sans l’aide de son roi ?",
+          "nom": "Non : dans chaque mat, ton roi est tout près du roi noir",
+          "explication": "Calculé sur tous les mats de roi et dame contre roi : ton roi est toujours à deux pas du roi noir. Il garde les cases que la dame ne garde pas, ou protège la dame collée au roi noir.",
+          "pieges": [
+            {
+              "texte": "Oui : la dame est assez forte",
+              "pourquoi": "La dame seule laisse toujours une case au roi noir, ou se fait prendre si elle se colle à lui."
+            },
+            {
+              "texte": "Oui, si le roi noir est dans un coin",
+              "pourquoi": "Même dans le coin, le roi blanc doit aider : dans tous les mats, il est à deux pas du roi noir."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "King and queen against king: mate without stalemate",
+        "idee": "The queen locks the black king in like the rook, only faster. The black king ends up on the edge, your king comes closer, and the queen mates. Before each move, check the black king still has a square: if not, it is stalemate.",
+        "phrases": {
+          "consigne": "Look at the squares your queen guards, then those your king guards. Watch out for stalemate.",
+          "question": "{texte}",
+          "indice": "The queen guards its file, its rank and both its diagonals. If the black king is not in check and cannot move, it is stalemate: the game is drawn.",
+          "exemple": "Black king on h8, white king on f7, queen on g1. The queen goes to g7, protected by your king: checkmate. The queen on g6, however, would be stalemate: no check, and no square left for the black king.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Black king on h8, white king on g6, white queen on b1. White to play. Which move gives checkmate?",
+            "nom": "The queen goes to b8",
+            "explication": "The queen gives check along the whole 8th rank and guards g8. Your king guards g7 and h7: the black king has no square left. Checkmate.",
+            "pieges": [
+              {
+                "texte": "The queen goes to b3",
+                "pourquoi": "The queen guards g8, your king guards g7 and h7, but the black king is not in check: it is stalemate, a draw."
+              },
+              {
+                "texte": "The king goes to f7",
+                "pourquoi": "Your king guards g7 and g8, your queen guards h7, but there is no check: it is stalemate."
+              }
+            ]
+          },
+          {
+            "texte": "Black king on a8, white king on c7, white queen on b1. White to play. Why is the queen to b6 a mistake?",
+            "nom": "It is stalemate: the black king is not in check and has no square",
+            "explication": "On b6, the queen guards a7 and b7; your king guards b7 and b8. The black king is not in check and cannot move: stalemate, a draw. The queen to b7, protected by your king, was checkmate.",
+            "pieges": [
+              {
+                "texte": "The black king takes the queen",
+                "pourquoi": "b6 does not touch a8: the black king cannot reach it."
+              },
+              {
+                "texte": "It is not a mistake: it is checkmate",
+                "pourquoi": "The queen on b6 does not give check to the king on a8. No check and a stuck king means stalemate."
+              }
+            ]
+          },
+          {
+            "texte": "Black king on e8, white king on e6, white queen on h1. White to play. Which move gives checkmate?",
+            "nom": "The queen goes to h8",
+            "explication": "The queen gives check along the 8th rank and guards d8 and f8. Your king guards d7, e7 and f7: checkmate. (The queen to a8 is checkmate too.)",
+            "pieges": [
+              {
+                "texte": "The queen goes to h5",
+                "pourquoi": "It is a diagonal check, but the black king escapes to d8 or f8."
+              },
+              {
+                "texte": "The queen goes to c6",
+                "pourquoi": "It is a diagonal check, but the black king escapes to d8 or f8."
+              }
+            ]
+          },
+          {
+            "texte": "Black king on a8, white king on b6, white queen on c1. White to play. Which move gives checkmate?",
+            "nom": "The queen goes to c8",
+            "explication": "The queen gives check along the 8th rank and guards b8. Your king guards a7 and b7: checkmate.",
+            "pieges": [
+              {
+                "texte": "The queen goes to c7",
+                "pourquoi": "The queen guards b8 and b7, your king guards a7, but there is no check: it is stalemate."
+              },
+              {
+                "texte": "The queen goes to a3",
+                "pourquoi": "It is check along the a-file, but the black king escapes to b8."
+              }
+            ]
+          },
+          {
+            "texte": "With king and queen against king, at most how many moves does it take to checkmate, if Black defends as well as possible?",
+            "nom": "10",
+            "explication": "Computed over every position with White to play: the longest mate takes 10 White moves. With king and rook, it can take up to 16.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "16 moves is the longest mate with king and rook: the queen is faster."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "When the black king is in the centre, you first have to push it to the edge: 3 moves are not always enough."
+              }
+            ]
+          },
+          {
+            "texte": "Can you checkmate with the queen alone, without help from your king?",
+            "nom": "No: in every checkmate, your king is close to the black king",
+            "explication": "Computed over every king and queen against king checkmate: your king is always two steps from the black king. It guards the squares the queen does not, or protects the queen standing next to the black king.",
+            "pieges": [
+              {
+                "texte": "Yes: the queen is strong enough",
+                "pourquoi": "The queen alone always leaves the black king a square, or gets taken if it stands next to it."
+              },
+              {
+                "texte": "Yes, if the black king is in a corner",
+                "pourquoi": "Even in the corner, the white king must help: in every checkmate, it is two steps from the black king."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "opposition",
+      "titre": "Roi et pion contre roi : l’opposition",
+      "niveau": "4e",
+      "prerequis": [
+        "regle-carre"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.9.2 : No piece can be moved that will either expose the king of the same colour to check or leave that king in check."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Deux rois face à face, une case entre eux : aucun ne peut avancer vers l’autre. Celui qui doit jouer doit s’écarter. Avoir l’opposition, c’est créer ce face-à-face quand c’est à l’autre de jouer.",
+      "phrases": {
+        "consigne": "Roi et pion contre roi : cherche le coup de roi qui met les deux rois face à face, une case entre eux.",
+        "question": "{texte}",
+        "indice": "Rois face à face sur une colonne, une case entre eux : celui qui doit jouer cède le passage. Ne pousse pas le pion trop tôt.",
+        "exemple": "Roi blanc en f4, pion en e3, roi noir en e6. Aux Blancs. Le roi va en e4 : face au roi noir, une case entre eux. Les Noirs doivent s’écarter, et ton roi avance devant son pion.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Roi blanc en e4, roi noir en e6, aux Noirs de jouer. Qui a l’opposition ?",
+          "nom": "Les Blancs",
+          "explication": "Les rois sont face à face, une case entre eux, et ce sont les Noirs qui doivent jouer : ils doivent s’écarter. L’opposition est aux Blancs.",
+          "pieges": [
+            {
+              "texte": "Les Noirs",
+              "pourquoi": "Ici, avoir le trait est un désavantage : le roi noir doit céder le passage."
+            },
+            {
+              "texte": "Personne : il faudrait que les rois se touchent",
+              "pourquoi": "Deux rois ne peuvent jamais se toucher, l’un serait en échec (article 3.9.2) : l’opposition, c’est une case entre eux."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en d4, pion blanc en e3, roi noir en e6. Aux Blancs. Quel coup gagne ?",
+          "nom": "Le roi va en e4",
+          "explication": "Face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent s’écarter, et ton roi avance. Calculé : c’est le seul coup qui gagne.",
+          "pieges": [
+            {
+              "texte": "Le pion va en e4",
+              "pourquoi": "Le pion avance trop tôt : le roi noir reste devant lui. Calculé : c’est nulle."
+            },
+            {
+              "texte": "Le roi va en c5",
+              "pourquoi": "Ton roi quitte le face-à-face : le roi noir prend l’opposition. Calculé : c’est nulle."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en d5, pion blanc en e3, roi noir en e7. Aux Blancs. Quel coup gagne ?",
+          "nom": "Le roi va en e5",
+          "explication": "Ton roi se place face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent céder une case. Calculé : c’est le seul coup qui gagne.",
+          "pieges": [
+            {
+              "texte": "Le pion va en e4",
+              "pourquoi": "Le pion prend la case dont ton roi a besoin. Calculé : c’est nulle."
+            },
+            {
+              "texte": "Le roi va en d4",
+              "pourquoi": "Ton roi recule : le roi noir vient en e5 ou d5 et prend l’opposition. Calculé : c’est nulle."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en f6, pion blanc en e5, roi noir en e8. Aux Blancs. Quel coup gagne ?",
+          "nom": "Le roi va en e6",
+          "explication": "Opposition : le roi noir doit s’écarter. S’il va en d8, ton roi va en f7, et le pion passe. Calculé : c’est le seul coup qui gagne.",
+          "pieges": [
+            {
+              "texte": "Le pion va en e6",
+              "pourquoi": "Le roi noir se place devant le pion, et c’est toi qui dois jouer. Calculé : c’est nulle."
+            },
+            {
+              "texte": "Le roi va en g6",
+              "pourquoi": "Ton roi s’écarte du pion : le roi noir garde ses cases. Calculé : c’est nulle."
+            }
+          ]
+        },
+        {
+          "texte": "Roi noir en e5, roi blanc en d3, pion blanc en d2. Aux Noirs. Quel coup fait nulle ?",
+          "nom": "Le roi va en d5",
+          "explication": "Face au roi blanc, une case entre eux, et c’est aux Blancs de jouer : le roi noir garde l’opposition. Calculé : c’est le seul coup qui fait nulle.",
+          "pieges": [
+            {
+              "texte": "Le roi va en e6",
+              "pourquoi": "Le roi noir recule et laisse l’opposition au roi blanc. Calculé : les Blancs gagnent."
+            },
+            {
+              "texte": "Le roi va en f4",
+              "pourquoi": "Le roi noir s’écarte de la colonne du pion. Calculé : les Blancs gagnent."
+            }
+          ]
+        },
+        {
+          "texte": "Dans les positions de cette leçon, pourquoi faut-il jouer le roi avant le pion ?",
+          "nom": "Le roi doit d’abord gagner de la place devant son pion",
+          "explication": "Dans chaque position de la leçon, pousser le pion tout de suite donne nulle : le roi noir le bloque. Ton roi prend l’opposition, avance, et le pion suit.",
+          "pieges": [
+            {
+              "texte": "Le pion ne peut pas avancer si le roi noir est loin",
+              "pourquoi": "Le pion peut toujours avancer si sa case est libre ; c’est la nulle qui vient, pas l’interdiction."
+            },
+            {
+              "texte": "La règle interdit de pousser le pion",
+              "pourquoi": "Aucune règle ne l’interdit : c’est une question de méthode."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "King and pawn against king: the opposition",
+        "idee": "Two kings face to face, one square between them: neither can step towards the other. The one who must move has to step aside. Having the opposition means creating that face-off when it is the other side’s move.",
+        "phrases": {
+          "consigne": "King and pawn against king: look for the king move that puts both kings face to face, one square between them.",
+          "question": "{texte}",
+          "indice": "Kings face to face on a file, one square between them: the side to move gives way. Do not push the pawn too early.",
+          "exemple": "White king on f4, pawn on e3, black king on e6. White to play. The king goes to e4: facing the black king, one square between them. Black must step aside, and your king moves ahead of its pawn.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "White king on e4, black king on e6, Black to play. Who has the opposition?",
+            "nom": "White",
+            "explication": "The kings are face to face, one square between them, and Black has to move: Black must step aside. White has the opposition.",
+            "pieges": [
+              {
+                "texte": "Black",
+                "pourquoi": "Here, having the move is a drawback: the black king has to give way."
+              },
+              {
+                "texte": "Nobody: the kings would have to touch",
+                "pourquoi": "Two kings can never touch, one would be in check (Article 3.9.2): the opposition means one square between them."
+              }
+            ]
+          },
+          {
+            "texte": "White king on d4, white pawn on e3, black king on e6. White to play. Which move wins?",
+            "nom": "The king goes to e4",
+            "explication": "Facing the black king, one square between them, and Black has to move: Black must step aside, and your king moves forward. Computed: it is the only winning move.",
+            "pieges": [
+              {
+                "texte": "The pawn goes to e4",
+                "pourquoi": "The pawn moves too early: the black king stays in front of it. Computed: it is a draw."
+              },
+              {
+                "texte": "The king goes to c5",
+                "pourquoi": "Your king leaves the face-off: the black king takes the opposition. Computed: it is a draw."
+              }
+            ]
+          },
+          {
+            "texte": "White king on d5, white pawn on e3, black king on e7. White to play. Which move wins?",
+            "nom": "The king goes to e5",
+            "explication": "Your king faces the black king, one square between them, and Black has to move: Black must give up a square. Computed: it is the only winning move.",
+            "pieges": [
+              {
+                "texte": "The pawn goes to e4",
+                "pourquoi": "The pawn takes the square your king needs. Computed: it is a draw."
+              },
+              {
+                "texte": "The king goes to d4",
+                "pourquoi": "Your king steps back: the black king comes to e5 or d5 and takes the opposition. Computed: it is a draw."
+              }
+            ]
+          },
+          {
+            "texte": "White king on f6, white pawn on e5, black king on e8. White to play. Which move wins?",
+            "nom": "The king goes to e6",
+            "explication": "Opposition: the black king must step aside. If it goes to d8, your king goes to f7, and the pawn gets through. Computed: it is the only winning move.",
+            "pieges": [
+              {
+                "texte": "The pawn goes to e6",
+                "pourquoi": "The black king stands in front of the pawn, and you are the one who must move. Computed: it is a draw."
+              },
+              {
+                "texte": "The king goes to g6",
+                "pourquoi": "Your king moves away from the pawn: the black king keeps its squares. Computed: it is a draw."
+              }
+            ]
+          },
+          {
+            "texte": "Black king on e5, white king on d3, white pawn on d2. Black to play. Which move draws?",
+            "nom": "The king goes to d5",
+            "explication": "Facing the white king, one square between them, and White has to move: the black king keeps the opposition. Computed: it is the only drawing move.",
+            "pieges": [
+              {
+                "texte": "The king goes to e6",
+                "pourquoi": "The black king steps back and hands the opposition to the white king. Computed: White wins."
+              },
+              {
+                "texte": "The king goes to f4",
+                "pourquoi": "The black king leaves the pawn’s file. Computed: White wins."
+              }
+            ]
+          },
+          {
+            "texte": "In the positions of this lesson, why must you play the king before the pawn?",
+            "nom": "The king must first win space in front of its pawn",
+            "explication": "In every position of the lesson, pushing the pawn at once leads to a draw: the black king blocks it. Your king takes the opposition, moves forward, and the pawn follows.",
+            "pieges": [
+              {
+                "texte": "The pawn cannot move if the black king is far away",
+                "pourquoi": "The pawn can always move if its square is free; what follows is a draw, not a ban."
+              },
+              {
+                "texte": "The rules forbid pushing the pawn",
+                "pourquoi": "No rule forbids it: it is a question of method."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cases-cles",
+      "titre": "Roi et pion contre roi : les cases clés",
+      "niveau": "3e",
+      "prerequis": [
+        "opposition"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "3.7.3.3 : When a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn as part of the same move for a new queen, rook, bishop or knight of the same colour."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Chaque pion a ses cases clés : si ton roi s’y pose, tu gagnes, que ce soit à toi de jouer ou non. Pion en 2e, 3e ou 4e rangée : les trois cases deux rangées devant lui. Le pion tour fait exception.",
+      "phrases": {
+        "consigne": "Trouve les cases clés du pion, puis cherche comment ton roi peut y arriver.",
+        "question": "{texte}",
+        "indice": "Pion en 2e, 3e ou 4e rangée : deux rangées devant lui, sur sa colonne et les deux voisines. Pion en 5e ou 6e rangée : les trois cases juste devant lui, et les trois d’après.",
+        "exemple": "Pion en e4 : ses cases clés sont d6, e6 et f6. Roi blanc en f6, roi noir en e8 : les Blancs gagnent, qu’ils aient le trait ou non.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Pion blanc en e3. Quelles sont ses cases clés ?",
+          "nom": "d5, e5 et f5",
+          "explication": "Deux rangées devant le pion, sur sa colonne et les deux voisines : d5, e5 et f5.",
+          "pieges": [
+            {
+              "texte": "d4, e4 et f4",
+              "pourquoi": "Une rangée trop près : les cases clés sont deux rangées devant le pion, en 5e rangée."
+            },
+            {
+              "texte": "e4, e5 et e6",
+              "pourquoi": "Les cases clés sont côte à côte, sur la colonne du pion et les deux voisines."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en d4. Quelles sont ses cases clés ?",
+          "nom": "c6, d6 et e6",
+          "explication": "Deux rangées devant le pion, sur les colonnes c, d et e : c6, d6 et e6.",
+          "pieges": [
+            {
+              "texte": "c5, d5 et e5",
+              "pourquoi": "Une rangée trop près : pour un pion en 4e rangée, les cases clés sont en 6e rangée."
+            },
+            {
+              "texte": "d6 seulement",
+              "pourquoi": "Les deux colonnes voisines comptent aussi : c6 et e6."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en e5. Combien a-t-il de cases clés ?",
+          "nom": "6",
+          "explication": "En 5e rangée, les trois cases juste devant lui (d6, e6, f6) et les trois d’après (d7, e7, f7).",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "En 5e rangée, la rangée d’après compte aussi : d7, e7 et f7 s’ajoutent à d6, e6 et f6."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "Les cases clés sont sur trois colonnes seulement : celle du pion et ses deux voisines."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en f4, pion blanc en e2, roi noir en e6. Aux Noirs. Qui gagne ?",
+          "nom": "Les Blancs",
+          "explication": "Les cases clés du pion e2 sont d4, e4 et f4 : ton roi y est déjà. Les Blancs gagnent, même si ce sont les Noirs qui jouent.",
+          "pieges": [
+            {
+              "texte": "Nulle : les Noirs ont le trait",
+              "pourquoi": "Sur une case clé, le trait ne compte plus : le roi blanc gagne dans les deux cas."
+            },
+            {
+              "texte": "Nulle : le pion est encore loin de la promotion",
+              "pourquoi": "Ce qui compte, c’est la place du roi blanc, pas la distance du pion."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en c6. Sur laquelle de ces cases ton roi gagne-t-il à coup sûr ?",
+          "nom": "d7",
+          "explication": "Pion en 6e rangée : ses cases clés sont b7, c7, d7, b8, c8 et d8. d7 en fait partie.",
+          "pieges": [
+            {
+              "texte": "c5",
+              "pourquoi": "c5 est derrière le pion : le roi noir peut encore se placer devant lui."
+            },
+            {
+              "texte": "a6",
+              "pourquoi": "Trop loin sur le côté : les cases clés sont sur les colonnes b, c et d."
+            }
+          ]
+        },
+        {
+          "texte": "Ton roi est sur une case clé. Faut-il encore regarder qui a le trait ?",
+          "nom": "Non : tu gagnes dans les deux cas, si le pion n’est pas pris tout de suite",
+          "explication": "Calculé sur toutes les positions de ces pions : roi blanc sur une case clé et pion à l’abri, les Blancs gagnent quel que soit le trait. Hors des cases clés, c’est l’opposition qui décide.",
+          "pieges": [
+            {
+              "texte": "Oui : il faut toujours avoir l’opposition",
+              "pourquoi": "L’opposition sert à atteindre une case clé ; une fois dessus, tu gagnes de toute façon."
+            },
+            {
+              "texte": "Oui : celui qui a le trait gagne",
+              "pourquoi": "Sur une case clé, le trait ne change rien : les Blancs gagnent dans les deux cas."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "King and pawn against king: the key squares",
+        "idee": "Every pawn has its key squares: if your king stands on one, you win, whether it is your move or not. Pawn on the 2nd, 3rd or 4th rank: the three squares two ranks ahead of it. The rook pawn is the exception.",
+        "phrases": {
+          "consigne": "Find the pawn’s key squares, then look for a way for your king to get there.",
+          "question": "{texte}",
+          "indice": "Pawn on the 2nd, 3rd or 4th rank: two ranks ahead of it, on its file and the two next to it. Pawn on the 5th or 6th rank: the three squares just ahead of it, and the three after them.",
+          "exemple": "Pawn on e4: its key squares are d6, e6 and f6. White king on f6, black king on e8: White wins, whether it is White’s move or not.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "White pawn on e3. What are its key squares?",
+            "nom": "d5, e5 and f5",
+            "explication": "Two ranks ahead of the pawn, on its file and the two next to it: d5, e5 and f5.",
+            "pieges": [
+              {
+                "texte": "d4, e4 and f4",
+                "pourquoi": "One rank too close: the key squares are two ranks ahead of the pawn, on the 5th rank."
+              },
+              {
+                "texte": "e4, e5 and e6",
+                "pourquoi": "The key squares lie side by side, on the pawn’s file and the two next to it."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on d4. What are its key squares?",
+            "nom": "c6, d6 and e6",
+            "explication": "Two ranks ahead of the pawn, on the c-, d- and e-files: c6, d6 and e6.",
+            "pieges": [
+              {
+                "texte": "c5, d5 and e5",
+                "pourquoi": "One rank too close: for a pawn on the 4th rank, the key squares are on the 6th rank."
+              },
+              {
+                "texte": "d6 only",
+                "pourquoi": "The two neighbouring files count too: c6 and e6."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on e5. How many key squares does it have?",
+            "nom": "6",
+            "explication": "On the 5th rank, the three squares just ahead of it (d6, e6, f6) and the three after them (d7, e7, f7).",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "On the 5th rank, the next rank counts too: d7, e7 and f7 are added to d6, e6 and f6."
+              },
+              {
+                "texte": "8",
+                "pourquoi": "The key squares lie on three files only: the pawn’s file and the two next to it."
+              }
+            ]
+          },
+          {
+            "texte": "White king on f4, white pawn on e2, black king on e6. Black to play. Who wins?",
+            "nom": "White",
+            "explication": "The key squares of the e2 pawn are d4, e4 and f4: your king is already there. White wins, even though Black has the move.",
+            "pieges": [
+              {
+                "texte": "Draw: Black has the move",
+                "pourquoi": "On a key square, the move no longer matters: the white king wins either way."
+              },
+              {
+                "texte": "Draw: the pawn is still far from promotion",
+                "pourquoi": "What matters is where the white king stands, not how far the pawn has to go."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on c6. On which of these squares does your king win for sure?",
+            "nom": "d7",
+            "explication": "Pawn on the 6th rank: its key squares are b7, c7, d7, b8, c8 and d8. d7 is one of them.",
+            "pieges": [
+              {
+                "texte": "c5",
+                "pourquoi": "c5 is behind the pawn: the black king can still stand in front of it."
+              },
+              {
+                "texte": "a6",
+                "pourquoi": "Too far to the side: the key squares are on the b-, c- and d-files."
+              }
+            ]
+          },
+          {
+            "texte": "Your king stands on a key square. Do you still need to check whose move it is?",
+            "nom": "No: you win either way, as long as the pawn is not taken at once",
+            "explication": "Computed over every position of these pawns: white king on a key square and the pawn safe, White wins whoever has the move. Off the key squares, the opposition decides.",
+            "pieges": [
+              {
+                "texte": "Yes: you always need the opposition",
+                "pourquoi": "The opposition helps you reach a key square; once there, you win anyway."
+              },
+              {
+                "texte": "Yes: the side to move wins",
+                "pourquoi": "On a key square, the move changes nothing: White wins either way."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pion-tour",
+      "titre": "Roi et pion tour contre roi : la nulle du coin",
+      "niveau": "2de",
+      "prerequis": [
+        "cases-cles"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le pion tour (colonne a ou h) fait exception : si le roi noir atteint le coin devant lui, rien ne l’en chasse, c’est nulle. Pousser le pion peut même donner pat. Le roi blanc doit lui barrer la route du coin.",
+      "phrases": {
+        "consigne": "Pion sur la colonne a ou h : regarde d’abord si le roi noir peut atteindre le coin devant le pion.",
+        "question": "{texte}",
+        "indice": "Roi noir dans le coin devant le pion tour : c’est nulle. Le roi blanc doit l’empêcher d’y entrer, ou le roi noir doit y courir.",
+        "exemple": "Roi blanc en c5, pion en a5, roi noir en a8, aux Blancs. Le roi noir est dans le coin devant le pion : quel que soit le coup blanc, c’est nulle.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Roi blanc en b6, pion blanc en a5, roi noir en a8. Aux Blancs. Quel est le résultat avec le meilleur jeu ?",
+          "nom": "Nulle",
+          "explication": "Le roi noir est dans le coin devant le pion tour. Calculé : aucun coup blanc ne gagne.",
+          "pieges": [
+            {
+              "texte": "Les Blancs gagnent",
+              "pourquoi": "Calculé : aucun coup blanc ne gagne. Le roi noir ne peut pas être chassé du coin."
+            },
+            {
+              "texte": "Les Noirs gagnent",
+              "pourquoi": "Un roi seul ne peut jamais faire mat : au mieux, les Noirs font nulle."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en b6, pion blanc en a6, roi noir en a8. Aux Blancs. Que se passe-t-il si le pion va en a7 ?",
+          "nom": "Pat : le roi noir n’est pas en échec et n’a plus aucun coup",
+          "explication": "Le pion en a7 garde b8, ton roi garde b7 et protège le pion. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle.",
+          "pieges": [
+            {
+              "texte": "Le roi noir prend le pion",
+              "pourquoi": "Le pion en a7 est protégé par ton roi en b6 : le roi noir ne peut pas le prendre."
+            },
+            {
+              "texte": "Échec et mat",
+              "pourquoi": "Un pion en a7 attaque b8, pas a8 : il n’y a pas d’échec. Sans échec, c’est pat."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en b6, pion blanc en a5, roi noir en c8. Aux Noirs. Quel coup fait nulle ?",
+          "nom": "Le roi va en b8",
+          "explication": "Le roi noir reste collé au coin a8. Calculé : c’est le seul coup qui fait nulle.",
+          "pieges": [
+            {
+              "texte": "Le roi va en d8",
+              "pourquoi": "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent."
+            },
+            {
+              "texte": "Le roi va en d7",
+              "pourquoi": "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en a7, pion blanc en a6, roi noir en c8. Aux Noirs. Quel coup fait nulle ?",
+          "nom": "Le roi va en c7",
+          "explication": "Le roi blanc est enfermé devant son pion : il ne peut plus aller qu’en a8, et le pion est bloqué. Calculé : c’est le seul coup qui fait nulle.",
+          "pieges": [
+            {
+              "texte": "Le roi va en d8",
+              "pourquoi": "Le roi blanc sort par b7 ou b8, et le pion passe. Calculé : les Blancs gagnent."
+            },
+            {
+              "texte": "Le roi va en d7",
+              "pourquoi": "Le roi blanc sort par b7 ou b8, et le pion passe. Calculé : les Blancs gagnent."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en b7, pion blanc en a5, roi noir en d6. Aux Noirs. Qui gagne ?",
+          "nom": "Les Blancs",
+          "explication": "Le roi blanc en b7 interdit le coin a8 au roi noir. Calculé : roi blanc en b7 et pion en a5 ou a6, les Blancs gagnent toujours, si le pion n’est pas pris tout de suite.",
+          "pieges": [
+            {
+              "texte": "Nulle : c’est un pion tour",
+              "pourquoi": "Le pion tour fait nulle quand le roi noir atteint le coin ; ici, ton roi en b7 le lui interdit."
+            },
+            {
+              "texte": "Nulle : les Noirs ont le trait",
+              "pourquoi": "Calculé : quel que soit le trait, les Blancs gagnent dans cette position."
+            }
+          ]
+        },
+        {
+          "texte": "Roi blanc en f5, pion blanc en h5, roi noir en h8. Aux Blancs. Quel est le résultat ?",
+          "nom": "Nulle",
+          "explication": "Même idée sur la colonne h : le roi noir est dans le coin devant le pion. Calculé : aucun coup blanc ne gagne.",
+          "pieges": [
+            {
+              "texte": "Les Blancs gagnent : le pion n’a que trois cases à faire",
+              "pourquoi": "Le roi noir est déjà devant lui, dans le coin : le pion ne passera pas."
+            },
+            {
+              "texte": "Les Blancs gagnent s’ils prennent l’opposition",
+              "pourquoi": "Contre le pion tour, l’opposition ne suffit pas : le roi noir reste dans le coin."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "King and rook pawn against king: the corner draw",
+        "idee": "The rook pawn (a- or h-file) is the exception: if the black king reaches the corner in front of it, nothing drives it out, it is a draw. Pushing the pawn can even give stalemate. The white king must bar the way to the corner.",
+        "phrases": {
+          "consigne": "Pawn on the a- or h-file: first check whether the black king can reach the corner in front of the pawn.",
+          "question": "{texte}",
+          "indice": "Black king in the corner in front of the rook pawn: it is a draw. The white king must keep it out, or the black king must run there.",
+          "exemple": "White king on c5, pawn on a5, black king on a8, White to play. The black king is in the corner in front of the pawn: whatever White plays, it is a draw.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "White king on b6, white pawn on a5, black king on a8. White to play. What is the result with best play?",
+            "nom": "Draw",
+            "explication": "The black king is in the corner in front of the rook pawn. Computed: no White move wins.",
+            "pieges": [
+              {
+                "texte": "White wins",
+                "pourquoi": "Computed: no White move wins. The black king cannot be driven out of the corner."
+              },
+              {
+                "texte": "Black wins",
+                "pourquoi": "A lone king can never give checkmate: at best, Black draws."
+              }
+            ]
+          },
+          {
+            "texte": "White king on b6, white pawn on a6, black king on a8. White to play. What happens if the pawn goes to a7?",
+            "nom": "Stalemate: the black king is not in check and has no move",
+            "explication": "The pawn on a7 guards b8, your king guards b7 and protects the pawn. The black king is not in check and cannot move: stalemate, a draw.",
+            "pieges": [
+              {
+                "texte": "The black king takes the pawn",
+                "pourquoi": "The pawn on a7 is protected by your king on b6: the black king cannot take it."
+              },
+              {
+                "texte": "Checkmate",
+                "pourquoi": "A pawn on a7 attacks b8, not a8: there is no check. No check means stalemate."
+              }
+            ]
+          },
+          {
+            "texte": "White king on b6, white pawn on a5, black king on c8. Black to play. Which move draws?",
+            "nom": "The king goes to b8",
+            "explication": "The black king stays next to the a8 corner. Computed: it is the only drawing move.",
+            "pieges": [
+              {
+                "texte": "The king goes to d8",
+                "pourquoi": "The black king moves away from the corner. Computed: White wins."
+              },
+              {
+                "texte": "The king goes to d7",
+                "pourquoi": "The black king moves away from the corner. Computed: White wins."
+              }
+            ]
+          },
+          {
+            "texte": "White king on a7, white pawn on a6, black king on c8. Black to play. Which move draws?",
+            "nom": "The king goes to c7",
+            "explication": "The white king is shut in in front of its pawn: it can only go to a8, and the pawn is blocked. Computed: it is the only drawing move.",
+            "pieges": [
+              {
+                "texte": "The king goes to d8",
+                "pourquoi": "The white king gets out via b7 or b8, and the pawn gets through. Computed: White wins."
+              },
+              {
+                "texte": "The king goes to d7",
+                "pourquoi": "The white king gets out via b7 or b8, and the pawn gets through. Computed: White wins."
+              }
+            ]
+          },
+          {
+            "texte": "White king on b7, white pawn on a5, black king on d6. Black to play. Who wins?",
+            "nom": "White",
+            "explication": "The white king on b7 keeps the black king out of the a8 corner. Computed: with the white king on b7 and the pawn on a5 or a6, White always wins, unless the pawn is taken at once.",
+            "pieges": [
+              {
+                "texte": "Draw: it is a rook pawn",
+                "pourquoi": "The rook pawn draws when the black king reaches the corner; here, your king on b7 keeps it out."
+              },
+              {
+                "texte": "Draw: Black has the move",
+                "pourquoi": "Computed: whoever has the move, White wins in this position."
+              }
+            ]
+          },
+          {
+            "texte": "White king on f5, white pawn on h5, black king on h8. White to play. What is the result?",
+            "nom": "Draw",
+            "explication": "Same idea on the h-file: the black king is in the corner in front of the pawn. Computed: no White move wins.",
+            "pieges": [
+              {
+                "texte": "White wins: the pawn only has three squares to go",
+                "pourquoi": "The black king is already in front of it, in the corner: the pawn will not get through."
+              },
+              {
+                "texte": "White wins by taking the opposition",
+                "pourquoi": "Against the rook pawn, the opposition is not enough: the black king stays in the corner."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mauvais-fou",
+      "titre": "Fou et pion tour contre roi : le mauvais fou",
+      "niveau": "1re",
+      "prerequis": [
+        "pion-tour"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Fou et pion tour contre roi : si le fou n’a pas la couleur de la case de promotion, il ne peut jamais chasser le roi noir du coin. C’est nulle, malgré la pièce de plus : on l’appelle le mauvais fou.",
+      "phrases": {
+        "consigne": "Regarde la couleur de la case de promotion du pion, puis celle des cases de ton fou.",
+        "question": "{texte}",
+        "indice": "a8 est une case blanche, h8 une case noire. Un fou reste toujours sur des cases de la même couleur.",
+        "exemple": "Pion en a5, roi blanc en c5, roi noir en a8, aux Blancs. Avec un fou en d3 (cases blanches), les Blancs gagnent. Avec un fou en d2 (cases noires), c’est nulle : le fou ne garde jamais a8.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Pion blanc en a5, roi blanc en b6, fou blanc en e1, roi noir en a8. Aux Blancs. Quel est le résultat ?",
+          "nom": "Nulle",
+          "explication": "Le fou en e1 va sur les cases noires ; a8 est blanche. Le roi noir reste dans le coin. Calculé : aucun coup blanc ne gagne.",
+          "pieges": [
+            {
+              "texte": "Les Blancs gagnent : ils ont un fou et un pion de plus",
+              "pourquoi": "Le fou de cases noires ne garde jamais a8, une case blanche : le roi noir ne quitte pas le coin."
+            },
+            {
+              "texte": "Les Blancs gagnent en poussant le pion",
+              "pourquoi": "Calculé : aucun coup blanc ne gagne, pousser le pion compris."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en a5, roi blanc en b6, fou blanc en f1, roi noir en a8. Aux Blancs. Quel est le résultat ?",
+          "nom": "Les Blancs gagnent",
+          "explication": "Le fou en f1 va sur les cases blanches, comme a8. Par exemple, le fou va en g2 : échec par la grande diagonale, et le roi noir doit quitter le coin. Calculé : gain blanc.",
+          "pieges": [
+            {
+              "texte": "Nulle : le roi noir est dans le coin",
+              "pourquoi": "Le coin ne protège que contre le mauvais fou ; ici, le fou attaque a8."
+            },
+            {
+              "texte": "Nulle : un fou ne peut pas faire mat",
+              "pourquoi": "Le fou aide le pion à aller à dame ; c’est la nouvelle dame qui fera mat."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en a5, roi blanc en b3, fou blanc en g1, roi noir en c7. Aux Noirs. Où va le roi noir ?",
+          "nom": "En b8, vers le coin a8",
+          "explication": "Le fou en g1 va sur les cases noires : il ne garde pas a8. Le roi noir file vers le coin, c’est nulle. Calculé : c8, b8 et b7 font nulle ; d7 et d6 perdent.",
+          "pieges": [
+            {
+              "texte": "En d6, vers le centre",
+              "pourquoi": "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent."
+            },
+            {
+              "texte": "En d7",
+              "pourquoi": "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc en a5, roi blanc en c4, fou blanc en f1, roi noir en d6. Aux Noirs. Peuvent-ils faire nulle ?",
+          "nom": "Non : tous les coups noirs perdent",
+          "explication": "Le fou en f1 va sur les cases blanches : il peut garder a8. Calculé : chaque coup noir perd.",
+          "pieges": [
+            {
+              "texte": "Oui : le roi va vers le coin a8",
+              "pourquoi": "Avec un fou de cases blanches, le coin a8 ne sauve plus le roi noir. Calculé : tous les coups noirs perdent."
+            },
+            {
+              "texte": "Oui : un fou et un pion ne peuvent pas gagner",
+              "pourquoi": "Avec le bon fou, ils gagnent : le fou protège le chemin du pion."
+            }
+          ]
+        },
+        {
+          "texte": "Pion blanc sur la colonne h, roi noir dans le coin h8. Avec quel fou les Blancs ne peuvent-ils pas le chasser du coin ?",
+          "nom": "Un fou de cases blanches",
+          "explication": "h8 est une case noire. Un fou de cases blanches ne l’attaque jamais : c’est le mauvais fou pour le pion h. (Calculé sur la colonne a ; la colonne h en est le reflet, avec les couleurs inversées.)",
+          "pieges": [
+            {
+              "texte": "Un fou de cases noires",
+              "pourquoi": "h8 est noire : ce fou peut l’attaquer et chasser le roi du coin."
+            },
+            {
+              "texte": "Aucun : un fou chasse toujours le roi",
+              "pourquoi": "Un fou reste sur sa couleur : s’il n’a pas celle du coin, il ne l’attaque jamais."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on « le mauvais fou » ?",
+          "nom": "Il n’a pas la couleur de la case de promotion du pion tour",
+          "explication": "Un fou reste toujours sur sa couleur. S’il n’a pas celle de la case de promotion, il ne peut ni la garder ni chasser le roi noir qui s’y installe.",
+          "pieges": [
+            {
+              "texte": "C’est un fou qui a déjà été pris",
+              "pourquoi": "Le mauvais fou est bien sur l’échiquier ; c’est sa couleur de cases qui pose problème."
+            },
+            {
+              "texte": "C’est le fou placé du côté du roi",
+              "pourquoi": "Son côté de départ ne compte pas : seule la couleur de ses cases compte."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Bishop and rook pawn against king: the wrong bishop",
+        "idee": "Bishop and rook pawn against king: if the bishop does not have the colour of the promotion square, it can never drive the black king out of the corner. It is a draw, despite the extra piece: this is the wrong bishop.",
+        "phrases": {
+          "consigne": "Look at the colour of the pawn’s promotion square, then at the colour of your bishop’s squares.",
+          "question": "{texte}",
+          "indice": "a8 is a light square, h8 a dark square. A bishop always stays on squares of the same colour.",
+          "exemple": "Pawn on a5, white king on c5, black king on a8, White to play. With a bishop on d3 (light squares), White wins. With a bishop on d2 (dark squares), it is a draw: the bishop never guards a8.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "White pawn on a5, white king on b6, white bishop on e1, black king on a8. White to play. What is the result?",
+            "nom": "Draw",
+            "explication": "The bishop on e1 moves on dark squares; a8 is light. The black king stays in the corner. Computed: no White move wins.",
+            "pieges": [
+              {
+                "texte": "White wins: they have an extra bishop and pawn",
+                "pourquoi": "The dark-squared bishop never guards a8, a light square: the black king does not leave the corner."
+              },
+              {
+                "texte": "White wins by pushing the pawn",
+                "pourquoi": "Computed: no White move wins, pawn moves included."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on a5, white king on b6, white bishop on f1, black king on a8. White to play. What is the result?",
+            "nom": "White wins",
+            "explication": "The bishop on f1 moves on light squares, like a8. For example, the bishop goes to g2: check along the long diagonal, and the black king must leave the corner. Computed: White wins.",
+            "pieges": [
+              {
+                "texte": "Draw: the black king is in the corner",
+                "pourquoi": "The corner only protects against the wrong bishop; here, the bishop attacks a8."
+              },
+              {
+                "texte": "Draw: a bishop cannot give checkmate",
+                "pourquoi": "The bishop helps the pawn to queen; the new queen gives checkmate."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on a5, white king on b3, white bishop on g1, black king on c7. Black to play. Where does the black king go?",
+            "nom": "To b8, towards the a8 corner",
+            "explication": "The bishop on g1 moves on dark squares: it does not guard a8. The black king heads for the corner, it is a draw. Computed: c8, b8 and b7 draw; d7 and d6 lose.",
+            "pieges": [
+              {
+                "texte": "To d6, towards the centre",
+                "pourquoi": "The black king moves away from the corner. Computed: White wins."
+              },
+              {
+                "texte": "To d7",
+                "pourquoi": "The black king moves away from the corner. Computed: White wins."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on a5, white king on c4, white bishop on f1, black king on d6. Black to play. Can Black draw?",
+            "nom": "No: every Black move loses",
+            "explication": "The bishop on f1 moves on light squares: it can guard a8. Computed: every Black move loses.",
+            "pieges": [
+              {
+                "texte": "Yes: the king heads for the a8 corner",
+                "pourquoi": "With a light-squared bishop, the a8 corner no longer saves the black king. Computed: every Black move loses."
+              },
+              {
+                "texte": "Yes: a bishop and a pawn cannot win",
+                "pourquoi": "With the right bishop, they win: the bishop protects the pawn’s path."
+              }
+            ]
+          },
+          {
+            "texte": "White pawn on the h-file, black king in the h8 corner. With which bishop can White not drive it out of the corner?",
+            "nom": "A light-squared bishop",
+            "explication": "h8 is a dark square. A light-squared bishop never attacks it: it is the wrong bishop for the h-pawn. (Computed on the a-file; the h-file is its mirror image, with the colours swapped.)",
+            "pieges": [
+              {
+                "texte": "A dark-squared bishop",
+                "pourquoi": "h8 is dark: this bishop can attack it and drive the king out of the corner."
+              },
+              {
+                "texte": "None: a bishop always drives the king out",
+                "pourquoi": "A bishop stays on its colour: if it is not the corner’s colour, it never attacks it."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say “the wrong bishop”?",
+            "nom": "It does not have the colour of the rook pawn’s promotion square",
+            "explication": "A bishop always stays on its colour. If it is not the colour of the promotion square, it can neither guard it nor drive out the black king sitting there.",
+            "pieges": [
+              {
+                "texte": "It is a bishop that has already been captured",
+                "pourquoi": "The wrong bishop is on the board; the colour of its squares is the problem."
+              },
+              {
+                "texte": "It is the bishop on the king’s side",
+                "pourquoi": "Its starting side does not matter: only the colour of its squares does."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cinquante-coups",
+      "titre": "Mater à temps : la règle des 50 coups",
+      "niveau": "Terminale",
+      "prerequis": [
+        "finale-dame-roi",
+        "mauvais-fou"
+      ],
+      "programme": {
+        "source": "fide",
+        "texte": "9.3 : The game is drawn, upon a correct claim by a player having the move, if: […] 9.3.2 the last 50 moves by each player have been completed without the movement of any pawn and without any capture."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Après 50 coups de chaque joueur sans prise ni coup de pion, celui qui a le trait peut réclamer la nulle (article 9.3). Roi et dame matent en 10 coups au plus, roi et tour en 16 : il faut mater sans traîner.",
+      "phrases": {
+        "consigne": "Compte les coups depuis la dernière prise ou le dernier coup de pion.",
+        "question": "{texte}",
+        "indice": "Une prise ou un coup de pion remet le compte à zéro. Il faut 50 coups de chaque joueur, pas 50 coups en tout.",
+        "exemple": "La dernière pièce noire vient d’être prise : le compte repart de zéro. Avec roi et tour contre roi, le mat le plus long demande 16 coups : bien moins que 50, si tu connais la méthode.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "D’après l’article 9.3 des règles de la FIDE, quand peut-on réclamer la nulle ?",
+          "nom": "Après 50 coups de chaque joueur sans coup de pion ni prise",
+          "explication": "L’article 9.3 compte les 50 derniers coups de chaque joueur, sans coup de pion et sans prise. C’est le joueur qui a le trait qui réclame.",
+          "pieges": [
+            {
+              "texte": "Après 50 coups en tout, Blancs et Noirs ensemble",
+              "pourquoi": "L’article dit « by each player » : 50 coups des Blancs et 50 coups des Noirs."
+            },
+            {
+              "texte": "Après 50 coups sans échec",
+              "pourquoi": "Les échecs ne comptent pas : seuls les coups de pion et les prises remettent le compte à zéro."
+            }
+          ]
+        },
+        {
+          "texte": "Après 30 coups de chaque joueur sans prise ni coup de pion, un pion avance. Où en est le compte ?",
+          "nom": "Il repart de zéro",
+          "explication": "L’article 9.3 compte les derniers coups joués sans coup de pion : le coup de pion remet le compte à zéro, pour les deux joueurs.",
+          "pieges": [
+            {
+              "texte": "Il continue : 31",
+              "pourquoi": "Un coup de pion interrompt la série : les 50 coups se comptent à partir de lui."
+            },
+            {
+              "texte": "Il repart de zéro, pour les Blancs seulement",
+              "pourquoi": "La série compte les coups des deux joueurs depuis ce coup de pion : elle repart de zéro pour tous les deux."
+            }
+          ]
+        },
+        {
+          "texte": "Roi et tour contre roi : combien de coups faut-il au plus pour mater, si les Noirs se défendent au mieux ?",
+          "nom": "16",
+          "explication": "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 16 coups blancs.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "10 coups, c’est le mat le plus long avec roi et dame : la tour va moins vite."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "Bien moins : avec la meilleure méthode, 16 coups suffisent toujours."
+            }
+          ]
+        },
+        {
+          "texte": "Roi et dame contre roi : combien de coups faut-il au plus pour mater ?",
+          "nom": "10",
+          "explication": "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "16 coups, c’est le mat le plus long avec roi et tour."
+            },
+            {
+              "texte": "5",
+              "pourquoi": "Depuis le centre, il faut d’abord pousser le roi noir au bord : 5 coups ne suffisent pas toujours."
+            }
+          ]
+        },
+        {
+          "texte": "Tu as roi et tour contre roi. 45 coups de chaque joueur ont déjà été joués sans prise ni coup de pion. Es-tu sûr de mater à temps ?",
+          "nom": "Non : il peut falloir jusqu’à 16 coups, et il n’en reste que 5",
+          "explication": "Après 5 coups de plus de chaque joueur, la série atteint 50 : l’adversaire pourra réclamer la nulle. Le mat peut demander jusqu’à 16 coups.",
+          "pieges": [
+            {
+              "texte": "Oui : 16 coups suffisent toujours",
+              "pourquoi": "16 coups, oui, mais il n’en reste que 5 avant que la nulle puisse être réclamée."
+            },
+            {
+              "texte": "Oui : la règle ne compte pas quand on a plus de pièces",
+              "pourquoi": "L’article 9.3 ne regarde pas le matériel : seulement les prises et les coups de pion."
+            }
+          ]
+        },
+        {
+          "texte": "Que dit l’article 9.6.2 des règles de la FIDE ?",
+          "nom": "Après 75 coups de chaque joueur sans coup de pion ni prise, la partie est nulle, sans réclamation",
+          "explication": "À 50 coups, il faut réclamer la nulle (9.3). À 75 coups, elle est automatique (9.6.2) ; seul un mat au dernier coup passe avant.",
+          "pieges": [
+            {
+              "texte": "Après 75 coups, celui qui a le plus de pièces gagne",
+              "pourquoi": "Le matériel ne compte pas : après 75 coups sans prise ni coup de pion, c’est nulle."
+            },
+            {
+              "texte": "Après 75 coups, il faut encore réclamer la nulle",
+              "pourquoi": "La réclamation, c’est à 50 coups (9.3) ; à 75 coups, la nulle vient sans réclamation."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Mate in time: the 50-move rule",
+        "idee": "After 50 moves by each player with no capture and no pawn move, the player to move may claim a draw (Article 9.3). King and queen mate in at most 10 moves, king and rook in 16: you must mate without dawdling.",
+        "phrases": {
+          "consigne": "Count the moves since the last capture or the last pawn move.",
+          "question": "{texte}",
+          "indice": "A capture or a pawn move resets the count to zero. It takes 50 moves by each player, not 50 moves in all.",
+          "exemple": "The last black piece has just been captured: the count starts again from zero. With king and rook against king, the longest mate takes 16 moves: far fewer than 50, if you know the method.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "According to Article 9.3 of the FIDE Laws, when can a draw be claimed?",
+            "nom": "After 50 moves by each player with no pawn move and no capture",
+            "explication": "Article 9.3 counts the last 50 moves by each player, with no pawn move and no capture. The player having the move makes the claim.",
+            "pieges": [
+              {
+                "texte": "After 50 moves in all, White and Black together",
+                "pourquoi": "The Article says “by each player”: 50 White moves and 50 Black moves."
+              },
+              {
+                "texte": "After 50 moves without a check",
+                "pourquoi": "Checks do not count: only pawn moves and captures reset the count."
+              }
+            ]
+          },
+          {
+            "texte": "After 30 moves by each player with no capture and no pawn move, a pawn moves. Where does the count stand?",
+            "nom": "It starts again from zero",
+            "explication": "Article 9.3 counts the last moves played with no pawn move: the pawn move resets the count, for both players.",
+            "pieges": [
+              {
+                "texte": "It goes on: 31",
+                "pourquoi": "A pawn move breaks the series: the 50 moves are counted from it."
+              },
+              {
+                "texte": "It starts again from zero, for White only",
+                "pourquoi": "The series counts both players’ moves since that pawn move: it starts again from zero for both."
+              }
+            ]
+          },
+          {
+            "texte": "King and rook against king: at most how many moves does it take to mate, if Black defends as well as possible?",
+            "nom": "16",
+            "explication": "Computed over every position with White to play: the longest mate takes 16 White moves.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "10 moves is the longest mate with king and queen: the rook is slower."
+              },
+              {
+                "texte": "50",
+                "pourquoi": "Far fewer: with the best method, 16 moves are always enough."
+              }
+            ]
+          },
+          {
+            "texte": "King and queen against king: at most how many moves does it take to mate?",
+            "nom": "10",
+            "explication": "Computed over every position with White to play: the longest mate takes 10 White moves.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "16 moves is the longest mate with king and rook."
+              },
+              {
+                "texte": "5",
+                "pourquoi": "From the centre, you first have to push the black king to the edge: 5 moves are not always enough."
+              }
+            ]
+          },
+          {
+            "texte": "You have king and rook against king. 45 moves by each player have already been played with no capture and no pawn move. Are you sure to mate in time?",
+            "nom": "No: it can take up to 16 moves, and only 5 are left",
+            "explication": "After 5 more moves by each player, the series reaches 50: your opponent may claim a draw. The mate can take up to 16 moves.",
+            "pieges": [
+              {
+                "texte": "Yes: 16 moves are always enough",
+                "pourquoi": "16 moves, yes, but only 5 are left before a draw can be claimed."
+              },
+              {
+                "texte": "Yes: the rule does not count when you have more pieces",
+                "pourquoi": "Article 9.3 does not look at material: only at captures and pawn moves."
+              }
+            ]
+          },
+          {
+            "texte": "What does Article 9.6.2 of the FIDE Laws say?",
+            "nom": "After 75 moves by each player with no pawn move and no capture, the game is drawn, with no claim",
+            "explication": "At 50 moves, a draw must be claimed (9.3). At 75 moves, it is automatic (9.6.2); only a checkmate on the last move comes first.",
+            "pieges": [
+              {
+                "texte": "After 75 moves, the side with more pieces wins",
+                "pourquoi": "Material does not count: after 75 moves with no capture and no pawn move, it is a draw."
+              },
+              {
+                "texte": "After 75 moves, a draw must still be claimed",
+                "pourquoi": "The claim is at 50 moves (9.3); at 75 moves, the draw comes with no claim."
+              }
+            ]
           }
         ]
       }
