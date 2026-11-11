@@ -1,0 +1,112 @@
+id: pierre-et-le-loup
+titre: "Une œuvre : Pierre et le Loup"
+niveau: CM2
+prerequis: [orchestre]
+programme: { source: c3, texte: "Quelques grandes œuvres du patrimoine." }
+activite: quiz
+parametres: {}
+idee: "Dans Pierre et le Loup (Prokofiev, 1936), chaque personnage a son instrument. Oiseau : flûte. Canard : hautbois. Chat : clarinette. Grand-père : basson. Loup : trois cors. Pierre : cordes. Chasseurs : timbales."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Range d'abord par famille : l'oiseau, le canard, le chat et le grand-père sont des bois ; le loup, des cuivres ; Pierre, des cordes ; les chasseurs, des percussions."
+  exemple: "Exemple : quand l'oiseau entre dans l'histoire, on entend la flûte. Prokofiev a donné l'oiseau à la flûte, un instrument de la famille des bois."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qui a composé Pierre et le Loup ?"
+    nom: "Sergueï Prokofiev."
+    explication: "Sergueï Prokofiev a écrit la musique de Pierre et le Loup, et aussi son texte."
+    pieges:
+      - { texte: "Natalia Satz.", pourquoi: "Natalia Satz dirigeait le théâtre pour enfants de Moscou qui a commandé l'œuvre. Elle ne l'a pas composée." }
+      - { texte: "Pierre, le héros du conte.", pourquoi: "Pierre est un personnage de l'histoire, pas le compositeur." }
+  - texte: "Quel instrument joue le canard ?"
+    nom: "Le hautbois."
+    explication: "Le canard est joué par le hautbois, un instrument de la famille des bois."
+    pieges:
+      - { texte: "La flûte.", pourquoi: "La flûte joue l'oiseau." }
+      - { texte: "Les timbales.", pourquoi: "Les timbales, avec la grosse caisse, font les coups de fusil des chasseurs." }
+  - texte: "Quels instruments jouent le loup ?"
+    nom: "Trois cors."
+    explication: "Le loup est joué par trois cors, des cuivres."
+    pieges:
+      - { texte: "Le basson.", pourquoi: "Le basson joue le grand-père." }
+      - { texte: "Les cordes.", pourquoi: "Les cordes jouent Pierre." }
+  - texte: "Quel instrument joue le chat ?"
+    nom: "La clarinette."
+    explication: "Le chat est joué par la clarinette, en notes détachées, dans le grave."
+    pieges:
+      - { texte: "Le hautbois.", pourquoi: "Le hautbois joue le canard." }
+      - { texte: "Les cors.", pourquoi: "Les trois cors jouent le loup." }
+  - texte: "Quel instrument joue le grand-père ?"
+    nom: "Le basson."
+    explication: "Le grand-père est joué par le basson, de la famille des bois."
+    pieges:
+      - { texte: "La flûte.", pourquoi: "La flûte joue l'oiseau." }
+      - { texte: "La clarinette.", pourquoi: "La clarinette joue le chat." }
+  - texte: "Qui joue Pierre ?"
+    nom: "Les instruments à cordes."
+    explication: "Pierre est joué par les cordes : un quatuor à cordes."
+    pieges:
+      - { texte: "Les trois cors.", pourquoi: "Les cors jouent le loup, l'ennemi de Pierre." }
+      - { texte: "Le basson.", pourquoi: "Le basson joue le grand-père." }
+  - texte: "Quelle famille d'instruments imite les coups de fusil des chasseurs ?"
+    nom: "Les percussions."
+    explication: "Les coups de fusil des chasseurs sont joués par les timbales et la grosse caisse : des percussions."
+    pieges:
+      - { texte: "Les bois.", pourquoi: "Les bois jouent l'oiseau, le canard, le chat et le grand-père." }
+      - { texte: "Les cordes.", pourquoi: "Les cordes jouent Pierre." }
+
+en:
+  titre: "A work: Peter and the Wolf"
+  idee: "In Peter and the Wolf (Prokofiev, 1936), each character has its instrument. Bird: flute. Duck: oboe. Cat: clarinet. Grandfather: bassoon. Wolf: three horns. Peter: strings. Hunters: timpani."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Sort by family first: the bird, the duck, the cat and the grandfather are woodwind; the wolf, brass; Peter, strings; the hunters, percussion."
+    exemple: "Example: when the bird enters the story, you hear the flute. Prokofiev gave the bird to the flute, an instrument of the woodwind family."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Who composed Peter and the Wolf?"
+      nom: "Sergei Prokofiev."
+      explication: "Sergei Prokofiev wrote the music of Peter and the Wolf, and its words too."
+      pieges:
+        - { texte: "Natalia Satz.", pourquoi: "Natalia Satz ran the Moscow children's theatre that commissioned the work. She didn't compose it." }
+        - { texte: "Peter, the hero of the tale.", pourquoi: "Peter is a character in the story, not the composer." }
+    - texte: "Which instrument plays the duck?"
+      nom: "The oboe."
+      explication: "The duck is played by the oboe, an instrument of the woodwind family."
+      pieges:
+        - { texte: "The flute.", pourquoi: "The flute plays the bird." }
+        - { texte: "The timpani.", pourquoi: "The timpani, with the bass drum, make the hunters' gunshots." }
+    - texte: "Which instruments play the wolf?"
+      nom: "Three horns."
+      explication: "The wolf is played by three horns, which are brass instruments."
+      pieges:
+        - { texte: "The bassoon.", pourquoi: "The bassoon plays the grandfather." }
+        - { texte: "The strings.", pourquoi: "The strings play Peter." }
+    - texte: "Which instrument plays the cat?"
+      nom: "The clarinet."
+      explication: "The cat is played by the clarinet, in short detached notes, in the low range."
+      pieges:
+        - { texte: "The oboe.", pourquoi: "The oboe plays the duck." }
+        - { texte: "The horns.", pourquoi: "The three horns play the wolf." }
+    - texte: "Which instrument plays the grandfather?"
+      nom: "The bassoon."
+      explication: "The grandfather is played by the bassoon, from the woodwind family."
+      pieges:
+        - { texte: "The flute.", pourquoi: "The flute plays the bird." }
+        - { texte: "The clarinet.", pourquoi: "The clarinet plays the cat." }
+    - texte: "Who plays Peter?"
+      nom: "The string instruments."
+      explication: "Peter is played by the strings: a string quartet."
+      pieges:
+        - { texte: "The three horns.", pourquoi: "The horns play the wolf, Peter's enemy." }
+        - { texte: "The bassoon.", pourquoi: "The bassoon plays the grandfather." }
+    - texte: "Which family of instruments imitates the hunters' gunshots?"
+      nom: "Percussion."
+      explication: "The hunters' gunshots are played by the timpani and the bass drum: percussion instruments."
+      pieges:
+        - { texte: "Woodwind.", pourquoi: "The woodwind play the bird, the duck, the cat and the grandfather." }
+        - { texte: "Strings.", pourquoi: "The strings play Peter." }

@@ -1,0 +1,88 @@
+id: refrain-couplet
+titre: "Ce qui revient : le refrain"
+niveau: CE2
+prerequis: [parametres-son]
+programme: { source: c2, texte: "Repérer une organisation simple : récurrence d’une mélodie, d’un motif rythmique, d’un thème, etc." }
+activite: quiz
+parametres: {}
+idee: "Dans beaucoup de chansons, une partie revient, toujours pareille : c'est le refrain. Entre deux refrains, un couplet, avec de nouvelles paroles. Un rythme aussi peut revenir : c'est un motif rythmique."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Cherche ce qui revient pareil. Ce qui revient, c'est le refrain ; ce qui change, ce sont les couplets."
+  exemple: "Exemple : une chanson fait couplet 1, refrain, couplet 2, refrain. Le refrain revient deux fois, avec les mêmes paroles. Les couplets 1 et 2 ont des paroles différentes."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans une chanson, quelle partie revient pareille après chaque couplet ?"
+    nom: "Le refrain."
+    explication: "Le refrain revient après chaque couplet, avec les mêmes paroles et la même mélodie."
+    pieges:
+      - { texte: "Le couplet.", pourquoi: "Chaque couplet a ses propres paroles : il ne revient pas pareil." }
+      - { texte: "Le titre.", pourquoi: "Le titre est le nom de la chanson, pas une partie que l'on chante à chaque fois." }
+  - texte: "Les couplets d'une chanson ont-ils les mêmes paroles ?"
+    nom: "Non, chaque couplet a ses paroles."
+    explication: "Les couplets racontent la suite : leurs paroles changent. C'est le refrain qui reste le même."
+    pieges:
+      - { texte: "Oui, toujours les mêmes.", pourquoi: "Ce qui garde les mêmes paroles, c'est le refrain, pas les couplets." }
+      - { texte: "Il n'y a qu'un seul couplet par chanson.", pourquoi: "Le refrain sépare les couplets : il y en a souvent plusieurs." }
+  - texte: "Une chanson fait : couplet 1, refrain, couplet 2, refrain, couplet 3, refrain. Combien de fois chante-t-on le refrain ?"
+    nom: "3 fois."
+    explication: "Un refrain après chacun des 3 couplets : on le chante 3 fois."
+    pieges:
+      - { texte: "1 fois.", pourquoi: "Le refrain revient après chaque couplet, pas seulement à la fin." }
+      - { texte: "6 fois.", pourquoi: "6, c'est le nombre de parties en tout : 3 couplets et 3 refrains." }
+  - texte: "Couplet 1, refrain, couplet 2… Que chante-t-on juste après le couplet 2 ?"
+    nom: "Le refrain."
+    explication: "Après chaque couplet revient le refrain."
+    pieges:
+      - { texte: "Le couplet 1, encore.", pourquoi: "On ne rechante pas un couplet : c'est le refrain qui revient." }
+      - { texte: "Rien, la chanson est finie.", pourquoi: "Après le couplet 1, il y avait un refrain : après le couplet 2 aussi." }
+  - texte: "On frappe dans les mains : long, court, court — long, court, court — long, court, court. Que remarques-tu ?"
+    nom: "Le même rythme revient trois fois."
+    explication: "« Long, court, court » revient pareil : c'est un motif rythmique répété."
+    pieges:
+      - { texte: "Le rythme change à chaque fois.", pourquoi: "Compare les trois morceaux : ils sont tous « long, court, court »." }
+      - { texte: "Il y a un son de plus à chaque fois.", pourquoi: "Chaque morceau a trois sons : un long et deux courts." }
+
+en:
+  titre: "What comes back: the chorus"
+  idee: "In many songs, one part comes back, always the same: it's the chorus. Between two choruses, a verse, with new words. A rhythm can come back too: it's a rhythmic pattern."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Look for what comes back the same. What comes back is the chorus; what changes are the verses."
+    exemple: "Example: a song goes verse 1, chorus, verse 2, chorus. The chorus comes back twice, with the same words. Verses 1 and 2 have different words."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In a song, which part comes back the same after each verse?"
+      nom: "The chorus."
+      explication: "The chorus comes back after each verse, with the same words and the same tune."
+      pieges:
+        - { texte: "The verse.", pourquoi: "Each verse has its own words: it doesn't come back the same." }
+        - { texte: "The title.", pourquoi: "The title is the song's name, not a part you sing each time." }
+    - texte: "Do the verses of a song have the same words?"
+      nom: "No, each verse has its own words."
+      explication: "The verses tell what happens next: their words change. It's the chorus that stays the same."
+      pieges:
+        - { texte: "Yes, always the same.", pourquoi: "What keeps the same words is the chorus, not the verses." }
+        - { texte: "A song only has one verse.", pourquoi: "The chorus separates the verses: there are often several." }
+    - texte: "A song goes: verse 1, chorus, verse 2, chorus, verse 3, chorus. How many times do you sing the chorus?"
+      nom: "3 times."
+      explication: "One chorus after each of the 3 verses: you sing it 3 times."
+      pieges:
+        - { texte: "Once.", pourquoi: "The chorus comes back after each verse, not only at the end." }
+        - { texte: "6 times.", pourquoi: "6 is the number of parts in all: 3 verses and 3 choruses." }
+    - texte: "Verse 1, chorus, verse 2… What do you sing right after verse 2?"
+      nom: "The chorus."
+      explication: "After each verse, the chorus comes back."
+      pieges:
+        - { texte: "Verse 1 again.", pourquoi: "You don't sing a verse again: it's the chorus that comes back." }
+        - { texte: "Nothing, the song is over.", pourquoi: "After verse 1 there was a chorus: after verse 2 too." }
+    - texte: "We clap: long, short, short — long, short, short — long, short, short. What do you notice?"
+      nom: "The same rhythm comes back three times."
+      explication: "“Long, short, short” comes back the same: it's a repeated rhythmic pattern."
+      pieges:
+        - { texte: "The rhythm changes each time.", pourquoi: "Compare the three pieces: they are all “long, short, short”." }
+        - { texte: "There's one more sound each time.", pourquoi: "Each piece has three sounds: one long and two short." }
