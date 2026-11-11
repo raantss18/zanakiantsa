@@ -1,0 +1,130 @@
+id: laicite-republique
+titre: "La laïcité et les symboles de la République (EMC)"
+niveau: 3e
+prerequis: [republique-xixe]
+# Enseignement moral et civique du cycle 4 (programme c4, p. 74-77) : quatre valeurs et principes majeurs (liberté,
+# égalité, fraternité, laïcité) ; symboles de la République ; « les principes de la laïcité : liberté de conscience et
+# égalité des citoyens ; les lois scolaires – la loi de 1905 – la loi de 2004 ». Faits : Constitution du 4 octobre 1958,
+# articles 1er et 2 (texte du Conseil constitutionnel, source constitution) ; loi du 9 décembre 1905, articles 1er et 2
+# (Légifrance, source loi1905) ; loi n° 2004-228 du 15 mars 2004 et article L. 141-5-1 du code de l'éducation
+# (Légifrance, source loi2004). Lus le 2026-11-11.
+programme: { source: c4, texte: "Comprendre les enjeux de la laïcité. Les principes de la laïcité : liberté de conscience et égalité des citoyens. Les lois scolaires – la loi de 1905 – la loi de 2004." }
+activite: quiz
+parametres: {}
+idee: "La laïcité garantit la liberté de conscience et l'égalité des citoyens, quelle que soit leur religion. La Constitution dit que la France est une République indivisible, laïque, démocratique et sociale."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Constitution, article 1er : République indivisible, laïque, démocratique et sociale. Loi du 9 décembre 1905 : liberté de conscience ; aucun culte reconnu, payé ni subventionné. Loi du 15 mars 2004 : l'école publique."
+  exemple: "Exemple : dans une classe, des élèves ont des religions différentes, d'autres n'en ont pas. La laïcité protège la liberté de conscience de chacun et les traite tous de façon égale."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Que dit l'article 1er de la Constitution de 1958 ?"
+    nom: "La France est une République indivisible, laïque, démocratique et sociale."
+    explication: "Le même article ajoute qu'elle assure l'égalité de tous les citoyens devant la loi, sans distinction de religion, et respecte toutes les croyances."
+    pieges:
+      - { texte: "La France est un royaume chrétien.", pourquoi: "La France est une République, et elle est laïque." }
+      - { texte: "La France a une religion officielle.", pourquoi: "Elle est laïque : elle respecte toutes les croyances, sans en choisir une." }
+  - texte: "Que garantit d'abord la loi du 9 décembre 1905, dans son article 1er ?"
+    nom: "La liberté de conscience et le libre exercice des cultes."
+    explication: "La République assure la liberté de conscience ; chacun peut pratiquer son culte, dans le respect de l'ordre public."
+    pieges:
+      - { texte: "L'interdiction de toutes les religions.", pourquoi: "Au contraire : elle garantit le libre exercice des cultes." }
+      - { texte: "Le droit de vote des femmes.", pourquoi: "Cette loi porte sur les religions et l'État, pas sur le vote." }
+  - texte: "Selon l'article 2 de la loi de 1905, comment la République traite-t-elle les cultes ?"
+    nom: "Elle n'en reconnaît, n'en salarie et n'en subventionne aucun."
+    explication: "Les dépenses pour l'exercice des cultes sont supprimées des budgets de l'État, des départements et des communes."
+    pieges:
+      - { texte: "Elle paie les responsables de tous les cultes.", pourquoi: "C'est ce que la loi supprime : la République ne salarie aucun culte." }
+      - { texte: "Elle choisit une religion pour tous.", pourquoi: "Elle ne reconnaît aucun culte : chacun reste libre de croire ou non." }
+  - texte: "La loi de 1905 permet pourtant de payer certains services religieux. Lesquels ?"
+    nom: "Les aumôneries, dans des lieux publics comme les lycées, les collèges ou les prisons."
+    explication: "Ces dépenses d'aumônerie servent à assurer le libre exercice des cultes dans des établissements publics, comme les écoles ou les prisons."
+    pieges:
+      - { texte: "La construction de nouveaux lieux de culte.", pourquoi: "La loi supprime les dépenses pour l'exercice des cultes ; seules les aumôneries restent possibles." }
+      - { texte: "Rien du tout.", pourquoi: "La loi prévoit une exception : les services d'aumônerie dans les établissements publics." }
+  - texte: "Que prévoit la loi du 15 mars 2004 ?"
+    nom: "Dans les écoles, collèges et lycées publics, les élèves ne portent pas de signes religieux ostensibles."
+    explication: "Elle applique le principe de laïcité : les élèves n'y manifestent pas ostensiblement une appartenance religieuse par des signes ou des tenues."
+    pieges:
+      - { texte: "Elle interdit toutes les religions en France.", pourquoi: "Elle ne concerne que les élèves des écoles, collèges et lycées publics." }
+      - { texte: "Elle oblige les élèves à suivre une religion.", pourquoi: "C'est l'inverse : la laïcité garantit la liberté de conscience." }
+  - texte: "Selon l'article 2 de la Constitution, quelle est la devise de la République ?"
+    nom: "« Liberté, Égalité, Fraternité »."
+    explication: "L'article 2 fixe aussi la langue (le français), l'emblème (le drapeau tricolore) et l'hymne (« La Marseillaise »)."
+    pieges:
+      - { texte: "« Gouvernement du peuple, par le peuple et pour le peuple ».", pourquoi: "C'est le principe de la République, écrit lui aussi à l'article 2, pas sa devise." }
+      - { texte: "« Laïcité, Égalité, Solidarité ».", pourquoi: "Ce sont des valeurs de la République, mais la devise est « Liberté, Égalité, Fraternité »." }
+  - texte: "Selon l'article 2 de la Constitution, quel est l'hymne national ?"
+    nom: "« La Marseillaise »."
+    explication: "L'article 2 dit : l'hymne national est « La Marseillaise »."
+    pieges:
+      - { texte: "Le drapeau tricolore.", pourquoi: "Le drapeau bleu, blanc, rouge est l'emblème national, pas l'hymne." }
+      - { texte: "Le français.", pourquoi: "Le français est la langue de la République, pas son hymne." }
+  - texte: "Selon le programme d'enseignement moral et civique, quelles sont les quatre valeurs et principes majeurs de la République ?"
+    nom: "La liberté, l'égalité, la fraternité et la laïcité."
+    explication: "De ces quatre principes découlent la solidarité, l'égalité entre les femmes et les hommes et le refus de toutes les discriminations."
+    pieges:
+      - { texte: "La liberté, l'égalité, la fraternité et la monarchie.", pourquoi: "La France est une République : la monarchie n'en fait pas partie." }
+      - { texte: "La richesse, la force, la gloire et la victoire.", pourquoi: "Ce ne sont pas des principes de la République ; ses valeurs sont la liberté, l'égalité, la fraternité et la laïcité." }
+
+en:
+  titre: "Secularism (laïcité) and the symbols of the Republic (civics)"
+  idee: "Laïcité guarantees freedom of conscience and the equality of citizens, whatever their religion. The Constitution says France is an indivisible, secular, democratic and social Republic."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Constitution, Article 1: an indivisible, secular, democratic and social Republic. Law of 9 December 1905: freedom of conscience; no religion recognised, paid or subsidised. Law of 15 March 2004: state schools."
+    exemple: "Example: in a class, some pupils have different religions, others have none. Laïcité protects everyone's freedom of conscience and treats them all equally."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What does Article 1 of the 1958 Constitution say?"
+      nom: "France is an indivisible, secular, democratic and social Republic."
+      explication: "The same article adds that it ensures the equality of all citizens before the law, regardless of religion, and respects all beliefs."
+      pieges:
+        - { texte: "France is a Christian kingdom.", pourquoi: "France is a Republic, and it is secular." }
+        - { texte: "France has an official religion.", pourquoi: "It is secular: it respects all beliefs without choosing one." }
+    - texte: "What does the law of 9 December 1905 guarantee first, in its Article 1?"
+      nom: "Freedom of conscience and the free practice of religions."
+      explication: "The Republic ensures freedom of conscience; everyone may practise their religion, within public order."
+      pieges:
+        - { texte: "Banning all religions.", pourquoi: "On the contrary: it guarantees the free practice of religions." }
+        - { texte: "Votes for women.", pourquoi: "This law is about religions and the State, not voting." }
+    - texte: "According to Article 2 of the 1905 law, how does the Republic treat religions?"
+      nom: "It recognises, pays and subsidises none of them."
+      explication: "Spending on the practice of religion is removed from the budgets of the State, the départements and the communes."
+      pieges:
+        - { texte: "It pays the leaders of every religion.", pourquoi: "That's what the law ends: the Republic pays no religion." }
+        - { texte: "It chooses one religion for everyone.", pourquoi: "It recognises no religion: everyone is free to believe or not." }
+    - texte: "Yet the 1905 law allows some religious services to be paid for. Which ones?"
+      nom: "Chaplaincies, in public places such as lycées, collèges or prisons."
+      explication: "This chaplaincy spending ensures the free practice of religion in public institutions, such as schools or prisons."
+      pieges:
+        - { texte: "Building new places of worship.", pourquoi: "The law removes spending on the practice of religion; only chaplaincies remain possible." }
+        - { texte: "Nothing at all.", pourquoi: "The law makes an exception: chaplaincy services in public institutions." }
+    - texte: "What does the law of 15 March 2004 provide?"
+      nom: "In state primary schools, collèges and lycées, pupils don't wear conspicuous religious signs."
+      explication: "It applies the principle of laïcité: pupils there don't conspicuously show a religious affiliation through signs or clothing."
+      pieges:
+        - { texte: "It bans all religions in France.", pourquoi: "It only concerns pupils in state schools, collèges and lycées." }
+        - { texte: "It makes pupils follow a religion.", pourquoi: "It's the opposite: laïcité guarantees freedom of conscience." }
+    - texte: "According to Article 2 of the Constitution, what is the motto of the Republic?"
+      nom: "« Liberty, Equality, Fraternity »."
+      explication: "Article 2 also sets the language (French), the emblem (the tricolour flag) and the anthem (« La Marseillaise »)."
+      pieges:
+        - { texte: "« Government of the people, by the people and for the people ».", pourquoi: "That's the principle of the Republic, also written in Article 2, not its motto." }
+        - { texte: "« Laïcité, Equality, Solidarity ».", pourquoi: "These are values of the Republic, but the motto is « Liberty, Equality, Fraternity »." }
+    - texte: "According to Article 2 of the Constitution, what is the national anthem?"
+      nom: "« La Marseillaise »."
+      explication: "Article 2 says: the national anthem is « La Marseillaise »."
+      pieges:
+        - { texte: "The tricolour flag.", pourquoi: "The blue, white and red flag is the national emblem, not the anthem." }
+        - { texte: "French.", pourquoi: "French is the language of the Republic, not its anthem." }
+    - texte: "According to the civics curriculum, what are the four main values and principles of the Republic?"
+      nom: "Liberty, equality, fraternity and laïcité."
+      explication: "From these four principles follow solidarity, equality between women and men, and the rejection of all discrimination."
+      pieges:
+        - { texte: "Liberty, equality, fraternity and monarchy.", pourquoi: "France is a Republic: monarchy is not one of them." }
+        - { texte: "Wealth, strength, glory and victory.", pourquoi: "These aren't principles of the Republic; its values are liberty, equality, fraternity and laïcité." }

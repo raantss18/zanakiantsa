@@ -1,0 +1,130 @@
+id: croissance-demographique
+titre: "La croissance démographique et ses effets"
+niveau: 5e
+prerequis: [habiter-metropole]
+# Faits : ONU, World Population Prospects 2024, communiqué du 11 juillet 2024 (source onu_wpp, lu le 2026-11-11) :
+# 8,2 milliards en 2024, maximum ≈ 10,3 milliards au milieu des années 2080, ≈ 10,2 milliards en 2100 ; une naissance de
+# moins par femme qu'autour de 1990 ; plus de la moitié des pays sous 2,1 enfants par femme (seuil de renouvellement) ;
+# espérance de vie 73,3 ans en 2024 (70,9 pendant la pandémie). Transition démographique : Office québécois de la langue
+# française, Grand dictionnaire terminologique (source oqlf) ; l'ordre « mortalité puis natalité » y est discuté, donc la
+# leçon ne l'affirme pas comme une règle.
+programme: { source: c4, texte: "La question démographique et l’inégal développement : la croissance démographique et ses effets." }
+activite: quiz
+parametres: {}
+idee: "En 2024, la Terre compte 8,2 milliards d'humains. La population grandit encore, mais moins vite : les familles ont moins d'enfants. L'ONU prévoit un maximum au milieu des années 2080."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "La population augmente quand il y a plus de naissances que de décès. Repères de l'ONU : 8,2 milliards en 2024 ; environ 10,3 milliards au maximum, au milieu des années 2080."
+  exemple: "Exemple : dans un pays, il y a en un an 30 naissances et 10 décès pour 1 000 habitants. 30 moins 10 égale 20 : sans compter les migrations, la population gagne 20 personnes pour 1 000."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Selon l'ONU, combien d'humains vivent sur Terre en 2024 ?"
+    nom: "Environ 8,2 milliards."
+    explication: "Les Nations unies estiment la population mondiale à 8,2 milliards de personnes en 2024."
+    pieges:
+      - { texte: "Environ 8,2 millions.", pourquoi: "Un milliard, c'est mille millions : 8,2 millions serait mille fois trop peu." }
+      - { texte: "Environ 82 milliards.", pourquoi: "C'est dix fois trop : l'ONU compte 8,2 milliards." }
+  - texte: "Selon l'ONU, quand la population mondiale devrait-elle atteindre son maximum ?"
+    nom: "Au milieu des années 2080, vers 10,3 milliards."
+    explication: "L'ONU prévoit environ 10,3 milliards au milieu des années 2080, puis une légère baisse, vers 10,2 milliards en 2100."
+    pieges:
+      - { texte: "Jamais : elle grandira toujours.", pourquoi: "L'ONU prévoit un maximum dans ce siècle, puis une légère baisse." }
+      - { texte: "Elle baisse déjà depuis 1990.", pourquoi: "Elle augmente encore : 8,2 milliards en 2024." }
+  - texte: "Un pays compte en un an, pour 1 000 habitants, 35 naissances et 10 décès. Sans les migrations, que devient sa population ?"
+    nom: "Elle augmente de 25 pour 1 000 habitants."
+    explication: "On soustrait les décès aux naissances : 35 moins 10 égale 25. Il y a plus de naissances que de décès, donc la population augmente."
+    pieges:
+      - { texte: "Elle augmente de 45 pour 1 000 habitants.", pourquoi: "On a ajouté les décès : il faut les soustraire, 35 moins 10." }
+      - { texte: "Elle diminue.", pourquoi: "Il y a plus de naissances que de décès : elle augmente." }
+  - texte: "Qu'appelle-t-on la transition démographique ?"
+    nom: "Le passage d'une natalité et d'une mortalité élevées à une natalité et une mortalité basses."
+    explication: "Pendant la transition, naissances et décès quittent leurs niveaux traditionnels, élevés, pour aller vers des niveaux bas."
+    pieges:
+      - { texte: "Le départ des habitants de la campagne vers la ville.", pourquoi: "Ça, c'est l'urbanisation : elle parle d'où l'on vit, pas des naissances et des décès." }
+      - { texte: "Le passage d'un pays à un autre.", pourquoi: "Changer de pays, c'est une migration." }
+  - texte: "Dans un pays, les soins progressent et les décès baissent, mais les familles ont toujours beaucoup d'enfants. Que se passe-t-il ?"
+    nom: "La population augmente vite."
+    explication: "Moins de décès et autant de naissances : l'écart entre naissances et décès grandit, donc la population augmente vite."
+    pieges:
+      - { texte: "La population baisse.", pourquoi: "Il y a moins de décès et autant de naissances : elle augmente." }
+      - { texte: "Rien ne change.", pourquoi: "L'écart entre naissances et décès grandit : la population change." }
+  - texte: "Selon l'ONU, comment a évolué le nombre d'enfants par femme depuis 1990 ?"
+    nom: "Il a baissé : environ un enfant de moins en moyenne."
+    explication: "En moyenne, les femmes ont environ une naissance de moins qu'autour de 1990 ; c'est pourquoi la croissance ralentit."
+    pieges:
+      - { texte: "Il a doublé.", pourquoi: "C'est l'inverse : il a baissé d'environ un enfant." }
+      - { texte: "Il n'a pas changé.", pourquoi: "Il a baissé d'environ un enfant par femme." }
+  - texte: "En moyenne, combien d'enfants par femme faut-il pour qu'une population se renouvelle à taille égale ?"
+    nom: "Environ 2,1."
+    explication: "C'est le seuil de renouvellement. D'après l'ONU, plus de la moitié des pays sont aujourd'hui en dessous."
+    pieges:
+      - { texte: "1.", pourquoi: "Avec un enfant pour deux parents, chaque génération est plus petite que la précédente." }
+      - { texte: "5.", pourquoi: "Avec 5 enfants par femme, la population grandit beaucoup." }
+  - texte: "Selon l'ONU, quelle est l'espérance de vie moyenne dans le monde en 2024 ?"
+    nom: "Environ 73 ans."
+    explication: "Elle est de 73,3 ans en 2024 ; elle était descendue à 70,9 ans pendant la pandémie de Covid-19."
+    pieges:
+      - { texte: "Environ 37 ans.", pourquoi: "C'est environ deux fois moins que la moyenne mesurée par l'ONU : 73,3 ans." }
+      - { texte: "Environ 120 ans.", pourquoi: "C'est bien plus que la moyenne mesurée par l'ONU : 73,3 ans." }
+
+en:
+  titre: "Population growth and its effects"
+  idee: "In 2024, the Earth has 8.2 billion people. The population is still growing, but more slowly: families have fewer children. The UN expects a peak in the mid-2080s."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "The population grows when there are more births than deaths. UN landmarks: 8.2 billion in 2024; a peak of about 10.3 billion in the mid-2080s."
+    exemple: "Example: in one country, in one year, there are 30 births and 10 deaths per 1,000 inhabitants. 30 minus 10 equals 20: not counting migration, the population gains 20 people per 1,000."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "According to the UN, how many people live on Earth in 2024?"
+      nom: "About 8.2 billion."
+      explication: "The United Nations estimates the world population at 8.2 billion people in 2024."
+      pieges:
+        - { texte: "About 8.2 million.", pourquoi: "A billion is a thousand million: 8.2 million would be a thousand times too few." }
+        - { texte: "About 82 billion.", pourquoi: "That's ten times too many: the UN counts 8.2 billion." }
+    - texte: "According to the UN, when should the world population reach its peak?"
+      nom: "In the mid-2080s, at about 10.3 billion."
+      explication: "The UN expects about 10.3 billion in the mid-2080s, then a slight fall, to about 10.2 billion in 2100."
+      pieges:
+        - { texte: "Never: it will keep growing forever.", pourquoi: "The UN expects a peak this century, then a slight fall." }
+        - { texte: "It has been falling since 1990.", pourquoi: "It is still growing: 8.2 billion in 2024." }
+    - texte: "In one year, a country has 35 births and 10 deaths per 1,000 inhabitants. Without migration, what happens to its population?"
+      nom: "It grows by 25 per 1,000 inhabitants."
+      explication: "Subtract the deaths from the births: 35 minus 10 equals 25. There are more births than deaths, so the population grows."
+      pieges:
+        - { texte: "It grows by 45 per 1,000 inhabitants.", pourquoi: "You added the deaths: you must subtract them, 35 minus 10." }
+        - { texte: "It shrinks.", pourquoi: "There are more births than deaths: it grows." }
+    - texte: "What is the demographic transition?"
+      nom: "The shift from high birth and death rates to low birth and death rates."
+      explication: "During the transition, births and deaths leave their traditional high levels and move towards low levels."
+      pieges:
+        - { texte: "People leaving the countryside for the city.", pourquoi: "That's urbanisation: it's about where people live, not births and deaths." }
+        - { texte: "Moving from one country to another.", pourquoi: "Changing country is migration." }
+    - texte: "In a country, healthcare improves and deaths fall, but families still have many children. What happens?"
+      nom: "The population grows quickly."
+      explication: "Fewer deaths and as many births: the gap between births and deaths widens, so the population grows quickly."
+      pieges:
+        - { texte: "The population falls.", pourquoi: "There are fewer deaths and as many births: it grows." }
+        - { texte: "Nothing changes.", pourquoi: "The gap between births and deaths widens: the population changes." }
+    - texte: "According to the UN, how has the number of children per woman changed since 1990?"
+      nom: "It has fallen: about one child fewer on average."
+      explication: "On average, women have about one birth fewer than around 1990; that's why growth is slowing down."
+      pieges:
+        - { texte: "It has doubled.", pourquoi: "It's the opposite: it has fallen by about one child." }
+        - { texte: "It hasn't changed.", pourquoi: "It has fallen by about one child per woman." }
+    - texte: "On average, how many children per woman does a population need to replace itself at the same size?"
+      nom: "About 2.1."
+      explication: "That's the replacement level. According to the UN, more than half of all countries are now below it."
+      pieges:
+        - { texte: "1.", pourquoi: "With one child for two parents, each generation is smaller than the one before." }
+        - { texte: "5.", pourquoi: "With 5 children per woman, the population grows a lot." }
+    - texte: "According to the UN, what is the average life expectancy in the world in 2024?"
+      nom: "About 73 years."
+      explication: "It is 73.3 years in 2024; it had dropped to 70.9 years during the COVID-19 pandemic."
+      pieges:
+        - { texte: "About 37 years.", pourquoi: "That's about half the average measured by the UN: 73.3 years." }
+        - { texte: "About 120 years.", pourquoi: "That's far more than the average measured by the UN: 73.3 years." }
