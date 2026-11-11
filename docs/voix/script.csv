@@ -6327,6 +6327,29 @@ robot-tourner.exemple;Pivoter à droite, c'est un quart de tour du côté de ta 
 robot-tourner.demonstration;Regarde ce programme : il conduit jusqu'à l'objet.
 robot-tourner.bravo;Bravo ! Ton programme est juste.
 robot-tourner.idee;Avancer va tout droit, là où regarde la flèche. Pivoter fait tourner sur place, sans avancer.
+decoder-deplacement.consigne;Écoute le code et fais-le dans ta tête, une instruction après l'autre. Puis touche la réponse.
+decoder-deplacement.question;{texte}
+decoder-deplacement.indice;Pose ton doigt sur le départ, puis fais chaque instruction dans l'ordre, une case à la fois.
+decoder-deplacement.exemple;Le robot est sur la case 2 et regarde vers la case 10. Le code dit : avancer de 3 cases. On compte 3, 4, 5 : il arrive sur la case 5.
+decoder-deplacement.demonstration;{explication}
+decoder-deplacement.bravo;Oui ! La réponse est : {bonne}.
+decoder-deplacement.idee;Un code dit quoi faire, dans l'ordre. Avancer : on va là où on regarde. Reculer : on va en arrière, sans se retourner. Tourner : on change de direction, sur place.
+decoder-deplacement.items.0;Le robot est sur la case 2 et regarde vers la case 10. Son code : / avancer de 3 cases / Sur quelle case arrive-t-il ?
+decoder-deplacement.items.0.explication;On part de la case 2 et on compte 3 cases : 3, 4, 5. Il arrive sur la case 5.
+decoder-deplacement.items.1;Le robot est sur la case 6 et regarde vers la case 10. Son code : / reculer de 2 cases / Sur quelle case arrive-t-il ?
+decoder-deplacement.items.1.explication;Reculer, c'est aller en arrière : 5, puis 4. Il arrive sur la case 4.
+decoder-deplacement.items.2;Le robot est sur la case 3 et regarde vers la case 10. Son code : / avancer de 4 cases / reculer de 1 case / Sur quelle case arrive-t-il ?
+decoder-deplacement.items.2.explication;Avancer de 4 : 4, 5, 6, 7. Puis reculer de 1 : 6. Il arrive sur la case 6.
+decoder-deplacement.items.3;Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code : / tourner à droite / Que regardes-tu maintenant ?
+decoder-deplacement.items.3.explication;Tourner à droite, c'est faire un quart de tour du côté de ta main droite. La porte était à ta droite : tu la regardes.
+decoder-deplacement.items.4;Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code : / tourner à gauche / Que regardes-tu maintenant ?
+decoder-deplacement.items.4.explication;Tourner à gauche, c'est un quart de tour du côté de ta main gauche. La fenêtre était à ta gauche : tu la regardes.
+decoder-deplacement.items.5;Tu regardes la porte. L'armoire est à ta droite, le lit derrière toi. Le code : / tourner à droite / tourner à droite / Que regardes-tu maintenant ?
+decoder-deplacement.items.5.explication;Un quart de tour à droite : tu regardes l'armoire. Encore un : tu regardes derrière toi, le lit. Deux quarts de tour font un demi-tour.
+decoder-deplacement.items.6;Le robot est sur la case 1 et regarde vers la case 10. Il doit aller sur la case 4. Quel code faut-il ?
+decoder-deplacement.items.6.explication;De la case 1 à la case 4, on compte 2, 3, 4 : trois cases, vers la case 10. Le code est : avancer de 3 cases.
+decoder-deplacement.items.7;Le robot est sur la case 7 et regarde vers la case 10. Il doit aller sur la case 5. Quel code faut-il ?
+decoder-deplacement.items.7.explication;La case 5 est derrière lui. De 7 à 5, on compte 6, 5 : deux cases en arrière. Le code est : reculer de 2 cases.
 robot-rochers.consigne;Touche les blocs dans l'ordre, puis le bouton vert. C'est réussi quand le robot arrive sur l'objet sans passer sur un rocher.
 robot-rochers.question;Programme le robot pour aller jusqu'à l'objet sans toucher les rochers.
 robot-rochers.indice;Cherche d'abord le chemin avec ton doigt, puis écris-le avec les blocs.
@@ -6348,6 +6371,52 @@ robot-long-trajet.exemple;Pas plus de quatre virages : va tout droit le plus lon
 robot-long-trajet.demonstration;Regarde ce programme : il évite les rochers jusqu'à l'objet.
 robot-long-trajet.bravo;Bravo ! Ton long programme est juste.
 robot-long-trajet.idee;Un long programme se prépare morceau par morceau : une ligne droite, un virage, une ligne droite… Avant chaque virage, regarde où pointe la flèche du robot.
+trouver-erreur.consigne;Suis le programme dans ta tête, une instruction après l'autre. Puis touche la réponse.
+trouver-erreur.question;{texte}
+trouver-erreur.indice;Mets-toi à la place du robot : tourne la feuille pour regarder comme lui, puis fais chaque instruction.
+trouver-erreur.exemple;Le robot regarde vers la droite et doit monter. Il pivote à gauche : un quart de tour du côté de sa main gauche, il regarde maintenant vers le haut.
+trouver-erreur.demonstration;{explication}
+trouver-erreur.bravo;Oui ! La réponse est : {bonne}.
+trouver-erreur.idee;Pour trouver une erreur, on suit le programme pas à pas, à la place du robot. Pivoter à droite, c'est un quart de tour du côté de sa main droite à lui, pas forcément de la tienne.
+trouver-erreur.items.0;Le robot regarde vers la droite. Il doit aller 3 cases à droite, puis 2 cases vers le haut. Son programme : / avancer de 3 / pivoter à droite / avancer de 2 / Où est l'erreur ?
+trouver-erreur.items.0.explication;Le robot regarde vers la droite. S'il pivote à droite, il regarde vers le bas. Pour monter, il doit pivoter à gauche.
+trouver-erreur.items.1;Le robot regarde vers le haut. Il doit aller 4 cases vers le haut. Son programme : / avancer de 3 / Où est l'erreur ?
+trouver-erreur.items.1.explication;Le robot regarde déjà vers le haut, il n'a pas besoin de pivoter. Mais il doit faire 4 cases, pas 3.
+trouver-erreur.items.2;Le robot regarde vers le haut. Il doit aller 2 cases vers la droite. Son programme : / avancer de 2 / Où est l'erreur ?
+trouver-erreur.items.2.explication;Sans virage, le robot monte de 2 cases. Il doit d'abord pivoter à droite pour regarder vers la droite, puis avancer de 2.
+trouver-erreur.items.3;Le robot regarde vers la droite. Il doit aller 2 cases à droite, puis 3 cases vers le bas. Son programme : / avancer de 2 / pivoter à droite / avancer de 2 / Où est l'erreur ?
+trouver-erreur.items.3.explication;Avancer de 2 : juste. Pivoter à droite : quand on regarde vers la droite, la main droite est vers le bas, juste. Mais il faut descendre de 3 cases, pas 2.
+trouver-erreur.items.4;Le robot regarde vers le bas. Il doit aller 1 case vers le bas, puis 2 cases vers la gauche. Son programme : / avancer de 1 / pivoter à gauche / avancer de 2 / Où est l'erreur ?
+trouver-erreur.items.4.explication;Quand le robot regarde vers le bas, sa main droite est du côté gauche de la feuille. Pour aller vers la gauche de la feuille, il pivote à droite.
+trouver-erreur.items.5;Le robot regarde vers le haut. Son programme : / avancer de 2 / pivoter à droite / avancer de 3 / Où arrive-t-il ?
+trouver-erreur.items.5.explication;Il monte de 2 cases. Puis il pivote à droite : il regarde vers la droite et avance de 3 cases.
+trouver-erreur.items.6;Le robot regarde vers la droite. Son programme : / pivoter à gauche / pivoter à gauche / avancer de 2 / Où arrive-t-il ?
+trouver-erreur.items.6.explication;Un quart de tour à gauche : il regarde vers le haut. Encore un : il regarde vers la gauche. Puis il avance de 2.
+trouver-erreur.items.7;Le robot regarde vers la gauche. Il doit aller 3 cases vers le haut. Son programme : / pivoter à gauche / avancer de 3 / Où est l'erreur ?
+trouver-erreur.items.7.explication;Quand le robot regarde vers la gauche, sa main droite est vers le haut de la feuille. Pivoter à gauche le ferait descendre.
+motif-repete.consigne;Lis le programme et cherche ce qui revient. Puis touche la réponse.
+motif-repete.question;{texte}
+motif-repete.indice;Entoure le premier morceau avec ton doigt, puis compte combien de fois il revient, à l'identique.
+motif-repete.exemple;avancer, avancer, pivoter à gauche, avancer, avancer, pivoter à gauche : le morceau « avancer, avancer, pivoter à gauche » revient 2 fois. On écrit : répéter 2 fois [ avancer, avancer, pivoter à gauche ].
+motif-repete.demonstration;{explication}
+motif-repete.bravo;Oui ! La réponse est : {bonne}.
+motif-repete.idee;Dans un long programme, cherche le morceau qui revient. On peut l'écrire une seule fois dans « répéter » : « répéter 3 fois [ avancer, pivoter à droite ] » fait ce morceau 3 fois de suite.
+motif-repete.items.0;Quel morceau se répète, et combien de fois ? / avancer, pivoter à droite, avancer, pivoter à droite, avancer, pivoter à droite
+motif-repete.items.0.explication;Le morceau « avancer, pivoter à droite » a 2 blocs. Il revient 3 fois : 3 × 2 = 6 blocs en tout.
+motif-repete.items.1;Quel morceau se répète, et combien de fois ? / avancer, avancer, avancer, avancer, avancer
+motif-repete.items.1.explication;Un seul bloc revient, « avancer », et on le compte 5 fois.
+motif-repete.items.2;répéter 4 fois [ avancer, avancer ] / Combien de fois le robot avance-t-il ?
+motif-repete.items.2.explication;À chaque tour, le robot avance 2 fois. 4 tours : 2 + 2 + 2 + 2 = 8.
+motif-repete.items.3;Quel programme fait la même chose ? / avancer, avancer, pivoter à droite, avancer, avancer, pivoter à droite
+motif-repete.items.3.explication;Le morceau « avancer, avancer, pivoter à droite » revient 2 fois. On l'écrit une fois, dans « répéter 2 fois ».
+motif-repete.items.4;Dans la suite qui se répète A B C A B C A B C…, quelle est la dixième lettre ?
+motif-repete.items.4.explication;Le morceau A B C revient sans fin. 3 morceaux font 9 lettres : la dixième commence un nouveau morceau, c'est A.
+motif-repete.items.5;répéter 3 fois [ avancer, pivoter à droite ] / avancer / Combien de fois le robot avance-t-il ?
+motif-repete.items.5.explication;La boucle fait avancer 3 fois. Puis le dernier « avancer », après la boucle, une fois de plus : 3 + 1 = 4.
+motif-repete.items.6;Le robot doit avancer 12 fois. Son programme est « répéter … fois [ avancer, avancer, avancer ] ». Quel nombre faut-il mettre ?
+motif-repete.items.6.explication;Chaque tour fait avancer 3 fois. 3 + 3 + 3 + 3 = 12 : il faut 4 tours.
+motif-repete.items.7;Pourquoi écrire « répéter 5 fois [ avancer ] » au lieu de 5 blocs « avancer » ?
+motif-repete.items.7.explication;Le robot fait exactement les mêmes pas. Mais on écrit le morceau une seule fois : le programme tient en moins de blocs.
 boucle-repeter.consigne;Il y a peu de place : trouve ce qui se répète dans le chemin. Mets ces blocs dans « répéter », règle le nombre de tours, puis touche le bouton vert.
 boucle-repeter.question;Conduis le robot jusqu'à l'objet avec une boucle.
 boucle-repeter.indice;Regarde le chemin : quel petit morceau revient plusieurs fois ? Combien de fois ?
@@ -6355,6 +6424,29 @@ boucle-repeter.exemple;Touche « répéter », puis les blocs qui vont dedans, p
 boucle-repeter.demonstration;Regarde ce programme : une seule boucle suffit.
 boucle-repeter.bravo;Bravo ! Ta boucle est juste.
 boucle-repeter.idee;Quand le robot doit refaire plusieurs fois la même chose, on ne l'écrit qu'une fois, dans un bloc « répéter » : il refait tout ce qu'il y a dedans, autant de fois que demandé.
+boucle-lire.consigne;Fais tourner la boucle dans ta tête, tour par tour, puis touche la réponse.
+boucle-lire.question;{texte}
+boucle-lire.indice;Dessine le chemin sur une feuille quadrillée, un tour après l'autre. Où regarde le robot à la fin de chaque tour ?
+boucle-lire.exemple;répéter 4 fois [ avancer de 3, pivoter à droite ] : un côté de 3 cases, un quart de tour, et ainsi 4 fois. Le robot dessine un carré et revient à son départ.
+boucle-lire.demonstration;{explication}
+boucle-lire.bravo;Oui ! La réponse est : {bonne}.
+boucle-lire.idee;Pour lire une boucle, on fait les tours un par un : tout ce qui est entre les crochets, puis on recommence. Après le dernier tour seulement, on passe à la suite.
+boucle-lire.items.0;répéter 5 fois [ avancer de 4 ] / De combien de cases le robot avance-t-il en tout ?
+boucle-lire.items.0.explication;Chaque tour fait 4 cases. 5 tours : 4 + 4 + 4 + 4 + 4 = 20 cases.
+boucle-lire.items.1;répéter 2 fois [ avancer de 5, pivoter à droite, avancer de 2, pivoter à droite ] / Quel chemin le robot dessine-t-il ?
+boucle-lire.items.1.explication;Un tour fait un côté de 5, un quart de tour, un côté de 2, un quart de tour. Deux tours ferment la figure : un rectangle de 5 sur 2.
+boucle-lire.items.2;Le robot regarde vers la droite. Son programme : / répéter 3 fois [ avancer de 2 ] / pivoter à gauche / avancer de 1 / Où arrive-t-il ?
+boucle-lire.items.2.explication;La boucle fait 3 × 2 = 6 cases vers la droite. Puis il pivote à gauche : en regardant vers la droite, sa gauche est vers le haut. Il monte d'une case.
+boucle-lire.items.3;répéter 4 fois [ avancer de 2, pivoter à gauche ] / Où finit le robot ?
+boucle-lire.items.3.explication;4 côtés de 2 cases, avec un quart de tour à chaque fois : c'est un carré. 4 quarts de tour font un tour complet.
+boucle-lire.items.4;Quelle boucle fait la même chose ? / avancer de 1, pivoter à droite, avancer de 1, pivoter à droite, avancer de 1, pivoter à droite
+boucle-lire.items.4.explication;Le morceau « avancer de 1, pivoter à droite » revient 3 fois.
+boucle-lire.items.5;Dans Scratch, un lutin fait : / répéter 10 fois [ avancer de 10 pas ] / De combien de pas avance-t-il en tout ?
+boucle-lire.items.5.explication;10 tours de 10 pas : 10 × 10 = 100 pas.
+boucle-lire.items.6;Un bus fait le tour d'un pâté de maisons. Son programme : / répéter 4 fois [ avancer d'une rue, pivoter à droite ] / répéter 4 fois [ avancer d'une rue, pivoter à droite ] / Combien de fois fait-il le tour ?
+boucle-lire.items.6.explication;Une boucle de 4 côtés avec un quart de tour fait un tour complet. Il y a deux boucles l'une après l'autre : 2 tours.
+boucle-lire.items.7;Le robot regarde vers le haut. Son programme : / répéter 3 fois [ avancer de 2, pivoter à droite, pivoter à droite ] / Où finit-il ?
+boucle-lire.items.7.explication;Deux quarts de tour font un demi-tour. Tour 1 : il monte de 2 et se retourne. Tour 2 : il redescend de 2 et se retourne. Tour 3 : il remonte de 2 et se retourne.
 condition-si.consigne;Mets « répéter jusqu'à l'objet ». Dedans : « si rocher devant » avec un virage, puis « avancer ». Touche le bouton vert.
 condition-si.question;Le robot doit contourner les rochers tout seul. Écris un programme qui regarde devant lui.
 condition-si.indice;À chaque pas : s'il y a un rocher devant, le robot pivote ; puis il avance. De quel côté doit-il pivoter ?
@@ -6362,6 +6454,29 @@ condition-si.exemple;Après « si rocher devant », mets un seul virage, puis «
 condition-si.demonstration;Regarde ce programme : le robot regarde devant lui à chaque pas.
 condition-si.bravo;Bravo ! Ton robot sait contourner les rochers.
 condition-si.idee;Un bloc « si » regarde d'abord : s'il y a un rocher devant, il fait ce qu'il y a dedans ; sinon, il ne fait rien. Dans « répéter jusqu'à l'objet », le robot regarde à chaque pas.
+programme-calcul-blocs.consigne;Fais le calcul bloc par bloc, de haut en bas, puis touche la réponse.
+programme-calcul-blocs.question;{texte}
+programme-calcul-blocs.indice;Écris ce que contient la boîte « nombre » après chaque bloc, avant de lire le suivant.
+programme-calcul-blocs.exemple;mettre nombre à 4, puis ajouter 3 à nombre, puis dire nombre : la boîte contient 4, puis 7. Le lutin dit 7.
+programme-calcul-blocs.demonstration;{explication}
+programme-calcul-blocs.bravo;Oui ! La réponse est : {bonne}.
+programme-calcul-blocs.idee;Dans Scratch, une variable est une boîte qui a un nom, ici « nombre ». « mettre nombre à 5 » range 5 dedans ; « ajouter 2 à nombre » augmente ce qu'elle contient. Les blocs s'exécutent de haut en bas.
+programme-calcul-blocs.items.0;mettre nombre à 6 / ajouter 2 à nombre / dire nombre / Que dit le lutin ?
+programme-calcul-blocs.items.0.explication;La boîte contient 6, puis 6 + 2 = 8. Le lutin dit 8.
+programme-calcul-blocs.items.1;Quel bloc Scratch fait « ajouter 2 au nombre choisi » ?
+programme-calcul-blocs.items.1.explication;« ajouter 2 à nombre » augmente de 2 ce que contient la boîte « nombre ».
+programme-calcul-blocs.items.2;Programme de calcul : choisir 3, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?
+programme-calcul-blocs.items.2.explication;3 + 2 = 5, puis 5 × 4 = 20, puis 20 − 3 = 17.
+programme-calcul-blocs.items.3;mettre nombre à 4 / mettre nombre à nombre × 3 / ajouter 1 à nombre / dire nombre / Que dit le lutin ?
+programme-calcul-blocs.items.3.explication;La boîte contient 4, puis 4 × 3 = 12, puis 12 + 1 = 13.
+programme-calcul-blocs.items.4;Programme de calcul : choisir un nombre, ajouter 2, multiplier le résultat par 4. Quels blocs viennent après « mettre nombre à … » ?
+programme-calcul-blocs.items.4.explication;On traduit chaque étape dans l'ordre : d'abord ajouter 2, ensuite multiplier ce résultat par 4.
+programme-calcul-blocs.items.5;mettre nombre à 5 / ajouter 3 à nombre / ajouter 3 à nombre / dire nombre / Que dit le lutin ?
+programme-calcul-blocs.items.5.explication;La boîte contient 5, puis 8, puis 11. Deux blocs pareils sont exécutés tous les deux.
+programme-calcul-blocs.items.6;Programme de calcul : choisir 0, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?
+programme-calcul-blocs.items.6.explication;0 + 2 = 2, puis 2 × 4 = 8, puis 8 − 3 = 5.
+programme-calcul-blocs.items.7;mettre nombre à 8 / mettre nombre à nombre × 2 / mettre nombre à nombre × 2 / dire nombre / Que dit le lutin ?
+programme-calcul-blocs.items.7.explication;La boîte contient 8, puis 8 × 2 = 16, puis 16 × 2 = 32.
 compteur.consigne;Le robot doit s'arrêter sur la gemme au drapeau : toujours la même gemme en comptant depuis la gauche, mais les gemmes ne sont pas aux mêmes endroits. Fais-le compter, puis touche le bouton vert : ton programme est essayé sur trois parcours.
 compteur.question;Programme le robot avec un compteur : il doit s'arrêter sur la gemme au drapeau, sur les trois parcours.
 compteur.indice;Compte les gemmes jusqu'au drapeau. À chaque pas, si le robot est sur une gemme, ajoute 1 au compteur. Arrête-toi quand le compteur vaut ce nombre.
@@ -6369,6 +6484,29 @@ compteur.exemple;Mets « répéter jusqu'à compteur = » et règle le nombre. D
 compteur.demonstration;Regarde ce programme : il compte les gemmes, et marche sur les trois parcours.
 compteur.bravo;Bravo ! Ton programme marche partout, parce que ton robot sait compter.
 compteur.idee;Un compteur est une petite boîte qui garde un nombre. Il commence à 0. Le bloc « ajouter 1 au compteur » le fait grimper. On peut demander au robot de s'arrêter quand le compteur atteint un nombre.
+suite-boucle.consigne;Trouve la règle, ou fais tourner la boucle tour par tour, puis touche la réponse.
+suite-boucle.question;{texte}
+suite-boucle.indice;Écris la valeur de la variable à la fin de chaque tour, comme une suite : départ, tour 1, tour 2…
+suite-boucle.exemple;Suite 2 ; 5 ; 8 ; 11… : la règle est « ajouter 3 ». En blocs : mettre nombre à 2, puis répéter 3 fois [ ajouter 3 à nombre ]. Après les 3 tours, nombre vaut 11.
+suite-boucle.demonstration;{explication}
+suite-boucle.bravo;Oui ! La réponse est : {bonne}.
+suite-boucle.idee;Une suite se fabrique avec une règle qu'on refait encore et encore : c'est une boucle. Le bloc dans « répéter » est la règle ; la variable garde le dernier nombre ; le nombre de tours dit jusqu'où on va.
+suite-boucle.items.0;mettre nombre à 0 / répéter 4 fois [ ajouter 5 à nombre ] / dire nombre / Que dit le lutin ?
+suite-boucle.items.0.explication;Départ : 0. Tour 1 : 5. Tour 2 : 10. Tour 3 : 15. Tour 4 : 20.
+suite-boucle.items.1;Suite : 7 ; 15 ; 31 ; 63 ; 127… Quelle règle fait passer d'un nombre au suivant ?
+suite-boucle.items.1.explication;7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63, 63 × 2 + 1 = 127.
+suite-boucle.items.2;mettre nombre à 7 / répéter 2 fois [ mettre nombre à nombre × 2 + 1 ] / dire nombre / Que dit le lutin ?
+suite-boucle.items.2.explication;Départ : 7. Tour 1 : 7 × 2 + 1 = 15. Tour 2 : 15 × 2 + 1 = 31.
+suite-boucle.items.3;Suite : 3 ; 7 ; 11 ; 15… Quel bloc mettre dans la boucle pour passer d'un nombre au suivant ?
+suite-boucle.items.3.explication;De 3 à 7, de 7 à 11, de 11 à 15 : on ajoute 4 chaque fois.
+suite-boucle.items.4;mettre nombre à 3 / répéter 9 fois [ ajouter 4 à nombre ] / dire nombre / Que dit le lutin ?
+suite-boucle.items.4.explication;On part de 3 et on ajoute 4, neuf fois : 3 + 9 × 4 = 3 + 36 = 39. C'est le dixième nombre de la suite 3 ; 7 ; 11…
+suite-boucle.items.5;On veut le sixième nombre de la suite 7 ; 15 ; 31… en partant de 7. Combien de tours de boucle faut-il ?
+suite-boucle.items.5.explication;7 est déjà le premier nombre. Chaque tour donne le suivant : 5 tours mènent du 1er au 6e.
+suite-boucle.items.6;mettre nombre à 1 / répéter 3 fois [ dire nombre, ajouter 3 à nombre ] / Que dit le lutin, dans l'ordre ?
+suite-boucle.items.6.explication;Dans chaque tour, le lutin parle d'abord, puis la boîte augmente de 3 : il dit 1, puis 4, puis 7.
+suite-boucle.items.7;Suite : 1 ; 2 ; 4 ; 7 ; 11 ; 16… Quel est le nombre suivant ?
+suite-boucle.items.7.explication;On ajoute 1, puis 2, puis 3, puis 4, puis 5. L'écart grandit de 1 à chaque fois : 16 + 6 = 22.
 sequence-instructions.consigne;Exécute le programme dans ta tête, ligne par ligne, puis touche la réponse.
 sequence-instructions.question;{texte}
 sequence-instructions.indice;Écris la valeur de x après chaque ligne, avant de lire la suivante.

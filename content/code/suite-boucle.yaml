@@ -1,0 +1,129 @@
+id: suite-boucle
+titre: "Une boucle qui fabrique une suite"
+niveau: CM2
+prerequis: [compteur]
+# Programme de mathématiques du cycle 3, « Initiation à la pensée informatique », Cours moyen deuxième année, lu le
+# 2026-11-11 (texte cité ci-dessous ; suite donnée en exemple : « 7 ; 15 ; 31 ; 63 ; 127, etc. »). La suite « 1, 2, 4, 7,
+# 11, 16 » vient du programme du cycle 2, CE1 (« Dans la suite évolutive « 1, 2, 4, 7, 11, 16… », quel est le onzième
+# nombre ? »). Une variable et une boucle « répéter » calculent les termes l'un après l'autre. Blocs Scratch : scratch-l10n,
+# editor/blocks/fr.json, lu le 2026-11-11 ; « × » au lieu de « * » pour la voix (voir programme-calcul-blocs).
+programme: { source: cycle3, texte: "L’élève continue de travailler sur des suites évolutives de nombres ou de motifs qui s’appuient sur des algorithmes de plus en plus complexes […] et il peut utiliser des logiciels de programmation par blocs ou un tableur pour déterminer des termes éloignés." }
+activite: quiz
+parametres: {}
+idee: "Une suite se fabrique avec une règle qu'on refait encore et encore : c'est une boucle. Le bloc dans « répéter » est la règle ; la variable garde le dernier nombre ; le nombre de tours dit jusqu'où on va."
+phrases:
+  consigne: "Trouve la règle, ou fais tourner la boucle tour par tour, puis touche la réponse."
+  question: "{texte}"
+  indice: "Écris la valeur de la variable à la fin de chaque tour, comme une suite : départ, tour 1, tour 2…"
+  exemple: "Suite 2 ; 5 ; 8 ; 11… : la règle est « ajouter 3 ». En blocs : mettre nombre à 2, puis répéter 3 fois [ ajouter 3 à nombre ]. Après les 3 tours, nombre vaut 11."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre nombre à 0\nrépéter 4 fois [ ajouter 5 à nombre ]\ndire nombre\nQue dit le lutin ?"
+    nom: "20"
+    explication: "Départ : 0. Tour 1 : 5. Tour 2 : 10. Tour 3 : 15. Tour 4 : 20."
+    pieges:
+      - { texte: "5", pourquoi: "Le bloc dans la boucle est exécuté 4 fois, pas une seule." }
+      - { texte: "9", pourquoi: "Tu as ajouté 4 et 5. La boucle ajoute 5, quatre fois : 5 + 5 + 5 + 5." }
+  - texte: "Suite : 7 ; 15 ; 31 ; 63 ; 127… Quelle règle fait passer d'un nombre au suivant ?"
+    nom: "multiplier par 2, puis ajouter 1"
+    explication: "7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63, 63 × 2 + 1 = 127."
+    pieges:
+      - { texte: "ajouter 8", pourquoi: "7 + 8 = 15, mais 15 + 8 = 23, pas 31. Une règle doit marcher pour tous les nombres." }
+      - { texte: "multiplier par 2", pourquoi: "7 × 2 = 14, pas 15 : il manque une étape." }
+  - texte: "mettre nombre à 7\nrépéter 2 fois [ mettre nombre à nombre × 2 + 1 ]\ndire nombre\nQue dit le lutin ?"
+    nom: "31"
+    explication: "Départ : 7. Tour 1 : 7 × 2 + 1 = 15. Tour 2 : 15 × 2 + 1 = 31."
+    pieges:
+      - { texte: "15", pourquoi: "Ça, c'est après un seul tour. La boucle en fait 2." }
+      - { texte: "63", pourquoi: "Ça, c'est après 3 tours. La boucle n'en fait que 2." }
+  - texte: "Suite : 3 ; 7 ; 11 ; 15… Quel bloc mettre dans la boucle pour passer d'un nombre au suivant ?"
+    nom: "ajouter 4 à nombre"
+    explication: "De 3 à 7, de 7 à 11, de 11 à 15 : on ajoute 4 chaque fois."
+    pieges:
+      - { texte: "ajouter 3 à nombre", pourquoi: "3 est le premier nombre de la suite, pas l'écart. De 3 à 7, on ajoute 4." }
+      - { texte: "mettre nombre à 4", pourquoi: "« mettre » remplace le nombre : la boîte vaudrait toujours 4, la suite n'avancerait pas." }
+  - texte: "mettre nombre à 3\nrépéter 9 fois [ ajouter 4 à nombre ]\ndire nombre\nQue dit le lutin ?"
+    nom: "39"
+    explication: "On part de 3 et on ajoute 4, neuf fois : 3 + 9 × 4 = 3 + 36 = 39. C'est le dixième nombre de la suite 3 ; 7 ; 11…"
+    pieges:
+      - { texte: "36", pourquoi: "9 × 4 = 36, mais la boîte valait déjà 3 au départ : 3 + 36." }
+      - { texte: "40", pourquoi: "Tu as fait 10 × 4. La boucle fait 9 tours, et on part de 3." }
+  - texte: "On veut le sixième nombre de la suite 7 ; 15 ; 31… en partant de 7. Combien de tours de boucle faut-il ?"
+    nom: "5"
+    explication: "7 est déjà le premier nombre. Chaque tour donne le suivant : 5 tours mènent du 1er au 6e."
+    pieges:
+      - { texte: "6", pourquoi: "On part de 7, qui est déjà le premier nombre : il ne faut que 5 tours pour aller au sixième." }
+      - { texte: "7", pourquoi: "7 est le premier nombre de la suite, pas le nombre de tours." }
+  - texte: "mettre nombre à 1\nrépéter 3 fois [ dire nombre, ajouter 3 à nombre ]\nQue dit le lutin, dans l'ordre ?"
+    nom: "1, puis 4, puis 7"
+    explication: "Dans chaque tour, le lutin parle d'abord, puis la boîte augmente de 3 : il dit 1, puis 4, puis 7."
+    pieges:
+      - { texte: "4, puis 7, puis 10", pourquoi: "Dans la boucle, « dire » vient avant « ajouter » : au premier tour, la boîte vaut encore 1." }
+      - { texte: "1, puis 2, puis 3", pourquoi: "« ajouter 3 » ajoute 3, pas 1 : 1, 4, 7." }
+  - texte: "Suite : 1 ; 2 ; 4 ; 7 ; 11 ; 16… Quel est le nombre suivant ?"
+    nom: "22"
+    explication: "On ajoute 1, puis 2, puis 3, puis 4, puis 5. L'écart grandit de 1 à chaque fois : 16 + 6 = 22."
+    pieges:
+      - { texte: "21", pourquoi: "De 11 à 16, on a ajouté 5. L'écart grandit de 1 à chaque fois : on ajoute 6 maintenant." }
+      - { texte: "32", pourquoi: "On ne double pas : 4 × 2 = 8, pas 7. On ajoute 1, 2, 3, 4, 5, puis 6." }
+
+en:
+  titre: "A loop that builds a sequence"
+  idee: "A sequence is built with a rule you do again and again: that's a loop. The block inside “repeat” is the rule; the variable keeps the last number; the number of times round says how far you go."
+  phrases:
+    consigne: "Find the rule, or run the loop time by time, then touch the answer."
+    question: "{texte}"
+    indice: "Write down the value of the variable at the end of each time round, like a sequence: start, time 1, time 2…"
+    exemple: "Sequence 2; 5; 8; 11…: the rule is “add 3”. In blocks: set number to 2, then repeat 3 times [ change number by 3 ]. After the 3 times round, number is 11."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set number to 0\nrepeat 4 times [ change number by 5 ]\nsay number\nWhat does the sprite say?"
+      nom: "20"
+      explication: "Start: 0. Time 1: 5. Time 2: 10. Time 3: 15. Time 4: 20."
+      pieges:
+        - { texte: "5", pourquoi: "The block inside the loop runs 4 times, not just once." }
+        - { texte: "9", pourquoi: "You added 4 and 5. The loop adds 5, four times: 5 + 5 + 5 + 5." }
+    - texte: "Sequence: 7; 15; 31; 63; 127… Which rule takes you from one number to the next?"
+      nom: "multiply by 2, then add 1"
+      explication: "7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63, 63 × 2 + 1 = 127."
+      pieges:
+        - { texte: "add 8", pourquoi: "7 + 8 = 15, but 15 + 8 = 23, not 31. A rule must work for every number." }
+        - { texte: "multiply by 2", pourquoi: "7 × 2 = 14, not 15: a step is missing." }
+    - texte: "set number to 7\nrepeat 2 times [ set number to number × 2 + 1 ]\nsay number\nWhat does the sprite say?"
+      nom: "31"
+      explication: "Start: 7. Time 1: 7 × 2 + 1 = 15. Time 2: 15 × 2 + 1 = 31."
+      pieges:
+        - { texte: "15", pourquoi: "That's after one time round. The loop goes round 2 times." }
+        - { texte: "63", pourquoi: "That's after 3 times round. The loop only goes round 2 times." }
+    - texte: "Sequence: 3; 7; 11; 15… Which block goes inside the loop to get from one number to the next?"
+      nom: "change number by 4"
+      explication: "From 3 to 7, from 7 to 11, from 11 to 15: we add 4 each time."
+      pieges:
+        - { texte: "change number by 3", pourquoi: "3 is the first number of the sequence, not the gap. From 3 to 7, we add 4." }
+        - { texte: "set number to 4", pourquoi: "“set” replaces the number: the box would always hold 4, and the sequence wouldn't move on." }
+    - texte: "set number to 3\nrepeat 9 times [ change number by 4 ]\nsay number\nWhat does the sprite say?"
+      nom: "39"
+      explication: "We start from 3 and add 4, nine times: 3 + 9 × 4 = 3 + 36 = 39. It's the tenth number of the sequence 3; 7; 11…"
+      pieges:
+        - { texte: "36", pourquoi: "9 × 4 = 36, but the box already held 3 at the start: 3 + 36." }
+        - { texte: "40", pourquoi: "You did 10 × 4. The loop goes round 9 times, and we start from 3." }
+    - texte: "We want the sixth number of the sequence 7; 15; 31… starting from 7. How many times round the loop do we need?"
+      nom: "5"
+      explication: "7 is already the first number. Each time round gives the next one: 5 times round take you from the 1st to the 6th."
+      pieges:
+        - { texte: "6", pourquoi: "We start from 7, which is already the first number: only 5 times round are needed to reach the sixth." }
+        - { texte: "7", pourquoi: "7 is the first number of the sequence, not the number of times round." }
+    - texte: "set number to 1\nrepeat 3 times [ say number, change number by 3 ]\nWhat does the sprite say, in order?"
+      nom: "1, then 4, then 7"
+      explication: "Each time round, the sprite speaks first, then the box goes up by 3: it says 1, then 4, then 7."
+      pieges:
+        - { texte: "4, then 7, then 10", pourquoi: "Inside the loop, “say” comes before “change”: the first time round, the box still holds 1." }
+        - { texte: "1, then 2, then 3", pourquoi: "“change by 3” adds 3, not 1: 1, 4, 7." }
+    - texte: "Sequence: 1; 2; 4; 7; 11; 16… What is the next number?"
+      nom: "22"
+      explication: "We add 1, then 2, then 3, then 4, then 5. The gap grows by 1 each time: 16 + 6 = 22."
+      pieges:
+        - { texte: "21", pourquoi: "From 11 to 16, we added 5. The gap grows by 1 each time: now we add 6." }
+        - { texte: "32", pourquoi: "We are not doubling: 4 × 2 = 8, not 7. We add 1, 2, 3, 4, 5, then 6." }

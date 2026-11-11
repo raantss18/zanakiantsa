@@ -1,7 +1,7 @@
 id: robot-rochers
 titre: Contourner les rochers
 niveau: CP
-prerequis: [robot-tourner]
+prerequis: [decoder-deplacement]
 programme: { source: cycle2, texte: "Pour coder ces déplacements, il utilise les instructions : « avancer d’une case », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche ». Les déplacements à programmer comprennent au maximum dix instructions, dont deux virages." }
 activite: programmer
 parametres: { mode: tourner, grille: 6, min: 4, max: 10, rochers: 6, virages_max: 2 }

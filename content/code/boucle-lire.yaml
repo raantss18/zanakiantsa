@@ -1,0 +1,129 @@
+id: boucle-lire
+titre: "Lire une boucle de déplacement"
+niveau: CM1
+prerequis: [boucle-repeter]
+# Programme de mathématiques du cycle 3, « Initiation à la pensée informatique », Cours moyen première année, lu le
+# 2026-11-11 (texte cité ci-dessous). La fiche éduscol « Programmer » (cycles 3 et 4) nomme la boucle parmi les
+# instructions simples. Après avoir écrit une boucle (boucle-repeter), l'enfant lit des boucles et prévoit le chemin.
+# Blocs Scratch « répéter %1 fois » et « avancer de %1 pas » : scratch-l10n, editor/blocks/fr.json, lu le 2026-11-11.
+# Chaque arrivée a été vérifiée en simulant le robot (orientation + quart de tour), le 2026-11-11.
+programme: { source: cycle3, texte: "Au CM1, l’élève continue d’utiliser et de produire des codages de déplacements en élargissant les environnements dans lesquels ces déplacements ont lieu (quartier, ville, etc.)." }
+activite: quiz
+parametres: {}
+idee: "Pour lire une boucle, on fait les tours un par un : tout ce qui est entre les crochets, puis on recommence. Après le dernier tour seulement, on passe à la suite."
+phrases:
+  consigne: "Fais tourner la boucle dans ta tête, tour par tour, puis touche la réponse."
+  question: "{texte}"
+  indice: "Dessine le chemin sur une feuille quadrillée, un tour après l'autre. Où regarde le robot à la fin de chaque tour ?"
+  exemple: "répéter 4 fois [ avancer de 3, pivoter à droite ] : un côté de 3 cases, un quart de tour, et ainsi 4 fois. Le robot dessine un carré et revient à son départ."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "répéter 5 fois [ avancer de 4 ]\nDe combien de cases le robot avance-t-il en tout ?"
+    nom: "20"
+    explication: "Chaque tour fait 4 cases. 5 tours : 4 + 4 + 4 + 4 + 4 = 20 cases."
+    pieges:
+      - { texte: "9", pourquoi: "Tu as ajouté 5 et 4. La boucle fait 5 tours de 4 cases : 5 × 4." }
+      - { texte: "4", pourquoi: "Ça, c'est un seul tour. La boucle en fait 5." }
+  - texte: "répéter 2 fois [ avancer de 5, pivoter à droite, avancer de 2, pivoter à droite ]\nQuel chemin le robot dessine-t-il ?"
+    nom: "Un rectangle de 5 cases sur 2"
+    explication: "Un tour fait un côté de 5, un quart de tour, un côté de 2, un quart de tour. Deux tours ferment la figure : un rectangle de 5 sur 2."
+    pieges:
+      - { texte: "Un carré de 5 cases de côté", pourquoi: "Deux côtés font 5 cases, mais les deux autres n'en font que 2 : ce n'est pas un carré." }
+      - { texte: "Une ligne droite de 14 cases", pourquoi: "Les virages changent la direction à chaque côté : le chemin tourne." }
+  - texte: "Le robot regarde vers la droite. Son programme :\nrépéter 3 fois [ avancer de 2 ]\npivoter à gauche\navancer de 1\nOù arrive-t-il ?"
+    nom: "6 cases à droite, 1 case plus haut"
+    explication: "La boucle fait 3 × 2 = 6 cases vers la droite. Puis il pivote à gauche : en regardant vers la droite, sa gauche est vers le haut. Il monte d'une case."
+    pieges:
+      - { texte: "6 cases à droite, 1 case plus bas", pourquoi: "Quand il regarde vers la droite, sa main gauche est vers le haut de la feuille, pas vers le bas." }
+      - { texte: "2 cases à droite, 1 case plus haut", pourquoi: "La boucle fait 3 tours : 2 + 2 + 2 = 6 cases." }
+  - texte: "répéter 4 fois [ avancer de 2, pivoter à gauche ]\nOù finit le robot ?"
+    nom: "Sur sa case de départ, tourné comme au début"
+    explication: "4 côtés de 2 cases, avec un quart de tour à chaque fois : c'est un carré. 4 quarts de tour font un tour complet."
+    pieges:
+      - { texte: "8 cases plus loin", pourquoi: "Le robot tourne à chaque côté : il fait le tour d'un carré au lieu d'aller tout droit." }
+      - { texte: "Sur sa case de départ, tourné dans l'autre sens", pourquoi: "4 quarts de tour font un tour complet : il regarde du même côté qu'au début." }
+  - texte: "Quelle boucle fait la même chose ?\navancer de 1, pivoter à droite, avancer de 1, pivoter à droite, avancer de 1, pivoter à droite"
+    nom: "répéter 3 fois [ avancer de 1, pivoter à droite ]"
+    explication: "Le morceau « avancer de 1, pivoter à droite » revient 3 fois."
+    pieges:
+      - { texte: "répéter 6 fois [ avancer de 1, pivoter à droite ]", pourquoi: "Il y a 6 blocs, mais le morceau en a 2 : il ne revient que 3 fois." }
+      - { texte: "répéter 3 fois [ avancer de 3 ]", pourquoi: "Les virages ont disparu : ce robot irait tout droit." }
+  - texte: "Dans Scratch, un lutin fait :\nrépéter 10 fois [ avancer de 10 pas ]\nDe combien de pas avance-t-il en tout ?"
+    nom: "100"
+    explication: "10 tours de 10 pas : 10 × 10 = 100 pas."
+    pieges:
+      - { texte: "20", pourquoi: "Tu as ajouté 10 et 10. Il y a 10 tours de 10 pas : 10 × 10." }
+      - { texte: "10", pourquoi: "Ça, c'est un seul tour. La boucle en fait 10." }
+  - texte: "Un bus fait le tour d'un pâté de maisons. Son programme :\nrépéter 4 fois [ avancer d'une rue, pivoter à droite ]\nrépéter 4 fois [ avancer d'une rue, pivoter à droite ]\nCombien de fois fait-il le tour ?"
+    nom: "2"
+    explication: "Une boucle de 4 côtés avec un quart de tour fait un tour complet. Il y a deux boucles l'une après l'autre : 2 tours."
+    pieges:
+      - { texte: "8", pourquoi: "8, c'est le nombre de rues. Il faut 4 rues pour faire un tour : 8 rues font 2 tours." }
+      - { texte: "1", pourquoi: "Après la première boucle, le programme continue : la deuxième boucle refait un tour." }
+  - texte: "Le robot regarde vers le haut. Son programme :\nrépéter 3 fois [ avancer de 2, pivoter à droite, pivoter à droite ]\nOù finit-il ?"
+    nom: "2 cases plus haut, tourné vers le bas"
+    explication: "Deux quarts de tour font un demi-tour. Tour 1 : il monte de 2 et se retourne. Tour 2 : il redescend de 2 et se retourne. Tour 3 : il remonte de 2 et se retourne."
+    pieges:
+      - { texte: "6 cases plus haut", pourquoi: "À chaque tour, il fait demi-tour : il monte, puis redescend, puis remonte." }
+      - { texte: "Sur sa case de départ", pourquoi: "Il faudrait un nombre pair de tours pour revenir. Au 3e tour, il remonte de 2 cases." }
+
+en:
+  titre: "Reading a movement loop"
+  idee: "To read a loop, go round it time by time: everything between the brackets, then start again. Only after the last time round do you move on."
+  phrases:
+    consigne: "Run the loop in your head, time by time, then touch the answer."
+    question: "{texte}"
+    indice: "Draw the path on squared paper, one time round after another. Which way is the robot facing at the end of each time round?"
+    exemple: "repeat 4 times [ move forward 3, turn right ]: a side of 3 squares, a quarter turn, and so on 4 times. The robot draws a square and comes back to its start."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "repeat 5 times [ move forward 4 ]\nHow many squares does the robot move in all?"
+      nom: "20"
+      explication: "Each time round is 4 squares. 5 times round: 4 + 4 + 4 + 4 + 4 = 20 squares."
+      pieges:
+        - { texte: "9", pourquoi: "You added 5 and 4. The loop goes round 5 times, 4 squares each time: 5 × 4." }
+        - { texte: "4", pourquoi: "That's one time round. The loop goes round 5 times." }
+    - texte: "repeat 2 times [ move forward 5, turn right, move forward 2, turn right ]\nWhat path does the robot draw?"
+      nom: "A rectangle 5 squares by 2"
+      explication: "One time round makes a side of 5, a quarter turn, a side of 2, a quarter turn. Two times round close the shape: a rectangle 5 by 2."
+      pieges:
+        - { texte: "A square with sides of 5 squares", pourquoi: "Two sides are 5 squares long, but the other two are only 2: it isn't a square." }
+        - { texte: "A straight line 14 squares long", pourquoi: "The turns change direction at each side: the path turns." }
+    - texte: "The robot is facing right. Its program:\nrepeat 3 times [ move forward 2 ]\nturn left\nmove forward 1\nWhere does it end up?"
+      nom: "6 squares right, 1 square up"
+      explication: "The loop makes 3 × 2 = 6 squares to the right. Then it turns left: facing right, its left is towards the top. It goes up one square."
+      pieges:
+        - { texte: "6 squares right, 1 square down", pourquoi: "When it faces right, its left hand points to the top of the page, not the bottom." }
+        - { texte: "2 squares right, 1 square up", pourquoi: "The loop goes round 3 times: 2 + 2 + 2 = 6 squares." }
+    - texte: "repeat 4 times [ move forward 2, turn left ]\nWhere does the robot end up?"
+      nom: "On its starting square, facing the same way as at the start"
+      explication: "4 sides of 2 squares, with a quarter turn each time: it's a square. 4 quarter turns make a full turn."
+      pieges:
+        - { texte: "8 squares further on", pourquoi: "The robot turns at each side: it goes round a square instead of going straight." }
+        - { texte: "On its starting square, facing the other way", pourquoi: "4 quarter turns make a full turn: it faces the same way as at the start." }
+    - texte: "Which loop does the same thing?\nmove forward 1, turn right, move forward 1, turn right, move forward 1, turn right"
+      nom: "repeat 3 times [ move forward 1, turn right ]"
+      explication: "The piece “move forward 1, turn right” comes back 3 times."
+      pieges:
+        - { texte: "repeat 6 times [ move forward 1, turn right ]", pourquoi: "There are 6 blocks, but the piece has 2: it only comes back 3 times." }
+        - { texte: "repeat 3 times [ move forward 3 ]", pourquoi: "The turns have gone: this robot would go straight." }
+    - texte: "In Scratch, a sprite does:\nrepeat 10 times [ move 10 steps ]\nHow many steps does it move in all?"
+      nom: "100"
+      explication: "10 times round, 10 steps each: 10 × 10 = 100 steps."
+      pieges:
+        - { texte: "20", pourquoi: "You added 10 and 10. It's 10 times round, 10 steps each: 10 × 10." }
+        - { texte: "10", pourquoi: "That's one time round. The loop goes round 10 times." }
+    - texte: "A bus goes round a block of houses. Its program:\nrepeat 4 times [ move forward one street, turn right ]\nrepeat 4 times [ move forward one street, turn right ]\nHow many times does it go round?"
+      nom: "2"
+      explication: "A loop of 4 sides with a quarter turn makes one full trip round. There are two loops, one after the other: 2 trips round."
+      pieges:
+        - { texte: "8", pourquoi: "8 is the number of streets. It takes 4 streets to go round once: 8 streets make 2 trips round." }
+        - { texte: "1", pourquoi: "After the first loop, the program carries on: the second loop goes round again." }
+    - texte: "The robot is facing up. Its program:\nrepeat 3 times [ move forward 2, turn right, turn right ]\nWhere does it end up?"
+      nom: "2 squares up, facing down"
+      explication: "Two quarter turns make a half turn. Time 1: it goes up 2 and turns round. Time 2: it comes back down 2 and turns round. Time 3: it goes up 2 again and turns round."
+      pieges:
+        - { texte: "6 squares up", pourquoi: "Each time round, it makes a half turn: it goes up, then down, then up again." }
+        - { texte: "On its starting square", pourquoi: "It would need an even number of times round to come back. On the 3rd time, it goes up 2 squares." }

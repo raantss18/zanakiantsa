@@ -1,0 +1,130 @@
+id: decoder-deplacement
+titre: "Lire un code de déplacement"
+niveau: CP
+prerequis: [robot-tourner]
+# Programme de mathématiques du cycle 2, CP, « Le repérage dans l'espace », lu le 2026-11-11 : « Les élèves apprennent
+# aussi à faire le lien entre un déplacement et des instructions correspondant à ce déplacement » ; « L'élève comprend et
+# utilise les instructions suivantes : avancer, reculer, tourner à droite, tourner à gauche, monter, descendre » ; exemple
+# de code : « avancer de deux pas, tourner à droite, reculer de trois pas ». Avant de coder (robot-rochers), l'enfant
+# décode : il suit un code donné et dit où il arrive. Le quiz n'a pas de quadrillage : une rangée de cases numérotées et
+# des repères de la classe (tableau, porte, fenêtre) en tiennent lieu (choix de l'app).
+programme: { source: cycle2, texte: "L’élève sait coder un déplacement qu’un autre élève doit ensuite effectuer, par exemple : « avancer de deux pas, tourner à droite, reculer de trois pas »." }
+activite: quiz
+parametres: {}
+idee: "Un code dit quoi faire, dans l'ordre. Avancer : on va là où on regarde. Reculer : on va en arrière, sans se retourner. Tourner : on change de direction, sur place."
+phrases:
+  consigne: "Écoute le code et fais-le dans ta tête, une instruction après l'autre. Puis touche la réponse."
+  question: "{texte}"
+  indice: "Pose ton doigt sur le départ, puis fais chaque instruction dans l'ordre, une case à la fois."
+  exemple: "Le robot est sur la case 2 et regarde vers la case 10. Le code dit : avancer de 3 cases. On compte 3, 4, 5 : il arrive sur la case 5."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Le robot est sur la case 2 et regarde vers la case 10. Son code :\navancer de 3 cases\nSur quelle case arrive-t-il ?"
+    nom: "5"
+    explication: "On part de la case 2 et on compte 3 cases : 3, 4, 5. Il arrive sur la case 5."
+    pieges:
+      - { texte: "4", pourquoi: "Tu as compté la case de départ. On compte les cases où l'on arrive : 3, 4, 5." }
+      - { texte: "3", pourquoi: "3, c'est le nombre de cases à faire, pas la case d'arrivée. On part de la case 2." }
+  - texte: "Le robot est sur la case 6 et regarde vers la case 10. Son code :\nreculer de 2 cases\nSur quelle case arrive-t-il ?"
+    nom: "4"
+    explication: "Reculer, c'est aller en arrière : 5, puis 4. Il arrive sur la case 4."
+    pieges:
+      - { texte: "8", pourquoi: "Tu l'as fait avancer. Reculer, c'est aller en arrière, à l'opposé de là où il regarde." }
+      - { texte: "2", pourquoi: "2, c'est le nombre de cases à faire. On part de la case 6 : 5, puis 4." }
+  - texte: "Le robot est sur la case 3 et regarde vers la case 10. Son code :\navancer de 4 cases\nreculer de 1 case\nSur quelle case arrive-t-il ?"
+    nom: "6"
+    explication: "Avancer de 4 : 4, 5, 6, 7. Puis reculer de 1 : 6. Il arrive sur la case 6."
+    pieges:
+      - { texte: "7", pourquoi: "Tu t'es arrêté après la première instruction. Il faut encore reculer de 1 case." }
+      - { texte: "8", pourquoi: "Tu as fait avancer le robot à la fin. Reculer, c'est revenir en arrière : de 7 à 6." }
+  - texte: "Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code :\ntourner à droite\nQue regardes-tu maintenant ?"
+    nom: "la porte"
+    explication: "Tourner à droite, c'est faire un quart de tour du côté de ta main droite. La porte était à ta droite : tu la regardes."
+    pieges:
+      - { texte: "le tableau", pourquoi: "Tourner change ce que l'on regarde. Tu as fait un quart de tour : tu ne regardes plus le tableau." }
+      - { texte: "la fenêtre", pourquoi: "La fenêtre est à ta gauche. Tourner à droite, c'est du côté de ta main droite." }
+  - texte: "Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code :\ntourner à gauche\nQue regardes-tu maintenant ?"
+    nom: "la fenêtre"
+    explication: "Tourner à gauche, c'est un quart de tour du côté de ta main gauche. La fenêtre était à ta gauche : tu la regardes."
+    pieges:
+      - { texte: "la porte", pourquoi: "La porte est à ta droite. Tourner à gauche, c'est du côté de ta main gauche." }
+      - { texte: "le tableau", pourquoi: "Tourner change ce que l'on regarde : tu as fait un quart de tour." }
+  - texte: "Tu regardes la porte. L'armoire est à ta droite, le lit derrière toi. Le code :\ntourner à droite\ntourner à droite\nQue regardes-tu maintenant ?"
+    nom: "le lit"
+    explication: "Un quart de tour à droite : tu regardes l'armoire. Encore un : tu regardes derrière toi, le lit. Deux quarts de tour font un demi-tour."
+    pieges:
+      - { texte: "l'armoire", pourquoi: "Ça, c'est après un seul « tourner à droite ». Le code en a deux : il faut tourner encore une fois." }
+      - { texte: "la porte", pourquoi: "Chaque « tourner » change ce que l'on regarde. Après deux quarts de tour, la porte est derrière toi." }
+  - texte: "Le robot est sur la case 1 et regarde vers la case 10. Il doit aller sur la case 4. Quel code faut-il ?"
+    nom: "avancer de 3 cases"
+    explication: "De la case 1 à la case 4, on compte 2, 3, 4 : trois cases, vers la case 10. Le code est : avancer de 3 cases."
+    pieges:
+      - { texte: "avancer de 4 cases", pourquoi: "Avec 4 cases, il irait jusqu'à la case 5. On ne compte pas la case de départ." }
+      - { texte: "reculer de 3 cases", pourquoi: "La case 4 est devant lui, du côté de la case 10 : il faut avancer, pas reculer." }
+  - texte: "Le robot est sur la case 7 et regarde vers la case 10. Il doit aller sur la case 5. Quel code faut-il ?"
+    nom: "reculer de 2 cases"
+    explication: "La case 5 est derrière lui. De 7 à 5, on compte 6, 5 : deux cases en arrière. Le code est : reculer de 2 cases."
+    pieges:
+      - { texte: "avancer de 2 cases", pourquoi: "En avançant, il irait vers la case 10, jusqu'à la case 9. La case 5 est derrière lui." }
+      - { texte: "reculer de 5 cases", pourquoi: "5, c'est la case d'arrivée. Le code dit combien de cases faire : de 7 à 5, il y en a 2." }
+
+en:
+  titre: "Reading a movement code"
+  idee: "A code says what to do, in order. Move forward: go the way you are facing. Move back: go backwards, without turning round. Turn: change direction, on the spot."
+  phrases:
+    consigne: "Listen to the code and do it in your head, one instruction after the other. Then touch the answer."
+    question: "{texte}"
+    indice: "Put your finger on the start, then do each instruction in order, one square at a time."
+    exemple: "The robot is on square 2, facing square 10. The code says: move forward 3 squares. We count 3, 4, 5: it lands on square 5."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "The robot is on square 2, facing square 10. Its code:\nmove forward 3 squares\nWhich square does it land on?"
+      nom: "5"
+      explication: "We start on square 2 and count 3 squares: 3, 4, 5. It lands on square 5."
+      pieges:
+        - { texte: "4", pourquoi: "You counted the starting square. We count the squares we move onto: 3, 4, 5." }
+        - { texte: "3", pourquoi: "3 is the number of squares to move, not the square it lands on. It starts on square 2." }
+    - texte: "The robot is on square 6, facing square 10. Its code:\nmove back 2 squares\nWhich square does it land on?"
+      nom: "4"
+      explication: "Moving back means going backwards: 5, then 4. It lands on square 4."
+      pieges:
+        - { texte: "8", pourquoi: "You moved it forward. Moving back means going backwards, away from where it is facing." }
+        - { texte: "2", pourquoi: "2 is the number of squares to move. It starts on square 6: 5, then 4." }
+    - texte: "The robot is on square 3, facing square 10. Its code:\nmove forward 4 squares\nmove back 1 square\nWhich square does it land on?"
+      nom: "6"
+      explication: "Move forward 4: 4, 5, 6, 7. Then move back 1: 6. It lands on square 6."
+      pieges:
+        - { texte: "7", pourquoi: "You stopped after the first instruction. It still has to move back 1 square." }
+        - { texte: "8", pourquoi: "You moved the robot forward at the end. Moving back means going backwards: from 7 to 6." }
+    - texte: "You are facing the board. The door is on your right, the window on your left. The code:\nturn right\nWhat are you facing now?"
+      nom: "the door"
+      explication: "Turning right is a quarter turn towards your right hand. The door was on your right: now you are facing it."
+      pieges:
+        - { texte: "the board", pourquoi: "Turning changes what you are facing. You made a quarter turn: you are no longer facing the board." }
+        - { texte: "the window", pourquoi: "The window is on your left. Turning right is towards your right hand." }
+    - texte: "You are facing the board. The door is on your right, the window on your left. The code:\nturn left\nWhat are you facing now?"
+      nom: "the window"
+      explication: "Turning left is a quarter turn towards your left hand. The window was on your left: now you are facing it."
+      pieges:
+        - { texte: "the door", pourquoi: "The door is on your right. Turning left is towards your left hand." }
+        - { texte: "the board", pourquoi: "Turning changes what you are facing: you made a quarter turn." }
+    - texte: "You are facing the door. The wardrobe is on your right, the bed behind you. The code:\nturn right\nturn right\nWhat are you facing now?"
+      nom: "the bed"
+      explication: "One quarter turn to the right: you face the wardrobe. One more: you face what was behind you, the bed. Two quarter turns make a half turn."
+      pieges:
+        - { texte: "the wardrobe", pourquoi: "That's after just one “turn right”. The code has two: you must turn once more." }
+        - { texte: "the door", pourquoi: "Each “turn” changes what you are facing. After two quarter turns, the door is behind you." }
+    - texte: "The robot is on square 1, facing square 10. It must get to square 4. Which code does it need?"
+      nom: "move forward 3 squares"
+      explication: "From square 1 to square 4, we count 2, 3, 4: three squares, towards square 10. The code is: move forward 3 squares."
+      pieges:
+        - { texte: "move forward 4 squares", pourquoi: "With 4 squares, it would go as far as square 5. We don't count the starting square." }
+        - { texte: "move back 3 squares", pourquoi: "Square 4 is in front of it, towards square 10: it must move forward, not back." }
+    - texte: "The robot is on square 7, facing square 10. It must get to square 5. Which code does it need?"
+      nom: "move back 2 squares"
+      explication: "Square 5 is behind it. From 7 to 5, we count 6, 5: two squares backwards. The code is: move back 2 squares."
+      pieges:
+        - { texte: "move forward 2 squares", pourquoi: "Moving forward, it would go towards square 10, as far as square 9. Square 5 is behind it." }
+        - { texte: "move back 5 squares", pourquoi: "5 is the square it must land on. The code says how many squares to move: from 7 to 5, there are 2." }

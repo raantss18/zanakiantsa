@@ -157,11 +157,290 @@
       }
     },
     {
+      "id": "decoder-deplacement",
+      "titre": "Lire un code de déplacement",
+      "niveau": "CP",
+      "prerequis": [
+        "robot-tourner"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "L’élève sait coder un déplacement qu’un autre élève doit ensuite effectuer, par exemple : « avancer de deux pas, tourner à droite, reculer de trois pas »."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un code dit quoi faire, dans l'ordre. Avancer : on va là où on regarde. Reculer : on va en arrière, sans se retourner. Tourner : on change de direction, sur place.",
+      "phrases": {
+        "consigne": "Écoute le code et fais-le dans ta tête, une instruction après l'autre. Puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Pose ton doigt sur le départ, puis fais chaque instruction dans l'ordre, une case à la fois.",
+        "exemple": "Le robot est sur la case 2 et regarde vers la case 10. Le code dit : avancer de 3 cases. On compte 3, 4, 5 : il arrive sur la case 5.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Le robot est sur la case 2 et regarde vers la case 10. Son code :\navancer de 3 cases\nSur quelle case arrive-t-il ?",
+          "nom": "5",
+          "explication": "On part de la case 2 et on compte 3 cases : 3, 4, 5. Il arrive sur la case 5.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "Tu as compté la case de départ. On compte les cases où l'on arrive : 3, 4, 5."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "3, c'est le nombre de cases à faire, pas la case d'arrivée. On part de la case 2."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot est sur la case 6 et regarde vers la case 10. Son code :\nreculer de 2 cases\nSur quelle case arrive-t-il ?",
+          "nom": "4",
+          "explication": "Reculer, c'est aller en arrière : 5, puis 4. Il arrive sur la case 4.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu l'as fait avancer. Reculer, c'est aller en arrière, à l'opposé de là où il regarde."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "2, c'est le nombre de cases à faire. On part de la case 6 : 5, puis 4."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot est sur la case 3 et regarde vers la case 10. Son code :\navancer de 4 cases\nreculer de 1 case\nSur quelle case arrive-t-il ?",
+          "nom": "6",
+          "explication": "Avancer de 4 : 4, 5, 6, 7. Puis reculer de 1 : 6. Il arrive sur la case 6.",
+          "pieges": [
+            {
+              "texte": "7",
+              "pourquoi": "Tu t'es arrêté après la première instruction. Il faut encore reculer de 1 case."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "Tu as fait avancer le robot à la fin. Reculer, c'est revenir en arrière : de 7 à 6."
+            }
+          ]
+        },
+        {
+          "texte": "Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code :\ntourner à droite\nQue regardes-tu maintenant ?",
+          "nom": "la porte",
+          "explication": "Tourner à droite, c'est faire un quart de tour du côté de ta main droite. La porte était à ta droite : tu la regardes.",
+          "pieges": [
+            {
+              "texte": "le tableau",
+              "pourquoi": "Tourner change ce que l'on regarde. Tu as fait un quart de tour : tu ne regardes plus le tableau."
+            },
+            {
+              "texte": "la fenêtre",
+              "pourquoi": "La fenêtre est à ta gauche. Tourner à droite, c'est du côté de ta main droite."
+            }
+          ]
+        },
+        {
+          "texte": "Tu regardes le tableau. La porte est à ta droite, la fenêtre à ta gauche. Le code :\ntourner à gauche\nQue regardes-tu maintenant ?",
+          "nom": "la fenêtre",
+          "explication": "Tourner à gauche, c'est un quart de tour du côté de ta main gauche. La fenêtre était à ta gauche : tu la regardes.",
+          "pieges": [
+            {
+              "texte": "la porte",
+              "pourquoi": "La porte est à ta droite. Tourner à gauche, c'est du côté de ta main gauche."
+            },
+            {
+              "texte": "le tableau",
+              "pourquoi": "Tourner change ce que l'on regarde : tu as fait un quart de tour."
+            }
+          ]
+        },
+        {
+          "texte": "Tu regardes la porte. L'armoire est à ta droite, le lit derrière toi. Le code :\ntourner à droite\ntourner à droite\nQue regardes-tu maintenant ?",
+          "nom": "le lit",
+          "explication": "Un quart de tour à droite : tu regardes l'armoire. Encore un : tu regardes derrière toi, le lit. Deux quarts de tour font un demi-tour.",
+          "pieges": [
+            {
+              "texte": "l'armoire",
+              "pourquoi": "Ça, c'est après un seul « tourner à droite ». Le code en a deux : il faut tourner encore une fois."
+            },
+            {
+              "texte": "la porte",
+              "pourquoi": "Chaque « tourner » change ce que l'on regarde. Après deux quarts de tour, la porte est derrière toi."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot est sur la case 1 et regarde vers la case 10. Il doit aller sur la case 4. Quel code faut-il ?",
+          "nom": "avancer de 3 cases",
+          "explication": "De la case 1 à la case 4, on compte 2, 3, 4 : trois cases, vers la case 10. Le code est : avancer de 3 cases.",
+          "pieges": [
+            {
+              "texte": "avancer de 4 cases",
+              "pourquoi": "Avec 4 cases, il irait jusqu'à la case 5. On ne compte pas la case de départ."
+            },
+            {
+              "texte": "reculer de 3 cases",
+              "pourquoi": "La case 4 est devant lui, du côté de la case 10 : il faut avancer, pas reculer."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot est sur la case 7 et regarde vers la case 10. Il doit aller sur la case 5. Quel code faut-il ?",
+          "nom": "reculer de 2 cases",
+          "explication": "La case 5 est derrière lui. De 7 à 5, on compte 6, 5 : deux cases en arrière. Le code est : reculer de 2 cases.",
+          "pieges": [
+            {
+              "texte": "avancer de 2 cases",
+              "pourquoi": "En avançant, il irait vers la case 10, jusqu'à la case 9. La case 5 est derrière lui."
+            },
+            {
+              "texte": "reculer de 5 cases",
+              "pourquoi": "5, c'est la case d'arrivée. Le code dit combien de cases faire : de 7 à 5, il y en a 2."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Reading a movement code",
+        "idee": "A code says what to do, in order. Move forward: go the way you are facing. Move back: go backwards, without turning round. Turn: change direction, on the spot.",
+        "phrases": {
+          "consigne": "Listen to the code and do it in your head, one instruction after the other. Then touch the answer.",
+          "question": "{texte}",
+          "indice": "Put your finger on the start, then do each instruction in order, one square at a time.",
+          "exemple": "The robot is on square 2, facing square 10. The code says: move forward 3 squares. We count 3, 4, 5: it lands on square 5.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "The robot is on square 2, facing square 10. Its code:\nmove forward 3 squares\nWhich square does it land on?",
+            "nom": "5",
+            "explication": "We start on square 2 and count 3 squares: 3, 4, 5. It lands on square 5.",
+            "pieges": [
+              {
+                "texte": "4",
+                "pourquoi": "You counted the starting square. We count the squares we move onto: 3, 4, 5."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "3 is the number of squares to move, not the square it lands on. It starts on square 2."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is on square 6, facing square 10. Its code:\nmove back 2 squares\nWhich square does it land on?",
+            "nom": "4",
+            "explication": "Moving back means going backwards: 5, then 4. It lands on square 4.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You moved it forward. Moving back means going backwards, away from where it is facing."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "2 is the number of squares to move. It starts on square 6: 5, then 4."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is on square 3, facing square 10. Its code:\nmove forward 4 squares\nmove back 1 square\nWhich square does it land on?",
+            "nom": "6",
+            "explication": "Move forward 4: 4, 5, 6, 7. Then move back 1: 6. It lands on square 6.",
+            "pieges": [
+              {
+                "texte": "7",
+                "pourquoi": "You stopped after the first instruction. It still has to move back 1 square."
+              },
+              {
+                "texte": "8",
+                "pourquoi": "You moved the robot forward at the end. Moving back means going backwards: from 7 to 6."
+              }
+            ]
+          },
+          {
+            "texte": "You are facing the board. The door is on your right, the window on your left. The code:\nturn right\nWhat are you facing now?",
+            "nom": "the door",
+            "explication": "Turning right is a quarter turn towards your right hand. The door was on your right: now you are facing it.",
+            "pieges": [
+              {
+                "texte": "the board",
+                "pourquoi": "Turning changes what you are facing. You made a quarter turn: you are no longer facing the board."
+              },
+              {
+                "texte": "the window",
+                "pourquoi": "The window is on your left. Turning right is towards your right hand."
+              }
+            ]
+          },
+          {
+            "texte": "You are facing the board. The door is on your right, the window on your left. The code:\nturn left\nWhat are you facing now?",
+            "nom": "the window",
+            "explication": "Turning left is a quarter turn towards your left hand. The window was on your left: now you are facing it.",
+            "pieges": [
+              {
+                "texte": "the door",
+                "pourquoi": "The door is on your right. Turning left is towards your left hand."
+              },
+              {
+                "texte": "the board",
+                "pourquoi": "Turning changes what you are facing: you made a quarter turn."
+              }
+            ]
+          },
+          {
+            "texte": "You are facing the door. The wardrobe is on your right, the bed behind you. The code:\nturn right\nturn right\nWhat are you facing now?",
+            "nom": "the bed",
+            "explication": "One quarter turn to the right: you face the wardrobe. One more: you face what was behind you, the bed. Two quarter turns make a half turn.",
+            "pieges": [
+              {
+                "texte": "the wardrobe",
+                "pourquoi": "That's after just one “turn right”. The code has two: you must turn once more."
+              },
+              {
+                "texte": "the door",
+                "pourquoi": "Each “turn” changes what you are facing. After two quarter turns, the door is behind you."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is on square 1, facing square 10. It must get to square 4. Which code does it need?",
+            "nom": "move forward 3 squares",
+            "explication": "From square 1 to square 4, we count 2, 3, 4: three squares, towards square 10. The code is: move forward 3 squares.",
+            "pieges": [
+              {
+                "texte": "move forward 4 squares",
+                "pourquoi": "With 4 squares, it would go as far as square 5. We don't count the starting square."
+              },
+              {
+                "texte": "move back 3 squares",
+                "pourquoi": "Square 4 is in front of it, towards square 10: it must move forward, not back."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is on square 7, facing square 10. It must get to square 5. Which code does it need?",
+            "nom": "move back 2 squares",
+            "explication": "Square 5 is behind it. From 7 to 5, we count 6, 5: two squares backwards. The code is: move back 2 squares.",
+            "pieges": [
+              {
+                "texte": "move forward 2 squares",
+                "pourquoi": "Moving forward, it would go towards square 10, as far as square 9. Square 5 is behind it."
+              },
+              {
+                "texte": "move back 5 squares",
+                "pourquoi": "5 is the square it must land on. The code says how many squares to move: from 7 to 5, there are 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "robot-rochers",
       "titre": "Contourner les rochers",
       "niveau": "CP",
       "prerequis": [
-        "robot-tourner"
+        "decoder-deplacement"
       ],
       "programme": {
         "source": "cycle2",
@@ -282,11 +561,569 @@
       }
     },
     {
+      "id": "trouver-erreur",
+      "titre": "Trouver l'erreur d'un programme",
+      "niveau": "CE1",
+      "prerequis": [
+        "robot-long-trajet"
+      ],
+      "programme": {
+        "source": "cycle2",
+        "texte": "Pour ces déplacements, il dispose des instructions « avancer de », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche »."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour trouver une erreur, on suit le programme pas à pas, à la place du robot. Pivoter à droite, c'est un quart de tour du côté de sa main droite à lui, pas forcément de la tienne.",
+      "phrases": {
+        "consigne": "Suis le programme dans ta tête, une instruction après l'autre. Puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Mets-toi à la place du robot : tourne la feuille pour regarder comme lui, puis fais chaque instruction.",
+        "exemple": "Le robot regarde vers la droite et doit monter. Il pivote à gauche : un quart de tour du côté de sa main gauche, il regarde maintenant vers le haut.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Le robot regarde vers la droite. Il doit aller 3 cases à droite, puis 2 cases vers le haut. Son programme :\navancer de 3\npivoter à droite\navancer de 2\nOù est l'erreur ?",
+          "nom": "Il fallait pivoter à gauche",
+          "explication": "Le robot regarde vers la droite. S'il pivote à droite, il regarde vers le bas. Pour monter, il doit pivoter à gauche.",
+          "pieges": [
+            {
+              "texte": "Il fallait avancer de 2 au début",
+              "pourquoi": "Le début est juste : il doit bien faire 3 cases à droite."
+            },
+            {
+              "texte": "Il manque un virage",
+              "pourquoi": "Un seul virage suffit pour passer de la droite au haut. C'est le sens du virage qui est faux."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers le haut. Il doit aller 4 cases vers le haut. Son programme :\navancer de 3\nOù est l'erreur ?",
+          "nom": "Il fallait avancer de 4",
+          "explication": "Le robot regarde déjà vers le haut, il n'a pas besoin de pivoter. Mais il doit faire 4 cases, pas 3.",
+          "pieges": [
+            {
+              "texte": "Il fallait pivoter d'abord",
+              "pourquoi": "Il regarde déjà vers le haut : il peut avancer tout de suite."
+            },
+            {
+              "texte": "Il fallait reculer de 4",
+              "pourquoi": "Reculer l'emmènerait vers le bas. Il regarde vers le haut : il doit avancer."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers le haut. Il doit aller 2 cases vers la droite. Son programme :\navancer de 2\nOù est l'erreur ?",
+          "nom": "Il manque « pivoter à droite » au début",
+          "explication": "Sans virage, le robot monte de 2 cases. Il doit d'abord pivoter à droite pour regarder vers la droite, puis avancer de 2.",
+          "pieges": [
+            {
+              "texte": "Il manque « pivoter à gauche » au début",
+              "pourquoi": "En pivotant à gauche, il regarderait vers la gauche. La droite est du côté de sa main droite."
+            },
+            {
+              "texte": "Il fallait avancer de 3",
+              "pourquoi": "Le nombre de cases est juste : 2. C'est la direction qui manque."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers la droite. Il doit aller 2 cases à droite, puis 3 cases vers le bas. Son programme :\navancer de 2\npivoter à droite\navancer de 2\nOù est l'erreur ?",
+          "nom": "À la fin, il fallait avancer de 3",
+          "explication": "Avancer de 2 : juste. Pivoter à droite : quand on regarde vers la droite, la main droite est vers le bas, juste. Mais il faut descendre de 3 cases, pas 2.",
+          "pieges": [
+            {
+              "texte": "Il fallait pivoter à gauche",
+              "pourquoi": "Quand le robot regarde vers la droite, sa main droite est vers le bas : pivoter à droite le fait bien descendre."
+            },
+            {
+              "texte": "Au début, il fallait avancer de 3",
+              "pourquoi": "Le début est juste : 2 cases à droite. C'est la descente qui est trop courte."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers le bas. Il doit aller 1 case vers le bas, puis 2 cases vers la gauche. Son programme :\navancer de 1\npivoter à gauche\navancer de 2\nOù est l'erreur ?",
+          "nom": "Il fallait pivoter à droite",
+          "explication": "Quand le robot regarde vers le bas, sa main droite est du côté gauche de la feuille. Pour aller vers la gauche de la feuille, il pivote à droite.",
+          "pieges": [
+            {
+              "texte": "Il fallait avancer de 1 à la fin",
+              "pourquoi": "Il doit bien faire 2 cases vers la gauche. C'est le sens du virage qui est faux."
+            },
+            {
+              "texte": "Il n'y a pas d'erreur",
+              "pourquoi": "Tourne la feuille pour regarder vers le bas comme lui : pivoter à gauche l'envoie vers la droite de la feuille."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers le haut. Son programme :\navancer de 2\npivoter à droite\navancer de 3\nOù arrive-t-il ?",
+          "nom": "2 cases plus haut et 3 cases à droite",
+          "explication": "Il monte de 2 cases. Puis il pivote à droite : il regarde vers la droite et avance de 3 cases.",
+          "pieges": [
+            {
+              "texte": "2 cases plus haut et 3 cases à gauche",
+              "pourquoi": "Quand il regarde vers le haut, sa main droite est à droite de la feuille : il part vers la droite."
+            },
+            {
+              "texte": "5 cases plus haut",
+              "pourquoi": "Le virage change la direction : les 3 dernières cases vont vers la droite, pas vers le haut."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers la droite. Son programme :\npivoter à gauche\npivoter à gauche\navancer de 2\nOù arrive-t-il ?",
+          "nom": "2 cases à gauche du départ",
+          "explication": "Un quart de tour à gauche : il regarde vers le haut. Encore un : il regarde vers la gauche. Puis il avance de 2.",
+          "pieges": [
+            {
+              "texte": "2 cases au-dessus du départ",
+              "pourquoi": "Ça, c'est après un seul virage. Le programme en a deux : il fait un demi-tour."
+            },
+            {
+              "texte": "2 cases à droite du départ",
+              "pourquoi": "Les deux virages comptent : après un demi-tour, il ne regarde plus vers la droite."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers la gauche. Il doit aller 3 cases vers le haut. Son programme :\npivoter à gauche\navancer de 3\nOù est l'erreur ?",
+          "nom": "Il fallait pivoter à droite",
+          "explication": "Quand le robot regarde vers la gauche, sa main droite est vers le haut de la feuille. Pivoter à gauche le ferait descendre.",
+          "pieges": [
+            {
+              "texte": "Il ne fallait pas pivoter",
+              "pourquoi": "Il regarde vers la gauche : sans virage, il irait vers la gauche, pas vers le haut."
+            },
+            {
+              "texte": "Il fallait avancer de 4",
+              "pourquoi": "Il doit bien faire 3 cases. C'est le sens du virage qui est faux."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Finding the mistake in a program",
+        "idee": "To find a mistake, follow the program step by step, as if you were the robot. Turning right is a quarter turn towards its right hand, not always yours.",
+        "phrases": {
+          "consigne": "Follow the program in your head, one instruction after the other. Then touch the answer.",
+          "question": "{texte}",
+          "indice": "Put yourself in the robot's place: turn the page to face the same way, then do each instruction.",
+          "exemple": "The robot is facing right and must go up. It turns left: a quarter turn towards its left hand, so now it is facing up.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "The robot is facing right. It must go 3 squares right, then 2 squares up. Its program:\nmove forward 3\nturn right\nmove forward 2\nWhere is the mistake?",
+            "nom": "It should have turned left",
+            "explication": "The robot is facing right. If it turns right, it faces down. To go up, it must turn left.",
+            "pieges": [
+              {
+                "texte": "It should have moved forward 2 at the start",
+                "pourquoi": "The start is right: it does have to go 3 squares right."
+              },
+              {
+                "texte": "A turn is missing",
+                "pourquoi": "One turn is enough to go from right to up. It's the direction of the turn that is wrong."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing up. It must go 4 squares up. Its program:\nmove forward 3\nWhere is the mistake?",
+            "nom": "It should have moved forward 4",
+            "explication": "The robot is already facing up, so it doesn't need to turn. But it must move 4 squares, not 3.",
+            "pieges": [
+              {
+                "texte": "It should have turned first",
+                "pourquoi": "It is already facing up: it can move forward straight away."
+              },
+              {
+                "texte": "It should have moved back 4",
+                "pourquoi": "Moving back would take it down. It is facing up: it must move forward."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing up. It must go 2 squares to the right. Its program:\nmove forward 2\nWhere is the mistake?",
+            "nom": "“turn right” is missing at the start",
+            "explication": "Without a turn, the robot goes up 2 squares. It must first turn right to face right, then move forward 2.",
+            "pieges": [
+              {
+                "texte": "“turn left” is missing at the start",
+                "pourquoi": "Turning left, it would face left. Right is on the side of its right hand."
+              },
+              {
+                "texte": "It should have moved forward 3",
+                "pourquoi": "The number of squares is right: 2. It's the direction that is missing."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing right. It must go 2 squares right, then 3 squares down. Its program:\nmove forward 2\nturn right\nmove forward 2\nWhere is the mistake?",
+            "nom": "At the end, it should have moved forward 3",
+            "explication": "Move forward 2: right. Turn right: when you face right, your right hand points down, so that's right. But it must go down 3 squares, not 2.",
+            "pieges": [
+              {
+                "texte": "It should have turned left",
+                "pourquoi": "When the robot faces right, its right hand points down: turning right does take it down."
+              },
+              {
+                "texte": "At the start, it should have moved forward 3",
+                "pourquoi": "The start is right: 2 squares to the right. It's the way down that is too short."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing down. It must go 1 square down, then 2 squares to the left. Its program:\nmove forward 1\nturn left\nmove forward 2\nWhere is the mistake?",
+            "nom": "It should have turned right",
+            "explication": "When the robot faces down, its right hand is on the left side of the page. To go to the left of the page, it turns right.",
+            "pieges": [
+              {
+                "texte": "It should have moved forward 1 at the end",
+                "pourquoi": "It does have to go 2 squares to the left. It's the direction of the turn that is wrong."
+              },
+              {
+                "texte": "There is no mistake",
+                "pourquoi": "Turn the page to face down like the robot: turning left sends it to the right of the page."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing up. Its program:\nmove forward 2\nturn right\nmove forward 3\nWhere does it end up?",
+            "nom": "2 squares up and 3 squares to the right",
+            "explication": "It goes up 2 squares. Then it turns right: it faces right and moves forward 3 squares.",
+            "pieges": [
+              {
+                "texte": "2 squares up and 3 squares to the left",
+                "pourquoi": "When it faces up, its right hand is on the right of the page: it heads to the right."
+              },
+              {
+                "texte": "5 squares up",
+                "pourquoi": "The turn changes direction: the last 3 squares go to the right, not up."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing right. Its program:\nturn left\nturn left\nmove forward 2\nWhere does it end up?",
+            "nom": "2 squares to the left of the start",
+            "explication": "One quarter turn to the left: it faces up. One more: it faces left. Then it moves forward 2.",
+            "pieges": [
+              {
+                "texte": "2 squares above the start",
+                "pourquoi": "That's after just one turn. The program has two: it makes a half turn."
+              },
+              {
+                "texte": "2 squares to the right of the start",
+                "pourquoi": "Both turns count: after a half turn, it is no longer facing right."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing left. It must go 3 squares up. Its program:\nturn left\nmove forward 3\nWhere is the mistake?",
+            "nom": "It should have turned right",
+            "explication": "When the robot faces left, its right hand points to the top of the page. Turning left would take it down.",
+            "pieges": [
+              {
+                "texte": "It shouldn't have turned",
+                "pourquoi": "It is facing left: without a turn, it would go left, not up."
+              },
+              {
+                "texte": "It should have moved forward 4",
+                "pourquoi": "It does have to move 3 squares. It's the direction of the turn that is wrong."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "motif-repete",
+      "titre": "Ce qui se répète dans un programme",
+      "niveau": "CE2",
+      "prerequis": [
+        "trouver-erreur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Dès le CP, l’élève a appris à réaliser un déplacement dans l’espace à partir d’un codage ou à coder de tels déplacements, notamment pour programmer un robot se déplaçant sur un quadrillage."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans un long programme, cherche le morceau qui revient. On peut l'écrire une seule fois dans « répéter » : « répéter 3 fois [ avancer, pivoter à droite ] » fait ce morceau 3 fois de suite.",
+      "phrases": {
+        "consigne": "Lis le programme et cherche ce qui revient. Puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Entoure le premier morceau avec ton doigt, puis compte combien de fois il revient, à l'identique.",
+        "exemple": "avancer, avancer, pivoter à gauche, avancer, avancer, pivoter à gauche : le morceau « avancer, avancer, pivoter à gauche » revient 2 fois. On écrit : répéter 2 fois [ avancer, avancer, pivoter à gauche ].",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Quel morceau se répète, et combien de fois ?\navancer, pivoter à droite, avancer, pivoter à droite, avancer, pivoter à droite",
+          "nom": "avancer, pivoter à droite : 3 fois",
+          "explication": "Le morceau « avancer, pivoter à droite » a 2 blocs. Il revient 3 fois : 3 × 2 = 6 blocs en tout.",
+          "pieges": [
+            {
+              "texte": "avancer, pivoter à droite : 6 fois",
+              "pourquoi": "6, c'est le nombre de blocs. Le morceau a 2 blocs : il revient 3 fois."
+            },
+            {
+              "texte": "avancer : 6 fois",
+              "pourquoi": "Il n'y a que 3 « avancer ». Et les virages font partie du morceau qui revient."
+            }
+          ]
+        },
+        {
+          "texte": "Quel morceau se répète, et combien de fois ?\navancer, avancer, avancer, avancer, avancer",
+          "nom": "avancer : 5 fois",
+          "explication": "Un seul bloc revient, « avancer », et on le compte 5 fois.",
+          "pieges": [
+            {
+              "texte": "avancer : 4 fois",
+              "pourquoi": "Compte encore, en touchant chaque bloc : il y en a 5."
+            },
+            {
+              "texte": "avancer, avancer : 2 fois",
+              "pourquoi": "2 fois « avancer, avancer », ça fait 4 blocs. Le programme en a 5."
+            }
+          ]
+        },
+        {
+          "texte": "répéter 4 fois [ avancer, avancer ]\nCombien de fois le robot avance-t-il ?",
+          "nom": "8",
+          "explication": "À chaque tour, le robot avance 2 fois. 4 tours : 2 + 2 + 2 + 2 = 8.",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "Chaque tour contient 2 « avancer », pas un seul."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Tu as ajouté 4 et 2. Il faut 4 tours de 2 : 2 + 2 + 2 + 2."
+            }
+          ]
+        },
+        {
+          "texte": "Quel programme fait la même chose ?\navancer, avancer, pivoter à droite, avancer, avancer, pivoter à droite",
+          "nom": "répéter 2 fois [ avancer, avancer, pivoter à droite ]",
+          "explication": "Le morceau « avancer, avancer, pivoter à droite » revient 2 fois. On l'écrit une fois, dans « répéter 2 fois ».",
+          "pieges": [
+            {
+              "texte": "répéter 2 fois [ avancer, pivoter à droite ]",
+              "pourquoi": "Il manque un « avancer » : chaque morceau en a deux avant le virage."
+            },
+            {
+              "texte": "répéter 3 fois [ avancer, avancer, pivoter à droite ]",
+              "pourquoi": "Le morceau ne revient que 2 fois : 3 tours en feraient un de trop."
+            }
+          ]
+        },
+        {
+          "texte": "Dans la suite qui se répète A B C A B C A B C…, quelle est la dixième lettre ?",
+          "nom": "A",
+          "explication": "Le morceau A B C revient sans fin. 3 morceaux font 9 lettres : la dixième commence un nouveau morceau, c'est A.",
+          "pieges": [
+            {
+              "texte": "C",
+              "pourquoi": "C est la neuvième lettre, la fin du troisième morceau. La dixième est juste après."
+            },
+            {
+              "texte": "B",
+              "pourquoi": "B est la huitième ou la onzième lettre. Après 3 morceaux de 3 lettres, on recommence par A."
+            }
+          ]
+        },
+        {
+          "texte": "répéter 3 fois [ avancer, pivoter à droite ]\navancer\nCombien de fois le robot avance-t-il ?",
+          "nom": "4",
+          "explication": "La boucle fait avancer 3 fois. Puis le dernier « avancer », après la boucle, une fois de plus : 3 + 1 = 4.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "Après la boucle, le programme continue : il reste un « avancer »."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Chaque tour n'a qu'un « avancer » ; l'autre bloc est un virage."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot doit avancer 12 fois. Son programme est « répéter … fois [ avancer, avancer, avancer ] ». Quel nombre faut-il mettre ?",
+          "nom": "4",
+          "explication": "Chaque tour fait avancer 3 fois. 3 + 3 + 3 + 3 = 12 : il faut 4 tours.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "Avec 12 tours de 3 « avancer », le robot avancerait 36 fois."
+            },
+            {
+              "texte": "3",
+              "pourquoi": "3, c'est le nombre de « avancer » dans un tour. 3 tours ne font que 9."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi écrire « répéter 5 fois [ avancer ] » au lieu de 5 blocs « avancer » ?",
+          "nom": "Le programme est plus court",
+          "explication": "Le robot fait exactement les mêmes pas. Mais on écrit le morceau une seule fois : le programme tient en moins de blocs.",
+          "pieges": [
+            {
+              "texte": "Le robot va plus vite",
+              "pourquoi": "Le robot fait les mêmes pas, un par un : la boucle ne le fait pas aller plus vite."
+            },
+            {
+              "texte": "Le robot va plus loin",
+              "pourquoi": "Les deux programmes font le même chemin : 5 cases."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "What repeats in a program",
+        "idee": "In a long program, look for the piece that comes back. You can write it just once inside “repeat”: “repeat 3 times [ move forward, turn right ]” does that piece 3 times in a row.",
+        "phrases": {
+          "consigne": "Read the program and look for what comes back. Then touch the answer.",
+          "question": "{texte}",
+          "indice": "Circle the first piece with your finger, then count how many times it comes back, exactly the same.",
+          "exemple": "move forward, move forward, turn left, move forward, move forward, turn left: the piece “move forward, move forward, turn left” comes back 2 times. We write: repeat 2 times [ move forward, move forward, turn left ].",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Which piece repeats, and how many times?\nmove forward, turn right, move forward, turn right, move forward, turn right",
+            "nom": "move forward, turn right: 3 times",
+            "explication": "The piece “move forward, turn right” has 2 blocks. It comes back 3 times: 3 × 2 = 6 blocks in all.",
+            "pieges": [
+              {
+                "texte": "move forward, turn right: 6 times",
+                "pourquoi": "6 is the number of blocks. The piece has 2 blocks: it comes back 3 times."
+              },
+              {
+                "texte": "move forward: 6 times",
+                "pourquoi": "There are only 3 “move forward”. And the turns are part of the piece that comes back."
+              }
+            ]
+          },
+          {
+            "texte": "Which piece repeats, and how many times?\nmove forward, move forward, move forward, move forward, move forward",
+            "nom": "move forward: 5 times",
+            "explication": "Only one block comes back, “move forward”, and we count it 5 times.",
+            "pieges": [
+              {
+                "texte": "move forward: 4 times",
+                "pourquoi": "Count again, touching each block: there are 5."
+              },
+              {
+                "texte": "move forward, move forward: 2 times",
+                "pourquoi": "2 times “move forward, move forward” makes 4 blocks. The program has 5."
+              }
+            ]
+          },
+          {
+            "texte": "repeat 4 times [ move forward, move forward ]\nHow many times does the robot move forward?",
+            "nom": "8",
+            "explication": "Each time round, the robot moves forward 2 times. 4 times round: 2 + 2 + 2 + 2 = 8.",
+            "pieges": [
+              {
+                "texte": "4",
+                "pourquoi": "Each time round has 2 “move forward”, not just one."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "You added 4 and 2. It's 4 times round, 2 each time: 2 + 2 + 2 + 2."
+              }
+            ]
+          },
+          {
+            "texte": "Which program does the same thing?\nmove forward, move forward, turn right, move forward, move forward, turn right",
+            "nom": "repeat 2 times [ move forward, move forward, turn right ]",
+            "explication": "The piece “move forward, move forward, turn right” comes back 2 times. We write it once, inside “repeat 2 times”.",
+            "pieges": [
+              {
+                "texte": "repeat 2 times [ move forward, turn right ]",
+                "pourquoi": "One “move forward” is missing: each piece has two before the turn."
+              },
+              {
+                "texte": "repeat 3 times [ move forward, move forward, turn right ]",
+                "pourquoi": "The piece only comes back 2 times: 3 times round would be one too many."
+              }
+            ]
+          },
+          {
+            "texte": "In the repeating sequence A B C A B C A B C…, what is the tenth letter?",
+            "nom": "A",
+            "explication": "The piece A B C comes back again and again. 3 pieces make 9 letters: the tenth starts a new piece, so it is A.",
+            "pieges": [
+              {
+                "texte": "C",
+                "pourquoi": "C is the ninth letter, the end of the third piece. The tenth comes just after."
+              },
+              {
+                "texte": "B",
+                "pourquoi": "B is the eighth or the eleventh letter. After 3 pieces of 3 letters, we start again with A."
+              }
+            ]
+          },
+          {
+            "texte": "repeat 3 times [ move forward, turn right ]\nmove forward\nHow many times does the robot move forward?",
+            "nom": "4",
+            "explication": "The loop moves it forward 3 times. Then the last “move forward”, after the loop, once more: 3 + 1 = 4.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "After the loop, the program carries on: there is still one “move forward”."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "Each time round has only one “move forward”; the other block is a turn."
+              }
+            ]
+          },
+          {
+            "texte": "The robot must move forward 12 times. Its program is “repeat … times [ move forward, move forward, move forward ]”. Which number must go in?",
+            "nom": "4",
+            "explication": "Each time round moves it forward 3 times. 3 + 3 + 3 + 3 = 12: it needs 4 times round.",
+            "pieges": [
+              {
+                "texte": "12",
+                "pourquoi": "With 12 times round of 3 “move forward”, the robot would move forward 36 times."
+              },
+              {
+                "texte": "3",
+                "pourquoi": "3 is the number of “move forward” in one time round. 3 times round only make 9."
+              }
+            ]
+          },
+          {
+            "texte": "Why write “repeat 5 times [ move forward ]” instead of 5 “move forward” blocks?",
+            "nom": "The program is shorter",
+            "explication": "The robot takes exactly the same steps. But we write the piece only once: the program needs fewer blocks.",
+            "pieges": [
+              {
+                "texte": "The robot goes faster",
+                "pourquoi": "The robot takes the same steps, one by one: the loop doesn't make it go faster."
+              },
+              {
+                "texte": "The robot goes further",
+                "pourquoi": "Both programs follow the same path: 5 squares."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "boucle-repeter",
       "titre": "La boucle : répéter",
       "niveau": "CE2",
       "prerequis": [
-        "robot-long-trajet"
+        "motif-repete"
       ],
       "programme": {
         "source": "prog",
@@ -319,11 +1156,290 @@
       }
     },
     {
+      "id": "boucle-lire",
+      "titre": "Lire une boucle de déplacement",
+      "niveau": "CM1",
+      "prerequis": [
+        "boucle-repeter"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Au CM1, l’élève continue d’utiliser et de produire des codages de déplacements en élargissant les environnements dans lesquels ces déplacements ont lieu (quartier, ville, etc.)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour lire une boucle, on fait les tours un par un : tout ce qui est entre les crochets, puis on recommence. Après le dernier tour seulement, on passe à la suite.",
+      "phrases": {
+        "consigne": "Fais tourner la boucle dans ta tête, tour par tour, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Dessine le chemin sur une feuille quadrillée, un tour après l'autre. Où regarde le robot à la fin de chaque tour ?",
+        "exemple": "répéter 4 fois [ avancer de 3, pivoter à droite ] : un côté de 3 cases, un quart de tour, et ainsi 4 fois. Le robot dessine un carré et revient à son départ.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "répéter 5 fois [ avancer de 4 ]\nDe combien de cases le robot avance-t-il en tout ?",
+          "nom": "20",
+          "explication": "Chaque tour fait 4 cases. 5 tours : 4 + 4 + 4 + 4 + 4 = 20 cases.",
+          "pieges": [
+            {
+              "texte": "9",
+              "pourquoi": "Tu as ajouté 5 et 4. La boucle fait 5 tours de 4 cases : 5 × 4."
+            },
+            {
+              "texte": "4",
+              "pourquoi": "Ça, c'est un seul tour. La boucle en fait 5."
+            }
+          ]
+        },
+        {
+          "texte": "répéter 2 fois [ avancer de 5, pivoter à droite, avancer de 2, pivoter à droite ]\nQuel chemin le robot dessine-t-il ?",
+          "nom": "Un rectangle de 5 cases sur 2",
+          "explication": "Un tour fait un côté de 5, un quart de tour, un côté de 2, un quart de tour. Deux tours ferment la figure : un rectangle de 5 sur 2.",
+          "pieges": [
+            {
+              "texte": "Un carré de 5 cases de côté",
+              "pourquoi": "Deux côtés font 5 cases, mais les deux autres n'en font que 2 : ce n'est pas un carré."
+            },
+            {
+              "texte": "Une ligne droite de 14 cases",
+              "pourquoi": "Les virages changent la direction à chaque côté : le chemin tourne."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers la droite. Son programme :\nrépéter 3 fois [ avancer de 2 ]\npivoter à gauche\navancer de 1\nOù arrive-t-il ?",
+          "nom": "6 cases à droite, 1 case plus haut",
+          "explication": "La boucle fait 3 × 2 = 6 cases vers la droite. Puis il pivote à gauche : en regardant vers la droite, sa gauche est vers le haut. Il monte d'une case.",
+          "pieges": [
+            {
+              "texte": "6 cases à droite, 1 case plus bas",
+              "pourquoi": "Quand il regarde vers la droite, sa main gauche est vers le haut de la feuille, pas vers le bas."
+            },
+            {
+              "texte": "2 cases à droite, 1 case plus haut",
+              "pourquoi": "La boucle fait 3 tours : 2 + 2 + 2 = 6 cases."
+            }
+          ]
+        },
+        {
+          "texte": "répéter 4 fois [ avancer de 2, pivoter à gauche ]\nOù finit le robot ?",
+          "nom": "Sur sa case de départ, tourné comme au début",
+          "explication": "4 côtés de 2 cases, avec un quart de tour à chaque fois : c'est un carré. 4 quarts de tour font un tour complet.",
+          "pieges": [
+            {
+              "texte": "8 cases plus loin",
+              "pourquoi": "Le robot tourne à chaque côté : il fait le tour d'un carré au lieu d'aller tout droit."
+            },
+            {
+              "texte": "Sur sa case de départ, tourné dans l'autre sens",
+              "pourquoi": "4 quarts de tour font un tour complet : il regarde du même côté qu'au début."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle boucle fait la même chose ?\navancer de 1, pivoter à droite, avancer de 1, pivoter à droite, avancer de 1, pivoter à droite",
+          "nom": "répéter 3 fois [ avancer de 1, pivoter à droite ]",
+          "explication": "Le morceau « avancer de 1, pivoter à droite » revient 3 fois.",
+          "pieges": [
+            {
+              "texte": "répéter 6 fois [ avancer de 1, pivoter à droite ]",
+              "pourquoi": "Il y a 6 blocs, mais le morceau en a 2 : il ne revient que 3 fois."
+            },
+            {
+              "texte": "répéter 3 fois [ avancer de 3 ]",
+              "pourquoi": "Les virages ont disparu : ce robot irait tout droit."
+            }
+          ]
+        },
+        {
+          "texte": "Dans Scratch, un lutin fait :\nrépéter 10 fois [ avancer de 10 pas ]\nDe combien de pas avance-t-il en tout ?",
+          "nom": "100",
+          "explication": "10 tours de 10 pas : 10 × 10 = 100 pas.",
+          "pieges": [
+            {
+              "texte": "20",
+              "pourquoi": "Tu as ajouté 10 et 10. Il y a 10 tours de 10 pas : 10 × 10."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "Ça, c'est un seul tour. La boucle en fait 10."
+            }
+          ]
+        },
+        {
+          "texte": "Un bus fait le tour d'un pâté de maisons. Son programme :\nrépéter 4 fois [ avancer d'une rue, pivoter à droite ]\nrépéter 4 fois [ avancer d'une rue, pivoter à droite ]\nCombien de fois fait-il le tour ?",
+          "nom": "2",
+          "explication": "Une boucle de 4 côtés avec un quart de tour fait un tour complet. Il y a deux boucles l'une après l'autre : 2 tours.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "8, c'est le nombre de rues. Il faut 4 rues pour faire un tour : 8 rues font 2 tours."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "Après la première boucle, le programme continue : la deuxième boucle refait un tour."
+            }
+          ]
+        },
+        {
+          "texte": "Le robot regarde vers le haut. Son programme :\nrépéter 3 fois [ avancer de 2, pivoter à droite, pivoter à droite ]\nOù finit-il ?",
+          "nom": "2 cases plus haut, tourné vers le bas",
+          "explication": "Deux quarts de tour font un demi-tour. Tour 1 : il monte de 2 et se retourne. Tour 2 : il redescend de 2 et se retourne. Tour 3 : il remonte de 2 et se retourne.",
+          "pieges": [
+            {
+              "texte": "6 cases plus haut",
+              "pourquoi": "À chaque tour, il fait demi-tour : il monte, puis redescend, puis remonte."
+            },
+            {
+              "texte": "Sur sa case de départ",
+              "pourquoi": "Il faudrait un nombre pair de tours pour revenir. Au 3e tour, il remonte de 2 cases."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Reading a movement loop",
+        "idee": "To read a loop, go round it time by time: everything between the brackets, then start again. Only after the last time round do you move on.",
+        "phrases": {
+          "consigne": "Run the loop in your head, time by time, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Draw the path on squared paper, one time round after another. Which way is the robot facing at the end of each time round?",
+          "exemple": "repeat 4 times [ move forward 3, turn right ]: a side of 3 squares, a quarter turn, and so on 4 times. The robot draws a square and comes back to its start.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "repeat 5 times [ move forward 4 ]\nHow many squares does the robot move in all?",
+            "nom": "20",
+            "explication": "Each time round is 4 squares. 5 times round: 4 + 4 + 4 + 4 + 4 = 20 squares.",
+            "pieges": [
+              {
+                "texte": "9",
+                "pourquoi": "You added 5 and 4. The loop goes round 5 times, 4 squares each time: 5 × 4."
+              },
+              {
+                "texte": "4",
+                "pourquoi": "That's one time round. The loop goes round 5 times."
+              }
+            ]
+          },
+          {
+            "texte": "repeat 2 times [ move forward 5, turn right, move forward 2, turn right ]\nWhat path does the robot draw?",
+            "nom": "A rectangle 5 squares by 2",
+            "explication": "One time round makes a side of 5, a quarter turn, a side of 2, a quarter turn. Two times round close the shape: a rectangle 5 by 2.",
+            "pieges": [
+              {
+                "texte": "A square with sides of 5 squares",
+                "pourquoi": "Two sides are 5 squares long, but the other two are only 2: it isn't a square."
+              },
+              {
+                "texte": "A straight line 14 squares long",
+                "pourquoi": "The turns change direction at each side: the path turns."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing right. Its program:\nrepeat 3 times [ move forward 2 ]\nturn left\nmove forward 1\nWhere does it end up?",
+            "nom": "6 squares right, 1 square up",
+            "explication": "The loop makes 3 × 2 = 6 squares to the right. Then it turns left: facing right, its left is towards the top. It goes up one square.",
+            "pieges": [
+              {
+                "texte": "6 squares right, 1 square down",
+                "pourquoi": "When it faces right, its left hand points to the top of the page, not the bottom."
+              },
+              {
+                "texte": "2 squares right, 1 square up",
+                "pourquoi": "The loop goes round 3 times: 2 + 2 + 2 = 6 squares."
+              }
+            ]
+          },
+          {
+            "texte": "repeat 4 times [ move forward 2, turn left ]\nWhere does the robot end up?",
+            "nom": "On its starting square, facing the same way as at the start",
+            "explication": "4 sides of 2 squares, with a quarter turn each time: it's a square. 4 quarter turns make a full turn.",
+            "pieges": [
+              {
+                "texte": "8 squares further on",
+                "pourquoi": "The robot turns at each side: it goes round a square instead of going straight."
+              },
+              {
+                "texte": "On its starting square, facing the other way",
+                "pourquoi": "4 quarter turns make a full turn: it faces the same way as at the start."
+              }
+            ]
+          },
+          {
+            "texte": "Which loop does the same thing?\nmove forward 1, turn right, move forward 1, turn right, move forward 1, turn right",
+            "nom": "repeat 3 times [ move forward 1, turn right ]",
+            "explication": "The piece “move forward 1, turn right” comes back 3 times.",
+            "pieges": [
+              {
+                "texte": "repeat 6 times [ move forward 1, turn right ]",
+                "pourquoi": "There are 6 blocks, but the piece has 2: it only comes back 3 times."
+              },
+              {
+                "texte": "repeat 3 times [ move forward 3 ]",
+                "pourquoi": "The turns have gone: this robot would go straight."
+              }
+            ]
+          },
+          {
+            "texte": "In Scratch, a sprite does:\nrepeat 10 times [ move 10 steps ]\nHow many steps does it move in all?",
+            "nom": "100",
+            "explication": "10 times round, 10 steps each: 10 × 10 = 100 steps.",
+            "pieges": [
+              {
+                "texte": "20",
+                "pourquoi": "You added 10 and 10. It's 10 times round, 10 steps each: 10 × 10."
+              },
+              {
+                "texte": "10",
+                "pourquoi": "That's one time round. The loop goes round 10 times."
+              }
+            ]
+          },
+          {
+            "texte": "A bus goes round a block of houses. Its program:\nrepeat 4 times [ move forward one street, turn right ]\nrepeat 4 times [ move forward one street, turn right ]\nHow many times does it go round?",
+            "nom": "2",
+            "explication": "A loop of 4 sides with a quarter turn makes one full trip round. There are two loops, one after the other: 2 trips round.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "8 is the number of streets. It takes 4 streets to go round once: 8 streets make 2 trips round."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "After the first loop, the program carries on: the second loop goes round again."
+              }
+            ]
+          },
+          {
+            "texte": "The robot is facing up. Its program:\nrepeat 3 times [ move forward 2, turn right, turn right ]\nWhere does it end up?",
+            "nom": "2 squares up, facing down",
+            "explication": "Two quarter turns make a half turn. Time 1: it goes up 2 and turns round. Time 2: it comes back down 2 and turns round. Time 3: it goes up 2 again and turns round.",
+            "pieges": [
+              {
+                "texte": "6 squares up",
+                "pourquoi": "Each time round, it makes a half turn: it goes up, then down, then up again."
+              },
+              {
+                "texte": "On its starting square",
+                "pourquoi": "It would need an even number of times round to come back. On the 3rd time, it goes up 2 squares."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "condition-si",
       "titre": "La condition : si… alors",
       "niveau": "CM1",
       "prerequis": [
-        "boucle-repeter"
+        "boucle-lire"
       ],
       "programme": {
         "source": "prog",
@@ -356,11 +1472,290 @@
       }
     },
     {
+      "id": "programme-calcul-blocs",
+      "titre": "Un programme de calcul en blocs",
+      "niveau": "CM2",
+      "prerequis": [
+        "condition-si"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Il exécute également des programmes de calcul ayant jusqu’à trois instructions […] Ces programmes peuvent aussi être codés avec un logiciel de programmation par bloc comme Scratch."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans Scratch, une variable est une boîte qui a un nom, ici « nombre ». « mettre nombre à 5 » range 5 dedans ; « ajouter 2 à nombre » augmente ce qu'elle contient. Les blocs s'exécutent de haut en bas.",
+      "phrases": {
+        "consigne": "Fais le calcul bloc par bloc, de haut en bas, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Écris ce que contient la boîte « nombre » après chaque bloc, avant de lire le suivant.",
+        "exemple": "mettre nombre à 4, puis ajouter 3 à nombre, puis dire nombre : la boîte contient 4, puis 7. Le lutin dit 7.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre nombre à 6\najouter 2 à nombre\ndire nombre\nQue dit le lutin ?",
+          "nom": "8",
+          "explication": "La boîte contient 6, puis 6 + 2 = 8. Le lutin dit 8.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "« ajouter 2 à nombre » est exécuté avant « dire nombre » : la boîte contient déjà 8."
+            },
+            {
+              "texte": "2",
+              "pourquoi": "« ajouter 2 » augmente ce qu'il y a dans la boîte ; il ne remplace pas 6 par 2."
+            }
+          ]
+        },
+        {
+          "texte": "Quel bloc Scratch fait « ajouter 2 au nombre choisi » ?",
+          "nom": "ajouter 2 à nombre",
+          "explication": "« ajouter 2 à nombre » augmente de 2 ce que contient la boîte « nombre ».",
+          "pieges": [
+            {
+              "texte": "mettre nombre à 2",
+              "pourquoi": "« mettre nombre à 2 » remplace ce qu'il y a dans la boîte par 2 : le nombre choisi est perdu."
+            },
+            {
+              "texte": "dire 2",
+              "pourquoi": "« dire » fait parler le lutin ; il ne change pas la boîte."
+            }
+          ]
+        },
+        {
+          "texte": "Programme de calcul : choisir 3, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?",
+          "nom": "17",
+          "explication": "3 + 2 = 5, puis 5 × 4 = 20, puis 20 − 3 = 17.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu as multiplié seulement le 2. Chaque étape part du résultat de l'étape d'avant : (3 + 2) × 4."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "Tu as oublié la dernière instruction : il faut encore retirer 3."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 4\nmettre nombre à nombre × 3\najouter 1 à nombre\ndire nombre\nQue dit le lutin ?",
+          "nom": "13",
+          "explication": "La boîte contient 4, puis 4 × 3 = 12, puis 12 + 1 = 13.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "Tu as ajouté avant de multiplier. Les blocs s'exécutent dans l'ordre : d'abord × 3, ensuite + 1."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "Il reste un bloc après la multiplication : « ajouter 1 à nombre »."
+            }
+          ]
+        },
+        {
+          "texte": "Programme de calcul : choisir un nombre, ajouter 2, multiplier le résultat par 4. Quels blocs viennent après « mettre nombre à … » ?",
+          "nom": "ajouter 2 à nombre, puis mettre nombre à nombre × 4",
+          "explication": "On traduit chaque étape dans l'ordre : d'abord ajouter 2, ensuite multiplier ce résultat par 4.",
+          "pieges": [
+            {
+              "texte": "mettre nombre à nombre × 4, puis ajouter 2 à nombre",
+              "pourquoi": "L'ordre est inversé : le programme dit d'ajouter 2 d'abord, puis de multiplier."
+            },
+            {
+              "texte": "mettre nombre à 2, puis mettre nombre à 4",
+              "pourquoi": "« mettre » remplace ce qu'il y a dans la boîte : le nombre choisi serait perdu."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 5\najouter 3 à nombre\najouter 3 à nombre\ndire nombre\nQue dit le lutin ?",
+          "nom": "11",
+          "explication": "La boîte contient 5, puis 8, puis 11. Deux blocs pareils sont exécutés tous les deux.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Les deux blocs « ajouter 3 » sont exécutés l'un après l'autre : 5, 8, puis 11."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "3 + 3 = 6, mais la boîte contenait déjà 5 : 5 + 3 + 3 = 11."
+            }
+          ]
+        },
+        {
+          "texte": "Programme de calcul : choisir 0, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?",
+          "nom": "5",
+          "explication": "0 + 2 = 2, puis 2 × 4 = 8, puis 8 − 3 = 5.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu as oublié la dernière instruction : il faut encore retirer 3."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "On part de 0, mais on ajoute 2 : le résultat n'est plus 0 dès la première étape."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 8\nmettre nombre à nombre × 2\nmettre nombre à nombre × 2\ndire nombre\nQue dit le lutin ?",
+          "nom": "32",
+          "explication": "La boîte contient 8, puis 8 × 2 = 16, puis 16 × 2 = 32.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "Ça, c'est après un seul bloc. Le deuxième « × 2 » part de 16."
+            },
+            {
+              "texte": "12",
+              "pourquoi": "Tu as ajouté 2 deux fois. Le bloc multiplie par 2 : 8 × 2, puis 16 × 2."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A calculation program in blocks",
+        "idee": "In Scratch, a variable is a box with a name, here “number”. “set number to 5” puts 5 in it; “change number by 2” increases what it holds. The blocks run from top to bottom.",
+        "phrases": {
+          "consigne": "Do the calculation block by block, from top to bottom, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Write down what the box “number” holds after each block, before you read the next one.",
+          "exemple": "set number to 4, then change number by 3, then say number: the box holds 4, then 7. The sprite says 7.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set number to 6\nchange number by 2\nsay number\nWhat does the sprite say?",
+            "nom": "8",
+            "explication": "The box holds 6, then 6 + 2 = 8. The sprite says 8.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "“change number by 2” runs before “say number”: the box already holds 8."
+              },
+              {
+                "texte": "2",
+                "pourquoi": "“change by 2” increases what is in the box; it doesn't replace 6 with 2."
+              }
+            ]
+          },
+          {
+            "texte": "Which Scratch block does “add 2 to the chosen number”?",
+            "nom": "change number by 2",
+            "explication": "“change number by 2” increases what the box “number” holds by 2.",
+            "pieges": [
+              {
+                "texte": "set number to 2",
+                "pourquoi": "“set number to 2” replaces what is in the box with 2: the chosen number is lost."
+              },
+              {
+                "texte": "say 2",
+                "pourquoi": "“say” makes the sprite speak; it doesn't change the box."
+              }
+            ]
+          },
+          {
+            "texte": "Calculation program: choose 3, add 2, multiply the result by 4, subtract 3. Which number do you get?",
+            "nom": "17",
+            "explication": "3 + 2 = 5, then 5 × 4 = 20, then 20 − 3 = 17.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You only multiplied the 2. Each step starts from the result of the step before: (3 + 2) × 4."
+              },
+              {
+                "texte": "20",
+                "pourquoi": "You forgot the last instruction: you still have to subtract 3."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 4\nset number to number × 3\nchange number by 1\nsay number\nWhat does the sprite say?",
+            "nom": "13",
+            "explication": "The box holds 4, then 4 × 3 = 12, then 12 + 1 = 13.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "You added before multiplying. The blocks run in order: first × 3, then + 1."
+              },
+              {
+                "texte": "12",
+                "pourquoi": "There is one more block after the multiplication: “change number by 1”."
+              }
+            ]
+          },
+          {
+            "texte": "Calculation program: choose a number, add 2, multiply the result by 4. Which blocks come after “set number to …”?",
+            "nom": "change number by 2, then set number to number × 4",
+            "explication": "We translate each step in order: first add 2, then multiply that result by 4.",
+            "pieges": [
+              {
+                "texte": "set number to number × 4, then change number by 2",
+                "pourquoi": "The order is reversed: the program says to add 2 first, then multiply."
+              },
+              {
+                "texte": "set number to 2, then set number to 4",
+                "pourquoi": "“set” replaces what is in the box: the chosen number would be lost."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 5\nchange number by 3\nchange number by 3\nsay number\nWhat does the sprite say?",
+            "nom": "11",
+            "explication": "The box holds 5, then 8, then 11. Two identical blocks are both run.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "Both “change by 3” blocks run, one after the other: 5, 8, then 11."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "3 + 3 = 6, but the box already held 5: 5 + 3 + 3 = 11."
+              }
+            ]
+          },
+          {
+            "texte": "Calculation program: choose 0, add 2, multiply the result by 4, subtract 3. Which number do you get?",
+            "nom": "5",
+            "explication": "0 + 2 = 2, then 2 × 4 = 8, then 8 − 3 = 5.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You forgot the last instruction: you still have to subtract 3."
+              },
+              {
+                "texte": "0",
+                "pourquoi": "We start from 0, but we add 2: the result is no longer 0 after the first step."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 8\nset number to number × 2\nset number to number × 2\nsay number\nWhat does the sprite say?",
+            "nom": "32",
+            "explication": "The box holds 8, then 8 × 2 = 16, then 16 × 2 = 32.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "That's after just one block. The second “× 2” starts from 16."
+              },
+              {
+                "texte": "12",
+                "pourquoi": "You added 2 twice. The block multiplies by 2: 8 × 2, then 16 × 2."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "compteur",
       "titre": "Le compteur : une variable",
       "niveau": "CM2",
       "prerequis": [
-        "condition-si"
+        "programme-calcul-blocs"
       ],
       "programme": {
         "source": "prog",
@@ -390,6 +1785,285 @@
           "demonstration": "Look at this program: it counts the gems, and works on all three paths.",
           "bravo": "Well done! Your program works everywhere, because your robot knows how to count."
         }
+      }
+    },
+    {
+      "id": "suite-boucle",
+      "titre": "Une boucle qui fabrique une suite",
+      "niveau": "CM2",
+      "prerequis": [
+        "compteur"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "L’élève continue de travailler sur des suites évolutives de nombres ou de motifs qui s’appuient sur des algorithmes de plus en plus complexes […] et il peut utiliser des logiciels de programmation par blocs ou un tableur pour déterminer des termes éloignés."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une suite se fabrique avec une règle qu'on refait encore et encore : c'est une boucle. Le bloc dans « répéter » est la règle ; la variable garde le dernier nombre ; le nombre de tours dit jusqu'où on va.",
+      "phrases": {
+        "consigne": "Trouve la règle, ou fais tourner la boucle tour par tour, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Écris la valeur de la variable à la fin de chaque tour, comme une suite : départ, tour 1, tour 2…",
+        "exemple": "Suite 2 ; 5 ; 8 ; 11… : la règle est « ajouter 3 ». En blocs : mettre nombre à 2, puis répéter 3 fois [ ajouter 3 à nombre ]. Après les 3 tours, nombre vaut 11.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est : {bonne}."
+      },
+      "items": [
+        {
+          "texte": "mettre nombre à 0\nrépéter 4 fois [ ajouter 5 à nombre ]\ndire nombre\nQue dit le lutin ?",
+          "nom": "20",
+          "explication": "Départ : 0. Tour 1 : 5. Tour 2 : 10. Tour 3 : 15. Tour 4 : 20.",
+          "pieges": [
+            {
+              "texte": "5",
+              "pourquoi": "Le bloc dans la boucle est exécuté 4 fois, pas une seule."
+            },
+            {
+              "texte": "9",
+              "pourquoi": "Tu as ajouté 4 et 5. La boucle ajoute 5, quatre fois : 5 + 5 + 5 + 5."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 7 ; 15 ; 31 ; 63 ; 127… Quelle règle fait passer d'un nombre au suivant ?",
+          "nom": "multiplier par 2, puis ajouter 1",
+          "explication": "7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63, 63 × 2 + 1 = 127.",
+          "pieges": [
+            {
+              "texte": "ajouter 8",
+              "pourquoi": "7 + 8 = 15, mais 15 + 8 = 23, pas 31. Une règle doit marcher pour tous les nombres."
+            },
+            {
+              "texte": "multiplier par 2",
+              "pourquoi": "7 × 2 = 14, pas 15 : il manque une étape."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 7\nrépéter 2 fois [ mettre nombre à nombre × 2 + 1 ]\ndire nombre\nQue dit le lutin ?",
+          "nom": "31",
+          "explication": "Départ : 7. Tour 1 : 7 × 2 + 1 = 15. Tour 2 : 15 × 2 + 1 = 31.",
+          "pieges": [
+            {
+              "texte": "15",
+              "pourquoi": "Ça, c'est après un seul tour. La boucle en fait 2."
+            },
+            {
+              "texte": "63",
+              "pourquoi": "Ça, c'est après 3 tours. La boucle n'en fait que 2."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 3 ; 7 ; 11 ; 15… Quel bloc mettre dans la boucle pour passer d'un nombre au suivant ?",
+          "nom": "ajouter 4 à nombre",
+          "explication": "De 3 à 7, de 7 à 11, de 11 à 15 : on ajoute 4 chaque fois.",
+          "pieges": [
+            {
+              "texte": "ajouter 3 à nombre",
+              "pourquoi": "3 est le premier nombre de la suite, pas l'écart. De 3 à 7, on ajoute 4."
+            },
+            {
+              "texte": "mettre nombre à 4",
+              "pourquoi": "« mettre » remplace le nombre : la boîte vaudrait toujours 4, la suite n'avancerait pas."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 3\nrépéter 9 fois [ ajouter 4 à nombre ]\ndire nombre\nQue dit le lutin ?",
+          "nom": "39",
+          "explication": "On part de 3 et on ajoute 4, neuf fois : 3 + 9 × 4 = 3 + 36 = 39. C'est le dixième nombre de la suite 3 ; 7 ; 11…",
+          "pieges": [
+            {
+              "texte": "36",
+              "pourquoi": "9 × 4 = 36, mais la boîte valait déjà 3 au départ : 3 + 36."
+            },
+            {
+              "texte": "40",
+              "pourquoi": "Tu as fait 10 × 4. La boucle fait 9 tours, et on part de 3."
+            }
+          ]
+        },
+        {
+          "texte": "On veut le sixième nombre de la suite 7 ; 15 ; 31… en partant de 7. Combien de tours de boucle faut-il ?",
+          "nom": "5",
+          "explication": "7 est déjà le premier nombre. Chaque tour donne le suivant : 5 tours mènent du 1er au 6e.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "On part de 7, qui est déjà le premier nombre : il ne faut que 5 tours pour aller au sixième."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "7 est le premier nombre de la suite, pas le nombre de tours."
+            }
+          ]
+        },
+        {
+          "texte": "mettre nombre à 1\nrépéter 3 fois [ dire nombre, ajouter 3 à nombre ]\nQue dit le lutin, dans l'ordre ?",
+          "nom": "1, puis 4, puis 7",
+          "explication": "Dans chaque tour, le lutin parle d'abord, puis la boîte augmente de 3 : il dit 1, puis 4, puis 7.",
+          "pieges": [
+            {
+              "texte": "4, puis 7, puis 10",
+              "pourquoi": "Dans la boucle, « dire » vient avant « ajouter » : au premier tour, la boîte vaut encore 1."
+            },
+            {
+              "texte": "1, puis 2, puis 3",
+              "pourquoi": "« ajouter 3 » ajoute 3, pas 1 : 1, 4, 7."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 1 ; 2 ; 4 ; 7 ; 11 ; 16… Quel est le nombre suivant ?",
+          "nom": "22",
+          "explication": "On ajoute 1, puis 2, puis 3, puis 4, puis 5. L'écart grandit de 1 à chaque fois : 16 + 6 = 22.",
+          "pieges": [
+            {
+              "texte": "21",
+              "pourquoi": "De 11 à 16, on a ajouté 5. L'écart grandit de 1 à chaque fois : on ajoute 6 maintenant."
+            },
+            {
+              "texte": "32",
+              "pourquoi": "On ne double pas : 4 × 2 = 8, pas 7. On ajoute 1, 2, 3, 4, 5, puis 6."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A loop that builds a sequence",
+        "idee": "A sequence is built with a rule you do again and again: that's a loop. The block inside “repeat” is the rule; the variable keeps the last number; the number of times round says how far you go.",
+        "phrases": {
+          "consigne": "Find the rule, or run the loop time by time, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Write down the value of the variable at the end of each time round, like a sequence: start, time 1, time 2…",
+          "exemple": "Sequence 2; 5; 8; 11…: the rule is “add 3”. In blocks: set number to 2, then repeat 3 times [ change number by 3 ]. After the 3 times round, number is 11.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "set number to 0\nrepeat 4 times [ change number by 5 ]\nsay number\nWhat does the sprite say?",
+            "nom": "20",
+            "explication": "Start: 0. Time 1: 5. Time 2: 10. Time 3: 15. Time 4: 20.",
+            "pieges": [
+              {
+                "texte": "5",
+                "pourquoi": "The block inside the loop runs 4 times, not just once."
+              },
+              {
+                "texte": "9",
+                "pourquoi": "You added 4 and 5. The loop adds 5, four times: 5 + 5 + 5 + 5."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 7; 15; 31; 63; 127… Which rule takes you from one number to the next?",
+            "nom": "multiply by 2, then add 1",
+            "explication": "7 × 2 + 1 = 15, 15 × 2 + 1 = 31, 31 × 2 + 1 = 63, 63 × 2 + 1 = 127.",
+            "pieges": [
+              {
+                "texte": "add 8",
+                "pourquoi": "7 + 8 = 15, but 15 + 8 = 23, not 31. A rule must work for every number."
+              },
+              {
+                "texte": "multiply by 2",
+                "pourquoi": "7 × 2 = 14, not 15: a step is missing."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 7\nrepeat 2 times [ set number to number × 2 + 1 ]\nsay number\nWhat does the sprite say?",
+            "nom": "31",
+            "explication": "Start: 7. Time 1: 7 × 2 + 1 = 15. Time 2: 15 × 2 + 1 = 31.",
+            "pieges": [
+              {
+                "texte": "15",
+                "pourquoi": "That's after one time round. The loop goes round 2 times."
+              },
+              {
+                "texte": "63",
+                "pourquoi": "That's after 3 times round. The loop only goes round 2 times."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 3; 7; 11; 15… Which block goes inside the loop to get from one number to the next?",
+            "nom": "change number by 4",
+            "explication": "From 3 to 7, from 7 to 11, from 11 to 15: we add 4 each time.",
+            "pieges": [
+              {
+                "texte": "change number by 3",
+                "pourquoi": "3 is the first number of the sequence, not the gap. From 3 to 7, we add 4."
+              },
+              {
+                "texte": "set number to 4",
+                "pourquoi": "“set” replaces the number: the box would always hold 4, and the sequence wouldn't move on."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 3\nrepeat 9 times [ change number by 4 ]\nsay number\nWhat does the sprite say?",
+            "nom": "39",
+            "explication": "We start from 3 and add 4, nine times: 3 + 9 × 4 = 3 + 36 = 39. It's the tenth number of the sequence 3; 7; 11…",
+            "pieges": [
+              {
+                "texte": "36",
+                "pourquoi": "9 × 4 = 36, but the box already held 3 at the start: 3 + 36."
+              },
+              {
+                "texte": "40",
+                "pourquoi": "You did 10 × 4. The loop goes round 9 times, and we start from 3."
+              }
+            ]
+          },
+          {
+            "texte": "We want the sixth number of the sequence 7; 15; 31… starting from 7. How many times round the loop do we need?",
+            "nom": "5",
+            "explication": "7 is already the first number. Each time round gives the next one: 5 times round take you from the 1st to the 6th.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "We start from 7, which is already the first number: only 5 times round are needed to reach the sixth."
+              },
+              {
+                "texte": "7",
+                "pourquoi": "7 is the first number of the sequence, not the number of times round."
+              }
+            ]
+          },
+          {
+            "texte": "set number to 1\nrepeat 3 times [ say number, change number by 3 ]\nWhat does the sprite say, in order?",
+            "nom": "1, then 4, then 7",
+            "explication": "Each time round, the sprite speaks first, then the box goes up by 3: it says 1, then 4, then 7.",
+            "pieges": [
+              {
+                "texte": "4, then 7, then 10",
+                "pourquoi": "Inside the loop, “say” comes before “change”: the first time round, the box still holds 1."
+              },
+              {
+                "texte": "1, then 2, then 3",
+                "pourquoi": "“change by 3” adds 3, not 1: 1, 4, 7."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 1; 2; 4; 7; 11; 16… What is the next number?",
+            "nom": "22",
+            "explication": "We add 1, then 2, then 3, then 4, then 5. The gap grows by 1 each time: 16 + 6 = 22.",
+            "pieges": [
+              {
+                "texte": "21",
+                "pourquoi": "From 11 to 16, we added 5. The gap grows by 1 each time: now we add 6."
+              },
+              {
+                "texte": "32",
+                "pourquoi": "We are not doubling: 4 × 2 = 8, not 7. We add 1, 2, 3, 4, 5, then 6."
+              }
+            ]
+          }
+        ]
       }
     },
     {

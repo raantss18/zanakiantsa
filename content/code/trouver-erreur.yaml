@@ -1,0 +1,129 @@
+id: trouver-erreur
+titre: "Trouver l'erreur d'un programme"
+niveau: CE1
+prerequis: [robot-long-trajet]
+# Programme de mathématiques du cycle 2, CE1, « Le repérage dans l'espace », lu le 2026-11-11 : « Les élèves comprennent,
+# utilisent et produisent des instructions correspondant à des déplacements » ; instructions « avancer de », « pivoter d'un
+# quart de tour à droite », « pivoter d'un quart de tour à gauche ». Ici l'enfant lit un programme écrit sur un plan
+# (haut, bas, gauche, droite de la feuille), le suit et trouve l'instruction fausse. Chaque réponse a été vérifiée en
+# simulant le robot (orientation + quart de tour), le 2026-11-11.
+programme: { source: cycle2, texte: "Pour ces déplacements, il dispose des instructions « avancer de », « pivoter d’un quart de tour à droite », « pivoter d’un quart de tour à gauche »." }
+activite: quiz
+parametres: {}
+idee: "Pour trouver une erreur, on suit le programme pas à pas, à la place du robot. Pivoter à droite, c'est un quart de tour du côté de sa main droite à lui, pas forcément de la tienne."
+phrases:
+  consigne: "Suis le programme dans ta tête, une instruction après l'autre. Puis touche la réponse."
+  question: "{texte}"
+  indice: "Mets-toi à la place du robot : tourne la feuille pour regarder comme lui, puis fais chaque instruction."
+  exemple: "Le robot regarde vers la droite et doit monter. Il pivote à gauche : un quart de tour du côté de sa main gauche, il regarde maintenant vers le haut."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Le robot regarde vers la droite. Il doit aller 3 cases à droite, puis 2 cases vers le haut. Son programme :\navancer de 3\npivoter à droite\navancer de 2\nOù est l'erreur ?"
+    nom: "Il fallait pivoter à gauche"
+    explication: "Le robot regarde vers la droite. S'il pivote à droite, il regarde vers le bas. Pour monter, il doit pivoter à gauche."
+    pieges:
+      - { texte: "Il fallait avancer de 2 au début", pourquoi: "Le début est juste : il doit bien faire 3 cases à droite." }
+      - { texte: "Il manque un virage", pourquoi: "Un seul virage suffit pour passer de la droite au haut. C'est le sens du virage qui est faux." }
+  - texte: "Le robot regarde vers le haut. Il doit aller 4 cases vers le haut. Son programme :\navancer de 3\nOù est l'erreur ?"
+    nom: "Il fallait avancer de 4"
+    explication: "Le robot regarde déjà vers le haut, il n'a pas besoin de pivoter. Mais il doit faire 4 cases, pas 3."
+    pieges:
+      - { texte: "Il fallait pivoter d'abord", pourquoi: "Il regarde déjà vers le haut : il peut avancer tout de suite." }
+      - { texte: "Il fallait reculer de 4", pourquoi: "Reculer l'emmènerait vers le bas. Il regarde vers le haut : il doit avancer." }
+  - texte: "Le robot regarde vers le haut. Il doit aller 2 cases vers la droite. Son programme :\navancer de 2\nOù est l'erreur ?"
+    nom: "Il manque « pivoter à droite » au début"
+    explication: "Sans virage, le robot monte de 2 cases. Il doit d'abord pivoter à droite pour regarder vers la droite, puis avancer de 2."
+    pieges:
+      - { texte: "Il manque « pivoter à gauche » au début", pourquoi: "En pivotant à gauche, il regarderait vers la gauche. La droite est du côté de sa main droite." }
+      - { texte: "Il fallait avancer de 3", pourquoi: "Le nombre de cases est juste : 2. C'est la direction qui manque." }
+  - texte: "Le robot regarde vers la droite. Il doit aller 2 cases à droite, puis 3 cases vers le bas. Son programme :\navancer de 2\npivoter à droite\navancer de 2\nOù est l'erreur ?"
+    nom: "À la fin, il fallait avancer de 3"
+    explication: "Avancer de 2 : juste. Pivoter à droite : quand on regarde vers la droite, la main droite est vers le bas, juste. Mais il faut descendre de 3 cases, pas 2."
+    pieges:
+      - { texte: "Il fallait pivoter à gauche", pourquoi: "Quand le robot regarde vers la droite, sa main droite est vers le bas : pivoter à droite le fait bien descendre." }
+      - { texte: "Au début, il fallait avancer de 3", pourquoi: "Le début est juste : 2 cases à droite. C'est la descente qui est trop courte." }
+  - texte: "Le robot regarde vers le bas. Il doit aller 1 case vers le bas, puis 2 cases vers la gauche. Son programme :\navancer de 1\npivoter à gauche\navancer de 2\nOù est l'erreur ?"
+    nom: "Il fallait pivoter à droite"
+    explication: "Quand le robot regarde vers le bas, sa main droite est du côté gauche de la feuille. Pour aller vers la gauche de la feuille, il pivote à droite."
+    pieges:
+      - { texte: "Il fallait avancer de 1 à la fin", pourquoi: "Il doit bien faire 2 cases vers la gauche. C'est le sens du virage qui est faux." }
+      - { texte: "Il n'y a pas d'erreur", pourquoi: "Tourne la feuille pour regarder vers le bas comme lui : pivoter à gauche l'envoie vers la droite de la feuille." }
+  - texte: "Le robot regarde vers le haut. Son programme :\navancer de 2\npivoter à droite\navancer de 3\nOù arrive-t-il ?"
+    nom: "2 cases plus haut et 3 cases à droite"
+    explication: "Il monte de 2 cases. Puis il pivote à droite : il regarde vers la droite et avance de 3 cases."
+    pieges:
+      - { texte: "2 cases plus haut et 3 cases à gauche", pourquoi: "Quand il regarde vers le haut, sa main droite est à droite de la feuille : il part vers la droite." }
+      - { texte: "5 cases plus haut", pourquoi: "Le virage change la direction : les 3 dernières cases vont vers la droite, pas vers le haut." }
+  - texte: "Le robot regarde vers la droite. Son programme :\npivoter à gauche\npivoter à gauche\navancer de 2\nOù arrive-t-il ?"
+    nom: "2 cases à gauche du départ"
+    explication: "Un quart de tour à gauche : il regarde vers le haut. Encore un : il regarde vers la gauche. Puis il avance de 2."
+    pieges:
+      - { texte: "2 cases au-dessus du départ", pourquoi: "Ça, c'est après un seul virage. Le programme en a deux : il fait un demi-tour." }
+      - { texte: "2 cases à droite du départ", pourquoi: "Les deux virages comptent : après un demi-tour, il ne regarde plus vers la droite." }
+  - texte: "Le robot regarde vers la gauche. Il doit aller 3 cases vers le haut. Son programme :\npivoter à gauche\navancer de 3\nOù est l'erreur ?"
+    nom: "Il fallait pivoter à droite"
+    explication: "Quand le robot regarde vers la gauche, sa main droite est vers le haut de la feuille. Pivoter à gauche le ferait descendre."
+    pieges:
+      - { texte: "Il ne fallait pas pivoter", pourquoi: "Il regarde vers la gauche : sans virage, il irait vers la gauche, pas vers le haut." }
+      - { texte: "Il fallait avancer de 4", pourquoi: "Il doit bien faire 3 cases. C'est le sens du virage qui est faux." }
+
+en:
+  titre: "Finding the mistake in a program"
+  idee: "To find a mistake, follow the program step by step, as if you were the robot. Turning right is a quarter turn towards its right hand, not always yours."
+  phrases:
+    consigne: "Follow the program in your head, one instruction after the other. Then touch the answer."
+    question: "{texte}"
+    indice: "Put yourself in the robot's place: turn the page to face the same way, then do each instruction."
+    exemple: "The robot is facing right and must go up. It turns left: a quarter turn towards its left hand, so now it is facing up."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "The robot is facing right. It must go 3 squares right, then 2 squares up. Its program:\nmove forward 3\nturn right\nmove forward 2\nWhere is the mistake?"
+      nom: "It should have turned left"
+      explication: "The robot is facing right. If it turns right, it faces down. To go up, it must turn left."
+      pieges:
+        - { texte: "It should have moved forward 2 at the start", pourquoi: "The start is right: it does have to go 3 squares right." }
+        - { texte: "A turn is missing", pourquoi: "One turn is enough to go from right to up. It's the direction of the turn that is wrong." }
+    - texte: "The robot is facing up. It must go 4 squares up. Its program:\nmove forward 3\nWhere is the mistake?"
+      nom: "It should have moved forward 4"
+      explication: "The robot is already facing up, so it doesn't need to turn. But it must move 4 squares, not 3."
+      pieges:
+        - { texte: "It should have turned first", pourquoi: "It is already facing up: it can move forward straight away." }
+        - { texte: "It should have moved back 4", pourquoi: "Moving back would take it down. It is facing up: it must move forward." }
+    - texte: "The robot is facing up. It must go 2 squares to the right. Its program:\nmove forward 2\nWhere is the mistake?"
+      nom: "“turn right” is missing at the start"
+      explication: "Without a turn, the robot goes up 2 squares. It must first turn right to face right, then move forward 2."
+      pieges:
+        - { texte: "“turn left” is missing at the start", pourquoi: "Turning left, it would face left. Right is on the side of its right hand." }
+        - { texte: "It should have moved forward 3", pourquoi: "The number of squares is right: 2. It's the direction that is missing." }
+    - texte: "The robot is facing right. It must go 2 squares right, then 3 squares down. Its program:\nmove forward 2\nturn right\nmove forward 2\nWhere is the mistake?"
+      nom: "At the end, it should have moved forward 3"
+      explication: "Move forward 2: right. Turn right: when you face right, your right hand points down, so that's right. But it must go down 3 squares, not 2."
+      pieges:
+        - { texte: "It should have turned left", pourquoi: "When the robot faces right, its right hand points down: turning right does take it down." }
+        - { texte: "At the start, it should have moved forward 3", pourquoi: "The start is right: 2 squares to the right. It's the way down that is too short." }
+    - texte: "The robot is facing down. It must go 1 square down, then 2 squares to the left. Its program:\nmove forward 1\nturn left\nmove forward 2\nWhere is the mistake?"
+      nom: "It should have turned right"
+      explication: "When the robot faces down, its right hand is on the left side of the page. To go to the left of the page, it turns right."
+      pieges:
+        - { texte: "It should have moved forward 1 at the end", pourquoi: "It does have to go 2 squares to the left. It's the direction of the turn that is wrong." }
+        - { texte: "There is no mistake", pourquoi: "Turn the page to face down like the robot: turning left sends it to the right of the page." }
+    - texte: "The robot is facing up. Its program:\nmove forward 2\nturn right\nmove forward 3\nWhere does it end up?"
+      nom: "2 squares up and 3 squares to the right"
+      explication: "It goes up 2 squares. Then it turns right: it faces right and moves forward 3 squares."
+      pieges:
+        - { texte: "2 squares up and 3 squares to the left", pourquoi: "When it faces up, its right hand is on the right of the page: it heads to the right." }
+        - { texte: "5 squares up", pourquoi: "The turn changes direction: the last 3 squares go to the right, not up." }
+    - texte: "The robot is facing right. Its program:\nturn left\nturn left\nmove forward 2\nWhere does it end up?"
+      nom: "2 squares to the left of the start"
+      explication: "One quarter turn to the left: it faces up. One more: it faces left. Then it moves forward 2."
+      pieges:
+        - { texte: "2 squares above the start", pourquoi: "That's after just one turn. The program has two: it makes a half turn." }
+        - { texte: "2 squares to the right of the start", pourquoi: "Both turns count: after a half turn, it is no longer facing right." }
+    - texte: "The robot is facing left. It must go 3 squares up. Its program:\nturn left\nmove forward 3\nWhere is the mistake?"
+      nom: "It should have turned right"
+      explication: "When the robot faces left, its right hand points to the top of the page. Turning left would take it down."
+      pieges:
+        - { texte: "It shouldn't have turned", pourquoi: "It is facing left: without a turn, it would go left, not up." }
+        - { texte: "It should have moved forward 4", pourquoi: "It does have to move 3 squares. It's the direction of the turn that is wrong." }

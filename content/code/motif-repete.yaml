@@ -1,0 +1,130 @@
+id: motif-repete
+titre: "Ce qui se répète dans un programme"
+niveau: CE2
+prerequis: [trouver-erreur]
+# Lu le 2026-11-11. Le programme de mathématiques du cycle 2 (annexe 4) n'a pas de partie « Le repérage dans l'espace » au
+# CE2 (sommaire : CP et CE1 seulement). Le programme du cycle 3, « Initiation à la pensée informatique », résume ce qui
+# est acquis au cycle 2 (texte cité ci-dessous). Le même programme du cycle 2, CE1, fait travailler les suites
+# répétitives : « Dans la suite répétitive « ABGFABGFAB… », quelle est la dix-septième lettre ? ». Cette leçon relie les
+# deux : un programme de robot peut contenir un morceau qui revient, qu'on écrit une fois avec « répéter » (bloc Scratch
+# « répéter %1 fois », scratch-l10n editor/blocks/fr.json). Elle prépare la boucle (boucle-repeter) : choix de l'app.
+programme: { source: cycle3, texte: "Dès le CP, l’élève a appris à réaliser un déplacement dans l’espace à partir d’un codage ou à coder de tels déplacements, notamment pour programmer un robot se déplaçant sur un quadrillage." }
+activite: quiz
+parametres: {}
+idee: "Dans un long programme, cherche le morceau qui revient. On peut l'écrire une seule fois dans « répéter » : « répéter 3 fois [ avancer, pivoter à droite ] » fait ce morceau 3 fois de suite."
+phrases:
+  consigne: "Lis le programme et cherche ce qui revient. Puis touche la réponse."
+  question: "{texte}"
+  indice: "Entoure le premier morceau avec ton doigt, puis compte combien de fois il revient, à l'identique."
+  exemple: "avancer, avancer, pivoter à gauche, avancer, avancer, pivoter à gauche : le morceau « avancer, avancer, pivoter à gauche » revient 2 fois. On écrit : répéter 2 fois [ avancer, avancer, pivoter à gauche ]."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Quel morceau se répète, et combien de fois ?\navancer, pivoter à droite, avancer, pivoter à droite, avancer, pivoter à droite"
+    nom: "avancer, pivoter à droite : 3 fois"
+    explication: "Le morceau « avancer, pivoter à droite » a 2 blocs. Il revient 3 fois : 3 × 2 = 6 blocs en tout."
+    pieges:
+      - { texte: "avancer, pivoter à droite : 6 fois", pourquoi: "6, c'est le nombre de blocs. Le morceau a 2 blocs : il revient 3 fois." }
+      - { texte: "avancer : 6 fois", pourquoi: "Il n'y a que 3 « avancer ». Et les virages font partie du morceau qui revient." }
+  - texte: "Quel morceau se répète, et combien de fois ?\navancer, avancer, avancer, avancer, avancer"
+    nom: "avancer : 5 fois"
+    explication: "Un seul bloc revient, « avancer », et on le compte 5 fois."
+    pieges:
+      - { texte: "avancer : 4 fois", pourquoi: "Compte encore, en touchant chaque bloc : il y en a 5." }
+      - { texte: "avancer, avancer : 2 fois", pourquoi: "2 fois « avancer, avancer », ça fait 4 blocs. Le programme en a 5." }
+  - texte: "répéter 4 fois [ avancer, avancer ]\nCombien de fois le robot avance-t-il ?"
+    nom: "8"
+    explication: "À chaque tour, le robot avance 2 fois. 4 tours : 2 + 2 + 2 + 2 = 8."
+    pieges:
+      - { texte: "4", pourquoi: "Chaque tour contient 2 « avancer », pas un seul." }
+      - { texte: "6", pourquoi: "Tu as ajouté 4 et 2. Il faut 4 tours de 2 : 2 + 2 + 2 + 2." }
+  - texte: "Quel programme fait la même chose ?\navancer, avancer, pivoter à droite, avancer, avancer, pivoter à droite"
+    nom: "répéter 2 fois [ avancer, avancer, pivoter à droite ]"
+    explication: "Le morceau « avancer, avancer, pivoter à droite » revient 2 fois. On l'écrit une fois, dans « répéter 2 fois »."
+    pieges:
+      - { texte: "répéter 2 fois [ avancer, pivoter à droite ]", pourquoi: "Il manque un « avancer » : chaque morceau en a deux avant le virage." }
+      - { texte: "répéter 3 fois [ avancer, avancer, pivoter à droite ]", pourquoi: "Le morceau ne revient que 2 fois : 3 tours en feraient un de trop." }
+  - texte: "Dans la suite qui se répète A B C A B C A B C…, quelle est la dixième lettre ?"
+    nom: "A"
+    explication: "Le morceau A B C revient sans fin. 3 morceaux font 9 lettres : la dixième commence un nouveau morceau, c'est A."
+    pieges:
+      - { texte: "C", pourquoi: "C est la neuvième lettre, la fin du troisième morceau. La dixième est juste après." }
+      - { texte: "B", pourquoi: "B est la huitième ou la onzième lettre. Après 3 morceaux de 3 lettres, on recommence par A." }
+  - texte: "répéter 3 fois [ avancer, pivoter à droite ]\navancer\nCombien de fois le robot avance-t-il ?"
+    nom: "4"
+    explication: "La boucle fait avancer 3 fois. Puis le dernier « avancer », après la boucle, une fois de plus : 3 + 1 = 4."
+    pieges:
+      - { texte: "3", pourquoi: "Après la boucle, le programme continue : il reste un « avancer »." }
+      - { texte: "6", pourquoi: "Chaque tour n'a qu'un « avancer » ; l'autre bloc est un virage." }
+  - texte: "Le robot doit avancer 12 fois. Son programme est « répéter … fois [ avancer, avancer, avancer ] ». Quel nombre faut-il mettre ?"
+    nom: "4"
+    explication: "Chaque tour fait avancer 3 fois. 3 + 3 + 3 + 3 = 12 : il faut 4 tours."
+    pieges:
+      - { texte: "12", pourquoi: "Avec 12 tours de 3 « avancer », le robot avancerait 36 fois." }
+      - { texte: "3", pourquoi: "3, c'est le nombre de « avancer » dans un tour. 3 tours ne font que 9." }
+  - texte: "Pourquoi écrire « répéter 5 fois [ avancer ] » au lieu de 5 blocs « avancer » ?"
+    nom: "Le programme est plus court"
+    explication: "Le robot fait exactement les mêmes pas. Mais on écrit le morceau une seule fois : le programme tient en moins de blocs."
+    pieges:
+      - { texte: "Le robot va plus vite", pourquoi: "Le robot fait les mêmes pas, un par un : la boucle ne le fait pas aller plus vite." }
+      - { texte: "Le robot va plus loin", pourquoi: "Les deux programmes font le même chemin : 5 cases." }
+
+en:
+  titre: "What repeats in a program"
+  idee: "In a long program, look for the piece that comes back. You can write it just once inside “repeat”: “repeat 3 times [ move forward, turn right ]” does that piece 3 times in a row."
+  phrases:
+    consigne: "Read the program and look for what comes back. Then touch the answer."
+    question: "{texte}"
+    indice: "Circle the first piece with your finger, then count how many times it comes back, exactly the same."
+    exemple: "move forward, move forward, turn left, move forward, move forward, turn left: the piece “move forward, move forward, turn left” comes back 2 times. We write: repeat 2 times [ move forward, move forward, turn left ]."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Which piece repeats, and how many times?\nmove forward, turn right, move forward, turn right, move forward, turn right"
+      nom: "move forward, turn right: 3 times"
+      explication: "The piece “move forward, turn right” has 2 blocks. It comes back 3 times: 3 × 2 = 6 blocks in all."
+      pieges:
+        - { texte: "move forward, turn right: 6 times", pourquoi: "6 is the number of blocks. The piece has 2 blocks: it comes back 3 times." }
+        - { texte: "move forward: 6 times", pourquoi: "There are only 3 “move forward”. And the turns are part of the piece that comes back." }
+    - texte: "Which piece repeats, and how many times?\nmove forward, move forward, move forward, move forward, move forward"
+      nom: "move forward: 5 times"
+      explication: "Only one block comes back, “move forward”, and we count it 5 times."
+      pieges:
+        - { texte: "move forward: 4 times", pourquoi: "Count again, touching each block: there are 5." }
+        - { texte: "move forward, move forward: 2 times", pourquoi: "2 times “move forward, move forward” makes 4 blocks. The program has 5." }
+    - texte: "repeat 4 times [ move forward, move forward ]\nHow many times does the robot move forward?"
+      nom: "8"
+      explication: "Each time round, the robot moves forward 2 times. 4 times round: 2 + 2 + 2 + 2 = 8."
+      pieges:
+        - { texte: "4", pourquoi: "Each time round has 2 “move forward”, not just one." }
+        - { texte: "6", pourquoi: "You added 4 and 2. It's 4 times round, 2 each time: 2 + 2 + 2 + 2." }
+    - texte: "Which program does the same thing?\nmove forward, move forward, turn right, move forward, move forward, turn right"
+      nom: "repeat 2 times [ move forward, move forward, turn right ]"
+      explication: "The piece “move forward, move forward, turn right” comes back 2 times. We write it once, inside “repeat 2 times”."
+      pieges:
+        - { texte: "repeat 2 times [ move forward, turn right ]", pourquoi: "One “move forward” is missing: each piece has two before the turn." }
+        - { texte: "repeat 3 times [ move forward, move forward, turn right ]", pourquoi: "The piece only comes back 2 times: 3 times round would be one too many." }
+    - texte: "In the repeating sequence A B C A B C A B C…, what is the tenth letter?"
+      nom: "A"
+      explication: "The piece A B C comes back again and again. 3 pieces make 9 letters: the tenth starts a new piece, so it is A."
+      pieges:
+        - { texte: "C", pourquoi: "C is the ninth letter, the end of the third piece. The tenth comes just after." }
+        - { texte: "B", pourquoi: "B is the eighth or the eleventh letter. After 3 pieces of 3 letters, we start again with A." }
+    - texte: "repeat 3 times [ move forward, turn right ]\nmove forward\nHow many times does the robot move forward?"
+      nom: "4"
+      explication: "The loop moves it forward 3 times. Then the last “move forward”, after the loop, once more: 3 + 1 = 4."
+      pieges:
+        - { texte: "3", pourquoi: "After the loop, the program carries on: there is still one “move forward”." }
+        - { texte: "6", pourquoi: "Each time round has only one “move forward”; the other block is a turn." }
+    - texte: "The robot must move forward 12 times. Its program is “repeat … times [ move forward, move forward, move forward ]”. Which number must go in?"
+      nom: "4"
+      explication: "Each time round moves it forward 3 times. 3 + 3 + 3 + 3 = 12: it needs 4 times round."
+      pieges:
+        - { texte: "12", pourquoi: "With 12 times round of 3 “move forward”, the robot would move forward 36 times." }
+        - { texte: "3", pourquoi: "3 is the number of “move forward” in one time round. 3 times round only make 9." }
+    - texte: "Why write “repeat 5 times [ move forward ]” instead of 5 “move forward” blocks?"
+      nom: "The program is shorter"
+      explication: "The robot takes exactly the same steps. But we write the piece only once: the program needs fewer blocks."
+      pieges:
+        - { texte: "The robot goes faster", pourquoi: "The robot takes the same steps, one by one: the loop doesn't make it go faster." }
+        - { texte: "The robot goes further", pourquoi: "Both programs follow the same path: 5 squares." }

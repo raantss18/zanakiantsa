@@ -1,0 +1,131 @@
+id: programme-calcul-blocs
+titre: "Un programme de calcul en blocs"
+niveau: CM2
+prerequis: [condition-si]
+# Programme de mathématiques du cycle 3, « Initiation à la pensée informatique », Cours moyen deuxième année, lu le
+# 2026-11-11 : programmes de calcul « ayant jusqu’à trois instructions » (choisir un nombre ; ajouter 2 ; multiplier par 4 ;
+# retirer 3 ; écrire le nombre obtenu), qui « peuvent aussi être codés avec un logiciel de programmation par bloc comme
+# Scratch ». Les nombres de l'exemple officiel ne sont pas repris (la leçon de 6e sequence-instructions les utilise).
+# Blocs Scratch « mettre %1 à %2 », « ajouter %2 à %1 », « dire %1 » : scratch-l10n, editor/blocks/fr.json, lu le
+# 2026-11-11. Scratch écrit « * » pour multiplier ; on écrit « × » pour que la voix dise « fois » (app/lib/audio/spoken.dart
+# ne lit pas « * »). La variable s'appelle « nombre » : un choix de l'app.
+programme: { source: cycle3, texte: "Il exécute également des programmes de calcul ayant jusqu’à trois instructions […] Ces programmes peuvent aussi être codés avec un logiciel de programmation par bloc comme Scratch." }
+activite: quiz
+parametres: {}
+idee: "Dans Scratch, une variable est une boîte qui a un nom, ici « nombre ». « mettre nombre à 5 » range 5 dedans ; « ajouter 2 à nombre » augmente ce qu'elle contient. Les blocs s'exécutent de haut en bas."
+phrases:
+  consigne: "Fais le calcul bloc par bloc, de haut en bas, puis touche la réponse."
+  question: "{texte}"
+  indice: "Écris ce que contient la boîte « nombre » après chaque bloc, avant de lire le suivant."
+  exemple: "mettre nombre à 4, puis ajouter 3 à nombre, puis dire nombre : la boîte contient 4, puis 7. Le lutin dit 7."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "mettre nombre à 6\najouter 2 à nombre\ndire nombre\nQue dit le lutin ?"
+    nom: "8"
+    explication: "La boîte contient 6, puis 6 + 2 = 8. Le lutin dit 8."
+    pieges:
+      - { texte: "6", pourquoi: "« ajouter 2 à nombre » est exécuté avant « dire nombre » : la boîte contient déjà 8." }
+      - { texte: "2", pourquoi: "« ajouter 2 » augmente ce qu'il y a dans la boîte ; il ne remplace pas 6 par 2." }
+  - texte: "Quel bloc Scratch fait « ajouter 2 au nombre choisi » ?"
+    nom: "ajouter 2 à nombre"
+    explication: "« ajouter 2 à nombre » augmente de 2 ce que contient la boîte « nombre »."
+    pieges:
+      - { texte: "mettre nombre à 2", pourquoi: "« mettre nombre à 2 » remplace ce qu'il y a dans la boîte par 2 : le nombre choisi est perdu." }
+      - { texte: "dire 2", pourquoi: "« dire » fait parler le lutin ; il ne change pas la boîte." }
+  - texte: "Programme de calcul : choisir 3, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?"
+    nom: "17"
+    explication: "3 + 2 = 5, puis 5 × 4 = 20, puis 20 − 3 = 17."
+    pieges:
+      - { texte: "8", pourquoi: "Tu as multiplié seulement le 2. Chaque étape part du résultat de l'étape d'avant : (3 + 2) × 4." }
+      - { texte: "20", pourquoi: "Tu as oublié la dernière instruction : il faut encore retirer 3." }
+  - texte: "mettre nombre à 4\nmettre nombre à nombre × 3\najouter 1 à nombre\ndire nombre\nQue dit le lutin ?"
+    nom: "13"
+    explication: "La boîte contient 4, puis 4 × 3 = 12, puis 12 + 1 = 13."
+    pieges:
+      - { texte: "16", pourquoi: "Tu as ajouté avant de multiplier. Les blocs s'exécutent dans l'ordre : d'abord × 3, ensuite + 1." }
+      - { texte: "12", pourquoi: "Il reste un bloc après la multiplication : « ajouter 1 à nombre »." }
+  - texte: "Programme de calcul : choisir un nombre, ajouter 2, multiplier le résultat par 4. Quels blocs viennent après « mettre nombre à … » ?"
+    nom: "ajouter 2 à nombre, puis mettre nombre à nombre × 4"
+    explication: "On traduit chaque étape dans l'ordre : d'abord ajouter 2, ensuite multiplier ce résultat par 4."
+    pieges:
+      - { texte: "mettre nombre à nombre × 4, puis ajouter 2 à nombre", pourquoi: "L'ordre est inversé : le programme dit d'ajouter 2 d'abord, puis de multiplier." }
+      - { texte: "mettre nombre à 2, puis mettre nombre à 4", pourquoi: "« mettre » remplace ce qu'il y a dans la boîte : le nombre choisi serait perdu." }
+  - texte: "mettre nombre à 5\najouter 3 à nombre\najouter 3 à nombre\ndire nombre\nQue dit le lutin ?"
+    nom: "11"
+    explication: "La boîte contient 5, puis 8, puis 11. Deux blocs pareils sont exécutés tous les deux."
+    pieges:
+      - { texte: "8", pourquoi: "Les deux blocs « ajouter 3 » sont exécutés l'un après l'autre : 5, 8, puis 11." }
+      - { texte: "6", pourquoi: "3 + 3 = 6, mais la boîte contenait déjà 5 : 5 + 3 + 3 = 11." }
+  - texte: "Programme de calcul : choisir 0, ajouter 2, multiplier le résultat par 4, retirer 3. Quel nombre obtient-on ?"
+    nom: "5"
+    explication: "0 + 2 = 2, puis 2 × 4 = 8, puis 8 − 3 = 5."
+    pieges:
+      - { texte: "8", pourquoi: "Tu as oublié la dernière instruction : il faut encore retirer 3." }
+      - { texte: "0", pourquoi: "On part de 0, mais on ajoute 2 : le résultat n'est plus 0 dès la première étape." }
+  - texte: "mettre nombre à 8\nmettre nombre à nombre × 2\nmettre nombre à nombre × 2\ndire nombre\nQue dit le lutin ?"
+    nom: "32"
+    explication: "La boîte contient 8, puis 8 × 2 = 16, puis 16 × 2 = 32."
+    pieges:
+      - { texte: "16", pourquoi: "Ça, c'est après un seul bloc. Le deuxième « × 2 » part de 16." }
+      - { texte: "12", pourquoi: "Tu as ajouté 2 deux fois. Le bloc multiplie par 2 : 8 × 2, puis 16 × 2." }
+
+en:
+  titre: "A calculation program in blocks"
+  idee: "In Scratch, a variable is a box with a name, here “number”. “set number to 5” puts 5 in it; “change number by 2” increases what it holds. The blocks run from top to bottom."
+  phrases:
+    consigne: "Do the calculation block by block, from top to bottom, then touch the answer."
+    question: "{texte}"
+    indice: "Write down what the box “number” holds after each block, before you read the next one."
+    exemple: "set number to 4, then change number by 3, then say number: the box holds 4, then 7. The sprite says 7."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "set number to 6\nchange number by 2\nsay number\nWhat does the sprite say?"
+      nom: "8"
+      explication: "The box holds 6, then 6 + 2 = 8. The sprite says 8."
+      pieges:
+        - { texte: "6", pourquoi: "“change number by 2” runs before “say number”: the box already holds 8." }
+        - { texte: "2", pourquoi: "“change by 2” increases what is in the box; it doesn't replace 6 with 2." }
+    - texte: "Which Scratch block does “add 2 to the chosen number”?"
+      nom: "change number by 2"
+      explication: "“change number by 2” increases what the box “number” holds by 2."
+      pieges:
+        - { texte: "set number to 2", pourquoi: "“set number to 2” replaces what is in the box with 2: the chosen number is lost." }
+        - { texte: "say 2", pourquoi: "“say” makes the sprite speak; it doesn't change the box." }
+    - texte: "Calculation program: choose 3, add 2, multiply the result by 4, subtract 3. Which number do you get?"
+      nom: "17"
+      explication: "3 + 2 = 5, then 5 × 4 = 20, then 20 − 3 = 17."
+      pieges:
+        - { texte: "8", pourquoi: "You only multiplied the 2. Each step starts from the result of the step before: (3 + 2) × 4." }
+        - { texte: "20", pourquoi: "You forgot the last instruction: you still have to subtract 3." }
+    - texte: "set number to 4\nset number to number × 3\nchange number by 1\nsay number\nWhat does the sprite say?"
+      nom: "13"
+      explication: "The box holds 4, then 4 × 3 = 12, then 12 + 1 = 13."
+      pieges:
+        - { texte: "16", pourquoi: "You added before multiplying. The blocks run in order: first × 3, then + 1." }
+        - { texte: "12", pourquoi: "There is one more block after the multiplication: “change number by 1”." }
+    - texte: "Calculation program: choose a number, add 2, multiply the result by 4. Which blocks come after “set number to …”?"
+      nom: "change number by 2, then set number to number × 4"
+      explication: "We translate each step in order: first add 2, then multiply that result by 4."
+      pieges:
+        - { texte: "set number to number × 4, then change number by 2", pourquoi: "The order is reversed: the program says to add 2 first, then multiply." }
+        - { texte: "set number to 2, then set number to 4", pourquoi: "“set” replaces what is in the box: the chosen number would be lost." }
+    - texte: "set number to 5\nchange number by 3\nchange number by 3\nsay number\nWhat does the sprite say?"
+      nom: "11"
+      explication: "The box holds 5, then 8, then 11. Two identical blocks are both run."
+      pieges:
+        - { texte: "8", pourquoi: "Both “change by 3” blocks run, one after the other: 5, 8, then 11." }
+        - { texte: "6", pourquoi: "3 + 3 = 6, but the box already held 5: 5 + 3 + 3 = 11." }
+    - texte: "Calculation program: choose 0, add 2, multiply the result by 4, subtract 3. Which number do you get?"
+      nom: "5"
+      explication: "0 + 2 = 2, then 2 × 4 = 8, then 8 − 3 = 5."
+      pieges:
+        - { texte: "8", pourquoi: "You forgot the last instruction: you still have to subtract 3." }
+        - { texte: "0", pourquoi: "We start from 0, but we add 2: the result is no longer 0 after the first step." }
+    - texte: "set number to 8\nset number to number × 2\nset number to number × 2\nsay number\nWhat does the sprite say?"
+      nom: "32"
+      explication: "The box holds 8, then 8 × 2 = 16, then 16 × 2 = 32."
+      pieges:
+        - { texte: "16", pourquoi: "That's after just one block. The second “× 2” starts from 16." }
+        - { texte: "12", pourquoi: "You added 2 twice. The block multiplies by 2: 8 × 2, then 16 × 2." }
