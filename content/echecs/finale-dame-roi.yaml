@@ -1,0 +1,100 @@
+id: finale-dame-roi
+titre: "Roi et dame contre roi : mater sans pat"
+niveau: 4e
+prerequis: [finale-tour-roi]
+programme: { source: fide, texte: "5.2.1 : The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’." }
+activite: quiz
+parametres: {}
+idee: "La dame enferme le roi noir comme la tour, mais plus vite. Le roi noir finit au bord, ton roi s’approche, et la dame fait mat. Avant chaque coup, vérifie qu’il reste une case au roi noir : sinon, c’est pat."
+phrases:
+  consigne: "Regarde les cases que garde ta dame, puis celles que garde ton roi. Attention au pat."
+  question: "{texte}"
+  indice: "La dame garde sa colonne, sa rangée et ses deux diagonales. Si le roi noir n’est pas en échec et ne peut plus bouger, c’est pat : partie nulle."
+  exemple: "Roi noir en h8, roi blanc en f7, dame en g1. La dame va en g7, protégée par ton roi : mat. La dame en g6, elle, serait pat : pas d’échec, et plus aucune case pour le roi noir."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est : {bonne}."
+items:
+  - texte: "Roi noir en h8, roi blanc en g6, dame blanche en b1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La dame va en b8"
+    explication: "La dame fait échec sur toute la 8e rangée et garde g8. Ton roi garde g7 et h7 : le roi noir n’a plus de case. Mat."
+    pieges:
+      - { texte: "La dame va en b3", pourquoi: "La dame garde g8, ton roi garde g7 et h7, mais le roi noir n’est pas en échec : c’est pat, partie nulle." }
+      - { texte: "Le roi va en f7", pourquoi: "Ton roi garde g7 et g8, ta dame garde h7, mais il n’y a pas d’échec : c’est pat." }
+  - texte: "Roi noir en a8, roi blanc en c7, dame blanche en b1. Aux Blancs. Pourquoi la dame en b6 est-elle une faute ?"
+    nom: "C’est pat : le roi noir n’est pas en échec et n’a plus de case"
+    explication: "En b6, la dame garde a7 et b7 ; ton roi garde b7 et b8. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle. La dame en b7, protégée par ton roi, faisait mat."
+    pieges:
+      - { texte: "Le roi noir prend la dame", pourquoi: "b6 ne touche pas a8 : le roi noir ne peut pas l’atteindre." }
+      - { texte: "Ce n’est pas une faute : c’est mat", pourquoi: "La dame en b6 ne fait pas échec au roi en a8. Sans échec, un roi bloqué, c’est pat." }
+  - texte: "Roi noir en e8, roi blanc en e6, dame blanche en h1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La dame va en h8"
+    explication: "La dame fait échec sur la 8e rangée et garde d8 et f8. Ton roi garde d7, e7 et f7 : mat. (La dame en a8 fait mat aussi.)"
+    pieges:
+      - { texte: "La dame va en h5", pourquoi: "C’est un échec en diagonale, mais le roi noir s’échappe en d8 ou en f8." }
+      - { texte: "La dame va en c6", pourquoi: "C’est un échec en diagonale, mais le roi noir s’échappe en d8 ou en f8." }
+  - texte: "Roi noir en a8, roi blanc en b6, dame blanche en c1. Aux Blancs. Quel coup fait échec et mat ?"
+    nom: "La dame va en c8"
+    explication: "La dame fait échec sur la 8e rangée et garde b8. Ton roi garde a7 et b7 : mat."
+    pieges:
+      - { texte: "La dame va en c7", pourquoi: "La dame garde b8 et b7, ton roi garde a7, mais il n’y a pas d’échec : c’est pat." }
+      - { texte: "La dame va en a3", pourquoi: "C’est échec sur la colonne a, mais le roi noir s’échappe en b8." }
+  - texte: "Avec roi et dame contre roi, combien de coups faut-il au plus pour faire mat, si les Noirs se défendent au mieux ?"
+    nom: "10"
+    explication: "Calculé sur toutes les positions où les Blancs ont le trait : le mat le plus long demande 10 coups blancs. Avec roi et tour, il en faut jusqu’à 16."
+    pieges:
+      - { texte: "16", pourquoi: "16 coups, c’est le mat le plus long avec roi et tour : la dame va plus vite." }
+      - { texte: "3", pourquoi: "Quand le roi noir est au centre, il faut d’abord le pousser au bord : 3 coups ne suffisent pas toujours." }
+  - texte: "Peut-on faire mat avec la dame seule, sans l’aide de son roi ?"
+    nom: "Non : dans chaque mat, ton roi est tout près du roi noir"
+    explication: "Calculé sur tous les mats de roi et dame contre roi : ton roi est toujours à deux pas du roi noir. Il garde les cases que la dame ne garde pas, ou protège la dame collée au roi noir."
+    pieges:
+      - { texte: "Oui : la dame est assez forte", pourquoi: "La dame seule laisse toujours une case au roi noir, ou se fait prendre si elle se colle à lui." }
+      - { texte: "Oui, si le roi noir est dans un coin", pourquoi: "Même dans le coin, le roi blanc doit aider : dans tous les mats, il est à deux pas du roi noir." }
+
+en:
+  titre: "King and queen against king: mate without stalemate"
+  idee: "The queen locks the black king in like the rook, only faster. The black king ends up on the edge, your king comes closer, and the queen mates. Before each move, check the black king still has a square: if not, it is stalemate."
+  phrases:
+    consigne: "Look at the squares your queen guards, then those your king guards. Watch out for stalemate."
+    question: "{texte}"
+    indice: "The queen guards its file, its rank and both its diagonals. If the black king is not in check and cannot move, it is stalemate: the game is drawn."
+    exemple: "Black king on h8, white king on f7, queen on g1. The queen goes to g7, protected by your king: checkmate. The queen on g6, however, would be stalemate: no check, and no square left for the black king."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Black king on h8, white king on g6, white queen on b1. White to play. Which move gives checkmate?"
+      nom: "The queen goes to b8"
+      explication: "The queen gives check along the whole 8th rank and guards g8. Your king guards g7 and h7: the black king has no square left. Checkmate."
+      pieges:
+        - { texte: "The queen goes to b3", pourquoi: "The queen guards g8, your king guards g7 and h7, but the black king is not in check: it is stalemate, a draw." }
+        - { texte: "The king goes to f7", pourquoi: "Your king guards g7 and g8, your queen guards h7, but there is no check: it is stalemate." }
+    - texte: "Black king on a8, white king on c7, white queen on b1. White to play. Why is the queen to b6 a mistake?"
+      nom: "It is stalemate: the black king is not in check and has no square"
+      explication: "On b6, the queen guards a7 and b7; your king guards b7 and b8. The black king is not in check and cannot move: stalemate, a draw. The queen to b7, protected by your king, was checkmate."
+      pieges:
+        - { texte: "The black king takes the queen", pourquoi: "b6 does not touch a8: the black king cannot reach it." }
+        - { texte: "It is not a mistake: it is checkmate", pourquoi: "The queen on b6 does not give check to the king on a8. No check and a stuck king means stalemate." }
+    - texte: "Black king on e8, white king on e6, white queen on h1. White to play. Which move gives checkmate?"
+      nom: "The queen goes to h8"
+      explication: "The queen gives check along the 8th rank and guards d8 and f8. Your king guards d7, e7 and f7: checkmate. (The queen to a8 is checkmate too.)"
+      pieges:
+        - { texte: "The queen goes to h5", pourquoi: "It is a diagonal check, but the black king escapes to d8 or f8." }
+        - { texte: "The queen goes to c6", pourquoi: "It is a diagonal check, but the black king escapes to d8 or f8." }
+    - texte: "Black king on a8, white king on b6, white queen on c1. White to play. Which move gives checkmate?"
+      nom: "The queen goes to c8"
+      explication: "The queen gives check along the 8th rank and guards b8. Your king guards a7 and b7: checkmate."
+      pieges:
+        - { texte: "The queen goes to c7", pourquoi: "The queen guards b8 and b7, your king guards a7, but there is no check: it is stalemate." }
+        - { texte: "The queen goes to a3", pourquoi: "It is check along the a-file, but the black king escapes to b8." }
+    - texte: "With king and queen against king, at most how many moves does it take to checkmate, if Black defends as well as possible?"
+      nom: "10"
+      explication: "Computed over every position with White to play: the longest mate takes 10 White moves. With king and rook, it can take up to 16."
+      pieges:
+        - { texte: "16", pourquoi: "16 moves is the longest mate with king and rook: the queen is faster." }
+        - { texte: "3", pourquoi: "When the black king is in the centre, you first have to push it to the edge: 3 moves are not always enough." }
+    - texte: "Can you checkmate with the queen alone, without help from your king?"
+      nom: "No: in every checkmate, your king is close to the black king"
+      explication: "Computed over every king and queen against king checkmate: your king is always two steps from the black king. It guards the squares the queen does not, or protects the queen standing next to the black king."
+      pieges:
+        - { texte: "Yes: the queen is strong enough", pourquoi: "The queen alone always leaves the black king a square, or gets taken if it stands next to it." }
+        - { texte: "Yes, if the black king is in a corner", pourquoi: "Even in the corner, the white king must help: in every checkmate, it is two steps from the black king." }
