@@ -1,0 +1,100 @@
+id: souffler-frapper
+titre: "Souffler, frapper, frotter, pincer"
+niveau: CE1
+prerequis: [parametres-son]
+programme: { source: c2, texte: "Diversité des matériaux sonores." }
+activite: quiz
+parametres: {}
+idee: "Chaque instrument fait son son à sa façon. On souffle dans la flûte et la trompette. On frappe le tambour. On frotte les cordes du violon avec un archet. On pince les cordes de la guitare et de la harpe."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Imagine le musicien : avec quoi fait-il le son ? Sa bouche, une baguette, un archet ou ses doigts ?"
+  exemple: "Exemple : pour jouer du xylophone, on tape sur les lames avec des baguettes. On le frappe : c'est une percussion."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Comment fait-on sonner une flûte ?"
+    nom: "On souffle dedans."
+    explication: "La flûte est un instrument à vent : le son vient de l'air que l'on souffle."
+    pieges:
+      - { texte: "On la frappe avec une baguette.", pourquoi: "On frappe un tambour ou un xylophone, pas une flûte." }
+      - { texte: "On pince ses cordes.", pourquoi: "La flûte n'a pas de cordes : c'est un tuyau." }
+  - texte: "Comment fait-on sonner un tambour ?"
+    nom: "On le frappe."
+    explication: "Le tambour est une percussion : on frappe sa peau avec la main ou une baguette."
+    pieges:
+      - { texte: "On souffle dedans.", pourquoi: "On souffle dans une flûte ou une trompette, pas dans un tambour." }
+      - { texte: "On frotte ses cordes avec un archet.", pourquoi: "Le tambour n'a pas de cordes : il a une peau tendue." }
+  - texte: "La violoniste passe un archet sur les cordes. Que fait-elle ?"
+    nom: "Elle frotte les cordes."
+    explication: "Le violon est un instrument à cordes frottées : l'archet frotte les cordes."
+    pieges:
+      - { texte: "Elle pince les cordes.", pourquoi: "Pincer, c'est avec les doigts, comme à la guitare. L'archet, lui, frotte." }
+      - { texte: "Elle souffle sur les cordes.", pourquoi: "Le violon n'est pas un instrument à vent : on ne souffle pas." }
+  - texte: "Comment joue-t-on de la guitare ?"
+    nom: "On pince les cordes avec les doigts."
+    explication: "La guitare est un instrument à cordes pincées, comme la harpe."
+    pieges:
+      - { texte: "On frotte les cordes avec un archet.", pourquoi: "L'archet, c'est pour le violon ou le violoncelle." }
+      - { texte: "On souffle dedans.", pourquoi: "La guitare n'est pas un instrument à vent." }
+  - texte: "Dans le piano, des petits marteaux tapent sur des cordes. Les cordes du piano sont…"
+    nom: "Frappées."
+    explication: "Quand on appuie sur une touche, un marteau frappe une corde : ce sont des cordes frappées."
+    pieges:
+      - { texte: "Pincées.", pourquoi: "Ce n'est pas un doigt qui pince la corde, c'est un marteau qui la frappe." }
+      - { texte: "Soufflées.", pourquoi: "On ne souffle pas dans un piano : il n'a pas de tuyau." }
+  - texte: "Lequel est un instrument à vent ?"
+    nom: "La trompette."
+    explication: "On souffle dans la trompette : c'est un instrument à vent."
+    pieges:
+      - { texte: "La harpe.", pourquoi: "La harpe a des cordes que l'on pince." }
+      - { texte: "Le xylophone.", pourquoi: "On frappe le xylophone avec des baguettes : c'est une percussion." }
+
+en:
+  titre: "Blow, strike, bow, pluck"
+  idee: "Each instrument makes its sound in its own way. You blow into the flute and the trumpet. You strike the drum. You rub the violin's strings with a bow. You pluck the strings of the guitar and the harp."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Picture the musician: what makes the sound? Their mouth, a stick, a bow or their fingers?"
+    exemple: "Example: to play the xylophone, you tap the bars with sticks. You strike it: it's a percussion instrument."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "How do you make a flute sound?"
+      nom: "You blow into it."
+      explication: "The flute is a wind instrument: the sound comes from the air you blow."
+      pieges:
+        - { texte: "You strike it with a stick.", pourquoi: "You strike a drum or a xylophone, not a flute." }
+        - { texte: "You pluck its strings.", pourquoi: "The flute has no strings: it's a tube." }
+    - texte: "How do you make a drum sound?"
+      nom: "You strike it."
+      explication: "The drum is a percussion instrument: you strike its skin with your hand or a stick."
+      pieges:
+        - { texte: "You blow into it.", pourquoi: "You blow into a flute or a trumpet, not into a drum." }
+        - { texte: "You rub its strings with a bow.", pourquoi: "The drum has no strings: it has a stretched skin." }
+    - texte: "The violinist moves a bow across the strings. What is she doing?"
+      nom: "She is rubbing the strings."
+      explication: "The violin is a bowed string instrument: the bow rubs the strings."
+      pieges:
+        - { texte: "She is plucking the strings.", pourquoi: "Plucking is done with the fingers, as on a guitar. The bow rubs." }
+        - { texte: "She is blowing on the strings.", pourquoi: "The violin isn't a wind instrument: you don't blow." }
+    - texte: "How do you play the guitar?"
+      nom: "You pluck the strings with your fingers."
+      explication: "The guitar is a plucked string instrument, like the harp."
+      pieges:
+        - { texte: "You rub the strings with a bow.", pourquoi: "The bow is for the violin or the cello." }
+        - { texte: "You blow into it.", pourquoi: "The guitar isn't a wind instrument." }
+    - texte: "Inside the piano, little hammers hit strings. The piano's strings are…"
+      nom: "Struck."
+      explication: "When you press a key, a hammer strikes a string: these are struck strings."
+      pieges:
+        - { texte: "Plucked.", pourquoi: "No finger plucks the string: a hammer strikes it." }
+        - { texte: "Blown.", pourquoi: "You don't blow into a piano: it has no tube." }
+    - texte: "Which one is a wind instrument?"
+      nom: "The trumpet."
+      explication: "You blow into the trumpet: it's a wind instrument."
+      pieges:
+        - { texte: "The harp.", pourquoi: "The harp has strings that you pluck." }
+        - { texte: "The xylophone.", pourquoi: "You strike the xylophone with sticks: it's a percussion instrument." }

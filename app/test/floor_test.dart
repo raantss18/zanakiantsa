@@ -67,9 +67,12 @@ void main() {
     expect(progressFor(compter, classForAge(9)).checkable(['fractions-quantite']), ['fractions-quantite']);
   });
 
-  test('à 12 ans, la journée ne propose ni « Les sons » ni les suites de maternelle', () {
+  test('à 12 ans, la journée ne propose ni les sons ni les suites de maternelle', () {
     final shown = [for (final t in all) if (t.ageless || t.skills.any((s) => s.ref.level >= floor)) t.id];
-    expect(shown, isNot(contains('sons')));
+    // « Les sons » va jusqu'au CM2 (éducation musicale) : proposé à 12 ans, mais sans ses leçons de maternelle (voir plus
+    // haut, rien sous le CM2) ; à 13 ans, plus du tout.
+    expect(shown, contains('sons'));
+    expect(all.firstWhere((t) => t.id == 'sons').skills.any((s) => s.ref.level >= floorForClass(classForAge(13))), isFalse);
     expect(shown, isNot(contains('motifs')));
     expect(shown, contains('dessin'), reason: 'le dessin libre est pour tous les âges');
     final tops = {for (final t in all) t.id: t.skills.map((s) => s.ref.level).reduce(max)};
@@ -169,6 +172,29 @@ void main() {
       final checked = p.checkable(prerequisitesToCheck(next.ref, [for (final s in code.skills) s.ref]));
       expect(checked.every((id) => !p.belowFloor(id)), isTrue);
     });
+  });
+
+  // Éducation musicale du CP au CM2 (programmes des cycles 2 et 3) : un enfant de CM2 n'a plus les sons de maternelle, et
+  // sa journée (horaires du CM) fait une place à la musique.
+  test('sons, 10 ans (CM2) : rien sous le CE2, des leçons à apprendre, et la musique dans la journée', () {
+    final sons = all.firstWhere((t) => t.id == 'sons');
+    final cm2 = classForAge(10);
+    expect(schoolLevels[cm2], 'CM2');
+    final p = progressFor(sons, cm2);
+    final level = {for (final s in sons.skills) s.id: s.ref.level};
+    for (var d = 0; d < 30; d++) {
+      for (final id in p.plan(DateTime(2026, 11, 1 + d))) {
+        expect(level[id]!, greaterThanOrEqualTo(floorForClass(cm2)), reason: id);
+      }
+    }
+    expect(p.belowFloor('aigu-grave'), isTrue);
+    expect(level[p.newSkill!]!, greaterThanOrEqualTo(levelRank('CM1')));
+    final candidates = ['lire', 'compter', 'anglais', 'nature', 'explorer', 'dessin', 'sons'];
+    final themes = [
+      for (var d = 0; d < 60; d++)
+        ...DayPlan.of(DateTime(2026, 9, 1).add(Duration(days: d)), const [], classe: cm2, visible: candidates).items.map((i) => i.theme),
+    ];
+    expect(themes, contains('sons'));
   });
 
   test('le carnet de 12 ans ne montre plus « Compter jusqu\'à 10 »', () {

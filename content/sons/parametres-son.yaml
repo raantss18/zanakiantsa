@@ -1,0 +1,88 @@
+id: parametres-son
+titre: "Les mots pour décrire un son"
+niveau: CP
+prerequis: [aigu-grave, fort-doux, long-court]
+programme: { source: c2, texte: "Éléments de vocabulaire liés aux paramètres du son (intensité, durée, hauteur, timbre)." }
+activite: quiz
+parametres: {}
+idee: "Un son a une hauteur : aigu ou grave. Il a une intensité : fort ou doux. Il a une durée : long ou court. Et il a un timbre : c'est ce qui fait qu'on reconnaît la flûte ou le tambour."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Aigu ou grave : la hauteur. Fort ou doux : l'intensité. Long ou court : la durée. Qui joue : le timbre."
+  exemple: "Exemple : un oiseau chante aigu, un ours grogne grave. Aigu ou grave, c'est la hauteur du son."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Un son aigu ou grave : de quoi parle-t-on ?"
+    nom: "De la hauteur."
+    explication: "Aigu ou grave, c'est la hauteur du son."
+    pieges:
+      - { texte: "De la durée.", pourquoi: "La durée dit si le son est long ou court." }
+      - { texte: "De l'intensité.", pourquoi: "L'intensité dit si le son est fort ou doux." }
+  - texte: "Un son fort ou doux : de quoi parle-t-on ?"
+    nom: "De l'intensité."
+    explication: "Fort ou doux, c'est l'intensité du son."
+    pieges:
+      - { texte: "De la hauteur.", pourquoi: "La hauteur dit si le son est aigu ou grave." }
+      - { texte: "Du timbre.", pourquoi: "Le timbre dit qui joue : flûte, tambour, voix…" }
+  - texte: "Un son long ou court : de quoi parle-t-on ?"
+    nom: "De la durée."
+    explication: "Long ou court, c'est la durée du son."
+    pieges:
+      - { texte: "De l'intensité.", pourquoi: "Un son peut être long et doux, ou court et fort : l'intensité, c'est fort ou doux." }
+      - { texte: "De la hauteur.", pourquoi: "La hauteur dit si le son est aigu ou grave." }
+  - texte: "Une flûte et une voix font la même note, aussi fort l'une que l'autre. On les reconnaît quand même. Grâce à quoi ?"
+    nom: "Au timbre."
+    explication: "Même hauteur, même intensité : c'est le timbre qui change. Il permet de reconnaître qui joue."
+    pieges:
+      - { texte: "À la hauteur.", pourquoi: "C'est la même note : la hauteur est la même." }
+      - { texte: "À l'intensité.", pourquoi: "Elles sont aussi fortes l'une que l'autre : l'intensité est la même." }
+  - texte: "Le tonnerre fait un son grave et très fort. Quel mot parle de « très fort » ?"
+    nom: "L'intensité."
+    explication: "Très fort, c'est une grande intensité. Grave, c'est la hauteur."
+    pieges:
+      - { texte: "La hauteur.", pourquoi: "La hauteur, ici, c'est « grave »." }
+      - { texte: "La durée.", pourquoi: "La durée dirait si le tonnerre gronde longtemps ou non." }
+
+en:
+  titre: "Words to describe a sound"
+  idee: "A sound has a pitch: high or low. It has a volume: loud or soft. It has a length: long or short. And it has a timbre: that's what lets you tell a flute from a drum."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "High or low: pitch. Loud or soft: volume. Long or short: length. Who is playing: timbre."
+    exemple: "Example: a bird sings high, a bear growls low. High or low is the pitch of the sound."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "A high or low sound: what are we talking about?"
+      nom: "Pitch."
+      explication: "High or low is the pitch of the sound."
+      pieges:
+        - { texte: "Length.", pourquoi: "Length says whether the sound is long or short." }
+        - { texte: "Volume.", pourquoi: "Volume says whether the sound is loud or soft." }
+    - texte: "A loud or soft sound: what are we talking about?"
+      nom: "Volume."
+      explication: "Loud or soft is the volume of the sound."
+      pieges:
+        - { texte: "Pitch.", pourquoi: "Pitch says whether the sound is high or low." }
+        - { texte: "Timbre.", pourquoi: "Timbre says who is playing: flute, drum, voice…" }
+    - texte: "A long or short sound: what are we talking about?"
+      nom: "Length."
+      explication: "Long or short is the length of the sound."
+      pieges:
+        - { texte: "Volume.", pourquoi: "A sound can be long and soft, or short and loud: volume is loud or soft." }
+        - { texte: "Pitch.", pourquoi: "Pitch says whether the sound is high or low." }
+    - texte: "A flute and a voice make the same note, just as loud as each other. You can still tell them apart. Thanks to what?"
+      nom: "Timbre."
+      explication: "Same pitch, same volume: it's the timbre that changes. It lets you recognise who is playing."
+      pieges:
+        - { texte: "Pitch.", pourquoi: "It's the same note: the pitch is the same." }
+        - { texte: "Volume.", pourquoi: "They are just as loud as each other: the volume is the same." }
+    - texte: "Thunder makes a low and very loud sound. Which word is about “very loud”?"
+      nom: "Volume."
+      explication: "Very loud is a high volume. Low is the pitch."
+      pieges:
+        - { texte: "Pitch.", pourquoi: "Here, the pitch is “low”." }
+        - { texte: "Length.", pourquoi: "Length would say whether the thunder rumbles for a long time or not." }

@@ -1,15 +1,47 @@
 id: sons
 titre: Les univers sonores
 nom: "Les sons"
+# Nom selon la tranche d'âge (ADR 0066) : du CM1 au CM2, on parle d'orchestre et de nuances.
+noms: {moyens: "La musique", grands: "Musique"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Écouter, comparer, reconnaître."
+resume: "Écouter, comparer, reconnaître ; puis les mots du son, les instruments, le refrain, les nuances, l'orchestre et Pierre et le Loup, jusqu'au CM2."
 icone: "1f3b5"
-ages: [4, 7]
+ages: [4, 11]
 # Programme de l'école maternelle, version consolidée, « Les univers sonores », p. 30-33 (sons brefs, tenus, graves,
 # aigus, variations de volume ; doux / fort ; rythme lent, rapide). Consulté le 2026-11-03.
 sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
-ordre: [aigu-grave, fort-doux, long-court, lent-rapide]
+  # Programme du cycle 2 en vigueur à la rentrée 2020 (d'après le BOEN n° 31 du 30 juillet 2020), version Éduscol
+  # « avec modifications apparentes », « Éducation musicale », p. 33-35. Lu le 2026-11-11 dans la copie déposée par la
+  # circonscription de Montbéliard 1 (Éduscol refusait le téléchargement). ⚠ Un projet de nouveaux programmes
+  # d'enseignements artistiques des cycles 2 et 3 a été soumis à consultation (février-mars 2026) ; sa publication au BO
+  # n'a pas été trouvée : à relire.
+  c2: "https://montbeliard1.circo25.ac-besancon.fr/wp-content/uploads/sites/20/2020/08/Cycle-2-avec-modifications-apparentes.pdf"
+  # Programme du cycle 3 en vigueur à la rentrée 2023 (BOEN n° 31 du 30 juillet 2020 et n° 25 du 22 juin 2023), Éduscol,
+  # « Éducation musicale », p. 47-50. Lu le 2026-11-11.
+  c3: "https://eduscol.education.fr/document/50990/download"
+  # Faits des leçons, lus le 2026-11-11.
+  # Familles d'instruments (cordes frottées, pincées, frappées ; bois, cuivres ; percussions ; « quoique en métal, la flûte
+  # traversière et le saxophone sont des bois ») : Larousse, mémo « Les familles d'instruments ».
+  larousse_familles: "https://www.larousse.fr/dictionnaires/memo/Les_familles_d_instruments/23"
+  # Modes de jeu « souffler, pincer, frotter, frapper, secouer » : Philharmonie de Paris, dossier « Pierre et le Loup »
+  # (visite-conte, juin 2019), p. 3.
+  philharmonie: "https://deneb.philharmoniedeparis.fr/uploads/documents/dp_vc_pierre_et_le_loup.pdf"
+  # Personnages et instruments de Pierre et le Loup ; création le 2 mai 1936 au Théâtre pour enfants de Moscou, commande de
+  # Natalia Satz ; texte écrit par Prokofiev ; timbale et grosse caisse dans les percussions, cors dans les cuivres :
+  # dossier pédagogique de l'Orchestre national de France, « Pierre et le loup – Le retour du loup », p. 3-4.
+  # ⚠ Copie hébergée hors de Radio France.
+  onf: "https://francoispapin.github.io/NPEi.lab/pdf/DOSSIER_PEDAGOGIQUE_PIERRE_ET_LE_LOUP-LE_RETOUR_DU_LOUP.pdf"
+  # Piano : « Indication de nuance […] jouer ou chanter plus doucement », « abrégé en p ou P » (Académie française,
+  # 9e édition). Forte : « Terme musical de nuance, qui implique une exécution très sonore. (Il s'écrit f ou F.) » (Larousse).
+  academie_piano: "https://www.dictionnaire-academie.fr/article/A9P2222"
+  larousse_forte: "https://www.larousse.fr/dictionnaires/francais/forte/34689"
+  # Refrain ; couplet (« Chacune des strophes d'une chanson, séparée par un refrain ») ; timbre (« Qualité particulière du
+  # son, indépendante de sa hauteur ou de son intensité ») : Larousse.
+  larousse_refrain: "https://www.larousse.fr/dictionnaires/francais/refrain"
+  larousse_couplet: "https://www.larousse.fr/dictionnaires/francais/couplet"
+  larousse_timbre: "https://www.larousse.fr/dictionnaires/francais/timbre"
+ordre: [aigu-grave, fort-doux, long-court, lent-rapide, parametres-son, souffler-frapper, refrain-couplet, piano-forte, orchestre, pierre-et-le-loup]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -23,7 +55,8 @@ intro:
 en:
   titre: "The world of sounds"
   nom: "Sounds"
-  resume: "Listen, compare, recognise."
+  noms: {moyens: "Music", grands: "Music"}
+  resume: "Listen, compare, recognise; then words for sound, instruments, the chorus, dynamics, the orchestra and Peter and the Wolf, up to Year 6."
   intro:
     - texte: "Listen carefully to the two sounds."
       images: ["1f442", "1f3b5"]

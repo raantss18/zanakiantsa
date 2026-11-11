@@ -26,9 +26,10 @@ const dayGroups = [
 /// - 2de : arrêté du 16 juillet 2018, annexe 1 (https://www.legifrance.gouv.fr/loda/id/JORFTEXT000037202776) : français 4 h,
 ///   maths 4 h, LVA + LVB 5 h 30 (l'anglais compté pour la moitié), physique-chimie 3 h + SVT 1 h 30, histoire-géographie
 ///   3 h, SNT 1 h 30 (le code).
-/// Hors des grilles, choix de l'app (supposé) : le code 1 h avant la 5e, les échecs 1 h, le dessin 1 h (part des arts).
+/// Hors des grilles, choix de l'app (supposé) : le code 1 h avant la 5e, les échecs 1 h ; au CM, les 2 h d'arts partagées
+/// entre le dessin (arts plastiques) et les sons (éducation musicale, leçons jusqu'au CM2), 1 h chacun.
 const dayWeights = <String, Map<String, int>>{
-  'cm': {'lire': 16, 'compter': 10, 'anglais': 3, 'nature': 4, 'explorer': 5, 'dessin': 2, 'code': 2, 'echecs': 2},
+  'cm': {'lire': 16, 'compter': 10, 'anglais': 3, 'nature': 4, 'explorer': 5, 'dessin': 2, 'sons': 2, 'code': 2, 'echecs': 2},
   '6e': {'lire': 9, 'compter': 9, 'anglais': 8, 'nature': 6, 'explorer': 6, 'dessin': 2, 'code': 2, 'echecs': 2},
   'cycle4': {'lire': 9, 'compter': 7, 'anglais': 6, 'nature': 6, 'explorer': 6, 'code': 3, 'echecs': 2},
   'lycee': {'lire': 8, 'compter': 8, 'anglais': 6, 'nature': 9, 'explorer': 6, 'code': 3, 'echecs': 2},

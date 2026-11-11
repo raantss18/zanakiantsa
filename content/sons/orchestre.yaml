@@ -1,0 +1,100 @@
+id: orchestre
+titre: "Les familles de l'orchestre"
+niveau: CM2
+prerequis: [souffler-frapper]
+programme: { source: c3, texte: "Principales caractéristiques de l’orchestre symphonique." }
+activite: quiz
+parametres: {}
+idee: "L'orchestre range ses instruments en quatre familles : les cordes (violon, violoncelle), les bois (flûte, clarinette), les cuivres (trompette, cor) et les percussions (timbales). Bois et cuivres sont des vents."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "On souffle dedans ? Bois ou cuivres. On frappe ? Percussions. Il a des cordes ? Cordes. Attention : une flûte en métal reste un bois."
+  exemple: "Exemple : le trombone. On souffle dedans, c'est un instrument à vent, et il fait partie des cuivres, avec la trompette, le cor et le tuba."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "À quelle famille appartient le violoncelle ?"
+    nom: "Les cordes."
+    explication: "Le violoncelle a des cordes que l'on frotte avec un archet, comme le violon, l'alto et la contrebasse."
+    pieges:
+      - { texte: "Les bois.", pourquoi: "La famille des bois regroupe des instruments à vent. Le violoncelle, lui, a des cordes." }
+      - { texte: "Les percussions.", pourquoi: "On ne frappe pas le violoncelle : on frotte ses cordes." }
+  - texte: "La flûte traversière de l'orchestre est en métal. À quelle famille appartient-elle ?"
+    nom: "Les bois."
+    explication: "Même en métal, la flûte traversière fait partie des bois, avec le hautbois, la clarinette et le basson."
+    pieges:
+      - { texte: "Les cuivres.", pourquoi: "C'est le piège : le métal ne suffit pas. La flûte est rangée avec les bois." }
+      - { texte: "Les cordes.", pourquoi: "La flûte n'a pas de cordes : on souffle dedans." }
+  - texte: "À quelle famille appartient le cor ?"
+    nom: "Les cuivres."
+    explication: "Le cor est un cuivre, comme la trompette, le trombone et le tuba."
+    pieges:
+      - { texte: "Les bois.", pourquoi: "On souffle aussi dans les bois, mais le cor est rangé avec les cuivres." }
+      - { texte: "Les percussions.", pourquoi: "On ne frappe pas le cor : on souffle dedans." }
+  - texte: "À quelle famille appartiennent les timbales ?"
+    nom: "Les percussions."
+    explication: "Les timbales ont une peau tendue que l'on frappe avec des baguettes."
+    pieges:
+      - { texte: "Les cuivres.", pourquoi: "On ne souffle pas dans les timbales : on les frappe." }
+      - { texte: "Les cordes.", pourquoi: "Les timbales n'ont pas de cordes : elles ont une peau tendue." }
+  - texte: "Quelles sont les deux familles d'instruments à vent de l'orchestre ?"
+    nom: "Les bois et les cuivres."
+    explication: "Dans les bois comme dans les cuivres, le son vient de l'air soufflé par le musicien."
+    pieges:
+      - { texte: "Les cordes et les bois.", pourquoi: "On ne souffle pas dans les cordes : on les frotte ou on les pince." }
+      - { texte: "Les percussions et les cuivres.", pourquoi: "Les percussions se frappent : ce ne sont pas des vents." }
+  - texte: "À quelle famille appartient la clarinette ?"
+    nom: "Les bois."
+    explication: "La clarinette fait partie des bois, avec la flûte, le hautbois et le basson."
+    pieges:
+      - { texte: "Les cuivres.", pourquoi: "La clarinette est un instrument à vent, mais elle est rangée avec les bois." }
+      - { texte: "Les cordes.", pourquoi: "La clarinette n'a pas de cordes : on souffle dedans." }
+
+en:
+  titre: "The families of the orchestra"
+  idee: "The orchestra sorts its instruments into four families: strings (violin, cello), woodwind (flute, clarinet), brass (trumpet, horn) and percussion (timpani). Woodwind and brass are wind instruments."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Do you blow into it? Woodwind or brass. Do you strike it? Percussion. Does it have strings? Strings. Careful: a metal flute is still woodwind."
+    exemple: "Example: the trombone. You blow into it, it's a wind instrument, and it belongs to the brass, with the trumpet, the horn and the tuba."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which family does the cello belong to?"
+      nom: "Strings."
+      explication: "The cello has strings that you rub with a bow, like the violin, the viola and the double bass."
+      pieges:
+        - { texte: "Woodwind.", pourquoi: "The woodwind family is made of wind instruments. The cello has strings." }
+        - { texte: "Percussion.", pourquoi: "You don't strike the cello: you rub its strings." }
+    - texte: "The orchestra's flute is made of metal. Which family does it belong to?"
+      nom: "Woodwind."
+      explication: "Even in metal, the flute is part of the woodwind, with the oboe, the clarinet and the bassoon."
+      pieges:
+        - { texte: "Brass.", pourquoi: "That's the trap: metal isn't enough. The flute is grouped with the woodwind." }
+        - { texte: "Strings.", pourquoi: "The flute has no strings: you blow into it." }
+    - texte: "Which family does the horn belong to?"
+      nom: "Brass."
+      explication: "The horn is a brass instrument, like the trumpet, the trombone and the tuba."
+      pieges:
+        - { texte: "Woodwind.", pourquoi: "You blow into woodwind too, but the horn is grouped with the brass." }
+        - { texte: "Percussion.", pourquoi: "You don't strike the horn: you blow into it." }
+    - texte: "Which family do the timpani belong to?"
+      nom: "Percussion."
+      explication: "Timpani have a stretched skin that you strike with sticks."
+      pieges:
+        - { texte: "Brass.", pourquoi: "You don't blow into timpani: you strike them." }
+        - { texte: "Strings.", pourquoi: "Timpani have no strings: they have a stretched skin." }
+    - texte: "What are the orchestra's two families of wind instruments?"
+      nom: "Woodwind and brass."
+      explication: "In both woodwind and brass, the sound comes from the air the musician blows."
+      pieges:
+        - { texte: "Strings and woodwind.", pourquoi: "You don't blow into strings: you rub or pluck them." }
+        - { texte: "Percussion and brass.", pourquoi: "Percussion is struck: it isn't wind." }
+    - texte: "Which family does the clarinet belong to?"
+      nom: "Woodwind."
+      explication: "The clarinet is part of the woodwind, with the flute, the oboe and the bassoon."
+      pieges:
+        - { texte: "Brass.", pourquoi: "The clarinet is a wind instrument, but it's grouped with the woodwind." }
+        - { texte: "Strings.", pourquoi: "The clarinet has no strings: you blow into it." }

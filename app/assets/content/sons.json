@@ -3,6 +3,10 @@
   "id": "sons",
   "titre": "Les univers sonores",
   "nom": "Les sons",
+  "noms": {
+    "moyens": "La musique",
+    "grands": "Musique"
+  },
   "icone": "1f3b5",
   "intro": [
     {
@@ -28,12 +32,16 @@
   ],
   "ages": [
     4,
-    7
+    11
   ],
   "en": {
     "titre": "The world of sounds",
     "nom": "Sounds",
-    "resume": "Listen, compare, recognise.",
+    "noms": {
+      "moyens": "Music",
+      "grands": "Music"
+    },
+    "resume": "Listen, compare, recognise; then words for sound, instruments, the chorus, dynamics, the orchestra and Peter and the Wolf, up to Year 6.",
     "intro": [
       {
         "texte": "Listen carefully to the two sounds.",
@@ -58,7 +66,17 @@
     ]
   },
   "sources": {
-    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
+    "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
+    "c2": "https://montbeliard1.circo25.ac-besancon.fr/wp-content/uploads/sites/20/2020/08/Cycle-2-avec-modifications-apparentes.pdf",
+    "c3": "https://eduscol.education.fr/document/50990/download",
+    "larousse_familles": "https://www.larousse.fr/dictionnaires/memo/Les_familles_d_instruments/23",
+    "philharmonie": "https://deneb.philharmoniedeparis.fr/uploads/documents/dp_vc_pierre_et_le_loup.pdf",
+    "onf": "https://francoispapin.github.io/NPEi.lab/pdf/DOSSIER_PEDAGOGIQUE_PIERRE_ET_LE_LOUP-LE_RETOUR_DU_LOUP.pdf",
+    "academie_piano": "https://www.dictionnaire-academie.fr/article/A9P2222",
+    "larousse_forte": "https://www.larousse.fr/dictionnaires/francais/forte/34689",
+    "larousse_refrain": "https://www.larousse.fr/dictionnaires/francais/refrain",
+    "larousse_couplet": "https://www.larousse.fr/dictionnaires/francais/couplet",
+    "larousse_timbre": "https://www.larousse.fr/dictionnaires/francais/timbre"
   },
   "competences": [
     {
@@ -231,6 +249,1119 @@
           "demonstration": "Listen: sound {rep} is {mot}.",
           "bravo": "Yes! Sound {rep} is {mot}."
         }
+      }
+    },
+    {
+      "id": "parametres-son",
+      "titre": "Les mots pour décrire un son",
+      "niveau": "CP",
+      "prerequis": [
+        "aigu-grave",
+        "fort-doux",
+        "long-court"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Éléments de vocabulaire liés aux paramètres du son (intensité, durée, hauteur, timbre)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un son a une hauteur : aigu ou grave. Il a une intensité : fort ou doux. Il a une durée : long ou court. Et il a un timbre : c'est ce qui fait qu'on reconnaît la flûte ou le tambour.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Aigu ou grave : la hauteur. Fort ou doux : l'intensité. Long ou court : la durée. Qui joue : le timbre.",
+        "exemple": "Exemple : un oiseau chante aigu, un ours grogne grave. Aigu ou grave, c'est la hauteur du son.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Un son aigu ou grave : de quoi parle-t-on ?",
+          "nom": "De la hauteur.",
+          "explication": "Aigu ou grave, c'est la hauteur du son.",
+          "pieges": [
+            {
+              "texte": "De la durée.",
+              "pourquoi": "La durée dit si le son est long ou court."
+            },
+            {
+              "texte": "De l'intensité.",
+              "pourquoi": "L'intensité dit si le son est fort ou doux."
+            }
+          ]
+        },
+        {
+          "texte": "Un son fort ou doux : de quoi parle-t-on ?",
+          "nom": "De l'intensité.",
+          "explication": "Fort ou doux, c'est l'intensité du son.",
+          "pieges": [
+            {
+              "texte": "De la hauteur.",
+              "pourquoi": "La hauteur dit si le son est aigu ou grave."
+            },
+            {
+              "texte": "Du timbre.",
+              "pourquoi": "Le timbre dit qui joue : flûte, tambour, voix…"
+            }
+          ]
+        },
+        {
+          "texte": "Un son long ou court : de quoi parle-t-on ?",
+          "nom": "De la durée.",
+          "explication": "Long ou court, c'est la durée du son.",
+          "pieges": [
+            {
+              "texte": "De l'intensité.",
+              "pourquoi": "Un son peut être long et doux, ou court et fort : l'intensité, c'est fort ou doux."
+            },
+            {
+              "texte": "De la hauteur.",
+              "pourquoi": "La hauteur dit si le son est aigu ou grave."
+            }
+          ]
+        },
+        {
+          "texte": "Une flûte et une voix font la même note, aussi fort l'une que l'autre. On les reconnaît quand même. Grâce à quoi ?",
+          "nom": "Au timbre.",
+          "explication": "Même hauteur, même intensité : c'est le timbre qui change. Il permet de reconnaître qui joue.",
+          "pieges": [
+            {
+              "texte": "À la hauteur.",
+              "pourquoi": "C'est la même note : la hauteur est la même."
+            },
+            {
+              "texte": "À l'intensité.",
+              "pourquoi": "Elles sont aussi fortes l'une que l'autre : l'intensité est la même."
+            }
+          ]
+        },
+        {
+          "texte": "Le tonnerre fait un son grave et très fort. Quel mot parle de « très fort » ?",
+          "nom": "L'intensité.",
+          "explication": "Très fort, c'est une grande intensité. Grave, c'est la hauteur.",
+          "pieges": [
+            {
+              "texte": "La hauteur.",
+              "pourquoi": "La hauteur, ici, c'est « grave »."
+            },
+            {
+              "texte": "La durée.",
+              "pourquoi": "La durée dirait si le tonnerre gronde longtemps ou non."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Words to describe a sound",
+        "idee": "A sound has a pitch: high or low. It has a volume: loud or soft. It has a length: long or short. And it has a timbre: that's what lets you tell a flute from a drum.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "High or low: pitch. Loud or soft: volume. Long or short: length. Who is playing: timbre.",
+          "exemple": "Example: a bird sings high, a bear growls low. High or low is the pitch of the sound.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "A high or low sound: what are we talking about?",
+            "nom": "Pitch.",
+            "explication": "High or low is the pitch of the sound.",
+            "pieges": [
+              {
+                "texte": "Length.",
+                "pourquoi": "Length says whether the sound is long or short."
+              },
+              {
+                "texte": "Volume.",
+                "pourquoi": "Volume says whether the sound is loud or soft."
+              }
+            ]
+          },
+          {
+            "texte": "A loud or soft sound: what are we talking about?",
+            "nom": "Volume.",
+            "explication": "Loud or soft is the volume of the sound.",
+            "pieges": [
+              {
+                "texte": "Pitch.",
+                "pourquoi": "Pitch says whether the sound is high or low."
+              },
+              {
+                "texte": "Timbre.",
+                "pourquoi": "Timbre says who is playing: flute, drum, voice…"
+              }
+            ]
+          },
+          {
+            "texte": "A long or short sound: what are we talking about?",
+            "nom": "Length.",
+            "explication": "Long or short is the length of the sound.",
+            "pieges": [
+              {
+                "texte": "Volume.",
+                "pourquoi": "A sound can be long and soft, or short and loud: volume is loud or soft."
+              },
+              {
+                "texte": "Pitch.",
+                "pourquoi": "Pitch says whether the sound is high or low."
+              }
+            ]
+          },
+          {
+            "texte": "A flute and a voice make the same note, just as loud as each other. You can still tell them apart. Thanks to what?",
+            "nom": "Timbre.",
+            "explication": "Same pitch, same volume: it's the timbre that changes. It lets you recognise who is playing.",
+            "pieges": [
+              {
+                "texte": "Pitch.",
+                "pourquoi": "It's the same note: the pitch is the same."
+              },
+              {
+                "texte": "Volume.",
+                "pourquoi": "They are just as loud as each other: the volume is the same."
+              }
+            ]
+          },
+          {
+            "texte": "Thunder makes a low and very loud sound. Which word is about “very loud”?",
+            "nom": "Volume.",
+            "explication": "Very loud is a high volume. Low is the pitch.",
+            "pieges": [
+              {
+                "texte": "Pitch.",
+                "pourquoi": "Here, the pitch is “low”."
+              },
+              {
+                "texte": "Length.",
+                "pourquoi": "Length would say whether the thunder rumbles for a long time or not."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "souffler-frapper",
+      "titre": "Souffler, frapper, frotter, pincer",
+      "niveau": "CE1",
+      "prerequis": [
+        "parametres-son"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Diversité des matériaux sonores."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Chaque instrument fait son son à sa façon. On souffle dans la flûte et la trompette. On frappe le tambour. On frotte les cordes du violon avec un archet. On pince les cordes de la guitare et de la harpe.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Imagine le musicien : avec quoi fait-il le son ? Sa bouche, une baguette, un archet ou ses doigts ?",
+        "exemple": "Exemple : pour jouer du xylophone, on tape sur les lames avec des baguettes. On le frappe : c'est une percussion.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Comment fait-on sonner une flûte ?",
+          "nom": "On souffle dedans.",
+          "explication": "La flûte est un instrument à vent : le son vient de l'air que l'on souffle.",
+          "pieges": [
+            {
+              "texte": "On la frappe avec une baguette.",
+              "pourquoi": "On frappe un tambour ou un xylophone, pas une flûte."
+            },
+            {
+              "texte": "On pince ses cordes.",
+              "pourquoi": "La flûte n'a pas de cordes : c'est un tuyau."
+            }
+          ]
+        },
+        {
+          "texte": "Comment fait-on sonner un tambour ?",
+          "nom": "On le frappe.",
+          "explication": "Le tambour est une percussion : on frappe sa peau avec la main ou une baguette.",
+          "pieges": [
+            {
+              "texte": "On souffle dedans.",
+              "pourquoi": "On souffle dans une flûte ou une trompette, pas dans un tambour."
+            },
+            {
+              "texte": "On frotte ses cordes avec un archet.",
+              "pourquoi": "Le tambour n'a pas de cordes : il a une peau tendue."
+            }
+          ]
+        },
+        {
+          "texte": "La violoniste passe un archet sur les cordes. Que fait-elle ?",
+          "nom": "Elle frotte les cordes.",
+          "explication": "Le violon est un instrument à cordes frottées : l'archet frotte les cordes.",
+          "pieges": [
+            {
+              "texte": "Elle pince les cordes.",
+              "pourquoi": "Pincer, c'est avec les doigts, comme à la guitare. L'archet, lui, frotte."
+            },
+            {
+              "texte": "Elle souffle sur les cordes.",
+              "pourquoi": "Le violon n'est pas un instrument à vent : on ne souffle pas."
+            }
+          ]
+        },
+        {
+          "texte": "Comment joue-t-on de la guitare ?",
+          "nom": "On pince les cordes avec les doigts.",
+          "explication": "La guitare est un instrument à cordes pincées, comme la harpe.",
+          "pieges": [
+            {
+              "texte": "On frotte les cordes avec un archet.",
+              "pourquoi": "L'archet, c'est pour le violon ou le violoncelle."
+            },
+            {
+              "texte": "On souffle dedans.",
+              "pourquoi": "La guitare n'est pas un instrument à vent."
+            }
+          ]
+        },
+        {
+          "texte": "Dans le piano, des petits marteaux tapent sur des cordes. Les cordes du piano sont…",
+          "nom": "Frappées.",
+          "explication": "Quand on appuie sur une touche, un marteau frappe une corde : ce sont des cordes frappées.",
+          "pieges": [
+            {
+              "texte": "Pincées.",
+              "pourquoi": "Ce n'est pas un doigt qui pince la corde, c'est un marteau qui la frappe."
+            },
+            {
+              "texte": "Soufflées.",
+              "pourquoi": "On ne souffle pas dans un piano : il n'a pas de tuyau."
+            }
+          ]
+        },
+        {
+          "texte": "Lequel est un instrument à vent ?",
+          "nom": "La trompette.",
+          "explication": "On souffle dans la trompette : c'est un instrument à vent.",
+          "pieges": [
+            {
+              "texte": "La harpe.",
+              "pourquoi": "La harpe a des cordes que l'on pince."
+            },
+            {
+              "texte": "Le xylophone.",
+              "pourquoi": "On frappe le xylophone avec des baguettes : c'est une percussion."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Blow, strike, bow, pluck",
+        "idee": "Each instrument makes its sound in its own way. You blow into the flute and the trumpet. You strike the drum. You rub the violin's strings with a bow. You pluck the strings of the guitar and the harp.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Picture the musician: what makes the sound? Their mouth, a stick, a bow or their fingers?",
+          "exemple": "Example: to play the xylophone, you tap the bars with sticks. You strike it: it's a percussion instrument.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "How do you make a flute sound?",
+            "nom": "You blow into it.",
+            "explication": "The flute is a wind instrument: the sound comes from the air you blow.",
+            "pieges": [
+              {
+                "texte": "You strike it with a stick.",
+                "pourquoi": "You strike a drum or a xylophone, not a flute."
+              },
+              {
+                "texte": "You pluck its strings.",
+                "pourquoi": "The flute has no strings: it's a tube."
+              }
+            ]
+          },
+          {
+            "texte": "How do you make a drum sound?",
+            "nom": "You strike it.",
+            "explication": "The drum is a percussion instrument: you strike its skin with your hand or a stick.",
+            "pieges": [
+              {
+                "texte": "You blow into it.",
+                "pourquoi": "You blow into a flute or a trumpet, not into a drum."
+              },
+              {
+                "texte": "You rub its strings with a bow.",
+                "pourquoi": "The drum has no strings: it has a stretched skin."
+              }
+            ]
+          },
+          {
+            "texte": "The violinist moves a bow across the strings. What is she doing?",
+            "nom": "She is rubbing the strings.",
+            "explication": "The violin is a bowed string instrument: the bow rubs the strings.",
+            "pieges": [
+              {
+                "texte": "She is plucking the strings.",
+                "pourquoi": "Plucking is done with the fingers, as on a guitar. The bow rubs."
+              },
+              {
+                "texte": "She is blowing on the strings.",
+                "pourquoi": "The violin isn't a wind instrument: you don't blow."
+              }
+            ]
+          },
+          {
+            "texte": "How do you play the guitar?",
+            "nom": "You pluck the strings with your fingers.",
+            "explication": "The guitar is a plucked string instrument, like the harp.",
+            "pieges": [
+              {
+                "texte": "You rub the strings with a bow.",
+                "pourquoi": "The bow is for the violin or the cello."
+              },
+              {
+                "texte": "You blow into it.",
+                "pourquoi": "The guitar isn't a wind instrument."
+              }
+            ]
+          },
+          {
+            "texte": "Inside the piano, little hammers hit strings. The piano's strings are…",
+            "nom": "Struck.",
+            "explication": "When you press a key, a hammer strikes a string: these are struck strings.",
+            "pieges": [
+              {
+                "texte": "Plucked.",
+                "pourquoi": "No finger plucks the string: a hammer strikes it."
+              },
+              {
+                "texte": "Blown.",
+                "pourquoi": "You don't blow into a piano: it has no tube."
+              }
+            ]
+          },
+          {
+            "texte": "Which one is a wind instrument?",
+            "nom": "The trumpet.",
+            "explication": "You blow into the trumpet: it's a wind instrument.",
+            "pieges": [
+              {
+                "texte": "The harp.",
+                "pourquoi": "The harp has strings that you pluck."
+              },
+              {
+                "texte": "The xylophone.",
+                "pourquoi": "You strike the xylophone with sticks: it's a percussion instrument."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "refrain-couplet",
+      "titre": "Ce qui revient : le refrain",
+      "niveau": "CE2",
+      "prerequis": [
+        "parametres-son"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Repérer une organisation simple : récurrence d’une mélodie, d’un motif rythmique, d’un thème, etc."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans beaucoup de chansons, une partie revient, toujours pareille : c'est le refrain. Entre deux refrains, un couplet, avec de nouvelles paroles. Un rythme aussi peut revenir : c'est un motif rythmique.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Cherche ce qui revient pareil. Ce qui revient, c'est le refrain ; ce qui change, ce sont les couplets.",
+        "exemple": "Exemple : une chanson fait couplet 1, refrain, couplet 2, refrain. Le refrain revient deux fois, avec les mêmes paroles. Les couplets 1 et 2 ont des paroles différentes.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans une chanson, quelle partie revient pareille après chaque couplet ?",
+          "nom": "Le refrain.",
+          "explication": "Le refrain revient après chaque couplet, avec les mêmes paroles et la même mélodie.",
+          "pieges": [
+            {
+              "texte": "Le couplet.",
+              "pourquoi": "Chaque couplet a ses propres paroles : il ne revient pas pareil."
+            },
+            {
+              "texte": "Le titre.",
+              "pourquoi": "Le titre est le nom de la chanson, pas une partie que l'on chante à chaque fois."
+            }
+          ]
+        },
+        {
+          "texte": "Les couplets d'une chanson ont-ils les mêmes paroles ?",
+          "nom": "Non, chaque couplet a ses paroles.",
+          "explication": "Les couplets racontent la suite : leurs paroles changent. C'est le refrain qui reste le même.",
+          "pieges": [
+            {
+              "texte": "Oui, toujours les mêmes.",
+              "pourquoi": "Ce qui garde les mêmes paroles, c'est le refrain, pas les couplets."
+            },
+            {
+              "texte": "Il n'y a qu'un seul couplet par chanson.",
+              "pourquoi": "Le refrain sépare les couplets : il y en a souvent plusieurs."
+            }
+          ]
+        },
+        {
+          "texte": "Une chanson fait : couplet 1, refrain, couplet 2, refrain, couplet 3, refrain. Combien de fois chante-t-on le refrain ?",
+          "nom": "3 fois.",
+          "explication": "Un refrain après chacun des 3 couplets : on le chante 3 fois.",
+          "pieges": [
+            {
+              "texte": "1 fois.",
+              "pourquoi": "Le refrain revient après chaque couplet, pas seulement à la fin."
+            },
+            {
+              "texte": "6 fois.",
+              "pourquoi": "6, c'est le nombre de parties en tout : 3 couplets et 3 refrains."
+            }
+          ]
+        },
+        {
+          "texte": "Couplet 1, refrain, couplet 2… Que chante-t-on juste après le couplet 2 ?",
+          "nom": "Le refrain.",
+          "explication": "Après chaque couplet revient le refrain.",
+          "pieges": [
+            {
+              "texte": "Le couplet 1, encore.",
+              "pourquoi": "On ne rechante pas un couplet : c'est le refrain qui revient."
+            },
+            {
+              "texte": "Rien, la chanson est finie.",
+              "pourquoi": "Après le couplet 1, il y avait un refrain : après le couplet 2 aussi."
+            }
+          ]
+        },
+        {
+          "texte": "On frappe dans les mains : long, court, court — long, court, court — long, court, court. Que remarques-tu ?",
+          "nom": "Le même rythme revient trois fois.",
+          "explication": "« Long, court, court » revient pareil : c'est un motif rythmique répété.",
+          "pieges": [
+            {
+              "texte": "Le rythme change à chaque fois.",
+              "pourquoi": "Compare les trois morceaux : ils sont tous « long, court, court »."
+            },
+            {
+              "texte": "Il y a un son de plus à chaque fois.",
+              "pourquoi": "Chaque morceau a trois sons : un long et deux courts."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "What comes back: the chorus",
+        "idee": "In many songs, one part comes back, always the same: it's the chorus. Between two choruses, a verse, with new words. A rhythm can come back too: it's a rhythmic pattern.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Look for what comes back the same. What comes back is the chorus; what changes are the verses.",
+          "exemple": "Example: a song goes verse 1, chorus, verse 2, chorus. The chorus comes back twice, with the same words. Verses 1 and 2 have different words.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In a song, which part comes back the same after each verse?",
+            "nom": "The chorus.",
+            "explication": "The chorus comes back after each verse, with the same words and the same tune.",
+            "pieges": [
+              {
+                "texte": "The verse.",
+                "pourquoi": "Each verse has its own words: it doesn't come back the same."
+              },
+              {
+                "texte": "The title.",
+                "pourquoi": "The title is the song's name, not a part you sing each time."
+              }
+            ]
+          },
+          {
+            "texte": "Do the verses of a song have the same words?",
+            "nom": "No, each verse has its own words.",
+            "explication": "The verses tell what happens next: their words change. It's the chorus that stays the same.",
+            "pieges": [
+              {
+                "texte": "Yes, always the same.",
+                "pourquoi": "What keeps the same words is the chorus, not the verses."
+              },
+              {
+                "texte": "A song only has one verse.",
+                "pourquoi": "The chorus separates the verses: there are often several."
+              }
+            ]
+          },
+          {
+            "texte": "A song goes: verse 1, chorus, verse 2, chorus, verse 3, chorus. How many times do you sing the chorus?",
+            "nom": "3 times.",
+            "explication": "One chorus after each of the 3 verses: you sing it 3 times.",
+            "pieges": [
+              {
+                "texte": "Once.",
+                "pourquoi": "The chorus comes back after each verse, not only at the end."
+              },
+              {
+                "texte": "6 times.",
+                "pourquoi": "6 is the number of parts in all: 3 verses and 3 choruses."
+              }
+            ]
+          },
+          {
+            "texte": "Verse 1, chorus, verse 2… What do you sing right after verse 2?",
+            "nom": "The chorus.",
+            "explication": "After each verse, the chorus comes back.",
+            "pieges": [
+              {
+                "texte": "Verse 1 again.",
+                "pourquoi": "You don't sing a verse again: it's the chorus that comes back."
+              },
+              {
+                "texte": "Nothing, the song is over.",
+                "pourquoi": "After verse 1 there was a chorus: after verse 2 too."
+              }
+            ]
+          },
+          {
+            "texte": "We clap: long, short, short — long, short, short — long, short, short. What do you notice?",
+            "nom": "The same rhythm comes back three times.",
+            "explication": "“Long, short, short” comes back the same: it's a repeated rhythmic pattern.",
+            "pieges": [
+              {
+                "texte": "The rhythm changes each time.",
+                "pourquoi": "Compare the three pieces: they are all “long, short, short”."
+              },
+              {
+                "texte": "There's one more sound each time.",
+                "pourquoi": "Each piece has three sounds: one long and two short."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "piano-forte",
+      "titre": "Les nuances : piano ou forte",
+      "niveau": "CM1",
+      "prerequis": [
+        "fort-doux",
+        "parametres-son"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Vocabulaire de l’expression : quelques nuances simples, tempo, caractère, etc."
+      },
+      "activite": "ecouter",
+      "parametres": {
+        "dimension": "intensite",
+        "mots": [
+          "forte",
+          "piano"
+        ]
+      },
+      "idee": "Sur une partition, les nuances disent comment jouer. Forte, écrit f, veut dire fort. Piano, écrit p, veut dire doucement. Ce sont des mots italiens.",
+      "phrases": {
+        "consigne": "Écoute les deux sons. Tu peux les réécouter. Puis touche la carte du son demandé.",
+        "question": "Quel son est joué {mot} ?",
+        "indice": "Forte, c'est fort. Piano, c'est doucement. Écoute lequel est le plus fort.",
+        "exemple": "Exemple : sous les notes, on lit p : on joue piano, doucement. Plus loin, on lit f : on joue forte, fort.",
+        "demonstration": "Écoute : le son {rep} est joué {mot}.",
+        "bravo": "Oui ! Le son {rep} est joué {mot}."
+      },
+      "en": {
+        "mots": [
+          "forte",
+          "piano"
+        ],
+        "titre": "Dynamics: piano or forte",
+        "idee": "On a score, dynamics tell you how to play. Forte, written f, means loud. Piano, written p, means softly. They are Italian words.",
+        "phrases": {
+          "consigne": "Listen to the two sounds. You can listen again. Then touch the card for the sound I ask for.",
+          "question": "Which sound is played {mot}?",
+          "indice": "Forte is loud. Piano is soft. Listen for which one is louder.",
+          "exemple": "Example: under the notes you read p: you play piano, softly. Further on you read f: you play forte, loud.",
+          "demonstration": "Listen: sound {rep} is played {mot}.",
+          "bravo": "Yes! Sound {rep} is played {mot}."
+        }
+      }
+    },
+    {
+      "id": "orchestre",
+      "titre": "Les familles de l'orchestre",
+      "niveau": "CM2",
+      "prerequis": [
+        "souffler-frapper"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Principales caractéristiques de l’orchestre symphonique."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'orchestre range ses instruments en quatre familles : les cordes (violon, violoncelle), les bois (flûte, clarinette), les cuivres (trompette, cor) et les percussions (timbales). Bois et cuivres sont des vents.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "On souffle dedans ? Bois ou cuivres. On frappe ? Percussions. Il a des cordes ? Cordes. Attention : une flûte en métal reste un bois.",
+        "exemple": "Exemple : le trombone. On souffle dedans, c'est un instrument à vent, et il fait partie des cuivres, avec la trompette, le cor et le tuba.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "À quelle famille appartient le violoncelle ?",
+          "nom": "Les cordes.",
+          "explication": "Le violoncelle a des cordes que l'on frotte avec un archet, comme le violon, l'alto et la contrebasse.",
+          "pieges": [
+            {
+              "texte": "Les bois.",
+              "pourquoi": "La famille des bois regroupe des instruments à vent. Le violoncelle, lui, a des cordes."
+            },
+            {
+              "texte": "Les percussions.",
+              "pourquoi": "On ne frappe pas le violoncelle : on frotte ses cordes."
+            }
+          ]
+        },
+        {
+          "texte": "La flûte traversière de l'orchestre est en métal. À quelle famille appartient-elle ?",
+          "nom": "Les bois.",
+          "explication": "Même en métal, la flûte traversière fait partie des bois, avec le hautbois, la clarinette et le basson.",
+          "pieges": [
+            {
+              "texte": "Les cuivres.",
+              "pourquoi": "C'est le piège : le métal ne suffit pas. La flûte est rangée avec les bois."
+            },
+            {
+              "texte": "Les cordes.",
+              "pourquoi": "La flûte n'a pas de cordes : on souffle dedans."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle famille appartient le cor ?",
+          "nom": "Les cuivres.",
+          "explication": "Le cor est un cuivre, comme la trompette, le trombone et le tuba.",
+          "pieges": [
+            {
+              "texte": "Les bois.",
+              "pourquoi": "On souffle aussi dans les bois, mais le cor est rangé avec les cuivres."
+            },
+            {
+              "texte": "Les percussions.",
+              "pourquoi": "On ne frappe pas le cor : on souffle dedans."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle famille appartiennent les timbales ?",
+          "nom": "Les percussions.",
+          "explication": "Les timbales ont une peau tendue que l'on frappe avec des baguettes.",
+          "pieges": [
+            {
+              "texte": "Les cuivres.",
+              "pourquoi": "On ne souffle pas dans les timbales : on les frappe."
+            },
+            {
+              "texte": "Les cordes.",
+              "pourquoi": "Les timbales n'ont pas de cordes : elles ont une peau tendue."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles sont les deux familles d'instruments à vent de l'orchestre ?",
+          "nom": "Les bois et les cuivres.",
+          "explication": "Dans les bois comme dans les cuivres, le son vient de l'air soufflé par le musicien.",
+          "pieges": [
+            {
+              "texte": "Les cordes et les bois.",
+              "pourquoi": "On ne souffle pas dans les cordes : on les frotte ou on les pince."
+            },
+            {
+              "texte": "Les percussions et les cuivres.",
+              "pourquoi": "Les percussions se frappent : ce ne sont pas des vents."
+            }
+          ]
+        },
+        {
+          "texte": "À quelle famille appartient la clarinette ?",
+          "nom": "Les bois.",
+          "explication": "La clarinette fait partie des bois, avec la flûte, le hautbois et le basson.",
+          "pieges": [
+            {
+              "texte": "Les cuivres.",
+              "pourquoi": "La clarinette est un instrument à vent, mais elle est rangée avec les bois."
+            },
+            {
+              "texte": "Les cordes.",
+              "pourquoi": "La clarinette n'a pas de cordes : on souffle dedans."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The families of the orchestra",
+        "idee": "The orchestra sorts its instruments into four families: strings (violin, cello), woodwind (flute, clarinet), brass (trumpet, horn) and percussion (timpani). Woodwind and brass are wind instruments.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Do you blow into it? Woodwind or brass. Do you strike it? Percussion. Does it have strings? Strings. Careful: a metal flute is still woodwind.",
+          "exemple": "Example: the trombone. You blow into it, it's a wind instrument, and it belongs to the brass, with the trumpet, the horn and the tuba.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which family does the cello belong to?",
+            "nom": "Strings.",
+            "explication": "The cello has strings that you rub with a bow, like the violin, the viola and the double bass.",
+            "pieges": [
+              {
+                "texte": "Woodwind.",
+                "pourquoi": "The woodwind family is made of wind instruments. The cello has strings."
+              },
+              {
+                "texte": "Percussion.",
+                "pourquoi": "You don't strike the cello: you rub its strings."
+              }
+            ]
+          },
+          {
+            "texte": "The orchestra's flute is made of metal. Which family does it belong to?",
+            "nom": "Woodwind.",
+            "explication": "Even in metal, the flute is part of the woodwind, with the oboe, the clarinet and the bassoon.",
+            "pieges": [
+              {
+                "texte": "Brass.",
+                "pourquoi": "That's the trap: metal isn't enough. The flute is grouped with the woodwind."
+              },
+              {
+                "texte": "Strings.",
+                "pourquoi": "The flute has no strings: you blow into it."
+              }
+            ]
+          },
+          {
+            "texte": "Which family does the horn belong to?",
+            "nom": "Brass.",
+            "explication": "The horn is a brass instrument, like the trumpet, the trombone and the tuba.",
+            "pieges": [
+              {
+                "texte": "Woodwind.",
+                "pourquoi": "You blow into woodwind too, but the horn is grouped with the brass."
+              },
+              {
+                "texte": "Percussion.",
+                "pourquoi": "You don't strike the horn: you blow into it."
+              }
+            ]
+          },
+          {
+            "texte": "Which family do the timpani belong to?",
+            "nom": "Percussion.",
+            "explication": "Timpani have a stretched skin that you strike with sticks.",
+            "pieges": [
+              {
+                "texte": "Brass.",
+                "pourquoi": "You don't blow into timpani: you strike them."
+              },
+              {
+                "texte": "Strings.",
+                "pourquoi": "Timpani have no strings: they have a stretched skin."
+              }
+            ]
+          },
+          {
+            "texte": "What are the orchestra's two families of wind instruments?",
+            "nom": "Woodwind and brass.",
+            "explication": "In both woodwind and brass, the sound comes from the air the musician blows.",
+            "pieges": [
+              {
+                "texte": "Strings and woodwind.",
+                "pourquoi": "You don't blow into strings: you rub or pluck them."
+              },
+              {
+                "texte": "Percussion and brass.",
+                "pourquoi": "Percussion is struck: it isn't wind."
+              }
+            ]
+          },
+          {
+            "texte": "Which family does the clarinet belong to?",
+            "nom": "Woodwind.",
+            "explication": "The clarinet is part of the woodwind, with the flute, the oboe and the bassoon.",
+            "pieges": [
+              {
+                "texte": "Brass.",
+                "pourquoi": "The clarinet is a wind instrument, but it's grouped with the woodwind."
+              },
+              {
+                "texte": "Strings.",
+                "pourquoi": "The clarinet has no strings: you blow into it."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pierre-et-le-loup",
+      "titre": "Une œuvre : Pierre et le Loup",
+      "niveau": "CM2",
+      "prerequis": [
+        "orchestre"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Quelques grandes œuvres du patrimoine."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans Pierre et le Loup (Prokofiev, 1936), chaque personnage a son instrument. Oiseau : flûte. Canard : hautbois. Chat : clarinette. Grand-père : basson. Loup : trois cors. Pierre : cordes. Chasseurs : timbales.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Range d'abord par famille : l'oiseau, le canard, le chat et le grand-père sont des bois ; le loup, des cuivres ; Pierre, des cordes ; les chasseurs, des percussions.",
+        "exemple": "Exemple : quand l'oiseau entre dans l'histoire, on entend la flûte. Prokofiev a donné l'oiseau à la flûte, un instrument de la famille des bois.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qui a composé Pierre et le Loup ?",
+          "nom": "Sergueï Prokofiev.",
+          "explication": "Sergueï Prokofiev a écrit la musique de Pierre et le Loup, et aussi son texte.",
+          "pieges": [
+            {
+              "texte": "Natalia Satz.",
+              "pourquoi": "Natalia Satz dirigeait le théâtre pour enfants de Moscou qui a commandé l'œuvre. Elle ne l'a pas composée."
+            },
+            {
+              "texte": "Pierre, le héros du conte.",
+              "pourquoi": "Pierre est un personnage de l'histoire, pas le compositeur."
+            }
+          ]
+        },
+        {
+          "texte": "Quel instrument joue le canard ?",
+          "nom": "Le hautbois.",
+          "explication": "Le canard est joué par le hautbois, un instrument de la famille des bois.",
+          "pieges": [
+            {
+              "texte": "La flûte.",
+              "pourquoi": "La flûte joue l'oiseau."
+            },
+            {
+              "texte": "Les timbales.",
+              "pourquoi": "Les timbales, avec la grosse caisse, font les coups de fusil des chasseurs."
+            }
+          ]
+        },
+        {
+          "texte": "Quels instruments jouent le loup ?",
+          "nom": "Trois cors.",
+          "explication": "Le loup est joué par trois cors, des cuivres.",
+          "pieges": [
+            {
+              "texte": "Le basson.",
+              "pourquoi": "Le basson joue le grand-père."
+            },
+            {
+              "texte": "Les cordes.",
+              "pourquoi": "Les cordes jouent Pierre."
+            }
+          ]
+        },
+        {
+          "texte": "Quel instrument joue le chat ?",
+          "nom": "La clarinette.",
+          "explication": "Le chat est joué par la clarinette, en notes détachées, dans le grave.",
+          "pieges": [
+            {
+              "texte": "Le hautbois.",
+              "pourquoi": "Le hautbois joue le canard."
+            },
+            {
+              "texte": "Les cors.",
+              "pourquoi": "Les trois cors jouent le loup."
+            }
+          ]
+        },
+        {
+          "texte": "Quel instrument joue le grand-père ?",
+          "nom": "Le basson.",
+          "explication": "Le grand-père est joué par le basson, de la famille des bois.",
+          "pieges": [
+            {
+              "texte": "La flûte.",
+              "pourquoi": "La flûte joue l'oiseau."
+            },
+            {
+              "texte": "La clarinette.",
+              "pourquoi": "La clarinette joue le chat."
+            }
+          ]
+        },
+        {
+          "texte": "Qui joue Pierre ?",
+          "nom": "Les instruments à cordes.",
+          "explication": "Pierre est joué par les cordes : un quatuor à cordes.",
+          "pieges": [
+            {
+              "texte": "Les trois cors.",
+              "pourquoi": "Les cors jouent le loup, l'ennemi de Pierre."
+            },
+            {
+              "texte": "Le basson.",
+              "pourquoi": "Le basson joue le grand-père."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle famille d'instruments imite les coups de fusil des chasseurs ?",
+          "nom": "Les percussions.",
+          "explication": "Les coups de fusil des chasseurs sont joués par les timbales et la grosse caisse : des percussions.",
+          "pieges": [
+            {
+              "texte": "Les bois.",
+              "pourquoi": "Les bois jouent l'oiseau, le canard, le chat et le grand-père."
+            },
+            {
+              "texte": "Les cordes.",
+              "pourquoi": "Les cordes jouent Pierre."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A work: Peter and the Wolf",
+        "idee": "In Peter and the Wolf (Prokofiev, 1936), each character has its instrument. Bird: flute. Duck: oboe. Cat: clarinet. Grandfather: bassoon. Wolf: three horns. Peter: strings. Hunters: timpani.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Sort by family first: the bird, the duck, the cat and the grandfather are woodwind; the wolf, brass; Peter, strings; the hunters, percussion.",
+          "exemple": "Example: when the bird enters the story, you hear the flute. Prokofiev gave the bird to the flute, an instrument of the woodwind family.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Who composed Peter and the Wolf?",
+            "nom": "Sergei Prokofiev.",
+            "explication": "Sergei Prokofiev wrote the music of Peter and the Wolf, and its words too.",
+            "pieges": [
+              {
+                "texte": "Natalia Satz.",
+                "pourquoi": "Natalia Satz ran the Moscow children's theatre that commissioned the work. She didn't compose it."
+              },
+              {
+                "texte": "Peter, the hero of the tale.",
+                "pourquoi": "Peter is a character in the story, not the composer."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument plays the duck?",
+            "nom": "The oboe.",
+            "explication": "The duck is played by the oboe, an instrument of the woodwind family.",
+            "pieges": [
+              {
+                "texte": "The flute.",
+                "pourquoi": "The flute plays the bird."
+              },
+              {
+                "texte": "The timpani.",
+                "pourquoi": "The timpani, with the bass drum, make the hunters' gunshots."
+              }
+            ]
+          },
+          {
+            "texte": "Which instruments play the wolf?",
+            "nom": "Three horns.",
+            "explication": "The wolf is played by three horns, which are brass instruments.",
+            "pieges": [
+              {
+                "texte": "The bassoon.",
+                "pourquoi": "The bassoon plays the grandfather."
+              },
+              {
+                "texte": "The strings.",
+                "pourquoi": "The strings play Peter."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument plays the cat?",
+            "nom": "The clarinet.",
+            "explication": "The cat is played by the clarinet, in short detached notes, in the low range.",
+            "pieges": [
+              {
+                "texte": "The oboe.",
+                "pourquoi": "The oboe plays the duck."
+              },
+              {
+                "texte": "The horns.",
+                "pourquoi": "The three horns play the wolf."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument plays the grandfather?",
+            "nom": "The bassoon.",
+            "explication": "The grandfather is played by the bassoon, from the woodwind family.",
+            "pieges": [
+              {
+                "texte": "The flute.",
+                "pourquoi": "The flute plays the bird."
+              },
+              {
+                "texte": "The clarinet.",
+                "pourquoi": "The clarinet plays the cat."
+              }
+            ]
+          },
+          {
+            "texte": "Who plays Peter?",
+            "nom": "The string instruments.",
+            "explication": "Peter is played by the strings: a string quartet.",
+            "pieges": [
+              {
+                "texte": "The three horns.",
+                "pourquoi": "The horns play the wolf, Peter's enemy."
+              },
+              {
+                "texte": "The bassoon.",
+                "pourquoi": "The bassoon plays the grandfather."
+              }
+            ]
+          },
+          {
+            "texte": "Which family of instruments imitates the hunters' gunshots?",
+            "nom": "Percussion.",
+            "explication": "The hunters' gunshots are played by the timpani and the bass drum: percussion instruments.",
+            "pieges": [
+              {
+                "texte": "Woodwind.",
+                "pourquoi": "The woodwind play the bird, the duck, the cat and the grandfather."
+              },
+              {
+                "texte": "Strings.",
+                "pourquoi": "The strings play Peter."
+              }
+            ]
+          }
+        ]
       }
     }
   ]

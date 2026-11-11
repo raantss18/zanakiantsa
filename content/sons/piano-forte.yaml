@@ -1,0 +1,28 @@
+id: piano-forte
+titre: "Les nuances : piano ou forte"
+niveau: CM1
+prerequis: [fort-doux, parametres-son]
+programme: { source: c3, texte: "Vocabulaire de l’expression : quelques nuances simples, tempo, caractère, etc." }
+activite: ecouter
+# mots : [propriété du son « A », propriété du son « B »] ; le son A (intensite) est le fort, le son B le doux.
+parametres: { dimension: intensite, mots: ["forte", "piano"] }
+idee: "Sur une partition, les nuances disent comment jouer. Forte, écrit f, veut dire fort. Piano, écrit p, veut dire doucement. Ce sont des mots italiens."
+phrases:
+  consigne: "Écoute les deux sons. Tu peux les réécouter. Puis touche la carte du son demandé."
+  question: "Quel son est joué {mot} ?"
+  indice: "Forte, c'est fort. Piano, c'est doucement. Écoute lequel est le plus fort."
+  exemple: "Exemple : sous les notes, on lit p : on joue piano, doucement. Plus loin, on lit f : on joue forte, fort."
+  demonstration: "Écoute : le son {rep} est joué {mot}."
+  bravo: "Oui ! Le son {rep} est joué {mot}."
+
+en:
+  mots: ["forte", "piano"]
+  titre: "Dynamics: piano or forte"
+  idee: "On a score, dynamics tell you how to play. Forte, written f, means loud. Piano, written p, means softly. They are Italian words."
+  phrases:
+    consigne: "Listen to the two sounds. You can listen again. Then touch the card for the sound I ask for."
+    question: "Which sound is played {mot}?"
+    indice: "Forte is loud. Piano is soft. Listen for which one is louder."
+    exemple: "Example: under the notes you read p: you play piano, softly. Further on you read f: you play forte, loud."
+    demonstration: "Listen: sound {rep} is played {mot}."
+    bravo: "Yes! Sound {rep} is played {mot}."
