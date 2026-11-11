@@ -1,0 +1,130 @@
+id: immunite-vaccination
+titre: "Immunité, vaccins et antibiotiques"
+niveau: 3e
+prerequis: [cellule]
+# Faits : barrières naturelles, phagocytose, lymphocytes B et anticorps, lymphocytes T, mémoire, vaccination
+# (MedlinePlus, « Immune response », https://medlineplus.gov/ency/article/000821.htm) ; vaccins à germes tués ou
+# affaiblis, protection des proches (OMS, https://www.who.int/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination) ;
+# cellules mémoires pendant plusieurs années (Inserm, https://www.inserm.fr/dossier/vaccins-et-vaccinations/) ;
+# antibiotiques contre les bactéries, pas contre les virus, résistance (MedlinePlus, https://medlineplus.gov/antibiotics.html).
+# Lus le 2026-11-11.
+programme: { source: c4, texte: "Expliquer les réactions qui permettent à l’organisme de se préserver des micro-organismes pathogènes. Réactions immunitaires. Mesures d’hygiène, vaccination, action des antiseptiques et des antibiotiques." }
+activite: quiz
+parametres: {}
+idee: "Le corps se défend contre les microbes : des globules blancs les mangent, d'autres fabriquent des anticorps et gardent la mémoire du microbe. Un vaccin crée cette mémoire sans faire tomber malade."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi : de quel microbe s'agit-il, bactérie ou virus ? Et quelle cellule du système immunitaire agit ?"
+  exemple: "Exemple : une écharde fait entrer des bactéries dans la peau. Des globules blancs, les phagocytes, viennent les manger : c'est la phagocytose."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelle est l'une des premières barrières du corps contre les microbes ?"
+    nom: "La peau."
+    explication: "La peau, le mucus qui piège les particules, les larmes ou l'acidité de l'estomac empêchent beaucoup de microbes d'entrer ou de survivre."
+    pieges:
+      - { texte: "Les anticorps, toujours en premier.", pourquoi: "Les anticorps viennent plus tard, quand le microbe est déjà entré et reconnu." }
+      - { texte: "Les antibiotiques.", pourquoi: "Ce sont des médicaments, pas une défense naturelle du corps." }
+  - texte: "Comment s'appelle le mécanisme par lequel certains globules blancs « mangent » les microbes ?"
+    nom: "La phagocytose."
+    explication: "Des globules blancs, les phagocytes, englobent et détruisent les microbes et les cellules mortes ou abîmées."
+    pieges:
+      - { texte: "La digestion.", pourquoi: "La digestion transforme les aliments dans le tube digestif ; la phagocytose a lieu dans les tissus infectés." }
+      - { texte: "La vaccination.", pourquoi: "La vaccination est un geste médical qui prépare le système immunitaire ; ce n'est pas une action des globules blancs." }
+  - texte: "Quelles cellules produisent les anticorps ?"
+    nom: "Des lymphocytes B, devenus plasmocytes."
+    explication: "Les lymphocytes B se transforment en plasmocytes, qui fabriquent des anticorps. Chaque anticorps se fixe à un antigène précis et aide à le détruire."
+    pieges:
+      - { texte: "Les globules rouges.", pourquoi: "Les globules rouges transportent le dioxygène ; ils ne font pas partie des défenses immunitaires." }
+      - { texte: "Les neurones.", pourquoi: "Les neurones transmettent des messages nerveux, pas des anticorps." }
+  - texte: "Que font les lymphocytes T ?"
+    nom: "Ils attaquent directement les antigènes et aident à contrôler la réponse immunitaire."
+    explication: "Certains lymphocytes T s'attaquent directement à ce qu'ils reconnaissent comme étranger ; d'autres organisent la réponse."
+    pieges:
+      - { texte: "Ils fabriquent les anticorps.", pourquoi: "Ce sont les lymphocytes B, devenus plasmocytes, qui fabriquent les anticorps." }
+      - { texte: "Ils transportent le dioxygène.", pourquoi: "C'est le rôle des globules rouges." }
+  - texte: "Après avoir combattu un microbe, pourquoi le corps réagit-il plus vite s'il le rencontre à nouveau ?"
+    nom: "Parce que des lymphocytes mémoires le reconnaissent vite."
+    explication: "Après une première rencontre, quelques lymphocytes B et T restent en mémoire : au contact suivant, la réponse est rapide et efficace."
+    pieges:
+      - { texte: "Parce que le microbe a disparu de la Terre.", pourquoi: "Le microbe existe toujours ; c'est le corps qui a appris à le reconnaître." }
+      - { texte: "Parce que la peau est devenue plus épaisse.", pourquoi: "La protection vient de la mémoire immunitaire, pas de la peau." }
+  - texte: "Que contient un vaccin ?"
+    nom: "Un microbe tué ou affaibli, ou une partie de microbe."
+    explication: "Le vaccin présente au système immunitaire un microbe tué, affaibli, ou une de ses parties : il fabrique des anticorps et une mémoire, sans tomber malade."
+    pieges:
+      - { texte: "Des anticorps tout prêts, qui durent toute la vie.", pourquoi: "Un vaccin fait fabriquer ses propres anticorps et ses cellules mémoires par le corps." }
+      - { texte: "Un antibiotique.", pourquoi: "L'antibiotique est un médicament qui tue des bactéries ; le vaccin prépare le système immunitaire." }
+  - texte: "Pourquoi se faire vacciner protège-t-il aussi les autres ?"
+    nom: "Parce que certaines personnes ne peuvent pas être vaccinées et comptent sur les autres."
+    explication: "Les bébés très jeunes ou les personnes gravement malades ne peuvent pas toujours être vaccinés : ils comptent sur la vaccination des autres pour être protégés."
+    pieges:
+      - { texte: "Ça ne protège que soi-même.", pourquoi: "On se vaccine pour se protéger et pour protéger ceux qui nous entourent." }
+      - { texte: "Parce qu'un vaccin soigne les malades qui sont autour de soi.", pourquoi: "Un vaccin prépare le corps de la personne vaccinée ; il ne soigne pas les autres." }
+  - texte: "Un antibiotique peut-il soigner un rhume causé par un virus ?"
+    nom: "Non, les antibiotiques agissent sur les bactéries, pas sur les virus."
+    explication: "Les antibiotiques tuent les bactéries ou les empêchent de se multiplier. Ils sont sans effet sur les virus, et les utiliser à tort favorise les bactéries résistantes."
+    pieges:
+      - { texte: "Oui, les antibiotiques tuent tous les microbes.", pourquoi: "C'est une idée répandue, mais les antibiotiques n'agissent pas sur les virus." }
+      - { texte: "Oui, s'il est pris très tôt.", pourquoi: "Qu'il soit pris tôt ou tard, un antibiotique n'agit pas sur un virus." }
+
+en:
+  titre: "Immunity, vaccines and antibiotics"
+  idee: "The body defends itself against germs: some white blood cells eat them, others make antibodies and remember the germ. A vaccine builds this memory without making you ill."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Ask yourself: which germ is it, a bacterium or a virus? And which immune cell is acting?"
+    exemple: "Example: a splinter lets bacteria into the skin. White blood cells called phagocytes come and eat them: that's phagocytosis."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is one of the body's first barriers against germs?"
+      nom: "The skin."
+      explication: "The skin, mucus that traps particles, tears and stomach acid stop many germs from getting in or surviving."
+      pieges:
+        - { texte: "Antibodies, always first.", pourquoi: "Antibodies come later, once the germ has got in and been recognised." }
+        - { texte: "Antibiotics.", pourquoi: "They are medicines, not a natural defence of the body." }
+    - texte: "What is the process called in which some white blood cells “eat” germs?"
+      nom: "Phagocytosis."
+      explication: "White blood cells called phagocytes engulf and destroy germs and dead or damaged cells."
+      pieges:
+        - { texte: "Digestion.", pourquoi: "Digestion breaks down food in the digestive tract; phagocytosis happens in infected tissue." }
+        - { texte: "Vaccination.", pourquoi: "Vaccination is a medical act that prepares the immune system; it isn't something white blood cells do." }
+    - texte: "Which cells make antibodies?"
+      nom: "B lymphocytes, once they become plasma cells."
+      explication: "B lymphocytes turn into plasma cells, which make antibodies. Each antibody attaches to a specific antigen and helps destroy it."
+      pieges:
+        - { texte: "Red blood cells.", pourquoi: "Red blood cells carry oxygen; they aren't part of the immune defences." }
+        - { texte: "Neurons.", pourquoi: "Neurons pass on nerve messages, not antibodies." }
+    - texte: "What do T lymphocytes do?"
+      nom: "They attack antigens directly and help control the immune response."
+      explication: "Some T lymphocytes directly attack what they recognise as foreign; others organise the response."
+      pieges:
+        - { texte: "They make antibodies.", pourquoi: "B lymphocytes, once they become plasma cells, are what make antibodies." }
+        - { texte: "They carry oxygen.", pourquoi: "That's what red blood cells do." }
+    - texte: "After fighting off a germ, why does the body react faster if it meets it again?"
+      nom: "Because memory lymphocytes recognise it quickly."
+      explication: "After a first encounter, a few B and T lymphocytes remain as memory: the next time, the response is fast and effective."
+      pieges:
+        - { texte: "Because the germ has disappeared from the Earth.", pourquoi: "The germ still exists; it's the body that has learned to recognise it." }
+        - { texte: "Because the skin has got thicker.", pourquoi: "The protection comes from immune memory, not from the skin." }
+    - texte: "What does a vaccine contain?"
+      nom: "A killed or weakened germ, or part of a germ."
+      explication: "A vaccine shows the immune system a killed or weakened germ, or part of one: it makes antibodies and memory, without getting ill."
+      pieges:
+        - { texte: "Ready-made antibodies that last for life.", pourquoi: "A vaccine makes the body produce its own antibodies and memory cells." }
+        - { texte: "An antibiotic.", pourquoi: "An antibiotic is a medicine that kills bacteria; a vaccine prepares the immune system." }
+    - texte: "Why does getting vaccinated also protect other people?"
+      nom: "Because some people can't be vaccinated and rely on others."
+      explication: "Very young babies or seriously ill people can't always be vaccinated: they rely on others being vaccinated to be protected."
+      pieges:
+        - { texte: "It only protects yourself.", pourquoi: "We get vaccinated to protect ourselves and to protect the people around us." }
+        - { texte: "Because a vaccine cures the sick people around you.", pourquoi: "A vaccine prepares the vaccinated person's body; it doesn't cure other people." }
+    - texte: "Can an antibiotic cure a cold caused by a virus?"
+      nom: "No, antibiotics work on bacteria, not on viruses."
+      explication: "Antibiotics kill bacteria or stop them from multiplying. They have no effect on viruses, and using them wrongly encourages resistant bacteria."
+      pieges:
+        - { texte: "Yes, antibiotics kill all germs.", pourquoi: "It's a common idea, but antibiotics don't work on viruses." }
+        - { texte: "Yes, if you take it very early.", pourquoi: "Whether taken early or late, an antibiotic doesn't work on a virus." }

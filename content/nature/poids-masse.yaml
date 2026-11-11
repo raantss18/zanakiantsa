@@ -1,0 +1,128 @@
+id: poids-masse
+titre: "Poids et masse"
+niveau: 3e
+prerequis: [masse-volumique]
+# Faits : intensité de la pesanteur à la surface, 9,80 sur Terre et 1,62 sur la Lune (rapport 0,165), en m/s², soit en
+# newtons par kilogramme (NASA, Moon Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html) ;
+# newton = kg·m·s⁻² (BIPM, brochure du SI, https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf).
+# Lus le 2026-11-11. Les autres nombres sont des calculs.
+programme: { source: c4, texte: "Force de pesanteur et son expression P=mg. Pesanteur sur Terre et sur la Lune, différence entre poids et masse (unités)." }
+activite: quiz
+parametres: {}
+idee: "La masse, en kilogrammes, est la quantité de matière : elle ne change pas d'un astre à l'autre. Le poids, en newtons, est une force : poids = masse × intensité de la pesanteur."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Poids en newtons = masse en kilogrammes × intensité de la pesanteur. Sur Terre, elle vaut environ 9,8 newtons par kilogramme ; sur la Lune, environ 1,6."
+  exemple: "Exemple : un sac de 2 kilogrammes, sur Terre, a un poids d'environ 2 × 9,8 = 19,6 newtons."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Dans quelle unité s'exprime le poids d'un objet ?"
+    nom: "En newtons."
+    explication: "Le poids est une force : il s'exprime en newtons. La masse, elle, s'exprime en kilogrammes."
+    pieges:
+      - { texte: "En kilogrammes.", pourquoi: "Dans la vie courante, on dit « je pèse 40 kilos », mais le kilogramme est l'unité de la masse, pas du poids." }
+      - { texte: "En litres.", pourquoi: "Le litre est une unité de volume." }
+  - texte: "Quelle relation lie le poids et la masse ?"
+    nom: "Poids = masse × intensité de la pesanteur."
+    explication: "Le poids, en newtons, s'obtient en multipliant la masse, en kilogrammes, par l'intensité de la pesanteur, en newtons par kilogramme."
+    pieges:
+      - { texte: "Poids = masse ÷ intensité de la pesanteur.", pourquoi: "On multiplie : plus la pesanteur est forte, plus le poids est grand." }
+      - { texte: "Le poids et la masse sont la même chose.", pourquoi: "La masse est une quantité de matière ; le poids est une force, qui dépend de l'endroit où l'on se trouve." }
+  - texte: "Sur Terre, quel est le poids d'un objet de 10 kilogrammes ?"
+    nom: "Environ 98 newtons."
+    explication: "Poids = 10 × 9,8 = 98 newtons environ."
+    pieges:
+      - { texte: "10 newtons.", pourquoi: "On a oublié de multiplier par l'intensité de la pesanteur, environ 9,8 newtons par kilogramme sur Terre." }
+      - { texte: "Environ 1 newton.", pourquoi: "On a divisé 10 par 9,8 ; il faut multiplier." }
+  - texte: "Un astronaute a une masse de 80 kilogrammes sur Terre. Quelle est sa masse sur la Lune ?"
+    nom: "80 kilogrammes, comme sur Terre."
+    explication: "La masse est la quantité de matière : elle ne change pas quand on change d'astre. C'est le poids qui change."
+    pieges:
+      - { texte: "Environ 13 kilogrammes.", pourquoi: "C'est le poids qui devient environ six fois plus petit sur la Lune, pas la masse." }
+      - { texte: "0 kilogramme.", pourquoi: "L'astronaute est toujours fait de la même matière : sa masse ne disparaît pas." }
+  - texte: "Pourquoi un objet est-il moins lourd sur la Lune que sur Terre ?"
+    nom: "Parce que l'intensité de la pesanteur y est plus faible."
+    explication: "À la surface de la Lune, l'intensité de la pesanteur vaut environ 1,6 newton par kilogramme, contre environ 9,8 sur Terre : environ six fois moins."
+    pieges:
+      - { texte: "Parce que sa masse y est plus petite.", pourquoi: "La masse reste la même ; c'est la pesanteur, donc le poids, qui diminue." }
+      - { texte: "Parce qu'il n'y a pas d'air sur la Lune.", pourquoi: "Le poids ne vient pas de l'air : il vient de l'attraction de l'astre, plus faible pour la Lune." }
+  - texte: "Sur la Lune, quel est, environ, le poids d'un objet de 10 kilogrammes ?"
+    nom: "Environ 16 newtons."
+    explication: "Poids = 10 × 1,6 = 16 newtons environ, au lieu d'environ 98 newtons sur Terre."
+    pieges:
+      - { texte: "Environ 98 newtons.", pourquoi: "C'est son poids sur Terre ; sur la Lune, la pesanteur est environ six fois plus faible." }
+      - { texte: "10 kilogrammes.", pourquoi: "C'est sa masse, qui ne change pas ; le poids s'exprime en newtons." }
+  - texte: "Avec quel instrument mesure-t-on une masse, et avec lequel mesure-t-on un poids ?"
+    nom: "Une balance pour la masse, un dynamomètre pour le poids."
+    explication: "La balance mesure une masse en kilogrammes ou en grammes ; le dynamomètre, un ressort gradué, mesure une force comme le poids, en newtons."
+    pieges:
+      - { texte: "Un dynamomètre pour la masse, une balance pour le poids.", pourquoi: "C'est l'inverse : le dynamomètre mesure des forces, en newtons." }
+      - { texte: "Un thermomètre pour les deux.", pourquoi: "Le thermomètre mesure une température." }
+  - texte: "Sur Terre, un objet a un poids de 49 newtons. Quelle est, environ, sa masse ?"
+    nom: "Environ 5 kilogrammes."
+    explication: "Masse = poids ÷ intensité de la pesanteur = 49 ÷ 9,8 = 5 kilogrammes."
+    pieges:
+      - { texte: "Environ 480 kilogrammes.", pourquoi: "On a multiplié 49 par 9,8 ; pour retrouver la masse, on divise." }
+      - { texte: "49 kilogrammes.", pourquoi: "49 est le poids en newtons ; il faut le diviser par environ 9,8 pour avoir la masse." }
+
+en:
+  titre: "Weight and mass"
+  idee: "Mass, in kilograms, is the amount of matter: it doesn't change from one world to another. Weight, in newtons, is a force: weight = mass × gravitational field strength."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Weight in newtons = mass in kilograms × gravitational field strength. On Earth it's about 9.8 newtons per kilogram; on the Moon, about 1.6."
+    exemple: "Example: a 2-kilogram bag on Earth has a weight of about 2 × 9.8 = 19.6 newtons."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What unit is an object's weight measured in?"
+      nom: "Newtons."
+      explication: "Weight is a force: it's measured in newtons. Mass is measured in kilograms."
+      pieges:
+        - { texte: "Kilograms.", pourquoi: "In everyday life we say “I weigh 40 kilos”, but the kilogram is the unit of mass, not weight." }
+        - { texte: "Litres.", pourquoi: "The litre is a unit of volume." }
+    - texte: "What relation links weight and mass?"
+      nom: "Weight = mass × gravitational field strength."
+      explication: "Weight, in newtons, is mass, in kilograms, multiplied by the gravitational field strength, in newtons per kilogram."
+      pieges:
+        - { texte: "Weight = mass ÷ gravitational field strength.", pourquoi: "You multiply: the stronger the gravity, the greater the weight." }
+        - { texte: "Weight and mass are the same thing.", pourquoi: "Mass is an amount of matter; weight is a force, which depends on where you are." }
+    - texte: "On Earth, what is the weight of a 10-kilogram object?"
+      nom: "About 98 newtons."
+      explication: "Weight = 10 × 9.8 = about 98 newtons."
+      pieges:
+        - { texte: "10 newtons.", pourquoi: "That forgets to multiply by the gravitational field strength, about 9.8 newtons per kilogram on Earth." }
+        - { texte: "About 1 newton.", pourquoi: "That divides 10 by 9.8; you need to multiply." }
+    - texte: "An astronaut has a mass of 80 kilograms on Earth. What is their mass on the Moon?"
+      nom: "80 kilograms, the same as on Earth."
+      explication: "Mass is the amount of matter: it doesn't change when you go to another world. It's the weight that changes."
+      pieges:
+        - { texte: "About 13 kilograms.", pourquoi: "It's the weight that becomes about six times smaller on the Moon, not the mass." }
+        - { texte: "0 kilograms.", pourquoi: "The astronaut is still made of the same matter: their mass doesn't disappear." }
+    - texte: "Why is an object less heavy on the Moon than on Earth?"
+      nom: "Because gravity is weaker there."
+      explication: "At the Moon's surface, the gravitational field strength is about 1.6 newtons per kilogram, compared with about 9.8 on Earth: about six times less."
+      pieges:
+        - { texte: "Because its mass is smaller there.", pourquoi: "The mass stays the same; it's the gravity, and so the weight, that goes down." }
+        - { texte: "Because there's no air on the Moon.", pourquoi: "Weight doesn't come from air: it comes from the pull of the world you're on, which is weaker for the Moon." }
+    - texte: "On the Moon, roughly what is the weight of a 10-kilogram object?"
+      nom: "About 16 newtons."
+      explication: "Weight = 10 × 1.6 = about 16 newtons, instead of about 98 newtons on Earth."
+      pieges:
+        - { texte: "About 98 newtons.", pourquoi: "That's its weight on Earth; on the Moon, gravity is about six times weaker." }
+        - { texte: "10 kilograms.", pourquoi: "That's its mass, which doesn't change; weight is measured in newtons." }
+    - texte: "Which instrument measures mass, and which one measures weight?"
+      nom: "A balance for mass, a spring scale (newton meter) for weight."
+      explication: "A balance measures mass in kilograms or grams; a newton meter, a marked spring, measures a force such as weight, in newtons."
+      pieges:
+        - { texte: "A newton meter for mass, a balance for weight.", pourquoi: "It's the other way round: a newton meter measures forces, in newtons." }
+        - { texte: "A thermometer for both.", pourquoi: "A thermometer measures temperature." }
+    - texte: "On Earth, an object has a weight of 49 newtons. Roughly what is its mass?"
+      nom: "About 5 kilograms."
+      explication: "Mass = weight ÷ gravitational field strength = 49 ÷ 9.8 = 5 kilograms."
+      pieges:
+        - { texte: "About 480 kilograms.", pourquoi: "That multiplies 49 by 9.8; to find the mass, you divide." }
+        - { texte: "49 kilograms.", pourquoi: "49 is the weight in newtons; divide it by about 9.8 to get the mass." }

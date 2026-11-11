@@ -1,0 +1,129 @@
+id: lumiere
+titre: "La lumière : sources et propagation"
+niveau: 5e
+prerequis: []
+# Faits : vitesse de la lumière dans le vide, 299 792 458 m/s exactement (BIPM, définition du mètre,
+# https://www.bipm.org/en/si-base-units/metre) ; année-lumière, Terre à environ huit minutes-lumière du Soleil,
+# Proxima du Centaure à un peu plus de quatre années-lumière, 9,46 billions de km par an
+# (NASA, https://science.nasa.gov/exoplanets/what-is-a-light-year/) ; la Lune ne produit pas sa lumière
+# (NASA, https://science.nasa.gov/moon/moon-phases/). Lus le 2026-11-11.
+programme: { source: c4, texte: "Distinguer une source primaire (objet lumineux) d’un objet diffusant. Exploiter expérimentalement la propagation rectiligne de la lumière dans le vide et le modèle du rayon lumineux. Utiliser l’unité « année-lumière » comme unité de distance." }
+activite: quiz
+parametres: {}
+idee: "Une source primaire produit sa lumière ; un objet diffusant renvoie celle qu'il reçoit. La lumière va en ligne droite, très vite : une année-lumière est la distance qu'elle parcourt en un an."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Demande-toi : l'objet produit-il sa propre lumière, ou renvoie-t-il celle qu'il reçoit ? Et souviens-toi : la lumière va tout droit."
+  exemple: "Exemple : une lampe allumée est une source primaire. Une feuille blanche éclairée par la lampe est un objet diffusant : dans le noir complet, on ne la voit plus."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Le Soleil est-il une source primaire de lumière ou un objet diffusant ?"
+    nom: "Une source primaire."
+    explication: "Le Soleil produit lui-même sa lumière : c'est une source primaire."
+    pieges:
+      - { texte: "Un objet diffusant.", pourquoi: "Un objet diffusant renvoie une lumière venue d'ailleurs ; le Soleil, lui, la produit." }
+      - { texte: "Ni l'un ni l'autre.", pourquoi: "Tout objet que l'on voit est soit une source primaire, soit un objet diffusant." }
+  - texte: "La Lune brille la nuit. Est-ce une source primaire de lumière ?"
+    nom: "Non, c'est un objet diffusant : elle renvoie la lumière du Soleil."
+    explication: "La Lune ne produit pas sa propre lumière : le clair de lune est de la lumière du Soleil renvoyée par la Lune."
+    pieges:
+      - { texte: "Oui, puisqu'elle brille.", pourquoi: "Briller ne suffit pas : une feuille blanche éclairée brille aussi, sans produire de lumière." }
+      - { texte: "Oui, la nuit seulement.", pourquoi: "La Lune ne produit de lumière ni le jour ni la nuit : elle renvoie celle du Soleil." }
+  - texte: "Pourquoi vois-tu une feuille de papier dans une pièce éclairée ?"
+    nom: "Parce qu'elle diffuse vers tes yeux la lumière qu'elle reçoit."
+    explication: "La feuille est un objet diffusant : elle renvoie dans toutes les directions la lumière de la lampe, et une partie entre dans tes yeux."
+    pieges:
+      - { texte: "Parce que tes yeux envoient de la lumière sur elle.", pourquoi: "L'œil reçoit la lumière, il n'en envoie pas : dans le noir complet, on ne voit rien." }
+      - { texte: "Parce qu'elle produit sa propre lumière.", pourquoi: "Lampe éteinte, dans le noir complet, on ne la voit plus : elle ne produit pas de lumière." }
+  - texte: "Comment la lumière se propage-t-elle dans le vide ou dans l'air ?"
+    nom: "En ligne droite."
+    explication: "La lumière se propage en ligne droite. On la représente par un rayon lumineux : une droite avec une flèche dans le sens de la propagation."
+    pieges:
+      - { texte: "En contournant les objets.", pourquoi: "Si elle contournait les objets, il n'y aurait pas d'ombre derrière eux." }
+      - { texte: "En zigzag.", pourquoi: "Dans un même milieu, comme l'air, la lumière ne change pas de direction : elle va tout droit." }
+  - texte: "Pourquoi un objet éclairé par une lampe a-t-il une ombre derrière lui ?"
+    nom: "Parce que la lumière va en ligne droite et que l'objet l'arrête."
+    explication: "Les rayons qui touchent l'objet sont arrêtés ; ceux qui passent à côté continuent tout droit. Derrière l'objet, une zone ne reçoit pas de lumière : c'est l'ombre."
+    pieges:
+      - { texte: "Parce que l'objet fabrique du noir.", pourquoi: "L'ombre n'est pas fabriquée : c'est une zone où la lumière n'arrive pas." }
+      - { texte: "Parce que la lumière est trop lente pour aller derrière.", pourquoi: "La lumière est très rapide ; elle n'arrive pas derrière parce qu'elle va en ligne droite." }
+  - texte: "Quelle est la vitesse de la lumière dans le vide ?"
+    nom: "Environ 300 000 kilomètres par seconde."
+    explication: "Elle vaut exactement 299 792 458 mètres par seconde, soit environ 300 000 kilomètres par seconde."
+    pieges:
+      - { texte: "Environ 300 kilomètres par heure.", pourquoi: "C'est la vitesse d'un train rapide : la lumière va des millions de fois plus vite." }
+      - { texte: "Elle est infinie : la lumière arrive instantanément.", pourquoi: "La lumière est très rapide, mais pas instantanée : celle du Soleil met environ huit minutes pour arriver sur Terre." }
+  - texte: "Qu'est-ce qu'une année-lumière ?"
+    nom: "Une distance : celle que parcourt la lumière en un an."
+    explication: "En un an, la lumière parcourt environ 9 460 milliards de kilomètres : l'année-lumière sert à mesurer les très grandes distances, entre les étoiles."
+    pieges:
+      - { texte: "Une durée d'un an.", pourquoi: "Le mot « année » trompe : l'année-lumière mesure une distance, pas un temps." }
+      - { texte: "La vitesse de la lumière.", pourquoi: "La vitesse dit combien de distance on parcourt chaque seconde ; l'année-lumière est une distance." }
+  - texte: "L'étoile la plus proche du Soleil, Proxima du Centaure, est à un peu plus de 4 années-lumière. Qu'est-ce que cela veut dire ?"
+    nom: "Sa lumière met un peu plus de 4 ans pour nous parvenir."
+    explication: "Une année-lumière est la distance parcourue par la lumière en un an : à un peu plus de 4 années-lumière, la lumière voyage un peu plus de 4 ans."
+    pieges:
+      - { texte: "Elle est à 4 kilomètres de nous.", pourquoi: "Une seule année-lumière vaut déjà environ 9 460 milliards de kilomètres." }
+      - { texte: "Une fusée peut y aller en 4 ans.", pourquoi: "4 ans, c'est le temps mis par la lumière ; une fusée va beaucoup moins vite que la lumière." }
+
+en:
+  titre: "Light: sources and how it travels"
+  idee: "A primary source makes its own light; a scattering object sends back the light it receives. Light travels in a straight line, very fast: a light-year is the distance it travels in one year."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Ask yourself: does the object make its own light, or does it send back light it receives? And remember: light travels in a straight line."
+    exemple: "Example: a lamp that is switched on is a primary source. A white sheet lit by the lamp is a scattering object: in total darkness, you can't see it any more."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Is the Sun a primary light source or a scattering object?"
+      nom: "A primary source."
+      explication: "The Sun makes its own light: it's a primary source."
+      pieges:
+        - { texte: "A scattering object.", pourquoi: "A scattering object sends back light that comes from somewhere else; the Sun makes its own." }
+        - { texte: "Neither.", pourquoi: "Every object we see is either a primary source or a scattering object." }
+    - texte: "The Moon shines at night. Is it a primary light source?"
+      nom: "No, it's a scattering object: it sends back sunlight."
+      explication: "The Moon doesn't make its own light: moonlight is sunlight sent back by the Moon."
+      pieges:
+        - { texte: "Yes, because it shines.", pourquoi: "Shining isn't enough: a lit white sheet shines too, without making light." }
+        - { texte: "Yes, but only at night.", pourquoi: "The Moon makes no light, by day or by night: it sends back the Sun's light." }
+    - texte: "Why can you see a sheet of paper in a lit room?"
+      nom: "Because it scatters the light it receives towards your eyes."
+      explication: "The sheet is a scattering object: it sends the lamp's light in all directions, and some of it enters your eyes."
+      pieges:
+        - { texte: "Because your eyes send light onto it.", pourquoi: "The eye receives light, it doesn't send any: in total darkness, you see nothing." }
+        - { texte: "Because it makes its own light.", pourquoi: "With the lamp off, in total darkness, you can't see it: it makes no light." }
+    - texte: "How does light travel in a vacuum or in air?"
+      nom: "In a straight line."
+      explication: "Light travels in a straight line. We draw it as a light ray: a straight line with an arrow showing the direction it travels."
+      pieges:
+        - { texte: "By going around objects.", pourquoi: "If it went around objects, there would be no shadow behind them." }
+        - { texte: "In a zigzag.", pourquoi: "In the same material, such as air, light doesn't change direction: it goes straight." }
+    - texte: "Why does an object lit by a lamp have a shadow behind it?"
+      nom: "Because light travels in a straight line and the object stops it."
+      explication: "Rays that hit the object are stopped; those that pass beside it carry straight on. Behind the object, an area gets no light: that's the shadow."
+      pieges:
+        - { texte: "Because the object makes darkness.", pourquoi: "A shadow isn't made: it's an area the light doesn't reach." }
+        - { texte: "Because light is too slow to get behind it.", pourquoi: "Light is very fast; it doesn't get behind because it travels in a straight line." }
+    - texte: "What is the speed of light in a vacuum?"
+      nom: "About 300,000 kilometres per second."
+      explication: "It is exactly 299,792,458 metres per second, or about 300,000 kilometres per second."
+      pieges:
+        - { texte: "About 300 kilometres per hour.", pourquoi: "That's the speed of a fast train: light goes millions of times faster." }
+        - { texte: "It's infinite: light arrives instantly.", pourquoi: "Light is very fast, but not instant: sunlight takes about eight minutes to reach Earth." }
+    - texte: "What is a light-year?"
+      nom: "A distance: the one light travels in a year."
+      explication: "In one year, light travels about 9.46 trillion kilometres: the light-year is used to measure huge distances, between stars."
+      pieges:
+        - { texte: "A length of time of one year.", pourquoi: "The word “year” is misleading: a light-year measures distance, not time." }
+        - { texte: "The speed of light.", pourquoi: "Speed tells how far you go each second; a light-year is a distance." }
+    - texte: "The nearest star to the Sun, Proxima Centauri, is a little more than 4 light-years away. What does that mean?"
+      nom: "Its light takes a little more than 4 years to reach us."
+      explication: "A light-year is the distance light travels in a year: at a little more than 4 light-years, light travels for a little more than 4 years."
+      pieges:
+        - { texte: "It's 4 kilometres away from us.", pourquoi: "Just one light-year is already about 9.46 trillion kilometres." }
+        - { texte: "A rocket can get there in 4 years.", pourquoi: "4 years is the time light takes; a rocket goes much slower than light." }

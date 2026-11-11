@@ -8304,6 +8304,562 @@
       }
     },
     {
+      "id": "effort-respiration",
+      "titre": "L'effort : muscles, cœur et respiration",
+      "niveau": "5e",
+      "prerequis": [
+        "digestion"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Expliquer comment le système nerveux, le système respiratoire et le système cardiovasculaire interviennent lors d’un effort musculaire, en identifiant les capacités et les limites de l’organisme."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pendant un effort, les muscles ont besoin de plus de dioxygène. Le cœur bat plus vite et on respire plus souvent : le sang leur apporte alors plus de dioxygène.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Suis le trajet du dioxygène : l'air, les poumons, le sang, le cœur qui pompe, puis les muscles.",
+        "exemple": "Exemple : après une course, ton cœur bat plus vite et tu respires plus souvent. Tes muscles reçoivent ainsi plus de dioxygène.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Pendant une course, pourquoi ton cœur bat-il plus vite ?",
+          "nom": "Pour apporter plus de dioxygène aux muscles.",
+          "explication": "Le cœur pompe le sang. En battant plus vite, il envoie plus de sang riche en dioxygène aux muscles qui travaillent.",
+          "pieges": [
+            {
+              "texte": "Pour fabriquer du dioxygène.",
+              "pourquoi": "Le cœur ne fabrique pas de dioxygène : il pompe le sang, qui se charge en dioxygène dans les poumons."
+            },
+            {
+              "texte": "Pour digérer plus vite.",
+              "pourquoi": "La digestion se fait dans le tube digestif ; le cœur accélère pour les muscles."
+            }
+          ]
+        },
+        {
+          "texte": "Où le dioxygène de l'air passe-t-il dans le sang ?",
+          "nom": "Dans les alvéoles des poumons.",
+          "explication": "Les alvéoles sont de minuscules sacs d'air entourés de vaisseaux très fins, les capillaires. Le dioxygène traverse leur paroi et passe dans le sang.",
+          "pieges": [
+            {
+              "texte": "Dans l'estomac.",
+              "pourquoi": "L'estomac reçoit les aliments, pas l'air que l'on respire."
+            },
+            {
+              "texte": "Dans le cœur.",
+              "pourquoi": "Le cœur pompe le sang, mais c'est dans les poumons que le sang se charge en dioxygène."
+            }
+          ]
+        },
+        {
+          "texte": "Quel gaz le sang rapporte-t-il des cellules vers les poumons, pour qu'il soit rejeté ?",
+          "nom": "Le dioxyde de carbone.",
+          "explication": "Les cellules rejettent du dioxyde de carbone. Le sang le transporte jusqu'aux poumons, où il passe dans l'air des alvéoles avant d'être expiré.",
+          "pieges": [
+            {
+              "texte": "Le dioxygène.",
+              "pourquoi": "Le dioxygène va dans l'autre sens : des poumons vers les cellules."
+            },
+            {
+              "texte": "Les nutriments.",
+              "pourquoi": "Les nutriments viennent de la digestion et servent aux cellules ; les poumons ne les rejettent pas."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les muscles ont-ils besoin de dioxygène ?",
+          "nom": "Pour produire l'énergie qui leur permet de travailler.",
+          "explication": "Les cellules utilisent le dioxygène pour produire l'énergie dont le corps a besoin. Un muscle qui travaille en demande davantage.",
+          "pieges": [
+            {
+              "texte": "Ils n'en ont pas besoin : seuls les poumons l'utilisent.",
+              "pourquoi": "Les poumons font passer le dioxygène dans le sang ; ce sont les cellules de tout le corps, dont celles des muscles, qui l'utilisent."
+            },
+            {
+              "texte": "Pour devenir plus lourds.",
+              "pourquoi": "Le dioxygène ne sert pas à grossir : il sert à produire de l'énergie."
+            }
+          ]
+        },
+        {
+          "texte": "Pendant un effort, que devient ta respiration ?",
+          "nom": "Elle devient plus rapide.",
+          "explication": "On respire plus souvent pendant une activité physique : plus d'air arrive dans les poumons, et plus de dioxygène peut passer dans le sang.",
+          "pieges": [
+            {
+              "texte": "Elle ralentit pour économiser l'air.",
+              "pourquoi": "Les muscles demandent plus de dioxygène pendant l'effort : la respiration s'accélère."
+            },
+            {
+              "texte": "Elle ne change pas.",
+              "pourquoi": "Observe-toi après une course : tu respires plus souvent qu'au repos."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le principal muscle de la respiration ?",
+          "nom": "Le diaphragme.",
+          "explication": "Quand on inspire, le diaphragme, sous les poumons, se contracte et descend : la cage thoracique s'agrandit et l'air entre.",
+          "pieges": [
+            {
+              "texte": "Le cœur.",
+              "pourquoi": "Le cœur est bien un muscle, mais il pompe le sang : il ne fait pas entrer l'air."
+            },
+            {
+              "texte": "Le biceps.",
+              "pourquoi": "Le biceps sert à plier le bras, pas à respirer."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qui règle le rythme de la respiration pendant l'effort ?",
+          "nom": "Des centres nerveux du cerveau, alertés par des capteurs.",
+          "explication": "Des capteurs mesurent le dioxygène et le dioxyde de carbone dans le sang. Ils envoient des messages aux centres de la respiration, dans le cerveau, qui commandent les muscles respiratoires.",
+          "pieges": [
+            {
+              "texte": "Les poumons, tout seuls.",
+              "pourquoi": "Les poumons ne décident rien : ce sont des muscles, commandés par le système nerveux, qui les font se remplir d'air."
+            },
+            {
+              "texte": "L'estomac.",
+              "pourquoi": "L'estomac sert à la digestion, pas à régler la respiration."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quel ordre le dioxygène voyage-t-il jusqu'aux muscles ?",
+          "nom": "Air, poumons, sang, cœur, muscles.",
+          "explication": "Le dioxygène de l'air passe dans le sang au niveau des poumons. Ce sang revient au cœur, qui le pompe vers tout le corps, dont les muscles.",
+          "pieges": [
+            {
+              "texte": "Air, estomac, sang, muscles.",
+              "pourquoi": "L'air que l'on respire va dans les poumons, pas dans l'estomac."
+            },
+            {
+              "texte": "Air, muscles, poumons, cœur.",
+              "pourquoi": "Le dioxygène doit d'abord passer dans le sang, dans les poumons, avant d'arriver aux muscles."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Exercise: muscles, heart and breathing",
+        "idee": "During exercise, muscles need more oxygen. The heart beats faster and we breathe more often, so the blood brings them more oxygen.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Follow the path of oxygen: the air, the lungs, the blood, the heart that pumps, then the muscles.",
+          "exemple": "Example: after a run, your heart beats faster and you breathe more often. That way your muscles get more oxygen.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "During a run, why does your heart beat faster?",
+            "nom": "To bring more oxygen to the muscles.",
+            "explication": "The heart pumps the blood. By beating faster, it sends more oxygen-rich blood to the working muscles.",
+            "pieges": [
+              {
+                "texte": "To make oxygen.",
+                "pourquoi": "The heart doesn't make oxygen: it pumps the blood, which picks up oxygen in the lungs."
+              },
+              {
+                "texte": "To digest faster.",
+                "pourquoi": "Digestion happens in the digestive tract; the heart speeds up for the muscles."
+              }
+            ]
+          },
+          {
+            "texte": "Where does oxygen from the air pass into the blood?",
+            "nom": "In the alveoli of the lungs.",
+            "explication": "Alveoli are tiny air sacs surrounded by very thin blood vessels, the capillaries. Oxygen crosses their walls and passes into the blood.",
+            "pieges": [
+              {
+                "texte": "In the stomach.",
+                "pourquoi": "The stomach receives food, not the air we breathe."
+              },
+              {
+                "texte": "In the heart.",
+                "pourquoi": "The heart pumps the blood, but the blood picks up oxygen in the lungs."
+              }
+            ]
+          },
+          {
+            "texte": "Which gas does the blood carry from the cells to the lungs, to be breathed out?",
+            "nom": "Carbon dioxide.",
+            "explication": "Cells give off carbon dioxide. The blood carries it to the lungs, where it passes into the air in the alveoli before being breathed out.",
+            "pieges": [
+              {
+                "texte": "Oxygen.",
+                "pourquoi": "Oxygen goes the other way: from the lungs to the cells."
+              },
+              {
+                "texte": "Nutrients.",
+                "pourquoi": "Nutrients come from digestion and are used by the cells; the lungs don't get rid of them."
+              }
+            ]
+          },
+          {
+            "texte": "Why do muscles need oxygen?",
+            "nom": "To make the energy that lets them work.",
+            "explication": "Cells use oxygen to make the energy the body needs. A working muscle needs more of it.",
+            "pieges": [
+              {
+                "texte": "They don't: only the lungs use it.",
+                "pourquoi": "The lungs pass oxygen into the blood; it's the cells all over the body, including muscle cells, that use it."
+              },
+              {
+                "texte": "To get heavier.",
+                "pourquoi": "Oxygen isn't for gaining weight: it's for making energy."
+              }
+            ]
+          },
+          {
+            "texte": "During exercise, what happens to your breathing?",
+            "nom": "It gets faster.",
+            "explication": "We breathe more often during physical activity: more air reaches the lungs, so more oxygen can pass into the blood.",
+            "pieges": [
+              {
+                "texte": "It slows down to save air.",
+                "pourquoi": "Muscles need more oxygen during exercise: breathing speeds up."
+              },
+              {
+                "texte": "It doesn't change.",
+                "pourquoi": "Watch yourself after a run: you breathe more often than at rest."
+              }
+            ]
+          },
+          {
+            "texte": "What is the main breathing muscle?",
+            "nom": "The diaphragm.",
+            "explication": "When we breathe in, the diaphragm, below the lungs, contracts and moves down: the chest gets bigger and air comes in.",
+            "pieges": [
+              {
+                "texte": "The heart.",
+                "pourquoi": "The heart is a muscle, but it pumps blood: it doesn't bring air in."
+              },
+              {
+                "texte": "The biceps.",
+                "pourquoi": "The biceps bends the arm; it isn't used for breathing."
+              }
+            ]
+          },
+          {
+            "texte": "What sets the pace of breathing during exercise?",
+            "nom": "Breathing centres in the brain, alerted by sensors.",
+            "explication": "Sensors measure oxygen and carbon dioxide in the blood. They send messages to the breathing centres in the brain, which control the breathing muscles.",
+            "pieges": [
+              {
+                "texte": "The lungs, on their own.",
+                "pourquoi": "The lungs don't decide anything: muscles, controlled by the nervous system, make them fill with air."
+              },
+              {
+                "texte": "The stomach.",
+                "pourquoi": "The stomach is for digestion, not for controlling breathing."
+              }
+            ]
+          },
+          {
+            "texte": "In what order does oxygen travel to the muscles?",
+            "nom": "Air, lungs, blood, heart, muscles.",
+            "explication": "Oxygen from the air passes into the blood in the lungs. This blood goes back to the heart, which pumps it all over the body, including the muscles.",
+            "pieges": [
+              {
+                "texte": "Air, stomach, blood, muscles.",
+                "pourquoi": "The air we breathe goes into the lungs, not the stomach."
+              },
+              {
+                "texte": "Air, muscles, lungs, heart.",
+                "pourquoi": "Oxygen first has to pass into the blood, in the lungs, before it reaches the muscles."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lumiere",
+      "titre": "La lumière : sources et propagation",
+      "niveau": "5e",
+      "prerequis": [],
+      "programme": {
+        "source": "c4",
+        "texte": "Distinguer une source primaire (objet lumineux) d’un objet diffusant. Exploiter expérimentalement la propagation rectiligne de la lumière dans le vide et le modèle du rayon lumineux. Utiliser l’unité « année-lumière » comme unité de distance."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une source primaire produit sa lumière ; un objet diffusant renvoie celle qu'il reçoit. La lumière va en ligne droite, très vite : une année-lumière est la distance qu'elle parcourt en un an.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi : l'objet produit-il sa propre lumière, ou renvoie-t-il celle qu'il reçoit ? Et souviens-toi : la lumière va tout droit.",
+        "exemple": "Exemple : une lampe allumée est une source primaire. Une feuille blanche éclairée par la lampe est un objet diffusant : dans le noir complet, on ne la voit plus.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Le Soleil est-il une source primaire de lumière ou un objet diffusant ?",
+          "nom": "Une source primaire.",
+          "explication": "Le Soleil produit lui-même sa lumière : c'est une source primaire.",
+          "pieges": [
+            {
+              "texte": "Un objet diffusant.",
+              "pourquoi": "Un objet diffusant renvoie une lumière venue d'ailleurs ; le Soleil, lui, la produit."
+            },
+            {
+              "texte": "Ni l'un ni l'autre.",
+              "pourquoi": "Tout objet que l'on voit est soit une source primaire, soit un objet diffusant."
+            }
+          ]
+        },
+        {
+          "texte": "La Lune brille la nuit. Est-ce une source primaire de lumière ?",
+          "nom": "Non, c'est un objet diffusant : elle renvoie la lumière du Soleil.",
+          "explication": "La Lune ne produit pas sa propre lumière : le clair de lune est de la lumière du Soleil renvoyée par la Lune.",
+          "pieges": [
+            {
+              "texte": "Oui, puisqu'elle brille.",
+              "pourquoi": "Briller ne suffit pas : une feuille blanche éclairée brille aussi, sans produire de lumière."
+            },
+            {
+              "texte": "Oui, la nuit seulement.",
+              "pourquoi": "La Lune ne produit de lumière ni le jour ni la nuit : elle renvoie celle du Soleil."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi vois-tu une feuille de papier dans une pièce éclairée ?",
+          "nom": "Parce qu'elle diffuse vers tes yeux la lumière qu'elle reçoit.",
+          "explication": "La feuille est un objet diffusant : elle renvoie dans toutes les directions la lumière de la lampe, et une partie entre dans tes yeux.",
+          "pieges": [
+            {
+              "texte": "Parce que tes yeux envoient de la lumière sur elle.",
+              "pourquoi": "L'œil reçoit la lumière, il n'en envoie pas : dans le noir complet, on ne voit rien."
+            },
+            {
+              "texte": "Parce qu'elle produit sa propre lumière.",
+              "pourquoi": "Lampe éteinte, dans le noir complet, on ne la voit plus : elle ne produit pas de lumière."
+            }
+          ]
+        },
+        {
+          "texte": "Comment la lumière se propage-t-elle dans le vide ou dans l'air ?",
+          "nom": "En ligne droite.",
+          "explication": "La lumière se propage en ligne droite. On la représente par un rayon lumineux : une droite avec une flèche dans le sens de la propagation.",
+          "pieges": [
+            {
+              "texte": "En contournant les objets.",
+              "pourquoi": "Si elle contournait les objets, il n'y aurait pas d'ombre derrière eux."
+            },
+            {
+              "texte": "En zigzag.",
+              "pourquoi": "Dans un même milieu, comme l'air, la lumière ne change pas de direction : elle va tout droit."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un objet éclairé par une lampe a-t-il une ombre derrière lui ?",
+          "nom": "Parce que la lumière va en ligne droite et que l'objet l'arrête.",
+          "explication": "Les rayons qui touchent l'objet sont arrêtés ; ceux qui passent à côté continuent tout droit. Derrière l'objet, une zone ne reçoit pas de lumière : c'est l'ombre.",
+          "pieges": [
+            {
+              "texte": "Parce que l'objet fabrique du noir.",
+              "pourquoi": "L'ombre n'est pas fabriquée : c'est une zone où la lumière n'arrive pas."
+            },
+            {
+              "texte": "Parce que la lumière est trop lente pour aller derrière.",
+              "pourquoi": "La lumière est très rapide ; elle n'arrive pas derrière parce qu'elle va en ligne droite."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la vitesse de la lumière dans le vide ?",
+          "nom": "Environ 300 000 kilomètres par seconde.",
+          "explication": "Elle vaut exactement 299 792 458 mètres par seconde, soit environ 300 000 kilomètres par seconde.",
+          "pieges": [
+            {
+              "texte": "Environ 300 kilomètres par heure.",
+              "pourquoi": "C'est la vitesse d'un train rapide : la lumière va des millions de fois plus vite."
+            },
+            {
+              "texte": "Elle est infinie : la lumière arrive instantanément.",
+              "pourquoi": "La lumière est très rapide, mais pas instantanée : celle du Soleil met environ huit minutes pour arriver sur Terre."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'une année-lumière ?",
+          "nom": "Une distance : celle que parcourt la lumière en un an.",
+          "explication": "En un an, la lumière parcourt environ 9 460 milliards de kilomètres : l'année-lumière sert à mesurer les très grandes distances, entre les étoiles.",
+          "pieges": [
+            {
+              "texte": "Une durée d'un an.",
+              "pourquoi": "Le mot « année » trompe : l'année-lumière mesure une distance, pas un temps."
+            },
+            {
+              "texte": "La vitesse de la lumière.",
+              "pourquoi": "La vitesse dit combien de distance on parcourt chaque seconde ; l'année-lumière est une distance."
+            }
+          ]
+        },
+        {
+          "texte": "L'étoile la plus proche du Soleil, Proxima du Centaure, est à un peu plus de 4 années-lumière. Qu'est-ce que cela veut dire ?",
+          "nom": "Sa lumière met un peu plus de 4 ans pour nous parvenir.",
+          "explication": "Une année-lumière est la distance parcourue par la lumière en un an : à un peu plus de 4 années-lumière, la lumière voyage un peu plus de 4 ans.",
+          "pieges": [
+            {
+              "texte": "Elle est à 4 kilomètres de nous.",
+              "pourquoi": "Une seule année-lumière vaut déjà environ 9 460 milliards de kilomètres."
+            },
+            {
+              "texte": "Une fusée peut y aller en 4 ans.",
+              "pourquoi": "4 ans, c'est le temps mis par la lumière ; une fusée va beaucoup moins vite que la lumière."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Light: sources and how it travels",
+        "idee": "A primary source makes its own light; a scattering object sends back the light it receives. Light travels in a straight line, very fast: a light-year is the distance it travels in one year.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Ask yourself: does the object make its own light, or does it send back light it receives? And remember: light travels in a straight line.",
+          "exemple": "Example: a lamp that is switched on is a primary source. A white sheet lit by the lamp is a scattering object: in total darkness, you can't see it any more.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Is the Sun a primary light source or a scattering object?",
+            "nom": "A primary source.",
+            "explication": "The Sun makes its own light: it's a primary source.",
+            "pieges": [
+              {
+                "texte": "A scattering object.",
+                "pourquoi": "A scattering object sends back light that comes from somewhere else; the Sun makes its own."
+              },
+              {
+                "texte": "Neither.",
+                "pourquoi": "Every object we see is either a primary source or a scattering object."
+              }
+            ]
+          },
+          {
+            "texte": "The Moon shines at night. Is it a primary light source?",
+            "nom": "No, it's a scattering object: it sends back sunlight.",
+            "explication": "The Moon doesn't make its own light: moonlight is sunlight sent back by the Moon.",
+            "pieges": [
+              {
+                "texte": "Yes, because it shines.",
+                "pourquoi": "Shining isn't enough: a lit white sheet shines too, without making light."
+              },
+              {
+                "texte": "Yes, but only at night.",
+                "pourquoi": "The Moon makes no light, by day or by night: it sends back the Sun's light."
+              }
+            ]
+          },
+          {
+            "texte": "Why can you see a sheet of paper in a lit room?",
+            "nom": "Because it scatters the light it receives towards your eyes.",
+            "explication": "The sheet is a scattering object: it sends the lamp's light in all directions, and some of it enters your eyes.",
+            "pieges": [
+              {
+                "texte": "Because your eyes send light onto it.",
+                "pourquoi": "The eye receives light, it doesn't send any: in total darkness, you see nothing."
+              },
+              {
+                "texte": "Because it makes its own light.",
+                "pourquoi": "With the lamp off, in total darkness, you can't see it: it makes no light."
+              }
+            ]
+          },
+          {
+            "texte": "How does light travel in a vacuum or in air?",
+            "nom": "In a straight line.",
+            "explication": "Light travels in a straight line. We draw it as a light ray: a straight line with an arrow showing the direction it travels.",
+            "pieges": [
+              {
+                "texte": "By going around objects.",
+                "pourquoi": "If it went around objects, there would be no shadow behind them."
+              },
+              {
+                "texte": "In a zigzag.",
+                "pourquoi": "In the same material, such as air, light doesn't change direction: it goes straight."
+              }
+            ]
+          },
+          {
+            "texte": "Why does an object lit by a lamp have a shadow behind it?",
+            "nom": "Because light travels in a straight line and the object stops it.",
+            "explication": "Rays that hit the object are stopped; those that pass beside it carry straight on. Behind the object, an area gets no light: that's the shadow.",
+            "pieges": [
+              {
+                "texte": "Because the object makes darkness.",
+                "pourquoi": "A shadow isn't made: it's an area the light doesn't reach."
+              },
+              {
+                "texte": "Because light is too slow to get behind it.",
+                "pourquoi": "Light is very fast; it doesn't get behind because it travels in a straight line."
+              }
+            ]
+          },
+          {
+            "texte": "What is the speed of light in a vacuum?",
+            "nom": "About 300,000 kilometres per second.",
+            "explication": "It is exactly 299,792,458 metres per second, or about 300,000 kilometres per second.",
+            "pieges": [
+              {
+                "texte": "About 300 kilometres per hour.",
+                "pourquoi": "That's the speed of a fast train: light goes millions of times faster."
+              },
+              {
+                "texte": "It's infinite: light arrives instantly.",
+                "pourquoi": "Light is very fast, but not instant: sunlight takes about eight minutes to reach Earth."
+              }
+            ]
+          },
+          {
+            "texte": "What is a light-year?",
+            "nom": "A distance: the one light travels in a year.",
+            "explication": "In one year, light travels about 9.46 trillion kilometres: the light-year is used to measure huge distances, between stars.",
+            "pieges": [
+              {
+                "texte": "A length of time of one year.",
+                "pourquoi": "The word “year” is misleading: a light-year measures distance, not time."
+              },
+              {
+                "texte": "The speed of light.",
+                "pourquoi": "Speed tells how far you go each second; a light-year is a distance."
+              }
+            ]
+          },
+          {
+            "texte": "The nearest star to the Sun, Proxima Centauri, is a little more than 4 light-years away. What does that mean?",
+            "nom": "Its light takes a little more than 4 years to reach us.",
+            "explication": "A light-year is the distance light travels in a year: at a little more than 4 light-years, light travels for a little more than 4 years.",
+            "pieges": [
+              {
+                "texte": "It's 4 kilometres away from us.",
+                "pourquoi": "Just one light-year is already about 9.46 trillion kilometres."
+              },
+              {
+                "texte": "A rocket can get there in 4 years.",
+                "pourquoi": "4 years is the time light takes; a rocket goes much slower than light."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "transformation-chimique",
       "titre": "Transformation chimique ou physique ?",
       "niveau": "4e",
@@ -8862,6 +9418,843 @@
       }
     },
     {
+      "id": "masse-volumique",
+      "titre": "La masse volumique",
+      "niveau": "4e",
+      "prerequis": [
+        "temperatures-etat"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "L’intérêt de la masse volumique est présenté pour mesurer un volume ou une masse quand on connaît l’autre grandeur mais aussi pour distinguer différents matériaux."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La masse volumique d'une matière est sa masse divisée par son volume. Elle sert à trouver une masse ou un volume, et à reconnaître une matière. L'eau : environ 1 kilogramme par litre.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Masse volumique = masse ÷ volume. Si tu connais deux des trois grandeurs, tu trouves la troisième.",
+        "exemple": "Exemple : 2 litres d'un liquide ont une masse de 3 kilogrammes. Sa masse volumique vaut 3 ÷ 2 = 1,5 kilogramme par litre.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Comment calcule-t-on la masse volumique d'une matière ?",
+          "nom": "On divise sa masse par son volume.",
+          "explication": "Masse volumique = masse ÷ volume. Elle dit quelle masse occupe chaque unité de volume, par exemple chaque litre.",
+          "pieges": [
+            {
+              "texte": "On multiplie sa masse par son volume.",
+              "pourquoi": "C'est une grandeur quotient : on divise, on ne multiplie pas."
+            },
+            {
+              "texte": "On divise son volume par sa masse.",
+              "pourquoi": "C'est l'inverse : la masse vient en premier, divisée par le volume."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est, environ, la masse d'un litre d'eau liquide ?",
+          "nom": "Environ 1 kilogramme.",
+          "explication": "L'eau a une masse volumique d'environ 1 gramme par millilitre. Un litre, c'est 1 000 millilitres : environ 1 000 grammes, soit 1 kilogramme.",
+          "pieges": [
+            {
+              "texte": "Environ 10 kilogrammes.",
+              "pourquoi": "C'est dix fois trop : 1 000 millilitres à environ 1 gramme chacun font environ 1 kilogramme."
+            },
+            {
+              "texte": "Environ 100 grammes.",
+              "pourquoi": "C'est dix fois trop peu : un litre d'eau pèse environ 1 000 grammes."
+            }
+          ]
+        },
+        {
+          "texte": "Un bloc de 50 centimètres cubes a une masse de 400 grammes. Quelle est sa masse volumique ?",
+          "nom": "8 grammes par centimètre cube.",
+          "explication": "Masse volumique = masse ÷ volume = 400 ÷ 50 = 8 grammes par centimètre cube.",
+          "pieges": [
+            {
+              "texte": "20 000 grammes par centimètre cube.",
+              "pourquoi": "On a multiplié 400 par 50 au lieu de diviser."
+            },
+            {
+              "texte": "0,125 gramme par centimètre cube.",
+              "pourquoi": "On a divisé le volume par la masse : 50 ÷ 400. Il faut la masse divisée par le volume."
+            }
+          ]
+        },
+        {
+          "texte": "Un liquide a une masse volumique de 0,8 kilogramme par litre. Quelle est la masse de 5 litres de ce liquide ?",
+          "nom": "4 kilogrammes.",
+          "explication": "Masse = masse volumique × volume = 0,8 × 5 = 4 kilogrammes.",
+          "pieges": [
+            {
+              "texte": "6,25 kilogrammes.",
+              "pourquoi": "On a divisé 5 par 0,8 ; pour trouver la masse, on multiplie la masse volumique par le volume."
+            },
+            {
+              "texte": "5,8 kilogrammes.",
+              "pourquoi": "On a additionné 5 et 0,8 ; il faut multiplier."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un glaçon flotte-t-il sur l'eau ?",
+          "nom": "Parce que la glace a une masse volumique plus petite que l'eau liquide.",
+          "explication": "La masse volumique de la glace vaut environ 90 % de celle de l'eau liquide : un litre de glace est plus léger qu'un litre d'eau, donc la glace flotte.",
+          "pieges": [
+            {
+              "texte": "Parce que la glace est plus lourde que l'eau.",
+              "pourquoi": "À volume égal, la glace est plus légère que l'eau liquide : c'est pour cela qu'elle flotte."
+            },
+            {
+              "texte": "Parce que le glaçon est froid.",
+              "pourquoi": "C'est la masse volumique qui compte : dans la glace, les molécules d'eau sont plus espacées que dans l'eau liquide."
+            }
+          ]
+        },
+        {
+          "texte": "Quand de l'eau gèle, que deviennent sa masse et son volume ?",
+          "nom": "La masse ne change pas, le volume augmente.",
+          "explication": "Lors d'un changement d'état, la masse se conserve. En gelant, l'eau prend plus de place : sa masse volumique diminue d'environ 9 %.",
+          "pieges": [
+            {
+              "texte": "La masse augmente.",
+              "pourquoi": "Rien n'est ajouté : la masse se conserve lors d'un changement d'état."
+            },
+            {
+              "texte": "Le volume diminue.",
+              "pourquoi": "C'est l'inverse pour l'eau : la glace occupe plus de place que l'eau liquide dont elle vient."
+            }
+          ]
+        },
+        {
+          "texte": "Deux cubes pleins ont le même volume, mais pas la même masse. Que peut-on en conclure ?",
+          "nom": "Ils ne sont pas faits de la même matière.",
+          "explication": "Même volume, masses différentes : leurs masses volumiques sont différentes. La masse volumique permet de distinguer des matières.",
+          "pieges": [
+            {
+              "texte": "Ils sont faits de la même matière.",
+              "pourquoi": "Une même matière a une même masse volumique : à volume égal, les deux cubes auraient la même masse."
+            },
+            {
+              "texte": "Le plus lourd est forcément le plus grand.",
+              "pourquoi": "Les deux cubes ont le même volume : c'est leur matière qui les rend plus ou moins lourds."
+            }
+          ]
+        },
+        {
+          "texte": "La masse volumique de l'eau change-t-elle avec la température ?",
+          "nom": "Oui : par exemple, l'eau à 100 °C est un peu moins dense que l'eau à 4 °C.",
+          "explication": "La masse volumique dépend de la température. Le programme relie ce fait à une cause de la montée du niveau des mers : l'eau des océans qui se réchauffe prend un peu plus de place.",
+          "pieges": [
+            {
+              "texte": "Non, elle est toujours exactement la même.",
+              "pourquoi": "Elle varie un peu avec la température ; « environ 1 kilogramme par litre » est une valeur arrondie."
+            },
+            {
+              "texte": "Seulement quand l'eau bout.",
+              "pourquoi": "Elle varie aussi pour l'eau liquide entre 4 °C et 100 °C, sans qu'elle bouille."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Density",
+        "idee": "The density of a material is its mass divided by its volume. It helps you find a mass or a volume, and recognise a material. Water: about 1 kilogram per litre.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Density = mass ÷ volume. If you know two of the three quantities, you can find the third.",
+          "exemple": "Example: 2 litres of a liquid have a mass of 3 kilograms. Its density is 3 ÷ 2 = 1.5 kilograms per litre.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "How do you work out the density of a material?",
+            "nom": "You divide its mass by its volume.",
+            "explication": "Density = mass ÷ volume. It tells you how much mass fills each unit of volume, for example each litre.",
+            "pieges": [
+              {
+                "texte": "You multiply its mass by its volume.",
+                "pourquoi": "It's a quotient: you divide, you don't multiply."
+              },
+              {
+                "texte": "You divide its volume by its mass.",
+                "pourquoi": "It's the other way round: mass comes first, divided by volume."
+              }
+            ]
+          },
+          {
+            "texte": "Roughly what is the mass of one litre of liquid water?",
+            "nom": "About 1 kilogram.",
+            "explication": "Water has a density of about 1 gram per millilitre. A litre is 1,000 millilitres: about 1,000 grams, or 1 kilogram.",
+            "pieges": [
+              {
+                "texte": "About 10 kilograms.",
+                "pourquoi": "That's ten times too much: 1,000 millilitres at about 1 gram each make about 1 kilogram."
+              },
+              {
+                "texte": "About 100 grams.",
+                "pourquoi": "That's ten times too little: a litre of water weighs about 1,000 grams."
+              }
+            ]
+          },
+          {
+            "texte": "A block of 50 cubic centimetres has a mass of 400 grams. What is its density?",
+            "nom": "8 grams per cubic centimetre.",
+            "explication": "Density = mass ÷ volume = 400 ÷ 50 = 8 grams per cubic centimetre.",
+            "pieges": [
+              {
+                "texte": "20,000 grams per cubic centimetre.",
+                "pourquoi": "That multiplies 400 by 50 instead of dividing."
+              },
+              {
+                "texte": "0.125 grams per cubic centimetre.",
+                "pourquoi": "That divides the volume by the mass: 50 ÷ 400. You need mass divided by volume."
+              }
+            ]
+          },
+          {
+            "texte": "A liquid has a density of 0.8 kilograms per litre. What is the mass of 5 litres of this liquid?",
+            "nom": "4 kilograms.",
+            "explication": "Mass = density × volume = 0.8 × 5 = 4 kilograms.",
+            "pieges": [
+              {
+                "texte": "6.25 kilograms.",
+                "pourquoi": "That divides 5 by 0.8; to find the mass, multiply the density by the volume."
+              },
+              {
+                "texte": "5.8 kilograms.",
+                "pourquoi": "That adds 5 and 0.8; you need to multiply."
+              }
+            ]
+          },
+          {
+            "texte": "Why does an ice cube float on water?",
+            "nom": "Because ice has a lower density than liquid water.",
+            "explication": "The density of ice is about 90% of that of liquid water: a litre of ice is lighter than a litre of water, so ice floats.",
+            "pieges": [
+              {
+                "texte": "Because ice is heavier than water.",
+                "pourquoi": "For the same volume, ice is lighter than liquid water: that's why it floats."
+              },
+              {
+                "texte": "Because the ice cube is cold.",
+                "pourquoi": "Density is what matters: in ice, water molecules are more spread out than in liquid water."
+              }
+            ]
+          },
+          {
+            "texte": "When water freezes, what happens to its mass and its volume?",
+            "nom": "The mass stays the same, the volume increases.",
+            "explication": "During a change of state, mass is conserved. When it freezes, water takes up more space: its density drops by about 9%.",
+            "pieges": [
+              {
+                "texte": "The mass increases.",
+                "pourquoi": "Nothing is added: mass is conserved during a change of state."
+              },
+              {
+                "texte": "The volume decreases.",
+                "pourquoi": "It's the opposite for water: ice takes up more space than the liquid water it came from."
+              }
+            ]
+          },
+          {
+            "texte": "Two solid cubes have the same volume but not the same mass. What can you conclude?",
+            "nom": "They aren't made of the same material.",
+            "explication": "Same volume, different masses: their densities are different. Density helps tell materials apart.",
+            "pieges": [
+              {
+                "texte": "They are made of the same material.",
+                "pourquoi": "The same material has the same density: for equal volumes, the two cubes would have the same mass."
+              },
+              {
+                "texte": "The heavier one must be bigger.",
+                "pourquoi": "Both cubes have the same volume: it's their material that makes them heavier or lighter."
+              }
+            ]
+          },
+          {
+            "texte": "Does the density of water change with temperature?",
+            "nom": "Yes: for example, water at 100 °C is a little less dense than water at 4 °C.",
+            "explication": "Density depends on temperature. The curriculum links this to one cause of sea level rise: ocean water that warms up takes up a little more space.",
+            "pieges": [
+              {
+                "texte": "No, it's always exactly the same.",
+                "pourquoi": "It varies a little with temperature; “about 1 kilogram per litre” is a rounded value."
+              },
+              {
+                "texte": "Only when water boils.",
+                "pourquoi": "It also varies for liquid water between 4 °C and 100 °C, without boiling."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tension-intensite",
+      "titre": "Tension et intensité : les lois des circuits",
+      "niveau": "4e",
+      "prerequis": [
+        "circuit-electrique"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Exploiter les lois de l’électricité. Dipôles en série, dipôles en dérivation. L’intensité du courant électrique est la même en tout point d’un circuit qui ne compte que des dipôles en série. Loi d’additivité des tensions (circuit à une seule maille). Loi d’additivité des intensités (circuit à deux mailles)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La tension se mesure en volts, avec un voltmètre branché en dérivation ; l'intensité, en ampères, avec un ampèremètre branché en série. Chaque type de circuit a ses lois.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi d'abord : le circuit est-il en série, une seule boucle, ou en dérivation, avec plusieurs branches ?",
+        "exemple": "Exemple : une pile de 6 volts alimente deux lampes en série. Si la première lampe a une tension de 2 volts, la seconde a 6 − 2 = 4 volts.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans quelle unité s'exprime la tension électrique ?",
+          "nom": "En volts.",
+          "explication": "La tension électrique s'exprime en volts, de symbole V, du nom du physicien Alessandro Volta.",
+          "pieges": [
+            {
+              "texte": "En ampères.",
+              "pourquoi": "L'ampère est l'unité de l'intensité du courant, pas de la tension."
+            },
+            {
+              "texte": "En watts.",
+              "pourquoi": "Le watt est l'unité de la puissance."
+            }
+          ]
+        },
+        {
+          "texte": "Comment branche-t-on un ampèremètre pour mesurer l'intensité du courant dans une lampe ?",
+          "nom": "En série avec la lampe.",
+          "explication": "L'ampèremètre se branche en série : le courant qui traverse la lampe le traverse aussi.",
+          "pieges": [
+            {
+              "texte": "En dérivation aux bornes de la lampe.",
+              "pourquoi": "C'est le branchement du voltmètre, qui mesure une tension."
+            },
+            {
+              "texte": "Loin du circuit, sans le toucher.",
+              "pourquoi": "Pour mesurer le courant, l'ampèremètre doit faire partie du circuit, en série."
+            }
+          ]
+        },
+        {
+          "texte": "Comment branche-t-on un voltmètre pour mesurer la tension aux bornes d'une lampe ?",
+          "nom": "En dérivation, aux bornes de la lampe.",
+          "explication": "Le voltmètre se branche en dérivation : ses deux bornes sont reliées aux deux bornes de la lampe.",
+          "pieges": [
+            {
+              "texte": "En série avec la lampe.",
+              "pourquoi": "C'est le branchement de l'ampèremètre, qui mesure une intensité."
+            },
+            {
+              "texte": "Sur une seule borne de la lampe.",
+              "pourquoi": "Une tension se mesure entre deux points : il faut relier les deux bornes."
+            }
+          ]
+        },
+        {
+          "texte": "Dans un circuit en série, l'intensité mesurée près de la pile est 0,2 ampère. Que vaut-elle entre les deux lampes ?",
+          "nom": "0,2 ampère aussi.",
+          "explication": "Dans un circuit en série, l'intensité du courant est la même en tout point du circuit.",
+          "pieges": [
+            {
+              "texte": "Moins de 0,2 ampère, car la première lampe a utilisé du courant.",
+              "pourquoi": "C'est une idée très répandue, mais le courant ne s'use pas : en série, l'intensité est la même partout."
+            },
+            {
+              "texte": "Plus de 0,2 ampère.",
+              "pourquoi": "En série, rien ne s'ajoute : l'intensité est la même en tout point."
+            }
+          ]
+        },
+        {
+          "texte": "Une pile de 9 volts alimente deux lampes en série. La tension aux bornes de la première lampe est 4 volts. Que vaut-elle aux bornes de la seconde ?",
+          "nom": "5 volts.",
+          "explication": "En série, la tension aux bornes du générateur est égale à la somme des tensions aux bornes des autres dipôles : 9 − 4 = 5 volts.",
+          "pieges": [
+            {
+              "texte": "9 volts.",
+              "pourquoi": "En série, les 9 volts de la pile se partagent entre les deux lampes."
+            },
+            {
+              "texte": "4 volts.",
+              "pourquoi": "Ce serait vrai si les deux tensions étaient égales ; ici, 4 + 4 ne fait pas 9."
+            }
+          ]
+        },
+        {
+          "texte": "Deux lampes sont branchées en dérivation sur un générateur de 6 volts. Quelle est la tension aux bornes de chaque lampe ?",
+          "nom": "6 volts pour chacune.",
+          "explication": "En dérivation, la tension aux bornes de chaque dipôle est égale à la tension aux bornes du générateur.",
+          "pieges": [
+            {
+              "texte": "3 volts pour chacune.",
+              "pourquoi": "C'est la loi des circuits en série ; en dérivation, chaque lampe reçoit toute la tension du générateur."
+            },
+            {
+              "texte": "12 volts pour chacune.",
+              "pourquoi": "Les tensions ne s'additionnent pas ainsi : en dérivation, chaque lampe a la même tension que le générateur."
+            }
+          ]
+        },
+        {
+          "texte": "En dérivation, une branche est parcourue par 0,3 ampère, l'autre par 0,2 ampère. Que vaut l'intensité dans la branche principale ?",
+          "nom": "0,5 ampère.",
+          "explication": "En dérivation, l'intensité dans la branche principale est égale à la somme des intensités des branches : 0,3 + 0,2 = 0,5 ampère.",
+          "pieges": [
+            {
+              "texte": "0,3 ampère.",
+              "pourquoi": "C'est seulement une des deux branches ; il faut ajouter les deux."
+            },
+            {
+              "texte": "0,1 ampère.",
+              "pourquoi": "On a soustrait ; dans la branche principale, les intensités des branches s'additionnent."
+            }
+          ]
+        },
+        {
+          "texte": "Dans une maison, les lampes sont branchées en dérivation. Quel avantage cela donne-t-il ?",
+          "nom": "Chaque lampe reçoit la même tension que le générateur et peut fonctionner seule.",
+          "explication": "En dérivation, chaque branche a la même tension que le générateur ; si on éteint ou retire une lampe, les autres branches restent fermées.",
+          "pieges": [
+            {
+              "texte": "Le courant est le même dans toutes les lampes, comme en série.",
+              "pourquoi": "C'est la loi des circuits en série ; en dérivation, ce sont les tensions qui sont égales."
+            },
+            {
+              "texte": "Si une lampe grille, toutes s'éteignent.",
+              "pourquoi": "C'est ce qui arrive en série, avec une seule boucle ; en dérivation, les autres branches restent fermées."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Voltage and current: circuit laws",
+        "idee": "Voltage is measured in volts, with a voltmeter connected in parallel; current, in amperes, with an ammeter connected in series. Each type of circuit has its own laws.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "First ask yourself: is the circuit in series, a single loop, or in parallel, with several branches?",
+          "exemple": "Example: a 6-volt battery powers two bulbs in series. If the first bulb has a voltage of 2 volts, the second has 6 − 2 = 4 volts.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What unit is voltage measured in?",
+            "nom": "Volts.",
+            "explication": "Voltage is measured in volts, symbol V, named after the physicist Alessandro Volta.",
+            "pieges": [
+              {
+                "texte": "Amperes.",
+                "pourquoi": "The ampere is the unit of electric current, not voltage."
+              },
+              {
+                "texte": "Watts.",
+                "pourquoi": "The watt is the unit of power."
+              }
+            ]
+          },
+          {
+            "texte": "How do you connect an ammeter to measure the current through a bulb?",
+            "nom": "In series with the bulb.",
+            "explication": "The ammeter is connected in series: the current that goes through the bulb goes through it too.",
+            "pieges": [
+              {
+                "texte": "In parallel, across the bulb.",
+                "pourquoi": "That's how a voltmeter is connected, to measure a voltage."
+              },
+              {
+                "texte": "Away from the circuit, without touching it.",
+                "pourquoi": "To measure the current, the ammeter must be part of the circuit, in series."
+              }
+            ]
+          },
+          {
+            "texte": "How do you connect a voltmeter to measure the voltage across a bulb?",
+            "nom": "In parallel, across the bulb.",
+            "explication": "The voltmeter is connected in parallel: its two terminals are joined to the bulb's two terminals.",
+            "pieges": [
+              {
+                "texte": "In series with the bulb.",
+                "pourquoi": "That's how an ammeter is connected, to measure a current."
+              },
+              {
+                "texte": "To only one terminal of the bulb.",
+                "pourquoi": "A voltage is measured between two points: you must connect both terminals."
+              }
+            ]
+          },
+          {
+            "texte": "In a series circuit, the current measured near the battery is 0.2 amperes. What is it between the two bulbs?",
+            "nom": "0.2 amperes too.",
+            "explication": "In a series circuit, the current is the same at every point in the circuit.",
+            "pieges": [
+              {
+                "texte": "Less than 0.2 amperes, because the first bulb used up some current.",
+                "pourquoi": "It's a very common idea, but current isn't used up: in series, the current is the same everywhere."
+              },
+              {
+                "texte": "More than 0.2 amperes.",
+                "pourquoi": "In series, nothing is added: the current is the same at every point."
+              }
+            ]
+          },
+          {
+            "texte": "A 9-volt battery powers two bulbs in series. The voltage across the first bulb is 4 volts. What is it across the second?",
+            "nom": "5 volts.",
+            "explication": "In series, the voltage across the power supply equals the sum of the voltages across the other components: 9 − 4 = 5 volts.",
+            "pieges": [
+              {
+                "texte": "9 volts.",
+                "pourquoi": "In series, the battery's 9 volts are shared between the two bulbs."
+              },
+              {
+                "texte": "4 volts.",
+                "pourquoi": "That would be true if both voltages were equal; here, 4 + 4 doesn't make 9."
+              }
+            ]
+          },
+          {
+            "texte": "Two bulbs are connected in parallel to a 6-volt power supply. What is the voltage across each bulb?",
+            "nom": "6 volts for each.",
+            "explication": "In parallel, the voltage across each component equals the voltage across the power supply.",
+            "pieges": [
+              {
+                "texte": "3 volts for each.",
+                "pourquoi": "That's the law for series circuits; in parallel, each bulb gets the full voltage of the supply."
+              },
+              {
+                "texte": "12 volts for each.",
+                "pourquoi": "Voltages don't add up like that: in parallel, each bulb has the same voltage as the supply."
+              }
+            ]
+          },
+          {
+            "texte": "In a parallel circuit, one branch carries 0.3 amperes and the other 0.2 amperes. What is the current in the main branch?",
+            "nom": "0.5 amperes.",
+            "explication": "In parallel, the current in the main branch equals the sum of the currents in the branches: 0.3 + 0.2 = 0.5 amperes.",
+            "pieges": [
+              {
+                "texte": "0.3 amperes.",
+                "pourquoi": "That's just one of the two branches; you have to add both."
+              },
+              {
+                "texte": "0.1 amperes.",
+                "pourquoi": "That subtracts; in the main branch, the branch currents add up."
+              }
+            ]
+          },
+          {
+            "texte": "In a house, the lights are connected in parallel. What is the advantage?",
+            "nom": "Each light gets the same voltage as the supply and can work on its own.",
+            "explication": "In parallel, each branch has the same voltage as the supply; if you switch off or remove one light, the other branches stay closed.",
+            "pieges": [
+              {
+                "texte": "The current is the same in every light, as in series.",
+                "pourquoi": "That's the law for series circuits; in parallel, it's the voltages that are equal."
+              },
+              {
+                "texte": "If one bulb blows, they all go out.",
+                "pourquoi": "That's what happens in series, with a single loop; in parallel, the other branches stay closed."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "systeme-nerveux",
+      "titre": "Le système nerveux et le cerveau",
+      "niveau": "4e",
+      "prerequis": [
+        "effort-respiration"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Mettre en évidence le rôle du cerveau dans la réception et l’intégration d’informations multiples. Message nerveux, centres nerveux, nerfs, cellules nerveuses."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Les organes des sens envoient des messages nerveux au cerveau par des nerfs. Le cerveau les traite et commande les muscles. D'un neurone à l'autre, le message passe par une synapse.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Pense au trajet du message : un organe des sens, un nerf, le cerveau, puis un nerf vers un muscle.",
+        "exemple": "Exemple : tu vois un ballon arriver. Ton œil envoie un message nerveux au cerveau ; le cerveau envoie un message aux muscles de tes bras, et tu l'attrapes.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Comment s'appellent les cellules qui transmettent les messages nerveux ?",
+          "nom": "Les neurones.",
+          "explication": "Les neurones sont les cellules nerveuses : ils envoient et reçoivent des messages, sous forme de signaux électriques et chimiques.",
+          "pieges": [
+            {
+              "texte": "Les globules rouges.",
+              "pourquoi": "Les globules rouges transportent le dioxygène dans le sang ; ils ne transmettent pas de messages nerveux."
+            },
+            {
+              "texte": "Les cellules des muscles.",
+              "pourquoi": "Elles reçoivent des messages et se contractent, mais ce sont les neurones qui les transmettent."
+            }
+          ]
+        },
+        {
+          "texte": "Quels organes forment le système nerveux central ?",
+          "nom": "Le cerveau et la moelle épinière.",
+          "explication": "Le système nerveux central comprend le cerveau et la moelle épinière ; les nerfs les relient au reste du corps.",
+          "pieges": [
+            {
+              "texte": "Le cœur et les poumons.",
+              "pourquoi": "Ce sont les organes de la circulation et de la respiration, pas du système nerveux."
+            },
+            {
+              "texte": "Les yeux et les oreilles.",
+              "pourquoi": "Ce sont des organes des sens : ils captent des informations et les envoient au système nerveux central."
+            }
+          ]
+        },
+        {
+          "texte": "Tu vois un ballon arriver. Quel trajet suit l'information ?",
+          "nom": "De l'œil au cerveau, par des neurones sensoriels.",
+          "explication": "Les neurones sensoriels transportent l'information des organes des sens, comme les yeux, jusqu'au cerveau.",
+          "pieges": [
+            {
+              "texte": "Du cerveau vers l'œil.",
+              "pourquoi": "L'information sur ce que tu vois part de l'œil : c'est l'œil qui envoie le message au cerveau."
+            },
+            {
+              "texte": "De l'œil directement aux muscles des bras.",
+              "pourquoi": "Le message passe d'abord par le cerveau, qui l'intègre avant de commander les muscles."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle partie du cerveau traite surtout les images venues des yeux ?",
+          "nom": "Les lobes occipitaux, à l'arrière du cerveau.",
+          "explication": "Les lobes occipitaux traitent les images venues des yeux et les relient aux images gardées en mémoire.",
+          "pieges": [
+            {
+              "texte": "Les lobes frontaux, derrière le front.",
+              "pourquoi": "Ils servent surtout à planifier, imaginer et raisonner ; les images sont traitées à l'arrière du cerveau."
+            },
+            {
+              "texte": "Le cervelet.",
+              "pourquoi": "Le cervelet coordonne les mouvements ; il ne traite pas les images."
+            }
+          ]
+        },
+        {
+          "texte": "Quand tu décides de lever le bras, qui commande le muscle ?",
+          "nom": "Le cerveau, par des neurones moteurs.",
+          "explication": "Une zone du cerveau, le cortex moteur, prépare le mouvement ; des neurones moteurs portent le message du cerveau jusqu'aux muscles.",
+          "pieges": [
+            {
+              "texte": "Le muscle décide tout seul.",
+              "pourquoi": "Un muscle se contracte quand il reçoit un message nerveux : pour un mouvement voulu, ce message vient du cerveau."
+            },
+            {
+              "texte": "Les yeux.",
+              "pourquoi": "Les yeux envoient des informations au cerveau, mais ce n'est pas eux qui commandent les muscles."
+            }
+          ]
+        },
+        {
+          "texte": "Comment un neurone transmet-il son message à la cellule suivante ?",
+          "nom": "Il libère des substances chimiques, les neurotransmetteurs, dans la synapse.",
+          "explication": "Entre deux neurones, il y a un tout petit espace, la synapse. Les neurotransmetteurs le traversent et se fixent sur la cellule voisine.",
+          "pieges": [
+            {
+              "texte": "Les neurones sont collés : le message passe sans rien libérer.",
+              "pourquoi": "Il reste un tout petit espace, la synapse ; le message le franchit grâce aux neurotransmetteurs."
+            },
+            {
+              "texte": "Par le sang.",
+              "pourquoi": "D'un neurone à l'autre, le message passe dans la synapse, pas par la circulation du sang."
+            }
+          ]
+        },
+        {
+          "texte": "À quoi sert le cervelet ?",
+          "nom": "Il coordonne les mouvements, en particulier ceux que l'on a appris.",
+          "explication": "Quand tu joues d'un instrument ou que tu frappes une balle, ton cervelet coordonne tes mouvements.",
+          "pieges": [
+            {
+              "texte": "À voir les images.",
+              "pourquoi": "Ce sont les lobes occipitaux qui traitent les images venues des yeux."
+            },
+            {
+              "texte": "À pomper le sang.",
+              "pourquoi": "C'est le rôle du cœur ; le cervelet fait partie de l'encéphale."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi le sommeil est-il important pour le cerveau ?",
+          "nom": "Il l'aide à apprendre et à garder des souvenirs.",
+          "explication": "Sans sommeil, le cerveau forme mal les connexions qui servent à apprendre et à mémoriser. Les enfants et les adolescents ont besoin d'environ 9 heures et demie de sommeil par nuit.",
+          "pieges": [
+            {
+              "texte": "Il sert seulement à reposer les muscles.",
+              "pourquoi": "Le sommeil sert aussi au cerveau : il l'aide à garder ce qu'il a appris."
+            },
+            {
+              "texte": "Dormir peu n'a aucun effet si l'on mange bien.",
+              "pourquoi": "Rien ne remplace le sommeil : sans lui, on apprend et on retient moins bien."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The nervous system and the brain",
+        "idee": "Sense organs send nerve messages to the brain along nerves. The brain processes them and controls the muscles. From one neuron to the next, the message crosses a synapse.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Think about the message's path: a sense organ, a nerve, the brain, then a nerve to a muscle.",
+          "exemple": "Example: you see a ball coming. Your eye sends a nerve message to the brain; the brain sends a message to the muscles in your arms, and you catch it.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What are the cells that carry nerve messages called?",
+            "nom": "Neurons.",
+            "explication": "Neurons are nerve cells: they send and receive messages, as electrical and chemical signals.",
+            "pieges": [
+              {
+                "texte": "Red blood cells.",
+                "pourquoi": "Red blood cells carry oxygen in the blood; they don't pass on nerve messages."
+              },
+              {
+                "texte": "Muscle cells.",
+                "pourquoi": "They receive messages and contract, but neurons are what pass the messages on."
+              }
+            ]
+          },
+          {
+            "texte": "Which organs make up the central nervous system?",
+            "nom": "The brain and the spinal cord.",
+            "explication": "The central nervous system is the brain and the spinal cord; nerves link them to the rest of the body.",
+            "pieges": [
+              {
+                "texte": "The heart and the lungs.",
+                "pourquoi": "Those are the organs of circulation and breathing, not of the nervous system."
+              },
+              {
+                "texte": "The eyes and the ears.",
+                "pourquoi": "Those are sense organs: they pick up information and send it to the central nervous system."
+              }
+            ]
+          },
+          {
+            "texte": "You see a ball coming. What path does the information take?",
+            "nom": "From the eye to the brain, through sensory neurons.",
+            "explication": "Sensory neurons carry information from the sense organs, such as the eyes, to the brain.",
+            "pieges": [
+              {
+                "texte": "From the brain to the eye.",
+                "pourquoi": "Information about what you see starts in the eye: the eye sends the message to the brain."
+              },
+              {
+                "texte": "From the eye straight to the arm muscles.",
+                "pourquoi": "The message goes through the brain first, which puts it together before controlling the muscles."
+              }
+            ]
+          },
+          {
+            "texte": "Which part of the brain mainly processes images from the eyes?",
+            "nom": "The occipital lobes, at the back of the brain.",
+            "explication": "The occipital lobes process images from the eyes and link them with images stored in memory.",
+            "pieges": [
+              {
+                "texte": "The frontal lobes, behind the forehead.",
+                "pourquoi": "They mostly help you plan, imagine and reason; images are processed at the back of the brain."
+              },
+              {
+                "texte": "The cerebellum.",
+                "pourquoi": "The cerebellum coordinates movement; it doesn't process images."
+              }
+            ]
+          },
+          {
+            "texte": "When you decide to raise your arm, what controls the muscle?",
+            "nom": "The brain, through motor neurons.",
+            "explication": "A part of the brain, the motor cortex, plans the movement; motor neurons carry the message from the brain to the muscles.",
+            "pieges": [
+              {
+                "texte": "The muscle decides on its own.",
+                "pourquoi": "A muscle contracts when it receives a nerve message: for a movement you choose, that message comes from the brain."
+              },
+              {
+                "texte": "The eyes.",
+                "pourquoi": "The eyes send information to the brain, but they don't control the muscles."
+              }
+            ]
+          },
+          {
+            "texte": "How does a neuron pass its message to the next cell?",
+            "nom": "It releases chemicals, neurotransmitters, into the synapse.",
+            "explication": "Between two neurons there is a tiny gap, the synapse. Neurotransmitters cross it and attach to the neighbouring cell.",
+            "pieges": [
+              {
+                "texte": "Neurons are stuck together: the message passes without releasing anything.",
+                "pourquoi": "There is still a tiny gap, the synapse; the message crosses it thanks to neurotransmitters."
+              },
+              {
+                "texte": "Through the blood.",
+                "pourquoi": "From one neuron to the next, the message crosses the synapse, not the bloodstream."
+              }
+            ]
+          },
+          {
+            "texte": "What does the cerebellum do?",
+            "nom": "It coordinates movement, especially learned movements.",
+            "explication": "When you play an instrument or hit a ball, your cerebellum coordinates your movements.",
+            "pieges": [
+              {
+                "texte": "It sees images.",
+                "pourquoi": "The occipital lobes are what process images from the eyes."
+              },
+              {
+                "texte": "It pumps blood.",
+                "pourquoi": "That's the heart's job; the cerebellum is part of the brain."
+              }
+            ]
+          },
+          {
+            "texte": "Why is sleep important for the brain?",
+            "nom": "It helps it learn and keep memories.",
+            "explication": "Without sleep, the brain can't properly form the connections used for learning and memory. School-age children and teenagers need about 9 and a half hours of sleep a night.",
+            "pieges": [
+              {
+                "texte": "It's only for resting the muscles.",
+                "pourquoi": "Sleep also matters for the brain: it helps it keep what it has learned."
+              },
+              {
+                "texte": "Sleeping little has no effect if you eat well.",
+                "pourquoi": "Nothing replaces sleep: without it, you learn and remember less well."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "energie",
       "titre": "Formes et conversions d'énergie",
       "niveau": "3e",
@@ -9165,6 +10558,844 @@
               {
                 "texte": "Because they produce oxygen.",
                 "pourquoi": "Burning uses up oxygen; it doesn't produce it."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "loi-ohm-puissance",
+      "titre": "Loi d'Ohm, puissance et énergie électriques",
+      "niveau": "3e",
+      "prerequis": [
+        "tension-intensite",
+        "energie"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Relation tension-courant : loi d’Ohm. Conduire un calcul de consommation d’énergie électrique relatif à une situation de la vie courante. Puissance électrique P= U.I. Relation liant l’énergie, la puissance électrique et la durée."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Loi d'Ohm : tension = résistance × intensité. Puissance électrique = tension × intensité. Énergie = puissance × durée : un appareil puissant qui fonctionne longtemps consomme beaucoup.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Choisis la bonne relation : tension = résistance × intensité ; puissance = tension × intensité ; énergie = puissance × durée. Vérifie les unités.",
+        "exemple": "Exemple : une résistance de 100 ohms est traversée par un courant de 0,05 ampère. La tension à ses bornes vaut 100 × 0,05 = 5 volts.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Que dit la loi d'Ohm pour un conducteur ohmique ?",
+          "nom": "La tension à ses bornes est égale à sa résistance multipliée par l'intensité qui le traverse.",
+          "explication": "Tension en volts = résistance en ohms × intensité en ampères. La tension et l'intensité sont proportionnelles.",
+          "pieges": [
+            {
+              "texte": "La tension est égale à la résistance divisée par l'intensité.",
+              "pourquoi": "C'est l'inverse : la résistance est la tension divisée par l'intensité, donc la tension est la résistance multipliée par l'intensité."
+            },
+            {
+              "texte": "L'intensité est la même quelle que soit la tension.",
+              "pourquoi": "Pour un conducteur ohmique, si la tension double, l'intensité double aussi."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quelle unité s'exprime une résistance électrique ?",
+          "nom": "En ohms.",
+          "explication": "La résistance s'exprime en ohms, de symbole Ω, la lettre grecque oméga : un ohm, c'est un volt par ampère.",
+          "pieges": [
+            {
+              "texte": "En volts.",
+              "pourquoi": "Le volt est l'unité de la tension."
+            },
+            {
+              "texte": "En ampères.",
+              "pourquoi": "L'ampère est l'unité de l'intensité du courant."
+            }
+          ]
+        },
+        {
+          "texte": "Un conducteur ohmique de 470 ohms est traversé par un courant de 0,02 ampère. Quelle est la tension à ses bornes ?",
+          "nom": "9,4 volts.",
+          "explication": "Tension = résistance × intensité = 470 × 0,02 = 9,4 volts.",
+          "pieges": [
+            {
+              "texte": "23 500 volts.",
+              "pourquoi": "On a divisé 470 par 0,02 ; la loi d'Ohm demande de multiplier."
+            },
+            {
+              "texte": "470,02 volts.",
+              "pourquoi": "On a additionné ; il faut multiplier la résistance par l'intensité."
+            }
+          ]
+        },
+        {
+          "texte": "Une tension de 12 volts est appliquée à un conducteur ohmique de 60 ohms. Quelle intensité le traverse ?",
+          "nom": "0,2 ampère.",
+          "explication": "Intensité = tension ÷ résistance = 12 ÷ 60 = 0,2 ampère.",
+          "pieges": [
+            {
+              "texte": "720 ampères.",
+              "pourquoi": "On a multiplié la tension par la résistance ; pour trouver l'intensité, on divise."
+            },
+            {
+              "texte": "5 ampères.",
+              "pourquoi": "On a divisé la résistance par la tension : 60 ÷ 12. Il faut la tension divisée par la résistance."
+            }
+          ]
+        },
+        {
+          "texte": "Une lampe fonctionne sous 12 volts et elle est traversée par 2 ampères. Quelle est sa puissance ?",
+          "nom": "24 watts.",
+          "explication": "Puissance = tension × intensité = 12 × 2 = 24 watts.",
+          "pieges": [
+            {
+              "texte": "6 watts.",
+              "pourquoi": "On a divisé 12 par 2 ; la puissance est le produit de la tension et de l'intensité."
+            },
+            {
+              "texte": "14 watts.",
+              "pourquoi": "On a additionné ; il faut multiplier."
+            }
+          ]
+        },
+        {
+          "texte": "Un appareil de 1 000 watts fonctionne pendant 2 heures. Quelle énergie électrique a-t-il consommée ?",
+          "nom": "2 000 wattheures, soit 2 kilowattheures.",
+          "explication": "Énergie = puissance × durée = 1 000 × 2 = 2 000 wattheures. Comme 1 kilowattheure vaut 1 000 wattheures, cela fait 2 kilowattheures.",
+          "pieges": [
+            {
+              "texte": "500 wattheures.",
+              "pourquoi": "On a divisé la puissance par la durée ; l'énergie est la puissance multipliée par la durée."
+            },
+            {
+              "texte": "1 000 wattheures, car la puissance ne change pas.",
+              "pourquoi": "La puissance ne change pas, mais l'appareil fonctionne 2 heures : l'énergie double."
+            }
+          ]
+        },
+        {
+          "texte": "Dans le Système international, en quelle unité s'exprime l'énergie ?",
+          "nom": "En joules.",
+          "explication": "L'unité d'énergie du Système international est le joule. Un watt, c'est un joule par seconde : un appareil de 1 watt consomme 1 joule chaque seconde.",
+          "pieges": [
+            {
+              "texte": "En watts.",
+              "pourquoi": "Le watt est l'unité de la puissance : l'énergie transférée chaque seconde."
+            },
+            {
+              "texte": "En volts.",
+              "pourquoi": "Le volt est l'unité de la tension électrique."
+            }
+          ]
+        },
+        {
+          "texte": "Une lampe de 10 watts et une lampe de 60 watts restent allumées pendant la même durée. Laquelle consomme le moins d'énergie ?",
+          "nom": "La lampe de 10 watts.",
+          "explication": "À durée égale, l'énergie consommée est proportionnelle à la puissance : la lampe de 10 watts consomme 6 fois moins que celle de 60 watts.",
+          "pieges": [
+            {
+              "texte": "La lampe de 60 watts.",
+              "pourquoi": "Plus la puissance est grande, plus l'énergie consommée pendant une même durée est grande."
+            },
+            {
+              "texte": "Les deux consomment autant.",
+              "pourquoi": "La durée est la même, mais pas la puissance : énergie = puissance × durée."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Ohm's law, electrical power and energy",
+        "idee": "Ohm's law: voltage = resistance × current. Electrical power = voltage × current. Energy = power × time: a powerful device that runs for a long time uses a lot.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Choose the right relation: voltage = resistance × current; power = voltage × current; energy = power × time. Check the units.",
+          "exemple": "Example: a current of 0.05 amperes flows through a 100-ohm resistor. The voltage across it is 100 × 0.05 = 5 volts.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What does Ohm's law say for a resistor?",
+            "nom": "The voltage across it equals its resistance multiplied by the current through it.",
+            "explication": "Voltage in volts = resistance in ohms × current in amperes. Voltage and current are proportional.",
+            "pieges": [
+              {
+                "texte": "The voltage equals the resistance divided by the current.",
+                "pourquoi": "It's the other way round: resistance is voltage divided by current, so voltage is resistance multiplied by current."
+              },
+              {
+                "texte": "The current is the same whatever the voltage.",
+                "pourquoi": "For a resistor, if the voltage doubles, the current doubles too."
+              }
+            ]
+          },
+          {
+            "texte": "What unit is electrical resistance measured in?",
+            "nom": "Ohms.",
+            "explication": "Resistance is measured in ohms, symbol Ω, the Greek letter omega: one ohm is one volt per ampere.",
+            "pieges": [
+              {
+                "texte": "Volts.",
+                "pourquoi": "The volt is the unit of voltage."
+              },
+              {
+                "texte": "Amperes.",
+                "pourquoi": "The ampere is the unit of electric current."
+              }
+            ]
+          },
+          {
+            "texte": "A current of 0.02 amperes flows through a 470-ohm resistor. What is the voltage across it?",
+            "nom": "9.4 volts.",
+            "explication": "Voltage = resistance × current = 470 × 0.02 = 9.4 volts.",
+            "pieges": [
+              {
+                "texte": "23,500 volts.",
+                "pourquoi": "That divides 470 by 0.02; Ohm's law says to multiply."
+              },
+              {
+                "texte": "470.02 volts.",
+                "pourquoi": "That adds; you need to multiply the resistance by the current."
+              }
+            ]
+          },
+          {
+            "texte": "A voltage of 12 volts is applied to a 60-ohm resistor. What current flows through it?",
+            "nom": "0.2 amperes.",
+            "explication": "Current = voltage ÷ resistance = 12 ÷ 60 = 0.2 amperes.",
+            "pieges": [
+              {
+                "texte": "720 amperes.",
+                "pourquoi": "That multiplies voltage by resistance; to find the current, you divide."
+              },
+              {
+                "texte": "5 amperes.",
+                "pourquoi": "That divides resistance by voltage: 60 ÷ 12. You need voltage divided by resistance."
+              }
+            ]
+          },
+          {
+            "texte": "A lamp runs on 12 volts with a current of 2 amperes. What is its power?",
+            "nom": "24 watts.",
+            "explication": "Power = voltage × current = 12 × 2 = 24 watts.",
+            "pieges": [
+              {
+                "texte": "6 watts.",
+                "pourquoi": "That divides 12 by 2; power is voltage multiplied by current."
+              },
+              {
+                "texte": "14 watts.",
+                "pourquoi": "That adds; you need to multiply."
+              }
+            ]
+          },
+          {
+            "texte": "A 1,000-watt appliance runs for 2 hours. How much electrical energy has it used?",
+            "nom": "2,000 watt-hours, or 2 kilowatt-hours.",
+            "explication": "Energy = power × time = 1,000 × 2 = 2,000 watt-hours. Since 1 kilowatt-hour is 1,000 watt-hours, that's 2 kilowatt-hours.",
+            "pieges": [
+              {
+                "texte": "500 watt-hours.",
+                "pourquoi": "That divides power by time; energy is power multiplied by time."
+              },
+              {
+                "texte": "1,000 watt-hours, because the power doesn't change.",
+                "pourquoi": "The power doesn't change, but the appliance runs for 2 hours: the energy doubles."
+              }
+            ]
+          },
+          {
+            "texte": "In the International System of Units, what unit is energy measured in?",
+            "nom": "Joules.",
+            "explication": "The SI unit of energy is the joule. One watt is one joule per second: a 1-watt device uses 1 joule every second.",
+            "pieges": [
+              {
+                "texte": "Watts.",
+                "pourquoi": "The watt is the unit of power: the energy transferred each second."
+              },
+              {
+                "texte": "Volts.",
+                "pourquoi": "The volt is the unit of voltage."
+              }
+            ]
+          },
+          {
+            "texte": "A 10-watt bulb and a 60-watt bulb stay on for the same length of time. Which one uses less energy?",
+            "nom": "The 10-watt bulb.",
+            "explication": "For the same time, the energy used is proportional to the power: the 10-watt bulb uses 6 times less than the 60-watt one.",
+            "pieges": [
+              {
+                "texte": "The 60-watt bulb.",
+                "pourquoi": "The greater the power, the more energy is used in the same time."
+              },
+              {
+                "texte": "They both use the same amount.",
+                "pourquoi": "The time is the same, but not the power: energy = power × time."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "poids-masse",
+      "titre": "Poids et masse",
+      "niveau": "3e",
+      "prerequis": [
+        "masse-volumique"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Force de pesanteur et son expression P=mg. Pesanteur sur Terre et sur la Lune, différence entre poids et masse (unités)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La masse, en kilogrammes, est la quantité de matière : elle ne change pas d'un astre à l'autre. Le poids, en newtons, est une force : poids = masse × intensité de la pesanteur.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Poids en newtons = masse en kilogrammes × intensité de la pesanteur. Sur Terre, elle vaut environ 9,8 newtons par kilogramme ; sur la Lune, environ 1,6.",
+        "exemple": "Exemple : un sac de 2 kilogrammes, sur Terre, a un poids d'environ 2 × 9,8 = 19,6 newtons.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Dans quelle unité s'exprime le poids d'un objet ?",
+          "nom": "En newtons.",
+          "explication": "Le poids est une force : il s'exprime en newtons. La masse, elle, s'exprime en kilogrammes.",
+          "pieges": [
+            {
+              "texte": "En kilogrammes.",
+              "pourquoi": "Dans la vie courante, on dit « je pèse 40 kilos », mais le kilogramme est l'unité de la masse, pas du poids."
+            },
+            {
+              "texte": "En litres.",
+              "pourquoi": "Le litre est une unité de volume."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle relation lie le poids et la masse ?",
+          "nom": "Poids = masse × intensité de la pesanteur.",
+          "explication": "Le poids, en newtons, s'obtient en multipliant la masse, en kilogrammes, par l'intensité de la pesanteur, en newtons par kilogramme.",
+          "pieges": [
+            {
+              "texte": "Poids = masse ÷ intensité de la pesanteur.",
+              "pourquoi": "On multiplie : plus la pesanteur est forte, plus le poids est grand."
+            },
+            {
+              "texte": "Le poids et la masse sont la même chose.",
+              "pourquoi": "La masse est une quantité de matière ; le poids est une force, qui dépend de l'endroit où l'on se trouve."
+            }
+          ]
+        },
+        {
+          "texte": "Sur Terre, quel est le poids d'un objet de 10 kilogrammes ?",
+          "nom": "Environ 98 newtons.",
+          "explication": "Poids = 10 × 9,8 = 98 newtons environ.",
+          "pieges": [
+            {
+              "texte": "10 newtons.",
+              "pourquoi": "On a oublié de multiplier par l'intensité de la pesanteur, environ 9,8 newtons par kilogramme sur Terre."
+            },
+            {
+              "texte": "Environ 1 newton.",
+              "pourquoi": "On a divisé 10 par 9,8 ; il faut multiplier."
+            }
+          ]
+        },
+        {
+          "texte": "Un astronaute a une masse de 80 kilogrammes sur Terre. Quelle est sa masse sur la Lune ?",
+          "nom": "80 kilogrammes, comme sur Terre.",
+          "explication": "La masse est la quantité de matière : elle ne change pas quand on change d'astre. C'est le poids qui change.",
+          "pieges": [
+            {
+              "texte": "Environ 13 kilogrammes.",
+              "pourquoi": "C'est le poids qui devient environ six fois plus petit sur la Lune, pas la masse."
+            },
+            {
+              "texte": "0 kilogramme.",
+              "pourquoi": "L'astronaute est toujours fait de la même matière : sa masse ne disparaît pas."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un objet est-il moins lourd sur la Lune que sur Terre ?",
+          "nom": "Parce que l'intensité de la pesanteur y est plus faible.",
+          "explication": "À la surface de la Lune, l'intensité de la pesanteur vaut environ 1,6 newton par kilogramme, contre environ 9,8 sur Terre : environ six fois moins.",
+          "pieges": [
+            {
+              "texte": "Parce que sa masse y est plus petite.",
+              "pourquoi": "La masse reste la même ; c'est la pesanteur, donc le poids, qui diminue."
+            },
+            {
+              "texte": "Parce qu'il n'y a pas d'air sur la Lune.",
+              "pourquoi": "Le poids ne vient pas de l'air : il vient de l'attraction de l'astre, plus faible pour la Lune."
+            }
+          ]
+        },
+        {
+          "texte": "Sur la Lune, quel est, environ, le poids d'un objet de 10 kilogrammes ?",
+          "nom": "Environ 16 newtons.",
+          "explication": "Poids = 10 × 1,6 = 16 newtons environ, au lieu d'environ 98 newtons sur Terre.",
+          "pieges": [
+            {
+              "texte": "Environ 98 newtons.",
+              "pourquoi": "C'est son poids sur Terre ; sur la Lune, la pesanteur est environ six fois plus faible."
+            },
+            {
+              "texte": "10 kilogrammes.",
+              "pourquoi": "C'est sa masse, qui ne change pas ; le poids s'exprime en newtons."
+            }
+          ]
+        },
+        {
+          "texte": "Avec quel instrument mesure-t-on une masse, et avec lequel mesure-t-on un poids ?",
+          "nom": "Une balance pour la masse, un dynamomètre pour le poids.",
+          "explication": "La balance mesure une masse en kilogrammes ou en grammes ; le dynamomètre, un ressort gradué, mesure une force comme le poids, en newtons.",
+          "pieges": [
+            {
+              "texte": "Un dynamomètre pour la masse, une balance pour le poids.",
+              "pourquoi": "C'est l'inverse : le dynamomètre mesure des forces, en newtons."
+            },
+            {
+              "texte": "Un thermomètre pour les deux.",
+              "pourquoi": "Le thermomètre mesure une température."
+            }
+          ]
+        },
+        {
+          "texte": "Sur Terre, un objet a un poids de 49 newtons. Quelle est, environ, sa masse ?",
+          "nom": "Environ 5 kilogrammes.",
+          "explication": "Masse = poids ÷ intensité de la pesanteur = 49 ÷ 9,8 = 5 kilogrammes.",
+          "pieges": [
+            {
+              "texte": "Environ 480 kilogrammes.",
+              "pourquoi": "On a multiplié 49 par 9,8 ; pour retrouver la masse, on divise."
+            },
+            {
+              "texte": "49 kilogrammes.",
+              "pourquoi": "49 est le poids en newtons ; il faut le diviser par environ 9,8 pour avoir la masse."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Weight and mass",
+        "idee": "Mass, in kilograms, is the amount of matter: it doesn't change from one world to another. Weight, in newtons, is a force: weight = mass × gravitational field strength.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Weight in newtons = mass in kilograms × gravitational field strength. On Earth it's about 9.8 newtons per kilogram; on the Moon, about 1.6.",
+          "exemple": "Example: a 2-kilogram bag on Earth has a weight of about 2 × 9.8 = 19.6 newtons.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What unit is an object's weight measured in?",
+            "nom": "Newtons.",
+            "explication": "Weight is a force: it's measured in newtons. Mass is measured in kilograms.",
+            "pieges": [
+              {
+                "texte": "Kilograms.",
+                "pourquoi": "In everyday life we say “I weigh 40 kilos”, but the kilogram is the unit of mass, not weight."
+              },
+              {
+                "texte": "Litres.",
+                "pourquoi": "The litre is a unit of volume."
+              }
+            ]
+          },
+          {
+            "texte": "What relation links weight and mass?",
+            "nom": "Weight = mass × gravitational field strength.",
+            "explication": "Weight, in newtons, is mass, in kilograms, multiplied by the gravitational field strength, in newtons per kilogram.",
+            "pieges": [
+              {
+                "texte": "Weight = mass ÷ gravitational field strength.",
+                "pourquoi": "You multiply: the stronger the gravity, the greater the weight."
+              },
+              {
+                "texte": "Weight and mass are the same thing.",
+                "pourquoi": "Mass is an amount of matter; weight is a force, which depends on where you are."
+              }
+            ]
+          },
+          {
+            "texte": "On Earth, what is the weight of a 10-kilogram object?",
+            "nom": "About 98 newtons.",
+            "explication": "Weight = 10 × 9.8 = about 98 newtons.",
+            "pieges": [
+              {
+                "texte": "10 newtons.",
+                "pourquoi": "That forgets to multiply by the gravitational field strength, about 9.8 newtons per kilogram on Earth."
+              },
+              {
+                "texte": "About 1 newton.",
+                "pourquoi": "That divides 10 by 9.8; you need to multiply."
+              }
+            ]
+          },
+          {
+            "texte": "An astronaut has a mass of 80 kilograms on Earth. What is their mass on the Moon?",
+            "nom": "80 kilograms, the same as on Earth.",
+            "explication": "Mass is the amount of matter: it doesn't change when you go to another world. It's the weight that changes.",
+            "pieges": [
+              {
+                "texte": "About 13 kilograms.",
+                "pourquoi": "It's the weight that becomes about six times smaller on the Moon, not the mass."
+              },
+              {
+                "texte": "0 kilograms.",
+                "pourquoi": "The astronaut is still made of the same matter: their mass doesn't disappear."
+              }
+            ]
+          },
+          {
+            "texte": "Why is an object less heavy on the Moon than on Earth?",
+            "nom": "Because gravity is weaker there.",
+            "explication": "At the Moon's surface, the gravitational field strength is about 1.6 newtons per kilogram, compared with about 9.8 on Earth: about six times less.",
+            "pieges": [
+              {
+                "texte": "Because its mass is smaller there.",
+                "pourquoi": "The mass stays the same; it's the gravity, and so the weight, that goes down."
+              },
+              {
+                "texte": "Because there's no air on the Moon.",
+                "pourquoi": "Weight doesn't come from air: it comes from the pull of the world you're on, which is weaker for the Moon."
+              }
+            ]
+          },
+          {
+            "texte": "On the Moon, roughly what is the weight of a 10-kilogram object?",
+            "nom": "About 16 newtons.",
+            "explication": "Weight = 10 × 1.6 = about 16 newtons, instead of about 98 newtons on Earth.",
+            "pieges": [
+              {
+                "texte": "About 98 newtons.",
+                "pourquoi": "That's its weight on Earth; on the Moon, gravity is about six times weaker."
+              },
+              {
+                "texte": "10 kilograms.",
+                "pourquoi": "That's its mass, which doesn't change; weight is measured in newtons."
+              }
+            ]
+          },
+          {
+            "texte": "Which instrument measures mass, and which one measures weight?",
+            "nom": "A balance for mass, a spring scale (newton meter) for weight.",
+            "explication": "A balance measures mass in kilograms or grams; a newton meter, a marked spring, measures a force such as weight, in newtons.",
+            "pieges": [
+              {
+                "texte": "A newton meter for mass, a balance for weight.",
+                "pourquoi": "It's the other way round: a newton meter measures forces, in newtons."
+              },
+              {
+                "texte": "A thermometer for both.",
+                "pourquoi": "A thermometer measures temperature."
+              }
+            ]
+          },
+          {
+            "texte": "On Earth, an object has a weight of 49 newtons. Roughly what is its mass?",
+            "nom": "About 5 kilograms.",
+            "explication": "Mass = weight ÷ gravitational field strength = 49 ÷ 9.8 = 5 kilograms.",
+            "pieges": [
+              {
+                "texte": "About 480 kilograms.",
+                "pourquoi": "That multiplies 49 by 9.8; to find the mass, you divide."
+              },
+              {
+                "texte": "49 kilograms.",
+                "pourquoi": "49 is the weight in newtons; divide it by about 9.8 to get the mass."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "immunite-vaccination",
+      "titre": "Immunité, vaccins et antibiotiques",
+      "niveau": "3e",
+      "prerequis": [
+        "cellule"
+      ],
+      "programme": {
+        "source": "c4",
+        "texte": "Expliquer les réactions qui permettent à l’organisme de se préserver des micro-organismes pathogènes. Réactions immunitaires. Mesures d’hygiène, vaccination, action des antiseptiques et des antibiotiques."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Le corps se défend contre les microbes : des globules blancs les mangent, d'autres fabriquent des anticorps et gardent la mémoire du microbe. Un vaccin crée cette mémoire sans faire tomber malade.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Demande-toi : de quel microbe s'agit-il, bactérie ou virus ? Et quelle cellule du système immunitaire agit ?",
+        "exemple": "Exemple : une écharde fait entrer des bactéries dans la peau. Des globules blancs, les phagocytes, viennent les manger : c'est la phagocytose.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelle est l'une des premières barrières du corps contre les microbes ?",
+          "nom": "La peau.",
+          "explication": "La peau, le mucus qui piège les particules, les larmes ou l'acidité de l'estomac empêchent beaucoup de microbes d'entrer ou de survivre.",
+          "pieges": [
+            {
+              "texte": "Les anticorps, toujours en premier.",
+              "pourquoi": "Les anticorps viennent plus tard, quand le microbe est déjà entré et reconnu."
+            },
+            {
+              "texte": "Les antibiotiques.",
+              "pourquoi": "Ce sont des médicaments, pas une défense naturelle du corps."
+            }
+          ]
+        },
+        {
+          "texte": "Comment s'appelle le mécanisme par lequel certains globules blancs « mangent » les microbes ?",
+          "nom": "La phagocytose.",
+          "explication": "Des globules blancs, les phagocytes, englobent et détruisent les microbes et les cellules mortes ou abîmées.",
+          "pieges": [
+            {
+              "texte": "La digestion.",
+              "pourquoi": "La digestion transforme les aliments dans le tube digestif ; la phagocytose a lieu dans les tissus infectés."
+            },
+            {
+              "texte": "La vaccination.",
+              "pourquoi": "La vaccination est un geste médical qui prépare le système immunitaire ; ce n'est pas une action des globules blancs."
+            }
+          ]
+        },
+        {
+          "texte": "Quelles cellules produisent les anticorps ?",
+          "nom": "Des lymphocytes B, devenus plasmocytes.",
+          "explication": "Les lymphocytes B se transforment en plasmocytes, qui fabriquent des anticorps. Chaque anticorps se fixe à un antigène précis et aide à le détruire.",
+          "pieges": [
+            {
+              "texte": "Les globules rouges.",
+              "pourquoi": "Les globules rouges transportent le dioxygène ; ils ne font pas partie des défenses immunitaires."
+            },
+            {
+              "texte": "Les neurones.",
+              "pourquoi": "Les neurones transmettent des messages nerveux, pas des anticorps."
+            }
+          ]
+        },
+        {
+          "texte": "Que font les lymphocytes T ?",
+          "nom": "Ils attaquent directement les antigènes et aident à contrôler la réponse immunitaire.",
+          "explication": "Certains lymphocytes T s'attaquent directement à ce qu'ils reconnaissent comme étranger ; d'autres organisent la réponse.",
+          "pieges": [
+            {
+              "texte": "Ils fabriquent les anticorps.",
+              "pourquoi": "Ce sont les lymphocytes B, devenus plasmocytes, qui fabriquent les anticorps."
+            },
+            {
+              "texte": "Ils transportent le dioxygène.",
+              "pourquoi": "C'est le rôle des globules rouges."
+            }
+          ]
+        },
+        {
+          "texte": "Après avoir combattu un microbe, pourquoi le corps réagit-il plus vite s'il le rencontre à nouveau ?",
+          "nom": "Parce que des lymphocytes mémoires le reconnaissent vite.",
+          "explication": "Après une première rencontre, quelques lymphocytes B et T restent en mémoire : au contact suivant, la réponse est rapide et efficace.",
+          "pieges": [
+            {
+              "texte": "Parce que le microbe a disparu de la Terre.",
+              "pourquoi": "Le microbe existe toujours ; c'est le corps qui a appris à le reconnaître."
+            },
+            {
+              "texte": "Parce que la peau est devenue plus épaisse.",
+              "pourquoi": "La protection vient de la mémoire immunitaire, pas de la peau."
+            }
+          ]
+        },
+        {
+          "texte": "Que contient un vaccin ?",
+          "nom": "Un microbe tué ou affaibli, ou une partie de microbe.",
+          "explication": "Le vaccin présente au système immunitaire un microbe tué, affaibli, ou une de ses parties : il fabrique des anticorps et une mémoire, sans tomber malade.",
+          "pieges": [
+            {
+              "texte": "Des anticorps tout prêts, qui durent toute la vie.",
+              "pourquoi": "Un vaccin fait fabriquer ses propres anticorps et ses cellules mémoires par le corps."
+            },
+            {
+              "texte": "Un antibiotique.",
+              "pourquoi": "L'antibiotique est un médicament qui tue des bactéries ; le vaccin prépare le système immunitaire."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi se faire vacciner protège-t-il aussi les autres ?",
+          "nom": "Parce que certaines personnes ne peuvent pas être vaccinées et comptent sur les autres.",
+          "explication": "Les bébés très jeunes ou les personnes gravement malades ne peuvent pas toujours être vaccinés : ils comptent sur la vaccination des autres pour être protégés.",
+          "pieges": [
+            {
+              "texte": "Ça ne protège que soi-même.",
+              "pourquoi": "On se vaccine pour se protéger et pour protéger ceux qui nous entourent."
+            },
+            {
+              "texte": "Parce qu'un vaccin soigne les malades qui sont autour de soi.",
+              "pourquoi": "Un vaccin prépare le corps de la personne vaccinée ; il ne soigne pas les autres."
+            }
+          ]
+        },
+        {
+          "texte": "Un antibiotique peut-il soigner un rhume causé par un virus ?",
+          "nom": "Non, les antibiotiques agissent sur les bactéries, pas sur les virus.",
+          "explication": "Les antibiotiques tuent les bactéries ou les empêchent de se multiplier. Ils sont sans effet sur les virus, et les utiliser à tort favorise les bactéries résistantes.",
+          "pieges": [
+            {
+              "texte": "Oui, les antibiotiques tuent tous les microbes.",
+              "pourquoi": "C'est une idée répandue, mais les antibiotiques n'agissent pas sur les virus."
+            },
+            {
+              "texte": "Oui, s'il est pris très tôt.",
+              "pourquoi": "Qu'il soit pris tôt ou tard, un antibiotique n'agit pas sur un virus."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Immunity, vaccines and antibiotics",
+        "idee": "The body defends itself against germs: some white blood cells eat them, others make antibodies and remember the germ. A vaccine builds this memory without making you ill.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Ask yourself: which germ is it, a bacterium or a virus? And which immune cell is acting?",
+          "exemple": "Example: a splinter lets bacteria into the skin. White blood cells called phagocytes come and eat them: that's phagocytosis.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is one of the body's first barriers against germs?",
+            "nom": "The skin.",
+            "explication": "The skin, mucus that traps particles, tears and stomach acid stop many germs from getting in or surviving.",
+            "pieges": [
+              {
+                "texte": "Antibodies, always first.",
+                "pourquoi": "Antibodies come later, once the germ has got in and been recognised."
+              },
+              {
+                "texte": "Antibiotics.",
+                "pourquoi": "They are medicines, not a natural defence of the body."
+              }
+            ]
+          },
+          {
+            "texte": "What is the process called in which some white blood cells “eat” germs?",
+            "nom": "Phagocytosis.",
+            "explication": "White blood cells called phagocytes engulf and destroy germs and dead or damaged cells.",
+            "pieges": [
+              {
+                "texte": "Digestion.",
+                "pourquoi": "Digestion breaks down food in the digestive tract; phagocytosis happens in infected tissue."
+              },
+              {
+                "texte": "Vaccination.",
+                "pourquoi": "Vaccination is a medical act that prepares the immune system; it isn't something white blood cells do."
+              }
+            ]
+          },
+          {
+            "texte": "Which cells make antibodies?",
+            "nom": "B lymphocytes, once they become plasma cells.",
+            "explication": "B lymphocytes turn into plasma cells, which make antibodies. Each antibody attaches to a specific antigen and helps destroy it.",
+            "pieges": [
+              {
+                "texte": "Red blood cells.",
+                "pourquoi": "Red blood cells carry oxygen; they aren't part of the immune defences."
+              },
+              {
+                "texte": "Neurons.",
+                "pourquoi": "Neurons pass on nerve messages, not antibodies."
+              }
+            ]
+          },
+          {
+            "texte": "What do T lymphocytes do?",
+            "nom": "They attack antigens directly and help control the immune response.",
+            "explication": "Some T lymphocytes directly attack what they recognise as foreign; others organise the response.",
+            "pieges": [
+              {
+                "texte": "They make antibodies.",
+                "pourquoi": "B lymphocytes, once they become plasma cells, are what make antibodies."
+              },
+              {
+                "texte": "They carry oxygen.",
+                "pourquoi": "That's what red blood cells do."
+              }
+            ]
+          },
+          {
+            "texte": "After fighting off a germ, why does the body react faster if it meets it again?",
+            "nom": "Because memory lymphocytes recognise it quickly.",
+            "explication": "After a first encounter, a few B and T lymphocytes remain as memory: the next time, the response is fast and effective.",
+            "pieges": [
+              {
+                "texte": "Because the germ has disappeared from the Earth.",
+                "pourquoi": "The germ still exists; it's the body that has learned to recognise it."
+              },
+              {
+                "texte": "Because the skin has got thicker.",
+                "pourquoi": "The protection comes from immune memory, not from the skin."
+              }
+            ]
+          },
+          {
+            "texte": "What does a vaccine contain?",
+            "nom": "A killed or weakened germ, or part of a germ.",
+            "explication": "A vaccine shows the immune system a killed or weakened germ, or part of one: it makes antibodies and memory, without getting ill.",
+            "pieges": [
+              {
+                "texte": "Ready-made antibodies that last for life.",
+                "pourquoi": "A vaccine makes the body produce its own antibodies and memory cells."
+              },
+              {
+                "texte": "An antibiotic.",
+                "pourquoi": "An antibiotic is a medicine that kills bacteria; a vaccine prepares the immune system."
+              }
+            ]
+          },
+          {
+            "texte": "Why does getting vaccinated also protect other people?",
+            "nom": "Because some people can't be vaccinated and rely on others.",
+            "explication": "Very young babies or seriously ill people can't always be vaccinated: they rely on others being vaccinated to be protected.",
+            "pieges": [
+              {
+                "texte": "It only protects yourself.",
+                "pourquoi": "We get vaccinated to protect ourselves and to protect the people around us."
+              },
+              {
+                "texte": "Because a vaccine cures the sick people around you.",
+                "pourquoi": "A vaccine prepares the vaccinated person's body; it doesn't cure other people."
+              }
+            ]
+          },
+          {
+            "texte": "Can an antibiotic cure a cold caused by a virus?",
+            "nom": "No, antibiotics work on bacteria, not on viruses.",
+            "explication": "Antibiotics kill bacteria or stop them from multiplying. They have no effect on viruses, and using them wrongly encourages resistant bacteria.",
+            "pieges": [
+              {
+                "texte": "Yes, antibiotics kill all germs.",
+                "pourquoi": "It's a common idea, but antibiotics don't work on viruses."
+              },
+              {
+                "texte": "Yes, if you take it very early.",
+                "pourquoi": "Whether taken early or late, an antibiotic doesn't work on a virus."
               }
             ]
           }

@@ -1,0 +1,128 @@
+id: masse-volumique
+titre: "La masse volumique"
+niveau: 4e
+prerequis: [temperatures-etat]
+# Faits sur l'eau : environ 1 g par mL ; la glace, environ 90 % de la masse volumique de l'eau liquide, flotte ;
+# la masse volumique dépend de la température (0,95865 g/cm³ à 100 °C contre 1,00000 à 4 °C dans le tableau)
+# (USGS Water Science School, « Water Density », https://www.usgs.gov/special-topics/water-science-school/science/water-density).
+# Lu le 2026-11-11. Les autres valeurs sont des calculs sur des nombres donnés dans la question.
+programme: { source: c4, texte: "L’intérêt de la masse volumique est présenté pour mesurer un volume ou une masse quand on connaît l’autre grandeur mais aussi pour distinguer différents matériaux." }
+activite: quiz
+parametres: {}
+idee: "La masse volumique d'une matière est sa masse divisée par son volume. Elle sert à trouver une masse ou un volume, et à reconnaître une matière. L'eau : environ 1 kilogramme par litre."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Masse volumique = masse ÷ volume. Si tu connais deux des trois grandeurs, tu trouves la troisième."
+  exemple: "Exemple : 2 litres d'un liquide ont une masse de 3 kilogrammes. Sa masse volumique vaut 3 ÷ 2 = 1,5 kilogramme par litre."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Comment calcule-t-on la masse volumique d'une matière ?"
+    nom: "On divise sa masse par son volume."
+    explication: "Masse volumique = masse ÷ volume. Elle dit quelle masse occupe chaque unité de volume, par exemple chaque litre."
+    pieges:
+      - { texte: "On multiplie sa masse par son volume.", pourquoi: "C'est une grandeur quotient : on divise, on ne multiplie pas." }
+      - { texte: "On divise son volume par sa masse.", pourquoi: "C'est l'inverse : la masse vient en premier, divisée par le volume." }
+  - texte: "Quelle est, environ, la masse d'un litre d'eau liquide ?"
+    nom: "Environ 1 kilogramme."
+    explication: "L'eau a une masse volumique d'environ 1 gramme par millilitre. Un litre, c'est 1 000 millilitres : environ 1 000 grammes, soit 1 kilogramme."
+    pieges:
+      - { texte: "Environ 10 kilogrammes.", pourquoi: "C'est dix fois trop : 1 000 millilitres à environ 1 gramme chacun font environ 1 kilogramme." }
+      - { texte: "Environ 100 grammes.", pourquoi: "C'est dix fois trop peu : un litre d'eau pèse environ 1 000 grammes." }
+  - texte: "Un bloc de 50 centimètres cubes a une masse de 400 grammes. Quelle est sa masse volumique ?"
+    nom: "8 grammes par centimètre cube."
+    explication: "Masse volumique = masse ÷ volume = 400 ÷ 50 = 8 grammes par centimètre cube."
+    pieges:
+      - { texte: "20 000 grammes par centimètre cube.", pourquoi: "On a multiplié 400 par 50 au lieu de diviser." }
+      - { texte: "0,125 gramme par centimètre cube.", pourquoi: "On a divisé le volume par la masse : 50 ÷ 400. Il faut la masse divisée par le volume." }
+  - texte: "Un liquide a une masse volumique de 0,8 kilogramme par litre. Quelle est la masse de 5 litres de ce liquide ?"
+    nom: "4 kilogrammes."
+    explication: "Masse = masse volumique × volume = 0,8 × 5 = 4 kilogrammes."
+    pieges:
+      - { texte: "6,25 kilogrammes.", pourquoi: "On a divisé 5 par 0,8 ; pour trouver la masse, on multiplie la masse volumique par le volume." }
+      - { texte: "5,8 kilogrammes.", pourquoi: "On a additionné 5 et 0,8 ; il faut multiplier." }
+  - texte: "Pourquoi un glaçon flotte-t-il sur l'eau ?"
+    nom: "Parce que la glace a une masse volumique plus petite que l'eau liquide."
+    explication: "La masse volumique de la glace vaut environ 90 % de celle de l'eau liquide : un litre de glace est plus léger qu'un litre d'eau, donc la glace flotte."
+    pieges:
+      - { texte: "Parce que la glace est plus lourde que l'eau.", pourquoi: "À volume égal, la glace est plus légère que l'eau liquide : c'est pour cela qu'elle flotte." }
+      - { texte: "Parce que le glaçon est froid.", pourquoi: "C'est la masse volumique qui compte : dans la glace, les molécules d'eau sont plus espacées que dans l'eau liquide." }
+  - texte: "Quand de l'eau gèle, que deviennent sa masse et son volume ?"
+    nom: "La masse ne change pas, le volume augmente."
+    explication: "Lors d'un changement d'état, la masse se conserve. En gelant, l'eau prend plus de place : sa masse volumique diminue d'environ 9 %."
+    pieges:
+      - { texte: "La masse augmente.", pourquoi: "Rien n'est ajouté : la masse se conserve lors d'un changement d'état." }
+      - { texte: "Le volume diminue.", pourquoi: "C'est l'inverse pour l'eau : la glace occupe plus de place que l'eau liquide dont elle vient." }
+  - texte: "Deux cubes pleins ont le même volume, mais pas la même masse. Que peut-on en conclure ?"
+    nom: "Ils ne sont pas faits de la même matière."
+    explication: "Même volume, masses différentes : leurs masses volumiques sont différentes. La masse volumique permet de distinguer des matières."
+    pieges:
+      - { texte: "Ils sont faits de la même matière.", pourquoi: "Une même matière a une même masse volumique : à volume égal, les deux cubes auraient la même masse." }
+      - { texte: "Le plus lourd est forcément le plus grand.", pourquoi: "Les deux cubes ont le même volume : c'est leur matière qui les rend plus ou moins lourds." }
+  - texte: "La masse volumique de l'eau change-t-elle avec la température ?"
+    nom: "Oui : par exemple, l'eau à 100 °C est un peu moins dense que l'eau à 4 °C."
+    explication: "La masse volumique dépend de la température. Le programme relie ce fait à une cause de la montée du niveau des mers : l'eau des océans qui se réchauffe prend un peu plus de place."
+    pieges:
+      - { texte: "Non, elle est toujours exactement la même.", pourquoi: "Elle varie un peu avec la température ; « environ 1 kilogramme par litre » est une valeur arrondie." }
+      - { texte: "Seulement quand l'eau bout.", pourquoi: "Elle varie aussi pour l'eau liquide entre 4 °C et 100 °C, sans qu'elle bouille." }
+
+en:
+  titre: "Density"
+  idee: "The density of a material is its mass divided by its volume. It helps you find a mass or a volume, and recognise a material. Water: about 1 kilogram per litre."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Density = mass ÷ volume. If you know two of the three quantities, you can find the third."
+    exemple: "Example: 2 litres of a liquid have a mass of 3 kilograms. Its density is 3 ÷ 2 = 1.5 kilograms per litre."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "How do you work out the density of a material?"
+      nom: "You divide its mass by its volume."
+      explication: "Density = mass ÷ volume. It tells you how much mass fills each unit of volume, for example each litre."
+      pieges:
+        - { texte: "You multiply its mass by its volume.", pourquoi: "It's a quotient: you divide, you don't multiply." }
+        - { texte: "You divide its volume by its mass.", pourquoi: "It's the other way round: mass comes first, divided by volume." }
+    - texte: "Roughly what is the mass of one litre of liquid water?"
+      nom: "About 1 kilogram."
+      explication: "Water has a density of about 1 gram per millilitre. A litre is 1,000 millilitres: about 1,000 grams, or 1 kilogram."
+      pieges:
+        - { texte: "About 10 kilograms.", pourquoi: "That's ten times too much: 1,000 millilitres at about 1 gram each make about 1 kilogram." }
+        - { texte: "About 100 grams.", pourquoi: "That's ten times too little: a litre of water weighs about 1,000 grams." }
+    - texte: "A block of 50 cubic centimetres has a mass of 400 grams. What is its density?"
+      nom: "8 grams per cubic centimetre."
+      explication: "Density = mass ÷ volume = 400 ÷ 50 = 8 grams per cubic centimetre."
+      pieges:
+        - { texte: "20,000 grams per cubic centimetre.", pourquoi: "That multiplies 400 by 50 instead of dividing." }
+        - { texte: "0.125 grams per cubic centimetre.", pourquoi: "That divides the volume by the mass: 50 ÷ 400. You need mass divided by volume." }
+    - texte: "A liquid has a density of 0.8 kilograms per litre. What is the mass of 5 litres of this liquid?"
+      nom: "4 kilograms."
+      explication: "Mass = density × volume = 0.8 × 5 = 4 kilograms."
+      pieges:
+        - { texte: "6.25 kilograms.", pourquoi: "That divides 5 by 0.8; to find the mass, multiply the density by the volume." }
+        - { texte: "5.8 kilograms.", pourquoi: "That adds 5 and 0.8; you need to multiply." }
+    - texte: "Why does an ice cube float on water?"
+      nom: "Because ice has a lower density than liquid water."
+      explication: "The density of ice is about 90% of that of liquid water: a litre of ice is lighter than a litre of water, so ice floats."
+      pieges:
+        - { texte: "Because ice is heavier than water.", pourquoi: "For the same volume, ice is lighter than liquid water: that's why it floats." }
+        - { texte: "Because the ice cube is cold.", pourquoi: "Density is what matters: in ice, water molecules are more spread out than in liquid water." }
+    - texte: "When water freezes, what happens to its mass and its volume?"
+      nom: "The mass stays the same, the volume increases."
+      explication: "During a change of state, mass is conserved. When it freezes, water takes up more space: its density drops by about 9%."
+      pieges:
+        - { texte: "The mass increases.", pourquoi: "Nothing is added: mass is conserved during a change of state." }
+        - { texte: "The volume decreases.", pourquoi: "It's the opposite for water: ice takes up more space than the liquid water it came from." }
+    - texte: "Two solid cubes have the same volume but not the same mass. What can you conclude?"
+      nom: "They aren't made of the same material."
+      explication: "Same volume, different masses: their densities are different. Density helps tell materials apart."
+      pieges:
+        - { texte: "They are made of the same material.", pourquoi: "The same material has the same density: for equal volumes, the two cubes would have the same mass." }
+        - { texte: "The heavier one must be bigger.", pourquoi: "Both cubes have the same volume: it's their material that makes them heavier or lighter." }
+    - texte: "Does the density of water change with temperature?"
+      nom: "Yes: for example, water at 100 °C is a little less dense than water at 4 °C."
+      explication: "Density depends on temperature. The curriculum links this to one cause of sea level rise: ocean water that warms up takes up a little more space."
+      pieges:
+        - { texte: "No, it's always exactly the same.", pourquoi: "It varies a little with temperature; “about 1 kilogram per litre” is a rounded value." }
+        - { texte: "Only when water boils.", pourquoi: "It also varies for liquid water between 4 °C and 100 °C, without boiling." }

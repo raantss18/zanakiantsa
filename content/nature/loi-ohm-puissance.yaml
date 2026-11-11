@@ -1,0 +1,128 @@
+id: loi-ohm-puissance
+titre: "Loi d'Ohm, puissance et énergie électriques"
+niveau: 3e
+prerequis: [tension-intensite, energie]
+# Faits : unités et relations ohm = volt ÷ ampère, watt = volt × ampère = joule ÷ seconde (BIPM, brochure du SI,
+# 9e édition, tableau des unités dérivées, https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf) ;
+# exemple du conducteur ohmique de 470 ohms et des 20 milliampères (Éduscol, évaluation « La guirlande électrique »,
+# https://eduscol.education.fr/document/17815/download). Lus le 2026-11-11. Les autres nombres sont des calculs.
+programme: { source: c4, texte: "Relation tension-courant : loi d’Ohm. Conduire un calcul de consommation d’énergie électrique relatif à une situation de la vie courante. Puissance électrique P= U.I. Relation liant l’énergie, la puissance électrique et la durée." }
+activite: quiz
+parametres: {}
+idee: "Loi d'Ohm : tension = résistance × intensité. Puissance électrique = tension × intensité. Énergie = puissance × durée : un appareil puissant qui fonctionne longtemps consomme beaucoup."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Choisis la bonne relation : tension = résistance × intensité ; puissance = tension × intensité ; énergie = puissance × durée. Vérifie les unités."
+  exemple: "Exemple : une résistance de 100 ohms est traversée par un courant de 0,05 ampère. La tension à ses bornes vaut 100 × 0,05 = 5 volts."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Que dit la loi d'Ohm pour un conducteur ohmique ?"
+    nom: "La tension à ses bornes est égale à sa résistance multipliée par l'intensité qui le traverse."
+    explication: "Tension en volts = résistance en ohms × intensité en ampères. La tension et l'intensité sont proportionnelles."
+    pieges:
+      - { texte: "La tension est égale à la résistance divisée par l'intensité.", pourquoi: "C'est l'inverse : la résistance est la tension divisée par l'intensité, donc la tension est la résistance multipliée par l'intensité." }
+      - { texte: "L'intensité est la même quelle que soit la tension.", pourquoi: "Pour un conducteur ohmique, si la tension double, l'intensité double aussi." }
+  - texte: "Dans quelle unité s'exprime une résistance électrique ?"
+    nom: "En ohms."
+    explication: "La résistance s'exprime en ohms, de symbole Ω, la lettre grecque oméga : un ohm, c'est un volt par ampère."
+    pieges:
+      - { texte: "En volts.", pourquoi: "Le volt est l'unité de la tension." }
+      - { texte: "En ampères.", pourquoi: "L'ampère est l'unité de l'intensité du courant." }
+  - texte: "Un conducteur ohmique de 470 ohms est traversé par un courant de 0,02 ampère. Quelle est la tension à ses bornes ?"
+    nom: "9,4 volts."
+    explication: "Tension = résistance × intensité = 470 × 0,02 = 9,4 volts."
+    pieges:
+      - { texte: "23 500 volts.", pourquoi: "On a divisé 470 par 0,02 ; la loi d'Ohm demande de multiplier." }
+      - { texte: "470,02 volts.", pourquoi: "On a additionné ; il faut multiplier la résistance par l'intensité." }
+  - texte: "Une tension de 12 volts est appliquée à un conducteur ohmique de 60 ohms. Quelle intensité le traverse ?"
+    nom: "0,2 ampère."
+    explication: "Intensité = tension ÷ résistance = 12 ÷ 60 = 0,2 ampère."
+    pieges:
+      - { texte: "720 ampères.", pourquoi: "On a multiplié la tension par la résistance ; pour trouver l'intensité, on divise." }
+      - { texte: "5 ampères.", pourquoi: "On a divisé la résistance par la tension : 60 ÷ 12. Il faut la tension divisée par la résistance." }
+  - texte: "Une lampe fonctionne sous 12 volts et elle est traversée par 2 ampères. Quelle est sa puissance ?"
+    nom: "24 watts."
+    explication: "Puissance = tension × intensité = 12 × 2 = 24 watts."
+    pieges:
+      - { texte: "6 watts.", pourquoi: "On a divisé 12 par 2 ; la puissance est le produit de la tension et de l'intensité." }
+      - { texte: "14 watts.", pourquoi: "On a additionné ; il faut multiplier." }
+  - texte: "Un appareil de 1 000 watts fonctionne pendant 2 heures. Quelle énergie électrique a-t-il consommée ?"
+    nom: "2 000 wattheures, soit 2 kilowattheures."
+    explication: "Énergie = puissance × durée = 1 000 × 2 = 2 000 wattheures. Comme 1 kilowattheure vaut 1 000 wattheures, cela fait 2 kilowattheures."
+    pieges:
+      - { texte: "500 wattheures.", pourquoi: "On a divisé la puissance par la durée ; l'énergie est la puissance multipliée par la durée." }
+      - { texte: "1 000 wattheures, car la puissance ne change pas.", pourquoi: "La puissance ne change pas, mais l'appareil fonctionne 2 heures : l'énergie double." }
+  - texte: "Dans le Système international, en quelle unité s'exprime l'énergie ?"
+    nom: "En joules."
+    explication: "L'unité d'énergie du Système international est le joule. Un watt, c'est un joule par seconde : un appareil de 1 watt consomme 1 joule chaque seconde."
+    pieges:
+      - { texte: "En watts.", pourquoi: "Le watt est l'unité de la puissance : l'énergie transférée chaque seconde." }
+      - { texte: "En volts.", pourquoi: "Le volt est l'unité de la tension électrique." }
+  - texte: "Une lampe de 10 watts et une lampe de 60 watts restent allumées pendant la même durée. Laquelle consomme le moins d'énergie ?"
+    nom: "La lampe de 10 watts."
+    explication: "À durée égale, l'énergie consommée est proportionnelle à la puissance : la lampe de 10 watts consomme 6 fois moins que celle de 60 watts."
+    pieges:
+      - { texte: "La lampe de 60 watts.", pourquoi: "Plus la puissance est grande, plus l'énergie consommée pendant une même durée est grande." }
+      - { texte: "Les deux consomment autant.", pourquoi: "La durée est la même, mais pas la puissance : énergie = puissance × durée." }
+
+en:
+  titre: "Ohm's law, electrical power and energy"
+  idee: "Ohm's law: voltage = resistance × current. Electrical power = voltage × current. Energy = power × time: a powerful device that runs for a long time uses a lot."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Choose the right relation: voltage = resistance × current; power = voltage × current; energy = power × time. Check the units."
+    exemple: "Example: a current of 0.05 amperes flows through a 100-ohm resistor. The voltage across it is 100 × 0.05 = 5 volts."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What does Ohm's law say for a resistor?"
+      nom: "The voltage across it equals its resistance multiplied by the current through it."
+      explication: "Voltage in volts = resistance in ohms × current in amperes. Voltage and current are proportional."
+      pieges:
+        - { texte: "The voltage equals the resistance divided by the current.", pourquoi: "It's the other way round: resistance is voltage divided by current, so voltage is resistance multiplied by current." }
+        - { texte: "The current is the same whatever the voltage.", pourquoi: "For a resistor, if the voltage doubles, the current doubles too." }
+    - texte: "What unit is electrical resistance measured in?"
+      nom: "Ohms."
+      explication: "Resistance is measured in ohms, symbol Ω, the Greek letter omega: one ohm is one volt per ampere."
+      pieges:
+        - { texte: "Volts.", pourquoi: "The volt is the unit of voltage." }
+        - { texte: "Amperes.", pourquoi: "The ampere is the unit of electric current." }
+    - texte: "A current of 0.02 amperes flows through a 470-ohm resistor. What is the voltage across it?"
+      nom: "9.4 volts."
+      explication: "Voltage = resistance × current = 470 × 0.02 = 9.4 volts."
+      pieges:
+        - { texte: "23,500 volts.", pourquoi: "That divides 470 by 0.02; Ohm's law says to multiply." }
+        - { texte: "470.02 volts.", pourquoi: "That adds; you need to multiply the resistance by the current." }
+    - texte: "A voltage of 12 volts is applied to a 60-ohm resistor. What current flows through it?"
+      nom: "0.2 amperes."
+      explication: "Current = voltage ÷ resistance = 12 ÷ 60 = 0.2 amperes."
+      pieges:
+        - { texte: "720 amperes.", pourquoi: "That multiplies voltage by resistance; to find the current, you divide." }
+        - { texte: "5 amperes.", pourquoi: "That divides resistance by voltage: 60 ÷ 12. You need voltage divided by resistance." }
+    - texte: "A lamp runs on 12 volts with a current of 2 amperes. What is its power?"
+      nom: "24 watts."
+      explication: "Power = voltage × current = 12 × 2 = 24 watts."
+      pieges:
+        - { texte: "6 watts.", pourquoi: "That divides 12 by 2; power is voltage multiplied by current." }
+        - { texte: "14 watts.", pourquoi: "That adds; you need to multiply." }
+    - texte: "A 1,000-watt appliance runs for 2 hours. How much electrical energy has it used?"
+      nom: "2,000 watt-hours, or 2 kilowatt-hours."
+      explication: "Energy = power × time = 1,000 × 2 = 2,000 watt-hours. Since 1 kilowatt-hour is 1,000 watt-hours, that's 2 kilowatt-hours."
+      pieges:
+        - { texte: "500 watt-hours.", pourquoi: "That divides power by time; energy is power multiplied by time." }
+        - { texte: "1,000 watt-hours, because the power doesn't change.", pourquoi: "The power doesn't change, but the appliance runs for 2 hours: the energy doubles." }
+    - texte: "In the International System of Units, what unit is energy measured in?"
+      nom: "Joules."
+      explication: "The SI unit of energy is the joule. One watt is one joule per second: a 1-watt device uses 1 joule every second."
+      pieges:
+        - { texte: "Watts.", pourquoi: "The watt is the unit of power: the energy transferred each second." }
+        - { texte: "Volts.", pourquoi: "The volt is the unit of voltage." }
+    - texte: "A 10-watt bulb and a 60-watt bulb stay on for the same length of time. Which one uses less energy?"
+      nom: "The 10-watt bulb."
+      explication: "For the same time, the energy used is proportional to the power: the 10-watt bulb uses 6 times less than the 60-watt one."
+      pieges:
+        - { texte: "The 60-watt bulb.", pourquoi: "The greater the power, the more energy is used in the same time." }
+        - { texte: "They both use the same amount.", pourquoi: "The time is the same, but not the power: energy = power × time." }
