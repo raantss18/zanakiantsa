@@ -139,6 +139,8 @@ String spoken(String text, String lang) {
       )
       .replaceAll('−', w(' moins ', ' minus '))
       .replaceAll('×', w(' fois ', ' times '))
+      // L'étoile des programmes (Scratch, Python) : « x * 3 » → « x fois 3 ». Seulement entre deux termes, avec espaces.
+      .replaceAllMapped(RegExp(r'(?<=[\w)])\s\*\s(?=[\w(])'), (_) => w(' fois ', ' times '))
       .replaceAll('÷', w(' divisé par ', ' divided by '))
       .replaceAll('≤', w(' inférieur ou égal à ', ' less than or equal to '))
       .replaceAll('≥', w(' supérieur ou égal à ', ' greater than or equal to '))

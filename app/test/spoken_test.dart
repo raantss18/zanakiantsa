@@ -7,6 +7,8 @@ void main() {
   String en(String s) => spoken(s, 'en');
 
   test('signes et opérations', () {
+    expect(fr('mettre x à x * 3'), 'mettre x à x fois 3');
+    expect(en('set x to x * 2'), 'set x to x times 2');
     expect(fr('Combien font 2,5 × 4 ?'), 'Combien font 2,5 fois 4 ?');
     expect(fr('(−5) + 3 = −2'), '(moins 5) + 3 = moins 2');
     expect(fr('12 ÷ 4'), '12 divisé par 4');
