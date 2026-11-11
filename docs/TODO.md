@@ -3,7 +3,16 @@
 > Une seule liste, tenue à jour à chaque tâche. Statuts : ✅ fait · 🔄 en cours · ⏳ à faire · ❓ décision d'Antsa.
 > Une tâche n'est ✅ qu'après tests + essai réel sur les tablettes (`CLAUDE.md`).
 
-## 🔄 Après la 1.0.6 (2026-11-08) — pas encore publié
+## 🔄 Après la 1.0.9 (2026-11-11) — pas encore publié
+
+- ✅ 34 leçons ajoutées (tests et analyse verts) : code CP→CM2 (6, lire un programme avant d'en écrire), sciences 5e→3e (8),
+  histoire-géographie 6e→3e dont la laïcité en EMC (8), échecs 4e→Terminale (6 finales, positions vérifiées par calcul
+  complet), musique CP→CM2 (6 ; « Les sons » va jusqu'au CM2, 1 h d'arts sur 2 dans la journée du CM). La voix dit « fois »
+  pour « * » des programmes. ⏳ Essai sur la SM-X135G (non branchée le 2026-11-11) : réponses longues, « Ω », « forte ».
+- ⏳ Vidéo de démonstration d'une minute : l'enregistrement du 2026-11-08 est perdu (/tmp effacé) ; à refaire sur une tablette.
+- ⏳ Programme d'histoire-géographie du BO n° 22 du 28 mai 2026 et futur programme d'arts : à relire dès que lisibles.
+
+## Après la 1.0.6 (2026-11-08)
 
 - ✅ Niveaux (ADR 0069) : carnet sans les leçons sous le plancher ; journée selon les horaires officiels de la classe à
   partir du CM1 ; code et échecs depuis le début (cours avant toute question) ; énoncés de code bien affichés. Essayé à 12 ans.
