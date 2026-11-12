@@ -20,7 +20,7 @@ List<Topic> topics() => [
 Progress progressFor(Topic t, int classe, [List<Answer> journal = const []]) {
   final refs = [for (final s in t.skills) s.ref];
   final l = t.levelsFor(classe);
-  return Progress(refs, journal, startLevel: l.start, floor: l.floor);
+  return Progress(refs, journal, startLevel: l.start, floor: l.floor, ceiling: l.ceiling);
 }
 
 void main() {
@@ -141,7 +141,7 @@ void main() {
       expect(first.id, 'sequence-instructions');
       expect(first.level, '6e');
       expect(p.checkable(prerequisitesToCheck(first.ref, [for (final s in code.skills) s.ref])), isEmpty);
-      expect(code.levelsFor(classe), (floor: levelRank('6e'), start: levelRank('6e')));
+      expect(code.levelsFor(classe), (floor: levelRank('6e'), start: levelRank('6e'), ceiling: levelRank('3e')));
     });
 
     test('code, 15 ans débutant : aussi le début des programmes écrits, pas la 3e', () {
@@ -195,6 +195,38 @@ void main() {
         ...DayPlan.of(DateTime(2026, 9, 1).add(Duration(days: d)), const [], classe: cm2, visible: candidates).items.map((i) => i.theme),
     ];
     expect(themes, contains('sons'));
+  });
+
+  // Demande d'Antsa du 2026-11-12 : « si l'enfant est en 6e, les cours qu'il doit pouvoir voir sont CM1 à 4e ».
+  group('la fenêtre de sa classe : deux en dessous, deux au-dessus', () {
+    final sixieme = levelRank('6e');
+    test('en 6e : du CM1 à la 4e', () {
+      expect(schoolLevels[floorForClass(sixieme)], 'CM1');
+      expect(schoolLevels[ceilingForClass(sixieme)], '4e');
+    });
+    for (final t in all.where((t) => !t.ageless)) {
+      test('${t.id} : en 6e, rien après la 4e, même quand tout le reste est acquis', () {
+        final l = t.levelsFor(sixieme);
+        final level = {for (final s in t.skills) s.id: s.ref.level};
+        // Tout ce qui est sous le plafond est réussi au test de départ : il ne reste rien à apprendre dans la fenêtre.
+        final placed = {for (final s in t.skills) if (s.ref.level <= l.ceiling) s.id};
+        final p = Progress([for (final s in t.skills) s.ref], const [],
+            startLevel: l.start, floor: l.floor, ceiling: l.ceiling, placed: placed);
+        expect(p.newSkill, isNull);
+        for (var d = 0; d < 20; d++) {
+          for (final id in p.plan(DateTime(2026, 11, 1 + d))) {
+            expect(level[id]!, lessThanOrEqualTo(l.ceiling), reason: id);
+          }
+        }
+        for (final s in t.skills.where((s) => s.ref.level > l.ceiling)) {
+          expect(p.inRange(s.id), isFalse, reason: s.id);
+          expect(p.choosable(s.id, sixieme), isFalse, reason: s.id);
+        }
+        // Sans rien d'acquis non plus : la leçon à apprendre n'est jamais au-dessus du plafond.
+        final fresh = Progress([for (final s in t.skills) s.ref], const [], startLevel: l.start, floor: l.floor, ceiling: l.ceiling);
+        if (fresh.newSkill case final id?) expect(level[id]!, lessThanOrEqualTo(l.ceiling), reason: id);
+      });
+    }
   });
 
   test('le carnet de 12 ans ne montre plus « Compter jusqu\'à 10 »', () {

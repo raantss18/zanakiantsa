@@ -238,13 +238,15 @@ class AppState extends ChangeNotifier {
   Progress progressOf(Topic t) {
     final l = t.levelsFor(schoolClass);
     return Progress([for (final s in t.skills) s.ref], journal,
-        sessionsDone: sessionsDone, startLevel: l.start, floor: l.floor, placed: placed);
+        sessionsDone: sessionsDone, startLevel: l.start, floor: l.floor, ceiling: l.ceiling, placed: placed);
   }
 
-  /// Les domaines proposés à cet enfant (ADR 0065) : ceux qui ont au moins une leçon au-dessus de son plancher, plus le
-  /// dessin libre. À 12 ans, plus de « Les sons » ni des suites de maternelle.
-  List<Topic> get shownTopics =>
-      [for (final t in topics) if (t.ageless || t.skills.any((s) => s.ref.level >= t.levelsFor(schoolClass).floor)) t];
+  /// Les domaines proposés à cet enfant (ADR 0065, 0070) : ceux qui ont au moins une leçon dans la fenêtre de sa classe
+  /// (deux classes en dessous à deux au-dessus), plus le dessin libre. À 12 ans, plus de « Les sons » ni des suites de maternelle.
+  List<Topic> get shownTopics => [
+        for (final t in topics)
+          if (t.ageless || t.skills.any((s) => s.ref.level >= t.levelsFor(schoolClass).floor && s.ref.level <= t.levelsFor(schoolClass).ceiling)) t
+      ];
 
   /// Note les compétences réussies au test de départ.
   Future<void> place(Iterable<String> ids) async {

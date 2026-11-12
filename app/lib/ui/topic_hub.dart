@@ -180,7 +180,7 @@ class NotebookPage extends StatelessWidget {
                 _section(tf('Mes compétences : {name}', {'name': tp.name})),
                 // Signalé par Antsa le 2026-11-08 : à 12 ans, le carnet montrait encore « Compter jusqu'à 10 ». Les leçons sous
                 // son plancher ne sont plus à son niveau (ADR 0065) : elles n'y apparaissent plus.
-                for (final s in tp.skills) if (!p.belowFloor(s.id)) _skillRow(s, p),
+                for (final s in tp.skills) if (p.inRange(s.id)) _skillRow(s, p),
                 if (tp.skills.any((s) => p.belowFloor(s.id)))
                   Padding(
                     padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
@@ -267,7 +267,7 @@ class LessonPicker extends StatelessWidget {
     final tp = app.topic(topic);
     final p = app.progressOf(tp);
     final classe = app.schoolClass;
-    final shown = [for (final s in tp.skills) if (!p.belowFloor(s.id)) s];
+    final shown = [for (final s in tp.skills) if (p.inRange(s.id)) s];
     final levels = {for (final s in shown) s.level}.toList()..sort((a, b) => levelRank(a).compareTo(levelRank(b)));
     return Scaffold(
       body: UniverseBackground(

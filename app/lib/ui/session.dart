@@ -308,7 +308,7 @@ class SessionResume {
       // L'âge ou la classe ont changé depuis (vu sur la tablette le 2026-11-08 : à 9 ans, la séance gardée à 5 ans reprenait
       // sur « Touche la syllabe ra ») : une séance qui contient des leçons devenues trop faciles ne reprend pas.
       final p = app.progressOf(app.topic(topic));
-      if (r.plan.skip(r.index).any(p.belowFloor)) return null;
+      if (r.plan.skip(r.index).any((id) => !p.inRange(id))) return null;
       return r;
     } catch (_) {
       return null;

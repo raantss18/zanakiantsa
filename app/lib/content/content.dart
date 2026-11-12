@@ -444,7 +444,7 @@ class Topic {
   final Map<String, String> _entry;
 
   /// Plancher et départ de ce domaine pour un enfant de cette classe (voir [domainLevels]).
-  ({int floor, int start}) levelsFor(int classe) => domainLevels([for (final s in skills) s.ref], classe,
+  ({int floor, int start, int ceiling}) levelsFor(int classe) => domainLevels([for (final s in skills) s.ref], classe,
       ageless: ageless, outOfSchool: outOfSchool, entry: _entry[topicBand] == null ? null : levelRank(_entry[topicBand]!));
 
   /// [title] pour le parent, [name] pour l'enfant (« Les nombres »), [icon] : code Twemoji.

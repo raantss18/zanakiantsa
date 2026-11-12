@@ -38,6 +38,10 @@ int startLevelForAge(int age) => startLevelForClass(classForAge(age));
 /// en révision, ni en entraînement, ni au défi. Elle est tenue pour acquise.
 int floorForClass(int classe) => max(0, classe - 2);
 
+/// Plafond d'une classe (demande d'Antsa du 2026-11-12 : « si l'enfant est en 6e, les cours qu'il doit pouvoir voir sont
+/// CM1 à 4e ») : rien au-delà de deux classes au-dessus de la sienne n'est montré ni proposé.
+int ceilingForClass(int classe) => classe + 2;
+
 /// Le point de départ dans un domaine : jamais au-delà de ce que ce domaine propose de plus avancé. Sans cela, pour un
 /// grand, toutes ses compétences compteraient comme acquises et il n'y aurait plus rien à y apprendre.
 int startLevelIn(List<SkillRef> skills, int start) => skills.isEmpty ? start : min(start, skills.map((s) => s.level).reduce(max));
@@ -49,13 +53,15 @@ int startLevelIn(List<SkillRef> skills, int start) => skills.isEmpty ? start : m
 /// - Domaine « hors école » (`hors_ecole` : le code, les échecs) : l'âge ne dit pas ce que l'enfant sait. On part de
 ///   l'entrée prévue pour sa tranche d'âge ([entry], le début du domaine sinon), et rien au-dessus n'est tenu pour acquis :
 ///   pas de diagnostic sur une notion jamais apprise, le cours d'abord. « Je sais déjà » saute ce qu'il connaît.
-({int floor, int start}) domainLevels(List<SkillRef> skills, int classe, {bool ageless = false, bool outOfSchool = false, int? entry}) {
+({int floor, int start, int ceiling}) domainLevels(List<SkillRef> skills, int classe,
+    {bool ageless = false, bool outOfSchool = false, int? entry}) {
   if (outOfSchool) {
     final first = skills.isEmpty ? 0 : skills.map((s) => s.level).reduce(min);
     final e = max(entry ?? first, first);
-    return (floor: e, start: e);
+    return (floor: e, start: e, ceiling: max(e, ceilingForClass(classe)));
   }
-  return (floor: ageless ? 0 : floorForClass(classe), start: startLevelIn(skills, startLevelForClass(classe)));
+  if (ageless) return (floor: 0, start: startLevelIn(skills, startLevelForClass(classe)), ceiling: schoolLevels.length);
+  return (floor: floorForClass(classe), start: startLevelIn(skills, startLevelForClass(classe)), ceiling: ceilingForClass(classe));
 }
 
 /// Questions par séance (⚠ choix produit : vise ≈ 10–15 min, à mesurer).
@@ -65,7 +71,8 @@ const questionsPerSession = 8;
 const placementPerSkill = 2, placementSkills = 6;
 
 class Progress {
-  Progress(this.skills, List<Answer> journal, {this.sessionsDone = 0, this.startLevel = 0, this.floor = 0, this.placed = const {}}) {
+  Progress(this.skills, List<Answer> journal,
+      {this.sessionsDone = 0, this.startLevel = 0, this.floor = 0, this.ceiling = 99, this.placed = const {}}) {
     for (final a in journal) {
       _bySkill.putIfAbsent(a.skill, () => []).add(a);
     }
@@ -85,8 +92,17 @@ class Progress {
 
   int _level(String id) => skills.firstWhere((s) => s.id == id, orElse: () => SkillRef(id, const [], level: 99)).level;
 
+  /// Plafond : les compétences plus hautes ne sont ni montrées ni proposées (voir [ceilingForClass]).
+  final int ceiling;
+
   /// Trop facile pour la classe de l'enfant : jamais proposée.
   bool belowFloor(String id) => _level(id) < floor;
+
+  /// Trop loin au-dessus de sa classe : ni montrée, ni proposée.
+  bool aboveCeiling(String id) => _level(id) > ceiling;
+
+  /// Dans la fenêtre de sa classe (deux classes en dessous à deux au-dessus) : la seule partie du domaine qu'il voit.
+  bool inRange(String id) => !belowFloor(id) && !aboveCeiling(id);
 
   /// Les prérequis à vérifier au diagnostic : ceux qui ne sont pas sous le plancher.
   List<String> checkable(List<String> prerequisites) => [for (final p in prerequisites) if (!belowFloor(p)) p];
@@ -112,7 +128,7 @@ class Progress {
   /// ouvertes : c'est le test qui le dira), [placementPerSkill] questions chacune. null s'il n'y a pas au moins deux
   /// compétences à tester (sauter ne servirait à rien).
   List<String>? placementPlan() {
-    final todo = [for (final s in skills) if (!mastered(s.id)) s.id].take(placementSkills).toList();
+    final todo = [for (final s in skills) if (!mastered(s.id) && !aboveCeiling(s.id)) s.id].take(placementSkills).toList();
     if (todo.length < 2) return null;
     return [for (final id in todo) for (var i = 0; i < placementPerSkill; i++) id];
   }
@@ -137,8 +153,8 @@ class Progress {
     if (next == null) {
       if (reviews.isNotEmpty) return reviews;
       // Tout est acquis : de l'entraînement varié sur tout le domaine (plus jamais la même suite fixe, ADR 0030).
-      final pool = [for (final s in skills) if (!belowFloor(s.id)) s.id];
-      final from = pool.isEmpty ? [for (final s in skills) s.id] : pool;
+      final pool = [for (final s in skills) if (inRange(s.id)) s.id];
+      final from = pool.isEmpty ? [for (final s in skills) if (!aboveCeiling(s.id)) s.id] : pool;
       return [for (var i = 0; i < questionsPerSession; i++) from[r.nextInt(from.length)]];
     }
     // Entrelacé (ADR 0037) : une question sur trois revient sur une compétence déjà acquise, au lieu de huit fois la
@@ -159,7 +175,7 @@ class Progress {
   }
 
   /// La compétence à apprendre en ce moment : la première ouverte et pas encore acquise.
-  String? get newSkill => skills.where((s) => !mastered(s.id) && unlocked(s)).firstOrNull?.id;
+  String? get newSkill => skills.where((s) => !mastered(s.id) && !aboveCeiling(s.id) && unlocked(s)).firstOrNull?.id;
 
   /// Une compétence que l'enfant a lui-même acquise, au hasard, autre que [not] ; null s'il n'y en a pas. Pas celles
   /// tenues pour acquises à cause de l'âge : trop faciles, elles ennuieraient.
@@ -177,7 +193,7 @@ class Progress {
   /// d'en dessous sont acquises dans ce domaine (« un élève avancé peut monter quand il a fini son niveau »).
   bool choosable(String id, int classe) {
     final l = _level(id);
-    if (l < floor) return false;
+    if (l < floor || l > ceiling) return false;
     if (l <= classe) return true;
     return skills.where((s) => s.level <= classe).every((s) => mastered(s.id));
   }

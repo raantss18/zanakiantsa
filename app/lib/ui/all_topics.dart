@@ -84,7 +84,7 @@ class AllTopicsPage extends StatelessWidget {
                       final p = app.progressOf(t);
                       // Seules les compétences vraiment maîtrisées comptent (pas celles tenues pour acquises par l'âge).
                       // Sur les leçons proposées à sa classe seulement (pas celles sous le plancher, ADR 0065).
-                      final offered = [for (final s in t.skills) if (!p.belowFloor(s.id)) s];
+                      final offered = [for (final s in t.skills) if (p.inRange(s.id)) s];
                       final done = offered.where((s) => p.earned(s.id)).length;
                       return Semantics(
                         button: true,
