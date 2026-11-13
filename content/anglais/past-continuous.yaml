@@ -1,0 +1,126 @@
+id: past-continuous
+titre: "Le prétérit en be + -ing : I was reading"
+niveau: 4e
+prerequis: [past-simple-irregular, present-continuous]
+programme: { source: college, texte: "4e (A2+, en bleu) : l’expression du passé : le prétérit simple et le prétérit en be+-ing." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Past continuous (I was working) », lu le 2026-11-13 :
+# https://dictionary.cambridge.org/grammar/british-grammar/past-continuous-i-was-working
+parametres: { langue: en }
+idee: "Une action en cours à un moment du passé : « was » ou « were », puis le verbe en -ing. « I was reading when the phone rang. » L'action brève qui la coupe reste au prétérit simple."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Action en cours dans le passé : « was » avec I, he, she, it ; « were » avec you, we, they ; puis -ing. Action brève qui coupe : prétérit simple."
+  exemple: "« At eight last night, I … TV. » (verbe « watch ») L'action était en cours : « I was watching TV. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « At six o'clock yesterday, she … her homework. » (verbe « do »)"
+    nom: "was doing"
+    explication: "Action en cours à six heures, avec « she » : « She was doing her homework. »"
+    pieges:
+      - { texte: "were doing", pourquoi: "« were » va avec you, we, they. Avec « she » : « was doing »." }
+      - { texte: "is doing", pourquoi: "« is doing » est le présent. « yesterday » demande le passé : « was doing »." }
+  - texte: "Complète : « We … football when it started to rain. » (verbe « play »)"
+    nom: "were playing"
+    explication: "Le match était en cours quand la pluie a commencé : « We were playing football when it started to rain. »"
+    pieges:
+      - { texte: "was playing", pourquoi: "« was » va avec I, he, she, it. Avec « we » : « were playing »." }
+      - { texte: "played", pourquoi: "Le jeu était déjà en cours quand la pluie a commencé : « were playing »." }
+  - texte: "Complète : « I was reading when the phone … » (verbe « ring »)"
+    nom: "rang"
+    explication: "La sonnerie est l'action brève qui coupe la lecture : prétérit simple, « the phone rang »."
+    pieges:
+      - { texte: "was ringing", pourquoi: "La sonnerie est l'action brève qui coupe la lecture : prétérit simple, « rang »." }
+      - { texte: "ringed", pourquoi: "« ring » est irrégulier : son prétérit est « rang »." }
+  - texte: "Complète : « What … you doing at nine o'clock last night? »"
+    nom: "were"
+    explication: "Question au prétérit en -ing, avec « you » : « What were you doing? »"
+    pieges:
+      - { texte: "did", pourquoi: "Avec le verbe en -ing, « doing », l'auxiliaire est « were » : « What were you doing? »" }
+      - { texte: "was", pourquoi: "« was » va avec I, he, she, it. Avec « you » : « were »." }
+  - texte: "Complète : « They … sleeping when the alarm went off. » (ils ne dormaient pas)"
+    nom: "weren't"
+    explication: "Négation avec « they » : « They weren't sleeping when the alarm went off. »"
+    pieges:
+      - { texte: "wasn't", pourquoi: "« wasn't » va avec I, he, she, it. Avec « they » : « weren't »." }
+      - { texte: "didn't", pourquoi: "Avec le verbe en -ing, « sleeping », la négation se fait avec « weren't »." }
+  - texte: "Complète : « Tom was walking home when he … a fox. » (verbe « see »)"
+    nom: "saw"
+    explication: "Voir le renard est l'événement bref qui arrive pendant la marche : « he saw a fox »."
+    pieges:
+      - { texte: "was seeing", pourquoi: "Voir le renard est l'événement bref, pas l'action de fond : « saw »." }
+      - { texte: "sees", pourquoi: "« sees » est le présent. Le récit est au passé : « saw »." }
+  - texte: "Complète : « While I … a bath, the lights went out. » (verbe « have »)"
+    nom: "was having"
+    explication: "Le bain était en cours quand la lumière s'est éteinte : « While I was having a bath »."
+    pieges:
+      - { texte: "had", pourquoi: "Le bain était en cours quand la lumière s'est éteinte : « was having »." }
+      - { texte: "were having", pourquoi: "« were » va avec you, we, they. Avec « I » : « was having »." }
+  - texte: "Pourquoi « was reading » dans « I was reading when the phone rang » ?"
+    nom: "La lecture était en cours quand le téléphone a sonné."
+    explication: "« was » et -ing montrent une action en cours dans le passé ; « rang » est l'action brève qui la coupe."
+    pieges:
+      - { texte: "Parce que la lecture a commencé après la sonnerie.", pourquoi: "Non : on lisait déjà quand le téléphone a sonné." }
+      - { texte: "Parce que « read » n'a pas de prétérit.", pourquoi: "Non : le prétérit de « read » existe, il s'écrit « read ». Ici, on montre une action en cours." }
+en:
+  titre: "The past continuous: I was reading"
+  idee: "An action in progress at a moment in the past: was or were, then the verb + -ing. “I was reading when the phone rang.” The short action that interrupts it stays in the past simple."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "An action in progress in the past: was with I, he, she, it; were with you, we, they; then -ing. A short action that interrupts: past simple."
+    exemple: "“At eight last night, I … TV.” (watch) The action was in progress: “I was watching TV.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “At six o'clock yesterday, she … her homework.” (do)"
+      nom: "was doing"
+      explication: "An action in progress at six, with she: “She was doing her homework.”"
+      pieges:
+        - { texte: "were doing", pourquoi: "Were goes with you, we and they. With she: was doing." }
+        - { texte: "is doing", pourquoi: "“is doing” is the present. Yesterday needs the past: was doing." }
+    - texte: "Complete: “We … football when it started to rain.” (play)"
+      nom: "were playing"
+      explication: "The game was in progress when the rain started: “We were playing football when it started to rain.”"
+      pieges:
+        - { texte: "was playing", pourquoi: "Was goes with I, he, she and it. With we: were playing." }
+        - { texte: "played", pourquoi: "The game was already in progress when the rain started: were playing." }
+    - texte: "Complete: “I was reading when the phone …” (ring)"
+      nom: "rang"
+      explication: "The ring is the short action that interrupts the reading: past simple, “the phone rang”."
+      pieges:
+        - { texte: "was ringing", pourquoi: "The ring is the short action that interrupts the reading: past simple, rang." }
+        - { texte: "ringed", pourquoi: "Ring is irregular: its past simple is rang." }
+    - texte: "Complete: “What … you doing at nine o'clock last night?”"
+      nom: "were"
+      explication: "A question in the past continuous, with you: “What were you doing?”"
+      pieges:
+        - { texte: "did", pourquoi: "With the -ing verb, doing, the auxiliary is were: “What were you doing?”" }
+        - { texte: "was", pourquoi: "Was goes with I, he, she and it. With you: were." }
+    - texte: "Complete: “They … sleeping when the alarm went off.” (they weren't asleep)"
+      nom: "weren't"
+      explication: "The negative with they: “They weren't sleeping when the alarm went off.”"
+      pieges:
+        - { texte: "wasn't", pourquoi: "Wasn't goes with I, he, she and it. With they: weren't." }
+        - { texte: "didn't", pourquoi: "With the -ing verb, sleeping, the negative uses weren't." }
+    - texte: "Complete: “Tom was walking home when he … a fox.” (see)"
+      nom: "saw"
+      explication: "Seeing the fox is the short event that happens during the walk: “he saw a fox”."
+      pieges:
+        - { texte: "was seeing", pourquoi: "Seeing the fox is the short event, not the background action: saw." }
+        - { texte: "sees", pourquoi: "“sees” is the present. The story is in the past: saw." }
+    - texte: "Complete: “While I … a bath, the lights went out.” (have)"
+      nom: "was having"
+      explication: "The bath was in progress when the lights went out: “While I was having a bath”."
+      pieges:
+        - { texte: "had", pourquoi: "The bath was in progress when the lights went out: was having." }
+        - { texte: "were having", pourquoi: "Were goes with you, we and they. With I: was having." }
+    - texte: "Why “was reading” in “I was reading when the phone rang”?"
+      nom: "The reading was in progress when the phone rang."
+      explication: "Was + -ing shows an action in progress in the past; rang is the short action that interrupts it."
+      pieges:
+        - { texte: "Because the reading started after the ring.", pourquoi: "No: we were already reading when the phone rang." }
+        - { texte: "Because read has no past simple.", pourquoi: "No: the past simple of read exists, it is spelt read. Here, we show an action in progress." }

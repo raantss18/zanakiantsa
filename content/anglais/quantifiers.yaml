@@ -1,0 +1,127 @@
+id: quantifiers
+titre: "Combien ? much, many, some, any"
+niveau: 5e
+prerequis: [there-is-are]
+programme: { source: college, texte: "5e (A2, en bleu) : les quantifieurs : much, many, some." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Much, many, a lot of, lots of (quantifiers) » et « Some and any », lus le 2026-11-13 :
+# https://dictionary.cambridge.org/grammar/british-grammar/much-many-a-lot-of-lots-of-quantifiers
+# https://dictionary.cambridge.org/grammar/british-grammar/some-and-any
+parametres: { langue: en }
+idee: "« many » va avec ce qui se compte : « many books ». « much » avec ce qui ne se compte pas : « much water ». « some » dans une phrase affirmative, « any » dans une phrase négative."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Ça se compte, comme « books » ou « apples » ? « many ». Ça ne se compte pas, comme « water » ou « money » ? « much ». Phrase affirmative : « some ». Phrase négative : « any »."
+  exemple: "« How … people came? » On compte des personnes : « How many people came? »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « How … brothers have you got? »"
+    nom: "many"
+    explication: "Les frères se comptent : « How many brothers have you got? »"
+    pieges:
+      - { texte: "much", pourquoi: "« brothers » se compte : « How many »." }
+      - { texte: "some", pourquoi: "Après « How », on met « many » ou « much » : « How many brothers »." }
+  - texte: "Complète : « How … money have you got? »"
+    nom: "much"
+    explication: "L'argent ne se compte pas en anglais : « How much money have you got? »"
+    pieges:
+      - { texte: "many", pourquoi: "« money » ne se compte pas : « How much »." }
+      - { texte: "any", pourquoi: "Après « How », on met « much » ou « many » : « How much money »." }
+  - texte: "Complète : « I've got … friends in my new school. » (quelques amis)"
+    nom: "some"
+    explication: "Phrase affirmative, quelques amis : « I've got some friends in my new school. »"
+    pieges:
+      - { texte: "any", pourquoi: "« any » va surtout dans une phrase négative ou une question. Ici, la phrase est affirmative : « some »." }
+      - { texte: "much", pourquoi: "« friends » se compte : jamais « much ». Et quelques amis, c'est « some »." }
+  - texte: "Complète : « We haven't got … bread. » (pas de pain)"
+    nom: "any"
+    explication: "Phrase négative : « We haven't got any bread. »"
+    pieges:
+      - { texte: "some", pourquoi: "Dans une phrase négative, on ne dit pas « haven't got some » : « haven't got any »." }
+      - { texte: "many", pourquoi: "« bread » ne se compte pas : jamais « many ». Et pas de pain, c'est « not any »." }
+  - texte: "Complète : « There aren't … cars in my village. » (pas beaucoup)"
+    nom: "many"
+    explication: "Les voitures se comptent ; pas beaucoup : « There aren't many cars in my village. »"
+    pieges:
+      - { texte: "much", pourquoi: "« cars » se compte : « many »." }
+      - { texte: "any", pourquoi: "« not any » voudrait dire aucune voiture. Pas beaucoup : « not many »." }
+  - texte: "Complète : « I don't drink … coffee. » (pas beaucoup)"
+    nom: "much"
+    explication: "Le café ne se compte pas ici ; pas beaucoup : « I don't drink much coffee. »"
+    pieges:
+      - { texte: "many", pourquoi: "« coffee » ne se compte pas ici : « much »." }
+      - { texte: "some", pourquoi: "La phrase est négative et dit pas beaucoup : « much »." }
+  - texte: "Complète : « There is … cheese on the table. » (un peu de fromage)"
+    nom: "some"
+    explication: "Phrase affirmative : « There is some cheese on the table. »"
+    pieges:
+      - { texte: "any", pourquoi: "Dans une phrase affirmative, on ne dit pas « There is any cheese » : « some »." }
+      - { texte: "many", pourquoi: "« cheese » ne se compte pas ici : jamais « many »." }
+  - texte: "Pourquoi dit-on « many apples » mais « much water » ?"
+    nom: "Les pommes se comptent ; l'eau ne se compte pas."
+    explication: "« many » va avec un pluriel qui se compte, « much » avec ce qui ne se compte pas."
+    pieges:
+      - { texte: "Parce que « water » est un mot court.", pourquoi: "Non : la longueur du mot ne change rien. L'eau ne se compte pas : « much »." }
+      - { texte: "Parce que « many » veut dire peu.", pourquoi: "Non : « many » et « much » veulent tous deux dire beaucoup. La différence : se compter ou non." }
+en:
+  titre: "How much? How many? much, many, some, any"
+  idee: "Many goes with things we can count: many books. Much goes with things we can't count: much water. Some in a positive sentence, any in a negative sentence."
+  phrases:
+    consigne: "Read the sentence, then touch the right word."
+    question: "{texte}"
+    indice: "Can you count it, like books or apples? many. Can't you count it, like water or money? much. Positive sentence: some. Negative sentence: any."
+    exemple: "“How … people came?” We count people: “How many people came?”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “How … brothers have you got?”"
+      nom: "many"
+      explication: "We can count brothers: “How many brothers have you got?”"
+      pieges:
+        - { texte: "much", pourquoi: "Brothers can be counted: How many." }
+        - { texte: "some", pourquoi: "After How, we use many or much: How many brothers." }
+    - texte: "Complete: “How … money have you got?”"
+      nom: "much"
+      explication: "In English, money is uncountable: “How much money have you got?”"
+      pieges:
+        - { texte: "many", pourquoi: "Money is uncountable: How much." }
+        - { texte: "any", pourquoi: "After How, we use much or many: How much money." }
+    - texte: "Complete: “I've got … friends in my new school.” (a few friends)"
+      nom: "some"
+      explication: "A positive sentence, a few friends: “I've got some friends in my new school.”"
+      pieges:
+        - { texte: "any", pourquoi: "Any is mostly for negative sentences and questions. This sentence is positive: some." }
+        - { texte: "much", pourquoi: "Friends can be counted: never much. And a few friends is some." }
+    - texte: "Complete: “We haven't got … bread.” (no bread)"
+      nom: "any"
+      explication: "A negative sentence: “We haven't got any bread.”"
+      pieges:
+        - { texte: "some", pourquoi: "In a negative sentence, we don't say haven't got some: haven't got any." }
+        - { texte: "many", pourquoi: "Bread is uncountable: never many. And no bread is not any." }
+    - texte: "Complete: “There aren't … cars in my village.” (not a lot)"
+      nom: "many"
+      explication: "Cars can be counted; not a lot: “There aren't many cars in my village.”"
+      pieges:
+        - { texte: "much", pourquoi: "Cars can be counted: many." }
+        - { texte: "any", pourquoi: "Not any would mean no cars at all. Not a lot: not many." }
+    - texte: "Complete: “I don't drink … coffee.” (not a lot)"
+      nom: "much"
+      explication: "Coffee is uncountable here; not a lot: “I don't drink much coffee.”"
+      pieges:
+        - { texte: "many", pourquoi: "Coffee is uncountable here: much." }
+        - { texte: "some", pourquoi: "The sentence is negative and means not a lot: much." }
+    - texte: "Complete: “There is … cheese on the table.” (a little cheese)"
+      nom: "some"
+      explication: "A positive sentence: “There is some cheese on the table.”"
+      pieges:
+        - { texte: "any", pourquoi: "In a positive sentence, we don't say There is any cheese: some." }
+        - { texte: "many", pourquoi: "Cheese is uncountable here: never many." }
+    - texte: "Why do we say “many apples” but “much water”?"
+      nom: "Apples can be counted; water can't."
+      explication: "Many goes with a plural we can count, much with things we can't count."
+      pieges:
+        - { texte: "Because water is a short word.", pourquoi: "No: the length of the word changes nothing. Water is uncountable: much." }
+        - { texte: "Because many means a little.", pourquoi: "No: many and much both mean a lot. The difference: countable or not." }

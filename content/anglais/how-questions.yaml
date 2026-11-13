@@ -1,0 +1,126 @@
+id: how-questions
+titre: "Des questions précises : how often, how long, how far…"
+niveau: 3e
+prerequis: [question-words, quantifiers]
+programme: { source: college, texte: "3e (B1, en bleu) : les éléments interrogatifs portant sur la fréquence (How often? / How many times?), le degré (How much? / How well?) et les mesures (How tall? / How long? / How wide?)." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « How » (« We use how to introduce questions about measurements or amounts »), lu le
+# 2026-11-13 : https://dictionary.cambridge.org/grammar/british-grammar/how
+parametres: { langue: en }
+idee: "« How » suivi d'un mot pose une question précise : « How often » pour la fréquence, « How long » pour la durée, « How far » pour la distance, « How tall » pour la taille, « How much » pour le prix."
+phrases:
+  consigne: "Lis la question anglaise et sa réponse, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Combien de fois ? « How often ». Combien de temps ? « How long ». À quelle distance ? « How far ». Quelle taille ? « How tall ». Quel prix ? « How much »."
+  exemple: "« How … people came? » « Thirty. » On compte des personnes : « How many people came? »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « How … is it from your house to the school? » « About two kilometres. »"
+    nom: "far"
+    explication: "La réponse est une distance : « How far is it from your house to the school? »"
+    pieges:
+      - { texte: "often", pourquoi: "« How often » demande combien de fois. Pour une distance : « How far »." }
+      - { texte: "much", pourquoi: "« How much » demande un prix ou une quantité. Pour une distance : « How far »." }
+  - texte: "Complète : « How … is your brother? » « He's 1.80 metres. »"
+    nom: "tall"
+    explication: "On demande la taille d'une personne : « How tall is your brother? »"
+    pieges:
+      - { texte: "old", pourquoi: "« How old » demande l'âge. 1,80 mètre est une taille : « How tall »." }
+      - { texte: "far", pourquoi: "« How far » demande une distance. Pour la taille d'une personne : « How tall »." }
+  - texte: "Complète : « How … does the film last? » « Two hours. »"
+    nom: "long"
+    explication: "La réponse est une durée : « How long does the film last? »"
+    pieges:
+      - { texte: "far", pourquoi: "« How far » demande une distance. Pour une durée : « How long »." }
+      - { texte: "often", pourquoi: "« How often » demande combien de fois. Pour une durée : « How long »." }
+  - texte: "Complète : « How … does this T-shirt cost? » « Ten pounds. »"
+    nom: "much"
+    explication: "On demande un prix : « How much does this T-shirt cost? »"
+    pieges:
+      - { texte: "many", pourquoi: "« How many » compte des choses. Pour un prix : « How much »." }
+      - { texte: "long", pourquoi: "« How long » demande une durée. Pour un prix : « How much »." }
+  - texte: "Complète : « How … do you visit your grandparents? » « Every Sunday. »"
+    nom: "often"
+    explication: "La réponse dit combien de fois : « How often do you visit your grandparents? »"
+    pieges:
+      - { texte: "long", pourquoi: "« How long » demande une durée. « Every Sunday » dit combien de fois : « How often »." }
+      - { texte: "much", pourquoi: "« How much » demande un prix ou une quantité. Pour la fréquence : « How often »." }
+  - texte: "Complète : « How … times have you been to London? » « Three times. »"
+    nom: "many"
+    explication: "On compte les fois : « How many times have you been to London? »"
+    pieges:
+      - { texte: "much", pourquoi: "« times » se compte ici : « How many times »." }
+      - { texte: "often", pourquoi: "On dit « How often » tout seul, ou « How many times » : jamais « How often times »." }
+  - texte: "Complète : « How … do you speak English? » « Quite well. »"
+    nom: "well"
+    explication: "On demande le niveau, la manière : « How well do you speak English? »"
+    pieges:
+      - { texte: "good", pourquoi: "« good » est un adjectif. Pour la manière de parler, l'adverbe : « How well »." }
+      - { texte: "long", pourquoi: "« How long » demande une durée. « Quite well » répond à « How well »." }
+  - texte: "Pourquoi « How often do you play tennis? » et pas « How long » ?"
+    nom: "On demande combien de fois, pas combien de temps."
+    explication: "« How often » demande une fréquence, comme « twice a week » ; « How long » demande une durée, comme « one hour »."
+    pieges:
+      - { texte: "Parce que « How long » ne sert que pour les objets.", pourquoi: "Non : « How long » demande aussi une durée : « How long does the film last? »" }
+      - { texte: "Parce que « often » veut dire longtemps.", pourquoi: "Non : « often » veut dire souvent." }
+en:
+  titre: "Precise questions: how often, how long, how far…"
+  idee: "How followed by a word asks a precise question: How often for frequency, How long for time, How far for distance, How tall for height, How much for price."
+  phrases:
+    consigne: "Read the question and its answer, then touch the right word."
+    question: "{texte}"
+    indice: "How many times? How often. How much time? How long. What distance? How far. What height? How tall. What price? How much."
+    exemple: "“How … people came?” “Thirty.” We count people: “How many people came?”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “How … is it from your house to the school?” “About two kilometres.”"
+      nom: "far"
+      explication: "The answer is a distance: “How far is it from your house to the school?”"
+      pieges:
+        - { texte: "often", pourquoi: "How often asks how many times. For a distance: How far." }
+        - { texte: "much", pourquoi: "How much asks about a price or an amount. For a distance: How far." }
+    - texte: "Complete: “How … is your brother?” “He's 1.80 metres.”"
+      nom: "tall"
+      explication: "We ask how tall a person is: “How tall is your brother?”"
+      pieges:
+        - { texte: "old", pourquoi: "How old asks about age. 1.80 metres is a height: How tall." }
+        - { texte: "far", pourquoi: "How far asks about a distance. For a person's height: How tall." }
+    - texte: "Complete: “How … does the film last?” “Two hours.”"
+      nom: "long"
+      explication: "The answer is a length of time: “How long does the film last?”"
+      pieges:
+        - { texte: "far", pourquoi: "How far asks about a distance. For time: How long." }
+        - { texte: "often", pourquoi: "How often asks how many times. For time: How long." }
+    - texte: "Complete: “How … does this T-shirt cost?” “Ten pounds.”"
+      nom: "much"
+      explication: "We ask about a price: “How much does this T-shirt cost?”"
+      pieges:
+        - { texte: "many", pourquoi: "How many counts things. For a price: How much." }
+        - { texte: "long", pourquoi: "How long asks about time. For a price: How much." }
+    - texte: "Complete: “How … do you visit your grandparents?” “Every Sunday.”"
+      nom: "often"
+      explication: "The answer says how many times: “How often do you visit your grandparents?”"
+      pieges:
+        - { texte: "long", pourquoi: "How long asks about time. Every Sunday says how many times: How often." }
+        - { texte: "much", pourquoi: "How much asks about a price or an amount. For frequency: How often." }
+    - texte: "Complete: “How … times have you been to London?” “Three times.”"
+      nom: "many"
+      explication: "We count the times: “How many times have you been to London?”"
+      pieges:
+        - { texte: "much", pourquoi: "Times can be counted here: How many times." }
+        - { texte: "often", pourquoi: "We say How often on its own, or How many times: never How often times." }
+    - texte: "Complete: “How … do you speak English?” “Quite well.”"
+      nom: "well"
+      explication: "We ask about the level, the way: “How well do you speak English?”"
+      pieges:
+        - { texte: "good", pourquoi: "Good is an adjective. For the way you speak, the adverb: How well." }
+        - { texte: "long", pourquoi: "How long asks about time. Quite well answers How well." }
+    - texte: "Why “How often do you play tennis?” and not How long?"
+      nom: "We ask how many times, not how much time."
+      explication: "How often asks about frequency, like twice a week; How long asks about time, like one hour."
+      pieges:
+        - { texte: "Because How long is only for objects.", pourquoi: "No: How long also asks about time: “How long does the film last?”" }
+        - { texte: "Because often means for a long time.", pourquoi: "No: often means many times." }

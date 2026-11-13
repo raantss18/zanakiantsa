@@ -1,0 +1,126 @@
+id: want-someone-to
+titre: "Vouloir que quelqu'un fasse : I want you to come"
+niveau: 3e
+prerequis: [present-simple, modals-advice]
+programme: { source: college, texte: "3e (B1, en bleu) : les propositions infinitives (want sb to + BV, expect sb to + BV, would like sb to + BV)." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Want » (« object + to-infinitive » ; « We don't use want with a that-clause »),
+# lu le 2026-11-13 : https://dictionary.cambridge.org/grammar/british-grammar/want
+parametres: { langue: en }
+idee: "Pour dire je veux que tu viennes, l'anglais ne prend pas « that » : « I want you to come ». Après « want », « would like » ou « expect » : la personne, puis « to » et le verbe."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "« want », puis la personne (« me », « you », « him », « her », « us », « them »), puis « to » et le verbe. Jamais « that »."
+  exemple: "Maman veut que je range ma chambre : « Mum wants me to tidy my room. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Je veux que tu viennes. Complète : « I want you … come. »"
+    nom: "to"
+    explication: "La personne, puis « to » et le verbe : « I want you to come. »"
+    pieges:
+      - { texte: "that", pourquoi: "« want » ne se construit pas avec « that » : « I want you to come »." }
+      - { texte: "for", pourquoi: "Après la personne, on met « to » : « I want you to come »." }
+  - texte: "La prof veut qu'elle refasse l'exercice. Complète : « The teacher wants … to do it again. »"
+    nom: "her"
+    explication: "Après « wants », la personne prend la forme complément : « The teacher wants her to do it again. »"
+    pieges:
+      - { texte: "she", pourquoi: "Après « wants », il faut la forme complément : « her », pas « she »." }
+      - { texte: "that she", pourquoi: "Pas de « that » après « want » : « wants her to do it »." }
+  - texte: "Mes parents veulent que je travaille dur. Complète : « My parents want … hard. »"
+    nom: "me to work"
+    explication: "La personne, « me », puis « to » et le verbe : « My parents want me to work hard. »"
+    pieges:
+      - { texte: "that I work", pourquoi: "« want » ne se construit pas avec « that » : « want me to work »." }
+      - { texte: "I to work", pourquoi: "Après « want », la forme complément : « me », pas « I »." }
+  - texte: "Elle aimerait que nous restions. Complète : « She would like … stay. »"
+    nom: "us to"
+    explication: "Après « would like » : la personne, « us », puis « to » : « She would like us to stay. »"
+    pieges:
+      - { texte: "we to", pourquoi: "Après « would like », la forme complément : « us », pas « we »." }
+      - { texte: "that we", pourquoi: "Pas de « that » : « She would like us to stay »." }
+  - texte: "Nous comptons sur eux pour arriver à l'heure. Complète : « We expect them … on time. »"
+    nom: "to arrive"
+    explication: "Après « expect them » : « to » et le verbe : « We expect them to arrive on time. »"
+    pieges:
+      - { texte: "arrive", pourquoi: "Il manque « to » : « expect them to arrive »." }
+      - { texte: "arriving", pourquoi: "Après « expect them », on met « to » et le verbe, pas -ing : « to arrive »." }
+  - texte: "Tu veux que je t'aide ? Complète : « Do you want me … you? »"
+    nom: "to help"
+    explication: "La personne, « me », puis « to » et le verbe : « Do you want me to help you? »"
+    pieges:
+      - { texte: "help", pourquoi: "Il manque « to » : « want me to help »." }
+      - { texte: "helping", pourquoi: "Après « want me », on met « to » et le verbe, pas -ing : « to help »." }
+  - texte: "C'est lui qui veut partir tôt. Complète : « He wants … early. »"
+    nom: "to leave"
+    explication: "Quand c'est le sujet lui-même qui veut faire l'action, pas de personne en plus : « He wants to leave early. »"
+    pieges:
+      - { texte: "him to leave", pourquoi: "Avec « him to leave », il voudrait qu'un autre garçon parte. C'est lui qui part : « wants to leave »." }
+      - { texte: "that he leaves", pourquoi: "« want » ne se construit pas avec « that » : « He wants to leave »." }
+  - texte: "Pourquoi dit-on « I want you to close the door » et pas « I want that you close the door » ?"
+    nom: "Après « want », pas de « that » : la personne, puis « to » et le verbe."
+    explication: "« want », la personne, « to », le verbe : « I want you to close the door. »"
+    pieges:
+      - { texte: "Parce que « that » serait trop poli.", pourquoi: "Non : ce n'est pas une question de politesse. « want » ne se construit jamais avec « that »." }
+      - { texte: "Parce que « close » est au passé.", pourquoi: "Non : après « to », le verbe est à la base : « to close »." }
+en:
+  titre: "Wanting someone to do something: I want you to come"
+  idee: "We don't use that after want: “I want you to come.” After want, would like or expect: the person, then to and the verb."
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "Want, then the person (me, you, him, her, us, them), then to and the verb. Never that."
+    exemple: "Mum says: “Tidy your room!” So: “Mum wants me to tidy my room.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I want you … come.”"
+      nom: "to"
+      explication: "The person, then to and the verb: “I want you to come.”"
+      pieges:
+        - { texte: "that", pourquoi: "We don't use want with that: “I want you to come.”" }
+        - { texte: "for", pourquoi: "After the person, we use to: “I want you to come.”" }
+    - texte: "Complete: “The teacher wants … to do it again.” (the girl)"
+      nom: "her"
+      explication: "After wants, the person is an object pronoun: “The teacher wants her to do it again.”"
+      pieges:
+        - { texte: "she", pourquoi: "After wants, we need the object pronoun: her, not she." }
+        - { texte: "that she", pourquoi: "No that after want: wants her to do it." }
+    - texte: "Complete: “My parents want … hard.” (I must work hard)"
+      nom: "me to work"
+      explication: "The person, me, then to and the verb: “My parents want me to work hard.”"
+      pieges:
+        - { texte: "that I work", pourquoi: "We don't use want with that: want me to work." }
+        - { texte: "I to work", pourquoi: "After want, the object pronoun: me, not I." }
+    - texte: "Complete: “She would like … stay.” (we should stay)"
+      nom: "us to"
+      explication: "After would like: the person, us, then to: “She would like us to stay.”"
+      pieges:
+        - { texte: "we to", pourquoi: "After would like, the object pronoun: us, not we." }
+        - { texte: "that we", pourquoi: "No that: “She would like us to stay.”" }
+    - texte: "Complete: “We expect them … on time.” (arrive)"
+      nom: "to arrive"
+      explication: "After expect them: to and the verb: “We expect them to arrive on time.”"
+      pieges:
+        - { texte: "arrive", pourquoi: "To is missing: expect them to arrive." }
+        - { texte: "arriving", pourquoi: "After expect them, we use to and the verb, not -ing: to arrive." }
+    - texte: "Complete: “Do you want me … you?” (help)"
+      nom: "to help"
+      explication: "The person, me, then to and the verb: “Do you want me to help you?”"
+      pieges:
+        - { texte: "help", pourquoi: "To is missing: want me to help." }
+        - { texte: "helping", pourquoi: "After want me, we use to and the verb, not -ing: to help." }
+    - texte: "Complete: “He wants … early.” (he himself wants to leave)"
+      nom: "to leave"
+      explication: "When the subject wants to do the action himself, no other person: “He wants to leave early.”"
+      pieges:
+        - { texte: "him to leave", pourquoi: "With him to leave, he would want another boy to leave. He is the one leaving: wants to leave." }
+        - { texte: "that he leaves", pourquoi: "We don't use want with that: “He wants to leave.”" }
+    - texte: "Why do we say “I want you to close the door” and not “I want that you close the door”?"
+      nom: "After want, no that: the person, then to and the verb."
+      explication: "Want, the person, to, the verb: “I want you to close the door.”"
+      pieges:
+        - { texte: "Because that would be too polite.", pourquoi: "No: it isn't about politeness. We never use want with that." }
+        - { texte: "Because close is in the past.", pourquoi: "No: after to, the verb is in the base form: to close." }

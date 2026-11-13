@@ -1,0 +1,126 @@
+id: question-words
+titre: "Poser une question : who, what, where, when, why, how"
+niveau: 6e
+prerequis: [present-simple]
+programme: { source: college, texte: "6e : reconnaitre les mots interrogatifs usuels : who?, what?, where?, when?, (A1+) why?, how?" }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Questions: wh-questions », lu le 2026-11-13 :
+# https://dictionary.cambridge.org/grammar/british-grammar/questions-wh-questions
+parametres: { langue: en }
+idee: "Une question commence par un mot interrogatif : « who » pour qui, « what » pour quoi, « where » pour où, « when » pour quand, « why » pour pourquoi, « how » pour comment."
+phrases:
+  consigne: "Lis la question anglaise et sa réponse, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Regarde la réponse. Une personne : « who ». Une chose : « what ». Un lieu : « where ». Un moment : « when ». Une raison : « why ». Une manière : « how »."
+  exemple: "« … do you live? » « In London. » La réponse est un lieu : « Where do you live? »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « … is your name? » « My name is Amy. »"
+    nom: "What"
+    explication: "On demande le nom : « What is your name? »"
+    pieges:
+      - { texte: "Who", pourquoi: "« Who » demande une personne : « Who is she? ». Pour le nom : « What is your name? »" }
+      - { texte: "Where", pourquoi: "« Where » demande un lieu. Pour le nom : « What is your name? »" }
+  - texte: "Complète : « … is the station? » « It's next to the park. »"
+    nom: "Where"
+    explication: "La réponse est un lieu : « Where is the station? »"
+    pieges:
+      - { texte: "When", pourquoi: "« When » demande un moment. « next to the park » est un lieu : « Where »." }
+      - { texte: "What", pourquoi: "« What » demande une chose. Pour un lieu : « Where »." }
+  - texte: "Complète : « … is your birthday? » « In May. »"
+    nom: "When"
+    explication: "La réponse est un moment : « When is your birthday? »"
+    pieges:
+      - { texte: "Where", pourquoi: "« Where » demande un lieu. « In May » est un moment : « When »." }
+      - { texte: "How", pourquoi: "« How » demande comment. Pour un moment : « When »." }
+  - texte: "Complète : « … is that girl? » « She's my sister. »"
+    nom: "Who"
+    explication: "On demande qui est cette personne : « Who is that girl? »"
+    pieges:
+      - { texte: "What", pourquoi: "« What » demande une chose. Pour une personne : « Who »." }
+      - { texte: "Where", pourquoi: "« Where » demande un lieu. La réponse dit qui elle est : « Who »." }
+  - texte: "Complète : « … are you sad? » « Because my cat is ill. »"
+    nom: "Why"
+    explication: "La réponse donne une raison, avec « Because » : « Why are you sad? »"
+    pieges:
+      - { texte: "How", pourquoi: "« How » demande comment. Une réponse avec « Because » répond à « Why »." }
+      - { texte: "When", pourquoi: "« When » demande un moment. La réponse donne une raison : « Why »." }
+  - texte: "Complète : « … are you? » « I'm fine, thank you. »"
+    nom: "How"
+    explication: "On demande comment ça va : « How are you? »"
+    pieges:
+      - { texte: "Who", pourquoi: "« Who are you? » demande qui tu es : on répondrait par un nom. « I'm fine » répond à « How »." }
+      - { texte: "Where", pourquoi: "« Where are you? » demande où tu es. « I'm fine » répond à « How »." }
+  - texte: "Complète : « … old are you? » « I'm eleven. »"
+    nom: "How"
+    explication: "L'âge se demande avec « How old » : « How old are you? »"
+    pieges:
+      - { texte: "What", pourquoi: "On ne dit pas « What old ». L'âge se demande avec « How old »." }
+      - { texte: "When", pourquoi: "« When » demande un moment. L'âge : « How old are you? »" }
+  - texte: "Pourquoi dit-on « Where do you live? » et pas « Where you live? » ?"
+    nom: "Avec un verbe comme « live », on ajoute « do » après le mot interrogatif."
+    explication: "Mot interrogatif, puis « do », puis le sujet, puis le verbe : « Where do you live? »"
+    pieges:
+      - { texte: "Parce que « where » est toujours suivi de « do ».", pourquoi: "Non : avec « be », pas de « do » : « Where is the station? »" }
+      - { texte: "Parce que « live » est au passé.", pourquoi: "Non : « live » est au présent. Au passé, ce serait « Where did you live? »" }
+en:
+  titre: "Asking questions: who, what, where, when, why, how"
+  idee: "A question can start with a question word: who for a person, what for a thing, where for a place, when for a time, why for a reason, how for the way."
+  phrases:
+    consigne: "Read the question and its answer, then touch the right word."
+    question: "{texte}"
+    indice: "Look at the answer. A person: who. A thing: what. A place: where. A time: when. A reason: why. A way: how."
+    exemple: "“… do you live?” “In London.” The answer is a place: “Where do you live?”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “… is your name?” “My name is Amy.”"
+      nom: "What"
+      explication: "We ask for the name: “What is your name?”"
+      pieges:
+        - { texte: "Who", pourquoi: "Who asks about a person: “Who is she?” For the name: “What is your name?”" }
+        - { texte: "Where", pourquoi: "Where asks about a place. For the name: “What is your name?”" }
+    - texte: "Complete: “… is the station?” “It's next to the park.”"
+      nom: "Where"
+      explication: "The answer is a place: “Where is the station?”"
+      pieges:
+        - { texte: "When", pourquoi: "When asks about a time. Next to the park is a place: Where." }
+        - { texte: "What", pourquoi: "What asks about a thing. For a place: Where." }
+    - texte: "Complete: “… is your birthday?” “In May.”"
+      nom: "When"
+      explication: "The answer is a time: “When is your birthday?”"
+      pieges:
+        - { texte: "Where", pourquoi: "Where asks about a place. In May is a time: When." }
+        - { texte: "How", pourquoi: "How asks about the way. For a time: When." }
+    - texte: "Complete: “… is that girl?” “She's my sister.”"
+      nom: "Who"
+      explication: "We ask who this person is: “Who is that girl?”"
+      pieges:
+        - { texte: "What", pourquoi: "What asks about a thing. For a person: Who." }
+        - { texte: "Where", pourquoi: "Where asks about a place. The answer says who she is: Who." }
+    - texte: "Complete: “… are you sad?” “Because my cat is ill.”"
+      nom: "Why"
+      explication: "The answer gives a reason, with Because: “Why are you sad?”"
+      pieges:
+        - { texte: "How", pourquoi: "How asks about the way. An answer with Because answers Why." }
+        - { texte: "When", pourquoi: "When asks about a time. The answer gives a reason: Why." }
+    - texte: "Complete: “… are you?” “I'm fine, thank you.”"
+      nom: "How"
+      explication: "We ask how someone is: “How are you?”"
+      pieges:
+        - { texte: "Who", pourquoi: "“Who are you?” asks who you are: the answer would be a name. “I'm fine” answers How." }
+        - { texte: "Where", pourquoi: "“Where are you?” asks where you are. “I'm fine” answers How." }
+    - texte: "Complete: “… old are you?” “I'm eleven.”"
+      nom: "How"
+      explication: "We ask someone's age with How old: “How old are you?”"
+      pieges:
+        - { texte: "What", pourquoi: "We don't say What old. We ask someone's age with How old." }
+        - { texte: "When", pourquoi: "When asks about a time. For age: “How old are you?”" }
+    - texte: "Why do we say “Where do you live?” and not “Where you live?”"
+      nom: "With a verb like live, we add do after the question word."
+      explication: "Question word, then do, then the subject, then the verb: “Where do you live?”"
+      pieges:
+        - { texte: "Because where is always followed by do.", pourquoi: "No: with be, there is no do: “Where is the station?”" }
+        - { texte: "Because live is in the past.", pourquoi: "No: live is in the present. In the past, it would be “Where did you live?”" }

@@ -1,0 +1,126 @@
+id: used-to
+titre: "Les habitudes d'autrefois : used to"
+niveau: 2de
+prerequis: [past-simple-irregular, past-continuous]
+programme: { source: lycee_2de, texte: "Correction grammaticale : l’élève est conduit à mobiliser ses connaissances de la langue française et des autres langues qu’il connaît afin de mieux saisir la différence ou la proximité avec la langue étudiée." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Used to » (forme, « didn't use to », « Did you use to », used to / would,
+# used to / be used to), lu le 2026-11-13 : https://dictionary.cambridge.org/grammar/british-grammar/used-to
+parametres: { langue: en }
+idee: "« used to » et le verbe : ce qui était vrai ou habituel autrefois, et ne l'est plus. « I used to live in Paris. » Négation : « didn't use to ». Question : « Did you use to… ? »"
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Habitude ou état d'autrefois, fini aujourd'hui : « used to » et le verbe. Après « did » ou « didn't » : « use to », sans -d."
+  exemple: "Avant, il jouait au foot ; plus maintenant : « He used to play football. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « When I was little, I … be afraid of the dark. »"
+    nom: "used to"
+    explication: "Un état d'autrefois, fini aujourd'hui : « I used to be afraid of the dark. »"
+    pieges:
+      - { texte: "use to", pourquoi: "Dans une phrase affirmative, on écrit « used to », avec -d." }
+      - { texte: "was used to", pourquoi: "On ne met pas « be » devant « used to » + verbe : « I used to be »." }
+  - texte: "Complète : « She didn't … like vegetables, but now she loves them. »"
+    nom: "use to"
+    explication: "Après « didn't », la forme à retenir pour les examens est « use to », sans -d : « She didn't use to like vegetables. »"
+    pieges:
+      - { texte: "used to", pourquoi: "Après « didn't », la forme attendue aux examens est « use to », sans -d." }
+      - { texte: "using to", pourquoi: "« using to » n'existe pas. Après « didn't » : « use to »." }
+  - texte: "Complète : « … you use to walk to school? »"
+    nom: "Did"
+    explication: "La question se fait avec « Did » : « Did you use to walk to school? »"
+    pieges:
+      - { texte: "Do", pourquoi: "« use to » parle du passé : « Did », pas « Do »." }
+      - { texte: "Were", pourquoi: "On ne met pas « be » avec « use to » + verbe : « Did you use to »." }
+  - texte: "Complète : « This café … be a bank. Now it's a café. »"
+    nom: "used to"
+    explication: "Un état d'autrefois, qui n'est plus vrai : « This café used to be a bank. »"
+    pieges:
+      - { texte: "would", pourquoi: "« would » peut dire une habitude passée, pas un état : « used to be a bank »." }
+      - { texte: "uses to", pourquoi: "« used to » ne change pas et parle toujours du passé : « used to »." }
+  - texte: "Complète : « We … live in Manchester. » (nous y habitions avant)"
+    nom: "used to"
+    explication: "Une situation d'autrefois : « We used to live in Manchester. »"
+    pieges:
+      - { texte: "are used to", pourquoi: "« be used to » veut dire être habitué à, et se construit avec un nom ou un -ing. Ici : « We used to live »." }
+      - { texte: "would", pourquoi: "« would » ne décrit pas une situation passée : on ne dit pas « We would live in Manchester »." }
+  - texte: "Complète : « I live in Scotland, so I'm … cold weather. » (j'y suis habitué)"
+    nom: "used to"
+    explication: "« be used to » et un nom : être habitué à. « I'm used to cold weather. »"
+    pieges:
+      - { texte: "use to", pourquoi: "Après « I'm », on écrit « used to » : être habitué à." }
+      - { texte: "used", pourquoi: "Il manque « to » : « I'm used to cold weather »." }
+  - texte: "Que veut dire « My grandfather used to work in a mine » ?"
+    nom: "Autrefois, mon grand-père travaillait dans une mine ; plus maintenant."
+    explication: "« used to » et le verbe : une situation passée qui n'existe plus."
+    pieges:
+      - { texte: "Mon grand-père est habitué à travailler dans une mine.", pourquoi: "Être habitué à, ce serait « is used to working ». « used to work » : autrefois, plus maintenant." }
+      - { texte: "Mon grand-père travaillera dans une mine.", pourquoi: "« used to » parle toujours du passé, jamais du futur." }
+  - texte: "« When we were kids, we used to play in the street. » Pourquoi « used to » ?"
+    nom: "C'est une habitude d'autrefois, qui n'existe plus."
+    explication: "« used to » et le verbe : ce qui se faisait souvent dans le passé, et ne se fait plus."
+    pieges:
+      - { texte: "C'est une action qui a eu lieu une seule fois.", pourquoi: "Non : « used to » parle d'une habitude répétée, pas d'un seul moment." }
+      - { texte: "C'est une habitude d'aujourd'hui.", pourquoi: "Non : « used to » parle toujours du passé." }
+en:
+  titre: "Past habits: used to"
+  idee: "Used to + verb: what was true or usual in the past, and isn't any more. “I used to live in Paris.” Negative: didn't use to. Question: “Did you use to…?”"
+  phrases:
+    consigne: "Read the sentence, then touch the right answer."
+    question: "{texte}"
+    indice: "A habit or a state in the past, over now: used to + verb. After did or didn't: use to, without -d."
+    exemple: "He played football in the past, but not now: “He used to play football.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “When I was little, I … be afraid of the dark.”"
+      nom: "used to"
+      explication: "A state in the past, over now: “I used to be afraid of the dark.”"
+      pieges:
+        - { texte: "use to", pourquoi: "In a positive sentence, we write used to, with -d." }
+        - { texte: "was used to", pourquoi: "We don't put be before used to + verb: “I used to be”." }
+    - texte: "Complete: “She didn't … like vegetables, but now she loves them.”"
+      nom: "use to"
+      explication: "After didn't, the form to use in exams is use to, without -d: “She didn't use to like vegetables.”"
+      pieges:
+        - { texte: "used to", pourquoi: "After didn't, the form expected in exams is use to, without -d." }
+        - { texte: "using to", pourquoi: "Using to doesn't exist. After didn't: use to." }
+    - texte: "Complete: “… you use to walk to school?”"
+      nom: "Did"
+      explication: "The question uses Did: “Did you use to walk to school?”"
+      pieges:
+        - { texte: "Do", pourquoi: "Use to is about the past: Did, not Do." }
+        - { texte: "Were", pourquoi: "We don't use be with use to + verb: “Did you use to”." }
+    - texte: "Complete: “This café … be a bank. Now it's a café.”"
+      nom: "used to"
+      explication: "A past state that is no longer true: “This café used to be a bank.”"
+      pieges:
+        - { texte: "would", pourquoi: "Would can describe a past habit, not a state: used to be a bank." }
+        - { texte: "uses to", pourquoi: "Used to doesn't change and is always about the past: used to." }
+    - texte: "Complete: “We … live in Manchester.” (we lived there before)"
+      nom: "used to"
+      explication: "A situation in the past: “We used to live in Manchester.”"
+      pieges:
+        - { texte: "are used to", pourquoi: "Be used to means be accustomed to, and goes with a noun or -ing. Here: “We used to live”." }
+        - { texte: "would", pourquoi: "Would doesn't describe a past situation: we don't say “We would live in Manchester”." }
+    - texte: "Complete: “I live in Scotland, so I'm … cold weather.” (I'm accustomed to it)"
+      nom: "used to"
+      explication: "Be used to + a noun: be accustomed to. “I'm used to cold weather.”"
+      pieges:
+        - { texte: "use to", pourquoi: "After I'm, we write used to: be accustomed to." }
+        - { texte: "used", pourquoi: "To is missing: “I'm used to cold weather.”" }
+    - texte: "What does “My grandfather used to work in a mine” mean?"
+      nom: "In the past, my grandfather worked in a mine; not any more."
+      explication: "Used to + verb: a past situation that no longer exists."
+      pieges:
+        - { texte: "My grandfather is accustomed to working in a mine.", pourquoi: "That would be “is used to working”. Used to work: in the past, not any more." }
+        - { texte: "My grandfather will work in a mine.", pourquoi: "Used to is always about the past, never the future." }
+    - texte: "“When we were kids, we used to play in the street.” Why used to?"
+      nom: "It's a habit in the past that no longer exists."
+      explication: "Used to + verb: something we often did in the past, and don't do any more."
+      pieges:
+        - { texte: "It's an action that happened only once.", pourquoi: "No: used to is about a repeated habit, not one moment." }
+        - { texte: "It's a habit today.", pourquoi: "No: used to is always about the past." }
