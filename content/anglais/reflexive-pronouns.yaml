@@ -1,0 +1,128 @@
+id: reflexive-pronouns
+titre: "Soi-même et l'un l'autre : myself, themselves, each other"
+niveau: 4e
+prerequis: [possessives]
+programme: { source: college, texte: "4e (A2+, en bleu) : les verbes réfléchis et réciproques : She introduced herself. They enjoyed seeing each other ; les pronoms personnels réfléchis (myself, himself, ourselves, themselves, etc.)." }
+activite: quiz
+# Les passages entre « » sont dits par la voix anglaise (ADR 0022, 0064).
+# Grammaire : Cambridge Dictionary, « Pronouns: reflexive (myself, themselves, etc.) » et « Each other, one another »,
+# lus le 2026-11-13 :
+# https://dictionary.cambridge.org/grammar/british-grammar/pronouns-reflexive-myself-themselves-etc
+# https://dictionary.cambridge.org/grammar/british-grammar/each-other-one-another
+parametres: { langue: en }
+idee: "Quand le sujet fait l'action sur lui-même : « myself », « yourself », « himself », « herself », « itself », « ourselves », « themselves ». Quand chacun la fait à l'autre : « each other »."
+phrases:
+  consigne: "Lis la phrase anglaise, puis touche le bon mot."
+  question: "{texte}"
+  indice: "Une seule personne : -self, comme « myself ». Plusieurs : -selves, comme « ourselves ». L'un à l'autre : « each other »."
+  exemple: "« She introduced … to the class. » Elle se présente elle-même : « She introduced herself. »"
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Complète : « I hurt … when I fell off my bike. »"
+    nom: "myself"
+    explication: "Le sujet « I » se fait mal à lui-même : « I hurt myself. »"
+    pieges:
+      - { texte: "me", pourquoi: "Quand le sujet et le complément sont la même personne, on prend « myself »." }
+      - { texte: "yourself", pourquoi: "« yourself » va avec « you ». Avec « I » : « myself »." }
+  - texte: "Complète : « Tom cut … with a knife. »"
+    nom: "himself"
+    explication: "Tom se coupe lui-même : « Tom cut himself. »"
+    pieges:
+      - { texte: "herself", pourquoi: "« herself » va avec une fille ou une femme. Pour Tom : « himself »." }
+      - { texte: "hisself", pourquoi: "« hisself » n'existe pas. On écrit « himself »." }
+  - texte: "Complète : « We made the cake by … » (tout seuls, sans aide)"
+    nom: "ourselves"
+    explication: "« by » et le pronom en -selves veut dire tout seuls : « We made the cake by ourselves. »"
+    pieges:
+      - { texte: "ourself", pourquoi: "Avec « we », plusieurs personnes : -selves, « ourselves »." }
+      - { texte: "us", pourquoi: "Pour dire sans aide, on prend « by ourselves »." }
+  - texte: "Complète : « The players blamed … for the defeat. »"
+    nom: "themselves"
+    explication: "Les joueurs se reprochent la défaite à eux-mêmes : « The players blamed themselves. »"
+    pieges:
+      - { texte: "theirselves", pourquoi: "« theirselves » n'existe pas. On écrit « themselves »." }
+      - { texte: "himself", pourquoi: "« the players » est un pluriel : « themselves »." }
+  - texte: "Complète : « Emma and Lucy are best friends. They phone … every day. »"
+    nom: "each other"
+    explication: "Emma appelle Lucy et Lucy appelle Emma : « They phone each other. »"
+    pieges:
+      - { texte: "themselves", pourquoi: "Avec « themselves », chacune s'appellerait elle-même ! L'une l'autre : « each other »." }
+      - { texte: "them", pourquoi: "« them » désignerait d'autres personnes. L'une l'autre : « each other »." }
+  - texte: "Complète : « We've known … for ten years. » (l'un l'autre)"
+    nom: "each other"
+    explication: "Chacun connaît l'autre : « We've known each other for ten years. »"
+    pieges:
+      - { texte: "ourselves", pourquoi: "On ne dit pas « We've known ourselves » : l'un l'autre, c'est « each other »." }
+      - { texte: "us", pourquoi: "On ne dit pas « We've known us » : l'un l'autre, c'est « each other »." }
+  - texte: "Complète : « Mia looked at … in the mirror. » (elle se regarde)"
+    nom: "herself"
+    explication: "Mia se regarde elle-même : « Mia looked at herself in the mirror. »"
+    pieges:
+      - { texte: "her", pourquoi: "Avec « her », Mia regarderait une autre fille. Elle se regarde : « herself »." }
+      - { texte: "itself", pourquoi: "« itself » va avec une chose ou un animal. Pour Mia : « herself »." }
+  - texte: "Pourquoi dit-on « She washed and dressed », sans « herself » ?"
+    nom: "Pour les gestes de tous les jours, on n'ajoute pas le pronom en -self, sauf pour insister."
+    explication: "En anglais, « wash » et « dress » s'emploient sans pronom : « She washed and dressed. »"
+    pieges:
+      - { texte: "Parce que « herself » n'existe pas.", pourquoi: "Non : « herself » existe : « Mia looked at herself »." }
+      - { texte: "Parce que la phrase est fausse.", pourquoi: "Non : la phrase est juste. On ajoute « herself » seulement pour insister." }
+en:
+  titre: "Myself, themselves, each other"
+  idee: "When the subject does the action to itself: myself, yourself, himself, herself, itself, ourselves, themselves. When each person does it to the other: each other."
+  phrases:
+    consigne: "Read the sentence, then touch the right word."
+    question: "{texte}"
+    indice: "One person: -self, like myself. More than one: -selves, like ourselves. To each other: each other."
+    exemple: "“She introduced … to the class.” She introduces herself: “She introduced herself.”"
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Complete: “I hurt … when I fell off my bike.”"
+      nom: "myself"
+      explication: "The subject and the object are the same person: “I hurt myself.”"
+      pieges:
+        - { texte: "me", pourquoi: "When the subject and the object are the same person, we use myself." }
+        - { texte: "yourself", pourquoi: "Yourself goes with you. With I: myself." }
+    - texte: "Complete: “Tom cut … with a knife.”"
+      nom: "himself"
+      explication: "Tom cuts himself: “Tom cut himself.”"
+      pieges:
+        - { texte: "herself", pourquoi: "Herself goes with a girl or a woman. For Tom: himself." }
+        - { texte: "hisself", pourquoi: "Hisself doesn't exist. We write himself." }
+    - texte: "Complete: “We made the cake by …” (alone, without help)"
+      nom: "ourselves"
+      explication: "By + a -selves pronoun means alone: “We made the cake by ourselves.”"
+      pieges:
+        - { texte: "ourself", pourquoi: "With we, more than one person: -selves, ourselves." }
+        - { texte: "us", pourquoi: "To say without help, we use by ourselves." }
+    - texte: "Complete: “The players blamed … for the defeat.”"
+      nom: "themselves"
+      explication: "The players blame themselves: “The players blamed themselves.”"
+      pieges:
+        - { texte: "theirselves", pourquoi: "Theirselves doesn't exist. We write themselves." }
+        - { texte: "himself", pourquoi: "The players is plural: themselves." }
+    - texte: "Complete: “Emma and Lucy are best friends. They phone … every day.”"
+      nom: "each other"
+      explication: "Emma phones Lucy and Lucy phones Emma: “They phone each other.”"
+      pieges:
+        - { texte: "themselves", pourquoi: "With themselves, each girl would phone herself! To each other: each other." }
+        - { texte: "them", pourquoi: "Them would mean other people. To each other: each other." }
+    - texte: "Complete: “We've known … for ten years.” (one another)"
+      nom: "each other"
+      explication: "Each one knows the other: “We've known each other for ten years.”"
+      pieges:
+        - { texte: "ourselves", pourquoi: "We don't say We've known ourselves: each other." }
+        - { texte: "us", pourquoi: "We don't say We've known us: each other." }
+    - texte: "Complete: “Mia looked at … in the mirror.” (she looks at herself)"
+      nom: "herself"
+      explication: "Mia looks at herself: “Mia looked at herself in the mirror.”"
+      pieges:
+        - { texte: "her", pourquoi: "With her, Mia would be looking at another girl. She looks at herself: herself." }
+        - { texte: "itself", pourquoi: "Itself goes with a thing or an animal. For Mia: herself." }
+    - texte: "Why do we say “She washed and dressed”, without herself?"
+      nom: "For everyday actions, we don't add the -self pronoun, unless we want to insist."
+      explication: "In English, wash and dress are used without a pronoun: “She washed and dressed.”"
+      pieges:
+        - { texte: "Because herself doesn't exist.", pourquoi: "No: herself exists: “Mia looked at herself.”" }
+        - { texte: "Because the sentence is wrong.", pourquoi: "No: the sentence is right. We add herself only to insist." }

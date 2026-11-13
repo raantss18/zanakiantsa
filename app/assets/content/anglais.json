@@ -8136,6 +8136,287 @@
       }
     },
     {
+      "id": "question-words",
+      "titre": "Poser une question : who, what, where, when, why, how",
+      "niveau": "6e",
+      "prerequis": [
+        "present-simple"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "6e : reconnaitre les mots interrogatifs usuels : who?, what?, where?, when?, (A1+) why?, how?"
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "Une question commence par un mot interrogatif : « who » pour qui, « what » pour quoi, « where » pour où, « when » pour quand, « why » pour pourquoi, « how » pour comment.",
+      "phrases": {
+        "consigne": "Lis la question anglaise et sa réponse, puis touche le bon mot.",
+        "question": "{texte}",
+        "indice": "Regarde la réponse. Une personne : « who ». Une chose : « what ». Un lieu : « where ». Un moment : « when ». Une raison : « why ». Une manière : « how ».",
+        "exemple": "« … do you live? » « In London. » La réponse est un lieu : « Where do you live? »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « … is your name? » « My name is Amy. »",
+          "nom": "What",
+          "explication": "On demande le nom : « What is your name? »",
+          "pieges": [
+            {
+              "texte": "Who",
+              "pourquoi": "« Who » demande une personne : « Who is she? ». Pour le nom : « What is your name? »"
+            },
+            {
+              "texte": "Where",
+              "pourquoi": "« Where » demande un lieu. Pour le nom : « What is your name? »"
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … is the station? » « It's next to the park. »",
+          "nom": "Where",
+          "explication": "La réponse est un lieu : « Where is the station? »",
+          "pieges": [
+            {
+              "texte": "When",
+              "pourquoi": "« When » demande un moment. « next to the park » est un lieu : « Where »."
+            },
+            {
+              "texte": "What",
+              "pourquoi": "« What » demande une chose. Pour un lieu : « Where »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … is your birthday? » « In May. »",
+          "nom": "When",
+          "explication": "La réponse est un moment : « When is your birthday? »",
+          "pieges": [
+            {
+              "texte": "Where",
+              "pourquoi": "« Where » demande un lieu. « In May » est un moment : « When »."
+            },
+            {
+              "texte": "How",
+              "pourquoi": "« How » demande comment. Pour un moment : « When »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … is that girl? » « She's my sister. »",
+          "nom": "Who",
+          "explication": "On demande qui est cette personne : « Who is that girl? »",
+          "pieges": [
+            {
+              "texte": "What",
+              "pourquoi": "« What » demande une chose. Pour une personne : « Who »."
+            },
+            {
+              "texte": "Where",
+              "pourquoi": "« Where » demande un lieu. La réponse dit qui elle est : « Who »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … are you sad? » « Because my cat is ill. »",
+          "nom": "Why",
+          "explication": "La réponse donne une raison, avec « Because » : « Why are you sad? »",
+          "pieges": [
+            {
+              "texte": "How",
+              "pourquoi": "« How » demande comment. Une réponse avec « Because » répond à « Why »."
+            },
+            {
+              "texte": "When",
+              "pourquoi": "« When » demande un moment. La réponse donne une raison : « Why »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … are you? » « I'm fine, thank you. »",
+          "nom": "How",
+          "explication": "On demande comment ça va : « How are you? »",
+          "pieges": [
+            {
+              "texte": "Who",
+              "pourquoi": "« Who are you? » demande qui tu es : on répondrait par un nom. « I'm fine » répond à « How »."
+            },
+            {
+              "texte": "Where",
+              "pourquoi": "« Where are you? » demande où tu es. « I'm fine » répond à « How »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … old are you? » « I'm eleven. »",
+          "nom": "How",
+          "explication": "L'âge se demande avec « How old » : « How old are you? »",
+          "pieges": [
+            {
+              "texte": "What",
+              "pourquoi": "On ne dit pas « What old ». L'âge se demande avec « How old »."
+            },
+            {
+              "texte": "When",
+              "pourquoi": "« When » demande un moment. L'âge : « How old are you? »"
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on « Where do you live? » et pas « Where you live? » ?",
+          "nom": "Avec un verbe comme « live », on ajoute « do » après le mot interrogatif.",
+          "explication": "Mot interrogatif, puis « do », puis le sujet, puis le verbe : « Where do you live? »",
+          "pieges": [
+            {
+              "texte": "Parce que « where » est toujours suivi de « do ».",
+              "pourquoi": "Non : avec « be », pas de « do » : « Where is the station? »"
+            },
+            {
+              "texte": "Parce que « live » est au passé.",
+              "pourquoi": "Non : « live » est au présent. Au passé, ce serait « Where did you live? »"
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Asking questions: who, what, where, when, why, how",
+        "idee": "A question can start with a question word: who for a person, what for a thing, where for a place, when for a time, why for a reason, how for the way.",
+        "phrases": {
+          "consigne": "Read the question and its answer, then touch the right word.",
+          "question": "{texte}",
+          "indice": "Look at the answer. A person: who. A thing: what. A place: where. A time: when. A reason: why. A way: how.",
+          "exemple": "“… do you live?” “In London.” The answer is a place: “Where do you live?”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “… is your name?” “My name is Amy.”",
+            "nom": "What",
+            "explication": "We ask for the name: “What is your name?”",
+            "pieges": [
+              {
+                "texte": "Who",
+                "pourquoi": "Who asks about a person: “Who is she?” For the name: “What is your name?”"
+              },
+              {
+                "texte": "Where",
+                "pourquoi": "Where asks about a place. For the name: “What is your name?”"
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… is the station?” “It's next to the park.”",
+            "nom": "Where",
+            "explication": "The answer is a place: “Where is the station?”",
+            "pieges": [
+              {
+                "texte": "When",
+                "pourquoi": "When asks about a time. Next to the park is a place: Where."
+              },
+              {
+                "texte": "What",
+                "pourquoi": "What asks about a thing. For a place: Where."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… is your birthday?” “In May.”",
+            "nom": "When",
+            "explication": "The answer is a time: “When is your birthday?”",
+            "pieges": [
+              {
+                "texte": "Where",
+                "pourquoi": "Where asks about a place. In May is a time: When."
+              },
+              {
+                "texte": "How",
+                "pourquoi": "How asks about the way. For a time: When."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… is that girl?” “She's my sister.”",
+            "nom": "Who",
+            "explication": "We ask who this person is: “Who is that girl?”",
+            "pieges": [
+              {
+                "texte": "What",
+                "pourquoi": "What asks about a thing. For a person: Who."
+              },
+              {
+                "texte": "Where",
+                "pourquoi": "Where asks about a place. The answer says who she is: Who."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… are you sad?” “Because my cat is ill.”",
+            "nom": "Why",
+            "explication": "The answer gives a reason, with Because: “Why are you sad?”",
+            "pieges": [
+              {
+                "texte": "How",
+                "pourquoi": "How asks about the way. An answer with Because answers Why."
+              },
+              {
+                "texte": "When",
+                "pourquoi": "When asks about a time. The answer gives a reason: Why."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… are you?” “I'm fine, thank you.”",
+            "nom": "How",
+            "explication": "We ask how someone is: “How are you?”",
+            "pieges": [
+              {
+                "texte": "Who",
+                "pourquoi": "“Who are you?” asks who you are: the answer would be a name. “I'm fine” answers How."
+              },
+              {
+                "texte": "Where",
+                "pourquoi": "“Where are you?” asks where you are. “I'm fine” answers How."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… old are you?” “I'm eleven.”",
+            "nom": "How",
+            "explication": "We ask someone's age with How old: “How old are you?”",
+            "pieges": [
+              {
+                "texte": "What",
+                "pourquoi": "We don't say What old. We ask someone's age with How old."
+              },
+              {
+                "texte": "When",
+                "pourquoi": "When asks about a time. For age: “How old are you?”"
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say “Where do you live?” and not “Where you live?”",
+            "nom": "With a verb like live, we add do after the question word.",
+            "explication": "Question word, then do, then the subject, then the verb: “Where do you live?”",
+            "pieges": [
+              {
+                "texte": "Because where is always followed by do.",
+                "pourquoi": "No: with be, there is no do: “Where is the station?”"
+              },
+              {
+                "texte": "Because live is in the past.",
+                "pourquoi": "No: live is in the present. In the past, it would be “Where did you live?”"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "telling-time",
       "titre": "Dire l'heure en anglais",
       "niveau": "6e",
@@ -9410,6 +9691,287 @@
       }
     },
     {
+      "id": "quantifiers",
+      "titre": "Combien ? much, many, some, any",
+      "niveau": "5e",
+      "prerequis": [
+        "there-is-are"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "5e (A2, en bleu) : les quantifieurs : much, many, some."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "« many » va avec ce qui se compte : « many books ». « much » avec ce qui ne se compte pas : « much water ». « some » dans une phrase affirmative, « any » dans une phrase négative.",
+      "phrases": {
+        "consigne": "Lis la phrase anglaise, puis touche le bon mot.",
+        "question": "{texte}",
+        "indice": "Ça se compte, comme « books » ou « apples » ? « many ». Ça ne se compte pas, comme « water » ou « money » ? « much ». Phrase affirmative : « some ». Phrase négative : « any ».",
+        "exemple": "« How … people came? » On compte des personnes : « How many people came? »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « How … brothers have you got? »",
+          "nom": "many",
+          "explication": "Les frères se comptent : « How many brothers have you got? »",
+          "pieges": [
+            {
+              "texte": "much",
+              "pourquoi": "« brothers » se compte : « How many »."
+            },
+            {
+              "texte": "some",
+              "pourquoi": "Après « How », on met « many » ou « much » : « How many brothers »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … money have you got? »",
+          "nom": "much",
+          "explication": "L'argent ne se compte pas en anglais : « How much money have you got? »",
+          "pieges": [
+            {
+              "texte": "many",
+              "pourquoi": "« money » ne se compte pas : « How much »."
+            },
+            {
+              "texte": "any",
+              "pourquoi": "Après « How », on met « much » ou « many » : « How much money »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « I've got … friends in my new school. » (quelques amis)",
+          "nom": "some",
+          "explication": "Phrase affirmative, quelques amis : « I've got some friends in my new school. »",
+          "pieges": [
+            {
+              "texte": "any",
+              "pourquoi": "« any » va surtout dans une phrase négative ou une question. Ici, la phrase est affirmative : « some »."
+            },
+            {
+              "texte": "much",
+              "pourquoi": "« friends » se compte : jamais « much ». Et quelques amis, c'est « some »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « We haven't got … bread. » (pas de pain)",
+          "nom": "any",
+          "explication": "Phrase négative : « We haven't got any bread. »",
+          "pieges": [
+            {
+              "texte": "some",
+              "pourquoi": "Dans une phrase négative, on ne dit pas « haven't got some » : « haven't got any »."
+            },
+            {
+              "texte": "many",
+              "pourquoi": "« bread » ne se compte pas : jamais « many ». Et pas de pain, c'est « not any »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « There aren't … cars in my village. » (pas beaucoup)",
+          "nom": "many",
+          "explication": "Les voitures se comptent ; pas beaucoup : « There aren't many cars in my village. »",
+          "pieges": [
+            {
+              "texte": "much",
+              "pourquoi": "« cars » se compte : « many »."
+            },
+            {
+              "texte": "any",
+              "pourquoi": "« not any » voudrait dire aucune voiture. Pas beaucoup : « not many »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « I don't drink … coffee. » (pas beaucoup)",
+          "nom": "much",
+          "explication": "Le café ne se compte pas ici ; pas beaucoup : « I don't drink much coffee. »",
+          "pieges": [
+            {
+              "texte": "many",
+              "pourquoi": "« coffee » ne se compte pas ici : « much »."
+            },
+            {
+              "texte": "some",
+              "pourquoi": "La phrase est négative et dit pas beaucoup : « much »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « There is … cheese on the table. » (un peu de fromage)",
+          "nom": "some",
+          "explication": "Phrase affirmative : « There is some cheese on the table. »",
+          "pieges": [
+            {
+              "texte": "any",
+              "pourquoi": "Dans une phrase affirmative, on ne dit pas « There is any cheese » : « some »."
+            },
+            {
+              "texte": "many",
+              "pourquoi": "« cheese » ne se compte pas ici : jamais « many »."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on « many apples » mais « much water » ?",
+          "nom": "Les pommes se comptent ; l'eau ne se compte pas.",
+          "explication": "« many » va avec un pluriel qui se compte, « much » avec ce qui ne se compte pas.",
+          "pieges": [
+            {
+              "texte": "Parce que « water » est un mot court.",
+              "pourquoi": "Non : la longueur du mot ne change rien. L'eau ne se compte pas : « much »."
+            },
+            {
+              "texte": "Parce que « many » veut dire peu.",
+              "pourquoi": "Non : « many » et « much » veulent tous deux dire beaucoup. La différence : se compter ou non."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "How much? How many? much, many, some, any",
+        "idee": "Many goes with things we can count: many books. Much goes with things we can't count: much water. Some in a positive sentence, any in a negative sentence.",
+        "phrases": {
+          "consigne": "Read the sentence, then touch the right word.",
+          "question": "{texte}",
+          "indice": "Can you count it, like books or apples? many. Can't you count it, like water or money? much. Positive sentence: some. Negative sentence: any.",
+          "exemple": "“How … people came?” We count people: “How many people came?”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “How … brothers have you got?”",
+            "nom": "many",
+            "explication": "We can count brothers: “How many brothers have you got?”",
+            "pieges": [
+              {
+                "texte": "much",
+                "pourquoi": "Brothers can be counted: How many."
+              },
+              {
+                "texte": "some",
+                "pourquoi": "After How, we use many or much: How many brothers."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … money have you got?”",
+            "nom": "much",
+            "explication": "In English, money is uncountable: “How much money have you got?”",
+            "pieges": [
+              {
+                "texte": "many",
+                "pourquoi": "Money is uncountable: How much."
+              },
+              {
+                "texte": "any",
+                "pourquoi": "After How, we use much or many: How much money."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “I've got … friends in my new school.” (a few friends)",
+            "nom": "some",
+            "explication": "A positive sentence, a few friends: “I've got some friends in my new school.”",
+            "pieges": [
+              {
+                "texte": "any",
+                "pourquoi": "Any is mostly for negative sentences and questions. This sentence is positive: some."
+              },
+              {
+                "texte": "much",
+                "pourquoi": "Friends can be counted: never much. And a few friends is some."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We haven't got … bread.” (no bread)",
+            "nom": "any",
+            "explication": "A negative sentence: “We haven't got any bread.”",
+            "pieges": [
+              {
+                "texte": "some",
+                "pourquoi": "In a negative sentence, we don't say haven't got some: haven't got any."
+              },
+              {
+                "texte": "many",
+                "pourquoi": "Bread is uncountable: never many. And no bread is not any."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “There aren't … cars in my village.” (not a lot)",
+            "nom": "many",
+            "explication": "Cars can be counted; not a lot: “There aren't many cars in my village.”",
+            "pieges": [
+              {
+                "texte": "much",
+                "pourquoi": "Cars can be counted: many."
+              },
+              {
+                "texte": "any",
+                "pourquoi": "Not any would mean no cars at all. Not a lot: not many."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “I don't drink … coffee.” (not a lot)",
+            "nom": "much",
+            "explication": "Coffee is uncountable here; not a lot: “I don't drink much coffee.”",
+            "pieges": [
+              {
+                "texte": "many",
+                "pourquoi": "Coffee is uncountable here: much."
+              },
+              {
+                "texte": "some",
+                "pourquoi": "The sentence is negative and means not a lot: much."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “There is … cheese on the table.” (a little cheese)",
+            "nom": "some",
+            "explication": "A positive sentence: “There is some cheese on the table.”",
+            "pieges": [
+              {
+                "texte": "any",
+                "pourquoi": "In a positive sentence, we don't say There is any cheese: some."
+              },
+              {
+                "texte": "many",
+                "pourquoi": "Cheese is uncountable here: never many."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say “many apples” but “much water”?",
+            "nom": "Apples can be counted; water can't.",
+            "explication": "Many goes with a plural we can count, much with things we can't count.",
+            "pieges": [
+              {
+                "texte": "Because water is a short word.",
+                "pourquoi": "No: the length of the word changes nothing. Water is uncountable: much."
+              },
+              {
+                "texte": "Because many means a little.",
+                "pourquoi": "No: many and much both mean a lot. The difference: countable or not."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "past-simple-regular",
       "titre": "Le prétérit : I played, I was",
       "niveau": "5e",
@@ -10062,6 +10624,288 @@
       }
     },
     {
+      "id": "past-continuous",
+      "titre": "Le prétérit en be + -ing : I was reading",
+      "niveau": "4e",
+      "prerequis": [
+        "past-simple-irregular",
+        "present-continuous"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "4e (A2+, en bleu) : l’expression du passé : le prétérit simple et le prétérit en be+-ing."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "Une action en cours à un moment du passé : « was » ou « were », puis le verbe en -ing. « I was reading when the phone rang. » L'action brève qui la coupe reste au prétérit simple.",
+      "phrases": {
+        "consigne": "Lis la phrase anglaise, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Action en cours dans le passé : « was » avec I, he, she, it ; « were » avec you, we, they ; puis -ing. Action brève qui coupe : prétérit simple.",
+        "exemple": "« At eight last night, I … TV. » (verbe « watch ») L'action était en cours : « I was watching TV. »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « At six o'clock yesterday, she … her homework. » (verbe « do »)",
+          "nom": "was doing",
+          "explication": "Action en cours à six heures, avec « she » : « She was doing her homework. »",
+          "pieges": [
+            {
+              "texte": "were doing",
+              "pourquoi": "« were » va avec you, we, they. Avec « she » : « was doing »."
+            },
+            {
+              "texte": "is doing",
+              "pourquoi": "« is doing » est le présent. « yesterday » demande le passé : « was doing »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « We … football when it started to rain. » (verbe « play »)",
+          "nom": "were playing",
+          "explication": "Le match était en cours quand la pluie a commencé : « We were playing football when it started to rain. »",
+          "pieges": [
+            {
+              "texte": "was playing",
+              "pourquoi": "« was » va avec I, he, she, it. Avec « we » : « were playing »."
+            },
+            {
+              "texte": "played",
+              "pourquoi": "Le jeu était déjà en cours quand la pluie a commencé : « were playing »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « I was reading when the phone … » (verbe « ring »)",
+          "nom": "rang",
+          "explication": "La sonnerie est l'action brève qui coupe la lecture : prétérit simple, « the phone rang ».",
+          "pieges": [
+            {
+              "texte": "was ringing",
+              "pourquoi": "La sonnerie est l'action brève qui coupe la lecture : prétérit simple, « rang »."
+            },
+            {
+              "texte": "ringed",
+              "pourquoi": "« ring » est irrégulier : son prétérit est « rang »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « What … you doing at nine o'clock last night? »",
+          "nom": "were",
+          "explication": "Question au prétérit en -ing, avec « you » : « What were you doing? »",
+          "pieges": [
+            {
+              "texte": "did",
+              "pourquoi": "Avec le verbe en -ing, « doing », l'auxiliaire est « were » : « What were you doing? »"
+            },
+            {
+              "texte": "was",
+              "pourquoi": "« was » va avec I, he, she, it. Avec « you » : « were »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « They … sleeping when the alarm went off. » (ils ne dormaient pas)",
+          "nom": "weren't",
+          "explication": "Négation avec « they » : « They weren't sleeping when the alarm went off. »",
+          "pieges": [
+            {
+              "texte": "wasn't",
+              "pourquoi": "« wasn't » va avec I, he, she, it. Avec « they » : « weren't »."
+            },
+            {
+              "texte": "didn't",
+              "pourquoi": "Avec le verbe en -ing, « sleeping », la négation se fait avec « weren't »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « Tom was walking home when he … a fox. » (verbe « see »)",
+          "nom": "saw",
+          "explication": "Voir le renard est l'événement bref qui arrive pendant la marche : « he saw a fox ».",
+          "pieges": [
+            {
+              "texte": "was seeing",
+              "pourquoi": "Voir le renard est l'événement bref, pas l'action de fond : « saw »."
+            },
+            {
+              "texte": "sees",
+              "pourquoi": "« sees » est le présent. Le récit est au passé : « saw »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « While I … a bath, the lights went out. » (verbe « have »)",
+          "nom": "was having",
+          "explication": "Le bain était en cours quand la lumière s'est éteinte : « While I was having a bath ».",
+          "pieges": [
+            {
+              "texte": "had",
+              "pourquoi": "Le bain était en cours quand la lumière s'est éteinte : « was having »."
+            },
+            {
+              "texte": "were having",
+              "pourquoi": "« were » va avec you, we, they. Avec « I » : « was having »."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi « was reading » dans « I was reading when the phone rang » ?",
+          "nom": "La lecture était en cours quand le téléphone a sonné.",
+          "explication": "« was » et -ing montrent une action en cours dans le passé ; « rang » est l'action brève qui la coupe.",
+          "pieges": [
+            {
+              "texte": "Parce que la lecture a commencé après la sonnerie.",
+              "pourquoi": "Non : on lisait déjà quand le téléphone a sonné."
+            },
+            {
+              "texte": "Parce que « read » n'a pas de prétérit.",
+              "pourquoi": "Non : le prétérit de « read » existe, il s'écrit « read ». Ici, on montre une action en cours."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The past continuous: I was reading",
+        "idee": "An action in progress at a moment in the past: was or were, then the verb + -ing. “I was reading when the phone rang.” The short action that interrupts it stays in the past simple.",
+        "phrases": {
+          "consigne": "Read the sentence, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "An action in progress in the past: was with I, he, she, it; were with you, we, they; then -ing. A short action that interrupts: past simple.",
+          "exemple": "“At eight last night, I … TV.” (watch) The action was in progress: “I was watching TV.”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “At six o'clock yesterday, she … her homework.” (do)",
+            "nom": "was doing",
+            "explication": "An action in progress at six, with she: “She was doing her homework.”",
+            "pieges": [
+              {
+                "texte": "were doing",
+                "pourquoi": "Were goes with you, we and they. With she: was doing."
+              },
+              {
+                "texte": "is doing",
+                "pourquoi": "“is doing” is the present. Yesterday needs the past: was doing."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We … football when it started to rain.” (play)",
+            "nom": "were playing",
+            "explication": "The game was in progress when the rain started: “We were playing football when it started to rain.”",
+            "pieges": [
+              {
+                "texte": "was playing",
+                "pourquoi": "Was goes with I, he, she and it. With we: were playing."
+              },
+              {
+                "texte": "played",
+                "pourquoi": "The game was already in progress when the rain started: were playing."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “I was reading when the phone …” (ring)",
+            "nom": "rang",
+            "explication": "The ring is the short action that interrupts the reading: past simple, “the phone rang”.",
+            "pieges": [
+              {
+                "texte": "was ringing",
+                "pourquoi": "The ring is the short action that interrupts the reading: past simple, rang."
+              },
+              {
+                "texte": "ringed",
+                "pourquoi": "Ring is irregular: its past simple is rang."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “What … you doing at nine o'clock last night?”",
+            "nom": "were",
+            "explication": "A question in the past continuous, with you: “What were you doing?”",
+            "pieges": [
+              {
+                "texte": "did",
+                "pourquoi": "With the -ing verb, doing, the auxiliary is were: “What were you doing?”"
+              },
+              {
+                "texte": "was",
+                "pourquoi": "Was goes with I, he, she and it. With you: were."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “They … sleeping when the alarm went off.” (they weren't asleep)",
+            "nom": "weren't",
+            "explication": "The negative with they: “They weren't sleeping when the alarm went off.”",
+            "pieges": [
+              {
+                "texte": "wasn't",
+                "pourquoi": "Wasn't goes with I, he, she and it. With they: weren't."
+              },
+              {
+                "texte": "didn't",
+                "pourquoi": "With the -ing verb, sleeping, the negative uses weren't."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “Tom was walking home when he … a fox.” (see)",
+            "nom": "saw",
+            "explication": "Seeing the fox is the short event that happens during the walk: “he saw a fox”.",
+            "pieges": [
+              {
+                "texte": "was seeing",
+                "pourquoi": "Seeing the fox is the short event, not the background action: saw."
+              },
+              {
+                "texte": "sees",
+                "pourquoi": "“sees” is the present. The story is in the past: saw."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “While I … a bath, the lights went out.” (have)",
+            "nom": "was having",
+            "explication": "The bath was in progress when the lights went out: “While I was having a bath”.",
+            "pieges": [
+              {
+                "texte": "had",
+                "pourquoi": "The bath was in progress when the lights went out: was having."
+              },
+              {
+                "texte": "were having",
+                "pourquoi": "Were goes with you, we and they. With I: was having."
+              }
+            ]
+          },
+          {
+            "texte": "Why “was reading” in “I was reading when the phone rang”?",
+            "nom": "The reading was in progress when the phone rang.",
+            "explication": "Was + -ing shows an action in progress in the past; rang is the short action that interrupts it.",
+            "pieges": [
+              {
+                "texte": "Because the reading started after the ring.",
+                "pourquoi": "No: we were already reading when the phone rang."
+              },
+              {
+                "texte": "Because read has no past simple.",
+                "pourquoi": "No: the past simple of read exists, it is spelt read. Here, we show an action in progress."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "comparatives",
       "titre": "Comparer : taller, more famous, the best",
       "niveau": "4e",
@@ -10366,6 +11210,287 @@
               {
                 "texte": "Because more goes with words about appearance.",
                 "pourquoi": "No: we say more interesting, more expensive: it's the length of the word that matters."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reflexive-pronouns",
+      "titre": "Soi-même et l'un l'autre : myself, themselves, each other",
+      "niveau": "4e",
+      "prerequis": [
+        "possessives"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "4e (A2+, en bleu) : les verbes réfléchis et réciproques : She introduced herself. They enjoyed seeing each other ; les pronoms personnels réfléchis (myself, himself, ourselves, themselves, etc.)."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "Quand le sujet fait l'action sur lui-même : « myself », « yourself », « himself », « herself », « itself », « ourselves », « themselves ». Quand chacun la fait à l'autre : « each other ».",
+      "phrases": {
+        "consigne": "Lis la phrase anglaise, puis touche le bon mot.",
+        "question": "{texte}",
+        "indice": "Une seule personne : -self, comme « myself ». Plusieurs : -selves, comme « ourselves ». L'un à l'autre : « each other ».",
+        "exemple": "« She introduced … to the class. » Elle se présente elle-même : « She introduced herself. »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « I hurt … when I fell off my bike. »",
+          "nom": "myself",
+          "explication": "Le sujet « I » se fait mal à lui-même : « I hurt myself. »",
+          "pieges": [
+            {
+              "texte": "me",
+              "pourquoi": "Quand le sujet et le complément sont la même personne, on prend « myself »."
+            },
+            {
+              "texte": "yourself",
+              "pourquoi": "« yourself » va avec « you ». Avec « I » : « myself »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « Tom cut … with a knife. »",
+          "nom": "himself",
+          "explication": "Tom se coupe lui-même : « Tom cut himself. »",
+          "pieges": [
+            {
+              "texte": "herself",
+              "pourquoi": "« herself » va avec une fille ou une femme. Pour Tom : « himself »."
+            },
+            {
+              "texte": "hisself",
+              "pourquoi": "« hisself » n'existe pas. On écrit « himself »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « We made the cake by … » (tout seuls, sans aide)",
+          "nom": "ourselves",
+          "explication": "« by » et le pronom en -selves veut dire tout seuls : « We made the cake by ourselves. »",
+          "pieges": [
+            {
+              "texte": "ourself",
+              "pourquoi": "Avec « we », plusieurs personnes : -selves, « ourselves »."
+            },
+            {
+              "texte": "us",
+              "pourquoi": "Pour dire sans aide, on prend « by ourselves »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « The players blamed … for the defeat. »",
+          "nom": "themselves",
+          "explication": "Les joueurs se reprochent la défaite à eux-mêmes : « The players blamed themselves. »",
+          "pieges": [
+            {
+              "texte": "theirselves",
+              "pourquoi": "« theirselves » n'existe pas. On écrit « themselves »."
+            },
+            {
+              "texte": "himself",
+              "pourquoi": "« the players » est un pluriel : « themselves »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « Emma and Lucy are best friends. They phone … every day. »",
+          "nom": "each other",
+          "explication": "Emma appelle Lucy et Lucy appelle Emma : « They phone each other. »",
+          "pieges": [
+            {
+              "texte": "themselves",
+              "pourquoi": "Avec « themselves », chacune s'appellerait elle-même ! L'une l'autre : « each other »."
+            },
+            {
+              "texte": "them",
+              "pourquoi": "« them » désignerait d'autres personnes. L'une l'autre : « each other »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « We've known … for ten years. » (l'un l'autre)",
+          "nom": "each other",
+          "explication": "Chacun connaît l'autre : « We've known each other for ten years. »",
+          "pieges": [
+            {
+              "texte": "ourselves",
+              "pourquoi": "On ne dit pas « We've known ourselves » : l'un l'autre, c'est « each other »."
+            },
+            {
+              "texte": "us",
+              "pourquoi": "On ne dit pas « We've known us » : l'un l'autre, c'est « each other »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « Mia looked at … in the mirror. » (elle se regarde)",
+          "nom": "herself",
+          "explication": "Mia se regarde elle-même : « Mia looked at herself in the mirror. »",
+          "pieges": [
+            {
+              "texte": "her",
+              "pourquoi": "Avec « her », Mia regarderait une autre fille. Elle se regarde : « herself »."
+            },
+            {
+              "texte": "itself",
+              "pourquoi": "« itself » va avec une chose ou un animal. Pour Mia : « herself »."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on « She washed and dressed », sans « herself » ?",
+          "nom": "Pour les gestes de tous les jours, on n'ajoute pas le pronom en -self, sauf pour insister.",
+          "explication": "En anglais, « wash » et « dress » s'emploient sans pronom : « She washed and dressed. »",
+          "pieges": [
+            {
+              "texte": "Parce que « herself » n'existe pas.",
+              "pourquoi": "Non : « herself » existe : « Mia looked at herself »."
+            },
+            {
+              "texte": "Parce que la phrase est fausse.",
+              "pourquoi": "Non : la phrase est juste. On ajoute « herself » seulement pour insister."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Myself, themselves, each other",
+        "idee": "When the subject does the action to itself: myself, yourself, himself, herself, itself, ourselves, themselves. When each person does it to the other: each other.",
+        "phrases": {
+          "consigne": "Read the sentence, then touch the right word.",
+          "question": "{texte}",
+          "indice": "One person: -self, like myself. More than one: -selves, like ourselves. To each other: each other.",
+          "exemple": "“She introduced … to the class.” She introduces herself: “She introduced herself.”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “I hurt … when I fell off my bike.”",
+            "nom": "myself",
+            "explication": "The subject and the object are the same person: “I hurt myself.”",
+            "pieges": [
+              {
+                "texte": "me",
+                "pourquoi": "When the subject and the object are the same person, we use myself."
+              },
+              {
+                "texte": "yourself",
+                "pourquoi": "Yourself goes with you. With I: myself."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “Tom cut … with a knife.”",
+            "nom": "himself",
+            "explication": "Tom cuts himself: “Tom cut himself.”",
+            "pieges": [
+              {
+                "texte": "herself",
+                "pourquoi": "Herself goes with a girl or a woman. For Tom: himself."
+              },
+              {
+                "texte": "hisself",
+                "pourquoi": "Hisself doesn't exist. We write himself."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We made the cake by …” (alone, without help)",
+            "nom": "ourselves",
+            "explication": "By + a -selves pronoun means alone: “We made the cake by ourselves.”",
+            "pieges": [
+              {
+                "texte": "ourself",
+                "pourquoi": "With we, more than one person: -selves, ourselves."
+              },
+              {
+                "texte": "us",
+                "pourquoi": "To say without help, we use by ourselves."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “The players blamed … for the defeat.”",
+            "nom": "themselves",
+            "explication": "The players blame themselves: “The players blamed themselves.”",
+            "pieges": [
+              {
+                "texte": "theirselves",
+                "pourquoi": "Theirselves doesn't exist. We write themselves."
+              },
+              {
+                "texte": "himself",
+                "pourquoi": "The players is plural: themselves."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “Emma and Lucy are best friends. They phone … every day.”",
+            "nom": "each other",
+            "explication": "Emma phones Lucy and Lucy phones Emma: “They phone each other.”",
+            "pieges": [
+              {
+                "texte": "themselves",
+                "pourquoi": "With themselves, each girl would phone herself! To each other: each other."
+              },
+              {
+                "texte": "them",
+                "pourquoi": "Them would mean other people. To each other: each other."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We've known … for ten years.” (one another)",
+            "nom": "each other",
+            "explication": "Each one knows the other: “We've known each other for ten years.”",
+            "pieges": [
+              {
+                "texte": "ourselves",
+                "pourquoi": "We don't say We've known ourselves: each other."
+              },
+              {
+                "texte": "us",
+                "pourquoi": "We don't say We've known us: each other."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “Mia looked at … in the mirror.” (she looks at herself)",
+            "nom": "herself",
+            "explication": "Mia looks at herself: “Mia looked at herself in the mirror.”",
+            "pieges": [
+              {
+                "texte": "her",
+                "pourquoi": "With her, Mia would be looking at another girl. She looks at herself: herself."
+              },
+              {
+                "texte": "itself",
+                "pourquoi": "Itself goes with a thing or an animal. For Mia: herself."
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say “She washed and dressed”, without herself?",
+            "nom": "For everyday actions, we don't add the -self pronoun, unless we want to insist.",
+            "explication": "In English, wash and dress are used without a pronoun: “She washed and dressed.”",
+            "pieges": [
+              {
+                "texte": "Because herself doesn't exist.",
+                "pourquoi": "No: herself exists: “Mia looked at herself.”"
+              },
+              {
+                "texte": "Because the sentence is wrong.",
+                "pourquoi": "No: the sentence is right. We add herself only to insist."
               }
             ]
           }
@@ -11025,6 +12150,288 @@
       }
     },
     {
+      "id": "how-questions",
+      "titre": "Des questions précises : how often, how long, how far…",
+      "niveau": "3e",
+      "prerequis": [
+        "question-words",
+        "quantifiers"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "3e (B1, en bleu) : les éléments interrogatifs portant sur la fréquence (How often? / How many times?), le degré (How much? / How well?) et les mesures (How tall? / How long? / How wide?)."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "« How » suivi d'un mot pose une question précise : « How often » pour la fréquence, « How long » pour la durée, « How far » pour la distance, « How tall » pour la taille, « How much » pour le prix.",
+      "phrases": {
+        "consigne": "Lis la question anglaise et sa réponse, puis touche le bon mot.",
+        "question": "{texte}",
+        "indice": "Combien de fois ? « How often ». Combien de temps ? « How long ». À quelle distance ? « How far ». Quelle taille ? « How tall ». Quel prix ? « How much ».",
+        "exemple": "« How … people came? » « Thirty. » On compte des personnes : « How many people came? »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « How … is it from your house to the school? » « About two kilometres. »",
+          "nom": "far",
+          "explication": "La réponse est une distance : « How far is it from your house to the school? »",
+          "pieges": [
+            {
+              "texte": "often",
+              "pourquoi": "« How often » demande combien de fois. Pour une distance : « How far »."
+            },
+            {
+              "texte": "much",
+              "pourquoi": "« How much » demande un prix ou une quantité. Pour une distance : « How far »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … is your brother? » « He's 1.80 metres. »",
+          "nom": "tall",
+          "explication": "On demande la taille d'une personne : « How tall is your brother? »",
+          "pieges": [
+            {
+              "texte": "old",
+              "pourquoi": "« How old » demande l'âge. 1,80 mètre est une taille : « How tall »."
+            },
+            {
+              "texte": "far",
+              "pourquoi": "« How far » demande une distance. Pour la taille d'une personne : « How tall »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … does the film last? » « Two hours. »",
+          "nom": "long",
+          "explication": "La réponse est une durée : « How long does the film last? »",
+          "pieges": [
+            {
+              "texte": "far",
+              "pourquoi": "« How far » demande une distance. Pour une durée : « How long »."
+            },
+            {
+              "texte": "often",
+              "pourquoi": "« How often » demande combien de fois. Pour une durée : « How long »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … does this T-shirt cost? » « Ten pounds. »",
+          "nom": "much",
+          "explication": "On demande un prix : « How much does this T-shirt cost? »",
+          "pieges": [
+            {
+              "texte": "many",
+              "pourquoi": "« How many » compte des choses. Pour un prix : « How much »."
+            },
+            {
+              "texte": "long",
+              "pourquoi": "« How long » demande une durée. Pour un prix : « How much »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … do you visit your grandparents? » « Every Sunday. »",
+          "nom": "often",
+          "explication": "La réponse dit combien de fois : « How often do you visit your grandparents? »",
+          "pieges": [
+            {
+              "texte": "long",
+              "pourquoi": "« How long » demande une durée. « Every Sunday » dit combien de fois : « How often »."
+            },
+            {
+              "texte": "much",
+              "pourquoi": "« How much » demande un prix ou une quantité. Pour la fréquence : « How often »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … times have you been to London? » « Three times. »",
+          "nom": "many",
+          "explication": "On compte les fois : « How many times have you been to London? »",
+          "pieges": [
+            {
+              "texte": "much",
+              "pourquoi": "« times » se compte ici : « How many times »."
+            },
+            {
+              "texte": "often",
+              "pourquoi": "On dit « How often » tout seul, ou « How many times » : jamais « How often times »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « How … do you speak English? » « Quite well. »",
+          "nom": "well",
+          "explication": "On demande le niveau, la manière : « How well do you speak English? »",
+          "pieges": [
+            {
+              "texte": "good",
+              "pourquoi": "« good » est un adjectif. Pour la manière de parler, l'adverbe : « How well »."
+            },
+            {
+              "texte": "long",
+              "pourquoi": "« How long » demande une durée. « Quite well » répond à « How well »."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi « How often do you play tennis? » et pas « How long » ?",
+          "nom": "On demande combien de fois, pas combien de temps.",
+          "explication": "« How often » demande une fréquence, comme « twice a week » ; « How long » demande une durée, comme « one hour ».",
+          "pieges": [
+            {
+              "texte": "Parce que « How long » ne sert que pour les objets.",
+              "pourquoi": "Non : « How long » demande aussi une durée : « How long does the film last? »"
+            },
+            {
+              "texte": "Parce que « often » veut dire longtemps.",
+              "pourquoi": "Non : « often » veut dire souvent."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Precise questions: how often, how long, how far…",
+        "idee": "How followed by a word asks a precise question: How often for frequency, How long for time, How far for distance, How tall for height, How much for price.",
+        "phrases": {
+          "consigne": "Read the question and its answer, then touch the right word.",
+          "question": "{texte}",
+          "indice": "How many times? How often. How much time? How long. What distance? How far. What height? How tall. What price? How much.",
+          "exemple": "“How … people came?” “Thirty.” We count people: “How many people came?”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “How … is it from your house to the school?” “About two kilometres.”",
+            "nom": "far",
+            "explication": "The answer is a distance: “How far is it from your house to the school?”",
+            "pieges": [
+              {
+                "texte": "often",
+                "pourquoi": "How often asks how many times. For a distance: How far."
+              },
+              {
+                "texte": "much",
+                "pourquoi": "How much asks about a price or an amount. For a distance: How far."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … is your brother?” “He's 1.80 metres.”",
+            "nom": "tall",
+            "explication": "We ask how tall a person is: “How tall is your brother?”",
+            "pieges": [
+              {
+                "texte": "old",
+                "pourquoi": "How old asks about age. 1.80 metres is a height: How tall."
+              },
+              {
+                "texte": "far",
+                "pourquoi": "How far asks about a distance. For a person's height: How tall."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … does the film last?” “Two hours.”",
+            "nom": "long",
+            "explication": "The answer is a length of time: “How long does the film last?”",
+            "pieges": [
+              {
+                "texte": "far",
+                "pourquoi": "How far asks about a distance. For time: How long."
+              },
+              {
+                "texte": "often",
+                "pourquoi": "How often asks how many times. For time: How long."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … does this T-shirt cost?” “Ten pounds.”",
+            "nom": "much",
+            "explication": "We ask about a price: “How much does this T-shirt cost?”",
+            "pieges": [
+              {
+                "texte": "many",
+                "pourquoi": "How many counts things. For a price: How much."
+              },
+              {
+                "texte": "long",
+                "pourquoi": "How long asks about time. For a price: How much."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … do you visit your grandparents?” “Every Sunday.”",
+            "nom": "often",
+            "explication": "The answer says how many times: “How often do you visit your grandparents?”",
+            "pieges": [
+              {
+                "texte": "long",
+                "pourquoi": "How long asks about time. Every Sunday says how many times: How often."
+              },
+              {
+                "texte": "much",
+                "pourquoi": "How much asks about a price or an amount. For frequency: How often."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … times have you been to London?” “Three times.”",
+            "nom": "many",
+            "explication": "We count the times: “How many times have you been to London?”",
+            "pieges": [
+              {
+                "texte": "much",
+                "pourquoi": "Times can be counted here: How many times."
+              },
+              {
+                "texte": "often",
+                "pourquoi": "We say How often on its own, or How many times: never How often times."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “How … do you speak English?” “Quite well.”",
+            "nom": "well",
+            "explication": "We ask about the level, the way: “How well do you speak English?”",
+            "pieges": [
+              {
+                "texte": "good",
+                "pourquoi": "Good is an adjective. For the way you speak, the adverb: How well."
+              },
+              {
+                "texte": "long",
+                "pourquoi": "How long asks about time. Quite well answers How well."
+              }
+            ]
+          },
+          {
+            "texte": "Why “How often do you play tennis?” and not How long?",
+            "nom": "We ask how many times, not how much time.",
+            "explication": "How often asks about frequency, like twice a week; How long asks about time, like one hour.",
+            "pieges": [
+              {
+                "texte": "Because How long is only for objects.",
+                "pourquoi": "No: How long also asks about time: “How long does the film last?”"
+              },
+              {
+                "texte": "Because often means for a long time.",
+                "pourquoi": "No: often means many times."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "modals-advice",
       "titre": "Conseiller, supposer : should, could, might",
       "niveau": "3e",
@@ -11329,6 +12736,288 @@
               {
                 "texte": "Because study is irregular.",
                 "pourquoi": "No: “he studies” does take an ending in the present simple. Should is what stops it."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "want-someone-to",
+      "titre": "Vouloir que quelqu'un fasse : I want you to come",
+      "niveau": "3e",
+      "prerequis": [
+        "present-simple",
+        "modals-advice"
+      ],
+      "programme": {
+        "source": "college",
+        "texte": "3e (B1, en bleu) : les propositions infinitives (want sb to + BV, expect sb to + BV, would like sb to + BV)."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "Pour dire je veux que tu viennes, l'anglais ne prend pas « that » : « I want you to come ». Après « want », « would like » ou « expect » : la personne, puis « to » et le verbe.",
+      "phrases": {
+        "consigne": "Lis la phrase anglaise, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "« want », puis la personne (« me », « you », « him », « her », « us », « them »), puis « to » et le verbe. Jamais « that ».",
+        "exemple": "Maman veut que je range ma chambre : « Mum wants me to tidy my room. »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Je veux que tu viennes. Complète : « I want you … come. »",
+          "nom": "to",
+          "explication": "La personne, puis « to » et le verbe : « I want you to come. »",
+          "pieges": [
+            {
+              "texte": "that",
+              "pourquoi": "« want » ne se construit pas avec « that » : « I want you to come »."
+            },
+            {
+              "texte": "for",
+              "pourquoi": "Après la personne, on met « to » : « I want you to come »."
+            }
+          ]
+        },
+        {
+          "texte": "La prof veut qu'elle refasse l'exercice. Complète : « The teacher wants … to do it again. »",
+          "nom": "her",
+          "explication": "Après « wants », la personne prend la forme complément : « The teacher wants her to do it again. »",
+          "pieges": [
+            {
+              "texte": "she",
+              "pourquoi": "Après « wants », il faut la forme complément : « her », pas « she »."
+            },
+            {
+              "texte": "that she",
+              "pourquoi": "Pas de « that » après « want » : « wants her to do it »."
+            }
+          ]
+        },
+        {
+          "texte": "Mes parents veulent que je travaille dur. Complète : « My parents want … hard. »",
+          "nom": "me to work",
+          "explication": "La personne, « me », puis « to » et le verbe : « My parents want me to work hard. »",
+          "pieges": [
+            {
+              "texte": "that I work",
+              "pourquoi": "« want » ne se construit pas avec « that » : « want me to work »."
+            },
+            {
+              "texte": "I to work",
+              "pourquoi": "Après « want », la forme complément : « me », pas « I »."
+            }
+          ]
+        },
+        {
+          "texte": "Elle aimerait que nous restions. Complète : « She would like … stay. »",
+          "nom": "us to",
+          "explication": "Après « would like » : la personne, « us », puis « to » : « She would like us to stay. »",
+          "pieges": [
+            {
+              "texte": "we to",
+              "pourquoi": "Après « would like », la forme complément : « us », pas « we »."
+            },
+            {
+              "texte": "that we",
+              "pourquoi": "Pas de « that » : « She would like us to stay »."
+            }
+          ]
+        },
+        {
+          "texte": "Nous comptons sur eux pour arriver à l'heure. Complète : « We expect them … on time. »",
+          "nom": "to arrive",
+          "explication": "Après « expect them » : « to » et le verbe : « We expect them to arrive on time. »",
+          "pieges": [
+            {
+              "texte": "arrive",
+              "pourquoi": "Il manque « to » : « expect them to arrive »."
+            },
+            {
+              "texte": "arriving",
+              "pourquoi": "Après « expect them », on met « to » et le verbe, pas -ing : « to arrive »."
+            }
+          ]
+        },
+        {
+          "texte": "Tu veux que je t'aide ? Complète : « Do you want me … you? »",
+          "nom": "to help",
+          "explication": "La personne, « me », puis « to » et le verbe : « Do you want me to help you? »",
+          "pieges": [
+            {
+              "texte": "help",
+              "pourquoi": "Il manque « to » : « want me to help »."
+            },
+            {
+              "texte": "helping",
+              "pourquoi": "Après « want me », on met « to » et le verbe, pas -ing : « to help »."
+            }
+          ]
+        },
+        {
+          "texte": "C'est lui qui veut partir tôt. Complète : « He wants … early. »",
+          "nom": "to leave",
+          "explication": "Quand c'est le sujet lui-même qui veut faire l'action, pas de personne en plus : « He wants to leave early. »",
+          "pieges": [
+            {
+              "texte": "him to leave",
+              "pourquoi": "Avec « him to leave », il voudrait qu'un autre garçon parte. C'est lui qui part : « wants to leave »."
+            },
+            {
+              "texte": "that he leaves",
+              "pourquoi": "« want » ne se construit pas avec « that » : « He wants to leave »."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi dit-on « I want you to close the door » et pas « I want that you close the door » ?",
+          "nom": "Après « want », pas de « that » : la personne, puis « to » et le verbe.",
+          "explication": "« want », la personne, « to », le verbe : « I want you to close the door. »",
+          "pieges": [
+            {
+              "texte": "Parce que « that » serait trop poli.",
+              "pourquoi": "Non : ce n'est pas une question de politesse. « want » ne se construit jamais avec « that »."
+            },
+            {
+              "texte": "Parce que « close » est au passé.",
+              "pourquoi": "Non : après « to », le verbe est à la base : « to close »."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Wanting someone to do something: I want you to come",
+        "idee": "We don't use that after want: “I want you to come.” After want, would like or expect: the person, then to and the verb.",
+        "phrases": {
+          "consigne": "Read the sentence, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Want, then the person (me, you, him, her, us, them), then to and the verb. Never that.",
+          "exemple": "Mum says: “Tidy your room!” So: “Mum wants me to tidy my room.”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “I want you … come.”",
+            "nom": "to",
+            "explication": "The person, then to and the verb: “I want you to come.”",
+            "pieges": [
+              {
+                "texte": "that",
+                "pourquoi": "We don't use want with that: “I want you to come.”"
+              },
+              {
+                "texte": "for",
+                "pourquoi": "After the person, we use to: “I want you to come.”"
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “The teacher wants … to do it again.” (the girl)",
+            "nom": "her",
+            "explication": "After wants, the person is an object pronoun: “The teacher wants her to do it again.”",
+            "pieges": [
+              {
+                "texte": "she",
+                "pourquoi": "After wants, we need the object pronoun: her, not she."
+              },
+              {
+                "texte": "that she",
+                "pourquoi": "No that after want: wants her to do it."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “My parents want … hard.” (I must work hard)",
+            "nom": "me to work",
+            "explication": "The person, me, then to and the verb: “My parents want me to work hard.”",
+            "pieges": [
+              {
+                "texte": "that I work",
+                "pourquoi": "We don't use want with that: want me to work."
+              },
+              {
+                "texte": "I to work",
+                "pourquoi": "After want, the object pronoun: me, not I."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “She would like … stay.” (we should stay)",
+            "nom": "us to",
+            "explication": "After would like: the person, us, then to: “She would like us to stay.”",
+            "pieges": [
+              {
+                "texte": "we to",
+                "pourquoi": "After would like, the object pronoun: us, not we."
+              },
+              {
+                "texte": "that we",
+                "pourquoi": "No that: “She would like us to stay.”"
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We expect them … on time.” (arrive)",
+            "nom": "to arrive",
+            "explication": "After expect them: to and the verb: “We expect them to arrive on time.”",
+            "pieges": [
+              {
+                "texte": "arrive",
+                "pourquoi": "To is missing: expect them to arrive."
+              },
+              {
+                "texte": "arriving",
+                "pourquoi": "After expect them, we use to and the verb, not -ing: to arrive."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “Do you want me … you?” (help)",
+            "nom": "to help",
+            "explication": "The person, me, then to and the verb: “Do you want me to help you?”",
+            "pieges": [
+              {
+                "texte": "help",
+                "pourquoi": "To is missing: want me to help."
+              },
+              {
+                "texte": "helping",
+                "pourquoi": "After want me, we use to and the verb, not -ing: to help."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “He wants … early.” (he himself wants to leave)",
+            "nom": "to leave",
+            "explication": "When the subject wants to do the action himself, no other person: “He wants to leave early.”",
+            "pieges": [
+              {
+                "texte": "him to leave",
+                "pourquoi": "With him to leave, he would want another boy to leave. He is the one leaving: wants to leave."
+              },
+              {
+                "texte": "that he leaves",
+                "pourquoi": "We don't use want with that: “He wants to leave.”"
+              }
+            ]
+          },
+          {
+            "texte": "Why do we say “I want you to close the door” and not “I want that you close the door”?",
+            "nom": "After want, no that: the person, then to and the verb.",
+            "explication": "Want, the person, to, the verb: “I want you to close the door.”",
+            "pieges": [
+              {
+                "texte": "Because that would be too polite.",
+                "pourquoi": "No: it isn't about politeness. We never use want with that."
+              },
+              {
+                "texte": "Because close is in the past.",
+                "pourquoi": "No: after to, the verb is in the base form: to close."
               }
             ]
           }
@@ -11983,6 +13672,288 @@
               {
                 "texte": "Because arrived always needs had in the same sentence.",
                 "pourquoi": "“When I arrived, the train left” also exists: the train leaves at that moment. “had left” says it had gone before."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "used-to",
+      "titre": "Les habitudes d'autrefois : used to",
+      "niveau": "2de",
+      "prerequis": [
+        "past-simple-irregular",
+        "past-continuous"
+      ],
+      "programme": {
+        "source": "lycee_2de",
+        "texte": "Correction grammaticale : l’élève est conduit à mobiliser ses connaissances de la langue française et des autres langues qu’il connaît afin de mieux saisir la différence ou la proximité avec la langue étudiée."
+      },
+      "activite": "quiz",
+      "parametres": {
+        "langue": "en"
+      },
+      "idee": "« used to » et le verbe : ce qui était vrai ou habituel autrefois, et ne l'est plus. « I used to live in Paris. » Négation : « didn't use to ». Question : « Did you use to… ? »",
+      "phrases": {
+        "consigne": "Lis la phrase anglaise, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Habitude ou état d'autrefois, fini aujourd'hui : « used to » et le verbe. Après « did » ou « didn't » : « use to », sans -d.",
+        "exemple": "Avant, il jouait au foot ; plus maintenant : « He used to play football. »",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Complète : « When I was little, I … be afraid of the dark. »",
+          "nom": "used to",
+          "explication": "Un état d'autrefois, fini aujourd'hui : « I used to be afraid of the dark. »",
+          "pieges": [
+            {
+              "texte": "use to",
+              "pourquoi": "Dans une phrase affirmative, on écrit « used to », avec -d."
+            },
+            {
+              "texte": "was used to",
+              "pourquoi": "On ne met pas « be » devant « used to » + verbe : « I used to be »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « She didn't … like vegetables, but now she loves them. »",
+          "nom": "use to",
+          "explication": "Après « didn't », la forme à retenir pour les examens est « use to », sans -d : « She didn't use to like vegetables. »",
+          "pieges": [
+            {
+              "texte": "used to",
+              "pourquoi": "Après « didn't », la forme attendue aux examens est « use to », sans -d."
+            },
+            {
+              "texte": "using to",
+              "pourquoi": "« using to » n'existe pas. Après « didn't » : « use to »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « … you use to walk to school? »",
+          "nom": "Did",
+          "explication": "La question se fait avec « Did » : « Did you use to walk to school? »",
+          "pieges": [
+            {
+              "texte": "Do",
+              "pourquoi": "« use to » parle du passé : « Did », pas « Do »."
+            },
+            {
+              "texte": "Were",
+              "pourquoi": "On ne met pas « be » avec « use to » + verbe : « Did you use to »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « This café … be a bank. Now it's a café. »",
+          "nom": "used to",
+          "explication": "Un état d'autrefois, qui n'est plus vrai : « This café used to be a bank. »",
+          "pieges": [
+            {
+              "texte": "would",
+              "pourquoi": "« would » peut dire une habitude passée, pas un état : « used to be a bank »."
+            },
+            {
+              "texte": "uses to",
+              "pourquoi": "« used to » ne change pas et parle toujours du passé : « used to »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « We … live in Manchester. » (nous y habitions avant)",
+          "nom": "used to",
+          "explication": "Une situation d'autrefois : « We used to live in Manchester. »",
+          "pieges": [
+            {
+              "texte": "are used to",
+              "pourquoi": "« be used to » veut dire être habitué à, et se construit avec un nom ou un -ing. Ici : « We used to live »."
+            },
+            {
+              "texte": "would",
+              "pourquoi": "« would » ne décrit pas une situation passée : on ne dit pas « We would live in Manchester »."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : « I live in Scotland, so I'm … cold weather. » (j'y suis habitué)",
+          "nom": "used to",
+          "explication": "« be used to » et un nom : être habitué à. « I'm used to cold weather. »",
+          "pieges": [
+            {
+              "texte": "use to",
+              "pourquoi": "Après « I'm », on écrit « used to » : être habitué à."
+            },
+            {
+              "texte": "used",
+              "pourquoi": "Il manque « to » : « I'm used to cold weather »."
+            }
+          ]
+        },
+        {
+          "texte": "Que veut dire « My grandfather used to work in a mine » ?",
+          "nom": "Autrefois, mon grand-père travaillait dans une mine ; plus maintenant.",
+          "explication": "« used to » et le verbe : une situation passée qui n'existe plus.",
+          "pieges": [
+            {
+              "texte": "Mon grand-père est habitué à travailler dans une mine.",
+              "pourquoi": "Être habitué à, ce serait « is used to working ». « used to work » : autrefois, plus maintenant."
+            },
+            {
+              "texte": "Mon grand-père travaillera dans une mine.",
+              "pourquoi": "« used to » parle toujours du passé, jamais du futur."
+            }
+          ]
+        },
+        {
+          "texte": "« When we were kids, we used to play in the street. » Pourquoi « used to » ?",
+          "nom": "C'est une habitude d'autrefois, qui n'existe plus.",
+          "explication": "« used to » et le verbe : ce qui se faisait souvent dans le passé, et ne se fait plus.",
+          "pieges": [
+            {
+              "texte": "C'est une action qui a eu lieu une seule fois.",
+              "pourquoi": "Non : « used to » parle d'une habitude répétée, pas d'un seul moment."
+            },
+            {
+              "texte": "C'est une habitude d'aujourd'hui.",
+              "pourquoi": "Non : « used to » parle toujours du passé."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Past habits: used to",
+        "idee": "Used to + verb: what was true or usual in the past, and isn't any more. “I used to live in Paris.” Negative: didn't use to. Question: “Did you use to…?”",
+        "phrases": {
+          "consigne": "Read the sentence, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A habit or a state in the past, over now: used to + verb. After did or didn't: use to, without -d.",
+          "exemple": "He played football in the past, but not now: “He used to play football.”",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Complete: “When I was little, I … be afraid of the dark.”",
+            "nom": "used to",
+            "explication": "A state in the past, over now: “I used to be afraid of the dark.”",
+            "pieges": [
+              {
+                "texte": "use to",
+                "pourquoi": "In a positive sentence, we write used to, with -d."
+              },
+              {
+                "texte": "was used to",
+                "pourquoi": "We don't put be before used to + verb: “I used to be”."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “She didn't … like vegetables, but now she loves them.”",
+            "nom": "use to",
+            "explication": "After didn't, the form to use in exams is use to, without -d: “She didn't use to like vegetables.”",
+            "pieges": [
+              {
+                "texte": "used to",
+                "pourquoi": "After didn't, the form expected in exams is use to, without -d."
+              },
+              {
+                "texte": "using to",
+                "pourquoi": "Using to doesn't exist. After didn't: use to."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “… you use to walk to school?”",
+            "nom": "Did",
+            "explication": "The question uses Did: “Did you use to walk to school?”",
+            "pieges": [
+              {
+                "texte": "Do",
+                "pourquoi": "Use to is about the past: Did, not Do."
+              },
+              {
+                "texte": "Were",
+                "pourquoi": "We don't use be with use to + verb: “Did you use to”."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “This café … be a bank. Now it's a café.”",
+            "nom": "used to",
+            "explication": "A past state that is no longer true: “This café used to be a bank.”",
+            "pieges": [
+              {
+                "texte": "would",
+                "pourquoi": "Would can describe a past habit, not a state: used to be a bank."
+              },
+              {
+                "texte": "uses to",
+                "pourquoi": "Used to doesn't change and is always about the past: used to."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “We … live in Manchester.” (we lived there before)",
+            "nom": "used to",
+            "explication": "A situation in the past: “We used to live in Manchester.”",
+            "pieges": [
+              {
+                "texte": "are used to",
+                "pourquoi": "Be used to means be accustomed to, and goes with a noun or -ing. Here: “We used to live”."
+              },
+              {
+                "texte": "would",
+                "pourquoi": "Would doesn't describe a past situation: we don't say “We would live in Manchester”."
+              }
+            ]
+          },
+          {
+            "texte": "Complete: “I live in Scotland, so I'm … cold weather.” (I'm accustomed to it)",
+            "nom": "used to",
+            "explication": "Be used to + a noun: be accustomed to. “I'm used to cold weather.”",
+            "pieges": [
+              {
+                "texte": "use to",
+                "pourquoi": "After I'm, we write used to: be accustomed to."
+              },
+              {
+                "texte": "used",
+                "pourquoi": "To is missing: “I'm used to cold weather.”"
+              }
+            ]
+          },
+          {
+            "texte": "What does “My grandfather used to work in a mine” mean?",
+            "nom": "In the past, my grandfather worked in a mine; not any more.",
+            "explication": "Used to + verb: a past situation that no longer exists.",
+            "pieges": [
+              {
+                "texte": "My grandfather is accustomed to working in a mine.",
+                "pourquoi": "That would be “is used to working”. Used to work: in the past, not any more."
+              },
+              {
+                "texte": "My grandfather will work in a mine.",
+                "pourquoi": "Used to is always about the past, never the future."
+              }
+            ]
+          },
+          {
+            "texte": "“When we were kids, we used to play in the street.” Why used to?",
+            "nom": "It's a habit in the past that no longer exists.",
+            "explication": "Used to + verb: something we often did in the past, and don't do any more.",
+            "pieges": [
+              {
+                "texte": "It's an action that happened only once.",
+                "pourquoi": "No: used to is about a repeated habit, not one moment."
+              },
+              {
+                "texte": "It's a habit today.",
+                "pourquoi": "No: used to is always about the past."
               }
             ]
           }
