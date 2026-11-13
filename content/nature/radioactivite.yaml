@@ -1,0 +1,130 @@
+id: radioactivite
+titre: "Décroissance radioactive et demi-vie"
+niveau: Terminale
+prerequis: [atome-tableau]
+# Faits : carbone 14, désintégration bêta moins vers l'azote 14, demi-vie 5 700 ans (LNHB, table du C-14,
+# http://www.lnhb.fr/nuclides/C-14_tables.pdf) ; iode 131, demi-vie 8,02 jours (LNHB, http://www.lnhb.fr/nuclides/I-131_tables.pdf) ;
+# uranium 238, désintégration alpha vers le thorium 234 (LNHB, http://www.lnhb.fr/nuclides/U-238_tables.pdf) ;
+# activité en becquerels, 1 Bq = 1 désintégration par seconde, unité s⁻¹ (BIPM, brochure du SI,
+# https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf). Lus le 2026-11-13. Les autres nombres sont des
+# calculs refaits (lois de conservation, multiples de la demi-vie). « Alpha » et « bêta » sont écrits en mots pour la voix.
+programme: { source: pctle, texte: "Utiliser des données et les lois de conservation pour écrire l’équation d’une réaction nucléaire et identifier le type de radioactivité. Exploiter la loi et une courbe de décroissance radioactive." }
+activite: quiz
+parametres: {}
+idee: "On ne sait pas quand un noyau radioactif se désintégrera : c'est aléatoire. Mais pour un grand nombre de noyaux, la moitié a disparu au bout d'une durée fixe, la demi-vie."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Après 1 demi-vie, il reste 1/2 des noyaux ; après 2, il en reste 1/4 ; après 3, 1/8. Dans une désintégration, le nombre de masse A et le numéro atomique Z se conservent."
+  exemple: "Exemple : le carbone 14 a une demi-vie d'environ 5 700 ans. Au bout de 5 700 ans, il en reste la moitié ; au bout de 11 400 ans, le quart."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce que le temps de demi-vie d'un noyau radioactif ?"
+    nom: "La durée au bout de laquelle la moitié des noyaux présents au départ se sont désintégrés."
+    explication: "La demi-vie ne dépend pas du nombre de noyaux au départ : à chaque demi-vie, la population est divisée par 2."
+    pieges:
+      - { texte: "La durée au bout de laquelle tous les noyaux se sont désintégrés.", pourquoi: "Après une demi-vie, il en reste la moitié ; après deux, le quart : il en reste toujours une partie." }
+      - { texte: "La moitié de la durée de vie de chaque noyau.", pourquoi: "Chaque noyau se désintègre au hasard : la demi-vie décrit une grande population, pas un noyau seul." }
+  - texte: "L'iode 131 a une demi-vie d'environ 8 jours. Quelle part des noyaux reste-t-il au bout de 24 jours ?"
+    nom: "Environ 1/8."
+    explication: "24 jours font 3 demi-vies : 1/2 × 1/2 × 1/2 = 1/8."
+    pieges:
+      - { texte: "Environ 1/3.", pourquoi: "On a divisé par le nombre de demi-vies ; chaque demi-vie divise par 2 : 2 × 2 × 2 = 8." }
+      - { texte: "Plus rien, il a tout disparu au bout de 16 jours.", pourquoi: "Après 2 demi-vies, il reste encore 1/4 des noyaux : la décroissance ne s'arrête jamais d'un coup." }
+  - texte: "Peut-on prévoir quand un noyau radioactif précis va se désintégrer ?"
+    nom: "Non : la désintégration d'un noyau est aléatoire."
+    explication: "On ne peut prévoir que le comportement d'un grand nombre de noyaux, par exemple la durée au bout de laquelle la moitié s'est désintégrée."
+    pieges:
+      - { texte: "Oui, exactement au bout d'une demi-vie.", pourquoi: "Au bout d'une demi-vie, seule la moitié des noyaux s'est désintégrée : on ne sait pas lesquels." }
+      - { texte: "Oui, les plus vieux noyaux se désintègrent en premier.", pourquoi: "Un noyau ne « vieillit » pas : sa probabilité de se désintégrer ne dépend pas du temps déjà passé." }
+  - texte: "Le noyau ²³⁸₉₂U se désintègre par radioactivité alpha : il émet un noyau d'hélium ⁴₂He. Quel noyau se forme ?"
+    nom: "Le noyau ²³⁴₉₀Th, du thorium."
+    explication: "Conservation du nombre de masse : 238 − 4 = 234. Conservation du numéro atomique : 92 − 2 = 90, c'est le thorium."
+    pieges:
+      - { texte: "Le noyau ²³⁴₉₂U.", pourquoi: "Le noyau d'hélium emporte aussi 2 protons : le numéro atomique passe de 92 à 90 et l'élément change." }
+      - { texte: "Le noyau ²³⁶₉₀Th.", pourquoi: "Le noyau d'hélium compte 4 nucléons, pas 2 : 238 − 4 = 234." }
+  - texte: "Le carbone 14, ¹⁴₆C, se désintègre par radioactivité bêta moins : il émet un électron. Quel noyau se forme ?"
+    nom: "Le noyau ¹⁴₇N, de l'azote."
+    explication: "L'électron a un nombre de masse 0 et une charge − 1 : A reste 14 et Z passe de 6 à 7, c'est l'azote."
+    pieges:
+      - { texte: "Le noyau ¹⁴₅B, du bore.", pourquoi: "Pour conserver la charge, le noyau doit gagner une charge positive quand il émet un électron : Z augmente." }
+      - { texte: "Le noyau ¹³₆C.", pourquoi: "Un électron a un nombre de masse nul : A ne change pas, et c'est Z qui change." }
+  - texte: "Un os ancien ne contient plus que 1/4 du carbone 14 qu'il avait à la mort de l'animal. La demi-vie du carbone 14 est d'environ 5 700 ans. Quel est son âge ?"
+    nom: "Environ 11 400 ans."
+    explication: "1/4 = 1/2 × 1/2 : il s'est écoulé 2 demi-vies, soit 2 × 5 700 = 11 400 ans."
+    pieges:
+      - { texte: "Environ 2 850 ans.", pourquoi: "On a divisé la demi-vie par 2 ; pour qu'il reste 1/4, il faut 2 demi-vies entières." }
+      - { texte: "Environ 22 800 ans.", pourquoi: "On a compté 4 demi-vies pour 1/4 ; or 1/4 correspond à 2 demi-vies : 1/2 puis 1/4." }
+  - texte: "Comment évolue le nombre de noyaux radioactifs d'un échantillon au cours du temps ?"
+    nom: "Il décroît de façon exponentielle : pendant des durées égales, la même proportion se désintègre."
+    explication: "Le nombre de désintégrations est proportionnel au nombre de noyaux présents : la population suit une loi exponentielle décroissante."
+    pieges:
+      - { texte: "Il décroît en ligne droite, du même nombre chaque jour.", pourquoi: "C'est la même proportion, pas le même nombre, qui disparaît : moins il reste de noyaux, moins il s'en désintègre." }
+      - { texte: "Il reste constant, puis tombe à zéro d'un coup.", pourquoi: "Les désintégrations sont aléatoires et continues : le nombre de noyaux baisse progressivement." }
+  - texte: "Qu'appelle-t-on l'activité d'un échantillon radioactif ?"
+    nom: "Le nombre de désintégrations par seconde, en becquerels."
+    explication: "Un becquerel correspond à une désintégration par seconde ; l'activité diminue avec le nombre de noyaux restants."
+    pieges:
+      - { texte: "La masse de l'échantillon, en kilogrammes.", pourquoi: "L'activité compte des désintégrations par seconde ; ce n'est pas une masse." }
+      - { texte: "La durée de demi-vie, en années.", pourquoi: "La demi-vie est une durée ; l'activité est un nombre de désintégrations par seconde." }
+
+en:
+  titre: "Radioactive decay and half-life"
+  idee: "We can't know when a radioactive nucleus will decay: it's random. But for a large number of nuclei, half have gone after a fixed time, the half-life."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "After 1 half-life, 1/2 of the nuclei remain; after 2, 1/4 remain; after 3, 1/8. In a decay, the mass number A and the atomic number Z are conserved."
+    exemple: "Example: carbon-14 has a half-life of about 5,700 years. After 5,700 years, half of it remains; after 11,400 years, a quarter."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is the half-life of a radioactive nucleus?"
+      nom: "The time after which half of the nuclei present at the start have decayed."
+      explication: "The half-life doesn't depend on the starting number of nuclei: with each half-life, the population is divided by 2."
+      pieges:
+        - { texte: "The time after which all the nuclei have decayed.", pourquoi: "After one half-life, half remain; after two, a quarter: some always remain." }
+        - { texte: "Half the lifetime of each nucleus.", pourquoi: "Each nucleus decays at random: the half-life describes a large population, not a single nucleus." }
+    - texte: "Iodine-131 has a half-life of about 8 days. What share of the nuclei remains after 24 days?"
+      nom: "About 1/8."
+      explication: "24 days is 3 half-lives: 1/2 × 1/2 × 1/2 = 1/8."
+      pieges:
+        - { texte: "About 1/3.", pourquoi: "That's dividing by the number of half-lives; each half-life divides by 2: 2 × 2 × 2 = 8." }
+        - { texte: "Nothing, it was all gone after 16 days.", pourquoi: "After 2 half-lives, 1/4 of the nuclei still remain: decay never stops all at once." }
+    - texte: "Can we predict when one particular radioactive nucleus will decay?"
+      nom: "No: the decay of a nucleus is random."
+      explication: "We can only predict the behaviour of a large number of nuclei, for example the time after which half have decayed."
+      pieges:
+        - { texte: "Yes, exactly after one half-life.", pourquoi: "After one half-life, only half the nuclei have decayed: we don't know which ones." }
+        - { texte: "Yes, the oldest nuclei decay first.", pourquoi: "A nucleus doesn't \"age\": its chance of decaying doesn't depend on the time already gone by." }
+    - texte: "The ²³⁸₉₂U nucleus undergoes alpha decay: it emits a helium nucleus, ⁴₂He. Which nucleus forms?"
+      nom: "The ²³⁴₉₀Th nucleus, thorium."
+      explication: "Conservation of mass number: 238 − 4 = 234. Conservation of atomic number: 92 − 2 = 90, which is thorium."
+      pieges:
+        - { texte: "The ²³⁴₉₂U nucleus.", pourquoi: "The helium nucleus also carries off 2 protons: the atomic number goes from 92 to 90 and the element changes." }
+        - { texte: "The ²³⁶₉₀Th nucleus.", pourquoi: "The helium nucleus has 4 nucleons, not 2: 238 − 4 = 234." }
+    - texte: "Carbon-14, ¹⁴₆C, undergoes beta-minus decay: it emits an electron. Which nucleus forms?"
+      nom: "The ¹⁴₇N nucleus, nitrogen."
+      explication: "The electron has mass number 0 and charge − 1: A stays 14 and Z goes from 6 to 7, which is nitrogen."
+      pieges:
+        - { texte: "The ¹⁴₅B nucleus, boron.", pourquoi: "To conserve charge, the nucleus must gain a positive charge when it emits an electron: Z goes up." }
+        - { texte: "The ¹³₆C nucleus.", pourquoi: "An electron has zero mass number: A doesn't change, it's Z that changes." }
+    - texte: "An ancient bone has only 1/4 of the carbon-14 it had when the animal died. The half-life of carbon-14 is about 5,700 years. How old is it?"
+      nom: "About 11,400 years."
+      explication: "1/4 = 1/2 × 1/2: 2 half-lives have gone by, that is 2 × 5,700 = 11,400 years."
+      pieges:
+        - { texte: "About 2,850 years.", pourquoi: "That's halving the half-life; for 1/4 to remain, it takes 2 whole half-lives." }
+        - { texte: "About 22,800 years.", pourquoi: "That's counting 4 half-lives for 1/4; but 1/4 is 2 half-lives: 1/2, then 1/4." }
+    - texte: "How does the number of radioactive nuclei in a sample change over time?"
+      nom: "It decreases exponentially: over equal times, the same proportion decays."
+      explication: "The number of decays is proportional to the number of nuclei present: the population follows a decreasing exponential law."
+      pieges:
+        - { texte: "It decreases in a straight line, by the same number each day.", pourquoi: "It's the same proportion, not the same number, that goes: the fewer nuclei remain, the fewer decay." }
+        - { texte: "It stays constant, then drops to zero all at once.", pourquoi: "Decays are random and continuous: the number of nuclei falls gradually." }
+    - texte: "What is the activity of a radioactive sample?"
+      nom: "The number of decays per second, in becquerels."
+      explication: "One becquerel is one decay per second; activity falls as the number of remaining nuclei falls."
+      pieges:
+        - { texte: "The mass of the sample, in kilograms.", pourquoi: "Activity counts decays per second; it isn't a mass." }
+        - { texte: "The half-life, in years.", pourquoi: "The half-life is a time; activity is a number of decays per second." }

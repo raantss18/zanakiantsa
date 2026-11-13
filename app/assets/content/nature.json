@@ -76,7 +76,10 @@
     "svt2de": "https://www.snes.edu/IMG/pdf/svt_annexe_2e_bo.pdf",
     "pc2de": "https://www.snes.edu/IMG/pdf/physique_annexe_2e_bo.pdf",
     "es1re": "https://www.vivelessvt.com/wp-content/uploads/2020/04/Enseignement-scientifique-1ere-BO-2023.pdf",
-    "estle": "https://groupe-reussite.fr/ressources/wp-content/uploads/2026/09/programme-enseignement-scientifique-terminale-.pdf"
+    "estle": "https://groupe-reussite.fr/ressources/wp-content/uploads/2026/09/programme-enseignement-scientifique-terminale-.pdf",
+    "pc1re": "https://www.snes.edu/IMG/pdf/physique_spe_annexe_1eg_bo.pdf",
+    "svt1re": "https://www.snes.edu/wp-content/uploads/svt_spe_annexe_1eg_bo.pdf",
+    "pctle": "https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/92/9/spe249_annexe_1158929.pdf"
   },
   "competences": [
     {
@@ -12518,6 +12521,285 @@
       }
     },
     {
+      "id": "quantite-matiere",
+      "titre": "Compter la matière : la mole",
+      "niveau": "2de",
+      "prerequis": [
+        "atome-tableau"
+      ],
+      "programme": {
+        "source": "pc2de",
+        "texte": "Déterminer la masse d’une entité à partir de sa formule brute et de la masse des atomes qui la composent. Déterminer le nombre d’entités et la quantité de matière (en mol) d’une espèce dans une masse d’échantillon."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un échantillon contient un nombre immense d'entités. On les compte par paquets : une mole contient exactement 6,022 140 76 × 10²³ entités. La quantité de matière n se mesure en moles.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Nombre d'entités = masse de l'échantillon ÷ masse d'une entité. Quantité de matière, en moles = nombre d'entités ÷ 6,02 × 10²³. Les deux masses doivent être dans la même unité.",
+        "exemple": "Exemple : un échantillon contient 1,204 × 10²⁴ molécules. Sa quantité de matière vaut 1,204 × 10²⁴ ÷ 6,02 × 10²³ = 2 moles.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'une mole ?",
+          "nom": "Un paquet d'exactement 6,022 140 76 × 10²³ entités : atomes, molécules ou ions.",
+          "explication": "La mole est l'unité de quantité de matière : elle compte des entités, comme une douzaine compte des œufs, mais avec un nombre immense.",
+          "pieges": [
+            {
+              "texte": "Une masse d'un gramme de matière.",
+              "pourquoi": "La mole compte des entités, elle ne pèse rien en elle-même : une mole de fer et une mole d'eau n'ont pas la même masse."
+            },
+            {
+              "texte": "Un volume d'un litre de matière.",
+              "pourquoi": "Le litre mesure un volume ; la mole compte un nombre d'entités."
+            }
+          ]
+        },
+        {
+          "texte": "Combien d'entités y a-t-il dans 2 moles de dioxygène ?",
+          "nom": "Environ 1,2 × 10²⁴ molécules.",
+          "explication": "2 × 6,022 × 10²³ = 12,04 × 10²³, soit environ 1,2 × 10²⁴ molécules.",
+          "pieges": [
+            {
+              "texte": "Environ 3,0 × 10²³ molécules.",
+              "pourquoi": "On a divisé par 2 ; il y a deux paquets de 6,022 × 10²³ : on multiplie."
+            },
+            {
+              "texte": "Environ 6,0 × 10²³ molécules.",
+              "pourquoi": "C'est le contenu d'une seule mole ; ici, il y en a deux."
+            }
+          ]
+        },
+        {
+          "texte": "Un échantillon contient 3,011 × 10²³ molécules d'eau. Quelle est sa quantité de matière ?",
+          "nom": "0,5 mole.",
+          "explication": "3,011 × 10²³ ÷ 6,022 × 10²³ = 0,5 : c'est un demi-paquet.",
+          "pieges": [
+            {
+              "texte": "2 moles.",
+              "pourquoi": "On a divisé 6,022 × 10²³ par le nombre de molécules : c'est le nombre de molécules qu'on divise par 6,022 × 10²³."
+            },
+            {
+              "texte": "3,011 moles.",
+              "pourquoi": "On a gardé le début du nombre en oubliant les puissances de 10 : 10²³ ÷ 10²³ = 1, et 3,011 ÷ 6,022 = 0,5."
+            }
+          ]
+        },
+        {
+          "texte": "Un atome d'hydrogène a une masse d'environ 1,67 × 10⁻²⁷ kilogramme, un atome d'oxygène environ 2,66 × 10⁻²⁶ kilogramme. Quelle est la masse d'une molécule d'eau H₂O ?",
+          "nom": "Environ 2,99 × 10⁻²⁶ kilogramme.",
+          "explication": "2 × 1,67 × 10⁻²⁷ = 0,334 × 10⁻²⁶ ; puis 0,334 × 10⁻²⁶ + 2,66 × 10⁻²⁶ = 2,994 × 10⁻²⁶ kilogramme.",
+          "pieges": [
+            {
+              "texte": "Environ 2,83 × 10⁻²⁶ kilogramme.",
+              "pourquoi": "On n'a compté qu'un atome d'hydrogène ; le 2 de H₂O en indique deux."
+            },
+            {
+              "texte": "Environ 4,33 × 10⁻²⁷ kilogramme.",
+              "pourquoi": "On a ajouté 1,67 et 2,66 sans regarder les puissances de 10 : 10⁻²⁶ vaut dix fois 10⁻²⁷."
+            }
+          ]
+        },
+        {
+          "texte": "Un atome de carbone a une masse d'environ 2,0 × 10⁻²⁶ kilogramme. Combien d'atomes y a-t-il dans 1,0 gramme de carbone ?",
+          "nom": "Environ 5,0 × 10²² atomes.",
+          "explication": "1,0 gramme = 1,0 × 10⁻³ kilogramme ; 1,0 × 10⁻³ ÷ 2,0 × 10⁻²⁶ = 0,5 × 10²³ = 5,0 × 10²² atomes.",
+          "pieges": [
+            {
+              "texte": "Environ 5,0 × 10²⁵ atomes.",
+              "pourquoi": "On a laissé la masse en grammes : il faut d'abord la convertir en kilogrammes, comme la masse de l'atome."
+            },
+            {
+              "texte": "Environ 2,0 × 10⁻²⁹ atomes.",
+              "pourquoi": "On a multiplié les deux masses ; pour compter les atomes, on divise la masse de l'échantillon par celle d'un atome."
+            }
+          ]
+        },
+        {
+          "texte": "Ces 5,0 × 10²² atomes de carbone représentent quelle quantité de matière ?",
+          "nom": "Environ 0,083 mole.",
+          "explication": "5,0 × 10²² ÷ 6,02 × 10²³ ≈ 0,083 mole : moins d'un dixième de mole.",
+          "pieges": [
+            {
+              "texte": "Environ 12 moles.",
+              "pourquoi": "On a divisé 6,02 × 10²³ par le nombre d'atomes ; c'est l'inverse."
+            },
+            {
+              "texte": "Environ 3,0 × 10⁴⁶ moles.",
+              "pourquoi": "On a multiplié par 6,02 × 10²³ ; pour passer des entités aux moles, on divise."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les chimistes comptent-ils en moles plutôt qu'en atomes ?",
+          "nom": "Parce qu'un échantillon à notre échelle contient un nombre d'entités immense, difficile à manier.",
+          "explication": "Un seul gramme de carbone contient environ 5 × 10²² atomes ; en moles, on obtient des nombres simples.",
+          "pieges": [
+            {
+              "texte": "Parce qu'on ne sait pas combien d'atomes il y a dans une mole.",
+              "pourquoi": "On le sait exactement : une mole contient 6,022 140 76 × 10²³ entités, par définition."
+            },
+            {
+              "texte": "Parce qu'une mole est plus légère qu'un atome.",
+              "pourquoi": "Une mole contient des milliards de milliards d'atomes : elle est bien plus lourde qu'un seul atome."
+            }
+          ]
+        },
+        {
+          "texte": "Une mole de fer et une mole d'eau ont-elles la même masse ?",
+          "nom": "Non : elles ont le même nombre d'entités, mais un atome de fer et une molécule d'eau n'ont pas la même masse.",
+          "explication": "La mole fixe le nombre d'entités ; la masse de l'échantillon dépend de la masse de chaque entité.",
+          "pieges": [
+            {
+              "texte": "Oui, une mole pèse toujours la même chose.",
+              "pourquoi": "Une douzaine d'œufs et une douzaine de melons n'ont pas la même masse : c'est pareil pour la mole."
+            },
+            {
+              "texte": "Oui, car ce sont toutes les deux des matières.",
+              "pourquoi": "La masse dépend de l'entité comptée : atome de fer ou molécule d'eau."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Counting matter: the mole",
+        "idee": "A sample contains a huge number of entities. We count them in packs: one mole contains exactly 6.022 140 76 × 10²³ entities. The amount of substance n is measured in moles.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Number of entities = mass of the sample ÷ mass of one entity. Amount of substance, in moles = number of entities ÷ 6.02 × 10²³. Both masses must be in the same unit.",
+          "exemple": "Example: a sample contains 1.204 × 10²⁴ molecules. Its amount of substance is 1.204 × 10²⁴ ÷ 6.02 × 10²³ = 2 moles.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a mole?",
+            "nom": "A pack of exactly 6.022 140 76 × 10²³ entities: atoms, molecules or ions.",
+            "explication": "The mole is the unit of amount of substance: it counts entities, like a dozen counts eggs, but with a huge number.",
+            "pieges": [
+              {
+                "texte": "A mass of one gram of matter.",
+                "pourquoi": "The mole counts entities; it has no mass of its own: a mole of iron and a mole of water don't have the same mass."
+              },
+              {
+                "texte": "A volume of one litre of matter.",
+                "pourquoi": "The litre measures a volume; the mole counts a number of entities."
+              }
+            ]
+          },
+          {
+            "texte": "How many entities are there in 2 moles of oxygen gas?",
+            "nom": "About 1.2 × 10²⁴ molecules.",
+            "explication": "2 × 6.022 × 10²³ = 12.04 × 10²³, that is about 1.2 × 10²⁴ molecules.",
+            "pieges": [
+              {
+                "texte": "About 3.0 × 10²³ molecules.",
+                "pourquoi": "That's dividing by 2; there are two packs of 6.022 × 10²³: multiply."
+              },
+              {
+                "texte": "About 6.0 × 10²³ molecules.",
+                "pourquoi": "That's what one mole contains; here there are two."
+              }
+            ]
+          },
+          {
+            "texte": "A sample contains 3.011 × 10²³ water molecules. What is its amount of substance?",
+            "nom": "0.5 mole.",
+            "explication": "3.011 × 10²³ ÷ 6.022 × 10²³ = 0.5: it's half a pack.",
+            "pieges": [
+              {
+                "texte": "2 moles.",
+                "pourquoi": "6.022 × 10²³ was divided by the number of molecules: it's the number of molecules that gets divided by 6.022 × 10²³."
+              },
+              {
+                "texte": "3.011 moles.",
+                "pourquoi": "The start of the number was kept and the powers of 10 forgotten: 10²³ ÷ 10²³ = 1, and 3.011 ÷ 6.022 = 0.5."
+              }
+            ]
+          },
+          {
+            "texte": "A hydrogen atom has a mass of about 1.67 × 10⁻²⁷ kilogram, an oxygen atom about 2.66 × 10⁻²⁶ kilogram. What is the mass of a water molecule, H₂O?",
+            "nom": "About 2.99 × 10⁻²⁶ kilogram.",
+            "explication": "2 × 1.67 × 10⁻²⁷ = 0.334 × 10⁻²⁶; then 0.334 × 10⁻²⁶ + 2.66 × 10⁻²⁶ = 2.994 × 10⁻²⁶ kilogram.",
+            "pieges": [
+              {
+                "texte": "About 2.83 × 10⁻²⁶ kilogram.",
+                "pourquoi": "Only one hydrogen atom was counted; the 2 in H₂O means two."
+              },
+              {
+                "texte": "About 4.33 × 10⁻²⁷ kilogram.",
+                "pourquoi": "1.67 and 2.66 were added without looking at the powers of 10: 10⁻²⁶ is ten times 10⁻²⁷."
+              }
+            ]
+          },
+          {
+            "texte": "A carbon atom has a mass of about 2.0 × 10⁻²⁶ kilogram. How many atoms are there in 1.0 gram of carbon?",
+            "nom": "About 5.0 × 10²² atoms.",
+            "explication": "1.0 gram = 1.0 × 10⁻³ kilogram; 1.0 × 10⁻³ ÷ 2.0 × 10⁻²⁶ = 0.5 × 10²³ = 5.0 × 10²² atoms.",
+            "pieges": [
+              {
+                "texte": "About 5.0 × 10²⁵ atoms.",
+                "pourquoi": "The mass was left in grams: first convert it to kilograms, like the atom's mass."
+              },
+              {
+                "texte": "About 2.0 × 10⁻²⁹ atoms.",
+                "pourquoi": "The two masses were multiplied; to count the atoms, divide the sample's mass by one atom's mass."
+              }
+            ]
+          },
+          {
+            "texte": "What amount of substance do these 5.0 × 10²² carbon atoms make?",
+            "nom": "About 0.083 mole.",
+            "explication": "5.0 × 10²² ÷ 6.02 × 10²³ ≈ 0.083 mole: less than a tenth of a mole.",
+            "pieges": [
+              {
+                "texte": "About 12 moles.",
+                "pourquoi": "6.02 × 10²³ was divided by the number of atoms; it's the other way round."
+              },
+              {
+                "texte": "About 3.0 × 10⁴⁶ moles.",
+                "pourquoi": "That's multiplying by 6.02 × 10²³; to go from entities to moles, divide."
+              }
+            ]
+          },
+          {
+            "texte": "Why do chemists count in moles rather than in atoms?",
+            "nom": "Because a sample at our scale contains a huge number of entities, hard to handle.",
+            "explication": "A single gram of carbon contains about 5 × 10²² atoms; in moles, the numbers are simple.",
+            "pieges": [
+              {
+                "texte": "Because nobody knows how many atoms are in a mole.",
+                "pourquoi": "It's known exactly: one mole contains 6.022 140 76 × 10²³ entities, by definition."
+              },
+              {
+                "texte": "Because a mole is lighter than an atom.",
+                "pourquoi": "A mole contains billions of billions of atoms: it's far heavier than a single atom."
+              }
+            ]
+          },
+          {
+            "texte": "Do one mole of iron and one mole of water have the same mass?",
+            "nom": "No: they have the same number of entities, but an iron atom and a water molecule don't have the same mass.",
+            "explication": "The mole fixes the number of entities; the sample's mass depends on the mass of each entity.",
+            "pieges": [
+              {
+                "texte": "Yes, a mole always weighs the same.",
+                "pourquoi": "A dozen eggs and a dozen melons don't have the same mass: it's the same with the mole."
+              },
+              {
+                "texte": "Yes, because they are both matter.",
+                "pourquoi": "The mass depends on the entity counted: an iron atom or a water molecule."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "son-musique",
       "titre": "Son, musique et numérisation",
       "niveau": "1re",
@@ -13067,6 +13349,843 @@
               {
                 "texte": "Because CO₂ increases the albedo.",
                 "pourquoi": "CO₂ is transparent to visible light: it acts on infrared, not on albedo."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "energie-mecanique",
+      "titre": "Énergie cinétique, potentielle et mécanique",
+      "niveau": "1re",
+      "prerequis": [
+        "mouvement-vitesse"
+      ],
+      "programme": {
+        "source": "pc1re",
+        "texte": "Identifier des situations de conservation et de non conservation de l’énergie mécanique. Exploiter la conservation de l’énergie mécanique dans des cas simples : chute libre en l’absence de frottement, oscillations d’un pendule en l’absence de frottement, etc."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "L'énergie cinétique vient de la vitesse : 1/2 × m × v². L'énergie potentielle de pesanteur vient de l'altitude : m × g × z. Leur somme, l'énergie mécanique, se conserve sans frottement.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Énergie cinétique = 1/2 × masse × vitesse au carré. Énergie potentielle de pesanteur = masse × 9,8 × altitude. Masse en kilogrammes, vitesse en m/s, altitude en mètres : le résultat est en joules.",
+        "exemple": "Exemple : un ballon de 0,5 kilogramme lancé à 10 m/s a une énergie cinétique de 1/2 × 0,5 × 10² = 25 joules.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une voiture de 1 000 kilogrammes roule à 20 m/s. Quelle est son énergie cinétique ?",
+          "nom": "200 000 joules.",
+          "explication": "1/2 × 1 000 × 20² = 1/2 × 1 000 × 400 = 200 000 joules.",
+          "pieges": [
+            {
+              "texte": "10 000 joules.",
+              "pourquoi": "On a oublié d'élever la vitesse au carré : 20² = 400, pas 20."
+            },
+            {
+              "texte": "400 000 joules.",
+              "pourquoi": "On a oublié le facteur 1/2 de la formule."
+            }
+          ]
+        },
+        {
+          "texte": "Si la vitesse d'un objet double, que devient son énergie cinétique ?",
+          "nom": "Elle est multipliée par 4.",
+          "explication": "La vitesse est au carré dans la formule : 2² = 4.",
+          "pieges": [
+            {
+              "texte": "Elle est multipliée par 2.",
+              "pourquoi": "Ce serait vrai si l'énergie était proportionnelle à la vitesse ; elle l'est à son carré."
+            },
+            {
+              "texte": "Elle ne change pas.",
+              "pourquoi": "L'énergie cinétique dépend de la vitesse : plus on va vite, plus elle est grande."
+            }
+          ]
+        },
+        {
+          "texte": "On monte un livre de 2 kilogrammes de 1,5 mètre. De combien augmente son énergie potentielle de pesanteur ? (Intensité de la pesanteur : 9,8 newtons par kilogramme.)",
+          "nom": "D'environ 29 joules.",
+          "explication": "2 × 9,8 × 1,5 = 29,4 joules.",
+          "pieges": [
+            {
+              "texte": "De 3 joules.",
+              "pourquoi": "On a oublié l'intensité de la pesanteur, 9,8 newtons par kilogramme."
+            },
+            {
+              "texte": "D'environ 13 joules.",
+              "pourquoi": "On a divisé par la hauteur ; la formule multiplie masse, pesanteur et altitude."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on énergie mécanique d'un objet ?",
+          "nom": "La somme de son énergie cinétique et de son énergie potentielle de pesanteur.",
+          "explication": "Énergie mécanique = énergie cinétique + énergie potentielle.",
+          "pieges": [
+            {
+              "texte": "Le produit de son énergie cinétique et de son énergie potentielle.",
+              "pourquoi": "Les énergies s'additionnent, elles ne se multiplient pas."
+            },
+            {
+              "texte": "Son énergie cinétique seulement.",
+              "pourquoi": "Il manque la part liée à l'altitude, l'énergie potentielle."
+            }
+          ]
+        },
+        {
+          "texte": "Une pomme tombe sans frottement. Quelle grandeur reste constante pendant la chute ?",
+          "nom": "Son énergie mécanique.",
+          "explication": "L'énergie potentielle diminue, l'énergie cinétique augmente d'autant : la somme ne change pas.",
+          "pieges": [
+            {
+              "texte": "Son énergie cinétique.",
+              "pourquoi": "La pomme accélère : son énergie cinétique augmente."
+            },
+            {
+              "texte": "Son énergie potentielle.",
+              "pourquoi": "La pomme descend : son énergie potentielle diminue."
+            }
+          ]
+        },
+        {
+          "texte": "On lâche une bille sans vitesse, de 5 mètres de haut, sans frottement. À quelle vitesse touche-t-elle le sol ?",
+          "nom": "Environ 9,9 m/s.",
+          "explication": "L'énergie mécanique se conserve : 1/2 × m × v² = m × 9,8 × 5, donc v² = 98 et v = √98 ≈ 9,9 m/s. La masse ne compte pas.",
+          "pieges": [
+            {
+              "texte": "98 m/s.",
+              "pourquoi": "98 est le carré de la vitesse : il faut en prendre la racine carrée."
+            },
+            {
+              "texte": "49 m/s.",
+              "pourquoi": "On a calculé 9,8 × 5 en oubliant le 1/2 et la racine carrée."
+            }
+          ]
+        },
+        {
+          "texte": "Une luge glisse sur un sol plat et ralentit à cause des frottements. Que devient son énergie mécanique ?",
+          "nom": "Elle diminue : une partie est transférée au milieu, surtout sous forme thermique.",
+          "explication": "Les frottements sont des forces non conservatives : l'énergie mécanique n'est pas conservée, elle est dissipée.",
+          "pieges": [
+            {
+              "texte": "Elle reste constante.",
+              "pourquoi": "Elle ne se conserve qu'en l'absence de frottement ; ici, la luge ralentit sans descendre."
+            },
+            {
+              "texte": "Elle disparaît sans aller nulle part.",
+              "pourquoi": "L'énergie ne disparaît pas : elle est transférée au sol et à l'air, qui s'échauffent."
+            }
+          ]
+        },
+        {
+          "texte": "Un pendule oscille sans frottement. Où son énergie cinétique est-elle la plus grande ?",
+          "nom": "Au point le plus bas de sa trajectoire.",
+          "explication": "En bas, l'énergie potentielle est la plus petite ; comme l'énergie mécanique est constante, l'énergie cinétique y est la plus grande.",
+          "pieges": [
+            {
+              "texte": "Aux points les plus hauts.",
+              "pourquoi": "En haut, le pendule s'arrête un instant avant de repartir : son énergie cinétique y est nulle."
+            },
+            {
+              "texte": "Elle est la même partout.",
+              "pourquoi": "C'est l'énergie mécanique qui est la même partout ; elle passe de cinétique à potentielle et inversement."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Kinetic, potential and mechanical energy",
+        "idee": "Kinetic energy comes from speed: 1/2 × m × v². Gravitational potential energy comes from height: m × g × z. Their sum, mechanical energy, is conserved when there is no friction.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Kinetic energy = 1/2 × mass × speed squared. Gravitational potential energy = mass × 9.8 × height. Mass in kilograms, speed in m/s, height in metres: the result is in joules.",
+          "exemple": "Example: a 0.5 kilogram ball thrown at 10 m/s has a kinetic energy of 1/2 × 0.5 × 10² = 25 joules.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "A 1,000 kilogram car is moving at 20 m/s. What is its kinetic energy?",
+            "nom": "200,000 joules.",
+            "explication": "1/2 × 1,000 × 20² = 1/2 × 1,000 × 400 = 200,000 joules.",
+            "pieges": [
+              {
+                "texte": "10,000 joules.",
+                "pourquoi": "The speed wasn't squared: 20² = 400, not 20."
+              },
+              {
+                "texte": "400,000 joules.",
+                "pourquoi": "The factor 1/2 in the formula was forgotten."
+              }
+            ]
+          },
+          {
+            "texte": "If an object's speed doubles, what happens to its kinetic energy?",
+            "nom": "It is multiplied by 4.",
+            "explication": "The speed is squared in the formula: 2² = 4.",
+            "pieges": [
+              {
+                "texte": "It is multiplied by 2.",
+                "pourquoi": "That would be true if the energy were proportional to the speed; it is proportional to its square."
+              },
+              {
+                "texte": "It doesn't change.",
+                "pourquoi": "Kinetic energy depends on speed: the faster you go, the bigger it is."
+              }
+            ]
+          },
+          {
+            "texte": "A 2 kilogram book is lifted 1.5 metres. By how much does its gravitational potential energy rise? (Gravitational field strength: 9.8 newtons per kilogram.)",
+            "nom": "By about 29 joules.",
+            "explication": "2 × 9.8 × 1.5 = 29.4 joules.",
+            "pieges": [
+              {
+                "texte": "By 3 joules.",
+                "pourquoi": "The gravitational field strength, 9.8 newtons per kilogram, was forgotten."
+              },
+              {
+                "texte": "By about 13 joules.",
+                "pourquoi": "That's dividing by the height; the formula multiplies mass, gravity and height."
+              }
+            ]
+          },
+          {
+            "texte": "What is an object's mechanical energy?",
+            "nom": "The sum of its kinetic energy and its gravitational potential energy.",
+            "explication": "Mechanical energy = kinetic energy + potential energy.",
+            "pieges": [
+              {
+                "texte": "The product of its kinetic energy and its potential energy.",
+                "pourquoi": "Energies add up; they don't multiply."
+              },
+              {
+                "texte": "Its kinetic energy only.",
+                "pourquoi": "The part linked to height, the potential energy, is missing."
+              }
+            ]
+          },
+          {
+            "texte": "An apple falls with no friction. Which quantity stays constant during the fall?",
+            "nom": "Its mechanical energy.",
+            "explication": "Potential energy goes down and kinetic energy goes up by the same amount: the sum doesn't change.",
+            "pieges": [
+              {
+                "texte": "Its kinetic energy.",
+                "pourquoi": "The apple speeds up: its kinetic energy increases."
+              },
+              {
+                "texte": "Its potential energy.",
+                "pourquoi": "The apple goes down: its potential energy decreases."
+              }
+            ]
+          },
+          {
+            "texte": "A marble is dropped from rest, 5 metres up, with no friction. At what speed does it hit the ground?",
+            "nom": "About 9.9 m/s.",
+            "explication": "Mechanical energy is conserved: 1/2 × m × v² = m × 9.8 × 5, so v² = 98 and v = √98 ≈ 9.9 m/s. The mass doesn't matter.",
+            "pieges": [
+              {
+                "texte": "98 m/s.",
+                "pourquoi": "98 is the square of the speed: take its square root."
+              },
+              {
+                "texte": "49 m/s.",
+                "pourquoi": "That's 9.8 × 5, forgetting the 1/2 and the square root."
+              }
+            ]
+          },
+          {
+            "texte": "A sledge slides on flat ground and slows down because of friction. What happens to its mechanical energy?",
+            "nom": "It decreases: part of it is transferred to the surroundings, mostly as heat.",
+            "explication": "Friction forces are non-conservative: mechanical energy isn't conserved, it is dissipated.",
+            "pieges": [
+              {
+                "texte": "It stays constant.",
+                "pourquoi": "It's only conserved without friction; here the sledge slows down without going downhill."
+              },
+              {
+                "texte": "It vanishes without going anywhere.",
+                "pourquoi": "Energy doesn't vanish: it is transferred to the ground and the air, which warm up."
+              }
+            ]
+          },
+          {
+            "texte": "A pendulum swings with no friction. Where is its kinetic energy greatest?",
+            "nom": "At the lowest point of its path.",
+            "explication": "At the bottom, potential energy is smallest; since mechanical energy is constant, kinetic energy is greatest there.",
+            "pieges": [
+              {
+                "texte": "At the highest points.",
+                "pourquoi": "At the top, the pendulum stops for an instant before coming back: its kinetic energy is zero there."
+              },
+              {
+                "texte": "It's the same everywhere.",
+                "pourquoi": "It's the mechanical energy that is the same everywhere; it switches from kinetic to potential and back."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxydoreduction",
+      "titre": "Oxydants, réducteurs et oxydo-réduction",
+      "niveau": "1re",
+      "prerequis": [
+        "atome-tableau"
+      ],
+      "programme": {
+        "source": "pc1re",
+        "texte": "À partir de données expérimentales, identifier le transfert d’électrons entre deux réactifs et le modéliser par des demi-équations électroniques et par une réaction d’oxydo-réduction."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un oxydant capte des électrons, un réducteur en cède. Dans une réaction d'oxydo-réduction, les électrons passent du réducteur d'un couple à l'oxydant d'un autre couple.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Oxydant + électrons = réducteur. Une oxydation est une perte d'électrons, une réduction un gain. Dans une demi-équation, on équilibre les atomes, puis les charges avec des électrons.",
+        "exemple": "Exemple : pour le couple formé de l'ion Fe²⁺ et du métal Fe, la demi-équation s'écrit Fe²⁺ + 2 électrons = Fe. L'ion Fe²⁺ est l'oxydant, le fer métal est le réducteur.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'un oxydant ?",
+          "nom": "Une espèce capable de capter un ou plusieurs électrons.",
+          "explication": "En captant des électrons, l'oxydant se transforme en le réducteur de son couple.",
+          "pieges": [
+            {
+              "texte": "Une espèce capable de céder des électrons.",
+              "pourquoi": "C'est la définition d'un réducteur."
+            },
+            {
+              "texte": "Une espèce qui contient forcément de l'oxygène.",
+              "pourquoi": "Le mot vient de l'oxygène, mais l'ion Cu²⁺, sans oxygène, est un oxydant : tout est affaire d'électrons."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'un réducteur ?",
+          "nom": "Une espèce capable de céder un ou plusieurs électrons.",
+          "explication": "En cédant des électrons, le réducteur se transforme en l'oxydant de son couple ; les métaux comme le fer ou le zinc sont des réducteurs.",
+          "pieges": [
+            {
+              "texte": "Une espèce capable de capter des électrons.",
+              "pourquoi": "C'est la définition d'un oxydant."
+            },
+            {
+              "texte": "Une espèce qui rend les objets plus petits.",
+              "pourquoi": "« Réduire » a ici un sens chimique : il s'agit d'électrons, pas de taille."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle est la demi-équation électronique du couple formé de l'ion Cu²⁺ (oxydant) et du cuivre métal Cu (réducteur) ?",
+          "nom": "Cu²⁺ + 2 électrons = Cu.",
+          "explication": "L'ion porte 2 charges positives : il faut 2 électrons pour obtenir l'atome neutre.",
+          "pieges": [
+            {
+              "texte": "Cu²⁺ + 1 électron = Cu.",
+              "pourquoi": "Un seul électron laisserait une charge positive : les charges ne seraient pas équilibrées."
+            },
+            {
+              "texte": "Cu²⁺ = Cu + 2 électrons.",
+              "pourquoi": "Les charges ne sont pas équilibrées : à gauche plus 2, à droite moins 2. L'oxydant capte les électrons, ils vont donc de son côté."
+            }
+          ]
+        },
+        {
+          "texte": "On plonge un clou de fer dans une solution bleue d'ions Cu²⁺. Il se couvre de cuivre et des ions Fe²⁺ apparaissent. Quelle espèce a été oxydée ?",
+          "nom": "Le fer du clou, qui a cédé 2 électrons pour devenir Fe²⁺.",
+          "explication": "Fe = Fe²⁺ + 2 électrons : le fer perd des électrons, c'est une oxydation. Les ions Cu²⁺ captent ces électrons : ils sont réduits.",
+          "pieges": [
+            {
+              "texte": "Les ions Cu²⁺, qui sont devenus du cuivre.",
+              "pourquoi": "Les ions Cu²⁺ ont gagné des électrons : c'est une réduction, pas une oxydation."
+            },
+            {
+              "texte": "Aucune : le cuivre s'est seulement déposé.",
+              "pourquoi": "Le dépôt de cuivre et l'apparition des ions Fe²⁺ montrent un transfert d'électrons du fer vers les ions Cu²⁺."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les électrons n'apparaissent-ils pas dans l'équation de la réaction d'oxydo-réduction ?",
+          "nom": "Parce que tous les électrons cédés par le réducteur sont captés par l'oxydant.",
+          "explication": "On combine les deux demi-équations pour que le nombre d'électrons cédés soit égal au nombre d'électrons captés : ils s'éliminent.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils s'échappent dans l'air.",
+              "pourquoi": "Il n'y a pas d'électrons libres en solution : ils passent directement d'une espèce à l'autre."
+            },
+            {
+              "texte": "Parce que les électrons ne jouent aucun rôle.",
+              "pourquoi": "Au contraire, c'est leur transfert qui définit la réaction ; ils disparaissent de l'équation car ils sont échangés en totalité."
+            }
+          ]
+        },
+        {
+          "texte": "Le zinc Zn réagit avec les ions H⁺. Demi-équations : Zn²⁺ + 2 électrons = Zn et 2 H⁺ + 2 électrons = H₂. Que se passe-t-il ?",
+          "nom": "Un atome de zinc réagit avec 2 ions H⁺ : il se forme un ion Zn²⁺ et une molécule H₂.",
+          "explication": "Le zinc cède 2 électrons, captés par 2 ions H⁺ : les électrons s'équilibrent, comme les atomes et les charges.",
+          "pieges": [
+            {
+              "texte": "Un atome de zinc réagit avec 1 ion H⁺ : il se forme un ion Zn²⁺ et une molécule H₂.",
+              "pourquoi": "Une molécule H₂ contient 2 atomes d'hydrogène : il faut 2 ions H⁺, et ils captent les 2 électrons du zinc."
+            },
+            {
+              "texte": "Un ion Zn²⁺ réagit avec une molécule H₂ : il se forme du zinc et 2 ions H⁺.",
+              "pourquoi": "C'est le sens inverse : les réactifs donnés sont le zinc métal et les ions H⁺."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on une oxydation ?",
+          "nom": "Une perte d'électrons par un réducteur.",
+          "explication": "Le réducteur s'oxyde en cédant des électrons ; en même temps, l'oxydant se réduit en les captant.",
+          "pieges": [
+            {
+              "texte": "Un gain d'électrons.",
+              "pourquoi": "C'est une réduction ; on peut retenir que l'oxydation est une perte."
+            },
+            {
+              "texte": "Seulement une réaction avec le dioxygène de l'air.",
+              "pourquoi": "Le fer dans les ions Cu²⁺ s'oxyde sans dioxygène : ce qui compte, c'est la perte d'électrons."
+            }
+          ]
+        },
+        {
+          "texte": "Al = Al³⁺ + 3 électrons. Cette transformation de l'aluminium est-elle une oxydation ou une réduction ?",
+          "nom": "Une oxydation : l'aluminium perd 3 électrons.",
+          "explication": "L'aluminium métal joue le rôle de réducteur : il cède des électrons et devient l'ion Al³⁺.",
+          "pieges": [
+            {
+              "texte": "Une réduction, car l'atome devient plus petit.",
+              "pourquoi": "Le mot « réduction » ne parle pas de taille : une réduction est un gain d'électrons."
+            },
+            {
+              "texte": "Une réduction, car il y a 3 électrons dans l'équation.",
+              "pourquoi": "Ce qui compte, c'est leur côté : ils sont produits, donc perdus par l'aluminium. C'est une oxydation."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Oxidants, reductants and redox reactions",
+        "idee": "An oxidant takes in electrons, a reductant gives them away. In a redox reaction, electrons pass from the reductant of one pair to the oxidant of another pair.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Oxidant + electrons = reductant. Oxidation is a loss of electrons, reduction a gain. In a half-equation, balance the atoms first, then the charges with electrons.",
+          "exemple": "Example: for the pair made of the Fe²⁺ ion and the metal Fe, the half-equation is Fe²⁺ + 2 electrons = Fe. The Fe²⁺ ion is the oxidant, iron metal is the reductant.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is an oxidant?",
+            "nom": "A species that can take in one or more electrons.",
+            "explication": "By taking in electrons, the oxidant turns into the reductant of its pair.",
+            "pieges": [
+              {
+                "texte": "A species that can give away electrons.",
+                "pourquoi": "That's the definition of a reductant."
+              },
+              {
+                "texte": "A species that must contain oxygen.",
+                "pourquoi": "The word comes from oxygen, but the Cu²⁺ ion, with no oxygen, is an oxidant: it's all about electrons."
+              }
+            ]
+          },
+          {
+            "texte": "What is a reductant?",
+            "nom": "A species that can give away one or more electrons.",
+            "explication": "By giving away electrons, the reductant turns into the oxidant of its pair; metals such as iron or zinc are reductants.",
+            "pieges": [
+              {
+                "texte": "A species that can take in electrons.",
+                "pourquoi": "That's the definition of an oxidant."
+              },
+              {
+                "texte": "A species that makes things smaller.",
+                "pourquoi": "\"Reduce\" has a chemical meaning here: it's about electrons, not size."
+              }
+            ]
+          },
+          {
+            "texte": "What is the half-equation for the pair made of the Cu²⁺ ion (oxidant) and copper metal Cu (reductant)?",
+            "nom": "Cu²⁺ + 2 electrons = Cu.",
+            "explication": "The ion carries 2 positive charges: it takes 2 electrons to get the neutral atom.",
+            "pieges": [
+              {
+                "texte": "Cu²⁺ + 1 electron = Cu.",
+                "pourquoi": "A single electron would leave one positive charge: the charges wouldn't balance."
+              },
+              {
+                "texte": "Cu²⁺ = Cu + 2 electrons.",
+                "pourquoi": "The charges don't balance: plus 2 on the left, minus 2 on the right. The oxidant takes in the electrons, so they go on its side."
+              }
+            ]
+          },
+          {
+            "texte": "An iron nail is dipped into a blue solution of Cu²⁺ ions. It gets coated with copper and Fe²⁺ ions appear. Which species was oxidised?",
+            "nom": "The iron of the nail, which gave away 2 electrons to become Fe²⁺.",
+            "explication": "Fe = Fe²⁺ + 2 electrons: iron loses electrons, that's an oxidation. The Cu²⁺ ions take in these electrons: they are reduced.",
+            "pieges": [
+              {
+                "texte": "The Cu²⁺ ions, which turned into copper.",
+                "pourquoi": "The Cu²⁺ ions gained electrons: that's a reduction, not an oxidation."
+              },
+              {
+                "texte": "None: the copper just settled.",
+                "pourquoi": "The copper coating and the new Fe²⁺ ions show electrons moving from the iron to the Cu²⁺ ions."
+              }
+            ]
+          },
+          {
+            "texte": "Why don't electrons appear in the equation of a redox reaction?",
+            "nom": "Because all the electrons given away by the reductant are taken in by the oxidant.",
+            "explication": "The two half-equations are combined so that the electrons given away equal the electrons taken in: they cancel out.",
+            "pieges": [
+              {
+                "texte": "Because they escape into the air.",
+                "pourquoi": "There are no free electrons in the solution: they pass straight from one species to the other."
+              },
+              {
+                "texte": "Because electrons play no part.",
+                "pourquoi": "On the contrary, their transfer is what defines the reaction; they drop out of the equation because they are all exchanged."
+              }
+            ]
+          },
+          {
+            "texte": "Zinc, Zn, reacts with H⁺ ions. Half-equations: Zn²⁺ + 2 electrons = Zn and 2 H⁺ + 2 electrons = H₂. What happens?",
+            "nom": "One zinc atom reacts with 2 H⁺ ions: a Zn²⁺ ion and an H₂ molecule form.",
+            "explication": "Zinc gives away 2 electrons, taken in by 2 H⁺ ions: the electrons balance, as do the atoms and charges.",
+            "pieges": [
+              {
+                "texte": "One zinc atom reacts with 1 H⁺ ion: a Zn²⁺ ion and an H₂ molecule form.",
+                "pourquoi": "An H₂ molecule contains 2 hydrogen atoms: it takes 2 H⁺ ions, and they take in zinc's 2 electrons."
+              },
+              {
+                "texte": "A Zn²⁺ ion reacts with an H₂ molecule: zinc and 2 H⁺ ions form.",
+                "pourquoi": "That's the reverse direction: the reactants given are zinc metal and H⁺ ions."
+              }
+            ]
+          },
+          {
+            "texte": "What is an oxidation?",
+            "nom": "A loss of electrons by a reductant.",
+            "explication": "The reductant is oxidised by giving away electrons; at the same time, the oxidant is reduced by taking them in.",
+            "pieges": [
+              {
+                "texte": "A gain of electrons.",
+                "pourquoi": "That's a reduction; remember that oxidation is a loss."
+              },
+              {
+                "texte": "Only a reaction with oxygen in the air.",
+                "pourquoi": "Iron in Cu²⁺ ions is oxidised with no oxygen: what counts is the loss of electrons."
+              }
+            ]
+          },
+          {
+            "texte": "Al = Al³⁺ + 3 electrons. Is this change of aluminium an oxidation or a reduction?",
+            "nom": "An oxidation: aluminium loses 3 electrons.",
+            "explication": "Aluminium metal acts as a reductant: it gives away electrons and becomes the Al³⁺ ion.",
+            "pieges": [
+              {
+                "texte": "A reduction, because the atom gets smaller.",
+                "pourquoi": "The word \"reduction\" isn't about size: a reduction is a gain of electrons."
+              },
+              {
+                "texte": "A reduction, because there are 3 electrons in the equation.",
+                "pourquoi": "What counts is their side: they are produced, so lost by aluminium. It's an oxidation."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mutations-adn",
+      "titre": "Mutations de l'ADN et variabilité génétique",
+      "niveau": "1re",
+      "prerequis": [
+        "cellule-adn"
+      ],
+      "programme": {
+        "source": "svt1re",
+        "texte": "Des erreurs peuvent se produire aléatoirement lors de la réplication de l'ADN. Leur fréquence est augmentée par l’action d’agents mutagènes. L’ADN peut également être endommagé en dehors de sa réplication."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une mutation est une modification de la séquence de l'ADN. Elle naît au hasard, souvent d'une erreur de réplication non réparée. Les mutations créent de nouveaux allèles.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Une erreur de réplication ou un ADN endommagé est en général réparé par des enzymes. Si la réparation échoue, la mutation est copiée et transmise aux cellules filles. Cellule germinale : transmissible aux enfants ; cellule somatique : non.",
+        "exemple": "Exemple : un coup de soleil endommage l'ADN d'une cellule de la peau. Si la réparation échoue, la mutation se retrouve dans toutes les cellules issues de celle-ci, mais pas chez les enfants de la personne.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Comment apparaissent la plupart des mutations spontanées ?",
+          "nom": "Par des erreurs qui se produisent au hasard pendant la réplication de l'ADN.",
+          "explication": "Lors de la copie de l'ADN, des erreurs surviennent aléatoirement ; celles qui ne sont pas réparées deviennent des mutations.",
+          "pieges": [
+            {
+              "texte": "Parce que la cellule choisit de muter pour s'adapter.",
+              "pourquoi": "Les mutations se produisent au hasard : la cellule ne choisit pas celle dont elle aurait besoin."
+            },
+            {
+              "texte": "Uniquement à cause de produits toxiques.",
+              "pourquoi": "Les agents mutagènes augmentent la fréquence des mutations, mais il en apparaît aussi sans eux, par erreur de réplication."
+            }
+          ]
+        },
+        {
+          "texte": "Que fait un agent mutagène, comme les rayons ultraviolets ?",
+          "nom": "Il augmente la fréquence des mutations.",
+          "explication": "Les agents mutagènes, physiques comme les rayonnements ou chimiques comme certaines molécules, endommagent l'ADN et rendent les mutations plus fréquentes.",
+          "pieges": [
+            {
+              "texte": "Il provoque toujours la même mutation, au même endroit.",
+              "pourquoi": "Les mutations restent aléatoires : l'agent mutagène augmente leur nombre, pas leur précision."
+            },
+            {
+              "texte": "Il répare l'ADN abîmé.",
+              "pourquoi": "C'est le rôle des systèmes de réparation, faits d'enzymes ; l'agent mutagène fait l'inverse."
+            }
+          ]
+        },
+        {
+          "texte": "Une erreur de réplication vient de se produire. Que se passe-t-il le plus souvent ?",
+          "nom": "Elle est réparée par des enzymes spécialisées.",
+          "explication": "La cellule possède des systèmes de réparation ; la mutation ne persiste que si la réparation échoue ou n'est pas conforme.",
+          "pieges": [
+            {
+              "texte": "Elle devient toujours une mutation.",
+              "pourquoi": "La plupart des erreurs sont réparées : seules celles qui échappent à la réparation deviennent des mutations."
+            },
+            {
+              "texte": "La cellule meurt aussitôt.",
+              "pourquoi": "Une erreur isolée ne tue pas la cellule : elle est le plus souvent réparée."
+            }
+          ]
+        },
+        {
+          "texte": "Une mutation apparaît dans une cellule de la peau d'un adulte. Sera-t-elle transmise à ses enfants ?",
+          "nom": "Non : elle ne sera présente que dans les cellules issues de cette cellule de la peau.",
+          "explication": "C'est une mutation somatique : elle se retrouve dans le clone issu de la cellule, pas dans les cellules reproductrices.",
+          "pieges": [
+            {
+              "texte": "Oui, toute mutation se transmet aux enfants.",
+              "pourquoi": "Seules les mutations des cellules germinales, à l'origine des ovules et des spermatozoïdes, peuvent se transmettre."
+            },
+            {
+              "texte": "Oui, si la mutation est visible sur la peau.",
+              "pourquoi": "Ce qui compte, c'est la cellule touchée : une cellule de la peau ne participe pas à la reproduction."
+            }
+          ]
+        },
+        {
+          "texte": "Dans quel cas une mutation peut-elle être héréditaire ?",
+          "nom": "Quand elle survient dans une cellule germinale, qui donne les ovules ou les spermatozoïdes.",
+          "explication": "Une mutation germinale peut passer à l'enfant : elle sera alors présente dans toutes ses cellules.",
+          "pieges": [
+            {
+              "texte": "Quand elle survient dans un muscle très utilisé.",
+              "pourquoi": "Un muscle est fait de cellules somatiques : ses mutations ne passent pas aux enfants."
+            },
+            {
+              "texte": "Jamais : les mutations ne se transmettent pas.",
+              "pourquoi": "Les mutations des cellules germinales peuvent se transmettre : c'est l'origine des nouveaux allèles."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est le lien entre mutations et allèles ?",
+          "nom": "Les mutations sont à l'origine de la diversité des allèles au cours du temps.",
+          "explication": "Un allèle est une version d'un segment d'ADN ; chaque mutation transmise peut créer une nouvelle version.",
+          "pieges": [
+            {
+              "texte": "Les allèles produisent les mutations.",
+              "pourquoi": "C'est l'inverse : une mutation modifie la séquence et crée un nouvel allèle."
+            },
+            {
+              "texte": "Il n'y en a aucun.",
+              "pourquoi": "Sans mutations, il n'y aurait qu'une seule version de chaque gène."
+            }
+          ]
+        },
+        {
+          "texte": "Une mutation a-t-elle toujours un effet sur la santé ?",
+          "nom": "Non : selon sa nature, ses effets sont variés, et la plupart des mutations n'affectent pas la santé.",
+          "explication": "Des mutations se produisent sans cesse dans nos cellules ; la plupart sont réparées ou sans conséquence, d'autres modifient le phénotype.",
+          "pieges": [
+            {
+              "texte": "Oui, toute mutation provoque une maladie.",
+              "pourquoi": "C'est l'image des films : en réalité, presque aucune mutation n'affecte notre santé."
+            },
+            {
+              "texte": "Oui, toute mutation donne un nouveau pouvoir.",
+              "pourquoi": "Aucune mutation ne fait pousser des ailes : les effets réels sont souvent nuls ou discrets."
+            }
+          ]
+        },
+        {
+          "texte": "Une étude a lu le génome entier de 78 trios père, mère, enfant en Islande. Qu'a-t-elle montré sur l'âge du père ?",
+          "nom": "Plus le père est âgé, plus l'enfant porte de mutations nouvelles : environ 2 de plus par année d'âge du père.",
+          "explication": "Le taux moyen mesuré est de 1,2 × 10⁻⁸ mutation nouvelle par nucléotide et par génération ; l'âge du père explique l'essentiel des écarts entre enfants.",
+          "pieges": [
+            {
+              "texte": "L'âge du père n'a aucun effet.",
+              "pourquoi": "C'est le principal facteur mesuré : environ deux mutations nouvelles de plus par année."
+            },
+            {
+              "texte": "Les enfants de pères âgés ont moins de mutations.",
+              "pourquoi": "C'est l'inverse : le nombre de mutations nouvelles augmente avec l'âge du père."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "DNA mutations and genetic variability",
+        "idee": "A mutation is a change in the DNA sequence. It happens by chance, often from a replication error that wasn't repaired. Mutations create new alleles.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A replication error or damaged DNA is usually repaired by enzymes. If the repair fails, the mutation is copied and passed on to daughter cells. Germ cell: can be passed on to children; somatic cell: cannot.",
+          "exemple": "Example: sunburn damages the DNA of a skin cell. If the repair fails, the mutation ends up in every cell that comes from it, but not in the person's children.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "How do most spontaneous mutations appear?",
+            "nom": "Through errors that happen by chance during DNA replication.",
+            "explication": "When DNA is copied, errors occur at random; those that aren't repaired become mutations.",
+            "pieges": [
+              {
+                "texte": "Because the cell chooses to mutate in order to adapt.",
+                "pourquoi": "Mutations happen by chance: the cell doesn't pick the one it would need."
+              },
+              {
+                "texte": "Only because of toxic products.",
+                "pourquoi": "Mutagens make mutations more frequent, but some also appear without them, through replication errors."
+              }
+            ]
+          },
+          {
+            "texte": "What does a mutagen, such as ultraviolet light, do?",
+            "nom": "It increases the frequency of mutations.",
+            "explication": "Mutagens, physical like radiation or chemical like certain molecules, damage DNA and make mutations more frequent.",
+            "pieges": [
+              {
+                "texte": "It always causes the same mutation, in the same place.",
+                "pourquoi": "Mutations remain random: the mutagen raises their number, not their precision."
+              },
+              {
+                "texte": "It repairs damaged DNA.",
+                "pourquoi": "That's the job of repair systems, made of enzymes; the mutagen does the opposite."
+              }
+            ]
+          },
+          {
+            "texte": "A replication error has just happened. What usually happens next?",
+            "nom": "It is repaired by specialised enzymes.",
+            "explication": "The cell has repair systems; the mutation only remains if the repair fails or is faulty.",
+            "pieges": [
+              {
+                "texte": "It always becomes a mutation.",
+                "pourquoi": "Most errors are repaired: only those that escape repair become mutations."
+              },
+              {
+                "texte": "The cell dies straight away.",
+                "pourquoi": "A single error doesn't kill the cell: it is usually repaired."
+              }
+            ]
+          },
+          {
+            "texte": "A mutation appears in a skin cell of an adult. Will it be passed on to their children?",
+            "nom": "No: it will only be in the cells that come from that skin cell.",
+            "explication": "It's a somatic mutation: it is found in the clone that comes from the cell, not in the reproductive cells.",
+            "pieges": [
+              {
+                "texte": "Yes, every mutation is passed on to children.",
+                "pourquoi": "Only mutations in germ cells, which give rise to eggs and sperm, can be passed on."
+              },
+              {
+                "texte": "Yes, if the mutation shows on the skin.",
+                "pourquoi": "What counts is the cell affected: a skin cell takes no part in reproduction."
+              }
+            ]
+          },
+          {
+            "texte": "When can a mutation be inherited?",
+            "nom": "When it happens in a germ cell, which gives rise to eggs or sperm.",
+            "explication": "A germline mutation can pass to the child: it will then be in every one of the child's cells.",
+            "pieges": [
+              {
+                "texte": "When it happens in a muscle that is used a lot.",
+                "pourquoi": "A muscle is made of somatic cells: its mutations don't pass to children."
+              },
+              {
+                "texte": "Never: mutations are not passed on.",
+                "pourquoi": "Mutations in germ cells can be passed on: that's where new alleles come from."
+              }
+            ]
+          },
+          {
+            "texte": "What is the link between mutations and alleles?",
+            "nom": "Mutations are the source of the diversity of alleles over time.",
+            "explication": "An allele is a version of a stretch of DNA; each mutation passed on can create a new version.",
+            "pieges": [
+              {
+                "texte": "Alleles produce mutations.",
+                "pourquoi": "It's the other way round: a mutation changes the sequence and creates a new allele."
+              },
+              {
+                "texte": "There is none.",
+                "pourquoi": "Without mutations, there would be only one version of each gene."
+              }
+            ]
+          },
+          {
+            "texte": "Does a mutation always affect health?",
+            "nom": "No: depending on its nature, its effects vary, and most mutations don't affect health.",
+            "explication": "Mutations happen in our cells all the time; most are repaired or have no consequence, others change the phenotype.",
+            "pieges": [
+              {
+                "texte": "Yes, every mutation causes a disease.",
+                "pourquoi": "That's the film version: in reality, almost no mutation affects our health."
+              },
+              {
+                "texte": "Yes, every mutation gives a new power.",
+                "pourquoi": "No mutation makes wings grow: real effects are often nil or subtle."
+              }
+            ]
+          },
+          {
+            "texte": "A study read the whole genome of 78 father, mother, child trios in Iceland. What did it show about the father's age?",
+            "nom": "The older the father, the more new mutations the child carries: about 2 more per year of the father's age.",
+            "explication": "The average rate measured is 1.2 × 10⁻⁸ new mutation per nucleotide per generation; the father's age explains most of the differences between children.",
+            "pieges": [
+              {
+                "texte": "The father's age has no effect.",
+                "pourquoi": "It's the main factor measured: about two more new mutations per year."
+              },
+              {
+                "texte": "Children of older fathers have fewer mutations.",
+                "pourquoi": "It's the other way round: the number of new mutations rises with the father's age."
               }
             ]
           }
@@ -13964,6 +15083,564 @@
               {
                 "texte": "Only wind turbines have an effect.",
                 "pourquoi": "They all do: for example, the radioactive waste from nuclear power stations."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "acides-bases-ph",
+      "titre": "Acides, bases et pH",
+      "niveau": "Terminale",
+      "prerequis": [
+        "quantite-matiere"
+      ],
+      "programme": {
+        "source": "pctle",
+        "texte": "Déterminer, à partir de la valeur de la concentration en ion oxonium H3O+, la valeur du pH de la solution et inversement."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un acide cède un ion H⁺, une base en capte un. Le pH mesure la concentration en ions oxonium : pH = − log de cette concentration en moles par litre. Plus le pH est bas, plus la solution est acide.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "pH = − log c, où c est la concentration en ions oxonium en moles par litre. Inversement, c = 10 puissance moins pH. Une unité de pH en moins, c'est une concentration 10 fois plus grande.",
+        "exemple": "Exemple : une solution contient 1,0 × 10⁻⁴ mole d'ions oxonium par litre. Son pH vaut − log (10⁻⁴) = 4.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce qu'un acide au sens de Brönsted ?",
+          "nom": "Une espèce capable de céder un ion hydrogène H⁺.",
+          "explication": "En cédant un ion H⁺, l'acide se transforme en sa base conjuguée : les deux forment un couple acide-base.",
+          "pieges": [
+            {
+              "texte": "Une espèce capable de capter un ion H⁺.",
+              "pourquoi": "C'est la définition d'une base."
+            },
+            {
+              "texte": "Une espèce capable de céder des électrons.",
+              "pourquoi": "C'est un réducteur : les réactions acide-base échangent des ions H⁺, pas des électrons."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qu'une base au sens de Brönsted ?",
+          "nom": "Une espèce capable de capter un ion hydrogène H⁺.",
+          "explication": "En captant un ion H⁺, la base se transforme en son acide conjugué.",
+          "pieges": [
+            {
+              "texte": "Une espèce capable de céder un ion H⁺.",
+              "pourquoi": "C'est la définition d'un acide."
+            },
+            {
+              "texte": "Une espèce qui ne contient aucun atome d'hydrogène.",
+              "pourquoi": "L'eau contient de l'hydrogène et peut jouer le rôle de base : elle capte un ion H⁺ pour donner l'ion oxonium."
+            }
+          ]
+        },
+        {
+          "texte": "Que se passe-t-il au cours d'une réaction acide-base ?",
+          "nom": "Un ion H⁺ passe de l'acide d'un couple à la base d'un autre couple.",
+          "explication": "Deux couples acide-base sont en jeu : l'acide de l'un cède un ion H⁺, la base de l'autre le capte.",
+          "pieges": [
+            {
+              "texte": "Des électrons passent d'un réducteur à un oxydant.",
+              "pourquoi": "C'est une réaction d'oxydo-réduction ; en acide-base, c'est un ion H⁺ qui est transféré."
+            },
+            {
+              "texte": "L'acide et la base s'annulent et disparaissent sans rien former.",
+              "pourquoi": "Ils se transforment : l'acide devient sa base conjuguée, la base devient son acide conjugué."
+            }
+          ]
+        },
+        {
+          "texte": "L'eau est la base du couple ion oxonium et eau, et l'acide du couple eau et ion hydroxyde. Comment qualifie-t-on une telle espèce ?",
+          "nom": "D'amphotère : elle peut jouer le rôle d'acide ou de base.",
+          "explication": "L'eau capte un ion H⁺ pour donner l'ion oxonium, ou en cède un pour donner l'ion hydroxyde.",
+          "pieges": [
+            {
+              "texte": "De neutre : elle ne réagit jamais.",
+              "pourquoi": "L'eau participe à de nombreuses réactions acide-base, dans un rôle ou dans l'autre."
+            },
+            {
+              "texte": "D'oxydant.",
+              "pourquoi": "Oxydant parle d'électrons ; ici, il s'agit de gagner ou de perdre un ion H⁺."
+            }
+          ]
+        },
+        {
+          "texte": "Une solution contient 1,0 × 10⁻³ mole d'ions oxonium par litre. Quel est son pH ?",
+          "nom": "3.",
+          "explication": "pH = − log (10⁻³) = − (− 3) = 3.",
+          "pieges": [
+            {
+              "texte": "− 3.",
+              "pourquoi": "On a oublié le signe moins de la formule : pH = − log c."
+            },
+            {
+              "texte": "0,001.",
+              "pourquoi": "C'est la concentration elle-même ; le pH en est le logarithme décimal, changé de signe."
+            }
+          ]
+        },
+        {
+          "texte": "Un jus a un pH de 2. Quelle est sa concentration en ions oxonium ?",
+          "nom": "1,0 × 10⁻² mole par litre, soit 0,01 mole par litre.",
+          "explication": "c = 10 puissance moins pH = 10⁻² mole par litre.",
+          "pieges": [
+            {
+              "texte": "2 moles par litre.",
+              "pourquoi": "Le pH n'est pas la concentration : c'est l'opposé de son logarithme."
+            },
+            {
+              "texte": "100 moles par litre.",
+              "pourquoi": "On a calculé 10², sans le signe moins : c = 10 puissance moins pH."
+            }
+          ]
+        },
+        {
+          "texte": "On dilue 10 fois une solution d'acide chlorhydrique de pH 2. Quel est le nouveau pH ?",
+          "nom": "3.",
+          "explication": "La concentration en ions oxonium est divisée par 10 : elle passe de 10⁻² à 10⁻³ mole par litre, donc le pH augmente de 1.",
+          "pieges": [
+            {
+              "texte": "1.",
+              "pourquoi": "Diluer rend la solution moins acide : le pH augmente, il ne diminue pas."
+            },
+            {
+              "texte": "20.",
+              "pourquoi": "Le pH n'est pas proportionnel à la dilution : diviser la concentration par 10 ajoute 1 au pH."
+            }
+          ]
+        },
+        {
+          "texte": "Une solution A a un pH de 3, une solution B un pH de 5. Comparer leurs concentrations en ions oxonium.",
+          "nom": "A en contient 100 fois plus que B.",
+          "explication": "10⁻³ ÷ 10⁻⁵ = 10² = 100 : deux unités de pH d'écart, c'est un facteur 100.",
+          "pieges": [
+            {
+              "texte": "A en contient 2 fois plus que B.",
+              "pourquoi": "L'échelle du pH est logarithmique : une unité d'écart vaut un facteur 10, deux unités un facteur 100."
+            },
+            {
+              "texte": "B en contient plus que A.",
+              "pourquoi": "Plus le pH est grand, plus la concentration en ions oxonium est petite : c'est A, au pH le plus bas, qui en contient le plus."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Acids, bases and pH",
+        "idee": "An acid gives away an H⁺ ion, a base takes one in. pH measures the concentration of oxonium ions: pH = − log of that concentration in moles per litre. The lower the pH, the more acidic the solution.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "pH = − log c, where c is the oxonium ion concentration in moles per litre. Conversely, c = 10 to the power of minus pH. One pH unit lower means a concentration 10 times higher.",
+          "exemple": "Example: a solution contains 1.0 × 10⁻⁴ mole of oxonium ions per litre. Its pH is − log (10⁻⁴) = 4.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is a Brønsted acid?",
+            "nom": "A species that can give away a hydrogen ion, H⁺.",
+            "explication": "By giving away an H⁺ ion, the acid turns into its conjugate base: the two form an acid-base pair.",
+            "pieges": [
+              {
+                "texte": "A species that can take in an H⁺ ion.",
+                "pourquoi": "That's the definition of a base."
+              },
+              {
+                "texte": "A species that can give away electrons.",
+                "pourquoi": "That's a reductant: acid-base reactions exchange H⁺ ions, not electrons."
+              }
+            ]
+          },
+          {
+            "texte": "What is a Brønsted base?",
+            "nom": "A species that can take in a hydrogen ion, H⁺.",
+            "explication": "By taking in an H⁺ ion, the base turns into its conjugate acid.",
+            "pieges": [
+              {
+                "texte": "A species that can give away an H⁺ ion.",
+                "pourquoi": "That's the definition of an acid."
+              },
+              {
+                "texte": "A species with no hydrogen atom.",
+                "pourquoi": "Water contains hydrogen and can act as a base: it takes in an H⁺ ion to give the oxonium ion."
+              }
+            ]
+          },
+          {
+            "texte": "What happens during an acid-base reaction?",
+            "nom": "An H⁺ ion passes from the acid of one pair to the base of another pair.",
+            "explication": "Two acid-base pairs are involved: the acid of one gives away an H⁺ ion, the base of the other takes it in.",
+            "pieges": [
+              {
+                "texte": "Electrons pass from a reductant to an oxidant.",
+                "pourquoi": "That's a redox reaction; in acid-base, it's an H⁺ ion that is transferred."
+              },
+              {
+                "texte": "The acid and the base cancel out and vanish, forming nothing.",
+                "pourquoi": "They change: the acid becomes its conjugate base, the base its conjugate acid."
+              }
+            ]
+          },
+          {
+            "texte": "Water is the base of the oxonium ion and water pair, and the acid of the water and hydroxide ion pair. What is such a species called?",
+            "nom": "Amphoteric: it can act as an acid or as a base.",
+            "explication": "Water takes in an H⁺ ion to give the oxonium ion, or gives one away to give the hydroxide ion.",
+            "pieges": [
+              {
+                "texte": "Neutral: it never reacts.",
+                "pourquoi": "Water takes part in many acid-base reactions, in one role or the other."
+              },
+              {
+                "texte": "An oxidant.",
+                "pourquoi": "Oxidant is about electrons; here it's about gaining or losing an H⁺ ion."
+              }
+            ]
+          },
+          {
+            "texte": "A solution contains 1.0 × 10⁻³ mole of oxonium ions per litre. What is its pH?",
+            "nom": "3.",
+            "explication": "pH = − log (10⁻³) = − (− 3) = 3.",
+            "pieges": [
+              {
+                "texte": "− 3.",
+                "pourquoi": "The minus sign in the formula was forgotten: pH = − log c."
+              },
+              {
+                "texte": "0.001.",
+                "pourquoi": "That's the concentration itself; pH is its decimal logarithm with the sign changed."
+              }
+            ]
+          },
+          {
+            "texte": "A juice has a pH of 2. What is its oxonium ion concentration?",
+            "nom": "1.0 × 10⁻² mole per litre, that is 0.01 mole per litre.",
+            "explication": "c = 10 to the power of minus pH = 10⁻² mole per litre.",
+            "pieges": [
+              {
+                "texte": "2 moles per litre.",
+                "pourquoi": "pH is not the concentration: it's the opposite of its logarithm."
+              },
+              {
+                "texte": "100 moles per litre.",
+                "pourquoi": "That's 10², without the minus sign: c = 10 to the power of minus pH."
+              }
+            ]
+          },
+          {
+            "texte": "A hydrochloric acid solution of pH 2 is diluted 10 times. What is the new pH?",
+            "nom": "3.",
+            "explication": "The oxonium ion concentration is divided by 10: it goes from 10⁻² to 10⁻³ mole per litre, so the pH rises by 1.",
+            "pieges": [
+              {
+                "texte": "1.",
+                "pourquoi": "Diluting makes the solution less acidic: the pH goes up, not down."
+              },
+              {
+                "texte": "20.",
+                "pourquoi": "pH isn't proportional to dilution: dividing the concentration by 10 adds 1 to the pH."
+              }
+            ]
+          },
+          {
+            "texte": "Solution A has a pH of 3, solution B a pH of 5. Compare their oxonium ion concentrations.",
+            "nom": "A contains 100 times more than B.",
+            "explication": "10⁻³ ÷ 10⁻⁵ = 10² = 100: two pH units apart means a factor of 100.",
+            "pieges": [
+              {
+                "texte": "A contains 2 times more than B.",
+                "pourquoi": "The pH scale is logarithmic: one unit apart is a factor of 10, two units a factor of 100."
+              },
+              {
+                "texte": "B contains more than A.",
+                "pourquoi": "The higher the pH, the lower the oxonium ion concentration: A, with the lowest pH, contains the most."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "radioactivite",
+      "titre": "Décroissance radioactive et demi-vie",
+      "niveau": "Terminale",
+      "prerequis": [
+        "atome-tableau"
+      ],
+      "programme": {
+        "source": "pctle",
+        "texte": "Utiliser des données et les lois de conservation pour écrire l’équation d’une réaction nucléaire et identifier le type de radioactivité. Exploiter la loi et une courbe de décroissance radioactive."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "On ne sait pas quand un noyau radioactif se désintégrera : c'est aléatoire. Mais pour un grand nombre de noyaux, la moitié a disparu au bout d'une durée fixe, la demi-vie.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Après 1 demi-vie, il reste 1/2 des noyaux ; après 2, il en reste 1/4 ; après 3, 1/8. Dans une désintégration, le nombre de masse A et le numéro atomique Z se conservent.",
+        "exemple": "Exemple : le carbone 14 a une demi-vie d'environ 5 700 ans. Au bout de 5 700 ans, il en reste la moitié ; au bout de 11 400 ans, le quart.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Qu'est-ce que le temps de demi-vie d'un noyau radioactif ?",
+          "nom": "La durée au bout de laquelle la moitié des noyaux présents au départ se sont désintégrés.",
+          "explication": "La demi-vie ne dépend pas du nombre de noyaux au départ : à chaque demi-vie, la population est divisée par 2.",
+          "pieges": [
+            {
+              "texte": "La durée au bout de laquelle tous les noyaux se sont désintégrés.",
+              "pourquoi": "Après une demi-vie, il en reste la moitié ; après deux, le quart : il en reste toujours une partie."
+            },
+            {
+              "texte": "La moitié de la durée de vie de chaque noyau.",
+              "pourquoi": "Chaque noyau se désintègre au hasard : la demi-vie décrit une grande population, pas un noyau seul."
+            }
+          ]
+        },
+        {
+          "texte": "L'iode 131 a une demi-vie d'environ 8 jours. Quelle part des noyaux reste-t-il au bout de 24 jours ?",
+          "nom": "Environ 1/8.",
+          "explication": "24 jours font 3 demi-vies : 1/2 × 1/2 × 1/2 = 1/8.",
+          "pieges": [
+            {
+              "texte": "Environ 1/3.",
+              "pourquoi": "On a divisé par le nombre de demi-vies ; chaque demi-vie divise par 2 : 2 × 2 × 2 = 8."
+            },
+            {
+              "texte": "Plus rien, il a tout disparu au bout de 16 jours.",
+              "pourquoi": "Après 2 demi-vies, il reste encore 1/4 des noyaux : la décroissance ne s'arrête jamais d'un coup."
+            }
+          ]
+        },
+        {
+          "texte": "Peut-on prévoir quand un noyau radioactif précis va se désintégrer ?",
+          "nom": "Non : la désintégration d'un noyau est aléatoire.",
+          "explication": "On ne peut prévoir que le comportement d'un grand nombre de noyaux, par exemple la durée au bout de laquelle la moitié s'est désintégrée.",
+          "pieges": [
+            {
+              "texte": "Oui, exactement au bout d'une demi-vie.",
+              "pourquoi": "Au bout d'une demi-vie, seule la moitié des noyaux s'est désintégrée : on ne sait pas lesquels."
+            },
+            {
+              "texte": "Oui, les plus vieux noyaux se désintègrent en premier.",
+              "pourquoi": "Un noyau ne « vieillit » pas : sa probabilité de se désintégrer ne dépend pas du temps déjà passé."
+            }
+          ]
+        },
+        {
+          "texte": "Le noyau ²³⁸₉₂U se désintègre par radioactivité alpha : il émet un noyau d'hélium ⁴₂He. Quel noyau se forme ?",
+          "nom": "Le noyau ²³⁴₉₀Th, du thorium.",
+          "explication": "Conservation du nombre de masse : 238 − 4 = 234. Conservation du numéro atomique : 92 − 2 = 90, c'est le thorium.",
+          "pieges": [
+            {
+              "texte": "Le noyau ²³⁴₉₂U.",
+              "pourquoi": "Le noyau d'hélium emporte aussi 2 protons : le numéro atomique passe de 92 à 90 et l'élément change."
+            },
+            {
+              "texte": "Le noyau ²³⁶₉₀Th.",
+              "pourquoi": "Le noyau d'hélium compte 4 nucléons, pas 2 : 238 − 4 = 234."
+            }
+          ]
+        },
+        {
+          "texte": "Le carbone 14, ¹⁴₆C, se désintègre par radioactivité bêta moins : il émet un électron. Quel noyau se forme ?",
+          "nom": "Le noyau ¹⁴₇N, de l'azote.",
+          "explication": "L'électron a un nombre de masse 0 et une charge − 1 : A reste 14 et Z passe de 6 à 7, c'est l'azote.",
+          "pieges": [
+            {
+              "texte": "Le noyau ¹⁴₅B, du bore.",
+              "pourquoi": "Pour conserver la charge, le noyau doit gagner une charge positive quand il émet un électron : Z augmente."
+            },
+            {
+              "texte": "Le noyau ¹³₆C.",
+              "pourquoi": "Un électron a un nombre de masse nul : A ne change pas, et c'est Z qui change."
+            }
+          ]
+        },
+        {
+          "texte": "Un os ancien ne contient plus que 1/4 du carbone 14 qu'il avait à la mort de l'animal. La demi-vie du carbone 14 est d'environ 5 700 ans. Quel est son âge ?",
+          "nom": "Environ 11 400 ans.",
+          "explication": "1/4 = 1/2 × 1/2 : il s'est écoulé 2 demi-vies, soit 2 × 5 700 = 11 400 ans.",
+          "pieges": [
+            {
+              "texte": "Environ 2 850 ans.",
+              "pourquoi": "On a divisé la demi-vie par 2 ; pour qu'il reste 1/4, il faut 2 demi-vies entières."
+            },
+            {
+              "texte": "Environ 22 800 ans.",
+              "pourquoi": "On a compté 4 demi-vies pour 1/4 ; or 1/4 correspond à 2 demi-vies : 1/2 puis 1/4."
+            }
+          ]
+        },
+        {
+          "texte": "Comment évolue le nombre de noyaux radioactifs d'un échantillon au cours du temps ?",
+          "nom": "Il décroît de façon exponentielle : pendant des durées égales, la même proportion se désintègre.",
+          "explication": "Le nombre de désintégrations est proportionnel au nombre de noyaux présents : la population suit une loi exponentielle décroissante.",
+          "pieges": [
+            {
+              "texte": "Il décroît en ligne droite, du même nombre chaque jour.",
+              "pourquoi": "C'est la même proportion, pas le même nombre, qui disparaît : moins il reste de noyaux, moins il s'en désintègre."
+            },
+            {
+              "texte": "Il reste constant, puis tombe à zéro d'un coup.",
+              "pourquoi": "Les désintégrations sont aléatoires et continues : le nombre de noyaux baisse progressivement."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on l'activité d'un échantillon radioactif ?",
+          "nom": "Le nombre de désintégrations par seconde, en becquerels.",
+          "explication": "Un becquerel correspond à une désintégration par seconde ; l'activité diminue avec le nombre de noyaux restants.",
+          "pieges": [
+            {
+              "texte": "La masse de l'échantillon, en kilogrammes.",
+              "pourquoi": "L'activité compte des désintégrations par seconde ; ce n'est pas une masse."
+            },
+            {
+              "texte": "La durée de demi-vie, en années.",
+              "pourquoi": "La demi-vie est une durée ; l'activité est un nombre de désintégrations par seconde."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Radioactive decay and half-life",
+        "idee": "We can't know when a radioactive nucleus will decay: it's random. But for a large number of nuclei, half have gone after a fixed time, the half-life.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "After 1 half-life, 1/2 of the nuclei remain; after 2, 1/4 remain; after 3, 1/8. In a decay, the mass number A and the atomic number Z are conserved.",
+          "exemple": "Example: carbon-14 has a half-life of about 5,700 years. After 5,700 years, half of it remains; after 11,400 years, a quarter.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "What is the half-life of a radioactive nucleus?",
+            "nom": "The time after which half of the nuclei present at the start have decayed.",
+            "explication": "The half-life doesn't depend on the starting number of nuclei: with each half-life, the population is divided by 2.",
+            "pieges": [
+              {
+                "texte": "The time after which all the nuclei have decayed.",
+                "pourquoi": "After one half-life, half remain; after two, a quarter: some always remain."
+              },
+              {
+                "texte": "Half the lifetime of each nucleus.",
+                "pourquoi": "Each nucleus decays at random: the half-life describes a large population, not a single nucleus."
+              }
+            ]
+          },
+          {
+            "texte": "Iodine-131 has a half-life of about 8 days. What share of the nuclei remains after 24 days?",
+            "nom": "About 1/8.",
+            "explication": "24 days is 3 half-lives: 1/2 × 1/2 × 1/2 = 1/8.",
+            "pieges": [
+              {
+                "texte": "About 1/3.",
+                "pourquoi": "That's dividing by the number of half-lives; each half-life divides by 2: 2 × 2 × 2 = 8."
+              },
+              {
+                "texte": "Nothing, it was all gone after 16 days.",
+                "pourquoi": "After 2 half-lives, 1/4 of the nuclei still remain: decay never stops all at once."
+              }
+            ]
+          },
+          {
+            "texte": "Can we predict when one particular radioactive nucleus will decay?",
+            "nom": "No: the decay of a nucleus is random.",
+            "explication": "We can only predict the behaviour of a large number of nuclei, for example the time after which half have decayed.",
+            "pieges": [
+              {
+                "texte": "Yes, exactly after one half-life.",
+                "pourquoi": "After one half-life, only half the nuclei have decayed: we don't know which ones."
+              },
+              {
+                "texte": "Yes, the oldest nuclei decay first.",
+                "pourquoi": "A nucleus doesn't \"age\": its chance of decaying doesn't depend on the time already gone by."
+              }
+            ]
+          },
+          {
+            "texte": "The ²³⁸₉₂U nucleus undergoes alpha decay: it emits a helium nucleus, ⁴₂He. Which nucleus forms?",
+            "nom": "The ²³⁴₉₀Th nucleus, thorium.",
+            "explication": "Conservation of mass number: 238 − 4 = 234. Conservation of atomic number: 92 − 2 = 90, which is thorium.",
+            "pieges": [
+              {
+                "texte": "The ²³⁴₉₂U nucleus.",
+                "pourquoi": "The helium nucleus also carries off 2 protons: the atomic number goes from 92 to 90 and the element changes."
+              },
+              {
+                "texte": "The ²³⁶₉₀Th nucleus.",
+                "pourquoi": "The helium nucleus has 4 nucleons, not 2: 238 − 4 = 234."
+              }
+            ]
+          },
+          {
+            "texte": "Carbon-14, ¹⁴₆C, undergoes beta-minus decay: it emits an electron. Which nucleus forms?",
+            "nom": "The ¹⁴₇N nucleus, nitrogen.",
+            "explication": "The electron has mass number 0 and charge − 1: A stays 14 and Z goes from 6 to 7, which is nitrogen.",
+            "pieges": [
+              {
+                "texte": "The ¹⁴₅B nucleus, boron.",
+                "pourquoi": "To conserve charge, the nucleus must gain a positive charge when it emits an electron: Z goes up."
+              },
+              {
+                "texte": "The ¹³₆C nucleus.",
+                "pourquoi": "An electron has zero mass number: A doesn't change, it's Z that changes."
+              }
+            ]
+          },
+          {
+            "texte": "An ancient bone has only 1/4 of the carbon-14 it had when the animal died. The half-life of carbon-14 is about 5,700 years. How old is it?",
+            "nom": "About 11,400 years.",
+            "explication": "1/4 = 1/2 × 1/2: 2 half-lives have gone by, that is 2 × 5,700 = 11,400 years.",
+            "pieges": [
+              {
+                "texte": "About 2,850 years.",
+                "pourquoi": "That's halving the half-life; for 1/4 to remain, it takes 2 whole half-lives."
+              },
+              {
+                "texte": "About 22,800 years.",
+                "pourquoi": "That's counting 4 half-lives for 1/4; but 1/4 is 2 half-lives: 1/2, then 1/4."
+              }
+            ]
+          },
+          {
+            "texte": "How does the number of radioactive nuclei in a sample change over time?",
+            "nom": "It decreases exponentially: over equal times, the same proportion decays.",
+            "explication": "The number of decays is proportional to the number of nuclei present: the population follows a decreasing exponential law.",
+            "pieges": [
+              {
+                "texte": "It decreases in a straight line, by the same number each day.",
+                "pourquoi": "It's the same proportion, not the same number, that goes: the fewer nuclei remain, the fewer decay."
+              },
+              {
+                "texte": "It stays constant, then drops to zero all at once.",
+                "pourquoi": "Decays are random and continuous: the number of nuclei falls gradually."
+              }
+            ]
+          },
+          {
+            "texte": "What is the activity of a radioactive sample?",
+            "nom": "The number of decays per second, in becquerels.",
+            "explication": "One becquerel is one decay per second; activity falls as the number of remaining nuclei falls.",
+            "pieges": [
+              {
+                "texte": "The mass of the sample, in kilograms.",
+                "pourquoi": "Activity counts decays per second; it isn't a mass."
+              },
+              {
+                "texte": "The half-life, in years.",
+                "pourquoi": "The half-life is a time; activity is a number of decays per second."
               }
             ]
           }

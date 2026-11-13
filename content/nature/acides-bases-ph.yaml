@@ -1,0 +1,128 @@
+id: acides-bases-ph
+titre: "Acides, bases et pH"
+niveau: Terminale
+prerequis: [quantite-matiere]
+# Notions du programme (pctle, partie « Modéliser des transformations acide-base par des transferts d'ion hydrogène H⁺ »
+# et « pH et relation pH = − log ([H₃O⁺] / c°) avec c° = 1 mol·L⁻¹ ») : acide et base de Brönsted, couples de l'eau,
+# espèce amphotère, dilutions successives d'un facteur 10. Aucun fait extérieur ; les pH sont des calculs refaits.
+# Les ions oxonium et hydroxyde sont écrits en mots, car « H₃O⁺ » et « HO⁻ » ne se lisent pas bien à voix haute (ADR 0067).
+programme: { source: pctle, texte: "Déterminer, à partir de la valeur de la concentration en ion oxonium H3O+, la valeur du pH de la solution et inversement." }
+activite: quiz
+parametres: {}
+idee: "Un acide cède un ion H⁺, une base en capte un. Le pH mesure la concentration en ions oxonium : pH = − log de cette concentration en moles par litre. Plus le pH est bas, plus la solution est acide."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "pH = − log c, où c est la concentration en ions oxonium en moles par litre. Inversement, c = 10 puissance moins pH. Une unité de pH en moins, c'est une concentration 10 fois plus grande."
+  exemple: "Exemple : une solution contient 1,0 × 10⁻⁴ mole d'ions oxonium par litre. Son pH vaut − log (10⁻⁴) = 4."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'un acide au sens de Brönsted ?"
+    nom: "Une espèce capable de céder un ion hydrogène H⁺."
+    explication: "En cédant un ion H⁺, l'acide se transforme en sa base conjuguée : les deux forment un couple acide-base."
+    pieges:
+      - { texte: "Une espèce capable de capter un ion H⁺.", pourquoi: "C'est la définition d'une base." }
+      - { texte: "Une espèce capable de céder des électrons.", pourquoi: "C'est un réducteur : les réactions acide-base échangent des ions H⁺, pas des électrons." }
+  - texte: "Qu'est-ce qu'une base au sens de Brönsted ?"
+    nom: "Une espèce capable de capter un ion hydrogène H⁺."
+    explication: "En captant un ion H⁺, la base se transforme en son acide conjugué."
+    pieges:
+      - { texte: "Une espèce capable de céder un ion H⁺.", pourquoi: "C'est la définition d'un acide." }
+      - { texte: "Une espèce qui ne contient aucun atome d'hydrogène.", pourquoi: "L'eau contient de l'hydrogène et peut jouer le rôle de base : elle capte un ion H⁺ pour donner l'ion oxonium." }
+  - texte: "Que se passe-t-il au cours d'une réaction acide-base ?"
+    nom: "Un ion H⁺ passe de l'acide d'un couple à la base d'un autre couple."
+    explication: "Deux couples acide-base sont en jeu : l'acide de l'un cède un ion H⁺, la base de l'autre le capte."
+    pieges:
+      - { texte: "Des électrons passent d'un réducteur à un oxydant.", pourquoi: "C'est une réaction d'oxydo-réduction ; en acide-base, c'est un ion H⁺ qui est transféré." }
+      - { texte: "L'acide et la base s'annulent et disparaissent sans rien former.", pourquoi: "Ils se transforment : l'acide devient sa base conjuguée, la base devient son acide conjugué." }
+  - texte: "L'eau est la base du couple ion oxonium et eau, et l'acide du couple eau et ion hydroxyde. Comment qualifie-t-on une telle espèce ?"
+    nom: "D'amphotère : elle peut jouer le rôle d'acide ou de base."
+    explication: "L'eau capte un ion H⁺ pour donner l'ion oxonium, ou en cède un pour donner l'ion hydroxyde."
+    pieges:
+      - { texte: "De neutre : elle ne réagit jamais.", pourquoi: "L'eau participe à de nombreuses réactions acide-base, dans un rôle ou dans l'autre." }
+      - { texte: "D'oxydant.", pourquoi: "Oxydant parle d'électrons ; ici, il s'agit de gagner ou de perdre un ion H⁺." }
+  - texte: "Une solution contient 1,0 × 10⁻³ mole d'ions oxonium par litre. Quel est son pH ?"
+    nom: "3."
+    explication: "pH = − log (10⁻³) = − (− 3) = 3."
+    pieges:
+      - { texte: "− 3.", pourquoi: "On a oublié le signe moins de la formule : pH = − log c." }
+      - { texte: "0,001.", pourquoi: "C'est la concentration elle-même ; le pH en est le logarithme décimal, changé de signe." }
+  - texte: "Un jus a un pH de 2. Quelle est sa concentration en ions oxonium ?"
+    nom: "1,0 × 10⁻² mole par litre, soit 0,01 mole par litre."
+    explication: "c = 10 puissance moins pH = 10⁻² mole par litre."
+    pieges:
+      - { texte: "2 moles par litre.", pourquoi: "Le pH n'est pas la concentration : c'est l'opposé de son logarithme." }
+      - { texte: "100 moles par litre.", pourquoi: "On a calculé 10², sans le signe moins : c = 10 puissance moins pH." }
+  - texte: "On dilue 10 fois une solution d'acide chlorhydrique de pH 2. Quel est le nouveau pH ?"
+    nom: "3."
+    explication: "La concentration en ions oxonium est divisée par 10 : elle passe de 10⁻² à 10⁻³ mole par litre, donc le pH augmente de 1."
+    pieges:
+      - { texte: "1.", pourquoi: "Diluer rend la solution moins acide : le pH augmente, il ne diminue pas." }
+      - { texte: "20.", pourquoi: "Le pH n'est pas proportionnel à la dilution : diviser la concentration par 10 ajoute 1 au pH." }
+  - texte: "Une solution A a un pH de 3, une solution B un pH de 5. Comparer leurs concentrations en ions oxonium."
+    nom: "A en contient 100 fois plus que B."
+    explication: "10⁻³ ÷ 10⁻⁵ = 10² = 100 : deux unités de pH d'écart, c'est un facteur 100."
+    pieges:
+      - { texte: "A en contient 2 fois plus que B.", pourquoi: "L'échelle du pH est logarithmique : une unité d'écart vaut un facteur 10, deux unités un facteur 100." }
+      - { texte: "B en contient plus que A.", pourquoi: "Plus le pH est grand, plus la concentration en ions oxonium est petite : c'est A, au pH le plus bas, qui en contient le plus." }
+
+en:
+  titre: "Acids, bases and pH"
+  idee: "An acid gives away an H⁺ ion, a base takes one in. pH measures the concentration of oxonium ions: pH = − log of that concentration in moles per litre. The lower the pH, the more acidic the solution."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "pH = − log c, where c is the oxonium ion concentration in moles per litre. Conversely, c = 10 to the power of minus pH. One pH unit lower means a concentration 10 times higher."
+    exemple: "Example: a solution contains 1.0 × 10⁻⁴ mole of oxonium ions per litre. Its pH is − log (10⁻⁴) = 4."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a Brønsted acid?"
+      nom: "A species that can give away a hydrogen ion, H⁺."
+      explication: "By giving away an H⁺ ion, the acid turns into its conjugate base: the two form an acid-base pair."
+      pieges:
+        - { texte: "A species that can take in an H⁺ ion.", pourquoi: "That's the definition of a base." }
+        - { texte: "A species that can give away electrons.", pourquoi: "That's a reductant: acid-base reactions exchange H⁺ ions, not electrons." }
+    - texte: "What is a Brønsted base?"
+      nom: "A species that can take in a hydrogen ion, H⁺."
+      explication: "By taking in an H⁺ ion, the base turns into its conjugate acid."
+      pieges:
+        - { texte: "A species that can give away an H⁺ ion.", pourquoi: "That's the definition of an acid." }
+        - { texte: "A species with no hydrogen atom.", pourquoi: "Water contains hydrogen and can act as a base: it takes in an H⁺ ion to give the oxonium ion." }
+    - texte: "What happens during an acid-base reaction?"
+      nom: "An H⁺ ion passes from the acid of one pair to the base of another pair."
+      explication: "Two acid-base pairs are involved: the acid of one gives away an H⁺ ion, the base of the other takes it in."
+      pieges:
+        - { texte: "Electrons pass from a reductant to an oxidant.", pourquoi: "That's a redox reaction; in acid-base, it's an H⁺ ion that is transferred." }
+        - { texte: "The acid and the base cancel out and vanish, forming nothing.", pourquoi: "They change: the acid becomes its conjugate base, the base its conjugate acid." }
+    - texte: "Water is the base of the oxonium ion and water pair, and the acid of the water and hydroxide ion pair. What is such a species called?"
+      nom: "Amphoteric: it can act as an acid or as a base."
+      explication: "Water takes in an H⁺ ion to give the oxonium ion, or gives one away to give the hydroxide ion."
+      pieges:
+        - { texte: "Neutral: it never reacts.", pourquoi: "Water takes part in many acid-base reactions, in one role or the other." }
+        - { texte: "An oxidant.", pourquoi: "Oxidant is about electrons; here it's about gaining or losing an H⁺ ion." }
+    - texte: "A solution contains 1.0 × 10⁻³ mole of oxonium ions per litre. What is its pH?"
+      nom: "3."
+      explication: "pH = − log (10⁻³) = − (− 3) = 3."
+      pieges:
+        - { texte: "− 3.", pourquoi: "The minus sign in the formula was forgotten: pH = − log c." }
+        - { texte: "0.001.", pourquoi: "That's the concentration itself; pH is its decimal logarithm with the sign changed." }
+    - texte: "A juice has a pH of 2. What is its oxonium ion concentration?"
+      nom: "1.0 × 10⁻² mole per litre, that is 0.01 mole per litre."
+      explication: "c = 10 to the power of minus pH = 10⁻² mole per litre."
+      pieges:
+        - { texte: "2 moles per litre.", pourquoi: "pH is not the concentration: it's the opposite of its logarithm." }
+        - { texte: "100 moles per litre.", pourquoi: "That's 10², without the minus sign: c = 10 to the power of minus pH." }
+    - texte: "A hydrochloric acid solution of pH 2 is diluted 10 times. What is the new pH?"
+      nom: "3."
+      explication: "The oxonium ion concentration is divided by 10: it goes from 10⁻² to 10⁻³ mole per litre, so the pH rises by 1."
+      pieges:
+        - { texte: "1.", pourquoi: "Diluting makes the solution less acidic: the pH goes up, not down." }
+        - { texte: "20.", pourquoi: "pH isn't proportional to dilution: dividing the concentration by 10 adds 1 to the pH." }
+    - texte: "Solution A has a pH of 3, solution B a pH of 5. Compare their oxonium ion concentrations."
+      nom: "A contains 100 times more than B."
+      explication: "10⁻³ ÷ 10⁻⁵ = 10² = 100: two pH units apart means a factor of 100."
+      pieges:
+        - { texte: "A contains 2 times more than B.", pourquoi: "The pH scale is logarithmic: one unit apart is a factor of 10, two units a factor of 100." }
+        - { texte: "B contains more than A.", pourquoi: "The higher the pH, the lower the oxonium ion concentration: A, with the lowest pH, contains the most." }

@@ -1,0 +1,128 @@
+id: energie-mecanique
+titre: "Énergie cinétique, potentielle et mécanique"
+niveau: 1re
+prerequis: [mouvement-vitesse]
+# Faits : intensité de la pesanteur à la surface de la Terre, 9,80 m/s², soit 9,8 newtons par kilogramme (NASA, Moon
+# Fact Sheet, colonne Terre, https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html). Lu le 2026-11-13.
+# Relations du programme (pc1re) : énergie cinétique = 1/2 × m × v², énergie potentielle de pesanteur = m × g × z,
+# énergie mécanique = somme des deux. Les nombres sont des calculs refaits.
+programme: { source: pc1re, texte: "Identifier des situations de conservation et de non conservation de l’énergie mécanique. Exploiter la conservation de l’énergie mécanique dans des cas simples : chute libre en l’absence de frottement, oscillations d’un pendule en l’absence de frottement, etc." }
+activite: quiz
+parametres: {}
+idee: "L'énergie cinétique vient de la vitesse : 1/2 × m × v². L'énergie potentielle de pesanteur vient de l'altitude : m × g × z. Leur somme, l'énergie mécanique, se conserve sans frottement."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Énergie cinétique = 1/2 × masse × vitesse au carré. Énergie potentielle de pesanteur = masse × 9,8 × altitude. Masse en kilogrammes, vitesse en m/s, altitude en mètres : le résultat est en joules."
+  exemple: "Exemple : un ballon de 0,5 kilogramme lancé à 10 m/s a une énergie cinétique de 1/2 × 0,5 × 10² = 25 joules."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Une voiture de 1 000 kilogrammes roule à 20 m/s. Quelle est son énergie cinétique ?"
+    nom: "200 000 joules."
+    explication: "1/2 × 1 000 × 20² = 1/2 × 1 000 × 400 = 200 000 joules."
+    pieges:
+      - { texte: "10 000 joules.", pourquoi: "On a oublié d'élever la vitesse au carré : 20² = 400, pas 20." }
+      - { texte: "400 000 joules.", pourquoi: "On a oublié le facteur 1/2 de la formule." }
+  - texte: "Si la vitesse d'un objet double, que devient son énergie cinétique ?"
+    nom: "Elle est multipliée par 4."
+    explication: "La vitesse est au carré dans la formule : 2² = 4."
+    pieges:
+      - { texte: "Elle est multipliée par 2.", pourquoi: "Ce serait vrai si l'énergie était proportionnelle à la vitesse ; elle l'est à son carré." }
+      - { texte: "Elle ne change pas.", pourquoi: "L'énergie cinétique dépend de la vitesse : plus on va vite, plus elle est grande." }
+  - texte: "On monte un livre de 2 kilogrammes de 1,5 mètre. De combien augmente son énergie potentielle de pesanteur ? (Intensité de la pesanteur : 9,8 newtons par kilogramme.)"
+    nom: "D'environ 29 joules."
+    explication: "2 × 9,8 × 1,5 = 29,4 joules."
+    pieges:
+      - { texte: "De 3 joules.", pourquoi: "On a oublié l'intensité de la pesanteur, 9,8 newtons par kilogramme." }
+      - { texte: "D'environ 13 joules.", pourquoi: "On a divisé par la hauteur ; la formule multiplie masse, pesanteur et altitude." }
+  - texte: "Qu'appelle-t-on énergie mécanique d'un objet ?"
+    nom: "La somme de son énergie cinétique et de son énergie potentielle de pesanteur."
+    explication: "Énergie mécanique = énergie cinétique + énergie potentielle."
+    pieges:
+      - { texte: "Le produit de son énergie cinétique et de son énergie potentielle.", pourquoi: "Les énergies s'additionnent, elles ne se multiplient pas." }
+      - { texte: "Son énergie cinétique seulement.", pourquoi: "Il manque la part liée à l'altitude, l'énergie potentielle." }
+  - texte: "Une pomme tombe sans frottement. Quelle grandeur reste constante pendant la chute ?"
+    nom: "Son énergie mécanique."
+    explication: "L'énergie potentielle diminue, l'énergie cinétique augmente d'autant : la somme ne change pas."
+    pieges:
+      - { texte: "Son énergie cinétique.", pourquoi: "La pomme accélère : son énergie cinétique augmente." }
+      - { texte: "Son énergie potentielle.", pourquoi: "La pomme descend : son énergie potentielle diminue." }
+  - texte: "On lâche une bille sans vitesse, de 5 mètres de haut, sans frottement. À quelle vitesse touche-t-elle le sol ?"
+    nom: "Environ 9,9 m/s."
+    explication: "L'énergie mécanique se conserve : 1/2 × m × v² = m × 9,8 × 5, donc v² = 98 et v = √98 ≈ 9,9 m/s. La masse ne compte pas."
+    pieges:
+      - { texte: "98 m/s.", pourquoi: "98 est le carré de la vitesse : il faut en prendre la racine carrée." }
+      - { texte: "49 m/s.", pourquoi: "On a calculé 9,8 × 5 en oubliant le 1/2 et la racine carrée." }
+  - texte: "Une luge glisse sur un sol plat et ralentit à cause des frottements. Que devient son énergie mécanique ?"
+    nom: "Elle diminue : une partie est transférée au milieu, surtout sous forme thermique."
+    explication: "Les frottements sont des forces non conservatives : l'énergie mécanique n'est pas conservée, elle est dissipée."
+    pieges:
+      - { texte: "Elle reste constante.", pourquoi: "Elle ne se conserve qu'en l'absence de frottement ; ici, la luge ralentit sans descendre." }
+      - { texte: "Elle disparaît sans aller nulle part.", pourquoi: "L'énergie ne disparaît pas : elle est transférée au sol et à l'air, qui s'échauffent." }
+  - texte: "Un pendule oscille sans frottement. Où son énergie cinétique est-elle la plus grande ?"
+    nom: "Au point le plus bas de sa trajectoire."
+    explication: "En bas, l'énergie potentielle est la plus petite ; comme l'énergie mécanique est constante, l'énergie cinétique y est la plus grande."
+    pieges:
+      - { texte: "Aux points les plus hauts.", pourquoi: "En haut, le pendule s'arrête un instant avant de repartir : son énergie cinétique y est nulle." }
+      - { texte: "Elle est la même partout.", pourquoi: "C'est l'énergie mécanique qui est la même partout ; elle passe de cinétique à potentielle et inversement." }
+
+en:
+  titre: "Kinetic, potential and mechanical energy"
+  idee: "Kinetic energy comes from speed: 1/2 × m × v². Gravitational potential energy comes from height: m × g × z. Their sum, mechanical energy, is conserved when there is no friction."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Kinetic energy = 1/2 × mass × speed squared. Gravitational potential energy = mass × 9.8 × height. Mass in kilograms, speed in m/s, height in metres: the result is in joules."
+    exemple: "Example: a 0.5 kilogram ball thrown at 10 m/s has a kinetic energy of 1/2 × 0.5 × 10² = 25 joules."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "A 1,000 kilogram car is moving at 20 m/s. What is its kinetic energy?"
+      nom: "200,000 joules."
+      explication: "1/2 × 1,000 × 20² = 1/2 × 1,000 × 400 = 200,000 joules."
+      pieges:
+        - { texte: "10,000 joules.", pourquoi: "The speed wasn't squared: 20² = 400, not 20." }
+        - { texte: "400,000 joules.", pourquoi: "The factor 1/2 in the formula was forgotten." }
+    - texte: "If an object's speed doubles, what happens to its kinetic energy?"
+      nom: "It is multiplied by 4."
+      explication: "The speed is squared in the formula: 2² = 4."
+      pieges:
+        - { texte: "It is multiplied by 2.", pourquoi: "That would be true if the energy were proportional to the speed; it is proportional to its square." }
+        - { texte: "It doesn't change.", pourquoi: "Kinetic energy depends on speed: the faster you go, the bigger it is." }
+    - texte: "A 2 kilogram book is lifted 1.5 metres. By how much does its gravitational potential energy rise? (Gravitational field strength: 9.8 newtons per kilogram.)"
+      nom: "By about 29 joules."
+      explication: "2 × 9.8 × 1.5 = 29.4 joules."
+      pieges:
+        - { texte: "By 3 joules.", pourquoi: "The gravitational field strength, 9.8 newtons per kilogram, was forgotten." }
+        - { texte: "By about 13 joules.", pourquoi: "That's dividing by the height; the formula multiplies mass, gravity and height." }
+    - texte: "What is an object's mechanical energy?"
+      nom: "The sum of its kinetic energy and its gravitational potential energy."
+      explication: "Mechanical energy = kinetic energy + potential energy."
+      pieges:
+        - { texte: "The product of its kinetic energy and its potential energy.", pourquoi: "Energies add up; they don't multiply." }
+        - { texte: "Its kinetic energy only.", pourquoi: "The part linked to height, the potential energy, is missing." }
+    - texte: "An apple falls with no friction. Which quantity stays constant during the fall?"
+      nom: "Its mechanical energy."
+      explication: "Potential energy goes down and kinetic energy goes up by the same amount: the sum doesn't change."
+      pieges:
+        - { texte: "Its kinetic energy.", pourquoi: "The apple speeds up: its kinetic energy increases." }
+        - { texte: "Its potential energy.", pourquoi: "The apple goes down: its potential energy decreases." }
+    - texte: "A marble is dropped from rest, 5 metres up, with no friction. At what speed does it hit the ground?"
+      nom: "About 9.9 m/s."
+      explication: "Mechanical energy is conserved: 1/2 × m × v² = m × 9.8 × 5, so v² = 98 and v = √98 ≈ 9.9 m/s. The mass doesn't matter."
+      pieges:
+        - { texte: "98 m/s.", pourquoi: "98 is the square of the speed: take its square root." }
+        - { texte: "49 m/s.", pourquoi: "That's 9.8 × 5, forgetting the 1/2 and the square root." }
+    - texte: "A sledge slides on flat ground and slows down because of friction. What happens to its mechanical energy?"
+      nom: "It decreases: part of it is transferred to the surroundings, mostly as heat."
+      explication: "Friction forces are non-conservative: mechanical energy isn't conserved, it is dissipated."
+      pieges:
+        - { texte: "It stays constant.", pourquoi: "It's only conserved without friction; here the sledge slows down without going downhill." }
+        - { texte: "It vanishes without going anywhere.", pourquoi: "Energy doesn't vanish: it is transferred to the ground and the air, which warm up." }
+    - texte: "A pendulum swings with no friction. Where is its kinetic energy greatest?"
+      nom: "At the lowest point of its path."
+      explication: "At the bottom, potential energy is smallest; since mechanical energy is constant, kinetic energy is greatest there."
+      pieges:
+        - { texte: "At the highest points.", pourquoi: "At the top, the pendulum stops for an instant before coming back: its kinetic energy is zero there." }
+        - { texte: "It's the same everywhere.", pourquoi: "It's the mechanical energy that is the same everywhere; it switches from kinetic to potential and back." }
