@@ -3442,6 +3442,29 @@ fonction-affine.items.8;Le point M(2 ; 5) est-il sur la droite de f(x) = 3x − 
 fonction-affine.items.8.explication;On remplace x par l’abscisse 2 : f(2) = 3 × 2 − 1 = 5, c’est bien l’ordonnée de M.
 fonction-affine.items.9;Pour quelle valeur de x la fonction f(x) = 2x − 6 s’annule-t-elle ?
 fonction-affine.items.9.explication;2x − 6 = 0 donne 2x = 6, donc x = 3 : la droite coupe l’axe des abscisses en 3.
+fonctions-reference.consigne;Pense à la courbe de la fonction, puis touche la bonne réponse.
+fonctions-reference.question;{texte}
+fonctions-reference.indice;Un nombre et son opposé ont le même carré : 3² = 9 et (−3)² = 9.
+fonctions-reference.exemple;x² = 49 donne x = 7 ou x = −7, car 7 × 7 = 49 et (−7) × (−7) = 49. Et 1/x = 5 donne x = 1/5 = 0,2.
+fonctions-reference.demonstration;{explication}
+fonctions-reference.bravo;Oui ! La réponse est {bonne}.
+fonctions-reference.idee;Un carré n’est jamais négatif : x² = 9 a deux solutions, 3 et −3. La fonction carré décroît puis croît ; la fonction inverse, 1/x, décroît sur ]0 ; +∞[.
+fonctions-reference.items.0;Résous l’équation x² = 9.
+fonctions-reference.items.0.explication;3² = 9 et (−3)² = (−3) × (−3) = 9 : il y a deux solutions.
+fonctions-reference.items.1;Pourquoi l’équation x² = −4 n’a-t-elle aucune solution ?
+fonctions-reference.items.1.explication;Un nombre multiplié par lui-même donne toujours un résultat positif ou nul : x² ne peut pas valoir −4.
+fonctions-reference.items.2;Résous l’inéquation x² < 16.
+fonctions-reference.items.2.explication;x² = 16 pour x = 4 et x = −4. Entre les deux, le carré est plus petit que 16 ; par exemple 3² = 9 et (−3)² = 9.
+fonctions-reference.items.3;f(x) = 1/x est la fonction inverse. Combien vaut f(0,25) ?
+fonctions-reference.items.3.explication;1 ÷ 0,25 = 4, car 4 × 0,25 = 1.
+fonctions-reference.items.4;f(x) = x². Compare f(−3) et f(2).
+fonctions-reference.items.4.explication;f(−3) = 9 et f(2) = 4 : 9 > 4. La fonction carré décroît avant 0, donc l’ordre n’est pas gardé avec les négatifs.
+fonctions-reference.items.5;f(x) = 1/x. Compare f(2) et f(5).
+fonctions-reference.items.5.explication;f(2) = 0,5 et f(5) = 0,2. La fonction inverse est décroissante sur ]0 ; +∞[ : plus x grandit, plus 1/x diminue.
+fonctions-reference.items.6;Complète : x² = 25 donne x = 5 ou x = …
+fonctions-reference.items.6.explication;(−5)² = (−5) × (−5) = 25 : l’autre solution est l’opposé de 5.
+fonctions-reference.items.7;Résous l’équation x³ = −8.
+fonctions-reference.items.7.explication;(−2)³ = (−2) × (−2) × (−2) = −8. Un cube peut être négatif, et il n’y a qu’une solution.
 vecteurs-coordonnees.consigne;Calcule les coordonnées, puis touche la bonne réponse.
 vecteurs-coordonnees.question;{texte}
 vecteurs-coordonnees.indice;Pour le vecteur AB : coordonnées de B moins coordonnées de A.
@@ -3469,6 +3492,29 @@ vecteurs-coordonnees.items.8;Pourquoi le vecteur AB a-t-il pour coordonnées (xB
 vecteurs-coordonnees.items.8.explication;Pour aller de A à B, l’abscisse passe de xA à xB : elle change de xB − xA. De même pour l’ordonnée.
 vecteurs-coordonnees.items.9;u(3 ; −1) et v(−5 ; 2). Quelles sont les coordonnées de u − v ?
 vecteurs-coordonnees.items.9.explication;(3 − (−5) ; −1 − 2) = (3 + 5 ; −3) = (8 ; −3).
+equations-droites.consigne;Lis l’équation de la droite, puis touche la bonne réponse.
+equations-droites.question;{texte}
+equations-droites.indice;Dans y = mx + p, m est la pente : quand x avance de 1, y change de m.
+equations-droites.exemple;y = 2x + 1 et y = −x + 4 : 2x + 1 = −x + 4 donne 3x = 3, donc x = 1, puis y = 2 × 1 + 1 = 3. Les droites se coupent au point (1 ; 3).
+equations-droites.demonstration;{explication}
+equations-droites.bravo;Oui ! La réponse est {bonne}.
+equations-droites.idee;Une droite non parallèle à l’axe des ordonnées a une équation réduite y = mx + p : m est sa pente, et u(1 ; m) un vecteur directeur. Deux droites de même pente sont parallèles.
+equations-droites.items.0;Une droite a pour équation cartésienne 2x − y + 5 = 0. Quelle est son équation réduite ?
+equations-droites.items.0.explication;On isole y : 2x + 5 = y, donc y = 2x + 5.
+equations-droites.items.1;Quel est un vecteur directeur de la droite d’équation y = 3x + 1 ?
+equations-droites.items.1.explication;La pente vaut 3 : quand x avance de 1, y monte de 3. Le vecteur u(1 ; 3) suit la droite.
+equations-droites.items.2;La droite d’équation ax + by + c = 0 a pour vecteur directeur u(−b ; a). Lequel convient pour 3x + 2y − 6 = 0 ?
+equations-droites.items.2.explication;Ici a = 3 et b = 2, donc u(−2 ; 3). Vérification : les points (2 ; 0) et (0 ; 3) sont sur la droite, et de l’un à l’autre on fait −2 en x et +3 en y.
+equations-droites.items.3;Une droite de pente 2 passe par le point A(1 ; 4). Quelle est son équation réduite ?
+equations-droites.items.3.explication;On cherche p dans y = 2x + p. A est sur la droite : 4 = 2 × 1 + p, donc p = 4 − 2 = 2.
+equations-droites.items.4;Les droites y = 3x + 1 et y = 3x − 5 sont-elles parallèles ou sécantes ?
+equations-droites.items.4.explication;Elles ont la même pente, 3 : elles ne se croisent jamais. Leurs ordonnées à l’origine, 1 et −5, sont différentes, donc elles ne sont pas confondues.
+equations-droites.items.5;En quel point se coupent les droites y = 2x + 1 et y = −x + 7 ?
+equations-droites.items.5.explication;2x + 1 = −x + 7 donne 3x = 6, donc x = 2. Puis y = 2 × 2 + 1 = 5. Vérification : −2 + 7 = 5.
+equations-droites.items.6;Complète : y = x + 4 et y = 3x se coupent quand x + 4 = 3x, donc 4 = 2x et x = …
+equations-droites.items.6.explication;4 = 2x donne x = 4 ÷ 2 = 2. Puis y = 3 × 2 = 6 : le point est (2 ; 6).
+equations-droites.items.7;Pourquoi la droite d’équation x = 3 n’a-t-elle pas d’équation réduite de la forme y = mx + p ?
+equations-droites.items.7.explication;Tous ses points ont x = 3, quel que soit y. Un vecteur directeur est u(0 ; 1) : x n’avance pas, donc on ne peut pas parler de pente.
 moyenne-mediane.consigne;Calcule, puis touche la bonne réponse.
 moyenne-mediane.question;{texte}
 moyenne-mediane.indice;Pour la médiane, range d’abord les valeurs dans l’ordre croissant.
@@ -3654,6 +3700,29 @@ derivee-polynome.items.8;f(x) = x². Quelle est la pente de la tangente au point
 derivee-polynome.items.8.explication;La pente de la tangente est f′(3). f′(x) = 2x, donc f′(3) = 6.
 derivee-polynome.items.9;f(x) = x³ − 3x. Pour quelles valeurs de x a-t-on f′(x) = 0 ?
 derivee-polynome.items.9.explication;f′(x) = 3x² − 3 = 0 donne x² = 1, donc x = 1 ou x = −1 : deux tangentes horizontales.
+fonction-exponentielle.consigne;Utilise les propriétés de l’exponentielle, puis touche la bonne réponse.
+fonction-exponentielle.question;{texte}
+fonction-exponentielle.indice;exp(a) × exp(b) = exp(a + b), et exp(a) ÷ exp(b) = exp(a − b).
+fonction-exponentielle.exemple;exp(2) × exp(5) = exp(2 + 5) = exp(7). Et exp(6) ÷ exp(4) = exp(6 − 4) = exp(2).
+fonction-exponentielle.demonstration;{explication}
+fonction-exponentielle.bravo;Oui ! La réponse est {bonne}.
+fonction-exponentielle.idee;exp est la fonction égale à sa dérivée avec exp(0) = 1. Elle change les sommes en produits : exp(a + b) = exp(a) × exp(b). Elle est toujours strictement positive.
+fonction-exponentielle.items.0;Écris plus simplement : exp(3) × exp(4)
+fonction-exponentielle.items.0.explication;exp(a) × exp(b) = exp(a + b) : exp(3 + 4) = exp(7).
+fonction-exponentielle.items.1;Écris plus simplement : exp(5) ÷ exp(2)
+fonction-exponentielle.items.1.explication;exp(a) ÷ exp(b) = exp(a − b) : exp(5 − 2) = exp(3).
+fonction-exponentielle.items.2;Écris plus simplement : exp(x) × exp(−x)
+fonction-exponentielle.items.2.explication;exp(x) × exp(−x) = exp(x − x) = exp(0) = 1.
+fonction-exponentielle.items.3;Écris plus simplement : (exp(2))³
+fonction-exponentielle.items.3.explication;(exp(2))³ = exp(2) × exp(2) × exp(2) = exp(2 + 2 + 2) = exp(6).
+fonction-exponentielle.items.4;f(x) = exp(x). Quelle est sa dérivée f′(x) ?
+fonction-exponentielle.items.4.explication;C’est sa définition : exp est égale à sa dérivée, et exp(0) = 1.
+fonction-exponentielle.items.5;g(t) = exp(3t). Quelle est sa dérivée g′(t) ?
+fonction-exponentielle.items.5.explication;La dérivée de exp(at) est a × exp(at) : ici a = 3, donc g′(t) = 3 exp(3t).
+fonction-exponentielle.items.6;Complète : exp(2x) = exp(x + 5) donne 2x = x + 5, donc x = …
+fonction-exponentielle.items.6.explication;exp est strictement croissante : deux exponentielles égales ont le même nombre. 2x − x = 5, donc x = 5.
+fonction-exponentielle.items.7;Pourquoi exp(x) n’est-il jamais égal à 0 ?
+fonction-exponentielle.items.7.explication;Un produit qui vaut 1 n’a aucun facteur nul. En plus, exp(x) = exp(x ÷ 2)², un carré, donc exp(x) est strictement positif.
 produit-scalaire.consigne;Calcule le produit scalaire, puis touche la bonne réponse.
 produit-scalaire.question;{texte}
 produit-scalaire.indice;Abscisse fois abscisse, plus ordonnée fois ordonnée.
@@ -3708,6 +3777,29 @@ probabilites-totales.items.8;Pourquoi a-t-on P(B) = P(A et B) + P(non A et B) ?
 probabilites-totales.items.8.explication;Un cas de B est soit dans A, soit dans non A, jamais les deux : on additionne les deux parts.
 probabilites-totales.items.9;Un tir réussit avec la probabilité 0,8. Deux tirs indépendants. Probabilité d’au moins une réussite ?
 probabilites-totales.items.9.explication;Le contraire est « deux échecs » : 0,2 × 0,2 = 0,04. Donc 1 − 0,04 = 0,96.
+variables-aleatoires.consigne;Écris la loi de X, puis touche la bonne réponse.
+variables-aleatoires.question;{texte}
+variables-aleatoires.indice;E(X) = x1 × p1 + x2 × p2 + … : chaque valeur multipliée par sa probabilité, puis on additionne.
+variables-aleatoires.exemple;X vaut 2 avec la probabilité 0,4 et 5 avec la probabilité 0,6. E(X) = 2 × 0,4 + 5 × 0,6 = 0,8 + 3 = 3,8.
+variables-aleatoires.demonstration;{explication}
+variables-aleatoires.bravo;Oui ! La réponse est {bonne}.
+variables-aleatoires.idee;Une variable aléatoire X associe un nombre à chaque issue. Son espérance E(X) est la somme des valeurs multipliées par leurs probabilités : la moyenne obtenue sur un très grand nombre d’essais.
+variables-aleatoires.items.0;X prend les valeurs 0, 10 et 20 avec les probabilités 0,5 ; 0,3 et 0,2. Combien vaut E(X) ?
+variables-aleatoires.items.0.explication;E(X) = 0 × 0,5 + 10 × 0,3 + 20 × 0,2 = 0 + 3 + 4 = 7.
+variables-aleatoires.items.1;X prend les valeurs 1, 2 et 3. P(X = 1) = 0,2 et P(X = 2) = 0,5. Combien vaut P(X = 3) ?
+variables-aleatoires.items.1.explication;Les probabilités d’une loi ont pour somme 1 : P(X = 3) = 1 − 0,2 − 0,5 = 0,3.
+variables-aleatoires.items.2;On lance un dé équilibré. On gagne 6 € si on fait 6, sinon on perd 1 €. Quelle est l’espérance du gain ?
+variables-aleatoires.items.2.explication;E = 6 × 1/6 + (−1) × 5/6 = 1 − 5/6 = 1/6, environ 0,17 €.
+variables-aleatoires.items.3;On mise m € pour jouer. On gagne 10 € avec la probabilité 0,2, rien sinon. Quelle mise rend le jeu équitable ?
+variables-aleatoires.items.3.explication;Le jeu est équitable quand l’espérance du gain net est nulle : 10 × 0,2 − m = 0, donc m = 2.
+variables-aleatoires.items.4;E(X) = 4. Combien vaut E(3X + 2) ?
+variables-aleatoires.items.4.explication;L’espérance est linéaire : E(3X + 2) = 3 × E(X) + 2 = 3 × 4 + 2 = 14.
+variables-aleatoires.items.5;X vaut −1 ou 1, chacun avec la probabilité 0,5. Combien vaut sa variance V(X) ?
+variables-aleatoires.items.5.explication;E(X) = −0,5 + 0,5 = 0. V(X) = 0,5 × (−1 − 0)² + 0,5 × (1 − 0)² = 0,5 + 0,5 = 1.
+variables-aleatoires.items.6;Complète : X vaut 0 ou 4, chacun avec la probabilité 0,5, et E(X) = 2. V(X) = 0,5 × (0 − 2)² + 0,5 × (4 − 2)² = …
+variables-aleatoires.items.6.explication;(0 − 2)² = 4 et (4 − 2)² = 4 : V(X) = 0,5 × 4 + 0,5 × 4 = 4. L’écart type vaut √4 = 2.
+variables-aleatoires.items.7;Au jeu du dé, l’espérance du gain vaut 1/6 d’euro, alors qu’on gagne 6 € ou qu’on perd 1 €. Pourquoi ?
+variables-aleatoires.items.7.explication;E(X) est une moyenne pondérée par les probabilités : sur 600 parties, on s’attend à gagner environ 100 € (600 × 1/6), pas à gagner 1/6 d’euro à chaque fois.
 limites-fonctions.consigne;Imagine x très grand, puis touche la limite.
 limites-fonctions.question;{texte}
 limites-fonctions.indice;Remplace x par 1 000, puis par 1 000 000 : de quoi le résultat se rapproche-t-il ?
@@ -3841,6 +3933,52 @@ primitives.items.8;Pourquoi x² et x² + 7 sont-elles toutes deux des primitives
 primitives.items.8.explication;Deux primitives d’une même fonction diffèrent d’une constante : x² + C convient pour tout nombre C.
 primitives.items.9;Quelle est la primitive de f(x) = 6x² − 2x qui vaut 0 en 0 ?
 primitives.items.9.explication;(2x³ − x²)′ = 6x² − 2x, et 2 × 0³ − 0² = 0.
+convexite.consigne;Calcule la dérivée seconde et regarde son signe, puis touche la bonne réponse.
+convexite.question;{texte}
+convexite.indice;La dérivée seconde est la dérivée de f′(x). Positive : convexe. Négative : concave.
+convexite.exemple;f(x) = x³ : f′(x) = 3x², puis la dérivée seconde vaut 6x. Elle est négative avant 0 et positive après : f est concave puis convexe, avec un point d’inflexion en 0.
+convexite.demonstration;{explication}
+convexite.bravo;Oui ! La réponse est {bonne}.
+convexite.idee;f est convexe quand sa courbe est au-dessus de ses tangentes, c’est-à-dire quand sa dérivée seconde est positive. Là où la dérivée seconde change de signe, la courbe a un point d’inflexion.
+convexite.items.0;f(x) = x³ − 6x², donc f′(x) = 3x² − 12x. Quelle est la dérivée seconde de f ?
+convexite.items.0.explication;On dérive f′(x) : la dérivée de 3x² est 6x, celle de −12x est −12. La dérivée seconde vaut 6x − 12.
+convexite.items.1;La dérivée seconde de f vaut 2 pour tout x, par exemple pour f(x) = x². f est-elle convexe ou concave ?
+convexite.items.1.explication;La dérivée seconde est positive partout : f′(x) est croissante, et la courbe est au-dessus de ses tangentes. f est convexe.
+convexite.items.2;f(x) = exp(x). f est-elle convexe ou concave ?
+convexite.items.2.explication;f′(x) = exp(x), et la dérivée seconde vaut aussi exp(x), toujours strictement positive : f est convexe pour tout x.
+convexite.items.3;La dérivée seconde de f vaut 6x − 12. En quelle abscisse la courbe a-t-elle un point d’inflexion ?
+convexite.items.3.explication;6x − 12 = 0 donne x = 2. Avant 2 elle est négative, après 2 positive : la courbe passe de concave à convexe en x = 2.
+convexite.items.4;f(x) = x³ − 6x². Sur quel intervalle f est-elle convexe ?
+convexite.items.4.explication;La dérivée seconde, 6x − 12, est positive ou nulle quand 6x ≥ 12, c’est-à-dire x ≥ 2.
+convexite.items.5;f est convexe sur un intervalle. Où est sa courbe par rapport à ses tangentes ?
+convexite.items.5.explication;Pour une fonction convexe, la courbe est au-dessus de chacune de ses tangentes, comme la parabole y = x².
+convexite.items.6;Complète : f(x) = ln(x), f′(x) = 1/x, et sa dérivée seconde vaut −1/x². Sur ]0 ; +∞[, f est donc …
+convexite.items.6.explication;x² est positif, donc −1/x² est négatif pour tout x > 0 : f est concave sur ]0 ; +∞[.
+convexite.items.7;Pourquoi a-t-on exp(x) ≥ x + 1 pour tout x ?
+convexite.items.7.explication;En 0, exp(0) = 1 et la pente vaut exp(0) = 1 : la tangente est y = x + 1. Une fonction convexe reste au-dessus de ses tangentes.
+equations-differentielles.consigne;Cherche la fonction dont la dérivée vérifie l’équation, puis touche la bonne réponse.
+equations-differentielles.question;{texte}
+equations-differentielles.indice;La dérivée de C exp(ax) est a × C exp(ax) : c’est a fois la fonction elle-même.
+equations-differentielles.exemple;f′(x) = 4 × f(x) et f(0) = 3 : f(x) = C exp(4x), et f(0) = C = 3. Donc f(x) = 3 exp(4x).
+equations-differentielles.demonstration;{explication}
+equations-differentielles.bravo;Oui ! La réponse est {bonne}.
+equations-differentielles.idee;Les solutions de f′(x) = a × f(x) sont les fonctions f(x) = C exp(ax), où C est un réel. Pour f′(x) = a × f(x) + b, on ajoute la solution constante, −b ÷ a.
+equations-differentielles.items.0;Quelles sont les fonctions f telles que f′(x) = 3 × f(x) pour tout x ?
+equations-differentielles.items.0.explication;La dérivée de C exp(3x) est 3C exp(3x) = 3 × f(x). Ce sont les seules solutions.
+equations-differentielles.items.1;f′(x) = −2 × f(x) et f(0) = 5. Quelle est la fonction f ?
+equations-differentielles.items.1.explication;f(x) = C exp(−2x), et f(0) = C × exp(0) = C, donc C = 5.
+equations-differentielles.items.2;f(x) = 4 exp(x). Est-ce une solution de f′(x) = f(x) ?
+equations-differentielles.items.2.explication;Le facteur 4 reste en dérivant : f′(x) = 4 exp(x), qui est bien f(x). C’est le cas C = 4.
+equations-differentielles.items.3;f′(x) = 2 × f(x) + 6. Quelle est la solution constante ?
+equations-differentielles.items.3.explication;Une constante k a pour dérivée 0 : 0 = 2k + 6, donc k = −6 ÷ 2 = −3.
+equations-differentielles.items.4;f′(x) = 2 × f(x) + 6. Quelles sont toutes les solutions ?
+equations-differentielles.items.4.explication;On ajoute la solution constante −3 aux solutions C exp(2x) de f′(x) = 2 × f(x). Vérification : f′(x) = 2C exp(2x) et 2 × (C exp(2x) − 3) + 6 = 2C exp(2x).
+equations-differentielles.items.5;Un objet refroidit selon f′(t) = −0,1 × f(t), avec f(0) = 80. Combien vaut f(10) ?
+equations-differentielles.items.5.explication;f(t) = 80 exp(−0,1t). En t = 10 : −0,1 × 10 = −1, donc f(10) = 80 exp(−1), environ 80 × 0,368 = 29,4.
+equations-differentielles.items.6;Complète : f′(x) = 5 × f(x) − 10. La solution constante k vérifie 0 = 5k − 10, donc k = …
+equations-differentielles.items.6.explication;5k = 10 donne k = 2. Vérification : 5 × 2 − 10 = 0.
+equations-differentielles.items.7;f′(x) = 2 × f(x) et f(0) > 0. Pourquoi la courbe de f monte-t-elle de plus en plus vite ?
+equations-differentielles.items.7.explication;f(x) = C exp(2x) avec C > 0 : f est positive et croissante, donc sa pente 2 × f(x) augmente sans cesse.
 nature.intro.0;Les êtres vivants naissent, grandissent et changent.
 nature.intro.1;Ils ont besoin d'eau et de nourriture.
 nature.intro.2;Observe bien chaque image avant de répondre.

@@ -48,7 +48,7 @@
       "moyens": "Maths",
       "grands": "Mathematics"
     },
-    "resume": "Counting, making numbers, adding, subtracting, times tables, sharing, telling the time, column methods digit by digit, large numbers, division, fractions, decimals, measures and time, area, proportion, percentages, angles, factors and prime numbers, order of operations, negative numbers, powers, algebra, squares and roots, equations, Pythagoras, the intercept theorem, trigonometry, speed, linear functions, scientific notation; at sixth-form level, functions, vectors, statistics, probability, quadratics, sequences, derivatives, logarithms, the binomial distribution.",
+    "resume": "Counting, making numbers, adding, subtracting, times tables, sharing, telling the time, column methods digit by digit, large numbers, division, fractions, decimals, measures and time, area, proportion, percentages, angles, factors and prime numbers, order of operations, negative numbers, powers, algebra, squares and roots, equations, Pythagoras, the intercept theorem, trigonometry, speed, linear functions, scientific notation; at sixth-form level, functions, vectors, statistics, probability, quadratics, sequences, derivatives, logarithms, the binomial distribution, equations of lines, reference functions, expected value, the exponential function, convexity, differential equations.",
     "intro": [
       {
         "texte": "To count, touch each thing only once.",
@@ -19047,6 +19047,286 @@
       }
     },
     {
+      "id": "fonctions-reference",
+      "titre": "Fonctions carré, inverse et cube",
+      "niveau": "2de",
+      "prerequis": [
+        "fonction-affine",
+        "racine-carree"
+      ],
+      "programme": {
+        "source": "lycee2de",
+        "texte": "Pour les fonctions affines, valeur absolue, carré, inverse, racine carrée et cube, résoudre graphiquement ou algébriquement une équation ou une inéquation du type f(x) = k, f(x) < k."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un carré n’est jamais négatif : x² = 9 a deux solutions, 3 et −3. La fonction carré décroît puis croît ; la fonction inverse, 1/x, décroît sur ]0 ; +∞[.",
+      "phrases": {
+        "consigne": "Pense à la courbe de la fonction, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Un nombre et son opposé ont le même carré : 3² = 9 et (−3)² = 9.",
+        "exemple": "x² = 49 donne x = 7 ou x = −7, car 7 × 7 = 49 et (−7) × (−7) = 49. Et 1/x = 5 donne x = 1/5 = 0,2.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Résous l’équation x² = 9.",
+          "nom": "x = 3 ou x = −3",
+          "explication": "3² = 9 et (−3)² = (−3) × (−3) = 9 : il y a deux solutions.",
+          "pieges": [
+            {
+              "texte": "x = 3",
+              "pourquoi": "Il en manque une : (−3)² = 9 aussi."
+            },
+            {
+              "texte": "x = 4,5",
+              "pourquoi": "x² veut dire x × x, pas 2 × x : 4,5² = 20,25."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l’équation x² = −4 n’a-t-elle aucune solution ?",
+          "nom": "Un carré n’est jamais négatif.",
+          "explication": "Un nombre multiplié par lui-même donne toujours un résultat positif ou nul : x² ne peut pas valoir −4.",
+          "pieges": [
+            {
+              "texte": "Parce que la solution est −2.",
+              "pourquoi": "(−2)² = (−2) × (−2) = 4, pas −4."
+            },
+            {
+              "texte": "Parce que −4 n’a pas de racine entière.",
+              "pourquoi": "x² = 5 n’a pas de solution entière, mais en a deux : √5 et −√5. C’est le signe de −4 qui bloque."
+            }
+          ]
+        },
+        {
+          "texte": "Résous l’inéquation x² < 16.",
+          "nom": "x ∈ ]−4 ; 4[",
+          "explication": "x² = 16 pour x = 4 et x = −4. Entre les deux, le carré est plus petit que 16 ; par exemple 3² = 9 et (−3)² = 9.",
+          "pieges": [
+            {
+              "texte": "x ∈ ]−∞ ; 4[",
+              "pourquoi": "−5 est dans cet intervalle, mais (−5)² = 25, plus grand que 16."
+            },
+            {
+              "texte": "x ∈ ]−8 ; 8[",
+              "pourquoi": "16 ÷ 2 = 8, mais 8² = 64 : la limite est 4, car 4² = 16."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = 1/x est la fonction inverse. Combien vaut f(0,25) ?",
+          "nom": "4",
+          "explication": "1 ÷ 0,25 = 4, car 4 × 0,25 = 1.",
+          "pieges": [
+            {
+              "texte": "0,5",
+              "pourquoi": "0,5 est la racine carrée de 0,25 ; l’inverse est 1 ÷ 0,25 = 4."
+            },
+            {
+              "texte": "−0,25",
+              "pourquoi": "L’inverse n’est pas l’opposé : on calcule 1 ÷ 0,25."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = x². Compare f(−3) et f(2).",
+          "nom": "f(−3) > f(2)",
+          "explication": "f(−3) = 9 et f(2) = 4 : 9 > 4. La fonction carré décroît avant 0, donc l’ordre n’est pas gardé avec les négatifs.",
+          "pieges": [
+            {
+              "texte": "f(−3) < f(2)",
+              "pourquoi": "−3 < 2, mais (−3)² = 9 est plus grand que 2² = 4."
+            },
+            {
+              "texte": "f(−3) = f(2)",
+              "pourquoi": "Seuls deux nombres opposés ont le même carré : f(−2) = f(2) = 4, mais f(−3) = 9."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = 1/x. Compare f(2) et f(5).",
+          "nom": "f(2) > f(5)",
+          "explication": "f(2) = 0,5 et f(5) = 0,2. La fonction inverse est décroissante sur ]0 ; +∞[ : plus x grandit, plus 1/x diminue.",
+          "pieges": [
+            {
+              "texte": "f(2) < f(5)",
+              "pourquoi": "2 < 5, mais la fonction inverse décroît : 0,5 > 0,2."
+            },
+            {
+              "texte": "f(2) = f(5)",
+              "pourquoi": "1 ÷ 2 = 0,5 et 1 ÷ 5 = 0,2 : ce n’est pas égal."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : x² = 25 donne x = 5 ou x = …",
+          "nom": "−5",
+          "explication": "(−5)² = (−5) × (−5) = 25 : l’autre solution est l’opposé de 5.",
+          "pieges": [
+            {
+              "texte": "1/5",
+              "pourquoi": "1/5 est l’inverse de 5, pas l’opposé : (1/5)² = 1/25."
+            },
+            {
+              "texte": "−25",
+              "pourquoi": "(−25)² = 625, pas 25."
+            }
+          ]
+        },
+        {
+          "texte": "Résous l’équation x³ = −8.",
+          "nom": "x = −2",
+          "explication": "(−2)³ = (−2) × (−2) × (−2) = −8. Un cube peut être négatif, et il n’y a qu’une solution.",
+          "pieges": [
+            {
+              "texte": "Aucune solution",
+              "pourquoi": "C’est le carré qui n’est jamais négatif ; un cube peut l’être."
+            },
+            {
+              "texte": "x = 2",
+              "pourquoi": "2³ = 8, pas −8."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Square, reciprocal and cube functions",
+        "idee": "A square is never negative: x² = 9 has two solutions, 3 and −3. The square function goes down then up; the reciprocal function, 1/x, goes down on (0, +∞).",
+        "phrases": {
+          "consigne": "Think of the graph of the function, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "A number and its opposite have the same square: 3² = 9 and (−3)² = 9.",
+          "exemple": "x² = 49 gives x = 7 or x = −7, because 7 × 7 = 49 and (−7) × (−7) = 49. And 1/x = 5 gives x = 1/5 = 0.2.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Solve the equation x² = 9.",
+            "nom": "x = 3 or x = −3",
+            "explication": "3² = 9 and (−3)² = (−3) × (−3) = 9: there are two solutions.",
+            "pieges": [
+              {
+                "texte": "x = 3",
+                "pourquoi": "One is missing: (−3)² = 9 as well."
+              },
+              {
+                "texte": "x = 4.5",
+                "pourquoi": "x² means x × x, not 2 × x: 4.5² = 20.25."
+              }
+            ]
+          },
+          {
+            "texte": "Why does the equation x² = −4 have no solution?",
+            "nom": "A square is never negative.",
+            "explication": "A number times itself always gives a result that is positive or zero: x² cannot be −4.",
+            "pieges": [
+              {
+                "texte": "Because the solution is −2.",
+                "pourquoi": "(−2)² = (−2) × (−2) = 4, not −4."
+              },
+              {
+                "texte": "Because −4 has no whole-number root.",
+                "pourquoi": "x² = 5 has no whole-number solution, but it has two: √5 and −√5. It is the sign of −4 that is the problem."
+              }
+            ]
+          },
+          {
+            "texte": "Solve the inequality x² < 16.",
+            "nom": "x ∈ (−4, 4)",
+            "explication": "x² = 16 for x = 4 and x = −4. In between, the square is less than 16; for example 3² = 9 and (−3)² = 9.",
+            "pieges": [
+              {
+                "texte": "x ∈ (−∞, 4)",
+                "pourquoi": "−5 is in this interval, but (−5)² = 25, which is more than 16."
+              },
+              {
+                "texte": "x ∈ (−8, 8)",
+                "pourquoi": "16 ÷ 2 = 8, but 8² = 64: the limit is 4, because 4² = 16."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = 1/x is the reciprocal function. What is f(0.25)?",
+            "nom": "4",
+            "explication": "1 ÷ 0.25 = 4, because 4 × 0.25 = 1.",
+            "pieges": [
+              {
+                "texte": "0.5",
+                "pourquoi": "0.5 is the square root of 0.25; the reciprocal is 1 ÷ 0.25 = 4."
+              },
+              {
+                "texte": "−0.25",
+                "pourquoi": "The reciprocal is not the opposite: work out 1 ÷ 0.25."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = x². Compare f(−3) and f(2).",
+            "nom": "f(−3) > f(2)",
+            "explication": "f(−3) = 9 and f(2) = 4: 9 > 4. The square function goes down before 0, so the order is not kept with negative numbers.",
+            "pieges": [
+              {
+                "texte": "f(−3) < f(2)",
+                "pourquoi": "−3 < 2, but (−3)² = 9 is bigger than 2² = 4."
+              },
+              {
+                "texte": "f(−3) = f(2)",
+                "pourquoi": "Only opposite numbers have the same square: f(−2) = f(2) = 4, but f(−3) = 9."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = 1/x. Compare f(2) and f(5).",
+            "nom": "f(2) > f(5)",
+            "explication": "f(2) = 0.5 and f(5) = 0.2. The reciprocal function goes down on (0, +∞): the bigger x is, the smaller 1/x is.",
+            "pieges": [
+              {
+                "texte": "f(2) < f(5)",
+                "pourquoi": "2 < 5, but the reciprocal function goes down: 0.5 > 0.2."
+              },
+              {
+                "texte": "f(2) = f(5)",
+                "pourquoi": "1 ÷ 2 = 0.5 and 1 ÷ 5 = 0.2: they are not equal."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: x² = 25 gives x = 5 or x = …",
+            "nom": "−5",
+            "explication": "(−5)² = (−5) × (−5) = 25: the other solution is the opposite of 5.",
+            "pieges": [
+              {
+                "texte": "1/5",
+                "pourquoi": "1/5 is the reciprocal of 5, not the opposite: (1/5)² = 1/25."
+              },
+              {
+                "texte": "−25",
+                "pourquoi": "(−25)² = 625, not 25."
+              }
+            ]
+          },
+          {
+            "texte": "Solve the equation x³ = −8.",
+            "nom": "x = −2",
+            "explication": "(−2)³ = (−2) × (−2) × (−2) = −8. A cube can be negative, and there is only one solution.",
+            "pieges": [
+              {
+                "texte": "No solution",
+                "pourquoi": "It is a square that is never negative; a cube can be."
+              },
+              {
+                "texte": "x = 2",
+                "pourquoi": "2³ = 8, not −8."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "vecteurs-coordonnees",
       "titre": "Vecteurs et coordonnées",
       "niveau": "2de",
@@ -19380,6 +19660,286 @@
               {
                 "texte": "(−8, 3)",
                 "pourquoi": "Those are the components of v − u: the order matters."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "equations-droites",
+      "titre": "Équations de droites",
+      "niveau": "2de",
+      "prerequis": [
+        "fonction-affine",
+        "vecteurs-coordonnees"
+      ],
+      "programme": {
+        "source": "lycee2de",
+        "texte": "Déterminer si deux droites sont parallèles ou sécantes. Déterminer le point d’intersection de deux droites sécantes données par leur équation réduite."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une droite non parallèle à l’axe des ordonnées a une équation réduite y = mx + p : m est sa pente, et u(1 ; m) un vecteur directeur. Deux droites de même pente sont parallèles.",
+      "phrases": {
+        "consigne": "Lis l’équation de la droite, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Dans y = mx + p, m est la pente : quand x avance de 1, y change de m.",
+        "exemple": "y = 2x + 1 et y = −x + 4 : 2x + 1 = −x + 4 donne 3x = 3, donc x = 1, puis y = 2 × 1 + 1 = 3. Les droites se coupent au point (1 ; 3).",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Une droite a pour équation cartésienne 2x − y + 5 = 0. Quelle est son équation réduite ?",
+          "nom": "y = 2x + 5",
+          "explication": "On isole y : 2x + 5 = y, donc y = 2x + 5.",
+          "pieges": [
+            {
+              "texte": "y = −2x − 5",
+              "pourquoi": "En passant y de l’autre côté, il change de signe : 2x + 5 = y, pas −2x − 5."
+            },
+            {
+              "texte": "y = 2x − 5",
+              "pourquoi": "Le + 5 reste du même côté que 2x : y = 2x + 5."
+            }
+          ]
+        },
+        {
+          "texte": "Quel est un vecteur directeur de la droite d’équation y = 3x + 1 ?",
+          "nom": "u(1 ; 3)",
+          "explication": "La pente vaut 3 : quand x avance de 1, y monte de 3. Le vecteur u(1 ; 3) suit la droite.",
+          "pieges": [
+            {
+              "texte": "u(3 ; 1)",
+              "pourquoi": "Ce vecteur avance de 3 et monte de 1 : sa pente est 1/3, pas 3."
+            },
+            {
+              "texte": "u(0 ; 1)",
+              "pourquoi": "Ce vecteur est vertical : il dirige les droites parallèles à l’axe des ordonnées."
+            }
+          ]
+        },
+        {
+          "texte": "La droite d’équation ax + by + c = 0 a pour vecteur directeur u(−b ; a). Lequel convient pour 3x + 2y − 6 = 0 ?",
+          "nom": "u(−2 ; 3)",
+          "explication": "Ici a = 3 et b = 2, donc u(−2 ; 3). Vérification : les points (2 ; 0) et (0 ; 3) sont sur la droite, et de l’un à l’autre on fait −2 en x et +3 en y.",
+          "pieges": [
+            {
+              "texte": "u(3 ; 2)",
+              "pourquoi": "On a recopié a et b : le vecteur directeur est (−b ; a), soit (−2 ; 3)."
+            },
+            {
+              "texte": "u(2 ; 3)",
+              "pourquoi": "Le signe moins devant b a été oublié : c’est (−2 ; 3)."
+            }
+          ]
+        },
+        {
+          "texte": "Une droite de pente 2 passe par le point A(1 ; 4). Quelle est son équation réduite ?",
+          "nom": "y = 2x + 2",
+          "explication": "On cherche p dans y = 2x + p. A est sur la droite : 4 = 2 × 1 + p, donc p = 4 − 2 = 2.",
+          "pieges": [
+            {
+              "texte": "y = 2x + 4",
+              "pourquoi": "4 est l’ordonnée de A, pas l’ordonnée à l’origine : 2 × 1 + 4 = 6, pas 4."
+            },
+            {
+              "texte": "y = 2x − 2",
+              "pourquoi": "p = 4 − 2, pas 2 − 4 : avec p = −2, on trouve y = 0 en x = 1, pas 4."
+            }
+          ]
+        },
+        {
+          "texte": "Les droites y = 3x + 1 et y = 3x − 5 sont-elles parallèles ou sécantes ?",
+          "nom": "Parallèles",
+          "explication": "Elles ont la même pente, 3 : elles ne se croisent jamais. Leurs ordonnées à l’origine, 1 et −5, sont différentes, donc elles ne sont pas confondues.",
+          "pieges": [
+            {
+              "texte": "Sécantes",
+              "pourquoi": "Deux droites sécantes ont des pentes différentes ; ici les deux pentes valent 3."
+            },
+            {
+              "texte": "Confondues",
+              "pourquoi": "Il faudrait la même ordonnée à l’origine ; ici 1 et −5."
+            }
+          ]
+        },
+        {
+          "texte": "En quel point se coupent les droites y = 2x + 1 et y = −x + 7 ?",
+          "nom": "(2 ; 5)",
+          "explication": "2x + 1 = −x + 7 donne 3x = 6, donc x = 2. Puis y = 2 × 2 + 1 = 5. Vérification : −2 + 7 = 5.",
+          "pieges": [
+            {
+              "texte": "(5 ; 2)",
+              "pourquoi": "On écrit d’abord x, puis y : x = 2 et y = 5."
+            },
+            {
+              "texte": "(6 ; 13)",
+              "pourquoi": "3x = 6 donne x = 6 ÷ 3 = 2, pas x = 6."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : y = x + 4 et y = 3x se coupent quand x + 4 = 3x, donc 4 = 2x et x = …",
+          "nom": "2",
+          "explication": "4 = 2x donne x = 4 ÷ 2 = 2. Puis y = 3 × 2 = 6 : le point est (2 ; 6).",
+          "pieges": [
+            {
+              "texte": "4",
+              "pourquoi": "2x = 4 veut dire 2 × x = 4 : on divise par 2."
+            },
+            {
+              "texte": "1/2",
+              "pourquoi": "On divise 4 par 2, pas 2 par 4."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi la droite d’équation x = 3 n’a-t-elle pas d’équation réduite de la forme y = mx + p ?",
+          "nom": "Elle est parallèle à l’axe des ordonnées : elle n’a pas de pente.",
+          "explication": "Tous ses points ont x = 3, quel que soit y. Un vecteur directeur est u(0 ; 1) : x n’avance pas, donc on ne peut pas parler de pente.",
+          "pieges": [
+            {
+              "texte": "Parce que sa pente vaut 0.",
+              "pourquoi": "Une droite de pente 0 est horizontale, comme y = 3 ; x = 3 est verticale."
+            },
+            {
+              "texte": "Parce qu’elle passe par l’origine.",
+              "pourquoi": "x = 3 ne passe pas par l’origine, et y = 2x y passe tout en ayant une équation réduite."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Equations of lines",
+        "idee": "A line that is not parallel to the y-axis has an equation y = mx + p: m is its gradient, and u(1, m) is a direction vector. Two lines with the same gradient are parallel.",
+        "phrases": {
+          "consigne": "Read the equation of the line, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "In y = mx + p, m is the gradient: when x goes up by 1, y changes by m.",
+          "exemple": "y = 2x + 1 and y = −x + 4: 2x + 1 = −x + 4 gives 3x = 3, so x = 1, then y = 2 × 1 + 1 = 3. The lines meet at the point (1, 3).",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "A line has the general equation 2x − y + 5 = 0. What is its equation in the form y = mx + p?",
+            "nom": "y = 2x + 5",
+            "explication": "Make y the subject: 2x + 5 = y, so y = 2x + 5.",
+            "pieges": [
+              {
+                "texte": "y = −2x − 5",
+                "pourquoi": "When y moves to the other side, its sign changes: 2x + 5 = y, not −2x − 5."
+              },
+              {
+                "texte": "y = 2x − 5",
+                "pourquoi": "The + 5 stays on the same side as 2x: y = 2x + 5."
+              }
+            ]
+          },
+          {
+            "texte": "What is a direction vector of the line y = 3x + 1?",
+            "nom": "u(1, 3)",
+            "explication": "The gradient is 3: when x goes up by 1, y goes up by 3. The vector u(1, 3) follows the line.",
+            "pieges": [
+              {
+                "texte": "u(3, 1)",
+                "pourquoi": "This vector goes 3 across and 1 up: its gradient is 1/3, not 3."
+              },
+              {
+                "texte": "u(0, 1)",
+                "pourquoi": "This vector is vertical: it is the direction of lines parallel to the y-axis."
+              }
+            ]
+          },
+          {
+            "texte": "The line ax + by + c = 0 has direction vector u(−b, a). Which one works for 3x + 2y − 6 = 0?",
+            "nom": "u(−2, 3)",
+            "explication": "Here a = 3 and b = 2, so u(−2, 3). Check: the points (2, 0) and (0, 3) are on the line, and going from one to the other is −2 in x and +3 in y.",
+            "pieges": [
+              {
+                "texte": "u(3, 2)",
+                "pourquoi": "That just copies a and b: the direction vector is (−b, a), which is (−2, 3)."
+              },
+              {
+                "texte": "u(2, 3)",
+                "pourquoi": "The minus sign in front of b was forgotten: it is (−2, 3)."
+              }
+            ]
+          },
+          {
+            "texte": "A line with gradient 2 goes through the point A(1, 4). What is its equation y = mx + p?",
+            "nom": "y = 2x + 2",
+            "explication": "We look for p in y = 2x + p. A is on the line: 4 = 2 × 1 + p, so p = 4 − 2 = 2.",
+            "pieges": [
+              {
+                "texte": "y = 2x + 4",
+                "pourquoi": "4 is the y-coordinate of A, not the y-intercept: 2 × 1 + 4 = 6, not 4."
+              },
+              {
+                "texte": "y = 2x − 2",
+                "pourquoi": "p = 4 − 2, not 2 − 4: with p = −2, y is 0 at x = 1, not 4."
+              }
+            ]
+          },
+          {
+            "texte": "Are the lines y = 3x + 1 and y = 3x − 5 parallel or do they cross?",
+            "nom": "Parallel",
+            "explication": "They have the same gradient, 3: they never meet. Their y-intercepts, 1 and −5, are different, so they are not the same line.",
+            "pieges": [
+              {
+                "texte": "They cross",
+                "pourquoi": "Lines that cross have different gradients; here both gradients are 3."
+              },
+              {
+                "texte": "The same line",
+                "pourquoi": "That would need the same y-intercept; here they are 1 and −5."
+              }
+            ]
+          },
+          {
+            "texte": "Where do the lines y = 2x + 1 and y = −x + 7 meet?",
+            "nom": "(2, 5)",
+            "explication": "2x + 1 = −x + 7 gives 3x = 6, so x = 2. Then y = 2 × 2 + 1 = 5. Check: −2 + 7 = 5.",
+            "pieges": [
+              {
+                "texte": "(5, 2)",
+                "pourquoi": "x comes first, then y: x = 2 and y = 5."
+              },
+              {
+                "texte": "(6, 13)",
+                "pourquoi": "3x = 6 gives x = 6 ÷ 3 = 2, not x = 6."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: y = x + 4 and y = 3x meet when x + 4 = 3x, so 4 = 2x and x = …",
+            "nom": "2",
+            "explication": "4 = 2x gives x = 4 ÷ 2 = 2. Then y = 3 × 2 = 6: the point is (2, 6).",
+            "pieges": [
+              {
+                "texte": "4",
+                "pourquoi": "2x = 4 means 2 × x = 4: divide by 2."
+              },
+              {
+                "texte": "1/2",
+                "pourquoi": "Divide 4 by 2, not 2 by 4."
+              }
+            ]
+          },
+          {
+            "texte": "Why does the line x = 3 have no equation of the form y = mx + p?",
+            "nom": "It is parallel to the y-axis: it has no gradient.",
+            "explication": "All its points have x = 3, whatever y is. A direction vector is u(0, 1): x does not move, so there is no gradient.",
+            "pieges": [
+              {
+                "texte": "Because its gradient is 0.",
+                "pourquoi": "A line with gradient 0 is horizontal, like y = 3; x = 3 is vertical."
+              },
+              {
+                "texte": "Because it goes through the origin.",
+                "pourquoi": "x = 3 does not go through the origin, and y = 2x does while still having an equation y = mx + p."
               }
             ]
           }
@@ -21704,6 +22264,286 @@
       }
     },
     {
+      "id": "fonction-exponentielle",
+      "titre": "La fonction exponentielle",
+      "niveau": "1re",
+      "prerequis": [
+        "suites-geometriques",
+        "derivee-polynome"
+      ],
+      "programme": {
+        "source": "lycee1re",
+        "texte": "Transformer une expression en utilisant les propriétés algébriques de la fonction exponentielle."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "exp est la fonction égale à sa dérivée avec exp(0) = 1. Elle change les sommes en produits : exp(a + b) = exp(a) × exp(b). Elle est toujours strictement positive.",
+      "phrases": {
+        "consigne": "Utilise les propriétés de l’exponentielle, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "exp(a) × exp(b) = exp(a + b), et exp(a) ÷ exp(b) = exp(a − b).",
+        "exemple": "exp(2) × exp(5) = exp(2 + 5) = exp(7). Et exp(6) ÷ exp(4) = exp(6 − 4) = exp(2).",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Écris plus simplement : exp(3) × exp(4)",
+          "nom": "exp(7)",
+          "explication": "exp(a) × exp(b) = exp(a + b) : exp(3 + 4) = exp(7).",
+          "pieges": [
+            {
+              "texte": "exp(12)",
+              "pourquoi": "Un produit d’exponentielles additionne les nombres : 3 + 4 = 7, pas 3 × 4."
+            },
+            {
+              "texte": "7",
+              "pourquoi": "Le résultat est exp(7), environ 1 097, pas 7."
+            }
+          ]
+        },
+        {
+          "texte": "Écris plus simplement : exp(5) ÷ exp(2)",
+          "nom": "exp(3)",
+          "explication": "exp(a) ÷ exp(b) = exp(a − b) : exp(5 − 2) = exp(3).",
+          "pieges": [
+            {
+              "texte": "exp(2,5)",
+              "pourquoi": "Un quotient d’exponentielles soustrait les nombres : 5 − 2 = 3, pas 5 ÷ 2."
+            },
+            {
+              "texte": "exp(7)",
+              "pourquoi": "On divise : 5 − 2 = 3. C’est le produit qui donnerait 5 + 2 = 7."
+            }
+          ]
+        },
+        {
+          "texte": "Écris plus simplement : exp(x) × exp(−x)",
+          "nom": "1",
+          "explication": "exp(x) × exp(−x) = exp(x − x) = exp(0) = 1.",
+          "pieges": [
+            {
+              "texte": "0",
+              "pourquoi": "x − x = 0, mais exp(0) = 1, pas 0."
+            },
+            {
+              "texte": "exp(−x²)",
+              "pourquoi": "Dans un produit d’exponentielles, on additionne x et −x, on ne les multiplie pas."
+            }
+          ]
+        },
+        {
+          "texte": "Écris plus simplement : (exp(2))³",
+          "nom": "exp(6)",
+          "explication": "(exp(2))³ = exp(2) × exp(2) × exp(2) = exp(2 + 2 + 2) = exp(6).",
+          "pieges": [
+            {
+              "texte": "exp(5)",
+              "pourquoi": "exp(5) = exp(2) × exp(3) ; ici, on multiplie trois fois exp(2) : 2 + 2 + 2 = 6."
+            },
+            {
+              "texte": "exp(8)",
+              "pourquoi": "2³ = 8, mais c’est exp(2) qui est au cube : 3 × 2 = 6."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = exp(x). Quelle est sa dérivée f′(x) ?",
+          "nom": "f′(x) = exp(x)",
+          "explication": "C’est sa définition : exp est égale à sa dérivée, et exp(0) = 1.",
+          "pieges": [
+            {
+              "texte": "f′(x) = x × exp(x − 1)",
+              "pourquoi": "Cette règle sert pour les puissances de x, comme x³ ; exp n’en est pas une."
+            },
+            {
+              "texte": "f′(x) = 0",
+              "pourquoi": "exp n’est pas constante : elle est croissante, sa dérivée est exp(x), toujours positive."
+            }
+          ]
+        },
+        {
+          "texte": "g(t) = exp(3t). Quelle est sa dérivée g′(t) ?",
+          "nom": "g′(t) = 3 exp(3t)",
+          "explication": "La dérivée de exp(at) est a × exp(at) : ici a = 3, donc g′(t) = 3 exp(3t).",
+          "pieges": [
+            {
+              "texte": "g′(t) = exp(3t)",
+              "pourquoi": "Il manque le facteur a = 3 : la dérivée de exp(at) est a × exp(at)."
+            },
+            {
+              "texte": "g′(t) = 3t exp(3t)",
+              "pourquoi": "Le facteur est le nombre a = 3, pas 3t."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : exp(2x) = exp(x + 5) donne 2x = x + 5, donc x = …",
+          "nom": "5",
+          "explication": "exp est strictement croissante : deux exponentielles égales ont le même nombre. 2x − x = 5, donc x = 5.",
+          "pieges": [
+            {
+              "texte": "2,5",
+              "pourquoi": "Il y a aussi x à droite : 2x − x = x, donc x = 5, pas 5 ÷ 2."
+            },
+            {
+              "texte": "5/3",
+              "pourquoi": "En passant x à gauche, il change de signe : 2x − x = 5, pas 2x + x = 5."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi exp(x) n’est-il jamais égal à 0 ?",
+          "nom": "Parce que exp(x) × exp(−x) = 1 : si exp(x) valait 0, ce produit vaudrait 0.",
+          "explication": "Un produit qui vaut 1 n’a aucun facteur nul. En plus, exp(x) = exp(x ÷ 2)², un carré, donc exp(x) est strictement positif.",
+          "pieges": [
+            {
+              "texte": "Parce que exp(0) = 1.",
+              "pourquoi": "Cela donne la valeur en 0 seulement, pas pour tous les x."
+            },
+            {
+              "texte": "Parce que exp est croissante.",
+              "pourquoi": "Une fonction croissante peut s’annuler : x − 1 est croissante et vaut 0 en 1."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The exponential function",
+        "idee": "exp is the function equal to its own derivative with exp(0) = 1. It turns sums into products: exp(a + b) = exp(a) × exp(b). It is always strictly positive.",
+        "phrases": {
+          "consigne": "Use the rules of the exponential, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "exp(a) × exp(b) = exp(a + b), and exp(a) ÷ exp(b) = exp(a − b).",
+          "exemple": "exp(2) × exp(5) = exp(2 + 5) = exp(7). And exp(6) ÷ exp(4) = exp(6 − 4) = exp(2).",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Simplify: exp(3) × exp(4)",
+            "nom": "exp(7)",
+            "explication": "exp(a) × exp(b) = exp(a + b): exp(3 + 4) = exp(7).",
+            "pieges": [
+              {
+                "texte": "exp(12)",
+                "pourquoi": "A product of exponentials adds the numbers: 3 + 4 = 7, not 3 × 4."
+              },
+              {
+                "texte": "7",
+                "pourquoi": "The result is exp(7), about 1,097, not 7."
+              }
+            ]
+          },
+          {
+            "texte": "Simplify: exp(5) ÷ exp(2)",
+            "nom": "exp(3)",
+            "explication": "exp(a) ÷ exp(b) = exp(a − b): exp(5 − 2) = exp(3).",
+            "pieges": [
+              {
+                "texte": "exp(2.5)",
+                "pourquoi": "A quotient of exponentials subtracts the numbers: 5 − 2 = 3, not 5 ÷ 2."
+              },
+              {
+                "texte": "exp(7)",
+                "pourquoi": "This is a division: 5 − 2 = 3. A product would give 5 + 2 = 7."
+              }
+            ]
+          },
+          {
+            "texte": "Simplify: exp(x) × exp(−x)",
+            "nom": "1",
+            "explication": "exp(x) × exp(−x) = exp(x − x) = exp(0) = 1.",
+            "pieges": [
+              {
+                "texte": "0",
+                "pourquoi": "x − x = 0, but exp(0) = 1, not 0."
+              },
+              {
+                "texte": "exp(−x²)",
+                "pourquoi": "In a product of exponentials, x and −x are added, not multiplied."
+              }
+            ]
+          },
+          {
+            "texte": "Simplify: (exp(2))³",
+            "nom": "exp(6)",
+            "explication": "(exp(2))³ = exp(2) × exp(2) × exp(2) = exp(2 + 2 + 2) = exp(6).",
+            "pieges": [
+              {
+                "texte": "exp(5)",
+                "pourquoi": "exp(5) = exp(2) × exp(3); here exp(2) is multiplied three times: 2 + 2 + 2 = 6."
+              },
+              {
+                "texte": "exp(8)",
+                "pourquoi": "2³ = 8, but it is exp(2) that is cubed: 3 × 2 = 6."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = exp(x). What is its derivative f′(x)?",
+            "nom": "f′(x) = exp(x)",
+            "explication": "That is its definition: exp is equal to its own derivative, and exp(0) = 1.",
+            "pieges": [
+              {
+                "texte": "f′(x) = x × exp(x − 1)",
+                "pourquoi": "That rule is for powers of x, like x³; exp is not one."
+              },
+              {
+                "texte": "f′(x) = 0",
+                "pourquoi": "exp is not constant: it is increasing, and its derivative is exp(x), always positive."
+              }
+            ]
+          },
+          {
+            "texte": "g(t) = exp(3t). What is its derivative g′(t)?",
+            "nom": "g′(t) = 3 exp(3t)",
+            "explication": "The derivative of exp(at) is a × exp(at): here a = 3, so g′(t) = 3 exp(3t).",
+            "pieges": [
+              {
+                "texte": "g′(t) = exp(3t)",
+                "pourquoi": "The factor a = 3 is missing: the derivative of exp(at) is a × exp(at)."
+              },
+              {
+                "texte": "g′(t) = 3t exp(3t)",
+                "pourquoi": "The factor is the number a = 3, not 3t."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: exp(2x) = exp(x + 5) gives 2x = x + 5, so x = …",
+            "nom": "5",
+            "explication": "exp is strictly increasing: two equal exponentials have the same number inside. 2x − x = 5, so x = 5.",
+            "pieges": [
+              {
+                "texte": "2.5",
+                "pourquoi": "There is an x on the right too: 2x − x = x, so x = 5, not 5 ÷ 2."
+              },
+              {
+                "texte": "5/3",
+                "pourquoi": "When x moves to the left, its sign changes: 2x − x = 5, not 2x + x = 5."
+              }
+            ]
+          },
+          {
+            "texte": "Why is exp(x) never equal to 0?",
+            "nom": "Because exp(x) × exp(−x) = 1: if exp(x) were 0, that product would be 0.",
+            "explication": "A product equal to 1 has no zero factor. Also, exp(x) = exp(x ÷ 2)², a square, so exp(x) is strictly positive.",
+            "pieges": [
+              {
+                "texte": "Because exp(0) = 1.",
+                "pourquoi": "That only gives the value at 0, not for every x."
+              },
+              {
+                "texte": "Because exp is increasing.",
+                "pourquoi": "An increasing function can be zero: x − 1 is increasing and equals 0 at 1."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "produit-scalaire",
       "titre": "Le produit scalaire",
       "niveau": "1re",
@@ -22375,6 +23215,286 @@
               {
                 "texte": "0.32",
                 "pourquoi": "0.32 is the probability of exactly one success: add the two successes, 0.64."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "variables-aleatoires",
+      "titre": "Variables aléatoires et espérance",
+      "niveau": "1re",
+      "prerequis": [
+        "probabilites-conditionnelles",
+        "moyenne-mediane"
+      ],
+      "programme": {
+        "source": "lycee1re",
+        "texte": "Calculer une espérance, une variance, un écart type. Utiliser la notion d’espérance dans une résolution de problème (mise pour un jeu équitable, etc.)."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une variable aléatoire X associe un nombre à chaque issue. Son espérance E(X) est la somme des valeurs multipliées par leurs probabilités : la moyenne obtenue sur un très grand nombre d’essais.",
+      "phrases": {
+        "consigne": "Écris la loi de X, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "E(X) = x1 × p1 + x2 × p2 + … : chaque valeur multipliée par sa probabilité, puis on additionne.",
+        "exemple": "X vaut 2 avec la probabilité 0,4 et 5 avec la probabilité 0,6. E(X) = 2 × 0,4 + 5 × 0,6 = 0,8 + 3 = 3,8.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "X prend les valeurs 0, 10 et 20 avec les probabilités 0,5 ; 0,3 et 0,2. Combien vaut E(X) ?",
+          "nom": "7",
+          "explication": "E(X) = 0 × 0,5 + 10 × 0,3 + 20 × 0,2 = 0 + 3 + 4 = 7.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "10 est la moyenne des trois valeurs sans tenir compte des probabilités ; 0 est le plus probable."
+            },
+            {
+              "texte": "1",
+              "pourquoi": "1 est la somme des probabilités, 0,5 + 0,3 + 0,2 ; il faut multiplier chaque valeur par sa probabilité."
+            }
+          ]
+        },
+        {
+          "texte": "X prend les valeurs 1, 2 et 3. P(X = 1) = 0,2 et P(X = 2) = 0,5. Combien vaut P(X = 3) ?",
+          "nom": "0,3",
+          "explication": "Les probabilités d’une loi ont pour somme 1 : P(X = 3) = 1 − 0,2 − 0,5 = 0,3.",
+          "pieges": [
+            {
+              "texte": "0,7",
+              "pourquoi": "0,7 = 0,2 + 0,5, c’est la probabilité que X vaille 1 ou 2."
+            },
+            {
+              "texte": "1/3",
+              "pourquoi": "Les trois valeurs ne sont pas équiprobables : 0,2 et 0,5 sont déjà différentes."
+            }
+          ]
+        },
+        {
+          "texte": "On lance un dé équilibré. On gagne 6 € si on fait 6, sinon on perd 1 €. Quelle est l’espérance du gain ?",
+          "nom": "1/6 d’euro, environ 0,17 €",
+          "explication": "E = 6 × 1/6 + (−1) × 5/6 = 1 − 5/6 = 1/6, environ 0,17 €.",
+          "pieges": [
+            {
+              "texte": "2,5 €",
+              "pourquoi": "C’est la moyenne de 6 et de −1 ; perdre 1 € arrive 5 fois sur 6, pas une fois sur deux."
+            },
+            {
+              "texte": "1 €",
+              "pourquoi": "6 × 1/6 = 1, mais il faut aussi compter la perte : − 5/6."
+            }
+          ]
+        },
+        {
+          "texte": "On mise m € pour jouer. On gagne 10 € avec la probabilité 0,2, rien sinon. Quelle mise rend le jeu équitable ?",
+          "nom": "2 €",
+          "explication": "Le jeu est équitable quand l’espérance du gain net est nulle : 10 × 0,2 − m = 0, donc m = 2.",
+          "pieges": [
+            {
+              "texte": "10 €",
+              "pourquoi": "On ne gagne 10 € qu’une fois sur 5 : en moyenne, 2 € par partie."
+            },
+            {
+              "texte": "0,2 €",
+              "pourquoi": "0,2 est la probabilité de gagner, pas un montant : 10 × 0,2 = 2 €."
+            }
+          ]
+        },
+        {
+          "texte": "E(X) = 4. Combien vaut E(3X + 2) ?",
+          "nom": "14",
+          "explication": "L’espérance est linéaire : E(3X + 2) = 3 × E(X) + 2 = 3 × 4 + 2 = 14.",
+          "pieges": [
+            {
+              "texte": "12",
+              "pourquoi": "Le + 2 compte aussi : 3 × 4 + 2 = 14."
+            },
+            {
+              "texte": "18",
+              "pourquoi": "On multiplie E(X) par 3, puis on ajoute 2 : 3 × 4 + 2, pas 3 × (4 + 2)."
+            }
+          ]
+        },
+        {
+          "texte": "X vaut −1 ou 1, chacun avec la probabilité 0,5. Combien vaut sa variance V(X) ?",
+          "nom": "1",
+          "explication": "E(X) = −0,5 + 0,5 = 0. V(X) = 0,5 × (−1 − 0)² + 0,5 × (1 − 0)² = 0,5 + 0,5 = 1.",
+          "pieges": [
+            {
+              "texte": "0",
+              "pourquoi": "0 est l’espérance ; la variance mesure l’écart autour d’elle, ici 1."
+            },
+            {
+              "texte": "0,5",
+              "pourquoi": "Il y a deux termes, 0,5 × 1 et 0,5 × 1 : leur somme vaut 1."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : X vaut 0 ou 4, chacun avec la probabilité 0,5, et E(X) = 2. V(X) = 0,5 × (0 − 2)² + 0,5 × (4 − 2)² = …",
+          "nom": "4",
+          "explication": "(0 − 2)² = 4 et (4 − 2)² = 4 : V(X) = 0,5 × 4 + 0,5 × 4 = 4. L’écart type vaut √4 = 2.",
+          "pieges": [
+            {
+              "texte": "2",
+              "pourquoi": "2 est l’écart type, la racine carrée de la variance : √4 = 2."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "Les écarts sont élevés au carré : (0 − 2)² = 4, positif, ils ne s’annulent pas."
+            }
+          ]
+        },
+        {
+          "texte": "Au jeu du dé, l’espérance du gain vaut 1/6 d’euro, alors qu’on gagne 6 € ou qu’on perd 1 €. Pourquoi ?",
+          "nom": "L’espérance est le gain moyen sur un très grand nombre de parties, pas le gain d’une partie.",
+          "explication": "E(X) est une moyenne pondérée par les probabilités : sur 600 parties, on s’attend à gagner environ 100 € (600 × 1/6), pas à gagner 1/6 d’euro à chaque fois.",
+          "pieges": [
+            {
+              "texte": "Parce que le calcul est approché.",
+              "pourquoi": "1/6 est la valeur exacte ; 0,17 n’en est que l’arrondi."
+            },
+            {
+              "texte": "Parce que l’espérance est la valeur la plus probable.",
+              "pourquoi": "La plus probable est de perdre 1 € (5 chances sur 6), pas de gagner 1/6 d’euro."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Random variables and expected value",
+        "idee": "A random variable X gives a number to each outcome. Its expected value E(X) is the sum of the values times their probabilities: the mean you get over a very large number of trials.",
+        "phrases": {
+          "consigne": "Write the distribution of X, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "E(X) = x1 × p1 + x2 × p2 + …: multiply each value by its probability, then add up.",
+          "exemple": "X is 2 with probability 0.4 and 5 with probability 0.6. E(X) = 2 × 0.4 + 5 × 0.6 = 0.8 + 3 = 3.8.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "X takes the values 0, 10 and 20 with probabilities 0.5, 0.3 and 0.2. What is E(X)?",
+            "nom": "7",
+            "explication": "E(X) = 0 × 0.5 + 10 × 0.3 + 20 × 0.2 = 0 + 3 + 4 = 7.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "10 is the mean of the three values, ignoring the probabilities; 0 is the most likely."
+              },
+              {
+                "texte": "1",
+                "pourquoi": "1 is the sum of the probabilities, 0.5 + 0.3 + 0.2; multiply each value by its probability."
+              }
+            ]
+          },
+          {
+            "texte": "X takes the values 1, 2 and 3. P(X = 1) = 0.2 and P(X = 2) = 0.5. What is P(X = 3)?",
+            "nom": "0.3",
+            "explication": "The probabilities of a distribution add up to 1: P(X = 3) = 1 − 0.2 − 0.5 = 0.3.",
+            "pieges": [
+              {
+                "texte": "0.7",
+                "pourquoi": "0.7 = 0.2 + 0.5, the probability that X is 1 or 2."
+              },
+              {
+                "texte": "1/3",
+                "pourquoi": "The three values are not equally likely: 0.2 and 0.5 are already different."
+              }
+            ]
+          },
+          {
+            "texte": "You roll a fair dice. You win €6 if you get a 6, otherwise you lose €1. What is the expected gain?",
+            "nom": "1/6 of a euro, about €0.17",
+            "explication": "E = 6 × 1/6 + (−1) × 5/6 = 1 − 5/6 = 1/6, about €0.17.",
+            "pieges": [
+              {
+                "texte": "€2.50",
+                "pourquoi": "That is the mean of 6 and −1; losing €1 happens 5 times out of 6, not half the time."
+              },
+              {
+                "texte": "€1",
+                "pourquoi": "6 × 1/6 = 1, but the loss counts too: − 5/6."
+              }
+            ]
+          },
+          {
+            "texte": "You pay a stake of €m to play. You win €10 with probability 0.2, nothing otherwise. What stake makes the game fair?",
+            "nom": "€2",
+            "explication": "The game is fair when the expected net gain is zero: 10 × 0.2 − m = 0, so m = 2.",
+            "pieges": [
+              {
+                "texte": "€10",
+                "pourquoi": "You win €10 only once in 5 games: on average, €2 per game."
+              },
+              {
+                "texte": "€0.20",
+                "pourquoi": "0.2 is the probability of winning, not an amount: 10 × 0.2 = €2."
+              }
+            ]
+          },
+          {
+            "texte": "E(X) = 4. What is E(3X + 2)?",
+            "nom": "14",
+            "explication": "Expected value is linear: E(3X + 2) = 3 × E(X) + 2 = 3 × 4 + 2 = 14.",
+            "pieges": [
+              {
+                "texte": "12",
+                "pourquoi": "The + 2 counts too: 3 × 4 + 2 = 14."
+              },
+              {
+                "texte": "18",
+                "pourquoi": "Multiply E(X) by 3, then add 2: 3 × 4 + 2, not 3 × (4 + 2)."
+              }
+            ]
+          },
+          {
+            "texte": "X is −1 or 1, each with probability 0.5. What is its variance V(X)?",
+            "nom": "1",
+            "explication": "E(X) = −0.5 + 0.5 = 0. V(X) = 0.5 × (−1 − 0)² + 0.5 × (1 − 0)² = 0.5 + 0.5 = 1.",
+            "pieges": [
+              {
+                "texte": "0",
+                "pourquoi": "0 is the expected value; the variance measures the spread around it, here 1."
+              },
+              {
+                "texte": "0.5",
+                "pourquoi": "There are two terms, 0.5 × 1 and 0.5 × 1: they add up to 1."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: X is 0 or 4, each with probability 0.5, and E(X) = 2. V(X) = 0.5 × (0 − 2)² + 0.5 × (4 − 2)² = …",
+            "nom": "4",
+            "explication": "(0 − 2)² = 4 and (4 − 2)² = 4: V(X) = 0.5 × 4 + 0.5 × 4 = 4. The standard deviation is √4 = 2.",
+            "pieges": [
+              {
+                "texte": "2",
+                "pourquoi": "2 is the standard deviation, the square root of the variance: √4 = 2."
+              },
+              {
+                "texte": "0",
+                "pourquoi": "The gaps are squared: (0 − 2)² = 4, which is positive, so they do not cancel out."
+              }
+            ]
+          },
+          {
+            "texte": "In the dice game, the expected gain is 1/6 of a euro, yet you either win €6 or lose €1. Why?",
+            "nom": "The expected value is the mean gain over a very large number of games, not the gain in one game.",
+            "explication": "E(X) is a mean weighted by the probabilities: over 600 games you expect to win about €100 (600 × 1/6), not 1/6 of a euro each time.",
+            "pieges": [
+              {
+                "texte": "Because the calculation is rounded.",
+                "pourquoi": "1/6 is the exact value; 0.17 is only its rounding."
+              },
+              {
+                "texte": "Because the expected value is the most likely value.",
+                "pourquoi": "The most likely result is losing €1 (5 chances out of 6), not winning 1/6 of a euro."
               }
             ]
           }
@@ -24041,6 +25161,566 @@
               {
                 "texte": "2x³ − x² + 1",
                 "pourquoi": "Its derivative is right, but it equals 1 at 0, not 0."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "convexite",
+      "titre": "Convexité et point d’inflexion",
+      "niveau": "Terminale",
+      "prerequis": [
+        "derivee-polynome",
+        "fonction-exponentielle"
+      ],
+      "programme": {
+        "source": "terminale",
+        "texte": "Dérivée seconde d’une fonction. Fonction convexe sur un intervalle : définition par la position relative de la courbe représentative et des sécantes. […] Point d’inflexion."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "f est convexe quand sa courbe est au-dessus de ses tangentes, c’est-à-dire quand sa dérivée seconde est positive. Là où la dérivée seconde change de signe, la courbe a un point d’inflexion.",
+      "phrases": {
+        "consigne": "Calcule la dérivée seconde et regarde son signe, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "La dérivée seconde est la dérivée de f′(x). Positive : convexe. Négative : concave.",
+        "exemple": "f(x) = x³ : f′(x) = 3x², puis la dérivée seconde vaut 6x. Elle est négative avant 0 et positive après : f est concave puis convexe, avec un point d’inflexion en 0.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "f(x) = x³ − 6x², donc f′(x) = 3x² − 12x. Quelle est la dérivée seconde de f ?",
+          "nom": "6x − 12",
+          "explication": "On dérive f′(x) : la dérivée de 3x² est 6x, celle de −12x est −12. La dérivée seconde vaut 6x − 12.",
+          "pieges": [
+            {
+              "texte": "3x² − 12x",
+              "pourquoi": "C’est f′(x), la dérivée première ; il faut la dériver encore une fois."
+            },
+            {
+              "texte": "6x",
+              "pourquoi": "La dérivée de −12x vaut −12 : il ne faut pas l’oublier."
+            }
+          ]
+        },
+        {
+          "texte": "La dérivée seconde de f vaut 2 pour tout x, par exemple pour f(x) = x². f est-elle convexe ou concave ?",
+          "nom": "Convexe",
+          "explication": "La dérivée seconde est positive partout : f′(x) est croissante, et la courbe est au-dessus de ses tangentes. f est convexe.",
+          "pieges": [
+            {
+              "texte": "Concave",
+              "pourquoi": "Concave correspond à une dérivée seconde négative ; ici elle vaut 2."
+            },
+            {
+              "texte": "On ne peut pas savoir",
+              "pourquoi": "Le signe de la dérivée seconde suffit : 2 est positif."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = exp(x). f est-elle convexe ou concave ?",
+          "nom": "Convexe partout",
+          "explication": "f′(x) = exp(x), et la dérivée seconde vaut aussi exp(x), toujours strictement positive : f est convexe pour tout x.",
+          "pieges": [
+            {
+              "texte": "Concave",
+              "pourquoi": "La dérivée seconde, exp(x), est positive : c’est convexe."
+            },
+            {
+              "texte": "Convexe pour x > 0 seulement",
+              "pourquoi": "exp(x) est positif même quand x est négatif : par exemple exp(−3), environ 0,05."
+            }
+          ]
+        },
+        {
+          "texte": "La dérivée seconde de f vaut 6x − 12. En quelle abscisse la courbe a-t-elle un point d’inflexion ?",
+          "nom": "x = 2",
+          "explication": "6x − 12 = 0 donne x = 2. Avant 2 elle est négative, après 2 positive : la courbe passe de concave à convexe en x = 2.",
+          "pieges": [
+            {
+              "texte": "x = −2",
+              "pourquoi": "6 × (−2) − 12 = −24, pas 0."
+            },
+            {
+              "texte": "x = 0",
+              "pourquoi": "En 0, la dérivée seconde vaut −12 : elle ne s’annule pas, elle ne change pas de signe."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = x³ − 6x². Sur quel intervalle f est-elle convexe ?",
+          "nom": "[2 ; +∞[",
+          "explication": "La dérivée seconde, 6x − 12, est positive ou nulle quand 6x ≥ 12, c’est-à-dire x ≥ 2.",
+          "pieges": [
+            {
+              "texte": "]−∞ ; 2]",
+              "pourquoi": "Là, 6x − 12 est négative ou nulle : f y est concave."
+            },
+            {
+              "texte": "[0 ; +∞[",
+              "pourquoi": "En x = 1, 6 × 1 − 12 = −6, négatif : f n’est pas convexe entre 0 et 2."
+            }
+          ]
+        },
+        {
+          "texte": "f est convexe sur un intervalle. Où est sa courbe par rapport à ses tangentes ?",
+          "nom": "Au-dessus de ses tangentes",
+          "explication": "Pour une fonction convexe, la courbe est au-dessus de chacune de ses tangentes, comme la parabole y = x².",
+          "pieges": [
+            {
+              "texte": "En dessous de ses tangentes",
+              "pourquoi": "C’est le cas d’une fonction concave."
+            },
+            {
+              "texte": "Elle les traverse",
+              "pourquoi": "La courbe traverse sa tangente seulement en un point d’inflexion."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : f(x) = ln(x), f′(x) = 1/x, et sa dérivée seconde vaut −1/x². Sur ]0 ; +∞[, f est donc …",
+          "nom": "concave",
+          "explication": "x² est positif, donc −1/x² est négatif pour tout x > 0 : f est concave sur ]0 ; +∞[.",
+          "pieges": [
+            {
+              "texte": "convexe",
+              "pourquoi": "Le signe moins rend la dérivée seconde négative : c’est concave."
+            },
+            {
+              "texte": "ni convexe ni concave",
+              "pourquoi": "La dérivée seconde garde le même signe, négatif, sur tout l’intervalle : f est concave partout."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi a-t-on exp(x) ≥ x + 1 pour tout x ?",
+          "nom": "exp est convexe, et la droite y = x + 1 est sa tangente en 0 : la courbe est au-dessus.",
+          "explication": "En 0, exp(0) = 1 et la pente vaut exp(0) = 1 : la tangente est y = x + 1. Une fonction convexe reste au-dessus de ses tangentes.",
+          "pieges": [
+            {
+              "texte": "Parce que exp est croissante.",
+              "pourquoi": "Être croissante ne place pas une courbe au-dessus d’une droite : c’est la convexité qui le fait."
+            },
+            {
+              "texte": "Parce que exp(x) est toujours positif.",
+              "pourquoi": "x + 1 peut être positif aussi : en x = 1, il faut comparer exp(1), environ 2,72, à 2. La positivité ne suffit pas."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Convexity and points of inflection",
+        "idee": "f is convex when its graph lies above its tangents, that is when its second derivative is positive. Where the second derivative changes sign, the graph has a point of inflection.",
+        "phrases": {
+          "consigne": "Work out the second derivative and look at its sign, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The second derivative is the derivative of f′(x). Positive: convex. Negative: concave.",
+          "exemple": "f(x) = x³: f′(x) = 3x², then the second derivative is 6x. It is negative before 0 and positive after: f is concave then convex, with a point of inflection at 0.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "f(x) = x³ − 6x², so f′(x) = 3x² − 12x. What is the second derivative of f?",
+            "nom": "6x − 12",
+            "explication": "Differentiate f′(x): the derivative of 3x² is 6x, and that of −12x is −12. The second derivative is 6x − 12.",
+            "pieges": [
+              {
+                "texte": "3x² − 12x",
+                "pourquoi": "That is f′(x), the first derivative; it must be differentiated once more."
+              },
+              {
+                "texte": "6x",
+                "pourquoi": "The derivative of −12x is −12: do not forget it."
+              }
+            ]
+          },
+          {
+            "texte": "The second derivative of f is 2 for every x, for example for f(x) = x². Is f convex or concave?",
+            "nom": "Convex",
+            "explication": "The second derivative is positive everywhere: f′(x) is increasing, and the graph lies above its tangents. f is convex.",
+            "pieges": [
+              {
+                "texte": "Concave",
+                "pourquoi": "Concave goes with a negative second derivative; here it is 2."
+              },
+              {
+                "texte": "We cannot tell",
+                "pourquoi": "The sign of the second derivative is enough: 2 is positive."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = exp(x). Is f convex or concave?",
+            "nom": "Convex everywhere",
+            "explication": "f′(x) = exp(x), and the second derivative is exp(x) too, always strictly positive: f is convex for every x.",
+            "pieges": [
+              {
+                "texte": "Concave",
+                "pourquoi": "The second derivative, exp(x), is positive: it is convex."
+              },
+              {
+                "texte": "Convex for x > 0 only",
+                "pourquoi": "exp(x) is positive even when x is negative: for example exp(−3) is about 0.05."
+              }
+            ]
+          },
+          {
+            "texte": "The second derivative of f is 6x − 12. At what x does the graph have a point of inflection?",
+            "nom": "x = 2",
+            "explication": "6x − 12 = 0 gives x = 2. Before 2 it is negative, after 2 positive: the graph goes from concave to convex at x = 2.",
+            "pieges": [
+              {
+                "texte": "x = −2",
+                "pourquoi": "6 × (−2) − 12 = −24, not 0."
+              },
+              {
+                "texte": "x = 0",
+                "pourquoi": "At 0 the second derivative is −12: it is not zero and does not change sign there."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = x³ − 6x². On which interval is f convex?",
+            "nom": "[2, +∞)",
+            "explication": "The second derivative, 6x − 12, is positive or zero when 6x ≥ 12, that is x ≥ 2.",
+            "pieges": [
+              {
+                "texte": "(−∞, 2]",
+                "pourquoi": "There, 6x − 12 is negative or zero: f is concave."
+              },
+              {
+                "texte": "[0, +∞)",
+                "pourquoi": "At x = 1, 6 × 1 − 12 = −6, which is negative: f is not convex between 0 and 2."
+              }
+            ]
+          },
+          {
+            "texte": "f is convex on an interval. Where is its graph compared with its tangents?",
+            "nom": "Above its tangents",
+            "explication": "For a convex function, the graph lies above each of its tangents, like the parabola y = x².",
+            "pieges": [
+              {
+                "texte": "Below its tangents",
+                "pourquoi": "That is the case for a concave function."
+              },
+              {
+                "texte": "It crosses them",
+                "pourquoi": "The graph crosses its tangent only at a point of inflection."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: f(x) = ln(x), f′(x) = 1/x, and its second derivative is −1/x². On (0, +∞), f is therefore …",
+            "nom": "concave",
+            "explication": "x² is positive, so −1/x² is negative for every x > 0: f is concave on (0, +∞).",
+            "pieges": [
+              {
+                "texte": "convex",
+                "pourquoi": "The minus sign makes the second derivative negative: it is concave."
+              },
+              {
+                "texte": "neither convex nor concave",
+                "pourquoi": "The second derivative keeps the same sign, negative, on the whole interval: f is concave everywhere."
+              }
+            ]
+          },
+          {
+            "texte": "Why is exp(x) ≥ x + 1 for every x?",
+            "nom": "exp is convex, and the line y = x + 1 is its tangent at 0: the graph lies above it.",
+            "explication": "At 0, exp(0) = 1 and the gradient is exp(0) = 1: the tangent is y = x + 1. A convex function stays above its tangents.",
+            "pieges": [
+              {
+                "texte": "Because exp is increasing.",
+                "pourquoi": "Being increasing does not put a graph above a line: convexity does."
+              },
+              {
+                "texte": "Because exp(x) is always positive.",
+                "pourquoi": "x + 1 can be positive too: at x = 1, compare exp(1), about 2.72, with 2. Being positive is not enough."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "equations-differentielles",
+      "titre": "Équations différentielles",
+      "niveau": "Terminale",
+      "prerequis": [
+        "primitives",
+        "fonction-exponentielle"
+      ],
+      "programme": {
+        "source": "terminale",
+        "texte": "Équation différentielle y’ = ay, où a est un nombre réel ; allure des courbes. Équation différentielle y’ = ay + b."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Les solutions de f′(x) = a × f(x) sont les fonctions f(x) = C exp(ax), où C est un réel. Pour f′(x) = a × f(x) + b, on ajoute la solution constante, −b ÷ a.",
+      "phrases": {
+        "consigne": "Cherche la fonction dont la dérivée vérifie l’équation, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "La dérivée de C exp(ax) est a × C exp(ax) : c’est a fois la fonction elle-même.",
+        "exemple": "f′(x) = 4 × f(x) et f(0) = 3 : f(x) = C exp(4x), et f(0) = C = 3. Donc f(x) = 3 exp(4x).",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! La réponse est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Quelles sont les fonctions f telles que f′(x) = 3 × f(x) pour tout x ?",
+          "nom": "f(x) = C exp(3x), avec C un réel quelconque",
+          "explication": "La dérivée de C exp(3x) est 3C exp(3x) = 3 × f(x). Ce sont les seules solutions.",
+          "pieges": [
+            {
+              "texte": "f(x) = 3 exp(x)",
+              "pourquoi": "Sa dérivée est 3 exp(x), c’est-à-dire f(x), pas 3 × f(x)."
+            },
+            {
+              "texte": "f(x) = exp(3x) seulement",
+              "pourquoi": "Toute constante C convient : 2 exp(3x) a pour dérivée 6 exp(3x) = 3 × 2 exp(3x)."
+            }
+          ]
+        },
+        {
+          "texte": "f′(x) = −2 × f(x) et f(0) = 5. Quelle est la fonction f ?",
+          "nom": "f(x) = 5 exp(−2x)",
+          "explication": "f(x) = C exp(−2x), et f(0) = C × exp(0) = C, donc C = 5.",
+          "pieges": [
+            {
+              "texte": "f(x) = −2 exp(5x)",
+              "pourquoi": "Les rôles sont inversés : −2 va dans l’exponentielle, 5 devant."
+            },
+            {
+              "texte": "f(x) = 5 exp(2x)",
+              "pourquoi": "Le signe compte : la dérivée de 5 exp(2x) vaut 2 × f(x), pas −2 × f(x)."
+            }
+          ]
+        },
+        {
+          "texte": "f(x) = 4 exp(x). Est-ce une solution de f′(x) = f(x) ?",
+          "nom": "Oui : f′(x) = 4 exp(x) = f(x).",
+          "explication": "Le facteur 4 reste en dérivant : f′(x) = 4 exp(x), qui est bien f(x). C’est le cas C = 4.",
+          "pieges": [
+            {
+              "texte": "Non : seule exp(x) est solution.",
+              "pourquoi": "Toutes les fonctions C exp(x) sont solutions ; exp(x) est seulement celle qui vaut 1 en 0."
+            },
+            {
+              "texte": "Non : il faudrait f(0) = 1.",
+              "pourquoi": "L’équation n’impose aucune valeur en 0 ; ici f(0) = 4, et c’est une solution."
+            }
+          ]
+        },
+        {
+          "texte": "f′(x) = 2 × f(x) + 6. Quelle est la solution constante ?",
+          "nom": "f(x) = −3",
+          "explication": "Une constante k a pour dérivée 0 : 0 = 2k + 6, donc k = −6 ÷ 2 = −3.",
+          "pieges": [
+            {
+              "texte": "f(x) = 3",
+              "pourquoi": "2 × 3 + 6 = 12, pas 0 : il faut un nombre négatif, −3."
+            },
+            {
+              "texte": "f(x) = −6",
+              "pourquoi": "2 × (−6) + 6 = −6, pas 0 : il faut encore diviser par 2."
+            }
+          ]
+        },
+        {
+          "texte": "f′(x) = 2 × f(x) + 6. Quelles sont toutes les solutions ?",
+          "nom": "f(x) = C exp(2x) − 3, avec C réel",
+          "explication": "On ajoute la solution constante −3 aux solutions C exp(2x) de f′(x) = 2 × f(x). Vérification : f′(x) = 2C exp(2x) et 2 × (C exp(2x) − 3) + 6 = 2C exp(2x).",
+          "pieges": [
+            {
+              "texte": "f(x) = C exp(2x) + 3",
+              "pourquoi": "La solution constante est −3 : 2 × 3 + 6 = 12, pas 0."
+            },
+            {
+              "texte": "f(x) = C exp(2x) + 6",
+              "pourquoi": "On ajoute la solution constante, −3, pas le nombre b = 6."
+            }
+          ]
+        },
+        {
+          "texte": "Un objet refroidit selon f′(t) = −0,1 × f(t), avec f(0) = 80. Combien vaut f(10) ?",
+          "nom": "80 exp(−1), environ 29,4",
+          "explication": "f(t) = 80 exp(−0,1t). En t = 10 : −0,1 × 10 = −1, donc f(10) = 80 exp(−1), environ 80 × 0,368 = 29,4.",
+          "pieges": [
+            {
+              "texte": "80 exp(−10)",
+              "pourquoi": "Dans l’exponentielle, on multiplie −0,1 par 10 : cela donne −1, pas −10."
+            },
+            {
+              "texte": "72",
+              "pourquoi": "80 − 8 = 72 enlève 10 % une seule fois ; la baisse suit 80 exp(−0,1t), elle ralentit avec le temps."
+            }
+          ]
+        },
+        {
+          "texte": "Complète : f′(x) = 5 × f(x) − 10. La solution constante k vérifie 0 = 5k − 10, donc k = …",
+          "nom": "2",
+          "explication": "5k = 10 donne k = 2. Vérification : 5 × 2 − 10 = 0.",
+          "pieges": [
+            {
+              "texte": "10",
+              "pourquoi": "5 × 10 − 10 = 40, pas 0 : il faut diviser 10 par 5."
+            },
+            {
+              "texte": "−2",
+              "pourquoi": "5 × (−2) − 10 = −20, pas 0."
+            }
+          ]
+        },
+        {
+          "texte": "f′(x) = 2 × f(x) et f(0) > 0. Pourquoi la courbe de f monte-t-elle de plus en plus vite ?",
+          "nom": "La pente, 2 × f(x), grandit en même temps que f(x).",
+          "explication": "f(x) = C exp(2x) avec C > 0 : f est positive et croissante, donc sa pente 2 × f(x) augmente sans cesse.",
+          "pieges": [
+            {
+              "texte": "Parce que la pente vaut toujours 2.",
+              "pourquoi": "Une pente toujours égale à 2 donnerait une droite, f(x) = 2x + C. Ici la pente est 2 × f(x)."
+            },
+            {
+              "texte": "Parce que f(0) > 0 suffit.",
+              "pourquoi": "Avec f′(x) = −2 × f(x) et f(0) > 0, f décroît : c’est le signe de a qui compte."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Differential equations",
+        "idee": "The solutions of f′(x) = a × f(x) are the functions f(x) = C exp(ax), where C is a real number. For f′(x) = a × f(x) + b, add the constant solution, −b ÷ a.",
+        "phrases": {
+          "consigne": "Look for the function whose derivative fits the equation, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "The derivative of C exp(ax) is a × C exp(ax): a times the function itself.",
+          "exemple": "f′(x) = 4 × f(x) and f(0) = 3: f(x) = C exp(4x), and f(0) = C = 3. So f(x) = 3 exp(4x).",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Which functions f satisfy f′(x) = 3 × f(x) for every x?",
+            "nom": "f(x) = C exp(3x), for any real number C",
+            "explication": "The derivative of C exp(3x) is 3C exp(3x) = 3 × f(x). These are the only solutions.",
+            "pieges": [
+              {
+                "texte": "f(x) = 3 exp(x)",
+                "pourquoi": "Its derivative is 3 exp(x), which is f(x), not 3 × f(x)."
+              },
+              {
+                "texte": "Only f(x) = exp(3x)",
+                "pourquoi": "Any constant C works: 2 exp(3x) has derivative 6 exp(3x) = 3 × 2 exp(3x)."
+              }
+            ]
+          },
+          {
+            "texte": "f′(x) = −2 × f(x) and f(0) = 5. What is the function f?",
+            "nom": "f(x) = 5 exp(−2x)",
+            "explication": "f(x) = C exp(−2x), and f(0) = C × exp(0) = C, so C = 5.",
+            "pieges": [
+              {
+                "texte": "f(x) = −2 exp(5x)",
+                "pourquoi": "The roles are swapped: −2 goes inside the exponential, 5 in front."
+              },
+              {
+                "texte": "f(x) = 5 exp(2x)",
+                "pourquoi": "The sign matters: the derivative of 5 exp(2x) is 2 × f(x), not −2 × f(x)."
+              }
+            ]
+          },
+          {
+            "texte": "f(x) = 4 exp(x). Is it a solution of f′(x) = f(x)?",
+            "nom": "Yes: f′(x) = 4 exp(x) = f(x).",
+            "explication": "The factor 4 stays when differentiating: f′(x) = 4 exp(x), which is f(x). This is the case C = 4.",
+            "pieges": [
+              {
+                "texte": "No: only exp(x) is a solution.",
+                "pourquoi": "All the functions C exp(x) are solutions; exp(x) is just the one equal to 1 at 0."
+              },
+              {
+                "texte": "No: f(0) would have to be 1.",
+                "pourquoi": "The equation sets no value at 0; here f(0) = 4, and it is a solution."
+              }
+            ]
+          },
+          {
+            "texte": "f′(x) = 2 × f(x) + 6. What is the constant solution?",
+            "nom": "f(x) = −3",
+            "explication": "A constant k has derivative 0: 0 = 2k + 6, so k = −6 ÷ 2 = −3.",
+            "pieges": [
+              {
+                "texte": "f(x) = 3",
+                "pourquoi": "2 × 3 + 6 = 12, not 0: it has to be a negative number, −3."
+              },
+              {
+                "texte": "f(x) = −6",
+                "pourquoi": "2 × (−6) + 6 = −6, not 0: you still have to divide by 2."
+              }
+            ]
+          },
+          {
+            "texte": "f′(x) = 2 × f(x) + 6. What are all the solutions?",
+            "nom": "f(x) = C exp(2x) − 3, C real",
+            "explication": "Add the constant solution −3 to the solutions C exp(2x) of f′(x) = 2 × f(x). Check: f′(x) = 2C exp(2x) and 2 × (C exp(2x) − 3) + 6 = 2C exp(2x).",
+            "pieges": [
+              {
+                "texte": "f(x) = C exp(2x) + 3",
+                "pourquoi": "The constant solution is −3: 2 × 3 + 6 = 12, not 0."
+              },
+              {
+                "texte": "f(x) = C exp(2x) + 6",
+                "pourquoi": "Add the constant solution, −3, not the number b = 6."
+              }
+            ]
+          },
+          {
+            "texte": "An object cools down following f′(t) = −0.1 × f(t), with f(0) = 80. What is f(10)?",
+            "nom": "80 exp(−1), about 29.4",
+            "explication": "f(t) = 80 exp(−0.1t). At t = 10: −0.1 × 10 = −1, so f(10) = 80 exp(−1), about 80 × 0.368 = 29.4.",
+            "pieges": [
+              {
+                "texte": "80 exp(−10)",
+                "pourquoi": "Inside the exponential, multiply −0.1 by 10: that gives −1, not −10."
+              },
+              {
+                "texte": "72",
+                "pourquoi": "80 − 8 = 72 takes off 10 % only once; the fall follows 80 exp(−0.1t) and slows down over time."
+              }
+            ]
+          },
+          {
+            "texte": "Fill in the step: f′(x) = 5 × f(x) − 10. The constant solution k satisfies 0 = 5k − 10, so k = …",
+            "nom": "2",
+            "explication": "5k = 10 gives k = 2. Check: 5 × 2 − 10 = 0.",
+            "pieges": [
+              {
+                "texte": "10",
+                "pourquoi": "5 × 10 − 10 = 40, not 0: divide 10 by 5."
+              },
+              {
+                "texte": "−2",
+                "pourquoi": "5 × (−2) − 10 = −20, not 0."
+              }
+            ]
+          },
+          {
+            "texte": "f′(x) = 2 × f(x) and f(0) > 0. Why does the graph of f rise faster and faster?",
+            "nom": "The gradient, 2 × f(x), grows as f(x) grows.",
+            "explication": "f(x) = C exp(2x) with C > 0: f is positive and increasing, so its gradient 2 × f(x) keeps getting bigger.",
+            "pieges": [
+              {
+                "texte": "Because the gradient is always 2.",
+                "pourquoi": "A gradient always equal to 2 would give a straight line, f(x) = 2x + C. Here the gradient is 2 × f(x)."
+              },
+              {
+                "texte": "Because f(0) > 0 is enough.",
+                "pourquoi": "With f′(x) = −2 × f(x) and f(0) > 0, f decreases: it is the sign of a that matters."
               }
             ]
           }

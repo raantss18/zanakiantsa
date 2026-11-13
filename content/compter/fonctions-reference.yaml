@@ -1,0 +1,124 @@
+id: fonctions-reference
+titre: "Fonctions carré, inverse et cube"
+niveau: 2de
+prerequis: ["fonction-affine", "racine-carree"]
+programme: { source: lycee2de, texte: "Pour les fonctions affines, valeur absolue, carré, inverse, racine carrée et cube, résoudre graphiquement ou algébriquement une équation ou une inéquation du type f(x) = k, f(x) < k." }
+activite: quiz
+parametres: {}
+idee: "Un carré n’est jamais négatif : x² = 9 a deux solutions, 3 et −3. La fonction carré décroît puis croît ; la fonction inverse, 1/x, décroît sur ]0 ; +∞[."
+phrases:
+  consigne: "Pense à la courbe de la fonction, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Un nombre et son opposé ont le même carré : 3² = 9 et (−3)² = 9."
+  exemple: "x² = 49 donne x = 7 ou x = −7, car 7 × 7 = 49 et (−7) × (−7) = 49. Et 1/x = 5 donne x = 1/5 = 0,2."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Résous l’équation x² = 9."
+    nom: "x = 3 ou x = −3"
+    explication: "3² = 9 et (−3)² = (−3) × (−3) = 9 : il y a deux solutions."
+    pieges:
+      - { texte: "x = 3", pourquoi: "Il en manque une : (−3)² = 9 aussi." }
+      - { texte: "x = 4,5", pourquoi: "x² veut dire x × x, pas 2 × x : 4,5² = 20,25." }
+  - texte: "Pourquoi l’équation x² = −4 n’a-t-elle aucune solution ?"
+    nom: "Un carré n’est jamais négatif."
+    explication: "Un nombre multiplié par lui-même donne toujours un résultat positif ou nul : x² ne peut pas valoir −4."
+    pieges:
+      - { texte: "Parce que la solution est −2.", pourquoi: "(−2)² = (−2) × (−2) = 4, pas −4." }
+      - { texte: "Parce que −4 n’a pas de racine entière.", pourquoi: "x² = 5 n’a pas de solution entière, mais en a deux : √5 et −√5. C’est le signe de −4 qui bloque." }
+  - texte: "Résous l’inéquation x² < 16."
+    nom: "x ∈ ]−4 ; 4["
+    explication: "x² = 16 pour x = 4 et x = −4. Entre les deux, le carré est plus petit que 16 ; par exemple 3² = 9 et (−3)² = 9."
+    pieges:
+      - { texte: "x ∈ ]−∞ ; 4[", pourquoi: "−5 est dans cet intervalle, mais (−5)² = 25, plus grand que 16." }
+      - { texte: "x ∈ ]−8 ; 8[", pourquoi: "16 ÷ 2 = 8, mais 8² = 64 : la limite est 4, car 4² = 16." }
+  - texte: "f(x) = 1/x est la fonction inverse. Combien vaut f(0,25) ?"
+    nom: "4"
+    explication: "1 ÷ 0,25 = 4, car 4 × 0,25 = 1."
+    pieges:
+      - { texte: "0,5", pourquoi: "0,5 est la racine carrée de 0,25 ; l’inverse est 1 ÷ 0,25 = 4." }
+      - { texte: "−0,25", pourquoi: "L’inverse n’est pas l’opposé : on calcule 1 ÷ 0,25." }
+  - texte: "f(x) = x². Compare f(−3) et f(2)."
+    nom: "f(−3) > f(2)"
+    explication: "f(−3) = 9 et f(2) = 4 : 9 > 4. La fonction carré décroît avant 0, donc l’ordre n’est pas gardé avec les négatifs."
+    pieges:
+      - { texte: "f(−3) < f(2)", pourquoi: "−3 < 2, mais (−3)² = 9 est plus grand que 2² = 4." }
+      - { texte: "f(−3) = f(2)", pourquoi: "Seuls deux nombres opposés ont le même carré : f(−2) = f(2) = 4, mais f(−3) = 9." }
+  - texte: "f(x) = 1/x. Compare f(2) et f(5)."
+    nom: "f(2) > f(5)"
+    explication: "f(2) = 0,5 et f(5) = 0,2. La fonction inverse est décroissante sur ]0 ; +∞[ : plus x grandit, plus 1/x diminue."
+    pieges:
+      - { texte: "f(2) < f(5)", pourquoi: "2 < 5, mais la fonction inverse décroît : 0,5 > 0,2." }
+      - { texte: "f(2) = f(5)", pourquoi: "1 ÷ 2 = 0,5 et 1 ÷ 5 = 0,2 : ce n’est pas égal." }
+  - texte: "Complète : x² = 25 donne x = 5 ou x = …"
+    nom: "−5"
+    explication: "(−5)² = (−5) × (−5) = 25 : l’autre solution est l’opposé de 5."
+    pieges:
+      - { texte: "1/5", pourquoi: "1/5 est l’inverse de 5, pas l’opposé : (1/5)² = 1/25." }
+      - { texte: "−25", pourquoi: "(−25)² = 625, pas 25." }
+  - texte: "Résous l’équation x³ = −8."
+    nom: "x = −2"
+    explication: "(−2)³ = (−2) × (−2) × (−2) = −8. Un cube peut être négatif, et il n’y a qu’une solution."
+    pieges:
+      - { texte: "Aucune solution", pourquoi: "C’est le carré qui n’est jamais négatif ; un cube peut l’être." }
+      - { texte: "x = 2", pourquoi: "2³ = 8, pas −8." }
+
+en:
+  titre: "Square, reciprocal and cube functions"
+  idee: "A square is never negative: x² = 9 has two solutions, 3 and −3. The square function goes down then up; the reciprocal function, 1/x, goes down on (0, +∞)."
+  phrases:
+    consigne: "Think of the graph of the function, then touch the right answer."
+    question: "{texte}"
+    indice: "A number and its opposite have the same square: 3² = 9 and (−3)² = 9."
+    exemple: "x² = 49 gives x = 7 or x = −7, because 7 × 7 = 49 and (−7) × (−7) = 49. And 1/x = 5 gives x = 1/5 = 0.2."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Solve the equation x² = 9."
+      nom: "x = 3 or x = −3"
+      explication: "3² = 9 and (−3)² = (−3) × (−3) = 9: there are two solutions."
+      pieges:
+        - { texte: "x = 3", pourquoi: "One is missing: (−3)² = 9 as well." }
+        - { texte: "x = 4.5", pourquoi: "x² means x × x, not 2 × x: 4.5² = 20.25." }
+    - texte: "Why does the equation x² = −4 have no solution?"
+      nom: "A square is never negative."
+      explication: "A number times itself always gives a result that is positive or zero: x² cannot be −4."
+      pieges:
+        - { texte: "Because the solution is −2.", pourquoi: "(−2)² = (−2) × (−2) = 4, not −4." }
+        - { texte: "Because −4 has no whole-number root.", pourquoi: "x² = 5 has no whole-number solution, but it has two: √5 and −√5. It is the sign of −4 that is the problem." }
+    - texte: "Solve the inequality x² < 16."
+      nom: "x ∈ (−4, 4)"
+      explication: "x² = 16 for x = 4 and x = −4. In between, the square is less than 16; for example 3² = 9 and (−3)² = 9."
+      pieges:
+        - { texte: "x ∈ (−∞, 4)", pourquoi: "−5 is in this interval, but (−5)² = 25, which is more than 16." }
+        - { texte: "x ∈ (−8, 8)", pourquoi: "16 ÷ 2 = 8, but 8² = 64: the limit is 4, because 4² = 16." }
+    - texte: "f(x) = 1/x is the reciprocal function. What is f(0.25)?"
+      nom: "4"
+      explication: "1 ÷ 0.25 = 4, because 4 × 0.25 = 1."
+      pieges:
+        - { texte: "0.5", pourquoi: "0.5 is the square root of 0.25; the reciprocal is 1 ÷ 0.25 = 4." }
+        - { texte: "−0.25", pourquoi: "The reciprocal is not the opposite: work out 1 ÷ 0.25." }
+    - texte: "f(x) = x². Compare f(−3) and f(2)."
+      nom: "f(−3) > f(2)"
+      explication: "f(−3) = 9 and f(2) = 4: 9 > 4. The square function goes down before 0, so the order is not kept with negative numbers."
+      pieges:
+        - { texte: "f(−3) < f(2)", pourquoi: "−3 < 2, but (−3)² = 9 is bigger than 2² = 4." }
+        - { texte: "f(−3) = f(2)", pourquoi: "Only opposite numbers have the same square: f(−2) = f(2) = 4, but f(−3) = 9." }
+    - texte: "f(x) = 1/x. Compare f(2) and f(5)."
+      nom: "f(2) > f(5)"
+      explication: "f(2) = 0.5 and f(5) = 0.2. The reciprocal function goes down on (0, +∞): the bigger x is, the smaller 1/x is."
+      pieges:
+        - { texte: "f(2) < f(5)", pourquoi: "2 < 5, but the reciprocal function goes down: 0.5 > 0.2." }
+        - { texte: "f(2) = f(5)", pourquoi: "1 ÷ 2 = 0.5 and 1 ÷ 5 = 0.2: they are not equal." }
+    - texte: "Fill in the step: x² = 25 gives x = 5 or x = …"
+      nom: "−5"
+      explication: "(−5)² = (−5) × (−5) = 25: the other solution is the opposite of 5."
+      pieges:
+        - { texte: "1/5", pourquoi: "1/5 is the reciprocal of 5, not the opposite: (1/5)² = 1/25." }
+        - { texte: "−25", pourquoi: "(−25)² = 625, not 25." }
+    - texte: "Solve the equation x³ = −8."
+      nom: "x = −2"
+      explication: "(−2)³ = (−2) × (−2) × (−2) = −8. A cube can be negative, and there is only one solution."
+      pieges:
+        - { texte: "No solution", pourquoi: "It is a square that is never negative; a cube can be." }
+        - { texte: "x = 2", pourquoi: "2³ = 8, not −8." }

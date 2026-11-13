@@ -1,0 +1,124 @@
+id: convexite
+titre: "Convexité et point d’inflexion"
+niveau: Terminale
+prerequis: ["derivee-polynome", "fonction-exponentielle"]
+programme: { source: terminale, texte: "Dérivée seconde d’une fonction. Fonction convexe sur un intervalle : définition par la position relative de la courbe représentative et des sécantes. […] Point d’inflexion." }
+activite: quiz
+parametres: {}
+idee: "f est convexe quand sa courbe est au-dessus de ses tangentes, c’est-à-dire quand sa dérivée seconde est positive. Là où la dérivée seconde change de signe, la courbe a un point d’inflexion."
+phrases:
+  consigne: "Calcule la dérivée seconde et regarde son signe, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "La dérivée seconde est la dérivée de f′(x). Positive : convexe. Négative : concave."
+  exemple: "f(x) = x³ : f′(x) = 3x², puis la dérivée seconde vaut 6x. Elle est négative avant 0 et positive après : f est concave puis convexe, avec un point d’inflexion en 0."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "f(x) = x³ − 6x², donc f′(x) = 3x² − 12x. Quelle est la dérivée seconde de f ?"
+    nom: "6x − 12"
+    explication: "On dérive f′(x) : la dérivée de 3x² est 6x, celle de −12x est −12. La dérivée seconde vaut 6x − 12."
+    pieges:
+      - { texte: "3x² − 12x", pourquoi: "C’est f′(x), la dérivée première ; il faut la dériver encore une fois." }
+      - { texte: "6x", pourquoi: "La dérivée de −12x vaut −12 : il ne faut pas l’oublier." }
+  - texte: "La dérivée seconde de f vaut 2 pour tout x, par exemple pour f(x) = x². f est-elle convexe ou concave ?"
+    nom: "Convexe"
+    explication: "La dérivée seconde est positive partout : f′(x) est croissante, et la courbe est au-dessus de ses tangentes. f est convexe."
+    pieges:
+      - { texte: "Concave", pourquoi: "Concave correspond à une dérivée seconde négative ; ici elle vaut 2." }
+      - { texte: "On ne peut pas savoir", pourquoi: "Le signe de la dérivée seconde suffit : 2 est positif." }
+  - texte: "f(x) = exp(x). f est-elle convexe ou concave ?"
+    nom: "Convexe partout"
+    explication: "f′(x) = exp(x), et la dérivée seconde vaut aussi exp(x), toujours strictement positive : f est convexe pour tout x."
+    pieges:
+      - { texte: "Concave", pourquoi: "La dérivée seconde, exp(x), est positive : c’est convexe." }
+      - { texte: "Convexe pour x > 0 seulement", pourquoi: "exp(x) est positif même quand x est négatif : par exemple exp(−3), environ 0,05." }
+  - texte: "La dérivée seconde de f vaut 6x − 12. En quelle abscisse la courbe a-t-elle un point d’inflexion ?"
+    nom: "x = 2"
+    explication: "6x − 12 = 0 donne x = 2. Avant 2 elle est négative, après 2 positive : la courbe passe de concave à convexe en x = 2."
+    pieges:
+      - { texte: "x = −2", pourquoi: "6 × (−2) − 12 = −24, pas 0." }
+      - { texte: "x = 0", pourquoi: "En 0, la dérivée seconde vaut −12 : elle ne s’annule pas, elle ne change pas de signe." }
+  - texte: "f(x) = x³ − 6x². Sur quel intervalle f est-elle convexe ?"
+    nom: "[2 ; +∞["
+    explication: "La dérivée seconde, 6x − 12, est positive ou nulle quand 6x ≥ 12, c’est-à-dire x ≥ 2."
+    pieges:
+      - { texte: "]−∞ ; 2]", pourquoi: "Là, 6x − 12 est négative ou nulle : f y est concave." }
+      - { texte: "[0 ; +∞[", pourquoi: "En x = 1, 6 × 1 − 12 = −6, négatif : f n’est pas convexe entre 0 et 2." }
+  - texte: "f est convexe sur un intervalle. Où est sa courbe par rapport à ses tangentes ?"
+    nom: "Au-dessus de ses tangentes"
+    explication: "Pour une fonction convexe, la courbe est au-dessus de chacune de ses tangentes, comme la parabole y = x²."
+    pieges:
+      - { texte: "En dessous de ses tangentes", pourquoi: "C’est le cas d’une fonction concave." }
+      - { texte: "Elle les traverse", pourquoi: "La courbe traverse sa tangente seulement en un point d’inflexion." }
+  - texte: "Complète : f(x) = ln(x), f′(x) = 1/x, et sa dérivée seconde vaut −1/x². Sur ]0 ; +∞[, f est donc …"
+    nom: "concave"
+    explication: "x² est positif, donc −1/x² est négatif pour tout x > 0 : f est concave sur ]0 ; +∞[."
+    pieges:
+      - { texte: "convexe", pourquoi: "Le signe moins rend la dérivée seconde négative : c’est concave." }
+      - { texte: "ni convexe ni concave", pourquoi: "La dérivée seconde garde le même signe, négatif, sur tout l’intervalle : f est concave partout." }
+  - texte: "Pourquoi a-t-on exp(x) ≥ x + 1 pour tout x ?"
+    nom: "exp est convexe, et la droite y = x + 1 est sa tangente en 0 : la courbe est au-dessus."
+    explication: "En 0, exp(0) = 1 et la pente vaut exp(0) = 1 : la tangente est y = x + 1. Une fonction convexe reste au-dessus de ses tangentes."
+    pieges:
+      - { texte: "Parce que exp est croissante.", pourquoi: "Être croissante ne place pas une courbe au-dessus d’une droite : c’est la convexité qui le fait." }
+      - { texte: "Parce que exp(x) est toujours positif.", pourquoi: "x + 1 peut être positif aussi : en x = 1, il faut comparer exp(1), environ 2,72, à 2. La positivité ne suffit pas." }
+
+en:
+  titre: "Convexity and points of inflection"
+  idee: "f is convex when its graph lies above its tangents, that is when its second derivative is positive. Where the second derivative changes sign, the graph has a point of inflection."
+  phrases:
+    consigne: "Work out the second derivative and look at its sign, then touch the right answer."
+    question: "{texte}"
+    indice: "The second derivative is the derivative of f′(x). Positive: convex. Negative: concave."
+    exemple: "f(x) = x³: f′(x) = 3x², then the second derivative is 6x. It is negative before 0 and positive after: f is concave then convex, with a point of inflection at 0."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "f(x) = x³ − 6x², so f′(x) = 3x² − 12x. What is the second derivative of f?"
+      nom: "6x − 12"
+      explication: "Differentiate f′(x): the derivative of 3x² is 6x, and that of −12x is −12. The second derivative is 6x − 12."
+      pieges:
+        - { texte: "3x² − 12x", pourquoi: "That is f′(x), the first derivative; it must be differentiated once more." }
+        - { texte: "6x", pourquoi: "The derivative of −12x is −12: do not forget it." }
+    - texte: "The second derivative of f is 2 for every x, for example for f(x) = x². Is f convex or concave?"
+      nom: "Convex"
+      explication: "The second derivative is positive everywhere: f′(x) is increasing, and the graph lies above its tangents. f is convex."
+      pieges:
+        - { texte: "Concave", pourquoi: "Concave goes with a negative second derivative; here it is 2." }
+        - { texte: "We cannot tell", pourquoi: "The sign of the second derivative is enough: 2 is positive." }
+    - texte: "f(x) = exp(x). Is f convex or concave?"
+      nom: "Convex everywhere"
+      explication: "f′(x) = exp(x), and the second derivative is exp(x) too, always strictly positive: f is convex for every x."
+      pieges:
+        - { texte: "Concave", pourquoi: "The second derivative, exp(x), is positive: it is convex." }
+        - { texte: "Convex for x > 0 only", pourquoi: "exp(x) is positive even when x is negative: for example exp(−3) is about 0.05." }
+    - texte: "The second derivative of f is 6x − 12. At what x does the graph have a point of inflection?"
+      nom: "x = 2"
+      explication: "6x − 12 = 0 gives x = 2. Before 2 it is negative, after 2 positive: the graph goes from concave to convex at x = 2."
+      pieges:
+        - { texte: "x = −2", pourquoi: "6 × (−2) − 12 = −24, not 0." }
+        - { texte: "x = 0", pourquoi: "At 0 the second derivative is −12: it is not zero and does not change sign there." }
+    - texte: "f(x) = x³ − 6x². On which interval is f convex?"
+      nom: "[2, +∞)"
+      explication: "The second derivative, 6x − 12, is positive or zero when 6x ≥ 12, that is x ≥ 2."
+      pieges:
+        - { texte: "(−∞, 2]", pourquoi: "There, 6x − 12 is negative or zero: f is concave." }
+        - { texte: "[0, +∞)", pourquoi: "At x = 1, 6 × 1 − 12 = −6, which is negative: f is not convex between 0 and 2." }
+    - texte: "f is convex on an interval. Where is its graph compared with its tangents?"
+      nom: "Above its tangents"
+      explication: "For a convex function, the graph lies above each of its tangents, like the parabola y = x²."
+      pieges:
+        - { texte: "Below its tangents", pourquoi: "That is the case for a concave function." }
+        - { texte: "It crosses them", pourquoi: "The graph crosses its tangent only at a point of inflection." }
+    - texte: "Fill in the step: f(x) = ln(x), f′(x) = 1/x, and its second derivative is −1/x². On (0, +∞), f is therefore …"
+      nom: "concave"
+      explication: "x² is positive, so −1/x² is negative for every x > 0: f is concave on (0, +∞)."
+      pieges:
+        - { texte: "convex", pourquoi: "The minus sign makes the second derivative negative: it is concave." }
+        - { texte: "neither convex nor concave", pourquoi: "The second derivative keeps the same sign, negative, on the whole interval: f is concave everywhere." }
+    - texte: "Why is exp(x) ≥ x + 1 for every x?"
+      nom: "exp is convex, and the line y = x + 1 is its tangent at 0: the graph lies above it."
+      explication: "At 0, exp(0) = 1 and the gradient is exp(0) = 1: the tangent is y = x + 1. A convex function stays above its tangents."
+      pieges:
+        - { texte: "Because exp is increasing.", pourquoi: "Being increasing does not put a graph above a line: convexity does." }
+        - { texte: "Because exp(x) is always positive.", pourquoi: "x + 1 can be positive too: at x = 1, compare exp(1), about 2.72, with 2. Being positive is not enough." }

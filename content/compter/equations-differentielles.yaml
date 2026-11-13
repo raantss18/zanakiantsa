@@ -1,0 +1,124 @@
+id: equations-differentielles
+titre: "Équations différentielles"
+niveau: Terminale
+prerequis: ["primitives", "fonction-exponentielle"]
+programme: { source: terminale, texte: "Équation différentielle y’ = ay, où a est un nombre réel ; allure des courbes. Équation différentielle y’ = ay + b." }
+activite: quiz
+parametres: {}
+idee: "Les solutions de f′(x) = a × f(x) sont les fonctions f(x) = C exp(ax), où C est un réel. Pour f′(x) = a × f(x) + b, on ajoute la solution constante, −b ÷ a."
+phrases:
+  consigne: "Cherche la fonction dont la dérivée vérifie l’équation, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "La dérivée de C exp(ax) est a × C exp(ax) : c’est a fois la fonction elle-même."
+  exemple: "f′(x) = 4 × f(x) et f(0) = 3 : f(x) = C exp(4x), et f(0) = C = 3. Donc f(x) = 3 exp(4x)."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Quelles sont les fonctions f telles que f′(x) = 3 × f(x) pour tout x ?"
+    nom: "f(x) = C exp(3x), avec C un réel quelconque"
+    explication: "La dérivée de C exp(3x) est 3C exp(3x) = 3 × f(x). Ce sont les seules solutions."
+    pieges:
+      - { texte: "f(x) = 3 exp(x)", pourquoi: "Sa dérivée est 3 exp(x), c’est-à-dire f(x), pas 3 × f(x)." }
+      - { texte: "f(x) = exp(3x) seulement", pourquoi: "Toute constante C convient : 2 exp(3x) a pour dérivée 6 exp(3x) = 3 × 2 exp(3x)." }
+  - texte: "f′(x) = −2 × f(x) et f(0) = 5. Quelle est la fonction f ?"
+    nom: "f(x) = 5 exp(−2x)"
+    explication: "f(x) = C exp(−2x), et f(0) = C × exp(0) = C, donc C = 5."
+    pieges:
+      - { texte: "f(x) = −2 exp(5x)", pourquoi: "Les rôles sont inversés : −2 va dans l’exponentielle, 5 devant." }
+      - { texte: "f(x) = 5 exp(2x)", pourquoi: "Le signe compte : la dérivée de 5 exp(2x) vaut 2 × f(x), pas −2 × f(x)." }
+  - texte: "f(x) = 4 exp(x). Est-ce une solution de f′(x) = f(x) ?"
+    nom: "Oui : f′(x) = 4 exp(x) = f(x)."
+    explication: "Le facteur 4 reste en dérivant : f′(x) = 4 exp(x), qui est bien f(x). C’est le cas C = 4."
+    pieges:
+      - { texte: "Non : seule exp(x) est solution.", pourquoi: "Toutes les fonctions C exp(x) sont solutions ; exp(x) est seulement celle qui vaut 1 en 0." }
+      - { texte: "Non : il faudrait f(0) = 1.", pourquoi: "L’équation n’impose aucune valeur en 0 ; ici f(0) = 4, et c’est une solution." }
+  - texte: "f′(x) = 2 × f(x) + 6. Quelle est la solution constante ?"
+    nom: "f(x) = −3"
+    explication: "Une constante k a pour dérivée 0 : 0 = 2k + 6, donc k = −6 ÷ 2 = −3."
+    pieges:
+      - { texte: "f(x) = 3", pourquoi: "2 × 3 + 6 = 12, pas 0 : il faut un nombre négatif, −3." }
+      - { texte: "f(x) = −6", pourquoi: "2 × (−6) + 6 = −6, pas 0 : il faut encore diviser par 2." }
+  - texte: "f′(x) = 2 × f(x) + 6. Quelles sont toutes les solutions ?"
+    nom: "f(x) = C exp(2x) − 3, avec C réel"
+    explication: "On ajoute la solution constante −3 aux solutions C exp(2x) de f′(x) = 2 × f(x). Vérification : f′(x) = 2C exp(2x) et 2 × (C exp(2x) − 3) + 6 = 2C exp(2x)."
+    pieges:
+      - { texte: "f(x) = C exp(2x) + 3", pourquoi: "La solution constante est −3 : 2 × 3 + 6 = 12, pas 0." }
+      - { texte: "f(x) = C exp(2x) + 6", pourquoi: "On ajoute la solution constante, −3, pas le nombre b = 6." }
+  - texte: "Un objet refroidit selon f′(t) = −0,1 × f(t), avec f(0) = 80. Combien vaut f(10) ?"
+    nom: "80 exp(−1), environ 29,4"
+    explication: "f(t) = 80 exp(−0,1t). En t = 10 : −0,1 × 10 = −1, donc f(10) = 80 exp(−1), environ 80 × 0,368 = 29,4."
+    pieges:
+      - { texte: "80 exp(−10)", pourquoi: "Dans l’exponentielle, on multiplie −0,1 par 10 : cela donne −1, pas −10." }
+      - { texte: "72", pourquoi: "80 − 8 = 72 enlève 10 % une seule fois ; la baisse suit 80 exp(−0,1t), elle ralentit avec le temps." }
+  - texte: "Complète : f′(x) = 5 × f(x) − 10. La solution constante k vérifie 0 = 5k − 10, donc k = …"
+    nom: "2"
+    explication: "5k = 10 donne k = 2. Vérification : 5 × 2 − 10 = 0."
+    pieges:
+      - { texte: "10", pourquoi: "5 × 10 − 10 = 40, pas 0 : il faut diviser 10 par 5." }
+      - { texte: "−2", pourquoi: "5 × (−2) − 10 = −20, pas 0." }
+  - texte: "f′(x) = 2 × f(x) et f(0) > 0. Pourquoi la courbe de f monte-t-elle de plus en plus vite ?"
+    nom: "La pente, 2 × f(x), grandit en même temps que f(x)."
+    explication: "f(x) = C exp(2x) avec C > 0 : f est positive et croissante, donc sa pente 2 × f(x) augmente sans cesse."
+    pieges:
+      - { texte: "Parce que la pente vaut toujours 2.", pourquoi: "Une pente toujours égale à 2 donnerait une droite, f(x) = 2x + C. Ici la pente est 2 × f(x)." }
+      - { texte: "Parce que f(0) > 0 suffit.", pourquoi: "Avec f′(x) = −2 × f(x) et f(0) > 0, f décroît : c’est le signe de a qui compte." }
+
+en:
+  titre: "Differential equations"
+  idee: "The solutions of f′(x) = a × f(x) are the functions f(x) = C exp(ax), where C is a real number. For f′(x) = a × f(x) + b, add the constant solution, −b ÷ a."
+  phrases:
+    consigne: "Look for the function whose derivative fits the equation, then touch the right answer."
+    question: "{texte}"
+    indice: "The derivative of C exp(ax) is a × C exp(ax): a times the function itself."
+    exemple: "f′(x) = 4 × f(x) and f(0) = 3: f(x) = C exp(4x), and f(0) = C = 3. So f(x) = 3 exp(4x)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Which functions f satisfy f′(x) = 3 × f(x) for every x?"
+      nom: "f(x) = C exp(3x), for any real number C"
+      explication: "The derivative of C exp(3x) is 3C exp(3x) = 3 × f(x). These are the only solutions."
+      pieges:
+        - { texte: "f(x) = 3 exp(x)", pourquoi: "Its derivative is 3 exp(x), which is f(x), not 3 × f(x)." }
+        - { texte: "Only f(x) = exp(3x)", pourquoi: "Any constant C works: 2 exp(3x) has derivative 6 exp(3x) = 3 × 2 exp(3x)." }
+    - texte: "f′(x) = −2 × f(x) and f(0) = 5. What is the function f?"
+      nom: "f(x) = 5 exp(−2x)"
+      explication: "f(x) = C exp(−2x), and f(0) = C × exp(0) = C, so C = 5."
+      pieges:
+        - { texte: "f(x) = −2 exp(5x)", pourquoi: "The roles are swapped: −2 goes inside the exponential, 5 in front." }
+        - { texte: "f(x) = 5 exp(2x)", pourquoi: "The sign matters: the derivative of 5 exp(2x) is 2 × f(x), not −2 × f(x)." }
+    - texte: "f(x) = 4 exp(x). Is it a solution of f′(x) = f(x)?"
+      nom: "Yes: f′(x) = 4 exp(x) = f(x)."
+      explication: "The factor 4 stays when differentiating: f′(x) = 4 exp(x), which is f(x). This is the case C = 4."
+      pieges:
+        - { texte: "No: only exp(x) is a solution.", pourquoi: "All the functions C exp(x) are solutions; exp(x) is just the one equal to 1 at 0." }
+        - { texte: "No: f(0) would have to be 1.", pourquoi: "The equation sets no value at 0; here f(0) = 4, and it is a solution." }
+    - texte: "f′(x) = 2 × f(x) + 6. What is the constant solution?"
+      nom: "f(x) = −3"
+      explication: "A constant k has derivative 0: 0 = 2k + 6, so k = −6 ÷ 2 = −3."
+      pieges:
+        - { texte: "f(x) = 3", pourquoi: "2 × 3 + 6 = 12, not 0: it has to be a negative number, −3." }
+        - { texte: "f(x) = −6", pourquoi: "2 × (−6) + 6 = −6, not 0: you still have to divide by 2." }
+    - texte: "f′(x) = 2 × f(x) + 6. What are all the solutions?"
+      nom: "f(x) = C exp(2x) − 3, C real"
+      explication: "Add the constant solution −3 to the solutions C exp(2x) of f′(x) = 2 × f(x). Check: f′(x) = 2C exp(2x) and 2 × (C exp(2x) − 3) + 6 = 2C exp(2x)."
+      pieges:
+        - { texte: "f(x) = C exp(2x) + 3", pourquoi: "The constant solution is −3: 2 × 3 + 6 = 12, not 0." }
+        - { texte: "f(x) = C exp(2x) + 6", pourquoi: "Add the constant solution, −3, not the number b = 6." }
+    - texte: "An object cools down following f′(t) = −0.1 × f(t), with f(0) = 80. What is f(10)?"
+      nom: "80 exp(−1), about 29.4"
+      explication: "f(t) = 80 exp(−0.1t). At t = 10: −0.1 × 10 = −1, so f(10) = 80 exp(−1), about 80 × 0.368 = 29.4."
+      pieges:
+        - { texte: "80 exp(−10)", pourquoi: "Inside the exponential, multiply −0.1 by 10: that gives −1, not −10." }
+        - { texte: "72", pourquoi: "80 − 8 = 72 takes off 10 % only once; the fall follows 80 exp(−0.1t) and slows down over time." }
+    - texte: "Fill in the step: f′(x) = 5 × f(x) − 10. The constant solution k satisfies 0 = 5k − 10, so k = …"
+      nom: "2"
+      explication: "5k = 10 gives k = 2. Check: 5 × 2 − 10 = 0."
+      pieges:
+        - { texte: "10", pourquoi: "5 × 10 − 10 = 40, not 0: divide 10 by 5." }
+        - { texte: "−2", pourquoi: "5 × (−2) − 10 = −20, not 0." }
+    - texte: "f′(x) = 2 × f(x) and f(0) > 0. Why does the graph of f rise faster and faster?"
+      nom: "The gradient, 2 × f(x), grows as f(x) grows."
+      explication: "f(x) = C exp(2x) with C > 0: f is positive and increasing, so its gradient 2 × f(x) keeps getting bigger."
+      pieges:
+        - { texte: "Because the gradient is always 2.", pourquoi: "A gradient always equal to 2 would give a straight line, f(x) = 2x + C. Here the gradient is 2 × f(x)." }
+        - { texte: "Because f(0) > 0 is enough.", pourquoi: "With f′(x) = −2 × f(x) and f(0) > 0, f decreases: it is the sign of a that matters." }

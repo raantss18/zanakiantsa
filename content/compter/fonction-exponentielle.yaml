@@ -1,0 +1,124 @@
+id: fonction-exponentielle
+titre: "La fonction exponentielle"
+niveau: 1re
+prerequis: ["suites-geometriques", "derivee-polynome"]
+programme: { source: lycee1re, texte: "Transformer une expression en utilisant les propriétés algébriques de la fonction exponentielle." }
+activite: quiz
+parametres: {}
+idee: "exp est la fonction égale à sa dérivée avec exp(0) = 1. Elle change les sommes en produits : exp(a + b) = exp(a) × exp(b). Elle est toujours strictement positive."
+phrases:
+  consigne: "Utilise les propriétés de l’exponentielle, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "exp(a) × exp(b) = exp(a + b), et exp(a) ÷ exp(b) = exp(a − b)."
+  exemple: "exp(2) × exp(5) = exp(2 + 5) = exp(7). Et exp(6) ÷ exp(4) = exp(6 − 4) = exp(2)."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Écris plus simplement : exp(3) × exp(4)"
+    nom: "exp(7)"
+    explication: "exp(a) × exp(b) = exp(a + b) : exp(3 + 4) = exp(7)."
+    pieges:
+      - { texte: "exp(12)", pourquoi: "Un produit d’exponentielles additionne les nombres : 3 + 4 = 7, pas 3 × 4." }
+      - { texte: "7", pourquoi: "Le résultat est exp(7), environ 1 097, pas 7." }
+  - texte: "Écris plus simplement : exp(5) ÷ exp(2)"
+    nom: "exp(3)"
+    explication: "exp(a) ÷ exp(b) = exp(a − b) : exp(5 − 2) = exp(3)."
+    pieges:
+      - { texte: "exp(2,5)", pourquoi: "Un quotient d’exponentielles soustrait les nombres : 5 − 2 = 3, pas 5 ÷ 2." }
+      - { texte: "exp(7)", pourquoi: "On divise : 5 − 2 = 3. C’est le produit qui donnerait 5 + 2 = 7." }
+  - texte: "Écris plus simplement : exp(x) × exp(−x)"
+    nom: "1"
+    explication: "exp(x) × exp(−x) = exp(x − x) = exp(0) = 1."
+    pieges:
+      - { texte: "0", pourquoi: "x − x = 0, mais exp(0) = 1, pas 0." }
+      - { texte: "exp(−x²)", pourquoi: "Dans un produit d’exponentielles, on additionne x et −x, on ne les multiplie pas." }
+  - texte: "Écris plus simplement : (exp(2))³"
+    nom: "exp(6)"
+    explication: "(exp(2))³ = exp(2) × exp(2) × exp(2) = exp(2 + 2 + 2) = exp(6)."
+    pieges:
+      - { texte: "exp(5)", pourquoi: "exp(5) = exp(2) × exp(3) ; ici, on multiplie trois fois exp(2) : 2 + 2 + 2 = 6." }
+      - { texte: "exp(8)", pourquoi: "2³ = 8, mais c’est exp(2) qui est au cube : 3 × 2 = 6." }
+  - texte: "f(x) = exp(x). Quelle est sa dérivée f′(x) ?"
+    nom: "f′(x) = exp(x)"
+    explication: "C’est sa définition : exp est égale à sa dérivée, et exp(0) = 1."
+    pieges:
+      - { texte: "f′(x) = x × exp(x − 1)", pourquoi: "Cette règle sert pour les puissances de x, comme x³ ; exp n’en est pas une." }
+      - { texte: "f′(x) = 0", pourquoi: "exp n’est pas constante : elle est croissante, sa dérivée est exp(x), toujours positive." }
+  - texte: "g(t) = exp(3t). Quelle est sa dérivée g′(t) ?"
+    nom: "g′(t) = 3 exp(3t)"
+    explication: "La dérivée de exp(at) est a × exp(at) : ici a = 3, donc g′(t) = 3 exp(3t)."
+    pieges:
+      - { texte: "g′(t) = exp(3t)", pourquoi: "Il manque le facteur a = 3 : la dérivée de exp(at) est a × exp(at)." }
+      - { texte: "g′(t) = 3t exp(3t)", pourquoi: "Le facteur est le nombre a = 3, pas 3t." }
+  - texte: "Complète : exp(2x) = exp(x + 5) donne 2x = x + 5, donc x = …"
+    nom: "5"
+    explication: "exp est strictement croissante : deux exponentielles égales ont le même nombre. 2x − x = 5, donc x = 5."
+    pieges:
+      - { texte: "2,5", pourquoi: "Il y a aussi x à droite : 2x − x = x, donc x = 5, pas 5 ÷ 2." }
+      - { texte: "5/3", pourquoi: "En passant x à gauche, il change de signe : 2x − x = 5, pas 2x + x = 5." }
+  - texte: "Pourquoi exp(x) n’est-il jamais égal à 0 ?"
+    nom: "Parce que exp(x) × exp(−x) = 1 : si exp(x) valait 0, ce produit vaudrait 0."
+    explication: "Un produit qui vaut 1 n’a aucun facteur nul. En plus, exp(x) = exp(x ÷ 2)², un carré, donc exp(x) est strictement positif."
+    pieges:
+      - { texte: "Parce que exp(0) = 1.", pourquoi: "Cela donne la valeur en 0 seulement, pas pour tous les x." }
+      - { texte: "Parce que exp est croissante.", pourquoi: "Une fonction croissante peut s’annuler : x − 1 est croissante et vaut 0 en 1." }
+
+en:
+  titre: "The exponential function"
+  idee: "exp is the function equal to its own derivative with exp(0) = 1. It turns sums into products: exp(a + b) = exp(a) × exp(b). It is always strictly positive."
+  phrases:
+    consigne: "Use the rules of the exponential, then touch the right answer."
+    question: "{texte}"
+    indice: "exp(a) × exp(b) = exp(a + b), and exp(a) ÷ exp(b) = exp(a − b)."
+    exemple: "exp(2) × exp(5) = exp(2 + 5) = exp(7). And exp(6) ÷ exp(4) = exp(6 − 4) = exp(2)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "Simplify: exp(3) × exp(4)"
+      nom: "exp(7)"
+      explication: "exp(a) × exp(b) = exp(a + b): exp(3 + 4) = exp(7)."
+      pieges:
+        - { texte: "exp(12)", pourquoi: "A product of exponentials adds the numbers: 3 + 4 = 7, not 3 × 4." }
+        - { texte: "7", pourquoi: "The result is exp(7), about 1,097, not 7." }
+    - texte: "Simplify: exp(5) ÷ exp(2)"
+      nom: "exp(3)"
+      explication: "exp(a) ÷ exp(b) = exp(a − b): exp(5 − 2) = exp(3)."
+      pieges:
+        - { texte: "exp(2.5)", pourquoi: "A quotient of exponentials subtracts the numbers: 5 − 2 = 3, not 5 ÷ 2." }
+        - { texte: "exp(7)", pourquoi: "This is a division: 5 − 2 = 3. A product would give 5 + 2 = 7." }
+    - texte: "Simplify: exp(x) × exp(−x)"
+      nom: "1"
+      explication: "exp(x) × exp(−x) = exp(x − x) = exp(0) = 1."
+      pieges:
+        - { texte: "0", pourquoi: "x − x = 0, but exp(0) = 1, not 0." }
+        - { texte: "exp(−x²)", pourquoi: "In a product of exponentials, x and −x are added, not multiplied." }
+    - texte: "Simplify: (exp(2))³"
+      nom: "exp(6)"
+      explication: "(exp(2))³ = exp(2) × exp(2) × exp(2) = exp(2 + 2 + 2) = exp(6)."
+      pieges:
+        - { texte: "exp(5)", pourquoi: "exp(5) = exp(2) × exp(3); here exp(2) is multiplied three times: 2 + 2 + 2 = 6." }
+        - { texte: "exp(8)", pourquoi: "2³ = 8, but it is exp(2) that is cubed: 3 × 2 = 6." }
+    - texte: "f(x) = exp(x). What is its derivative f′(x)?"
+      nom: "f′(x) = exp(x)"
+      explication: "That is its definition: exp is equal to its own derivative, and exp(0) = 1."
+      pieges:
+        - { texte: "f′(x) = x × exp(x − 1)", pourquoi: "That rule is for powers of x, like x³; exp is not one." }
+        - { texte: "f′(x) = 0", pourquoi: "exp is not constant: it is increasing, and its derivative is exp(x), always positive." }
+    - texte: "g(t) = exp(3t). What is its derivative g′(t)?"
+      nom: "g′(t) = 3 exp(3t)"
+      explication: "The derivative of exp(at) is a × exp(at): here a = 3, so g′(t) = 3 exp(3t)."
+      pieges:
+        - { texte: "g′(t) = exp(3t)", pourquoi: "The factor a = 3 is missing: the derivative of exp(at) is a × exp(at)." }
+        - { texte: "g′(t) = 3t exp(3t)", pourquoi: "The factor is the number a = 3, not 3t." }
+    - texte: "Fill in the step: exp(2x) = exp(x + 5) gives 2x = x + 5, so x = …"
+      nom: "5"
+      explication: "exp is strictly increasing: two equal exponentials have the same number inside. 2x − x = 5, so x = 5."
+      pieges:
+        - { texte: "2.5", pourquoi: "There is an x on the right too: 2x − x = x, so x = 5, not 5 ÷ 2." }
+        - { texte: "5/3", pourquoi: "When x moves to the left, its sign changes: 2x − x = 5, not 2x + x = 5." }
+    - texte: "Why is exp(x) never equal to 0?"
+      nom: "Because exp(x) × exp(−x) = 1: if exp(x) were 0, that product would be 0."
+      explication: "A product equal to 1 has no zero factor. Also, exp(x) = exp(x ÷ 2)², a square, so exp(x) is strictly positive."
+      pieges:
+        - { texte: "Because exp(0) = 1.", pourquoi: "That only gives the value at 0, not for every x." }
+        - { texte: "Because exp is increasing.", pourquoi: "An increasing function can be zero: x − 1 is increasing and equals 0 at 1." }

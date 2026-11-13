@@ -1,0 +1,124 @@
+id: equations-droites
+titre: "Équations de droites"
+niveau: 2de
+prerequis: ["fonction-affine", "vecteurs-coordonnees"]
+programme: { source: lycee2de, texte: "Déterminer si deux droites sont parallèles ou sécantes. Déterminer le point d’intersection de deux droites sécantes données par leur équation réduite." }
+activite: quiz
+parametres: {}
+idee: "Une droite non parallèle à l’axe des ordonnées a une équation réduite y = mx + p : m est sa pente, et u(1 ; m) un vecteur directeur. Deux droites de même pente sont parallèles."
+phrases:
+  consigne: "Lis l’équation de la droite, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Dans y = mx + p, m est la pente : quand x avance de 1, y change de m."
+  exemple: "y = 2x + 1 et y = −x + 4 : 2x + 1 = −x + 4 donne 3x = 3, donc x = 1, puis y = 2 × 1 + 1 = 3. Les droites se coupent au point (1 ; 3)."
+  demonstration: "{explication}"
+  bravo: "Oui ! La réponse est {bonne}."
+items:
+  - texte: "Une droite a pour équation cartésienne 2x − y + 5 = 0. Quelle est son équation réduite ?"
+    nom: "y = 2x + 5"
+    explication: "On isole y : 2x + 5 = y, donc y = 2x + 5."
+    pieges:
+      - { texte: "y = −2x − 5", pourquoi: "En passant y de l’autre côté, il change de signe : 2x + 5 = y, pas −2x − 5." }
+      - { texte: "y = 2x − 5", pourquoi: "Le + 5 reste du même côté que 2x : y = 2x + 5." }
+  - texte: "Quel est un vecteur directeur de la droite d’équation y = 3x + 1 ?"
+    nom: "u(1 ; 3)"
+    explication: "La pente vaut 3 : quand x avance de 1, y monte de 3. Le vecteur u(1 ; 3) suit la droite."
+    pieges:
+      - { texte: "u(3 ; 1)", pourquoi: "Ce vecteur avance de 3 et monte de 1 : sa pente est 1/3, pas 3." }
+      - { texte: "u(0 ; 1)", pourquoi: "Ce vecteur est vertical : il dirige les droites parallèles à l’axe des ordonnées." }
+  - texte: "La droite d’équation ax + by + c = 0 a pour vecteur directeur u(−b ; a). Lequel convient pour 3x + 2y − 6 = 0 ?"
+    nom: "u(−2 ; 3)"
+    explication: "Ici a = 3 et b = 2, donc u(−2 ; 3). Vérification : les points (2 ; 0) et (0 ; 3) sont sur la droite, et de l’un à l’autre on fait −2 en x et +3 en y."
+    pieges:
+      - { texte: "u(3 ; 2)", pourquoi: "On a recopié a et b : le vecteur directeur est (−b ; a), soit (−2 ; 3)." }
+      - { texte: "u(2 ; 3)", pourquoi: "Le signe moins devant b a été oublié : c’est (−2 ; 3)." }
+  - texte: "Une droite de pente 2 passe par le point A(1 ; 4). Quelle est son équation réduite ?"
+    nom: "y = 2x + 2"
+    explication: "On cherche p dans y = 2x + p. A est sur la droite : 4 = 2 × 1 + p, donc p = 4 − 2 = 2."
+    pieges:
+      - { texte: "y = 2x + 4", pourquoi: "4 est l’ordonnée de A, pas l’ordonnée à l’origine : 2 × 1 + 4 = 6, pas 4." }
+      - { texte: "y = 2x − 2", pourquoi: "p = 4 − 2, pas 2 − 4 : avec p = −2, on trouve y = 0 en x = 1, pas 4." }
+  - texte: "Les droites y = 3x + 1 et y = 3x − 5 sont-elles parallèles ou sécantes ?"
+    nom: "Parallèles"
+    explication: "Elles ont la même pente, 3 : elles ne se croisent jamais. Leurs ordonnées à l’origine, 1 et −5, sont différentes, donc elles ne sont pas confondues."
+    pieges:
+      - { texte: "Sécantes", pourquoi: "Deux droites sécantes ont des pentes différentes ; ici les deux pentes valent 3." }
+      - { texte: "Confondues", pourquoi: "Il faudrait la même ordonnée à l’origine ; ici 1 et −5." }
+  - texte: "En quel point se coupent les droites y = 2x + 1 et y = −x + 7 ?"
+    nom: "(2 ; 5)"
+    explication: "2x + 1 = −x + 7 donne 3x = 6, donc x = 2. Puis y = 2 × 2 + 1 = 5. Vérification : −2 + 7 = 5."
+    pieges:
+      - { texte: "(5 ; 2)", pourquoi: "On écrit d’abord x, puis y : x = 2 et y = 5." }
+      - { texte: "(6 ; 13)", pourquoi: "3x = 6 donne x = 6 ÷ 3 = 2, pas x = 6." }
+  - texte: "Complète : y = x + 4 et y = 3x se coupent quand x + 4 = 3x, donc 4 = 2x et x = …"
+    nom: "2"
+    explication: "4 = 2x donne x = 4 ÷ 2 = 2. Puis y = 3 × 2 = 6 : le point est (2 ; 6)."
+    pieges:
+      - { texte: "4", pourquoi: "2x = 4 veut dire 2 × x = 4 : on divise par 2." }
+      - { texte: "1/2", pourquoi: "On divise 4 par 2, pas 2 par 4." }
+  - texte: "Pourquoi la droite d’équation x = 3 n’a-t-elle pas d’équation réduite de la forme y = mx + p ?"
+    nom: "Elle est parallèle à l’axe des ordonnées : elle n’a pas de pente."
+    explication: "Tous ses points ont x = 3, quel que soit y. Un vecteur directeur est u(0 ; 1) : x n’avance pas, donc on ne peut pas parler de pente."
+    pieges:
+      - { texte: "Parce que sa pente vaut 0.", pourquoi: "Une droite de pente 0 est horizontale, comme y = 3 ; x = 3 est verticale." }
+      - { texte: "Parce qu’elle passe par l’origine.", pourquoi: "x = 3 ne passe pas par l’origine, et y = 2x y passe tout en ayant une équation réduite." }
+
+en:
+  titre: "Equations of lines"
+  idee: "A line that is not parallel to the y-axis has an equation y = mx + p: m is its gradient, and u(1, m) is a direction vector. Two lines with the same gradient are parallel."
+  phrases:
+    consigne: "Read the equation of the line, then touch the right answer."
+    question: "{texte}"
+    indice: "In y = mx + p, m is the gradient: when x goes up by 1, y changes by m."
+    exemple: "y = 2x + 1 and y = −x + 4: 2x + 1 = −x + 4 gives 3x = 3, so x = 1, then y = 2 × 1 + 1 = 3. The lines meet at the point (1, 3)."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is {bonne}."
+  items:
+    - texte: "A line has the general equation 2x − y + 5 = 0. What is its equation in the form y = mx + p?"
+      nom: "y = 2x + 5"
+      explication: "Make y the subject: 2x + 5 = y, so y = 2x + 5."
+      pieges:
+        - { texte: "y = −2x − 5", pourquoi: "When y moves to the other side, its sign changes: 2x + 5 = y, not −2x − 5." }
+        - { texte: "y = 2x − 5", pourquoi: "The + 5 stays on the same side as 2x: y = 2x + 5." }
+    - texte: "What is a direction vector of the line y = 3x + 1?"
+      nom: "u(1, 3)"
+      explication: "The gradient is 3: when x goes up by 1, y goes up by 3. The vector u(1, 3) follows the line."
+      pieges:
+        - { texte: "u(3, 1)", pourquoi: "This vector goes 3 across and 1 up: its gradient is 1/3, not 3." }
+        - { texte: "u(0, 1)", pourquoi: "This vector is vertical: it is the direction of lines parallel to the y-axis." }
+    - texte: "The line ax + by + c = 0 has direction vector u(−b, a). Which one works for 3x + 2y − 6 = 0?"
+      nom: "u(−2, 3)"
+      explication: "Here a = 3 and b = 2, so u(−2, 3). Check: the points (2, 0) and (0, 3) are on the line, and going from one to the other is −2 in x and +3 in y."
+      pieges:
+        - { texte: "u(3, 2)", pourquoi: "That just copies a and b: the direction vector is (−b, a), which is (−2, 3)." }
+        - { texte: "u(2, 3)", pourquoi: "The minus sign in front of b was forgotten: it is (−2, 3)." }
+    - texte: "A line with gradient 2 goes through the point A(1, 4). What is its equation y = mx + p?"
+      nom: "y = 2x + 2"
+      explication: "We look for p in y = 2x + p. A is on the line: 4 = 2 × 1 + p, so p = 4 − 2 = 2."
+      pieges:
+        - { texte: "y = 2x + 4", pourquoi: "4 is the y-coordinate of A, not the y-intercept: 2 × 1 + 4 = 6, not 4." }
+        - { texte: "y = 2x − 2", pourquoi: "p = 4 − 2, not 2 − 4: with p = −2, y is 0 at x = 1, not 4." }
+    - texte: "Are the lines y = 3x + 1 and y = 3x − 5 parallel or do they cross?"
+      nom: "Parallel"
+      explication: "They have the same gradient, 3: they never meet. Their y-intercepts, 1 and −5, are different, so they are not the same line."
+      pieges:
+        - { texte: "They cross", pourquoi: "Lines that cross have different gradients; here both gradients are 3." }
+        - { texte: "The same line", pourquoi: "That would need the same y-intercept; here they are 1 and −5." }
+    - texte: "Where do the lines y = 2x + 1 and y = −x + 7 meet?"
+      nom: "(2, 5)"
+      explication: "2x + 1 = −x + 7 gives 3x = 6, so x = 2. Then y = 2 × 2 + 1 = 5. Check: −2 + 7 = 5."
+      pieges:
+        - { texte: "(5, 2)", pourquoi: "x comes first, then y: x = 2 and y = 5." }
+        - { texte: "(6, 13)", pourquoi: "3x = 6 gives x = 6 ÷ 3 = 2, not x = 6." }
+    - texte: "Fill in the step: y = x + 4 and y = 3x meet when x + 4 = 3x, so 4 = 2x and x = …"
+      nom: "2"
+      explication: "4 = 2x gives x = 4 ÷ 2 = 2. Then y = 3 × 2 = 6: the point is (2, 6)."
+      pieges:
+        - { texte: "4", pourquoi: "2x = 4 means 2 × x = 4: divide by 2." }
+        - { texte: "1/2", pourquoi: "Divide 4 by 2, not 2 by 4." }
+    - texte: "Why does the line x = 3 have no equation of the form y = mx + p?"
+      nom: "It is parallel to the y-axis: it has no gradient."
+      explication: "All its points have x = 3, whatever y is. A direction vector is u(0, 1): x does not move, so there is no gradient."
+      pieges:
+        - { texte: "Because its gradient is 0.", pourquoi: "A line with gradient 0 is horizontal, like y = 3; x = 3 is vertical." }
+        - { texte: "Because it goes through the origin.", pourquoi: "x = 3 does not go through the origin, and y = 2x does while still having an equation y = mx + p." }
