@@ -1,0 +1,125 @@
+id: negation
+titre: "L’expression de la négation"
+niveau: 1re
+prerequis: ["types-de-phrases", "phrase-complexe"]
+programme: { source: lycee1re, texte: "Il s’agit d’étudier les différentes formes de construction de la négation ; l’examen de la phrase négative, de la préfixation et de l’opposition lexicale (antonymie) permet de travailler sur des unités de niveaux différents (mot, proposition)" }
+activite: quiz
+parametres: {}
+idee: "« ne… pas » nie toute la phrase ; « ne… plus, jamais, rien, personne » précisent ce qui est nié. Un préfixe (im-, in-) ou un contraire nient un mot. « ne… que » n’est pas une négation : il veut dire « seulement »."
+phrases:
+  consigne: "Lis la phrase, repère comment la négation est construite et sur quoi elle porte, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Quels mots encadrent le verbe ? Remplace par « seulement » : le sens reste-t-il le même ? Que nie-t-on exactement ?"
+  exemple: "« Il ne vient plus » : « ne… plus » nie que l’action continue (il venait avant). « Il ne vient que le soir » : il vient, mais seulement le soir."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "La Fontaine, « Les Animaux malades de la peste » (Fables, livre VII) : « Ils ne mouraient pas tous, mais tous étaient frappés ». Que veut dire « Ils ne mouraient pas tous » ?"
+    nom: "Certains mouraient, d’autres non."
+    explication: "La négation porte sur « tous » : elle nie que tous mouraient, pas que certains mouraient. La suite le confirme : tous étaient frappés."
+    pieges:
+      - { texte: "Aucun ne mourait.", pourquoi: "La négation porte sur « tous » : il y avait des morts, mais pas tous. Pour dire « aucun », il faudrait « aucun ne mourait »." }
+      - { texte: "Tous mouraient.", pourquoi: "C’est l’inverse : la phrase est négative, elle nie que tous mouraient." }
+  - texte: "La Fontaine, même fable : « Nul mets n’excitait leur envie ». Quel mot fait la négation avec « n’ » ?"
+    nom: "nul"
+    explication: "« nul… ne » nie : aucun plat ne donnait envie aux animaux."
+    pieges:
+      - { texte: "mets", pourquoi: "« mets » est un nom (un plat) ; c’est le déterminant « nul » qui nie, avec « ne »." }
+      - { texte: "envie", pourquoi: "« leur envie » est le complément du verbe ; la négation est faite par « nul… ne »." }
+  - texte: "La Fontaine, même fable : « Ni loups ni renards n’épiaient / La douce et l’innocente proie ». Que nie « ni… ni… ne » ?"
+    nom: "deux sujets à la fois : ni les loups, ni les renards"
+    explication: "« ni… ni… » coordonne deux éléments niés ensemble : aucun loup, aucun renard ne guettait sa proie."
+    pieges:
+      - { texte: "seulement les loups", pourquoi: "« ni » est répété : les loups ET les renards sont niés ensemble." }
+      - { texte: "la proie", pourquoi: "La proie est le complément ; ce sont les chasseurs, loups et renards, qui n’épient plus." }
+  - texte: "La Fontaine, même fable : « Plus d’amour, partant plus de joie. » (« partant » veut dire « par conséquent »). Pourquoi n’y a-t-il pas de « ne » ?"
+    nom: "La phrase n’a pas de verbe : « plus » seul garde le sens négatif."
+    explication: "On comprend « il n’y a plus d’amour, donc il n’y a plus de joie ». Sans verbe, « ne » disparaît et « plus » porte seul la négation."
+    pieges:
+      - { texte: "Ici, « plus » veut dire « davantage ».", pourquoi: "Le sens est « il n’y a plus d’amour », donc plus de joie : c’est une négation, pas une augmentation." }
+      - { texte: "C’est une faute du poète.", pourquoi: "Ce n’est pas une faute : dans une phrase sans verbe, « plus » peut porter seul la négation." }
+  - texte: "« Je n’ai que dix minutes. » Est-ce une négation ?"
+    nom: "Non : « ne… que » veut dire « seulement »."
+    explication: "On peut remplacer par « J’ai seulement dix minutes » : j’ai bien du temps, mais peu. C’est une restriction."
+    pieges:
+      - { texte: "Oui : « ne… que » nie tout le verbe.", pourquoi: "Je n’ai pas « rien » : j’ai dix minutes. « ne… que » restreint, il ne nie pas." }
+      - { texte: "Oui : « que » remplace « pas ».", pourquoi: "« ne… que » a un autre sens : remplace par « seulement », le sens reste le même." }
+  - texte: "« Ce problème est impossible à résoudre. » Comment la négation est-elle exprimée ?"
+    nom: "par un préfixe : im- devant « possible »"
+    explication: "« impossible » veut dire « pas possible » : le préfixe im- nie le sens de l’adjectif."
+    pieges:
+      - { texte: "par « ne… pas »", pourquoi: "Il n’y a ni « ne » ni « pas » dans la phrase : c’est le préfixe qui nie." }
+      - { texte: "par un contraire sans lien de forme", pourquoi: "« impossible » est fait sur « possible » avec un préfixe ; un contraire sans lien de forme, c’est « grand » et « petit »." }
+  - texte: "À l’oral familier, on entend « J’sais pas ». Qu’est-ce qui manque par rapport à l’écrit soigné « Je ne sais pas » ?"
+    nom: "le « ne » de la négation"
+    explication: "À l’oral familier, « ne » tombe souvent et « pas » porte seul la négation. À l’écrit soigné, on garde les deux."
+    pieges:
+      - { texte: "le « pas »", pourquoi: "« pas » est bien là ; c’est « ne » qui a disparu." }
+      - { texte: "le sujet", pourquoi: "Le sujet est là, réduit à « J’ » ; c’est « ne » qui manque." }
+  - texte: "« Il ne vient jamais. » Quelle sorte de négation ?"
+    nom: "une négation partielle : elle porte sur le temps"
+    explication: "« ne… jamais » ne nie pas seulement l’action : il précise qu’elle n’a lieu à aucun moment."
+    pieges:
+      - { texte: "une négation totale", pourquoi: "La négation totale est « ne… pas » ; « jamais » précise sur quoi porte la négation : le temps." }
+      - { texte: "une restriction", pourquoi: "La restriction est « ne… que » (seulement) ; « ne… jamais » nie." }
+
+en:
+  langue: "fr"
+  titre: "French: expressing negation"
+  idee: "« ne… pas » negates the whole sentence; « ne… plus, jamais, rien, personne » specify what is negated. A prefix (im-, in-) or an opposite negates a word. « ne… que » isn't a negation: it means « only »."
+  phrases:
+    consigne: "Read the French sentence, find how the negation is built and what it applies to, then touch the right answer."
+    question: "{texte}"
+    indice: "Which words surround the verb? Replace them with « seulement » (only): does the meaning stay the same? What exactly is being negated?"
+    exemple: "« Il ne vient plus »: « ne… plus » denies that the action continues (he used to come). « Il ne vient que le soir »: he does come, but only in the evening."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "La Fontaine, « Les Animaux malades de la peste » (Fables, book VII): « Ils ne mouraient pas tous, mais tous étaient frappés ». What does « Ils ne mouraient pas tous » mean?"
+      nom: "Some died, others didn't."
+      explication: "The negation applies to « tous » (all): it denies that all died, not that some died. The rest confirms it: all were struck."
+      pieges:
+        - { texte: "None of them died.", pourquoi: "The negation applies to « tous »: some died, but not all. To say « none », you'd need « aucun ne mourait »." }
+        - { texte: "All of them died.", pourquoi: "It's the opposite: the sentence is negative, it denies that all died." }
+    - texte: "La Fontaine, same fable: « Nul mets n’excitait leur envie ». Which word makes the negation with « n’ »?"
+      nom: "nul"
+      explication: "« nul… ne » negates: no dish tempted the animals."
+      pieges:
+        - { texte: "mets", pourquoi: "« mets » is a noun (a dish); it's the determiner « nul » that negates, with « ne »." }
+        - { texte: "envie", pourquoi: "« leur envie » is the verb's complement; the negation is made by « nul… ne »." }
+    - texte: "La Fontaine, same fable: « Ni loups ni renards n’épiaient / La douce et l’innocente proie ». What does « ni… ni… ne » negate?"
+      nom: "two subjects at once: neither the wolves nor the foxes"
+      explication: "« ni… ni… » joins two elements negated together: no wolf, no fox was stalking its prey."
+      pieges:
+        - { texte: "only the wolves", pourquoi: "« ni » is repeated: the wolves AND the foxes are negated together." }
+        - { texte: "the prey", pourquoi: "The prey is the complement; it's the hunters, wolves and foxes, who no longer stalk." }
+    - texte: "La Fontaine, same fable: « Plus d’amour, partant plus de joie. » (« partant » means « therefore »). Why is there no « ne »?"
+      nom: "The sentence has no verb: « plus » alone keeps the negative meaning."
+      explication: "We understand « il n’y a plus d’amour, donc il n’y a plus de joie » (no more love, so no more joy). With no verb, « ne » disappears and « plus » carries the negation alone."
+      pieges:
+        - { texte: "Here « plus » means « more ».", pourquoi: "The meaning is « there is no more love », so no more joy: it's a negation, not an increase." }
+        - { texte: "It's the poet's mistake.", pourquoi: "It isn't a mistake: in a sentence with no verb, « plus » can carry the negation alone." }
+    - texte: "« Je n’ai que dix minutes. » Is this a negation?"
+      nom: "No: « ne… que » means « only »."
+      explication: "You can replace it with « J’ai seulement dix minutes »: I do have time, but not much. It's a restriction."
+      pieges:
+        - { texte: "Yes: « ne… que » negates the whole verb.", pourquoi: "I don't have « nothing »: I have ten minutes. « ne… que » restricts, it doesn't negate." }
+        - { texte: "Yes: « que » replaces « pas ».", pourquoi: "« ne… que » has another meaning: replace it with « seulement » and the meaning stays the same." }
+    - texte: "« Ce problème est impossible à résoudre. » How is the negation expressed?"
+      nom: "by a prefix: im- before « possible »"
+      explication: "« impossible » means « not possible »: the prefix im- negates the adjective's meaning."
+      pieges:
+        - { texte: "by « ne… pas »", pourquoi: "There's neither « ne » nor « pas » in the sentence: it's the prefix that negates." }
+        - { texte: "by an opposite with no shared form", pourquoi: "« impossible » is built on « possible » with a prefix; opposites with no shared form are like « grand » and « petit »." }
+    - texte: "In casual spoken French you hear « J’sais pas ». What is missing compared with careful written « Je ne sais pas »?"
+      nom: "the « ne » of the negation"
+      explication: "In casual speech, « ne » is often dropped and « pas » carries the negation alone. In careful writing, both are kept."
+      pieges:
+        - { texte: "the « pas »", pourquoi: "« pas » is there; it's « ne » that has disappeared." }
+        - { texte: "the subject", pourquoi: "The subject is there, shortened to « J’ »; it's « ne » that's missing." }
+    - texte: "« Il ne vient jamais. » What kind of negation is this?"
+      nom: "a partial negation: it applies to time"
+      explication: "« ne… jamais » doesn't just negate the action: it specifies that it happens at no time."
+      pieges:
+        - { texte: "a total negation", pourquoi: "Total negation is « ne… pas »; « jamais » specifies what the negation applies to: time." }
+        - { texte: "a restriction", pourquoi: "Restriction is « ne… que » (only); « ne… jamais » negates." }

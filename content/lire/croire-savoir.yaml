@@ -1,0 +1,125 @@
+id: croire-savoir
+titre: "Philosophie : croire et savoir"
+niveau: Terminale
+prerequis: ["argumentation"]
+programme: { source: philoTle, texte: "Les repères prennent la forme de distinctions lexicales et conceptuelles qui, bien comprises, soutiennent la réflexion que l’élève construit pour traiter un problème. [...] Croire/savoir [...] Objectif/subjectif/intersubjectif [...] Vrai/probable/certain." }
+activite: quiz
+parametres: {}
+idee: "Savoir, c’est pouvoir justifier une chose devant quiconque raisonne. Kant distingue l’opinion (insuffisante pour soi et pour tous), la foi (suffisante pour soi seulement) et le savoir (suffisant pour soi et pour tous)."
+phrases:
+  consigne: "Lis la phrase ou l’extrait, cherche la distinction en jeu, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Est-ce assez pour moi seulement, ou pour quiconque raisonne ? Peut-on le prouver, le vérifier, ou seulement le supposer ?"
+  exemple: "« Je crois qu’il pleuvra demain » : je n’en ai pas la preuve, c’est une croyance. « Je sais que 2 + 2 = 4 » : je peux le démontrer à tous, c’est un savoir."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Kant, Critique de la raison pure (1781), traduction Barni : « L’opinion est un jugement qui a conscience d’être insuffisant subjectivement aussi bien qu’objectivement. » Que veut dire « insuffisant subjectivement » ?"
+    nom: "Celui qui juge n’en est pas lui-même assuré."
+    explication: "Subjectivement : du côté du sujet qui juge. L’opinion ne convainc même pas celui qui l’a, et elle ne vaut pas non plus pour les autres."
+    pieges:
+      - { texte: "Le jugement ne vaut pas pour les autres.", pourquoi: "Ça, c’est l’insuffisance objective. « Subjectivement » parle de celui qui juge." }
+      - { texte: "Le jugement est faux.", pourquoi: "Insuffisant ne veut pas dire faux : on manque de raisons pour l’affirmer." }
+  - texte: "Selon Kant, comment s’appelle un jugement suffisant pour moi, mais que je sais insuffisant objectivement ?"
+    nom: "la foi (la croyance)"
+    explication: "Kant : « Quand le jugement n’est suffisant que subjectivement, et qu’en même temps il est tenu pour objectivement insuffisant, il s’appelle foi. »"
+    pieges:
+      - { texte: "le savoir", pourquoi: "Le savoir est suffisant des deux côtés, pour moi et pour tous." }
+      - { texte: "l’opinion", pourquoi: "L’opinion est insuffisante même pour moi ; la foi, elle, me suffit." }
+  - texte: "Selon Kant, comment s’appelle un jugement suffisant subjectivement aussi bien qu’objectivement ?"
+    nom: "le savoir"
+    explication: "Kant : celui « qui est suffisant subjectivement aussi bien qu’objectivement s’appelle savoir »."
+    pieges:
+      - { texte: "la foi", pourquoi: "La foi ne suffit qu’à moi : elle est objectivement insuffisante." }
+      - { texte: "la persuasion", pourquoi: "Pour Kant, la persuasion a son principe seulement dans le sujet : elle ne vaut pas pour tous." }
+  - texte: "Kant cherche une « pierre de touche » pour savoir si quelqu’un est vraiment sûr de ce qu’il affirme. Laquelle propose-t-il ?"
+    nom: "le pari : quand l’enjeu grandit, l’assurance faiblit"
+    explication: "Kant : on risque bien un ducat, mais quand il s’agit d’en parier dix, on s’aperçoit qu’on pourrait s’être trompé."
+    pieges:
+      - { texte: "le vote : ce que la majorité croit est sûr", pourquoi: "Kant ne parle pas de vote : il met chacun devant un pari, et l’assurance baisse quand l’enjeu monte." }
+      - { texte: "le ton de la voix : qui parle fort est sûr", pourquoi: "Kant remarque au contraire que des gens parlent avec « assurance et aplomb », puis hésitent devant un pari." }
+  - texte: "« Ce morceau de musique est beau. » ; « Ce morceau dure trois minutes. » Lequel de ces jugements est objectif ?"
+    nom: "« Ce morceau dure trois minutes. »"
+    explication: "Chacun peut le vérifier avec une montre : le jugement porte sur l’objet. « beau » exprime d’abord le goût de celui qui juge."
+    pieges:
+      - { texte: "« Ce morceau de musique est beau. »", pourquoi: "D’autres peuvent ne pas le trouver beau : ce jugement dépend d’abord de celui qui écoute." }
+      - { texte: "Aucun des deux.", pourquoi: "La durée se mesure et se vérifie par tous : c’est un jugement objectif." }
+  - texte: "« La météo annonce 80 % de risque de pluie demain. » La pluie de demain est…"
+    nom: "probable"
+    explication: "Il y a de bonnes raisons de l’attendre, mais elle peut ne pas venir : c’est probable, pas certain."
+    pieges:
+      - { texte: "certaine", pourquoi: "Avec 80 %, il reste 20 % de chances qu’il ne pleuve pas : ce n’est pas certain." }
+      - { texte: "vraie", pourquoi: "On ne peut pas encore dire que c’est vrai : la pluie n’a pas eu lieu, on peut seulement l’estimer." }
+  - texte: "« Je suis certain d’avoir fermé la porte. » Pourtant, elle est ouverte. Que montre cet exemple ?"
+    nom: "Être certain ne suffit pas pour que ce soit vrai."
+    explication: "La certitude est dans l’esprit ; la vérité dépend de la chose. Kant : « la vérité repose sur l’accord avec l’objet »."
+    pieges:
+      - { texte: "Ma certitude rend la chose vraie.", pourquoi: "C’est l’inverse : la porte est ouverte, quoi que je pense." }
+      - { texte: "Rien n’est jamais vrai.", pourquoi: "L’exemple montre une erreur, pas que tout est faux : il suffit de regarder la porte pour savoir ce qui est vrai." }
+  - texte: "Kant écrit : « il est absurde de former des opinions dans les mathématiques pures : il faut ou savoir, ou s’abstenir de tout jugement. » Pourquoi ?"
+    nom: "Parce que tout y est nécessaire : on sait, ou bien on ne juge pas."
+    explication: "En mathématiques pures, tout doit être connu avec une entière certitude ; une simple opinion n’y a pas de place."
+    pieges:
+      - { texte: "Parce que les mathématiques sont une affaire de goût.", pourquoi: "Au contraire : elles exigent une entière certitude, valable pour tous." }
+      - { texte: "Parce que chacun peut y avoir son avis.", pourquoi: "C’est justement ce que Kant refuse : en mathématiques, l’avis personnel ne vaut rien sans savoir." }
+
+en:
+  langue: "fr"
+  titre: "Philosophy: believing and knowing"
+  idee: "To know is to be able to justify something to anyone who reasons. Kant distinguishes opinion (not enough for me or for all), faith (enough for me only) and knowledge (enough for me and for all)."
+  phrases:
+    consigne: "Read the sentence or the extract, find the distinction at stake, then touch the right answer."
+    question: "{texte}"
+    indice: "Is it enough for me only, or for anyone who reasons? Can it be proved, checked, or only assumed?"
+    exemple: "« Je crois qu’il pleuvra demain » (I believe it will rain tomorrow): I have no proof, it's a belief. « Je sais que 2 + 2 = 4 » (I know): I can prove it to everyone, it's knowledge."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Kant, Critique of Pure Reason (1781), French translation by Barni: « L’opinion est un jugement qui a conscience d’être insuffisant subjectivement aussi bien qu’objectivement. » What does « insufficient subjectively » mean?"
+      nom: "The person judging isn't sure of it themselves."
+      explication: "Subjectively: on the side of the subject who judges. An opinion doesn't even convince the person who holds it, and it doesn't hold for others either."
+      pieges:
+        - { texte: "The judgement doesn't hold for others.", pourquoi: "That's objective insufficiency. « Subjectively » is about the person judging." }
+        - { texte: "The judgement is false.", pourquoi: "Insufficient doesn't mean false: there aren't enough reasons to assert it." }
+    - texte: "According to Kant, what is a judgement called that is enough for me, but that I know to be objectively insufficient?"
+      nom: "faith (belief)"
+      explication: "Kant: « Quand le jugement n’est suffisant que subjectivement, et qu’en même temps il est tenu pour objectivement insuffisant, il s’appelle foi. »"
+      pieges:
+        - { texte: "knowledge", pourquoi: "Knowledge is sufficient on both sides, for me and for everyone." }
+        - { texte: "opinion", pourquoi: "Opinion isn't enough even for me; faith, on the other hand, is enough for me." }
+    - texte: "According to Kant, what is a judgement called that is sufficient both subjectively and objectively?"
+      nom: "knowledge"
+      explication: "Kant: the one « qui est suffisant subjectivement aussi bien qu’objectivement s’appelle savoir »."
+      pieges:
+        - { texte: "faith", pourquoi: "Faith is only enough for me: it's objectively insufficient." }
+        - { texte: "persuasion", pourquoi: "For Kant, persuasion has its ground only in the subject: it doesn't hold for everyone." }
+    - texte: "Kant looks for a « pierre de touche » (touchstone) to tell whether someone is really sure of what they claim. Which one does he suggest?"
+      nom: "a bet: as the stakes rise, confidence falls"
+      explication: "Kant: people will happily risk one ducat, but when it comes to betting ten, they realise they might have been wrong."
+      pieges:
+        - { texte: "a vote: what the majority believes is sure", pourquoi: "Kant doesn't talk about voting: he puts each person in front of a bet, and confidence drops as the stakes rise." }
+        - { texte: "tone of voice: whoever speaks loudly is sure", pourquoi: "Kant notes, on the contrary, that people speak with « assurance et aplomb », then hesitate when faced with a bet." }
+    - texte: "« Ce morceau de musique est beau. » (This piece of music is beautiful.); « Ce morceau dure trois minutes. » (This piece lasts three minutes.) Which judgement is objective?"
+      nom: "« Ce morceau dure trois minutes. »"
+      explication: "Anyone can check it with a watch: the judgement is about the object. « beau » first expresses the taste of the person judging."
+      pieges:
+        - { texte: "« Ce morceau de musique est beau. »", pourquoi: "Others may not find it beautiful: this judgement depends first on the listener." }
+        - { texte: "Neither of them.", pourquoi: "Duration can be measured and checked by everyone: it's an objective judgement." }
+    - texte: "« La météo annonce 80 % de risque de pluie demain. » (80% chance of rain tomorrow.) Tomorrow's rain is…"
+      nom: "probable"
+      explication: "There are good reasons to expect it, but it may not come: it's probable, not certain."
+      pieges:
+        - { texte: "certain", pourquoi: "With 80%, there's still a 20% chance it won't rain: it isn't certain." }
+        - { texte: "true", pourquoi: "We can't yet say it's true: the rain hasn't happened, we can only estimate it." }
+    - texte: "« Je suis certain d’avoir fermé la porte. » (I'm certain I shut the door.) Yet it's open. What does this example show?"
+      nom: "Being certain isn't enough to make it true."
+      explication: "Certainty is in the mind; truth depends on the thing. Kant: « la vérité repose sur l’accord avec l’objet » (truth rests on agreement with the object)."
+      pieges:
+        - { texte: "My certainty makes the thing true.", pourquoi: "It's the opposite: the door is open, whatever I think." }
+        - { texte: "Nothing is ever true.", pourquoi: "The example shows a mistake, not that everything is false: you just have to look at the door to know what's true." }
+    - texte: "Kant writes: « il est absurde de former des opinions dans les mathématiques pures : il faut ou savoir, ou s’abstenir de tout jugement. » Why?"
+      nom: "Because everything there is necessary: either you know, or you don't judge."
+      explication: "In pure mathematics, everything must be known with complete certainty; a mere opinion has no place there."
+      pieges:
+        - { texte: "Because mathematics is a matter of taste.", pourquoi: "On the contrary: it demands complete certainty, valid for everyone." }
+        - { texte: "Because everyone can have their own view.", pourquoi: "That's exactly what Kant rejects: in mathematics, a personal view is worth nothing without knowledge." }

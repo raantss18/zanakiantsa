@@ -69,7 +69,8 @@
     "cycle3": "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf",
     "cycle4": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20de%20fran%C3%A7ais%20pour%20le%20cycle%204-480713.pdf",
     "lycee2de": "https://www.snes.edu/IMG/pdf/francais_annexe-1_2e_bo-annote.pdf",
-    "lycee1re": "https://www.snes.edu/IMG/pdf/francais_annexe-2_1egt_bo-2.pdf"
+    "lycee1re": "https://www.snes.edu/IMG/pdf/francais_annexe-2_1egt_bo-2.pdf",
+    "philoTle": "https://cache.media.eduscol.education.fr/file/SPE8_MENJ_25_7_2019/15/9/spe238_annexe1_1159159.pdf"
   },
   "competences": [
     {
@@ -10906,6 +10907,567 @@
       }
     },
     {
+      "id": "pronoms-personnels",
+      "titre": "Le pronom personnel : ce qu’il reprend, sa fonction",
+      "niveau": "6e",
+      "prerequis": [
+        "reprises-texte",
+        "complements-verbe"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "Identifier aisément les pronoms personnels et préciser leur fonction ; Mettre en relation un pronom personnel avec son antécédent"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un pronom personnel remplace un nom déjà cité, son antécédent. Pour trouver sa fonction, on remet ce nom à sa place : « Je la vois » → « Je vois la mer » : « la » est COD. « lui », « leur » sont COI.",
+      "phrases": {
+        "consigne": "Lis la phrase, cherche ce que le pronom remplace ou quelle est sa fonction, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Remets à la place du pronom le nom qu’il remplace. La phrase garde-t-elle son sens ? Y a-t-il « à » devant ce nom ?",
+        "exemple": "« Léa cherche sa clé. Elle la trouve sous le lit. » : « la » remplace « sa clé » ; on dit « Elle trouve sa clé », sans « à » : « la » est COD.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » Que remplace « la » ?",
+          "nom": "une lettre",
+          "explication": "« Il donne la lettre à Mme Rabe » : « la » remplace « une lettre ».",
+          "pieges": [
+            {
+              "texte": "Mme Rabe",
+              "pourquoi": "Mme Rabe est remplacée par « lui » : on donne la lettre À Mme Rabe."
+            },
+            {
+              "texte": "le facteur",
+              "pourquoi": "Le facteur est remplacé par « Il », le sujet : c’est lui qui donne."
+            }
+          ]
+        },
+        {
+          "texte": "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » Que remplace « lui » ?",
+          "nom": "Mme Rabe",
+          "explication": "On donne la lettre à Mme Rabe : « lui » remplace « à Mme Rabe ».",
+          "pieges": [
+            {
+              "texte": "une lettre",
+              "pourquoi": "La lettre est remplacée par « la » : c’est ce qu’on donne."
+            },
+            {
+              "texte": "le facteur",
+              "pourquoi": "Le facteur est remplacé par « Il », le sujet de « donne »."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Il la lui donne », quelle est la fonction de « lui » ?",
+          "nom": "complément d’objet indirect (COI)",
+          "explication": "« lui » remplace « à Mme Rabe » : le complément est construit avec « à », il est indirect.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "Le COD répond à « donne quoi ? » : c’est « la » (la lettre). « lui » remplace « à Mme Rabe »."
+            },
+            {
+              "texte": "sujet",
+              "pourquoi": "Le sujet est « Il » : c’est lui qui fait l’action de donner."
+            }
+          ]
+        },
+        {
+          "texte": "« Mes cousins arrivent demain ; je les attends à la gare. » Quelle est la fonction de « les » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "« J’attends mes cousins », sans préposition : « les » est COD.",
+          "pieges": [
+            {
+              "texte": "sujet",
+              "pourquoi": "Le sujet de « attends » est « je »."
+            },
+            {
+              "texte": "déterminant",
+              "pourquoi": "Ici, « les » est devant un verbe et remplace « mes cousins » : c’est un pronom. Déterminant, il serait devant un nom (« les cousins »)."
+            }
+          ]
+        },
+        {
+          "texte": "« Les élèves rencontrent deux pompiers ; ils leur posent des questions. » Que remplace « leur » ?",
+          "nom": "deux pompiers",
+          "explication": "Les élèves posent des questions aux pompiers : « leur » remplace « aux pompiers ».",
+          "pieges": [
+            {
+              "texte": "les élèves",
+              "pourquoi": "Les élèves sont remplacés par « ils », le sujet : ce sont eux qui posent les questions."
+            },
+            {
+              "texte": "des questions",
+              "pourquoi": "« des questions » est le COD (poser quoi ?) ; il n’est pas remplacé, il est écrit."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « ils leur posent des questions », pourquoi « leur » n’a-t-il pas de -s ?",
+          "nom": "Parce que le pronom « leur » ne s’accorde jamais.",
+          "explication": "Devant un verbe, « leur » veut dire « à eux, à elles » : ce pronom est invariable. « leurs » avec -s est un déterminant devant un nom pluriel (« leurs questions »).",
+          "pieges": [
+            {
+              "texte": "Parce que les pompiers ne sont que deux.",
+              "pourquoi": "Le nombre ne change rien : devant un verbe, le pronom « leur » reste toujours sans -s."
+            },
+            {
+              "texte": "C’est une faute d’orthographe.",
+              "pourquoi": "Ce n’en est pas une : « leur » remplace « à eux », et ce pronom ne prend jamais de -s."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Tu me parles. », quelle est la fonction de « me » ?",
+          "nom": "complément d’objet indirect (COI)",
+          "explication": "On parle À quelqu’un : « Tu parles à moi ». « me » est COI.",
+          "pieges": [
+            {
+              "texte": "complément d’objet direct (COD)",
+              "pourquoi": "On parle À quelqu’un : le complément est construit avec « à », il est indirect."
+            },
+            {
+              "texte": "sujet",
+              "pourquoi": "Le sujet est « Tu » : c’est lui qui parle."
+            }
+          ]
+        },
+        {
+          "texte": "Dans « Tu me regardes. », quelle est la fonction de « me » ?",
+          "nom": "complément d’objet direct (COD)",
+          "explication": "On regarde quelqu’un, sans « à » : « Tu regardes moi ». « me » est COD.",
+          "pieges": [
+            {
+              "texte": "complément d’objet indirect (COI)",
+              "pourquoi": "On regarde quelqu’un sans préposition : le complément est direct."
+            },
+            {
+              "texte": "attribut du sujet",
+              "pourquoi": "« regarder » n’est pas un verbe d’état comme « être » ou « sembler » : « me » est COD."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: personal pronouns, what they replace and their function",
+        "idee": "A French personal pronoun replaces a noun already mentioned, its antecedent. To find its function, put the noun back: « Je la vois » → « Je vois la mer »: « la » is a direct object. « lui », « leur » are indirect.",
+        "phrases": {
+          "consigne": "Read the French sentence, find what the pronoun replaces or what its function is, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Put the noun the pronoun replaces back in its place. Does the sentence still make sense? Is there « à » in front of that noun?",
+          "exemple": "« Léa cherche sa clé. Elle la trouve sous le lit. »: « la » replaces « sa clé »; we say « Elle trouve sa clé », with no « à »: « la » is a direct object.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! It's {bonne}."
+        },
+        "items": [
+          {
+            "texte": "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » What does « la » replace?",
+            "nom": "une lettre",
+            "explication": "« Il donne la lettre à Mme Rabe »: « la » replaces « une lettre » (a letter).",
+            "pieges": [
+              {
+                "texte": "Mme Rabe",
+                "pourquoi": "Mme Rabe is replaced by « lui »: the letter is given TO Mme Rabe."
+              },
+              {
+                "texte": "le facteur",
+                "pourquoi": "The postman is replaced by « Il », the subject: he is the one giving."
+              }
+            ]
+          },
+          {
+            "texte": "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » What does « lui » replace?",
+            "nom": "Mme Rabe",
+            "explication": "The letter is given to Mme Rabe: « lui » replaces « à Mme Rabe ».",
+            "pieges": [
+              {
+                "texte": "une lettre",
+                "pourquoi": "The letter is replaced by « la »: it's what is given."
+              },
+              {
+                "texte": "le facteur",
+                "pourquoi": "The postman is replaced by « Il », the subject of « donne »."
+              }
+            ]
+          },
+          {
+            "texte": "In « Il la lui donne », what is the function of « lui »?",
+            "nom": "indirect object (COI)",
+            "explication": "« lui » replaces « à Mme Rabe »: the complement is built with « à », so it's indirect.",
+            "pieges": [
+              {
+                "texte": "direct object (COD)",
+                "pourquoi": "The direct object answers « gives what? »: it's « la » (the letter). « lui » replaces « à Mme Rabe »."
+              },
+              {
+                "texte": "subject",
+                "pourquoi": "The subject is « Il »: he is the one doing the giving."
+              }
+            ]
+          },
+          {
+            "texte": "« Mes cousins arrivent demain ; je les attends à la gare. » What is the function of « les »?",
+            "nom": "direct object (COD)",
+            "explication": "« J’attends mes cousins », with no preposition: « les » is a direct object.",
+            "pieges": [
+              {
+                "texte": "subject",
+                "pourquoi": "The subject of « attends » is « je »."
+              },
+              {
+                "texte": "determiner",
+                "pourquoi": "Here « les » comes before a verb and replaces « mes cousins »: it's a pronoun. As a determiner it would come before a noun (« les cousins »)."
+              }
+            ]
+          },
+          {
+            "texte": "« Les élèves rencontrent deux pompiers ; ils leur posent des questions. » What does « leur » replace?",
+            "nom": "deux pompiers",
+            "explication": "The pupils ask the firefighters questions: « leur » replaces « aux pompiers ».",
+            "pieges": [
+              {
+                "texte": "les élèves",
+                "pourquoi": "The pupils are replaced by « ils », the subject: they are the ones asking."
+              },
+              {
+                "texte": "des questions",
+                "pourquoi": "« des questions » is the direct object (ask what?); it isn't replaced, it's written out."
+              }
+            ]
+          },
+          {
+            "texte": "In « ils leur posent des questions », why does « leur » have no -s?",
+            "nom": "Because the pronoun « leur » never agrees.",
+            "explication": "Before a verb, « leur » means « to them »: this pronoun never changes. « leurs » with -s is a determiner before a plural noun (« leurs questions »).",
+            "pieges": [
+              {
+                "texte": "Because there are only two firefighters.",
+                "pourquoi": "The number makes no difference: before a verb, the pronoun « leur » never takes an -s."
+              },
+              {
+                "texte": "It's a spelling mistake.",
+                "pourquoi": "It isn't: « leur » replaces « à eux », and this pronoun never takes an -s."
+              }
+            ]
+          },
+          {
+            "texte": "In « Tu me parles. », what is the function of « me »?",
+            "nom": "indirect object (COI)",
+            "explication": "In French you speak TO someone: « Tu parles à moi ». « me » is an indirect object.",
+            "pieges": [
+              {
+                "texte": "direct object (COD)",
+                "pourquoi": "In French you speak TO someone: the complement is built with « à », so it's indirect."
+              },
+              {
+                "texte": "subject",
+                "pourquoi": "The subject is « Tu »: that's who is speaking."
+              }
+            ]
+          },
+          {
+            "texte": "In « Tu me regardes. », what is the function of « me »?",
+            "nom": "direct object (COD)",
+            "explication": "In French you look at someone with no « à »: « Tu regardes moi ». « me » is a direct object.",
+            "pieges": [
+              {
+                "texte": "indirect object (COI)",
+                "pourquoi": "« regarder » takes its complement with no preposition: it's direct."
+              },
+              {
+                "texte": "subject complement",
+                "pourquoi": "« regarder » isn't a linking verb like « être » or « sembler »: « me » is a direct object."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "conte-petit-poucet",
+      "titre": "Le conte : « Le Petit Poucet » de Perrault",
+      "niveau": "6e",
+      "prerequis": [
+        "essentiel-texte"
+      ],
+      "programme": {
+        "source": "cycle3",
+        "texte": "l’élève est invité à découvrir la part d’humanité d’un personnage monstrueux inspirant la peur ou la compassion et à dégager la visée éducative d’un conte ou d’un récit."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un conte s’ouvre souvent par « Il était une fois ». Un problème lance l’aventure ; épreuves et ruses mènent à la fin. Le merveilleux (ogre, bottes magiques) y est normal. La morale tire la leçon.",
+      "phrases": {
+        "consigne": "Lis le passage du conte de Perrault, réfléchis à son rôle dans l’histoire, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "À quelle étape du conte sommes-nous ? Qui agit, et comment ? Est-ce possible dans la vraie vie ?",
+        "exemple": "« Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants » : c’est la formule d’ouverture, puis la situation de départ, qui présente les personnages.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Perrault, « Le Petit Poucet » (1697), première phrase : « Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants, tous garçons. » Que signale « Il était une fois » ?",
+          "nom": "le début d’un conte, dans un passé sans date",
+          "explication": "« Il était une fois » est la formule d’ouverture du conte : elle place l’histoire dans un passé lointain qu’on ne précise pas.",
+          "pieges": [
+            {
+              "texte": "une date précise de l’histoire",
+              "pourquoi": "Aucune date n’est donnée : la formule place le récit dans un passé indéterminé."
+            },
+            {
+              "texte": "la fin du conte",
+              "pourquoi": "C’est la toute première phrase : la formule ouvre le conte, elle ne le ferme pas."
+            }
+          ]
+        },
+        {
+          "texte": "Perrault, « Le Petit Poucet » : « Il vint une année très fâcheuse, et la famine fut si grande que ces pauvres gens résolurent de se défaire de leurs enfants. » Quel est le rôle de cet événement ?",
+          "nom": "C’est le problème qui lance l’aventure (l’élément perturbateur).",
+          "explication": "La famine pousse les parents à abandonner leurs enfants dans la forêt : la situation de départ est troublée, l’aventure commence.",
+          "pieges": [
+            {
+              "texte": "C’est la situation finale.",
+              "pourquoi": "La fin est heureuse : Poucet revient et met sa famille « à son aise ». Ici, l’histoire commence à se troubler."
+            },
+            {
+              "texte": "C’est la morale.",
+              "pourquoi": "La morale est en vers, après le récit ; cette phrase raconte un événement."
+            }
+          ]
+        },
+        {
+          "texte": "Perrault écrit que le Petit Poucet « parlait peu » mais « écoutait beaucoup ». Comment cela l’aide-t-il au début ?",
+          "nom": "Il entend le projet de ses parents et ramasse des cailloux blancs.",
+          "explication": "Caché sous l’escabelle de son père, il entend tout ; au matin, il remplit ses poches de petits cailloux blancs pour retrouver le chemin.",
+          "pieges": [
+            {
+              "texte": "Il convainc ses parents de garder les enfants.",
+              "pourquoi": "Il ne dit rien à ses parents : il agit en secret, avec les cailloux."
+            },
+            {
+              "texte": "Il demande de l’argent au seigneur du village.",
+              "pourquoi": "Le seigneur envoie dix écus qu’il devait depuis longtemps : Poucet ne lui a rien demandé."
+            }
+          ]
+        },
+        {
+          "texte": "La deuxième fois, le Petit Poucet sème des miettes de pain le long du chemin. Pourquoi ne retrouve-t-il pas sa route ?",
+          "nom": "Les oiseaux ont mangé toutes les miettes.",
+          "explication": "Perrault écrit : « les oiseaux étaient venus qui avaient tout mangé ».",
+          "pieges": [
+            {
+              "texte": "La pluie a effacé les miettes.",
+              "pourquoi": "La pluie arrive plus tard ; le texte dit que les oiseaux avaient tout mangé."
+            },
+            {
+              "texte": "Il a oublié de les semer.",
+              "pourquoi": "Il les avait semées « partout où il avait passé » ; ce sont les oiseaux qui les ont mangées."
+            }
+          ]
+        },
+        {
+          "texte": "Chez l’Ogre, la nuit, le Petit Poucet pose les bonnets de ses frères sur la tête des filles de l’Ogre et met leurs couronnes d’or sur la tête des garçons. Comment appelle-t-on ce qu’il fait ?",
+          "nom": "une ruse : le plus petit trompe le plus fort",
+          "explication": "Dans le noir, l’Ogre tâte les têtes et confond les enfants : Poucet a gagné par l’intelligence, pas par la force.",
+          "pieges": [
+            {
+              "texte": "un combat",
+              "pourquoi": "Poucet ne se bat pas : il trompe l’Ogre en échangeant bonnets et couronnes."
+            },
+            {
+              "texte": "un sortilège de fée",
+              "pourquoi": "Il n’y a pas de magie ici : Poucet utilise seulement des bonnets et des couronnes."
+            }
+          ]
+        },
+        {
+          "texte": "Perrault, « Le Petit Poucet » : « comme elles étaient fées, elles avaient le don de s’agrandir et de s’appetisser selon la jambe de celui qui les chaussait ». De quoi s’agit-il ?",
+          "nom": "des bottes de sept lieues, un objet merveilleux",
+          "explication": "Les bottes de l’Ogre changent de taille toutes seules et font traverser les rivières aussi aisément qu’un ruisseau : c’est le merveilleux du conte.",
+          "pieges": [
+            {
+              "texte": "des bonnets des garçons, un objet ordinaire",
+              "pourquoi": "On ne « chausse » pas un bonnet ; ce sont les bottes de l’Ogre, qui sont « fées »."
+            },
+            {
+              "texte": "des bottes de l’Ogre, un détail réaliste",
+              "pourquoi": "Des bottes qui changent de taille d’elles-mêmes, c’est du merveilleux, pas la vraie vie."
+            }
+          ]
+        },
+        {
+          "texte": "L’Ogre mange les petits enfants, mais Perrault écrit aussi qu’il « ne laissait pas d’être fort bon mari ». Que montre ce détail ?",
+          "nom": "Même le monstre a une part d’humanité.",
+          "explication": "« ne laissait pas d’être » veut dire « était tout de même » : le monstre a aussi une vie de famille. Le conte le montre, sans l’excuser.",
+          "pieges": [
+            {
+              "texte": "L’Ogre n’est pas dangereux.",
+              "pourquoi": "Il veut manger les enfants et les poursuit avec ses bottes : il est très dangereux."
+            },
+            {
+              "texte": "Le conteur s’est trompé de personnage.",
+              "pourquoi": "C’est voulu : la phrase parle bien de l’Ogre, qui est aussi un mari."
+            }
+          ]
+        },
+        {
+          "texte": "La moralité du conte finit ainsi : « Quelquefois, cependant, c’est ce petit marmot / Qui fera le bonheur de toute la famille. » Quelle leçon en tirer ?",
+          "nom": "Il ne faut pas mépriser le plus petit ou le plus faible.",
+          "explication": "Poucet, le plus petit, que l’on prenait pour un sot, sauve ses frères et enrichit toute sa famille.",
+          "pieges": [
+            {
+              "texte": "Il vaut mieux être grand et fort.",
+              "pourquoi": "C’est l’inverse : c’est le plus petit, celui qu’on méprisait, qui sauve sa famille."
+            },
+            {
+              "texte": "Il faut toujours obéir à ses parents.",
+              "pourquoi": "La moralité parle du plus petit enfant, que l’on méprise ; elle ne parle pas d’obéissance."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: the fairy tale, Perrault's « Le Petit Poucet »",
+        "idee": "A French tale often opens with « Il était une fois » (once upon a time). A problem starts the adventure; trials and tricks lead to the end. Magic (ogre, magic boots) is normal there. The moral draws the lesson.",
+        "phrases": {
+          "consigne": "Read the passage from Perrault's tale in French, think about its role in the story, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Which stage of the tale are we at? Who acts, and how? Could it happen in real life?",
+          "exemple": "« Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants »: it's the opening formula, then the starting situation, which introduces the characters.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Perrault, « Le Petit Poucet » (1697), first sentence: « Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants, tous garçons. » What does « Il était une fois » signal?",
+            "nom": "the start of a fairy tale, in an undated past",
+            "explication": "« Il était une fois » (once upon a time) is the tale's opening formula: it sets the story in a distant past that isn't specified.",
+            "pieges": [
+              {
+                "texte": "a precise date in the story",
+                "pourquoi": "No date is given: the formula sets the story in an unspecified past."
+              },
+              {
+                "texte": "the end of the tale",
+                "pourquoi": "It's the very first sentence: the formula opens the tale, it doesn't close it."
+              }
+            ]
+          },
+          {
+            "texte": "Perrault, « Le Petit Poucet »: « Il vint une année très fâcheuse, et la famine fut si grande que ces pauvres gens résolurent de se défaire de leurs enfants. » What is the role of this event?",
+            "nom": "It's the problem that sets off the adventure (the disruptive event).",
+            "explication": "The famine drives the parents to abandon their children in the forest: the starting situation is disturbed, the adventure begins.",
+            "pieges": [
+              {
+                "texte": "It's the final situation.",
+                "pourquoi": "The ending is happy: Poucet comes back and makes his family comfortable. Here, the story is starting to go wrong."
+              },
+              {
+                "texte": "It's the moral.",
+                "pourquoi": "The moral is in verse, after the story; this sentence tells an event."
+              }
+            ]
+          },
+          {
+            "texte": "Perrault writes that Little Thumb « parlait peu » (spoke little) but « écoutait beaucoup » (listened a lot). How does this help him at the start?",
+            "nom": "He hears his parents' plan and gathers white pebbles.",
+            "explication": "Hidden under his father's stool, he hears everything; in the morning he fills his pockets with small white pebbles to find the way back.",
+            "pieges": [
+              {
+                "texte": "He persuades his parents to keep the children.",
+                "pourquoi": "He says nothing to his parents: he acts in secret, with the pebbles."
+              },
+              {
+                "texte": "He asks the village lord for money.",
+                "pourquoi": "The lord sends ten crowns he had owed for a long time: Poucet asked him for nothing."
+              }
+            ]
+          },
+          {
+            "texte": "The second time, Little Thumb scatters breadcrumbs along the path. Why can't he find his way back?",
+            "nom": "The birds ate all the crumbs.",
+            "explication": "Perrault writes: « les oiseaux étaient venus qui avaient tout mangé » (the birds had come and eaten everything).",
+            "pieges": [
+              {
+                "texte": "The rain washed the crumbs away.",
+                "pourquoi": "The rain comes later; the text says the birds had eaten everything."
+              },
+              {
+                "texte": "He forgot to scatter them.",
+                "pourquoi": "He had scattered them « partout où il avait passé », everywhere he went; the birds ate them."
+              }
+            ]
+          },
+          {
+            "texte": "At the Ogre's house, at night, Little Thumb puts his brothers' caps on the Ogre's daughters' heads and puts their gold crowns on the boys' heads. What do we call what he does?",
+            "nom": "a trick: the smallest fools the strongest",
+            "explication": "In the dark, the Ogre feels the heads and mixes up the children: Poucet wins by cleverness, not by strength.",
+            "pieges": [
+              {
+                "texte": "a fight",
+                "pourquoi": "Poucet doesn't fight: he fools the Ogre by swapping caps and crowns."
+              },
+              {
+                "texte": "a fairy's spell",
+                "pourquoi": "There's no magic here: Poucet only uses caps and crowns."
+              }
+            ]
+          },
+          {
+            "texte": "Perrault, « Le Petit Poucet »: « comme elles étaient fées, elles avaient le don de s’agrandir et de s’appetisser selon la jambe de celui qui les chaussait ». What is this about?",
+            "nom": "the seven-league boots, a magic object",
+            "explication": "The Ogre's boots change size by themselves and let him cross rivers as easily as a stream: it's the magic of the fairy tale.",
+            "pieges": [
+              {
+                "texte": "the boys' caps, an ordinary object",
+                "pourquoi": "You don't put a cap on your leg; these are the Ogre's boots, which are enchanted (« fées »)."
+              },
+              {
+                "texte": "the Ogre's boots, a realistic detail",
+                "pourquoi": "Boots that change size by themselves are magic, not real life."
+              }
+            ]
+          },
+          {
+            "texte": "The Ogre eats little children, but Perrault also writes that he « ne laissait pas d’être fort bon mari ». What does this detail show?",
+            "nom": "Even the monster has a human side.",
+            "explication": "« ne laissait pas d’être » means « was nonetheless »: the monster also has a family life. The tale shows it without excusing him.",
+            "pieges": [
+              {
+                "texte": "The Ogre isn't dangerous.",
+                "pourquoi": "He wants to eat the children and chases them with his boots: he is very dangerous."
+              },
+              {
+                "texte": "The storyteller mixed up the characters.",
+                "pourquoi": "It's deliberate: the sentence really is about the Ogre, who is also a husband."
+              }
+            ]
+          },
+          {
+            "texte": "The tale's moral ends: « Quelquefois, cependant, c’est ce petit marmot / Qui fera le bonheur de toute la famille. » What lesson should we draw?",
+            "nom": "You shouldn't look down on the smallest or the weakest.",
+            "explication": "Poucet, the smallest, whom everyone took for a fool, saves his brothers and makes his whole family rich.",
+            "pieges": [
+              {
+                "texte": "It's better to be big and strong.",
+                "pourquoi": "It's the opposite: the smallest, the one everyone looked down on, saves his family."
+              },
+              {
+                "texte": "You must always obey your parents.",
+                "pourquoi": "The moral is about the smallest child, whom people look down on; it says nothing about obedience."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "accord-sujet-verbe",
       "titre": "L’accord sujet-verbe",
       "niveau": "5e",
@@ -17240,6 +17802,287 @@
       }
     },
     {
+      "id": "focalisation",
+      "titre": "Le point de vue dans le récit (la focalisation)",
+      "niveau": "2de",
+      "prerequis": [
+        "comprendre-recit",
+        "genres-litteraires"
+      ],
+      "programme": {
+        "source": "lycee2de",
+        "texte": "L’objectif en classe de seconde est d'approfondir cette approche en proposant des œuvres de la littérature française et francophone du XVIIIe au XXIe siècle, inscrites dans une perspective historique et culturelle de l'évolution des formes narratives."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La focalisation est le point de vue du récit. Zéro : le narrateur sait tout. Interne : on ne sait que ce que perçoit un personnage. Externe : on voit de l’extérieur, sans les pensées.",
+      "phrases": {
+        "consigne": "Lis le passage, demande-toi qui voit et qui sait, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Connaît-on les pensées d’un seul personnage, de tous, ou d’aucun ? Le lecteur en sait-il plus que le personnage ?",
+        "exemple": "« Paul ouvrit la porte. Il eut peur : la pièce était trop sombre. » : on sait ce que ressent Paul, et lui seul : c’est une focalisation interne.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Le narrateur connaît le passé de tous les personnages, leurs pensées, et ce qui se passe au même moment dans une autre ville. Quel point de vue ?",
+          "nom": "la focalisation zéro (narrateur omniscient)",
+          "explication": "Le narrateur sait tout, bien plus qu’aucun personnage : c’est la focalisation zéro.",
+          "pieges": [
+            {
+              "texte": "la focalisation interne",
+              "pourquoi": "En focalisation interne, on ne sait que ce que perçoit un seul personnage ; ici, le narrateur sait tout."
+            },
+            {
+              "texte": "la focalisation externe",
+              "pourquoi": "En focalisation externe, on n’entre dans aucune pensée ; ici, on connaît les pensées de tous."
+            }
+          ]
+        },
+        {
+          "texte": "On ne voit, on n’entend et on ne comprend que ce que voit, entend et comprend un seul personnage. Quel point de vue ?",
+          "nom": "la focalisation interne",
+          "explication": "Le récit passe par les yeux et l’esprit d’un personnage : c’est la focalisation interne.",
+          "pieges": [
+            {
+              "texte": "la focalisation zéro",
+              "pourquoi": "En focalisation zéro, le narrateur sait tout ; ici, on est limité à un personnage."
+            },
+            {
+              "texte": "la focalisation externe",
+              "pourquoi": "En focalisation externe, on ne connaît pas les pensées ; ici, on sait ce que comprend le personnage."
+            }
+          ]
+        },
+        {
+          "texte": "« Un homme entra. Il posa son chapeau sur la table, regarda la pendule et ressortit sans un mot. » On ne sait ni qui il est, ni ce qu’il pense. Quel point de vue ?",
+          "nom": "la focalisation externe",
+          "explication": "On voit seulement les gestes, de l’extérieur, comme une caméra : c’est la focalisation externe.",
+          "pieges": [
+            {
+              "texte": "la focalisation interne",
+              "pourquoi": "On n’entre pas dans les pensées de l’homme : on ne voit que ses gestes."
+            },
+            {
+              "texte": "la focalisation zéro",
+              "pourquoi": "Un narrateur omniscient dirait qui est cet homme et pourquoi il part ; ici, on l’ignore."
+            }
+          ]
+        },
+        {
+          "texte": "Stendhal, La Chartreuse de Parme (1839), chapitre III, la bataille de Waterloo : « — Les habits rouges ! les habits rouges ! criaient avec joie les hussards de l’escorte, et d’abord Fabrice ne comprenait pas ; enfin il remarqua qu’en effet presque tous les cadavres étaient vêtus de rouge. » Quel point de vue domine ?",
+          "nom": "la focalisation interne, par Fabrice",
+          "explication": "On découvre la scène avec Fabrice : d’abord il ne comprend pas, puis il remarque. Le lecteur n’en sait pas plus que lui.",
+          "pieges": [
+            {
+              "texte": "la focalisation zéro",
+              "pourquoi": "Un narrateur omniscient expliquerait tout de suite qui sont les « habits rouges » ; ici, on comprend en même temps que Fabrice."
+            },
+            {
+              "texte": "la focalisation externe",
+              "pourquoi": "On sait ce que Fabrice comprend et remarque : on est dans sa tête, pas seulement à l’extérieur."
+            }
+          ]
+        },
+        {
+          "texte": "Dans le même chapitre, Fabrice demande à un soldat : « ceci est-il une véritable bataille ? » Quel effet produit ce point de vue ?",
+          "nom": "La bataille paraît confuse : on la voit par un jeune homme qui ne la comprend pas.",
+          "explication": "Fabrice dit que c’est la première fois qu’il assiste à une bataille : à travers lui, Waterloo n’est que bruit et désordre, sans vue d’ensemble.",
+          "pieges": [
+            {
+              "texte": "La bataille est racontée comme dans un livre d’histoire, avec tous les mouvements des armées.",
+              "pourquoi": "Au contraire : on ne voit que ce que voit Fabrice, sans vue d’ensemble."
+            },
+            {
+              "texte": "Fabrice est un général qui dirige la bataille.",
+              "pourquoi": "Il dit lui-même que c’est la première fois qu’il assiste à une bataille."
+            }
+          ]
+        },
+        {
+          "texte": "Stendhal écrit dans ce chapitre : « Nous avouerons que notre héros était fort peu héros en ce moment. » Qui parle ici ?",
+          "nom": "le narrateur, qui commente son personnage",
+          "explication": "« Nous » et « notre héros » : le narrateur intervient pour juger Fabrice, avec ironie. Il sort un moment du point de vue de Fabrice.",
+          "pieges": [
+            {
+              "texte": "Fabrice, qui pense",
+              "pourquoi": "Fabrice ne s’appelle pas lui-même « notre héros » : c’est le narrateur qui le juge."
+            },
+            {
+              "texte": "le général, qui crie",
+              "pourquoi": "Les paroles des personnages sont annoncées par des tirets ; cette phrase est un commentaire du narrateur."
+            }
+          ]
+        },
+        {
+          "texte": "« Sophie regarda la mer. Elle se demandait si son frère reviendrait avant l’orage. » Quel indice montre une focalisation interne ?",
+          "nom": "On entre dans les pensées de Sophie (« elle se demandait »).",
+          "explication": "Le texte donne accès à ce que pense Sophie, et à elle seule : c’est le signe d’une focalisation interne.",
+          "pieges": [
+            {
+              "texte": "Le verbe « regarda » est au passé simple.",
+              "pourquoi": "Le temps du verbe ne dit rien du point de vue : c’est l’accès aux pensées qui compte."
+            },
+            {
+              "texte": "Il y a deux personnages.",
+              "pourquoi": "Le nombre de personnages ne change pas le point de vue : on suit les pensées de Sophie seulement."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi un auteur choisit-il souvent la focalisation interne pour créer du suspense ?",
+          "nom": "Le lecteur n’en sait pas plus que le personnage : il découvre avec lui.",
+          "explication": "Limité à ce que perçoit le personnage, le lecteur ignore la suite et la menace : il attend, comme lui.",
+          "pieges": [
+            {
+              "texte": "Pour tout expliquer au lecteur dès le début.",
+              "pourquoi": "C’est ce que permettrait la focalisation zéro ; la focalisation interne cache ce que le personnage ignore."
+            },
+            {
+              "texte": "Pour ne montrer aucune pensée.",
+              "pourquoi": "C’est la focalisation externe ; la focalisation interne montre les pensées d’un personnage."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: point of view in narrative (focalisation)",
+        "idee": "Focalisation is the story's point of view. Zero: the narrator knows everything. Internal: we only know what one character perceives. External: we see from outside, without thoughts.",
+        "phrases": {
+          "consigne": "Read the passage in French, ask yourself who sees and who knows, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Do we know the thoughts of one character, of all of them, or of none? Does the reader know more than the character?",
+          "exemple": "« Paul ouvrit la porte. Il eut peur : la pièce était trop sombre. »: we know what Paul feels, and only Paul: it's internal focalisation.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "The narrator knows every character's past, their thoughts, and what is happening at the same moment in another town. Which point of view?",
+            "nom": "zero focalisation (omniscient narrator)",
+            "explication": "The narrator knows everything, far more than any character: it's zero focalisation.",
+            "pieges": [
+              {
+                "texte": "internal focalisation",
+                "pourquoi": "With internal focalisation, we only know what one character perceives; here the narrator knows everything."
+              },
+              {
+                "texte": "external focalisation",
+                "pourquoi": "With external focalisation, we enter no one's thoughts; here we know everyone's."
+              }
+            ]
+          },
+          {
+            "texte": "We only see, hear and understand what one single character sees, hears and understands. Which point of view?",
+            "nom": "internal focalisation",
+            "explication": "The story passes through one character's eyes and mind: it's internal focalisation.",
+            "pieges": [
+              {
+                "texte": "zero focalisation",
+                "pourquoi": "With zero focalisation, the narrator knows everything; here we're limited to one character."
+              },
+              {
+                "texte": "external focalisation",
+                "pourquoi": "With external focalisation, we don't know the thoughts; here we know what the character understands."
+              }
+            ]
+          },
+          {
+            "texte": "« Un homme entra. Il posa son chapeau sur la table, regarda la pendule et ressortit sans un mot. » We don't know who he is or what he thinks. Which point of view?",
+            "nom": "external focalisation",
+            "explication": "We only see his actions, from the outside, like a camera: it's external focalisation.",
+            "pieges": [
+              {
+                "texte": "internal focalisation",
+                "pourquoi": "We don't enter the man's thoughts: we only see what he does."
+              },
+              {
+                "texte": "zero focalisation",
+                "pourquoi": "An omniscient narrator would tell us who the man is and why he leaves; here we don't know."
+              }
+            ]
+          },
+          {
+            "texte": "Stendhal, La Chartreuse de Parme (1839), chapter III, the Battle of Waterloo: « — Les habits rouges ! les habits rouges ! criaient avec joie les hussards de l’escorte, et d’abord Fabrice ne comprenait pas ; enfin il remarqua qu’en effet presque tous les cadavres étaient vêtus de rouge. » Which point of view dominates?",
+            "nom": "internal focalisation, through Fabrice",
+            "explication": "We discover the scene with Fabrice: at first he doesn't understand, then he notices. The reader knows no more than he does.",
+            "pieges": [
+              {
+                "texte": "zero focalisation",
+                "pourquoi": "An omniscient narrator would explain straight away who the « habits rouges » (redcoats) are; here we understand at the same time as Fabrice."
+              },
+              {
+                "texte": "external focalisation",
+                "pourquoi": "We know what Fabrice understands and notices: we're inside his head, not just outside."
+              }
+            ]
+          },
+          {
+            "texte": "In the same chapter, Fabrice asks a soldier: « ceci est-il une véritable bataille ? » (is this a real battle?). What effect does this point of view create?",
+            "nom": "The battle seems confused: we see it through a young man who doesn't understand it.",
+            "explication": "Fabrice says it's the first time he has been at a battle: through him, Waterloo is just noise and chaos, with no overall view.",
+            "pieges": [
+              {
+                "texte": "The battle is told as in a history book, with all the armies' movements.",
+                "pourquoi": "On the contrary: we only see what Fabrice sees, with no overall view."
+              },
+              {
+                "texte": "Fabrice is a general commanding the battle.",
+                "pourquoi": "He says himself that it's the first time he has been at a battle."
+              }
+            ]
+          },
+          {
+            "texte": "Stendhal writes in this chapter: « Nous avouerons que notre héros était fort peu héros en ce moment. » Who is speaking here?",
+            "nom": "the narrator, commenting on his character",
+            "explication": "« Nous » (we) and « notre héros » (our hero): the narrator steps in to judge Fabrice, ironically. He briefly leaves Fabrice's point of view.",
+            "pieges": [
+              {
+                "texte": "Fabrice, thinking",
+                "pourquoi": "Fabrice doesn't call himself « notre héros »: it's the narrator judging him."
+              },
+              {
+                "texte": "the general, shouting",
+                "pourquoi": "The characters' words are introduced by dashes; this sentence is the narrator's comment."
+              }
+            ]
+          },
+          {
+            "texte": "« Sophie regarda la mer. Elle se demandait si son frère reviendrait avant l’orage. » Which clue shows internal focalisation?",
+            "nom": "We enter Sophie's thoughts (« elle se demandait », she wondered).",
+            "explication": "The text gives access to what Sophie thinks, and only Sophie: that's the sign of internal focalisation.",
+            "pieges": [
+              {
+                "texte": "The verb « regarda » is in the passé simple.",
+                "pourquoi": "The tense says nothing about point of view: what counts is access to thoughts."
+              },
+              {
+                "texte": "There are two characters.",
+                "pourquoi": "The number of characters doesn't change the point of view: we only follow Sophie's thoughts."
+              }
+            ]
+          },
+          {
+            "texte": "Why do authors often choose internal focalisation to create suspense?",
+            "nom": "The reader knows no more than the character: they discover things together.",
+            "explication": "Limited to what the character perceives, the reader doesn't know what comes next or what threatens: they wait, like the character.",
+            "pieges": [
+              {
+                "texte": "To explain everything to the reader from the start.",
+                "pourquoi": "That's what zero focalisation allows; internal focalisation hides what the character doesn't know."
+              },
+              {
+                "texte": "To show no thoughts at all.",
+                "pourquoi": "That's external focalisation; internal focalisation shows one character's thoughts."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "argumentation",
       "titre": "Thèse, arguments, exemples et connecteurs",
       "niveau": "1re",
@@ -18171,6 +19014,287 @@
       }
     },
     {
+      "id": "negation",
+      "titre": "L’expression de la négation",
+      "niveau": "1re",
+      "prerequis": [
+        "types-de-phrases",
+        "phrase-complexe"
+      ],
+      "programme": {
+        "source": "lycee1re",
+        "texte": "Il s’agit d’étudier les différentes formes de construction de la négation ; l’examen de la phrase négative, de la préfixation et de l’opposition lexicale (antonymie) permet de travailler sur des unités de niveaux différents (mot, proposition)"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "« ne… pas » nie toute la phrase ; « ne… plus, jamais, rien, personne » précisent ce qui est nié. Un préfixe (im-, in-) ou un contraire nient un mot. « ne… que » n’est pas une négation : il veut dire « seulement ».",
+      "phrases": {
+        "consigne": "Lis la phrase, repère comment la négation est construite et sur quoi elle porte, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Quels mots encadrent le verbe ? Remplace par « seulement » : le sens reste-t-il le même ? Que nie-t-on exactement ?",
+        "exemple": "« Il ne vient plus » : « ne… plus » nie que l’action continue (il venait avant). « Il ne vient que le soir » : il vient, mais seulement le soir.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "La Fontaine, « Les Animaux malades de la peste » (Fables, livre VII) : « Ils ne mouraient pas tous, mais tous étaient frappés ». Que veut dire « Ils ne mouraient pas tous » ?",
+          "nom": "Certains mouraient, d’autres non.",
+          "explication": "La négation porte sur « tous » : elle nie que tous mouraient, pas que certains mouraient. La suite le confirme : tous étaient frappés.",
+          "pieges": [
+            {
+              "texte": "Aucun ne mourait.",
+              "pourquoi": "La négation porte sur « tous » : il y avait des morts, mais pas tous. Pour dire « aucun », il faudrait « aucun ne mourait »."
+            },
+            {
+              "texte": "Tous mouraient.",
+              "pourquoi": "C’est l’inverse : la phrase est négative, elle nie que tous mouraient."
+            }
+          ]
+        },
+        {
+          "texte": "La Fontaine, même fable : « Nul mets n’excitait leur envie ». Quel mot fait la négation avec « n’ » ?",
+          "nom": "nul",
+          "explication": "« nul… ne » nie : aucun plat ne donnait envie aux animaux.",
+          "pieges": [
+            {
+              "texte": "mets",
+              "pourquoi": "« mets » est un nom (un plat) ; c’est le déterminant « nul » qui nie, avec « ne »."
+            },
+            {
+              "texte": "envie",
+              "pourquoi": "« leur envie » est le complément du verbe ; la négation est faite par « nul… ne »."
+            }
+          ]
+        },
+        {
+          "texte": "La Fontaine, même fable : « Ni loups ni renards n’épiaient / La douce et l’innocente proie ». Que nie « ni… ni… ne » ?",
+          "nom": "deux sujets à la fois : ni les loups, ni les renards",
+          "explication": "« ni… ni… » coordonne deux éléments niés ensemble : aucun loup, aucun renard ne guettait sa proie.",
+          "pieges": [
+            {
+              "texte": "seulement les loups",
+              "pourquoi": "« ni » est répété : les loups ET les renards sont niés ensemble."
+            },
+            {
+              "texte": "la proie",
+              "pourquoi": "La proie est le complément ; ce sont les chasseurs, loups et renards, qui n’épient plus."
+            }
+          ]
+        },
+        {
+          "texte": "La Fontaine, même fable : « Plus d’amour, partant plus de joie. » (« partant » veut dire « par conséquent »). Pourquoi n’y a-t-il pas de « ne » ?",
+          "nom": "La phrase n’a pas de verbe : « plus » seul garde le sens négatif.",
+          "explication": "On comprend « il n’y a plus d’amour, donc il n’y a plus de joie ». Sans verbe, « ne » disparaît et « plus » porte seul la négation.",
+          "pieges": [
+            {
+              "texte": "Ici, « plus » veut dire « davantage ».",
+              "pourquoi": "Le sens est « il n’y a plus d’amour », donc plus de joie : c’est une négation, pas une augmentation."
+            },
+            {
+              "texte": "C’est une faute du poète.",
+              "pourquoi": "Ce n’est pas une faute : dans une phrase sans verbe, « plus » peut porter seul la négation."
+            }
+          ]
+        },
+        {
+          "texte": "« Je n’ai que dix minutes. » Est-ce une négation ?",
+          "nom": "Non : « ne… que » veut dire « seulement ».",
+          "explication": "On peut remplacer par « J’ai seulement dix minutes » : j’ai bien du temps, mais peu. C’est une restriction.",
+          "pieges": [
+            {
+              "texte": "Oui : « ne… que » nie tout le verbe.",
+              "pourquoi": "Je n’ai pas « rien » : j’ai dix minutes. « ne… que » restreint, il ne nie pas."
+            },
+            {
+              "texte": "Oui : « que » remplace « pas ».",
+              "pourquoi": "« ne… que » a un autre sens : remplace par « seulement », le sens reste le même."
+            }
+          ]
+        },
+        {
+          "texte": "« Ce problème est impossible à résoudre. » Comment la négation est-elle exprimée ?",
+          "nom": "par un préfixe : im- devant « possible »",
+          "explication": "« impossible » veut dire « pas possible » : le préfixe im- nie le sens de l’adjectif.",
+          "pieges": [
+            {
+              "texte": "par « ne… pas »",
+              "pourquoi": "Il n’y a ni « ne » ni « pas » dans la phrase : c’est le préfixe qui nie."
+            },
+            {
+              "texte": "par un contraire sans lien de forme",
+              "pourquoi": "« impossible » est fait sur « possible » avec un préfixe ; un contraire sans lien de forme, c’est « grand » et « petit »."
+            }
+          ]
+        },
+        {
+          "texte": "À l’oral familier, on entend « J’sais pas ». Qu’est-ce qui manque par rapport à l’écrit soigné « Je ne sais pas » ?",
+          "nom": "le « ne » de la négation",
+          "explication": "À l’oral familier, « ne » tombe souvent et « pas » porte seul la négation. À l’écrit soigné, on garde les deux.",
+          "pieges": [
+            {
+              "texte": "le « pas »",
+              "pourquoi": "« pas » est bien là ; c’est « ne » qui a disparu."
+            },
+            {
+              "texte": "le sujet",
+              "pourquoi": "Le sujet est là, réduit à « J’ » ; c’est « ne » qui manque."
+            }
+          ]
+        },
+        {
+          "texte": "« Il ne vient jamais. » Quelle sorte de négation ?",
+          "nom": "une négation partielle : elle porte sur le temps",
+          "explication": "« ne… jamais » ne nie pas seulement l’action : il précise qu’elle n’a lieu à aucun moment.",
+          "pieges": [
+            {
+              "texte": "une négation totale",
+              "pourquoi": "La négation totale est « ne… pas » ; « jamais » précise sur quoi porte la négation : le temps."
+            },
+            {
+              "texte": "une restriction",
+              "pourquoi": "La restriction est « ne… que » (seulement) ; « ne… jamais » nie."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "French: expressing negation",
+        "idee": "« ne… pas » negates the whole sentence; « ne… plus, jamais, rien, personne » specify what is negated. A prefix (im-, in-) or an opposite negates a word. « ne… que » isn't a negation: it means « only ».",
+        "phrases": {
+          "consigne": "Read the French sentence, find how the negation is built and what it applies to, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Which words surround the verb? Replace them with « seulement » (only): does the meaning stay the same? What exactly is being negated?",
+          "exemple": "« Il ne vient plus »: « ne… plus » denies that the action continues (he used to come). « Il ne vient que le soir »: he does come, but only in the evening.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "La Fontaine, « Les Animaux malades de la peste » (Fables, book VII): « Ils ne mouraient pas tous, mais tous étaient frappés ». What does « Ils ne mouraient pas tous » mean?",
+            "nom": "Some died, others didn't.",
+            "explication": "The negation applies to « tous » (all): it denies that all died, not that some died. The rest confirms it: all were struck.",
+            "pieges": [
+              {
+                "texte": "None of them died.",
+                "pourquoi": "The negation applies to « tous »: some died, but not all. To say « none », you'd need « aucun ne mourait »."
+              },
+              {
+                "texte": "All of them died.",
+                "pourquoi": "It's the opposite: the sentence is negative, it denies that all died."
+              }
+            ]
+          },
+          {
+            "texte": "La Fontaine, same fable: « Nul mets n’excitait leur envie ». Which word makes the negation with « n’ »?",
+            "nom": "nul",
+            "explication": "« nul… ne » negates: no dish tempted the animals.",
+            "pieges": [
+              {
+                "texte": "mets",
+                "pourquoi": "« mets » is a noun (a dish); it's the determiner « nul » that negates, with « ne »."
+              },
+              {
+                "texte": "envie",
+                "pourquoi": "« leur envie » is the verb's complement; the negation is made by « nul… ne »."
+              }
+            ]
+          },
+          {
+            "texte": "La Fontaine, same fable: « Ni loups ni renards n’épiaient / La douce et l’innocente proie ». What does « ni… ni… ne » negate?",
+            "nom": "two subjects at once: neither the wolves nor the foxes",
+            "explication": "« ni… ni… » joins two elements negated together: no wolf, no fox was stalking its prey.",
+            "pieges": [
+              {
+                "texte": "only the wolves",
+                "pourquoi": "« ni » is repeated: the wolves AND the foxes are negated together."
+              },
+              {
+                "texte": "the prey",
+                "pourquoi": "The prey is the complement; it's the hunters, wolves and foxes, who no longer stalk."
+              }
+            ]
+          },
+          {
+            "texte": "La Fontaine, same fable: « Plus d’amour, partant plus de joie. » (« partant » means « therefore »). Why is there no « ne »?",
+            "nom": "The sentence has no verb: « plus » alone keeps the negative meaning.",
+            "explication": "We understand « il n’y a plus d’amour, donc il n’y a plus de joie » (no more love, so no more joy). With no verb, « ne » disappears and « plus » carries the negation alone.",
+            "pieges": [
+              {
+                "texte": "Here « plus » means « more ».",
+                "pourquoi": "The meaning is « there is no more love », so no more joy: it's a negation, not an increase."
+              },
+              {
+                "texte": "It's the poet's mistake.",
+                "pourquoi": "It isn't a mistake: in a sentence with no verb, « plus » can carry the negation alone."
+              }
+            ]
+          },
+          {
+            "texte": "« Je n’ai que dix minutes. » Is this a negation?",
+            "nom": "No: « ne… que » means « only ».",
+            "explication": "You can replace it with « J’ai seulement dix minutes »: I do have time, but not much. It's a restriction.",
+            "pieges": [
+              {
+                "texte": "Yes: « ne… que » negates the whole verb.",
+                "pourquoi": "I don't have « nothing »: I have ten minutes. « ne… que » restricts, it doesn't negate."
+              },
+              {
+                "texte": "Yes: « que » replaces « pas ».",
+                "pourquoi": "« ne… que » has another meaning: replace it with « seulement » and the meaning stays the same."
+              }
+            ]
+          },
+          {
+            "texte": "« Ce problème est impossible à résoudre. » How is the negation expressed?",
+            "nom": "by a prefix: im- before « possible »",
+            "explication": "« impossible » means « not possible »: the prefix im- negates the adjective's meaning.",
+            "pieges": [
+              {
+                "texte": "by « ne… pas »",
+                "pourquoi": "There's neither « ne » nor « pas » in the sentence: it's the prefix that negates."
+              },
+              {
+                "texte": "by an opposite with no shared form",
+                "pourquoi": "« impossible » is built on « possible » with a prefix; opposites with no shared form are like « grand » and « petit »."
+              }
+            ]
+          },
+          {
+            "texte": "In casual spoken French you hear « J’sais pas ». What is missing compared with careful written « Je ne sais pas »?",
+            "nom": "the « ne » of the negation",
+            "explication": "In casual speech, « ne » is often dropped and « pas » carries the negation alone. In careful writing, both are kept.",
+            "pieges": [
+              {
+                "texte": "the « pas »",
+                "pourquoi": "« pas » is there; it's « ne » that has disappeared."
+              },
+              {
+                "texte": "the subject",
+                "pourquoi": "The subject is there, shortened to « J’ »; it's « ne » that's missing."
+              }
+            ]
+          },
+          {
+            "texte": "« Il ne vient jamais. » What kind of negation is this?",
+            "nom": "a partial negation: it applies to time",
+            "explication": "« ne… jamais » doesn't just negate the action: it specifies that it happens at no time.",
+            "pieges": [
+              {
+                "texte": "a total negation",
+                "pourquoi": "Total negation is « ne… pas »; « jamais » specifies what the negation applies to: time."
+              },
+              {
+                "texte": "a restriction",
+                "pourquoi": "Restriction is « ne… que » (only); « ne… jamais » negates."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "registres",
       "titre": "Les registres (tonalités)",
       "niveau": "1re",
@@ -18474,6 +19598,847 @@
               {
                 "texte": "Because he shouts.",
                 "pourquoi": "A shout can be pathetic too: it's the gap with the situation that's funny."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "croire-savoir",
+      "titre": "Philosophie : croire et savoir",
+      "niveau": "Terminale",
+      "prerequis": [
+        "argumentation"
+      ],
+      "programme": {
+        "source": "philoTle",
+        "texte": "Les repères prennent la forme de distinctions lexicales et conceptuelles qui, bien comprises, soutiennent la réflexion que l’élève construit pour traiter un problème. [...] Croire/savoir [...] Objectif/subjectif/intersubjectif [...] Vrai/probable/certain."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Savoir, c’est pouvoir justifier une chose devant quiconque raisonne. Kant distingue l’opinion (insuffisante pour soi et pour tous), la foi (suffisante pour soi seulement) et le savoir (suffisant pour soi et pour tous).",
+      "phrases": {
+        "consigne": "Lis la phrase ou l’extrait, cherche la distinction en jeu, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Est-ce assez pour moi seulement, ou pour quiconque raisonne ? Peut-on le prouver, le vérifier, ou seulement le supposer ?",
+        "exemple": "« Je crois qu’il pleuvra demain » : je n’en ai pas la preuve, c’est une croyance. « Je sais que 2 + 2 = 4 » : je peux le démontrer à tous, c’est un savoir.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Kant, Critique de la raison pure (1781), traduction Barni : « L’opinion est un jugement qui a conscience d’être insuffisant subjectivement aussi bien qu’objectivement. » Que veut dire « insuffisant subjectivement » ?",
+          "nom": "Celui qui juge n’en est pas lui-même assuré.",
+          "explication": "Subjectivement : du côté du sujet qui juge. L’opinion ne convainc même pas celui qui l’a, et elle ne vaut pas non plus pour les autres.",
+          "pieges": [
+            {
+              "texte": "Le jugement ne vaut pas pour les autres.",
+              "pourquoi": "Ça, c’est l’insuffisance objective. « Subjectivement » parle de celui qui juge."
+            },
+            {
+              "texte": "Le jugement est faux.",
+              "pourquoi": "Insuffisant ne veut pas dire faux : on manque de raisons pour l’affirmer."
+            }
+          ]
+        },
+        {
+          "texte": "Selon Kant, comment s’appelle un jugement suffisant pour moi, mais que je sais insuffisant objectivement ?",
+          "nom": "la foi (la croyance)",
+          "explication": "Kant : « Quand le jugement n’est suffisant que subjectivement, et qu’en même temps il est tenu pour objectivement insuffisant, il s’appelle foi. »",
+          "pieges": [
+            {
+              "texte": "le savoir",
+              "pourquoi": "Le savoir est suffisant des deux côtés, pour moi et pour tous."
+            },
+            {
+              "texte": "l’opinion",
+              "pourquoi": "L’opinion est insuffisante même pour moi ; la foi, elle, me suffit."
+            }
+          ]
+        },
+        {
+          "texte": "Selon Kant, comment s’appelle un jugement suffisant subjectivement aussi bien qu’objectivement ?",
+          "nom": "le savoir",
+          "explication": "Kant : celui « qui est suffisant subjectivement aussi bien qu’objectivement s’appelle savoir ».",
+          "pieges": [
+            {
+              "texte": "la foi",
+              "pourquoi": "La foi ne suffit qu’à moi : elle est objectivement insuffisante."
+            },
+            {
+              "texte": "la persuasion",
+              "pourquoi": "Pour Kant, la persuasion a son principe seulement dans le sujet : elle ne vaut pas pour tous."
+            }
+          ]
+        },
+        {
+          "texte": "Kant cherche une « pierre de touche » pour savoir si quelqu’un est vraiment sûr de ce qu’il affirme. Laquelle propose-t-il ?",
+          "nom": "le pari : quand l’enjeu grandit, l’assurance faiblit",
+          "explication": "Kant : on risque bien un ducat, mais quand il s’agit d’en parier dix, on s’aperçoit qu’on pourrait s’être trompé.",
+          "pieges": [
+            {
+              "texte": "le vote : ce que la majorité croit est sûr",
+              "pourquoi": "Kant ne parle pas de vote : il met chacun devant un pari, et l’assurance baisse quand l’enjeu monte."
+            },
+            {
+              "texte": "le ton de la voix : qui parle fort est sûr",
+              "pourquoi": "Kant remarque au contraire que des gens parlent avec « assurance et aplomb », puis hésitent devant un pari."
+            }
+          ]
+        },
+        {
+          "texte": "« Ce morceau de musique est beau. » ; « Ce morceau dure trois minutes. » Lequel de ces jugements est objectif ?",
+          "nom": "« Ce morceau dure trois minutes. »",
+          "explication": "Chacun peut le vérifier avec une montre : le jugement porte sur l’objet. « beau » exprime d’abord le goût de celui qui juge.",
+          "pieges": [
+            {
+              "texte": "« Ce morceau de musique est beau. »",
+              "pourquoi": "D’autres peuvent ne pas le trouver beau : ce jugement dépend d’abord de celui qui écoute."
+            },
+            {
+              "texte": "Aucun des deux.",
+              "pourquoi": "La durée se mesure et se vérifie par tous : c’est un jugement objectif."
+            }
+          ]
+        },
+        {
+          "texte": "« La météo annonce 80 % de risque de pluie demain. » La pluie de demain est…",
+          "nom": "probable",
+          "explication": "Il y a de bonnes raisons de l’attendre, mais elle peut ne pas venir : c’est probable, pas certain.",
+          "pieges": [
+            {
+              "texte": "certaine",
+              "pourquoi": "Avec 80 %, il reste 20 % de chances qu’il ne pleuve pas : ce n’est pas certain."
+            },
+            {
+              "texte": "vraie",
+              "pourquoi": "On ne peut pas encore dire que c’est vrai : la pluie n’a pas eu lieu, on peut seulement l’estimer."
+            }
+          ]
+        },
+        {
+          "texte": "« Je suis certain d’avoir fermé la porte. » Pourtant, elle est ouverte. Que montre cet exemple ?",
+          "nom": "Être certain ne suffit pas pour que ce soit vrai.",
+          "explication": "La certitude est dans l’esprit ; la vérité dépend de la chose. Kant : « la vérité repose sur l’accord avec l’objet ».",
+          "pieges": [
+            {
+              "texte": "Ma certitude rend la chose vraie.",
+              "pourquoi": "C’est l’inverse : la porte est ouverte, quoi que je pense."
+            },
+            {
+              "texte": "Rien n’est jamais vrai.",
+              "pourquoi": "L’exemple montre une erreur, pas que tout est faux : il suffit de regarder la porte pour savoir ce qui est vrai."
+            }
+          ]
+        },
+        {
+          "texte": "Kant écrit : « il est absurde de former des opinions dans les mathématiques pures : il faut ou savoir, ou s’abstenir de tout jugement. » Pourquoi ?",
+          "nom": "Parce que tout y est nécessaire : on sait, ou bien on ne juge pas.",
+          "explication": "En mathématiques pures, tout doit être connu avec une entière certitude ; une simple opinion n’y a pas de place.",
+          "pieges": [
+            {
+              "texte": "Parce que les mathématiques sont une affaire de goût.",
+              "pourquoi": "Au contraire : elles exigent une entière certitude, valable pour tous."
+            },
+            {
+              "texte": "Parce que chacun peut y avoir son avis.",
+              "pourquoi": "C’est justement ce que Kant refuse : en mathématiques, l’avis personnel ne vaut rien sans savoir."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "Philosophy: believing and knowing",
+        "idee": "To know is to be able to justify something to anyone who reasons. Kant distinguishes opinion (not enough for me or for all), faith (enough for me only) and knowledge (enough for me and for all).",
+        "phrases": {
+          "consigne": "Read the sentence or the extract, find the distinction at stake, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Is it enough for me only, or for anyone who reasons? Can it be proved, checked, or only assumed?",
+          "exemple": "« Je crois qu’il pleuvra demain » (I believe it will rain tomorrow): I have no proof, it's a belief. « Je sais que 2 + 2 = 4 » (I know): I can prove it to everyone, it's knowledge.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Kant, Critique of Pure Reason (1781), French translation by Barni: « L’opinion est un jugement qui a conscience d’être insuffisant subjectivement aussi bien qu’objectivement. » What does « insufficient subjectively » mean?",
+            "nom": "The person judging isn't sure of it themselves.",
+            "explication": "Subjectively: on the side of the subject who judges. An opinion doesn't even convince the person who holds it, and it doesn't hold for others either.",
+            "pieges": [
+              {
+                "texte": "The judgement doesn't hold for others.",
+                "pourquoi": "That's objective insufficiency. « Subjectively » is about the person judging."
+              },
+              {
+                "texte": "The judgement is false.",
+                "pourquoi": "Insufficient doesn't mean false: there aren't enough reasons to assert it."
+              }
+            ]
+          },
+          {
+            "texte": "According to Kant, what is a judgement called that is enough for me, but that I know to be objectively insufficient?",
+            "nom": "faith (belief)",
+            "explication": "Kant: « Quand le jugement n’est suffisant que subjectivement, et qu’en même temps il est tenu pour objectivement insuffisant, il s’appelle foi. »",
+            "pieges": [
+              {
+                "texte": "knowledge",
+                "pourquoi": "Knowledge is sufficient on both sides, for me and for everyone."
+              },
+              {
+                "texte": "opinion",
+                "pourquoi": "Opinion isn't enough even for me; faith, on the other hand, is enough for me."
+              }
+            ]
+          },
+          {
+            "texte": "According to Kant, what is a judgement called that is sufficient both subjectively and objectively?",
+            "nom": "knowledge",
+            "explication": "Kant: the one « qui est suffisant subjectivement aussi bien qu’objectivement s’appelle savoir ».",
+            "pieges": [
+              {
+                "texte": "faith",
+                "pourquoi": "Faith is only enough for me: it's objectively insufficient."
+              },
+              {
+                "texte": "persuasion",
+                "pourquoi": "For Kant, persuasion has its ground only in the subject: it doesn't hold for everyone."
+              }
+            ]
+          },
+          {
+            "texte": "Kant looks for a « pierre de touche » (touchstone) to tell whether someone is really sure of what they claim. Which one does he suggest?",
+            "nom": "a bet: as the stakes rise, confidence falls",
+            "explication": "Kant: people will happily risk one ducat, but when it comes to betting ten, they realise they might have been wrong.",
+            "pieges": [
+              {
+                "texte": "a vote: what the majority believes is sure",
+                "pourquoi": "Kant doesn't talk about voting: he puts each person in front of a bet, and confidence drops as the stakes rise."
+              },
+              {
+                "texte": "tone of voice: whoever speaks loudly is sure",
+                "pourquoi": "Kant notes, on the contrary, that people speak with « assurance et aplomb », then hesitate when faced with a bet."
+              }
+            ]
+          },
+          {
+            "texte": "« Ce morceau de musique est beau. » (This piece of music is beautiful.); « Ce morceau dure trois minutes. » (This piece lasts three minutes.) Which judgement is objective?",
+            "nom": "« Ce morceau dure trois minutes. »",
+            "explication": "Anyone can check it with a watch: the judgement is about the object. « beau » first expresses the taste of the person judging.",
+            "pieges": [
+              {
+                "texte": "« Ce morceau de musique est beau. »",
+                "pourquoi": "Others may not find it beautiful: this judgement depends first on the listener."
+              },
+              {
+                "texte": "Neither of them.",
+                "pourquoi": "Duration can be measured and checked by everyone: it's an objective judgement."
+              }
+            ]
+          },
+          {
+            "texte": "« La météo annonce 80 % de risque de pluie demain. » (80% chance of rain tomorrow.) Tomorrow's rain is…",
+            "nom": "probable",
+            "explication": "There are good reasons to expect it, but it may not come: it's probable, not certain.",
+            "pieges": [
+              {
+                "texte": "certain",
+                "pourquoi": "With 80%, there's still a 20% chance it won't rain: it isn't certain."
+              },
+              {
+                "texte": "true",
+                "pourquoi": "We can't yet say it's true: the rain hasn't happened, we can only estimate it."
+              }
+            ]
+          },
+          {
+            "texte": "« Je suis certain d’avoir fermé la porte. » (I'm certain I shut the door.) Yet it's open. What does this example show?",
+            "nom": "Being certain isn't enough to make it true.",
+            "explication": "Certainty is in the mind; truth depends on the thing. Kant: « la vérité repose sur l’accord avec l’objet » (truth rests on agreement with the object).",
+            "pieges": [
+              {
+                "texte": "My certainty makes the thing true.",
+                "pourquoi": "It's the opposite: the door is open, whatever I think."
+              },
+              {
+                "texte": "Nothing is ever true.",
+                "pourquoi": "The example shows a mistake, not that everything is false: you just have to look at the door to know what's true."
+              }
+            ]
+          },
+          {
+            "texte": "Kant writes: « il est absurde de former des opinions dans les mathématiques pures : il faut ou savoir, ou s’abstenir de tout jugement. » Why?",
+            "nom": "Because everything there is necessary: either you know, or you don't judge.",
+            "explication": "In pure mathematics, everything must be known with complete certainty; a mere opinion has no place there.",
+            "pieges": [
+              {
+                "texte": "Because mathematics is a matter of taste.",
+                "pourquoi": "On the contrary: it demands complete certainty, valid for everyone."
+              },
+              {
+                "texte": "Because everyone can have their own view.",
+                "pourquoi": "That's exactly what Kant rejects: in mathematics, a personal view is worth nothing without knowledge."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "persuader-convaincre",
+      "titre": "Philosophie : persuader, convaincre, démontrer",
+      "niveau": "Terminale",
+      "prerequis": [
+        "argumentation",
+        "croire-savoir"
+      ],
+      "programme": {
+        "source": "philoTle",
+        "texte": "Les repères prennent la forme de distinctions lexicales et conceptuelles qui, bien comprises, soutiennent la réflexion que l’élève construit pour traiter un problème. [...] Exemple/preuve [...] Hypothèse/conséquence/conclusion [...] Persuader/convaincre"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Convaincre, c’est faire admettre par des preuves que chacun peut suivre. Persuader, c’est aussi toucher le désir : pour Pascal, c’est autant « agréer » que « convaincre ». Un exemple illustre, il ne prouve pas.",
+      "phrases": {
+        "consigne": "Lis la phrase ou l’extrait, demande-toi à quoi s’adresse le discours et ce qu’il prouve vraiment, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "S’adresse-t-on à la raison (des preuves que chacun peut vérifier) ou au désir (le plaisir, l’émotion) ? Un cas suffit-il à prouver une règle ?",
+        "exemple": "« Prends ce parapluie : la météo annonce de la pluie » cherche à convaincre, par une raison. « Prends ce parapluie, il est si joli ! » cherche à persuader, par le plaisir.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Pascal, De l’esprit géométrique et de l’art de persuader : « il y a deux entrées par où les opinions sont reçues dans l’âme, qui sont ses deux principales puissances, l’entendement et la volonté. » Laquelle, dit-il, est « la plus naturelle » ?",
+          "nom": "l’entendement",
+          "explication": "Pascal : « La plus naturelle est celle de l’entendement, car on ne devrait jamais consentir qu’aux vérités démontrées ».",
+          "pieges": [
+            {
+              "texte": "la volonté",
+              "pourquoi": "Pour Pascal, la volonté est « la plus ordinaire », mais pas la plus naturelle."
+            },
+            {
+              "texte": "l’imagination",
+              "pourquoi": "Pascal ne nomme que deux entrées : l’entendement et la volonté."
+            }
+          ]
+        },
+        {
+          "texte": "Pascal ajoute que les hommes sont presque toujours « emportés à croire non pas par la preuve, mais par… »",
+          "nom": "l’agrément (ce qui plaît)",
+          "explication": "Pascal : « tout ce qu’il y a d’hommes sont presque toujours emportés à croire non pas par la preuve, mais par l’agrément ».",
+          "pieges": [
+            {
+              "texte": "la démonstration",
+              "pourquoi": "La démonstration est une preuve ; Pascal l’oppose justement à l’agrément."
+            },
+            {
+              "texte": "la peur",
+              "pourquoi": "Pascal oppose ici la preuve à l’agrément, c’est-à-dire au plaisir, pas à la peur."
+            }
+          ]
+        },
+        {
+          "texte": "Kant, Critique de la raison pure, traduction Barni : un jugement valable « pour quiconque du moins a de la raison » est une conviction. S’il a « uniquement son principe dans la nature particulière du sujet », on le nomme…",
+          "nom": "persuasion",
+          "explication": "Pour Kant, la persuasion ne vaut que pour celui qui juge ; la conviction vaut pour toute raison.",
+          "pieges": [
+            {
+              "texte": "savoir",
+              "pourquoi": "Le savoir est suffisant pour tous ; ici, le jugement ne vaut que pour le sujet."
+            },
+            {
+              "texte": "démonstration",
+              "pourquoi": "Une démonstration vaut pour quiconque la suit ; ici, le principe est seulement dans le sujet."
+            }
+          ]
+        },
+        {
+          "texte": "Selon Kant, comment distinguer une conviction d’une simple persuasion ?",
+          "nom": "Voir si le jugement peut se communiquer et valoir pour la raison de chacun.",
+          "explication": "Kant : la pierre de touche est extérieure ; elle consiste « dans la possibilité de le communiquer et de le trouver valable pour la raison de chaque homme ».",
+          "pieges": [
+            {
+              "texte": "Mesurer la force de sa propre assurance.",
+              "pourquoi": "Kant dit que, de l’intérieur, la persuasion ne se distingue pas de la conviction : l’épreuve est extérieure."
+            },
+            {
+              "texte": "Compter combien de personnes sont d’accord.",
+              "pourquoi": "Ce n’est pas un vote : il s’agit de savoir si les raisons valent pour la raison de chacun."
+            }
+          ]
+        },
+        {
+          "texte": "Une publicité montre un champion souriant, une boisson à la main, sans aucune information sur la boisson. Que cherche-t-elle ?",
+          "nom": "à persuader, en touchant le désir",
+          "explication": "Elle ne donne aucune raison vérifiable : elle associe la boisson au succès et au plaisir. Elle s’adresse au désir, pas à la raison.",
+          "pieges": [
+            {
+              "texte": "à convaincre par des preuves",
+              "pourquoi": "Il n’y a aucune preuve, aucune information : seulement une image agréable."
+            },
+            {
+              "texte": "à démontrer que la boisson est la meilleure",
+              "pourquoi": "Une démonstration part de principes admis et en tire une conclusion nécessaire ; ici, il n’y a qu’une image."
+            }
+          ]
+        },
+        {
+          "texte": "« Tous les nombres impairs sont premiers : la preuve, 3, 5 et 7 le sont. » Que vaut ce raisonnement ?",
+          "nom": "Rien : des exemples ne prouvent pas une règle, et 9 la réfute.",
+          "explication": "9 est impair mais 9 = 3 × 3 : il n’est pas premier. Des exemples illustrent ; un seul contre-exemple suffit à réfuter une règle générale.",
+          "pieges": [
+            {
+              "texte": "C’est une preuve, car il y a trois exemples.",
+              "pourquoi": "Aucun nombre d’exemples ne prouve une règle générale ; et 9 la contredit."
+            },
+            {
+              "texte": "La règle est vraie pour les petits nombres.",
+              "pourquoi": "9 est petit, impair, et il n’est pas premier : la règle est fausse dès 9."
+            }
+          ]
+        },
+        {
+          "texte": "« Si un nombre est divisible par 4, alors il est pair. Or 12 est divisible par 4. Donc 12 est pair. » Quelle est la conclusion ?",
+          "nom": "« 12 est pair. »",
+          "explication": "« donc » annonce la conclusion, qui découle nécessairement de la règle et du cas particulier.",
+          "pieges": [
+            {
+              "texte": "« Si un nombre est divisible par 4, alors il est pair. »",
+              "pourquoi": "C’est la règle générale d’où l’on part, pas ce qu’on conclut."
+            },
+            {
+              "texte": "« 12 est divisible par 4. »",
+              "pourquoi": "C’est le cas particulier, introduit par « or » ; la conclusion vient après « donc »."
+            }
+          ]
+        },
+        {
+          "texte": "Pascal : les vérités qui « se tirent, par une conséquence nécessaire, des principes communs et des vérités avouées » produisent « une nécessité inévitable de convaincre ». D’où vient la force d’une démonstration ?",
+          "nom": "Elle relie la conclusion, de façon nécessaire, à des principes déjà admis.",
+          "explication": "Si l’on accorde les principes et que chaque étape en découle, on ne peut refuser la conclusion : c’est convaincre, pas plaire.",
+          "pieges": [
+            {
+              "texte": "Elle plaît à celui qui écoute.",
+              "pourquoi": "Plaire, c’est « agréer » ; la démonstration convainc par la nécessité du raisonnement."
+            },
+            {
+              "texte": "Elle accumule beaucoup d’exemples.",
+              "pourquoi": "Des exemples ne rendent rien nécessaire ; la démonstration tire sa conclusion de principes admis."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "Philosophy: persuading, convincing, proving",
+        "idee": "To convince is to win agreement with proofs anyone can follow. To persuade also touches desire: for Pascal, it is as much « agréer » (pleasing) as « convaincre ». An example illustrates; it doesn't prove.",
+        "phrases": {
+          "consigne": "Read the sentence or the extract, ask yourself what the speech appeals to and what it really proves, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Does it appeal to reason (proofs anyone can check) or to desire (pleasure, emotion)? Is one case enough to prove a rule?",
+          "exemple": "« Prends ce parapluie : la météo annonce de la pluie » (take this umbrella: rain is forecast) aims to convince, with a reason. « Prends ce parapluie, il est si joli ! » (it's so pretty!) aims to persuade, through pleasure.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Pascal, De l’esprit géométrique et de l’art de persuader: « il y a deux entrées par où les opinions sont reçues dans l’âme, qui sont ses deux principales puissances, l’entendement et la volonté. » Which one, he says, is « la plus naturelle » (the most natural)?",
+            "nom": "the understanding (l’entendement)",
+            "explication": "Pascal: « La plus naturelle est celle de l’entendement, car on ne devrait jamais consentir qu’aux vérités démontrées » (we should only ever accept proven truths).",
+            "pieges": [
+              {
+                "texte": "the will (la volonté)",
+                "pourquoi": "For Pascal, the will is « la plus ordinaire » (the most common), but not the most natural."
+              },
+              {
+                "texte": "the imagination",
+                "pourquoi": "Pascal names only two entrances: the understanding and the will."
+              }
+            ]
+          },
+          {
+            "texte": "Pascal adds that people are almost always « emportés à croire non pas par la preuve, mais par… » (led to believe not by proof, but by…)",
+            "nom": "pleasure (l’agrément)",
+            "explication": "Pascal: « tout ce qu’il y a d’hommes sont presque toujours emportés à croire non pas par la preuve, mais par l’agrément ».",
+            "pieges": [
+              {
+                "texte": "demonstration",
+                "pourquoi": "A demonstration is a proof; Pascal sets it precisely against pleasure."
+              },
+              {
+                "texte": "fear",
+                "pourquoi": "Here Pascal sets proof against « agrément », that is pleasure, not fear."
+              }
+            ]
+          },
+          {
+            "texte": "Kant, Critique of Pure Reason, French translation by Barni: a judgement valid « pour quiconque du moins a de la raison » (for anyone who has reason) is a conviction. If it has « uniquement son principe dans la nature particulière du sujet » (its ground only in the particular nature of the subject), it is called…",
+            "nom": "persuasion",
+            "explication": "For Kant, persuasion only holds for the person judging; conviction holds for every reasoning mind.",
+            "pieges": [
+              {
+                "texte": "knowledge",
+                "pourquoi": "Knowledge is sufficient for everyone; here the judgement only holds for the subject."
+              },
+              {
+                "texte": "demonstration",
+                "pourquoi": "A demonstration holds for anyone who follows it; here the ground is only in the subject."
+              }
+            ]
+          },
+          {
+            "texte": "According to Kant, how can you tell a conviction from mere persuasion?",
+            "nom": "See whether the judgement can be shared and hold for everyone's reason.",
+            "explication": "Kant: the touchstone is external; it lies « dans la possibilité de le communiquer et de le trouver valable pour la raison de chaque homme ».",
+            "pieges": [
+              {
+                "texte": "Measure how strongly you feel sure.",
+                "pourquoi": "Kant says that from the inside, persuasion can't be told apart from conviction: the test is external."
+              },
+              {
+                "texte": "Count how many people agree.",
+                "pourquoi": "It isn't a vote: the question is whether the reasons hold for everyone's reason."
+              }
+            ]
+          },
+          {
+            "texte": "An advert shows a smiling champion holding a drink, with no information about the drink. What is it trying to do?",
+            "nom": "to persuade, by appealing to desire",
+            "explication": "It gives no checkable reason: it links the drink to success and pleasure. It speaks to desire, not to reason.",
+            "pieges": [
+              {
+                "texte": "to convince with proofs",
+                "pourquoi": "There's no proof, no information: just a pleasant image."
+              },
+              {
+                "texte": "to demonstrate that the drink is the best",
+                "pourquoi": "A demonstration starts from accepted principles and draws a necessary conclusion; here there's only an image."
+              }
+            ]
+          },
+          {
+            "texte": "« Tous les nombres impairs sont premiers : la preuve, 3, 5 et 7 le sont. » (All odd numbers are prime: proof, 3, 5 and 7 are.) What is this reasoning worth?",
+            "nom": "Nothing: examples don't prove a rule, and 9 refutes it.",
+            "explication": "9 is odd but 9 = 3 × 3: it isn't prime. Examples illustrate; a single counterexample is enough to refute a general rule.",
+            "pieges": [
+              {
+                "texte": "It's a proof, because there are three examples.",
+                "pourquoi": "No number of examples proves a general rule; and 9 contradicts it."
+              },
+              {
+                "texte": "The rule is true for small numbers.",
+                "pourquoi": "9 is small, odd and not prime: the rule fails as early as 9."
+              }
+            ]
+          },
+          {
+            "texte": "« Si un nombre est divisible par 4, alors il est pair. Or 12 est divisible par 4. Donc 12 est pair. » (If a number is divisible by 4, it is even. Now 12 is divisible by 4. So 12 is even.) What is the conclusion?",
+            "nom": "« 12 est pair. »",
+            "explication": "« donc » (so) introduces the conclusion, which follows necessarily from the rule and the particular case.",
+            "pieges": [
+              {
+                "texte": "« Si un nombre est divisible par 4, alors il est pair. »",
+                "pourquoi": "That's the general rule we start from, not what we conclude."
+              },
+              {
+                "texte": "« 12 est divisible par 4. »",
+                "pourquoi": "That's the particular case, introduced by « or »; the conclusion comes after « donc »."
+              }
+            ]
+          },
+          {
+            "texte": "Pascal: truths that « se tirent, par une conséquence nécessaire, des principes communs et des vérités avouées » (follow necessarily from common principles and admitted truths) produce « une nécessité inévitable de convaincre ». Where does a demonstration's strength come from?",
+            "nom": "It links the conclusion, necessarily, to principles already accepted.",
+            "explication": "If you grant the principles and each step follows from them, you can't refuse the conclusion: that's convincing, not pleasing.",
+            "pieges": [
+              {
+                "texte": "It pleases the listener.",
+                "pourquoi": "Pleasing is « agréer »; a demonstration convinces through the necessity of its reasoning."
+              },
+              {
+                "texte": "It piles up lots of examples.",
+                "pourquoi": "Examples make nothing necessary; a demonstration draws its conclusion from accepted principles."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "conscience-inconscient",
+      "titre": "Philosophie : la conscience et l’inconscient",
+      "niveau": "Terminale",
+      "prerequis": [
+        "croire-savoir"
+      ],
+      "programme": {
+        "source": "philoTle",
+        "texte": "Le programme propose à l’étude dix-sept notions : [...] La conscience [...] L’inconscient [...] Médiat/immédiat"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La conscience, c’est savoir ce qu’on pense ou fait, et juger le bien et le mal. Descartes : « je pense, donc je suis ». Leibniz : nous percevons sans nous en apercevoir. Freud : le lapsus trahit un souhait caché.",
+      "phrases": {
+        "consigne": "Lis l’extrait ou la situation, cherche ce qu’il dit de la conscience, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "S’en aperçoit-on, ou non ? Le sait-on directement, ou par un intermédiaire ? Parle-t-on de connaître, ou de juger le bien et le mal ?",
+        "exemple": "Je n’entends plus le tic-tac de la pendule, puis on me le fait remarquer et je l’entends : le bruit était perçu, mais pas aperçu par la conscience.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! C’est {bonne}."
+      },
+      "items": [
+        {
+          "texte": "Descartes, Discours de la méthode (1637), IVe partie : il décide de rejeter « comme absolument faux tout ce en quoi [il pourrait] imaginer le moindre doute ». Pourquoi ?",
+          "nom": "Pour voir s’il reste quelque chose d’entièrement indubitable.",
+          "explication": "Descartes le dit : c’est « afin de voir s’il ne resterait point après cela quelque chose en ma créance qui fût entièrement indubitable ». Le doute est une méthode.",
+          "pieges": [
+            {
+              "texte": "Parce qu’il pense que tout est faux.",
+              "pourquoi": "Il fait comme si tout était faux, pour trouver une certitude : c’est une méthode, pas une conviction."
+            },
+            {
+              "texte": "Pour ne plus jamais rien croire.",
+              "pourquoi": "Le doute vise au contraire à trouver une vérité sur laquelle bâtir."
+            }
+          ]
+        },
+        {
+          "texte": "Descartes, même partie : « je pense, donc je suis ». Pourquoi cette vérité résiste-t-elle au doute ?",
+          "nom": "Pour douter, il faut penser, et pour penser il faut être.",
+          "explication": "Descartes : pendant qu’il voulait penser que tout était faux, « il fallait nécessairement que moi qui le pensais fusse quelque chose ».",
+          "pieges": [
+            {
+              "texte": "Parce que les sens la confirment.",
+              "pourquoi": "Descartes a justement écarté les sens, parce qu’ils « nous trompent quelquefois »."
+            },
+            {
+              "texte": "Parce que tout le monde l’admet.",
+              "pourquoi": "Elle ne repose pas sur l’accord des autres : chacun la trouve en pensant lui-même."
+            }
+          ]
+        },
+        {
+          "texte": "Je connais l’heure en regardant ma montre. Cette connaissance est-elle médiate ou immédiate ?",
+          "nom": "médiate",
+          "explication": "Médiat : qui ne s’effectue que par un intermédiaire. Ici, l’intermédiaire est la montre.",
+          "pieges": [
+            {
+              "texte": "immédiate",
+              "pourquoi": "Immédiat veut dire sans intermédiaire ; or je passe par la montre."
+            },
+            {
+              "texte": "inconsciente",
+              "pourquoi": "Je sais très bien que je regarde ma montre : la connaissance est consciente, mais elle passe par un intermédiaire."
+            }
+          ]
+        },
+        {
+          "texte": "Leibniz, Nouveaux Essais sur l’entendement humain, avant-propos : pour entendre le bruit de la mer, « il faut bien qu’on entende les parties qui composent ce tout, c’est-à-dire le bruit de chaque vague ». Que veut-il montrer ?",
+          "nom": "Nous percevons chaque vague sans nous en apercevoir : il y a des perceptions inconscientes.",
+          "explication": "Chaque petit bruit ne se fait connaître que « dans l’assemblage confus de tous les autres ». Leibniz parle de « petites perceptions » sans aperception.",
+          "pieges": [
+            {
+              "texte": "Que la mer est trop bruyante pour penser.",
+              "pourquoi": "Leibniz ne parle pas de gêne : il montre qu’on perçoit des choses sans s’en rendre compte."
+            },
+            {
+              "texte": "Que nous entendons chaque vague séparément.",
+              "pourquoi": "C’est l’inverse : aucune vague n’est remarquée seule, et pourtant chacune est perçue."
+            }
+          ]
+        },
+        {
+          "texte": "Leibniz, même texte : « la coutume fait que nous ne prenons pas garde au mouvement d’un moulin ou à une chute d’eau, quand nous avons habité tout auprès ». Pourquoi ne remarque-t-on plus le moulin ?",
+          "nom": "Par habitude : le bruit nous touche encore, mais n’attire plus notre attention.",
+          "explication": "Leibniz précise que ce mouvement « frappe toujours nos organes » : la perception reste, c’est l’attention qui manque.",
+          "pieges": [
+            {
+              "texte": "Parce que le moulin s’est arrêté.",
+              "pourquoi": "Le moulin tourne toujours : c’est nous qui n’y prenons plus garde."
+            },
+            {
+              "texte": "Parce qu’on est devenu sourd.",
+              "pourquoi": "Leibniz dit que le bruit frappe toujours nos organes : on l’entend, sans le remarquer."
+            }
+          ]
+        },
+        {
+          "texte": "Dans Psychopathologie de la vie quotidienne (1901, chapitre V), Freud reprend l’exemple d’un président d’assemblée qui, au lieu d’ouvrir la séance, la déclara « close ». Quelle explication en est donnée ?",
+          "nom": "Il souhaitait en secret clore cette séance : ce souhait s’est dit malgré lui.",
+          "explication": "Le président « n’attendait rien de bon » de cette séance : le souhait de la clore s’est glissé dans ses mots. Le lapsus trahit une pensée cachée.",
+          "pieges": [
+            {
+              "texte": "Il était fatigué : l’erreur n’a aucun sens.",
+              "pourquoi": "L’explication proposée est justement un souhait caché : le mot choisi dit le contraire de son intention consciente."
+            },
+            {
+              "texte": "Il voulait faire rire l’assemblée.",
+              "pourquoi": "Il corrigea aussitôt son erreur : le lapsus n’était pas voulu."
+            }
+          ]
+        },
+        {
+          "texte": "« Avoir mauvaise conscience. » De quelle conscience s’agit-il ?",
+          "nom": "la conscience morale, qui juge le bien et le mal",
+          "explication": "On ne dit pas seulement qu’on sait ce qu’on a fait : on juge qu’on a mal agi. C’est la conscience morale.",
+          "pieges": [
+            {
+              "texte": "la conscience psychologique, savoir ce qu’on fait",
+              "pourquoi": "Savoir ce qu’on a fait ne suffit pas à avoir « mauvaise conscience » : il faut le juger mal."
+            },
+            {
+              "texte": "l’inconscient",
+              "pourquoi": "Avoir mauvaise conscience, c’est s’en rendre compte : ce n’est pas inconscient."
+            }
+          ]
+        },
+        {
+          "texte": "Si nous avons des perceptions ou des souhaits dont nous ne nous apercevons pas, que faut-il en conclure ?",
+          "nom": "La conscience ne connaît pas tout ce qui se passe en nous.",
+          "explication": "Les petites perceptions de Leibniz et les lapsus étudiés par Freud montrent une vie de l’esprit qui échappe en partie à la conscience.",
+          "pieges": [
+            {
+              "texte": "Que nous ne pensons jamais.",
+              "pourquoi": "Nous pensons, et nous le savons (Descartes) ; mais tout ne passe pas par la conscience."
+            },
+            {
+              "texte": "Que tout ce qui est en nous est conscient.",
+              "pourquoi": "C’est justement ce que ces exemples contestent : certaines perceptions et certains souhaits nous échappent."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "langue": "fr",
+        "titre": "Philosophy: consciousness and the unconscious",
+        "idee": "Consciousness is knowing what you think or do, and judging right and wrong. Descartes: « je pense, donc je suis ». Leibniz: we perceive without noticing. Freud: a slip of the tongue reveals a hidden wish.",
+        "phrases": {
+          "consigne": "Read the extract or the situation, find what it says about consciousness, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Do we notice it or not? Do we know it directly, or through something else? Is it about knowing, or about judging right and wrong?",
+          "exemple": "I no longer hear the clock ticking, then someone points it out and I hear it: the sound was perceived, but not noticed by consciousness.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! The answer is: {bonne}."
+        },
+        "items": [
+          {
+            "texte": "Descartes, Discours de la méthode (1637), part IV: he decides to reject « comme absolument faux tout ce en quoi [il pourrait] imaginer le moindre doute » (as absolutely false anything he could have the slightest doubt about). Why?",
+            "nom": "To see whether anything entirely beyond doubt remains.",
+            "explication": "Descartes says so: it's « afin de voir s’il ne resterait point après cela quelque chose en ma créance qui fût entièrement indubitable ». Doubt is a method.",
+            "pieges": [
+              {
+                "texte": "Because he thinks everything is false.",
+                "pourquoi": "He acts as if everything were false, in order to find a certainty: it's a method, not a conviction."
+              },
+              {
+                "texte": "So as never to believe anything again.",
+                "pourquoi": "On the contrary, doubt aims to find a truth to build on."
+              }
+            ]
+          },
+          {
+            "texte": "Descartes, same part: « je pense, donc je suis ». Why does this truth resist doubt?",
+            "nom": "To doubt you must think, and to think you must exist.",
+            "explication": "Descartes: while he wanted to think everything was false, « il fallait nécessairement que moi qui le pensais fusse quelque chose » (I, who was thinking it, necessarily had to be something).",
+            "pieges": [
+              {
+                "texte": "Because the senses confirm it.",
+                "pourquoi": "Descartes has precisely set the senses aside, because they « nous trompent quelquefois » (sometimes deceive us)."
+              },
+              {
+                "texte": "Because everyone accepts it.",
+                "pourquoi": "It doesn't rest on others agreeing: each person finds it by thinking for themselves."
+              }
+            ]
+          },
+          {
+            "texte": "I know the time by looking at my watch. Is this knowledge mediate or immediate?",
+            "nom": "mediate",
+            "explication": "Mediate: achieved only through an intermediary. Here the intermediary is the watch.",
+            "pieges": [
+              {
+                "texte": "immediate",
+                "pourquoi": "Immediate means with no intermediary; but I go through the watch."
+              },
+              {
+                "texte": "unconscious",
+                "pourquoi": "I know perfectly well that I'm looking at my watch: the knowledge is conscious, but it goes through an intermediary."
+              }
+            ]
+          },
+          {
+            "texte": "Leibniz, New Essays on Human Understanding, preface: to hear the noise of the sea, « il faut bien qu’on entende les parties qui composent ce tout, c’est-à-dire le bruit de chaque vague » (we must hear the parts that make up the whole, the noise of each wave). What does he want to show?",
+            "nom": "We perceive each wave without noticing it: there are unconscious perceptions.",
+            "explication": "Each little noise only makes itself known « dans l’assemblage confus de tous les autres » (in the confused mass of all the others). Leibniz speaks of « petites perceptions » without awareness.",
+            "pieges": [
+              {
+                "texte": "That the sea is too noisy to think.",
+                "pourquoi": "Leibniz isn't talking about being disturbed: he shows we perceive things without realising it."
+              },
+              {
+                "texte": "That we hear each wave separately.",
+                "pourquoi": "It's the opposite: no wave is noticed on its own, and yet each one is perceived."
+              }
+            ]
+          },
+          {
+            "texte": "Leibniz, same text: « la coutume fait que nous ne prenons pas garde au mouvement d’un moulin ou à une chute d’eau, quand nous avons habité tout auprès » (habit makes us stop noticing a mill or a waterfall when we've lived right next to it). Why don't we notice the mill any more?",
+            "nom": "Out of habit: the noise still reaches us, but no longer draws our attention.",
+            "explication": "Leibniz specifies that this movement « frappe toujours nos organes » (still strikes our senses): the perception remains, it's attention that is missing.",
+            "pieges": [
+              {
+                "texte": "Because the mill has stopped.",
+                "pourquoi": "The mill is still turning: it's we who no longer pay attention to it."
+              },
+              {
+                "texte": "Because we've gone deaf.",
+                "pourquoi": "Leibniz says the noise still strikes our senses: we hear it without noticing it."
+              }
+            ]
+          },
+          {
+            "texte": "In The Psychopathology of Everyday Life (1901, chapter V), Freud takes up the example of a chairman who, instead of opening a session, declared it « close » (closed). What explanation is given?",
+            "nom": "He secretly wished to close the session: the wish came out in spite of him.",
+            "explication": "The chairman « n’attendait rien de bon » (expected nothing good) from the session: the wish to close it slipped into his words. The slip reveals a hidden thought.",
+            "pieges": [
+              {
+                "texte": "He was tired: the mistake means nothing.",
+                "pourquoi": "The explanation given is precisely a hidden wish: the word chosen says the opposite of his conscious intention."
+              },
+              {
+                "texte": "He wanted to make the assembly laugh.",
+                "pourquoi": "He corrected his mistake at once: the slip wasn't deliberate."
+              }
+            ]
+          },
+          {
+            "texte": "« Avoir mauvaise conscience » (to have a guilty conscience). Which kind of consciousness is this?",
+            "nom": "moral conscience, which judges right and wrong",
+            "explication": "It doesn't just say you know what you did: you judge that you did wrong. That's moral conscience.",
+            "pieges": [
+              {
+                "texte": "psychological consciousness, knowing what you do",
+                "pourquoi": "Knowing what you did isn't enough to have a guilty conscience: you have to judge it wrong."
+              },
+              {
+                "texte": "the unconscious",
+                "pourquoi": "Having a guilty conscience means being aware of it: it isn't unconscious."
+              }
+            ]
+          },
+          {
+            "texte": "If we have perceptions or wishes we don't notice, what should we conclude?",
+            "nom": "Consciousness doesn't know everything going on inside us.",
+            "explication": "Leibniz's little perceptions and the slips studied by Freud show a mental life that partly escapes consciousness.",
+            "pieges": [
+              {
+                "texte": "That we never think.",
+                "pourquoi": "We do think, and we know it (Descartes); but not everything passes through consciousness."
+              },
+              {
+                "texte": "That everything in us is conscious.",
+                "pourquoi": "That's exactly what these examples challenge: some perceptions and some wishes escape us."
               }
             ]
           }

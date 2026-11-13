@@ -1,0 +1,125 @@
+id: focalisation
+titre: "Le point de vue dans le récit (la focalisation)"
+niveau: 2de
+prerequis: ["comprendre-recit", "genres-litteraires"]
+programme: { source: lycee2de, texte: "L’objectif en classe de seconde est d'approfondir cette approche en proposant des œuvres de la littérature française et francophone du XVIIIe au XXIe siècle, inscrites dans une perspective historique et culturelle de l'évolution des formes narratives." }
+activite: quiz
+parametres: {}
+idee: "La focalisation est le point de vue du récit. Zéro : le narrateur sait tout. Interne : on ne sait que ce que perçoit un personnage. Externe : on voit de l’extérieur, sans les pensées."
+phrases:
+  consigne: "Lis le passage, demande-toi qui voit et qui sait, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Connaît-on les pensées d’un seul personnage, de tous, ou d’aucun ? Le lecteur en sait-il plus que le personnage ?"
+  exemple: "« Paul ouvrit la porte. Il eut peur : la pièce était trop sombre. » : on sait ce que ressent Paul, et lui seul : c’est une focalisation interne."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Le narrateur connaît le passé de tous les personnages, leurs pensées, et ce qui se passe au même moment dans une autre ville. Quel point de vue ?"
+    nom: "la focalisation zéro (narrateur omniscient)"
+    explication: "Le narrateur sait tout, bien plus qu’aucun personnage : c’est la focalisation zéro."
+    pieges:
+      - { texte: "la focalisation interne", pourquoi: "En focalisation interne, on ne sait que ce que perçoit un seul personnage ; ici, le narrateur sait tout." }
+      - { texte: "la focalisation externe", pourquoi: "En focalisation externe, on n’entre dans aucune pensée ; ici, on connaît les pensées de tous." }
+  - texte: "On ne voit, on n’entend et on ne comprend que ce que voit, entend et comprend un seul personnage. Quel point de vue ?"
+    nom: "la focalisation interne"
+    explication: "Le récit passe par les yeux et l’esprit d’un personnage : c’est la focalisation interne."
+    pieges:
+      - { texte: "la focalisation zéro", pourquoi: "En focalisation zéro, le narrateur sait tout ; ici, on est limité à un personnage." }
+      - { texte: "la focalisation externe", pourquoi: "En focalisation externe, on ne connaît pas les pensées ; ici, on sait ce que comprend le personnage." }
+  - texte: "« Un homme entra. Il posa son chapeau sur la table, regarda la pendule et ressortit sans un mot. » On ne sait ni qui il est, ni ce qu’il pense. Quel point de vue ?"
+    nom: "la focalisation externe"
+    explication: "On voit seulement les gestes, de l’extérieur, comme une caméra : c’est la focalisation externe."
+    pieges:
+      - { texte: "la focalisation interne", pourquoi: "On n’entre pas dans les pensées de l’homme : on ne voit que ses gestes." }
+      - { texte: "la focalisation zéro", pourquoi: "Un narrateur omniscient dirait qui est cet homme et pourquoi il part ; ici, on l’ignore." }
+  - texte: "Stendhal, La Chartreuse de Parme (1839), chapitre III, la bataille de Waterloo : « — Les habits rouges ! les habits rouges ! criaient avec joie les hussards de l’escorte, et d’abord Fabrice ne comprenait pas ; enfin il remarqua qu’en effet presque tous les cadavres étaient vêtus de rouge. » Quel point de vue domine ?"
+    nom: "la focalisation interne, par Fabrice"
+    explication: "On découvre la scène avec Fabrice : d’abord il ne comprend pas, puis il remarque. Le lecteur n’en sait pas plus que lui."
+    pieges:
+      - { texte: "la focalisation zéro", pourquoi: "Un narrateur omniscient expliquerait tout de suite qui sont les « habits rouges » ; ici, on comprend en même temps que Fabrice." }
+      - { texte: "la focalisation externe", pourquoi: "On sait ce que Fabrice comprend et remarque : on est dans sa tête, pas seulement à l’extérieur." }
+  - texte: "Dans le même chapitre, Fabrice demande à un soldat : « ceci est-il une véritable bataille ? » Quel effet produit ce point de vue ?"
+    nom: "La bataille paraît confuse : on la voit par un jeune homme qui ne la comprend pas."
+    explication: "Fabrice dit que c’est la première fois qu’il assiste à une bataille : à travers lui, Waterloo n’est que bruit et désordre, sans vue d’ensemble."
+    pieges:
+      - { texte: "La bataille est racontée comme dans un livre d’histoire, avec tous les mouvements des armées.", pourquoi: "Au contraire : on ne voit que ce que voit Fabrice, sans vue d’ensemble." }
+      - { texte: "Fabrice est un général qui dirige la bataille.", pourquoi: "Il dit lui-même que c’est la première fois qu’il assiste à une bataille." }
+  - texte: "Stendhal écrit dans ce chapitre : « Nous avouerons que notre héros était fort peu héros en ce moment. » Qui parle ici ?"
+    nom: "le narrateur, qui commente son personnage"
+    explication: "« Nous » et « notre héros » : le narrateur intervient pour juger Fabrice, avec ironie. Il sort un moment du point de vue de Fabrice."
+    pieges:
+      - { texte: "Fabrice, qui pense", pourquoi: "Fabrice ne s’appelle pas lui-même « notre héros » : c’est le narrateur qui le juge." }
+      - { texte: "le général, qui crie", pourquoi: "Les paroles des personnages sont annoncées par des tirets ; cette phrase est un commentaire du narrateur." }
+  - texte: "« Sophie regarda la mer. Elle se demandait si son frère reviendrait avant l’orage. » Quel indice montre une focalisation interne ?"
+    nom: "On entre dans les pensées de Sophie (« elle se demandait »)."
+    explication: "Le texte donne accès à ce que pense Sophie, et à elle seule : c’est le signe d’une focalisation interne."
+    pieges:
+      - { texte: "Le verbe « regarda » est au passé simple.", pourquoi: "Le temps du verbe ne dit rien du point de vue : c’est l’accès aux pensées qui compte." }
+      - { texte: "Il y a deux personnages.", pourquoi: "Le nombre de personnages ne change pas le point de vue : on suit les pensées de Sophie seulement." }
+  - texte: "Pourquoi un auteur choisit-il souvent la focalisation interne pour créer du suspense ?"
+    nom: "Le lecteur n’en sait pas plus que le personnage : il découvre avec lui."
+    explication: "Limité à ce que perçoit le personnage, le lecteur ignore la suite et la menace : il attend, comme lui."
+    pieges:
+      - { texte: "Pour tout expliquer au lecteur dès le début.", pourquoi: "C’est ce que permettrait la focalisation zéro ; la focalisation interne cache ce que le personnage ignore." }
+      - { texte: "Pour ne montrer aucune pensée.", pourquoi: "C’est la focalisation externe ; la focalisation interne montre les pensées d’un personnage." }
+
+en:
+  langue: "fr"
+  titre: "French: point of view in narrative (focalisation)"
+  idee: "Focalisation is the story's point of view. Zero: the narrator knows everything. Internal: we only know what one character perceives. External: we see from outside, without thoughts."
+  phrases:
+    consigne: "Read the passage in French, ask yourself who sees and who knows, then touch the right answer."
+    question: "{texte}"
+    indice: "Do we know the thoughts of one character, of all of them, or of none? Does the reader know more than the character?"
+    exemple: "« Paul ouvrit la porte. Il eut peur : la pièce était trop sombre. »: we know what Paul feels, and only Paul: it's internal focalisation."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "The narrator knows every character's past, their thoughts, and what is happening at the same moment in another town. Which point of view?"
+      nom: "zero focalisation (omniscient narrator)"
+      explication: "The narrator knows everything, far more than any character: it's zero focalisation."
+      pieges:
+        - { texte: "internal focalisation", pourquoi: "With internal focalisation, we only know what one character perceives; here the narrator knows everything." }
+        - { texte: "external focalisation", pourquoi: "With external focalisation, we enter no one's thoughts; here we know everyone's." }
+    - texte: "We only see, hear and understand what one single character sees, hears and understands. Which point of view?"
+      nom: "internal focalisation"
+      explication: "The story passes through one character's eyes and mind: it's internal focalisation."
+      pieges:
+        - { texte: "zero focalisation", pourquoi: "With zero focalisation, the narrator knows everything; here we're limited to one character." }
+        - { texte: "external focalisation", pourquoi: "With external focalisation, we don't know the thoughts; here we know what the character understands." }
+    - texte: "« Un homme entra. Il posa son chapeau sur la table, regarda la pendule et ressortit sans un mot. » We don't know who he is or what he thinks. Which point of view?"
+      nom: "external focalisation"
+      explication: "We only see his actions, from the outside, like a camera: it's external focalisation."
+      pieges:
+        - { texte: "internal focalisation", pourquoi: "We don't enter the man's thoughts: we only see what he does." }
+        - { texte: "zero focalisation", pourquoi: "An omniscient narrator would tell us who the man is and why he leaves; here we don't know." }
+    - texte: "Stendhal, La Chartreuse de Parme (1839), chapter III, the Battle of Waterloo: « — Les habits rouges ! les habits rouges ! criaient avec joie les hussards de l’escorte, et d’abord Fabrice ne comprenait pas ; enfin il remarqua qu’en effet presque tous les cadavres étaient vêtus de rouge. » Which point of view dominates?"
+      nom: "internal focalisation, through Fabrice"
+      explication: "We discover the scene with Fabrice: at first he doesn't understand, then he notices. The reader knows no more than he does."
+      pieges:
+        - { texte: "zero focalisation", pourquoi: "An omniscient narrator would explain straight away who the « habits rouges » (redcoats) are; here we understand at the same time as Fabrice." }
+        - { texte: "external focalisation", pourquoi: "We know what Fabrice understands and notices: we're inside his head, not just outside." }
+    - texte: "In the same chapter, Fabrice asks a soldier: « ceci est-il une véritable bataille ? » (is this a real battle?). What effect does this point of view create?"
+      nom: "The battle seems confused: we see it through a young man who doesn't understand it."
+      explication: "Fabrice says it's the first time he has been at a battle: through him, Waterloo is just noise and chaos, with no overall view."
+      pieges:
+        - { texte: "The battle is told as in a history book, with all the armies' movements.", pourquoi: "On the contrary: we only see what Fabrice sees, with no overall view." }
+        - { texte: "Fabrice is a general commanding the battle.", pourquoi: "He says himself that it's the first time he has been at a battle." }
+    - texte: "Stendhal writes in this chapter: « Nous avouerons que notre héros était fort peu héros en ce moment. » Who is speaking here?"
+      nom: "the narrator, commenting on his character"
+      explication: "« Nous » (we) and « notre héros » (our hero): the narrator steps in to judge Fabrice, ironically. He briefly leaves Fabrice's point of view."
+      pieges:
+        - { texte: "Fabrice, thinking", pourquoi: "Fabrice doesn't call himself « notre héros »: it's the narrator judging him." }
+        - { texte: "the general, shouting", pourquoi: "The characters' words are introduced by dashes; this sentence is the narrator's comment." }
+    - texte: "« Sophie regarda la mer. Elle se demandait si son frère reviendrait avant l’orage. » Which clue shows internal focalisation?"
+      nom: "We enter Sophie's thoughts (« elle se demandait », she wondered)."
+      explication: "The text gives access to what Sophie thinks, and only Sophie: that's the sign of internal focalisation."
+      pieges:
+        - { texte: "The verb « regarda » is in the passé simple.", pourquoi: "The tense says nothing about point of view: what counts is access to thoughts." }
+        - { texte: "There are two characters.", pourquoi: "The number of characters doesn't change the point of view: we only follow Sophie's thoughts." }
+    - texte: "Why do authors often choose internal focalisation to create suspense?"
+      nom: "The reader knows no more than the character: they discover things together."
+      explication: "Limited to what the character perceives, the reader doesn't know what comes next or what threatens: they wait, like the character."
+      pieges:
+        - { texte: "To explain everything to the reader from the start.", pourquoi: "That's what zero focalisation allows; internal focalisation hides what the character doesn't know." }
+        - { texte: "To show no thoughts at all.", pourquoi: "That's external focalisation; internal focalisation shows one character's thoughts." }

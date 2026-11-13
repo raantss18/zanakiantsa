@@ -25,7 +25,28 @@ sources:
   # ⚠ La partie « Grammaire » a été modifiée par un arrêté publié au BO n° 40 du 22 octobre 2020 : à recouper.
   lycee2de: "https://www.snes.edu/IMG/pdf/francais_annexe-1_2e_bo-annote.pdf"
   lycee1re: "https://www.snes.edu/IMG/pdf/francais_annexe-2_1egt_bo-2.pdf"
-ordre: [syllabes, rimes, debut, lettres-capitales, lettres-minuscules, premiere-lettre, lettres-cursives, tracer-capitales, lire-syllabes, lire-syllabes-suite, tracer-cursive, lire-mots, ecrire-mots, lire-petites-phrases, lire-phrases, comprendre-texte, classes-de-mots, types-de-phrases, sujet-et-verbe, present-er, reprises-texte, implicite-texte, pluriel-noms, accord-groupe-nominal, synonymes-contraires, sens-propre-figure, present, imparfait, participe-passe-etre, futur, passe-simple, homophones-grammaticaux, complements-verbe, familles-de-mots, essentiel-texte, conditionnel, imperatif, attribut-ou-cod, accord-sujet-verbe, identifier-temps, participe-passe-avoir, discours-rapporte, comprendre-recit, subjonctif-present, temps-composes, voix-passive, expansions-nom, valeurs-temps-recit, texte-argumentatif, subjonctif-passe, subordonnees, circonstancielles-mode, connecteurs-logiques, analyse-poeme, genres-litteraires, figures-de-style, versification, phrase-complexe, relatives-dont, argumentation, circonstancielles, interrogation, registres]
+  # Terminale générale : le français n'y est plus enseigné, la philosophie l'est. Programme de philosophie de terminale
+  # générale, annexe 1 de l'arrêté du 19 juillet 2019, BO spécial n° 8 du 25 juillet 2019 (notions, repères), lu le
+  # 2026-11-13 (la page du BO refuse la lecture automatique : 403).
+  philoTle: "https://cache.media.eduscol.education.fr/file/SPE8_MENJ_25_7_2019/15/9/spe238_annexe1_1159159.pdf"
+  # Extraits du domaine public, vérifiés sur Wikisource le 2026-11-13 :
+  # conte-petit-poucet : Perrault (mort en 1703), « Le Petit Poucet » (1697), texte de l'éd. Casterman 1902
+  # https://fr.wikisource.org/wiki/Contes_de_Perrault_(éd._1902)/Le_Petit_Poucet ; moralité (graphie modernisée) de l'éd.
+  # originale https://fr.wikisource.org/wiki/Histoires_ou_Contes_du_temps_passé_(1697)/Original/Le_petit_Poucet
+  # focalisation : Stendhal (mort en 1842), La Chartreuse de Parme, ch. III
+  # https://fr.wikisource.org/wiki/La_Chartreuse_de_Parme_(édition_Martineau,_1927)/Chapitre_III
+  # negation : La Fontaine (mort en 1695), « Les Animaux malades de la peste », Fables VII, 1
+  # https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_(éd._1874)/Les_Animaux_malades_de_la_peste
+  # croire-savoir, persuader-convaincre : Kant (mort en 1804), Critique de la raison pure, trad. Barni (mort en 1878),
+  # Méthodologie, ch. 2, 3e section https://fr.wikisource.org/wiki/Critique_de_la_raison_pure_(trad._Barni)/Méthodologie_transcendentale/Chapitre_2 ;
+  # Pascal (mort en 1662) https://fr.wikisource.org/wiki/De_l’esprit_géométrique_et_de_l’art_de_persuader
+  # Définitions (convaincre, persuader, médiat, conscience) : TLFi et Académie 9e éd. sur https://www.cnrtl.fr/definition/
+  # conscience-inconscient : Descartes (mort en 1650), Discours de la méthode, IVe partie (graphie modernisée)
+  # https://fr.wikisource.org/wiki/Discours_de_la_méthode_(éd._Cousin)/Quatrième_partie ; Leibniz (mort en 1716),
+  # Nouveaux Essais, avant-propos https://fr.wikisource.org/wiki/Nouveaux_Essais_sur_l’entendement_humain/Avant-propos ;
+  # Freud (mort en 1939), Psychopathologie de la vie quotidienne, ch. V, trad. S. Jankélévitch (mort en 1951)
+  # https://fr.wikisource.org/wiki/Psychopathologie_de_la_vie_quotidienne/5
+ordre: [syllabes, rimes, debut, lettres-capitales, lettres-minuscules, premiere-lettre, lettres-cursives, tracer-capitales, lire-syllabes, lire-syllabes-suite, tracer-cursive, lire-mots, ecrire-mots, lire-petites-phrases, lire-phrases, comprendre-texte, classes-de-mots, types-de-phrases, sujet-et-verbe, present-er, reprises-texte, implicite-texte, pluriel-noms, accord-groupe-nominal, synonymes-contraires, sens-propre-figure, present, imparfait, participe-passe-etre, futur, passe-simple, homophones-grammaticaux, complements-verbe, familles-de-mots, essentiel-texte, conditionnel, imperatif, attribut-ou-cod, pronoms-personnels, conte-petit-poucet, accord-sujet-verbe, identifier-temps, participe-passe-avoir, discours-rapporte, comprendre-recit, subjonctif-present, temps-composes, voix-passive, expansions-nom, valeurs-temps-recit, texte-argumentatif, subjonctif-passe, subordonnees, circonstancielles-mode, connecteurs-logiques, analyse-poeme, genres-litteraires, figures-de-style, versification, phrase-complexe, relatives-dont, focalisation, argumentation, circonstancielles, interrogation, negation, registres, croire-savoir, persuader-convaincre, conscience-inconscient]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:

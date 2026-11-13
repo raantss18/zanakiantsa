@@ -1,0 +1,125 @@
+id: pronoms-personnels
+titre: "Le pronom personnel : ce qu’il reprend, sa fonction"
+niveau: 6e
+prerequis: ["reprises-texte", "complements-verbe"]
+programme: { source: cycle3, texte: "Identifier aisément les pronoms personnels et préciser leur fonction ; Mettre en relation un pronom personnel avec son antécédent" }
+activite: quiz
+parametres: {}
+idee: "Un pronom personnel remplace un nom déjà cité, son antécédent. Pour trouver sa fonction, on remet ce nom à sa place : « Je la vois » → « Je vois la mer » : « la » est COD. « lui », « leur » sont COI."
+phrases:
+  consigne: "Lis la phrase, cherche ce que le pronom remplace ou quelle est sa fonction, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Remets à la place du pronom le nom qu’il remplace. La phrase garde-t-elle son sens ? Y a-t-il « à » devant ce nom ?"
+  exemple: "« Léa cherche sa clé. Elle la trouve sous le lit. » : « la » remplace « sa clé » ; on dit « Elle trouve sa clé », sans « à » : « la » est COD."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » Que remplace « la » ?"
+    nom: "une lettre"
+    explication: "« Il donne la lettre à Mme Rabe » : « la » remplace « une lettre »."
+    pieges:
+      - { texte: "Mme Rabe", pourquoi: "Mme Rabe est remplacée par « lui » : on donne la lettre À Mme Rabe." }
+      - { texte: "le facteur", pourquoi: "Le facteur est remplacé par « Il », le sujet : c’est lui qui donne." }
+  - texte: "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » Que remplace « lui » ?"
+    nom: "Mme Rabe"
+    explication: "On donne la lettre à Mme Rabe : « lui » remplace « à Mme Rabe »."
+    pieges:
+      - { texte: "une lettre", pourquoi: "La lettre est remplacée par « la » : c’est ce qu’on donne." }
+      - { texte: "le facteur", pourquoi: "Le facteur est remplacé par « Il », le sujet de « donne »." }
+  - texte: "Dans « Il la lui donne », quelle est la fonction de « lui » ?"
+    nom: "complément d’objet indirect (COI)"
+    explication: "« lui » remplace « à Mme Rabe » : le complément est construit avec « à », il est indirect."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "Le COD répond à « donne quoi ? » : c’est « la » (la lettre). « lui » remplace « à Mme Rabe »." }
+      - { texte: "sujet", pourquoi: "Le sujet est « Il » : c’est lui qui fait l’action de donner." }
+  - texte: "« Mes cousins arrivent demain ; je les attends à la gare. » Quelle est la fonction de « les » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "« J’attends mes cousins », sans préposition : « les » est COD."
+    pieges:
+      - { texte: "sujet", pourquoi: "Le sujet de « attends » est « je »." }
+      - { texte: "déterminant", pourquoi: "Ici, « les » est devant un verbe et remplace « mes cousins » : c’est un pronom. Déterminant, il serait devant un nom (« les cousins »)." }
+  - texte: "« Les élèves rencontrent deux pompiers ; ils leur posent des questions. » Que remplace « leur » ?"
+    nom: "deux pompiers"
+    explication: "Les élèves posent des questions aux pompiers : « leur » remplace « aux pompiers »."
+    pieges:
+      - { texte: "les élèves", pourquoi: "Les élèves sont remplacés par « ils », le sujet : ce sont eux qui posent les questions." }
+      - { texte: "des questions", pourquoi: "« des questions » est le COD (poser quoi ?) ; il n’est pas remplacé, il est écrit." }
+  - texte: "Dans « ils leur posent des questions », pourquoi « leur » n’a-t-il pas de -s ?"
+    nom: "Parce que le pronom « leur » ne s’accorde jamais."
+    explication: "Devant un verbe, « leur » veut dire « à eux, à elles » : ce pronom est invariable. « leurs » avec -s est un déterminant devant un nom pluriel (« leurs questions »)."
+    pieges:
+      - { texte: "Parce que les pompiers ne sont que deux.", pourquoi: "Le nombre ne change rien : devant un verbe, le pronom « leur » reste toujours sans -s." }
+      - { texte: "C’est une faute d’orthographe.", pourquoi: "Ce n’en est pas une : « leur » remplace « à eux », et ce pronom ne prend jamais de -s." }
+  - texte: "Dans « Tu me parles. », quelle est la fonction de « me » ?"
+    nom: "complément d’objet indirect (COI)"
+    explication: "On parle À quelqu’un : « Tu parles à moi ». « me » est COI."
+    pieges:
+      - { texte: "complément d’objet direct (COD)", pourquoi: "On parle À quelqu’un : le complément est construit avec « à », il est indirect." }
+      - { texte: "sujet", pourquoi: "Le sujet est « Tu » : c’est lui qui parle." }
+  - texte: "Dans « Tu me regardes. », quelle est la fonction de « me » ?"
+    nom: "complément d’objet direct (COD)"
+    explication: "On regarde quelqu’un, sans « à » : « Tu regardes moi ». « me » est COD."
+    pieges:
+      - { texte: "complément d’objet indirect (COI)", pourquoi: "On regarde quelqu’un sans préposition : le complément est direct." }
+      - { texte: "attribut du sujet", pourquoi: "« regarder » n’est pas un verbe d’état comme « être » ou « sembler » : « me » est COD." }
+
+en:
+  langue: "fr"
+  titre: "French: personal pronouns, what they replace and their function"
+  idee: "A French personal pronoun replaces a noun already mentioned, its antecedent. To find its function, put the noun back: « Je la vois » → « Je vois la mer »: « la » is a direct object. « lui », « leur » are indirect."
+  phrases:
+    consigne: "Read the French sentence, find what the pronoun replaces or what its function is, then touch the right answer."
+    question: "{texte}"
+    indice: "Put the noun the pronoun replaces back in its place. Does the sentence still make sense? Is there « à » in front of that noun?"
+    exemple: "« Léa cherche sa clé. Elle la trouve sous le lit. »: « la » replaces « sa clé »; we say « Elle trouve sa clé », with no « à »: « la » is a direct object."
+    demonstration: "{explication}"
+    bravo: "Yes! It's {bonne}."
+  items:
+    - texte: "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » What does « la » replace?"
+      nom: "une lettre"
+      explication: "« Il donne la lettre à Mme Rabe »: « la » replaces « une lettre » (a letter)."
+      pieges:
+        - { texte: "Mme Rabe", pourquoi: "Mme Rabe is replaced by « lui »: the letter is given TO Mme Rabe." }
+        - { texte: "le facteur", pourquoi: "The postman is replaced by « Il », the subject: he is the one giving." }
+    - texte: "« Le facteur apporte une lettre à Mme Rabe. Il la lui donne en souriant. » What does « lui » replace?"
+      nom: "Mme Rabe"
+      explication: "The letter is given to Mme Rabe: « lui » replaces « à Mme Rabe »."
+      pieges:
+        - { texte: "une lettre", pourquoi: "The letter is replaced by « la »: it's what is given." }
+        - { texte: "le facteur", pourquoi: "The postman is replaced by « Il », the subject of « donne »." }
+    - texte: "In « Il la lui donne », what is the function of « lui »?"
+      nom: "indirect object (COI)"
+      explication: "« lui » replaces « à Mme Rabe »: the complement is built with « à », so it's indirect."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "The direct object answers « gives what? »: it's « la » (the letter). « lui » replaces « à Mme Rabe »." }
+        - { texte: "subject", pourquoi: "The subject is « Il »: he is the one doing the giving." }
+    - texte: "« Mes cousins arrivent demain ; je les attends à la gare. » What is the function of « les »?"
+      nom: "direct object (COD)"
+      explication: "« J’attends mes cousins », with no preposition: « les » is a direct object."
+      pieges:
+        - { texte: "subject", pourquoi: "The subject of « attends » is « je »." }
+        - { texte: "determiner", pourquoi: "Here « les » comes before a verb and replaces « mes cousins »: it's a pronoun. As a determiner it would come before a noun (« les cousins »)." }
+    - texte: "« Les élèves rencontrent deux pompiers ; ils leur posent des questions. » What does « leur » replace?"
+      nom: "deux pompiers"
+      explication: "The pupils ask the firefighters questions: « leur » replaces « aux pompiers »."
+      pieges:
+        - { texte: "les élèves", pourquoi: "The pupils are replaced by « ils », the subject: they are the ones asking." }
+        - { texte: "des questions", pourquoi: "« des questions » is the direct object (ask what?); it isn't replaced, it's written out." }
+    - texte: "In « ils leur posent des questions », why does « leur » have no -s?"
+      nom: "Because the pronoun « leur » never agrees."
+      explication: "Before a verb, « leur » means « to them »: this pronoun never changes. « leurs » with -s is a determiner before a plural noun (« leurs questions »)."
+      pieges:
+        - { texte: "Because there are only two firefighters.", pourquoi: "The number makes no difference: before a verb, the pronoun « leur » never takes an -s." }
+        - { texte: "It's a spelling mistake.", pourquoi: "It isn't: « leur » replaces « à eux », and this pronoun never takes an -s." }
+    - texte: "In « Tu me parles. », what is the function of « me »?"
+      nom: "indirect object (COI)"
+      explication: "In French you speak TO someone: « Tu parles à moi ». « me » is an indirect object."
+      pieges:
+        - { texte: "direct object (COD)", pourquoi: "In French you speak TO someone: the complement is built with « à », so it's indirect." }
+        - { texte: "subject", pourquoi: "The subject is « Tu »: that's who is speaking." }
+    - texte: "In « Tu me regardes. », what is the function of « me »?"
+      nom: "direct object (COD)"
+      explication: "In French you look at someone with no « à »: « Tu regardes moi ». « me » is a direct object."
+      pieges:
+        - { texte: "indirect object (COI)", pourquoi: "« regarder » takes its complement with no preposition: it's direct." }
+        - { texte: "subject complement", pourquoi: "« regarder » isn't a linking verb like « être » or « sembler »: « me » is a direct object." }
