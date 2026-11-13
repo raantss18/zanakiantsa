@@ -73,7 +73,10 @@ void main() {
     // haut, rien sous le CM2) ; à 13 ans, plus du tout.
     expect(shown, contains('sons'));
     expect(all.firstWhere((t) => t.id == 'sons').skills.any((s) => s.ref.level >= floorForClass(classForAge(13))), isFalse);
-    expect(shown, isNot(contains('motifs')));
+    // « Les suites » va jusqu'à la 6e (programme du cycle 3) : proposé à 12 ans, sans ses leçons de maternelle ; à 14 ans,
+    // plus du tout.
+    expect(shown, contains('motifs'));
+    expect(all.firstWhere((t) => t.id == 'motifs').skills.any((s) => s.ref.level >= floorForClass(classForAge(14))), isFalse);
     expect(shown, contains('dessin'), reason: 'le dessin libre est pour tous les âges');
     final tops = {for (final t in all) t.id: t.skills.map((s) => s.ref.level).reduce(max)};
     for (var d = 0; d < 14; d++) {
@@ -195,6 +198,31 @@ void main() {
         ...DayPlan.of(DateTime(2026, 9, 1).add(Duration(days: d)), const [], classe: cm2, visible: candidates).items.map((i) => i.theme),
     ];
     expect(themes, contains('sons'));
+  });
+
+  // Suites et tableaux jusqu'à la 6e (programmes de maths des cycles 2 et 3) : un enfant de 6e n'a plus les suites de
+  // maternelle, et sa journée (horaires du CM et de la 6e) leur fait une place.
+  test('suites, 11 ans (6e) : rien sous le CM1, des leçons à apprendre, et les suites dans la journée du CM et de la 6e', () {
+    final motifs = all.firstWhere((t) => t.id == 'motifs');
+    final sixieme = classForAge(11);
+    expect(schoolLevels[sixieme], '6e');
+    final p = progressFor(motifs, sixieme);
+    final level = {for (final s in motifs.skills) s.id: s.ref.level};
+    for (var d = 0; d < 30; d++) {
+      for (final id in p.plan(DateTime(2026, 11, 1 + d))) {
+        expect(level[id]!, greaterThanOrEqualTo(floorForClass(sixieme)), reason: id);
+      }
+    }
+    expect(p.belowFloor('motif-ab'), isTrue);
+    expect(level[p.newSkill!]!, greaterThanOrEqualTo(levelRank('CM1')));
+    const candidates = ['lire', 'compter', 'anglais', 'nature', 'explorer', 'dessin', 'motifs'];
+    for (final classe in [classForAge(10), sixieme]) {
+      final themes = [
+        for (var d = 0; d < 60; d++)
+          ...DayPlan.of(DateTime(2026, 9, 1).add(Duration(days: d)), const [], classe: classe, visible: candidates).items.map((i) => i.theme),
+      ];
+      expect(themes, contains('motifs'), reason: schoolLevels[classe]);
+    }
   });
 
   // Demande d'Antsa du 2026-11-12 : « si l'enfant est en 6e, les cours qu'il doit pouvoir voir sont CM1 à 4e ».

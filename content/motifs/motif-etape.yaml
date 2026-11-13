@@ -1,0 +1,128 @@
+id: motif-etape
+titre: "Une étape lointaine d'un motif qui grandit"
+niveau: CM2
+prerequis: [motif-regularite]
+# Programme de mathématiques du cycle 3 (2025), « Algèbre », Cours moyen deuxième année, objectifs d'apprentissage, lu le
+# 2026-11-13 (texte cité ci-dessous ; la même partie parle d'exprimer « la relation […] entre le rang d’un élément et la
+# valeur associée »). Motifs et nombres choisis par l'app. La leçon « Une boucle qui fabrique une suite » (code, CM2)
+# calcule des termes avec une boucle ; ici, on raisonne sur le motif, sans programme.
+programme: { source: c3, texte: "Trouver le nombre d’éléments pour une étape donnée dans une suite de motifs évolutive" }
+activite: quiz
+parametres: {}
+idee: "Pour une étape lointaine, sans tout dessiner, on cherche ce qu'il y a au départ et ce qu'on ajoute à chaque étape. Attention : de l'étape 1 à l'étape 10, il n'y a que 9 ajouts."
+phrases:
+  consigne: "Trouve ce qu'on ajoute à chaque étape, compte les ajouts, puis touche la réponse."
+  question: "{texte}"
+  indice: "Trouve ce qu'on ajoute à chaque étape. Puis compte les ajouts : de l'étape 1 à une étape donnée, il y en a un de moins que le numéro de l'étape."
+  exemple: "Exemple : étape 1, 7 ronds ; étape 2, 9 ; étape 3, 11. On ajoute 2 à chaque étape. Pour l'étape 20, on part de 7 et on fait 19 ajouts de 2 : 7 + 19 × 2 = 45 ronds."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Une rangée de carrés en allumettes : 1 carré, 4 allumettes ; 2 carrés, 7 ; 3 carrés, 10. Combien d'allumettes pour 10 carrés ?"
+    nom: "31"
+    explication: "1 allumette au bout, puis 3 allumettes par carré : 1 + 3 × 10 = 31. On vérifie avec 1 carré : 1 + 3 = 4."
+    pieges:
+      - { texte: "40", pourquoi: "10 × 4 compte chaque carré à part. Mais deux carrés voisins partagent une allumette." }
+      - { texte: "30", pourquoi: "3 × 10 = 30 oublie la toute première allumette, au bout de la rangée : 1 + 3 × 10." }
+  - texte: "Étape 1 : 5 points. Étape 2 : 8 points. Étape 3 : 11 points. Étape 4 : 14 points. Combien de points à l'étape 10 ?"
+    nom: "32"
+    explication: "On ajoute 3 à chaque étape. De l'étape 1 à l'étape 10, il y a 9 ajouts : 5 + 9 × 3 = 32."
+    pieges:
+      - { texte: "35", pourquoi: "Tu as fait 5 + 10 × 3. De l'étape 1 à l'étape 10, il n'y a que 9 ajouts : 5 + 9 × 3." }
+      - { texte: "30", pourquoi: "10 × 3 = 30 oublie le départ : à l'étape 1, il y a déjà 5 points." }
+  - texte: "Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 25 tables ?"
+    nom: "52"
+    explication: "2 places par table, une de chaque côté, plus les 2 places des deux bouts : 2 × 25 + 2 = 52."
+    pieges:
+      - { texte: "100", pourquoi: "25 × 4 compte 4 places par table. Collées, les tables n'en gardent que 2 chacune, plus les 2 bouts." }
+      - { texte: "50", pourquoi: "2 places par table, c'est juste, mais il reste les 2 places des bouts : 50 + 2." }
+  - texte: "Avec ces mêmes tables (4, 6, 8 places…), il faut asseoir 30 personnes, sans place vide. Combien de tables faut-il ?"
+    nom: "14"
+    explication: "2 places par table plus les 2 bouts : 2 × 14 + 2 = 30."
+    pieges:
+      - { texte: "15", pourquoi: "Avec 15 tables, il y a 2 × 15 + 2 = 32 places : 2 places resteraient vides." }
+      - { texte: "8", pourquoi: "Tu as compté 4 places par table. Collées, elles n'en ont que 2 chacune, plus les 2 bouts." }
+  - texte: "Étape 1 : un carré d'un carreau. Étape 2 : un carré de 2 carreaux sur 2. Étape 3 : un carré de 3 sur 3. Combien de carreaux à l'étape 7 ?"
+    nom: "49"
+    explication: "À l'étape 7, le carré a 7 rangées de 7 carreaux : 7 × 7 = 49."
+    pieges:
+      - { texte: "14", pourquoi: "7 × 2 = 14. Mais le carré de 7 sur 7 a 7 rangées de 7 carreaux." }
+      - { texte: "28", pourquoi: "Tu as compté le tour du carré, 4 × 7. Il faut tous les carreaux, aussi ceux du milieu : 7 × 7." }
+  - texte: "Étape 1 : 6 ronds. Étape 2 : 11 ronds. Étape 3 : 16 ronds. Quelle phrase donne le nombre de ronds à n'importe quelle étape ?"
+    nom: "5 fois le numéro de l'étape, plus 1"
+    explication: "Étape 1 : 5 + 1 = 6. Étape 2 : 10 + 1 = 11. Étape 3 : 15 + 1 = 16. La règle marche à chaque étape."
+    pieges:
+      - { texte: "Le numéro de l'étape, plus 5", pourquoi: "Ça marche pour l'étape 1 (1 + 5 = 6), mais pas pour l'étape 2 : 2 + 5 = 7, pas 11." }
+      - { texte: "6 fois le numéro de l'étape", pourquoi: "6 × 2 = 12, pas 11. Vérifie toujours une règle sur plusieurs étapes." }
+  - texte: "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 8 ?"
+    nom: "36"
+    explication: "L'étape 8 a des colonnes de 1, 2, 3… jusqu'à 8 cubes : 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36."
+    pieges:
+      - { texte: "32", pourquoi: "Tu as fait 8 × 4. Chaque étape ajoute une colonne de la hauteur de son numéro : 1 + 2 + … + 8." }
+      - { texte: "64", pourquoi: "8 × 8 serait un carré plein. L'escalier n'en remplit qu'une partie : 1 + 2 + … + 8 = 36." }
+  - texte: "Une frise de perles : 3 perles à l'étape 1, puis 4 perles de plus à chaque étape. Combien de perles à l'étape 12 ?"
+    nom: "47"
+    explication: "De l'étape 1 à l'étape 12, il y a 11 ajouts de 4 perles : 3 + 11 × 4 = 47."
+    pieges:
+      - { texte: "51", pourquoi: "Tu as fait 3 + 12 × 4. L'étape 1 a déjà ses 3 perles : on n'ajoute que 11 fois 4." }
+      - { texte: "48", pourquoi: "12 × 4 = 48 compte 4 perles à l'étape 1. Or elle n'en a que 3 : 3 + 11 × 4." }
+
+en:
+  titre: "A far-off stage of a growing pattern"
+  idee: "For a far-off stage, without drawing everything, find what there is at the start and what you add at each stage. Careful: from stage 1 to stage 10, there are only 9 additions."
+  phrases:
+    consigne: "Find what is added at each stage, count the additions, then touch the answer."
+    question: "{texte}"
+    indice: "Find what is added at each stage. Then count the additions: from stage 1 to a given stage, there is one fewer than the stage number."
+    exemple: "Example: stage 1, 7 circles; stage 2, 9; stage 3, 11. You add 2 at each stage. For stage 20, start from 7 and make 19 additions of 2: 7 + 19 × 2 = 45 circles."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "A row of squares made of matchsticks: 1 square, 4 matchsticks; 2 squares, 7; 3 squares, 10. How many matchsticks for 10 squares?"
+      nom: "31"
+      explication: "1 matchstick at the end, then 3 matchsticks per square: 1 + 3 × 10 = 31. Check with 1 square: 1 + 3 = 4."
+      pieges:
+        - { texte: "40", pourquoi: "10 × 4 counts each square on its own. But two neighbouring squares share a matchstick." }
+        - { texte: "30", pourquoi: "3 × 10 = 30 forgets the very first matchstick, at the end of the row: 1 + 3 × 10." }
+    - texte: "Stage 1: 5 dots. Stage 2: 8 dots. Stage 3: 11 dots. Stage 4: 14 dots. How many dots at stage 10?"
+      nom: "32"
+      explication: "You add 3 at each stage. From stage 1 to stage 10 there are 9 additions: 5 + 9 × 3 = 32."
+      pieges:
+        - { texte: "35", pourquoi: "You did 5 + 10 × 3. From stage 1 to stage 10 there are only 9 additions: 5 + 9 × 3." }
+        - { texte: "30", pourquoi: "10 × 3 = 30 forgets the start: at stage 1 there are already 5 dots." }
+    - texte: "Square tables put end to end: 1 table, 4 seats; 2 tables, 6 seats; 3 tables, 8 seats. How many seats for 25 tables?"
+      nom: "52"
+      explication: "2 seats per table, one on each side, plus the 2 seats at the two ends: 2 × 25 + 2 = 52."
+      pieges:
+        - { texte: "100", pourquoi: "25 × 4 counts 4 seats per table. Pushed together, the tables keep only 2 each, plus the 2 ends." }
+        - { texte: "50", pourquoi: "2 seats per table is right, but there are still the 2 seats at the ends: 50 + 2." }
+    - texte: "With the same tables (4, 6, 8 seats…), 30 people must sit down, with no empty seat. How many tables are needed?"
+      nom: "14"
+      explication: "2 seats per table plus the 2 ends: 2 × 14 + 2 = 30."
+      pieges:
+        - { texte: "15", pourquoi: "With 15 tables there are 2 × 15 + 2 = 32 seats: 2 seats would stay empty." }
+        - { texte: "8", pourquoi: "You counted 4 seats per table. Pushed together, they only have 2 each, plus the 2 ends." }
+    - texte: "Stage 1: a square of one tile. Stage 2: a square of 2 tiles by 2. Stage 3: a square of 3 by 3. How many tiles at stage 7?"
+      nom: "49"
+      explication: "At stage 7, the square has 7 rows of 7 tiles: 7 × 7 = 49."
+      pieges:
+        - { texte: "14", pourquoi: "7 × 2 = 14. But the 7 by 7 square has 7 rows of 7 tiles." }
+        - { texte: "28", pourquoi: "You counted the edge of the square, 4 × 7. You need all the tiles, the middle ones too: 7 × 7." }
+    - texte: "Stage 1: 6 circles. Stage 2: 11 circles. Stage 3: 16 circles. Which sentence gives the number of circles at any stage?"
+      nom: "5 times the stage number, plus 1"
+      explication: "Stage 1: 5 + 1 = 6. Stage 2: 10 + 1 = 11. Stage 3: 15 + 1 = 16. The rule works at every stage."
+      pieges:
+        - { texte: "The stage number, plus 5", pourquoi: "It works for stage 1 (1 + 5 = 6), but not for stage 2: 2 + 5 = 7, not 11." }
+        - { texte: "6 times the stage number", pourquoi: "6 × 2 = 12, not 11. Always check a rule on several stages." }
+    - texte: "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 8?"
+      nom: "36"
+      explication: "Stage 8 has columns of 1, 2, 3… up to 8 cubes: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36."
+      pieges:
+        - { texte: "32", pourquoi: "You did 8 × 4. Each stage adds a column as tall as its number: 1 + 2 + … + 8." }
+        - { texte: "64", pourquoi: "8 × 8 would be a full square. The staircase only fills part of it: 1 + 2 + … + 8 = 36." }
+    - texte: "A bead pattern: 3 beads at stage 1, then 4 more beads at each stage. How many beads at stage 12?"
+      nom: "47"
+      explication: "From stage 1 to stage 12 there are 11 additions of 4 beads: 3 + 11 × 4 = 47."
+      pieges:
+        - { texte: "51", pourquoi: "You did 3 + 12 × 4. Stage 1 already has its 3 beads: you only add 4 eleven times." }
+        - { texte: "48", pourquoi: "12 × 4 = 48 counts 4 beads at stage 1. But it only has 3: 3 + 11 × 4." }

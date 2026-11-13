@@ -1,0 +1,129 @@
+id: suite-regle
+titre: "Trouver la règle d'une suite de nombres"
+niveau: CM1
+prerequis: [bande-numerique]
+# Programme de mathématiques du cycle 3 (2025), « Algèbre », Cours moyen première année, objectifs d'apprentissage, lu le
+# 2026-11-13 (texte cité ci-dessous). Le texte de la même partie dit que les élèves généralisent des structures « dans le
+# cadre de suites de motifs ou de suites de nombres ou de symboles en exprimant la relation entre deux éléments consécutifs
+# ou entre le rang d’un élément et la valeur associée ». Les suites des questions sont choisies par l'app ; celles du
+# domaine « code » (3 ; 7 ; 11 ; 15, 7 ; 15 ; 31 ; 63, 1 ; 2 ; 4 ; 7 ; 11 ; 16) ne sont pas reprises.
+programme: { source: c3, texte: "Identifier et formuler une règle de calcul pour poursuivre une suite de nombres" }
+activite: quiz
+parametres: {}
+idee: "Une suite de nombres suit une règle de calcul : on fait toujours la même chose pour passer d'un nombre au suivant. On calcule l'écart entre deux voisins, puis on vérifie la règle sur tous."
+phrases:
+  consigne: "Trouve la règle qui fait passer d'un nombre au suivant, puis touche la réponse."
+  question: "{texte}"
+  indice: "Calcule l'écart entre deux nombres voisins. S'il change, essaie une multiplication ou une division, ou regarde si les écarts suivent eux-mêmes une règle."
+  exemple: "Exemple : 6 ; 11 ; 16 ; 21. De 6 à 11, on ajoute 5. On vérifie : 11 + 5 = 16, et 16 + 5 = 21. La règle est « ajouter 5 », et le nombre suivant est 26."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Suite : 12 ; 19 ; 26 ; 33… Quelle est la règle ?"
+    nom: "ajouter 7"
+    explication: "12 + 7 = 19, 19 + 7 = 26, 26 + 7 = 33 : on ajoute 7 chaque fois."
+    pieges:
+      - { texte: "ajouter 12", pourquoi: "12 est le premier nombre de la suite, pas l'écart. De 12 à 19, il y a 7." }
+      - { texte: "ajouter 6", pourquoi: "12 + 6 = 18, pas 19. Compte l'écart exact entre deux nombres voisins." }
+  - texte: "Suite : 5 ; 15 ; 45 ; 135… Quel est le nombre suivant ?"
+    nom: "405"
+    explication: "Chaque nombre est 3 fois le précédent : 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135, et 135 × 3 = 405."
+    pieges:
+      - { texte: "225", pourquoi: "Tu as ajouté 90, le dernier écart. Mais les écarts grandissent (10, 30, 90) : la règle est « multiplier par 3 »." }
+      - { texte: "270", pourquoi: "Tu as multiplié par 2. Ici, 45 × 3 = 135 : on multiplie par 3." }
+  - texte: "Suite : 100 ; 92 ; 84 ; 76… Quel est le nombre suivant ?"
+    nom: "68"
+    explication: "La suite descend : on enlève 8 chaque fois. 76 − 8 = 68."
+    pieges:
+      - { texte: "84", pourquoi: "Tu as ajouté 8. Cette suite descend : de 100 à 92, on enlève 8." }
+      - { texte: "66", pourquoi: "Tu as enlevé 10. De 100 à 92, l'écart est 8, pas 10." }
+  - texte: "Suite : 1 000 ; 1 250 ; 1 500 ; 1 750… Quelle est la règle ?"
+    nom: "ajouter 250"
+    explication: "1 000 + 250 = 1 250, 1 250 + 250 = 1 500, 1 500 + 250 = 1 750."
+    pieges:
+      - { texte: "ajouter 25", pourquoi: "1 000 + 25 = 1 025, pas 1 250 : regarde le chiffre des centaines qui change." }
+      - { texte: "ajouter 1 000", pourquoi: "1 000 est le premier nombre, pas l'écart. De 1 000 à 1 250, il y a 250." }
+  - texte: "Suite : 64 ; 32 ; 16 ; 8… Quel est le nombre suivant ?"
+    nom: "4"
+    explication: "Chaque nombre est la moitié du précédent : on divise par 2. 8 : 2 = 4."
+    pieges:
+      - { texte: "0", pourquoi: "Tu as enlevé 8. Mais de 64 à 32 on enlève 32, et de 32 à 16 on enlève 16 : l'écart change. La règle est « diviser par 2 »." }
+      - { texte: "6", pourquoi: "Tu as enlevé 2. Chaque nombre est la moitié du précédent : la moitié de 8, c'est 4." }
+  - texte: "Suite : 10 ; 15 ; 13 ; 18 ; 16… Quel est le nombre suivant ?"
+    nom: "21"
+    explication: "Deux règles alternent : ajouter 5, puis enlever 2, et on recommence. Après 16, on ajoute 5 : 21."
+    pieges:
+      - { texte: "14", pourquoi: "Tu as enlevé 2 deux fois de suite. Les règles alternent : après « enlever 2 » vient « ajouter 5 »." }
+      - { texte: "19", pourquoi: "Tu as ajouté 3, l'écart entre 10 et 13. Mais on avance pas à pas : + 5, − 2, + 5, − 2…" }
+  - texte: "La règle est « ajouter 9 ». Le premier nombre est 4. Quel est le cinquième nombre ?"
+    nom: "40"
+    explication: "4, puis 13, puis 22, puis 31, puis 40. Du 1er au 5e nombre, il y a 4 pas : 4 + 4 × 9 = 40."
+    pieges:
+      - { texte: "49", pourquoi: "Tu as fait 5 pas. Du 1er au 5e nombre, il n'y en a que 4 : 4 + 4 × 9 = 40." }
+      - { texte: "45", pourquoi: "5 × 9 = 45, mais on part de 4, et il n'y a que 4 pas." }
+  - texte: "Suite : 1 ; 4 ; 9 ; 16 ; 25… Quel est le nombre suivant ?"
+    nom: "36"
+    explication: "Les écarts sont 3, 5, 7, 9 : ils grandissent de 2. Le suivant est 11 : 25 + 11 = 36."
+    pieges:
+      - { texte: "34", pourquoi: "Tu as ajouté 9, comme la dernière fois. Mais l'écart grandit de 2 à chaque pas : 3, 5, 7, 9, puis 11." }
+      - { texte: "50", pourquoi: "Tu as doublé 25. Mais 2 × 4 = 8, pas 9 : regarde plutôt les écarts, 3, 5, 7, 9." }
+
+en:
+  titre: "Finding the rule of a number sequence"
+  idee: "A number sequence follows a calculation rule: you always do the same thing to go from one number to the next. To find it, work out the gap between two neighbouring numbers, then check the rule on every number."
+  phrases:
+    consigne: "Find the rule that takes you from one number to the next, then touch the answer."
+    question: "{texte}"
+    indice: "Work out the gap between two neighbouring numbers. If it changes, try multiplying or dividing, or see whether the gaps follow a rule themselves."
+    exemple: "Example: 6; 11; 16; 21. From 6 to 11, you add 5. Check: 11 + 5 = 16, and 16 + 5 = 21. The rule is “add 5”, and the next number is 26."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Sequence: 12; 19; 26; 33… What is the rule?"
+      nom: "add 7"
+      explication: "12 + 7 = 19, 19 + 7 = 26, 26 + 7 = 33: you add 7 each time."
+      pieges:
+        - { texte: "add 12", pourquoi: "12 is the first number of the sequence, not the gap. From 12 to 19, it's 7." }
+        - { texte: "add 6", pourquoi: "12 + 6 = 18, not 19. Work out the exact gap between two neighbouring numbers." }
+    - texte: "Sequence: 5; 15; 45; 135… What is the next number?"
+      nom: "405"
+      explication: "Each number is 3 times the one before: 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135, and 135 × 3 = 405."
+      pieges:
+        - { texte: "225", pourquoi: "You added 90, the last gap. But the gaps grow (10, 30, 90): the rule is “multiply by 3”." }
+        - { texte: "270", pourquoi: "You multiplied by 2. Here, 45 × 3 = 135: you multiply by 3." }
+    - texte: "Sequence: 100; 92; 84; 76… What is the next number?"
+      nom: "68"
+      explication: "The sequence goes down: you take away 8 each time. 76 − 8 = 68."
+      pieges:
+        - { texte: "84", pourquoi: "You added 8. This sequence goes down: from 100 to 92, you take away 8." }
+        - { texte: "66", pourquoi: "You took away 10. From 100 to 92, the gap is 8, not 10." }
+    - texte: "Sequence: 1,000; 1,250; 1,500; 1,750… What is the rule?"
+      nom: "add 250"
+      explication: "1,000 + 250 = 1,250, 1,250 + 250 = 1,500, 1,500 + 250 = 1,750."
+      pieges:
+        - { texte: "add 25", pourquoi: "1,000 + 25 = 1,025, not 1,250: look at the hundreds digit that changes." }
+        - { texte: "add 1,000", pourquoi: "1,000 is the first number, not the gap. From 1,000 to 1,250, it's 250." }
+    - texte: "Sequence: 64; 32; 16; 8… What is the next number?"
+      nom: "4"
+      explication: "Each number is half the one before: you divide by 2. 8 ÷ 2 = 4."
+      pieges:
+        - { texte: "0", pourquoi: "You took away 8. But from 64 to 32 you take away 32, and from 32 to 16 you take away 16: the gap changes. The rule is “divide by 2”." }
+        - { texte: "6", pourquoi: "You took away 2. Each number is half the one before: half of 8 is 4." }
+    - texte: "Sequence: 10; 15; 13; 18; 16… What is the next number?"
+      nom: "21"
+      explication: "Two rules take turns: add 5, then take away 2, and start again. After 16, you add 5: 21."
+      pieges:
+        - { texte: "14", pourquoi: "You took away 2 twice in a row. The rules take turns: after “take away 2” comes “add 5”." }
+        - { texte: "19", pourquoi: "You added 3, the gap between 10 and 13. But you go step by step: + 5, − 2, + 5, − 2…" }
+    - texte: "The rule is “add 9”. The first number is 4. What is the fifth number?"
+      nom: "40"
+      explication: "4, then 13, then 22, then 31, then 40. From the 1st to the 5th number, there are 4 steps: 4 + 4 × 9 = 40."
+      pieges:
+        - { texte: "49", pourquoi: "You took 5 steps. From the 1st to the 5th number there are only 4: 4 + 4 × 9 = 40." }
+        - { texte: "45", pourquoi: "5 × 9 = 45, but you start from 4, and there are only 4 steps." }
+    - texte: "Sequence: 1; 4; 9; 16; 25… What is the next number?"
+      nom: "36"
+      explication: "The gaps are 3, 5, 7, 9: they grow by 2. The next one is 11: 25 + 11 = 36."
+      pieges:
+        - { texte: "34", pourquoi: "You added 9, like last time. But the gap grows by 2 each step: 3, 5, 7, 9, then 11." }
+        - { texte: "50", pourquoi: "You doubled 25. But 2 × 4 = 8, not 9: look at the gaps instead, 3, 5, 7, 9." }

@@ -1,18 +1,25 @@
 id: motifs
 titre: Se familiariser avec les motifs organisés
 nom: "Les suites"
+# Nom selon la tranche d'âge (ADR 0066) : du CE2 à la 6e, des suites de nombres et de motifs, et des tableaux de données.
+noms: {moyens: "Suites et logique", grands: "Logique et données"}
 # Pour le site vitrine, une phrase pour les parents (tool/build_site.py).
-resume: "Suites d'images et de nombres : de 1 en 1, de 2 en 2, de 10 en 10, à rebours."
+resume: "Suites d'images et de nombres : de 1 en 1, de 2 en 2, de 10 en 10, à rebours ; puis tableaux à double entrée, règles de suites et motifs qui grandissent, jusqu'à la 6e."
 icone: "1f9e9"
-ages: [4, 8]
+ages: [4, 11]
 # Programme de l'école maternelle, version consolidée, « Se familiariser avec les motifs organisés », p. 49-51
 # (premier pas vers l'algorithmique). Consulté le 2026-11-03.
 sources:
   c1: "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf"
   # Programme de mathématiques du cycle 2 (2025), « Connaitre la suite écrite et la suite orale des nombres jusqu'à
   # cent », et la bande numérique au CE1. Consulté le 2026-11-03.
+  # Le même texte, « Organisation et gestion de données », CE2 : le tableau à double entrée. Relu le 2026-11-13.
   c2: "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
-ordre: [motif-ab, motif-abb, motif-abc, motif-evolutif, suite-nombres, suite-rebours, bande-numerique]
+  # Programme de mathématiques du cycle 3 (2025), « Algèbre » (CM1, CM2, 6e : suites de nombres, motifs évolutifs) et
+  # « Organisation et gestion de données » (CM2). Lu le 2026-11-13. Le « si… alors » de ce programme n'y est qu'un exemple
+  # de proportionnalité (domaine « compter ») ; la condition « si » est déjà enseignée dans le domaine « code ».
+  c3: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
+ordre: [motif-ab, motif-abb, motif-abc, motif-evolutif, suite-nombres, suite-rebours, bande-numerique, tableau-double-entree, suite-regle, motif-regularite, motif-etape, tableau-problemes, motif-structure]
 
 # Animation de méthode, jouée à la première ouverture du jour (ADR 0033).
 intro:
@@ -27,7 +34,8 @@ intro:
 en:
   titre: "Getting to know patterns"
   nom: "Patterns"
-  resume: "Picture patterns and number sequences: in ones, twos and tens, and counting backwards."
+  noms: {moyens: "Sequences and logic", grands: "Logic and data"}
+  resume: "Picture patterns and number sequences: in ones, twos and tens, and counting backwards; then two-way tables, sequence rules and growing patterns, up to Year 7."
   intro:
     - texte: "A pattern is a group of pictures that repeats."
       images: ["2b50", "1f319", "2b50", "1f319"]

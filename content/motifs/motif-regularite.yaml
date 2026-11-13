@@ -1,0 +1,128 @@
+id: motif-regularite
+titre: "Une suite de motifs qui grandit : trouver la régularité"
+niveau: CM1
+prerequis: [suite-regle]
+# Programme de mathématiques du cycle 3 (2025), « Algèbre », Cours moyen première année, objectifs d'apprentissage, lu le
+# 2026-11-13 (texte cité ci-dessous). Les motifs sont décrits avec des mots et des nombres (allumettes, carreaux,
+# perles), pour que la voix puisse tout lire ; la suite de lettres reprend la forme des suites évolutives du programme du
+# cycle 2 (« △ ✕ △ ✕✕ △ ✕✕✕ △ ✕✕✕✕ △… »), avec des lettres. Motifs choisis par l'app.
+programme: { source: c3, texte: "Identifier des régularités et poursuivre une suite de motifs évolutive" }
+activite: quiz
+parametres: {}
+idee: "Dans une suite de motifs qui grandit, quelque chose change toujours de la même façon d'une étape à la suivante : c'est la régularité. On la trouve en comparant deux étapes voisines : qu'est-ce qui a été ajouté ?"
+phrases:
+  consigne: "Compare les étapes, trouve ce qui est ajouté à chaque fois, puis touche la réponse."
+  question: "{texte}"
+  indice: "Compare deux étapes voisines : qu'est-ce qu'on a ajouté ? Vérifie que c'est pareil entre les étapes suivantes."
+  exemple: "Exemple : une rangée de triangles en allumettes. 1 triangle : 3 allumettes ; 2 triangles : 5 ; 3 triangles : 7. Chaque nouveau triangle partage un côté avec le précédent : on ajoute 2 allumettes. Pour 4 triangles : 9."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Suite de lettres : A B A B B A B B B A… Quelles lettres viennent juste après le dernier A ?"
+    nom: "B B B B"
+    explication: "Après chaque A, il y a un B de plus : 1, puis 2, puis 3. Après le quatrième A viennent 4 B."
+    pieges:
+      - { texte: "B B B", pourquoi: "Ça, c'est le groupe d'avant. À chaque tour, il y a un B de plus : 1, 2, 3, puis 4." }
+      - { texte: "B", pourquoi: "La suite ne se répète pas à l'identique : elle grandit d'un B à chaque tour." }
+  - texte: "Avec des allumettes, on forme une rangée de carrés. 1 carré : 4 allumettes. 2 carrés : 7 allumettes. 3 carrés : 10 allumettes. Combien d'allumettes pour 4 carrés ?"
+    nom: "13"
+    explication: "Chaque nouveau carré partage un côté avec le précédent : on ajoute 3 allumettes. 10 + 3 = 13."
+    pieges:
+      - { texte: "16", pourquoi: "4 × 4 = 16 compte chaque carré à part. Mais deux carrés voisins partagent une allumette : on en ajoute 3 à chaque fois." }
+      - { texte: "14", pourquoi: "Tu as ajouté 4. Regarde : de 4 à 7, puis de 7 à 10, on ajoute 3." }
+  - texte: "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 5 ?"
+    nom: "15"
+    explication: "On ajoute 2, puis 3, puis 4 : chaque étape ajoute une colonne plus haute d'un cube que la précédente. À l'étape 5, on ajoute 5 : 10 + 5 = 15."
+    pieges:
+      - { texte: "14", pourquoi: "Tu as ajouté 4, comme la dernière fois. Les ajouts grandissent : 2, 3, 4, puis 5." }
+      - { texte: "20", pourquoi: "Tu as doublé 10. Mais de 6 à 10, on n'a pas doublé : regarde les ajouts, 2, 3, 4." }
+  - texte: "Un collier : 1 perle rouge, 1 bleue, puis 2 rouges, 2 bleues, puis 3 rouges, 3 bleues… Combien de perles rouges dans le groupe suivant ?"
+    nom: "4"
+    explication: "À chaque groupe, il y a une perle de plus de chaque couleur : 1, 2, 3, puis 4 rouges."
+    pieges:
+      - { texte: "3", pourquoi: "3, c'est le groupe d'avant. La suite grandit : une perle de plus à chaque groupe." }
+      - { texte: "6", pourquoi: "Tu as doublé 3. On n'ajoute qu'une perle à chaque groupe : 1, 2, 3, 4." }
+  - texte: "Étape 1 : 2 ronds. Étape 2 : 4 ronds. Étape 3 : 6 ronds. Quelle est la régularité ?"
+    nom: "On ajoute 2 ronds à chaque étape"
+    explication: "De 2 à 4, puis de 4 à 6 : on ajoute 2 ronds. À l'étape 4, il y en aura 8."
+    pieges:
+      - { texte: "On double à chaque étape", pourquoi: "2 × 2 = 4, mais 4 × 2 = 8, pas 6. Vérifie la règle sur toutes les étapes : on ajoute 2." }
+      - { texte: "On ajoute 4 ronds à chaque étape", pourquoi: "4 est le nombre de ronds à l'étape 2, pas ce qu'on ajoute. De 2 à 4, on ajoute 2." }
+  - texte: "Une figure en forme de L : étape 1, 3 carreaux ; étape 2, 5 carreaux ; étape 3, 7 carreaux. À chaque étape, on ajoute un carreau en haut et un à droite. Combien de carreaux à l'étape 4 ?"
+    nom: "9"
+    explication: "On ajoute 2 carreaux à chaque étape, un en haut et un à droite : 7 + 2 = 9."
+    pieges:
+      - { texte: "8", pourquoi: "Tu as ajouté un seul carreau. On en ajoute 2 : un en haut, un à droite." }
+      - { texte: "10", pourquoi: "Tu as ajouté 3. Regarde : de 3 à 5, puis de 5 à 7, on ajoute 2." }
+  - texte: "Une pile de boîtes : 6 boîtes en bas, puis 5 au-dessus, puis 4, et ainsi de suite jusqu'à 1 boîte en haut. Combien de boîtes en tout ?"
+    nom: "21"
+    explication: "Chaque rangée a une boîte de moins que celle du dessous : 6 + 5 + 4 + 3 + 2 + 1 = 21."
+    pieges:
+      - { texte: "6", pourquoi: "6, c'est seulement la rangée du bas. Il faut ajouter toutes les rangées." }
+      - { texte: "36", pourquoi: "6 × 6 = 36 compterait 6 rangées de 6. Ici, chaque rangée a une boîte de moins." }
+  - texte: "Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 5 tables ?"
+    nom: "12"
+    explication: "Chaque table ajoutée donne 2 places de plus : 8, puis 10 pour 4 tables, puis 12 pour 5 tables."
+    pieges:
+      - { texte: "20", pourquoi: "5 × 4 = 20 compte 4 places par table. Mais quand on colle deux tables, des places disparaissent : on ajoute 2 par table." }
+      - { texte: "10", pourquoi: "10, c'est pour 4 tables. Il faut encore une table : 10 + 2 = 12." }
+
+en:
+  titre: "A growing pattern: finding the regularity"
+  idee: "In a pattern that grows, something always changes in the same way from one stage to the next: that's the regularity. You find it by comparing two neighbouring stages: what was added?"
+  phrases:
+    consigne: "Compare the stages, find what is added each time, then touch the answer."
+    question: "{texte}"
+    indice: "Compare two neighbouring stages: what was added? Check that it's the same between the next stages."
+    exemple: "Example: a row of triangles made of matchsticks. 1 triangle: 3 matchsticks; 2 triangles: 5; 3 triangles: 7. Each new triangle shares a side with the one before: you add 2 matchsticks. For 4 triangles: 9."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Letter sequence: A B A B B A B B B A… Which letters come just after the last A?"
+      nom: "B B B B"
+      explication: "After each A there is one more B: 1, then 2, then 3. After the fourth A come 4 Bs."
+      pieges:
+        - { texte: "B B B", pourquoi: "That's the group before. Each time round there's one more B: 1, 2, 3, then 4." }
+        - { texte: "B", pourquoi: "The sequence doesn't repeat exactly: it grows by one B each time round." }
+    - texte: "With matchsticks, you make a row of squares. 1 square: 4 matchsticks. 2 squares: 7 matchsticks. 3 squares: 10 matchsticks. How many matchsticks for 4 squares?"
+      nom: "13"
+      explication: "Each new square shares a side with the one before: you add 3 matchsticks. 10 + 3 = 13."
+      pieges:
+        - { texte: "16", pourquoi: "4 × 4 = 16 counts each square on its own. But two neighbouring squares share a matchstick: you add 3 each time." }
+        - { texte: "14", pourquoi: "You added 4. Look: from 4 to 7, then from 7 to 10, you add 3." }
+    - texte: "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 5?"
+      nom: "15"
+      explication: "You add 2, then 3, then 4: each stage adds a column one cube taller than the last one. At stage 5 you add 5: 10 + 5 = 15."
+      pieges:
+        - { texte: "14", pourquoi: "You added 4, like last time. The additions grow: 2, 3, 4, then 5." }
+        - { texte: "20", pourquoi: "You doubled 10. But from 6 to 10 nothing was doubled: look at the additions, 2, 3, 4." }
+    - texte: "A necklace: 1 red bead, 1 blue, then 2 red, 2 blue, then 3 red, 3 blue… How many red beads in the next group?"
+      nom: "4"
+      explication: "Each group has one more bead of each colour: 1, 2, 3, then 4 red."
+      pieges:
+        - { texte: "3", pourquoi: "3 is the group before. The pattern grows: one more bead each group." }
+        - { texte: "6", pourquoi: "You doubled 3. Only one bead is added each group: 1, 2, 3, 4." }
+    - texte: "Stage 1: 2 circles. Stage 2: 4 circles. Stage 3: 6 circles. What is the regularity?"
+      nom: "You add 2 circles at each stage"
+      explication: "From 2 to 4, then from 4 to 6: you add 2 circles. At stage 4 there will be 8."
+      pieges:
+        - { texte: "You double at each stage", pourquoi: "2 × 2 = 4, but 4 × 2 = 8, not 6. Check the rule on every stage: you add 2." }
+        - { texte: "You add 4 circles at each stage", pourquoi: "4 is the number of circles at stage 2, not what you add. From 2 to 4, you add 2." }
+    - texte: "An L-shaped figure: stage 1, 3 tiles; stage 2, 5 tiles; stage 3, 7 tiles. At each stage, you add one tile at the top and one on the right. How many tiles at stage 4?"
+      nom: "9"
+      explication: "You add 2 tiles at each stage, one at the top and one on the right: 7 + 2 = 9."
+      pieges:
+        - { texte: "8", pourquoi: "You added only one tile. You add 2: one at the top, one on the right." }
+        - { texte: "10", pourquoi: "You added 3. Look: from 3 to 5, then from 5 to 7, you add 2." }
+    - texte: "A pile of boxes: 6 boxes at the bottom, then 5 on top, then 4, and so on up to 1 box at the top. How many boxes altogether?"
+      nom: "21"
+      explication: "Each row has one box fewer than the row below: 6 + 5 + 4 + 3 + 2 + 1 = 21."
+      pieges:
+        - { texte: "6", pourquoi: "6 is only the bottom row. You must add all the rows." }
+        - { texte: "36", pourquoi: "6 × 6 = 36 would be 6 rows of 6. Here each row has one box fewer." }
+    - texte: "Square tables put end to end: 1 table, 4 seats; 2 tables, 6 seats; 3 tables, 8 seats. How many seats for 5 tables?"
+      nom: "12"
+      explication: "Each extra table gives 2 more seats: 8, then 10 for 4 tables, then 12 for 5 tables."
+      pieges:
+        - { texte: "20", pourquoi: "5 × 4 = 20 counts 4 seats per table. But when two tables are pushed together, seats disappear: you add 2 per table." }
+        - { texte: "10", pourquoi: "10 is for 4 tables. You need one more table: 10 + 2 = 12." }
