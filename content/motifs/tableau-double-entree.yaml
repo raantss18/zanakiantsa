@@ -1,0 +1,128 @@
+id: tableau-double-entree
+titre: "Lire et compléter un tableau à double entrée"
+niveau: CE2
+prerequis: [bande-numerique]
+# Programme de mathématiques du cycle 2 (annexe 4), « Organisation et gestion de données », Cours élémentaire deuxième
+# année, objectifs d'apprentissage, lu le 2026-11-13 (texte cité ci-dessous ; exemple de réussite : « L’élève sait
+# compléter un tableau comme le suivant », un tableau filles / garçons par moyen de transport avec ses totaux). Les
+# nombres des questions sont choisis par l'app.
+programme: { source: c2, texte: "Lire et interpréter les données d’un tableau à double entrée ou d’un diagramme en barres. Résoudre des problèmes en utilisant les données d’un tableau à double entrée ou d’un diagramme en barre." }
+activite: quiz
+parametres: {}
+idee: "Un tableau à double entrée range des nombres selon deux choses : la ligne et la colonne. Chaque case est au croisement d'une ligne et d'une colonne. La case « Total » additionne sa ligne ou sa colonne."
+phrases:
+  consigne: "Lis le tableau, trouve la bonne ligne et la bonne colonne, puis touche la réponse."
+  question: "{texte}"
+  indice: "Pose un doigt sur la ligne, un autre sur la colonne : le nombre est là où ils se croisent. Pour une case vide, pars du total et enlève ce que tu connais."
+  exemple: "Exemple : 12 filles et 9 garçons mangent à la cantine. Dans le tableau, la ligne « Cantine » croise la colonne « Filles » sur 12, la colonne « Garçons » sur 9, et la colonne « Total » sur 21, car 12 + 9 = 21."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent en bus ?"
+    nom: "21"
+    explication: "La ligne « En bus » croise la colonne « Garçons » sur 21."
+    pieges:
+      - { texte: "15", pourquoi: "15, ce sont les filles qui viennent en bus : tu as lu la colonne « Filles »." }
+      - { texte: "36", pourquoi: "36, c'est le total de la ligne « En bus » : les filles et les garçons ensemble." }
+  - texte: "Dans un tableau qui compte les filles et les garçons selon leur moyen de transport, où lit-on le nombre de filles qui viennent en bus ?"
+    nom: "Dans la case où la ligne « En bus » croise la colonne « Filles »"
+    explication: "Une case est au croisement d'une ligne (en bus) et d'une colonne (filles) : elle compte les élèves qui sont les deux à la fois."
+    pieges:
+      - { texte: "Dans la case « Total » de la ligne « En bus »", pourquoi: "Cette case compte tous les élèves qui viennent en bus, filles et garçons ensemble." }
+      - { texte: "Tout en bas de la colonne « Filles »", pourquoi: "En bas de la colonne, c'est le total des filles, quel que soit leur moyen de transport." }
+  - texte: "Il manque un nombre dans le tableau :\n              Filles Garçons   Total\nÀ pied           34       …      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent à pied ?"
+    nom: "28"
+    explication: "À pied, il y a 62 élèves en tout, dont 34 filles : 62 − 34 = 28 garçons. On vérifie : 28 + 21 = 49, le total des garçons."
+    pieges:
+      - { texte: "96", pourquoi: "Tu as ajouté 34 et 62. Mais 62 est déjà le total de la ligne : on cherche ce qui manque à 34 pour faire 62." }
+      - { texte: "62", pourquoi: "62, c'est le total de la ligne : les garçons ne peuvent pas être aussi nombreux que filles et garçons ensemble." }
+  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien d'élèves y a-t-il en tout ?"
+    nom: "98"
+    explication: "La dernière case, en bas à droite, compte tout le monde : 62 + 36 = 98, ou 49 + 49 = 98."
+    pieges:
+      - { texte: "49", pourquoi: "49, c'est seulement le total d'une colonne : les filles, ou les garçons." }
+      - { texte: "196", pourquoi: "Tu as ajouté les totaux des lignes et ceux des colonnes : chaque élève est compté deux fois." }
+  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nÀ pied, combien y a-t-il de filles de plus que de garçons ?"
+    nom: "6"
+    explication: "Sur la ligne « À pied » : 34 filles et 28 garçons. 34 − 28 = 6 filles de plus."
+    pieges:
+      - { texte: "62", pourquoi: "62, c'est le nombre d'élèves à pied. On cherche l'écart entre filles et garçons, pas la somme." }
+      - { texte: "0", pourquoi: "Il y a autant de filles que de garçons en tout (49 et 49), mais pas sur la ligne « À pied » : 34 et 28." }
+  - texte: "Les deux classes de CE2 ont choisi leur sortie :\n                 Zoo   Musée   Total\nCE2 A            14      11      25\nCE2 B             …       9      27\nTotal            32      20      52\nCombien d'élèves du CE2 B ont choisi le zoo ?"
+    nom: "18"
+    explication: "Le CE2 B a 27 élèves, dont 9 pour le musée : 27 − 9 = 18 pour le zoo. On vérifie : 14 + 18 = 32."
+    pieges:
+      - { texte: "36", pourquoi: "Tu as ajouté 27 et 9. Le total 27 contient déjà les 9 du musée : on les enlève." }
+      - { texte: "14", pourquoi: "14, c'est le zoo pour le CE2 A. Regarde la ligne du CE2 B." }
+  - texte: "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140       …     230\nTotal           260     175     435\nCombien de BD ont été prêtées en février ?"
+    nom: "90"
+    explication: "En février, 230 livres dont 140 contes : 230 − 140 = 90 BD. On vérifie : 85 + 90 = 175."
+    pieges:
+      - { texte: "370", pourquoi: "Tu as ajouté 140 et 230. Le total de février contient déjà les contes : on les enlève." }
+      - { texte: "85", pourquoi: "85, ce sont les BD de janvier. Regarde la ligne « Février »." }
+  - texte: "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140      90     230\nTotal           260     175     435\nQuel mois a-t-on prêté le plus de livres ?"
+    nom: "En février"
+    explication: "La colonne « Total » le dit : 205 livres en janvier, 230 en février. 230 est plus grand."
+    pieges:
+      - { texte: "En janvier", pourquoi: "En janvier, 205 livres ; en février, 230. Compare les nombres de la colonne « Total »." }
+      - { texte: "Autant les deux mois", pourquoi: "205 et 230 ne sont pas égaux : février a 25 livres de plus." }
+
+en:
+  titre: "Reading and filling in a two-way table"
+  idee: "A two-way table sorts numbers by two things at once: the row and the column. Each box is where a row and a column cross. The “Total” box adds up its whole row, or its whole column."
+  phrases:
+    consigne: "Read the table, find the right row and the right column, then touch the answer."
+    question: "{texte}"
+    indice: "Put one finger on the row and another on the column: the number is where they cross. For an empty box, start from the total and take away what you know."
+    exemple: "Example: 12 girls and 9 boys eat at the canteen. In the table, the “Canteen” row crosses the “Girls” column at 12, the “Boys” column at 9, and the “Total” column at 21, because 12 + 9 = 21."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys come by bus?"
+      nom: "21"
+      explication: "The “By bus” row crosses the “Boys” column at 21."
+      pieges:
+        - { texte: "15", pourquoi: "15 is the girls who come by bus: you read the “Girls” column." }
+        - { texte: "36", pourquoi: "36 is the total of the “By bus” row: girls and boys together." }
+    - texte: "In a table that counts girls and boys by how they get to school, where do you read the number of girls who come by bus?"
+      nom: "In the box where the “By bus” row crosses the “Girls” column"
+      explication: "A box is where a row (by bus) and a column (girls) cross: it counts the pupils who are both at once."
+      pieges:
+        - { texte: "In the “Total” box of the “By bus” row", pourquoi: "That box counts everyone who comes by bus, girls and boys together." }
+        - { texte: "At the very bottom of the “Girls” column", pourquoi: "At the bottom of the column is the total of girls, however they come." }
+    - texte: "One number is missing from the table:\n               Girls    Boys   Total\nOn foot          34       …      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys walk to school?"
+      nom: "28"
+      explication: "On foot, there are 62 pupils in all, including 34 girls: 62 − 34 = 28 boys. Check: 28 + 21 = 49, the total of boys."
+      pieges:
+        - { texte: "96", pourquoi: "You added 34 and 62. But 62 is already the row total: we look for what 34 needs to make 62." }
+        - { texte: "62", pourquoi: "62 is the row total: the boys can't be as many as girls and boys together." }
+    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many pupils are there altogether?"
+      nom: "98"
+      explication: "The last box, bottom right, counts everyone: 62 + 36 = 98, or 49 + 49 = 98."
+      pieges:
+        - { texte: "49", pourquoi: "49 is only the total of one column: the girls, or the boys." }
+        - { texte: "196", pourquoi: "You added the row totals and the column totals: each pupil is counted twice." }
+    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nOn foot, how many more girls are there than boys?"
+      nom: "6"
+      explication: "On the “On foot” row: 34 girls and 28 boys. 34 − 28 = 6 more girls."
+      pieges:
+        - { texte: "62", pourquoi: "62 is the number of pupils on foot. We want the difference between girls and boys, not the sum." }
+        - { texte: "0", pourquoi: "There are as many girls as boys in all (49 and 49), but not on the “On foot” row: 34 and 28." }
+    - texte: "The two classes chose their school trip:\n                 Zoo  Museum   Total\nClass A          14      11      25\nClass B           …       9      27\nTotal            32      20      52\nHow many pupils in class B chose the zoo?"
+      nom: "18"
+      explication: "Class B has 27 pupils, 9 of them for the museum: 27 − 9 = 18 for the zoo. Check: 14 + 18 = 32."
+      pieges:
+        - { texte: "36", pourquoi: "You added 27 and 9. The total 27 already includes the 9 for the museum: take them away." }
+        - { texte: "14", pourquoi: "14 is the zoo for class A. Look at the class B row." }
+    - texte: "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140       …     230\nTotal           260     175     435\nHow many comics were lent in February?"
+      nom: "90"
+      explication: "In February, 230 books, 140 of them tales: 230 − 140 = 90 comics. Check: 85 + 90 = 175."
+      pieges:
+        - { texte: "370", pourquoi: "You added 140 and 230. The February total already includes the tales: take them away." }
+        - { texte: "85", pourquoi: "85 is the comics for January. Look at the “February” row." }
+    - texte: "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140      90     230\nTotal           260     175     435\nIn which month were the most books lent?"
+      nom: "In February"
+      explication: "The “Total” column says so: 205 books in January, 230 in February. 230 is bigger."
+      pieges:
+        - { texte: "In January", pourquoi: "In January, 205 books; in February, 230. Compare the numbers in the “Total” column." }
+        - { texte: "The same in both months", pourquoi: "205 and 230 aren't equal: February has 25 more books." }

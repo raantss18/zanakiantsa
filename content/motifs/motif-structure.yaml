@@ -1,0 +1,129 @@
+id: motif-structure
+titre: "Voir la structure d'un motif qui grandit"
+niveau: 6e
+prerequis: [motif-etape]
+# Programme de mathématiques du cycle 3 (2025), « Algèbre », Sixième, objectifs d'apprentissage, lu le 2026-11-13 (texte
+# cité ci-dessous ; l'autre objectif est « Utiliser des modèles pré-algébriques pour résoudre des problèmes algébriques »).
+# Le même texte dit : « les quantités inconnues sont exprimées à l’aide de mots, de dessins ou éventuellement de lettres.
+# Ce n’est qu’au cycle 4 que les lettres seront introduites de manière formelle » : les règles sont dites avec des mots
+# (« le numéro de l'étape »), une seule question avec la lettre n. Motifs choisis par l'app.
+programme: { source: c3, texte: "Identifier la structure d’un motif évolutif en repérant une régularité et en identifiant une structure" }
+activite: quiz
+parametres: {}
+idee: "Un motif qui grandit a une structure : une partie qui ne bouge pas, et des parties qui grandissent avec le numéro de l'étape. Avec elle, on calcule n'importe quelle étape."
+phrases:
+  consigne: "Cherche ce qui reste pareil et ce qui grandit, puis touche la réponse."
+  question: "{texte}"
+  indice: "Cherche ce qui ne bouge pas (souvent le centre ou un coin) et ce qui grandit avec le numéro de l'étape. Vérifie ta règle sur l'étape 1 et sur l'étape 2."
+  exemple: "Exemple : un L en carreaux, avec 1 carreau au coin, un bras vers le haut et un bras vers la droite, chacun aussi long que le numéro de l'étape. Structure : 1 + 2 × le numéro. Étape 30 : 1 + 2 × 30 = 61 carreaux. Un L de 21 carreaux ? 21 − 1 = 20, et 20 : 2 = 10 : c'est l'étape 10."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Une croix grandit : 1 carreau au centre et 4 bras. À l'étape 1, chaque bras a 1 carreau ; à l'étape 2, 2 carreaux ; à l'étape 3, 3 carreaux. Quelle règle donne le nombre de carreaux ?"
+    nom: "1 au centre, plus 4 fois le numéro de l'étape"
+    explication: "Le centre ne bouge pas ; les 4 bras ont chacun autant de carreaux que le numéro de l'étape. Étape 2 : 1 + 4 × 2 = 9."
+    pieges:
+      - { texte: "5 fois le numéro de l'étape", pourquoi: "Le centre n'est compté qu'une fois : à l'étape 2, il y a 1 + 4 × 2 = 9 carreaux, pas 10." }
+      - { texte: "4 fois le numéro de l'étape", pourquoi: "Il manque le carreau du centre : à l'étape 1, la croix a 5 carreaux, pas 4." }
+  - texte: "La même croix : 1 carreau au centre et 4 bras aussi longs que le numéro de l'étape. Combien de carreaux à l'étape 25 ?"
+    nom: "101"
+    explication: "1 + 4 × 25 = 1 + 100 = 101 carreaux."
+    pieges:
+      - { texte: "125", pourquoi: "5 × 25 compte le centre 25 fois. Il n'y a qu'un centre : 1 + 4 × 25." }
+      - { texte: "100", pourquoi: "4 × 25 = 100, ce sont les bras. Il manque le carreau du centre." }
+  - texte: "Une croix de ce type (1 au centre, 4 bras aussi longs que le numéro de l'étape) a 61 carreaux. À quelle étape est-elle ?"
+    nom: "Étape 15"
+    explication: "On enlève le centre : 61 − 1 = 60 carreaux pour les 4 bras, donc 60 : 4 = 15 carreaux par bras. C'est l'étape 15."
+    pieges:
+      - { texte: "Étape 16", pourquoi: "À l'étape 16, il y a 1 + 4 × 16 = 65 carreaux, pas 61." }
+      - { texte: "Étape 60", pourquoi: "60, c'est le nombre de carreaux des bras. Il y a 4 bras : 60 : 4 = 15." }
+  - texte: "Un cadre carré creux. Étape 1 : le tour d'un carré de 3 carreaux de côté, 8 carreaux. Étape 2 : le tour d'un carré de 4 de côté, 12 carreaux. Étape 3 : le tour d'un carré de 5 de côté, 16 carreaux. Quelle structure donne le nombre de carreaux ?"
+    nom: "4 bandes d'un carreau de plus que le numéro de l'étape"
+    explication: "On découpe le cadre en 4 bandes qui tournent autour du carré, sans compter les coins deux fois. Étape 1 : 4 × 2 = 8. Étape 2 : 4 × 3 = 12. Étape 3 : 4 × 4 = 16."
+    pieges:
+      - { texte: "4 côtés de 2 carreaux de plus que le numéro de l'étape", pourquoi: "Les 4 coins seraient comptés deux fois : à l'étape 1, 4 × 3 = 12, pas 8." }
+      - { texte: "2 fois le numéro de l'étape, plus 6", pourquoi: "Ça marche à l'étape 1 (8), mais pas à l'étape 2 : 2 × 2 + 6 = 10, pas 12." }
+  - texte: "Le même cadre carré creux (8, 12, 16 carreaux…), fait de 4 bandes d'un carreau de plus que le numéro de l'étape. Combien de carreaux à l'étape 10 ?"
+    nom: "44"
+    explication: "À l'étape 10, chaque bande a 11 carreaux : 4 × 11 = 44."
+    pieges:
+      - { texte: "48", pourquoi: "4 × 12 compte chaque coin deux fois. Chaque bande a 11 carreaux : 4 × 11." }
+      - { texte: "40", pourquoi: "4 × 10 oublie que chaque bande a un carreau de plus que le numéro de l'étape." }
+  - texte: "Un motif a 7 carreaux à l'étape 1 et en gagne 3 à chaque étape. Si n est le numéro de l'étape, quel calcul donne le nombre de carreaux ?"
+    nom: "4 + 3 × n"
+    explication: "Étape 1 : 4 + 3 = 7. Étape 2 : 4 + 6 = 10. On ajoute bien 3 à chaque étape, et l'étape 1 donne 7."
+    pieges:
+      - { texte: "7 + 3 × n", pourquoi: "À l'étape 1, ça donne 10, pas 7 : l'étape 1 n'a pas encore reçu d'ajout." }
+      - { texte: "3 + 7 × n", pourquoi: "Les rôles sont échangés : c'est ce qu'on ajoute à chaque étape, 3, qui multiplie n." }
+  - texte: "Motif A : 10 carreaux à l'étape 1, puis 2 de plus à chaque étape. Motif B : 4 carreaux à l'étape 1, puis 5 de plus à chaque étape. À quelle étape B dépasse-t-il A pour la première fois ?"
+    nom: "À l'étape 4"
+    explication: "A : 10, 12, 14, 16. B : 4, 9, 14, 19. À l'étape 3, ils sont à égalité (14) ; à l'étape 4, B a 19 et A 16."
+    pieges:
+      - { texte: "À l'étape 3", pourquoi: "À l'étape 3, les deux ont 14 carreaux : B rattrape A, mais ne le dépasse pas encore." }
+      - { texte: "À l'étape 2", pourquoi: "À l'étape 2, A a 12 carreaux et B 9 : B est encore derrière." }
+  - texte: "Une rangée de triangles en allumettes : 1 triangle, 3 allumettes ; 2 triangles, 5 ; 3 triangles, 7. Combien de triangles fait-on avec 41 allumettes ?"
+    nom: "20"
+    explication: "Structure : 1 allumette de départ, puis 2 par triangle. 41 − 1 = 40, et 40 : 2 = 20 triangles."
+    pieges:
+      - { texte: "13", pourquoi: "Tu as compté 3 allumettes par triangle. Les triangles voisins partagent un côté : 2 allumettes de plus par triangle." }
+      - { texte: "21", pourquoi: "21 triangles demandent 1 + 2 × 21 = 43 allumettes, pas 41." }
+
+en:
+  titre: "Seeing the structure of a growing pattern"
+  idee: "A growing pattern has a structure: a part that doesn't move, and parts that grow with the stage number. With it, you can work out any stage."
+  phrases:
+    consigne: "Look for what stays the same and what grows, then touch the answer."
+    question: "{texte}"
+    indice: "Look for what doesn't move (often the centre or a corner) and what grows with the stage number. Check your rule on stage 1 and on stage 2."
+    exemple: "Example: an L made of tiles, with 1 tile in the corner, one arm going up and one going right, each as long as the stage number. Structure: 1 + 2 × the number. Stage 30: 1 + 2 × 30 = 61 tiles. An L of 21 tiles? 21 − 1 = 20, and 20 ÷ 2 = 10: it's stage 10."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "A cross grows: 1 tile in the centre and 4 arms. At stage 1, each arm has 1 tile; at stage 2, 2 tiles; at stage 3, 3 tiles. Which rule gives the number of tiles?"
+      nom: "1 in the centre, plus 4 times the stage number"
+      explication: "The centre doesn't move; each of the 4 arms has as many tiles as the stage number. Stage 2: 1 + 4 × 2 = 9."
+      pieges:
+        - { texte: "5 times the stage number", pourquoi: "The centre is only counted once: at stage 2 there are 1 + 4 × 2 = 9 tiles, not 10." }
+        - { texte: "4 times the stage number", pourquoi: "The centre tile is missing: at stage 1 the cross has 5 tiles, not 4." }
+    - texte: "The same cross: 1 tile in the centre and 4 arms as long as the stage number. How many tiles at stage 25?"
+      nom: "101"
+      explication: "1 + 4 × 25 = 1 + 100 = 101 tiles."
+      pieges:
+        - { texte: "125", pourquoi: "5 × 25 counts the centre 25 times. There is only one centre: 1 + 4 × 25." }
+        - { texte: "100", pourquoi: "4 × 25 = 100 is the arms. The centre tile is missing." }
+    - texte: "A cross of this kind (1 in the centre, 4 arms as long as the stage number) has 61 tiles. Which stage is it?"
+      nom: "Stage 15"
+      explication: "Take away the centre: 61 − 1 = 60 tiles for the 4 arms, so 60 ÷ 4 = 15 tiles per arm. It's stage 15."
+      pieges:
+        - { texte: "Stage 16", pourquoi: "At stage 16 there are 1 + 4 × 16 = 65 tiles, not 61." }
+        - { texte: "Stage 60", pourquoi: "60 is the number of tiles in the arms. There are 4 arms: 60 ÷ 4 = 15." }
+    - texte: "A hollow square frame. Stage 1: the edge of a square 3 tiles wide, 8 tiles. Stage 2: the edge of a square 4 wide, 12 tiles. Stage 3: the edge of a square 5 wide, 16 tiles. Which structure gives the number of tiles?"
+      nom: "4 strips of one tile more than the stage number"
+      explication: "Cut the frame into 4 strips that go round the square, without counting the corners twice. Stage 1: 4 × 2 = 8. Stage 2: 4 × 3 = 12. Stage 3: 4 × 4 = 16."
+      pieges:
+        - { texte: "4 sides of 2 tiles more than the stage number", pourquoi: "The 4 corners would be counted twice: at stage 1, 4 × 3 = 12, not 8." }
+        - { texte: "2 times the stage number, plus 6", pourquoi: "It works at stage 1 (8), but not at stage 2: 2 × 2 + 6 = 10, not 12." }
+    - texte: "The same hollow square frame (8, 12, 16 tiles…), made of 4 strips of one tile more than the stage number. How many tiles at stage 10?"
+      nom: "44"
+      explication: "At stage 10, each strip has 11 tiles: 4 × 11 = 44."
+      pieges:
+        - { texte: "48", pourquoi: "4 × 12 counts each corner twice. Each strip has 11 tiles: 4 × 11." }
+        - { texte: "40", pourquoi: "4 × 10 forgets that each strip has one tile more than the stage number." }
+    - texte: "A pattern has 7 tiles at stage 1 and gains 3 at each stage. If n is the stage number, which calculation gives the number of tiles?"
+      nom: "4 + 3 × n"
+      explication: "Stage 1: 4 + 3 = 7. Stage 2: 4 + 6 = 10. You do add 3 at each stage, and stage 1 gives 7."
+      pieges:
+        - { texte: "7 + 3 × n", pourquoi: "At stage 1 that gives 10, not 7: stage 1 hasn't had any addition yet." }
+        - { texte: "3 + 7 × n", pourquoi: "The roles are swapped: it's what you add at each stage, 3, that multiplies n." }
+    - texte: "Pattern A: 10 tiles at stage 1, then 2 more at each stage. Pattern B: 4 tiles at stage 1, then 5 more at each stage. At which stage does B overtake A for the first time?"
+      nom: "At stage 4"
+      explication: "A: 10, 12, 14, 16. B: 4, 9, 14, 19. At stage 3 they're level (14); at stage 4, B has 19 and A 16."
+      pieges:
+        - { texte: "At stage 3", pourquoi: "At stage 3 both have 14 tiles: B catches up with A, but doesn't overtake it yet." }
+        - { texte: "At stage 2", pourquoi: "At stage 2, A has 12 tiles and B 9: B is still behind." }
+    - texte: "A row of triangles made of matchsticks: 1 triangle, 3 matchsticks; 2 triangles, 5; 3 triangles, 7. How many triangles can you make with 41 matchsticks?"
+      nom: "20"
+      explication: "Structure: 1 starting matchstick, then 2 per triangle. 41 − 1 = 40, and 40 ÷ 2 = 20 triangles."
+      pieges:
+        - { texte: "13", pourquoi: "You counted 3 matchsticks per triangle. Neighbouring triangles share a side: 2 more matchsticks per triangle." }
+        - { texte: "21", pourquoi: "21 triangles need 1 + 2 × 21 = 43 matchsticks, not 41." }

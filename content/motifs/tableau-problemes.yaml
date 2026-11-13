@@ -1,0 +1,128 @@
+id: tableau-problemes
+titre: "Résoudre un problème avec un tableau"
+niveau: CM2
+prerequis: [tableau-double-entree]
+# Programme de mathématiques du cycle 3 (2025), « Organisation et gestion de données », Cours moyen deuxième année,
+# objectifs d'apprentissage, lu le 2026-11-13 (texte cité ci-dessous ; la même partie dit que les données « peuvent être
+# prélevées dans un texte, dans des tableaux, dans des diagrammes en barres »). Données inventées par l'app (relevés d'une
+# classe, kermesse, cantine) : ce ne sont pas des mesures réelles.
+programme: { source: c3, texte: "Résoudre des problèmes en une ou deux étapes en utilisant les données d’un tableau, d’un diagramme en barres, d’un diagramme circulaire ou d’une courbe" }
+activite: quiz
+parametres: {}
+idee: "Avec un tableau, on prend d'abord les nombres utiles, dans la bonne ligne et la bonne colonne, puis on choisit le calcul. Parfois il faut deux étapes : un calcul intermédiaire, puis le résultat."
+phrases:
+  consigne: "Lis le tableau, prends les nombres utiles, calcule, puis touche la réponse."
+  question: "{texte}"
+  indice: "Trouve la ligne et la colonne utiles. Demande-toi : faut-il un seul calcul, ou d'abord un calcul intermédiaire ?"
+  exemple: "Exemple : on vend 30 cahiers à 2 € et 20 stylos à 1,50 €. Étape 1 : 30 × 2 = 60 € et 20 × 1,50 = 30 €. Étape 2 : 60 + 30 = 90 € en tout."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nMardi, de combien de degrés la température a-t-elle monté entre le matin et midi ?"
+    nom: "9 degrés"
+    explication: "Mardi : 16 °C le matin, 25 °C à midi. 25 − 16 = 9 degrés de plus."
+    pieges:
+      - { texte: "41 degrés", pourquoi: "Tu as ajouté 16 et 25. On cherche de combien elle a monté : c'est une différence." }
+      - { texte: "8 degrés", pourquoi: "8 degrés, c'est l'écart de lundi (22 − 14). Lis la colonne « Mardi »." }
+  - texte: "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuel jour l'écart entre le matin et midi est-il le plus petit ?"
+    nom: "Mercredi"
+    explication: "Lundi : 22 − 14 = 8. Mardi : 25 − 16 = 9. Mercredi : 20 − 13 = 7. Le plus petit écart est mercredi."
+    pieges:
+      - { texte: "Mardi", pourquoi: "Mardi a la température la plus haute à midi, mais son écart, 9 degrés, est le plus grand." }
+      - { texte: "Lundi", pourquoi: "Lundi, l'écart est de 8 degrés ; mercredi, de 7 seulement." }
+  - texte: "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté la vente des jus ?"
+    nom: "60 €"
+    explication: "40 jus à 1,50 € : 40 × 1,50 = 60 €."
+    pieges:
+      - { texte: "41,50 €", pourquoi: "Tu as ajouté 40 et 1,50. Chaque jus coûte 1,50 € : on multiplie par le nombre de jus." }
+      - { texte: "6 €", pourquoi: "6 €, c'est le prix de 4 jus. On en a vendu 40 : 40 × 1,50 = 60 €." }
+  - texte: "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté toute la vente ?"
+    nom: "190 €"
+    explication: "Étape 1 : jus 40 × 1,50 = 60 €, gâteaux 35 × 2 = 70 €, crêpes 50 × 1,20 = 60 €. Étape 2 : 60 + 70 + 60 = 190 €."
+    pieges:
+      - { texte: "4,70 €", pourquoi: "Tu as ajouté les prix. Il faut d'abord ce que rapporte chaque produit (prix × nombre vendu), puis la somme." }
+      - { texte: "125 €", pourquoi: "125, c'est le nombre de produits vendus (40 + 35 + 50), pas l'argent gagné." }
+  - texte: "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48      …     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de CM2 mangent à la cantine ?"
+    nom: "45"
+    explication: "93 élèves mangent à la cantine, dont 48 de CM1 : 93 − 48 = 45. On vérifie : 45 + 15 = 60, tous les CM2."
+    pieges:
+      - { texte: "141", pourquoi: "Tu as ajouté 93 et 48. Le total 93 contient déjà les 48 CM1 : on les enlève." }
+      - { texte: "60", pourquoi: "60, c'est tous les CM2, cantine et maison ensemble." }
+  - texte: "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48     45     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de plus mangent à la cantine qu'à la maison ?"
+    nom: "66"
+    explication: "Colonne « Total » : 93 à la cantine, 27 à la maison. 93 − 27 = 66."
+    pieges:
+      - { texte: "36", pourquoi: "48 − 12 = 36, c'est seulement pour le CM1. Prends la colonne « Total » : 93 − 27." }
+      - { texte: "120", pourquoi: "120, c'est le nombre de tous les élèves. On cherche l'écart entre cantine et maison." }
+  - texte: "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nQuel produit a rapporté le plus d'argent ?"
+    nom: "Les gâteaux"
+    explication: "Gâteaux : 35 × 2 = 70 €. Jus : 40 × 1,50 = 60 €. Crêpes : 50 × 1,20 = 60 €. Les gâteaux rapportent le plus."
+    pieges:
+      - { texte: "Les crêpes", pourquoi: "On a vendu le plus de crêpes, 50, mais à 1,20 € : 50 × 1,20 = 60 €, moins que les gâteaux (70 €)." }
+      - { texte: "Les jus", pourquoi: "Les jus rapportent 40 × 1,50 = 60 €, moins que les gâteaux (70 €)." }
+  - texte: "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuelle est la température la plus haute, et quand ?"
+    nom: "25 °C, mardi à midi"
+    explication: "Les températures de midi sont plus hautes que celles du matin, et la plus grande est 25 °C, mardi."
+    pieges:
+      - { texte: "22 °C, lundi à midi", pourquoi: "22 °C est le premier nombre de la ligne « Midi », pas le plus grand : 25 °C est plus grand." }
+      - { texte: "16 °C, mardi matin", pourquoi: "16 °C est la plus haute du matin. À midi, il fait plus chaud : 25 °C mardi." }
+
+en:
+  titre: "Solving a problem with a table"
+  idee: "With a table, first take the useful numbers, in the right row and the right column, then choose the calculation. Sometimes it takes two steps: an in-between calculation, then the result."
+  phrases:
+    consigne: "Read the table, take the useful numbers, calculate, then touch the answer."
+    question: "{texte}"
+    indice: "Find the useful row and column. Ask yourself: is one calculation enough, or do you need an in-between calculation first?"
+    exemple: "Example: you sell 30 exercise books at €2 and 20 pens at €1.50. Step 1: 30 × 2 = €60 and 20 × 1.50 = €30. Step 2: 60 + 30 = €90 in all."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn Tuesday, by how many degrees did the temperature rise between morning and noon?"
+      nom: "9 degrees"
+      explication: "Tuesday: 16 °C in the morning, 25 °C at noon. 25 − 16 = 9 degrees more."
+      pieges:
+        - { texte: "41 degrees", pourquoi: "You added 16 and 25. We want how much it rose: that's a difference." }
+        - { texte: "8 degrees", pourquoi: "8 degrees is Monday's gap (22 − 14). Read the “Tuesday” column." }
+    - texte: "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn which day is the gap between morning and noon the smallest?"
+      nom: "Wednesday"
+      explication: "Monday: 22 − 14 = 8. Tuesday: 25 − 16 = 9. Wednesday: 20 − 13 = 7. The smallest gap is on Wednesday."
+      pieges:
+        - { texte: "Tuesday", pourquoi: "Tuesday has the highest temperature at noon, but its gap, 9 degrees, is the biggest." }
+        - { texte: "Monday", pourquoi: "On Monday the gap is 8 degrees; on Wednesday, only 7." }
+    - texte: "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did the juice sales bring in?"
+      nom: "€60"
+      explication: "40 juices at €1.50: 40 × 1.50 = €60."
+      pieges:
+        - { texte: "€41.50", pourquoi: "You added 40 and 1.50. Each juice costs €1.50: multiply by the number of juices." }
+        - { texte: "€6", pourquoi: "€6 is the price of 4 juices. 40 were sold: 40 × 1.50 = €60." }
+    - texte: "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did all the sales bring in?"
+      nom: "€190"
+      explication: "Step 1: juice 40 × 1.50 = €60, cakes 35 × 2 = €70, pancakes 50 × 1.20 = €60. Step 2: 60 + 70 + 60 = €190."
+      pieges:
+        - { texte: "€4.70", pourquoi: "You added the prices. First find what each product brings in (price × number sold), then the sum." }
+        - { texte: "€125", pourquoi: "125 is the number of items sold (40 + 35 + 50), not the money made." }
+    - texte: "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48       …      93\nHome           12      15      27\nTotal          60      60     120\nHow many Year 6 pupils eat at the canteen?"
+      nom: "45"
+      explication: "93 pupils eat at the canteen, 48 of them in Year 5: 93 − 48 = 45. Check: 45 + 15 = 60, all of Year 6."
+      pieges:
+        - { texte: "141", pourquoi: "You added 93 and 48. The total 93 already includes the 48 Year 5 pupils: take them away." }
+        - { texte: "60", pourquoi: "60 is all of Year 6, canteen and home together." }
+    - texte: "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48      45      93\nHome           12      15      27\nTotal          60      60     120\nHow many more pupils eat at the canteen than at home?"
+      nom: "66"
+      explication: "“Total” column: 93 at the canteen, 27 at home. 93 − 27 = 66."
+      pieges:
+        - { texte: "36", pourquoi: "48 − 12 = 36 is only for Year 5. Use the “Total” column: 93 − 27." }
+        - { texte: "120", pourquoi: "120 is the number of all the pupils. We want the gap between canteen and home." }
+    - texte: "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nWhich product brought in the most money?"
+      nom: "The cakes"
+      explication: "Cakes: 35 × 2 = €70. Juice: 40 × 1.50 = €60. Pancakes: 50 × 1.20 = €60. The cakes bring in the most."
+      pieges:
+        - { texte: "The pancakes", pourquoi: "The most pancakes were sold, 50, but at €1.20: 50 × 1.20 = €60, less than the cakes (€70)." }
+        - { texte: "The juice", pourquoi: "The juice brings in 40 × 1.50 = €60, less than the cakes (€70)." }
+    - texte: "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nWhat is the highest temperature, and when?"
+      nom: "25 °C, Tuesday at noon"
+      explication: "The noon temperatures are higher than the morning ones, and the biggest is 25 °C, on Tuesday."
+      pieges:
+        - { texte: "22 °C, Monday at noon", pourquoi: "22 °C is the first number in the “Noon” row, not the biggest: 25 °C is bigger." }
+        - { texte: "16 °C, Tuesday morning", pourquoi: "16 °C is the highest in the morning. At noon it's warmer: 25 °C on Tuesday." }

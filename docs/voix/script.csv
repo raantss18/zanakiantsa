@@ -4839,6 +4839,144 @@ bande-numerique.demonstration;Regarde : de {pas} en {pas}, le nombre qui manque,
 bande-numerique.bravo;Oui ! De {pas} en {pas}, c'est {n}.
 bande-numerique.idee;Avec les grands nombres, c'est pareil : un pas de un change les unités, un pas de dix les dizaines, un pas de cent les centaines.
 bande-numerique.variantes.0;Quel nombre se cache sous le point d'interrogation ?
+tableau-double-entree.consigne;Lis le tableau, trouve la bonne ligne et la bonne colonne, puis touche la réponse.
+tableau-double-entree.question;{texte}
+tableau-double-entree.indice;Pose un doigt sur la ligne, un autre sur la colonne : le nombre est là où ils se croisent. Pour une case vide, pars du total et enlève ce que tu connais.
+tableau-double-entree.exemple;Exemple : 12 filles et 9 garçons mangent à la cantine. Dans le tableau, la ligne « Cantine » croise la colonne « Filles » sur 12, la colonne « Garçons » sur 9, et la colonne « Total » sur 21, car 12 + 9 = 21.
+tableau-double-entree.demonstration;{explication}
+tableau-double-entree.bravo;Oui ! {explication}
+tableau-double-entree.idee;Un tableau à double entrée range des nombres selon deux choses : la ligne et la colonne. Chaque case est au croisement d'une ligne et d'une colonne. La case « Total » additionne sa ligne ou sa colonne.
+tableau-double-entree.items.0;Le tableau dit comment les élèves viennent à l'école : /               Filles Garçons   Total / À pied           34      28      62 / En bus           15      21      36 / Total            49      49      98 / Combien de garçons viennent en bus ?
+tableau-double-entree.items.0.explication;La ligne « En bus » croise la colonne « Garçons » sur 21.
+tableau-double-entree.items.1;Dans un tableau qui compte les filles et les garçons selon leur moyen de transport, où lit-on le nombre de filles qui viennent en bus ?
+tableau-double-entree.items.1.explication;Une case est au croisement d'une ligne (en bus) et d'une colonne (filles) : elle compte les élèves qui sont les deux à la fois.
+tableau-double-entree.items.2;Il manque un nombre dans le tableau : /               Filles Garçons   Total / À pied           34       …      62 / En bus           15      21      36 / Total            49      49      98 / Combien de garçons viennent à pied ?
+tableau-double-entree.items.2.explication;À pied, il y a 62 élèves en tout, dont 34 filles : 62 − 34 = 28 garçons. On vérifie : 28 + 21 = 49, le total des garçons.
+tableau-double-entree.items.3;Le tableau dit comment les élèves viennent à l'école : /               Filles Garçons   Total / À pied           34      28      62 / En bus           15      21      36 / Total            49      49      98 / Combien d'élèves y a-t-il en tout ?
+tableau-double-entree.items.3.explication;La dernière case, en bas à droite, compte tout le monde : 62 + 36 = 98, ou 49 + 49 = 98.
+tableau-double-entree.items.4;Le tableau dit comment les élèves viennent à l'école : /               Filles Garçons   Total / À pied           34      28      62 / En bus           15      21      36 / Total            49      49      98 / À pied, combien y a-t-il de filles de plus que de garçons ?
+tableau-double-entree.items.4.explication;Sur la ligne « À pied » : 34 filles et 28 garçons. 34 − 28 = 6 filles de plus.
+tableau-double-entree.items.5;Les deux classes de CE2 ont choisi leur sortie : /                  Zoo   Musée   Total / CE2 A            14      11      25 / CE2 B             …       9      27 / Total            32      20      52 / Combien d'élèves du CE2 B ont choisi le zoo ?
+tableau-double-entree.items.5.explication;Le CE2 B a 27 élèves, dont 9 pour le musée : 27 − 9 = 18 pour le zoo. On vérifie : 14 + 18 = 32.
+tableau-double-entree.items.6;La bibliothèque compte les livres prêtés : /               Contes      BD   Total / Janvier         120      85     205 / Février         140       …     230 / Total           260     175     435 / Combien de BD ont été prêtées en février ?
+tableau-double-entree.items.6.explication;En février, 230 livres dont 140 contes : 230 − 140 = 90 BD. On vérifie : 85 + 90 = 175.
+tableau-double-entree.items.7;La bibliothèque compte les livres prêtés : /               Contes      BD   Total / Janvier         120      85     205 / Février         140      90     230 / Total           260     175     435 / Quel mois a-t-on prêté le plus de livres ?
+tableau-double-entree.items.7.explication;La colonne « Total » le dit : 205 livres en janvier, 230 en février. 230 est plus grand.
+suite-regle.consigne;Trouve la règle qui fait passer d'un nombre au suivant, puis touche la réponse.
+suite-regle.question;{texte}
+suite-regle.indice;Calcule l'écart entre deux nombres voisins. S'il change, essaie une multiplication ou une division, ou regarde si les écarts suivent eux-mêmes une règle.
+suite-regle.exemple;Exemple : 6 ; 11 ; 16 ; 21. De 6 à 11, on ajoute 5. On vérifie : 11 + 5 = 16, et 16 + 5 = 21. La règle est « ajouter 5 », et le nombre suivant est 26.
+suite-regle.demonstration;{explication}
+suite-regle.bravo;Oui ! {explication}
+suite-regle.idee;Une suite de nombres suit une règle de calcul : on fait toujours la même chose pour passer d'un nombre au suivant. On calcule l'écart entre deux voisins, puis on vérifie la règle sur tous.
+suite-regle.items.0;Suite : 12 ; 19 ; 26 ; 33… Quelle est la règle ?
+suite-regle.items.0.explication;12 + 7 = 19, 19 + 7 = 26, 26 + 7 = 33 : on ajoute 7 chaque fois.
+suite-regle.items.1;Suite : 5 ; 15 ; 45 ; 135… Quel est le nombre suivant ?
+suite-regle.items.1.explication;Chaque nombre est 3 fois le précédent : 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135, et 135 × 3 = 405.
+suite-regle.items.2;Suite : 100 ; 92 ; 84 ; 76… Quel est le nombre suivant ?
+suite-regle.items.2.explication;La suite descend : on enlève 8 chaque fois. 76 − 8 = 68.
+suite-regle.items.3;Suite : 1 000 ; 1 250 ; 1 500 ; 1 750… Quelle est la règle ?
+suite-regle.items.3.explication;1 000 + 250 = 1 250, 1 250 + 250 = 1 500, 1 500 + 250 = 1 750.
+suite-regle.items.4;Suite : 64 ; 32 ; 16 ; 8… Quel est le nombre suivant ?
+suite-regle.items.4.explication;Chaque nombre est la moitié du précédent : on divise par 2. 8 : 2 = 4.
+suite-regle.items.5;Suite : 10 ; 15 ; 13 ; 18 ; 16… Quel est le nombre suivant ?
+suite-regle.items.5.explication;Deux règles alternent : ajouter 5, puis enlever 2, et on recommence. Après 16, on ajoute 5 : 21.
+suite-regle.items.6;La règle est « ajouter 9 ». Le premier nombre est 4. Quel est le cinquième nombre ?
+suite-regle.items.6.explication;4, puis 13, puis 22, puis 31, puis 40. Du 1er au 5e nombre, il y a 4 pas : 4 + 4 × 9 = 40.
+suite-regle.items.7;Suite : 1 ; 4 ; 9 ; 16 ; 25… Quel est le nombre suivant ?
+suite-regle.items.7.explication;Les écarts sont 3, 5, 7, 9 : ils grandissent de 2. Le suivant est 11 : 25 + 11 = 36.
+motif-regularite.consigne;Compare les étapes, trouve ce qui est ajouté à chaque fois, puis touche la réponse.
+motif-regularite.question;{texte}
+motif-regularite.indice;Compare deux étapes voisines : qu'est-ce qu'on a ajouté ? Vérifie que c'est pareil entre les étapes suivantes.
+motif-regularite.exemple;Exemple : une rangée de triangles en allumettes. 1 triangle : 3 allumettes ; 2 triangles : 5 ; 3 triangles : 7. Chaque nouveau triangle partage un côté avec le précédent : on ajoute 2 allumettes. Pour 4 triangles : 9.
+motif-regularite.demonstration;{explication}
+motif-regularite.bravo;Oui ! {explication}
+motif-regularite.idee;Dans une suite de motifs qui grandit, quelque chose change toujours de la même façon d'une étape à la suivante : c'est la régularité. On la trouve en comparant deux étapes voisines : qu'est-ce qui a été ajouté ?
+motif-regularite.items.0;Suite de lettres : A B A B B A B B B A… Quelles lettres viennent juste après le dernier A ?
+motif-regularite.items.0.explication;Après chaque A, il y a un B de plus : 1, puis 2, puis 3. Après le quatrième A viennent 4 B.
+motif-regularite.items.1;Avec des allumettes, on forme une rangée de carrés. 1 carré : 4 allumettes. 2 carrés : 7 allumettes. 3 carrés : 10 allumettes. Combien d'allumettes pour 4 carrés ?
+motif-regularite.items.1.explication;Chaque nouveau carré partage un côté avec le précédent : on ajoute 3 allumettes. 10 + 3 = 13.
+motif-regularite.items.2;Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 5 ?
+motif-regularite.items.2.explication;On ajoute 2, puis 3, puis 4 : chaque étape ajoute une colonne plus haute d'un cube que la précédente. À l'étape 5, on ajoute 5 : 10 + 5 = 15.
+motif-regularite.items.3;Un collier : 1 perle rouge, 1 bleue, puis 2 rouges, 2 bleues, puis 3 rouges, 3 bleues… Combien de perles rouges dans le groupe suivant ?
+motif-regularite.items.3.explication;À chaque groupe, il y a une perle de plus de chaque couleur : 1, 2, 3, puis 4 rouges.
+motif-regularite.items.4;Étape 1 : 2 ronds. Étape 2 : 4 ronds. Étape 3 : 6 ronds. Quelle est la régularité ?
+motif-regularite.items.4.explication;De 2 à 4, puis de 4 à 6 : on ajoute 2 ronds. À l'étape 4, il y en aura 8.
+motif-regularite.items.5;Une figure en forme de L : étape 1, 3 carreaux ; étape 2, 5 carreaux ; étape 3, 7 carreaux. À chaque étape, on ajoute un carreau en haut et un à droite. Combien de carreaux à l'étape 4 ?
+motif-regularite.items.5.explication;On ajoute 2 carreaux à chaque étape, un en haut et un à droite : 7 + 2 = 9.
+motif-regularite.items.6;Une pile de boîtes : 6 boîtes en bas, puis 5 au-dessus, puis 4, et ainsi de suite jusqu'à 1 boîte en haut. Combien de boîtes en tout ?
+motif-regularite.items.6.explication;Chaque rangée a une boîte de moins que celle du dessous : 6 + 5 + 4 + 3 + 2 + 1 = 21.
+motif-regularite.items.7;Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 5 tables ?
+motif-regularite.items.7.explication;Chaque table ajoutée donne 2 places de plus : 8, puis 10 pour 4 tables, puis 12 pour 5 tables.
+motif-etape.consigne;Trouve ce qu'on ajoute à chaque étape, compte les ajouts, puis touche la réponse.
+motif-etape.question;{texte}
+motif-etape.indice;Trouve ce qu'on ajoute à chaque étape. Puis compte les ajouts : de l'étape 1 à une étape donnée, il y en a un de moins que le numéro de l'étape.
+motif-etape.exemple;Exemple : étape 1, 7 ronds ; étape 2, 9 ; étape 3, 11. On ajoute 2 à chaque étape. Pour l'étape 20, on part de 7 et on fait 19 ajouts de 2 : 7 + 19 × 2 = 45 ronds.
+motif-etape.demonstration;{explication}
+motif-etape.bravo;Oui ! {explication}
+motif-etape.idee;Pour une étape lointaine, sans tout dessiner, on cherche ce qu'il y a au départ et ce qu'on ajoute à chaque étape. Attention : de l'étape 1 à l'étape 10, il n'y a que 9 ajouts.
+motif-etape.items.0;Une rangée de carrés en allumettes : 1 carré, 4 allumettes ; 2 carrés, 7 ; 3 carrés, 10. Combien d'allumettes pour 10 carrés ?
+motif-etape.items.0.explication;1 allumette au bout, puis 3 allumettes par carré : 1 + 3 × 10 = 31. On vérifie avec 1 carré : 1 + 3 = 4.
+motif-etape.items.1;Étape 1 : 5 points. Étape 2 : 8 points. Étape 3 : 11 points. Étape 4 : 14 points. Combien de points à l'étape 10 ?
+motif-etape.items.1.explication;On ajoute 3 à chaque étape. De l'étape 1 à l'étape 10, il y a 9 ajouts : 5 + 9 × 3 = 32.
+motif-etape.items.2;Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 25 tables ?
+motif-etape.items.2.explication;2 places par table, une de chaque côté, plus les 2 places des deux bouts : 2 × 25 + 2 = 52.
+motif-etape.items.3;Avec ces mêmes tables (4, 6, 8 places…), il faut asseoir 30 personnes, sans place vide. Combien de tables faut-il ?
+motif-etape.items.3.explication;2 places par table plus les 2 bouts : 2 × 14 + 2 = 30.
+motif-etape.items.4;Étape 1 : un carré d'un carreau. Étape 2 : un carré de 2 carreaux sur 2. Étape 3 : un carré de 3 sur 3. Combien de carreaux à l'étape 7 ?
+motif-etape.items.4.explication;À l'étape 7, le carré a 7 rangées de 7 carreaux : 7 × 7 = 49.
+motif-etape.items.5;Étape 1 : 6 ronds. Étape 2 : 11 ronds. Étape 3 : 16 ronds. Quelle phrase donne le nombre de ronds à n'importe quelle étape ?
+motif-etape.items.5.explication;Étape 1 : 5 + 1 = 6. Étape 2 : 10 + 1 = 11. Étape 3 : 15 + 1 = 16. La règle marche à chaque étape.
+motif-etape.items.6;Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 8 ?
+motif-etape.items.6.explication;L'étape 8 a des colonnes de 1, 2, 3… jusqu'à 8 cubes : 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36.
+motif-etape.items.7;Une frise de perles : 3 perles à l'étape 1, puis 4 perles de plus à chaque étape. Combien de perles à l'étape 12 ?
+motif-etape.items.7.explication;De l'étape 1 à l'étape 12, il y a 11 ajouts de 4 perles : 3 + 11 × 4 = 47.
+tableau-problemes.consigne;Lis le tableau, prends les nombres utiles, calcule, puis touche la réponse.
+tableau-problemes.question;{texte}
+tableau-problemes.indice;Trouve la ligne et la colonne utiles. Demande-toi : faut-il un seul calcul, ou d'abord un calcul intermédiaire ?
+tableau-problemes.exemple;Exemple : on vend 30 cahiers à 2 € et 20 stylos à 1,50 €. Étape 1 : 30 × 2 = 60 € et 20 × 1,50 = 30 €. Étape 2 : 60 + 30 = 90 € en tout.
+tableau-problemes.demonstration;{explication}
+tableau-problemes.bravo;Oui ! {explication}
+tableau-problemes.idee;Avec un tableau, on prend d'abord les nombres utiles, dans la bonne ligne et la bonne colonne, puis on choisit le calcul. Parfois il faut deux étapes : un calcul intermédiaire, puis le résultat.
+tableau-problemes.items.0;La classe a relevé la température : /              Lundi     Mardi  Mercredi / Matin       14 °C     16 °C     13 °C / Midi        22 °C     25 °C     20 °C / Mardi, de combien de degrés la température a-t-elle monté entre le matin et midi ?
+tableau-problemes.items.0.explication;Mardi : 16 °C le matin, 25 °C à midi. 25 − 16 = 9 degrés de plus.
+tableau-problemes.items.1;La classe a relevé la température : /              Lundi     Mardi  Mercredi / Matin       14 °C     16 °C     13 °C / Midi        22 °C     25 °C     20 °C / Quel jour l'écart entre le matin et midi est-il le plus petit ?
+tableau-problemes.items.1.explication;Lundi : 22 − 14 = 8. Mardi : 25 − 16 = 9. Mercredi : 20 − 13 = 7. Le plus petit écart est mercredi.
+tableau-problemes.items.2;À la kermesse, l'école a vendu : /             Prix   Vendus / Jus       1,50 €       40 / Gâteau    2,00 €       35 / Crêpe     1,20 €       50 / Combien a rapporté la vente des jus ?
+tableau-problemes.items.2.explication;40 jus à 1,50 € : 40 × 1,50 = 60 €.
+tableau-problemes.items.3;À la kermesse, l'école a vendu : /             Prix   Vendus / Jus       1,50 €       40 / Gâteau    2,00 €       35 / Crêpe     1,20 €       50 / Combien a rapporté toute la vente ?
+tableau-problemes.items.3.explication;Étape 1 : jus 40 × 1,50 = 60 €, gâteaux 35 × 2 = 70 €, crêpes 50 × 1,20 = 60 €. Étape 2 : 60 + 70 + 60 = 190 €.
+tableau-problemes.items.4;Où mangent les élèves de CM le midi ? /              CM1    CM2  Total / Cantine       48      …     93 / Maison        12     15     27 / Total         60     60    120 / Combien d'élèves de CM2 mangent à la cantine ?
+tableau-problemes.items.4.explication;93 élèves mangent à la cantine, dont 48 de CM1 : 93 − 48 = 45. On vérifie : 45 + 15 = 60, tous les CM2.
+tableau-problemes.items.5;Où mangent les élèves de CM le midi ? /              CM1    CM2  Total / Cantine       48     45     93 / Maison        12     15     27 / Total         60     60    120 / Combien d'élèves de plus mangent à la cantine qu'à la maison ?
+tableau-problemes.items.5.explication;Colonne « Total » : 93 à la cantine, 27 à la maison. 93 − 27 = 66.
+tableau-problemes.items.6;À la kermesse, l'école a vendu : /             Prix   Vendus / Jus       1,50 €       40 / Gâteau    2,00 €       35 / Crêpe     1,20 €       50 / Quel produit a rapporté le plus d'argent ?
+tableau-problemes.items.6.explication;Gâteaux : 35 × 2 = 70 €. Jus : 40 × 1,50 = 60 €. Crêpes : 50 × 1,20 = 60 €. Les gâteaux rapportent le plus.
+tableau-problemes.items.7;La classe a relevé la température : /              Lundi     Mardi  Mercredi / Matin       14 °C     16 °C     13 °C / Midi        22 °C     25 °C     20 °C / Quelle est la température la plus haute, et quand ?
+tableau-problemes.items.7.explication;Les températures de midi sont plus hautes que celles du matin, et la plus grande est 25 °C, mardi.
+motif-structure.consigne;Cherche ce qui reste pareil et ce qui grandit, puis touche la réponse.
+motif-structure.question;{texte}
+motif-structure.indice;Cherche ce qui ne bouge pas (souvent le centre ou un coin) et ce qui grandit avec le numéro de l'étape. Vérifie ta règle sur l'étape 1 et sur l'étape 2.
+motif-structure.exemple;Exemple : un L en carreaux, avec 1 carreau au coin, un bras vers le haut et un bras vers la droite, chacun aussi long que le numéro de l'étape. Structure : 1 + 2 × le numéro. Étape 30 : 1 + 2 × 30 = 61 carreaux. Un L de 21 carreaux ? 21 − 1 = 20, et 20 : 2 = 10 : c'est l'étape 10.
+motif-structure.demonstration;{explication}
+motif-structure.bravo;Oui ! {explication}
+motif-structure.idee;Un motif qui grandit a une structure : une partie qui ne bouge pas, et des parties qui grandissent avec le numéro de l'étape. Avec elle, on calcule n'importe quelle étape.
+motif-structure.items.0;Une croix grandit : 1 carreau au centre et 4 bras. À l'étape 1, chaque bras a 1 carreau ; à l'étape 2, 2 carreaux ; à l'étape 3, 3 carreaux. Quelle règle donne le nombre de carreaux ?
+motif-structure.items.0.explication;Le centre ne bouge pas ; les 4 bras ont chacun autant de carreaux que le numéro de l'étape. Étape 2 : 1 + 4 × 2 = 9.
+motif-structure.items.1;La même croix : 1 carreau au centre et 4 bras aussi longs que le numéro de l'étape. Combien de carreaux à l'étape 25 ?
+motif-structure.items.1.explication;1 + 4 × 25 = 1 + 100 = 101 carreaux.
+motif-structure.items.2;Une croix de ce type (1 au centre, 4 bras aussi longs que le numéro de l'étape) a 61 carreaux. À quelle étape est-elle ?
+motif-structure.items.2.explication;On enlève le centre : 61 − 1 = 60 carreaux pour les 4 bras, donc 60 : 4 = 15 carreaux par bras. C'est l'étape 15.
+motif-structure.items.3;Un cadre carré creux. Étape 1 : le tour d'un carré de 3 carreaux de côté, 8 carreaux. Étape 2 : le tour d'un carré de 4 de côté, 12 carreaux. Étape 3 : le tour d'un carré de 5 de côté, 16 carreaux. Quelle structure donne le nombre de carreaux ?
+motif-structure.items.3.explication;On découpe le cadre en 4 bandes qui tournent autour du carré, sans compter les coins deux fois. Étape 1 : 4 × 2 = 8. Étape 2 : 4 × 3 = 12. Étape 3 : 4 × 4 = 16.
+motif-structure.items.4;Le même cadre carré creux (8, 12, 16 carreaux…), fait de 4 bandes d'un carreau de plus que le numéro de l'étape. Combien de carreaux à l'étape 10 ?
+motif-structure.items.4.explication;À l'étape 10, chaque bande a 11 carreaux : 4 × 11 = 44.
+motif-structure.items.5;Un motif a 7 carreaux à l'étape 1 et en gagne 3 à chaque étape. Si n est le numéro de l'étape, quel calcul donne le nombre de carreaux ?
+motif-structure.items.5.explication;Étape 1 : 4 + 3 = 7. Étape 2 : 4 + 6 = 10. On ajoute bien 3 à chaque étape, et l'étape 1 donne 7.
+motif-structure.items.6;Motif A : 10 carreaux à l'étape 1, puis 2 de plus à chaque étape. Motif B : 4 carreaux à l'étape 1, puis 5 de plus à chaque étape. À quelle étape B dépasse-t-il A pour la première fois ?
+motif-structure.items.6.explication;A : 10, 12, 14, 16. B : 4, 9, 14, 19. À l'étape 3, ils sont à égalité (14) ; à l'étape 4, B a 19 et A 16.
+motif-structure.items.7;Une rangée de triangles en allumettes : 1 triangle, 3 allumettes ; 2 triangles, 5 ; 3 triangles, 7. Combien de triangles fait-on avec 41 allumettes ?
+motif-structure.items.7.explication;Structure : 1 allumette de départ, puis 2 par triangle. 41 − 1 = 40, et 40 : 2 = 20 triangles.
 sons.intro.0;Écoute bien les deux sons.
 sons.intro.1;Aigu comme un petit oiseau, grave comme un gros ours.
 sons.intro.2;Tu peux réécouter autant que tu veux.

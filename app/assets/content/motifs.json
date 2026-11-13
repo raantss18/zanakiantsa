@@ -3,6 +3,10 @@
   "id": "motifs",
   "titre": "Se familiariser avec les motifs organisés",
   "nom": "Les suites",
+  "noms": {
+    "moyens": "Suites et logique",
+    "grands": "Logique et données"
+  },
   "icone": "1f9e9",
   "intro": [
     {
@@ -33,12 +37,16 @@
   ],
   "ages": [
     4,
-    8
+    11
   ],
   "en": {
     "titre": "Getting to know patterns",
     "nom": "Patterns",
-    "resume": "Picture patterns and number sequences: in ones, twos and tens, and counting backwards.",
+    "noms": {
+      "moyens": "Sequences and logic",
+      "grands": "Logic and data"
+    },
+    "resume": "Picture patterns and number sequences: in ones, twos and tens, and counting backwards; then two-way tables, sequence rules and growing patterns, up to Year 7.",
     "intro": [
       {
         "texte": "A pattern is a group of pictures that repeats.",
@@ -69,7 +77,8 @@
   },
   "sources": {
     "c1": "https://eduscol.education.gouv.fr/sites/default/files/document/programme-cycle-1-consolide-127565.pdf",
-    "c2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf"
+    "c2": "https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf",
+    "c3": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
   },
   "competences": [
     {
@@ -359,6 +368,1680 @@
         },
         "variantes": [
           "Which number is hiding under the question mark?"
+        ]
+      }
+    },
+    {
+      "id": "tableau-double-entree",
+      "titre": "Lire et compléter un tableau à double entrée",
+      "niveau": "CE2",
+      "prerequis": [
+        "bande-numerique"
+      ],
+      "programme": {
+        "source": "c2",
+        "texte": "Lire et interpréter les données d’un tableau à double entrée ou d’un diagramme en barres. Résoudre des problèmes en utilisant les données d’un tableau à double entrée ou d’un diagramme en barre."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un tableau à double entrée range des nombres selon deux choses : la ligne et la colonne. Chaque case est au croisement d'une ligne et d'une colonne. La case « Total » additionne sa ligne ou sa colonne.",
+      "phrases": {
+        "consigne": "Lis le tableau, trouve la bonne ligne et la bonne colonne, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Pose un doigt sur la ligne, un autre sur la colonne : le nombre est là où ils se croisent. Pour une case vide, pars du total et enlève ce que tu connais.",
+        "exemple": "Exemple : 12 filles et 9 garçons mangent à la cantine. Dans le tableau, la ligne « Cantine » croise la colonne « Filles » sur 12, la colonne « Garçons » sur 9, et la colonne « Total » sur 21, car 12 + 9 = 21.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent en bus ?",
+          "nom": "21",
+          "explication": "La ligne « En bus » croise la colonne « Garçons » sur 21.",
+          "pieges": [
+            {
+              "texte": "15",
+              "pourquoi": "15, ce sont les filles qui viennent en bus : tu as lu la colonne « Filles »."
+            },
+            {
+              "texte": "36",
+              "pourquoi": "36, c'est le total de la ligne « En bus » : les filles et les garçons ensemble."
+            }
+          ]
+        },
+        {
+          "texte": "Dans un tableau qui compte les filles et les garçons selon leur moyen de transport, où lit-on le nombre de filles qui viennent en bus ?",
+          "nom": "Dans la case où la ligne « En bus » croise la colonne « Filles »",
+          "explication": "Une case est au croisement d'une ligne (en bus) et d'une colonne (filles) : elle compte les élèves qui sont les deux à la fois.",
+          "pieges": [
+            {
+              "texte": "Dans la case « Total » de la ligne « En bus »",
+              "pourquoi": "Cette case compte tous les élèves qui viennent en bus, filles et garçons ensemble."
+            },
+            {
+              "texte": "Tout en bas de la colonne « Filles »",
+              "pourquoi": "En bas de la colonne, c'est le total des filles, quel que soit leur moyen de transport."
+            }
+          ]
+        },
+        {
+          "texte": "Il manque un nombre dans le tableau :\n              Filles Garçons   Total\nÀ pied           34       …      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent à pied ?",
+          "nom": "28",
+          "explication": "À pied, il y a 62 élèves en tout, dont 34 filles : 62 − 34 = 28 garçons. On vérifie : 28 + 21 = 49, le total des garçons.",
+          "pieges": [
+            {
+              "texte": "96",
+              "pourquoi": "Tu as ajouté 34 et 62. Mais 62 est déjà le total de la ligne : on cherche ce qui manque à 34 pour faire 62."
+            },
+            {
+              "texte": "62",
+              "pourquoi": "62, c'est le total de la ligne : les garçons ne peuvent pas être aussi nombreux que filles et garçons ensemble."
+            }
+          ]
+        },
+        {
+          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien d'élèves y a-t-il en tout ?",
+          "nom": "98",
+          "explication": "La dernière case, en bas à droite, compte tout le monde : 62 + 36 = 98, ou 49 + 49 = 98.",
+          "pieges": [
+            {
+              "texte": "49",
+              "pourquoi": "49, c'est seulement le total d'une colonne : les filles, ou les garçons."
+            },
+            {
+              "texte": "196",
+              "pourquoi": "Tu as ajouté les totaux des lignes et ceux des colonnes : chaque élève est compté deux fois."
+            }
+          ]
+        },
+        {
+          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nÀ pied, combien y a-t-il de filles de plus que de garçons ?",
+          "nom": "6",
+          "explication": "Sur la ligne « À pied » : 34 filles et 28 garçons. 34 − 28 = 6 filles de plus.",
+          "pieges": [
+            {
+              "texte": "62",
+              "pourquoi": "62, c'est le nombre d'élèves à pied. On cherche l'écart entre filles et garçons, pas la somme."
+            },
+            {
+              "texte": "0",
+              "pourquoi": "Il y a autant de filles que de garçons en tout (49 et 49), mais pas sur la ligne « À pied » : 34 et 28."
+            }
+          ]
+        },
+        {
+          "texte": "Les deux classes de CE2 ont choisi leur sortie :\n                 Zoo   Musée   Total\nCE2 A            14      11      25\nCE2 B             …       9      27\nTotal            32      20      52\nCombien d'élèves du CE2 B ont choisi le zoo ?",
+          "nom": "18",
+          "explication": "Le CE2 B a 27 élèves, dont 9 pour le musée : 27 − 9 = 18 pour le zoo. On vérifie : 14 + 18 = 32.",
+          "pieges": [
+            {
+              "texte": "36",
+              "pourquoi": "Tu as ajouté 27 et 9. Le total 27 contient déjà les 9 du musée : on les enlève."
+            },
+            {
+              "texte": "14",
+              "pourquoi": "14, c'est le zoo pour le CE2 A. Regarde la ligne du CE2 B."
+            }
+          ]
+        },
+        {
+          "texte": "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140       …     230\nTotal           260     175     435\nCombien de BD ont été prêtées en février ?",
+          "nom": "90",
+          "explication": "En février, 230 livres dont 140 contes : 230 − 140 = 90 BD. On vérifie : 85 + 90 = 175.",
+          "pieges": [
+            {
+              "texte": "370",
+              "pourquoi": "Tu as ajouté 140 et 230. Le total de février contient déjà les contes : on les enlève."
+            },
+            {
+              "texte": "85",
+              "pourquoi": "85, ce sont les BD de janvier. Regarde la ligne « Février »."
+            }
+          ]
+        },
+        {
+          "texte": "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140      90     230\nTotal           260     175     435\nQuel mois a-t-on prêté le plus de livres ?",
+          "nom": "En février",
+          "explication": "La colonne « Total » le dit : 205 livres en janvier, 230 en février. 230 est plus grand.",
+          "pieges": [
+            {
+              "texte": "En janvier",
+              "pourquoi": "En janvier, 205 livres ; en février, 230. Compare les nombres de la colonne « Total »."
+            },
+            {
+              "texte": "Autant les deux mois",
+              "pourquoi": "205 et 230 ne sont pas égaux : février a 25 livres de plus."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Reading and filling in a two-way table",
+        "idee": "A two-way table sorts numbers by two things at once: the row and the column. Each box is where a row and a column cross. The “Total” box adds up its whole row, or its whole column.",
+        "phrases": {
+          "consigne": "Read the table, find the right row and the right column, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Put one finger on the row and another on the column: the number is where they cross. For an empty box, start from the total and take away what you know.",
+          "exemple": "Example: 12 girls and 9 boys eat at the canteen. In the table, the “Canteen” row crosses the “Girls” column at 12, the “Boys” column at 9, and the “Total” column at 21, because 12 + 9 = 21.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys come by bus?",
+            "nom": "21",
+            "explication": "The “By bus” row crosses the “Boys” column at 21.",
+            "pieges": [
+              {
+                "texte": "15",
+                "pourquoi": "15 is the girls who come by bus: you read the “Girls” column."
+              },
+              {
+                "texte": "36",
+                "pourquoi": "36 is the total of the “By bus” row: girls and boys together."
+              }
+            ]
+          },
+          {
+            "texte": "In a table that counts girls and boys by how they get to school, where do you read the number of girls who come by bus?",
+            "nom": "In the box where the “By bus” row crosses the “Girls” column",
+            "explication": "A box is where a row (by bus) and a column (girls) cross: it counts the pupils who are both at once.",
+            "pieges": [
+              {
+                "texte": "In the “Total” box of the “By bus” row",
+                "pourquoi": "That box counts everyone who comes by bus, girls and boys together."
+              },
+              {
+                "texte": "At the very bottom of the “Girls” column",
+                "pourquoi": "At the bottom of the column is the total of girls, however they come."
+              }
+            ]
+          },
+          {
+            "texte": "One number is missing from the table:\n               Girls    Boys   Total\nOn foot          34       …      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys walk to school?",
+            "nom": "28",
+            "explication": "On foot, there are 62 pupils in all, including 34 girls: 62 − 34 = 28 boys. Check: 28 + 21 = 49, the total of boys.",
+            "pieges": [
+              {
+                "texte": "96",
+                "pourquoi": "You added 34 and 62. But 62 is already the row total: we look for what 34 needs to make 62."
+              },
+              {
+                "texte": "62",
+                "pourquoi": "62 is the row total: the boys can't be as many as girls and boys together."
+              }
+            ]
+          },
+          {
+            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many pupils are there altogether?",
+            "nom": "98",
+            "explication": "The last box, bottom right, counts everyone: 62 + 36 = 98, or 49 + 49 = 98.",
+            "pieges": [
+              {
+                "texte": "49",
+                "pourquoi": "49 is only the total of one column: the girls, or the boys."
+              },
+              {
+                "texte": "196",
+                "pourquoi": "You added the row totals and the column totals: each pupil is counted twice."
+              }
+            ]
+          },
+          {
+            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nOn foot, how many more girls are there than boys?",
+            "nom": "6",
+            "explication": "On the “On foot” row: 34 girls and 28 boys. 34 − 28 = 6 more girls.",
+            "pieges": [
+              {
+                "texte": "62",
+                "pourquoi": "62 is the number of pupils on foot. We want the difference between girls and boys, not the sum."
+              },
+              {
+                "texte": "0",
+                "pourquoi": "There are as many girls as boys in all (49 and 49), but not on the “On foot” row: 34 and 28."
+              }
+            ]
+          },
+          {
+            "texte": "The two classes chose their school trip:\n                 Zoo  Museum   Total\nClass A          14      11      25\nClass B           …       9      27\nTotal            32      20      52\nHow many pupils in class B chose the zoo?",
+            "nom": "18",
+            "explication": "Class B has 27 pupils, 9 of them for the museum: 27 − 9 = 18 for the zoo. Check: 14 + 18 = 32.",
+            "pieges": [
+              {
+                "texte": "36",
+                "pourquoi": "You added 27 and 9. The total 27 already includes the 9 for the museum: take them away."
+              },
+              {
+                "texte": "14",
+                "pourquoi": "14 is the zoo for class A. Look at the class B row."
+              }
+            ]
+          },
+          {
+            "texte": "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140       …     230\nTotal           260     175     435\nHow many comics were lent in February?",
+            "nom": "90",
+            "explication": "In February, 230 books, 140 of them tales: 230 − 140 = 90 comics. Check: 85 + 90 = 175.",
+            "pieges": [
+              {
+                "texte": "370",
+                "pourquoi": "You added 140 and 230. The February total already includes the tales: take them away."
+              },
+              {
+                "texte": "85",
+                "pourquoi": "85 is the comics for January. Look at the “February” row."
+              }
+            ]
+          },
+          {
+            "texte": "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140      90     230\nTotal           260     175     435\nIn which month were the most books lent?",
+            "nom": "In February",
+            "explication": "The “Total” column says so: 205 books in January, 230 in February. 230 is bigger.",
+            "pieges": [
+              {
+                "texte": "In January",
+                "pourquoi": "In January, 205 books; in February, 230. Compare the numbers in the “Total” column."
+              },
+              {
+                "texte": "The same in both months",
+                "pourquoi": "205 and 230 aren't equal: February has 25 more books."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "suite-regle",
+      "titre": "Trouver la règle d'une suite de nombres",
+      "niveau": "CM1",
+      "prerequis": [
+        "bande-numerique"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Identifier et formuler une règle de calcul pour poursuivre une suite de nombres"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Une suite de nombres suit une règle de calcul : on fait toujours la même chose pour passer d'un nombre au suivant. On calcule l'écart entre deux voisins, puis on vérifie la règle sur tous.",
+      "phrases": {
+        "consigne": "Trouve la règle qui fait passer d'un nombre au suivant, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Calcule l'écart entre deux nombres voisins. S'il change, essaie une multiplication ou une division, ou regarde si les écarts suivent eux-mêmes une règle.",
+        "exemple": "Exemple : 6 ; 11 ; 16 ; 21. De 6 à 11, on ajoute 5. On vérifie : 11 + 5 = 16, et 16 + 5 = 21. La règle est « ajouter 5 », et le nombre suivant est 26.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Suite : 12 ; 19 ; 26 ; 33… Quelle est la règle ?",
+          "nom": "ajouter 7",
+          "explication": "12 + 7 = 19, 19 + 7 = 26, 26 + 7 = 33 : on ajoute 7 chaque fois.",
+          "pieges": [
+            {
+              "texte": "ajouter 12",
+              "pourquoi": "12 est le premier nombre de la suite, pas l'écart. De 12 à 19, il y a 7."
+            },
+            {
+              "texte": "ajouter 6",
+              "pourquoi": "12 + 6 = 18, pas 19. Compte l'écart exact entre deux nombres voisins."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 5 ; 15 ; 45 ; 135… Quel est le nombre suivant ?",
+          "nom": "405",
+          "explication": "Chaque nombre est 3 fois le précédent : 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135, et 135 × 3 = 405.",
+          "pieges": [
+            {
+              "texte": "225",
+              "pourquoi": "Tu as ajouté 90, le dernier écart. Mais les écarts grandissent (10, 30, 90) : la règle est « multiplier par 3 »."
+            },
+            {
+              "texte": "270",
+              "pourquoi": "Tu as multiplié par 2. Ici, 45 × 3 = 135 : on multiplie par 3."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 100 ; 92 ; 84 ; 76… Quel est le nombre suivant ?",
+          "nom": "68",
+          "explication": "La suite descend : on enlève 8 chaque fois. 76 − 8 = 68.",
+          "pieges": [
+            {
+              "texte": "84",
+              "pourquoi": "Tu as ajouté 8. Cette suite descend : de 100 à 92, on enlève 8."
+            },
+            {
+              "texte": "66",
+              "pourquoi": "Tu as enlevé 10. De 100 à 92, l'écart est 8, pas 10."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 1 000 ; 1 250 ; 1 500 ; 1 750… Quelle est la règle ?",
+          "nom": "ajouter 250",
+          "explication": "1 000 + 250 = 1 250, 1 250 + 250 = 1 500, 1 500 + 250 = 1 750.",
+          "pieges": [
+            {
+              "texte": "ajouter 25",
+              "pourquoi": "1 000 + 25 = 1 025, pas 1 250 : regarde le chiffre des centaines qui change."
+            },
+            {
+              "texte": "ajouter 1 000",
+              "pourquoi": "1 000 est le premier nombre, pas l'écart. De 1 000 à 1 250, il y a 250."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 64 ; 32 ; 16 ; 8… Quel est le nombre suivant ?",
+          "nom": "4",
+          "explication": "Chaque nombre est la moitié du précédent : on divise par 2. 8 : 2 = 4.",
+          "pieges": [
+            {
+              "texte": "0",
+              "pourquoi": "Tu as enlevé 8. Mais de 64 à 32 on enlève 32, et de 32 à 16 on enlève 16 : l'écart change. La règle est « diviser par 2 »."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Tu as enlevé 2. Chaque nombre est la moitié du précédent : la moitié de 8, c'est 4."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 10 ; 15 ; 13 ; 18 ; 16… Quel est le nombre suivant ?",
+          "nom": "21",
+          "explication": "Deux règles alternent : ajouter 5, puis enlever 2, et on recommence. Après 16, on ajoute 5 : 21.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "Tu as enlevé 2 deux fois de suite. Les règles alternent : après « enlever 2 » vient « ajouter 5 »."
+            },
+            {
+              "texte": "19",
+              "pourquoi": "Tu as ajouté 3, l'écart entre 10 et 13. Mais on avance pas à pas : + 5, − 2, + 5, − 2…"
+            }
+          ]
+        },
+        {
+          "texte": "La règle est « ajouter 9 ». Le premier nombre est 4. Quel est le cinquième nombre ?",
+          "nom": "40",
+          "explication": "4, puis 13, puis 22, puis 31, puis 40. Du 1er au 5e nombre, il y a 4 pas : 4 + 4 × 9 = 40.",
+          "pieges": [
+            {
+              "texte": "49",
+              "pourquoi": "Tu as fait 5 pas. Du 1er au 5e nombre, il n'y en a que 4 : 4 + 4 × 9 = 40."
+            },
+            {
+              "texte": "45",
+              "pourquoi": "5 × 9 = 45, mais on part de 4, et il n'y a que 4 pas."
+            }
+          ]
+        },
+        {
+          "texte": "Suite : 1 ; 4 ; 9 ; 16 ; 25… Quel est le nombre suivant ?",
+          "nom": "36",
+          "explication": "Les écarts sont 3, 5, 7, 9 : ils grandissent de 2. Le suivant est 11 : 25 + 11 = 36.",
+          "pieges": [
+            {
+              "texte": "34",
+              "pourquoi": "Tu as ajouté 9, comme la dernière fois. Mais l'écart grandit de 2 à chaque pas : 3, 5, 7, 9, puis 11."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "Tu as doublé 25. Mais 2 × 4 = 8, pas 9 : regarde plutôt les écarts, 3, 5, 7, 9."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Finding the rule of a number sequence",
+        "idee": "A number sequence follows a calculation rule: you always do the same thing to go from one number to the next. To find it, work out the gap between two neighbouring numbers, then check the rule on every number.",
+        "phrases": {
+          "consigne": "Find the rule that takes you from one number to the next, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Work out the gap between two neighbouring numbers. If it changes, try multiplying or dividing, or see whether the gaps follow a rule themselves.",
+          "exemple": "Example: 6; 11; 16; 21. From 6 to 11, you add 5. Check: 11 + 5 = 16, and 16 + 5 = 21. The rule is “add 5”, and the next number is 26.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Sequence: 12; 19; 26; 33… What is the rule?",
+            "nom": "add 7",
+            "explication": "12 + 7 = 19, 19 + 7 = 26, 26 + 7 = 33: you add 7 each time.",
+            "pieges": [
+              {
+                "texte": "add 12",
+                "pourquoi": "12 is the first number of the sequence, not the gap. From 12 to 19, it's 7."
+              },
+              {
+                "texte": "add 6",
+                "pourquoi": "12 + 6 = 18, not 19. Work out the exact gap between two neighbouring numbers."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 5; 15; 45; 135… What is the next number?",
+            "nom": "405",
+            "explication": "Each number is 3 times the one before: 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135, and 135 × 3 = 405.",
+            "pieges": [
+              {
+                "texte": "225",
+                "pourquoi": "You added 90, the last gap. But the gaps grow (10, 30, 90): the rule is “multiply by 3”."
+              },
+              {
+                "texte": "270",
+                "pourquoi": "You multiplied by 2. Here, 45 × 3 = 135: you multiply by 3."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 100; 92; 84; 76… What is the next number?",
+            "nom": "68",
+            "explication": "The sequence goes down: you take away 8 each time. 76 − 8 = 68.",
+            "pieges": [
+              {
+                "texte": "84",
+                "pourquoi": "You added 8. This sequence goes down: from 100 to 92, you take away 8."
+              },
+              {
+                "texte": "66",
+                "pourquoi": "You took away 10. From 100 to 92, the gap is 8, not 10."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 1,000; 1,250; 1,500; 1,750… What is the rule?",
+            "nom": "add 250",
+            "explication": "1,000 + 250 = 1,250, 1,250 + 250 = 1,500, 1,500 + 250 = 1,750.",
+            "pieges": [
+              {
+                "texte": "add 25",
+                "pourquoi": "1,000 + 25 = 1,025, not 1,250: look at the hundreds digit that changes."
+              },
+              {
+                "texte": "add 1,000",
+                "pourquoi": "1,000 is the first number, not the gap. From 1,000 to 1,250, it's 250."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 64; 32; 16; 8… What is the next number?",
+            "nom": "4",
+            "explication": "Each number is half the one before: you divide by 2. 8 ÷ 2 = 4.",
+            "pieges": [
+              {
+                "texte": "0",
+                "pourquoi": "You took away 8. But from 64 to 32 you take away 32, and from 32 to 16 you take away 16: the gap changes. The rule is “divide by 2”."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "You took away 2. Each number is half the one before: half of 8 is 4."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 10; 15; 13; 18; 16… What is the next number?",
+            "nom": "21",
+            "explication": "Two rules take turns: add 5, then take away 2, and start again. After 16, you add 5: 21.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "You took away 2 twice in a row. The rules take turns: after “take away 2” comes “add 5”."
+              },
+              {
+                "texte": "19",
+                "pourquoi": "You added 3, the gap between 10 and 13. But you go step by step: + 5, − 2, + 5, − 2…"
+              }
+            ]
+          },
+          {
+            "texte": "The rule is “add 9”. The first number is 4. What is the fifth number?",
+            "nom": "40",
+            "explication": "4, then 13, then 22, then 31, then 40. From the 1st to the 5th number, there are 4 steps: 4 + 4 × 9 = 40.",
+            "pieges": [
+              {
+                "texte": "49",
+                "pourquoi": "You took 5 steps. From the 1st to the 5th number there are only 4: 4 + 4 × 9 = 40."
+              },
+              {
+                "texte": "45",
+                "pourquoi": "5 × 9 = 45, but you start from 4, and there are only 4 steps."
+              }
+            ]
+          },
+          {
+            "texte": "Sequence: 1; 4; 9; 16; 25… What is the next number?",
+            "nom": "36",
+            "explication": "The gaps are 3, 5, 7, 9: they grow by 2. The next one is 11: 25 + 11 = 36.",
+            "pieges": [
+              {
+                "texte": "34",
+                "pourquoi": "You added 9, like last time. But the gap grows by 2 each step: 3, 5, 7, 9, then 11."
+              },
+              {
+                "texte": "50",
+                "pourquoi": "You doubled 25. But 2 × 4 = 8, not 9: look at the gaps instead, 3, 5, 7, 9."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "motif-regularite",
+      "titre": "Une suite de motifs qui grandit : trouver la régularité",
+      "niveau": "CM1",
+      "prerequis": [
+        "suite-regle"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Identifier des régularités et poursuivre une suite de motifs évolutive"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Dans une suite de motifs qui grandit, quelque chose change toujours de la même façon d'une étape à la suivante : c'est la régularité. On la trouve en comparant deux étapes voisines : qu'est-ce qui a été ajouté ?",
+      "phrases": {
+        "consigne": "Compare les étapes, trouve ce qui est ajouté à chaque fois, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Compare deux étapes voisines : qu'est-ce qu'on a ajouté ? Vérifie que c'est pareil entre les étapes suivantes.",
+        "exemple": "Exemple : une rangée de triangles en allumettes. 1 triangle : 3 allumettes ; 2 triangles : 5 ; 3 triangles : 7. Chaque nouveau triangle partage un côté avec le précédent : on ajoute 2 allumettes. Pour 4 triangles : 9.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Suite de lettres : A B A B B A B B B A… Quelles lettres viennent juste après le dernier A ?",
+          "nom": "B B B B",
+          "explication": "Après chaque A, il y a un B de plus : 1, puis 2, puis 3. Après le quatrième A viennent 4 B.",
+          "pieges": [
+            {
+              "texte": "B B B",
+              "pourquoi": "Ça, c'est le groupe d'avant. À chaque tour, il y a un B de plus : 1, 2, 3, puis 4."
+            },
+            {
+              "texte": "B",
+              "pourquoi": "La suite ne se répète pas à l'identique : elle grandit d'un B à chaque tour."
+            }
+          ]
+        },
+        {
+          "texte": "Avec des allumettes, on forme une rangée de carrés. 1 carré : 4 allumettes. 2 carrés : 7 allumettes. 3 carrés : 10 allumettes. Combien d'allumettes pour 4 carrés ?",
+          "nom": "13",
+          "explication": "Chaque nouveau carré partage un côté avec le précédent : on ajoute 3 allumettes. 10 + 3 = 13.",
+          "pieges": [
+            {
+              "texte": "16",
+              "pourquoi": "4 × 4 = 16 compte chaque carré à part. Mais deux carrés voisins partagent une allumette : on en ajoute 3 à chaque fois."
+            },
+            {
+              "texte": "14",
+              "pourquoi": "Tu as ajouté 4. Regarde : de 4 à 7, puis de 7 à 10, on ajoute 3."
+            }
+          ]
+        },
+        {
+          "texte": "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 5 ?",
+          "nom": "15",
+          "explication": "On ajoute 2, puis 3, puis 4 : chaque étape ajoute une colonne plus haute d'un cube que la précédente. À l'étape 5, on ajoute 5 : 10 + 5 = 15.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "Tu as ajouté 4, comme la dernière fois. Les ajouts grandissent : 2, 3, 4, puis 5."
+            },
+            {
+              "texte": "20",
+              "pourquoi": "Tu as doublé 10. Mais de 6 à 10, on n'a pas doublé : regarde les ajouts, 2, 3, 4."
+            }
+          ]
+        },
+        {
+          "texte": "Un collier : 1 perle rouge, 1 bleue, puis 2 rouges, 2 bleues, puis 3 rouges, 3 bleues… Combien de perles rouges dans le groupe suivant ?",
+          "nom": "4",
+          "explication": "À chaque groupe, il y a une perle de plus de chaque couleur : 1, 2, 3, puis 4 rouges.",
+          "pieges": [
+            {
+              "texte": "3",
+              "pourquoi": "3, c'est le groupe d'avant. La suite grandit : une perle de plus à chaque groupe."
+            },
+            {
+              "texte": "6",
+              "pourquoi": "Tu as doublé 3. On n'ajoute qu'une perle à chaque groupe : 1, 2, 3, 4."
+            }
+          ]
+        },
+        {
+          "texte": "Étape 1 : 2 ronds. Étape 2 : 4 ronds. Étape 3 : 6 ronds. Quelle est la régularité ?",
+          "nom": "On ajoute 2 ronds à chaque étape",
+          "explication": "De 2 à 4, puis de 4 à 6 : on ajoute 2 ronds. À l'étape 4, il y en aura 8.",
+          "pieges": [
+            {
+              "texte": "On double à chaque étape",
+              "pourquoi": "2 × 2 = 4, mais 4 × 2 = 8, pas 6. Vérifie la règle sur toutes les étapes : on ajoute 2."
+            },
+            {
+              "texte": "On ajoute 4 ronds à chaque étape",
+              "pourquoi": "4 est le nombre de ronds à l'étape 2, pas ce qu'on ajoute. De 2 à 4, on ajoute 2."
+            }
+          ]
+        },
+        {
+          "texte": "Une figure en forme de L : étape 1, 3 carreaux ; étape 2, 5 carreaux ; étape 3, 7 carreaux. À chaque étape, on ajoute un carreau en haut et un à droite. Combien de carreaux à l'étape 4 ?",
+          "nom": "9",
+          "explication": "On ajoute 2 carreaux à chaque étape, un en haut et un à droite : 7 + 2 = 9.",
+          "pieges": [
+            {
+              "texte": "8",
+              "pourquoi": "Tu as ajouté un seul carreau. On en ajoute 2 : un en haut, un à droite."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "Tu as ajouté 3. Regarde : de 3 à 5, puis de 5 à 7, on ajoute 2."
+            }
+          ]
+        },
+        {
+          "texte": "Une pile de boîtes : 6 boîtes en bas, puis 5 au-dessus, puis 4, et ainsi de suite jusqu'à 1 boîte en haut. Combien de boîtes en tout ?",
+          "nom": "21",
+          "explication": "Chaque rangée a une boîte de moins que celle du dessous : 6 + 5 + 4 + 3 + 2 + 1 = 21.",
+          "pieges": [
+            {
+              "texte": "6",
+              "pourquoi": "6, c'est seulement la rangée du bas. Il faut ajouter toutes les rangées."
+            },
+            {
+              "texte": "36",
+              "pourquoi": "6 × 6 = 36 compterait 6 rangées de 6. Ici, chaque rangée a une boîte de moins."
+            }
+          ]
+        },
+        {
+          "texte": "Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 5 tables ?",
+          "nom": "12",
+          "explication": "Chaque table ajoutée donne 2 places de plus : 8, puis 10 pour 4 tables, puis 12 pour 5 tables.",
+          "pieges": [
+            {
+              "texte": "20",
+              "pourquoi": "5 × 4 = 20 compte 4 places par table. Mais quand on colle deux tables, des places disparaissent : on ajoute 2 par table."
+            },
+            {
+              "texte": "10",
+              "pourquoi": "10, c'est pour 4 tables. Il faut encore une table : 10 + 2 = 12."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A growing pattern: finding the regularity",
+        "idee": "In a pattern that grows, something always changes in the same way from one stage to the next: that's the regularity. You find it by comparing two neighbouring stages: what was added?",
+        "phrases": {
+          "consigne": "Compare the stages, find what is added each time, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Compare two neighbouring stages: what was added? Check that it's the same between the next stages.",
+          "exemple": "Example: a row of triangles made of matchsticks. 1 triangle: 3 matchsticks; 2 triangles: 5; 3 triangles: 7. Each new triangle shares a side with the one before: you add 2 matchsticks. For 4 triangles: 9.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Letter sequence: A B A B B A B B B A… Which letters come just after the last A?",
+            "nom": "B B B B",
+            "explication": "After each A there is one more B: 1, then 2, then 3. After the fourth A come 4 Bs.",
+            "pieges": [
+              {
+                "texte": "B B B",
+                "pourquoi": "That's the group before. Each time round there's one more B: 1, 2, 3, then 4."
+              },
+              {
+                "texte": "B",
+                "pourquoi": "The sequence doesn't repeat exactly: it grows by one B each time round."
+              }
+            ]
+          },
+          {
+            "texte": "With matchsticks, you make a row of squares. 1 square: 4 matchsticks. 2 squares: 7 matchsticks. 3 squares: 10 matchsticks. How many matchsticks for 4 squares?",
+            "nom": "13",
+            "explication": "Each new square shares a side with the one before: you add 3 matchsticks. 10 + 3 = 13.",
+            "pieges": [
+              {
+                "texte": "16",
+                "pourquoi": "4 × 4 = 16 counts each square on its own. But two neighbouring squares share a matchstick: you add 3 each time."
+              },
+              {
+                "texte": "14",
+                "pourquoi": "You added 4. Look: from 4 to 7, then from 7 to 10, you add 3."
+              }
+            ]
+          },
+          {
+            "texte": "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 5?",
+            "nom": "15",
+            "explication": "You add 2, then 3, then 4: each stage adds a column one cube taller than the last one. At stage 5 you add 5: 10 + 5 = 15.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "You added 4, like last time. The additions grow: 2, 3, 4, then 5."
+              },
+              {
+                "texte": "20",
+                "pourquoi": "You doubled 10. But from 6 to 10 nothing was doubled: look at the additions, 2, 3, 4."
+              }
+            ]
+          },
+          {
+            "texte": "A necklace: 1 red bead, 1 blue, then 2 red, 2 blue, then 3 red, 3 blue… How many red beads in the next group?",
+            "nom": "4",
+            "explication": "Each group has one more bead of each colour: 1, 2, 3, then 4 red.",
+            "pieges": [
+              {
+                "texte": "3",
+                "pourquoi": "3 is the group before. The pattern grows: one more bead each group."
+              },
+              {
+                "texte": "6",
+                "pourquoi": "You doubled 3. Only one bead is added each group: 1, 2, 3, 4."
+              }
+            ]
+          },
+          {
+            "texte": "Stage 1: 2 circles. Stage 2: 4 circles. Stage 3: 6 circles. What is the regularity?",
+            "nom": "You add 2 circles at each stage",
+            "explication": "From 2 to 4, then from 4 to 6: you add 2 circles. At stage 4 there will be 8.",
+            "pieges": [
+              {
+                "texte": "You double at each stage",
+                "pourquoi": "2 × 2 = 4, but 4 × 2 = 8, not 6. Check the rule on every stage: you add 2."
+              },
+              {
+                "texte": "You add 4 circles at each stage",
+                "pourquoi": "4 is the number of circles at stage 2, not what you add. From 2 to 4, you add 2."
+              }
+            ]
+          },
+          {
+            "texte": "An L-shaped figure: stage 1, 3 tiles; stage 2, 5 tiles; stage 3, 7 tiles. At each stage, you add one tile at the top and one on the right. How many tiles at stage 4?",
+            "nom": "9",
+            "explication": "You add 2 tiles at each stage, one at the top and one on the right: 7 + 2 = 9.",
+            "pieges": [
+              {
+                "texte": "8",
+                "pourquoi": "You added only one tile. You add 2: one at the top, one on the right."
+              },
+              {
+                "texte": "10",
+                "pourquoi": "You added 3. Look: from 3 to 5, then from 5 to 7, you add 2."
+              }
+            ]
+          },
+          {
+            "texte": "A pile of boxes: 6 boxes at the bottom, then 5 on top, then 4, and so on up to 1 box at the top. How many boxes altogether?",
+            "nom": "21",
+            "explication": "Each row has one box fewer than the row below: 6 + 5 + 4 + 3 + 2 + 1 = 21.",
+            "pieges": [
+              {
+                "texte": "6",
+                "pourquoi": "6 is only the bottom row. You must add all the rows."
+              },
+              {
+                "texte": "36",
+                "pourquoi": "6 × 6 = 36 would be 6 rows of 6. Here each row has one box fewer."
+              }
+            ]
+          },
+          {
+            "texte": "Square tables put end to end: 1 table, 4 seats; 2 tables, 6 seats; 3 tables, 8 seats. How many seats for 5 tables?",
+            "nom": "12",
+            "explication": "Each extra table gives 2 more seats: 8, then 10 for 4 tables, then 12 for 5 tables.",
+            "pieges": [
+              {
+                "texte": "20",
+                "pourquoi": "5 × 4 = 20 counts 4 seats per table. But when two tables are pushed together, seats disappear: you add 2 per table."
+              },
+              {
+                "texte": "10",
+                "pourquoi": "10 is for 4 tables. You need one more table: 10 + 2 = 12."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "motif-etape",
+      "titre": "Une étape lointaine d'un motif qui grandit",
+      "niveau": "CM2",
+      "prerequis": [
+        "motif-regularite"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Trouver le nombre d’éléments pour une étape donnée dans une suite de motifs évolutive"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Pour une étape lointaine, sans tout dessiner, on cherche ce qu'il y a au départ et ce qu'on ajoute à chaque étape. Attention : de l'étape 1 à l'étape 10, il n'y a que 9 ajouts.",
+      "phrases": {
+        "consigne": "Trouve ce qu'on ajoute à chaque étape, compte les ajouts, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Trouve ce qu'on ajoute à chaque étape. Puis compte les ajouts : de l'étape 1 à une étape donnée, il y en a un de moins que le numéro de l'étape.",
+        "exemple": "Exemple : étape 1, 7 ronds ; étape 2, 9 ; étape 3, 11. On ajoute 2 à chaque étape. Pour l'étape 20, on part de 7 et on fait 19 ajouts de 2 : 7 + 19 × 2 = 45 ronds.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une rangée de carrés en allumettes : 1 carré, 4 allumettes ; 2 carrés, 7 ; 3 carrés, 10. Combien d'allumettes pour 10 carrés ?",
+          "nom": "31",
+          "explication": "1 allumette au bout, puis 3 allumettes par carré : 1 + 3 × 10 = 31. On vérifie avec 1 carré : 1 + 3 = 4.",
+          "pieges": [
+            {
+              "texte": "40",
+              "pourquoi": "10 × 4 compte chaque carré à part. Mais deux carrés voisins partagent une allumette."
+            },
+            {
+              "texte": "30",
+              "pourquoi": "3 × 10 = 30 oublie la toute première allumette, au bout de la rangée : 1 + 3 × 10."
+            }
+          ]
+        },
+        {
+          "texte": "Étape 1 : 5 points. Étape 2 : 8 points. Étape 3 : 11 points. Étape 4 : 14 points. Combien de points à l'étape 10 ?",
+          "nom": "32",
+          "explication": "On ajoute 3 à chaque étape. De l'étape 1 à l'étape 10, il y a 9 ajouts : 5 + 9 × 3 = 32.",
+          "pieges": [
+            {
+              "texte": "35",
+              "pourquoi": "Tu as fait 5 + 10 × 3. De l'étape 1 à l'étape 10, il n'y a que 9 ajouts : 5 + 9 × 3."
+            },
+            {
+              "texte": "30",
+              "pourquoi": "10 × 3 = 30 oublie le départ : à l'étape 1, il y a déjà 5 points."
+            }
+          ]
+        },
+        {
+          "texte": "Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 25 tables ?",
+          "nom": "52",
+          "explication": "2 places par table, une de chaque côté, plus les 2 places des deux bouts : 2 × 25 + 2 = 52.",
+          "pieges": [
+            {
+              "texte": "100",
+              "pourquoi": "25 × 4 compte 4 places par table. Collées, les tables n'en gardent que 2 chacune, plus les 2 bouts."
+            },
+            {
+              "texte": "50",
+              "pourquoi": "2 places par table, c'est juste, mais il reste les 2 places des bouts : 50 + 2."
+            }
+          ]
+        },
+        {
+          "texte": "Avec ces mêmes tables (4, 6, 8 places…), il faut asseoir 30 personnes, sans place vide. Combien de tables faut-il ?",
+          "nom": "14",
+          "explication": "2 places par table plus les 2 bouts : 2 × 14 + 2 = 30.",
+          "pieges": [
+            {
+              "texte": "15",
+              "pourquoi": "Avec 15 tables, il y a 2 × 15 + 2 = 32 places : 2 places resteraient vides."
+            },
+            {
+              "texte": "8",
+              "pourquoi": "Tu as compté 4 places par table. Collées, elles n'en ont que 2 chacune, plus les 2 bouts."
+            }
+          ]
+        },
+        {
+          "texte": "Étape 1 : un carré d'un carreau. Étape 2 : un carré de 2 carreaux sur 2. Étape 3 : un carré de 3 sur 3. Combien de carreaux à l'étape 7 ?",
+          "nom": "49",
+          "explication": "À l'étape 7, le carré a 7 rangées de 7 carreaux : 7 × 7 = 49.",
+          "pieges": [
+            {
+              "texte": "14",
+              "pourquoi": "7 × 2 = 14. Mais le carré de 7 sur 7 a 7 rangées de 7 carreaux."
+            },
+            {
+              "texte": "28",
+              "pourquoi": "Tu as compté le tour du carré, 4 × 7. Il faut tous les carreaux, aussi ceux du milieu : 7 × 7."
+            }
+          ]
+        },
+        {
+          "texte": "Étape 1 : 6 ronds. Étape 2 : 11 ronds. Étape 3 : 16 ronds. Quelle phrase donne le nombre de ronds à n'importe quelle étape ?",
+          "nom": "5 fois le numéro de l'étape, plus 1",
+          "explication": "Étape 1 : 5 + 1 = 6. Étape 2 : 10 + 1 = 11. Étape 3 : 15 + 1 = 16. La règle marche à chaque étape.",
+          "pieges": [
+            {
+              "texte": "Le numéro de l'étape, plus 5",
+              "pourquoi": "Ça marche pour l'étape 1 (1 + 5 = 6), mais pas pour l'étape 2 : 2 + 5 = 7, pas 11."
+            },
+            {
+              "texte": "6 fois le numéro de l'étape",
+              "pourquoi": "6 × 2 = 12, pas 11. Vérifie toujours une règle sur plusieurs étapes."
+            }
+          ]
+        },
+        {
+          "texte": "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 8 ?",
+          "nom": "36",
+          "explication": "L'étape 8 a des colonnes de 1, 2, 3… jusqu'à 8 cubes : 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36.",
+          "pieges": [
+            {
+              "texte": "32",
+              "pourquoi": "Tu as fait 8 × 4. Chaque étape ajoute une colonne de la hauteur de son numéro : 1 + 2 + … + 8."
+            },
+            {
+              "texte": "64",
+              "pourquoi": "8 × 8 serait un carré plein. L'escalier n'en remplit qu'une partie : 1 + 2 + … + 8 = 36."
+            }
+          ]
+        },
+        {
+          "texte": "Une frise de perles : 3 perles à l'étape 1, puis 4 perles de plus à chaque étape. Combien de perles à l'étape 12 ?",
+          "nom": "47",
+          "explication": "De l'étape 1 à l'étape 12, il y a 11 ajouts de 4 perles : 3 + 11 × 4 = 47.",
+          "pieges": [
+            {
+              "texte": "51",
+              "pourquoi": "Tu as fait 3 + 12 × 4. L'étape 1 a déjà ses 3 perles : on n'ajoute que 11 fois 4."
+            },
+            {
+              "texte": "48",
+              "pourquoi": "12 × 4 = 48 compte 4 perles à l'étape 1. Or elle n'en a que 3 : 3 + 11 × 4."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "A far-off stage of a growing pattern",
+        "idee": "For a far-off stage, without drawing everything, find what there is at the start and what you add at each stage. Careful: from stage 1 to stage 10, there are only 9 additions.",
+        "phrases": {
+          "consigne": "Find what is added at each stage, count the additions, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Find what is added at each stage. Then count the additions: from stage 1 to a given stage, there is one fewer than the stage number.",
+          "exemple": "Example: stage 1, 7 circles; stage 2, 9; stage 3, 11. You add 2 at each stage. For stage 20, start from 7 and make 19 additions of 2: 7 + 19 × 2 = 45 circles.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "A row of squares made of matchsticks: 1 square, 4 matchsticks; 2 squares, 7; 3 squares, 10. How many matchsticks for 10 squares?",
+            "nom": "31",
+            "explication": "1 matchstick at the end, then 3 matchsticks per square: 1 + 3 × 10 = 31. Check with 1 square: 1 + 3 = 4.",
+            "pieges": [
+              {
+                "texte": "40",
+                "pourquoi": "10 × 4 counts each square on its own. But two neighbouring squares share a matchstick."
+              },
+              {
+                "texte": "30",
+                "pourquoi": "3 × 10 = 30 forgets the very first matchstick, at the end of the row: 1 + 3 × 10."
+              }
+            ]
+          },
+          {
+            "texte": "Stage 1: 5 dots. Stage 2: 8 dots. Stage 3: 11 dots. Stage 4: 14 dots. How many dots at stage 10?",
+            "nom": "32",
+            "explication": "You add 3 at each stage. From stage 1 to stage 10 there are 9 additions: 5 + 9 × 3 = 32.",
+            "pieges": [
+              {
+                "texte": "35",
+                "pourquoi": "You did 5 + 10 × 3. From stage 1 to stage 10 there are only 9 additions: 5 + 9 × 3."
+              },
+              {
+                "texte": "30",
+                "pourquoi": "10 × 3 = 30 forgets the start: at stage 1 there are already 5 dots."
+              }
+            ]
+          },
+          {
+            "texte": "Square tables put end to end: 1 table, 4 seats; 2 tables, 6 seats; 3 tables, 8 seats. How many seats for 25 tables?",
+            "nom": "52",
+            "explication": "2 seats per table, one on each side, plus the 2 seats at the two ends: 2 × 25 + 2 = 52.",
+            "pieges": [
+              {
+                "texte": "100",
+                "pourquoi": "25 × 4 counts 4 seats per table. Pushed together, the tables keep only 2 each, plus the 2 ends."
+              },
+              {
+                "texte": "50",
+                "pourquoi": "2 seats per table is right, but there are still the 2 seats at the ends: 50 + 2."
+              }
+            ]
+          },
+          {
+            "texte": "With the same tables (4, 6, 8 seats…), 30 people must sit down, with no empty seat. How many tables are needed?",
+            "nom": "14",
+            "explication": "2 seats per table plus the 2 ends: 2 × 14 + 2 = 30.",
+            "pieges": [
+              {
+                "texte": "15",
+                "pourquoi": "With 15 tables there are 2 × 15 + 2 = 32 seats: 2 seats would stay empty."
+              },
+              {
+                "texte": "8",
+                "pourquoi": "You counted 4 seats per table. Pushed together, they only have 2 each, plus the 2 ends."
+              }
+            ]
+          },
+          {
+            "texte": "Stage 1: a square of one tile. Stage 2: a square of 2 tiles by 2. Stage 3: a square of 3 by 3. How many tiles at stage 7?",
+            "nom": "49",
+            "explication": "At stage 7, the square has 7 rows of 7 tiles: 7 × 7 = 49.",
+            "pieges": [
+              {
+                "texte": "14",
+                "pourquoi": "7 × 2 = 14. But the 7 by 7 square has 7 rows of 7 tiles."
+              },
+              {
+                "texte": "28",
+                "pourquoi": "You counted the edge of the square, 4 × 7. You need all the tiles, the middle ones too: 7 × 7."
+              }
+            ]
+          },
+          {
+            "texte": "Stage 1: 6 circles. Stage 2: 11 circles. Stage 3: 16 circles. Which sentence gives the number of circles at any stage?",
+            "nom": "5 times the stage number, plus 1",
+            "explication": "Stage 1: 5 + 1 = 6. Stage 2: 10 + 1 = 11. Stage 3: 15 + 1 = 16. The rule works at every stage.",
+            "pieges": [
+              {
+                "texte": "The stage number, plus 5",
+                "pourquoi": "It works for stage 1 (1 + 5 = 6), but not for stage 2: 2 + 5 = 7, not 11."
+              },
+              {
+                "texte": "6 times the stage number",
+                "pourquoi": "6 × 2 = 12, not 11. Always check a rule on several stages."
+              }
+            ]
+          },
+          {
+            "texte": "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 8?",
+            "nom": "36",
+            "explication": "Stage 8 has columns of 1, 2, 3… up to 8 cubes: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36.",
+            "pieges": [
+              {
+                "texte": "32",
+                "pourquoi": "You did 8 × 4. Each stage adds a column as tall as its number: 1 + 2 + … + 8."
+              },
+              {
+                "texte": "64",
+                "pourquoi": "8 × 8 would be a full square. The staircase only fills part of it: 1 + 2 + … + 8 = 36."
+              }
+            ]
+          },
+          {
+            "texte": "A bead pattern: 3 beads at stage 1, then 4 more beads at each stage. How many beads at stage 12?",
+            "nom": "47",
+            "explication": "From stage 1 to stage 12 there are 11 additions of 4 beads: 3 + 11 × 4 = 47.",
+            "pieges": [
+              {
+                "texte": "51",
+                "pourquoi": "You did 3 + 12 × 4. Stage 1 already has its 3 beads: you only add 4 eleven times."
+              },
+              {
+                "texte": "48",
+                "pourquoi": "12 × 4 = 48 counts 4 beads at stage 1. But it only has 3: 3 + 11 × 4."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "tableau-problemes",
+      "titre": "Résoudre un problème avec un tableau",
+      "niveau": "CM2",
+      "prerequis": [
+        "tableau-double-entree"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Résoudre des problèmes en une ou deux étapes en utilisant les données d’un tableau, d’un diagramme en barres, d’un diagramme circulaire ou d’une courbe"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Avec un tableau, on prend d'abord les nombres utiles, dans la bonne ligne et la bonne colonne, puis on choisit le calcul. Parfois il faut deux étapes : un calcul intermédiaire, puis le résultat.",
+      "phrases": {
+        "consigne": "Lis le tableau, prends les nombres utiles, calcule, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Trouve la ligne et la colonne utiles. Demande-toi : faut-il un seul calcul, ou d'abord un calcul intermédiaire ?",
+        "exemple": "Exemple : on vend 30 cahiers à 2 € et 20 stylos à 1,50 €. Étape 1 : 30 × 2 = 60 € et 20 × 1,50 = 30 €. Étape 2 : 60 + 30 = 90 € en tout.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nMardi, de combien de degrés la température a-t-elle monté entre le matin et midi ?",
+          "nom": "9 degrés",
+          "explication": "Mardi : 16 °C le matin, 25 °C à midi. 25 − 16 = 9 degrés de plus.",
+          "pieges": [
+            {
+              "texte": "41 degrés",
+              "pourquoi": "Tu as ajouté 16 et 25. On cherche de combien elle a monté : c'est une différence."
+            },
+            {
+              "texte": "8 degrés",
+              "pourquoi": "8 degrés, c'est l'écart de lundi (22 − 14). Lis la colonne « Mardi »."
+            }
+          ]
+        },
+        {
+          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuel jour l'écart entre le matin et midi est-il le plus petit ?",
+          "nom": "Mercredi",
+          "explication": "Lundi : 22 − 14 = 8. Mardi : 25 − 16 = 9. Mercredi : 20 − 13 = 7. Le plus petit écart est mercredi.",
+          "pieges": [
+            {
+              "texte": "Mardi",
+              "pourquoi": "Mardi a la température la plus haute à midi, mais son écart, 9 degrés, est le plus grand."
+            },
+            {
+              "texte": "Lundi",
+              "pourquoi": "Lundi, l'écart est de 8 degrés ; mercredi, de 7 seulement."
+            }
+          ]
+        },
+        {
+          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté la vente des jus ?",
+          "nom": "60 €",
+          "explication": "40 jus à 1,50 € : 40 × 1,50 = 60 €.",
+          "pieges": [
+            {
+              "texte": "41,50 €",
+              "pourquoi": "Tu as ajouté 40 et 1,50. Chaque jus coûte 1,50 € : on multiplie par le nombre de jus."
+            },
+            {
+              "texte": "6 €",
+              "pourquoi": "6 €, c'est le prix de 4 jus. On en a vendu 40 : 40 × 1,50 = 60 €."
+            }
+          ]
+        },
+        {
+          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté toute la vente ?",
+          "nom": "190 €",
+          "explication": "Étape 1 : jus 40 × 1,50 = 60 €, gâteaux 35 × 2 = 70 €, crêpes 50 × 1,20 = 60 €. Étape 2 : 60 + 70 + 60 = 190 €.",
+          "pieges": [
+            {
+              "texte": "4,70 €",
+              "pourquoi": "Tu as ajouté les prix. Il faut d'abord ce que rapporte chaque produit (prix × nombre vendu), puis la somme."
+            },
+            {
+              "texte": "125 €",
+              "pourquoi": "125, c'est le nombre de produits vendus (40 + 35 + 50), pas l'argent gagné."
+            }
+          ]
+        },
+        {
+          "texte": "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48      …     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de CM2 mangent à la cantine ?",
+          "nom": "45",
+          "explication": "93 élèves mangent à la cantine, dont 48 de CM1 : 93 − 48 = 45. On vérifie : 45 + 15 = 60, tous les CM2.",
+          "pieges": [
+            {
+              "texte": "141",
+              "pourquoi": "Tu as ajouté 93 et 48. Le total 93 contient déjà les 48 CM1 : on les enlève."
+            },
+            {
+              "texte": "60",
+              "pourquoi": "60, c'est tous les CM2, cantine et maison ensemble."
+            }
+          ]
+        },
+        {
+          "texte": "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48     45     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de plus mangent à la cantine qu'à la maison ?",
+          "nom": "66",
+          "explication": "Colonne « Total » : 93 à la cantine, 27 à la maison. 93 − 27 = 66.",
+          "pieges": [
+            {
+              "texte": "36",
+              "pourquoi": "48 − 12 = 36, c'est seulement pour le CM1. Prends la colonne « Total » : 93 − 27."
+            },
+            {
+              "texte": "120",
+              "pourquoi": "120, c'est le nombre de tous les élèves. On cherche l'écart entre cantine et maison."
+            }
+          ]
+        },
+        {
+          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nQuel produit a rapporté le plus d'argent ?",
+          "nom": "Les gâteaux",
+          "explication": "Gâteaux : 35 × 2 = 70 €. Jus : 40 × 1,50 = 60 €. Crêpes : 50 × 1,20 = 60 €. Les gâteaux rapportent le plus.",
+          "pieges": [
+            {
+              "texte": "Les crêpes",
+              "pourquoi": "On a vendu le plus de crêpes, 50, mais à 1,20 € : 50 × 1,20 = 60 €, moins que les gâteaux (70 €)."
+            },
+            {
+              "texte": "Les jus",
+              "pourquoi": "Les jus rapportent 40 × 1,50 = 60 €, moins que les gâteaux (70 €)."
+            }
+          ]
+        },
+        {
+          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuelle est la température la plus haute, et quand ?",
+          "nom": "25 °C, mardi à midi",
+          "explication": "Les températures de midi sont plus hautes que celles du matin, et la plus grande est 25 °C, mardi.",
+          "pieges": [
+            {
+              "texte": "22 °C, lundi à midi",
+              "pourquoi": "22 °C est le premier nombre de la ligne « Midi », pas le plus grand : 25 °C est plus grand."
+            },
+            {
+              "texte": "16 °C, mardi matin",
+              "pourquoi": "16 °C est la plus haute du matin. À midi, il fait plus chaud : 25 °C mardi."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Solving a problem with a table",
+        "idee": "With a table, first take the useful numbers, in the right row and the right column, then choose the calculation. Sometimes it takes two steps: an in-between calculation, then the result.",
+        "phrases": {
+          "consigne": "Read the table, take the useful numbers, calculate, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Find the useful row and column. Ask yourself: is one calculation enough, or do you need an in-between calculation first?",
+          "exemple": "Example: you sell 30 exercise books at €2 and 20 pens at €1.50. Step 1: 30 × 2 = €60 and 20 × 1.50 = €30. Step 2: 60 + 30 = €90 in all.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn Tuesday, by how many degrees did the temperature rise between morning and noon?",
+            "nom": "9 degrees",
+            "explication": "Tuesday: 16 °C in the morning, 25 °C at noon. 25 − 16 = 9 degrees more.",
+            "pieges": [
+              {
+                "texte": "41 degrees",
+                "pourquoi": "You added 16 and 25. We want how much it rose: that's a difference."
+              },
+              {
+                "texte": "8 degrees",
+                "pourquoi": "8 degrees is Monday's gap (22 − 14). Read the “Tuesday” column."
+              }
+            ]
+          },
+          {
+            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn which day is the gap between morning and noon the smallest?",
+            "nom": "Wednesday",
+            "explication": "Monday: 22 − 14 = 8. Tuesday: 25 − 16 = 9. Wednesday: 20 − 13 = 7. The smallest gap is on Wednesday.",
+            "pieges": [
+              {
+                "texte": "Tuesday",
+                "pourquoi": "Tuesday has the highest temperature at noon, but its gap, 9 degrees, is the biggest."
+              },
+              {
+                "texte": "Monday",
+                "pourquoi": "On Monday the gap is 8 degrees; on Wednesday, only 7."
+              }
+            ]
+          },
+          {
+            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did the juice sales bring in?",
+            "nom": "€60",
+            "explication": "40 juices at €1.50: 40 × 1.50 = €60.",
+            "pieges": [
+              {
+                "texte": "€41.50",
+                "pourquoi": "You added 40 and 1.50. Each juice costs €1.50: multiply by the number of juices."
+              },
+              {
+                "texte": "€6",
+                "pourquoi": "€6 is the price of 4 juices. 40 were sold: 40 × 1.50 = €60."
+              }
+            ]
+          },
+          {
+            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did all the sales bring in?",
+            "nom": "€190",
+            "explication": "Step 1: juice 40 × 1.50 = €60, cakes 35 × 2 = €70, pancakes 50 × 1.20 = €60. Step 2: 60 + 70 + 60 = €190.",
+            "pieges": [
+              {
+                "texte": "€4.70",
+                "pourquoi": "You added the prices. First find what each product brings in (price × number sold), then the sum."
+              },
+              {
+                "texte": "€125",
+                "pourquoi": "125 is the number of items sold (40 + 35 + 50), not the money made."
+              }
+            ]
+          },
+          {
+            "texte": "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48       …      93\nHome           12      15      27\nTotal          60      60     120\nHow many Year 6 pupils eat at the canteen?",
+            "nom": "45",
+            "explication": "93 pupils eat at the canteen, 48 of them in Year 5: 93 − 48 = 45. Check: 45 + 15 = 60, all of Year 6.",
+            "pieges": [
+              {
+                "texte": "141",
+                "pourquoi": "You added 93 and 48. The total 93 already includes the 48 Year 5 pupils: take them away."
+              },
+              {
+                "texte": "60",
+                "pourquoi": "60 is all of Year 6, canteen and home together."
+              }
+            ]
+          },
+          {
+            "texte": "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48      45      93\nHome           12      15      27\nTotal          60      60     120\nHow many more pupils eat at the canteen than at home?",
+            "nom": "66",
+            "explication": "“Total” column: 93 at the canteen, 27 at home. 93 − 27 = 66.",
+            "pieges": [
+              {
+                "texte": "36",
+                "pourquoi": "48 − 12 = 36 is only for Year 5. Use the “Total” column: 93 − 27."
+              },
+              {
+                "texte": "120",
+                "pourquoi": "120 is the number of all the pupils. We want the gap between canteen and home."
+              }
+            ]
+          },
+          {
+            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nWhich product brought in the most money?",
+            "nom": "The cakes",
+            "explication": "Cakes: 35 × 2 = €70. Juice: 40 × 1.50 = €60. Pancakes: 50 × 1.20 = €60. The cakes bring in the most.",
+            "pieges": [
+              {
+                "texte": "The pancakes",
+                "pourquoi": "The most pancakes were sold, 50, but at €1.20: 50 × 1.20 = €60, less than the cakes (€70)."
+              },
+              {
+                "texte": "The juice",
+                "pourquoi": "The juice brings in 40 × 1.50 = €60, less than the cakes (€70)."
+              }
+            ]
+          },
+          {
+            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nWhat is the highest temperature, and when?",
+            "nom": "25 °C, Tuesday at noon",
+            "explication": "The noon temperatures are higher than the morning ones, and the biggest is 25 °C, on Tuesday.",
+            "pieges": [
+              {
+                "texte": "22 °C, Monday at noon",
+                "pourquoi": "22 °C is the first number in the “Noon” row, not the biggest: 25 °C is bigger."
+              },
+              {
+                "texte": "16 °C, Tuesday morning",
+                "pourquoi": "16 °C is the highest in the morning. At noon it's warmer: 25 °C on Tuesday."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "motif-structure",
+      "titre": "Voir la structure d'un motif qui grandit",
+      "niveau": "6e",
+      "prerequis": [
+        "motif-etape"
+      ],
+      "programme": {
+        "source": "c3",
+        "texte": "Identifier la structure d’un motif évolutif en repérant une régularité et en identifiant une structure"
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Un motif qui grandit a une structure : une partie qui ne bouge pas, et des parties qui grandissent avec le numéro de l'étape. Avec elle, on calcule n'importe quelle étape.",
+      "phrases": {
+        "consigne": "Cherche ce qui reste pareil et ce qui grandit, puis touche la réponse.",
+        "question": "{texte}",
+        "indice": "Cherche ce qui ne bouge pas (souvent le centre ou un coin) et ce qui grandit avec le numéro de l'étape. Vérifie ta règle sur l'étape 1 et sur l'étape 2.",
+        "exemple": "Exemple : un L en carreaux, avec 1 carreau au coin, un bras vers le haut et un bras vers la droite, chacun aussi long que le numéro de l'étape. Structure : 1 + 2 × le numéro. Étape 30 : 1 + 2 × 30 = 61 carreaux. Un L de 21 carreaux ? 21 − 1 = 20, et 20 : 2 = 10 : c'est l'étape 10.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Une croix grandit : 1 carreau au centre et 4 bras. À l'étape 1, chaque bras a 1 carreau ; à l'étape 2, 2 carreaux ; à l'étape 3, 3 carreaux. Quelle règle donne le nombre de carreaux ?",
+          "nom": "1 au centre, plus 4 fois le numéro de l'étape",
+          "explication": "Le centre ne bouge pas ; les 4 bras ont chacun autant de carreaux que le numéro de l'étape. Étape 2 : 1 + 4 × 2 = 9.",
+          "pieges": [
+            {
+              "texte": "5 fois le numéro de l'étape",
+              "pourquoi": "Le centre n'est compté qu'une fois : à l'étape 2, il y a 1 + 4 × 2 = 9 carreaux, pas 10."
+            },
+            {
+              "texte": "4 fois le numéro de l'étape",
+              "pourquoi": "Il manque le carreau du centre : à l'étape 1, la croix a 5 carreaux, pas 4."
+            }
+          ]
+        },
+        {
+          "texte": "La même croix : 1 carreau au centre et 4 bras aussi longs que le numéro de l'étape. Combien de carreaux à l'étape 25 ?",
+          "nom": "101",
+          "explication": "1 + 4 × 25 = 1 + 100 = 101 carreaux.",
+          "pieges": [
+            {
+              "texte": "125",
+              "pourquoi": "5 × 25 compte le centre 25 fois. Il n'y a qu'un centre : 1 + 4 × 25."
+            },
+            {
+              "texte": "100",
+              "pourquoi": "4 × 25 = 100, ce sont les bras. Il manque le carreau du centre."
+            }
+          ]
+        },
+        {
+          "texte": "Une croix de ce type (1 au centre, 4 bras aussi longs que le numéro de l'étape) a 61 carreaux. À quelle étape est-elle ?",
+          "nom": "Étape 15",
+          "explication": "On enlève le centre : 61 − 1 = 60 carreaux pour les 4 bras, donc 60 : 4 = 15 carreaux par bras. C'est l'étape 15.",
+          "pieges": [
+            {
+              "texte": "Étape 16",
+              "pourquoi": "À l'étape 16, il y a 1 + 4 × 16 = 65 carreaux, pas 61."
+            },
+            {
+              "texte": "Étape 60",
+              "pourquoi": "60, c'est le nombre de carreaux des bras. Il y a 4 bras : 60 : 4 = 15."
+            }
+          ]
+        },
+        {
+          "texte": "Un cadre carré creux. Étape 1 : le tour d'un carré de 3 carreaux de côté, 8 carreaux. Étape 2 : le tour d'un carré de 4 de côté, 12 carreaux. Étape 3 : le tour d'un carré de 5 de côté, 16 carreaux. Quelle structure donne le nombre de carreaux ?",
+          "nom": "4 bandes d'un carreau de plus que le numéro de l'étape",
+          "explication": "On découpe le cadre en 4 bandes qui tournent autour du carré, sans compter les coins deux fois. Étape 1 : 4 × 2 = 8. Étape 2 : 4 × 3 = 12. Étape 3 : 4 × 4 = 16.",
+          "pieges": [
+            {
+              "texte": "4 côtés de 2 carreaux de plus que le numéro de l'étape",
+              "pourquoi": "Les 4 coins seraient comptés deux fois : à l'étape 1, 4 × 3 = 12, pas 8."
+            },
+            {
+              "texte": "2 fois le numéro de l'étape, plus 6",
+              "pourquoi": "Ça marche à l'étape 1 (8), mais pas à l'étape 2 : 2 × 2 + 6 = 10, pas 12."
+            }
+          ]
+        },
+        {
+          "texte": "Le même cadre carré creux (8, 12, 16 carreaux…), fait de 4 bandes d'un carreau de plus que le numéro de l'étape. Combien de carreaux à l'étape 10 ?",
+          "nom": "44",
+          "explication": "À l'étape 10, chaque bande a 11 carreaux : 4 × 11 = 44.",
+          "pieges": [
+            {
+              "texte": "48",
+              "pourquoi": "4 × 12 compte chaque coin deux fois. Chaque bande a 11 carreaux : 4 × 11."
+            },
+            {
+              "texte": "40",
+              "pourquoi": "4 × 10 oublie que chaque bande a un carreau de plus que le numéro de l'étape."
+            }
+          ]
+        },
+        {
+          "texte": "Un motif a 7 carreaux à l'étape 1 et en gagne 3 à chaque étape. Si n est le numéro de l'étape, quel calcul donne le nombre de carreaux ?",
+          "nom": "4 + 3 × n",
+          "explication": "Étape 1 : 4 + 3 = 7. Étape 2 : 4 + 6 = 10. On ajoute bien 3 à chaque étape, et l'étape 1 donne 7.",
+          "pieges": [
+            {
+              "texte": "7 + 3 × n",
+              "pourquoi": "À l'étape 1, ça donne 10, pas 7 : l'étape 1 n'a pas encore reçu d'ajout."
+            },
+            {
+              "texte": "3 + 7 × n",
+              "pourquoi": "Les rôles sont échangés : c'est ce qu'on ajoute à chaque étape, 3, qui multiplie n."
+            }
+          ]
+        },
+        {
+          "texte": "Motif A : 10 carreaux à l'étape 1, puis 2 de plus à chaque étape. Motif B : 4 carreaux à l'étape 1, puis 5 de plus à chaque étape. À quelle étape B dépasse-t-il A pour la première fois ?",
+          "nom": "À l'étape 4",
+          "explication": "A : 10, 12, 14, 16. B : 4, 9, 14, 19. À l'étape 3, ils sont à égalité (14) ; à l'étape 4, B a 19 et A 16.",
+          "pieges": [
+            {
+              "texte": "À l'étape 3",
+              "pourquoi": "À l'étape 3, les deux ont 14 carreaux : B rattrape A, mais ne le dépasse pas encore."
+            },
+            {
+              "texte": "À l'étape 2",
+              "pourquoi": "À l'étape 2, A a 12 carreaux et B 9 : B est encore derrière."
+            }
+          ]
+        },
+        {
+          "texte": "Une rangée de triangles en allumettes : 1 triangle, 3 allumettes ; 2 triangles, 5 ; 3 triangles, 7. Combien de triangles fait-on avec 41 allumettes ?",
+          "nom": "20",
+          "explication": "Structure : 1 allumette de départ, puis 2 par triangle. 41 − 1 = 40, et 40 : 2 = 20 triangles.",
+          "pieges": [
+            {
+              "texte": "13",
+              "pourquoi": "Tu as compté 3 allumettes par triangle. Les triangles voisins partagent un côté : 2 allumettes de plus par triangle."
+            },
+            {
+              "texte": "21",
+              "pourquoi": "21 triangles demandent 1 + 2 × 21 = 43 allumettes, pas 41."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Seeing the structure of a growing pattern",
+        "idee": "A growing pattern has a structure: a part that doesn't move, and parts that grow with the stage number. With it, you can work out any stage.",
+        "phrases": {
+          "consigne": "Look for what stays the same and what grows, then touch the answer.",
+          "question": "{texte}",
+          "indice": "Look for what doesn't move (often the centre or a corner) and what grows with the stage number. Check your rule on stage 1 and on stage 2.",
+          "exemple": "Example: an L made of tiles, with 1 tile in the corner, one arm going up and one going right, each as long as the stage number. Structure: 1 + 2 × the number. Stage 30: 1 + 2 × 30 = 61 tiles. An L of 21 tiles? 21 − 1 = 20, and 20 ÷ 2 = 10: it's stage 10.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "A cross grows: 1 tile in the centre and 4 arms. At stage 1, each arm has 1 tile; at stage 2, 2 tiles; at stage 3, 3 tiles. Which rule gives the number of tiles?",
+            "nom": "1 in the centre, plus 4 times the stage number",
+            "explication": "The centre doesn't move; each of the 4 arms has as many tiles as the stage number. Stage 2: 1 + 4 × 2 = 9.",
+            "pieges": [
+              {
+                "texte": "5 times the stage number",
+                "pourquoi": "The centre is only counted once: at stage 2 there are 1 + 4 × 2 = 9 tiles, not 10."
+              },
+              {
+                "texte": "4 times the stage number",
+                "pourquoi": "The centre tile is missing: at stage 1 the cross has 5 tiles, not 4."
+              }
+            ]
+          },
+          {
+            "texte": "The same cross: 1 tile in the centre and 4 arms as long as the stage number. How many tiles at stage 25?",
+            "nom": "101",
+            "explication": "1 + 4 × 25 = 1 + 100 = 101 tiles.",
+            "pieges": [
+              {
+                "texte": "125",
+                "pourquoi": "5 × 25 counts the centre 25 times. There is only one centre: 1 + 4 × 25."
+              },
+              {
+                "texte": "100",
+                "pourquoi": "4 × 25 = 100 is the arms. The centre tile is missing."
+              }
+            ]
+          },
+          {
+            "texte": "A cross of this kind (1 in the centre, 4 arms as long as the stage number) has 61 tiles. Which stage is it?",
+            "nom": "Stage 15",
+            "explication": "Take away the centre: 61 − 1 = 60 tiles for the 4 arms, so 60 ÷ 4 = 15 tiles per arm. It's stage 15.",
+            "pieges": [
+              {
+                "texte": "Stage 16",
+                "pourquoi": "At stage 16 there are 1 + 4 × 16 = 65 tiles, not 61."
+              },
+              {
+                "texte": "Stage 60",
+                "pourquoi": "60 is the number of tiles in the arms. There are 4 arms: 60 ÷ 4 = 15."
+              }
+            ]
+          },
+          {
+            "texte": "A hollow square frame. Stage 1: the edge of a square 3 tiles wide, 8 tiles. Stage 2: the edge of a square 4 wide, 12 tiles. Stage 3: the edge of a square 5 wide, 16 tiles. Which structure gives the number of tiles?",
+            "nom": "4 strips of one tile more than the stage number",
+            "explication": "Cut the frame into 4 strips that go round the square, without counting the corners twice. Stage 1: 4 × 2 = 8. Stage 2: 4 × 3 = 12. Stage 3: 4 × 4 = 16.",
+            "pieges": [
+              {
+                "texte": "4 sides of 2 tiles more than the stage number",
+                "pourquoi": "The 4 corners would be counted twice: at stage 1, 4 × 3 = 12, not 8."
+              },
+              {
+                "texte": "2 times the stage number, plus 6",
+                "pourquoi": "It works at stage 1 (8), but not at stage 2: 2 × 2 + 6 = 10, not 12."
+              }
+            ]
+          },
+          {
+            "texte": "The same hollow square frame (8, 12, 16 tiles…), made of 4 strips of one tile more than the stage number. How many tiles at stage 10?",
+            "nom": "44",
+            "explication": "At stage 10, each strip has 11 tiles: 4 × 11 = 44.",
+            "pieges": [
+              {
+                "texte": "48",
+                "pourquoi": "4 × 12 counts each corner twice. Each strip has 11 tiles: 4 × 11."
+              },
+              {
+                "texte": "40",
+                "pourquoi": "4 × 10 forgets that each strip has one tile more than the stage number."
+              }
+            ]
+          },
+          {
+            "texte": "A pattern has 7 tiles at stage 1 and gains 3 at each stage. If n is the stage number, which calculation gives the number of tiles?",
+            "nom": "4 + 3 × n",
+            "explication": "Stage 1: 4 + 3 = 7. Stage 2: 4 + 6 = 10. You do add 3 at each stage, and stage 1 gives 7.",
+            "pieges": [
+              {
+                "texte": "7 + 3 × n",
+                "pourquoi": "At stage 1 that gives 10, not 7: stage 1 hasn't had any addition yet."
+              },
+              {
+                "texte": "3 + 7 × n",
+                "pourquoi": "The roles are swapped: it's what you add at each stage, 3, that multiplies n."
+              }
+            ]
+          },
+          {
+            "texte": "Pattern A: 10 tiles at stage 1, then 2 more at each stage. Pattern B: 4 tiles at stage 1, then 5 more at each stage. At which stage does B overtake A for the first time?",
+            "nom": "At stage 4",
+            "explication": "A: 10, 12, 14, 16. B: 4, 9, 14, 19. At stage 3 they're level (14); at stage 4, B has 19 and A 16.",
+            "pieges": [
+              {
+                "texte": "At stage 3",
+                "pourquoi": "At stage 3 both have 14 tiles: B catches up with A, but doesn't overtake it yet."
+              },
+              {
+                "texte": "At stage 2",
+                "pourquoi": "At stage 2, A has 12 tiles and B 9: B is still behind."
+              }
+            ]
+          },
+          {
+            "texte": "A row of triangles made of matchsticks: 1 triangle, 3 matchsticks; 2 triangles, 5; 3 triangles, 7. How many triangles can you make with 41 matchsticks?",
+            "nom": "20",
+            "explication": "Structure: 1 starting matchstick, then 2 per triangle. 41 − 1 = 40, and 40 ÷ 2 = 20 triangles.",
+            "pieges": [
+              {
+                "texte": "13",
+                "pourquoi": "You counted 3 matchsticks per triangle. Neighbouring triangles share a side: 2 more matchsticks per triangle."
+              },
+              {
+                "texte": "21",
+                "pourquoi": "21 triangles need 1 + 2 × 21 = 43 matchsticks, not 41."
+              }
+            ]
+          }
         ]
       }
     }
