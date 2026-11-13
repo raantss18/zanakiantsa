@@ -173,7 +173,8 @@ const _subjectWords = <String, List<String>>{
     'plant', 'cell', 'energy', 'experience', 'experiment', 'biodivers', 'foret', 'jungle', 'nature', 'cerveau', 'brain', 'virus', 'adn', 'dna', 'evolution'],
   'explorer': ['histoire', 'guerre', 'roi ', 'revolution', 'geographi', 'pays', 'carte', 'monde', 'espace', 'planete',
     'etoile', 'univers', 'lune', 'soleil', 'philosoph', 'antiquite', 'moyen age', 'empire', 'history', 'war', 'country',
-    'space', 'planet', 'star', 'universe', 'moon', 'ancient', 'galax', 'mars', 'nasa'],
+    'space', 'planet', 'star', 'universe', 'moon', 'ancient', 'galax', 'mars', 'nasa', 'mediev', 'chateau', 'chevalier',
+    'pharaon', 'romain', 'gaulois', 'castle', 'medieval', 'knight', 'pharaoh', 'roman '],
   'anglais': ['english', 'anglais', 'vocabulary', 'pronunciation', 'learn english'],
   'code': ['code', 'coding', 'programm', 'informatique', 'algorithm', 'python', 'scratch', 'ordinateur', 'internet', 'cyber',
     'computer', 'robot', 'intelligence artificielle', 'hack'],
@@ -199,6 +200,11 @@ String videoSubject(Video v) {
   }
   return best;
 }
+
+/// Une rangée de matière sous « Pour toi » : celles qui n'y sont pas d'abord (vu le 2026-11-13 : la même vidéo ouvrait
+/// « Pour toi » et « Les sciences »), puis les autres, dans le même ordre. Rien n'est retiré : « Tout voir » reste complet.
+List<Video> shownLast(List<Video> row, Set<String> shown) =>
+    [for (final v in row) if (!shown.contains(v.id)) v, for (final v in row) if (shown.contains(v.id)) v];
 
 /// Les vidéos rangées par matière, chaque rangée dans l'ordre de la liste de départ (pas vues d'abord, plus récentes).
 Map<String, List<Video>> bySubject(List<Video> pool, {required Set<String> seen}) {

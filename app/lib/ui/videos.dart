@@ -208,7 +208,7 @@ class _VideosPageState extends State<VideosPage> {
                             _Shelf(
                               art: app.topic(e.key).icon,
                               title: app.topic(e.key).name,
-                              videos: e.value.take(12).toList(),
+                              videos: shownLast(e.value, {for (final v in list.take(12)) v.id}).take(12).toList(),
                               seen: seen,
                               onPlay: _play,
                               onAll: e.value.length > 12

@@ -172,6 +172,14 @@ void main() {
     expect(rows.values.expand((r) => r).length, 3, reason: 'chaque vidéo dans une seule rangée');
   });
 
+  test('vu le 2026-11-13 : Carcassonne va en histoire, et une rangée ne recommence pas par « Pour toi »', () {
+    final c = Channel({'id': 'UCs', 'nom': 'x', 'langue': 'fr', 'ages': [5, 18], 'domaines': ['nature', 'explorer']});
+    Video v(String id, String t) => Video({'id': id, 't': t, 'd': 600, 'p': '2024-01-01', 'm': ''}, c);
+    expect(videoSubject(v('a', "Qui a sauvé la cité médiévale de Carcassonne ? - C'est Pas Sorcier")), 'explorer');
+    final row = [v('a', 'a'), v('b', 'b'), v('c', 'c')];
+    expect([for (final x in shownLast(row, {'a'})) x.id], ['b', 'c', 'a'], reason: 'rien de retiré, la vue en dernier');
+  });
+
   test('les mots-dièse ne s\'affichent pas dans le titre', () {
     final c = Channel({'id': 'UCx', 'nom': 'x', 'langue': 'fr', 'ages': [5, 18], 'domaines': <String>[]});
     Video v(String t) => Video({'id': 'a', 't': t, 'd': 100, 'p': '2024-01-01', 'm': ''}, c);
