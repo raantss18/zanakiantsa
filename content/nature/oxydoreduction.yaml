@@ -1,0 +1,128 @@
+id: oxydoreduction
+titre: "Oxydants, réducteurs et oxydo-réduction"
+niveau: 1re
+prerequis: [atome-tableau]
+# Notions du programme (pc1re, partie « Suivi et modélisation de l'évolution d'un système chimique ») : oxydant,
+# réducteur, couple oxydant-réducteur, demi-équation électronique, réaction d'oxydo-réduction. Aucun fait extérieur :
+# les observations sont données dans les questions ; les équilibrages (électrons, charges, atomes) sont refaits.
+# Les électrons sont écrits en mots, car « e⁻ » ne se lit pas bien à voix haute (ADR 0067).
+programme: { source: pc1re, texte: "À partir de données expérimentales, identifier le transfert d’électrons entre deux réactifs et le modéliser par des demi-équations électroniques et par une réaction d’oxydo-réduction." }
+activite: quiz
+parametres: {}
+idee: "Un oxydant capte des électrons, un réducteur en cède. Dans une réaction d'oxydo-réduction, les électrons passent du réducteur d'un couple à l'oxydant d'un autre couple."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Oxydant + électrons = réducteur. Une oxydation est une perte d'électrons, une réduction un gain. Dans une demi-équation, on équilibre les atomes, puis les charges avec des électrons."
+  exemple: "Exemple : pour le couple formé de l'ion Fe²⁺ et du métal Fe, la demi-équation s'écrit Fe²⁺ + 2 électrons = Fe. L'ion Fe²⁺ est l'oxydant, le fer métal est le réducteur."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'un oxydant ?"
+    nom: "Une espèce capable de capter un ou plusieurs électrons."
+    explication: "En captant des électrons, l'oxydant se transforme en le réducteur de son couple."
+    pieges:
+      - { texte: "Une espèce capable de céder des électrons.", pourquoi: "C'est la définition d'un réducteur." }
+      - { texte: "Une espèce qui contient forcément de l'oxygène.", pourquoi: "Le mot vient de l'oxygène, mais l'ion Cu²⁺, sans oxygène, est un oxydant : tout est affaire d'électrons." }
+  - texte: "Qu'est-ce qu'un réducteur ?"
+    nom: "Une espèce capable de céder un ou plusieurs électrons."
+    explication: "En cédant des électrons, le réducteur se transforme en l'oxydant de son couple ; les métaux comme le fer ou le zinc sont des réducteurs."
+    pieges:
+      - { texte: "Une espèce capable de capter des électrons.", pourquoi: "C'est la définition d'un oxydant." }
+      - { texte: "Une espèce qui rend les objets plus petits.", pourquoi: "« Réduire » a ici un sens chimique : il s'agit d'électrons, pas de taille." }
+  - texte: "Quelle est la demi-équation électronique du couple formé de l'ion Cu²⁺ (oxydant) et du cuivre métal Cu (réducteur) ?"
+    nom: "Cu²⁺ + 2 électrons = Cu."
+    explication: "L'ion porte 2 charges positives : il faut 2 électrons pour obtenir l'atome neutre."
+    pieges:
+      - { texte: "Cu²⁺ + 1 électron = Cu.", pourquoi: "Un seul électron laisserait une charge positive : les charges ne seraient pas équilibrées." }
+      - { texte: "Cu²⁺ = Cu + 2 électrons.", pourquoi: "Les charges ne sont pas équilibrées : à gauche plus 2, à droite moins 2. L'oxydant capte les électrons, ils vont donc de son côté." }
+  - texte: "On plonge un clou de fer dans une solution bleue d'ions Cu²⁺. Il se couvre de cuivre et des ions Fe²⁺ apparaissent. Quelle espèce a été oxydée ?"
+    nom: "Le fer du clou, qui a cédé 2 électrons pour devenir Fe²⁺."
+    explication: "Fe = Fe²⁺ + 2 électrons : le fer perd des électrons, c'est une oxydation. Les ions Cu²⁺ captent ces électrons : ils sont réduits."
+    pieges:
+      - { texte: "Les ions Cu²⁺, qui sont devenus du cuivre.", pourquoi: "Les ions Cu²⁺ ont gagné des électrons : c'est une réduction, pas une oxydation." }
+      - { texte: "Aucune : le cuivre s'est seulement déposé.", pourquoi: "Le dépôt de cuivre et l'apparition des ions Fe²⁺ montrent un transfert d'électrons du fer vers les ions Cu²⁺." }
+  - texte: "Pourquoi les électrons n'apparaissent-ils pas dans l'équation de la réaction d'oxydo-réduction ?"
+    nom: "Parce que tous les électrons cédés par le réducteur sont captés par l'oxydant."
+    explication: "On combine les deux demi-équations pour que le nombre d'électrons cédés soit égal au nombre d'électrons captés : ils s'éliminent."
+    pieges:
+      - { texte: "Parce qu'ils s'échappent dans l'air.", pourquoi: "Il n'y a pas d'électrons libres en solution : ils passent directement d'une espèce à l'autre." }
+      - { texte: "Parce que les électrons ne jouent aucun rôle.", pourquoi: "Au contraire, c'est leur transfert qui définit la réaction ; ils disparaissent de l'équation car ils sont échangés en totalité." }
+  - texte: "Le zinc Zn réagit avec les ions H⁺. Demi-équations : Zn²⁺ + 2 électrons = Zn et 2 H⁺ + 2 électrons = H₂. Que se passe-t-il ?"
+    nom: "Un atome de zinc réagit avec 2 ions H⁺ : il se forme un ion Zn²⁺ et une molécule H₂."
+    explication: "Le zinc cède 2 électrons, captés par 2 ions H⁺ : les électrons s'équilibrent, comme les atomes et les charges."
+    pieges:
+      - { texte: "Un atome de zinc réagit avec 1 ion H⁺ : il se forme un ion Zn²⁺ et une molécule H₂.", pourquoi: "Une molécule H₂ contient 2 atomes d'hydrogène : il faut 2 ions H⁺, et ils captent les 2 électrons du zinc." }
+      - { texte: "Un ion Zn²⁺ réagit avec une molécule H₂ : il se forme du zinc et 2 ions H⁺.", pourquoi: "C'est le sens inverse : les réactifs donnés sont le zinc métal et les ions H⁺." }
+  - texte: "Qu'appelle-t-on une oxydation ?"
+    nom: "Une perte d'électrons par un réducteur."
+    explication: "Le réducteur s'oxyde en cédant des électrons ; en même temps, l'oxydant se réduit en les captant."
+    pieges:
+      - { texte: "Un gain d'électrons.", pourquoi: "C'est une réduction ; on peut retenir que l'oxydation est une perte." }
+      - { texte: "Seulement une réaction avec le dioxygène de l'air.", pourquoi: "Le fer dans les ions Cu²⁺ s'oxyde sans dioxygène : ce qui compte, c'est la perte d'électrons." }
+  - texte: "Al = Al³⁺ + 3 électrons. Cette transformation de l'aluminium est-elle une oxydation ou une réduction ?"
+    nom: "Une oxydation : l'aluminium perd 3 électrons."
+    explication: "L'aluminium métal joue le rôle de réducteur : il cède des électrons et devient l'ion Al³⁺."
+    pieges:
+      - { texte: "Une réduction, car l'atome devient plus petit.", pourquoi: "Le mot « réduction » ne parle pas de taille : une réduction est un gain d'électrons." }
+      - { texte: "Une réduction, car il y a 3 électrons dans l'équation.", pourquoi: "Ce qui compte, c'est leur côté : ils sont produits, donc perdus par l'aluminium. C'est une oxydation." }
+
+en:
+  titre: "Oxidants, reductants and redox reactions"
+  idee: "An oxidant takes in electrons, a reductant gives them away. In a redox reaction, electrons pass from the reductant of one pair to the oxidant of another pair."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Oxidant + electrons = reductant. Oxidation is a loss of electrons, reduction a gain. In a half-equation, balance the atoms first, then the charges with electrons."
+    exemple: "Example: for the pair made of the Fe²⁺ ion and the metal Fe, the half-equation is Fe²⁺ + 2 electrons = Fe. The Fe²⁺ ion is the oxidant, iron metal is the reductant."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is an oxidant?"
+      nom: "A species that can take in one or more electrons."
+      explication: "By taking in electrons, the oxidant turns into the reductant of its pair."
+      pieges:
+        - { texte: "A species that can give away electrons.", pourquoi: "That's the definition of a reductant." }
+        - { texte: "A species that must contain oxygen.", pourquoi: "The word comes from oxygen, but the Cu²⁺ ion, with no oxygen, is an oxidant: it's all about electrons." }
+    - texte: "What is a reductant?"
+      nom: "A species that can give away one or more electrons."
+      explication: "By giving away electrons, the reductant turns into the oxidant of its pair; metals such as iron or zinc are reductants."
+      pieges:
+        - { texte: "A species that can take in electrons.", pourquoi: "That's the definition of an oxidant." }
+        - { texte: "A species that makes things smaller.", pourquoi: "\"Reduce\" has a chemical meaning here: it's about electrons, not size." }
+    - texte: "What is the half-equation for the pair made of the Cu²⁺ ion (oxidant) and copper metal Cu (reductant)?"
+      nom: "Cu²⁺ + 2 electrons = Cu."
+      explication: "The ion carries 2 positive charges: it takes 2 electrons to get the neutral atom."
+      pieges:
+        - { texte: "Cu²⁺ + 1 electron = Cu.", pourquoi: "A single electron would leave one positive charge: the charges wouldn't balance." }
+        - { texte: "Cu²⁺ = Cu + 2 electrons.", pourquoi: "The charges don't balance: plus 2 on the left, minus 2 on the right. The oxidant takes in the electrons, so they go on its side." }
+    - texte: "An iron nail is dipped into a blue solution of Cu²⁺ ions. It gets coated with copper and Fe²⁺ ions appear. Which species was oxidised?"
+      nom: "The iron of the nail, which gave away 2 electrons to become Fe²⁺."
+      explication: "Fe = Fe²⁺ + 2 electrons: iron loses electrons, that's an oxidation. The Cu²⁺ ions take in these electrons: they are reduced."
+      pieges:
+        - { texte: "The Cu²⁺ ions, which turned into copper.", pourquoi: "The Cu²⁺ ions gained electrons: that's a reduction, not an oxidation." }
+        - { texte: "None: the copper just settled.", pourquoi: "The copper coating and the new Fe²⁺ ions show electrons moving from the iron to the Cu²⁺ ions." }
+    - texte: "Why don't electrons appear in the equation of a redox reaction?"
+      nom: "Because all the electrons given away by the reductant are taken in by the oxidant."
+      explication: "The two half-equations are combined so that the electrons given away equal the electrons taken in: they cancel out."
+      pieges:
+        - { texte: "Because they escape into the air.", pourquoi: "There are no free electrons in the solution: they pass straight from one species to the other." }
+        - { texte: "Because electrons play no part.", pourquoi: "On the contrary, their transfer is what defines the reaction; they drop out of the equation because they are all exchanged." }
+    - texte: "Zinc, Zn, reacts with H⁺ ions. Half-equations: Zn²⁺ + 2 electrons = Zn and 2 H⁺ + 2 electrons = H₂. What happens?"
+      nom: "One zinc atom reacts with 2 H⁺ ions: a Zn²⁺ ion and an H₂ molecule form."
+      explication: "Zinc gives away 2 electrons, taken in by 2 H⁺ ions: the electrons balance, as do the atoms and charges."
+      pieges:
+        - { texte: "One zinc atom reacts with 1 H⁺ ion: a Zn²⁺ ion and an H₂ molecule form.", pourquoi: "An H₂ molecule contains 2 hydrogen atoms: it takes 2 H⁺ ions, and they take in zinc's 2 electrons." }
+        - { texte: "A Zn²⁺ ion reacts with an H₂ molecule: zinc and 2 H⁺ ions form.", pourquoi: "That's the reverse direction: the reactants given are zinc metal and H⁺ ions." }
+    - texte: "What is an oxidation?"
+      nom: "A loss of electrons by a reductant."
+      explication: "The reductant is oxidised by giving away electrons; at the same time, the oxidant is reduced by taking them in."
+      pieges:
+        - { texte: "A gain of electrons.", pourquoi: "That's a reduction; remember that oxidation is a loss." }
+        - { texte: "Only a reaction with oxygen in the air.", pourquoi: "Iron in Cu²⁺ ions is oxidised with no oxygen: what counts is the loss of electrons." }
+    - texte: "Al = Al³⁺ + 3 electrons. Is this change of aluminium an oxidation or a reduction?"
+      nom: "An oxidation: aluminium loses 3 electrons."
+      explication: "Aluminium metal acts as a reductant: it gives away electrons and becomes the Al³⁺ ion."
+      pieges:
+        - { texte: "A reduction, because the atom gets smaller.", pourquoi: "The word \"reduction\" isn't about size: a reduction is a gain of electrons." }
+        - { texte: "A reduction, because there are 3 electrons in the equation.", pourquoi: "What counts is their side: they are produced, so lost by aluminium. It's an oxidation." }

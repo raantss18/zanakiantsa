@@ -1,0 +1,129 @@
+id: quantite-matiere
+titre: "Compter la matière : la mole"
+niveau: 2de
+prerequis: [atome-tableau]
+# Faits : une mole contient exactement 6,022 140 76 × 10²³ entités (programme, pc2de, et NIST, constante d'Avogadro,
+# https://physics.nist.gov/cgi-bin/cuu/Value?na) ; constante de masse atomique 1,660 539 × 10⁻²⁷ kg (NIST,
+# https://physics.nist.gov/cgi-bin/cuu/Value?u) ; masses atomiques H ≈ 1,008, C ≈ 12,01, O ≈ 16,00 (CIAAW,
+# https://www.ciaaw.org/atomic-weights.htm). D'où, par calcul : atome H ≈ 1,67 × 10⁻²⁷ kg, atome O ≈ 2,66 × 10⁻²⁶ kg,
+# atome C ≈ 2,0 × 10⁻²⁶ kg. Lus le 2026-11-13. Les autres nombres sont des calculs refaits.
+programme: { source: pc2de, texte: "Déterminer la masse d’une entité à partir de sa formule brute et de la masse des atomes qui la composent. Déterminer le nombre d’entités et la quantité de matière (en mol) d’une espèce dans une masse d’échantillon." }
+activite: quiz
+parametres: {}
+idee: "Un échantillon contient un nombre immense d'entités. On les compte par paquets : une mole contient exactement 6,022 140 76 × 10²³ entités. La quantité de matière n se mesure en moles."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Nombre d'entités = masse de l'échantillon ÷ masse d'une entité. Quantité de matière, en moles = nombre d'entités ÷ 6,02 × 10²³. Les deux masses doivent être dans la même unité."
+  exemple: "Exemple : un échantillon contient 1,204 × 10²⁴ molécules. Sa quantité de matière vaut 1,204 × 10²⁴ ÷ 6,02 × 10²³ = 2 moles."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Qu'est-ce qu'une mole ?"
+    nom: "Un paquet d'exactement 6,022 140 76 × 10²³ entités : atomes, molécules ou ions."
+    explication: "La mole est l'unité de quantité de matière : elle compte des entités, comme une douzaine compte des œufs, mais avec un nombre immense."
+    pieges:
+      - { texte: "Une masse d'un gramme de matière.", pourquoi: "La mole compte des entités, elle ne pèse rien en elle-même : une mole de fer et une mole d'eau n'ont pas la même masse." }
+      - { texte: "Un volume d'un litre de matière.", pourquoi: "Le litre mesure un volume ; la mole compte un nombre d'entités." }
+  - texte: "Combien d'entités y a-t-il dans 2 moles de dioxygène ?"
+    nom: "Environ 1,2 × 10²⁴ molécules."
+    explication: "2 × 6,022 × 10²³ = 12,04 × 10²³, soit environ 1,2 × 10²⁴ molécules."
+    pieges:
+      - { texte: "Environ 3,0 × 10²³ molécules.", pourquoi: "On a divisé par 2 ; il y a deux paquets de 6,022 × 10²³ : on multiplie." }
+      - { texte: "Environ 6,0 × 10²³ molécules.", pourquoi: "C'est le contenu d'une seule mole ; ici, il y en a deux." }
+  - texte: "Un échantillon contient 3,011 × 10²³ molécules d'eau. Quelle est sa quantité de matière ?"
+    nom: "0,5 mole."
+    explication: "3,011 × 10²³ ÷ 6,022 × 10²³ = 0,5 : c'est un demi-paquet."
+    pieges:
+      - { texte: "2 moles.", pourquoi: "On a divisé 6,022 × 10²³ par le nombre de molécules : c'est le nombre de molécules qu'on divise par 6,022 × 10²³." }
+      - { texte: "3,011 moles.", pourquoi: "On a gardé le début du nombre en oubliant les puissances de 10 : 10²³ ÷ 10²³ = 1, et 3,011 ÷ 6,022 = 0,5." }
+  - texte: "Un atome d'hydrogène a une masse d'environ 1,67 × 10⁻²⁷ kilogramme, un atome d'oxygène environ 2,66 × 10⁻²⁶ kilogramme. Quelle est la masse d'une molécule d'eau H₂O ?"
+    nom: "Environ 2,99 × 10⁻²⁶ kilogramme."
+    explication: "2 × 1,67 × 10⁻²⁷ = 0,334 × 10⁻²⁶ ; puis 0,334 × 10⁻²⁶ + 2,66 × 10⁻²⁶ = 2,994 × 10⁻²⁶ kilogramme."
+    pieges:
+      - { texte: "Environ 2,83 × 10⁻²⁶ kilogramme.", pourquoi: "On n'a compté qu'un atome d'hydrogène ; le 2 de H₂O en indique deux." }
+      - { texte: "Environ 4,33 × 10⁻²⁷ kilogramme.", pourquoi: "On a ajouté 1,67 et 2,66 sans regarder les puissances de 10 : 10⁻²⁶ vaut dix fois 10⁻²⁷." }
+  - texte: "Un atome de carbone a une masse d'environ 2,0 × 10⁻²⁶ kilogramme. Combien d'atomes y a-t-il dans 1,0 gramme de carbone ?"
+    nom: "Environ 5,0 × 10²² atomes."
+    explication: "1,0 gramme = 1,0 × 10⁻³ kilogramme ; 1,0 × 10⁻³ ÷ 2,0 × 10⁻²⁶ = 0,5 × 10²³ = 5,0 × 10²² atomes."
+    pieges:
+      - { texte: "Environ 5,0 × 10²⁵ atomes.", pourquoi: "On a laissé la masse en grammes : il faut d'abord la convertir en kilogrammes, comme la masse de l'atome." }
+      - { texte: "Environ 2,0 × 10⁻²⁹ atomes.", pourquoi: "On a multiplié les deux masses ; pour compter les atomes, on divise la masse de l'échantillon par celle d'un atome." }
+  - texte: "Ces 5,0 × 10²² atomes de carbone représentent quelle quantité de matière ?"
+    nom: "Environ 0,083 mole."
+    explication: "5,0 × 10²² ÷ 6,02 × 10²³ ≈ 0,083 mole : moins d'un dixième de mole."
+    pieges:
+      - { texte: "Environ 12 moles.", pourquoi: "On a divisé 6,02 × 10²³ par le nombre d'atomes ; c'est l'inverse." }
+      - { texte: "Environ 3,0 × 10⁴⁶ moles.", pourquoi: "On a multiplié par 6,02 × 10²³ ; pour passer des entités aux moles, on divise." }
+  - texte: "Pourquoi les chimistes comptent-ils en moles plutôt qu'en atomes ?"
+    nom: "Parce qu'un échantillon à notre échelle contient un nombre d'entités immense, difficile à manier."
+    explication: "Un seul gramme de carbone contient environ 5 × 10²² atomes ; en moles, on obtient des nombres simples."
+    pieges:
+      - { texte: "Parce qu'on ne sait pas combien d'atomes il y a dans une mole.", pourquoi: "On le sait exactement : une mole contient 6,022 140 76 × 10²³ entités, par définition." }
+      - { texte: "Parce qu'une mole est plus légère qu'un atome.", pourquoi: "Une mole contient des milliards de milliards d'atomes : elle est bien plus lourde qu'un seul atome." }
+  - texte: "Une mole de fer et une mole d'eau ont-elles la même masse ?"
+    nom: "Non : elles ont le même nombre d'entités, mais un atome de fer et une molécule d'eau n'ont pas la même masse."
+    explication: "La mole fixe le nombre d'entités ; la masse de l'échantillon dépend de la masse de chaque entité."
+    pieges:
+      - { texte: "Oui, une mole pèse toujours la même chose.", pourquoi: "Une douzaine d'œufs et une douzaine de melons n'ont pas la même masse : c'est pareil pour la mole." }
+      - { texte: "Oui, car ce sont toutes les deux des matières.", pourquoi: "La masse dépend de l'entité comptée : atome de fer ou molécule d'eau." }
+
+en:
+  titre: "Counting matter: the mole"
+  idee: "A sample contains a huge number of entities. We count them in packs: one mole contains exactly 6.022 140 76 × 10²³ entities. The amount of substance n is measured in moles."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Number of entities = mass of the sample ÷ mass of one entity. Amount of substance, in moles = number of entities ÷ 6.02 × 10²³. Both masses must be in the same unit."
+    exemple: "Example: a sample contains 1.204 × 10²⁴ molecules. Its amount of substance is 1.204 × 10²⁴ ÷ 6.02 × 10²³ = 2 moles."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "What is a mole?"
+      nom: "A pack of exactly 6.022 140 76 × 10²³ entities: atoms, molecules or ions."
+      explication: "The mole is the unit of amount of substance: it counts entities, like a dozen counts eggs, but with a huge number."
+      pieges:
+        - { texte: "A mass of one gram of matter.", pourquoi: "The mole counts entities; it has no mass of its own: a mole of iron and a mole of water don't have the same mass." }
+        - { texte: "A volume of one litre of matter.", pourquoi: "The litre measures a volume; the mole counts a number of entities." }
+    - texte: "How many entities are there in 2 moles of oxygen gas?"
+      nom: "About 1.2 × 10²⁴ molecules."
+      explication: "2 × 6.022 × 10²³ = 12.04 × 10²³, that is about 1.2 × 10²⁴ molecules."
+      pieges:
+        - { texte: "About 3.0 × 10²³ molecules.", pourquoi: "That's dividing by 2; there are two packs of 6.022 × 10²³: multiply." }
+        - { texte: "About 6.0 × 10²³ molecules.", pourquoi: "That's what one mole contains; here there are two." }
+    - texte: "A sample contains 3.011 × 10²³ water molecules. What is its amount of substance?"
+      nom: "0.5 mole."
+      explication: "3.011 × 10²³ ÷ 6.022 × 10²³ = 0.5: it's half a pack."
+      pieges:
+        - { texte: "2 moles.", pourquoi: "6.022 × 10²³ was divided by the number of molecules: it's the number of molecules that gets divided by 6.022 × 10²³." }
+        - { texte: "3.011 moles.", pourquoi: "The start of the number was kept and the powers of 10 forgotten: 10²³ ÷ 10²³ = 1, and 3.011 ÷ 6.022 = 0.5." }
+    - texte: "A hydrogen atom has a mass of about 1.67 × 10⁻²⁷ kilogram, an oxygen atom about 2.66 × 10⁻²⁶ kilogram. What is the mass of a water molecule, H₂O?"
+      nom: "About 2.99 × 10⁻²⁶ kilogram."
+      explication: "2 × 1.67 × 10⁻²⁷ = 0.334 × 10⁻²⁶; then 0.334 × 10⁻²⁶ + 2.66 × 10⁻²⁶ = 2.994 × 10⁻²⁶ kilogram."
+      pieges:
+        - { texte: "About 2.83 × 10⁻²⁶ kilogram.", pourquoi: "Only one hydrogen atom was counted; the 2 in H₂O means two." }
+        - { texte: "About 4.33 × 10⁻²⁷ kilogram.", pourquoi: "1.67 and 2.66 were added without looking at the powers of 10: 10⁻²⁶ is ten times 10⁻²⁷." }
+    - texte: "A carbon atom has a mass of about 2.0 × 10⁻²⁶ kilogram. How many atoms are there in 1.0 gram of carbon?"
+      nom: "About 5.0 × 10²² atoms."
+      explication: "1.0 gram = 1.0 × 10⁻³ kilogram; 1.0 × 10⁻³ ÷ 2.0 × 10⁻²⁶ = 0.5 × 10²³ = 5.0 × 10²² atoms."
+      pieges:
+        - { texte: "About 5.0 × 10²⁵ atoms.", pourquoi: "The mass was left in grams: first convert it to kilograms, like the atom's mass." }
+        - { texte: "About 2.0 × 10⁻²⁹ atoms.", pourquoi: "The two masses were multiplied; to count the atoms, divide the sample's mass by one atom's mass." }
+    - texte: "What amount of substance do these 5.0 × 10²² carbon atoms make?"
+      nom: "About 0.083 mole."
+      explication: "5.0 × 10²² ÷ 6.02 × 10²³ ≈ 0.083 mole: less than a tenth of a mole."
+      pieges:
+        - { texte: "About 12 moles.", pourquoi: "6.02 × 10²³ was divided by the number of atoms; it's the other way round." }
+        - { texte: "About 3.0 × 10⁴⁶ moles.", pourquoi: "That's multiplying by 6.02 × 10²³; to go from entities to moles, divide." }
+    - texte: "Why do chemists count in moles rather than in atoms?"
+      nom: "Because a sample at our scale contains a huge number of entities, hard to handle."
+      explication: "A single gram of carbon contains about 5 × 10²² atoms; in moles, the numbers are simple."
+      pieges:
+        - { texte: "Because nobody knows how many atoms are in a mole.", pourquoi: "It's known exactly: one mole contains 6.022 140 76 × 10²³ entities, by definition." }
+        - { texte: "Because a mole is lighter than an atom.", pourquoi: "A mole contains billions of billions of atoms: it's far heavier than a single atom." }
+    - texte: "Do one mole of iron and one mole of water have the same mass?"
+      nom: "No: they have the same number of entities, but an iron atom and a water molecule don't have the same mass."
+      explication: "The mole fixes the number of entities; the sample's mass depends on the mass of each entity."
+      pieges:
+        - { texte: "Yes, a mole always weighs the same.", pourquoi: "A dozen eggs and a dozen melons don't have the same mass: it's the same with the mole." }
+        - { texte: "Yes, because they are both matter.", pourquoi: "The mass depends on the entity counted: an iron atom or a water molecule." }

@@ -1,0 +1,130 @@
+id: mutations-adn
+titre: "Mutations de l'ADN et variabilité génétique"
+niveau: 1re
+prerequis: [cellule-adn]
+# Faits : erreurs aléatoires de réplication, agents mutagènes, réparation par des enzymes, mutations somatiques et
+# germinales, diversité des allèles (programme, svt1re, « Mutations de l'ADN et variabilité génétique ») ; la plupart des
+# mutations n'affectent pas la santé, les mutations somatiques ne se transmettent pas aux enfants (NHGRI, glossaire,
+# https://www.genome.gov/genetics-glossary/Mutation) ; 78 trios islandais, taux moyen de mutations nouvelles
+# 1,20 × 10⁻⁸ par nucléotide et par génération, environ deux mutations de plus par année d'âge du père (Kong et al.,
+# Nature 488, 471-475, 2012, résumé : https://pubmed.ncbi.nlm.nih.gov/22914163/). Lus le 2026-11-13.
+programme: { source: svt1re, texte: "Des erreurs peuvent se produire aléatoirement lors de la réplication de l'ADN. Leur fréquence est augmentée par l’action d’agents mutagènes. L’ADN peut également être endommagé en dehors de sa réplication." }
+activite: quiz
+parametres: {}
+idee: "Une mutation est une modification de la séquence de l'ADN. Elle naît au hasard, souvent d'une erreur de réplication non réparée. Les mutations créent de nouveaux allèles."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Une erreur de réplication ou un ADN endommagé est en général réparé par des enzymes. Si la réparation échoue, la mutation est copiée et transmise aux cellules filles. Cellule germinale : transmissible aux enfants ; cellule somatique : non."
+  exemple: "Exemple : un coup de soleil endommage l'ADN d'une cellule de la peau. Si la réparation échoue, la mutation se retrouve dans toutes les cellules issues de celle-ci, mais pas chez les enfants de la personne."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Comment apparaissent la plupart des mutations spontanées ?"
+    nom: "Par des erreurs qui se produisent au hasard pendant la réplication de l'ADN."
+    explication: "Lors de la copie de l'ADN, des erreurs surviennent aléatoirement ; celles qui ne sont pas réparées deviennent des mutations."
+    pieges:
+      - { texte: "Parce que la cellule choisit de muter pour s'adapter.", pourquoi: "Les mutations se produisent au hasard : la cellule ne choisit pas celle dont elle aurait besoin." }
+      - { texte: "Uniquement à cause de produits toxiques.", pourquoi: "Les agents mutagènes augmentent la fréquence des mutations, mais il en apparaît aussi sans eux, par erreur de réplication." }
+  - texte: "Que fait un agent mutagène, comme les rayons ultraviolets ?"
+    nom: "Il augmente la fréquence des mutations."
+    explication: "Les agents mutagènes, physiques comme les rayonnements ou chimiques comme certaines molécules, endommagent l'ADN et rendent les mutations plus fréquentes."
+    pieges:
+      - { texte: "Il provoque toujours la même mutation, au même endroit.", pourquoi: "Les mutations restent aléatoires : l'agent mutagène augmente leur nombre, pas leur précision." }
+      - { texte: "Il répare l'ADN abîmé.", pourquoi: "C'est le rôle des systèmes de réparation, faits d'enzymes ; l'agent mutagène fait l'inverse." }
+  - texte: "Une erreur de réplication vient de se produire. Que se passe-t-il le plus souvent ?"
+    nom: "Elle est réparée par des enzymes spécialisées."
+    explication: "La cellule possède des systèmes de réparation ; la mutation ne persiste que si la réparation échoue ou n'est pas conforme."
+    pieges:
+      - { texte: "Elle devient toujours une mutation.", pourquoi: "La plupart des erreurs sont réparées : seules celles qui échappent à la réparation deviennent des mutations." }
+      - { texte: "La cellule meurt aussitôt.", pourquoi: "Une erreur isolée ne tue pas la cellule : elle est le plus souvent réparée." }
+  - texte: "Une mutation apparaît dans une cellule de la peau d'un adulte. Sera-t-elle transmise à ses enfants ?"
+    nom: "Non : elle ne sera présente que dans les cellules issues de cette cellule de la peau."
+    explication: "C'est une mutation somatique : elle se retrouve dans le clone issu de la cellule, pas dans les cellules reproductrices."
+    pieges:
+      - { texte: "Oui, toute mutation se transmet aux enfants.", pourquoi: "Seules les mutations des cellules germinales, à l'origine des ovules et des spermatozoïdes, peuvent se transmettre." }
+      - { texte: "Oui, si la mutation est visible sur la peau.", pourquoi: "Ce qui compte, c'est la cellule touchée : une cellule de la peau ne participe pas à la reproduction." }
+  - texte: "Dans quel cas une mutation peut-elle être héréditaire ?"
+    nom: "Quand elle survient dans une cellule germinale, qui donne les ovules ou les spermatozoïdes."
+    explication: "Une mutation germinale peut passer à l'enfant : elle sera alors présente dans toutes ses cellules."
+    pieges:
+      - { texte: "Quand elle survient dans un muscle très utilisé.", pourquoi: "Un muscle est fait de cellules somatiques : ses mutations ne passent pas aux enfants." }
+      - { texte: "Jamais : les mutations ne se transmettent pas.", pourquoi: "Les mutations des cellules germinales peuvent se transmettre : c'est l'origine des nouveaux allèles." }
+  - texte: "Quel est le lien entre mutations et allèles ?"
+    nom: "Les mutations sont à l'origine de la diversité des allèles au cours du temps."
+    explication: "Un allèle est une version d'un segment d'ADN ; chaque mutation transmise peut créer une nouvelle version."
+    pieges:
+      - { texte: "Les allèles produisent les mutations.", pourquoi: "C'est l'inverse : une mutation modifie la séquence et crée un nouvel allèle." }
+      - { texte: "Il n'y en a aucun.", pourquoi: "Sans mutations, il n'y aurait qu'une seule version de chaque gène." }
+  - texte: "Une mutation a-t-elle toujours un effet sur la santé ?"
+    nom: "Non : selon sa nature, ses effets sont variés, et la plupart des mutations n'affectent pas la santé."
+    explication: "Des mutations se produisent sans cesse dans nos cellules ; la plupart sont réparées ou sans conséquence, d'autres modifient le phénotype."
+    pieges:
+      - { texte: "Oui, toute mutation provoque une maladie.", pourquoi: "C'est l'image des films : en réalité, presque aucune mutation n'affecte notre santé." }
+      - { texte: "Oui, toute mutation donne un nouveau pouvoir.", pourquoi: "Aucune mutation ne fait pousser des ailes : les effets réels sont souvent nuls ou discrets." }
+  - texte: "Une étude a lu le génome entier de 78 trios père, mère, enfant en Islande. Qu'a-t-elle montré sur l'âge du père ?"
+    nom: "Plus le père est âgé, plus l'enfant porte de mutations nouvelles : environ 2 de plus par année d'âge du père."
+    explication: "Le taux moyen mesuré est de 1,2 × 10⁻⁸ mutation nouvelle par nucléotide et par génération ; l'âge du père explique l'essentiel des écarts entre enfants."
+    pieges:
+      - { texte: "L'âge du père n'a aucun effet.", pourquoi: "C'est le principal facteur mesuré : environ deux mutations nouvelles de plus par année." }
+      - { texte: "Les enfants de pères âgés ont moins de mutations.", pourquoi: "C'est l'inverse : le nombre de mutations nouvelles augmente avec l'âge du père." }
+
+en:
+  titre: "DNA mutations and genetic variability"
+  idee: "A mutation is a change in the DNA sequence. It happens by chance, often from a replication error that wasn't repaired. Mutations create new alleles."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "A replication error or damaged DNA is usually repaired by enzymes. If the repair fails, the mutation is copied and passed on to daughter cells. Germ cell: can be passed on to children; somatic cell: cannot."
+    exemple: "Example: sunburn damages the DNA of a skin cell. If the repair fails, the mutation ends up in every cell that comes from it, but not in the person's children."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "How do most spontaneous mutations appear?"
+      nom: "Through errors that happen by chance during DNA replication."
+      explication: "When DNA is copied, errors occur at random; those that aren't repaired become mutations."
+      pieges:
+        - { texte: "Because the cell chooses to mutate in order to adapt.", pourquoi: "Mutations happen by chance: the cell doesn't pick the one it would need." }
+        - { texte: "Only because of toxic products.", pourquoi: "Mutagens make mutations more frequent, but some also appear without them, through replication errors." }
+    - texte: "What does a mutagen, such as ultraviolet light, do?"
+      nom: "It increases the frequency of mutations."
+      explication: "Mutagens, physical like radiation or chemical like certain molecules, damage DNA and make mutations more frequent."
+      pieges:
+        - { texte: "It always causes the same mutation, in the same place.", pourquoi: "Mutations remain random: the mutagen raises their number, not their precision." }
+        - { texte: "It repairs damaged DNA.", pourquoi: "That's the job of repair systems, made of enzymes; the mutagen does the opposite." }
+    - texte: "A replication error has just happened. What usually happens next?"
+      nom: "It is repaired by specialised enzymes."
+      explication: "The cell has repair systems; the mutation only remains if the repair fails or is faulty."
+      pieges:
+        - { texte: "It always becomes a mutation.", pourquoi: "Most errors are repaired: only those that escape repair become mutations." }
+        - { texte: "The cell dies straight away.", pourquoi: "A single error doesn't kill the cell: it is usually repaired." }
+    - texte: "A mutation appears in a skin cell of an adult. Will it be passed on to their children?"
+      nom: "No: it will only be in the cells that come from that skin cell."
+      explication: "It's a somatic mutation: it is found in the clone that comes from the cell, not in the reproductive cells."
+      pieges:
+        - { texte: "Yes, every mutation is passed on to children.", pourquoi: "Only mutations in germ cells, which give rise to eggs and sperm, can be passed on." }
+        - { texte: "Yes, if the mutation shows on the skin.", pourquoi: "What counts is the cell affected: a skin cell takes no part in reproduction." }
+    - texte: "When can a mutation be inherited?"
+      nom: "When it happens in a germ cell, which gives rise to eggs or sperm."
+      explication: "A germline mutation can pass to the child: it will then be in every one of the child's cells."
+      pieges:
+        - { texte: "When it happens in a muscle that is used a lot.", pourquoi: "A muscle is made of somatic cells: its mutations don't pass to children." }
+        - { texte: "Never: mutations are not passed on.", pourquoi: "Mutations in germ cells can be passed on: that's where new alleles come from." }
+    - texte: "What is the link between mutations and alleles?"
+      nom: "Mutations are the source of the diversity of alleles over time."
+      explication: "An allele is a version of a stretch of DNA; each mutation passed on can create a new version."
+      pieges:
+        - { texte: "Alleles produce mutations.", pourquoi: "It's the other way round: a mutation changes the sequence and creates a new allele." }
+        - { texte: "There is none.", pourquoi: "Without mutations, there would be only one version of each gene." }
+    - texte: "Does a mutation always affect health?"
+      nom: "No: depending on its nature, its effects vary, and most mutations don't affect health."
+      explication: "Mutations happen in our cells all the time; most are repaired or have no consequence, others change the phenotype."
+      pieges:
+        - { texte: "Yes, every mutation causes a disease.", pourquoi: "That's the film version: in reality, almost no mutation affects our health." }
+        - { texte: "Yes, every mutation gives a new power.", pourquoi: "No mutation makes wings grow: real effects are often nil or subtle." }
+    - texte: "A study read the whole genome of 78 father, mother, child trios in Iceland. What did it show about the father's age?"
+      nom: "The older the father, the more new mutations the child carries: about 2 more per year of the father's age."
+      explication: "The average rate measured is 1.2 × 10⁻⁸ new mutation per nucleotide per generation; the father's age explains most of the differences between children."
+      pieges:
+        - { texte: "The father's age has no effect.", pourquoi: "It's the main factor measured: about two more new mutations per year." }
+        - { texte: "Children of older fathers have fewer mutations.", pourquoi: "It's the other way round: the number of new mutations rises with the father's age." }
