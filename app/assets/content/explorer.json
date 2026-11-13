@@ -93,7 +93,21 @@
     "loi1905": "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006070169",
     "loi2004": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000417977",
     "an1936": "https://www.assemblee-nationale.fr/dyn/histoire/il-y-a-90-ans-le-front-populaire-et-les-lois-sociales-de-la-republique/des-accords-de-matignon-aux-cinq-premieres-lois-adoptees",
-    "cnam1936": "https://www.cnam.fr/actualites/institutionnel/les-conges-payes-ont-90-ans"
+    "cnam1936": "https://www.cnam.fr/actualites/institutionnel/les-conges-payes-ont-90-ans",
+    "ed2h2": "https://eduscol.education.fr/document/23428/download",
+    "ed2h3": "https://eduscol.education.fr/document/23431/download",
+    "ed1h2": "https://eduscol.education.fr/document/44113/download",
+    "ed1h3": "https://eduscol.education.fr/document/39452/download",
+    "edth4": "https://eduscol.education.fr/document/11906/download",
+    "edtg2": "https://eduscol.education.fr/document/23479/download",
+    "villers": "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006070939",
+    "habeas": "https://www.legislation.gov.uk/aep/Cha2/31/2/introduction",
+    "billrights": "https://www.legislation.gov.uk/aep/WillandMarSess2/1/2/introduction",
+    "versailles": "https://www.chateauversailles.fr/decouvrir/histoire/grands-personnages/louis-xiv",
+    "colbertisme": "https://www.larousse.fr/encyclopedie/divers/colbertisme/35064",
+    "ue1990": "https://european-union.europa.eu/principles-countries-history/history-eu/1990-99_fr",
+    "ue2000": "https://european-union.europa.eu/principles-countries-history/history-eu/2000-09_fr",
+    "ue2010": "https://european-union.europa.eu/principles-countries-history/history-eu/2010-19_fr"
   },
   "competences": [
     {
@@ -10002,6 +10016,564 @@
       }
     },
     {
+      "id": "ouverture-atlantique",
+      "titre": "L'ouverture atlantique et le « Nouveau Monde »",
+      "niveau": "2de",
+      "prerequis": [
+        "mediterranee-antique-medievale"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Ce chapitre vise à montrer le basculement des échanges de la Méditerranée vers l’Atlantique après 1453 et 1492, ainsi que le début d’une forme de mondialisation."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Après 1453 et 1492, les échanges basculent de la Méditerranée vers l'Atlantique. Conquêtes, or et argent, sucre et esclavage relient Amériques, Afrique et Europe : une première mondialisation.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1453, prise de Constantinople ; 1492, Colomb aux Amériques ; conquistadores, marchands, missionnaires ; choc microbien ; économie sucrière et traite ; Las Casas face à Sepúlveda.",
+        "exemple": "Exemple : dans l'encomienda, un conquérant reçoit de la Couronne le droit de faire travailler un groupe d'Indiens, qu'il doit en échange évangéliser. C'est une forme de travail forcé.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Après 1453 et 1492, vers quel espace les grands échanges européens basculent-ils ?",
+          "nom": "Vers l'océan Atlantique.",
+          "explication": "Les échanges basculent de la Méditerranée vers l'Atlantique : c'est le début d'une forme de mondialisation.",
+          "pieges": [
+            {
+              "texte": "Vers la mer Méditerranée.",
+              "pourquoi": "C'est le point de départ : la Méditerranée était le centre des échanges, et le mouvement s'en éloigne."
+            },
+            {
+              "texte": "Vers l'océan Arctique.",
+              "pourquoi": "Les nouvelles routes relient l'Europe, l'Afrique, les Amériques et l'Asie par l'Atlantique."
+            }
+          ]
+        },
+        {
+          "texte": "Que cherchaient d'abord les navigateurs partis vers l'ouest à partir de 1492 ?",
+          "nom": "De nouvelles routes maritimes vers les Indes.",
+          "explication": "Ils voulaient atteindre les Indes par la mer, et non découvrir un « nouveau monde » dont ils ignoraient l'existence.",
+          "pieges": [
+            {
+              "texte": "Un continent qu'ils savaient déjà exister.",
+              "pourquoi": "Ils ignoraient l'existence de l'Amérique : ils visaient l'Asie."
+            },
+            {
+              "texte": "Des terres vides à peupler.",
+              "pourquoi": "Les Amériques étaient habitées, avec des peuples et des empires."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les historiens écrivent-ils « Nouveau Monde » entre guillemets ?",
+          "nom": "Parce que l'expression traduit le seul regard des Européens.",
+          "explication": "Pour les peuples d'Amérique, ce monde n'avait rien de nouveau : les guillemets rappellent qu'il ne faut pas s'en tenir au regard européen.",
+          "pieges": [
+            {
+              "texte": "Parce que l'Amérique est apparue récemment sur la Terre.",
+              "pourquoi": "Le continent existait bien avant : c'est sa découverte par les Européens qui est récente."
+            },
+            {
+              "texte": "Parce que ce nom a été choisi par les Amérindiens.",
+              "pourquoi": "C'est une expression européenne, pas celle des peuples d'Amérique."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi les empires américains s'effondrent-ils face aux conquérants européens ?",
+          "nom": "Surtout à cause de faiblesses politiques et du choc microbien.",
+          "explication": "Les historiens insistent moins sur les armes que sur les faiblesses politiques et les effets dramatiques des maladies sur les populations.",
+          "pieges": [
+            {
+              "texte": "Seulement parce que les armes européennes étaient meilleures.",
+              "pourquoi": "Ce déséquilibre était en partie compensé par le grand nombre de combattants amérindiens."
+            },
+            {
+              "texte": "Parce que les Amérindiens n'ont jamais résisté.",
+              "pourquoi": "Il y a eu des affrontements et des résistances pendant la conquête."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'appelle-t-on le « choc microbien » ?",
+          "nom": "Les maladies apportées par les Européens, qui frappent durement les Amérindiens.",
+          "explication": "Le mot « microbien » parle de microbes : ces maladies contribuent à l'effondrement de la population amérindienne.",
+          "pieges": [
+            {
+              "texte": "Un tremblement de terre.",
+              "pourquoi": "Un séisme n'a rien à voir avec les microbes."
+            },
+            {
+              "texte": "Une famine due à la sécheresse.",
+              "pourquoi": "Le choc microbien désigne des maladies, pas un manque de nourriture."
+            }
+          ]
+        },
+        {
+          "texte": "Au Brésil, pourquoi l'économie sucrière développe-t-elle la traite des esclaves africains ?",
+          "nom": "Parce qu'elle demande une main-d'œuvre nombreuse et peu coûteuse.",
+          "explication": "Les plantations de canne à sucre réclament beaucoup de bras : la traite négrière amène de force des Africains, depuis des comptoirs d'Afrique, pour y travailler.",
+          "pieges": [
+            {
+              "texte": "Parce que les Africains cultivaient déjà le sucre au Brésil.",
+              "pourquoi": "Ils y sont amenés de force, depuis des comptoirs africains."
+            },
+            {
+              "texte": "Parce que le sucre se récoltait avec des machines.",
+              "pourquoi": "Si des machines faisaient le travail, il ne faudrait pas une main-d'œuvre si nombreuse."
+            }
+          ]
+        },
+        {
+          "texte": "Lors de la controverse de Valladolid, que défend Bartolomé de Las Casas face à Sepúlveda ?",
+          "nom": "L'égale dignité de tous les hommes, Amérindiens compris.",
+          "explication": "Le dominicain Las Casas, ancien colon, s'oppose à Sepúlveda : le débat porte sur la légitimité de la conquête et la manière de considérer les peuples d'Amérique.",
+          "pieges": [
+            {
+              "texte": "Que certains hommes sont esclaves par nature.",
+              "pourquoi": "C'est la thèse de Sepúlveda, inspirée d'Aristote, que Las Casas combat."
+            },
+            {
+              "texte": "Qu'il faut abandonner l'Amérique pour commercer avec l'Asie.",
+              "pourquoi": "Le débat porte sur les peuples d'Amérique, pas sur les routes commerciales."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l'or et l'argent des Amériques sont-ils un bon exemple de première mondialisation ?",
+          "nom": "Parce que des flottes les transportent vers l'Europe, sur des routes qui relient plusieurs continents.",
+          "explication": "Ces flottes transportent l'or et l'argent, mais aussi des esclaves et des denrées tropicales : l'Europe, l'Afrique et l'Amérique sont reliées.",
+          "pieges": [
+            {
+              "texte": "Parce qu'ils restent dans les Amériques.",
+              "pourquoi": "Ils traversent l'Atlantique jusqu'en Europe : c'est un échange entre continents."
+            },
+            {
+              "texte": "Parce qu'ils viennent tous d'Asie.",
+              "pourquoi": "Ici, les métaux précieux viennent des gisements des Amériques."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Opening to the Atlantic and the « New World »",
+        "idee": "After 1453 and 1492, trade shifts from the Mediterranean to the Atlantic. Conquests, gold and silver, sugar and slavery link the Americas, Africa and Europe: a first globalisation.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1453, fall of Constantinople; 1492, Columbus in the Americas; conquistadors, merchants, missionaries; the microbial shock; the sugar economy and the slave trade; Las Casas against Sepúlveda.",
+          "exemple": "Example: under the encomienda, a conqueror receives from the Crown the right to make a group of Indians work for him, and in return he must convert them. It is a form of forced labour.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "After 1453 and 1492, towards which area does major European trade shift?",
+            "nom": "Towards the Atlantic Ocean.",
+            "explication": "Trade shifts from the Mediterranean to the Atlantic: this is the start of a form of globalisation.",
+            "pieges": [
+              {
+                "texte": "Towards the Mediterranean Sea.",
+                "pourquoi": "That is the starting point: the Mediterranean was the centre of trade, and the movement goes away from it."
+              },
+              {
+                "texte": "Towards the Arctic Ocean.",
+                "pourquoi": "The new routes link Europe, Africa, the Americas and Asia across the Atlantic."
+              }
+            ]
+          },
+          {
+            "texte": "What were the sailors who headed west from 1492 looking for first?",
+            "nom": "New sea routes to the Indies.",
+            "explication": "They wanted to reach the Indies by sea, not to discover a « new world » they did not know existed.",
+            "pieges": [
+              {
+                "texte": "A continent they already knew existed.",
+                "pourquoi": "They did not know America existed: they were aiming for Asia."
+              },
+              {
+                "texte": "Empty land to settle.",
+                "pourquoi": "The Americas were inhabited, with peoples and empires."
+              }
+            ]
+          },
+          {
+            "texte": "Why do historians put « New World » in quotation marks?",
+            "nom": "Because the phrase reflects only the Europeans' point of view.",
+            "explication": "For the peoples of America, this world was not new at all: the quotation marks remind us not to stick to the European view.",
+            "pieges": [
+              {
+                "texte": "Because America appeared on Earth recently.",
+                "pourquoi": "The continent existed long before: it is its discovery by Europeans that is recent."
+              },
+              {
+                "texte": "Because the name was chosen by Native Americans.",
+                "pourquoi": "It is a European phrase, not one used by the peoples of America."
+              }
+            ]
+          },
+          {
+            "texte": "Why do the American empires collapse in front of the European conquerors?",
+            "nom": "Mainly because of political weaknesses and the microbial shock.",
+            "explication": "Historians stress weapons less than political weaknesses and the dramatic effects of diseases on the population.",
+            "pieges": [
+              {
+                "texte": "Only because European weapons were better.",
+                "pourquoi": "This imbalance was partly made up for by the large numbers of Native American fighters."
+              },
+              {
+                "texte": "Because Native Americans never resisted.",
+                "pourquoi": "There were battles and resistance during the conquest."
+              }
+            ]
+          },
+          {
+            "texte": "What is the « microbial shock »?",
+            "nom": "The diseases brought by Europeans, which hit Native Americans very hard.",
+            "explication": "« Microbial » is about microbes: these diseases played a part in the collapse of the Native American population.",
+            "pieges": [
+              {
+                "texte": "An earthquake.",
+                "pourquoi": "An earthquake has nothing to do with microbes."
+              },
+              {
+                "texte": "A famine caused by drought.",
+                "pourquoi": "The microbial shock means diseases, not a lack of food."
+              }
+            ]
+          },
+          {
+            "texte": "In Brazil, why does the sugar economy develop the trade in African slaves?",
+            "nom": "Because it needs a large and cheap workforce.",
+            "explication": "Sugar cane plantations need many hands: the slave trade brings Africans there by force, from trading posts in Africa, to work.",
+            "pieges": [
+              {
+                "texte": "Because Africans were already growing sugar in Brazil.",
+                "pourquoi": "They are taken there by force, from African trading posts."
+              },
+              {
+                "texte": "Because sugar was harvested by machines.",
+                "pourquoi": "If machines did the work, such a large workforce would not be needed."
+              }
+            ]
+          },
+          {
+            "texte": "In the Valladolid debate, what does Bartolomé de Las Casas defend against Sepúlveda?",
+            "nom": "The equal dignity of all people, Native Americans included.",
+            "explication": "The Dominican Las Casas, a former colonist, opposes Sepúlveda: the debate is about whether the conquest is legitimate and how to regard the peoples of America.",
+            "pieges": [
+              {
+                "texte": "That some people are slaves by nature.",
+                "pourquoi": "That is Sepúlveda's view, taken from Aristotle, which Las Casas fights."
+              },
+              {
+                "texte": "That America should be abandoned to trade with Asia.",
+                "pourquoi": "The debate is about the peoples of America, not about trade routes."
+              }
+            ]
+          },
+          {
+            "texte": "Why are the gold and silver of the Americas a good example of a first globalisation?",
+            "nom": "Because fleets carry them to Europe, on routes that link several continents.",
+            "explication": "These fleets carry gold and silver, but also slaves and tropical goods: Europe, Africa and America are linked.",
+            "pieges": [
+              {
+                "texte": "Because they stay in the Americas.",
+                "pourquoi": "They cross the Atlantic to Europe: it is a trade between continents."
+              },
+              {
+                "texte": "Because they all come from Asia.",
+                "pourquoi": "Here, the precious metals come from mines in the Americas."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "etat-moderne",
+      "titre": "L'État à l'époque moderne : France et Angleterre",
+      "niveau": "2de",
+      "prerequis": [
+        "renaissance-humanisme"
+      ],
+      "programme": {
+        "source": "hg2de",
+        "texte": "Ce chapitre vise à montrer l’affirmation de l’État en France dans ses multiples dimensions ainsi qu’à caractériser la monarchie française."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Aux XVIe et XVIIe siècles, le roi de France renforce l'État : lois, administration, cour de Versailles. En Angleterre, le Parlement limite le roi ; ce modèle inspire les philosophes des Lumières.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 1539, ordonnance de Villers-Cotterêts ; Colbert et les manufactures ; 1682, la cour à Versailles ; 1679, Habeas Corpus ; 1689, Bill of Rights ; Voltaire et les Lettres philosophiques.",
+        "exemple": "Exemple : le Bill of Rights de 1689 déclare illégal de lever de l'argent pour la Couronne sans l'accord du Parlement. Le roi ne peut donc plus financer seul sa politique : il doit s'entendre avec le Parlement.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "En 1539, l'ordonnance de Villers-Cotterêts impose une langue pour les actes de justice. Laquelle ?",
+          "nom": "Le français.",
+          "explication": "Son article 111 exige que les actes soient faits « en langage maternel françois et non autrement » : le latin est écarté de l'administration royale.",
+          "pieges": [
+            {
+              "texte": "Le latin.",
+              "pourquoi": "C'est justement le latin que l'ordonnance écarte, à cause des doutes sur le sens de ses mots."
+            },
+            {
+              "texte": "La langue de chaque province, au choix.",
+              "pourquoi": "L'ordonnance impose une seule langue, le « langage maternel françois », pour toute la justice du roi."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle politique économique Colbert mène-t-il sous Louis XIV ?",
+          "nom": "Il soutient des manufactures et des compagnies de commerce, pour vendre à l'étranger et importer moins.",
+          "explication": "Cette politique, appelée mercantilisme ou colbertisme, vise la puissance de l'État : manufactures, tarifs douaniers protecteurs, compagnies des Indes.",
+          "pieges": [
+            {
+              "texte": "Il supprime toutes les taxes sur les produits étrangers.",
+              "pourquoi": "C'est l'inverse : il établit des tarifs douaniers protecteurs, qui réduisent les importations."
+            },
+            {
+              "texte": "Il laisse les artisans produire sans aucune aide de l'État.",
+              "pourquoi": "Le colbertisme est dirigé par l'État, qui soutient financièrement les manufactures."
+            }
+          ]
+        },
+        {
+          "texte": "En quelle année Louis XIV s'installe-t-il à Versailles avec sa cour ?",
+          "nom": "En 1682.",
+          "explication": "Le 6 mai 1682, la cour s'installe à Versailles ; auparavant, elle se déplaçait entre plusieurs résidences.",
+          "pieges": [
+            {
+              "texte": "En 1515.",
+              "pourquoi": "C'est la bataille de Marignan, sous François Ier, plus d'un siècle et demi avant."
+            },
+            {
+              "texte": "En 1789.",
+              "pourquoi": "C'est le début de la Révolution française, plus d'un siècle après."
+            }
+          ]
+        },
+        {
+          "texte": "À Versailles, que règle l'étiquette ?",
+          "nom": "La place de chacun à la cour, selon son rang dans la noblesse.",
+          "explication": "Par l'étiquette, Louis XIV hiérarchise la cour : le roi est au centre de tous les regards, et les grands nobles vivent sous son contrôle.",
+          "pieges": [
+            {
+              "texte": "Le prix des marchandises dans le royaume.",
+              "pourquoi": "L'étiquette est un ensemble de règles de la vie de cour, pas une règle de commerce."
+            },
+            {
+              "texte": "L'élection des députés.",
+              "pourquoi": "Il n'y a pas d'élus à la cour : l'étiquette organise la noblesse autour du roi."
+            }
+          ]
+        },
+        {
+          "texte": "Les historiens nuancent l'idée d'un roi de France tout-puissant, dit « absolu ». Pourquoi ?",
+          "nom": "Parce qu'il doit tenir compte des privilèges, des élites dont il dépend pour ses finances, et chercher des compromis.",
+          "explication": "L'absolutisme est plutôt un projet : le roi affirme sa toute-puissance, mais son pouvoir rencontre des limites dans la pratique.",
+          "pieges": [
+            {
+              "texte": "Parce que le roi est élu par ses sujets.",
+              "pourquoi": "Le roi n'est pas élu : il hérite du trône."
+            },
+            {
+              "texte": "Parce que le Parlement anglais gouverne la France.",
+              "pourquoi": "Le Parlement anglais limite le roi d'Angleterre, pas celui de France."
+            }
+          ]
+        },
+        {
+          "texte": "Que protège l'Habeas Corpus, voté en Angleterre en 1679 ?",
+          "nom": "La liberté des personnes, contre les emprisonnements arbitraires.",
+          "explication": "Cette loi vise à mieux garantir la liberté des sujets : le pouvoir ne peut plus emprisonner impunément qui il veut.",
+          "pieges": [
+            {
+              "texte": "Le droit de vote pour tous.",
+              "pourquoi": "Elle protège contre la détention arbitraire ; le vote reste réservé aux riches propriétaires."
+            },
+            {
+              "texte": "Le pouvoir absolu du roi.",
+              "pourquoi": "C'est l'inverse : elle limite l'arbitraire royal."
+            }
+          ]
+        },
+        {
+          "texte": "Que ne peut plus faire le roi d'Angleterre sans l'accord du Parlement, d'après le Bill of Rights de 1689 ?",
+          "nom": "Suspendre les lois ou garder une armée en temps de paix.",
+          "explication": "Le Bill of Rights réserve au Parlement la loi, l'impôt et l'armée en temps de paix ; il réclame aussi des élections libres.",
+          "pieges": [
+            {
+              "texte": "Rien : il garde tous les pouvoirs.",
+              "pourquoi": "Le texte limite justement la prérogative royale."
+            },
+            {
+              "texte": "Choisir sa religion personnelle, seul sujet du texte.",
+              "pourquoi": "Le texte traite surtout des pouvoirs : lois, impôts, armée, élections."
+            }
+          ]
+        },
+        {
+          "texte": "Que montrent les Lettres philosophiques, que Voltaire publie après son séjour en Angleterre ?",
+          "nom": "Son admiration pour la liberté anglaise, qui lui sert à critiquer la France.",
+          "explication": "Exilé en Angleterre de 1726 à 1729, Voltaire lance l'idée d'un « modèle britannique », repris par d'autres philosophes des Lumières.",
+          "pieges": [
+            {
+              "texte": "Un éloge de la monarchie absolue française.",
+              "pourquoi": "Le Parlement de Paris condamne le livre dès 1734 : il dérange le pouvoir."
+            },
+            {
+              "texte": "Le récit d'un voyage en Amérique.",
+              "pourquoi": "Voltaire séjourne en Angleterre, pas en Amérique."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The state in the early modern period: France and England",
+        "idee": "In the 16th and 17th centuries, the King of France strengthens the state: laws, administration, the court at Versailles. In England, Parliament limits the king; this model inspires Enlightenment thinkers.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 1539, ordinance of Villers-Cotterêts; Colbert and the manufactures; 1682, the court at Versailles; 1679, Habeas Corpus; 1689, Bill of Rights; Voltaire and the Philosophical Letters.",
+          "exemple": "Example: the 1689 Bill of Rights declares it illegal to raise money for the Crown without Parliament's consent. So the king can no longer fund his policies on his own: he has to agree with Parliament.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "In 1539, the ordinance of Villers-Cotterêts imposes one language for legal documents. Which one?",
+            "nom": "French.",
+            "explication": "Its article 111 requires documents to be made « in the French mother tongue and in no other way »: Latin is pushed out of royal administration.",
+            "pieges": [
+              {
+                "texte": "Latin.",
+                "pourquoi": "Latin is exactly what the ordinance removes, because of doubts about the meaning of its words."
+              },
+              {
+                "texte": "Each province's own language, as it likes.",
+                "pourquoi": "The ordinance imposes a single language, French, for all the king's justice."
+              }
+            ]
+          },
+          {
+            "texte": "What economic policy does Colbert follow under Louis XIV?",
+            "nom": "He supports manufactures and trading companies, to sell abroad and import less.",
+            "explication": "This policy, called mercantilism or Colbertism, aims at the power of the state: manufactures, protective customs duties, East India companies.",
+            "pieges": [
+              {
+                "texte": "He removes all taxes on foreign goods.",
+                "pourquoi": "It's the opposite: he sets protective customs duties, which reduce imports."
+              },
+              {
+                "texte": "He lets craftsmen produce without any help from the state.",
+                "pourquoi": "Colbertism is run by the state, which funds the manufactures."
+              }
+            ]
+          },
+          {
+            "texte": "In which year does Louis XIV move to Versailles with his court?",
+            "nom": "In 1682.",
+            "explication": "On 6 May 1682, the court settles at Versailles; before that, it moved between several residences.",
+            "pieges": [
+              {
+                "texte": "In 1515.",
+                "pourquoi": "That's the battle of Marignano, under Francis I, more than a century and a half earlier."
+              },
+              {
+                "texte": "In 1789.",
+                "pourquoi": "That's the start of the French Revolution, more than a century later."
+              }
+            ]
+          },
+          {
+            "texte": "At Versailles, what does etiquette regulate?",
+            "nom": "Everyone's place at court, according to their rank in the nobility.",
+            "explication": "Through etiquette, Louis XIV ranks the court: the king is the focus of every gaze, and the great nobles live under his control.",
+            "pieges": [
+              {
+                "texte": "The price of goods in the kingdom.",
+                "pourquoi": "Etiquette is a set of rules for court life, not a trade rule."
+              },
+              {
+                "texte": "The election of members of parliament.",
+                "pourquoi": "There are no elected people at court: etiquette arranges the nobility around the king."
+              }
+            ]
+          },
+          {
+            "texte": "Historians qualify the idea of an all-powerful, « absolute » King of France. Why?",
+            "nom": "Because he must take account of privileges and of the elites he depends on for money, and look for compromises.",
+            "explication": "Absolutism is more of a project: the king claims total power, but in practice his power meets limits.",
+            "pieges": [
+              {
+                "texte": "Because the king is elected by his subjects.",
+                "pourquoi": "The king isn't elected: he inherits the throne."
+              },
+              {
+                "texte": "Because the English Parliament governs France.",
+                "pourquoi": "The English Parliament limits the King of England, not the King of France."
+              }
+            ]
+          },
+          {
+            "texte": "What does Habeas Corpus, passed in England in 1679, protect?",
+            "nom": "People's liberty, against arbitrary imprisonment.",
+            "explication": "This law aims to better secure the liberty of the subject: those in power can no longer jail anyone they like with impunity.",
+            "pieges": [
+              {
+                "texte": "Everyone's right to vote.",
+                "pourquoi": "It protects against arbitrary detention; voting remains for rich property owners."
+              },
+              {
+                "texte": "The king's absolute power.",
+                "pourquoi": "It's the opposite: it limits royal arbitrariness."
+              }
+            ]
+          },
+          {
+            "texte": "According to the 1689 Bill of Rights, what can the King of England no longer do without Parliament's consent?",
+            "nom": "Suspend laws or keep an army in peacetime.",
+            "explication": "The Bill of Rights gives Parliament the say over laws, taxes and a peacetime army; it also calls for free elections.",
+            "pieges": [
+              {
+                "texte": "Nothing: he keeps all his powers.",
+                "pourquoi": "The text precisely limits the royal prerogative."
+              },
+              {
+                "texte": "Choose his personal religion, the only topic of the text.",
+                "pourquoi": "The text is mostly about powers: laws, taxes, the army, elections."
+              }
+            ]
+          },
+          {
+            "texte": "What do the Philosophical Letters, which Voltaire publishes after his stay in England, show?",
+            "nom": "His admiration for English liberty, which he uses to criticise France.",
+            "explication": "Exiled in England from 1726 to 1729, Voltaire launches the idea of a « British model », taken up by other Enlightenment thinkers.",
+            "pieges": [
+              {
+                "texte": "Praise for the absolute French monarchy.",
+                "pourquoi": "The Parlement of Paris condemns the book as early as 1734: it disturbs those in power."
+              },
+              {
+                "texte": "The story of a journey to America.",
+                "pourquoi": "Voltaire stays in England, not in America."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "europe-revolutions",
       "titre": "L'Europe face aux révolutions (1789-1848)",
       "niveau": "1re",
@@ -10274,6 +10846,566 @@
               {
                 "texte": "Crown Napoleon emperor of Europe.",
                 "pourquoi": "The congress meets after Napoleon's defeat, to organise Europe without him."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrialisation-france",
+      "titre": "L'industrialisation de la France sous le Second Empire",
+      "niveau": "1re",
+      "prerequis": [
+        "revolution-industrielle",
+        "europe-revolutions"
+      ],
+      "programme": {
+        "source": "hg1re",
+        "texte": "Ce chapitre vise à montrer que la société française connaît des mutations profondes liées à l’industrialisation et à l’urbanisation."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Sous le Second Empire, la France change vite : chemins de fer, banques, salariat, Paris transformé. Le monde rural reste important, et la question ouvrière pèse en politique.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : Napoléon III et le préfet Haussmann ; les frères Pereire, le chemin de fer et le crédit ; 1860, traité de commerce avec le Royaume-Uni ; 25 mai 1864, loi sur les coalitions ouvrières.",
+        "exemple": "Exemple : en 1870, Le Creusot compte 10 000 ouvriers pour 25 000 habitants. C'est une exception : en France, l'usine est surtout une petite entreprise. Un cas célèbre ne suffit pas pour généraliser.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quelles transformations s'accélèrent en France au milieu du XIXe siècle ?",
+          "nom": "Le salariat se développe, la mécanisation avance lentement, les villes attirent.",
+          "explication": "Ces changements sont vécus comme une accélération, mais avec de fortes différences entre régions, et des mobilités souvent saisonnières.",
+          "pieges": [
+            {
+              "texte": "Presque tous les paysans quittent les campagnes en quelques années.",
+              "pourquoi": "Le monde rural reste très important : l'exode rural ne fait que commencer."
+            },
+            {
+              "texte": "De grandes usines remplacent partout les petits ateliers.",
+              "pourquoi": "Le monde de l'usine reste surtout celui de la petite entreprise."
+            }
+          ]
+        },
+        {
+          "texte": "Dans la transformation de Paris, quel est le rôle d'Haussmann ?",
+          "nom": "Préfet, il exécute le projet voulu par Napoléon III.",
+          "explication": "Napoléon III est l'instigateur du projet ; le préfet Haussmann le met en œuvre et lui donne son nom : le Paris haussmannien.",
+          "pieges": [
+            {
+              "texte": "Il est l'empereur qui décide de tout.",
+              "pourquoi": "L'empereur est Napoléon III ; Haussmann est son préfet."
+            },
+            {
+              "texte": "Il mène les barricades ouvrières contre l'Empire.",
+              "pourquoi": "Au contraire, certains voient ses grands boulevards comme un moyen de neutraliser le Paris des barricades."
+            }
+          ]
+        },
+        {
+          "texte": "Qu'est-ce qui est au cœur du projet haussmannien ?",
+          "nom": "La circulation : relier les gares, faire passer l'air et l'eau, supprimer des quartiers insalubres.",
+          "explication": "Le percement des grands boulevards adapte la ville à la circulation des hommes, des marchandises, de l'air et de l'eau.",
+          "pieges": [
+            {
+              "texte": "Garder intactes les ruelles du vieux Paris.",
+              "pourquoi": "Le projet détruit une partie du vieux Paris, ce qu'on lui reproche à l'époque."
+            },
+            {
+              "texte": "Installer les usines polluantes au centre.",
+              "pourquoi": "C'est l'inverse : elles sont écartées vers l'extérieur de la ville."
+            }
+          ]
+        },
+        {
+          "texte": "Comment Paris s'agrandit-il sous le Second Empire ?",
+          "nom": "En intégrant des villages voisins, comme Belleville, Bercy ou Montmartre : Paris passe à vingt arrondissements.",
+          "explication": "La ville s'étend sur ses abords, et l'on crée des parcs et des bois, comme les Buttes-Chaumont ou le bois de Vincennes.",
+          "pieges": [
+            {
+              "texte": "En réduisant le nombre de ses arrondissements.",
+              "pourquoi": "Il augmente : Paris passe à vingt arrondissements."
+            },
+            {
+              "texte": "En construisant une ville nouvelle loin de la Seine.",
+              "pourquoi": "Paris s'agrandit sur place, en intégrant les villages qui l'entourent."
+            }
+          ]
+        },
+        {
+          "texte": "Sur quoi les frères Pereire fondent-ils leur action ?",
+          "nom": "Sur le chemin de fer et le crédit, en lien avec l'État.",
+          "explication": "Inspirés par les idées de Saint-Simon, ils développent les transports et la banque, et investissent aussi dans le Paris haussmannien.",
+          "pieges": [
+            {
+              "texte": "Sur la fermeture de la France au commerce étranger.",
+              "pourquoi": "Ils s'appuient au contraire sur le libre-échange et la circulation de l'argent."
+            },
+            {
+              "texte": "Sur le refus de tout lien avec le pouvoir.",
+              "pourquoi": "Ils sont proches du régime : tous deux sont élus au Corps législatif."
+            }
+          ]
+        },
+        {
+          "texte": "En 1867, la société de crédit des frères Pereire fait faillite. Que montre cette chute ?",
+          "nom": "Les risques de la spéculation qui accompagne la croissance.",
+          "explication": "Leur banque réinvestit sans cesse l'argent des particuliers dans de nouveaux projets : cette spéculation, critiquée par Zola dans La Curée, cause leur chute.",
+          "pieges": [
+            {
+              "texte": "Que la France n'a plus aucune banque.",
+              "pourquoi": "La faillite touche une société, pas tout le système bancaire."
+            },
+            {
+              "texte": "Que les chemins de fer sont abandonnés.",
+              "pourquoi": "La faillite touche leur banque, pas le réseau ferré lui-même."
+            }
+          ]
+        },
+        {
+          "texte": "Que fait le traité de commerce signé avec le Royaume-Uni en 1860 ?",
+          "nom": "Il diminue les droits de douane entre les deux pays.",
+          "explication": "Ce libre-échange favorise certains secteurs, comme le luxe, et en pénalise d'autres, comme les petites industries textiles.",
+          "pieges": [
+            {
+              "texte": "Il interdit tout commerce avec le Royaume-Uni.",
+              "pourquoi": "C'est l'inverse : il facilite les échanges en baissant les droits de douane."
+            },
+            {
+              "texte": "Il crée une monnaie commune aux deux pays.",
+              "pourquoi": "Il porte sur les droits de douane, pas sur la monnaie."
+            }
+          ]
+        },
+        {
+          "texte": "Que change la loi du 25 mai 1864 pour les ouvriers ?",
+          "nom": "Elle supprime le délit de coalition : faire grève n'est plus un délit.",
+          "explication": "Elle répond à une attente du mouvement ouvrier, mais reste limitée : elle n'accorde pas la liberté de réunion.",
+          "pieges": [
+            {
+              "texte": "Elle accorde aussi la pleine liberté de réunion.",
+              "pourquoi": "C'est justement sa limite : la liberté de réunion n'est pas accordée."
+            },
+            {
+              "texte": "Elle interdit toutes les grèves.",
+              "pourquoi": "C'est l'inverse : après elle, le nombre de grèves augmente."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The industrialisation of France under the Second Empire",
+        "idee": "Under the Second Empire, France changes fast: railways, banks, wage labour, Paris transformed. The countryside still matters a lot, and the workers' question weighs on politics.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: Napoleon III and the prefect Haussmann; the Pereire brothers, railways and credit; 1860, trade treaty with the United Kingdom; 25 May 1864, law on workers' combinations.",
+          "exemple": "Example: in 1870, Le Creusot has 10,000 workers for 25,000 inhabitants. It's an exception: in France, the factory is mostly a small business. One famous case is not enough to generalise.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which changes speed up in France in the middle of the 19th century?",
+            "nom": "Wage labour spreads, mechanisation advances slowly, towns attract people.",
+            "explication": "These changes are felt as a speeding-up, but with big differences between regions, and often seasonal movements.",
+            "pieges": [
+              {
+                "texte": "Almost all peasants leave the countryside within a few years.",
+                "pourquoi": "The countryside remains very important: the rural exodus is only beginning."
+              },
+              {
+                "texte": "Big factories replace small workshops everywhere.",
+                "pourquoi": "The world of the factory is still mostly that of the small business."
+              }
+            ]
+          },
+          {
+            "texte": "In the transformation of Paris, what is Haussmann's role?",
+            "nom": "As prefect, he carries out the project wanted by Napoleon III.",
+            "explication": "Napoleon III starts the project; the prefect Haussmann carries it out and gives it his name: Haussmann's Paris.",
+            "pieges": [
+              {
+                "texte": "He is the emperor who decides everything.",
+                "pourquoi": "The emperor is Napoleon III; Haussmann is his prefect."
+              },
+              {
+                "texte": "He leads the workers' barricades against the Empire.",
+                "pourquoi": "On the contrary, some see his wide boulevards as a way to neutralise the Paris of the barricades."
+              }
+            ]
+          },
+          {
+            "texte": "What is at the heart of Haussmann's project?",
+            "nom": "Circulation: linking the stations, letting air and water through, removing unhealthy districts.",
+            "explication": "Cutting the wide boulevards adapts the city to the movement of people, goods, air and water.",
+            "pieges": [
+              {
+                "texte": "Keeping the alleys of old Paris untouched.",
+                "pourquoi": "The project destroys part of old Paris, which people criticise at the time."
+              },
+              {
+                "texte": "Putting polluting factories in the centre.",
+                "pourquoi": "It's the opposite: they are pushed out of the city."
+              }
+            ]
+          },
+          {
+            "texte": "How does Paris grow under the Second Empire?",
+            "nom": "By taking in nearby villages, such as Belleville, Bercy or Montmartre: Paris goes up to twenty districts.",
+            "explication": "The city spreads over its edges, and parks and woods are created, such as the Buttes-Chaumont or the Bois de Vincennes.",
+            "pieges": [
+              {
+                "texte": "By reducing its number of districts.",
+                "pourquoi": "It goes up: Paris reaches twenty districts."
+              },
+              {
+                "texte": "By building a new town far from the Seine.",
+                "pourquoi": "Paris grows where it is, by taking in the villages around it."
+              }
+            ]
+          },
+          {
+            "texte": "What do the Pereire brothers base their work on?",
+            "nom": "On railways and credit, together with the state.",
+            "explication": "Inspired by Saint-Simon's ideas, they develop transport and banking, and also invest in Haussmann's Paris.",
+            "pieges": [
+              {
+                "texte": "On closing France to foreign trade.",
+                "pourquoi": "On the contrary, they rely on free trade and the flow of money."
+              },
+              {
+                "texte": "On refusing any link with those in power.",
+                "pourquoi": "They are close to the regime: both are elected to the Legislative Body."
+              }
+            ]
+          },
+          {
+            "texte": "In 1867, the Pereire brothers' credit company goes bankrupt. What does this fall show?",
+            "nom": "The risks of the speculation that comes with growth.",
+            "explication": "Their bank keeps reinvesting private savers' money in new projects: this speculation, criticised by Zola in La Curée, causes their fall.",
+            "pieges": [
+              {
+                "texte": "That France has no banks left.",
+                "pourquoi": "The bankruptcy hits one company, not the whole banking system."
+              },
+              {
+                "texte": "That the railways are abandoned.",
+                "pourquoi": "The bankruptcy hits their bank, not the railway network itself."
+              }
+            ]
+          },
+          {
+            "texte": "What does the trade treaty signed with the United Kingdom in 1860 do?",
+            "nom": "It lowers customs duties between the two countries.",
+            "explication": "This free trade helps some sectors, such as luxury goods, and hurts others, such as small textile industries.",
+            "pieges": [
+              {
+                "texte": "It bans all trade with the United Kingdom.",
+                "pourquoi": "It's the opposite: it makes trade easier by lowering customs duties."
+              },
+              {
+                "texte": "It creates a currency shared by both countries.",
+                "pourquoi": "It's about customs duties, not money."
+              }
+            ]
+          },
+          {
+            "texte": "What does the law of 25 May 1864 change for workers?",
+            "nom": "It abolishes the offence of combination: going on strike is no longer an offence.",
+            "explication": "It meets one of the labour movement's demands, but it is limited: it does not grant freedom of assembly.",
+            "pieges": [
+              {
+                "texte": "It also grants full freedom of assembly.",
+                "pourquoi": "That is exactly its limit: freedom of assembly is not granted."
+              },
+              {
+                "texte": "It bans all strikes.",
+                "pourquoi": "It's the opposite: afterwards, the number of strikes goes up."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "troisieme-republique",
+      "titre": "La Troisième République : la mise en œuvre du projet républicain",
+      "niveau": "1re",
+      "prerequis": [
+        "republique-xixe",
+        "europe-revolutions"
+      ],
+      "programme": {
+        "source": "hg1re",
+        "texte": "Ce chapitre vise à montrer la manière dont le régime républicain se met en place et s’enracine ainsi que les oppositions qu’il rencontre."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Proclamée en 1870, la République doit convaincre une France qui vote d'abord monarchiste. Elle s'enracine par des lois, l'école et des symboles, malgré de fortes oppositions et le refus du vote des femmes.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 4 septembre 1870, proclamation ; 1871, la Commune ; 1875, lois constitutionnelles ; 1876-1879, les républicains prennent les institutions ; 1880, 14 juillet fête nationale ; 1885, funérailles de Victor Hugo ; l'affaire Dreyfus.",
+        "exemple": "Exemple : le 14 juillet 1880 est la première célébration officielle du 14 juillet comme fête nationale. En rappelant la prise de la Bastille, la République se présente comme l'héritière de 1789.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "La République est proclamée à Paris le 4 septembre 1870. Qui remporte pourtant les élections du 8 février 1871 ?",
+          "nom": "Les monarchistes.",
+          "explication": "Ils incarnent alors le camp de la paix, face à des républicains qui ont voulu prolonger la guerre : la République doit encore convaincre.",
+          "pieges": [
+            {
+              "texte": "Les républicains, très largement.",
+              "pourquoi": "Ils ne prennent le contrôle des institutions qu'entre 1876 et 1879."
+            },
+            {
+              "texte": "Les partisans de Napoléon III, qui retrouve son trône.",
+              "pourquoi": "L'Empire vient de s'effondrer après la défaite de 1870."
+            }
+          ]
+        },
+        {
+          "texte": "Que veulent beaucoup de communards, comme Louise Michel, en 1871 ?",
+          "nom": "Une République radicale : démocratie directe, sociale et anticléricale.",
+          "explication": "Ils réclament par exemple la séparation de l'Église et de l'État et une instruction laïque, gratuite et obligatoire.",
+          "pieges": [
+            {
+              "texte": "Le retour d'un roi.",
+              "pourquoi": "Ils veulent une République radicale, pas une monarchie."
+            },
+            {
+              "texte": "La dictature du prolétariat décrite par Karl Marx.",
+              "pourquoi": "Selon les historiens, leur projet est surtout républicain radical, pas celui de Marx."
+            }
+          ]
+        },
+        {
+          "texte": "Comment se termine la Commune de Paris, en mai 1871 ?",
+          "nom": "Par une répression sanglante : la « semaine sanglante ».",
+          "explication": "Selon les estimations de l'historien Robert Tombs, entre 7 000 et 15 000 communards meurent ; d'autres sont arrêtés ou exilés.",
+          "pieges": [
+            {
+              "texte": "Par un accord de paix entre Paris et le gouvernement.",
+              "pourquoi": "Il n'y a pas d'accord : l'insurrection est écrasée par la force."
+            },
+            {
+              "texte": "Par la victoire des communards dans toute la France.",
+              "pourquoi": "La Commune reste surtout parisienne, et elle est vaincue."
+            }
+          ]
+        },
+        {
+          "texte": "Que sont les lois constitutionnelles de 1875 ?",
+          "nom": "Un compromis entre monarchistes modérés et républicains, qui organise le nouveau régime.",
+          "explication": "Elles créent la Chambre des députés, le Sénat et la présidence de la République : la démocratie parlementaire s'installe.",
+          "pieges": [
+            {
+              "texte": "Une constitution écrite par les communards.",
+              "pourquoi": "La Commune a été écrasée en 1871 ; le compromis se fait entre modérés."
+            },
+            {
+              "texte": "Le retour de la monarchie absolue.",
+              "pourquoi": "Elles organisent une République parlementaire, avec des élus."
+            }
+          ]
+        },
+        {
+          "texte": "Entre 1876 et 1879, que réussissent les républicains ?",
+          "nom": "Ils prennent le contrôle de la Chambre des députés, du Sénat et de la présidence.",
+          "explication": "Ils gagnent les élections de 1876, puis celles qui suivent la dissolution de 1877 par le président Mac-Mahon.",
+          "pieges": [
+            {
+              "texte": "Ils perdent toutes les élections.",
+              "pourquoi": "C'est l'inverse : leurs victoires électorales leur donnent toutes les institutions."
+            },
+            {
+              "texte": "Ils suppriment le Sénat.",
+              "pourquoi": "Le Sénat est conservé : les républicains en prennent le contrôle."
+            }
+          ]
+        },
+        {
+          "texte": "En 1885, pourquoi la République organise-t-elle des funérailles nationales pour Victor Hugo ?",
+          "nom": "Pour honorer un grand écrivain républicain et rassembler la nation autour de la République.",
+          "explication": "Environ deux millions de personnes y assistent ; Hugo, qui a refusé les prières de toute Église, entre au Panthéon.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il était un général victorieux.",
+              "pourquoi": "Hugo est un écrivain : honorer un civil tranche avec les régimes précédents."
+            },
+            {
+              "texte": "Parce qu'il était chef du gouvernement.",
+              "pourquoi": "Il n'est membre ni du gouvernement ni de l'armée."
+            }
+          ]
+        },
+        {
+          "texte": "Avant 1914, les femmes peuvent-elles voter aux élections politiques ?",
+          "nom": "Non : ce droit leur est refusé, malgré les campagnes suffragistes.",
+          "explication": "Hubertine Auclert, qui forge le mot « féminisme », réclame le vote. Les femmes obtiennent d'autres droits, comme adhérer à un syndicat en 1884.",
+          "pieges": [
+            {
+              "texte": "Oui, depuis 1848.",
+              "pourquoi": "En 1848, le suffrage universel est seulement masculin."
+            },
+            {
+              "texte": "Oui, grâce aux lois de 1875.",
+              "pourquoi": "Ces lois organisent le régime sans donner le vote aux femmes."
+            }
+          ]
+        },
+        {
+          "texte": "Autour de quelle affaire l'antisémitisme s'organise-t-il en France, à la fin du XIXe siècle ?",
+          "nom": "L'affaire Dreyfus.",
+          "explication": "L'affaire divise profondément le pays : elle structure l'antisémitisme et radicalise une partie de l'opinion catholique.",
+          "pieges": [
+            {
+              "texte": "L'affaire de Fachoda.",
+              "pourquoi": "Fachoda, en 1898, est un « choc des impérialismes » lié à la colonisation, pas une affaire intérieure."
+            },
+            {
+              "texte": "La Commune de Paris.",
+              "pourquoi": "La Commune est une insurrection parisienne de 1871, pas une « affaire »."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "The Third Republic: putting the republican project into practice",
+        "idee": "Proclaimed in 1870, the Republic must win over a France that first votes monarchist. It takes root through laws, schools and symbols, despite strong opposition and the refusal to let women vote.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 4 September 1870, proclamation; 1871, the Commune; 1875, constitutional laws; 1876-1879, republicans take over the institutions; 1880, 14 July becomes the national holiday; 1885, Victor Hugo's funeral; the Dreyfus affair.",
+          "exemple": "Example: 14 July 1880 is the first official celebration of 14 July as the national holiday. By recalling the storming of the Bastille, the Republic presents itself as the heir of 1789.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "The Republic is proclaimed in Paris on 4 September 1870. Yet who wins the elections of 8 February 1871?",
+            "nom": "The monarchists.",
+            "explication": "At the time they stand for peace, against republicans who wanted to carry on the war: the Republic still has to win people over.",
+            "pieges": [
+              {
+                "texte": "The republicans, by a wide margin.",
+                "pourquoi": "They only take control of the institutions between 1876 and 1879."
+              },
+              {
+                "texte": "Supporters of Napoleon III, who gets his throne back.",
+                "pourquoi": "The Empire has just collapsed after the defeat of 1870."
+              }
+            ]
+          },
+          {
+            "texte": "What do many Communards, like Louise Michel, want in 1871?",
+            "nom": "A radical Republic: direct, social and anticlerical democracy.",
+            "explication": "For example, they call for the separation of Church and State and for secular, free and compulsory schooling.",
+            "pieges": [
+              {
+                "texte": "The return of a king.",
+                "pourquoi": "They want a radical Republic, not a monarchy."
+              },
+              {
+                "texte": "The dictatorship of the proletariat described by Karl Marx.",
+                "pourquoi": "According to historians, their project is mostly a radical republican one, not Marx's."
+              }
+            ]
+          },
+          {
+            "texte": "How does the Paris Commune end, in May 1871?",
+            "nom": "With bloody repression: the « Bloody Week ».",
+            "explication": "According to historian Robert Tombs's estimates, between 7,000 and 15,000 Communards die; others are arrested or exiled.",
+            "pieges": [
+              {
+                "texte": "With a peace agreement between Paris and the government.",
+                "pourquoi": "There is no agreement: the uprising is crushed by force."
+              },
+              {
+                "texte": "With the Communards winning all over France.",
+                "pourquoi": "The Commune stays mostly in Paris, and it is defeated."
+              }
+            ]
+          },
+          {
+            "texte": "What are the constitutional laws of 1875?",
+            "nom": "A compromise between moderate monarchists and republicans, which organises the new regime.",
+            "explication": "They create the Chamber of Deputies, the Senate and the presidency of the Republic: parliamentary democracy takes hold.",
+            "pieges": [
+              {
+                "texte": "A constitution written by the Communards.",
+                "pourquoi": "The Commune was crushed in 1871; the compromise is made between moderates."
+              },
+              {
+                "texte": "The return of absolute monarchy.",
+                "pourquoi": "They organise a parliamentary Republic, with elected members."
+              }
+            ]
+          },
+          {
+            "texte": "Between 1876 and 1879, what do the republicans achieve?",
+            "nom": "They take control of the Chamber of Deputies, the Senate and the presidency.",
+            "explication": "They win the 1876 elections, then those that follow President Mac-Mahon's dissolution of 1877.",
+            "pieges": [
+              {
+                "texte": "They lose every election.",
+                "pourquoi": "It's the opposite: their election wins give them all the institutions."
+              },
+              {
+                "texte": "They abolish the Senate.",
+                "pourquoi": "The Senate is kept: the republicans take control of it."
+              }
+            ]
+          },
+          {
+            "texte": "In 1885, why does the Republic hold a state funeral for Victor Hugo?",
+            "nom": "To honour a great republican writer and unite the nation around the Republic.",
+            "explication": "About two million people attend; Hugo, who refused the prayers of any Church, is laid in the Panthéon.",
+            "pieges": [
+              {
+                "texte": "Because he was a victorious general.",
+                "pourquoi": "Hugo is a writer: honouring a civilian breaks with earlier regimes."
+              },
+              {
+                "texte": "Because he was head of government.",
+                "pourquoi": "He belongs neither to the government nor to the army."
+              }
+            ]
+          },
+          {
+            "texte": "Before 1914, can women vote in political elections?",
+            "nom": "No: this right is refused to them, despite suffrage campaigns.",
+            "explication": "Hubertine Auclert, who coins the word « feminism », demands the vote. Women gain other rights, such as joining a trade union in 1884.",
+            "pieges": [
+              {
+                "texte": "Yes, since 1848.",
+                "pourquoi": "In 1848, universal suffrage is for men only."
+              },
+              {
+                "texte": "Yes, thanks to the laws of 1875.",
+                "pourquoi": "These laws organise the regime without giving women the vote."
+              }
+            ]
+          },
+          {
+            "texte": "Around which affair does antisemitism organise itself in France at the end of the 19th century?",
+            "nom": "The Dreyfus affair.",
+            "explication": "The affair deeply divides the country: it shapes antisemitism and radicalises part of Catholic opinion.",
+            "pieges": [
+              {
+                "texte": "The Fashoda affair.",
+                "pourquoi": "Fashoda, in 1898, is a « clash of imperialisms » linked to colonisation, not a domestic affair."
+              },
+              {
+                "texte": "The Paris Commune.",
+                "pourquoi": "The Commune is a Parisian uprising of 1871, not an « affair »."
               }
             ]
           }
@@ -12000,6 +13132,564 @@
               {
                 "texte": "Through ships' radios.",
                 "pourquoi": "Ships' radios are for their own communications, not for internet traffic between continents."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "construction-europeenne",
+      "titre": "La construction européenne depuis les années 1990",
+      "niveau": "Terminale",
+      "prerequis": [
+        "monde-bipolaire"
+      ],
+      "programme": {
+        "source": "hgtle",
+        "texte": "La construction européenne entre élargissement, approfondissement et remises en question. Ce chapitre vise à contextualiser les évolutions, les avancées et les crises de la construction européenne."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "Depuis 1990, l'Europe s'élargit et s'approfondit : traité de Maastricht, euro, entrée de pays d'Europe centrale et orientale. Elle est aussi contestée : « non » français de 2005, départ du Royaume-Uni.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Repères : 3 octobre 1990, réunification allemande ; 1992, traité de Maastricht ; 2002, billets et pièces en euros ; 2004, dix nouveaux pays ; 2005, « non » au traité constitutionnel ; 2007, traité de Lisbonne ; 2020, départ du Royaume-Uni.",
+        "exemple": "Exemple : le tunnel sous la Manche, projet franco-britannique, relie Paris à Londres. Mais le Royaume-Uni reste hors de l'espace Schengen : une vraie frontière existe à la gare du Nord et à Saint-Pancras.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Quel événement du 3 octobre 1990 change l'équilibre de la construction européenne ?",
+          "nom": "La réunification de l'Allemagne.",
+          "explication": "Après la fin du bloc soviétique, l'Allemagne réunifiée devient potentiellement la première puissance économique du continent.",
+          "pieges": [
+            {
+              "texte": "La sortie du Royaume-Uni de l'Union.",
+              "pourquoi": "Elle a lieu bien plus tard, le 31 janvier 2020."
+            },
+            {
+              "texte": "La mise en circulation des pièces en euros.",
+              "pourquoi": "Les billets et les pièces en euros arrivent le 1er janvier 2002."
+            }
+          ]
+        },
+        {
+          "texte": "Que crée le traité de Maastricht, signé le 7 février 1992 ?",
+          "nom": "L'Union européenne, avec une citoyenneté européenne et le projet de monnaie unique.",
+          "explication": "Le traité entre en vigueur le 1er novembre 1993 : l'Union européenne est officiellement créée.",
+          "pieges": [
+            {
+              "texte": "Le tunnel sous la Manche.",
+              "pourquoi": "Le tunnel est un projet franco-britannique, pas un traité européen."
+            },
+            {
+              "texte": "L'OTAN.",
+              "pourquoi": "L'OTAN est une alliance militaire autour des États-Unis ; Maastricht crée l'Union européenne."
+            }
+          ]
+        },
+        {
+          "texte": "Quand les billets et les pièces en euros entrent-ils dans la vie quotidienne ?",
+          "nom": "Le 1er janvier 2002, dans 12 pays de l'Union.",
+          "explication": "Ce jour-là, les billets et les pièces en euros deviennent la monnaie légale dans 12 pays.",
+          "pieges": [
+            {
+              "texte": "En 1999, dans tous les pays de l'Union.",
+              "pourquoi": "En 1999, l'euro existe seulement pour les opérations commerciales et financières, dans 11 pays."
+            },
+            {
+              "texte": "Dès 1992, avec le traité de Maastricht.",
+              "pourquoi": "Le traité prévoit la monnaie unique ; les pièces n'arrivent que dix ans plus tard."
+            }
+          ]
+        },
+        {
+          "texte": "Pourquoi l'euro est-il un choix politique fort, et pas seulement économique ?",
+          "nom": "Parce que les États abandonnent leur politique monétaire, un attribut essentiel de leur souveraineté.",
+          "explication": "Avec l'euro, ce n'est plus chaque État qui conduit sa politique monétaire, mais la Banque centrale européenne.",
+          "pieges": [
+            {
+              "texte": "Parce qu'il remplace les drapeaux nationaux.",
+              "pourquoi": "L'euro est une monnaie : il ne touche pas aux drapeaux des États."
+            },
+            {
+              "texte": "Parce que tous les pays du monde doivent l'utiliser.",
+              "pourquoi": "Il concerne les pays qui l'ont adopté, pas le monde entier."
+            }
+          ]
+        },
+        {
+          "texte": "Selon ses statuts, quelle est la mission prioritaire de la Banque centrale européenne ?",
+          "nom": "Lutter contre l'inflation, pour garder une monnaie stable.",
+          "explication": "Pour la même raison, ses statuts lui interdisent de financer directement les dettes publiques des États membres.",
+          "pieges": [
+            {
+              "texte": "Financer directement les dettes des États.",
+              "pourquoi": "Ses statuts le lui interdisent."
+            },
+            {
+              "texte": "Fixer les impôts de chaque pays.",
+              "pourquoi": "La fiscalité reste aux États : il n'existe pas de convergence fiscale entre eux."
+            }
+          ]
+        },
+        {
+          "texte": "En 2004, combien de pays entrent dans l'Union européenne ?",
+          "nom": "Dix : Chypre, Malte et huit pays d'Europe centrale et orientale.",
+          "explication": "Les huit sont la Tchéquie, l'Estonie, la Hongrie, la Lettonie, la Lituanie, la Pologne, la Slovaquie et la Slovénie.",
+          "pieges": [
+            {
+              "texte": "Deux : la Bulgarie et la Roumanie.",
+              "pourquoi": "Elles entrent en 2007, ce qui porte l'Union à 27 membres."
+            },
+            {
+              "texte": "Un seul : la Croatie.",
+              "pourquoi": "La Croatie entre en 2013, comme 28e État membre."
+            }
+          ]
+        },
+        {
+          "texte": "En 2005, que devient le traité établissant une Constitution pour l'Europe ?",
+          "nom": "Les électeurs français et néerlandais le rejettent par référendum.",
+          "explication": "Le projet de constitution échoue ; en 2007, les 27 signent le traité de Lisbonne, en vigueur le 1er décembre 2009.",
+          "pieges": [
+            {
+              "texte": "Il est approuvé par référendum dans tous les pays.",
+              "pourquoi": "Les Français et les Néerlandais votent « non » : il ne peut pas entrer en vigueur."
+            },
+            {
+              "texte": "Il crée la monnaie unique.",
+              "pourquoi": "La monnaie unique vient du traité de Maastricht, en 1992."
+            }
+          ]
+        },
+        {
+          "texte": "Que décident les électeurs britanniques lors du référendum du 23 juin 2016 ?",
+          "nom": "De quitter l'Union européenne, à 52 % des voix.",
+          "explication": "Le Royaume-Uni quitte l'Union le 31 janvier 2020. Pendant les négociations, les autres pays de l'Union restent unis.",
+          "pieges": [
+            {
+              "texte": "D'adopter l'euro.",
+              "pourquoi": "Le vote porte sur la sortie de l'Union, pas sur la monnaie."
+            },
+            {
+              "texte": "D'entrer dans l'espace Schengen.",
+              "pourquoi": "Le Royaume-Uni restait hors de Schengen ; le vote porte sur l'appartenance à l'Union."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "European integration since the 1990s",
+        "idee": "Since 1990, Europe has grown wider and deeper: the Maastricht Treaty, the euro, Central and Eastern European countries joining. It is also challenged: the French « no » of 2005, the UK's departure.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Landmarks: 3 October 1990, German reunification; 1992, Maastricht Treaty; 2002, euro notes and coins; 2004, ten new countries; 2005, « no » to the constitutional treaty; 2007, Treaty of Lisbon; 2020, the UK leaves.",
+          "exemple": "Example: the Channel Tunnel, a Franco-British project, links Paris and London. But the UK stays outside the Schengen area: there is a real border at the Gare du Nord and at St Pancras.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Which event on 3 October 1990 changes the balance of European integration?",
+            "nom": "The reunification of Germany.",
+            "explication": "After the end of the Soviet bloc, reunified Germany potentially becomes the leading economic power on the continent.",
+            "pieges": [
+              {
+                "texte": "The UK leaving the Union.",
+                "pourquoi": "That happens much later, on 31 January 2020."
+              },
+              {
+                "texte": "Euro coins coming into circulation.",
+                "pourquoi": "Euro notes and coins arrive on 1 January 2002."
+              }
+            ]
+          },
+          {
+            "texte": "What does the Maastricht Treaty, signed on 7 February 1992, create?",
+            "nom": "The European Union, with European citizenship and the plan for a single currency.",
+            "explication": "The treaty comes into force on 1 November 1993: the European Union is officially created.",
+            "pieges": [
+              {
+                "texte": "The Channel Tunnel.",
+                "pourquoi": "The tunnel is a Franco-British project, not a European treaty."
+              },
+              {
+                "texte": "NATO.",
+                "pourquoi": "NATO is a military alliance around the United States; Maastricht creates the European Union."
+              }
+            ]
+          },
+          {
+            "texte": "When do euro notes and coins come into daily life?",
+            "nom": "On 1 January 2002, in 12 EU countries.",
+            "explication": "On that day, euro notes and coins become legal tender in 12 countries.",
+            "pieges": [
+              {
+                "texte": "In 1999, in every EU country.",
+                "pourquoi": "In 1999, the euro exists only for commercial and financial transactions, in 11 countries."
+              },
+              {
+                "texte": "In 1992, with the Maastricht Treaty.",
+                "pourquoi": "The treaty plans the single currency; the coins only arrive ten years later."
+              }
+            ]
+          },
+          {
+            "texte": "Why is the euro a strong political choice, and not just an economic one?",
+            "nom": "Because states give up their monetary policy, an essential feature of their sovereignty.",
+            "explication": "With the euro, it is no longer each state that runs its monetary policy, but the European Central Bank.",
+            "pieges": [
+              {
+                "texte": "Because it replaces national flags.",
+                "pourquoi": "The euro is a currency: it doesn't affect states' flags."
+              },
+              {
+                "texte": "Because every country in the world must use it.",
+                "pourquoi": "It concerns the countries that have adopted it, not the whole world."
+              }
+            ]
+          },
+          {
+            "texte": "According to its statutes, what is the European Central Bank's main task?",
+            "nom": "Fighting inflation, to keep the currency stable.",
+            "explication": "For the same reason, its statutes forbid it to fund member states' public debts directly.",
+            "pieges": [
+              {
+                "texte": "Funding states' debts directly.",
+                "pourquoi": "Its statutes forbid it."
+              },
+              {
+                "texte": "Setting each country's taxes.",
+                "pourquoi": "Taxation stays with the states: there is no tax convergence between them."
+              }
+            ]
+          },
+          {
+            "texte": "In 2004, how many countries join the European Union?",
+            "nom": "Ten: Cyprus, Malta and eight Central and Eastern European countries.",
+            "explication": "The eight are Czechia, Estonia, Hungary, Latvia, Lithuania, Poland, Slovakia and Slovenia.",
+            "pieges": [
+              {
+                "texte": "Two: Bulgaria and Romania.",
+                "pourquoi": "They join in 2007, bringing the Union to 27 members."
+              },
+              {
+                "texte": "Just one: Croatia.",
+                "pourquoi": "Croatia joins in 2013, as the 28th member state."
+              }
+            ]
+          },
+          {
+            "texte": "In 2005, what happens to the treaty establishing a Constitution for Europe?",
+            "nom": "French and Dutch voters reject it in referendums.",
+            "explication": "The constitution project fails; in 2007, the 27 sign the Treaty of Lisbon, which comes into force on 1 December 2009.",
+            "pieges": [
+              {
+                "texte": "It is approved by referendum in every country.",
+                "pourquoi": "The French and the Dutch vote « no »: it cannot come into force."
+              },
+              {
+                "texte": "It creates the single currency.",
+                "pourquoi": "The single currency comes from the Maastricht Treaty, in 1992."
+              }
+            ]
+          },
+          {
+            "texte": "What do British voters decide in the referendum of 23 June 2016?",
+            "nom": "To leave the European Union, with 52% of the vote.",
+            "explication": "The UK leaves the Union on 31 January 2020. During the negotiations, the other EU countries stay united.",
+            "pieges": [
+              {
+                "texte": "To adopt the euro.",
+                "pourquoi": "The vote is about leaving the Union, not about the currency."
+              },
+              {
+                "texte": "To join the Schengen area.",
+                "pourquoi": "The UK was already outside Schengen; the vote is about membership of the Union."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mondialisation-territoires",
+      "titre": "Territoires, coopérations et tensions dans la mondialisation",
+      "niveau": "Terminale",
+      "prerequis": [
+        "mers-oceans"
+      ],
+      "programme": {
+        "source": "hgtle",
+        "texte": "Dynamiques territoriales, coopérations et tensions dans la mondialisation : des territoires inégalement intégrés dans la mondialisation ; coopérations, tensions et régulations aux échelles mondiale, régionale et locale ; la France : un rayonnement international différencié et une inégale attractivité dans la mondialisation."
+      },
+      "activite": "quiz",
+      "parametres": {},
+      "idee": "La mondialisation hiérarchise les territoires : des centres très intégrés, des périphéries plus à l'écart. Les États coopèrent dans des ensembles régionaux, avec des tensions. La France rayonne, mais inégalement.",
+      "phrases": {
+        "consigne": "Lis la question, puis touche la bonne réponse.",
+        "question": "{texte}",
+        "indice": "Mots clés : centre, périphérie, intégration, attractivité, rayonnement, coopération régionale (Union européenne, ASEAN, MERCOSUR), libre-échange, souveraineté.",
+        "exemple": "Exemple : à Shanghai, le quartier d'affaires de Pudong et le port de Yangshan sont très intégrés à la mondialisation, tandis que des quartiers d'habitat précaire restent à l'écart. Centres et périphéries existent aussi dans une même ville.",
+        "demonstration": "{explication}",
+        "bravo": "Oui ! {explication}"
+      },
+      "items": [
+        {
+          "texte": "Pourquoi dit-on que la mondialisation est un processus « sélectif » ?",
+          "nom": "Parce qu'elle intègre fortement certains territoires et en laisse d'autres plus à l'écart.",
+          "explication": "Des centres s'affirment et des périphéries se dessinent, à toutes les échelles : la hiérarchie des territoires change sans cesse.",
+          "pieges": [
+            {
+              "texte": "Parce que tous les territoires y participent de la même façon.",
+              "pourquoi": "C'est l'inverse : les territoires sont inégalement intégrés."
+            },
+            {
+              "texte": "Parce qu'elle ne concerne que l'Europe.",
+              "pourquoi": "Elle touche le monde entier, avec des centres en Asie, en Europe et en Amérique."
+            }
+          ]
+        },
+        {
+          "texte": "D'après le programme de Terminale de 2019, où se trouvent la plupart des plus grands centres financiers ?",
+          "nom": "En Asie : cinq, contre trois en Europe et deux en Amérique du Nord.",
+          "explication": "Les centres européens cités sont Londres, Zurich et Francfort : la hiérarchie des centres de décision évolue sans cesse.",
+          "pieges": [
+            {
+              "texte": "Tous en Europe.",
+              "pourquoi": "L'Europe en compte trois, l'Asie cinq."
+            },
+            {
+              "texte": "Surtout en Amérique du Nord.",
+              "pourquoi": "L'Amérique du Nord en compte deux, moins que l'Asie."
+            }
+          ]
+        },
+        {
+          "texte": "Avec la mondialisation, la distance compte-t-elle encore ?",
+          "nom": "Oui : elle est moins contraignante, mais reste importante, et des barrières limitent les échanges.",
+          "explication": "Les transports la réduisent, mais la distance et les protections mises en place par les États freinent encore les échanges.",
+          "pieges": [
+            {
+              "texte": "Non, elle ne compte plus du tout.",
+              "pourquoi": "Elle reste un facteur contraignant, même s'il l'est moins qu'avant."
+            },
+            {
+              "texte": "Non, car il n'existe plus aucune barrière commerciale.",
+              "pourquoi": "Des protections et des barrières sont mises en place, qui limitent les échanges."
+            }
+          ]
+        },
+        {
+          "texte": "Que désigne le sigle ASEAN ?",
+          "nom": "L'Association des Nations du Sud-Est asiatique.",
+          "explication": "Sa coopération vise à limiter les tensions entre États, tout en leur laissant une forte souveraineté.",
+          "pieges": [
+            {
+              "texte": "Un accord des pays d'Amérique du Nord.",
+              "pourquoi": "En Amérique du Nord, le programme cite l'ALENA."
+            },
+            {
+              "texte": "Une alliance des nations européennes.",
+              "pourquoi": "En Europe, la grande coopération régionale est l'Union européenne."
+            }
+          ]
+        },
+        {
+          "texte": "Quelle logique suit le MERCOSUR, le Marché commun du Cône sud ?",
+          "nom": "Le libre-échange entre ses membres, sans grande délégation de souveraineté.",
+          "explication": "C'est une différence avec l'Union européenne, où les États délèguent une part de leur souveraineté.",
+          "pieges": [
+            {
+              "texte": "Une union où les États délèguent beaucoup de souveraineté, comme l'Union européenne.",
+              "pourquoi": "Cette forte délégation est propre à l'Union européenne, pas au MERCOSUR."
+            },
+            {
+              "texte": "Une alliance militaire.",
+              "pourquoi": "C'est un marché commun : il porte sur les échanges."
+            }
+          ]
+        },
+        {
+          "texte": "D'après le programme, quel effet l'Union européenne a-t-elle eu sur les inégalités entre territoires ?",
+          "nom": "Un rattrapage considérable du sud de l'Europe, mais les écarts entre régions se réduisent plus lentement.",
+          "explication": "Ses politiques de cohésion cherchent à la fois à réduire les inégalités et à valoriser les atouts des territoires.",
+          "pieges": [
+            {
+              "texte": "Elle a creusé l'écart entre le nord et le sud.",
+              "pourquoi": "C'est l'inverse : le sud a fortement rattrapé le nord."
+            },
+            {
+              "texte": "Elle a fait disparaître toutes les inégalités régionales.",
+              "pourquoi": "Les écarts entre régions se réduisent, mais lentement."
+            }
+          ]
+        },
+        {
+          "texte": "Quel signe montre l'attractivité de la France dans la mondialisation ?",
+          "nom": "Elle accueille le siège d'institutions internationales, comme l'UNESCO, l'OCDE ou Interpol.",
+          "explication": "Paris et les grandes métropoles attirent aussi des filiales d'entreprises étrangères, de grands événements et des touristes.",
+          "pieges": [
+            {
+              "texte": "Elle n'accueille aucune organisation internationale.",
+              "pourquoi": "Elle en accueille de nombreuses, surtout à Paris et dans les métropoles."
+            },
+            {
+              "texte": "Ses entreprises ne s'installent jamais à l'étranger.",
+              "pourquoi": "De grandes firmes françaises s'implantent au contraire dans de nombreux pays."
+            }
+          ]
+        },
+        {
+          "texte": "En France, tous les territoires sont-ils aussi intégrés à la mondialisation ?",
+          "nom": "Non : les métropoles et des vignobles réputés le sont fortement, le Limousin ou la Nièvre restent plus à l'écart.",
+          "explication": "L'intégration est différenciée : elle ne concerne pas que les métropoles, et certains territoires ont peu de rayonnement.",
+          "pieges": [
+            {
+              "texte": "Oui, toute la France est intégrée de la même façon.",
+              "pourquoi": "Certains territoires restent plus à l'écart, avec peu de rayonnement et d'attractivité."
+            },
+            {
+              "texte": "Seules les campagnes y participent.",
+              "pourquoi": "Les métropoles concentrent sièges d'entreprises et infrastructures : elles sont au cœur de l'intégration."
+            }
+          ]
+        }
+      ],
+      "en": {
+        "titre": "Territories, cooperation and tensions in globalisation",
+        "idee": "Globalisation ranks territories: highly integrated centres, peripheries further out. States cooperate in regional groupings, with tensions. France has worldwide influence, but unevenly.",
+        "phrases": {
+          "consigne": "Read the question, then touch the right answer.",
+          "question": "{texte}",
+          "indice": "Key words: centre, periphery, integration, attractiveness, influence, regional cooperation (European Union, ASEAN, MERCOSUR), free trade, sovereignty.",
+          "exemple": "Example: in Shanghai, the Pudong business district and the port of Yangshan are highly integrated into globalisation, while districts of poor housing stay on the sidelines. Centres and peripheries also exist within one city.",
+          "demonstration": "{explication}",
+          "bravo": "Yes! {explication}"
+        },
+        "items": [
+          {
+            "texte": "Why is globalisation called a « selective » process?",
+            "nom": "Because it strongly integrates some territories and leaves others further out.",
+            "explication": "Centres emerge and peripheries take shape, at every scale: the ranking of territories keeps changing.",
+            "pieges": [
+              {
+                "texte": "Because every territory takes part in the same way.",
+                "pourquoi": "It's the opposite: territories are unevenly integrated."
+              },
+              {
+                "texte": "Because it only concerns Europe.",
+                "pourquoi": "It affects the whole world, with centres in Asia, Europe and America."
+              }
+            ]
+          },
+          {
+            "texte": "According to the 2019 Year 13 (Terminale) curriculum, where are most of the biggest financial centres?",
+            "nom": "In Asia: five, against three in Europe and two in North America.",
+            "explication": "The European centres named are London, Zurich and Frankfurt: the ranking of decision centres keeps changing.",
+            "pieges": [
+              {
+                "texte": "All in Europe.",
+                "pourquoi": "Europe has three, Asia five."
+              },
+              {
+                "texte": "Mostly in North America.",
+                "pourquoi": "North America has two, fewer than Asia."
+              }
+            ]
+          },
+          {
+            "texte": "With globalisation, does distance still matter?",
+            "nom": "Yes: it is less of a constraint, but still important, and barriers limit trade.",
+            "explication": "Transport shrinks it, but distance and the protections set up by states still slow trade down.",
+            "pieges": [
+              {
+                "texte": "No, it doesn't matter at all any more.",
+                "pourquoi": "It is still a constraint, even if less than before."
+              },
+              {
+                "texte": "No, because there are no trade barriers left.",
+                "pourquoi": "Protections and barriers are set up, and they limit trade."
+              }
+            ]
+          },
+          {
+            "texte": "What does the acronym ASEAN stand for?",
+            "nom": "The Association of Southeast Asian Nations.",
+            "explication": "Its cooperation aims to limit tensions between states, while leaving them a lot of sovereignty.",
+            "pieges": [
+              {
+                "texte": "An agreement between North American countries.",
+                "pourquoi": "For North America, the curriculum names NAFTA (ALENA)."
+              },
+              {
+                "texte": "An alliance of European nations.",
+                "pourquoi": "In Europe, the major regional cooperation is the European Union."
+              }
+            ]
+          },
+          {
+            "texte": "What logic does MERCOSUR, the Southern Common Market, follow?",
+            "nom": "Free trade between its members, without much transfer of sovereignty.",
+            "explication": "That is a difference from the European Union, where states transfer part of their sovereignty.",
+            "pieges": [
+              {
+                "texte": "A union where states transfer a lot of sovereignty, like the European Union.",
+                "pourquoi": "This strong transfer is specific to the European Union, not MERCOSUR."
+              },
+              {
+                "texte": "A military alliance.",
+                "pourquoi": "It is a common market: it is about trade."
+              }
+            ]
+          },
+          {
+            "texte": "According to the curriculum, what effect has the European Union had on inequalities between territories?",
+            "nom": "Southern Europe has caught up considerably, but gaps between regions are shrinking more slowly.",
+            "explication": "Its cohesion policies aim both to reduce inequalities and to make the most of territories' strengths.",
+            "pieges": [
+              {
+                "texte": "It has widened the gap between north and south.",
+                "pourquoi": "It's the opposite: the south has caught up a lot with the north."
+              },
+              {
+                "texte": "It has removed all regional inequalities.",
+                "pourquoi": "Gaps between regions are shrinking, but slowly."
+              }
+            ]
+          },
+          {
+            "texte": "Which sign shows France's attractiveness in globalisation?",
+            "nom": "It hosts the headquarters of international bodies, such as UNESCO, the OECD or Interpol.",
+            "explication": "Paris and the big cities also attract subsidiaries of foreign companies, major events and tourists.",
+            "pieges": [
+              {
+                "texte": "It hosts no international organisation.",
+                "pourquoi": "It hosts many, especially in Paris and the big cities."
+              },
+              {
+                "texte": "Its companies never set up abroad.",
+                "pourquoi": "On the contrary, big French firms set up in many countries."
+              }
+            ]
+          },
+          {
+            "texte": "In France, are all territories equally integrated into globalisation?",
+            "nom": "No: big cities and famous vineyards are strongly integrated, while the Limousin or the Nièvre stay further out.",
+            "explication": "Integration is uneven: it is not only about big cities, and some territories have little influence.",
+            "pieges": [
+              {
+                "texte": "Yes, all of France is integrated in the same way.",
+                "pourquoi": "Some territories stay further out, with little influence or attractiveness."
+              },
+              {
+                "texte": "Only the countryside takes part.",
+                "pourquoi": "Big cities concentrate company headquarters and infrastructure: they are at the heart of integration."
               }
             ]
           }

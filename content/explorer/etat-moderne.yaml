@@ -1,0 +1,124 @@
+id: etat-moderne
+titre: "L'État à l'époque moderne : France et Angleterre"
+niveau: 2de
+prerequis: [renaissance-humanisme]
+programme: { source: hg2de, texte: "Ce chapitre vise à montrer l’affirmation de l’État en France dans ses multiples dimensions ainsi qu’à caractériser la monarchie française." }
+activite: quiz
+parametres: {}
+idee: "Aux XVIe et XVIIe siècles, le roi de France renforce l'État : lois, administration, cour de Versailles. En Angleterre, le Parlement limite le roi ; ce modèle inspire les philosophes des Lumières."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 1539, ordonnance de Villers-Cotterêts ; Colbert et les manufactures ; 1682, la cour à Versailles ; 1679, Habeas Corpus ; 1689, Bill of Rights ; Voltaire et les Lettres philosophiques."
+  exemple: "Exemple : le Bill of Rights de 1689 déclare illégal de lever de l'argent pour la Couronne sans l'accord du Parlement. Le roi ne peut donc plus financer seul sa politique : il doit s'entendre avec le Parlement."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "En 1539, l'ordonnance de Villers-Cotterêts impose une langue pour les actes de justice. Laquelle ?"
+    nom: "Le français."
+    explication: "Son article 111 exige que les actes soient faits « en langage maternel françois et non autrement » : le latin est écarté de l'administration royale."
+    pieges:
+      - { texte: "Le latin.", pourquoi: "C'est justement le latin que l'ordonnance écarte, à cause des doutes sur le sens de ses mots." }
+      - { texte: "La langue de chaque province, au choix.", pourquoi: "L'ordonnance impose une seule langue, le « langage maternel françois », pour toute la justice du roi." }
+  - texte: "Quelle politique économique Colbert mène-t-il sous Louis XIV ?"
+    nom: "Il soutient des manufactures et des compagnies de commerce, pour vendre à l'étranger et importer moins."
+    explication: "Cette politique, appelée mercantilisme ou colbertisme, vise la puissance de l'État : manufactures, tarifs douaniers protecteurs, compagnies des Indes."
+    pieges:
+      - { texte: "Il supprime toutes les taxes sur les produits étrangers.", pourquoi: "C'est l'inverse : il établit des tarifs douaniers protecteurs, qui réduisent les importations." }
+      - { texte: "Il laisse les artisans produire sans aucune aide de l'État.", pourquoi: "Le colbertisme est dirigé par l'État, qui soutient financièrement les manufactures." }
+  - texte: "En quelle année Louis XIV s'installe-t-il à Versailles avec sa cour ?"
+    nom: "En 1682."
+    explication: "Le 6 mai 1682, la cour s'installe à Versailles ; auparavant, elle se déplaçait entre plusieurs résidences."
+    pieges:
+      - { texte: "En 1515.", pourquoi: "C'est la bataille de Marignan, sous François Ier, plus d'un siècle et demi avant." }
+      - { texte: "En 1789.", pourquoi: "C'est le début de la Révolution française, plus d'un siècle après." }
+  - texte: "À Versailles, que règle l'étiquette ?"
+    nom: "La place de chacun à la cour, selon son rang dans la noblesse."
+    explication: "Par l'étiquette, Louis XIV hiérarchise la cour : le roi est au centre de tous les regards, et les grands nobles vivent sous son contrôle."
+    pieges:
+      - { texte: "Le prix des marchandises dans le royaume.", pourquoi: "L'étiquette est un ensemble de règles de la vie de cour, pas une règle de commerce." }
+      - { texte: "L'élection des députés.", pourquoi: "Il n'y a pas d'élus à la cour : l'étiquette organise la noblesse autour du roi." }
+  - texte: "Les historiens nuancent l'idée d'un roi de France tout-puissant, dit « absolu ». Pourquoi ?"
+    nom: "Parce qu'il doit tenir compte des privilèges, des élites dont il dépend pour ses finances, et chercher des compromis."
+    explication: "L'absolutisme est plutôt un projet : le roi affirme sa toute-puissance, mais son pouvoir rencontre des limites dans la pratique."
+    pieges:
+      - { texte: "Parce que le roi est élu par ses sujets.", pourquoi: "Le roi n'est pas élu : il hérite du trône." }
+      - { texte: "Parce que le Parlement anglais gouverne la France.", pourquoi: "Le Parlement anglais limite le roi d'Angleterre, pas celui de France." }
+  - texte: "Que protège l'Habeas Corpus, voté en Angleterre en 1679 ?"
+    nom: "La liberté des personnes, contre les emprisonnements arbitraires."
+    explication: "Cette loi vise à mieux garantir la liberté des sujets : le pouvoir ne peut plus emprisonner impunément qui il veut."
+    pieges:
+      - { texte: "Le droit de vote pour tous.", pourquoi: "Elle protège contre la détention arbitraire ; le vote reste réservé aux riches propriétaires." }
+      - { texte: "Le pouvoir absolu du roi.", pourquoi: "C'est l'inverse : elle limite l'arbitraire royal." }
+  - texte: "Que ne peut plus faire le roi d'Angleterre sans l'accord du Parlement, d'après le Bill of Rights de 1689 ?"
+    nom: "Suspendre les lois ou garder une armée en temps de paix."
+    explication: "Le Bill of Rights réserve au Parlement la loi, l'impôt et l'armée en temps de paix ; il réclame aussi des élections libres."
+    pieges:
+      - { texte: "Rien : il garde tous les pouvoirs.", pourquoi: "Le texte limite justement la prérogative royale." }
+      - { texte: "Choisir sa religion personnelle, seul sujet du texte.", pourquoi: "Le texte traite surtout des pouvoirs : lois, impôts, armée, élections." }
+  - texte: "Que montrent les Lettres philosophiques, que Voltaire publie après son séjour en Angleterre ?"
+    nom: "Son admiration pour la liberté anglaise, qui lui sert à critiquer la France."
+    explication: "Exilé en Angleterre de 1726 à 1729, Voltaire lance l'idée d'un « modèle britannique », repris par d'autres philosophes des Lumières."
+    pieges:
+      - { texte: "Un éloge de la monarchie absolue française.", pourquoi: "Le Parlement de Paris condamne le livre dès 1734 : il dérange le pouvoir." }
+      - { texte: "Le récit d'un voyage en Amérique.", pourquoi: "Voltaire séjourne en Angleterre, pas en Amérique." }
+
+en:
+  titre: "The state in the early modern period: France and England"
+  idee: "In the 16th and 17th centuries, the King of France strengthens the state: laws, administration, the court at Versailles. In England, Parliament limits the king; this model inspires Enlightenment thinkers."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 1539, ordinance of Villers-Cotterêts; Colbert and the manufactures; 1682, the court at Versailles; 1679, Habeas Corpus; 1689, Bill of Rights; Voltaire and the Philosophical Letters."
+    exemple: "Example: the 1689 Bill of Rights declares it illegal to raise money for the Crown without Parliament's consent. So the king can no longer fund his policies on his own: he has to agree with Parliament."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "In 1539, the ordinance of Villers-Cotterêts imposes one language for legal documents. Which one?"
+      nom: "French."
+      explication: "Its article 111 requires documents to be made « in the French mother tongue and in no other way »: Latin is pushed out of royal administration."
+      pieges:
+        - { texte: "Latin.", pourquoi: "Latin is exactly what the ordinance removes, because of doubts about the meaning of its words." }
+        - { texte: "Each province's own language, as it likes.", pourquoi: "The ordinance imposes a single language, French, for all the king's justice." }
+    - texte: "What economic policy does Colbert follow under Louis XIV?"
+      nom: "He supports manufactures and trading companies, to sell abroad and import less."
+      explication: "This policy, called mercantilism or Colbertism, aims at the power of the state: manufactures, protective customs duties, East India companies."
+      pieges:
+        - { texte: "He removes all taxes on foreign goods.", pourquoi: "It's the opposite: he sets protective customs duties, which reduce imports." }
+        - { texte: "He lets craftsmen produce without any help from the state.", pourquoi: "Colbertism is run by the state, which funds the manufactures." }
+    - texte: "In which year does Louis XIV move to Versailles with his court?"
+      nom: "In 1682."
+      explication: "On 6 May 1682, the court settles at Versailles; before that, it moved between several residences."
+      pieges:
+        - { texte: "In 1515.", pourquoi: "That's the battle of Marignano, under Francis I, more than a century and a half earlier." }
+        - { texte: "In 1789.", pourquoi: "That's the start of the French Revolution, more than a century later." }
+    - texte: "At Versailles, what does etiquette regulate?"
+      nom: "Everyone's place at court, according to their rank in the nobility."
+      explication: "Through etiquette, Louis XIV ranks the court: the king is the focus of every gaze, and the great nobles live under his control."
+      pieges:
+        - { texte: "The price of goods in the kingdom.", pourquoi: "Etiquette is a set of rules for court life, not a trade rule." }
+        - { texte: "The election of members of parliament.", pourquoi: "There are no elected people at court: etiquette arranges the nobility around the king." }
+    - texte: "Historians qualify the idea of an all-powerful, « absolute » King of France. Why?"
+      nom: "Because he must take account of privileges and of the elites he depends on for money, and look for compromises."
+      explication: "Absolutism is more of a project: the king claims total power, but in practice his power meets limits."
+      pieges:
+        - { texte: "Because the king is elected by his subjects.", pourquoi: "The king isn't elected: he inherits the throne." }
+        - { texte: "Because the English Parliament governs France.", pourquoi: "The English Parliament limits the King of England, not the King of France." }
+    - texte: "What does Habeas Corpus, passed in England in 1679, protect?"
+      nom: "People's liberty, against arbitrary imprisonment."
+      explication: "This law aims to better secure the liberty of the subject: those in power can no longer jail anyone they like with impunity."
+      pieges:
+        - { texte: "Everyone's right to vote.", pourquoi: "It protects against arbitrary detention; voting remains for rich property owners." }
+        - { texte: "The king's absolute power.", pourquoi: "It's the opposite: it limits royal arbitrariness." }
+    - texte: "According to the 1689 Bill of Rights, what can the King of England no longer do without Parliament's consent?"
+      nom: "Suspend laws or keep an army in peacetime."
+      explication: "The Bill of Rights gives Parliament the say over laws, taxes and a peacetime army; it also calls for free elections."
+      pieges:
+        - { texte: "Nothing: he keeps all his powers.", pourquoi: "The text precisely limits the royal prerogative." }
+        - { texte: "Choose his personal religion, the only topic of the text.", pourquoi: "The text is mostly about powers: laws, taxes, the army, elections." }
+    - texte: "What do the Philosophical Letters, which Voltaire publishes after his stay in England, show?"
+      nom: "His admiration for English liberty, which he uses to criticise France."
+      explication: "Exiled in England from 1726 to 1729, Voltaire launches the idea of a « British model », taken up by other Enlightenment thinkers."
+      pieges:
+        - { texte: "Praise for the absolute French monarchy.", pourquoi: "The Parlement of Paris condemns the book as early as 1734: it disturbs those in power." }
+        - { texte: "The story of a journey to America.", pourquoi: "Voltaire stays in England, not in America." }

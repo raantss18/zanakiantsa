@@ -1,0 +1,124 @@
+id: industrialisation-france
+titre: "L'industrialisation de la France sous le Second Empire"
+niveau: 1re
+prerequis: [revolution-industrielle, europe-revolutions]
+programme: { source: hg1re, texte: "Ce chapitre vise à montrer que la société française connaît des mutations profondes liées à l’industrialisation et à l’urbanisation." }
+activite: quiz
+parametres: {}
+idee: "Sous le Second Empire, la France change vite : chemins de fer, banques, salariat, Paris transformé. Le monde rural reste important, et la question ouvrière pèse en politique."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : Napoléon III et le préfet Haussmann ; les frères Pereire, le chemin de fer et le crédit ; 1860, traité de commerce avec le Royaume-Uni ; 25 mai 1864, loi sur les coalitions ouvrières."
+  exemple: "Exemple : en 1870, Le Creusot compte 10 000 ouvriers pour 25 000 habitants. C'est une exception : en France, l'usine est surtout une petite entreprise. Un cas célèbre ne suffit pas pour généraliser."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "Quelles transformations s'accélèrent en France au milieu du XIXe siècle ?"
+    nom: "Le salariat se développe, la mécanisation avance lentement, les villes attirent."
+    explication: "Ces changements sont vécus comme une accélération, mais avec de fortes différences entre régions, et des mobilités souvent saisonnières."
+    pieges:
+      - { texte: "Presque tous les paysans quittent les campagnes en quelques années.", pourquoi: "Le monde rural reste très important : l'exode rural ne fait que commencer." }
+      - { texte: "De grandes usines remplacent partout les petits ateliers.", pourquoi: "Le monde de l'usine reste surtout celui de la petite entreprise." }
+  - texte: "Dans la transformation de Paris, quel est le rôle d'Haussmann ?"
+    nom: "Préfet, il exécute le projet voulu par Napoléon III."
+    explication: "Napoléon III est l'instigateur du projet ; le préfet Haussmann le met en œuvre et lui donne son nom : le Paris haussmannien."
+    pieges:
+      - { texte: "Il est l'empereur qui décide de tout.", pourquoi: "L'empereur est Napoléon III ; Haussmann est son préfet." }
+      - { texte: "Il mène les barricades ouvrières contre l'Empire.", pourquoi: "Au contraire, certains voient ses grands boulevards comme un moyen de neutraliser le Paris des barricades." }
+  - texte: "Qu'est-ce qui est au cœur du projet haussmannien ?"
+    nom: "La circulation : relier les gares, faire passer l'air et l'eau, supprimer des quartiers insalubres."
+    explication: "Le percement des grands boulevards adapte la ville à la circulation des hommes, des marchandises, de l'air et de l'eau."
+    pieges:
+      - { texte: "Garder intactes les ruelles du vieux Paris.", pourquoi: "Le projet détruit une partie du vieux Paris, ce qu'on lui reproche à l'époque." }
+      - { texte: "Installer les usines polluantes au centre.", pourquoi: "C'est l'inverse : elles sont écartées vers l'extérieur de la ville." }
+  - texte: "Comment Paris s'agrandit-il sous le Second Empire ?"
+    nom: "En intégrant des villages voisins, comme Belleville, Bercy ou Montmartre : Paris passe à vingt arrondissements."
+    explication: "La ville s'étend sur ses abords, et l'on crée des parcs et des bois, comme les Buttes-Chaumont ou le bois de Vincennes."
+    pieges:
+      - { texte: "En réduisant le nombre de ses arrondissements.", pourquoi: "Il augmente : Paris passe à vingt arrondissements." }
+      - { texte: "En construisant une ville nouvelle loin de la Seine.", pourquoi: "Paris s'agrandit sur place, en intégrant les villages qui l'entourent." }
+  - texte: "Sur quoi les frères Pereire fondent-ils leur action ?"
+    nom: "Sur le chemin de fer et le crédit, en lien avec l'État."
+    explication: "Inspirés par les idées de Saint-Simon, ils développent les transports et la banque, et investissent aussi dans le Paris haussmannien."
+    pieges:
+      - { texte: "Sur la fermeture de la France au commerce étranger.", pourquoi: "Ils s'appuient au contraire sur le libre-échange et la circulation de l'argent." }
+      - { texte: "Sur le refus de tout lien avec le pouvoir.", pourquoi: "Ils sont proches du régime : tous deux sont élus au Corps législatif." }
+  - texte: "En 1867, la société de crédit des frères Pereire fait faillite. Que montre cette chute ?"
+    nom: "Les risques de la spéculation qui accompagne la croissance."
+    explication: "Leur banque réinvestit sans cesse l'argent des particuliers dans de nouveaux projets : cette spéculation, critiquée par Zola dans La Curée, cause leur chute."
+    pieges:
+      - { texte: "Que la France n'a plus aucune banque.", pourquoi: "La faillite touche une société, pas tout le système bancaire." }
+      - { texte: "Que les chemins de fer sont abandonnés.", pourquoi: "La faillite touche leur banque, pas le réseau ferré lui-même." }
+  - texte: "Que fait le traité de commerce signé avec le Royaume-Uni en 1860 ?"
+    nom: "Il diminue les droits de douane entre les deux pays."
+    explication: "Ce libre-échange favorise certains secteurs, comme le luxe, et en pénalise d'autres, comme les petites industries textiles."
+    pieges:
+      - { texte: "Il interdit tout commerce avec le Royaume-Uni.", pourquoi: "C'est l'inverse : il facilite les échanges en baissant les droits de douane." }
+      - { texte: "Il crée une monnaie commune aux deux pays.", pourquoi: "Il porte sur les droits de douane, pas sur la monnaie." }
+  - texte: "Que change la loi du 25 mai 1864 pour les ouvriers ?"
+    nom: "Elle supprime le délit de coalition : faire grève n'est plus un délit."
+    explication: "Elle répond à une attente du mouvement ouvrier, mais reste limitée : elle n'accorde pas la liberté de réunion."
+    pieges:
+      - { texte: "Elle accorde aussi la pleine liberté de réunion.", pourquoi: "C'est justement sa limite : la liberté de réunion n'est pas accordée." }
+      - { texte: "Elle interdit toutes les grèves.", pourquoi: "C'est l'inverse : après elle, le nombre de grèves augmente." }
+
+en:
+  titre: "The industrialisation of France under the Second Empire"
+  idee: "Under the Second Empire, France changes fast: railways, banks, wage labour, Paris transformed. The countryside still matters a lot, and the workers' question weighs on politics."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: Napoleon III and the prefect Haussmann; the Pereire brothers, railways and credit; 1860, trade treaty with the United Kingdom; 25 May 1864, law on workers' combinations."
+    exemple: "Example: in 1870, Le Creusot has 10,000 workers for 25,000 inhabitants. It's an exception: in France, the factory is mostly a small business. One famous case is not enough to generalise."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "Which changes speed up in France in the middle of the 19th century?"
+      nom: "Wage labour spreads, mechanisation advances slowly, towns attract people."
+      explication: "These changes are felt as a speeding-up, but with big differences between regions, and often seasonal movements."
+      pieges:
+        - { texte: "Almost all peasants leave the countryside within a few years.", pourquoi: "The countryside remains very important: the rural exodus is only beginning." }
+        - { texte: "Big factories replace small workshops everywhere.", pourquoi: "The world of the factory is still mostly that of the small business." }
+    - texte: "In the transformation of Paris, what is Haussmann's role?"
+      nom: "As prefect, he carries out the project wanted by Napoleon III."
+      explication: "Napoleon III starts the project; the prefect Haussmann carries it out and gives it his name: Haussmann's Paris."
+      pieges:
+        - { texte: "He is the emperor who decides everything.", pourquoi: "The emperor is Napoleon III; Haussmann is his prefect." }
+        - { texte: "He leads the workers' barricades against the Empire.", pourquoi: "On the contrary, some see his wide boulevards as a way to neutralise the Paris of the barricades." }
+    - texte: "What is at the heart of Haussmann's project?"
+      nom: "Circulation: linking the stations, letting air and water through, removing unhealthy districts."
+      explication: "Cutting the wide boulevards adapts the city to the movement of people, goods, air and water."
+      pieges:
+        - { texte: "Keeping the alleys of old Paris untouched.", pourquoi: "The project destroys part of old Paris, which people criticise at the time." }
+        - { texte: "Putting polluting factories in the centre.", pourquoi: "It's the opposite: they are pushed out of the city." }
+    - texte: "How does Paris grow under the Second Empire?"
+      nom: "By taking in nearby villages, such as Belleville, Bercy or Montmartre: Paris goes up to twenty districts."
+      explication: "The city spreads over its edges, and parks and woods are created, such as the Buttes-Chaumont or the Bois de Vincennes."
+      pieges:
+        - { texte: "By reducing its number of districts.", pourquoi: "It goes up: Paris reaches twenty districts." }
+        - { texte: "By building a new town far from the Seine.", pourquoi: "Paris grows where it is, by taking in the villages around it." }
+    - texte: "What do the Pereire brothers base their work on?"
+      nom: "On railways and credit, together with the state."
+      explication: "Inspired by Saint-Simon's ideas, they develop transport and banking, and also invest in Haussmann's Paris."
+      pieges:
+        - { texte: "On closing France to foreign trade.", pourquoi: "On the contrary, they rely on free trade and the flow of money." }
+        - { texte: "On refusing any link with those in power.", pourquoi: "They are close to the regime: both are elected to the Legislative Body." }
+    - texte: "In 1867, the Pereire brothers' credit company goes bankrupt. What does this fall show?"
+      nom: "The risks of the speculation that comes with growth."
+      explication: "Their bank keeps reinvesting private savers' money in new projects: this speculation, criticised by Zola in La Curée, causes their fall."
+      pieges:
+        - { texte: "That France has no banks left.", pourquoi: "The bankruptcy hits one company, not the whole banking system." }
+        - { texte: "That the railways are abandoned.", pourquoi: "The bankruptcy hits their bank, not the railway network itself." }
+    - texte: "What does the trade treaty signed with the United Kingdom in 1860 do?"
+      nom: "It lowers customs duties between the two countries."
+      explication: "This free trade helps some sectors, such as luxury goods, and hurts others, such as small textile industries."
+      pieges:
+        - { texte: "It bans all trade with the United Kingdom.", pourquoi: "It's the opposite: it makes trade easier by lowering customs duties." }
+        - { texte: "It creates a currency shared by both countries.", pourquoi: "It's about customs duties, not money." }
+    - texte: "What does the law of 25 May 1864 change for workers?"
+      nom: "It abolishes the offence of combination: going on strike is no longer an offence."
+      explication: "It meets one of the labour movement's demands, but it is limited: it does not grant freedom of assembly."
+      pieges:
+        - { texte: "It also grants full freedom of assembly.", pourquoi: "That is exactly its limit: freedom of assembly is not granted." }
+        - { texte: "It bans all strikes.", pourquoi: "It's the opposite: afterwards, the number of strikes goes up." }
