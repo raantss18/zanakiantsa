@@ -1,0 +1,125 @@
+id: persuader-convaincre
+titre: "Philosophie : persuader, convaincre, démontrer"
+niveau: Terminale
+prerequis: ["argumentation", "croire-savoir"]
+programme: { source: philoTle, texte: "Les repères prennent la forme de distinctions lexicales et conceptuelles qui, bien comprises, soutiennent la réflexion que l’élève construit pour traiter un problème. [...] Exemple/preuve [...] Hypothèse/conséquence/conclusion [...] Persuader/convaincre" }
+activite: quiz
+parametres: {}
+idee: "Convaincre, c’est faire admettre par des preuves que chacun peut suivre. Persuader, c’est aussi toucher le désir : pour Pascal, c’est autant « agréer » que « convaincre ». Un exemple illustre, il ne prouve pas."
+phrases:
+  consigne: "Lis la phrase ou l’extrait, demande-toi à quoi s’adresse le discours et ce qu’il prouve vraiment, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "S’adresse-t-on à la raison (des preuves que chacun peut vérifier) ou au désir (le plaisir, l’émotion) ? Un cas suffit-il à prouver une règle ?"
+  exemple: "« Prends ce parapluie : la météo annonce de la pluie » cherche à convaincre, par une raison. « Prends ce parapluie, il est si joli ! » cherche à persuader, par le plaisir."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Pascal, De l’esprit géométrique et de l’art de persuader : « il y a deux entrées par où les opinions sont reçues dans l’âme, qui sont ses deux principales puissances, l’entendement et la volonté. » Laquelle, dit-il, est « la plus naturelle » ?"
+    nom: "l’entendement"
+    explication: "Pascal : « La plus naturelle est celle de l’entendement, car on ne devrait jamais consentir qu’aux vérités démontrées »."
+    pieges:
+      - { texte: "la volonté", pourquoi: "Pour Pascal, la volonté est « la plus ordinaire », mais pas la plus naturelle." }
+      - { texte: "l’imagination", pourquoi: "Pascal ne nomme que deux entrées : l’entendement et la volonté." }
+  - texte: "Pascal ajoute que les hommes sont presque toujours « emportés à croire non pas par la preuve, mais par… »"
+    nom: "l’agrément (ce qui plaît)"
+    explication: "Pascal : « tout ce qu’il y a d’hommes sont presque toujours emportés à croire non pas par la preuve, mais par l’agrément »."
+    pieges:
+      - { texte: "la démonstration", pourquoi: "La démonstration est une preuve ; Pascal l’oppose justement à l’agrément." }
+      - { texte: "la peur", pourquoi: "Pascal oppose ici la preuve à l’agrément, c’est-à-dire au plaisir, pas à la peur." }
+  - texte: "Kant, Critique de la raison pure, traduction Barni : un jugement valable « pour quiconque du moins a de la raison » est une conviction. S’il a « uniquement son principe dans la nature particulière du sujet », on le nomme…"
+    nom: "persuasion"
+    explication: "Pour Kant, la persuasion ne vaut que pour celui qui juge ; la conviction vaut pour toute raison."
+    pieges:
+      - { texte: "savoir", pourquoi: "Le savoir est suffisant pour tous ; ici, le jugement ne vaut que pour le sujet." }
+      - { texte: "démonstration", pourquoi: "Une démonstration vaut pour quiconque la suit ; ici, le principe est seulement dans le sujet." }
+  - texte: "Selon Kant, comment distinguer une conviction d’une simple persuasion ?"
+    nom: "Voir si le jugement peut se communiquer et valoir pour la raison de chacun."
+    explication: "Kant : la pierre de touche est extérieure ; elle consiste « dans la possibilité de le communiquer et de le trouver valable pour la raison de chaque homme »."
+    pieges:
+      - { texte: "Mesurer la force de sa propre assurance.", pourquoi: "Kant dit que, de l’intérieur, la persuasion ne se distingue pas de la conviction : l’épreuve est extérieure." }
+      - { texte: "Compter combien de personnes sont d’accord.", pourquoi: "Ce n’est pas un vote : il s’agit de savoir si les raisons valent pour la raison de chacun." }
+  - texte: "Une publicité montre un champion souriant, une boisson à la main, sans aucune information sur la boisson. Que cherche-t-elle ?"
+    nom: "à persuader, en touchant le désir"
+    explication: "Elle ne donne aucune raison vérifiable : elle associe la boisson au succès et au plaisir. Elle s’adresse au désir, pas à la raison."
+    pieges:
+      - { texte: "à convaincre par des preuves", pourquoi: "Il n’y a aucune preuve, aucune information : seulement une image agréable." }
+      - { texte: "à démontrer que la boisson est la meilleure", pourquoi: "Une démonstration part de principes admis et en tire une conclusion nécessaire ; ici, il n’y a qu’une image." }
+  - texte: "« Tous les nombres impairs sont premiers : la preuve, 3, 5 et 7 le sont. » Que vaut ce raisonnement ?"
+    nom: "Rien : des exemples ne prouvent pas une règle, et 9 la réfute."
+    explication: "9 est impair mais 9 = 3 × 3 : il n’est pas premier. Des exemples illustrent ; un seul contre-exemple suffit à réfuter une règle générale."
+    pieges:
+      - { texte: "C’est une preuve, car il y a trois exemples.", pourquoi: "Aucun nombre d’exemples ne prouve une règle générale ; et 9 la contredit." }
+      - { texte: "La règle est vraie pour les petits nombres.", pourquoi: "9 est petit, impair, et il n’est pas premier : la règle est fausse dès 9." }
+  - texte: "« Si un nombre est divisible par 4, alors il est pair. Or 12 est divisible par 4. Donc 12 est pair. » Quelle est la conclusion ?"
+    nom: "« 12 est pair. »"
+    explication: "« donc » annonce la conclusion, qui découle nécessairement de la règle et du cas particulier."
+    pieges:
+      - { texte: "« Si un nombre est divisible par 4, alors il est pair. »", pourquoi: "C’est la règle générale d’où l’on part, pas ce qu’on conclut." }
+      - { texte: "« 12 est divisible par 4. »", pourquoi: "C’est le cas particulier, introduit par « or » ; la conclusion vient après « donc »." }
+  - texte: "Pascal : les vérités qui « se tirent, par une conséquence nécessaire, des principes communs et des vérités avouées » produisent « une nécessité inévitable de convaincre ». D’où vient la force d’une démonstration ?"
+    nom: "Elle relie la conclusion, de façon nécessaire, à des principes déjà admis."
+    explication: "Si l’on accorde les principes et que chaque étape en découle, on ne peut refuser la conclusion : c’est convaincre, pas plaire."
+    pieges:
+      - { texte: "Elle plaît à celui qui écoute.", pourquoi: "Plaire, c’est « agréer » ; la démonstration convainc par la nécessité du raisonnement." }
+      - { texte: "Elle accumule beaucoup d’exemples.", pourquoi: "Des exemples ne rendent rien nécessaire ; la démonstration tire sa conclusion de principes admis." }
+
+en:
+  langue: "fr"
+  titre: "Philosophy: persuading, convincing, proving"
+  idee: "To convince is to win agreement with proofs anyone can follow. To persuade also touches desire: for Pascal, it is as much « agréer » (pleasing) as « convaincre ». An example illustrates; it doesn't prove."
+  phrases:
+    consigne: "Read the sentence or the extract, ask yourself what the speech appeals to and what it really proves, then touch the right answer."
+    question: "{texte}"
+    indice: "Does it appeal to reason (proofs anyone can check) or to desire (pleasure, emotion)? Is one case enough to prove a rule?"
+    exemple: "« Prends ce parapluie : la météo annonce de la pluie » (take this umbrella: rain is forecast) aims to convince, with a reason. « Prends ce parapluie, il est si joli ! » (it's so pretty!) aims to persuade, through pleasure."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Pascal, De l’esprit géométrique et de l’art de persuader: « il y a deux entrées par où les opinions sont reçues dans l’âme, qui sont ses deux principales puissances, l’entendement et la volonté. » Which one, he says, is « la plus naturelle » (the most natural)?"
+      nom: "the understanding (l’entendement)"
+      explication: "Pascal: « La plus naturelle est celle de l’entendement, car on ne devrait jamais consentir qu’aux vérités démontrées » (we should only ever accept proven truths)."
+      pieges:
+        - { texte: "the will (la volonté)", pourquoi: "For Pascal, the will is « la plus ordinaire » (the most common), but not the most natural." }
+        - { texte: "the imagination", pourquoi: "Pascal names only two entrances: the understanding and the will." }
+    - texte: "Pascal adds that people are almost always « emportés à croire non pas par la preuve, mais par… » (led to believe not by proof, but by…)"
+      nom: "pleasure (l’agrément)"
+      explication: "Pascal: « tout ce qu’il y a d’hommes sont presque toujours emportés à croire non pas par la preuve, mais par l’agrément »."
+      pieges:
+        - { texte: "demonstration", pourquoi: "A demonstration is a proof; Pascal sets it precisely against pleasure." }
+        - { texte: "fear", pourquoi: "Here Pascal sets proof against « agrément », that is pleasure, not fear." }
+    - texte: "Kant, Critique of Pure Reason, French translation by Barni: a judgement valid « pour quiconque du moins a de la raison » (for anyone who has reason) is a conviction. If it has « uniquement son principe dans la nature particulière du sujet » (its ground only in the particular nature of the subject), it is called…"
+      nom: "persuasion"
+      explication: "For Kant, persuasion only holds for the person judging; conviction holds for every reasoning mind."
+      pieges:
+        - { texte: "knowledge", pourquoi: "Knowledge is sufficient for everyone; here the judgement only holds for the subject." }
+        - { texte: "demonstration", pourquoi: "A demonstration holds for anyone who follows it; here the ground is only in the subject." }
+    - texte: "According to Kant, how can you tell a conviction from mere persuasion?"
+      nom: "See whether the judgement can be shared and hold for everyone's reason."
+      explication: "Kant: the touchstone is external; it lies « dans la possibilité de le communiquer et de le trouver valable pour la raison de chaque homme »."
+      pieges:
+        - { texte: "Measure how strongly you feel sure.", pourquoi: "Kant says that from the inside, persuasion can't be told apart from conviction: the test is external." }
+        - { texte: "Count how many people agree.", pourquoi: "It isn't a vote: the question is whether the reasons hold for everyone's reason." }
+    - texte: "An advert shows a smiling champion holding a drink, with no information about the drink. What is it trying to do?"
+      nom: "to persuade, by appealing to desire"
+      explication: "It gives no checkable reason: it links the drink to success and pleasure. It speaks to desire, not to reason."
+      pieges:
+        - { texte: "to convince with proofs", pourquoi: "There's no proof, no information: just a pleasant image." }
+        - { texte: "to demonstrate that the drink is the best", pourquoi: "A demonstration starts from accepted principles and draws a necessary conclusion; here there's only an image." }
+    - texte: "« Tous les nombres impairs sont premiers : la preuve, 3, 5 et 7 le sont. » (All odd numbers are prime: proof, 3, 5 and 7 are.) What is this reasoning worth?"
+      nom: "Nothing: examples don't prove a rule, and 9 refutes it."
+      explication: "9 is odd but 9 = 3 × 3: it isn't prime. Examples illustrate; a single counterexample is enough to refute a general rule."
+      pieges:
+        - { texte: "It's a proof, because there are three examples.", pourquoi: "No number of examples proves a general rule; and 9 contradicts it." }
+        - { texte: "The rule is true for small numbers.", pourquoi: "9 is small, odd and not prime: the rule fails as early as 9." }
+    - texte: "« Si un nombre est divisible par 4, alors il est pair. Or 12 est divisible par 4. Donc 12 est pair. » (If a number is divisible by 4, it is even. Now 12 is divisible by 4. So 12 is even.) What is the conclusion?"
+      nom: "« 12 est pair. »"
+      explication: "« donc » (so) introduces the conclusion, which follows necessarily from the rule and the particular case."
+      pieges:
+        - { texte: "« Si un nombre est divisible par 4, alors il est pair. »", pourquoi: "That's the general rule we start from, not what we conclude." }
+        - { texte: "« 12 est divisible par 4. »", pourquoi: "That's the particular case, introduced by « or »; the conclusion comes after « donc »." }
+    - texte: "Pascal: truths that « se tirent, par une conséquence nécessaire, des principes communs et des vérités avouées » (follow necessarily from common principles and admitted truths) produce « une nécessité inévitable de convaincre ». Where does a demonstration's strength come from?"
+      nom: "It links the conclusion, necessarily, to principles already accepted."
+      explication: "If you grant the principles and each step follows from them, you can't refuse the conclusion: that's convincing, not pleasing."
+      pieges:
+        - { texte: "It pleases the listener.", pourquoi: "Pleasing is « agréer »; a demonstration convinces through the necessity of its reasoning." }
+        - { texte: "It piles up lots of examples.", pourquoi: "Examples make nothing necessary; a demonstration draws its conclusion from accepted principles." }

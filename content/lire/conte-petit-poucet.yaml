@@ -1,0 +1,125 @@
+id: conte-petit-poucet
+titre: "Le conte : « Le Petit Poucet » de Perrault"
+niveau: 6e
+prerequis: ["essentiel-texte"]
+programme: { source: cycle3, texte: "l’élève est invité à découvrir la part d’humanité d’un personnage monstrueux inspirant la peur ou la compassion et à dégager la visée éducative d’un conte ou d’un récit." }
+activite: quiz
+parametres: {}
+idee: "Un conte s’ouvre souvent par « Il était une fois ». Un problème lance l’aventure ; épreuves et ruses mènent à la fin. Le merveilleux (ogre, bottes magiques) y est normal. La morale tire la leçon."
+phrases:
+  consigne: "Lis le passage du conte de Perrault, réfléchis à son rôle dans l’histoire, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "À quelle étape du conte sommes-nous ? Qui agit, et comment ? Est-ce possible dans la vraie vie ?"
+  exemple: "« Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants » : c’est la formule d’ouverture, puis la situation de départ, qui présente les personnages."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Perrault, « Le Petit Poucet » (1697), première phrase : « Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants, tous garçons. » Que signale « Il était une fois » ?"
+    nom: "le début d’un conte, dans un passé sans date"
+    explication: "« Il était une fois » est la formule d’ouverture du conte : elle place l’histoire dans un passé lointain qu’on ne précise pas."
+    pieges:
+      - { texte: "une date précise de l’histoire", pourquoi: "Aucune date n’est donnée : la formule place le récit dans un passé indéterminé." }
+      - { texte: "la fin du conte", pourquoi: "C’est la toute première phrase : la formule ouvre le conte, elle ne le ferme pas." }
+  - texte: "Perrault, « Le Petit Poucet » : « Il vint une année très fâcheuse, et la famine fut si grande que ces pauvres gens résolurent de se défaire de leurs enfants. » Quel est le rôle de cet événement ?"
+    nom: "C’est le problème qui lance l’aventure (l’élément perturbateur)."
+    explication: "La famine pousse les parents à abandonner leurs enfants dans la forêt : la situation de départ est troublée, l’aventure commence."
+    pieges:
+      - { texte: "C’est la situation finale.", pourquoi: "La fin est heureuse : Poucet revient et met sa famille « à son aise ». Ici, l’histoire commence à se troubler." }
+      - { texte: "C’est la morale.", pourquoi: "La morale est en vers, après le récit ; cette phrase raconte un événement." }
+  - texte: "Perrault écrit que le Petit Poucet « parlait peu » mais « écoutait beaucoup ». Comment cela l’aide-t-il au début ?"
+    nom: "Il entend le projet de ses parents et ramasse des cailloux blancs."
+    explication: "Caché sous l’escabelle de son père, il entend tout ; au matin, il remplit ses poches de petits cailloux blancs pour retrouver le chemin."
+    pieges:
+      - { texte: "Il convainc ses parents de garder les enfants.", pourquoi: "Il ne dit rien à ses parents : il agit en secret, avec les cailloux." }
+      - { texte: "Il demande de l’argent au seigneur du village.", pourquoi: "Le seigneur envoie dix écus qu’il devait depuis longtemps : Poucet ne lui a rien demandé." }
+  - texte: "La deuxième fois, le Petit Poucet sème des miettes de pain le long du chemin. Pourquoi ne retrouve-t-il pas sa route ?"
+    nom: "Les oiseaux ont mangé toutes les miettes."
+    explication: "Perrault écrit : « les oiseaux étaient venus qui avaient tout mangé »."
+    pieges:
+      - { texte: "La pluie a effacé les miettes.", pourquoi: "La pluie arrive plus tard ; le texte dit que les oiseaux avaient tout mangé." }
+      - { texte: "Il a oublié de les semer.", pourquoi: "Il les avait semées « partout où il avait passé » ; ce sont les oiseaux qui les ont mangées." }
+  - texte: "Chez l’Ogre, la nuit, le Petit Poucet pose les bonnets de ses frères sur la tête des filles de l’Ogre et met leurs couronnes d’or sur la tête des garçons. Comment appelle-t-on ce qu’il fait ?"
+    nom: "une ruse : le plus petit trompe le plus fort"
+    explication: "Dans le noir, l’Ogre tâte les têtes et confond les enfants : Poucet a gagné par l’intelligence, pas par la force."
+    pieges:
+      - { texte: "un combat", pourquoi: "Poucet ne se bat pas : il trompe l’Ogre en échangeant bonnets et couronnes." }
+      - { texte: "un sortilège de fée", pourquoi: "Il n’y a pas de magie ici : Poucet utilise seulement des bonnets et des couronnes." }
+  - texte: "Perrault, « Le Petit Poucet » : « comme elles étaient fées, elles avaient le don de s’agrandir et de s’appetisser selon la jambe de celui qui les chaussait ». De quoi s’agit-il ?"
+    nom: "des bottes de sept lieues, un objet merveilleux"
+    explication: "Les bottes de l’Ogre changent de taille toutes seules et font traverser les rivières aussi aisément qu’un ruisseau : c’est le merveilleux du conte."
+    pieges:
+      - { texte: "des bonnets des garçons, un objet ordinaire", pourquoi: "On ne « chausse » pas un bonnet ; ce sont les bottes de l’Ogre, qui sont « fées »." }
+      - { texte: "des bottes de l’Ogre, un détail réaliste", pourquoi: "Des bottes qui changent de taille d’elles-mêmes, c’est du merveilleux, pas la vraie vie." }
+  - texte: "L’Ogre mange les petits enfants, mais Perrault écrit aussi qu’il « ne laissait pas d’être fort bon mari ». Que montre ce détail ?"
+    nom: "Même le monstre a une part d’humanité."
+    explication: "« ne laissait pas d’être » veut dire « était tout de même » : le monstre a aussi une vie de famille. Le conte le montre, sans l’excuser."
+    pieges:
+      - { texte: "L’Ogre n’est pas dangereux.", pourquoi: "Il veut manger les enfants et les poursuit avec ses bottes : il est très dangereux." }
+      - { texte: "Le conteur s’est trompé de personnage.", pourquoi: "C’est voulu : la phrase parle bien de l’Ogre, qui est aussi un mari." }
+  - texte: "La moralité du conte finit ainsi : « Quelquefois, cependant, c’est ce petit marmot / Qui fera le bonheur de toute la famille. » Quelle leçon en tirer ?"
+    nom: "Il ne faut pas mépriser le plus petit ou le plus faible."
+    explication: "Poucet, le plus petit, que l’on prenait pour un sot, sauve ses frères et enrichit toute sa famille."
+    pieges:
+      - { texte: "Il vaut mieux être grand et fort.", pourquoi: "C’est l’inverse : c’est le plus petit, celui qu’on méprisait, qui sauve sa famille." }
+      - { texte: "Il faut toujours obéir à ses parents.", pourquoi: "La moralité parle du plus petit enfant, que l’on méprise ; elle ne parle pas d’obéissance." }
+
+en:
+  langue: "fr"
+  titre: "French: the fairy tale, Perrault's « Le Petit Poucet »"
+  idee: "A French tale often opens with « Il était une fois » (once upon a time). A problem starts the adventure; trials and tricks lead to the end. Magic (ogre, magic boots) is normal there. The moral draws the lesson."
+  phrases:
+    consigne: "Read the passage from Perrault's tale in French, think about its role in the story, then touch the right answer."
+    question: "{texte}"
+    indice: "Which stage of the tale are we at? Who acts, and how? Could it happen in real life?"
+    exemple: "« Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants »: it's the opening formula, then the starting situation, which introduces the characters."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Perrault, « Le Petit Poucet » (1697), first sentence: « Il était une fois un bûcheron et une bûcheronne qui avaient sept enfants, tous garçons. » What does « Il était une fois » signal?"
+      nom: "the start of a fairy tale, in an undated past"
+      explication: "« Il était une fois » (once upon a time) is the tale's opening formula: it sets the story in a distant past that isn't specified."
+      pieges:
+        - { texte: "a precise date in the story", pourquoi: "No date is given: the formula sets the story in an unspecified past." }
+        - { texte: "the end of the tale", pourquoi: "It's the very first sentence: the formula opens the tale, it doesn't close it." }
+    - texte: "Perrault, « Le Petit Poucet »: « Il vint une année très fâcheuse, et la famine fut si grande que ces pauvres gens résolurent de se défaire de leurs enfants. » What is the role of this event?"
+      nom: "It's the problem that sets off the adventure (the disruptive event)."
+      explication: "The famine drives the parents to abandon their children in the forest: the starting situation is disturbed, the adventure begins."
+      pieges:
+        - { texte: "It's the final situation.", pourquoi: "The ending is happy: Poucet comes back and makes his family comfortable. Here, the story is starting to go wrong." }
+        - { texte: "It's the moral.", pourquoi: "The moral is in verse, after the story; this sentence tells an event." }
+    - texte: "Perrault writes that Little Thumb « parlait peu » (spoke little) but « écoutait beaucoup » (listened a lot). How does this help him at the start?"
+      nom: "He hears his parents' plan and gathers white pebbles."
+      explication: "Hidden under his father's stool, he hears everything; in the morning he fills his pockets with small white pebbles to find the way back."
+      pieges:
+        - { texte: "He persuades his parents to keep the children.", pourquoi: "He says nothing to his parents: he acts in secret, with the pebbles." }
+        - { texte: "He asks the village lord for money.", pourquoi: "The lord sends ten crowns he had owed for a long time: Poucet asked him for nothing." }
+    - texte: "The second time, Little Thumb scatters breadcrumbs along the path. Why can't he find his way back?"
+      nom: "The birds ate all the crumbs."
+      explication: "Perrault writes: « les oiseaux étaient venus qui avaient tout mangé » (the birds had come and eaten everything)."
+      pieges:
+        - { texte: "The rain washed the crumbs away.", pourquoi: "The rain comes later; the text says the birds had eaten everything." }
+        - { texte: "He forgot to scatter them.", pourquoi: "He had scattered them « partout où il avait passé », everywhere he went; the birds ate them." }
+    - texte: "At the Ogre's house, at night, Little Thumb puts his brothers' caps on the Ogre's daughters' heads and puts their gold crowns on the boys' heads. What do we call what he does?"
+      nom: "a trick: the smallest fools the strongest"
+      explication: "In the dark, the Ogre feels the heads and mixes up the children: Poucet wins by cleverness, not by strength."
+      pieges:
+        - { texte: "a fight", pourquoi: "Poucet doesn't fight: he fools the Ogre by swapping caps and crowns." }
+        - { texte: "a fairy's spell", pourquoi: "There's no magic here: Poucet only uses caps and crowns." }
+    - texte: "Perrault, « Le Petit Poucet »: « comme elles étaient fées, elles avaient le don de s’agrandir et de s’appetisser selon la jambe de celui qui les chaussait ». What is this about?"
+      nom: "the seven-league boots, a magic object"
+      explication: "The Ogre's boots change size by themselves and let him cross rivers as easily as a stream: it's the magic of the fairy tale."
+      pieges:
+        - { texte: "the boys' caps, an ordinary object", pourquoi: "You don't put a cap on your leg; these are the Ogre's boots, which are enchanted (« fées »)." }
+        - { texte: "the Ogre's boots, a realistic detail", pourquoi: "Boots that change size by themselves are magic, not real life." }
+    - texte: "The Ogre eats little children, but Perrault also writes that he « ne laissait pas d’être fort bon mari ». What does this detail show?"
+      nom: "Even the monster has a human side."
+      explication: "« ne laissait pas d’être » means « was nonetheless »: the monster also has a family life. The tale shows it without excusing him."
+      pieges:
+        - { texte: "The Ogre isn't dangerous.", pourquoi: "He wants to eat the children and chases them with his boots: he is very dangerous." }
+        - { texte: "The storyteller mixed up the characters.", pourquoi: "It's deliberate: the sentence really is about the Ogre, who is also a husband." }
+    - texte: "The tale's moral ends: « Quelquefois, cependant, c’est ce petit marmot / Qui fera le bonheur de toute la famille. » What lesson should we draw?"
+      nom: "You shouldn't look down on the smallest or the weakest."
+      explication: "Poucet, the smallest, whom everyone took for a fool, saves his brothers and makes his whole family rich."
+      pieges:
+        - { texte: "It's better to be big and strong.", pourquoi: "It's the opposite: the smallest, the one everyone looked down on, saves his family." }
+        - { texte: "You must always obey your parents.", pourquoi: "The moral is about the smallest child, whom people look down on; it says nothing about obedience." }

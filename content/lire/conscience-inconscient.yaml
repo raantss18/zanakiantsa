@@ -1,0 +1,125 @@
+id: conscience-inconscient
+titre: "Philosophie : la conscience et l’inconscient"
+niveau: Terminale
+prerequis: ["croire-savoir"]
+programme: { source: philoTle, texte: "Le programme propose à l’étude dix-sept notions : [...] La conscience [...] L’inconscient [...] Médiat/immédiat" }
+activite: quiz
+parametres: {}
+idee: "La conscience, c’est savoir ce qu’on pense ou fait, et juger le bien et le mal. Descartes : « je pense, donc je suis ». Leibniz : nous percevons sans nous en apercevoir. Freud : le lapsus trahit un souhait caché."
+phrases:
+  consigne: "Lis l’extrait ou la situation, cherche ce qu’il dit de la conscience, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "S’en aperçoit-on, ou non ? Le sait-on directement, ou par un intermédiaire ? Parle-t-on de connaître, ou de juger le bien et le mal ?"
+  exemple: "Je n’entends plus le tic-tac de la pendule, puis on me le fait remarquer et je l’entends : le bruit était perçu, mais pas aperçu par la conscience."
+  demonstration: "{explication}"
+  bravo: "Oui ! C’est {bonne}."
+items:
+  - texte: "Descartes, Discours de la méthode (1637), IVe partie : il décide de rejeter « comme absolument faux tout ce en quoi [il pourrait] imaginer le moindre doute ». Pourquoi ?"
+    nom: "Pour voir s’il reste quelque chose d’entièrement indubitable."
+    explication: "Descartes le dit : c’est « afin de voir s’il ne resterait point après cela quelque chose en ma créance qui fût entièrement indubitable ». Le doute est une méthode."
+    pieges:
+      - { texte: "Parce qu’il pense que tout est faux.", pourquoi: "Il fait comme si tout était faux, pour trouver une certitude : c’est une méthode, pas une conviction." }
+      - { texte: "Pour ne plus jamais rien croire.", pourquoi: "Le doute vise au contraire à trouver une vérité sur laquelle bâtir." }
+  - texte: "Descartes, même partie : « je pense, donc je suis ». Pourquoi cette vérité résiste-t-elle au doute ?"
+    nom: "Pour douter, il faut penser, et pour penser il faut être."
+    explication: "Descartes : pendant qu’il voulait penser que tout était faux, « il fallait nécessairement que moi qui le pensais fusse quelque chose »."
+    pieges:
+      - { texte: "Parce que les sens la confirment.", pourquoi: "Descartes a justement écarté les sens, parce qu’ils « nous trompent quelquefois »." }
+      - { texte: "Parce que tout le monde l’admet.", pourquoi: "Elle ne repose pas sur l’accord des autres : chacun la trouve en pensant lui-même." }
+  - texte: "Je connais l’heure en regardant ma montre. Cette connaissance est-elle médiate ou immédiate ?"
+    nom: "médiate"
+    explication: "Médiat : qui ne s’effectue que par un intermédiaire. Ici, l’intermédiaire est la montre."
+    pieges:
+      - { texte: "immédiate", pourquoi: "Immédiat veut dire sans intermédiaire ; or je passe par la montre." }
+      - { texte: "inconsciente", pourquoi: "Je sais très bien que je regarde ma montre : la connaissance est consciente, mais elle passe par un intermédiaire." }
+  - texte: "Leibniz, Nouveaux Essais sur l’entendement humain, avant-propos : pour entendre le bruit de la mer, « il faut bien qu’on entende les parties qui composent ce tout, c’est-à-dire le bruit de chaque vague ». Que veut-il montrer ?"
+    nom: "Nous percevons chaque vague sans nous en apercevoir : il y a des perceptions inconscientes."
+    explication: "Chaque petit bruit ne se fait connaître que « dans l’assemblage confus de tous les autres ». Leibniz parle de « petites perceptions » sans aperception."
+    pieges:
+      - { texte: "Que la mer est trop bruyante pour penser.", pourquoi: "Leibniz ne parle pas de gêne : il montre qu’on perçoit des choses sans s’en rendre compte." }
+      - { texte: "Que nous entendons chaque vague séparément.", pourquoi: "C’est l’inverse : aucune vague n’est remarquée seule, et pourtant chacune est perçue." }
+  - texte: "Leibniz, même texte : « la coutume fait que nous ne prenons pas garde au mouvement d’un moulin ou à une chute d’eau, quand nous avons habité tout auprès ». Pourquoi ne remarque-t-on plus le moulin ?"
+    nom: "Par habitude : le bruit nous touche encore, mais n’attire plus notre attention."
+    explication: "Leibniz précise que ce mouvement « frappe toujours nos organes » : la perception reste, c’est l’attention qui manque."
+    pieges:
+      - { texte: "Parce que le moulin s’est arrêté.", pourquoi: "Le moulin tourne toujours : c’est nous qui n’y prenons plus garde." }
+      - { texte: "Parce qu’on est devenu sourd.", pourquoi: "Leibniz dit que le bruit frappe toujours nos organes : on l’entend, sans le remarquer." }
+  - texte: "Dans Psychopathologie de la vie quotidienne (1901, chapitre V), Freud reprend l’exemple d’un président d’assemblée qui, au lieu d’ouvrir la séance, la déclara « close ». Quelle explication en est donnée ?"
+    nom: "Il souhaitait en secret clore cette séance : ce souhait s’est dit malgré lui."
+    explication: "Le président « n’attendait rien de bon » de cette séance : le souhait de la clore s’est glissé dans ses mots. Le lapsus trahit une pensée cachée."
+    pieges:
+      - { texte: "Il était fatigué : l’erreur n’a aucun sens.", pourquoi: "L’explication proposée est justement un souhait caché : le mot choisi dit le contraire de son intention consciente." }
+      - { texte: "Il voulait faire rire l’assemblée.", pourquoi: "Il corrigea aussitôt son erreur : le lapsus n’était pas voulu." }
+  - texte: "« Avoir mauvaise conscience. » De quelle conscience s’agit-il ?"
+    nom: "la conscience morale, qui juge le bien et le mal"
+    explication: "On ne dit pas seulement qu’on sait ce qu’on a fait : on juge qu’on a mal agi. C’est la conscience morale."
+    pieges:
+      - { texte: "la conscience psychologique, savoir ce qu’on fait", pourquoi: "Savoir ce qu’on a fait ne suffit pas à avoir « mauvaise conscience » : il faut le juger mal." }
+      - { texte: "l’inconscient", pourquoi: "Avoir mauvaise conscience, c’est s’en rendre compte : ce n’est pas inconscient." }
+  - texte: "Si nous avons des perceptions ou des souhaits dont nous ne nous apercevons pas, que faut-il en conclure ?"
+    nom: "La conscience ne connaît pas tout ce qui se passe en nous."
+    explication: "Les petites perceptions de Leibniz et les lapsus étudiés par Freud montrent une vie de l’esprit qui échappe en partie à la conscience."
+    pieges:
+      - { texte: "Que nous ne pensons jamais.", pourquoi: "Nous pensons, et nous le savons (Descartes) ; mais tout ne passe pas par la conscience." }
+      - { texte: "Que tout ce qui est en nous est conscient.", pourquoi: "C’est justement ce que ces exemples contestent : certaines perceptions et certains souhaits nous échappent." }
+
+en:
+  langue: "fr"
+  titre: "Philosophy: consciousness and the unconscious"
+  idee: "Consciousness is knowing what you think or do, and judging right and wrong. Descartes: « je pense, donc je suis ». Leibniz: we perceive without noticing. Freud: a slip of the tongue reveals a hidden wish."
+  phrases:
+    consigne: "Read the extract or the situation, find what it says about consciousness, then touch the right answer."
+    question: "{texte}"
+    indice: "Do we notice it or not? Do we know it directly, or through something else? Is it about knowing, or about judging right and wrong?"
+    exemple: "I no longer hear the clock ticking, then someone points it out and I hear it: the sound was perceived, but not noticed by consciousness."
+    demonstration: "{explication}"
+    bravo: "Yes! The answer is: {bonne}."
+  items:
+    - texte: "Descartes, Discours de la méthode (1637), part IV: he decides to reject « comme absolument faux tout ce en quoi [il pourrait] imaginer le moindre doute » (as absolutely false anything he could have the slightest doubt about). Why?"
+      nom: "To see whether anything entirely beyond doubt remains."
+      explication: "Descartes says so: it's « afin de voir s’il ne resterait point après cela quelque chose en ma créance qui fût entièrement indubitable ». Doubt is a method."
+      pieges:
+        - { texte: "Because he thinks everything is false.", pourquoi: "He acts as if everything were false, in order to find a certainty: it's a method, not a conviction." }
+        - { texte: "So as never to believe anything again.", pourquoi: "On the contrary, doubt aims to find a truth to build on." }
+    - texte: "Descartes, same part: « je pense, donc je suis ». Why does this truth resist doubt?"
+      nom: "To doubt you must think, and to think you must exist."
+      explication: "Descartes: while he wanted to think everything was false, « il fallait nécessairement que moi qui le pensais fusse quelque chose » (I, who was thinking it, necessarily had to be something)."
+      pieges:
+        - { texte: "Because the senses confirm it.", pourquoi: "Descartes has precisely set the senses aside, because they « nous trompent quelquefois » (sometimes deceive us)." }
+        - { texte: "Because everyone accepts it.", pourquoi: "It doesn't rest on others agreeing: each person finds it by thinking for themselves." }
+    - texte: "I know the time by looking at my watch. Is this knowledge mediate or immediate?"
+      nom: "mediate"
+      explication: "Mediate: achieved only through an intermediary. Here the intermediary is the watch."
+      pieges:
+        - { texte: "immediate", pourquoi: "Immediate means with no intermediary; but I go through the watch." }
+        - { texte: "unconscious", pourquoi: "I know perfectly well that I'm looking at my watch: the knowledge is conscious, but it goes through an intermediary." }
+    - texte: "Leibniz, New Essays on Human Understanding, preface: to hear the noise of the sea, « il faut bien qu’on entende les parties qui composent ce tout, c’est-à-dire le bruit de chaque vague » (we must hear the parts that make up the whole, the noise of each wave). What does he want to show?"
+      nom: "We perceive each wave without noticing it: there are unconscious perceptions."
+      explication: "Each little noise only makes itself known « dans l’assemblage confus de tous les autres » (in the confused mass of all the others). Leibniz speaks of « petites perceptions » without awareness."
+      pieges:
+        - { texte: "That the sea is too noisy to think.", pourquoi: "Leibniz isn't talking about being disturbed: he shows we perceive things without realising it." }
+        - { texte: "That we hear each wave separately.", pourquoi: "It's the opposite: no wave is noticed on its own, and yet each one is perceived." }
+    - texte: "Leibniz, same text: « la coutume fait que nous ne prenons pas garde au mouvement d’un moulin ou à une chute d’eau, quand nous avons habité tout auprès » (habit makes us stop noticing a mill or a waterfall when we've lived right next to it). Why don't we notice the mill any more?"
+      nom: "Out of habit: the noise still reaches us, but no longer draws our attention."
+      explication: "Leibniz specifies that this movement « frappe toujours nos organes » (still strikes our senses): the perception remains, it's attention that is missing."
+      pieges:
+        - { texte: "Because the mill has stopped.", pourquoi: "The mill is still turning: it's we who no longer pay attention to it." }
+        - { texte: "Because we've gone deaf.", pourquoi: "Leibniz says the noise still strikes our senses: we hear it without noticing it." }
+    - texte: "In The Psychopathology of Everyday Life (1901, chapter V), Freud takes up the example of a chairman who, instead of opening a session, declared it « close » (closed). What explanation is given?"
+      nom: "He secretly wished to close the session: the wish came out in spite of him."
+      explication: "The chairman « n’attendait rien de bon » (expected nothing good) from the session: the wish to close it slipped into his words. The slip reveals a hidden thought."
+      pieges:
+        - { texte: "He was tired: the mistake means nothing.", pourquoi: "The explanation given is precisely a hidden wish: the word chosen says the opposite of his conscious intention." }
+        - { texte: "He wanted to make the assembly laugh.", pourquoi: "He corrected his mistake at once: the slip wasn't deliberate." }
+    - texte: "« Avoir mauvaise conscience » (to have a guilty conscience). Which kind of consciousness is this?"
+      nom: "moral conscience, which judges right and wrong"
+      explication: "It doesn't just say you know what you did: you judge that you did wrong. That's moral conscience."
+      pieges:
+        - { texte: "psychological consciousness, knowing what you do", pourquoi: "Knowing what you did isn't enough to have a guilty conscience: you have to judge it wrong." }
+        - { texte: "the unconscious", pourquoi: "Having a guilty conscience means being aware of it: it isn't unconscious." }
+    - texte: "If we have perceptions or wishes we don't notice, what should we conclude?"
+      nom: "Consciousness doesn't know everything going on inside us."
+      explication: "Leibniz's little perceptions and the slips studied by Freud show a mental life that partly escapes consciousness."
+      pieges:
+        - { texte: "That we never think.", pourquoi: "We do think, and we know it (Descartes); but not everything passes through consciousness." }
+        - { texte: "That everything in us is conscious.", pourquoi: "That's exactly what these examples challenge: some perceptions and some wishes escape us." }
