@@ -12,7 +12,8 @@
 3. **Rien casser.** Une décision = un ADR ≤ 15 lignes (`docs/adr/NNNN-titre.md`). Commits courts en français
    (Conventional Commits), chemins explicites (jamais `git add -A`), `main` toujours vert.
 4. **Ne jamais dire « fini » sans l'avoir fait tourner** : tests, puis essai sur la tablette Samsung SM-X135G branchée
-   (`adb -s R8YYA0CZ5ZV`), sans demander. **Plus d'émulateur sur l'ordinateur** (consigne d'Antsa du 2026-11-07).
+   (`adb -s R8YYA0CZ5ZV`), sans demander. Tablette absente : le petit émulateur au même format, `tool/emulateur.sh`
+   (consigne d'Antsa du 2026-11-13, qui remplace celle du 2026-11-07) ; la tablette reste la référence.
 5. **100 % hors ligne pour le cœur.** Aucun compte enfant, aucune pub, aucun achat intégré, aucune télémétrie de
    l'app : le journal d'événements reste sur l'appareil. Ni image, ni voix, ni tracé ne quitte l'appareil ;
    **exception connue** : ML Kit envoie à Google des statistiques techniques d'usage (ADR 0012, `docs/conformite.md`).
