@@ -1,0 +1,124 @@
+id: troisieme-republique
+titre: "La Troisième République : la mise en œuvre du projet républicain"
+niveau: 1re
+prerequis: [republique-xixe, europe-revolutions]
+programme: { source: hg1re, texte: "Ce chapitre vise à montrer la manière dont le régime républicain se met en place et s’enracine ainsi que les oppositions qu’il rencontre." }
+activite: quiz
+parametres: {}
+idee: "Proclamée en 1870, la République doit convaincre une France qui vote d'abord monarchiste. Elle s'enracine par des lois, l'école et des symboles, malgré de fortes oppositions et le refus du vote des femmes."
+phrases:
+  consigne: "Lis la question, puis touche la bonne réponse."
+  question: "{texte}"
+  indice: "Repères : 4 septembre 1870, proclamation ; 1871, la Commune ; 1875, lois constitutionnelles ; 1876-1879, les républicains prennent les institutions ; 1880, 14 juillet fête nationale ; 1885, funérailles de Victor Hugo ; l'affaire Dreyfus."
+  exemple: "Exemple : le 14 juillet 1880 est la première célébration officielle du 14 juillet comme fête nationale. En rappelant la prise de la Bastille, la République se présente comme l'héritière de 1789."
+  demonstration: "{explication}"
+  bravo: "Oui ! {explication}"
+items:
+  - texte: "La République est proclamée à Paris le 4 septembre 1870. Qui remporte pourtant les élections du 8 février 1871 ?"
+    nom: "Les monarchistes."
+    explication: "Ils incarnent alors le camp de la paix, face à des républicains qui ont voulu prolonger la guerre : la République doit encore convaincre."
+    pieges:
+      - { texte: "Les républicains, très largement.", pourquoi: "Ils ne prennent le contrôle des institutions qu'entre 1876 et 1879." }
+      - { texte: "Les partisans de Napoléon III, qui retrouve son trône.", pourquoi: "L'Empire vient de s'effondrer après la défaite de 1870." }
+  - texte: "Que veulent beaucoup de communards, comme Louise Michel, en 1871 ?"
+    nom: "Une République radicale : démocratie directe, sociale et anticléricale."
+    explication: "Ils réclament par exemple la séparation de l'Église et de l'État et une instruction laïque, gratuite et obligatoire."
+    pieges:
+      - { texte: "Le retour d'un roi.", pourquoi: "Ils veulent une République radicale, pas une monarchie." }
+      - { texte: "La dictature du prolétariat décrite par Karl Marx.", pourquoi: "Selon les historiens, leur projet est surtout républicain radical, pas celui de Marx." }
+  - texte: "Comment se termine la Commune de Paris, en mai 1871 ?"
+    nom: "Par une répression sanglante : la « semaine sanglante »."
+    explication: "Selon les estimations de l'historien Robert Tombs, entre 7 000 et 15 000 communards meurent ; d'autres sont arrêtés ou exilés."
+    pieges:
+      - { texte: "Par un accord de paix entre Paris et le gouvernement.", pourquoi: "Il n'y a pas d'accord : l'insurrection est écrasée par la force." }
+      - { texte: "Par la victoire des communards dans toute la France.", pourquoi: "La Commune reste surtout parisienne, et elle est vaincue." }
+  - texte: "Que sont les lois constitutionnelles de 1875 ?"
+    nom: "Un compromis entre monarchistes modérés et républicains, qui organise le nouveau régime."
+    explication: "Elles créent la Chambre des députés, le Sénat et la présidence de la République : la démocratie parlementaire s'installe."
+    pieges:
+      - { texte: "Une constitution écrite par les communards.", pourquoi: "La Commune a été écrasée en 1871 ; le compromis se fait entre modérés." }
+      - { texte: "Le retour de la monarchie absolue.", pourquoi: "Elles organisent une République parlementaire, avec des élus." }
+  - texte: "Entre 1876 et 1879, que réussissent les républicains ?"
+    nom: "Ils prennent le contrôle de la Chambre des députés, du Sénat et de la présidence."
+    explication: "Ils gagnent les élections de 1876, puis celles qui suivent la dissolution de 1877 par le président Mac-Mahon."
+    pieges:
+      - { texte: "Ils perdent toutes les élections.", pourquoi: "C'est l'inverse : leurs victoires électorales leur donnent toutes les institutions." }
+      - { texte: "Ils suppriment le Sénat.", pourquoi: "Le Sénat est conservé : les républicains en prennent le contrôle." }
+  - texte: "En 1885, pourquoi la République organise-t-elle des funérailles nationales pour Victor Hugo ?"
+    nom: "Pour honorer un grand écrivain républicain et rassembler la nation autour de la République."
+    explication: "Environ deux millions de personnes y assistent ; Hugo, qui a refusé les prières de toute Église, entre au Panthéon."
+    pieges:
+      - { texte: "Parce qu'il était un général victorieux.", pourquoi: "Hugo est un écrivain : honorer un civil tranche avec les régimes précédents." }
+      - { texte: "Parce qu'il était chef du gouvernement.", pourquoi: "Il n'est membre ni du gouvernement ni de l'armée." }
+  - texte: "Avant 1914, les femmes peuvent-elles voter aux élections politiques ?"
+    nom: "Non : ce droit leur est refusé, malgré les campagnes suffragistes."
+    explication: "Hubertine Auclert, qui forge le mot « féminisme », réclame le vote. Les femmes obtiennent d'autres droits, comme adhérer à un syndicat en 1884."
+    pieges:
+      - { texte: "Oui, depuis 1848.", pourquoi: "En 1848, le suffrage universel est seulement masculin." }
+      - { texte: "Oui, grâce aux lois de 1875.", pourquoi: "Ces lois organisent le régime sans donner le vote aux femmes." }
+  - texte: "Autour de quelle affaire l'antisémitisme s'organise-t-il en France, à la fin du XIXe siècle ?"
+    nom: "L'affaire Dreyfus."
+    explication: "L'affaire divise profondément le pays : elle structure l'antisémitisme et radicalise une partie de l'opinion catholique."
+    pieges:
+      - { texte: "L'affaire de Fachoda.", pourquoi: "Fachoda, en 1898, est un « choc des impérialismes » lié à la colonisation, pas une affaire intérieure." }
+      - { texte: "La Commune de Paris.", pourquoi: "La Commune est une insurrection parisienne de 1871, pas une « affaire »." }
+
+en:
+  titre: "The Third Republic: putting the republican project into practice"
+  idee: "Proclaimed in 1870, the Republic must win over a France that first votes monarchist. It takes root through laws, schools and symbols, despite strong opposition and the refusal to let women vote."
+  phrases:
+    consigne: "Read the question, then touch the right answer."
+    question: "{texte}"
+    indice: "Landmarks: 4 September 1870, proclamation; 1871, the Commune; 1875, constitutional laws; 1876-1879, republicans take over the institutions; 1880, 14 July becomes the national holiday; 1885, Victor Hugo's funeral; the Dreyfus affair."
+    exemple: "Example: 14 July 1880 is the first official celebration of 14 July as the national holiday. By recalling the storming of the Bastille, the Republic presents itself as the heir of 1789."
+    demonstration: "{explication}"
+    bravo: "Yes! {explication}"
+  items:
+    - texte: "The Republic is proclaimed in Paris on 4 September 1870. Yet who wins the elections of 8 February 1871?"
+      nom: "The monarchists."
+      explication: "At the time they stand for peace, against republicans who wanted to carry on the war: the Republic still has to win people over."
+      pieges:
+        - { texte: "The republicans, by a wide margin.", pourquoi: "They only take control of the institutions between 1876 and 1879." }
+        - { texte: "Supporters of Napoleon III, who gets his throne back.", pourquoi: "The Empire has just collapsed after the defeat of 1870." }
+    - texte: "What do many Communards, like Louise Michel, want in 1871?"
+      nom: "A radical Republic: direct, social and anticlerical democracy."
+      explication: "For example, they call for the separation of Church and State and for secular, free and compulsory schooling."
+      pieges:
+        - { texte: "The return of a king.", pourquoi: "They want a radical Republic, not a monarchy." }
+        - { texte: "The dictatorship of the proletariat described by Karl Marx.", pourquoi: "According to historians, their project is mostly a radical republican one, not Marx's." }
+    - texte: "How does the Paris Commune end, in May 1871?"
+      nom: "With bloody repression: the « Bloody Week »."
+      explication: "According to historian Robert Tombs's estimates, between 7,000 and 15,000 Communards die; others are arrested or exiled."
+      pieges:
+        - { texte: "With a peace agreement between Paris and the government.", pourquoi: "There is no agreement: the uprising is crushed by force." }
+        - { texte: "With the Communards winning all over France.", pourquoi: "The Commune stays mostly in Paris, and it is defeated." }
+    - texte: "What are the constitutional laws of 1875?"
+      nom: "A compromise between moderate monarchists and republicans, which organises the new regime."
+      explication: "They create the Chamber of Deputies, the Senate and the presidency of the Republic: parliamentary democracy takes hold."
+      pieges:
+        - { texte: "A constitution written by the Communards.", pourquoi: "The Commune was crushed in 1871; the compromise is made between moderates." }
+        - { texte: "The return of absolute monarchy.", pourquoi: "They organise a parliamentary Republic, with elected members." }
+    - texte: "Between 1876 and 1879, what do the republicans achieve?"
+      nom: "They take control of the Chamber of Deputies, the Senate and the presidency."
+      explication: "They win the 1876 elections, then those that follow President Mac-Mahon's dissolution of 1877."
+      pieges:
+        - { texte: "They lose every election.", pourquoi: "It's the opposite: their election wins give them all the institutions." }
+        - { texte: "They abolish the Senate.", pourquoi: "The Senate is kept: the republicans take control of it." }
+    - texte: "In 1885, why does the Republic hold a state funeral for Victor Hugo?"
+      nom: "To honour a great republican writer and unite the nation around the Republic."
+      explication: "About two million people attend; Hugo, who refused the prayers of any Church, is laid in the Panthéon."
+      pieges:
+        - { texte: "Because he was a victorious general.", pourquoi: "Hugo is a writer: honouring a civilian breaks with earlier regimes." }
+        - { texte: "Because he was head of government.", pourquoi: "He belongs neither to the government nor to the army." }
+    - texte: "Before 1914, can women vote in political elections?"
+      nom: "No: this right is refused to them, despite suffrage campaigns."
+      explication: "Hubertine Auclert, who coins the word « feminism », demands the vote. Women gain other rights, such as joining a trade union in 1884."
+      pieges:
+        - { texte: "Yes, since 1848.", pourquoi: "In 1848, universal suffrage is for men only." }
+        - { texte: "Yes, thanks to the laws of 1875.", pourquoi: "These laws organise the regime without giving women the vote." }
+    - texte: "Around which affair does antisemitism organise itself in France at the end of the 19th century?"
+      nom: "The Dreyfus affair."
+      explication: "The affair deeply divides the country: it shapes antisemitism and radicalises part of Catholic opinion."
+      pieges:
+        - { texte: "The Fashoda affair.", pourquoi: "Fashoda, in 1898, is a « clash of imperialisms » linked to colonisation, not a domestic affair." }
+        - { texte: "The Paris Commune.", pourquoi: "The Commune is a Parisian uprising of 1871, not an « affair »." }
