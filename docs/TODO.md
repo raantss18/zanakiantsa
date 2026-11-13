@@ -5,6 +5,15 @@
 
 ## 🔄 Après la 1.0.9 (2026-11-11) — pas encore publié
 
+- ✅ 2026-11-13 : fenêtre de classe −2/+2 (ADR 0070), vérifiée sur l'émulateur en 6e (CM1 à 4e). Petit émulateur au format de
+  la SM-X135G (`tool/emulateur.sh`, consigne d'Antsa). 38 leçons de plus : français 6e/2de/1re et philosophie de Terminale (7),
+  anglais 6e→2de (7), logique et tableaux CE2→6e (6), maths (6), sciences (6) et histoire-géographie (6) du lycée.
+  Vidéos : les rangées de matière ne répètent plus « Pour toi » en tête. Quiz : la question, plate et cernée, ne ressemble
+  plus à une réponse. Vidéo de démonstration de 2 min (émulateur, narration Piper « siwis » CC BY 4.0, musique originale) :
+  `demo/zanakiantsa-demo-2min.mp4`, hors git.
+- ⏳ Sur l'émulateur : la voix française de Google ne marche pas (voix intégrée absente) et l'émulateur s'arrête en quittant la
+  3D (rendu logiciel). La tablette reste la référence : écoute et 3D à refaire dessus.
+
 - ✅ 34 leçons ajoutées (tests et analyse verts) : code CP→CM2 (6, lire un programme avant d'en écrire), sciences 5e→3e (8),
   histoire-géographie 6e→3e dont la laïcité en EMC (8), échecs 4e→Terminale (6 finales, positions vérifiées par calcul
   complet), musique CP→CM2 (6 ; « Les sons » va jusqu'au CM2, 1 h d'arts sur 2 dans la journée du CM). La voix dit « fois »

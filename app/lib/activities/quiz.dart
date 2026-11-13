@@ -51,11 +51,20 @@ class _QuizActivityState extends State<QuizActivity> {
           constraints: const BoxConstraints(maxWidth: 520),
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             // L'énoncé reste sous les yeux quand l'aide prend la place du narrateur.
-            Container(
-              margin: const EdgeInsets.only(bottom: 12),
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(28), boxShadow: cardShadow),
-              child: QuestionText(item.text),
+            // Plate et cernée, loin des réponses : une question courte (« Qui joue Pierre ? ») ressemblait à un bouton de réponse,
+            // en relief comme elles (émulateur, 2026-11-13). Seules les réponses ont du relief : elles se touchent.
+            Semantics(
+              header: true,
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: surface,
+                  borderRadius: BorderRadius.circular(28),
+                  border: Border.all(color: const Color(0x401B211D), width: 2),
+                ),
+                child: QuestionText(item.text),
+              ),
             ),
             for (final answer in answers)
               Padding(
