@@ -177,7 +177,9 @@ class _DrawPageState extends State<DrawPage> {
       if (!big) return await _tell('${t('Dessine plus grand, pour qu’on voie bien tous les morceaux.')} ${item.explanation}');
       if (strokes.length < item.minStrokes) return await _tell('${t('Il manque des morceaux.')} ${item.explanation}');
       // 2. Sans modèle (pas encore installé par un adulte) : on range le dessin, sans dire qu'on l'a reconnu.
-      if (_recognizer == null) return await _save(true, t('Ton dessin est rangé dans ton album.'));
+      // Rien n'est noté : ni étoile ni réussite au journal (avant, tout dessin assez grand comptait comme réussi, revue du
+      // 2026-11-14). La séance compte quand même : l'enfant a fini son dessin.
+      if (_recognizer == null) return await _save(false, t('Ton dessin est rangé dans ton album.'), checked: false);
       // 3. Reconnu parmi les premières propositions du modèle : réussi.
       final seen = await _recognize();
       debugPrint('dessin « ${item.name} » : $seen');
@@ -195,7 +197,8 @@ class _DrawPageState extends State<DrawPage> {
     }
   }
 
-  Future<void> _save(bool ok, String text) async {
+  /// [checked] faux : le dessin n'a pas pu être vérifié (pas de modèle), il est rangé sans réponse au journal.
+  Future<void> _save(bool ok, String text, {bool checked = true}) async {
     final rec = ui.PictureRecorder();
     final c = Canvas(rec);
     c.drawRect(Offset.zero & _canvas, Paint()..color = Colors.white);
@@ -205,7 +208,8 @@ class _DrawPageState extends State<DrawPage> {
     final f = File('${(await drawingsDir()).path}/${DateTime.now().millisecondsSinceEpoch}.png');
     await f.writeAsBytes(png);
     _logged = true;
-    await app.record(Answer(
+    if (checked) {
+      await app.record(Answer(
       skill: skill.id,
       attempts: misses + (ok ? 1 : 0),
       correct: ok,
@@ -213,7 +217,8 @@ class _DrawPageState extends State<DrawPage> {
       millis: DateTime.now().difference(_started).inMilliseconds,
       at: DateTime.now(),
       errors: _errors,
-    ));
+      ));
+    }
     await app.logSession(SessionLog(theme: 'dessin', started: _started, ended: DateTime.now()));
     if (!mounted) return;
     setState(() {

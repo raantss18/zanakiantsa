@@ -368,9 +368,11 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ Plein écran des vidéos : on en sort toujours (bouton en haut à gauche, retour Android) ; le lecteur n'y rentre plus seul
   en paysage (cause du blocage signalé par Antsa). Vidéos en récompense avant 10 ans (ADR 0073). Note de l'app = étoiles
   GitHub, sur le site et dans l'espace parent (ADR 0074). Ticket n° 1 (chaînes candidates) relu et fermé.
-- ⏳ Pas corrigé : sans modèle ML Kit, un dessin compte comme réussi (`draw.dart:179`) ; cibles du corps humain < 48 dp
-  (`explore.dart:281`) ; programme qui tourne en rond animé 23 s (`blocks.dart:126`) ; reprise au plan périmé ; supprimer un
-  enfant (pas de bouton) ; vidéo masquée encore visible dans « Tout voir ».
+- ✅ Après la 1.1.2 : dessin sans modèle rangé sans être noté ; cibles du corps humain élargies (test `body_test.dart`) et
+  croix sur les parties essayées ; programme qui tourne en rond montré en 12 pas ; reprise abandonnée si sa notion est
+  acquise ; supprimer un enfant (espace parent, avec confirmation) ; vidéo masquée retirée de « Tout voir » ; fenêtres de
+  l'espace parent au thème du cahier (« Ajouter » géant) ; niveaux de « Prendre une pièce non protégée » (CE1) et « Tracer
+  les capitales » (GS) alignés sur leurs prérequis ; « 1000 », « le cylindre » et le titre de l'album ne débordent plus.
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 

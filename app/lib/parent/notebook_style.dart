@@ -20,6 +20,14 @@ const trait = Color(0xFF768AD6);
 const notebookTitle = TextStyle(fontFamily: 'PlaywriteFR', fontSize: 24, height: 1.9, color: encre);
 
 /// Le thème de l'espace parent, construit sur celui de l'app.
+/// Une fenêtre de l'espace parent, au thème du cahier. `showDialog` construit la fenêtre au-dessus de la page, donc avec
+/// le thème des enfants : ses boutons y prenaient des lettres géantes (« Ajouter » sur deux lignes, vu sur l'émulateur le
+/// 2026-11-14).
+Future<T?> showParentDialog<T>(BuildContext context, WidgetBuilder builder) => showDialog<T>(
+      context: context,
+      builder: (ctx) => Theme(data: notebookTheme(Theme.of(context)), child: Builder(builder: builder)),
+    );
+
 ThemeData notebookTheme(ThemeData base) {
   final scheme = base.colorScheme.copyWith(
     primary: violet,

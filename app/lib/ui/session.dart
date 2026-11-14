@@ -327,6 +327,13 @@ class SessionResume {
       // sur « Touche la syllabe ra ») : une séance qui contient des leçons devenues trop faciles ne reprend pas.
       final p = app.progressOf(app.topic(topic));
       if (r.plan.skip(r.index).any((id) => !p.inRange(id))) return null;
+      // La notion travaillée par cette séance a été acquise entre-temps (leçon choisie, défi…) : la reprise reposerait des
+      // questions sur ce qui est su (revue du 2026-11-14). Une nouvelle séance part de la notion suivante.
+      final left = <String, int>{};
+      for (final id in r.plan.skip(r.index)) {
+        left[id] = (left[id] ?? 0) + 1;
+      }
+      if (left.entries.any((e) => e.value >= 2 && p.earned(e.key) && e.key != p.newSkill)) return null;
       return r;
     } catch (_) {
       return null;

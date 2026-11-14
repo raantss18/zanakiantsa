@@ -132,9 +132,7 @@ class _ParentPageState extends State<ParentPage> {
     });
     // Trouvée à l'entrée : elle se propose toute seule, le parent n'a rien à chercher (demande d'Antsa du 2026-11-14).
     if (automatic && r != null && r.build != _declinedBuild) {
-      final go = await showDialog<bool>(
-        context: context,
-        builder: (ctx) => AlertDialog(
+      final go = await showParentDialog<bool>(context, (ctx) => AlertDialog(
           icon: const Icon(Icons.system_update_rounded, size: 40),
           title: Text(tf('Nouvelle version {v} disponible', {'v': r.version})),
           content: SingleChildScrollView(child: Text(r.notes)),
@@ -215,9 +213,7 @@ class _ParentPageState extends State<ParentPage> {
 
   Future<void> _rename(ChildProfile p) async {
     final field = TextEditingController(text: p.name);
-    final name = await showDialog<String>(
-      context: context,
-      builder: (ctx) => AlertDialog(
+    final name = await showParentDialog<String>(context, (ctx) => AlertDialog(
         title: Text(t('Prénom')),
         content: TextField(controller: field, autofocus: true, textCapitalization: TextCapitalization.words),
         actions: [
@@ -230,20 +226,41 @@ class _ParentPageState extends State<ParentPage> {
     if (mounted) setState(() {});
   }
 
+  /// Supprimer un enfant : confirmation, car son journal est effacé pour de bon.
+  Future<void> _removeChild(ChildProfile p) async {
+    final ok = await showParentDialog<bool>(context, (ctx) => AlertDialog(
+        title: Text(tf('Supprimer {name} ?', {'name': p.label})),
+        content: Text(t('Sa progression, ses séances et ses réglages seront effacés de cette tablette. Cela ne peut pas être annulé. Les dessins de l’album restent.')),
+        actions: [
+          TextButton(style: TextButton.styleFrom(minimumSize: const Size(48, 52)), onPressed: () => Navigator.pop(ctx, false), child: Text(t('Annuler'))),
+          FilledButton(
+            style: FilledButton.styleFrom(minimumSize: const Size(48, 52), backgroundColor: const Color(0xFFB3261E)),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(t('Supprimer')),
+          ),
+        ],
+      ),
+    );
+    if (ok != true || !mounted) return;
+    await app.removeChild(p.id);
+    if (!mounted) return;
+    setState(() => report = null);
+    _load();
+  }
+
   Future<void> _addChild() async {
     final field = TextEditingController();
     var years = 7;
     bool? boy;
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => StatefulBuilder(
+    final ok = await showParentDialog<bool>(context, (ctx) => StatefulBuilder(
         builder: (ctx, set) => AlertDialog(
           title: Text(t('Ajouter un enfant')),
           content: SingleChildScrollView(
             child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TextField(controller: field, autofocus: true, decoration: InputDecoration(labelText: t('Prénom (facultatif)')), textCapitalization: TextCapitalization.words),
+              // Sans ouverture automatique du clavier : il cachait le choix garçon ou fille, et « Ajouter » restait gris sans
+              // qu'on voie pourquoi.
+              TextField(controller: field, decoration: InputDecoration(labelText: t('Prénom (facultatif)')), textCapitalization: TextCapitalization.words),
               const SizedBox(height: 12),
-              Text(t('Âge')),
               Wrap(spacing: 6, children: [
                 ValueStepper(
                   label: t('Âge'),
@@ -323,6 +340,12 @@ class _ParentPageState extends State<ParentPage> {
                     deleteButtonTooltipMessage: t('Renommer'),
                   ),
                 ActionChip(avatar: const Icon(Icons.person_add_alt_1_rounded), label: Text(t('Ajouter un enfant')), onPressed: _addChild),
+                if (app.profiles.length > 1)
+                  ActionChip(
+                    avatar: const Icon(Icons.person_remove_alt_1_rounded),
+                    label: Text(tf('Supprimer {name}', {'name': app.current.label})),
+                    onPressed: () => _removeChild(app.current),
+                  ),
               ]),
               const Divider(height: 32),
               Text(tf('{name} est', {'name': app.current.label}), style: notebookTitle),

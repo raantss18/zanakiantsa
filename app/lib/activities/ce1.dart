@@ -543,8 +543,12 @@ class _SequenceActivityState extends State<SequenceActivity> {
           // La case vide a un bord épais et pointillé à l'œil : pas seulement une autre couleur.
           border: hole ? Border.all(color: shown ? green : ink, width: 4) : null,
         ),
-        child: Text(hole && !shown ? '?' : '$v',
-            style: TextStyle(fontFamily: 'Andika', fontSize: 44, fontWeight: FontWeight.w700, color: hole && shown ? green : ink)),
+        // « 1000 » en 44 et texte agrandi : il rétrécit dans sa case au lieu de déborder (revue du 2026-11-14).
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(hole && !shown ? '?' : '$v',
+              style: TextStyle(fontFamily: 'Andika', fontSize: 44, fontWeight: FontWeight.w700, color: hole && shown ? green : ink)),
+        ),
       );
     }
 

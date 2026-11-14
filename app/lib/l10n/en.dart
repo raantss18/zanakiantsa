@@ -288,4 +288,8 @@ const en = <String, String>{
   'Donner une étoile': 'Give a star',
   'Écrire un avis': 'Write a review',
   'Pas de navigateur disponible. L’adresse : {url}': 'No browser available. The address: {url}',
+  'Supprimer {name}': 'Remove {name}',
+  'Supprimer {name} ?': 'Remove {name}?',
+  'Sa progression, ses séances et ses réglages seront effacés de cette tablette. Cela ne peut pas être annulé. Les dessins de l’album restent.': 'Their progress, sessions and settings will be erased from this tablet. This cannot be undone. Drawings in the album stay.',
+  'Supprimer': 'Remove',
 };

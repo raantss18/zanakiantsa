@@ -124,7 +124,10 @@ class _BlocksActivityState extends State<BlocksActivity> {
       if (i > 0) await Future<void>.delayed(const Duration(milliseconds: 400));
       if (!mounted) return;
       trace = execute(maze, program);
-      for (final (j, s) in trace.states.indexed.skip(1)) {
+      // Un programme qui tourne en rond s'arrête au bout de 60 pas : on n'en montre que 12, sinon tout restait bloqué 23 s
+      // (revue du 2026-11-14).
+      final shown = trace.tooLong ? trace.states.take(13) : trace.states;
+      for (final (j, s) in shown.indexed.skip(1)) {
         await Future<void>.delayed(const Duration(milliseconds: 380));
         if (!mounted) return;
         setState(() {

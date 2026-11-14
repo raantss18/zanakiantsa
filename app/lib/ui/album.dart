@@ -38,8 +38,8 @@ class AlbumPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                PlayfulTitle(t('Mon album')),
-                const Spacer(),
+                // Le titre cède la place aux boutons sur un écran étroit (plutôt que de déborder).
+                Expanded(child: Align(alignment: Alignment.centerLeft, child: FittedBox(fit: BoxFit.scaleDown, child: PlayfulTitle(t('Mon album'))))),
                 Material(
                   color: surface,
                   shape: const CircleBorder(),

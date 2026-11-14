@@ -157,9 +157,13 @@ class _VideosPageState extends State<VideosPage> {
     if (!app.canWatchVideo) return _earnFirst();
     await Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => VideoPlayerPage(video: v, pool: pool),
+        builder: (_) => VideoPlayerPage(video: v, pool: pool, onChanged: _reload),
       ),
     );
+    await _reload();
+  }
+
+  Future<void> _reload() async {
     final s = await seenVideos(app);
     final h = await hiddenVideos(app);
     if (mounted) {
@@ -168,6 +172,16 @@ class _VideosPageState extends State<VideosPage> {
         hidden = h;
       });
     }
+    _changes.value++;
+  }
+
+  /// Fait relire « Tout voir » (page ouverte par-dessus) quand une vidéo est vue ou masquée.
+  final _changes = ValueNotifier(0);
+
+  @override
+  void dispose() {
+    _changes.dispose();
+    super.dispose();
   }
 
   @override
@@ -308,11 +322,15 @@ class _VideosPageState extends State<VideosPage> {
   Future<void> _openSubject(String id, List<Video> videos) async {
     await Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => _SubjectPage(
-          title: app.topic(id).name,
-          videos: videos,
-          seen: seen,
-          onPlay: _play,
+        // Relue à chaque changement : une vidéo masquée disparaît, une vidéo vue prend son « Vu ».
+        builder: (_) => ValueListenableBuilder(
+          valueListenable: _changes,
+          builder: (_, _, _) => _SubjectPage(
+            title: app.topic(id).name,
+            videos: [for (final v in videos) if (!hidden.contains(v.id)) v],
+            seen: seen,
+            onPlay: _play,
+          ),
         ),
       ),
     );
@@ -479,9 +497,14 @@ class _VideoCard extends StatelessWidget {
 /// de l'app couvre le lecteur en pause et à la fin (là où YouTube montre d'autres vidéos).
 /// Plein écran : bouton du lecteur, bouton de l'app, ou tablette tournée ; le retour Android en sort.
 class VideoPlayerPage extends StatefulWidget {
-  const VideoPlayerPage({super.key, required this.video, required this.pool});
+  const VideoPlayerPage({super.key, required this.video, required this.pool, this.onChanged});
   final Video video;
   final List<Video> pool;
+
+  /// Une vidéo vient d'être vue ou masquée : la page qui a ouvert le lecteur relit ses listes. Transmis à la vidéo suivante :
+  /// avec « D'autres vidéos », la page d'origine relisait trop tôt, et une vidéo masquée restait dans la liste (revue du
+  /// 2026-11-14).
+  final VoidCallback? onChanged;
   @override
   State<VideoPlayerPage> createState() => _VideoPlayerPageState();
 }
@@ -571,6 +594,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     await controller.pauseVideo();
     if (!mounted || !await askParent(context)) return;
     await hideVideo(app, widget.video.id);
+    widget.onChanged?.call();
     if (mounted) Navigator.of(context).pop();
   }
 
@@ -679,6 +703,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     if (marked) return;
     marked = true;
     await markSeen(app, widget.video.id);
+    widget.onChanged?.call();
     final now = await seenVideos(app);
     if (mounted) setState(() => seen = now);
   }
@@ -795,7 +820,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                           onTap: () => Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: (_) =>
-                                  VideoPlayerPage(video: v, pool: widget.pool),
+                                  VideoPlayerPage(video: v, pool: widget.pool, onChanged: widget.onChanged),
                             ),
                           ),
                         ),

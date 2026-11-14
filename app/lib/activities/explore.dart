@@ -75,7 +75,8 @@ class _SolidActivityState extends State<SolidActivity> {
                       if (id != right) setState(() => tried.add(id));
                       a.submit(id == right);
                     },
-              child: Text(solidNames[id]!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink)),
+              // « le cylindre » en 24 à 130 % dépassait le bouton : il rétrécit plutôt que d'être coupé.
+              child: FittedBox(fit: BoxFit.scaleDown, child: Text(solidNames[id]!, textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: ink))),
             ),
         ]),
       ]),
@@ -295,6 +296,24 @@ Map<String, Path> bodyPaths(Size s) {
   };
 }
 
+/// La partie du corps touchée en [p], null à côté. Les petites parties d'abord (elles sont posées au bord des grandes), avec
+/// une zone de toucher élargie vers 48 dp : le cou et les mains faisaient 30 à 45 dp, et un doigt à côté touchait la tête ou
+/// le tronc, compté comme une erreur (revue du 2026-11-14).
+String? bodyHit(Size size, Offset p) {
+  final paths = bodyPaths(size);
+  final u = min(size.width / 6, size.height / 10);
+  const order = ['mains', 'cou', 'pieds', 'tete', 'bras', 'jambes', 'tronc'];
+  // D'abord ce qui est touché exactement ; la zone élargie d'une petite partie ne prend jamais le toucher d'une autre partie.
+  final exact = order.where((k) => paths[k]!.contains(p)).firstOrNull;
+  if (exact != null) return exact;
+  for (final k in const ['cou', 'mains', 'pieds']) {
+    final b = paths[k]!.getBounds();
+    final grow = max(0.0, (48 - min(b.width, b.height)) / 2).clamp(0.0, 0.35 * u);
+    if (b.inflate(grow).contains(p)) return k;
+  }
+  return null;
+}
+
 class BodyActivity extends StatefulWidget {
   const BodyActivity({super.key, required this.attempt});
   final Attempt attempt;
@@ -326,8 +345,7 @@ class _BodyActivityState extends State<BodyActivity> {
   void _tap(Offset p) {
     if (a.busy || a.finished) return;
     // Les petites parties (mains, cou) d'abord : elles sont posées au bord des grandes.
-    final paths = bodyPaths(_size);
-    final hit = ['mains', 'cou', 'pieds', 'tete', 'bras', 'jambes', 'tronc'].where((k) => paths[k]!.contains(p)).firstOrNull;
+    final hit = bodyHit(_size, p);
     if (hit == null || tried.contains(hit)) return;
     final ok = hit == item.target;
     if (!ok) setState(() => tried.add(hit));
@@ -375,6 +393,17 @@ class _BodyPainter extends CustomPainter {
       canvas
         ..drawPath(p, Paint()..shader = LinearGradient(colors: [Color.lerp(base, Colors.white, 0.25)!, base, Color.lerp(base, Colors.black, 0.2)!]).createShader(b))
         ..drawPath(p, outline);
+      // Partie déjà essayée : une croix en plus du gris (jamais la couleur seule, docs/design.md).
+      if (tried.contains(k)) {
+        final c = b.center, r = min(b.width, b.height) * 0.3;
+        final cross = Paint()
+          ..color = const Color(0xFF1B211D)
+          ..strokeWidth = 3.5
+          ..strokeCap = StrokeCap.round;
+        canvas
+          ..drawLine(c + Offset(-r, -r), c + Offset(r, r), cross)
+          ..drawLine(c + Offset(r, -r), c + Offset(-r, r), cross);
+      }
       if (k == target) {
         canvas.drawPath(p, Paint()
           ..color = gold

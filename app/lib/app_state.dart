@@ -138,6 +138,22 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Supprime un enfant ajouté par erreur (espace parent, après confirmation) : son profil et tout son journal. Jamais le
+  /// dernier : l'app a toujours au moins un enfant. Avant, un profil ajouté restait pour toujours (revue du 2026-11-14).
+  Future<bool> removeChild(int id) async {
+    if (profiles.length <= 1 || !profiles.any((p) => p.id == id)) return false;
+    profiles = [for (final p in profiles) if (p.id != id) p];
+    await _saveProfiles();
+    await store.deleteChild(id);
+    if (store.child == id) {
+      await switchChild(profiles.first.id);
+    } else {
+      notifyListeners();
+    }
+    chosen = profiles.length <= 1 || chosen;
+    return true;
+  }
+
   Future<void> renameChild(int id, String name) async {
     profiles = [for (final p in profiles) p.id == id ? ChildProfile(id, name.trim()) : p];
     await _saveProfiles();

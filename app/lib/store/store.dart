@@ -78,6 +78,13 @@ class Store {
           )
       ];
 
+  /// Efface tout ce qui appartient à l'enfant [id] : réponses, séances, réglages (`c<id>.…`). Les réglages communs restent.
+  Future<void> deleteChild(int id) => _db.transaction((tx) async {
+        await tx.delete('answers', where: 'child = ?', whereArgs: [id]);
+        await tx.delete('sessions', where: 'child = ?', whereArgs: [id]);
+        await tx.delete('settings', where: 'k LIKE ?', whereArgs: ['c$id.%']);
+      });
+
   Future<String?> get(String k) async =>
       (await _db.query('settings', where: 'k = ?', whereArgs: [_k(k)])).firstOrNull?['v'] as String?;
 
