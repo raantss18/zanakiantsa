@@ -37,7 +37,7 @@ void main() {
     ],
     'videos': [
       {
-        'id': 'a',
+        'id': 'aaaaaaaaaaa',
         'c': 0,
         't': 'Pourquoi les feuilles tombent',
         'd': 240,
@@ -45,7 +45,7 @@ void main() {
         'm': 'automne arbre',
       },
       {
-        'id': 'b',
+        'id': 'bbbbbbbbbbb',
         'c': 1,
         't': 'La forêt amazonienne',
         'd': 540,
@@ -53,7 +53,7 @@ void main() {
         'm': 'jungle biodiversité',
       },
       {
-        'id': 'c',
+        'id': 'ccccccccccc',
         'c': 1,
         't': 'Les volcans',
         'd': 900,
@@ -61,7 +61,7 @@ void main() {
         'm': 'lave séisme',
       },
       {
-        'id': 'd',
+        'id': 'ddddddddddd',
         'c': 2,
         't': 'La Révolution française',
         'd': 1500,
@@ -69,7 +69,7 @@ void main() {
         'm': 'histoire 1789',
       },
       {
-        'id': 'e',
+        'id': 'eeeeeeeeeee',
         'c': 3,
         't': 'Why do leaves fall',
         'd': 200,
@@ -77,7 +77,7 @@ void main() {
         'm': 'autumn',
       },
       {
-        'id': 'x',
+        'id': 'xxxxxxxxxxx',
         'c': 9,
         't': 'chaîne inconnue',
         'd': 100,
@@ -89,22 +89,22 @@ void main() {
 
   test('chaque enfant ne voit que les chaînes de son âge, dans sa langue', () {
     expect(
-      cat.videos.map((v) => v.id),
+      cat.videos.map((v) => v.id[0]),
       isNot(contains('x')),
       reason: 'vidéo d\'une chaîne absente : ignorée',
     );
-    expect(cat.forChild(age: 6, lang: 'fr').map((v) => v.id), ['a']);
-    expect(cat.forChild(age: 6, lang: 'en').map((v) => v.id), ['e']);
-    expect(cat.forChild(age: 9, lang: 'fr').map((v) => v.id), ['b', 'c']);
+    expect(cat.forChild(age: 6, lang: 'fr').map((v) => v.id[0]), ['a']);
+    expect(cat.forChild(age: 6, lang: 'en').map((v) => v.id[0]), ['e']);
+    expect(cat.forChild(age: 9, lang: 'fr').map((v) => v.id[0]), ['b', 'c']);
   });
 
   test('pas de limite de durée : une longue vidéo éducative est permise même aux petits', () {
     expect(
-      cat.forChild(age: 9, lang: 'fr').map((v) => v.id),
+      cat.forChild(age: 9, lang: 'fr').map((v) => v.id[0]),
       contains('c'),
       reason: '« Les volcans » dure 15 min',
     );
-    expect(cat.forChild(age: 14, lang: 'fr').map((v) => v.id), [
+    expect(cat.forChild(age: 14, lang: 'fr').map((v) => v.id[0]), [
       'b',
       'c',
       'd',
@@ -113,28 +113,28 @@ void main() {
 
   test('la recherche ne cherche que dans les vidéos permises, sans tenir compte des accents', () {
     final pool = cat.forChild(age: 9, lang: 'fr');
-    expect(search(pool, 'foret').map((v) => v.id), ['b']);
-    expect(search(pool, 'Biodiversité jungle').map((v) => v.id), ['b']);
-    expect(search(pool, 'volcan').map((v) => v.id), ['c']);
+    expect(search(pool, 'foret').map((v) => v.id[0]), ['b']);
+    expect(search(pool, 'Biodiversité jungle').map((v) => v.id[0]), ['b']);
+    expect(search(pool, 'volcan').map((v) => v.id[0]), ['c']);
     expect(
       search(pool, 'révolution'),
       isEmpty,
       reason: 'chaîne d\'un autre âge',
     );
     expect(search(pool, ' '), isEmpty);
-    expect(search(cat.forChild(age: 14, lang: 'fr'), 'révolution 1789').map((v) => v.id), ['d'], reason: 'les nombres comptent');
+    expect(search(cat.forChild(age: 14, lang: 'fr'), 'révolution 1789').map((v) => v.id[0]), ['d'], reason: 'les nombres comptent');
   });
 
   test('liste de départ : pas encore vues d\'abord, puis les vues ; d\'autres vidéos ensuite', () {
     final pool = cat.forChild(age: 14, lang: 'fr');
-    expect(suggestions(pool, seen: {'d'}).map((v) => v.id).first, isNot('d'));
-    expect(suggestions(pool, seen: {'d'}).map((v) => v.id).last, 'd');
+    expect(suggestions(pool, seen: {'ddddddddddd'}).map((v) => v.id[0]).first, isNot('d'));
+    expect(suggestions(pool, seen: {'ddddddddddd'}).map((v) => v.id[0]).last, 'd');
     expect(
       suggestions(pool, seen: {}, domains: {'explorer'}).first.channel.domains,
       contains('explorer'),
     );
-    final b = pool.firstWhere((v) => v.id == 'b');
-    expect(more(pool, b, {'c'}).map((v) => v.id), [
+    final b = pool.firstWhere((v) => v.id[0] == 'b');
+    expect(more(pool, b, {'ccccccccccc'}).map((v) => v.id[0]), [
       'd',
     ], reason: 'même matière, pas encore vue');
   });
@@ -147,9 +147,9 @@ void main() {
 
   test('le lecteur n\'accepte que les vidéos permises à cet enfant', () {
     final pool = cat.forChild(age: 9, lang: 'fr');
-    expect(allowedVideo('b', pool), isTrue);
-    expect(allowedVideo('c', pool), isTrue, reason: 'longue, mais de sa liste');
-    expect(allowedVideo('d', pool), isFalse, reason: 'chaîne d\'un autre âge');
+    expect(allowedVideo('bbbbbbbbbbb', pool), isTrue);
+    expect(allowedVideo('ccccccccccc', pool), isTrue, reason: 'longue, mais de sa liste');
+    expect(allowedVideo('ddddddddddd', pool), isFalse, reason: 'chaîne d\'un autre âge');
     expect(allowedVideo('dQw4w9WgXcQ', pool), isFalse, reason: 'hors des chaînes choisies');
     expect(allowedVideo('', pool), isTrue, reason: 'lecteur pas encore prêt : rien à bloquer');
   });
@@ -163,10 +163,10 @@ void main() {
 
   test('chaque vidéo est rangée dans sa matière, parmi celles de sa chaîne', () {
     final pool = cat.forChild(age: 9, lang: 'fr');
-    final foret = pool.firstWhere((v) => v.id == 'b');
+    final foret = pool.firstWhere((v) => v.id[0] == 'b');
     expect(foret.channel.domains, ['nature', 'explorer']);
     expect(videoSubject(foret), 'nature', reason: '« jungle biodiversité » : des mots de sciences');
-    final rev = cat.forChild(age: 14, lang: 'fr').firstWhere((v) => v.id == 'd');
+    final rev = cat.forChild(age: 14, lang: 'fr').firstWhere((v) => v.id[0] == 'd');
     expect(videoSubject(rev), 'explorer');
     final rows = bySubject(cat.forChild(age: 14, lang: 'fr'), seen: {});
     expect(rows.values.expand((r) => r).length, 3, reason: 'chaque vidéo dans une seule rangée');
@@ -189,6 +189,6 @@ void main() {
 
   test('durée écrite', () {
     expect(cat.videos.first.length, '4 min');
-    expect(cat.videos.firstWhere((v) => v.id == 'd').length, '25 min');
+    expect(cat.videos.firstWhere((v) => v.id[0] == 'd').length, '25 min');
   });
 }

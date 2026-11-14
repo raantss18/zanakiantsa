@@ -52,6 +52,16 @@ Future<Release?> parseSigned(List<int> body, String sigB64, {String publicKey = 
   }
 }
 
+/// L'APK ne se télécharge qu'en HTTPS depuis github.com, même si l'adresse est signée (audit du 2026-11-14) : une
+/// erreur dans release.json ne peut pas envoyer l'app ailleurs. Les redirections de GitHub vers son CDN sont suivies ;
+/// l'empreinte SHA-256 signée reste la preuve du contenu.
+bool trustedDownload(String url) {
+  final u = Uri.tryParse(url);
+  // Essais seulement : avec `--dart-define=UPDATE_URL=…` (jamais dans une version publiée), l'adresse d'essai est acceptée.
+  if (const bool.hasEnvironment('UPDATE_URL')) return u != null;
+  return u != null && u.scheme == 'https' && u.host == 'github.com';
+}
+
 class Updater {
   static const _channel = MethodChannel('zanakiantsa/system');
 
@@ -74,23 +84,34 @@ class Updater {
   /// Télécharge, vérifie l'empreinte, puis ouvre l'installateur Android. Faux si quelque chose échoue.
   Future<bool> install(Release r, void Function(double) progress) async {
     try {
-      final dir = Directory('${(await getTemporaryDirectory()).path}/updates')..createSync(recursive: true);
+      if (!trustedDownload(r.url)) return false;
+      final dir = Directory('${(await getTemporaryDirectory()).path}/updates');
+      // Les anciens téléchargements (environ 40 Mo par version) ne restent pas dans le cache.
+      if (dir.existsSync()) dir.deleteSync(recursive: true);
+      dir.createSync(recursive: true);
       final file = File('${dir.path}/zanakiantsa-${r.build}.apk');
-      final req = await http.Client().send(http.Request('GET', Uri.parse(r.url)));
-      if (req.statusCode != 200) return false;
+      final client = http.Client();
+      final req = await client.send(http.Request('GET', Uri.parse(r.url))).timeout(const Duration(seconds: 30));
+      if (req.statusCode != 200) {
+        client.close();
+        return false;
+      }
       final sink = file.openWrite();
       var got = 0;
       final hasher = Sha256().newHashSink();
-      await for (final chunk in req.stream) {
+      // Un flux qui s'arrête plus d'une minute, ou plus gros que la taille signée, est abandonné.
+      await for (final chunk in req.stream.timeout(const Duration(seconds: 60))) {
+        got += chunk.length;
+        if (r.bytes > 0 && got > r.bytes) break;
         sink.add(chunk);
         hasher.add(chunk);
-        got += chunk.length;
         progress(r.bytes > 0 ? got / r.bytes : 0);
       }
       await sink.close();
+      client.close();
       hasher.close();
       final hex = (await hasher.hash()).bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
-      if (hex != r.sha256.toLowerCase()) {
+      if (hex != r.sha256.toLowerCase() || (r.bytes > 0 && got != r.bytes)) {
         await file.delete();
         return false;
       }

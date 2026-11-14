@@ -3,6 +3,10 @@
 Seul Antsa publie. La clé privée Ed25519 est dans `release-keys/ed25519.pem` (hors de Git) : **la sauvegarder
 ailleurs** — sans elle, plus aucune mise à jour ne peut être signée et les apps installées refuseront toute autre clé.
 
+**Deuxième fichier à sauvegarder** (audit du 2026-11-14, ADR 0072) : `~/.android/debug.keystore`. C'est la clé Android
+qui signe les APK publiés ; si elle est perdue, les tablettes refusent toute mise à jour (il faudrait désinstaller l'app,
+donc perdre le journal de l'enfant).
+
 1. Monter la version : `python3 tool/version.py --bump`. Règle (ADR 0062) : trois chiffres de 0 à 9 qui se retiennent
    comme un compteur, 0.1.9 → 0.2.0, 1.9.9 → 2.0.0 ; le build (`+n`) augmente toujours de 1.
 2. `cd app && flutter test && tool/release.sh "Ce que la version permet de faire."`

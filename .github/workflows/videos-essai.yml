@@ -17,10 +17,10 @@ jobs:
   mesure:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           FICHIER: ${{ inputs.fichier }}
         run: |
-          pip install --quiet pyyaml
+          pip install --quiet pyyaml==6.0.3
           python3 tool/videos.py --chaines "$FICHIER" --out /tmp/essai.json

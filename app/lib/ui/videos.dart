@@ -483,6 +483,11 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     try {
       id = (await controller.videoData).videoId;
     } catch (_) {
+      // On ne sait pas ce qui joue : dans le doute, on arrête (audit du 2026-11-14 ; avant, la vidéo continuait).
+      try {
+        await controller.stopVideo();
+      } catch (_) {}
+      if (mounted) setState(() => blocked = true);
       return;
     }
     if (!mounted || id == widget.video.id || allowedVideo(id, widget.pool)) {

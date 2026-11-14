@@ -23,10 +23,50 @@ Future<void> openParentSpace(
   }
 }
 
+/// Essais de la porte (audit de sécurité du 2026-11-14) : avant, dix réponses possibles et des essais sans limite — un
+/// enfant pouvait toutes les essayer. Après [freeTries] erreurs de suite, la porte se ferme 30 s, puis le double à chaque
+/// nouvelle erreur (5 min au plus) ; une bonne réponse remet tout à zéro. Gardé en mémoire : relancer l'app redonne trois essais.
+class GateLock {
+  static const freeTries = 3;
+  int failures = 0;
+  DateTime? until;
+
+  /// Secondes à attendre encore ; 0 : la porte accepte une réponse.
+  int waitSeconds(DateTime now) => until == null || !now.isBefore(until!) ? 0 : (until!.difference(now).inMilliseconds / 1000).ceil();
+
+  void answered(bool ok, DateTime now) {
+    if (ok) {
+      failures = 0;
+      until = null;
+      return;
+    }
+    failures++;
+    if (failures >= freeTries) {
+      final seconds = min(300, 30 << min(failures - freeTries, 4));
+      until = now.add(Duration(seconds: seconds));
+    }
+  }
+}
+
+final gateLock = GateLock();
+
 /// La question de la porte parent seule : vrai si la bonne réponse est donnée (sert aussi à masquer une vidéo).
 Future<bool> askParent(BuildContext context) async {
+  final wait = gateLock.waitSeconds(DateTime.now());
+  if (wait > 0) {
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(t('Espace parent')),
+        content: Text(tf('Trop d’essais. Réessayez dans {s} secondes.', {'s': wait}), style: const TextStyle(fontSize: 20)),
+        actions: [TextButton(style: TextButton.styleFrom(minimumSize: const Size(48, 52)), onPressed: () => Navigator.pop(ctx), child: Text(t('Annuler')))],
+      ),
+    );
+    return false;
+  }
   final r = Random();
-  final a = 6 + r.nextInt(4), b = 6 + r.nextInt(4);
+  // Un nombre de 12 à 19 par un nombre de 6 à 9 : 32 questions, hors des tables apprises par cœur à l'école.
+  final a = 12 + r.nextInt(8), b = 6 + r.nextInt(4);
   final field = TextEditingController();
   final ok = await showDialog<bool>(
     context: context,
@@ -115,5 +155,7 @@ Future<bool> askParent(BuildContext context) async {
       );
     },
   );
+  // « Annuler » (null ou faux sans réponse saisie) ne compte pas comme un essai.
+  if (ok == true || field.text.trim().isNotEmpty) gateLock.answered(ok == true, DateTime.now());
   return ok == true;
 }

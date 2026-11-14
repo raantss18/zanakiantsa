@@ -4,7 +4,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 SITE=https://raantss18.github.io/zanakiantsa/
-read -r VERSION NOTES < <(python3 -c "import json;l=json.load(open('release-out/release.json'))['latest'];print(l['version'],l['notes'])")
+# Deux lectures : des notes sur plusieurs lignes seraient coupées à la première par un seul `read` (audit du 2026-11-14).
+VERSION=$(python3 -c "import json;print(json.load(open('release-out/release.json'))['latest']['version'])")
+NOTES=$(python3 -c "import json;print(json.load(open('release-out/release.json'))['latest']['notes'])")
 APK="release-out/zanakiantsa-$VERSION-arm64-v8a.apk"
 [ -f "$APK" ] || { echo "Fichier absent : $APK" >&2; exit 1; }
 gh release create "app-v$VERSION" "$APK" release-out/release.json release-out/release.json.sig \

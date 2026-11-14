@@ -1,11 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Réseau : seulement pour les mises à jour (ADR 0011) et le modèle d'écriture ML Kit (ADR 0009). -->
+    <!-- Réseau : les mises à jour (ADR 0011), le modèle d'écriture ML Kit (ADR 0009) et les vidéos YouTube (ADR 0068). -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <application
         android:label="Zanak'i Antsa"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules">
         <activity
             android:name=".MainActivity"
             android:exported="true"

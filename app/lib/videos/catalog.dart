@@ -42,6 +42,11 @@ class Video {
   final int seconds;
   final Channel channel;
 
+  /// Un identifiant YouTube : 11 caractères parmi lettres, chiffres, « - » et « _ ». Le catalogue vient du réseau : une
+  /// entrée qui n'y ressemble pas est ignorée (audit du 2026-11-14), elle ne finit ni dans une adresse ni dans le lecteur.
+  static final _idShape = RegExp(r'^[A-Za-z0-9_-]{11}$');
+  static bool validId(Object? id) => id is String && _idShape.hasMatch(id);
+
   String get thumbnail => 'https://i.ytimg.com/vi/$id/mqdefault.jpg';
 
   /// Le titre à montrer, sans les mots-dièse (« #science ») que certaines chaînes y ajoutent.
@@ -68,7 +73,7 @@ class Catalogue {
       ] {
     videos = [
       for (final v in j['videos'] as List? ?? const [])
-        if ((v as Map)['c'] is int && v['c'] < channels.length)
+        if ((v as Map)['c'] is int && v['c'] < channels.length && Video.validId(v['id']))
           Video(Map<String, dynamic>.from(v), channels[v['c'] as int]),
     ];
   }

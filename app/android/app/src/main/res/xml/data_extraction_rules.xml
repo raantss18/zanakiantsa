@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Le journal de l'enfant, les prénoms et les dessins ne quittent pas l'appareil (CLAUDE.md, règle 5 ; audit du
+     2026-11-14) : rien dans la sauvegarde Google. Le transfert direct d'une tablette à une autre reste permis : les
+     données vont d'un appareil de la famille à l'autre, sans passer par un serveur.
+     https://developer.android.com/guide/topics/data/autobackup#include-exclude-android-12 -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" />
+        <exclude domain="file" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="external" />
+    </cloud-backup>
+</data-extraction-rules>
