@@ -360,14 +360,17 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   empilées par un double toucher ; progression recalculée des dizaines de fois par affichage ; fin de séance comptée deux
   fois ; question figée si l'enregistrement échoue ; échéances de révision au changement d'heure ; défi du jour qui
   changeait dans la journée ; « 1 compétences » ; arrêt de l'émulateur qui perdait l'installation.
-- ⏳ Reste de la revue des activités (constats 3 à 15, non corrigés) : dernière aide illisible voix coupée
-  (`session.dart` 222-238) ; voix de la démonstration coupée par l'activité (`numbers.dart:462`, `letters.dart:55`,
-  `listen.dart:37`) ; partage inégal en démonstration (`numbers.dart:325`) ; consigne qui coupe « Bravo » ; sans modèle
-  ML Kit tout dessin est compté réussi (`draw.dart:179`) ; cibles du corps humain < 48 dp (`explore.dart:281`) ; touchers
-  acceptés pendant l'affichage d'un mauvais coup (`chess.dart`, `problem.dart:79`) ; explication fausse à l'horloge
-  (`ce1.dart:405`) ; dénombrer pendant la démonstration ; `setState` après `dispose` (denombrer, numbers, blocks, calcul,
-  draw) ; bouton ✓ muet du dessin ; programme qui tourne en rond animé 23 s (`blocks.dart:126`).
-- ⏳ Reprise de séance au plan périmé (`session.dart` 306-323). ⏳ Revue « écrans, voix, contenu » : rapport pas encore lu.
+- ✅ Reste de la revue corrigé le même soir : voix coupée (dernière aide, démonstrations), voix des démonstrations
+  (casser une dizaine, syllabes, écoute), partage inégal, consigne qui coupait « Bravo », horloge, dénombrer, touchers pendant
+  un mauvais coup (échecs, problèmes), `setState` après fermeture ; espace parent : un seul téléchargement de mise à jour,
+  « Plus tard » retenu ; voix qui continuait après l'écran ; « Qui joue ? » ; vidéos (portrait rétabli, vues, cache abîmé,
+  « cœur ») ; « Lis-moi » ; « Enfant 1 » traduit ; pastilles sur téléphone étroit.
+- ✅ Plein écran des vidéos : on en sort toujours (bouton en haut à gauche, retour Android) ; le lecteur n'y rentre plus seul
+  en paysage (cause du blocage signalé par Antsa). Vidéos en récompense avant 10 ans (ADR 0073). Note de l'app = étoiles
+  GitHub, sur le site et dans l'espace parent (ADR 0074). Ticket n° 1 (chaînes candidates) relu et fermé.
+- ⏳ Pas corrigé : sans modèle ML Kit, un dessin compte comme réussi (`draw.dart:179`) ; cibles du corps humain < 48 dp
+  (`explore.dart:281`) ; programme qui tourne en rond animé 23 s (`blocks.dart:126`) ; reprise au plan périmé ; supprimer un
+  enfant (pas de bouton) ; vidéo masquée encore visible dans « Tout voir ».
 
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
