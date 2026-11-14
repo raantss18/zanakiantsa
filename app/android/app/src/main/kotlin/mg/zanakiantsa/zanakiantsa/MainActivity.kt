@@ -42,6 +42,20 @@ class MainActivity : FlutterActivity() {
                     })
                     result.success(true)
                 }
+                // Les pages du projet sur GitHub (avis, ADR 0074), et elles seules : jamais une adresse venue d'ailleurs.
+                "open" -> {
+                    val url = call.argument<String>("url") ?: ""
+                    if (!url.startsWith("https://github.com/raantss18/zanakiantsa")) {
+                        result.success(false)
+                        return@setMethodCallHandler
+                    }
+                    try {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                        result.success(true)
+                    } catch (e: Exception) {
+                        result.success(false) // pas de navigateur (ou bloqué par le contrôle parental)
+                    }
+                }
                 else -> result.notImplemented()
             }
         }

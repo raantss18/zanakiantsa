@@ -14,6 +14,9 @@ on:
       - '.github/workflows/site.yml'
   release:
     types: [published, edited, deleted]
+  # Une étoile donnée au dépôt : le site et l'app affichent le nouveau nombre (avis, ADR 0074).
+  watch:
+    types: [started]
   schedule:
     - cron: '17 3 * * *'
   workflow_dispatch:
@@ -57,8 +60,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh api "repos/${{ github.repository }}/releases?per_page=30" > releases.json
 
+      - name: Étoiles du dépôt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api "repos/${{ github.repository }}" > depot.json
+
       - name: Construire le site
-        run: python3 tool/build_site.py --releases releases.json --out _site
+        run: python3 tool/build_site.py --releases releases.json --depot depot.json --out _site
 
       # Catalogue des vidéos éducatives (ADR 0068) : vidéos des chaînes choisies, filtrées, lues par l'app avec le lecteur
       # officiel de YouTube. La clé de l'interface YouTube est un secret du dépôt ; sans elle, le catalogue est vide.

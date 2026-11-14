@@ -10,6 +10,7 @@ const translatedFiles = [
   'lib/parent/dashboard.dart',
   'lib/parent/notebook_style.dart',
   'lib/parent/gate.dart',
+  'lib/parent/rating.dart',
   'lib/ui/home.dart',
   'lib/ui/session.dart',
   'lib/ui/topic_hub.dart',

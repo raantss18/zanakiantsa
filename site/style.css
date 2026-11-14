@@ -252,3 +252,11 @@ h3 { font-size: 1.3rem; line-height: var(--u); margin-bottom: 0; }
   .son { min-height: 44px; padding: 0 14px 0 10px; font-size: .9rem; left: 8px; top: 8px; border-width: 2px; }
   .son svg { width: 22px; height: 22px; }
 }
+
+/* Votre avis (ADR 0074) : le nombre d'étoiles du dépôt, et les deux façons de donner son avis. */
+.avis { max-width: 46rem; }
+.avis-compte { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; }
+.avis-compte svg { width: 44px; height: 44px; fill: #f7b42c; stroke: #8a5a00; stroke-width: 1; flex: none; }
+.avis-boutons { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.avis-boutons a:not(.bouton) { min-height: 48px; display: inline-flex; align-items: center; }
+.avis .petit { font-size: .95rem; opacity: .85; }

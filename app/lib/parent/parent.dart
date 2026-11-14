@@ -17,6 +17,7 @@ import '../ui/universe.dart';
 import 'dashboard.dart';
 import 'notebook_style.dart';
 import '../update/updater.dart';
+import 'rating.dart';
 
 /// Espace parent : âge de l'enfant, rapport de la semaine, modèle d'écriture, mises à jour.
 class ParentPage extends StatefulWidget {
@@ -437,6 +438,11 @@ class _ParentPageState extends State<ParentPage> {
                     child: Text(t('Installer')),
                   ),
               ],
+              const Divider(height: 32),
+              // Votre avis (ADR 0074) : la note de l'app, ce sont les étoiles du dépôt GitHub.
+              Text(t('Votre avis'), style: notebookTitle),
+              const SizedBox(height: 4),
+              const RatingCard(),
               const Divider(height: 32),
               // À propos : une question, un souci d'installation (demande d'Antsa, vidéo d'aide).
               Text(t('À propos'), style: notebookTitle),

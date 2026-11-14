@@ -141,10 +141,20 @@ def atom(vs, notes, maintenant):
         f"<author><name>Antsa</name></author>{''.join(entrees)}</feed>\n")
 
 
+def etoiles_fr(n) -> str:
+    """Le nombre d'étoiles, écrit en mots pour la page (ADR 0074)."""
+    if n is None:
+        return '<strong>Les étoiles</strong> du projet sur GitHub'
+    if n == 0:
+        return '<strong>Pas encore d\'étoile</strong> sur GitHub : la première peut être la vôtre'
+    return f'<strong>{n} étoile</strong> sur GitHub' if n == 1 else f'<strong>{n} étoiles</strong> sur GitHub'
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--releases', required=True, help='JSON de `gh api repos/<dépôt>/releases`')
     ap.add_argument('--out', required=True)
+    ap.add_argument('--depot', help='JSON de `gh api repos/<dépôt>` : le nombre d\'étoiles (avis, ADR 0074)')
     a = ap.parse_args()
 
     vs = versions(json.loads(Path(a.releases).read_text(encoding='utf-8')))
@@ -158,6 +168,12 @@ def main():
         shutil.rmtree(out)
     shutil.copytree(SITE, out, ignore=shutil.ignore_patterns('notes.json'))
 
+    # Les avis (ADR 0074) : les étoiles du dépôt GitHub. Écrites dans la page et dans avis.json, que l'app lit sur ce site :
+    # ni le site ni l'app ne contactent GitHub depuis l'appareil de l'utilisateur.
+    etoiles = None
+    if a.depot and Path(a.depot).exists():
+        etoiles = json.loads(Path(a.depot).read_text(encoding='utf-8')).get('stargazers_count')
+
     ds = domaines(dernier['tag'])
     for d in ds:
         shutil.copy(RACINE / 'app/assets/art' / f"{d['icone']}.svg", out / 'img')
@@ -168,6 +184,7 @@ def main():
         'VERSION': e(dernier['version']), 'VERSION_DATE': date_fr(dernier['date']), 'TAILLE': taille_fr(dernier['taille']),
         'APK_URL': e(dernier['apk']), 'SHA256': e(dernier['sha256'] or 'non fournie'), 'RELEASE_URL': e(dernier['url']),
         'VERSIONS': html_versions(vs), 'NOTES': html_notes(notes),
+        'ETOILES': etoiles_fr(etoiles),
     }
     page = (SITE / 'index.html').read_text(encoding='utf-8')
     for cle, val in valeurs.items():
@@ -184,6 +201,7 @@ def main():
     maintenant = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     (out / 'feed.xml').write_text(atom(vs, notes, maintenant), encoding='utf-8')
     (out / '.nojekyll').write_text('', encoding='utf-8')
+    (out / 'avis.json').write_text(json.dumps({'etoiles': etoiles, 'maj': maintenant}), encoding='utf-8')
     print(f"Site construit dans {out} : version {dernier['version']}, {len(vs)} version(s), {len(notes)} note(s).")
 
 
