@@ -138,9 +138,14 @@ class _ParentPageState extends State<ParentPage> {
           title: Text(tf('Nouvelle version {v} disponible', {'v': r.version})),
           content: SingleChildScrollView(child: Text(r.notes)),
           actions: [
-            TextButton(style: TextButton.styleFrom(minimumSize: const Size(48, 52)), onPressed: () => Navigator.pop(ctx, false), child: Text(t('Plus tard'))),
+            TextButton(
+              style: TextButton.styleFrom(minimumSize: const Size(48, 52), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 18, fontWeight: FontWeight.w700)),
+              onPressed: () => Navigator.pop(ctx, false),
+              child: Text(t('Plus tard')),
+            ),
             FilledButton.icon(
-              style: FilledButton.styleFrom(minimumSize: const Size(160, 52)),
+              // La taille du texte est fixée ici : le thème du cahier donne aux boutons un texte de titre, qui débordait de la fenêtre.
+              style: FilledButton.styleFrom(minimumSize: const Size(160, 52), textStyle: const TextStyle(fontFamily: 'Andika', fontSize: 18, fontWeight: FontWeight.w700)),
               onPressed: () => Navigator.pop(ctx, true),
               icon: const Icon(Icons.download_rounded),
               label: Text(t('Mettre à jour')),

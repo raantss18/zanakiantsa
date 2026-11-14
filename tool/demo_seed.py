@@ -53,5 +53,7 @@ owner = subprocess.check_output(adb + ['shell', 'stat', '-c', '%U', f'/data/data
 run('shell', 'rm', '-f', f'/data/data/{pkg}/databases/zanakiantsa.db-journal', f'/data/data/{pkg}/databases/zanakiantsa.db-wal')
 run('push', path, f'/data/data/{pkg}/databases/zanakiantsa.db')
 run('shell', 'chown', f'{owner}:{owner}', f'/data/data/{pkg}/databases/zanakiantsa.db')
-run('shell', 'restorecon', '-R', f'/data/data/{pkg}/databases')
+# L'étiquette SELinux du dossier (avec les catégories de l'app) : sans elle, l'app ne peut pas ouvrir une base neuve.
+label = subprocess.check_output(adb + ['shell', 'stat', '-c', '%C', f'/data/data/{pkg}/databases']).decode().strip()
+run('shell', 'chcon', label, f'/data/data/{pkg}/databases/zanakiantsa.db')
 print('base de démonstration installée :', serial)
