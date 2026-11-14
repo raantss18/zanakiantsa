@@ -129,6 +129,27 @@ class _ParentPageState extends State<ParentPage> {
               ? null
               : t('Pas de nouvelle version (ou pas de réseau).');
     });
+    // Trouvée à l'entrée : elle se propose toute seule, le parent n'a rien à chercher (demande d'Antsa du 2026-11-14).
+    if (automatic && r != null) {
+      final go = await showDialog<bool>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          icon: const Icon(Icons.system_update_rounded, size: 40),
+          title: Text(tf('Nouvelle version {v} disponible', {'v': r.version})),
+          content: SingleChildScrollView(child: Text(r.notes)),
+          actions: [
+            TextButton(style: TextButton.styleFrom(minimumSize: const Size(48, 52)), onPressed: () => Navigator.pop(ctx, false), child: Text(t('Plus tard'))),
+            FilledButton.icon(
+              style: FilledButton.styleFrom(minimumSize: const Size(160, 52)),
+              onPressed: () => Navigator.pop(ctx, true),
+              icon: const Icon(Icons.download_rounded),
+              label: Text(t('Mettre à jour')),
+            ),
+          ],
+        ),
+      );
+      if (go == true && mounted) await _install();
+    }
   }
 
   /// En haut de l'espace parent, dès qu'une nouvelle version est trouvée : le bouton pour l'installer, sans chercher plus bas.
@@ -250,6 +271,11 @@ class _ParentPageState extends State<ParentPage> {
             padding: readablePadding(context, side: 36, bottom: 48),
             children: [
               if (release != null) _updateBanner(),
+              // Le bilan d'abord (2026-11-14) : c'est ce qu'un parent vient lire ; les réglages suivent.
+              // Tableau de bord (ADR 0061) : temps, réussite du premier coup, progrès par domaine, à revoir.
+              Text(t('En un coup d’œil'), style: notebookTitle),
+              if (r == null) const LinearProgressIndicator() else Dashboard(app: app, sessions: sessions),
+              const Divider(height: 32),
               _LanguageSwitch(app: app),
               const Divider(height: 32),
               // Vidéos (ADR 0068) : actives sans réglage, à la demande d'Antsa ; le parent doit savoir ce qui part chez Google.
@@ -318,10 +344,6 @@ class _ParentPageState extends State<ParentPage> {
                     },
                   ),
               ]),
-              const Divider(height: 32),
-              // Tableau de bord (ADR 0061) : temps, réussite du premier coup, progrès par domaine, à revoir.
-              Text(t('En un coup d’œil'), style: notebookTitle),
-              if (r == null) const LinearProgressIndicator() else Dashboard(app: app, sessions: sessions),
               const Divider(height: 32),
               Text(t('La voix'), style: notebookTitle),
               Text(

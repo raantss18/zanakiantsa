@@ -339,6 +339,19 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   débranchée pendant l'essai, 2026-11-08). ✅ Écouté sur la SM-X135G (Whisper + journal du moteur) : « × » → fois,
   « ÷ » → divisé par, « ≤ » → inférieur ou égal à, « f(2) » → f de 2, « u₁ » → u indice 1 ; E(X), P(A) ajoutés ensuite.
 
+## 2026-11-14 — Révision, défi, série, bilan (ADR 0071) et audit de sécurité (ADR 0072)
+
+- ✅ Accueil : rangée « série de jours · À revoir · Défi du jour » ; révision du jour tous domaines mêlés ; question proche
+  après une erreur (pastille « On réessaie ») ; bilan de la semaine en phrases, en haut de l'espace parent.
+  Vérifié : 281 tests ; émulateur `zanakiantsa_tab` avec `tool/demo_seed.py` (accueil, révision, question proche, bilan).
+- ✅ Mise à jour plus visible (demande d'Antsa) : recherche à chaque lancement, pastille « Mise à jour » sur l'accueil et
+  point sur le cadenas ; à l'entrée de l'espace parent, la nouvelle version se propose seule dans une fenêtre.
+- ✅ Audit : sauvegarde Google coupée, porte parentale limitée, téléchargement de mise à jour durci, identifiants de
+  vidéos validés, actions GitHub épinglées. Aucune vulnérabilité connue dans les bibliothèques embarquées (OSV).
+- ⏳ **À faire par Antsa** : sauvegarder `~/.android/debug.keystore` hors du poste (c'est la clé qui signe les APK publiés).
+- ⏳ Reste à tester : SM-X135G (pas de câble le 2026-11-14) ; paysage de la nouvelle rangée ; fin du défi du jour ;
+  sauvegarde Google réellement vide ; code parent pour les plus de 10 ans ; catalogue de vidéos signé.
+
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
 1. ✅ **Maia** (ADR 0051) : lc0 v0.32.1 compilé pour Android (2,5 Mo, `tool/build_lc0.sh`), poids Maia-1 1100 / 1500 /
