@@ -21,7 +21,21 @@ import 'universe.dart';
 bool introFits(Topic t, int classe) =>
     t.ageless || t.skills.isEmpty || t.skills.map((s) => s.ref.level).reduce(min) >= t.levelsFor(classe).floor;
 
+/// Un domaine est en train de s'ouvrir : un second toucher pendant l'attente (la voix met parfois plus d'une seconde à se
+/// taire) empilait deux séances (revue du 2026-11-14).
+bool _opening = false;
+
 Future<void> openTopic(BuildContext context, AppState app, String topicId, {bool hub = false}) async {
+  if (_opening) return;
+  _opening = true;
+  try {
+    await _openTopic(context, app, topicId, hub: hub);
+  } finally {
+    _opening = false;
+  }
+}
+
+Future<void> _openTopic(BuildContext context, AppState app, String topicId, {bool hub = false}) async {
   await app.voice.stop();
   if (!context.mounted) return;
   final t = app.topic(topicId);

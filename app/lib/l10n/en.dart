@@ -266,4 +266,5 @@ const en = <String, String>{
   'Mise à jour': 'Update',
   'Nouvelle version {v} : demande à un adulte': 'New version {v}: ask a grown-up',
   'Espace parent : nouvelle version disponible': 'Parent area: new version available',
+  '{name}, {done} compétence maîtrisée sur {total}': '{name}, {done} of {total} skills mastered',
 };

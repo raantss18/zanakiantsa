@@ -144,6 +144,11 @@ MoveNote? _judge(Position p, Move m, int ply) {
   if (loss >= 250) {
     // Ce que l'adversaire peut prendre après ce coup.
     final replies = scoreMoves(next, 1);
+    // Pat : l'adversaire n'a plus de coup. Sans cela, `reduce` levait « No element » et l'analyse restait sur « J'analyse la
+    // partie… » (revue du 2026-11-14 : roi et dame contre roi, l'enfant fait pat).
+    if (replies.isEmpty) {
+      return MoveNote(ply, 'gaffe', tf('{move} : pat, la partie est nulle. Mieux : {best}.', {'move': san, 'best': p.san(best.key)}), better: best.key.uci);
+    }
     final reply = replies.entries.reduce((x, y) => y.value > x.value ? y : x).key;
     final taken = next.board[reply.to];
     if (taken != null && next.isCapture(reply)) {

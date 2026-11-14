@@ -30,7 +30,8 @@ serie() {  # la série de notre émulateur parmi ceux qui tournent (d'autres pro
 }
 
 if [ "${1:-}" = --stop ]; then
-  s=$(serie); [ -n "$s" ] && "$ADB" -s "$s" emu kill; exit 0
+  # `sync` d'abord : arrêté net, l'émulateur perdait ce qui venait d'être installé (2026-11-14).
+  s=$(serie); [ -n "$s" ] && { "$ADB" -s "$s" shell sync; sleep 2; "$ADB" -s "$s" emu kill; }; exit 0
 fi
 
 if ! "$EMU" -list-avds | grep -qx "$AVD"; then

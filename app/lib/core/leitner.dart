@@ -17,7 +17,9 @@ DateTime _day(DateTime t) => DateTime(t.year, t.month, t.day);
 /// Réussite : boîte suivante (max 5) ; échec : retour en boîte 1. L'échéance part du jour de la réponse.
 ReviewCard review(ReviewCard? card, bool success, DateTime when) {
   final box = success ? ((card?.box ?? 0) + 1).clamp(1, leitnerDays.length) : 1;
-  return ReviewCard(box, _day(when).add(Duration(days: leitnerDays[box - 1])));
+  // Par le calendrier, pas par tranches de 24 h : au changement d'heure, l'échéance glissait d'un jour (revue du 2026-11-14).
+  final d = _day(when);
+  return ReviewCard(box, DateTime(d.year, d.month, d.day + leitnerDays[box - 1]));
 }
 
 /// Rejoue le journal d'une compétence à partir du moment où elle est maîtrisée.

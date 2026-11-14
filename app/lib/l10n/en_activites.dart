@@ -370,4 +370,7 @@ const enActivites = <String, String>{
   '« {chosen} » ressemble à « {right} », mais regarde bien : la boucle ou la barre n\'est pas du même côté.': '“{chosen}” looks like “{right}”, but look carefully: the loop or the line is on the other side.',
   "Il manque un morceau de la lettre : suis-la jusqu'au bout.": 'Part of the letter is missing: follow it right to the end.',
   'Ton tracé sort de la lettre : va plus doucement, sur le gris.': 'Your line goes outside the letter: go more slowly, on the grey.',
+  '{move} : pat, la partie est nulle. Mieux : {best}.': '{move}: stalemate, the game is a draw. Better: {best}.',
+  'Le pion prend en diagonale : en avançant tout droit, il ne peut plus prendre.': 'The pawn captures diagonally: by going straight ahead, it can no longer capture.',
+  'Le pion ne recule jamais : il fallait passer par cette étoile.': 'The pawn never moves backwards: it had to go through that star.',
 };

@@ -32,6 +32,7 @@ class _ChessActivityState extends State<ChessActivity> {
   late Board board;
   late final Board start;
   final stars = <Square>{};
+  final _allStars = <Square>{};
   Square? selected;
   Square? wrong;
   bool hints = false;
@@ -52,6 +53,7 @@ class _ChessActivityState extends State<ChessActivity> {
         final p = starPuzzle(piece, a.question.n, _r);
         board = {p.start: Piece(piece)};
         stars.addAll(p.stars);
+        _allStars.addAll(p.stars);
     }
     start = {...board};
     final whites = board.entries.where((e) => e.value.white).toList();
@@ -95,12 +97,33 @@ class _ChessActivityState extends State<ChessActivity> {
       a.submit(false, why: whyIllegal(board, from, s));
       return;
     }
+    final captured = board[s] != null;
     setState(() {
       board = play(board, from, s);
       selected = board.entries.where((e) => e.value.white).length == 1 ? s : null;
       wrong = null;
       stars.remove(s);
     });
+    // Le pion ne recule pas : un coup permis peut rendre la question impossible (étoile laissée derrière lui, ou avancée
+    // tout droit au lieu de prendre). La position revient alors au départ, avec l'explication (revue du 2026-11-14 : avant,
+    // il ne restait que des coups interdits).
+    final stuck = piece == 'p' &&
+        ((mode == 'etoiles' && stars.any((x) => x.$2 <= s.$2)) || (mode == 'prise' && !captured && _blackPawnsLeft));
+    if (stuck) {
+      await Future<void>.delayed(const Duration(milliseconds: 700));
+      if (!mounted) return;
+      setState(() {
+        board = {...start};
+        selected = start.entries.where((e) => e.value.white).length == 1 ? start.entries.firstWhere((e) => e.value.white).key : null;
+        if (mode == 'etoiles') {
+          stars
+            ..clear()
+            ..addAll(_allStars);
+        }
+      });
+      a.submit(false, why: mode == 'prise' ? t('Le pion prend en diagonale : en avançant tout droit, il ne peut plus prendre.') : t('Le pion ne recule jamais : il fallait passer par cette étoile.'));
+      return;
+    }
     switch (mode) {
       case 'etoiles':
         if (stars.isEmpty) a.submit(true);

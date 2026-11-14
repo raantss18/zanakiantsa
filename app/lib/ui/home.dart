@@ -42,6 +42,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     });
   }
 
+  bool _going = false;
+
   /// La nouvelle version trouvée au lancement, s'il y en a une : annoncée sur l'accueil.
   Release? _update;
 
@@ -240,12 +242,18 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     final due = s.dueReviews();
     final daily = s.dailyChallengePlan();
     final done = s.dailyDone();
-    Future<void> go(Widget page) async {
-      _greeting?.close();
-      await s.voice.stop();
-      if (!context.mounted) return;
-      await Navigator.of(context).push(MaterialPageRoute(builder: (_) => page));
-      await s.refresh();
+    Future<void> go(Widget Function() page) async {
+      if (_going) return; // un second toucher pendant que la voix se tait n'ouvre pas deux séances
+      _going = true;
+      try {
+        _greeting?.close();
+        await s.voice.stop();
+        if (!context.mounted) return;
+        await Navigator.of(context).push(MaterialPageRoute(builder: (_) => page()));
+        await s.refresh();
+      } finally {
+        _going = false;
+      }
     }
 
     final pills = [
@@ -271,7 +279,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           label: t('À revoir'),
           count: due.length,
           semantics: tf('À revoir aujourd’hui : {n} notions', {'n': due.length}),
-          onTap: () => go(SessionPage.review(due)),
+          onTap: () => go(() => SessionPage.review(s.dueReviews())),
         ),
       if (daily != null)
         HomePill(
@@ -279,7 +287,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           color: done ? green : Brand.purple,
           label: done ? t('Défi réussi') : t('Défi du jour'),
           semantics: done ? t('Défi du jour : réussi, rejouer') : t('Défi du jour'),
-          onTap: () => go(SessionPage.daily(daily)),
+          // Le plan est relu au toucher : l'accueil a pu rester ouvert après minuit.
+          onTap: () => go(() => SessionPage.daily(s.dailyChallengePlan() ?? daily)),
         ),
     ];
     if (pills.isEmpty) return null;

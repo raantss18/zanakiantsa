@@ -237,6 +237,9 @@ class Attempt extends ChangeNotifier {
             }
         }
       }
+    } catch (e) {
+      // Une erreur d'enregistrement (stockage plein…) ne doit pas figer la question : la séance continue.
+      debugPrint('réponse : $e');
     } finally {
       busy = false;
       notifyListeners();
@@ -446,7 +449,9 @@ class _SessionPageState extends State<SessionPage> {
     final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;
     late final Attempt a;
-    a = Attempt(app, skill, q, _advance, () => setState(() => stars++),
+    a = Attempt(app, skill, q, _advance, () {
+          if (mounted) setState(() => stars++);
+        },
         challenge: st.kind == StepKind.check, diagnostic: st.kind == StepKind.check, example: st.kind == StepKind.reminder, reminder: st.kind == StepKind.reminder);
     return a;
   }
@@ -490,10 +495,13 @@ class _SessionPageState extends State<SessionPage> {
     // Leçon choisie : le cours à chaque fois, puisque l'enfant vient la (re)travailler.
     final example = !_oneGo && _introduced.add(skill.id) && (never || chosen);
     late final Attempt a;
-    a = Attempt(app, skill, q, _advance, () => setState(() {
-          stars++;
-          if (a.misses == 0) firstTry++;
-        }), example: example, challenge: _test, retry: !example && _retryAt.contains(index));
+    a = Attempt(app, skill, q, _advance, () {
+          if (!mounted) return;
+          setState(() {
+            stars++;
+            if (a.misses == 0) firstTry++;
+          });
+        }, example: example, challenge: _test, retry: !example && _retryAt.contains(index));
     return a;
   }
 
@@ -519,17 +527,25 @@ class _SessionPageState extends State<SessionPage> {
     }
     if (widget.placement) await _placementStep();
     // Question restée difficile : une question proche revient un peu plus loin, une fois par notion (ADR 0071).
-    if (!_test && done != null && !done.example && devSkill.isEmpty && (!done.solved || done.misses >= 2) && _retried.add(done.skill.id)) {
+    if (!_test && done != null && !done.example && devSkill.isEmpty && (!done.solved || done.misses >= 2) &&
+        // Pas si cette réponse vient de faire acquérir la notion : la suite du plan passe alors à la notion suivante, et la
+        // pastille « On réessaie » se posait sur une notion jamais manquée (revue du 2026-11-14).
+        !app.progressOf(app.topicOf(done.skill.id)).earned(done.skill.id) &&
+        _retried.add(done.skill.id)) {
       final before = plan.length;
       plan = Progress.withRetry(plan, index, done.skill.id);
       _retryAt.add(index + 3 > before ? before : index + 3);
     }
     if (index + 1 >= plan.length || _stoppedAt != null) {
       if (devSkill.isEmpty && widget.lesson == null && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
+      // « Finie » dès maintenant : si l'enfant sort pendant les enregistrements qui suivent, la séance n'est pas comptée une
+      // seconde fois comme interrompue (revue du 2026-11-14).
+      over = true;
       if (widget.challenge) await _endChallenge();
       if (widget.mixed != null && widget.challenge) await app.finishDaily();
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
-      setState(() => over = true);
+      if (!mounted) return;
+      setState(() {});
       app.voice.stopMusic();
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);

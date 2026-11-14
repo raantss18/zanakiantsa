@@ -475,7 +475,15 @@ class _GamePageState extends State<GamePage> {
     final seed = DateTime.now().millisecondsSinceEpoch;
     String? maiaMove;
     if (isMaia(widget.level) && !_maiaFailed) {
-      _maia ??= await Maia.start(widget.level);
+      if (_maia == null) {
+        final m = await Maia.start(widget.level);
+        // Retour pendant le chargement : le moteur démarré est arrêté, sinon son processus restait en vie.
+        if (!mounted) {
+          m?.dispose();
+          return;
+        }
+        _maia = m;
+      }
       if (_maia == null) _maiaFailed = true;
       final move = await _maia?.bestMove(fen);
       // Un coup qui n'est pas permis ne doit jamais arriver sur l'échiquier : le robot de l'app joue à la place.
@@ -500,6 +508,9 @@ class _GamePageState extends State<GamePage> {
       selected = null;
       message = null;
     });
+    // L'enfant a les Noirs et reprend le tout premier coup du robot : c'est de nouveau au robot de jouer. Sans cela la
+    // partie restait figée sur « À toi de jouer » (revue du 2026-11-14).
+    if (robot && !childTurn) _robotPlays();
   }
 
   void _endDialog(SavedGame saved) => showDialog<void>(
@@ -714,8 +725,14 @@ class _ReviewPageState extends State<ReviewPage> {
   Future<void> _analyse() async {
     var base = notes;
     if (base == null) {
-      final raw = await compute(_analyseIn, (appLang, startFen, widget.game.moves, _analysedSide));
-      base = [for (final j in raw) MoveNote.fromJson(j)];
+      // Une erreur d'analyse ne doit jamais laisser l'écran sur « J'analyse la partie… » : la partie se relit sans commentaire.
+      try {
+        final raw = await compute(_analyseIn, (appLang, startFen, widget.game.moves, _analysedSide));
+        base = [for (final j in raw) MoveNote.fromJson(j)];
+      } catch (e) {
+        debugPrint('analyse : $e');
+        base = [];
+      }
       if (!mounted) return;
       setState(() => notes = base);
       widget.game.notes = base;

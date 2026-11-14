@@ -157,6 +157,14 @@ class AppState extends ChangeNotifier {
     bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
     lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
     dailyDoneDay = int.tryParse(await store.get('defi_jour') ?? '');
+    _dailyPlan = null;
+    try {
+      final raw = await store.get('defi_jour_plan');
+      if (raw != null && raw.isNotEmpty) {
+        final j = jsonDecode(raw) as Map<String, dynamic>;
+        _dailyPlan = (j['jour'] as int, List<String>.from(j['plan'] as List));
+      }
+    } catch (_) {}
     final known = await store.get('test_depart');
     placed = known == null || known.isEmpty ? {} : Set<String>.from(jsonDecode(known) as List);
     voice
@@ -237,18 +245,40 @@ class AppState extends ChangeNotifier {
   /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
+  /// La progression d'un domaine. Gardée tant que rien de ce dont elle dépend n'a changé (journal, séances, classe, test de
+  /// départ, contenu) : l'accueil, le tableau de bord et la rangée « À revoir » la demandaient des dizaines de fois par
+  /// affichage, chaque fois en relisant tout le journal (revue du 2026-11-14).
   Progress progressOf(Topic t) {
-    final l = t.levelsFor(schoolClass);
-    return Progress([for (final s in t.skills) s.ref], journal,
-        sessionsDone: sessionsDone, startLevel: l.start, floor: l.floor, ceiling: l.ceiling, placed: placed);
+    final key = (journal, sessionsDone, schoolClass, placed, topics);
+    if (!identical(key.$1, _progressKey?.$1) || key.$2 != _progressKey?.$2 || key.$3 != _progressKey?.$3 || !identical(key.$4, _progressKey?.$4) || !identical(key.$5, _progressKey?.$5)) {
+      _progressKey = key;
+      _progress.clear();
+    }
+    return _progress.putIfAbsent(t.id, () {
+      final l = t.levelsFor(schoolClass);
+      return Progress([for (final s in t.skills) s.ref], journal,
+          sessionsDone: sessionsDone, startLevel: l.start, floor: l.floor, ceiling: l.ceiling, placed: placed);
+    });
   }
+
+  (List<Answer>, int, int, Set<String>, List<Topic>)? _progressKey;
+  final _progress = <String, Progress>{};
 
   /// Les domaines proposés à cet enfant (ADR 0065, 0070) : ceux qui ont au moins une leçon dans la fenêtre de sa classe
   /// (deux classes en dessous à deux au-dessus), plus le dessin libre. À 12 ans, plus de « Les sons » ni des suites de maternelle.
   List<Topic> get shownTopics => [
         for (final t in topics)
-          if (t.ageless || t.skills.any((s) => s.ref.level >= t.levelsFor(schoolClass).floor && s.ref.level <= t.levelsFor(schoolClass).ceiling)) t
+          if (t.ageless || _inWindow(t)) t
       ];
+
+  bool _inWindow(Topic t) {
+    final l = t.levelsFor(schoolClass);
+    return t.skills.any((s) => s.ref.level >= l.floor && s.ref.level <= l.ceiling);
+  }
+
+  /// Une question que la séance sait poser : le dessin libre a sa propre page (activities/draw.dart), il n'entre ni dans
+  /// « À revoir » ni dans le défi du jour (avant, il tombait dans l'activité de calcul, revue du 2026-11-14).
+  bool _askable(String skillId) => skill(skillId).activity != 'dessin';
 
   /// Le domaine d'une compétence.
   Topic topicOf(String skillId) => topics.firstWhere((t) => t.skills.any((s) => s.id == skillId));
@@ -258,8 +288,12 @@ class AppState extends ChangeNotifier {
   static const reviewSize = 8;
   List<String> dueReviews([DateTime? now]) {
     final at = now ?? DateTime.now();
-    final due = [for (final t in shownTopics) ...progressOf(t).due(at).where((d) => progressOf(t).inRange(d.$1))]
-      ..sort((a, b) => a.$2.compareTo(b.$2));
+    final due = <(String, DateTime)>[];
+    for (final t in shownTopics) {
+      final p = progressOf(t);
+      due.addAll(p.due(at).where((d) => p.inRange(d.$1) && _askable(d.$1)));
+    }
+    due.sort((a, b) => a.$2.compareTo(b.$2));
     return [for (final d in due.take(reviewSize)) d.$1];
   }
 
@@ -267,9 +301,25 @@ class AppState extends ChangeNotifier {
   Streak streak([DateTime? now]) => streakOf(sessions, now ?? DateTime.now());
 
   /// Le défi du jour (ADR 0071) : huit questions de ce qu'il a acquis, tous domaines mêlés ; null s'il n'a encore rien acquis.
-  List<String>? dailyChallengePlan([DateTime? now]) => dailyChallenge(
-      [for (final t in shownTopics) if (!t.ageless) ...progressOf(t).challengePool.where(progressOf(t).inRange)],
-      dayNumber(now ?? DateTime.now()) + devDayShift);
+  /// Le même toute la journée : le plan du jour est gardé (avant, il changeait dès qu'une notion était acquise).
+  List<String>? dailyChallengePlan([DateTime? now]) {
+    final day = dayNumber(now ?? DateTime.now()) + devDayShift;
+    final kept = _dailyPlan;
+    if (kept != null && kept.$1 == day && kept.$2.every((id) => topics.any((t) => t.skills.any((s) => s.id == id)))) return kept.$2;
+    final pool = <String>[];
+    for (final t in shownTopics) {
+      final p = progressOf(t);
+      pool.addAll(p.challengePool.where((id) => p.inRange(id) && _askable(id)));
+    }
+    final plan = dailyChallenge(pool, day);
+    if (plan != null) {
+      _dailyPlan = (day, plan);
+      store.set('defi_jour_plan', jsonEncode({'jour': day, 'plan': plan}));
+    }
+    return plan;
+  }
+
+  (int, List<String>)? _dailyPlan;
 
   /// Le jour (voir [dayNumber]) du dernier défi du jour fini.
   int? dailyDoneDay;

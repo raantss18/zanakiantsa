@@ -352,6 +352,23 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ⏳ Reste à tester : SM-X135G (pas de câble le 2026-11-14) ; paysage de la nouvelle rangée ; fin du défi du jour ;
   sauvegarde Google réellement vide ; code parent pour les plus de 10 ans ; catalogue de vidéos signé.
 
+## 2026-11-14 (soir) — Revue de toute l'app : corrigé et reste à corriger
+
+- ✅ Corrigé (284 tests, pas encore essayé sur l'émulateur ni publié) : partie figée quand l'enfant a les Noirs et reprend
+  le premier coup du robot ; leçon du pion rendue impossible par un coup permis ; analyse bloquée par un pat ; moteur Maia
+  laissé en vie ; dessin libre posé dans « À revoir » ; pastille « On réessaie » sur une notion jamais manquée ; deux séances
+  empilées par un double toucher ; progression recalculée des dizaines de fois par affichage ; fin de séance comptée deux
+  fois ; question figée si l'enregistrement échoue ; échéances de révision au changement d'heure ; défi du jour qui
+  changeait dans la journée ; « 1 compétences » ; arrêt de l'émulateur qui perdait l'installation.
+- ⏳ Reste de la revue des activités (constats 3 à 15, non corrigés) : dernière aide illisible voix coupée
+  (`session.dart` 222-238) ; voix de la démonstration coupée par l'activité (`numbers.dart:462`, `letters.dart:55`,
+  `listen.dart:37`) ; partage inégal en démonstration (`numbers.dart:325`) ; consigne qui coupe « Bravo » ; sans modèle
+  ML Kit tout dessin est compté réussi (`draw.dart:179`) ; cibles du corps humain < 48 dp (`explore.dart:281`) ; touchers
+  acceptés pendant l'affichage d'un mauvais coup (`chess.dart`, `problem.dart:79`) ; explication fausse à l'horloge
+  (`ce1.dart:405`) ; dénombrer pendant la démonstration ; `setState` après `dispose` (denombrer, numbers, blocks, calcul,
+  draw) ; bouton ✓ muet du dessin ; programme qui tourne en rond animé 23 s (`blocks.dart:126`).
+- ⏳ Reprise de séance au plan périmé (`session.dart` 306-323). ⏳ Revue « écrans, voix, contenu » : rapport pas encore lu.
+
 ## Moteurs externes (priorité basse, demandé le 2026-11-05) — ADR 0047 (proposé), ADR 0051 (Maia, accepté)
 
 1. ✅ **Maia** (ADR 0051) : lc0 v0.32.1 compilé pour Android (2,5 Mo, `tool/build_lc0.sh`), poids Maia-1 1100 / 1500 /

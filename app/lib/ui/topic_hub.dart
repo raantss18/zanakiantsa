@@ -32,8 +32,14 @@ class _TopicHubState extends State<TopicHub> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _load();
+    // Une seule fois : cette méthode revient à chaque réponse d'une séance ouverte par-dessus (`_go` recharge au retour).
+    if (!_loaded) {
+      _loaded = true;
+      _load();
+    }
   }
+
+  bool _loaded = false;
 
   Future<void> _load() async {
     final r = await SessionResume.load(app, widget.topic);

@@ -88,7 +88,7 @@ class AllTopicsPage extends StatelessWidget {
                       final done = offered.where((s) => p.earned(s.id)).length;
                       return Semantics(
                         button: true,
-                        label: tf('{name}, {done} compétences maîtrisées sur {total}', {'name': t.name, 'done': done, 'total': offered.length}),
+                        label: tf(done > 1 ? '{name}, {done} compétences maîtrisées sur {total}' : '{name}, {done} compétence maîtrisée sur {total}', {'name': t.name, 'done': done, 'total': offered.length}),
                         excludeSemantics: true,
                         child: Material(
                           color: surface,
