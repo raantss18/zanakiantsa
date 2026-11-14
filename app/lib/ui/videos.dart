@@ -24,7 +24,12 @@ Future<(Catalogue, DateTime?)?> keptCatalogue(AppState app, String key) async {
   final kept = await app.store.get('videos_cat_$key');
   if (kept == null || kept.isEmpty) return null;
   final when = DateTime.tryParse(await app.store.get('videos_cat_${key}_date') ?? '');
-  return (Catalogue(jsonDecode(kept) as Map<String, dynamic>), when);
+  // Une copie abîmée ne doit pas laisser le rond d'attente pour toujours : on fait comme s'il n'y en avait pas.
+  try {
+    return (Catalogue(jsonDecode(kept) as Map<String, dynamic>), when);
+  } catch (_) {
+    return null;
+  }
 }
 
 /// Télécharge le catalogue de cet enfant et le garde ; null sans connexion (ou trop lente : 60 s au plus).
@@ -122,7 +127,34 @@ class _VideosPageState extends State<VideosPage> {
       if (!hidden.contains(v.id)) v,
   ];
 
+  /// Avant 10 ans, une vidéo se gagne en finissant une activité (ADR 0073) : sans vidéo gagnée, l'app dit quoi faire.
+  Future<void> _earnFirst() => showDialog<void>(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      icon: const Icon(Icons.lock_rounded, size: 44),
+      title: Text(t('Une vidéo se gagne !')),
+      content: Text(
+        t('Finis une leçon, une révision ou le défi du jour : tu gagnes une vidéo.'),
+        textAlign: TextAlign.center,
+        style: const TextStyle(fontSize: 20),
+      ),
+      actionsAlignment: MainAxisAlignment.center,
+      actions: [
+        FilledButton.icon(
+          style: FilledButton.styleFrom(minimumSize: const Size(200, 56), textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+          onPressed: () {
+            Navigator.pop(ctx);
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.school_rounded),
+          label: Text(t('Aller aux leçons')),
+        ),
+      ],
+    ),
+  );
+
   Future<void> _play(Video v) async {
+    if (!app.canWatchVideo) return _earnFirst();
     await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (_) => VideoPlayerPage(video: v, pool: pool),
@@ -169,6 +201,32 @@ class _VideosPageState extends State<VideosPage> {
                   ),
                 ),
               ),
+              if (app.videosAreRewards)
+                Padding(
+                  padding: readablePadding(context, bottom: 8).copyWith(top: 0),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: surface,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: app.videoCredits > 0 ? green : const Color(0x401B211D), width: 3),
+                    ),
+                    child: Row(children: [
+                      Icon(app.videoCredits > 0 ? Icons.card_giftcard_rounded : Icons.lock_rounded, size: 34, color: app.videoCredits > 0 ? green : ink),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          app.videoCredits > 1
+                              ? tf('Tu as gagné {n} vidéos. Choisis !', {'n': app.videoCredits})
+                              : app.videoCredits == 1
+                              ? t('Tu as gagné une vidéo. Choisis !')
+                              : t('Finis une leçon pour gagner une vidéo.'),
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: ink),
+                        ),
+                      ),
+                    ]),
+                  ),
+                ),
               Expanded(
                 child: loading
                     ? Center(
@@ -445,6 +503,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
         ),
       );
   bool marked = false;
+  bool _spent = false;
   bool blocked = false;
   Set<String> seen = {};
   PlayerState state = PlayerState.unknown;
@@ -465,6 +524,13 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     // Vidéo finie : vue, même si la durée du catalogue était mal connue.
     controller.listen((v) {
       if (v.playerState == PlayerState.ended) _seen();
+      // La vidéo gagnée est prise quand la lecture commence vraiment, pas à l'ouverture : une vidéo qui ne charge pas ne coûte rien.
+      if (v.playerState == PlayerState.playing && !_spent) {
+        _spent = true;
+        app.spendVideo().then((_) {
+          if (mounted) setState(() {});
+        });
+      }
       if (v.playerState != state) {
         if (mounted) setState(() => state = v.playerState);
         if (v.playerState == PlayerState.buffering ||
@@ -475,6 +541,10 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
       }
     });
     controller.setFullScreenListener(_fullScreen);
+    // Les vidéos déjà vues, dès l'ouverture : « D'autres vidéos » ne les repropose pas.
+    seenVideos(app).then((s) {
+      if (mounted) setState(() => seen = {...seen, ...s});
+    });
   }
 
   /// Vérifie la vidéo réellement chargée dans le lecteur : hors de la liste de l'enfant, elle est arrêtée.
@@ -510,7 +580,10 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   }
 
   /// Plein écran : barres du système cachées, tablette en paysage ; au retour, tout redevient comme avant.
+  bool _full = false;
+
   void _fullScreen(bool on) {
+    if (mounted && on != _full) setState(() => _full = on);
     SystemChrome.setEnabledSystemUIMode(
       on ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge,
     );
@@ -520,7 +593,8 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
               DeviceOrientation.landscapeLeft,
               DeviceOrientation.landscapeRight,
             ]
-          : const [],
+          // Comme au lancement (main.dart) : avant, la liste vide laissait toute l'app tourner en paysage après une vidéo.
+          : const [DeviceOrientation.portraitUp],
     );
   }
 
@@ -537,7 +611,12 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
         onTap: controller.toggleFullScreen,
       ),
     );
-    if (!cover) return const SizedBox.shrink();
+    // En plein écran, le bouton pour en sortir est toujours là, en haut à gauche, loin des barres du système. Avant, il
+    // n'existait qu'en pause, en bas à droite : sur la tablette en paysage, la barre du bas le cachait et l'enfant ne
+    // pouvait plus revenir (signalé par Antsa, 2026-11-14).
+    final pad = MediaQuery.viewPaddingOf(context);
+    final exit = Positioned(left: pad.left + 12, top: pad.top + 12, child: Opacity(opacity: cover ? 1 : 0.8, child: full));
+    if (!cover) return fullScreen ? Stack(children: [exit]) : const SizedBox.shrink();
     final (IconData icon, String label, VoidCallback onTap) = blocked
         ? (Icons.replay, t('Revenir à ma vidéo'), _back)
         : state == PlayerState.ended
@@ -589,7 +668,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                 ),
               ),
             ),
-            Positioned(right: 8, bottom: 8, child: full),
+            if (fullScreen) exit else Positioned(right: 8, bottom: 8, child: full),
           ],
         ),
       ),
@@ -614,6 +693,17 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   @override
   Widget build(BuildContext context) {
     final next = more(widget.pool, widget.video, {...seen, widget.video.id});
+    // Le retour d'Android, en plein écran, en sort d'abord (au lieu de quitter la vidéo ou de ne rien faire).
+    return PopScope(
+      canPop: !_full,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) controller.exitFullScreen();
+      },
+      child: _page(context, next),
+    );
+  }
+
+  Widget _page(BuildContext context, List<Video> next) {
     return Scaffold(
       body: UniverseBackground(
         universe: app.universe,
@@ -631,6 +721,10 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                         controller: controller,
                         aspectRatio: 16 / 9,
                         controlsBuilder: _controls,
+                        // Pas de plein écran automatique quand l'écran est en paysage : à la sortie du plein écran, l'écran est
+                        // encore en paysage un instant et le lecteur y rentrait aussitôt — l'enfant ne pouvait plus revenir
+                        // (signalé par Antsa sur la tablette, 2026-11-14 ; reproduit sur l'émulateur).
+                        autoFullScreen: false,
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -675,7 +769,14 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                         color: app.universe.onBackground,
                       ),
                     ),
-                    if (next.isNotEmpty) ...[
+                    if (next.isNotEmpty && !app.canWatchVideo) ...[
+                      const SizedBox(height: 16),
+                      Text(
+                        t('Pour une autre vidéo, finis une leçon.'),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: app.universe.onBackground),
+                      ),
+                    ],
+                    if (next.isNotEmpty && app.canWatchVideo) ...[
                       const SizedBox(height: 16),
                       Text(
                         t('D\'autres vidéos'),

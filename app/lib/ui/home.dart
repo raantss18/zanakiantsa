@@ -54,6 +54,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Future<void> _welcome() async {
     final s = AppScope.of(context);
     _greeting?.close();
+    // « Qui joue ? » est à l'écran : pas l'histoire du dernier enfant (elle sera dite une fois l'enfant choisi).
+    if (!s.chosen) return;
     final g = _greeting = s.voice.scope();
     if (!s.ready) {
       await g.say(s.common.text('demande_adulte'), id: 'commun.demande_adulte');
@@ -84,7 +86,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     final s = AppScope.of(context);
-    if (!s.chosen) return const ProfilePicker();
+    if (!s.chosen) return ProfilePicker(onChosen: () => WidgetsBinding.instance.addPostFrameCallback((_) => _welcome()));
     final u = s.universe;
     final plan = s.dayPlan();
     return Scaffold(
@@ -256,8 +258,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       }
     }
 
+    // Téléphone étroit : quatre pastilles rendaient le texte illisible (revue du 2026-11-14). La mise à jour reste signalée
+    // par le point sur le cadenas, et la série s'écrit en chiffre seul.
+    final narrow = MediaQuery.sizeOf(context).width < 420;
     final pills = [
-      if (_update != null)
+      if (_update != null && !narrow)
         HomePill(
           icon: Icons.system_update_rounded,
           color: Brand.pink,
@@ -269,7 +274,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         HomePill(
           icon: Icons.local_fire_department_rounded,
           color: const Color(0xFFB3400F),
-          label: tf('{n} jours', {'n': streak.days}),
+          label: narrow ? '${streak.days}' : tf('{n} jours', {'n': streak.days}),
           semantics: tf('Série : {n} jours de jeu', {'n': streak.days}),
         ),
       if (due.isNotEmpty)
@@ -807,7 +812,10 @@ class _UniverseCard extends StatelessWidget {
 
 /// « Qui joue ? » (ADR 0034) : un grand bouton par enfant, avec la mascotte de son monde et son prénom écrit.
 class ProfilePicker extends StatelessWidget {
-  const ProfilePicker({super.key});
+  const ProfilePicker({super.key, this.onChosen});
+
+  /// L'enfant est choisi : l'accueil lui dit son histoire et ses activités.
+  final VoidCallback? onChosen;
 
   @override
   Widget build(BuildContext context) {
@@ -840,7 +848,11 @@ class ProfilePicker extends StatelessWidget {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32), side: BorderSide(color: u.night ? u.primary : u.onCard, width: 4)),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(32),
-                            onTap: () => s.switchChild(p.id),
+                            onTap: () async {
+                              await s.voice.stop();
+                              await s.switchChild(p.id);
+                              onChosen?.call();
+                            },
                             child: SizedBox(
                               width: 200,
                               height: 220,

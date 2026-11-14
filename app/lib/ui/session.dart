@@ -111,8 +111,10 @@ class Attempt extends ChangeNotifier {
   String? get _studied => skill.studied;
   bool get _english => _studied != null && _studied != appLang;
 
-  Future<void> say(String key, {bool force = false}) => example && key == 'consigne'
-      ? Future.value() // pendant l'exemple, la voix raconte l'idée et la démonstration, pas la consigne
+  Future<void> say(String key, {bool force = false}) => key == 'consigne' && !force && (example || busy || finished || misses > 0 || _closed)
+      // Pendant l'exemple, la voix raconte l'idée et la démonstration, pas la consigne. Et si l'enfant a déjà répondu pendant
+      // que la question était dite, la consigne ne vient pas couper « Bravo » ou l'explication de l'erreur (revue du 2026-11-14).
+      ? Future.value()
       : _english ? speech.sayMixed(phrase(key), force: force, quoted: _studied!) : speech.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
@@ -225,15 +227,21 @@ class Attempt extends ChangeNotifier {
               helpText = phrase('demonstration');
               notifyListeners();
               await _record(correct: false, demonstrated: true);
+              // Voix coupée, `say` revient tout de suite : on laisse quand même le temps de lire et de voir la démonstration.
+              final w = Stopwatch()..start();
               await say('demonstration');
+              await _readingTime(helpText!, w.elapsed);
               await Future<void>.delayed(const Duration(milliseconds: 800));
             } else {
               // 6 ans et plus : un indice, jamais la réponse (ADR 0006).
               helpText = phrase('indice');
               notifyListeners();
               await _record(correct: false, demonstrated: false);
+              final w = Stopwatch()..start();
               await speech.say(app.common.text('apres_indice'), id: 'commun.apres_indice');
               await say('indice');
+              // Voix coupée : le dernier indice restait 0,7 s à l'écran. Il reste le temps d'être lu.
+              await _readingTime(helpText!, w.elapsed);
             }
         }
       }
@@ -990,6 +998,19 @@ class DayEnd extends StatelessWidget {
                   ),
                 ]),
               ),
+            ],
+            if (app.videosAreRewards && app.videoCredits > 0) ...[
+              const SizedBox(height: 16),
+              Row(mainAxisSize: MainAxisSize.min, children: [
+                const Art('1f3ac', size: 44),
+                const SizedBox(width: 10),
+                Flexible(
+                  child: Text(
+                    app.videoCredits > 1 ? tf('Tu as {n} vidéos à regarder !', {'n': app.videoCredits}) : t('Tu as gagné une vidéo !'),
+                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: ink),
+                  ),
+                ),
+              ]),
             ],
             const SizedBox(height: 24),
             Wrap(spacing: 32, runSpacing: 16, alignment: WrapAlignment.center, children: [

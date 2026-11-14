@@ -150,12 +150,13 @@ class Voice {
     if (_hidden || (!voiceOn && !force)) return;
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
+    final turn = _turn;
     await _duck(true);
     final tag = lang == null ? _base : (lang == 'en' ? 'en-GB' : 'fr-FR');
     if (this.lang == 'fr' && lang != 'en' && id != null && _recorded.contains(id)) {
       await bounded(_player.play(AssetSource('audio/voix/$id.ogg')), _command);
       await bounded(_player.onPlayerComplete.first, speechBudget(text));
-    } else if (await _useLang(tag)) {
+    } else if (await _useLang(tag) && turn == _turn) {
       await _speak(text);
     }
     await _duck(false);
@@ -209,16 +210,24 @@ class Voice {
     if (_hidden || (!voiceOn && !force)) return;
     await bounded(_ready, const Duration(seconds: 8));
     await stop();
+    // Coupée (écran quitté, autre phrase) : les morceaux suivants ne sont pas dits. Avant, « red » de « Touche : « red » »
+    // s'entendait sur l'écran suivant (revue du 2026-11-14).
+    final turn = _turn;
     for (final (i, part) in text.split(RegExp('[«»]')).indexed) {
       final t = part.trim();
       if (t.isEmpty || RegExp(r'^[\s.,:;!?]+$').hasMatch(t)) continue;
+      if (turn != _turn) return;
       await _duck(true);
-      if (await _useLang(i.isOdd ? (quoted == 'en' ? 'en-GB' : 'fr-FR') : _base)) await _speak(t);
+      if (await _useLang(i.isOdd ? (quoted == 'en' ? 'en-GB' : 'fr-FR') : _base) && turn == _turn) await _speak(t);
     }
     await _duck(false);
   }
 
+  /// Compte les coupures : une phrase commencée avant une coupure ne reprend pas après.
+  int _turn = 0;
+
   Future<void> stop() async {
+    _turn++;
     // Celui qui attendait la fin de la phrase coupée n'attend plus (l'annulation du moteur, elle, peut arriver après
     // le début de la phrase suivante : on ne s'y fie pas).
     _ended();

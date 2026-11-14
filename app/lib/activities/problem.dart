@@ -40,8 +40,11 @@ class _ProblemActivityState extends State<ProblemActivity> {
 
   void _changed() => setState(() {});
 
+  /// Un mauvais coup est à l'écran un instant : pas d'autre coup avant le retour de la position.
+  bool _showing = false;
+
   Future<void> _tap(int s) async {
-    if (a.busy || a.finished) return;
+    if (a.busy || a.finished || _showing) return;
     final p = start;
     final piece = p.board[s];
     if (piece != null && isWhitePiece(piece)) {
@@ -76,7 +79,9 @@ class _ProblemActivityState extends State<ProblemActivity> {
       return;
     }
     // Le coup s'affiche un instant, puis la position revient pour un nouvel essai.
+    _showing = true;
     await Future<void>.delayed(const Duration(milliseconds: 900));
+    _showing = false;
     if (!mounted) return;
     setState(() {
       shown = start;

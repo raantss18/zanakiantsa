@@ -76,6 +76,7 @@ class _CalcActivityState extends State<CalcActivity> {
         if (value != null) break;
       }
     } catch (_) {}
+    if (!mounted) return;
     setState(() {
       _strokes.clear();
       _times.clear();

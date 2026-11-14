@@ -34,7 +34,10 @@ class _ListenActivityState extends State<ListenActivity> {
   void initState() {
     super.initState();
     a.addListener(_changed);
-    a.show('question').then((_) => _playBoth());
+    // Pendant l'exemple, la voix explique d'abord : les sons jouent quand elle a fini (avant, ils la coupaient).
+    a.show('question').then((_) {
+      if (!a.example && mounted) _playBoth();
+    });
   }
 
   @override
@@ -43,7 +46,15 @@ class _ListenActivityState extends State<ListenActivity> {
     super.dispose();
   }
 
-  void _changed() => setState(() {});
+  bool _examplePlayed = false;
+
+  void _changed() {
+    if (a.example && a.exampleDone && !_examplePlayed) {
+      _examplePlayed = true;
+      _playBoth();
+    }
+    setState(() {});
+  }
 
   Future<void> _play(int i) async {
     if (!mounted) return;

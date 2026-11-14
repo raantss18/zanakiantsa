@@ -402,7 +402,8 @@ class _ClockActivityState extends State<ClockActivity> {
 
   String? _why((int, int) o) {
     final q = a.question;
-    if (o.$2 == (q.n % 12) * 5) return t("Tu as lu les aiguilles à l'envers : la petite montre les heures, la grande les minutes.");
+    // Les deux aiguilles échangées, exactement (avant, « 1 h 00 » pour 12 h 00 recevait cette explication à tort).
+    if (o == ((q.b ~/ 5 == 0 ? 12 : q.b ~/ 5), (q.n % 12) * 5)) return t("Tu as lu les aiguilles à l'envers : la petite montre les heures, la grande les minutes.");
     if (o.$1 == q.n % 12 + 1 && o.$2 == q.b) return t("La petite aiguille n'a pas encore atteint ce nombre : regarde où elle est.");
     if (o.$1 == q.n && o.$2 != q.b) return t('Regarde bien la grande aiguille : elle montre les minutes.');
     return null;

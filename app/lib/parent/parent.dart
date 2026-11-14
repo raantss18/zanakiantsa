@@ -130,7 +130,7 @@ class _ParentPageState extends State<ParentPage> {
               : t('Pas de nouvelle version (ou pas de réseau).');
     });
     // Trouvée à l'entrée : elle se propose toute seule, le parent n'a rien à chercher (demande d'Antsa du 2026-11-14).
-    if (automatic && r != null) {
+    if (automatic && r != null && r.build != _declinedBuild) {
       final go = await showDialog<bool>(
         context: context,
         builder: (ctx) => AlertDialog(
@@ -153,6 +153,7 @@ class _ParentPageState extends State<ParentPage> {
           ],
         ),
       );
+      if (go != true) _declinedBuild = r.build;
       if (go == true && mounted) await _install();
     }
   }
@@ -186,11 +187,24 @@ class _ParentPageState extends State<ParentPage> {
         ),
       );
 
+  bool _installing = false;
+
+  /// La version refusée par « Plus tard » : la fenêtre ne revient pas à chaque entrée, le bandeau du haut suffit.
+  static int? _declinedBuild;
+
   Future<void> _install() async {
-    final ok = await updater.install(
-      release!,
-      (v) => setState(() => progress = v),
-    );
+    // Un seul téléchargement à la fois : un second appui effaçait le fichier que le premier écrivait (revue du 2026-11-14).
+    if (_installing) return;
+    _installing = true;
+    setState(() => progress = 0);
+    final bool ok;
+    try {
+      ok = await updater.install(release!, (v) {
+        if (mounted) setState(() => progress = v);
+      });
+    } finally {
+      _installing = false;
+    }
     if (!mounted) return;
     setState(() {
       progress = null;
@@ -286,6 +300,8 @@ class _ParentPageState extends State<ParentPage> {
               // Vidéos (ADR 0068) : actives sans réglage, à la demande d'Antsa ; le parent doit savoir ce qui part chez Google.
               Text(t('Vidéos'), style: notebookTitle),
               Text(t('Dans « Tout explorer », avec internet : des vidéos de chaînes éducatives choisies (C’est pas sorcier, Les Fondamentaux, Numberblocks…), adaptées à l’âge, courtes ou longues. Elles passent par le lecteur officiel de YouTube : Google reçoit alors l’adresse de la tablette et la vidéo regardée, et des publicités peuvent apparaître. Sans internet, rien n’est envoyé.')),
+              const SizedBox(height: 8),
+              Text(t('Avant 10 ans, les vidéos sont une récompense : chaque activité finie (leçon, révision, défi, dessin) donne droit à une vidéo, trois d’avance au plus. Sans activité finie, pas de vidéo. À partir de 10 ans, elles sont en accès libre.')),
               const Divider(height: 32),
               // Enfants de la famille (ADR 0034) : chacun a ses réglages, ses mondes, sa progression et ses livres.
               Text(t('Enfants'), style: notebookTitle),

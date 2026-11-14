@@ -93,7 +93,7 @@ String fold(String s) {
   const from = 'àâäáãåçéèêëíìîïñóòôöõúùûüýÿœæ';
   const to = 'aaaaaaceeeeiiiinooooouuuuyyoa';
   final b = StringBuffer();
-  for (final c in s.toLowerCase().split('')) {
+  for (final c in s.toLowerCase().replaceAll('œ', 'oe').replaceAll('æ', 'ae').split('')) {
     final i = from.indexOf(c);
     b.write(i < 0 ? c : to[i]);
   }

@@ -143,6 +143,7 @@ class _DrawPageState extends State<DrawPage> {
   }
 
   Future<void> _tell(String text) async {
+    if (!mounted) return;
     setState(() => feedback = text);
     await speech.say(text);
   }

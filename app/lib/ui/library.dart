@@ -364,10 +364,14 @@ class _ReaderPageState extends State<ReaderPage> {
     setState(() => reading = true);
     if (page == 0) await app.voice.say(book.title, force: true, lang: 'fr');
     while (reading && mounted && page < count - 1) {
+      final at = page;
       await app.voice.say(book.pages[page].text, force: true, lang: 'fr');
       if (!reading || !mounted) break;
+      // L'enfant a tourné la page lui-même pendant la lecture : on lit celle où il est, sans en sauter une.
+      if (page != at) continue;
       await Future<void>.delayed(const Duration(milliseconds: 700));
       if (!reading || !mounted) break;
+      if (page != at) continue;
       await _go(page + 1);
     }
     if (mounted) setState(() => reading = false);

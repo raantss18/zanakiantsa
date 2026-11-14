@@ -83,8 +83,11 @@ class _ChessActivityState extends State<ChessActivity> {
     return to == null ? null : (from, to);
   }
 
+  /// Un coup qui n'est pas la réponse est à l'écran un instant : pas d'autre coup avant le retour de la position.
+  bool _showing = false;
+
   Future<void> _tap(Square s) async {
-    if (a.busy || a.finished) return;
+    if (a.busy || a.finished || _showing) return;
     final p = board[s];
     if (p != null && p.white) {
       setState(() => selected = s);
@@ -110,7 +113,9 @@ class _ChessActivityState extends State<ChessActivity> {
     final stuck = piece == 'p' &&
         ((mode == 'etoiles' && stars.any((x) => x.$2 <= s.$2)) || (mode == 'prise' && !captured && _blackPawnsLeft));
     if (stuck) {
+      _showing = true;
       await Future<void>.delayed(const Duration(milliseconds: 700));
+      _showing = false;
       if (!mounted) return;
       setState(() {
         board = {...start};
@@ -141,7 +146,9 @@ class _ChessActivityState extends State<ChessActivity> {
           a.submit(true);
         } else {
           // Coup permis mais pas la réponse : on le laisse voir un instant, puis la position revient.
+          _showing = true;
           await Future<void>.delayed(const Duration(milliseconds: 700));
+          _showing = false;
           if (!mounted) return;
           setState(() {
             board = {...start};

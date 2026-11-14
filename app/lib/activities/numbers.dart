@@ -322,12 +322,17 @@ class _ShareActivityState extends State<ShareActivity> {
     super.dispose();
   }
 
+  bool _demo = false;
+
   Future<void> _changed() async {
-    if (a.demonstrate && pile > 0) {
+    // Une seule distribution : chaque notification en relançait une, et deux boucles donnaient des parts inégales
+    // (16 et 14 sous « Chacun en a 15 », revue du 2026-11-14).
+    if (a.demonstrate && pile > 0 && !_demo) {
+      _demo = true;
       // Démonstration : distribuer un par un, chacun son tour.
       for (var i = 0; pile > 0; i = (i + 1) % parts.length) {
         await Future<void>.delayed(const Duration(milliseconds: 300));
-        if (!mounted) return;
+        if (!mounted || pile <= 0) return;
         setState(() {
           parts[i]++;
           pile--;
@@ -454,12 +459,13 @@ class _BreakTenActivityState extends State<BreakTenActivity> {
   }
 
   void _take() {
-    if ((locked && !a.demonstrate) || loose == 0 || removed >= a.question.b) return;
+    if (!mounted || (locked && !a.demonstrate) || loose == 0 || removed >= a.question.b) return;
     setState(() {
       loose--;
       removed++;
     });
-    a.speech.say('$removed');
+    // En démonstration, la voix explique : compter à voix haute la coupait au bout d'un instant.
+    if (!a.demonstrate) a.speech.say('$removed');
   }
 
   @override

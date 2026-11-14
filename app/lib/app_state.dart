@@ -157,6 +157,7 @@ class AppState extends ChangeNotifier {
     bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
     lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
     dailyDoneDay = int.tryParse(await store.get('defi_jour') ?? '');
+    videoCredits = (int.tryParse(await store.get('videos_gagnees') ?? '') ?? 0).clamp(0, videoCreditMax);
     _dailyPlan = null;
     try {
       final raw = await store.get('defi_jour_plan');
@@ -249,7 +250,7 @@ class AppState extends ChangeNotifier {
   /// départ, contenu) : l'accueil, le tableau de bord et la rangée « À revoir » la demandaient des dizaines de fois par
   /// affichage, chaque fois en relisant tout le journal (revue du 2026-11-14).
   Progress progressOf(Topic t) {
-    final key = (journal, sessionsDone, schoolClass, placed, topics);
+    final key = (journal, sessionsDone, schoolClass * 100 + age, placed, topics); // l'âge compte aussi : il fixe l'entrée du code et des échecs
     if (!identical(key.$1, _progressKey?.$1) || key.$2 != _progressKey?.$2 || key.$3 != _progressKey?.$3 || !identical(key.$4, _progressKey?.$4) || !identical(key.$5, _progressKey?.$5)) {
       _progressKey = key;
       _progress.clear();
@@ -353,13 +354,37 @@ class AppState extends ChangeNotifier {
   Future<void> logSession(SessionLog s) async {
     await store.addSession(s);
     sessions = [...sessions, s];
-    if (s.complete) sessionsDone++;
+    if (s.complete) {
+      sessionsDone++;
+      if (videosAreRewards) await _setVideoCredits(videoCredits + 1);
+    }
+    notifyListeners();
+  }
+
+  /// Vidéos en récompense (demande d'Antsa du 2026-11-14, ADR 0073) : avant [videoRewardBelowAge] ans, chaque activité
+  /// finie (leçon, révision, défi, dessin) donne droit à une vidéo ; sans vidéo gagnée, on ne peut pas en regarder. Les
+  /// vidéos gagnées se gardent, [videoCreditMax] au plus : on ne met pas de côté une après-midi d'écran.
+  static const videoRewardBelowAge = 10, videoCreditMax = 3;
+  int videoCredits = 0;
+  bool get videosAreRewards => age < videoRewardBelowAge;
+  bool get canWatchVideo => !videosAreRewards || videoCredits > 0;
+
+  Future<void> _setVideoCredits(int n) async {
+    videoCredits = n.clamp(0, videoCreditMax);
+    await store.set('videos_gagnees', '$videoCredits');
+  }
+
+  /// Une vidéo commence : elle prend une des vidéos gagnées.
+  Future<void> spendVideo() async {
+    if (!videosAreRewards) return;
+    await _setVideoCredits(videoCredits - 1);
     notifyListeners();
   }
 
   /// Interrupteurs de la barre des leçons (ADR 0025), mémorisés.
   Future<void> setVoiceOn(bool on) async {
     voice.voiceOn = on;
+    if (!on) await voice.stop(); // la phrase en cours se tait tout de suite
     await store.set('voix', on ? 'oui' : 'non');
     notifyListeners();
   }
@@ -421,7 +446,7 @@ class ChildProfile {
   final int id;
   final String name;
 
-  String get label => name.isEmpty ? 'Enfant $id' : name;
+  String get label => name.isEmpty ? tf('Enfant {n}', {'n': id}) : name;
 }
 
 class AppScope extends InheritedNotifier<AppState> {

@@ -63,10 +63,16 @@ class _CountActivityState extends State<CountActivity> {
   }
 
   void _counted(int k) {
+    if (!mounted) return;
     setState(() => counted = k);
     if (a.demonstrate) return;
     a.speech.say('$k');
-    if (k == n) Future.delayed(const Duration(milliseconds: 700), () => a.show('question'));
+    if (k == n) {
+      Future.delayed(const Duration(milliseconds: 700), () {
+        // Pas si l'enfant a déjà répondu entre-temps : la question effaçait l'aide et coupait sa voix.
+        if (mounted && !a.busy && !a.finished) a.show('question');
+      });
+    }
   }
 
   @override
@@ -135,8 +141,10 @@ class CountGame extends FlameGame {
     if (isLoaded && _image != null) _layout();
   }
 
+  bool demonstrating = false;
+
   void tap(Thing t) {
-    if (t.number != null || counted >= n) return;
+    if (demonstrating || t.number != null || counted >= n) return;
     t.number = ++counted;
     onCount(counted);
   }
@@ -151,8 +159,10 @@ class CountGame extends FlameGame {
   /// Montre la bonne façon : compte chaque objet, un par un.
   Future<void> demonstrate() async {
     reset();
+    demonstrating = true;
     for (final t in _things) {
       await Future<void>.delayed(const Duration(milliseconds: 550));
+      if (t.number != null) continue;
       t.number = ++counted;
       onCount(counted);
     }
