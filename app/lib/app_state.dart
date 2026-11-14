@@ -10,6 +10,7 @@ import 'core/day.dart';
 import 'core/events.dart';
 import 'core/progress.dart';
 import 'core/rewards.dart';
+import 'core/streak.dart';
 import 'l10n/l10n.dart';
 import 'store/store.dart';
 import 'ui/universe.dart';
@@ -155,6 +156,7 @@ class AppState extends ChangeNotifier {
     final marks = await store.get('marque_pages');
     bookmarks = marks == null ? {} : {for (final e in (jsonDecode(marks) as Map).entries) int.parse(e.key as String): e.value as int};
     lastBook = int.tryParse(await store.get('livre_dernier') ?? '');
+    dailyDoneDay = int.tryParse(await store.get('defi_jour') ?? '');
     final known = await store.get('test_depart');
     placed = known == null || known.isEmpty ? {} : Set<String>.from(jsonDecode(known) as List);
     voice
@@ -247,6 +249,37 @@ class AppState extends ChangeNotifier {
         for (final t in topics)
           if (t.ageless || t.skills.any((s) => s.ref.level >= t.levelsFor(schoolClass).floor && s.ref.level <= t.levelsFor(schoolClass).ceiling)) t
       ];
+
+  /// Le domaine d'une compétence.
+  Topic topicOf(String skillId) => topics.firstWhere((t) => t.skills.any((s) => s.id == skillId));
+
+  /// « À revoir aujourd'hui » (ADR 0071) : les révisions dues de tous les domaines proposés, mêlées, les plus anciennes
+  /// d'abord, [reviewSize] au plus. Une notion revient juste avant d'être oubliée (boîtes de Leitner, ADR 0007).
+  static const reviewSize = 8;
+  List<String> dueReviews([DateTime? now]) {
+    final at = now ?? DateTime.now();
+    final due = [for (final t in shownTopics) ...progressOf(t).due(at).where((d) => progressOf(t).inRange(d.$1))]
+      ..sort((a, b) => a.$2.compareTo(b.$2));
+    return [for (final d in due.take(reviewSize)) d.$1];
+  }
+
+  /// Série de jours joués (ADR 0071).
+  Streak streak([DateTime? now]) => streakOf(sessions, now ?? DateTime.now());
+
+  /// Le défi du jour (ADR 0071) : huit questions de ce qu'il a acquis, tous domaines mêlés ; null s'il n'a encore rien acquis.
+  List<String>? dailyChallengePlan([DateTime? now]) => dailyChallenge(
+      [for (final t in shownTopics) if (!t.ageless) ...progressOf(t).challengePool.where(progressOf(t).inRange)],
+      dayNumber(now ?? DateTime.now()) + devDayShift);
+
+  /// Le jour (voir [dayNumber]) du dernier défi du jour fini.
+  int? dailyDoneDay;
+  bool dailyDone([DateTime? now]) => dailyDoneDay == dayNumber(now ?? DateTime.now()) + devDayShift;
+
+  Future<void> finishDaily() async {
+    dailyDoneDay = dayNumber(DateTime.now()) + devDayShift;
+    await store.set('defi_jour', '$dailyDoneDay');
+    notifyListeners();
+  }
 
   /// Note les compétences réussies au test de départ.
   Future<void> place(Iterable<String> ids) async {

@@ -23,7 +23,38 @@ class Dashboard extends StatelessWidget {
     final st = parentStats(app.journal, sessions, DateTime.now());
     final titles = {for (final t in app.topics) for (final s in t.skills) s.id: s.title};
     final name = app.current.label;
+    final streak = app.streak();
+    final due = app.dueReviews().length;
+    final total = st.minutesPerDay.fold<int>(0, (a, b) => a + b);
+    // Le bilan en phrases (ADR 0071) : ce qu'un parent pressé veut savoir, puis un seul conseil.
+    final advice = st.toReview.isNotEmpty
+        ? tf('Conseil : jouez cinq minutes avec {name} à « {skill} ». L’app explique chaque erreur, puis repose une question proche.', {'name': name, 'skill': titles[st.toReview.first.skill] ?? st.toReview.first.skill})
+        : st.daysPlayed < 3
+            ? t('Conseil : mieux vaut un peu chaque jour qu’une longue séance par semaine. Une révision de quelques minutes suffit les jours chargés.')
+            : due > 0
+                ? tf('Conseil : le bouton « À revoir » de l’accueil propose {n} notions à revoir aujourd’hui, juste avant qu’elles s’oublient.', {'n': due})
+                : t('Conseil : continuez ainsi. Demandez-lui de vous expliquer ce qu’il a appris : expliquer aide à retenir.');
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      _Card(
+        title: t('Le bilan de la semaine'),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          _Line(Icons.calendar_today_rounded, tf('{name} a joué {days} jours sur 7, {minutes} minutes en tout.', {'name': name, 'days': st.daysPlayed, 'minutes': total})),
+          if (streak.days >= 2) _Line(Icons.local_fire_department_rounded, tf('Série en cours : {n} jours. Un jour de repos ne la casse pas.', {'n': streak.days})),
+          _Line(
+            Icons.emoji_events_rounded,
+            st.learned.isEmpty
+                ? t('Pas de nouvelle notion acquise cette semaine : c’est normal quand les leçons sont nouvelles.')
+                : tf('Notions acquises cette semaine : {list}.', {'list': [for (final id in st.learned.take(4)) titles[id] ?? id].join(', ') + (st.learned.length > 4 ? '…' : '')}),
+          ),
+          if (st.toReview.isNotEmpty) _Line(Icons.flag_rounded, tf('À aider : {list}.', {'list': [for (final r in st.toReview) titles[r.skill] ?? r.skill].join(', ')})),
+          const SizedBox(height: 4),
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(color: const Color(0xFFF3F0FA), borderRadius: BorderRadius.circular(12)),
+            child: Text(advice, style: _body),
+          ),
+        ]),
+      ),
       _Card(title: t('Temps de jeu, 7 derniers jours'), child: _Days(minutes: st.minutesPerDay, target: app.dailyMinutes)),
       _Card(title: t('Réussi du premier coup'), child: _FirstTry(now: st.firstTryThisWeek, before: st.firstTryLastWeek)),
       _Card(
@@ -64,6 +95,23 @@ class Dashboard extends StatelessWidget {
 const _body = TextStyle(fontFamily: 'Andika', fontSize: 16, height: 1.35, color: texteCahier);
 const _small = TextStyle(fontFamily: 'Andika', fontSize: 14, height: 1.3, color: Color(0xFF4A4560));
 const _strong = TextStyle(fontFamily: 'Andika', fontSize: 17, fontWeight: FontWeight.w700, color: encre);
+
+/// Une phrase du bilan, avec son icône.
+class _Line extends StatelessWidget {
+  const _Line(this.icon, this.text);
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(padding: const EdgeInsets.only(top: 2), child: Icon(icon, color: violet, size: 22)),
+          const SizedBox(width: 10),
+          Expanded(child: Text(text, style: _body)),
+        ]),
+      );
+}
 
 class _Card extends StatelessWidget {
   const _Card({required this.title, required this.child});

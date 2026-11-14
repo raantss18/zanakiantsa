@@ -9,11 +9,13 @@ import '../content/content.dart';
 import '../core/day.dart';
 import '../l10n/l10n.dart';
 import '../parent/gate.dart';
+import '../update/updater.dart';
 import 'adaptive.dart';
 import 'album.dart';
 import 'topic_intro.dart';
 import 'all_topics.dart';
 import 'library.dart';
+import 'session.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -33,7 +35,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) => _welcome());
+    // À chaque lancement, l'app regarde seule s'il y a une nouvelle version (demande d'Antsa du 2026-11-14 : la mise à jour
+    // ne doit pas être cachée). Sans réseau, rien ne s'affiche. L'installation reste derrière la porte parent.
+    Updater().check().then((r) {
+      if (mounted && r != null) setState(() => _update = r);
+    });
   }
+
+  /// La nouvelle version trouvée au lancement, s'il y en a une : annoncée sur l'accueil.
+  Release? _update;
 
   /// La parole de l'accueil (bienvenue, histoire, activités du jour) : coupée dès que l'enfant touche l'écran, sinon
   /// elle continuait par-dessus la page ouverte.
@@ -86,7 +96,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           child: SafeArea(
             child: LayoutBuilder(builder: (context, k) {
               if (!s.ready) {
-                return Column(children: [_Header(onListen: _welcome), Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))]);
+                return Column(children: [_Header(onListen: _welcome, update: _update != null), Expanded(child: _AskAdult(text: s.common.text('demande_adulte')))]);
               }
               return isLandscape(k.biggest) ? _landscape(context, s, u, plan, k) : _portrait(context, s, u, plan, k);
             }),
@@ -114,13 +124,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   /// est trop petit pour les cartes, toute la page défile et elles gardent leur taille.
   Widget _portrait(BuildContext context, AppState s, Universe u, DayPlan plan, BoxConstraints k) {
     final scale = MediaQuery.textScalerOf(context).scale(1.0);
+    final strip = _strip(context, s, u);
     final layout = homeCardsFor(
       width: k.maxWidth - 32,
-      cardsHeight: k.maxHeight - homeChrome(fontScale: scale, dayFinished: plan.finished),
+      cardsHeight: k.maxHeight - homeChrome(fontScale: scale, dayFinished: plan.finished, strip: strip != null),
     );
     final top = [
-      _Header(onListen: _welcome),
+      _Header(onListen: _welcome, update: _update != null),
       _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+      ?strip,
       if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
     ];
     final bottom = [_exploreButton(context, s, u), _bottomRow(context, s, u)];
@@ -185,7 +197,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         child: Column(children: [
           // Le texte de Robi doit se lire en entier : la zone défilait, et avec un texte agrandi (150 % sur la SM-X135G) la
           // fin de la bulle restait cachée sans que rien ne le montre (signalé par Antsa, 2026-11-07). Elle rétrécit à la place.
-          _Header(onListen: _welcome), // hors de la zone qui rétrécit : ses boutons gardent leurs 48 dp
+          _Header(onListen: _welcome, update: _update != null), // hors de la zone qui rétrécit : ses boutons gardent leurs 48 dp
           Expanded(
             child: LayoutBuilder(
               builder: (_, box) => FittedBox(
@@ -195,6 +207,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   width: box.maxWidth,
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+                    ?_strip(context, s, u),
                     if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
                   ]),
                 ),
@@ -218,6 +231,67 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ),
       ),
     ]);
+  }
+
+  /// Série de jours, « À revoir » et « Défi du jour » (ADR 0071) : une rangée sous le texte d'accueil ; null quand il n'y a
+  /// rien à y mettre (premiers jours : pas encore de série, rien d'acquis à revoir).
+  Widget? _strip(BuildContext context, AppState s, Universe u) {
+    final streak = s.streak();
+    final due = s.dueReviews();
+    final daily = s.dailyChallengePlan();
+    final done = s.dailyDone();
+    Future<void> go(Widget page) async {
+      _greeting?.close();
+      await s.voice.stop();
+      if (!context.mounted) return;
+      await Navigator.of(context).push(MaterialPageRoute(builder: (_) => page));
+      await s.refresh();
+    }
+
+    final pills = [
+      if (_update != null)
+        HomePill(
+          icon: Icons.system_update_rounded,
+          color: Brand.pink,
+          label: t('Mise à jour'),
+          semantics: tf('Nouvelle version {v} : demande à un adulte', {'v': _update!.version}),
+          onTap: () => openParentSpace(context),
+        ),
+      if (streak.days >= 2)
+        HomePill(
+          icon: Icons.local_fire_department_rounded,
+          color: const Color(0xFFB3400F),
+          label: tf('{n} jours', {'n': streak.days}),
+          semantics: tf('Série : {n} jours de jeu', {'n': streak.days}),
+        ),
+      if (due.isNotEmpty)
+        HomePill(
+          icon: Icons.replay_circle_filled_rounded,
+          color: Brand.teal,
+          label: t('À revoir'),
+          count: due.length,
+          semantics: tf('À revoir aujourd’hui : {n} notions', {'n': due.length}),
+          onTap: () => go(SessionPage.review(due)),
+        ),
+      if (daily != null)
+        HomePill(
+          icon: done ? Icons.check_circle_rounded : Icons.bolt_rounded,
+          color: done ? green : Brand.purple,
+          label: done ? t('Défi réussi') : t('Défi du jour'),
+          semantics: done ? t('Défi du jour : réussi, rejouer') : t('Défi du jour'),
+          onTap: () => go(SessionPage.daily(daily)),
+        ),
+    ];
+    if (pills.isEmpty) return null;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: SizedBox(
+        height: homeStripHeight - 8,
+        child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          for (final (i, p) in pills.indexed) ...[if (i > 0) const SizedBox(width: 8), Expanded(flex: p.onTap == null ? 2 : 3, child: p)],
+        ]),
+      ),
+    );
   }
 
   /// « Tout explorer » : les trois du jour sont proposées, tout le reste reste ouvert (ADR 0032).
@@ -470,8 +544,11 @@ class _DayDone extends StatelessWidget {
 }
 
 class _Header extends StatelessWidget {
-  const _Header({required this.onListen});
+  const _Header({required this.onListen, this.update = false});
   final VoidCallback onListen;
+
+  /// Une nouvelle version attend : une pastille sur le cadenas de l'espace parent.
+  final bool update;
 
   @override
   Widget build(BuildContext context) {
@@ -500,12 +577,17 @@ class _Header extends StatelessWidget {
         const Spacer(),
         _RoundButton(size: 56, color: surface, tooltip: t('Réécouter'), onPressed: onListen, child: Icon(Icons.volume_up_rounded, color: u.onCard, size: 32)),
         const SizedBox(width: 8),
-        _RoundButton(
-          size: 48,
-          color: surface,
-          tooltip: t('Espace parent'),
-          onPressed: () => openParentSpace(context),
-          child: const Icon(Icons.lock_outline, color: Color(0xFF5F6B63), size: 24),
+        Badge(
+          isLabelVisible: update,
+          backgroundColor: Brand.pink,
+          smallSize: 14,
+          child: _RoundButton(
+            size: 48,
+            color: surface,
+            tooltip: update ? t('Espace parent : nouvelle version disponible') : t('Espace parent'),
+            onPressed: () => openParentSpace(context),
+            child: const Icon(Icons.lock_outline, color: Color(0xFF5F6B63), size: 24),
+          ),
         ),
       ]),
     );
@@ -771,4 +853,46 @@ class ProfilePicker extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Une pastille de la rangée de l'accueil (ADR 0071) : icône, texte écrit, et un nombre éventuel. Avec [onTap], c'est un
+/// bouton en relief (≥ 48 dp) ; sans, une simple étiquette plate (la série de jours ne se touche pas).
+class HomePill extends StatelessWidget {
+  const HomePill({super.key, required this.icon, required this.color, required this.label, required this.semantics, this.count, this.onTap});
+  final IconData icon;
+  final Color color;
+  final String label, semantics;
+  final int? count;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) => Semantics(
+        button: onTap != null,
+        label: semantics,
+        excludeSemantics: true,
+        child: Material(
+          color: surface,
+          elevation: onTap == null ? 0 : 3,
+          shape: StadiumBorder(side: BorderSide(color: onTap == null ? const Color(0x401B211D) : color, width: onTap == null ? 2 : 3)),
+          child: InkWell(
+            customBorder: const StadiumBorder(),
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  Icon(icon, color: color, size: 34),
+                  const SizedBox(width: 6),
+                  Text(label, maxLines: 1, style: const TextStyle(fontFamily: 'Fredoka', fontSize: 21, fontWeight: FontWeight.w700, color: ink)),
+                  if (count != null) ...[
+                    const SizedBox(width: 6),
+                    CircleAvatar(radius: 15, backgroundColor: color, child: Text('$count', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: Colors.white))),
+                  ],
+                ]),
+              ),
+            ),
+          ),
+        ),
+      );
 }

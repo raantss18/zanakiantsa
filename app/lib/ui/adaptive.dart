@@ -28,7 +28,8 @@ double appliedFontScale(double system, Size screen) =>
 
 /// Ce que prend le reste de l'accueil (en-tête, texte d'accueil, boutons du bas), en dp, avec une marge pour que
 /// l'estimation soit toujours trop grande plutôt que trop petite : mieux vaut défiler un peu que serrer les cartes.
-double homeChrome({required double fontScale, required bool dayFinished}) =>
+double homeChrome({required double fontScale, required bool dayFinished, bool strip = false}) =>
+    (strip ? homeStripHeight : 0) /* série, « À revoir », défi du jour (ADR 0071) */ +
     84 /* en-tête */ +
     (108 * fontScale +
         12) /* texte d'accueil, plus haut avec une grande police */ +
@@ -36,6 +37,9 @@ double homeChrome({required double fontScale, required bool dayFinished}) =>
     64 /* « Tout explorer » */ +
     84 /* rangée du bas */ +
     24 /* marges */;
+
+/// La rangée « série de jours, À revoir, Défi du jour » de l'accueil, marge comprise.
+const homeStripHeight = 72.0;
 
 /// Plus petite hauteur utile des trois cartes du jour, côte à côte (grandes cartes) ou l'une sous l'autre (lignes).
 const homeCardsMinSideBySide = 270.0,

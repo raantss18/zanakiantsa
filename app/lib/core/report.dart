@@ -54,7 +54,20 @@ class ToReview {
 }
 
 class ParentStats {
-  const ParentStats({required this.minutesPerDay, required this.firstTryThisWeek, required this.firstTryLastWeek, required this.toReview});
+  const ParentStats(
+      {required this.minutesPerDay,
+      required this.firstTryThisWeek,
+      required this.firstTryLastWeek,
+      required this.toReview,
+      this.daysPlayed = 0,
+      this.learned = const []});
+
+  /// Jours joués sur les 7 derniers (bilan de la semaine, ADR 0071).
+  final int daysPlayed;
+
+  /// Notions acquises cette semaine : maîtrisées aujourd'hui, pas encore il y a 7 jours. Dans l'ordre où elles l'ont été.
+  final List<String> learned;
+
 
   /// Minutes jouées chacun des 7 derniers jours, du plus ancien à aujourd'hui.
   final List<int> minutesPerDay;
@@ -98,7 +111,17 @@ ParentStats parentStats(List<Answer> journal, List<SessionLog> sessions, DateTim
     }
   });
   review.sort((a, b) => (b.failures / b.answers).compareTo(a.failures / a.answers));
+  final learned = [
+    for (final skill in bySkill.keys)
+      if (isMastered(journal.where((a) => a.skill == skill)) && !isMastered(journal.where((a) => a.skill == skill && a.at.isBefore(from)))) skill
+  ];
+  final days = {
+    for (final s in sessions)
+      if (!s.started.isBefore(from)) DateTime(s.started.year, s.started.month, s.started.day)
+  };
   return ParentStats(
+    daysPlayed: days.length,
+    learned: learned,
     minutesPerDay: [for (var i = 6; i >= 0; i--) minutes(today.subtract(Duration(days: i)))],
     firstTryThisWeek: _firstTry(week),
     firstTryLastWeek: _firstTry(last),

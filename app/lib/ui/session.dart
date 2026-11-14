@@ -26,6 +26,7 @@ import '../audio/voice.dart';
 import '../content/content.dart';
 import '../core/diagnostic.dart';
 import '../core/events.dart';
+import '../core/progress.dart';
 import '../core/rewards.dart';
 import '../core/rules.dart';
 import '../l10n/l10n.dart';
@@ -39,11 +40,17 @@ import 'universe.dart';
 /// que le bandeau narrateur affiche (ADR 0016).
 class Attempt extends ChangeNotifier {
   Attempt(this.app, this.skill, this.question, this.onDone, this.onCorrect,
-      {this.example = false, this.challenge = false, this.diagnostic = false, this.reminder = false})
+      {this.example = false, this.challenge = false, this.diagnostic = false, this.reminder = false, this.retry = false})
       : finished = example;
 
   /// Question de vérification d'un prérequis avant une notion nouvelle (ADR 0061) : une seule réponse, sans aide.
   final bool diagnostic;
+
+  /// Question proche d'une question restée difficile, un peu plus tôt dans la séance (ADR 0071).
+  final bool retry;
+
+  /// Une pastille au-dessus de l'activité dit ce qu'est cette question (« À vérifier d'abord », « On réessaie »).
+  bool get tagged => diagnostic || retry;
 
   /// Rappel d'un prérequis manqué au diagnostic (ADR 0061) : l'idée et l'exemple résolu, comme une découverte.
   final bool reminder;
@@ -325,7 +332,22 @@ const devSkill = String.fromEnvironment('DEV_SKILL');
 
 /// Une séance de questions dans un domaine (ADR 0018). Le dessin a sa propre page (activities/draw.dart).
 class SessionPage extends StatefulWidget {
-  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false, this.placement = false, this.lesson});
+  const SessionPage({super.key, required this.topic, this.resume, this.challenge = false, this.placement = false, this.lesson, this.mixed, this.review = false});
+
+  /// Thèmes des séances qui mêlent les domaines (ADR 0071) : ce ne sont pas des domaines du contenu.
+  static const reviewTheme = 'revision', dailyTheme = 'defi-jour';
+
+  /// « À revoir aujourd'hui » : les révisions dues de tous les domaines, avec les aides habituelles.
+  const SessionPage.review(List<String> plan, {super.key})
+      : topic = reviewTheme, mixed = plan, review = true, challenge = false, placement = false, lesson = null, resume = null;
+
+  /// Le défi du jour : huit questions de ce qui est acquis, tous domaines mêlés, sans aide ; on garde le record.
+  const SessionPage.daily(List<String> plan, {super.key})
+      : topic = dailyTheme, mixed = plan, review = false, challenge = true, placement = false, lesson = null, resume = null;
+
+  /// Plan imposé d'une séance qui mêle les domaines ; [topic] n'est alors pas un domaine du contenu.
+  final List<String>? mixed;
+  final bool review;
   final String topic;
 
   /// Leçon choisie par l'enfant dans « Tout explorer » (ADR 0065) : diagnostic de ses prérequis tant qu'elle n'est pas
@@ -350,6 +372,8 @@ class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
   late List<String> plan = devSkill.isNotEmpty
       ? devSkill.split(",")
+      : widget.mixed != null
+          ? [...widget.mixed!]
       : widget.challenge
           ? app.progressOf(app.topic(widget.topic)).challengePlan(Random()) ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
           : widget.placement
@@ -359,14 +383,21 @@ class _SessionPageState extends State<SessionPage> {
                   : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
-  late String? _target = widget.challenge || widget.placement ? null : widget.lesson ?? app.progressOf(app.topic(widget.topic)).newSkill;
+  late String? _target = _oneGo ? null : widget.lesson ?? app.progressOf(app.topic(widget.topic)).newSkill;
 
   /// Test de départ : les compétences sues, et celle où il s'est arrêté (null : rien manqué).
   final _known = <String>[];
   String? _stoppedAt;
 
   /// Ni reprise ni compétence cible : le défi et le test de départ se jouent d'une traite.
-  bool get _oneGo => widget.challenge || widget.placement;
+  bool get _oneGo => _test || widget.review;
+
+  /// Défi ou test de départ : sans aide ni question proche, et noté comme tel dans le journal.
+  bool get _test => widget.challenge || widget.placement;
+
+  /// Notions déjà reposées dans cette séance, et les places du plan où une question proche a été glissée (ADR 0071).
+  final _retried = <String>{};
+  final _retryAt = <int>{};
 
   /// Défi : réussites du premier coup, et le record d'avant (pour dire « nouveau record ! »).
   int firstTry = 0;
@@ -437,7 +468,7 @@ class _SessionPageState extends State<SessionPage> {
     }
     final skill = app.skill(plan[index]);
     // Notion nouvelle : d'abord ses prérequis (ADR 0061), une seule fois par séance, jamais pendant un défi ou un test.
-    final topic = app.topic(widget.topic);
+    final topic = app.topicOf(skill.id);
     final progress = app.progressOf(topic);
     final never = app.journal.every((x) => x.skill != skill.id || x.challenge);
     // Leçon choisie : diagnostic tant qu'elle n'est pas acquise, même si elle a déjà été commencée.
@@ -462,7 +493,7 @@ class _SessionPageState extends State<SessionPage> {
     a = Attempt(app, skill, q, _advance, () => setState(() {
           stars++;
           if (a.misses == 0) firstTry++;
-        }), example: example, challenge: _oneGo);
+        }), example: example, challenge: _test, retry: !example && _retryAt.contains(index));
     return a;
   }
 
@@ -487,16 +518,23 @@ class _SessionPageState extends State<SessionPage> {
       return;
     }
     if (widget.placement) await _placementStep();
+    // Question restée difficile : une question proche revient un peu plus loin, une fois par notion (ADR 0071).
+    if (!_test && done != null && !done.example && devSkill.isEmpty && (!done.solved || done.misses >= 2) && _retried.add(done.skill.id)) {
+      final before = plan.length;
+      plan = Progress.withRetry(plan, index, done.skill.id);
+      _retryAt.add(index + 3 > before ? before : index + 3);
+    }
     if (index + 1 >= plan.length || _stoppedAt != null) {
       if (devSkill.isEmpty && widget.lesson == null && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
       if (widget.challenge) await _endChallenge();
+      if (widget.mixed != null && widget.challenge) await app.finishDaily();
       await app.logSession(SessionLog(theme: widget.topic, started: _started, ended: DateTime.now()));
       setState(() => over = true);
       app.voice.stopMusic();
       app.voice.fanfare();
       await Future<void>.delayed(sfxLength);
       if (_oneGo) {
-        await speech.say(widget.challenge ? challengeText : placementText);
+        await speech.say(_oneGoText);
         return;
       }
       await speech.say(app.common.text('fin_seance'), id: 'commun.fin_seance');
@@ -544,6 +582,12 @@ class _SessionPageState extends State<SessionPage> {
     return start == null ? head + t('Tu sais tout ce qu\'il y a ici !') : head + tf('Tu commences à : {skill}.', {'skill': app.skill(start).title});
   }
 
+  String get _oneGoText => widget.review ? reviewText : widget.challenge ? challengeText : placementText;
+
+  /// Fin de « À revoir aujourd'hui ».
+  String get reviewText => tf('Révision finie : {score} sur {total} du premier coup. ', {'score': firstTry, 'total': plan.length}) +
+      t('Ces notions reviendront juste avant que tu les oublies.');
+
   /// Fin de défi : le score, et le record s'il est battu.
   Future<void> _endChallenge() async {
     if (firstTry > (_record ?? -1)) await app.store.set('defi_${widget.topic}', '$firstTry');
@@ -585,6 +629,8 @@ class _SessionPageState extends State<SessionPage> {
             // gauche quand l'échiquier a toute la hauteur.
             final badge = a.diagnostic
                 ? _NewBadge(title: a.skill.title, label: t('À vérifier d’abord'), icon: Icons.fact_check_rounded)
+                : a.retry
+                    ? _NewBadge(title: a.skill.title, label: t('On réessaie'), icon: Icons.replay_rounded)
                 : a.reminder
                     ? _NewBadge(title: a.skill.title, label: t('Rappel'), icon: Icons.lightbulb_rounded)
                     : a.example
@@ -629,7 +675,7 @@ class _SessionPageState extends State<SessionPage> {
             // La zone de l'activité : sous la barre du haut, et sous le texte ou à côté de lui.
             final area = Size(
               k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0),
-              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : a.diagnostic && !side ? 52 : 0),
+              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : a.tagged && !side ? 52 : 0),
             );
             final fills = activitiesThatFill.contains(a.skill.activity);
             final scale = activityScaleFor(area, a.skill.activity);
@@ -638,10 +684,12 @@ class _SessionPageState extends State<SessionPage> {
             final content = over
                   ? DayEnd(
                       theme: widget.topic,
-                      again: () => Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic, challenge: widget.challenge))),
+                      again: widget.mixed != null
+                          ? null
+                          : () => Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (_) => SessionPage(topic: widget.topic, challenge: widget.challenge))),
                       child: _oneGo
-                          ? Text(widget.challenge ? challengeText : placementText, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.25))
+                          ? Text(_oneGoText, textAlign: TextAlign.center, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: ink, height: 1.25))
                           : _End(
                         stars: stars,
                         universe: u,
@@ -654,7 +702,7 @@ class _SessionPageState extends State<SessionPage> {
                       Positioned.fill(
                         // Pendant l'exemple, l'activité laisse la place à la pastille « Nouveau » en haut et au bouton
                         // « J'ai compris » en bas (pas de chevauchement).
-                        top: (a.example || a.diagnostic) && !side ? 52 : 0,
+                        top: (a.example || a.tagged) && !side ? 52 : 0,
                         bottom: a.example && !side ? 104 : 0,
                         child: ScaledActivity(scale: scale, child: ActivityRoom(height: room, child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
@@ -689,7 +737,7 @@ class _SessionPageState extends State<SessionPage> {
                       Positioned.fill(child: Celebration(trigger: stars, scene: u.scene)),
                       // Essais seulement (jamais publié) : passer à la compétence suivante pour regarder chaque écran.
                       if (devSkill.isNotEmpty) Positioned(left: 4, bottom: 4, child: FloatingActionButton.small(heroTag: 'devSkip', onPressed: _advance, child: const Icon(Icons.skip_next))),
-                      if (a.diagnostic && !side)
+                      if (a.tagged && !side)
                         Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
                       if (a.example && !side) ...[
                         Positioned(left: 12, right: 12, top: 4, child: Align(alignment: Alignment.centerLeft, child: badge!)),
@@ -868,7 +916,9 @@ Future<void> sayDayStatus(AppState app, String theme, [Speech? speech]) async {
 class DayEnd extends StatelessWidget {
   const DayEnd({super.key, required this.theme, required this.again, required this.child});
   final String theme;
-  final VoidCallback again;
+
+  /// null : pas de « Continuer » (révision et défi du jour, une fois par jour).
+  final VoidCallback? again;
   final Widget child;
 
   @override
@@ -927,8 +977,8 @@ class DayEnd extends StatelessWidget {
             ],
             const SizedBox(height: 24),
             Wrap(spacing: 32, runSpacing: 16, alignment: WrapAlignment.center, children: [
-              if (!done) round(Icons.arrow_forward_rounded, t('Continuer'), again, detail: t('nouvelles questions')),
-              round(Icons.home_rounded, t('Accueil'), () => Navigator.of(context).pop(), primary: done),
+              if (!done && again != null) round(Icons.arrow_forward_rounded, t('Continuer'), again!, detail: t('nouvelles questions')),
+              round(Icons.home_rounded, t('Accueil'), () => Navigator.of(context).pop(), primary: done || again == null),
             ]),
           ]),
         ),

@@ -137,15 +137,23 @@ class Progress {
 
   bool unlocked(SkillRef s) => s.prerequisites.every(mastered);
 
-  /// Révisions dues (les plus anciennes d'abord), puis la première compétence ouverte non maîtrisée.
-  List<String> plan(DateTime now) {
+  /// Les révisions dues de ce domaine, avec leur échéance, les plus anciennes d'abord. Jamais sous le plancher.
+  List<(String, DateTime)> due(DateTime now) {
     final due = <(String, DateTime)>[];
     for (final s in skills) {
       final c = card(s.id);
       if (c != null && isDue(c, now) && !belowFloor(s.id)) due.add((s.id, c.due));
     }
-    due.sort((a, b) => a.$2.compareTo(b.$2));
-    final out = [for (final d in due) d.$1];
+    return due..sort((a, b) => a.$2.compareTo(b.$2));
+  }
+
+  /// Ce que le défi peut poser (ADR 0042) : ce que l'enfant a acquis, et le niveau juste en dessous de sa classe.
+  List<String> get challengePool =>
+      [for (final s in skills) if (!belowFloor(s.id) && (earned(s.id) || (skipped(s.id) && s.level == startLevel - 1))) s.id];
+
+  /// Révisions dues (les plus anciennes d'abord), puis la première compétence ouverte non maîtrisée.
+  List<String> plan(DateTime now) {
+    final out = [for (final d in due(now)) d.$1];
     final next = skills.where((s) => s.id == newSkill).firstOrNull;
     // Une révision = une question ; le reste de la séance va à la compétence nouvelle.
     final reviews = out.take(questionsPerSession ~/ 2).toList();
@@ -165,7 +173,7 @@ class Progress {
   /// Défi (ADR 0042) : [n] questions mêlées de tout ce que l'enfant a acquis (et du niveau juste en dessous de son
   /// âge), chaque compétence une fois par tour, dans le désordre. null : rien d'acquis encore, pas de défi.
   List<String>? challengePlan(Random r, {int n = 10}) {
-    final pool = [for (final s in skills) if (!belowFloor(s.id) && (earned(s.id) || (skipped(s.id) && s.level == startLevel - 1))) s.id];
+    final pool = challengePool;
     if (pool.isEmpty) return null;
     final out = <String>[];
     while (out.length < n) {
@@ -196,6 +204,14 @@ class Progress {
     if (l < floor || l > ceiling) return false;
     if (l <= classe) return true;
     return skills.where((s) => s.level <= classe).every((s) => mastered(s.id));
+  }
+
+  /// Après une question restée difficile (pas trouvée, ou trouvée au troisième essai) : une question proche de la même
+  /// notion revient deux questions plus loin (ADR 0071), le temps de penser à autre chose puis d'essayer ce qu'on vient de
+  /// comprendre. Le plan s'allonge d'une question ; la séance appelle cela une seule fois par notion.
+  static List<String> withRetry(List<String> plan, int index, String id) {
+    final at = index + 3 > plan.length ? plan.length : index + 3;
+    return [...plan.take(at), id, ...plan.skip(at)];
   }
 
   /// En cours de séance (ADR 0037) : la suite du plan à partir de [index], une fois la réponse enregistrée. Si
