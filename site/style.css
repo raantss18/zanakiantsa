@@ -213,6 +213,11 @@ h3 { font-size: 1.3rem; line-height: var(--u); margin-bottom: 0; }
 @media (min-width: 900px) { .accueil.deux.gauche-large { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 40px; } }
 .video-accueil .autocollant { display: none; } /* le texte le dit déjà ; sur la vidéo il cachait les chapitres */
 .video-accueil .tablette video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--papier); }
+/* La vidéo de l'évolution est verticale (téléphone) : un cadre de téléphone, centré, pas plus large qu'un vrai. */
+.video-accueil .telephone { max-width: 380px; margin-inline: auto; }
+.video-accueil .telephone .cadre { border-radius: clamp(26px, 5vw, 40px); }
+.video-accueil .telephone video { aspect-ratio: 9 / 16; }
+.video-accueil .telephone figcaption, .video-accueil .chapitres { max-width: 380px; margin-inline: auto; }
 .video-accueil .cadre { position: relative; }
 .son {
   position: absolute; left: 14px; top: 14px; z-index: 1; display: inline-flex; align-items: center; gap: 10px;
