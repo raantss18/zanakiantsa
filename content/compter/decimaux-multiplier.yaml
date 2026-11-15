@@ -45,6 +45,7 @@ items:
       - { texte: "120", pourquoi: "120 = 12 × 10 : multiplier par 0,1, c'est diviser par 10." }
       - { texte: "12,1", pourquoi: "12 + 0,1 : c'est une multiplication." }
   - texte: "Un rectangle mesure 2,5 m sur 1,2 m. Quelle est son aire ?"
+    figure: { type: rectangle, largeur: "2,5 m", hauteur: "1,2 m" }
     nom: "3 m²"
     explication: "25 × 12 = 300. 2 chiffres après les virgules : 3,00 m² = 3 m²."
     pieges:
@@ -111,6 +112,7 @@ en:
         - { texte: "120", pourquoi: "120 = 12 × 10: multiplying by 0.1 is dividing by 10." }
         - { texte: "12.1", pourquoi: "12 + 0.1: this is a multiplication." }
     - texte: "A rectangle is 2.5 m by 1.2 m. What is its area?"
+      figure: { type: rectangle, largeur: "2.5 m", hauteur: "1.2 m" }
       nom: "3 m²"
       explication: "25 × 12 = 300. 2 digits after the points: 3.00 m² = 3 m²."
       pieges:

@@ -20,12 +20,14 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "Le Soleil est-il une source primaire de lumière ou un objet diffusant ?"
+    image: "2600"
     nom: "Une source primaire."
     explication: "Le Soleil produit lui-même sa lumière : c'est une source primaire."
     pieges:
       - { texte: "Un objet diffusant.", pourquoi: "Un objet diffusant renvoie une lumière venue d'ailleurs ; le Soleil, lui, la produit." }
       - { texte: "Ni l'un ni l'autre.", pourquoi: "Tout objet que l'on voit est soit une source primaire, soit un objet diffusant." }
   - texte: "La Lune brille la nuit. Est-ce une source primaire de lumière ?"
+    image: 1f319
     nom: "Non, c'est un objet diffusant : elle renvoie la lumière du Soleil."
     explication: "La Lune ne produit pas sa propre lumière : le clair de lune est de la lumière du Soleil renvoyée par la Lune."
     pieges:
@@ -44,6 +46,7 @@ items:
       - { texte: "En contournant les objets.", pourquoi: "Si elle contournait les objets, il n'y aurait pas d'ombre derrière eux." }
       - { texte: "En zigzag.", pourquoi: "Dans un même milieu, comme l'air, la lumière ne change pas de direction : elle va tout droit." }
   - texte: "Pourquoi un objet éclairé par une lampe a-t-il une ombre derrière lui ?"
+    image: 1f4a1
     nom: "Parce que la lumière va en ligne droite et que l'objet l'arrête."
     explication: "Les rayons qui touchent l'objet sont arrêtés ; ceux qui passent à côté continuent tout droit. Derrière l'objet, une zone ne reçoit pas de lumière : c'est l'ombre."
     pieges:
@@ -62,6 +65,7 @@ items:
       - { texte: "Une durée d'un an.", pourquoi: "Le mot « année » trompe : l'année-lumière mesure une distance, pas un temps." }
       - { texte: "La vitesse de la lumière.", pourquoi: "La vitesse dit combien de distance on parcourt chaque seconde ; l'année-lumière est une distance." }
   - texte: "L'étoile la plus proche du Soleil, Proxima du Centaure, est à un peu plus de 4 années-lumière. Qu'est-ce que cela veut dire ?"
+    image: 2b50
     nom: "Sa lumière met un peu plus de 4 ans pour nous parvenir."
     explication: "Une année-lumière est la distance parcourue par la lumière en un an : à un peu plus de 4 années-lumière, la lumière voyage un peu plus de 4 ans."
     pieges:
@@ -80,12 +84,14 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "Is the Sun a primary light source or a scattering object?"
+      image: "2600"
       nom: "A primary source."
       explication: "The Sun makes its own light: it's a primary source."
       pieges:
         - { texte: "A scattering object.", pourquoi: "A scattering object sends back light that comes from somewhere else; the Sun makes its own." }
         - { texte: "Neither.", pourquoi: "Every object we see is either a primary source or a scattering object." }
     - texte: "The Moon shines at night. Is it a primary light source?"
+      image: 1f319
       nom: "No, it's a scattering object: it sends back sunlight."
       explication: "The Moon doesn't make its own light: moonlight is sunlight sent back by the Moon."
       pieges:
@@ -104,6 +110,7 @@ en:
         - { texte: "By going around objects.", pourquoi: "If it went around objects, there would be no shadow behind them." }
         - { texte: "In a zigzag.", pourquoi: "In the same material, such as air, light doesn't change direction: it goes straight." }
     - texte: "Why does an object lit by a lamp have a shadow behind it?"
+      image: 1f4a1
       nom: "Because light travels in a straight line and the object stops it."
       explication: "Rays that hit the object are stopped; those that pass beside it carry straight on. Behind the object, an area gets no light: that's the shadow."
       pieges:
@@ -122,6 +129,7 @@ en:
         - { texte: "A length of time of one year.", pourquoi: "The word “year” is misleading: a light-year measures distance, not time." }
         - { texte: "The speed of light.", pourquoi: "Speed tells how far you go each second; a light-year is a distance." }
     - texte: "The nearest star to the Sun, Proxima Centauri, is a little more than 4 light-years away. What does that mean?"
+      image: 2b50
       nom: "Its light takes a little more than 4 years to reach us."
       explication: "A light-year is the distance light travels in a year: at a little more than 4 light-years, light travels for a little more than 4 years."
       pieges:

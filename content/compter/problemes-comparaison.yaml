@@ -15,6 +15,7 @@ phrases:
   bravo: "Oui ! C'est la bonne réponse."
 items:
   - texte: "Léo a 12 billes. Lucie en a 3 fois plus. Combien Lucie a-t-elle de billes ?"
+    figure: { type: barres, barres: [{ nom: "Léo", parts: 1, valeur: "12" }, { nom: "Lucie", parts: 3, valeur: "?" }] }
     nom: "36"
     explication: "Schéma : 3 barres de 12 pour Lucie. 3 × 12 = 36 billes."
     pieges:
@@ -27,6 +28,7 @@ items:
       - { texte: "36", pourquoi: "« 3 de plus », c'est ajouter 3, pas multiplier par 3." }
       - { texte: "9", pourquoi: "12 − 3 : « de plus » veut dire que Lucie en a davantage." }
   - texte: "Un pull coûte 40 €. Un tee-shirt coûte 4 fois moins cher. Combien coûte le tee-shirt ?"
+    figure: { type: barres, barres: [{ nom: "pull", parts: 4, valeur: "40 €" }, { nom: "tee-shirt", parts: 1, valeur: "?" }] }
     nom: "10 €"
     explication: "Schéma : la barre du pull coupée en 4 parts égales. 40 ÷ 4 = 10 : le tee-shirt coûte 10 €."
     pieges:
@@ -51,6 +53,7 @@ items:
       - { texte: "Une barre de 15 € et 6 € en plus", pourquoi: "Ce schéma montre « 6 € de plus », pas « 6 fois plus »." }
       - { texte: "Une barre de 15 € coupée en 6", pourquoi: "Ce schéma montre « 6 fois moins » : le vélo serait moins cher." }
   - texte: "Sami a 9 ans. Son père a 4 fois plus. Schéma : 4 barres de 9. Calcul : … × 9 = 36. Quel nombre manque ?"
+    figure: { type: barres, barres: [{ nom: "Sami", parts: 1, valeur: "9" }, { nom: "père", parts: 4, valeur: "36" }] }
     nom: "4"
     explication: "Il y a 4 barres de 9 : 4 × 9 = 36. Le père de Sami a 36 ans."
     pieges:
@@ -81,6 +84,7 @@ en:
     bravo: "Yes! That's the right answer."
   items:
     - texte: "Leo has 12 marbles. Lucy has 3 times as many. How many marbles does Lucy have?"
+      figure: { type: barres, barres: [{ nom: "Leo", parts: 1, valeur: "12" }, { nom: "Lucy", parts: 3, valeur: "?" }] }
       nom: "36"
       explication: "Bar model: 3 bars of 12 for Lucy. 3 × 12 = 36 marbles."
       pieges:
@@ -93,6 +97,7 @@ en:
         - { texte: "36", pourquoi: "\"3 more\" means add 3, not multiply by 3." }
         - { texte: "9", pourquoi: "12 − 3: \"more\" means Lucy has more." }
     - texte: "A jumper costs €40. A T-shirt costs 4 times less. How much is the T-shirt?"
+      figure: { type: barres, barres: [{ nom: "jumper", parts: 4, valeur: "€40" }, { nom: "T-shirt", parts: 1, valeur: "?" }] }
       nom: "€10"
       explication: "Bar model: the jumper bar cut into 4 equal parts. 40 ÷ 4 = 10: the T-shirt costs €10."
       pieges:
@@ -117,6 +122,7 @@ en:
         - { texte: "One bar of €15 plus €6", pourquoi: "This model shows \"€6 more\", not \"6 times as much\"." }
         - { texte: "One bar of €15 cut into 6", pourquoi: "This model shows \"6 times less\": the bike would be cheaper." }
     - texte: "Sami is 9. His dad is 4 times as old. Bar model: 4 bars of 9. Calculation: … × 9 = 36. Which number is missing?"
+      figure: { type: barres, barres: [{ nom: "Sami", parts: 1, valeur: "9" }, { nom: "dad", parts: 4, valeur: "36" }] }
       nom: "4"
       explication: "There are 4 bars of 9: 4 × 9 = 36. Sami's dad is 36."
       pieges:

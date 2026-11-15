@@ -33,12 +33,14 @@ items:
       - { texte: "supérieur à", pourquoi: "Mêmes milliers ; aux centaines, 0 est inférieur à 8 : 4 080 est plus petit." }
       - { texte: "égal à", pourquoi: "Les chiffres sont les mêmes, mais pas aux mêmes places : les nombres sont différents." }
   - texte: "Sur une demi-droite graduée, quel nombre est au milieu entre 3 000 et 4 000 ?"
+    figure: { type: droite, debut: 3000, fin: 4000, pas: 100, etiquettes: [3000, 4000], points: { "?": 3500 }, fleche: true }
     nom: "3 500"
     explication: "De 3 000 à 4 000, il y a 1 000. La moitié de 1 000 est 500 : 3 000 + 500 = 3 500."
     pieges:
       - { texte: "3 050", pourquoi: "3 050 est tout près de 3 000 : le milieu est à 500 de chaque côté." }
       - { texte: "7 000", pourquoi: "3 000 + 4 000 = 7 000 : le milieu est entre les deux, ce n'est pas leur somme." }
   - texte: "Sur une demi-droite graduée de 100 en 100, le point A est 3 graduations après 2 600. Quel nombre est en A ?"
+    figure: { type: droite, debut: 2600, fin: 3100, pas: 100, etiquettes: [2600], points: { A: 2900 }, fleche: true }
     nom: "2 900"
     explication: "Chaque graduation vaut 100. 3 graduations font 300 : 2 600 + 300 = 2 900."
     pieges:
@@ -99,12 +101,14 @@ en:
         - { texte: "greater than", pourquoi: "Same thousands; in the hundreds, 0 is less than 8: 4,080 is smaller." }
         - { texte: "equal to", pourquoi: "The digits are the same, but not in the same places: the numbers are different." }
     - texte: "On a number line, which number is halfway between 3,000 and 4,000?"
+      figure: { type: droite, debut: 3000, fin: 4000, pas: 100, etiquettes: [3000, 4000], points: { "?": 3500 }, fleche: true }
       nom: "3,500"
       explication: "From 3,000 to 4,000 there are 1,000. Half of 1,000 is 500: 3,000 + 500 = 3,500."
       pieges:
         - { texte: "3,050", pourquoi: "3,050 is very close to 3,000: halfway is 500 from each end." }
         - { texte: "7,000", pourquoi: "3,000 + 4,000 = 7,000: halfway is between the two, not their sum." }
     - texte: "On a number line marked in hundreds, point A is 3 marks after 2,600. Which number is at A?"
+      figure: { type: droite, debut: 2600, fin: 3100, pas: 100, etiquettes: [2600], points: { A: 2900 }, fleche: true }
       nom: "2,900"
       explication: "Each mark is worth 100. 3 marks make 300: 2,600 + 300 = 2,900."
       pieges:

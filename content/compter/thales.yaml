@@ -15,18 +15,21 @@ phrases:
   bravo: "Oui ! C'est la bonne réponse."
 items:
   - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 4, AB = 12, BC = 9. Combien mesure MN ?"
+    figure: { type: thales, cotes: { AM: "4", AB: "12", BC: "9", MN: "?" } }
     nom: "3"
     explication: "MN/BC = AM/AB = 4/12 = 1/3, donc MN = 9 ÷ 3 = 3."
     pieges:
       - { texte: "27", pourquoi: "Le rapport est inversé : le petit triangle est plus petit, MN = 9 × 4/12." }
       - { texte: "1", pourquoi: "On a enlevé 12 − 4 = 8 à 9 : on garde le même rapport, pas la même différence." }
   - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 2, AB = 5, AN = 3. Combien mesure AC ?"
+    figure: { type: thales, cotes: { AM: "2", AB: "5", AN: "3", AC: "?" } }
     nom: "7,5"
     explication: "AN/AC = AM/AB = 2/5, donc AC = 3 × 5 ÷ 2 = 7,5."
     pieges:
       - { texte: "6", pourquoi: "On a ajouté AB − AM = 3 à AN : c'est le rapport qui se conserve, pas la différence." }
       - { texte: "1,2", pourquoi: "3 × 2/5 : AC est plus grand que AN, donc AC = 3 × 5/2." }
   - texte: "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 6, AB = 8, AC = 12. Combien mesure AN ?"
+    figure: { type: thales, cotes: { AM: "6", AB: "8", AC: "12", AN: "?" } }
     nom: "9"
     explication: "AN/AC = AM/AB = 6/8 = 0,75, donc AN = 0,75 × 12 = 9."
     pieges:
@@ -39,6 +42,7 @@ items:
       - { texte: "7", pourquoi: "On a ajouté AM − AB = 2 à BC : c'est le rapport 6/4 qui compte." }
       - { texte: "environ 3,3", pourquoi: "5 × 4/6 : le rapport est inversé, MN est du côté de AM, le plus long." }
   - texte: "Complète : AM/AB = AN/… = MN/BC"
+    figure: { type: thales }
     nom: "AC"
     explication: "Chaque rapport compare un côté du petit triangle AMN au côté correspondant du grand ABC : AN avec AC."
     pieges:
@@ -57,6 +61,7 @@ items:
       - { texte: "Oui, car 2/6 et 3/8 sont presque égaux.", pourquoi: "Presque ne suffit pas : il faut des rapports exactement égaux." }
       - { texte: "Oui, car M et N sont sur les côtés du triangle.", pourquoi: "Cela ne suffit pas : il faut aussi que AM/AB = AN/AC." }
   - texte: "Pourquoi, dans la configuration de Thalès, MN est-il plus petit que BC quand AM est plus petit que AB ?"
+    figure: { type: thales }
     nom: "Parce que AMN est une réduction de ABC : tous les côtés sont multipliés par le même rapport."
     explication: "Le rapport AM/AB est plus petit que 1, et MN = BC × AM/AB."
     pieges:
@@ -81,18 +86,21 @@ en:
     bravo: "Yes! That's the right answer."
   items:
     - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 4, AB = 12, BC = 9. How long is MN?"
+      figure: { type: thales, cotes: { AM: "4", AB: "12", BC: "9", MN: "?" } }
       nom: "3"
       explication: "MN/BC = AM/AB = 4/12 = 1/3, so MN = 9 ÷ 3 = 3."
       pieges:
         - { texte: "27", pourquoi: "The ratio is upside down: the small triangle is smaller, MN = 9 × 4/12." }
         - { texte: "1", pourquoi: "12 − 4 = 8 was taken from 9: the ratio stays the same, not the difference." }
     - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 2, AB = 5, AN = 3. How long is AC?"
+      figure: { type: thales, cotes: { AM: "2", AB: "5", AN: "3", AC: "?" } }
       nom: "7.5"
       explication: "AN/AC = AM/AB = 2/5, so AC = 3 × 5 ÷ 2 = 7.5."
       pieges:
         - { texte: "6", pourquoi: "AB − AM = 3 was added to AN: the ratio is kept, not the difference." }
         - { texte: "1.2", pourquoi: "3 × 2/5: AC is longer than AN, so AC = 3 × 5/2." }
     - texte: "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 6, AB = 8, AC = 12. How long is AN?"
+      figure: { type: thales, cotes: { AM: "6", AB: "8", AC: "12", AN: "?" } }
       nom: "9"
       explication: "AN/AC = AM/AB = 6/8 = 0.75, so AN = 0.75 × 12 = 9."
       pieges:
@@ -105,6 +113,7 @@ en:
         - { texte: "7", pourquoi: "AM − AB = 2 was added to BC: the ratio 6/4 is what counts." }
         - { texte: "about 3.3", pourquoi: "5 × 4/6: the ratio is upside down, MN is on the side of AM, the longer one." }
     - texte: "Fill in: AM/AB = AN/… = MN/BC"
+      figure: { type: thales }
       nom: "AC"
       explication: "Each ratio compares a side of the small triangle AMN with the matching side of the large ABC: AN with AC."
       pieges:
@@ -123,6 +132,7 @@ en:
         - { texte: "Yes, because 2/6 and 3/8 are nearly equal.", pourquoi: "Nearly is not enough: the ratios must be exactly equal." }
         - { texte: "Yes, because M and N are on the sides of the triangle.", pourquoi: "That is not enough: AM/AB must also equal AN/AC." }
     - texte: "In the intercept theorem set-up, why is MN shorter than BC when AM is shorter than AB?"
+      figure: { type: thales }
       nom: "Because AMN is a reduction of ABC: every side is multiplied by the same ratio."
       explication: "The ratio AM/AB is less than 1, and MN = BC × AM/AB."
       pieges:

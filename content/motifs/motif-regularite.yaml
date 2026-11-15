@@ -25,6 +25,7 @@ items:
       - { texte: "B B B", pourquoi: "Ça, c'est le groupe d'avant. À chaque tour, il y a un B de plus : 1, 2, 3, puis 4." }
       - { texte: "B", pourquoi: "La suite ne se répète pas à l'identique : elle grandit d'un B à chaque tour." }
   - texte: "Avec des allumettes, on forme une rangée de carrés. 1 carré : 4 allumettes. 2 carrés : 7 allumettes. 3 carrés : 10 allumettes. Combien d'allumettes pour 4 carrés ?"
+    figure: { type: allumettes, carres: [1, 2, 3] }
     nom: "13"
     explication: "Chaque nouveau carré partage un côté avec le précédent : on ajoute 3 allumettes. 10 + 3 = 13."
     pieges:
@@ -85,6 +86,7 @@ en:
         - { texte: "B B B", pourquoi: "That's the group before. Each time round there's one more B: 1, 2, 3, then 4." }
         - { texte: "B", pourquoi: "The sequence doesn't repeat exactly: it grows by one B each time round." }
     - texte: "With matchsticks, you make a row of squares. 1 square: 4 matchsticks. 2 squares: 7 matchsticks. 3 squares: 10 matchsticks. How many matchsticks for 4 squares?"
+      figure: { type: allumettes, carres: [1, 2, 3] }
       nom: "13"
       explication: "Each new square shares a side with the one before: you add 3 matchsticks. 10 + 3 = 13."
       pieges:

@@ -15,18 +15,21 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "Une éolienne tourne avec le vent et alimente le réseau. Quelle conversion fait-elle ?"
+    image: 1f32c
     nom: "De l'énergie cinétique en énergie électrique."
     explication: "Le vent fait tourner les pales (énergie de mouvement, dite cinétique) ; un alternateur la convertit en énergie électrique."
     pieges:
       - { texte: "De l'énergie électrique en énergie cinétique.", pourquoi: "C'est ce que fait un moteur, l'inverse d'une éolienne." }
       - { texte: "De l'énergie lumineuse en énergie électrique.", pourquoi: "C'est le rôle d'un panneau photovoltaïque, pas d'une éolienne." }
   - texte: "Quelle forme d'énergie une pile stocke-t-elle ?"
+    image: 1f50b
     nom: "De l'énergie chimique."
     explication: "Dans une pile, une transformation chimique fournit de l'énergie électrique au circuit."
     pieges:
       - { texte: "De l'électricité en réserve, comme de l'eau dans un réservoir.", pourquoi: "La pile ne contient pas de courant en stock : elle convertit de l'énergie chimique en énergie électrique." }
       - { texte: "De l'énergie nucléaire.", pourquoi: "Une pile ordinaire n'utilise pas de réaction nucléaire." }
   - texte: "Une ampoule allumée chauffe. Pourquoi ?"
+    image: 1f4a1
     nom: "Une partie de l'énergie électrique est convertie en énergie thermique."
     explication: "Une lampe convertit l'énergie électrique en énergie lumineuse, mais aussi en énergie thermique, souvent inutile."
     pieges:
@@ -45,6 +48,7 @@ items:
       - { texte: "De l'énergie thermique en énergie lumineuse.", pourquoi: "Le panneau ne produit pas de lumière : il en reçoit." }
       - { texte: "De l'énergie électrique en énergie lumineuse.", pourquoi: "C'est ce que fait une lampe, l'inverse d'un panneau." }
   - texte: "Une balle tombe d'une table. Quelle énergie augmente pendant la chute ?"
+    image: 26bd
     nom: "Son énergie cinétique."
     explication: "En tombant, la balle va de plus en plus vite : son énergie de position diminue et son énergie cinétique augmente."
     pieges:
@@ -63,6 +67,7 @@ items:
       - { texte: "Le watt.", pourquoi: "Le watt est l'unité de puissance, pas d'énergie." }
       - { texte: "Le volt.", pourquoi: "Le volt est l'unité de tension électrique." }
   - texte: "Pourquoi brûler du pétrole ou du charbon contribue-t-il au réchauffement climatique ?"
+    image: 26fd
     nom: "Leur combustion rejette du dioxyde de carbone, un gaz à effet de serre."
     explication: "La combustion des ressources fossiles libère du dioxyde de carbone, qui renforce l'effet de serre."
     pieges:
@@ -81,18 +86,21 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "A wind turbine turns in the wind and feeds the grid. What conversion does it make?"
+      image: 1f32c
       nom: "Kinetic energy into electrical energy."
       explication: "The wind turns the blades (energy of movement, called kinetic); a generator converts it into electrical energy."
       pieges:
         - { texte: "Electrical energy into kinetic energy.", pourquoi: "That's what a motor does, the opposite of a wind turbine." }
         - { texte: "Light energy into electrical energy.", pourquoi: "That's a solar panel's job, not a wind turbine's." }
     - texte: "What form of energy does a battery store?"
+      image: 1f50b
       nom: "Chemical energy."
       explication: "In a battery, a chemical change supplies electrical energy to the circuit."
       pieges:
         - { texte: "Stored electricity, like water in a tank.", pourquoi: "A battery doesn't hold a stock of current: it converts chemical energy into electrical energy." }
         - { texte: "Nuclear energy.", pourquoi: "An ordinary battery doesn't use a nuclear reaction." }
     - texte: "A lit bulb gets hot. Why?"
+      image: 1f4a1
       nom: "Part of the electrical energy is converted into thermal energy."
       explication: "A lamp converts electrical energy into light energy, but also into thermal energy, often wasted."
       pieges:
@@ -111,6 +119,7 @@ en:
         - { texte: "Thermal energy into light energy.", pourquoi: "The panel doesn't make light: it receives it." }
         - { texte: "Electrical energy into light energy.", pourquoi: "That's what a lamp does, the opposite of a panel." }
     - texte: "A ball falls off a table. Which energy increases as it falls?"
+      image: 26bd
       nom: "Its kinetic energy."
       explication: "As it falls, the ball goes faster and faster: its energy of position goes down and its kinetic energy goes up."
       pieges:
@@ -129,6 +138,7 @@ en:
         - { texte: "The watt.", pourquoi: "The watt is the unit of power, not energy." }
         - { texte: "The volt.", pourquoi: "The volt is the unit of voltage." }
     - texte: "Why does burning oil or coal add to global warming?"
+      image: 26fd
       nom: "Burning them gives off carbon dioxide, a greenhouse gas."
       explication: "Burning fossil fuels releases carbon dioxide, which strengthens the greenhouse effect."
       pieges:

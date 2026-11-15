@@ -15,12 +15,14 @@ phrases:
   bravo: "Oui ! C'est la bonne réponse."
 items:
   - texte: "Un triangle a deux angles de 40° et 60°. Combien mesure le troisième ?"
+    figure: { type: triangle, sommets: [A, B, C], angles: { A: "40°", B: "60°", C: "?" } }
     nom: "80°"
     explication: "40 + 60 = 100, et 180 − 100 = 80°."
     pieges:
       - { texte: "100°", pourquoi: "100°, c'est la somme des deux angles connus : il reste 180 − 100." }
       - { texte: "260°", pourquoi: "360 − 100 : la somme des angles d'un triangle vaut 180°, pas 360°." }
   - texte: "Un triangle a un angle droit et un angle de 35°. Combien mesure le troisième ?"
+    figure: { type: triangle, sommets: [A, B, C], droit: B, angles: { A: "35°", C: "?" } }
     nom: "55°"
     explication: "L'angle droit mesure 90°. 90 + 35 = 125, et 180 − 125 = 55°."
     pieges:
@@ -33,6 +35,7 @@ items:
       - { texte: "90°", pourquoi: "Trois angles de 90° feraient 270°, plus que 180°." }
       - { texte: "120°", pourquoi: "360 ÷ 3 : la somme vaut 180°, pas 360°." }
   - texte: "Un triangle isocèle a un angle principal de 40°. Ses deux autres angles sont égaux. Combien mesure chacun ?"
+    figure: { type: triangle, sommets: [A, B, C], angles: { C: "40°", A: "?", B: "?" } }
     nom: "70°"
     explication: "180 − 40 = 140° pour les deux angles ensemble, et 140 ÷ 2 = 70°."
     pieges:
@@ -45,6 +48,7 @@ items:
       - { texte: "130", pourquoi: "130, c'est la somme des deux angles donnés : il reste 180 − 130." }
       - { texte: "230", pourquoi: "360 − 130 : la somme des angles d'un triangle vaut 180°." }
   - texte: "Un triangle rectangle a un angle de 30°. Combien mesure le troisième angle ?"
+    figure: { type: triangle, sommets: [A, B, C], droit: B, angles: { A: "30°", C: "?" } }
     nom: "60°"
     explication: "90 + 30 = 120, et 180 − 120 = 60°."
     pieges:
@@ -81,12 +85,14 @@ en:
     bravo: "Yes! That's the right answer."
   items:
     - texte: "A triangle has two angles of 40° and 60°. How big is the third?"
+      figure: { type: triangle, sommets: [A, B, C], angles: { A: "40°", B: "60°", C: "?" } }
       nom: "80°"
       explication: "40 + 60 = 100, and 180 − 100 = 80°."
       pieges:
         - { texte: "100°", pourquoi: "100° is the sum of the two known angles: what is left is 180 − 100." }
         - { texte: "260°", pourquoi: "360 − 100: the angles of a triangle add up to 180°, not 360°." }
     - texte: "A triangle has a right angle and an angle of 35°. How big is the third?"
+      figure: { type: triangle, sommets: [A, B, C], droit: B, angles: { A: "35°", C: "?" } }
       nom: "55°"
       explication: "A right angle measures 90°. 90 + 35 = 125, and 180 − 125 = 55°."
       pieges:
@@ -99,6 +105,7 @@ en:
         - { texte: "90°", pourquoi: "Three angles of 90° would make 270°, more than 180°." }
         - { texte: "120°", pourquoi: "360 ÷ 3: the sum is 180°, not 360°." }
     - texte: "An isosceles triangle has a main angle of 40°. Its other two angles are equal. How big is each one?"
+      figure: { type: triangle, sommets: [A, B, C], angles: { C: "40°", A: "?", B: "?" } }
       nom: "70°"
       explication: "180 − 40 = 140° for the two angles together, and 140 ÷ 2 = 70°."
       pieges:
@@ -111,6 +118,7 @@ en:
         - { texte: "130", pourquoi: "130 is the sum of the two given angles: what is left is 180 − 130." }
         - { texte: "230", pourquoi: "360 − 130: the angles of a triangle add up to 180°." }
     - texte: "A right-angled triangle has an angle of 30°. How big is the third angle?"
+      figure: { type: triangle, sommets: [A, B, C], droit: B, angles: { A: "30°", C: "?" } }
       nom: "60°"
       explication: "90 + 30 = 120, and 180 − 120 = 60°."
       pieges:

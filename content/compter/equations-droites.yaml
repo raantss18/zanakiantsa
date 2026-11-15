@@ -33,6 +33,7 @@ items:
       - { texte: "u(3 ; 2)", pourquoi: "On a recopié a et b : le vecteur directeur est (−b ; a), soit (−2 ; 3)." }
       - { texte: "u(2 ; 3)", pourquoi: "Le signe moins devant b a été oublié : c’est (−2 ; 3)." }
   - texte: "Une droite de pente 2 passe par le point A(1 ; 4). Quelle est son équation réduite ?"
+    figure: { type: repere, xmin: -1, xmax: 5, ymin: -1, ymax: 7, points: { A: [1, 4] } }
     nom: "y = 2x + 2"
     explication: "On cherche p dans y = 2x + p. A est sur la droite : 4 = 2 × 1 + p, donc p = 4 − 2 = 2."
     pieges:
@@ -93,6 +94,7 @@ en:
         - { texte: "u(3, 2)", pourquoi: "That just copies a and b: the direction vector is (−b, a), which is (−2, 3)." }
         - { texte: "u(2, 3)", pourquoi: "The minus sign in front of b was forgotten: it is (−2, 3)." }
     - texte: "A line with gradient 2 goes through the point A(1, 4). What is its equation y = mx + p?"
+      figure: { type: repere, xmin: -1, xmax: 5, ymin: -1, ymax: 7, points: { A: [1, 4] } }
       nom: "y = 2x + 2"
       explication: "We look for p in y = 2x + p. A is on the line: 4 = 2 × 1 + p, so p = 4 − 2 = 2."
       pieges:

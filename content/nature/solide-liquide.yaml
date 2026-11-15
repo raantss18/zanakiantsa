@@ -15,12 +15,14 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "On verse du lait d'une bouteille dans un bol. Que fait sa forme ?"
+    image: 1f95b
     nom: "Il prend la forme du bol."
     explication: "Le lait est un liquide : il n'a pas de forme propre, il prend celle du récipient."
     pieges:
       - { texte: "Il garde la forme de la bouteille.", pourquoi: "Seul un solide garde sa forme. Le lait coule." }
       - { texte: "Il devient solide dans le bol.", pourquoi: "Changer de récipient ne change pas l'état : le lait reste liquide." }
   - texte: "On pose un caillou dans un verre, puis dans une boîte. Que fait sa forme ?"
+    image: 1faa8
     nom: "Il garde toujours la même forme."
     explication: "Le caillou est un solide : il a une forme propre, quel que soit le récipient."
     pieges:
@@ -51,6 +53,7 @@ items:
       - { texte: "Le beurre froid.", pourquoi: "Le beurre sorti du réfrigérateur garde sa forme : il est solide." }
       - { texte: "Le sucre en poudre.", pourquoi: "Le sucre en poudre coule, mais ce sont des grains solides." }
   - texte: "Pourquoi peut-on tenir un glaçon dans la main, mais pas de l'eau ?"
+    image: 1f9ca
     nom: "Le glaçon est solide : il a une forme propre."
     explication: "La glace est de l'eau à l'état solide. L'eau liquide n'a pas de forme propre : elle s'échappe entre les doigts."
     pieges:
@@ -75,12 +78,14 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "We pour milk from a bottle into a bowl. What happens to its shape?"
+      image: 1f95b
       nom: "It takes the shape of the bowl."
       explication: "Milk is a liquid: it has no shape of its own, it takes the shape of its container."
       pieges:
         - { texte: "It keeps the shape of the bottle.", pourquoi: "Only a solid keeps its shape. Milk flows." }
         - { texte: "It turns solid in the bowl.", pourquoi: "Changing container doesn't change the state: the milk stays liquid." }
     - texte: "We put a stone in a glass, then in a box. What happens to its shape?"
+      image: 1faa8
       nom: "It always keeps the same shape."
       explication: "A stone is a solid: it has its own shape, whatever the container."
       pieges:
@@ -111,6 +116,7 @@ en:
         - { texte: "Cold butter.", pourquoi: "Butter from the fridge keeps its shape: it's solid." }
         - { texte: "Caster sugar.", pourquoi: "Caster sugar pours, but it's made of solid grains." }
     - texte: "Why can you hold an ice cube in your hand, but not water?"
+      image: 1f9ca
       nom: "The ice cube is solid: it has its own shape."
       explication: "Ice is water in the solid state. Liquid water has no shape of its own: it escapes between your fingers."
       pieges:

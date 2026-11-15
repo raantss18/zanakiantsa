@@ -15,6 +15,7 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "À quoi sert la légende d'une carte ?"
+    image: 1f5fa
     nom: "À expliquer ce que veulent dire les couleurs et les symboles."
     explication: "La légende donne le sens de chaque couleur et de chaque symbole : forêt, route, ville, rivière…"
     pieges:
@@ -33,6 +34,7 @@ items:
       - { texte: "13 km.", pourquoi: "On a additionné 3 et 10 : il faut multiplier." }
       - { texte: "3 km.", pourquoi: "Chaque centimètre vaut 10 km, pas 1 km." }
   - texte: "Sur la plupart des cartes, le nord est en haut. Où est l'est ?"
+    image: 1f9ed
     nom: "À droite."
     explication: "Nord en haut, sud en bas, est à droite, ouest à gauche. La rose des vents le rappelle."
     pieges:
@@ -45,12 +47,14 @@ items:
       - { texte: "La carte de France.", pourquoi: "Elle montre un très grand espace : on n'y voit pas les rues." }
       - { texte: "Le planisphère.", pourquoi: "Le planisphère représente le monde entier : ta rue y est invisible." }
   - texte: "Sur une carte de relief, le vert foncé est en bas de la légende et le marron en haut. Où sont les montagnes ?"
+    figure: { type: relief, legende: ["0 m", "200 m", "500 m", "1000 m", "2000 m"] }
     nom: "Dans les zones marron."
     explication: "Sur ce type de carte, la légende associe le marron aux altitudes élevées et le vert aux plaines basses."
     pieges:
       - { texte: "Dans les zones vertes, car il y a des forêts.", pourquoi: "Sur une carte de relief, le vert indique les basses altitudes, pas les forêts : c'est la légende qui le dit." }
       - { texte: "Dans les zones bleues.", pourquoi: "Le bleu représente l'eau : mers, lacs, rivières." }
   - texte: "Pourquoi faut-il toujours lire la légende avant d'interpréter une carte ?"
+    image: 1f5fa
     nom: "Parce que chaque carte choisit ses propres couleurs et symboles."
     explication: "Une même couleur peut vouloir dire des choses différentes selon les cartes : la légende évite les erreurs."
     pieges:
@@ -75,6 +79,7 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "What is a map's key for?"
+      image: 1f5fa
       nom: "To explain what the colours and symbols mean."
       explication: "The key gives the meaning of each colour and symbol: forest, road, town, river…"
       pieges:
@@ -93,6 +98,7 @@ en:
         - { texte: "13 km.", pourquoi: "That adds 3 and 10: you must multiply." }
         - { texte: "3 km.", pourquoi: "Each centimetre is worth 10 km, not 1 km." }
     - texte: "On most maps, north is at the top. Where is east?"
+      image: 1f9ed
       nom: "On the right."
       explication: "North at the top, south at the bottom, east on the right, west on the left. The compass rose reminds you."
       pieges:
@@ -105,12 +111,14 @@ en:
         - { texte: "The map of France.", pourquoi: "It shows a very large area: you can't see streets on it." }
         - { texte: "The world map.", pourquoi: "A world map shows the whole world: your street is invisible on it." }
     - texte: "On a relief map, dark green is at the bottom of the key and brown at the top. Where are the mountains?"
+      figure: { type: relief, legende: ["0 m", "200 m", "500 m", "1000 m", "2000 m"] }
       nom: "In the brown areas."
       explication: "On this kind of map, the key matches brown to high ground and green to low plains."
       pieges:
         - { texte: "In the green areas, because there are forests.", pourquoi: "On a relief map, green shows low ground, not forests: the key says so." }
         - { texte: "In the blue areas.", pourquoi: "Blue stands for water: seas, lakes, rivers." }
     - texte: "Why should you always read the key before making sense of a map?"
+      image: 1f5fa
       nom: "Because each map chooses its own colours and symbols."
       explication: "The same colour can mean different things on different maps: the key avoids mistakes."
       pieges:

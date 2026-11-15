@@ -63,6 +63,7 @@ items:
       - { texte: "Parce que 2 + 3 ne fait pas 5.", pourquoi: "2 + 3 fait bien 5 : la raison est qu'on mêlerait des x et un nombre." }
       - { texte: "Parce qu'il faut écrire 6x.", pourquoi: "2 × 3 = 6, mais il n'y a pas de multiplication : 2x + 3 reste tel quel." }
   - texte: "Un rectangle a pour largeur 4 et pour longueur x + 5. Quelle expression donne son aire ?"
+    figure: { type: rectangle, largeur: "x + 5", hauteur: "4" }
     nom: "4x + 20"
     explication: "Aire = 4(x + 5) = 4x + 20."
     pieges:
@@ -129,6 +130,7 @@ en:
         - { texte: "Because 2 + 3 does not make 5.", pourquoi: "2 + 3 does make 5: the reason is that it would mix an x term with a number." }
         - { texte: "Because you should write 6x.", pourquoi: "2 × 3 = 6, but there is no multiplication: 2x + 3 stays as it is." }
     - texte: "A rectangle is 4 wide and x + 5 long. Which expression gives its area?"
+      figure: { type: rectangle, largeur: "x + 5", hauteur: "4" }
       nom: "4x + 20"
       explication: "Area = 4(x + 5) = 4x + 20."
       pieges:

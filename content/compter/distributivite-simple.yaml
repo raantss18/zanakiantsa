@@ -63,6 +63,7 @@ items:
       - { texte: "Parce que les parenthèses ne servent à rien.", pourquoi: "Elles servent : sans elles, on calcule 80 + 3 = 83." }
       - { texte: "Parce qu'il faut calculer 8 × 10 × 3.", pourquoi: "8 × 10 × 3 = 240 : on multiplie chaque terme par 8, puis on additionne." }
   - texte: "Un rectangle de largeur 6 cm est coupé en deux rectangles de longueurs 10 cm et 4 cm. Quelle est l'aire du grand rectangle ?"
+    figure: { type: rectangle, hauteur: "6 cm", parts: ["10 cm", "4 cm"] }
     nom: "84 cm²"
     explication: "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm²."
     pieges:
@@ -129,6 +130,7 @@ en:
         - { texte: "Because the brackets are pointless.", pourquoi: "They matter: without them, we work out 80 + 3 = 83." }
         - { texte: "Because you must work out 8 × 10 × 3.", pourquoi: "8 × 10 × 3 = 240: multiply each term by 8, then add." }
     - texte: "A rectangle 6 cm wide is cut into two rectangles 10 cm and 4 cm long. What is the area of the large rectangle?"
+      figure: { type: rectangle, hauteur: "6 cm", parts: ["10 cm", "4 cm"] }
       nom: "84 cm²"
       explication: "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm²."
       pieges:

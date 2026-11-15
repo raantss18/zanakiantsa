@@ -1898,6 +1898,20 @@
         },
         {
           "texte": "Sur une demi-droite graduée, quel nombre est au milieu entre 3 000 et 4 000 ?",
+          "figure": {
+            "type": "droite",
+            "debut": 3000,
+            "fin": 4000,
+            "pas": 100,
+            "etiquettes": [
+              3000,
+              4000
+            ],
+            "points": {
+              "?": 3500
+            },
+            "fleche": true
+          },
           "nom": "3 500",
           "explication": "De 3 000 à 4 000, il y a 1 000. La moitié de 1 000 est 500 : 3 000 + 500 = 3 500.",
           "pieges": [
@@ -1913,6 +1927,19 @@
         },
         {
           "texte": "Sur une demi-droite graduée de 100 en 100, le point A est 3 graduations après 2 600. Quel nombre est en A ?",
+          "figure": {
+            "type": "droite",
+            "debut": 2600,
+            "fin": 3100,
+            "pas": 100,
+            "etiquettes": [
+              2600
+            ],
+            "points": {
+              "A": 2900
+            },
+            "fleche": true
+          },
           "nom": "2 900",
           "explication": "Chaque graduation vaut 100. 3 graduations font 300 : 2 600 + 300 = 2 900.",
           "pieges": [
@@ -2046,6 +2073,20 @@
           },
           {
             "texte": "On a number line, which number is halfway between 3,000 and 4,000?",
+            "figure": {
+              "type": "droite",
+              "debut": 3000,
+              "fin": 4000,
+              "pas": 100,
+              "etiquettes": [
+                3000,
+                4000
+              ],
+              "points": {
+                "?": 3500
+              },
+              "fleche": true
+            },
             "nom": "3,500",
             "explication": "From 3,000 to 4,000 there are 1,000. Half of 1,000 is 500: 3,000 + 500 = 3,500.",
             "pieges": [
@@ -2061,6 +2102,19 @@
           },
           {
             "texte": "On a number line marked in hundreds, point A is 3 marks after 2,600. Which number is at A?",
+            "figure": {
+              "type": "droite",
+              "debut": 2600,
+              "fin": 3100,
+              "pas": 100,
+              "etiquettes": [
+                2600
+              ],
+              "points": {
+                "A": 2900
+              },
+              "fleche": true
+            },
             "nom": "2,900",
             "explication": "Each mark is worth 100. 3 marks make 300: 2,600 + 300 = 2,900.",
             "pieges": [
@@ -2812,6 +2866,15 @@
         },
         {
           "texte": "Lina partage 48 billes en 6 parts égales. Combien de billes y a-t-il dans chaque part ?",
+          "figure": {
+            "type": "barres",
+            "barres": [
+              {
+                "parts": 6
+              }
+            ],
+            "total": "48"
+          },
           "nom": "8",
           "explication": "Schéma : une barre de 48 coupée en 6 parts égales. 6 × 8 = 48, donc chaque part a 8 billes.",
           "pieges": [
@@ -2842,6 +2905,15 @@
         },
         {
           "texte": "Dans un schéma en barre, une barre de 63 est coupée en 9 parts égales. Combien vaut une part ?",
+          "figure": {
+            "type": "barres",
+            "barres": [
+              {
+                "parts": 9
+              }
+            ],
+            "total": "63"
+          },
           "nom": "7",
           "explication": "9 × 7 = 63, donc 63 ÷ 9 = 7 : chaque part vaut 7.",
           "pieges": [
@@ -2960,6 +3032,15 @@
           },
           {
             "texte": "Lina shares 48 marbles into 6 equal parts. How many marbles are in each part?",
+            "figure": {
+              "type": "barres",
+              "barres": [
+                {
+                  "parts": 6
+                }
+              ],
+              "total": "48"
+            },
             "nom": "8",
             "explication": "Bar model: a bar of 48 cut into 6 equal parts. 6 × 8 = 48, so each part has 8 marbles.",
             "pieges": [
@@ -2990,6 +3071,15 @@
           },
           {
             "texte": "In a bar model, a bar of 63 is cut into 9 equal parts. What is one part worth?",
+            "figure": {
+              "type": "barres",
+              "barres": [
+                {
+                  "parts": 9
+                }
+              ],
+              "total": "63"
+            },
             "nom": "7",
             "explication": "9 × 7 = 63, so 63 ÷ 9 = 7: each part is worth 7.",
             "pieges": [
@@ -3092,6 +3182,21 @@
       "items": [
         {
           "texte": "Léo a 12 billes. Lucie en a 3 fois plus. Combien Lucie a-t-elle de billes ?",
+          "figure": {
+            "type": "barres",
+            "barres": [
+              {
+                "nom": "Léo",
+                "parts": 1,
+                "valeur": "12"
+              },
+              {
+                "nom": "Lucie",
+                "parts": 3,
+                "valeur": "?"
+              }
+            ]
+          },
           "nom": "36",
           "explication": "Schéma : 3 barres de 12 pour Lucie. 3 × 12 = 36 billes.",
           "pieges": [
@@ -3122,6 +3227,21 @@
         },
         {
           "texte": "Un pull coûte 40 €. Un tee-shirt coûte 4 fois moins cher. Combien coûte le tee-shirt ?",
+          "figure": {
+            "type": "barres",
+            "barres": [
+              {
+                "nom": "pull",
+                "parts": 4,
+                "valeur": "40 €"
+              },
+              {
+                "nom": "tee-shirt",
+                "parts": 1,
+                "valeur": "?"
+              }
+            ]
+          },
           "nom": "10 €",
           "explication": "Schéma : la barre du pull coupée en 4 parts égales. 40 ÷ 4 = 10 : le tee-shirt coûte 10 €.",
           "pieges": [
@@ -3182,6 +3302,21 @@
         },
         {
           "texte": "Sami a 9 ans. Son père a 4 fois plus. Schéma : 4 barres de 9. Calcul : … × 9 = 36. Quel nombre manque ?",
+          "figure": {
+            "type": "barres",
+            "barres": [
+              {
+                "nom": "Sami",
+                "parts": 1,
+                "valeur": "9"
+              },
+              {
+                "nom": "père",
+                "parts": 4,
+                "valeur": "36"
+              }
+            ]
+          },
           "nom": "4",
           "explication": "Il y a 4 barres de 9 : 4 × 9 = 36. Le père de Sami a 36 ans.",
           "pieges": [
@@ -3240,6 +3375,21 @@
         "items": [
           {
             "texte": "Leo has 12 marbles. Lucy has 3 times as many. How many marbles does Lucy have?",
+            "figure": {
+              "type": "barres",
+              "barres": [
+                {
+                  "nom": "Leo",
+                  "parts": 1,
+                  "valeur": "12"
+                },
+                {
+                  "nom": "Lucy",
+                  "parts": 3,
+                  "valeur": "?"
+                }
+              ]
+            },
             "nom": "36",
             "explication": "Bar model: 3 bars of 12 for Lucy. 3 × 12 = 36 marbles.",
             "pieges": [
@@ -3270,6 +3420,21 @@
           },
           {
             "texte": "A jumper costs €40. A T-shirt costs 4 times less. How much is the T-shirt?",
+            "figure": {
+              "type": "barres",
+              "barres": [
+                {
+                  "nom": "jumper",
+                  "parts": 4,
+                  "valeur": "€40"
+                },
+                {
+                  "nom": "T-shirt",
+                  "parts": 1,
+                  "valeur": "?"
+                }
+              ]
+            },
             "nom": "€10",
             "explication": "Bar model: the jumper bar cut into 4 equal parts. 40 ÷ 4 = 10: the T-shirt costs €10.",
             "pieges": [
@@ -3330,6 +3495,21 @@
           },
           {
             "texte": "Sami is 9. His dad is 4 times as old. Bar model: 4 bars of 9. Calculation: … × 9 = 36. Which number is missing?",
+            "figure": {
+              "type": "barres",
+              "barres": [
+                {
+                  "nom": "Sami",
+                  "parts": 1,
+                  "valeur": "9"
+                },
+                {
+                  "nom": "dad",
+                  "parts": 4,
+                  "valeur": "36"
+                }
+              ]
+            },
             "nom": "4",
             "explication": "There are 4 bars of 9: 4 × 9 = 36. Sami's dad is 36.",
             "pieges": [
@@ -3596,6 +3776,22 @@
         },
         {
           "texte": "Une demi-droite est graduée de 10 000 en 10 000 : 0 ; 10 000 ; 20 000 ; … ; 40 000. Quel nombre manque ?",
+          "figure": {
+            "type": "droite",
+            "debut": 0,
+            "fin": 50000,
+            "pas": 10000,
+            "etiquettes": [
+              0,
+              10000,
+              20000,
+              40000
+            ],
+            "points": {
+              "?": 30000
+            },
+            "fleche": true
+          },
           "nom": "30 000",
           "explication": "Chaque graduation ajoute 10 000 : 20 000 + 10 000 = 30 000.",
           "pieges": [
@@ -3744,6 +3940,22 @@
           },
           {
             "texte": "A number line is marked in steps of 10,000: 0; 10,000; 20,000; …; 40,000. Which number is missing?",
+            "figure": {
+              "type": "droite",
+              "debut": 0,
+              "fin": 50000,
+              "pas": 10000,
+              "etiquettes": [
+                0,
+                10000,
+                20000,
+                40000
+              ],
+              "points": {
+                "?": 30000
+              },
+              "fleche": true
+            },
             "nom": "30,000",
             "explication": "Each mark adds 10,000: 20,000 + 10,000 = 30,000.",
             "pieges": [
@@ -4419,6 +4631,19 @@
       "items": [
         {
           "texte": "Entre 0 et 1, la droite est partagée en 10 parts égales. Le point A est sur la 6e graduation après 0. Quel nombre est en A ?",
+          "figure": {
+            "type": "droite",
+            "debut": 0,
+            "fin": 1,
+            "pas": 0.1,
+            "etiquettes": [
+              0,
+              1
+            ],
+            "points": {
+              "A": 0.6
+            }
+          },
           "nom": "0,6",
           "explication": "Chaque graduation vaut 1 dixième. 6 graduations : 6 dixièmes, 0,6.",
           "pieges": [
@@ -4434,6 +4659,19 @@
         },
         {
           "texte": "Entre 3 et 4, la droite est partagée en 10. Le point B est sur la 8e graduation après 3. Quel nombre est en B ?",
+          "figure": {
+            "type": "droite",
+            "debut": 3,
+            "fin": 4,
+            "pas": 0.1,
+            "etiquettes": [
+              3,
+              4
+            ],
+            "points": {
+              "B": 3.8
+            }
+          },
           "nom": "3,8",
           "explication": "On part de 3 et on avance de 8 dixièmes : 3 + 0,8 = 3,8.",
           "pieges": [
@@ -4449,6 +4687,16 @@
         },
         {
           "texte": "Entre 0 et 1, la droite est partagée en 10. Combien de graduations compte-t-on depuis 0 pour placer 0,4 ?",
+          "figure": {
+            "type": "droite",
+            "debut": 0,
+            "fin": 1,
+            "pas": 0.1,
+            "etiquettes": [
+              0,
+              1
+            ]
+          },
           "nom": "4",
           "explication": "0,4, ce sont 4 dixièmes : 4 graduations depuis 0.",
           "pieges": [
@@ -4464,6 +4712,18 @@
         },
         {
           "texte": "Une droite est graduée de 0,1 en 0,1. Quel nombre vient juste après 1,9 ?",
+          "figure": {
+            "type": "droite",
+            "debut": 1.5,
+            "fin": 2.5,
+            "pas": 0.1,
+            "etiquettes": [
+              1.9
+            ],
+            "points": {
+              "?": 2
+            }
+          },
           "nom": "2",
           "explication": "1,9 + 0,1 : 9 dixièmes + 1 dixième = 10 dixièmes = 1 unité. 1 + 1 = 2.",
           "pieges": [
@@ -4479,6 +4739,19 @@
         },
         {
           "texte": "Quel nombre est au milieu entre 2 et 3 sur la droite ?",
+          "figure": {
+            "type": "droite",
+            "debut": 2,
+            "fin": 3,
+            "pas": 0.5,
+            "etiquettes": [
+              2,
+              3
+            ],
+            "points": {
+              "?": 2.5
+            }
+          },
           "nom": "2,5",
           "explication": "De 2 à 3, il y a 10 dixièmes. Le milieu est à 5 dixièmes : 2,5.",
           "pieges": [
@@ -4494,6 +4767,19 @@
         },
         {
           "texte": "Entre 1 et 2, la droite est partagée en 4 parts égales. Le point C est sur la 1re graduation après 1. Quel nombre est en C ?",
+          "figure": {
+            "type": "droite",
+            "debut": 1,
+            "fin": 2,
+            "pas": 0.25,
+            "etiquettes": [
+              1,
+              2
+            ],
+            "points": {
+              "C": 1.25
+            }
+          },
           "nom": "1,25",
           "explication": "Chaque part est un quart d'unité. Un quart = 25 centièmes = 0,25. C = 1 + 0,25 = 1,25.",
           "pieges": [
@@ -4509,6 +4795,16 @@
         },
         {
           "texte": "Entre 0 et 0,1, la droite est partagée en 10 parts égales. Que vaut une graduation ?",
+          "figure": {
+            "type": "droite",
+            "debut": 0,
+            "fin": 0.1,
+            "pas": 0.01,
+            "etiquettes": [
+              0,
+              0.1
+            ]
+          },
           "nom": "0,01",
           "explication": "Un dixième partagé en 10 donne un centième : 0,01.",
           "pieges": [
@@ -4524,6 +4820,19 @@
         },
         {
           "texte": "Sur une droite graduée en dixièmes, le point D est 7 graduations après 5. D = 5 + … = 5,7. Quel nombre manque ?",
+          "figure": {
+            "type": "droite",
+            "debut": 5,
+            "fin": 6,
+            "pas": 0.1,
+            "etiquettes": [
+              5,
+              6
+            ],
+            "points": {
+              "D": 5.7
+            }
+          },
           "nom": "0,7",
           "explication": "7 graduations de 0,1 font 0,7 : D = 5 + 0,7 = 5,7.",
           "pieges": [
@@ -4567,6 +4876,19 @@
         "items": [
           {
             "texte": "Between 0 and 1, the line is split into 10 equal parts. Point A is on the 6th mark after 0. Which number is at A?",
+            "figure": {
+              "type": "droite",
+              "debut": 0,
+              "fin": 1,
+              "pas": 0.1,
+              "etiquettes": [
+                0,
+                1
+              ],
+              "points": {
+                "A": 0.6
+              }
+            },
             "nom": "0.6",
             "explication": "Each mark is worth 1 tenth. 6 marks: 6 tenths, 0.6.",
             "pieges": [
@@ -4582,6 +4904,19 @@
           },
           {
             "texte": "Between 3 and 4, the line is split into 10. Point B is on the 8th mark after 3. Which number is at B?",
+            "figure": {
+              "type": "droite",
+              "debut": 3,
+              "fin": 4,
+              "pas": 0.1,
+              "etiquettes": [
+                3,
+                4
+              ],
+              "points": {
+                "B": 3.8
+              }
+            },
             "nom": "3.8",
             "explication": "Start at 3 and move on 8 tenths: 3 + 0.8 = 3.8.",
             "pieges": [
@@ -4597,6 +4932,16 @@
           },
           {
             "texte": "Between 0 and 1, the line is split into 10. How many marks do you count from 0 to place 0.4?",
+            "figure": {
+              "type": "droite",
+              "debut": 0,
+              "fin": 1,
+              "pas": 0.1,
+              "etiquettes": [
+                0,
+                1
+              ]
+            },
             "nom": "4",
             "explication": "0.4 is 4 tenths: 4 marks from 0.",
             "pieges": [
@@ -4612,6 +4957,18 @@
           },
           {
             "texte": "A line is marked in steps of 0.1. Which number comes just after 1.9?",
+            "figure": {
+              "type": "droite",
+              "debut": 1.5,
+              "fin": 2.5,
+              "pas": 0.1,
+              "etiquettes": [
+                1.9
+              ],
+              "points": {
+                "?": 2
+              }
+            },
             "nom": "2",
             "explication": "1.9 + 0.1: 9 tenths + 1 tenth = 10 tenths = 1 whole. 1 + 1 = 2.",
             "pieges": [
@@ -4627,6 +4984,19 @@
           },
           {
             "texte": "Which number is halfway between 2 and 3 on the line?",
+            "figure": {
+              "type": "droite",
+              "debut": 2,
+              "fin": 3,
+              "pas": 0.5,
+              "etiquettes": [
+                2,
+                3
+              ],
+              "points": {
+                "?": 2.5
+              }
+            },
             "nom": "2.5",
             "explication": "From 2 to 3 there are 10 tenths. Halfway is 5 tenths along: 2.5.",
             "pieges": [
@@ -4642,6 +5012,19 @@
           },
           {
             "texte": "Between 1 and 2, the line is split into 4 equal parts. Point C is on the 1st mark after 1. Which number is at C?",
+            "figure": {
+              "type": "droite",
+              "debut": 1,
+              "fin": 2,
+              "pas": 0.25,
+              "etiquettes": [
+                1,
+                2
+              ],
+              "points": {
+                "C": 1.25
+              }
+            },
             "nom": "1.25",
             "explication": "Each part is a quarter of a whole. A quarter = 25 hundredths = 0.25. C = 1 + 0.25 = 1.25.",
             "pieges": [
@@ -4657,6 +5040,16 @@
           },
           {
             "texte": "Between 0 and 0.1, the line is split into 10 equal parts. What is one mark worth?",
+            "figure": {
+              "type": "droite",
+              "debut": 0,
+              "fin": 0.1,
+              "pas": 0.01,
+              "etiquettes": [
+                0,
+                0.1
+              ]
+            },
             "nom": "0.01",
             "explication": "A tenth split into 10 gives a hundredth: 0.01.",
             "pieges": [
@@ -4672,6 +5065,19 @@
           },
           {
             "texte": "On a line marked in tenths, point D is 7 marks after 5. D = 5 + … = 5.7. Which number is missing?",
+            "figure": {
+              "type": "droite",
+              "debut": 5,
+              "fin": 6,
+              "pas": 0.1,
+              "etiquettes": [
+                5,
+                6
+              ],
+              "points": {
+                "D": 5.7
+              }
+            },
             "nom": "0.7",
             "explication": "7 marks of 0.1 make 0.7: D = 5 + 0.7 = 5.7.",
             "pieges": [
@@ -6586,6 +6992,11 @@
       "items": [
         {
           "texte": "Quelle est l'aire d'un rectangle de 7 cm sur 3 cm ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "7 cm",
+            "hauteur": "3 cm"
+          },
           "nom": "21 cm²",
           "explication": "3 rangées de 7 carrés de 1 cm² : 3 × 7 = 21 cm².",
           "pieges": [
@@ -6616,6 +7027,11 @@
         },
         {
           "texte": "Quelle est l'aire d'un jardin rectangulaire de 8 m sur 6 m ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "8 m",
+            "hauteur": "6 m"
+          },
           "nom": "48 m²",
           "explication": "6 rangées de 8 carrés de 1 m² : 6 × 8 = 48 m².",
           "pieges": [
@@ -6646,6 +7062,11 @@
         },
         {
           "texte": "Un rectangle a une aire de 40 cm² et une longueur de 8 cm. Quelle est sa largeur ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "8 cm",
+            "hauteur": "?"
+          },
           "nom": "5 cm",
           "explication": "8 × … = 40 : 8 × 5 = 40, donc la largeur est 40 ÷ 8 = 5 cm.",
           "pieges": [
@@ -6691,6 +7112,11 @@
         },
         {
           "texte": "Rectangle de 9 cm sur 7 cm : aire = … × 7 = 63 cm². Quel nombre manque ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "9 cm",
+            "hauteur": "7 cm"
+          },
           "nom": "9",
           "explication": "L'aire est longueur × largeur : 9 × 7 = 63 cm².",
           "pieges": [
@@ -6706,6 +7132,11 @@
         },
         {
           "texte": "Pourquoi l'aire d'un rectangle de 5 cm sur 3 cm est-elle 3 × 5 cm² ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "5 cm",
+            "hauteur": "3 cm"
+          },
           "nom": "Il y a 3 rangées de 5 carrés de 1 cm².",
           "explication": "On peut paver le rectangle avec des carrés de 1 cm² : 3 rangées de 5, soit 15 cm².",
           "pieges": [
@@ -6734,6 +7165,11 @@
         "items": [
           {
             "texte": "What is the area of a 7 cm by 3 cm rectangle?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "7 cm",
+              "hauteur": "3 cm"
+            },
             "nom": "21 cm²",
             "explication": "3 rows of 7 squares of 1 cm²: 3 × 7 = 21 cm².",
             "pieges": [
@@ -6764,6 +7200,11 @@
           },
           {
             "texte": "What is the area of a rectangular garden 8 m by 6 m?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "8 m",
+              "hauteur": "6 m"
+            },
             "nom": "48 m²",
             "explication": "6 rows of 8 squares of 1 m²: 6 × 8 = 48 m².",
             "pieges": [
@@ -6794,6 +7235,11 @@
           },
           {
             "texte": "A rectangle has an area of 40 cm² and a length of 8 cm. What is its width?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "8 cm",
+              "hauteur": "?"
+            },
             "nom": "5 cm",
             "explication": "8 × … = 40: 8 × 5 = 40, so the width is 40 ÷ 8 = 5 cm.",
             "pieges": [
@@ -6839,6 +7285,11 @@
           },
           {
             "texte": "A 9 cm by 7 cm rectangle: area = … × 7 = 63 cm². Which number is missing?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "9 cm",
+              "hauteur": "7 cm"
+            },
             "nom": "9",
             "explication": "Area is length × width: 9 × 7 = 63 cm².",
             "pieges": [
@@ -6854,6 +7305,11 @@
           },
           {
             "texte": "Why is the area of a 5 cm by 3 cm rectangle 3 × 5 cm²?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "5 cm",
+              "hauteur": "3 cm"
+            },
             "nom": "There are 3 rows of 5 squares of 1 cm².",
             "explication": "You can tile the rectangle with 1 cm² squares: 3 rows of 5, which is 15 cm².",
             "pieges": [
@@ -7823,6 +8279,11 @@
       "items": [
         {
           "texte": "Combien mesure un angle droit ?",
+          "figure": {
+            "type": "angle",
+            "degres": 90,
+            "etiquette": "?"
+          },
           "nom": "90°",
           "explication": "Un angle droit, comme le coin d'une feuille, mesure 90°.",
           "pieges": [
@@ -7838,6 +8299,11 @@
         },
         {
           "texte": "On plie un angle droit en deux parts égales. Combien mesure chaque part ?",
+          "figure": {
+            "type": "angle",
+            "degres": 45,
+            "etiquette": "?"
+          },
           "nom": "45°",
           "explication": "Chaque part est la moitié de 90° : 90 ÷ 2 = 45°.",
           "pieges": [
@@ -7853,6 +8319,11 @@
         },
         {
           "texte": "Un angle mesure le tiers d'un angle droit. Combien mesure-t-il ?",
+          "figure": {
+            "type": "angle",
+            "degres": 30,
+            "etiquette": "?"
+          },
           "nom": "30°",
           "explication": "Le tiers de 90° : 90 ÷ 3 = 30°.",
           "pieges": [
@@ -7868,6 +8339,11 @@
         },
         {
           "texte": "Un angle mesure 3 fois un angle de 20°. Combien mesure-t-il ?",
+          "figure": {
+            "type": "angle",
+            "degres": 60,
+            "etiquette": "?"
+          },
           "nom": "60°",
           "explication": "3 angles de 20° mis côte à côte : 3 × 20 = 60°.",
           "pieges": [
@@ -7883,6 +8359,11 @@
         },
         {
           "texte": "On place côte à côte un angle de 30° et un angle de 45°. Combien mesure le grand angle obtenu ?",
+          "figure": {
+            "type": "angle",
+            "degres": 75,
+            "etiquette": "?"
+          },
           "nom": "75°",
           "explication": "Les angles s'ajoutent : 30 + 45 = 75°.",
           "pieges": [
@@ -7928,6 +8409,11 @@
         },
         {
           "texte": "Pourquoi un angle de 100° n'est-il pas un angle droit ?",
+          "figure": {
+            "type": "angle",
+            "degres": 100,
+            "etiquette": "100°"
+          },
           "nom": "Parce qu'un angle droit mesure exactement 90°.",
           "explication": "100° est plus grand que 90° : c'est un angle obtus.",
           "pieges": [
@@ -7956,6 +8442,11 @@
         "items": [
           {
             "texte": "How big is a right angle?",
+            "figure": {
+              "type": "angle",
+              "degres": 90,
+              "etiquette": "?"
+            },
             "nom": "90°",
             "explication": "A right angle, like the corner of a sheet of paper, measures 90°.",
             "pieges": [
@@ -7971,6 +8462,11 @@
           },
           {
             "texte": "A right angle is folded into two equal parts. How big is each part?",
+            "figure": {
+              "type": "angle",
+              "degres": 45,
+              "etiquette": "?"
+            },
             "nom": "45°",
             "explication": "Each part is half of 90°: 90 ÷ 2 = 45°.",
             "pieges": [
@@ -7986,6 +8482,11 @@
           },
           {
             "texte": "An angle is one third of a right angle. How big is it?",
+            "figure": {
+              "type": "angle",
+              "degres": 30,
+              "etiquette": "?"
+            },
             "nom": "30°",
             "explication": "A third of 90°: 90 ÷ 3 = 30°.",
             "pieges": [
@@ -8001,6 +8502,11 @@
           },
           {
             "texte": "An angle is 3 times an angle of 20°. How big is it?",
+            "figure": {
+              "type": "angle",
+              "degres": 60,
+              "etiquette": "?"
+            },
             "nom": "60°",
             "explication": "3 angles of 20° side by side: 3 × 20 = 60°.",
             "pieges": [
@@ -8016,6 +8522,11 @@
           },
           {
             "texte": "An angle of 30° and an angle of 45° are placed side by side. How big is the large angle they make?",
+            "figure": {
+              "type": "angle",
+              "degres": 75,
+              "etiquette": "?"
+            },
             "nom": "75°",
             "explication": "The angles add up: 30 + 45 = 75°.",
             "pieges": [
@@ -8061,6 +8572,11 @@
           },
           {
             "texte": "Why is an angle of 100° not a right angle?",
+            "figure": {
+              "type": "angle",
+              "degres": 100,
+              "etiquette": "100°"
+            },
             "nom": "Because a right angle measures exactly 90°.",
             "explication": "100° is bigger than 90°: it is an obtuse angle.",
             "pieges": [
@@ -9475,6 +9991,11 @@
         },
         {
           "texte": "Un rectangle mesure 2,5 m sur 1,2 m. Quelle est son aire ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "2,5 m",
+            "hauteur": "1,2 m"
+          },
           "nom": "3 m²",
           "explication": "25 × 12 = 300. 2 chiffres après les virgules : 3,00 m² = 3 m².",
           "pieges": [
@@ -9623,6 +10144,11 @@
           },
           {
             "texte": "A rectangle is 2.5 m by 1.2 m. What is its area?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "2.5 m",
+              "hauteur": "1.2 m"
+            },
             "nom": "3 m²",
             "explication": "25 × 12 = 300. 2 digits after the points: 3.00 m² = 3 m².",
             "pieges": [
@@ -10639,6 +11165,10 @@
       "items": [
         {
           "texte": "Un disque a un diamètre de 10 cm. Quel est son périmètre, avec pi environ égal à 3,14 ?",
+          "figure": {
+            "type": "cercle",
+            "diametre": "10 cm"
+          },
           "nom": "environ 31,4 cm",
           "explication": "Périmètre = pi × diamètre, environ 3,14 × 10 = 31,4 cm.",
           "pieges": [
@@ -10654,6 +11184,10 @@
         },
         {
           "texte": "Un disque a un diamètre de 2 m. Quel est son périmètre, avec pi environ égal à 3,14 ?",
+          "figure": {
+            "type": "cercle",
+            "diametre": "2 m"
+          },
           "nom": "environ 6,28 m",
           "explication": "Périmètre = pi × diamètre, environ 3,14 × 2 = 6,28 m.",
           "pieges": [
@@ -10669,6 +11203,10 @@
         },
         {
           "texte": "Un disque a un rayon de 5 cm. Quel est son périmètre, avec pi environ égal à 3,14 ?",
+          "figure": {
+            "type": "cercle",
+            "rayon": "5 cm"
+          },
           "nom": "environ 31,4 cm",
           "explication": "Diamètre = 2 × 5 = 10 cm. Périmètre, environ 3,14 × 10 = 31,4 cm.",
           "pieges": [
@@ -10699,6 +11237,10 @@
         },
         {
           "texte": "Une roue a un diamètre de 50 cm. Quelle distance parcourt-elle en un tour, avec pi environ égal à 3,14 ?",
+          "figure": {
+            "type": "cercle",
+            "diametre": "50 cm"
+          },
           "nom": "environ 157 cm",
           "explication": "En un tour, la roue avance de son périmètre : environ 3,14 × 50 = 157 cm.",
           "pieges": [
@@ -10729,6 +11271,11 @@
         },
         {
           "texte": "Un demi-disque a un diamètre de 10 cm. Quel est le périmètre de sa figure, côté droit compris, avec pi environ égal à 3,14 ?",
+          "figure": {
+            "type": "cercle",
+            "demi": true,
+            "diametre": "10 cm"
+          },
           "nom": "environ 25,7 cm",
           "explication": "L'arc est la moitié du périmètre du disque : 31,4 ÷ 2 = 15,7 cm. On ajoute le diamètre : 15,7 + 10 = 25,7 cm.",
           "pieges": [
@@ -10744,6 +11291,10 @@
         },
         {
           "texte": "Rayon 3 cm. Diamètre = 2 × 3 = … cm. Périmètre, environ 3,14 × 6 = 18,84 cm. Quel nombre manque ?",
+          "figure": {
+            "type": "cercle",
+            "rayon": "3 cm"
+          },
           "nom": "6",
           "explication": "Le diamètre vaut 2 fois le rayon : 2 × 3 = 6 cm.",
           "pieges": [
@@ -10787,6 +11338,10 @@
         "items": [
           {
             "texte": "A circle has a diameter of 10 cm. What is its perimeter, with pi about 3.14?",
+            "figure": {
+              "type": "cercle",
+              "diametre": "10 cm"
+            },
             "nom": "about 31.4 cm",
             "explication": "Perimeter = pi × diameter, about 3.14 × 10 = 31.4 cm.",
             "pieges": [
@@ -10802,6 +11357,10 @@
           },
           {
             "texte": "A circle has a diameter of 2 m. What is its perimeter, with pi about 3.14?",
+            "figure": {
+              "type": "cercle",
+              "diametre": "2 m"
+            },
             "nom": "about 6.28 m",
             "explication": "Perimeter = pi × diameter, about 3.14 × 2 = 6.28 m.",
             "pieges": [
@@ -10817,6 +11376,10 @@
           },
           {
             "texte": "A circle has a radius of 5 cm. What is its perimeter, with pi about 3.14?",
+            "figure": {
+              "type": "cercle",
+              "rayon": "5 cm"
+            },
             "nom": "about 31.4 cm",
             "explication": "Diameter = 2 × 5 = 10 cm. Perimeter, about 3.14 × 10 = 31.4 cm.",
             "pieges": [
@@ -10847,6 +11410,10 @@
           },
           {
             "texte": "A wheel has a diameter of 50 cm. How far does it travel in one turn, with pi about 3.14?",
+            "figure": {
+              "type": "cercle",
+              "diametre": "50 cm"
+            },
             "nom": "about 157 cm",
             "explication": "In one turn, the wheel moves forward by its perimeter: about 3.14 × 50 = 157 cm.",
             "pieges": [
@@ -10877,6 +11444,11 @@
           },
           {
             "texte": "A half circle has a diameter of 10 cm. What is the perimeter of the shape, straight side included, with pi about 3.14?",
+            "figure": {
+              "type": "cercle",
+              "demi": true,
+              "diametre": "10 cm"
+            },
             "nom": "about 25.7 cm",
             "explication": "The arc is half the circle's perimeter: 31.4 ÷ 2 = 15.7 cm. Add the diameter: 15.7 + 10 = 25.7 cm.",
             "pieges": [
@@ -10892,6 +11464,10 @@
           },
           {
             "texte": "Radius 3 cm. Diameter = 2 × 3 = … cm. Perimeter, about 3.14 × 6 = 18.84 cm. Which number is missing?",
+            "figure": {
+              "type": "cercle",
+              "rayon": "3 cm"
+            },
             "nom": "6",
             "explication": "The diameter is 2 times the radius: 2 × 3 = 6 cm.",
             "pieges": [
@@ -12055,6 +12631,14 @@
         },
         {
           "texte": "Un rectangle de largeur 6 cm est coupé en deux rectangles de longueurs 10 cm et 4 cm. Quelle est l'aire du grand rectangle ?",
+          "figure": {
+            "type": "rectangle",
+            "hauteur": "6 cm",
+            "parts": [
+              "10 cm",
+              "4 cm"
+            ]
+          },
           "nom": "84 cm²",
           "explication": "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm².",
           "pieges": [
@@ -12203,6 +12787,14 @@
           },
           {
             "texte": "A rectangle 6 cm wide is cut into two rectangles 10 cm and 4 cm long. What is the area of the large rectangle?",
+            "figure": {
+              "type": "rectangle",
+              "hauteur": "6 cm",
+              "parts": [
+                "10 cm",
+                "4 cm"
+              ]
+            },
             "nom": "84 cm²",
             "explication": "6 × (10 + 4) = 6 × 10 + 6 × 4 = 60 + 24 = 84 cm².",
             "pieges": [
@@ -12553,6 +13145,19 @@
       "items": [
         {
           "texte": "Un triangle a deux angles de 40° et 60°. Combien mesure le troisième ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "angles": {
+              "A": "40°",
+              "B": "60°",
+              "C": "?"
+            }
+          },
           "nom": "80°",
           "explication": "40 + 60 = 100, et 180 − 100 = 80°.",
           "pieges": [
@@ -12568,6 +13173,19 @@
         },
         {
           "texte": "Un triangle a un angle droit et un angle de 35°. Combien mesure le troisième ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "angles": {
+              "A": "35°",
+              "C": "?"
+            }
+          },
           "nom": "55°",
           "explication": "L'angle droit mesure 90°. 90 + 35 = 125, et 180 − 125 = 55°.",
           "pieges": [
@@ -12598,6 +13216,19 @@
         },
         {
           "texte": "Un triangle isocèle a un angle principal de 40°. Ses deux autres angles sont égaux. Combien mesure chacun ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "angles": {
+              "C": "40°",
+              "A": "?",
+              "B": "?"
+            }
+          },
           "nom": "70°",
           "explication": "180 − 40 = 140° pour les deux angles ensemble, et 140 ÷ 2 = 70°.",
           "pieges": [
@@ -12628,6 +13259,19 @@
         },
         {
           "texte": "Un triangle rectangle a un angle de 30°. Combien mesure le troisième angle ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "angles": {
+              "A": "30°",
+              "C": "?"
+            }
+          },
           "nom": "60°",
           "explication": "90 + 30 = 120, et 180 − 120 = 60°.",
           "pieges": [
@@ -12701,6 +13345,19 @@
         "items": [
           {
             "texte": "A triangle has two angles of 40° and 60°. How big is the third?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "angles": {
+                "A": "40°",
+                "B": "60°",
+                "C": "?"
+              }
+            },
             "nom": "80°",
             "explication": "40 + 60 = 100, and 180 − 100 = 80°.",
             "pieges": [
@@ -12716,6 +13373,19 @@
           },
           {
             "texte": "A triangle has a right angle and an angle of 35°. How big is the third?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "angles": {
+                "A": "35°",
+                "C": "?"
+              }
+            },
             "nom": "55°",
             "explication": "A right angle measures 90°. 90 + 35 = 125, and 180 − 125 = 55°.",
             "pieges": [
@@ -12746,6 +13416,19 @@
           },
           {
             "texte": "An isosceles triangle has a main angle of 40°. Its other two angles are equal. How big is each one?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "angles": {
+                "C": "40°",
+                "A": "?",
+                "B": "?"
+              }
+            },
             "nom": "70°",
             "explication": "180 − 40 = 140° for the two angles together, and 140 ÷ 2 = 70°.",
             "pieges": [
@@ -12776,6 +13459,19 @@
           },
           {
             "texte": "A right-angled triangle has an angle of 30°. How big is the third angle?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "angles": {
+                "A": "30°",
+                "C": "?"
+              }
+            },
             "nom": "60°",
             "explication": "90 + 30 = 120, and 180 − 120 = 60°.",
             "pieges": [
@@ -14279,6 +14975,20 @@
       "items": [
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 3 cm et 4 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "3 cm",
+              "BC": "4 cm",
+              "AC": "?"
+            }
+          },
           "nom": "5 cm",
           "explication": "3² + 4² = 9 + 16 = 25, et 5 × 5 = 25 : l’hypoténuse mesure 5 cm.",
           "pieges": [
@@ -14294,6 +15004,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 6 cm et 8 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "6 cm",
+              "BC": "8 cm",
+              "AC": "?"
+            }
+          },
           "nom": "10 cm",
           "explication": "6² + 8² = 36 + 64 = 100, et 10 × 10 = 100 : l’hypoténuse mesure 10 cm.",
           "pieges": [
@@ -14309,6 +15033,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 5 cm et 12 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "5 cm",
+              "BC": "12 cm",
+              "AC": "?"
+            }
+          },
           "nom": "13 cm",
           "explication": "5² + 12² = 25 + 144 = 169, et 13 × 13 = 169 : l’hypoténuse mesure 13 cm.",
           "pieges": [
@@ -14324,6 +15062,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 9 cm et 12 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "9 cm",
+              "BC": "12 cm",
+              "AC": "?"
+            }
+          },
           "nom": "15 cm",
           "explication": "9² + 12² = 81 + 144 = 225, et 15 × 15 = 225 : l’hypoténuse mesure 15 cm.",
           "pieges": [
@@ -14339,6 +15091,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 8 cm et 15 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "8 cm",
+              "BC": "15 cm",
+              "AC": "?"
+            }
+          },
           "nom": "17 cm",
           "explication": "8² + 15² = 64 + 225 = 289, et 17 × 17 = 289 : l’hypoténuse mesure 17 cm.",
           "pieges": [
@@ -14354,6 +15120,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 12 cm et 16 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "12 cm",
+              "BC": "16 cm",
+              "AC": "?"
+            }
+          },
           "nom": "20 cm",
           "explication": "12² + 16² = 144 + 256 = 400, et 20 × 20 = 400 : l’hypoténuse mesure 20 cm.",
           "pieges": [
@@ -14369,6 +15149,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 7 cm et 24 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "7 cm",
+              "BC": "24 cm",
+              "AC": "?"
+            }
+          },
           "nom": "25 cm",
           "explication": "7² + 24² = 49 + 576 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm.",
           "pieges": [
@@ -14384,6 +15178,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 15 cm et 20 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "15 cm",
+              "BC": "20 cm",
+              "AC": "?"
+            }
+          },
           "nom": "25 cm",
           "explication": "15² + 20² = 225 + 400 = 625, et 25 × 25 = 625 : l’hypoténuse mesure 25 cm.",
           "pieges": [
@@ -14399,6 +15207,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 20 cm et 21 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "20 cm",
+              "BC": "21 cm",
+              "AC": "?"
+            }
+          },
           "nom": "29 cm",
           "explication": "20² + 21² = 400 + 441 = 841, et 29 × 29 = 841 : l’hypoténuse mesure 29 cm.",
           "pieges": [
@@ -14414,6 +15236,20 @@
         },
         {
           "texte": "Un triangle rectangle a des côtés de l’angle droit de 10 cm et 24 cm. Combien mesure l’hypoténuse ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "10 cm",
+              "BC": "24 cm",
+              "AC": "?"
+            }
+          },
           "nom": "26 cm",
           "explication": "10² + 24² = 100 + 576 = 676, et 26 × 26 = 676 : l’hypoténuse mesure 26 cm.",
           "pieges": [
@@ -14442,6 +15278,20 @@
         "items": [
           {
             "texte": "A right-angled triangle has sides of 3 cm and 4 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "3 cm",
+                "BC": "4 cm",
+                "AC": "?"
+              }
+            },
             "nom": "5 cm",
             "explication": "3² + 4² = 9 + 16 = 25, and 5 × 5 = 25: the hypotenuse is 5 cm.",
             "pieges": [
@@ -14457,6 +15307,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 6 cm and 8 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "6 cm",
+                "BC": "8 cm",
+                "AC": "?"
+              }
+            },
             "nom": "10 cm",
             "explication": "6² + 8² = 36 + 64 = 100, and 10 × 10 = 100: the hypotenuse is 10 cm.",
             "pieges": [
@@ -14472,6 +15336,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 5 cm and 12 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "5 cm",
+                "BC": "12 cm",
+                "AC": "?"
+              }
+            },
             "nom": "13 cm",
             "explication": "5² + 12² = 25 + 144 = 169, and 13 × 13 = 169: the hypotenuse is 13 cm.",
             "pieges": [
@@ -14487,6 +15365,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 9 cm and 12 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "9 cm",
+                "BC": "12 cm",
+                "AC": "?"
+              }
+            },
             "nom": "15 cm",
             "explication": "9² + 12² = 81 + 144 = 225, and 15 × 15 = 225: the hypotenuse is 15 cm.",
             "pieges": [
@@ -14502,6 +15394,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 8 cm and 15 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "8 cm",
+                "BC": "15 cm",
+                "AC": "?"
+              }
+            },
             "nom": "17 cm",
             "explication": "8² + 15² = 64 + 225 = 289, and 17 × 17 = 289: the hypotenuse is 17 cm.",
             "pieges": [
@@ -14517,6 +15423,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 12 cm and 16 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "12 cm",
+                "BC": "16 cm",
+                "AC": "?"
+              }
+            },
             "nom": "20 cm",
             "explication": "12² + 16² = 144 + 256 = 400, and 20 × 20 = 400: the hypotenuse is 20 cm.",
             "pieges": [
@@ -14532,6 +15452,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 7 cm and 24 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "7 cm",
+                "BC": "24 cm",
+                "AC": "?"
+              }
+            },
             "nom": "25 cm",
             "explication": "7² + 24² = 49 + 576 = 625, and 25 × 25 = 625: the hypotenuse is 25 cm.",
             "pieges": [
@@ -14547,6 +15481,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 15 cm and 20 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "15 cm",
+                "BC": "20 cm",
+                "AC": "?"
+              }
+            },
             "nom": "25 cm",
             "explication": "15² + 20² = 225 + 400 = 625, and 25 × 25 = 625: the hypotenuse is 25 cm.",
             "pieges": [
@@ -14562,6 +15510,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 20 cm and 21 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "20 cm",
+                "BC": "21 cm",
+                "AC": "?"
+              }
+            },
             "nom": "29 cm",
             "explication": "20² + 21² = 400 + 441 = 841, and 29 × 29 = 841: the hypotenuse is 29 cm.",
             "pieges": [
@@ -14577,6 +15539,20 @@
           },
           {
             "texte": "A right-angled triangle has sides of 10 cm and 24 cm next to the right angle. How long is the hypotenuse?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "10 cm",
+                "BC": "24 cm",
+                "AC": "?"
+              }
+            },
             "nom": "26 cm",
             "explication": "10² + 24² = 100 + 576 = 676, and 26 × 26 = 676: the hypotenuse is 26 cm.",
             "pieges": [
@@ -15047,6 +16023,11 @@
         },
         {
           "texte": "Un rectangle a pour largeur 4 et pour longueur x + 5. Quelle expression donne son aire ?",
+          "figure": {
+            "type": "rectangle",
+            "largeur": "x + 5",
+            "hauteur": "4"
+          },
           "nom": "4x + 20",
           "explication": "Aire = 4(x + 5) = 4x + 20.",
           "pieges": [
@@ -15195,6 +16176,11 @@
           },
           {
             "texte": "A rectangle is 4 wide and x + 5 long. Which expression gives its area?",
+            "figure": {
+              "type": "rectangle",
+              "largeur": "x + 5",
+              "hauteur": "4"
+            },
             "nom": "4x + 20",
             "explication": "Area = 4(x + 5) = 4x + 20.",
             "pieges": [
@@ -17153,6 +18139,15 @@
       "items": [
         {
           "texte": "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 4, AB = 12, BC = 9. Combien mesure MN ?",
+          "figure": {
+            "type": "thales",
+            "cotes": {
+              "AM": "4",
+              "AB": "12",
+              "BC": "9",
+              "MN": "?"
+            }
+          },
           "nom": "3",
           "explication": "MN/BC = AM/AB = 4/12 = 1/3, donc MN = 9 ÷ 3 = 3.",
           "pieges": [
@@ -17168,6 +18163,15 @@
         },
         {
           "texte": "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 2, AB = 5, AN = 3. Combien mesure AC ?",
+          "figure": {
+            "type": "thales",
+            "cotes": {
+              "AM": "2",
+              "AB": "5",
+              "AN": "3",
+              "AC": "?"
+            }
+          },
           "nom": "7,5",
           "explication": "AN/AC = AM/AB = 2/5, donc AC = 3 × 5 ÷ 2 = 7,5.",
           "pieges": [
@@ -17183,6 +18187,15 @@
         },
         {
           "texte": "Triangle ABC, M sur [AB], N sur [AC], (MN) parallèle à (BC). AM = 6, AB = 8, AC = 12. Combien mesure AN ?",
+          "figure": {
+            "type": "thales",
+            "cotes": {
+              "AM": "6",
+              "AB": "8",
+              "AC": "12",
+              "AN": "?"
+            }
+          },
           "nom": "9",
           "explication": "AN/AC = AM/AB = 6/8 = 0,75, donc AN = 0,75 × 12 = 9.",
           "pieges": [
@@ -17213,6 +18226,9 @@
         },
         {
           "texte": "Complète : AM/AB = AN/… = MN/BC",
+          "figure": {
+            "type": "thales"
+          },
           "nom": "AC",
           "explication": "Chaque rapport compare un côté du petit triangle AMN au côté correspondant du grand ABC : AN avec AC.",
           "pieges": [
@@ -17258,6 +18274,9 @@
         },
         {
           "texte": "Pourquoi, dans la configuration de Thalès, MN est-il plus petit que BC quand AM est plus petit que AB ?",
+          "figure": {
+            "type": "thales"
+          },
           "nom": "Parce que AMN est une réduction de ABC : tous les côtés sont multipliés par le même rapport.",
           "explication": "Le rapport AM/AB est plus petit que 1, et MN = BC × AM/AB.",
           "pieges": [
@@ -17301,6 +18320,15 @@
         "items": [
           {
             "texte": "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 4, AB = 12, BC = 9. How long is MN?",
+            "figure": {
+              "type": "thales",
+              "cotes": {
+                "AM": "4",
+                "AB": "12",
+                "BC": "9",
+                "MN": "?"
+              }
+            },
             "nom": "3",
             "explication": "MN/BC = AM/AB = 4/12 = 1/3, so MN = 9 ÷ 3 = 3.",
             "pieges": [
@@ -17316,6 +18344,15 @@
           },
           {
             "texte": "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 2, AB = 5, AN = 3. How long is AC?",
+            "figure": {
+              "type": "thales",
+              "cotes": {
+                "AM": "2",
+                "AB": "5",
+                "AN": "3",
+                "AC": "?"
+              }
+            },
             "nom": "7.5",
             "explication": "AN/AC = AM/AB = 2/5, so AC = 3 × 5 ÷ 2 = 7.5.",
             "pieges": [
@@ -17331,6 +18368,15 @@
           },
           {
             "texte": "Triangle ABC, M on [AB], N on [AC], (MN) parallel to (BC). AM = 6, AB = 8, AC = 12. How long is AN?",
+            "figure": {
+              "type": "thales",
+              "cotes": {
+                "AM": "6",
+                "AB": "8",
+                "AC": "12",
+                "AN": "?"
+              }
+            },
             "nom": "9",
             "explication": "AN/AC = AM/AB = 6/8 = 0.75, so AN = 0.75 × 12 = 9.",
             "pieges": [
@@ -17361,6 +18407,9 @@
           },
           {
             "texte": "Fill in: AM/AB = AN/… = MN/BC",
+            "figure": {
+              "type": "thales"
+            },
             "nom": "AC",
             "explication": "Each ratio compares a side of the small triangle AMN with the matching side of the large ABC: AN with AC.",
             "pieges": [
@@ -17406,6 +18455,9 @@
           },
           {
             "texte": "In the intercept theorem set-up, why is MN shorter than BC when AM is shorter than AB?",
+            "figure": {
+              "type": "thales"
+            },
             "nom": "Because AMN is a reduction of ABC: every side is multiplied by the same ratio.",
             "explication": "The ratio AM/AB is less than 1, and MN = BC × AM/AB.",
             "pieges": [
@@ -17463,6 +18515,23 @@
       "items": [
         {
           "texte": "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut cos Â ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "8",
+              "BC": "6",
+              "AC": "10"
+            },
+            "angles": {
+              "A": ""
+            }
+          },
           "nom": "0,8",
           "explication": "cos Â = adjacent ÷ hypoténuse = AB ÷ AC = 8 ÷ 10 = 0,8.",
           "pieges": [
@@ -17478,6 +18547,23 @@
         },
         {
           "texte": "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut sin Â ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "8",
+              "BC": "6",
+              "AC": "10"
+            },
+            "angles": {
+              "A": ""
+            }
+          },
           "nom": "0,6",
           "explication": "sin Â = opposé ÷ hypoténuse = BC ÷ AC = 6 ÷ 10 = 0,6.",
           "pieges": [
@@ -17493,6 +18579,23 @@
         },
         {
           "texte": "ABC est rectangle en B, avec AB = 8, BC = 6 et AC = 10. Combien vaut tan Â ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "8",
+              "BC": "6",
+              "AC": "10"
+            },
+            "angles": {
+              "A": ""
+            }
+          },
           "nom": "0,75",
           "explication": "tan Â = opposé ÷ adjacent = BC ÷ AB = 6 ÷ 8 = 0,75.",
           "pieges": [
@@ -17508,6 +18611,22 @@
         },
         {
           "texte": "ABC est rectangle en B, AC = 10 cm et Â = 60°. On sait que cos 60° = 0,5. Combien mesure AB ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AC": "10 cm",
+              "AB": "?"
+            },
+            "angles": {
+              "A": "60°"
+            }
+          },
           "nom": "5 cm",
           "explication": "cos Â = AB ÷ AC, donc AB = AC × cos Â = 10 × 0,5 = 5 cm.",
           "pieges": [
@@ -17523,6 +18642,22 @@
         },
         {
           "texte": "ABC est rectangle en B, AB = 6 cm et tan Â = 2. Combien mesure BC ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "AB": "6 cm",
+              "BC": "?"
+            },
+            "angles": {
+              "A": ""
+            }
+          },
           "nom": "12 cm",
           "explication": "tan Â = BC ÷ AB, donc BC = AB × tan Â = 6 × 2 = 12 cm.",
           "pieges": [
@@ -17538,6 +18673,18 @@
         },
         {
           "texte": "Complète : dans ABC rectangle en B, sin Â = … ÷ AC",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "angles": {
+              "A": ""
+            }
+          },
           "nom": "BC",
           "explication": "Le sinus est l'opposé divisé par l'hypoténuse : le côté opposé à Â est BC.",
           "pieges": [
@@ -17583,6 +18730,22 @@
         },
         {
           "texte": "Une échelle de 5 m est appuyée contre un mur vertical. Son pied est à 3 m du mur. Quel est le cosinus de l'angle entre l'échelle et le sol ?",
+          "figure": {
+            "type": "triangle",
+            "sommets": [
+              "A",
+              "B",
+              "C"
+            ],
+            "droit": "B",
+            "cotes": {
+              "BC": "3 m",
+              "AC": "5 m"
+            },
+            "angles": {
+              "C": "?"
+            }
+          },
           "nom": "0,6",
           "explication": "Le côté adjacent à l'angle au sol est la distance au mur, 3 m ; l'hypoténuse est l'échelle, 5 m. cos = 3 ÷ 5 = 0,6.",
           "pieges": [
@@ -17611,6 +18774,23 @@
         "items": [
           {
             "texte": "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is cos Â?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "8",
+                "BC": "6",
+                "AC": "10"
+              },
+              "angles": {
+                "A": ""
+              }
+            },
             "nom": "0.8",
             "explication": "cos Â = adjacent ÷ hypotenuse = AB ÷ AC = 8 ÷ 10 = 0.8.",
             "pieges": [
@@ -17626,6 +18806,23 @@
           },
           {
             "texte": "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is sin Â?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "8",
+                "BC": "6",
+                "AC": "10"
+              },
+              "angles": {
+                "A": ""
+              }
+            },
             "nom": "0.6",
             "explication": "sin Â = opposite ÷ hypotenuse = BC ÷ AC = 6 ÷ 10 = 0.6.",
             "pieges": [
@@ -17641,6 +18838,23 @@
           },
           {
             "texte": "ABC is right-angled at B, with AB = 8, BC = 6 and AC = 10. What is tan Â?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "8",
+                "BC": "6",
+                "AC": "10"
+              },
+              "angles": {
+                "A": ""
+              }
+            },
             "nom": "0.75",
             "explication": "tan Â = opposite ÷ adjacent = BC ÷ AB = 6 ÷ 8 = 0.75.",
             "pieges": [
@@ -17656,6 +18870,22 @@
           },
           {
             "texte": "ABC is right-angled at B, AC = 10 cm and Â = 60°. We know that cos 60° = 0.5. How long is AB?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AC": "10 cm",
+                "AB": "?"
+              },
+              "angles": {
+                "A": "60°"
+              }
+            },
             "nom": "5 cm",
             "explication": "cos Â = AB ÷ AC, so AB = AC × cos Â = 10 × 0.5 = 5 cm.",
             "pieges": [
@@ -17671,6 +18901,22 @@
           },
           {
             "texte": "ABC is right-angled at B, AB = 6 cm and tan Â = 2. How long is BC?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "AB": "6 cm",
+                "BC": "?"
+              },
+              "angles": {
+                "A": ""
+              }
+            },
             "nom": "12 cm",
             "explication": "tan Â = BC ÷ AB, so BC = AB × tan Â = 6 × 2 = 12 cm.",
             "pieges": [
@@ -17686,6 +18932,18 @@
           },
           {
             "texte": "Fill in: in ABC right-angled at B, sin Â = … ÷ AC",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "angles": {
+                "A": ""
+              }
+            },
             "nom": "BC",
             "explication": "The sine is the opposite divided by the hypotenuse: the side opposite Â is BC.",
             "pieges": [
@@ -17731,6 +18989,22 @@
           },
           {
             "texte": "A 5 m ladder leans against a vertical wall. Its foot is 3 m from the wall. What is the cosine of the angle between the ladder and the ground?",
+            "figure": {
+              "type": "triangle",
+              "sommets": [
+                "A",
+                "B",
+                "C"
+              ],
+              "droit": "B",
+              "cotes": {
+                "BC": "3 m",
+                "AC": "5 m"
+              },
+              "angles": {
+                "C": "?"
+              }
+            },
             "nom": "0.6",
             "explication": "The side adjacent to the angle at the ground is the distance to the wall, 3 m; the hypotenuse is the ladder, 5 m. cos = 3 ÷ 5 = 0.6.",
             "pieges": [
@@ -18777,6 +20051,29 @@
         },
         {
           "texte": "Une droite passe par A(1 ; 3) et B(3 ; 7). Quel est son coefficient directeur ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 5,
+            "ymin": -1,
+            "ymax": 8,
+            "points": {
+              "A": [
+                1,
+                3
+              ],
+              "B": [
+                3,
+                7
+              ]
+            },
+            "segments": [
+              [
+                "A",
+                "B"
+              ]
+            ]
+          },
           "nom": "2",
           "explication": "Écart des ordonnées divisé par écart des abscisses : (7 − 3) ÷ (3 − 1) = 4 ÷ 2 = 2.",
           "pieges": [
@@ -18792,6 +20089,29 @@
         },
         {
           "texte": "Sur le graphique d’une fonction affine, quand x passe de 0 à 1, f(x) passe de 4 à 1. Combien vaut m ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 3,
+            "ymin": -1,
+            "ymax": 5,
+            "points": {
+              "A": [
+                0,
+                4
+              ],
+              "B": [
+                1,
+                1
+              ]
+            },
+            "droites": [
+              [
+                -3,
+                4
+              ]
+            ]
+          },
           "nom": "−3",
           "explication": "Quand x augmente de 1, f(x) varie de 1 − 4 = −3 : m = −3, la droite descend.",
           "pieges": [
@@ -18940,6 +20260,29 @@
           },
           {
             "texte": "A line goes through A(1, 3) and B(3, 7). What is its gradient?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 5,
+              "ymin": -1,
+              "ymax": 8,
+              "points": {
+                "A": [
+                  1,
+                  3
+                ],
+                "B": [
+                  3,
+                  7
+                ]
+              },
+              "segments": [
+                [
+                  "A",
+                  "B"
+                ]
+              ]
+            },
             "nom": "2",
             "explication": "Change in y divided by change in x: (7 − 3) ÷ (3 − 1) = 4 ÷ 2 = 2.",
             "pieges": [
@@ -18955,6 +20298,29 @@
           },
           {
             "texte": "On the graph of a linear function, when x goes from 0 to 1, f(x) goes from 4 to 1. What is m?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 3,
+              "ymin": -1,
+              "ymax": 5,
+              "points": {
+                "A": [
+                  0,
+                  4
+                ],
+                "B": [
+                  1,
+                  1
+                ]
+              },
+              "droites": [
+                [
+                  -3,
+                  4
+                ]
+              ]
+            },
             "nom": "−3",
             "explication": "When x goes up by 1, f(x) changes by 1 − 4 = −3: m = −3, the line goes down.",
             "pieges": [
@@ -19352,6 +20718,29 @@
       "items": [
         {
           "texte": "A(2 ; 1) et B(5 ; 7). Quelles sont les coordonnées du vecteur AB ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 7,
+            "ymin": -1,
+            "ymax": 8,
+            "points": {
+              "A": [
+                2,
+                1
+              ],
+              "B": [
+                5,
+                7
+              ]
+            },
+            "segments": [
+              [
+                "A",
+                "B"
+              ]
+            ]
+          },
           "nom": "(3 ; 6)",
           "explication": "Arrivée moins départ : (5 − 2 ; 7 − 1) = (3 ; 6).",
           "pieges": [
@@ -19367,6 +20756,29 @@
         },
         {
           "texte": "A(−1 ; 4) et B(3 ; 2). Quelles sont les coordonnées du vecteur AB ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -2,
+            "xmax": 5,
+            "ymin": -1,
+            "ymax": 6,
+            "points": {
+              "A": [
+                -1,
+                4
+              ],
+              "B": [
+                3,
+                2
+              ]
+            },
+            "segments": [
+              [
+                "A",
+                "B"
+              ]
+            ]
+          },
           "nom": "(4 ; −2)",
           "explication": "(3 − (−1) ; 2 − 4) = (3 + 1 ; −2) = (4 ; −2).",
           "pieges": [
@@ -19442,6 +20854,29 @@
         },
         {
           "texte": "A(2 ; 4) et B(6 ; 10). Quelles sont les coordonnées du milieu de [AB] ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 8,
+            "ymin": -1,
+            "ymax": 11,
+            "points": {
+              "A": [
+                2,
+                4
+              ],
+              "B": [
+                6,
+                10
+              ]
+            },
+            "segments": [
+              [
+                "A",
+                "B"
+              ]
+            ]
+          },
           "nom": "(4 ; 7)",
           "explication": "On fait la moyenne des coordonnées : ((2 + 6) ÷ 2 ; (4 + 10) ÷ 2) = (4 ; 7).",
           "pieges": [
@@ -19515,6 +20950,29 @@
         "items": [
           {
             "texte": "A(2, 1) and B(5, 7). What are the components of vector AB?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 7,
+              "ymin": -1,
+              "ymax": 8,
+              "points": {
+                "A": [
+                  2,
+                  1
+                ],
+                "B": [
+                  5,
+                  7
+                ]
+              },
+              "segments": [
+                [
+                  "A",
+                  "B"
+                ]
+              ]
+            },
             "nom": "(3, 6)",
             "explication": "End minus start: (5 − 2, 7 − 1) = (3, 6).",
             "pieges": [
@@ -19530,6 +20988,29 @@
           },
           {
             "texte": "A(−1, 4) and B(3, 2). What are the components of vector AB?",
+            "figure": {
+              "type": "repere",
+              "xmin": -2,
+              "xmax": 5,
+              "ymin": -1,
+              "ymax": 6,
+              "points": {
+                "A": [
+                  -1,
+                  4
+                ],
+                "B": [
+                  3,
+                  2
+                ]
+              },
+              "segments": [
+                [
+                  "A",
+                  "B"
+                ]
+              ]
+            },
             "nom": "(4, −2)",
             "explication": "(3 − (−1), 2 − 4) = (3 + 1, −2) = (4, −2).",
             "pieges": [
@@ -19605,6 +21086,29 @@
           },
           {
             "texte": "A(2, 4) and B(6, 10). What are the coordinates of the midpoint of [AB]?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 8,
+              "ymin": -1,
+              "ymax": 11,
+              "points": {
+                "A": [
+                  2,
+                  4
+                ],
+                "B": [
+                  6,
+                  10
+                ]
+              },
+              "segments": [
+                [
+                  "A",
+                  "B"
+                ]
+              ]
+            },
             "nom": "(4, 7)",
             "explication": "Take the mean of the coordinates: ((2 + 6) ÷ 2, (4 + 10) ÷ 2) = (4, 7).",
             "pieges": [
@@ -19737,6 +21241,19 @@
         },
         {
           "texte": "Une droite de pente 2 passe par le point A(1 ; 4). Quelle est son équation réduite ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 5,
+            "ymin": -1,
+            "ymax": 7,
+            "points": {
+              "A": [
+                1,
+                4
+              ]
+            }
+          },
           "nom": "y = 2x + 2",
           "explication": "On cherche p dans y = 2x + p. A est sur la droite : 4 = 2 × 1 + p, donc p = 4 − 2 = 2.",
           "pieges": [
@@ -19870,6 +21387,19 @@
           },
           {
             "texte": "A line with gradient 2 goes through the point A(1, 4). What is its equation y = mx + p?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 5,
+              "ymin": -1,
+              "ymax": 7,
+              "points": {
+                "A": [
+                  1,
+                  4
+                ]
+              }
+            },
             "nom": "y = 2x + 2",
             "explication": "We look for p in y = 2x + p. A is on the line: 4 = 2 × 1 + p, so p = 4 − 2 = 2.",
             "pieges": [
@@ -22628,6 +24158,11 @@
         },
         {
           "texte": "‖u‖ = 4, ‖v‖ = 5 et l’angle entre u et v est 60°. Combien vaut u · v ?",
+          "figure": {
+            "type": "angle",
+            "degres": 60,
+            "etiquette": "60°"
+          },
           "nom": "10",
           "explication": "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0,5 = 10.",
           "pieges": [
@@ -22643,6 +24178,11 @@
         },
         {
           "texte": "‖u‖ = 3, ‖v‖ = 7 et l’angle entre u et v est droit. Combien vaut u · v ?",
+          "figure": {
+            "type": "angle",
+            "degres": 90,
+            "etiquette": ""
+          },
           "nom": "0",
           "explication": "cos(90°) = 0, donc u · v = 3 × 7 × 0 = 0 : des vecteurs orthogonaux ont un produit scalaire nul.",
           "pieges": [
@@ -22791,6 +24331,11 @@
           },
           {
             "texte": "‖u‖ = 4, ‖v‖ = 5 and the angle between u and v is 60°. What is u · v?",
+            "figure": {
+              "type": "angle",
+              "degres": 60,
+              "etiquette": "60°"
+            },
             "nom": "10",
             "explication": "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0.5 = 10.",
             "pieges": [
@@ -22806,6 +24351,11 @@
           },
           {
             "texte": "‖u‖ = 3, ‖v‖ = 7 and the angle between u and v is a right angle. What is u · v?",
+            "figure": {
+              "type": "angle",
+              "degres": 90,
+              "etiquette": ""
+            },
             "nom": "0",
             "explication": "cos(90°) = 0, so u · v = 3 × 7 × 0 = 0: perpendicular vectors have a zero scalar product.",
             "pieges": [

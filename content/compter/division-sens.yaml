@@ -27,6 +27,7 @@ items:
       - { texte: "13", pourquoi: "91 ÷ 7 = 13 : ici, on divise par 13, le quotient est l'autre facteur, 7." }
       - { texte: "78", pourquoi: "91 − 13 : diviser, ce n'est pas soustraire une seule fois." }
   - texte: "Lina partage 48 billes en 6 parts égales. Combien de billes y a-t-il dans chaque part ?"
+    figure: { type: barres, barres: [{ parts: 6 }], total: "48" }
     nom: "8"
     explication: "Schéma : une barre de 48 coupée en 6 parts égales. 6 × 8 = 48, donc chaque part a 8 billes."
     pieges:
@@ -39,6 +40,7 @@ items:
       - { texte: "40", pourquoi: "45 − 5 : on cherche combien de bouquets de 5, c'est une division." }
       - { texte: "225", pourquoi: "45 × 5 : le nombre de bouquets est plus petit que le nombre de roses." }
   - texte: "Dans un schéma en barre, une barre de 63 est coupée en 9 parts égales. Combien vaut une part ?"
+    figure: { type: barres, barres: [{ parts: 9 }], total: "63" }
     nom: "7"
     explication: "9 × 7 = 63, donc 63 ÷ 9 = 7 : chaque part vaut 7."
     pieges:
@@ -93,6 +95,7 @@ en:
         - { texte: "13", pourquoi: "91 ÷ 7 = 13: here we divide by 13, so the answer is the other factor, 7." }
         - { texte: "78", pourquoi: "91 − 13: dividing is not subtracting just once." }
     - texte: "Lina shares 48 marbles into 6 equal parts. How many marbles are in each part?"
+      figure: { type: barres, barres: [{ parts: 6 }], total: "48" }
       nom: "8"
       explication: "Bar model: a bar of 48 cut into 6 equal parts. 6 × 8 = 48, so each part has 8 marbles."
       pieges:
@@ -105,6 +108,7 @@ en:
         - { texte: "40", pourquoi: "45 − 5: we want how many bunches of 5, so it is a division." }
         - { texte: "225", pourquoi: "45 × 5: the number of bunches is smaller than the number of roses." }
     - texte: "In a bar model, a bar of 63 is cut into 9 equal parts. What is one part worth?"
+      figure: { type: barres, barres: [{ parts: 9 }], total: "63" }
       nom: "7"
       explication: "9 × 7 = 63, so 63 ÷ 9 = 7: each part is worth 7."
       pieges:

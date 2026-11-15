@@ -39,12 +39,14 @@ items:
       - { texte: "5", pourquoi: "5 est la norme de u : u · u est son carré, 5² = 25." }
       - { texte: "7", pourquoi: "3 + 4 : on multiplie chaque coordonnée par elle-même, puis on additionne." }
   - texte: "‖u‖ = 4, ‖v‖ = 5 et l’angle entre u et v est 60°. Combien vaut u · v ?"
+    figure: { type: angle, degres: 60, etiquette: "60°" }
     nom: "10"
     explication: "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0,5 = 10."
     pieges:
       - { texte: "20", pourquoi: "4 × 5 oublie le cosinus de l’angle : cos(60°) = 0,5." }
       - { texte: "Environ 17,3", pourquoi: "C’est 4 × 5 × sin(60°) : la formule utilise le cosinus." }
   - texte: "‖u‖ = 3, ‖v‖ = 7 et l’angle entre u et v est droit. Combien vaut u · v ?"
+    figure: { type: angle, degres: 90, etiquette: "" }
     nom: "0"
     explication: "cos(90°) = 0, donc u · v = 3 × 7 × 0 = 0 : des vecteurs orthogonaux ont un produit scalaire nul."
     pieges:
@@ -111,12 +113,14 @@ en:
         - { texte: "5", pourquoi: "5 is the magnitude of u: u · u is its square, 5² = 25." }
         - { texte: "7", pourquoi: "3 + 4: multiply each component by itself, then add." }
     - texte: "‖u‖ = 4, ‖v‖ = 5 and the angle between u and v is 60°. What is u · v?"
+      figure: { type: angle, degres: 60, etiquette: "60°" }
       nom: "10"
       explication: "u · v = ‖u‖ × ‖v‖ × cos(60°) = 4 × 5 × 0.5 = 10."
       pieges:
         - { texte: "20", pourquoi: "4 × 5 leaves out the cosine of the angle: cos(60°) = 0.5." }
         - { texte: "About 17.3", pourquoi: "That is 4 × 5 × sin(60°): the formula uses the cosine." }
     - texte: "‖u‖ = 3, ‖v‖ = 7 and the angle between u and v is a right angle. What is u · v?"
+      figure: { type: angle, degres: 90, etiquette: "" }
       nom: "0"
       explication: "cos(90°) = 0, so u · v = 3 × 7 × 0 = 0: perpendicular vectors have a zero scalar product."
       pieges:

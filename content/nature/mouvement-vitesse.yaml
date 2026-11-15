@@ -15,6 +15,7 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "Assis dans un train qui roule, tu ne bouges pas de ton siège. Es-tu immobile ?"
+    image: 1f686
     nom: "Oui par rapport au train, non par rapport au quai."
     explication: "Le mouvement dépend du référentiel : immobile dans le référentiel du train, en mouvement dans le référentiel terrestre."
     pieges:
@@ -27,12 +28,14 @@ items:
       - { texte: "L'objet dont on étudie le mouvement.", pourquoi: "Celui-ci s'appelle le système ; le référentiel sert de point de comparaison." }
       - { texte: "La trajectoire suivie par l'objet.", pourquoi: "La trajectoire dépend elle-même du référentiel choisi." }
   - texte: "Une valve de roue de vélo, vue depuis le cadre du vélo, décrit un cercle. Vue depuis le trottoir, que décrit-elle ?"
+    image: 1f6b2
     nom: "Une courbe qui avance en formant des arches."
     explication: "La trajectoire dépend du référentiel : cercle par rapport au vélo, courbe en arches par rapport au sol."
     pieges:
       - { texte: "Le même cercle.", pourquoi: "Vu du trottoir, le vélo avance : le cercle est « étiré » le long de la route." }
       - { texte: "Une droite.", pourquoi: "Le moyeu de la roue avance en ligne droite, mais la valve tourne aussi autour de lui." }
   - texte: "Un coureur parcourt 100 m en 10 s. Quelle est sa vitesse moyenne ?"
+    image: 1f45f
     nom: "10 m/s, soit 36 km/h."
     explication: "v = d ÷ Δt = 100 ÷ 10 = 10 m/s ; et 10 × 3,6 = 36 km/h."
     pieges:
@@ -45,6 +48,7 @@ items:
       - { texte: "La masse de l'objet.", pourquoi: "La masse ne dépend pas du mouvement : elle n'apparaît pas dans le vecteur vitesse." }
       - { texte: "Rien de plus que la valeur.", pourquoi: "C'est justement l'intérêt du vecteur : il dit aussi où va l'objet." }
   - texte: "Une voiture roule tout droit, toujours à 90 km/h. Comment qualifie-t-on ce mouvement ?"
+    image: 1f697
     nom: "Rectiligne uniforme."
     explication: "Rectiligne : la trajectoire est une droite. Uniforme : la valeur de la vitesse ne change pas."
     pieges:
@@ -75,6 +79,7 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "Sitting in a moving train, you don't leave your seat. Are you still?"
+      image: 1f686
       nom: "Yes relative to the train, no relative to the platform."
       explication: "Motion depends on the frame of reference: still in the train's frame, moving in the Earth's frame."
       pieges:
@@ -87,12 +92,14 @@ en:
         - { texte: "The object whose motion we study.", pourquoi: "That's called the system; the frame of reference is what we compare it with." }
         - { texte: "The path followed by the object.", pourquoi: "The path itself depends on the chosen frame of reference." }
     - texte: "Seen from the bike's frame, a bicycle wheel's valve moves in a circle. Seen from the pavement, what does it trace?"
+      image: 1f6b2
       nom: "A curve moving forward in a series of arches."
       explication: "The path depends on the frame of reference: a circle relative to the bike, an arched curve relative to the ground."
       pieges:
         - { texte: "The same circle.", pourquoi: "Seen from the pavement, the bike moves forward: the circle is « stretched » along the road." }
         - { texte: "A straight line.", pourquoi: "The wheel's hub moves in a straight line, but the valve also turns around it." }
     - texte: "A runner covers 100 m in 10 s. What is their average speed?"
+      image: 1f45f
       nom: "10 m/s, that is 36 km/h."
       explication: "v = d ÷ Δt = 100 ÷ 10 = 10 m/s; and 10 × 3.6 = 36 km/h."
       pieges:
@@ -105,6 +112,7 @@ en:
         - { texte: "The object's mass.", pourquoi: "Mass doesn't depend on motion: it doesn't appear in the velocity vector." }
         - { texte: "Nothing more than the speed.", pourquoi: "That's the whole point of the vector: it also says where the object is going." }
     - texte: "A car drives in a straight line, always at 90 km/h. How do we describe this motion?"
+      image: 1f697
       nom: "Uniform straight-line motion."
       explication: "Straight-line: the path is a straight line. Uniform: the speed doesn't change."
       pieges:
