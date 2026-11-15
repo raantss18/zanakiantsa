@@ -361,6 +361,17 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   (`bounded`, erreur de type). Vérifié sur l'émulateur : plus aucun « son ignoré ».
 - ⏳ Programmes libres sur une vraie tablette, et avec un enfant.
 
+## 2026-11-15 (nuit) — Autres boutiques (demande d'Antsa)
+
+- ✅ Obtainium (https://github.com/ImranR98/Obtainium) : bouton « Ajouter à Obtainium » et marche à suivre sur le site ;
+  même APK que le site (même signature, progression gardée). ⏳ Pas essayé sur un vrai appareil avec Obtainium.
+- ⛔ IzzyOnDroid, d'après sa règle d'inclusion (https://izzyondroid.org/docs/general/AppInclusionPolicy/) : APK signé avec
+  une clé de version (le nôtre l'est avec la clé de débogage), environ 30 Mo par APK (le nôtre : 40,7 Mo), aucun élément
+  de pistage ou de publicité dans une app pour enfants (lecteur YouTube, statistiques d'ML Kit), et refus des apps dont
+  le code est écrit par une IA (celui-ci l'est, avec Claude). Demande non envoyée.
+- ⏸ Google Play remis à plus tard (compte d'Antsa, 12 testeurs × 14 jours, version sans mise à jour intégrée) ; F-Droid
+  demanderait une version sans ML Kit et une autre signature ; Aurora Store ne fait que relayer Google Play.
+
 ## 2026-11-15 (soir, 2) — Reprise partout, cours sur cahier, bulle lisible, figures (ADR 0078)
 
 - ✅ Reprise après chaque réponse, toutes séances (leçon choisie, vérification des prérequis, défi, test, révision, défi du
