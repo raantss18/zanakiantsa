@@ -135,7 +135,7 @@ def build(channels: list[dict], per_channel: int) -> dict:
             print(f"chaîne introuvable, ignorée : {c['nom']} ({c['id']})", file=sys.stderr)
             continue
         index = len(out_channels)
-        out_channels.append({k: c[k] for k in ('id', 'nom', 'langue', 'ages', 'domaines')})
+        out_channels.append({k: c[k] for k in ('id', 'nom', 'langue', 'ages', 'domaines', 'sans_niveau_ages') if k in c})
         before = len(videos)
         vids, token = [], None
         wanted = c.get('profondeur', per_channel)
@@ -177,6 +177,55 @@ def build(channels: list[dict], per_channel: int) -> dict:
     return {'genere': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'chaines': out_channels, 'videos': videos}
 
 
+# Niveau écrit dans le titre ou les mots-clés d'une vidéo (essai sur tablette du 2026-11-15 : à 7 ans, « Pour toi »
+# montrait « L'osmose et la diffusion » d'Alloprof, chaîne réglée de 6 à 17 ans). Âge le plus jeune visé par chaque niveau :
+# France (CP à CM2, 6e, cycles 2 à 4, lycée) et Québec (« 3e année », « 2e cycle » du primaire, « Secondaire 2 »).
+_GRADES = {'cp': 6, 'ce1': 7, 'ce2': 8, 'cm1': 9, 'cm2': 10}
+_LEVEL = re.compile(
+    r"\b(?P<grade>cp|ce1|ce2|cm1|cm2)\b"
+    r"|\bcycle\s*(?P<fr_cycle>[234])\b"
+    r"|\b(?P<qc_cycle>[123])\s*(?:er|e|ème)\s+cycle\b"
+    r"|\b(?P<qc_year>[1-6])\s*(?:re|er|e|ème)\s+(?:(?:à|et)\s+[1-6]\s*(?:e|ème)\s+)?année"
+    r"|\bsecondaire\s*(?P<sec>[1-5])?\b"
+    r"|\b(?P<sixth>6\s*(?:e|ème))\b(?!\s+(?:année|partie|épisode))"
+    r"|\b(?P<primaire>primaire)\b"
+    r"|\b(?P<lycee>lycée)\b",
+    re.IGNORECASE)
+
+
+def youngest_age(text: str) -> int | None:
+    """L'âge le plus jeune visé par les niveaux nommés dans le texte, ou None s'il n'en nomme aucun."""
+    ages = []
+    for m in _LEVEL.finditer(text):
+        if m['grade']:
+            ages.append(_GRADES[m['grade'].lower()])
+        elif m['fr_cycle']:
+            ages.append({'2': 6, '3': 9, '4': 12}[m['fr_cycle']])
+        elif m['qc_cycle']:
+            ages.append({'1': 6, '2': 8, '3': 10}[m['qc_cycle']])
+        elif m['qc_year']:
+            ages.append(5 + int(m['qc_year']))
+        elif m.group(0).lower().startswith('secondaire'):
+            ages.append(11 + int(m['sec'] or 1))
+        elif m['sixth']:
+            ages.append(11)
+        elif m['lycee']:
+            ages.append(15)
+    # « Primaire » seul dit le primaire en entier ; à côté d'un niveau plus précis (« 3e à 6e année | Primaire »), il s'efface.
+    if not ages and any(m['primaire'] for m in _LEVEL.finditer(text)):
+        ages.append(6)
+    return min(ages) if ages else None
+
+
+def fits_level(v: dict, c: dict, age: int) -> bool:
+    """Une vidéo dont le titre vise un niveau plus avancé reste pour plus tard : gardée dès un an avant ce niveau. Sans
+    niveau écrit, `sans_niveau_ages` de la chaîne s'applique (Alloprof : ses vidéos du primaire disent « Primaire »)."""
+    lo = youngest_age(f"{v['t']} {v.get('m', '')}")
+    if lo is None:
+        lo = c.get('sans_niveau_ages', c['ages'])[0]
+    return age >= lo - 1
+
+
 def per_age(catalogue: dict) -> dict[str, dict]:
     """Un petit catalogue par langue et par âge (5 à 18 ; 18 = 18 ans et plus) : l'app ne télécharge que le sien. À 10 ans en
     français, ≈ 50 Ko compressés au lieu de ≈ 850 Ko pour tout le catalogue (lent sur un téléphone, signalé le 2026-11-08)."""
@@ -189,7 +238,8 @@ def per_age(catalogue: dict) -> dict[str, dict]:
             out[f'{lang}-{age}'] = {
                 'genere': catalogue['genere'],
                 'chaines': [catalogue['chaines'][i] for i in keep],
-                'videos': [dict(v, c=index[v['c']], m=v['m'][:80]) for v in catalogue['videos'] if v['c'] in index],
+                'videos': [dict(v, c=index[v['c']], m=v['m'][:80]) for v in catalogue['videos']
+                           if v['c'] in index and fits_level(v, catalogue['chaines'][v['c']], age)],
             }
     return out
 

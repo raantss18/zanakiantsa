@@ -75,6 +75,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           pip install --quiet pyyaml==6.0.3
+          (cd tool && python3 test_videos.py)
           python3 tool/videos.py --out _site/videos.json --par-age _site/videos
 
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
