@@ -177,3 +177,9 @@ Float64List ambience(String world) {
 
 /// Pour `compute` : le WAV de la trame d'un monde.
 Uint8List ambienceWav(String world) => wav(ambience(world));
+
+/// Notes des programmes libres (ADR 0076) : do majeur, du do4 au do5, timbre pincé, 0,35 s.
+const _noteFreqs = [261.63, 293.66, 329.63, 349.23, 392.0, 440.0, 493.88, 523.25];
+
+/// Le WAV d'une note des programmes libres ([i] de 0 = do à 7 = do aigu).
+Uint8List noteWav(int i) => wav(_render([_Note(0, 0.35, _noteFreqs[i.clamp(0, 7)], _pluck, decay: 6)], _peak));

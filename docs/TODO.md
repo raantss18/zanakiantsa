@@ -178,7 +178,7 @@
 3. ✅ **Anglais** (ADR 0022) : couleurs, nombres, animaux, corps ; ✅ CE2 → 3e calés sur les programmes publiés (BO 2025
    et 2026, copies lues : URL officielles à substituer) ; ⏳ voix anglaise hors ligne sur la tablette
 4. ✅ **Exploration 3D sur GPU** (ADR 0024) : système solaire et corps ; ⏳ organes, fluidité sur vraie tablette
-5. ✅ **Programmer un robot par blocs** (ADR 0023) ; ✅ boucles, conditions, variables, Python (leçons 6e → 2de) ; ⏳ programmes libres type Scratch
+5. ✅ **Programmer un robot par blocs** (ADR 0023) ; ✅ boucles, conditions, variables, Python (leçons 6e → 2de) ; ✅ programmes libres type Scratch : le robot dessine et joue des notes, programmes enregistrés (ADR 0076)
 6. ✅ **Solides en 3D** (ADR 0024) ; ⏳ manipulation libre type GeoGebra
 - ✅ 3e journée : anglais / code / explorer (les journées tournent sur 3 jours, ADR 0018)
 - ✅ Vérifié sur l'émulateur : mat en un coup, bâtonnets (lire, construire), paquets, partage, tables, solide 3D,
@@ -348,9 +348,18 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   point sur le cadenas ; à l'entrée de l'espace parent, la nouvelle version se propose seule dans une fenêtre.
 - ✅ Audit : sauvegarde Google coupée, porte parentale limitée, téléchargement de mise à jour durci, identifiants de
   vidéos validés, actions GitHub épinglées. Aucune vulnérabilité connue dans les bibliothèques embarquées (OSV).
-- ⏳ **À faire par Antsa** : sauvegarder `~/.android/debug.keystore` hors du poste (c'est la clé qui signe les APK publiés).
+- ✅ Clé `~/.android/debug.keystore` mise en lieu sûr hors du poste (Antsa, 2026-11-15).
 - ⏳ Reste à tester : SM-X135G (pas de câble le 2026-11-14) ; paysage de la nouvelle rangée ; fin du défi du jour ;
   sauvegarde Google réellement vide ; code parent pour les plus de 10 ans ; catalogue de vidéos signé.
+
+## 2026-11-15 (soir) — Programmes libres
+
+- ✅ **Programmes libres** (ADR 0076) : « Programme libre » et « Mes programmes » dans le code. Le robot dessine (crayon,
+  six couleurs nommées, angles de 15° à 180°), répète, joue des notes ; sept idées à changer ; enregistrer, rouvrir,
+  supprimer. Vérifié sur l'émulateur (téléphone et densité tablette), 302 tests.
+- ✅ Corrigé : les sons fabriqués par l'app (notes, exercices d'écoute) ne s'attendaient pas et se coupaient
+  (`bounded`, erreur de type). Vérifié sur l'émulateur : plus aucun « son ignoré ».
+- ⏳ Programmes libres sur une vraie tablette, et avec un enfant.
 
 ## 2026-11-15 — Essais sur la Xiaomi Pad 7 d'Antsa (Android 16, HyperOS, sans données d'enfant)
 
@@ -365,8 +374,8 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   le second essai a réussi, cause non trouvée dans le journal. À surveiller si un parent le signale.
 - ⚠️ Android 16 note « background playback would be muted » pour la voix Google (simple avertissement, le son passe) :
   à surveiller dans les prochaines versions d'Android.
-- ⏳ Reste à tester : tablette avec Family Link (8df629a, encore en 1.0.9, non touchée) ; corps humain sur vraie
-  tablette ; fin du défi du jour.
+- ✅ Essais sur les tablettes et avec les enfants faits par Antsa : « les enfants sont contents » (2026-11-15, son
+  retour, pas de compte rendu écrit).
 
 ## 2026-11-14 (soir) — Revue de toute l'app : corrigé et reste à corriger
 

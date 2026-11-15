@@ -10,6 +10,7 @@ import '../l10n/l10n.dart';
 import 'adaptive.dart';
 import 'chess_play.dart';
 import 'session.dart';
+import 'studio.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -109,6 +110,13 @@ class _TopicHubState extends State<TopicHub> {
                   hubCard('1f46b', t('À deux'), t('Une partie avec quelqu\'un, sur la même tablette.'),
                       () => _go(const GamePage(mode: 'deux', level: 0, childWhite: true))),
                   hubCard('1f4dc', t('Mes parties'), t('Revoir mes parties coup par coup, avec des conseils.'), () => _go(const GamesPage())),
+                ],
+                // Programmes libres (ADR 0076) : écrire ce qu'on veut, sans bonne réponse.
+                if (widget.topic == 'code') ...[
+                  hubCard('1f916', t('Programme libre'), t('Invente ce que tu veux : le robot dessine et joue de la musique.'),
+                      () => _go(const StudioPage())),
+                  hubCard('1f4bb', t('Mes programmes'), t('Tes programmes enregistrés, et des idées pour commencer.'),
+                      () => _go(const ProgramsPage())),
                 ],
                 hubCard('1f4d2', t('Mon carnet'), t('Ce que tu sais, ce qui est à revoir, et les erreurs qui reviennent.'),
                     () => _go(NotebookPage(topic: widget.topic))),
