@@ -20,7 +20,9 @@ gh release create "app-v$VERSION" "$APK" release-out/release.json release-out/re
 echo "Version $VERSION publiée. J'attends le site…"
 for _ in $(seq 1 40); do
   sleep 15
-  if curl -fsSL "$SITE?v=$RANDOM" | grep -q "Version $VERSION,"; then
+  # Page lue en entier d'abord : `grep -q` coupait le tuyau et curl criait « Failure writing output » (1.1.6).
+  PAGE=$(curl -fsSL "$SITE?v=$RANDOM" 2>/dev/null || true)
+  if grep -q "Version $VERSION," <<<"$PAGE"; then
     echo "Le site annonce la version $VERSION : $SITE"
     exit 0
   fi

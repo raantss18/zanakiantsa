@@ -371,6 +371,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   ouverte refermée sans rien dire au lancement ; date abîmée qui vidait toute la liste ; message coupé sous le dessin.
 - ✅ Vérifié : 313 tests ; émulateur 800 × 1340 (défi réussi puis marqué « Réussi », essai raté, limite de 4 boucles,
   effacer un bloc d'une idée).
+- ✅ Publié en 1.1.6 (build 2032) : tag sur le bon commit (nouveau `tool/publish.sh`), site à jour.
 - ⏳ Défis sur une vraie tablette et avec un enfant (les pointillés se voient-ils assez ? l'ordre des défis).
 
 ## 2026-11-15 — Essais sur la Xiaomi Pad 7 d'Antsa (Android 16, HyperOS, sans données d'enfant)
