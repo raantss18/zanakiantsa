@@ -18,6 +18,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -29,8 +31,20 @@ API = 'https://www.googleapis.com/youtube/v3/'
 def get(endpoint: str, **params) -> dict:
     params['key'] = os.environ['YOUTUBE_API_KEY']
     url = API + endpoint + '?' + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'zanakiantsa-videos'}), timeout=30) as r:
-        return json.load(r)
+    # Une erreur passagère de YouTube (500, 503) faisait échouer tout le site (publication de la 1.1.7) : on réessaie
+    # quatre fois en attendant de plus en plus ; une erreur 4xx (clé, quota) reste immédiate.
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'zanakiantsa-videos'}), timeout=30) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == 4:
+                raise
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 4:
+                raise
+        time.sleep(2 ** attempt * 3)
+    raise RuntimeError('inaccessible')
 
 
 def seconds(iso: str) -> int:
