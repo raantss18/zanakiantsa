@@ -36,6 +36,17 @@ List<String> prerequisitesToCheck(SkillRef skill, List<SkillRef> domain) {
 /// juste après le rappel de ce prérequis.
 class Diagnostic {
   Diagnostic(List<String> prerequisites) : _steps = [for (final p in prerequisites) DiagStep(StepKind.check, p)];
+
+  /// Reprise d'une séance laissée en cours (ADR 0078) : les étapes qui restaient, au format `check:id` / `reminder:id`.
+  Diagnostic.restore(List<String> saved)
+      : _steps = [
+          for (final x in saved)
+            if (StepKind.values.where((k) => '${k.name}:' == x.substring(0, x.indexOf(':') + 1)).firstOrNull case final k?)
+              DiagStep(k, x.substring(x.indexOf(':') + 1)),
+        ];
+
+  /// Les étapes qui restent, à garder pour une reprise.
+  List<String> get saved => [for (final st in _steps) st.toString()];
   final List<DiagStep> _steps;
 
   bool get done => _steps.isEmpty;

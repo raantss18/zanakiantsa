@@ -409,4 +409,9 @@ const en = <String, String>{
   'Bravo, c\'est le même dessin ! Et ton programme est aussi court que possible.': 'Well done, it is the same drawing! And your program is as short as it can be.',
   'Bravo, c\'est le même dessin ! Idée : il peut s\'écrire avec {n} blocs seulement.': 'Well done, it is the same drawing! Idea: it can be written with only {n} blocks.',
   'Pas encore pareil : compare ton dessin avec les pointillés, puis change un bloc.': 'Not the same yet: compare your drawing with the dotted one, then change a block.',
+  'À revoir aujourd’hui': 'Review today',
+  'Défi : {topic}': 'Challenge: {topic}',
+  'Test de départ : {topic}': 'Starting test: {topic}',
+  'Reprendre : {what}': 'Continue: {what}',
+  '{skill} · question {n} sur {total}': '{skill} · question {n} of {total}',
 };

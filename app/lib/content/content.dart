@@ -328,7 +328,11 @@ class Item {
         fen = j['fen'] as String?,
         moves = [for (final m in j['coups'] as List? ?? const []) m as String],
         minStrokes = j['traits'] as int? ?? 1,
-        traps = [for (final t in j['pieges'] as List? ?? const []) Trap(Map<String, dynamic>.from(t as Map))];
+        traps = [for (final t in j['pieges'] as List? ?? const []) Trap(Map<String, dynamic>.from(t as Map))],
+        figure = j['figure'] == null ? null : Map<String, dynamic>.from(j['figure'] as Map);
+
+  /// Figure dessinée au-dessus d'une question écrite (ADR 0078, `activities/figure.dart`).
+  final Map<String, dynamic>? figure;
 
   /// Question écrite (`quiz`, ADR 0057) : les mauvaises réponses et ce que chacune montre ; la bonne est dans [name].
   final List<Trap> traps;

@@ -118,8 +118,11 @@ class Attempt extends ChangeNotifier {
       : _english ? speech.sayMixed(phrase(key), force: force, quoted: _studied!) : speech.say(phrase(key), id: voiceId(key), force: force);
 
   /// Affiche et dit une phrase de l'énoncé.
-  Future<void> show(String key) {
-    statementKey = key;
+  /// [display] : la phrase écrite dans la bulle, si ce n'est pas celle qui est dite (quiz : la question est déjà écrite
+  /// en grand sur la page, la bulle montre la consigne).
+  Future<void> show(String key, {String? display}) {
+    statementKey = display ?? key;
+    _spokenKey = key;
     helpText = null;
     notifyListeners();
     final spoken = say(key);
@@ -130,10 +133,13 @@ class Attempt extends ChangeNotifier {
     return spoken;
   }
 
+  /// La phrase dite par le dernier [show] (la question d'un quiz, quand la bulle montre la consigne).
+  String? _spokenKey;
+
   /// « Réécouter » : une demande explicite, dite même voix coupée (ADR 0025).
   Future<void> listen() => helpText != null
       ? (_english ? speech.sayMixed(helpText!, force: true, quoted: _studied!) : speech.say(helpText!, force: true))
-      : say(statementKey, force: true);
+      : say(_spokenKey != null && statementKey == 'consigne' ? _spokenKey! : statementKey, force: true);
 
   Future<void> _record({required bool correct, required bool demonstrated}) => app.record(Answer(
         skill: skill.id,
@@ -300,44 +306,142 @@ class Attempt extends ChangeNotifier {
   }
 }
 
-/// Une séance laissée en cours (ADR 0039) : le plan, la question où reprendre, les étoiles déjà gagnées. Gardée par
-/// enfant et par domaine jusqu'à la fin de la séance, même si l'enfant sort, change de domaine ou ferme l'app.
+/// Une séance laissée en cours (ADR 0039, 0078) : le plan, la question où reprendre, les étoiles déjà gagnées, et ce qu'il
+/// faut pour repartir au même endroit (vérification des prérequis en cours, notions déjà présentées). Gardée par enfant
+/// jusqu'à la fin de la séance, même si l'enfant sort, change de domaine ou ferme l'app. Toutes les séances se
+/// reprennent : parcours d'un domaine, leçon choisie, défi, test de départ, révision, défi du jour (demande d'Antsa,
+/// 2026-11-15 : « reprendre au moment où l'enfant a quitté, même au milieu d'une épreuve »).
 class SessionResume {
-  const SessionResume(this.plan, this.index, this.stars);
+  const SessionResume(this.plan, this.index, this.stars,
+      {this.kind = parcours,
+      this.topic = '',
+      this.lesson,
+      this.firstTry = 0,
+      this.diag = const [],
+      this.introduced = const [],
+      this.diagnosed = const [],
+      this.day = 0});
   final List<String> plan;
-  final int index, stars;
+  final int index, stars, firstTry;
 
-  static String _key(String topic) => 'reprise_$topic';
+  /// Sorte de séance : [parcours], [lecon], [defi], [test], [revision], [defiJour].
+  final String kind;
+  static const parcours = 'parcours', lecon = 'lecon', defi = 'defi', test = 'test', revision = 'revision', defiJour = 'defi-jour';
+  final String topic;
+  final String? lesson;
 
-  Future<void> save(AppState app, String topic) =>
-      app.store.set(_key(topic), jsonEncode({'plan': plan, 'index': index, 'stars': stars}));
+  /// Étapes de vérification des prérequis qui restaient (la question en cours d'abord), au format `check:id`.
+  final List<String> diag;
+  final List<String> introduced, diagnosed;
 
-  static Future<void> clear(AppState app, String topic) => app.store.set(_key(topic), '');
+  /// Jour de l'enregistrement (révision et défi du jour ne se reprennent que le jour même).
+  final int day;
 
-  /// La reprise de ce domaine, si elle est encore valable (toutes ses compétences existent toujours).
-  static Future<SessionResume?> load(AppState app, String topic) async {
-    final raw = await app.store.get(_key(topic));
+  static String keyFor(String kind, String topic, String? lesson) => switch (kind) {
+        parcours => 'reprise_$topic',
+        lecon => 'reprise_lecon_$lesson',
+        _ => 'reprise_${kind}_$topic',
+      };
+
+  String get key => keyFor(kind, topic, lesson);
+
+  /// La dernière séance laissée en cours, tous domaines confondus : la carte « Reprendre » de l'accueil.
+  static const lastKey = 'reprise_accueil';
+
+  static int today([DateTime? now]) {
+    final d = now ?? DateTime.now();
+    return d.year * 10000 + d.month * 100 + d.day;
+  }
+
+  Map<String, Object?> toJson() => {
+        'plan': plan,
+        'index': index,
+        'stars': stars,
+        'kind': kind,
+        'topic': topic,
+        'lesson': lesson,
+        'firstTry': firstTry,
+        'diag': diag,
+        'introduced': introduced,
+        'diagnosed': diagnosed,
+        'day': day,
+      };
+
+  static SessionResume? fromJson(Object? raw, {String? topic}) {
+    if (raw is! Map) return null;
+    List<String> strings(Object? v) => v is List ? [for (final x in v) if (x is String) x] : const [];
+    final plan = strings(raw['plan']);
+    final index = raw['index'], stars = raw['stars'];
+    if (index is! int || stars is! int) return null;
+    return SessionResume(plan, index, stars,
+        kind: raw['kind'] as String? ?? parcours,
+        topic: raw['topic'] as String? ?? topic ?? '',
+        lesson: raw['lesson'] as String?,
+        firstTry: raw['firstTry'] as int? ?? 0,
+        diag: strings(raw['diag']),
+        introduced: strings(raw['introduced']),
+        diagnosed: strings(raw['diagnosed']),
+        day: raw['day'] as int? ?? 0);
+  }
+
+  Future<void> save(AppState app, [String? legacyTopic]) async {
+    await app.store.set(key, jsonEncode(toJson()));
+    await app.store.set(lastKey, key);
+  }
+
+  static Future<void> clearKey(AppState app, String key) async {
+    await app.store.set(key, '');
+    if (await app.store.get(lastKey) == key) await app.store.set(lastKey, '');
+  }
+
+  static Future<void> clear(AppState app, String topic) => clearKey(app, keyFor(parcours, topic, null));
+
+  /// La reprise du parcours de ce domaine, si elle est encore valable.
+  static Future<SessionResume?> load(AppState app, String topic) => loadKey(app, keyFor(parcours, topic, null), topic: topic);
+
+  /// La séance à proposer sur l'accueil (« Reprendre »), si elle est encore valable.
+  static Future<SessionResume?> loadLast(AppState app) async {
+    final key = await app.store.get(lastKey);
+    if (key == null || key.isEmpty) return null;
+    return loadKey(app, key);
+  }
+
+  static Future<SessionResume?> loadKey(AppState app, String key, {String? topic}) async {
+    final raw = await app.store.get(key);
     if (raw == null || raw.isEmpty) return null;
     try {
-      final j = jsonDecode(raw) as Map<String, dynamic>;
-      final r = SessionResume(List<String>.from(j['plan'] as List), j['index'] as int, j['stars'] as int);
-      final ids = {for (final s in app.topic(topic).skills) s.id};
-      if (r.index <= 0 || r.index >= r.plan.length || !r.plan.every(ids.contains)) return null;
-      // L'âge ou la classe ont changé depuis (vu sur la tablette le 2026-11-08 : à 9 ans, la séance gardée à 5 ans reprenait
-      // sur « Touche la syllabe ra ») : une séance qui contient des leçons devenues trop faciles ne reprend pas.
-      final p = app.progressOf(app.topic(topic));
-      if (r.plan.skip(r.index).any((id) => !p.inRange(id))) return null;
-      // La notion travaillée par cette séance a été acquise entre-temps (leçon choisie, défi…) : la reprise reposerait des
-      // questions sur ce qui est su (revue du 2026-11-14). Une nouvelle séance part de la notion suivante.
-      final left = <String, int>{};
-      for (final id in r.plan.skip(r.index)) {
-        left[id] = (left[id] ?? 0) + 1;
-      }
-      if (left.entries.any((e) => e.value >= 2 && p.earned(e.key) && e.key != p.newSkill)) return null;
-      return r;
+      final r = fromJson(jsonDecode(raw), topic: topic);
+      return r != null && r.validFor(app) ? r : null;
     } catch (_) {
       return null;
     }
+  }
+
+  /// Encore valable : toutes ses compétences existent, la séance n'est pas finie, et (parcours) elle convient toujours.
+  bool validFor(AppState app) {
+    if (index < 0 || index >= plan.length) return false;
+    // Rien n'a encore été répondu : pas de reprise (une séance juste ouverte puis quittée se recommence).
+    if (index == 0 && stars == 0 && diagnosed.isEmpty && introduced.isEmpty) return false;
+    if (!plan.every(app.hasSkill)) return false;
+    if (diag.any((d) => !app.hasSkill(d.split(':').last))) return false;
+    if ((kind == revision || kind == defiJour) && day != today()) return false;
+    if (kind == lecon && (lesson == null || !app.hasSkill(lesson!))) return false;
+    if (kind != parcours) return true;
+    if (!app.hasTopic(topic)) return false;
+    final ids = {for (final s in app.topic(topic).skills) s.id};
+    if (!plan.every(ids.contains)) return false;
+    // L'âge ou la classe ont changé depuis (vu sur la tablette le 2026-11-08 : à 9 ans, la séance gardée à 5 ans reprenait
+    // sur « Touche la syllabe ra ») : une séance qui contient des leçons devenues trop faciles ne reprend pas.
+    final p = app.progressOf(app.topic(topic));
+    if (plan.skip(index).any((id) => !p.inRange(id))) return false;
+    // La notion travaillée par cette séance a été acquise entre-temps (leçon choisie, défi…) : la reprise reposerait des
+    // questions sur ce qui est su (revue du 2026-11-14). Une nouvelle séance part de la notion suivante.
+    final left = <String, int>{};
+    for (final id in plan.skip(index)) {
+      left[id] = (left[id] ?? 0) + 1;
+    }
+    if (left.entries.any((e) => e.value >= 2 && p.earned(e.key) && e.key != p.newSkill)) return false;
+    return true;
   }
 }
 
@@ -356,12 +460,22 @@ class SessionPage extends StatefulWidget {
   static const reviewTheme = 'revision', dailyTheme = 'defi-jour';
 
   /// « À revoir aujourd'hui » : les révisions dues de tous les domaines, avec les aides habituelles.
-  const SessionPage.review(List<String> plan, {super.key})
-      : topic = reviewTheme, mixed = plan, review = true, challenge = false, placement = false, lesson = null, resume = null;
+  const SessionPage.review(List<String> plan, {super.key, this.resume})
+      : topic = reviewTheme, mixed = plan, review = true, challenge = false, placement = false, lesson = null;
 
   /// Le défi du jour : huit questions de ce qui est acquis, tous domaines mêlés, sans aide ; on garde le record.
-  const SessionPage.daily(List<String> plan, {super.key})
-      : topic = dailyTheme, mixed = plan, review = false, challenge = true, placement = false, lesson = null, resume = null;
+  const SessionPage.daily(List<String> plan, {super.key, this.resume})
+      : topic = dailyTheme, mixed = plan, review = false, challenge = true, placement = false, lesson = null;
+
+  /// Rouvre une séance gardée (carte « Reprendre » de l'accueil), quelle qu'en soit la sorte (ADR 0078).
+  static SessionPage resumed(SessionResume r) => switch (r.kind) {
+        SessionResume.revision => SessionPage.review(r.plan, resume: r),
+        SessionResume.defiJour => SessionPage.daily(r.plan, resume: r),
+        SessionResume.defi => SessionPage(topic: r.topic, challenge: true, resume: r),
+        SessionResume.test => SessionPage(topic: r.topic, placement: true, resume: r),
+        SessionResume.lecon => SessionPage(topic: r.topic, lesson: r.lesson, resume: r),
+        _ => SessionPage(topic: r.topic, resume: r),
+      };
 
   /// Plan imposé d'une séance qui mêle les domaines ; [topic] n'est alors pas un domaine du contenu.
   final List<String>? mixed;
@@ -390,6 +504,8 @@ class _SessionPageState extends State<SessionPage> {
   late final AppState app = AppScope.of(context);
   late List<String> plan = devSkill.isNotEmpty
       ? devSkill.split(",")
+      : widget.resume != null
+          ? [...widget.resume!.plan]
       : widget.mixed != null
           ? [...widget.mixed!]
       : widget.challenge
@@ -398,7 +514,7 @@ class _SessionPageState extends State<SessionPage> {
               ? app.progressOf(app.topic(widget.topic)).placementPlan() ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now())
               : widget.lesson != null
                   ? app.progressOf(app.topic(widget.topic)).focusPlan(widget.lesson!, Random())
-                  : widget.resume?.plan ?? app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
+                  : app.progressOf(app.topic(widget.topic)).plan(DateTime.now());
 
   /// La compétence nouvelle de la séance : dès qu'elle est acquise, la suite passe à la suivante (ADR 0037).
   late String? _target = _oneGo ? null : widget.lesson ?? app.progressOf(app.topic(widget.topic)).newSkill;
@@ -418,7 +534,7 @@ class _SessionPageState extends State<SessionPage> {
   final _retryAt = <int>{};
 
   /// Défi : réussites du premier coup, et le record d'avant (pour dire « nouveau record ! »).
-  int firstTry = 0;
+  late int firstTry = widget.resume?.firstTry ?? 0;
   int? _record;
   late final Rewards before = app.rewards;
 
@@ -452,14 +568,48 @@ class _SessionPageState extends State<SessionPage> {
   }
 
   /// Compétences déjà présentées dans cette séance (découverte guidée, ADR 0029).
-  final _introduced = <String>{};
+  late final _introduced = <String>{...?widget.resume?.introduced};
 
   /// Diagnostic en cours avant une notion nouvelle (ADR 0061), et les notions déjà diagnostiquées dans la séance.
-  Diagnostic? _diagnostic;
-  final _diagnosed = <String>{};
+  late Diagnostic? _diagnostic = widget.resume == null || widget.resume!.diag.isEmpty ? null : Diagnostic.restore(widget.resume!.diag);
+  late final _diagnosed = <String>{...?widget.resume?.diagnosed};
+
+  /// L'étape de vérification en cours (null : une question du plan), gardée pour la reprise.
+  DiagStep? _currentStep;
+
+  /// La sorte de cette séance, pour sa reprise (ADR 0078).
+  String get _kind => widget.mixed != null
+      ? (widget.review ? SessionResume.revision : SessionResume.defiJour)
+      : widget.challenge
+          ? SessionResume.defi
+          : widget.placement
+              ? SessionResume.test
+              : widget.lesson != null
+                  ? SessionResume.lecon
+                  : SessionResume.parcours;
+
+  /// Le point de reprise, gardé après chaque réponse : si l'enfant sort maintenant, il reviendra à cette question, même
+  /// au milieu d'une vérification, d'un défi ou d'une révision. Une notion dont le cours n'a pas été vu jusqu'au bout
+  /// sera présentée de nouveau.
+  void _saveResume() {
+    if (devSkill.isNotEmpty || over) return;
+    final a = attempt;
+    final unseen = a != null && a.example && !a.exampleDone && _currentStep == null ? a.skill.id : null;
+    SessionResume(plan, index, stars,
+            kind: _kind,
+            topic: widget.topic,
+            lesson: widget.lesson,
+            firstTry: firstTry,
+            diag: [?_currentStep?.toString(), ...?_diagnostic?.saved],
+            introduced: [for (final id in _introduced) if (id != unseen) id],
+            diagnosed: [..._diagnosed],
+            day: SessionResume.today())
+        .save(app);
+  }
 
   /// Une étape du diagnostic : question de vérification, ou rappel (exemple résolu) d'un prérequis manqué.
   Attempt _step(DiagStep st) {
+    _currentStep = st;
     final skill = app.skill(st.skill);
     final q = skill.draw(_rand, last: _last, avoid: app.recentOf(skill.id));
     _last = q;
@@ -478,6 +628,7 @@ class _SessionPageState extends State<SessionPage> {
       if (st != null) return _step(st);
       _diagnostic = null;
     }
+    _currentStep = null;
     final target = _target;
     if (devSkill.isEmpty && target != null) {
       final p = app.progressOf(app.topic(widget.topic));
@@ -526,6 +677,7 @@ class _SessionPageState extends State<SessionPage> {
     setState(() => attempt = _next());
     old?.dispose();
     _music();
+    _saveResume();
   }
 
   Future<void> _advance() async {
@@ -538,6 +690,7 @@ class _SessionPageState extends State<SessionPage> {
       setState(() => attempt = _next());
       old?.dispose();
       _music();
+      _saveResume();
       return;
     }
     if (widget.placement) await _placementStep();
@@ -552,7 +705,11 @@ class _SessionPageState extends State<SessionPage> {
       _retryAt.add(index + 3 > before ? before : index + 3);
     }
     if (index + 1 >= plan.length || _stoppedAt != null) {
-      if (devSkill.isEmpty && widget.lesson == null && (!_oneGo || _known.isNotEmpty)) SessionResume.clear(app, widget.topic);
+      if (devSkill.isEmpty) {
+        SessionResume.clearKey(app, SessionResume.keyFor(_kind, widget.topic, widget.lesson));
+        // Un test de départ qui a trouvé des compétences sues : la séance gardée du parcours ne convient plus.
+        if (widget.placement && _known.isNotEmpty) SessionResume.clear(app, widget.topic);
+      }
       // « Finie » dès maintenant : si l'enfant sort pendant les enregistrements qui suivent, la séance n'est pas comptée une
       // seconde fois comme interrompue (revue du 2026-11-14).
       over = true;
@@ -584,9 +741,7 @@ class _SessionPageState extends State<SessionPage> {
     });
     old?.dispose();
     _music();
-    // Le point de reprise : si l'enfant sort maintenant, il reviendra à cette question.
-    // Une leçon choisie ne remplace pas le point de reprise du parcours.
-    if (devSkill.isEmpty && !_oneGo && widget.lesson == null) SessionResume(plan, index, stars).save(app, widget.topic);
+    _saveResume();
   }
 
   /// Test de départ, après chaque question : hésitation (essai manqué) → on s'arrête là ; dernière question d'une
@@ -652,6 +807,9 @@ class _SessionPageState extends State<SessionPage> {
       child: Scaffold(
       body: UniverseBackground(
         universe: u,
+        // Le cours (idée et exemple résolu, rappel d'un prérequis) sur une page de cahier ; les questions sur le décor du
+        // monde (ADR 0078).
+        lesson: !over && (a.example || a.reminder),
         child: SafeArea(
           // Paysage (ADR 0052, 0054) : le texte passe dans une colonne à gauche et l'activité prend toute la hauteur.
           child: LayoutBuilder(builder: (context, k) {
@@ -701,17 +859,11 @@ class _SessionPageState extends State<SessionPage> {
                 cheer: stars,
                 onListen: a.listen,
                 height: side ? sideHeight : narratorHeight,
+                // Un long texte fait grandir la bulle (au plus 40 % de l'écran) ; au-delà il défile.
+                maxHeight: side ? sideHeight : max(narratorHeight, k.maxHeight * 0.4),
               ),
             );
-            // La zone de l'activité : sous la barre du haut, et sous le texte ou à côté de lui.
-            final area = Size(
-              k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0),
-              k.maxHeight - 72 - (side ? 0 : narratorHeight) - (a.example && !side ? 156 : a.tagged && !side ? 52 : 0),
-            );
             final fills = activitiesThatFill.contains(a.skill.activity);
-            final scale = activityScaleFor(area, a.skill.activity);
-            // Centrée en hauteur seulement là où elle est agrandie ou à côté du texte : ailleurs, rien ne change.
-            final room = !fills && (scale > 1 || side) ? (area.height - 8) / scale : null;
             final content = over
                   ? DayEnd(
                       theme: widget.topic,
@@ -729,11 +881,20 @@ class _SessionPageState extends State<SessionPage> {
                         newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null,
                       ),
                     )
-                  : Stack(children: [
+                  : LayoutBuilder(builder: (context, box) {
+                      // La zone de l'activité : ce que le texte laisse (la bulle grandit avec un texte long, ADR 0078).
+                      // La pastille « Nouveau / Rappel : titre » s'écrit en entier (deux lignes au plus) : coupée en « Continents et
+                      // océa… », on ne savait plus de quoi parlait le rappel (capture d'Antsa, 2026-11-15).
+                      final top = (a.example || a.tagged) && !side ? _NewBadge.heightFor(context, badge!, box.maxWidth - 24) + 8 : 0.0;
+                      final area = Size(box.maxWidth, box.maxHeight - top - (a.example && !side ? 104 : 0));
+                      final scale = activityScaleFor(area, a.skill.activity);
+                      // Centrée en hauteur seulement là où elle est agrandie ou à côté du texte : ailleurs, rien ne change.
+                      final room = !fills && (scale > 1 || side) ? (area.height - 8) / scale : null;
+                      return Stack(children: [
                       Positioned.fill(
                         // Pendant l'exemple, l'activité laisse la place à la pastille « Nouveau » en haut et au bouton
                         // « J'ai compris » en bas (pas de chevauchement).
-                        top: (a.example || a.tagged) && !side ? 52 : 0,
+                        top: top,
                         bottom: a.example && !side ? 104 : 0,
                         child: ScaledActivity(scale: scale, child: ActivityRoom(height: room, child: switch (a.skill.activity) {
                           'denombrer' => CountActivity(key: ObjectKey(a), attempt: a),
@@ -780,6 +941,7 @@ class _SessionPageState extends State<SessionPage> {
                         ),
                       ],
                     ]);
+                    });
             return Column(children: [
               SessionTopBar(
                 onVoiceOn: () => attempt?.listen(),
@@ -1120,17 +1282,30 @@ class _NewBadge extends StatelessWidget {
   final String title, label;
   final IconData icon;
 
+  static const _style = TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink, height: 1.2);
+
+  String get text => tf('{label} : {title}', {'label': label, 'title': title});
+
+  /// Hauteur de la pastille dans [width] (une ou deux lignes).
+  static double heightFor(BuildContext context, _NewBadge b, double width) {
+    final tp = TextPainter(text: TextSpan(text: b.text, style: _style), textDirection: TextDirection.ltr, maxLines: 2,
+        textScaler: MediaQuery.textScalerOf(context))
+      ..layout(maxWidth: (min(width, 560.0) - 54).clamp(40.0, double.infinity));
+    final h = tp.height;
+    tp.dispose();
+    return max(36.0, h) + 12;
+  }
+
   @override
   Widget build(BuildContext context) => Container(
-        constraints: const BoxConstraints(maxWidth: 480),
+        constraints: const BoxConstraints(maxWidth: 560),
         padding: const EdgeInsets.fromLTRB(10, 6, 14, 6),
         decoration: BoxDecoration(color: Brand.yellow, borderRadius: BorderRadius.circular(999), boxShadow: cardShadow),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
-          Icon(icon, color: ink, size: 24),
+          Icon(icon, color: textOn(Brand.yellow), size: 24),
           const SizedBox(width: 6),
           Flexible(
-            child: Text(tf('{label} : {title}', {'label': label, 'title': title}), maxLines: 1, overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: ink)),
+            child: Text(text, maxLines: 2, overflow: TextOverflow.ellipsis, style: _style),
           ),
         ]),
       );

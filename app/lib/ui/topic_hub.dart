@@ -95,7 +95,7 @@ class _TopicHubState extends State<TopicHub> {
                       '1f50d',
                       t('Je sais déjà'),
                       tf('Un petit test pour sauter ce que tu sais : {n} compétences, deux questions chacune. Il s\'arrête dès que tu hésites.', {'n': test.length ~/ placementPerSkill}),
-                      () => _go(SessionPage(topic: widget.topic, placement: true)),
+                      () async => _go(SessionPage(topic: widget.topic, placement: true, resume: await SessionResume.loadKey(app, SessionResume.keyFor(SessionResume.test, widget.topic, null)))),
                     ),
                   hubCard(
                     '1f3c5',
@@ -103,7 +103,7 @@ class _TopicHubState extends State<TopicHub> {
                     canChallenge
                         ? t('Dix questions mêlées de tout ce que tu sais.') + (record == null ? '' : tf(' Ton record : {record} sur 10.', {'record': record!}))
                         : t('Il s\'ouvre quand tu as appris ta première compétence ici.'),
-                    canChallenge ? () => _go(SessionPage(topic: widget.topic, challenge: true)) : null,
+                    canChallenge ? () async => _go(SessionPage(topic: widget.topic, challenge: true, resume: await SessionResume.loadKey(app, SessionResume.keyFor(SessionResume.defi, widget.topic, null)))) : null,
                   ),
                 ],
                 if (echecs) ...[
@@ -333,8 +333,10 @@ class LessonPicker extends StatelessWidget {
           onTap: open
               ? () async {
                   await app.voice.stop();
+                  // Leçon commencée puis quittée : on la reprend à la même question (ADR 0078).
+                  final r = await SessionResume.loadKey(app, SessionResume.keyFor(SessionResume.lecon, topic, s.id));
                   if (!context.mounted) return;
-                  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionPage(topic: topic, lesson: s.id)));
+                  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionPage(topic: topic, lesson: s.id, resume: r)));
                   await app.refresh();
                 }
               : null,

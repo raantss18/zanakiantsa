@@ -262,6 +262,11 @@ class AppState extends ChangeNotifier {
   /// Compétence d'un domaine quelconque (les identifiants sont uniques dans tout le contenu).
   Skill skill(String id) => topics.expand((t) => t.skills).firstWhere((s) => s.id == id);
 
+  /// Cette compétence existe-t-elle encore dans le contenu (reprise d'une séance gardée, ADR 0078) ?
+  bool hasSkill(String id) => topics.any((t) => t.skills.any((s) => s.id == id));
+
+  bool hasTopic(String id) => topics.any((t) => t.id == id);
+
   /// La progression d'un domaine. Gardée tant que rien de ce dont elle dépend n'a changé (journal, séances, classe, test de
   /// départ, contenu) : l'accueil, le tableau de bord et la rangée « À revoir » la demandaient des dizaines de fois par
   /// affichage, chaque fois en relisant tout le journal (revue du 2026-11-14).

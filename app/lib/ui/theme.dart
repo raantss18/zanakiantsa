@@ -10,6 +10,19 @@ import 'universe.dart';
 const ink = Color(0xFF1B211D);
 const surface = Color(0xFFFFFFFF);
 const gold = Color(0xFFE08A00);
+
+/// Fond de la bulle d'aide (ampoule) : un jaune très pâle, texte [ink] (contraste vérifié par `test/contrast_test.dart`).
+const helpBubble = Color(0xFFFFF4DE);
+
+/// Contraste WCAG 2.x entre deux couleurs (1 à 21). Texte : 4,5 au moins.
+double contrastRatio(Color a, Color b) {
+  final la = a.computeLuminance(), lb = b.computeLuminance();
+  return (max(la, lb) + 0.05) / (min(la, lb) + 0.05);
+}
+
+/// La couleur de texte lisible sur [bg] : [ink] ou blanc, celle qui contraste le plus. À utiliser pour tout texte posé
+/// sur une couleur (jaune, or, couleur d'univers) : un texte blanc sur jaune ne se lisait pas (2026-11-15).
+Color textOn(Color bg) => contrastRatio(ink, bg) >= contrastRatio(Colors.white, bg) ? ink : Colors.white;
 const green = Color(0xFF1D7A33);
 
 /// Cible tactile minimale pour l'enfant (≥ 48 dp exigé ; on vise large).

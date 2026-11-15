@@ -44,6 +44,74 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   bool _going = false;
 
+  /// La séance laissée en cours (ADR 0078), relue quand l'enfant, le journal ou le nombre de séances change.
+  SessionResume? _resume;
+  String? _resumeFor;
+
+  void _watchResume(AppState s) {
+    final key = '${s.store.child}-${s.journal.length}-${s.sessionsDone}';
+    if (key == _resumeFor) return;
+    _resumeFor = key;
+    SessionResume.loadLast(s).then((r) {
+      if (mounted && _resumeFor == key) setState(() => _resume = r);
+    });
+  }
+
+  /// « Reprendre » : où l'enfant s'est arrêté, écrit (quoi, et à quelle question), en grand sous le texte d'accueil.
+  Widget? _resumeBar(BuildContext context, AppState s, Universe u) {
+    final r = _resume;
+    if (r == null || !s.ready) return null;
+    final what = switch (r.kind) {
+      SessionResume.lecon => s.topic(r.topic).name,
+      SessionResume.revision => t('À revoir aujourd’hui'),
+      SessionResume.defiJour => t('Défi du jour'),
+      SessionResume.defi => tf('Défi : {topic}', {'topic': s.topic(r.topic).name}),
+      SessionResume.test => tf('Test de départ : {topic}', {'topic': s.topic(r.topic).name}),
+      _ => s.topic(r.topic).name,
+    };
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: SizedBox(
+        width: double.infinity,
+        height: homeResumeHeight - 8,
+        child: FilledButton(
+          style: FilledButton.styleFrom(
+            backgroundColor: green,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          ),
+          onPressed: () async {
+            if (_going) return;
+            _going = true;
+            try {
+              _greeting?.close();
+              await s.voice.stop();
+              if (!context.mounted) return;
+              await Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionPage.resumed(r)));
+              await s.refresh();
+            } finally {
+              _going = false;
+            }
+          },
+          child: Row(children: [
+            const Icon(Icons.play_circle_fill_rounded, size: 40),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(tf('Reprendre : {what}', {'what': what}),
+                    maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontFamily: 'Fredoka', fontSize: 21, fontWeight: FontWeight.w700)),
+                // La leçon en cours et où on en est : « Les syllabes · question 3 sur 8 ».
+                Text(tf('{skill} · question {n} sur {total}', {'skill': s.skill(r.plan[r.index]).title, 'n': r.index + 1, 'total': r.plan.length}),
+                    maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+              ]),
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
   /// La nouvelle version trouvée au lancement, s'il y en a une : annoncée sur l'accueil.
   Release? _update;
 
@@ -129,13 +197,16 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget _portrait(BuildContext context, AppState s, Universe u, DayPlan plan, BoxConstraints k) {
     final scale = MediaQuery.textScalerOf(context).scale(1.0);
     final strip = _strip(context, s, u);
+    _watchResume(s);
+    final resume = _resumeBar(context, s, u);
     final layout = homeCardsFor(
       width: k.maxWidth - 32,
-      cardsHeight: k.maxHeight - homeChrome(fontScale: scale, dayFinished: plan.finished, strip: strip != null),
+      cardsHeight: k.maxHeight - homeChrome(fontScale: scale, dayFinished: plan.finished, strip: strip != null, resume: resume != null),
     );
     final top = [
       _Header(onListen: _welcome, update: _update != null),
       _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+      ?resume,
       ?strip,
       if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
     ];
@@ -195,6 +266,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget _landscape(BuildContext context, AppState s, Universe u, DayPlan plan, BoxConstraints k) {
     final cardH = max(landscapeCardHeight(k.maxHeight), homeCardMinRow);
     final count = plan.items.length;
+    _watchResume(s);
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
       SizedBox(
         width: sidePanelWidth(k.maxWidth),
@@ -211,6 +283,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   width: box.maxWidth,
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     _Intro(words: s.universeWords, sessions: s.sessionsDone, universe: u),
+                    ?_resumeBar(context, s, u),
                     ?_strip(context, s, u),
                     if (plan.finished) _DayDone(text: s.common.text('journee_finie')),
                   ]),

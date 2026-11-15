@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../content/content.dart';
 import '../ui/session.dart';
 import '../ui/theme.dart';
+import '../ui/universe.dart';
+import 'figure.dart';
 
 /// Question écrite à réponses écrites (ADR 0057), pour les plus grands : la même séance, le même narrateur, les mêmes
 /// aides. Chaque mauvaise réponse dit ce qu'elle montre. Une nouvelle leçon s'écrit dans le contenu, sans code.
@@ -23,7 +25,9 @@ class _QuizActivityState extends State<QuizActivity> {
   void initState() {
     super.initState();
     a.addListener(_changed);
-    a.show('question').then((_) => a.say('consigne'));
+    // La question est écrite en grand dans la carte : la bulle montre la consigne (courte) pendant que la voix lit la
+    // question. Avant, le même long texte prenait deux fois la place sur un téléphone (capture d'Antsa, 2026-11-15).
+    a.show('question', display: 'consigne').then((_) => a.say('consigne'));
   }
 
   @override
@@ -50,6 +54,17 @@ class _QuizActivityState extends State<QuizActivity> {
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 520),
           child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            // L'image ou la figure dont parle la question (ADR 0078) : au-dessus de l'énoncé, dans une carte blanche.
+            if (item.figure != null || item.image != null)
+              Container(
+                margin: const EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(24), border: Border.all(color: const Color(0x401B211D), width: 2)),
+                child: Column(children: [
+                  if (item.image != null) Art(item.image!, size: item.figure == null ? 120 : 64),
+                  if (item.figure != null) QuizFigure(item.figure!),
+                ]),
+              ),
             // L'énoncé reste sous les yeux quand l'aide prend la place du narrateur.
             // Plate et cernée, loin des réponses : une question courte (« Qui joue Pierre ? ») ressemblait à un bouton de réponse,
             // en relief comme elles (émulateur, 2026-11-13). Seules les réponses ont du relief : elles se touchent.

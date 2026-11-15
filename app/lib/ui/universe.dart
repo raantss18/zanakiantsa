@@ -354,9 +354,13 @@ Future<Map<String, UniverseWords>> loadUniverseWords() async {
 
 /// Fond d'univers : dégradé + décor en filigrane (jamais derrière un texte sans carte, docs/design.md § 4).
 class UniverseBackground extends StatelessWidget {
-  const UniverseBackground({super.key, required this.universe, required this.child});
+  const UniverseBackground({super.key, required this.universe, required this.child, this.lesson = false});
   final Universe universe;
   final Widget child;
+
+  /// Cours, découverte, rappel, explication (ADR 0078) : une page de cahier à grands carreaux au lieu du décor du monde,
+  /// pour que l'enfant voie d'un coup d'œil qu'on apprend (et pas qu'on s'exerce). Demande d'Antsa du 2026-11-15.
+  final bool lesson;
 
   // Jamais dans la bande du haut (titre, boutons) : y ≥ -0.4.
   static const _spots = [
@@ -364,19 +368,60 @@ class UniverseBackground extends StatelessWidget {
     Alignment(0.8, 0.55), Alignment(-0.25, 0.92), Alignment(0.35, 0.15),
   ];
 
+  /// Le papier du cahier de cours : crème, lignes bleu pâle, marge rouge pâle (décor seulement, jamais porteur de sens).
+  static const lessonPaper = Color(0xFFFFFBF0);
+
   @override
-  Widget build(BuildContext context) => DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [universe.bg1, universe.bg2],
-          ),
+  Widget build(BuildContext context) => Stack(children: [
+        Positioned.fill(
+          child: lesson
+              ? const DecoratedBox(
+                  decoration: BoxDecoration(color: lessonPaper),
+                  child: CustomPaint(painter: _NotebookPainter()),
+                )
+              : DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [universe.bg1, universe.bg2],
+                    ),
+                  ),
+                  child: Stack(fit: StackFit.expand, children: [
+                    for (final (i, code) in universe.decor.indexed)
+                      Align(alignment: _spots[i % _spots.length], child: Art(code, size: 64, opacity: universe.night ? 0.22 : 0.12)),
+                  ]),
+                ),
         ),
-        child: Stack(children: [
-          for (final (i, code) in universe.decor.indexed)
-            Align(alignment: _spots[i % _spots.length], child: Art(code, size: 64, opacity: universe.night ? 0.22 : 0.12)),
-          Positioned.fill(child: child),
-        ]),
-      );
+        Positioned.fill(child: child),
+      ]);
+}
+
+
+/// Lignes de cahier (grands carreaux simplifiés) et marge.
+class _NotebookPainter extends CustomPainter {
+  const _NotebookPainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final line = Paint()
+      ..color = const Color(0xFFC9DDF2)
+      ..strokeWidth = 1.2;
+    final thin = Paint()
+      ..color = const Color(0xFFE6EEF8)
+      ..strokeWidth = 1;
+    // Calme derrière le texte : une ligne tous les 40, une ligne fine au milieu.
+    const step = 40.0;
+    for (var y = step; y < size.height; y += step) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), line);
+      canvas.drawLine(Offset(0, y + step / 2), Offset(size.width, y + step / 2), thin);
+    }
+    final margin = Paint()
+      ..color = const Color(0xFFF2B8B8)
+      ..strokeWidth = 2;
+    canvas.drawLine(Offset(size.width < 600 ? 20 : 48, 0), Offset(size.width < 600 ? 20 : 48, size.height), margin);
+  }
+
+  @override
+  bool shouldRepaint(_NotebookPainter old) => false;
 }

@@ -116,6 +116,18 @@ void checkItems(String where, String act, List items) {
       }
       final traps = it['pieges'] as List? ?? const [];
       if (traps.length < 2) fail(w, 'au moins deux pièges');
+      // ADR 0078 : image (assets/art) et figure dessinée par l'app, au-dessus de l'énoncé.
+      if (it['image'] != null) {
+        if (it['image'] is! String) {
+          fail(w, 'image : un code de assets/art');
+        } else {
+          checkArt(w, it['image'] as String);
+        }
+      }
+      if (it['figure'] != null) {
+        final f = it['figure'];
+        if (f is! Map || !figureTypes.contains(f['type'])) fail(w, 'figure : type inconnu « ${f is Map ? f['type'] : f} »');
+      }
       for (final t in traps) {
         if (t is! Map || t['texte'] is! String || t['pourquoi'] is! String) fail(w, 'piège : texte et pourquoi');
       }
@@ -167,8 +179,13 @@ void checkEnglish(String where, Map<String, dynamic> s) {
     String art(Object? x) => x is List ? '${x[0]}' : '';
     if (art(a['bonne']) != art(b['bonne'])) fail(where, 'en : question ${i + 1}, même image');
     if (a['image'] != b['image'] || a['fen'] != b['fen'] || '${a['coups']}' != '${b['coups']}') fail(where, 'en : question ${i + 1}, même image ou position');
+    String fig(Object? x) => x is Map ? '${x['type']}' : '';
+    if (fig(a['figure']) != fig(b['figure'])) fail(where, 'en : question ${i + 1}, même figure');
   }
 }
+
+/// Types de figure connus de `lib/activities/figure.dart` (QuizFigure.types).
+const figureTypes = {'triangle', 'thales', 'rectangle', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes', 'relief', 'cases'};
 
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');

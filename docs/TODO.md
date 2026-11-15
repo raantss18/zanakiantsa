@@ -361,6 +361,20 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   (`bounded`, erreur de type). Vérifié sur l'émulateur : plus aucun « son ignoré ».
 - ⏳ Programmes libres sur une vraie tablette, et avec un enfant.
 
+## 2026-11-15 (soir, 2) — Reprise partout, cours sur cahier, bulle lisible, figures (ADR 0078)
+
+- ✅ Reprise après chaque réponse, toutes séances (leçon choisie, vérification des prérequis, défi, test, révision, défi du
+  jour) ; bouton « Reprendre » sur l'accueil. Vérifié sur l'émulateur : une réponse, sortie, « question 2 sur 8 », reprise
+  sans revoir le cours.
+- ✅ Bulle qui grandit au lieu de rétrécir (19/21 points au moins) ; pastille sur deux lignes ; quiz sans texte en double ;
+  test de contraste des textes sur fond coloré.
+- ✅ Cours sur une page de cahier, exercices sur le décor du monde.
+- ✅ 202 questions illustrées (67 figures en maths, figures de code et de suites, images en sciences, histoire-géo,
+  lecture, musique). Corrigé au passage : « J'ai compris » restait sans effet dans la version publiée (fondu du fond).
+- ⏳ Cartes : continents, océans, France, outre-mer, mers (une vingtaine de questions) attendent des contours libres
+  (Natural Earth, domaine public) — à décider avec Antsa.
+- ⏳ Figures manquantes : robot sur quadrillage, échiquier, tableaux, papillon de Thalès, carré vu comme carré.
+
 ## 2026-11-15 (nuit) — Défis du robot et relecture des programmes libres
 
 - ✅ **Défis du robot** (ADR 0077) : onze dessins modèles en pointillés (ligne → moulin) ; réussi si le dessin est le même,
