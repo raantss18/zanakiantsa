@@ -21,7 +21,9 @@ Duration speechBudget(String text) => Duration(milliseconds: 2500 + 150 * text.l
 /// jamais (vu le 2026-11-03 : exercice d'écoute figé, voix coupée).
 Future<void> bounded(Future<void> f, Duration budget) async {
   try {
-    await f.timeout(budget, onTimeout: () {});
+    // `.then<void>` : un `Future<AudioEvent>` vu comme `Future<void>` (onPlayerComplete.first) refusait le `onTimeout`
+    // vide à l'exécution ; l'erreur rendait la main tout de suite, sans attendre la fin du son (2026-11-15).
+    await f.then<void>((_) {}).timeout(budget, onTimeout: () {});
   } catch (e) {
     debugPrint('son ignoré : $e');
   }

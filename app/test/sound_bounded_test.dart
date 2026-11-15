@@ -16,4 +16,12 @@ void main() {
   test('un son qui échoue ne fait pas échouer l\'écran', () async {
     await expectLater(bounded(Future<void>.error(StateError('lecteur absent')), const Duration(seconds: 1)), completes);
   });
+
+  test('un son dont le futur a un autre type est bien attendu jusqu\'à sa fin', () async {
+    // Comme `onPlayerComplete.first` : un Future<Object> vu comme Future<void>.
+    final Future<void> f = Future<Object>.delayed(const Duration(milliseconds: 300), () => Object());
+    final watch = Stopwatch()..start();
+    await bounded(f, const Duration(seconds: 3));
+    expect(watch.elapsedMilliseconds, greaterThanOrEqualTo(250));
+  });
 }
