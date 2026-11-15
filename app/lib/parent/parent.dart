@@ -42,6 +42,18 @@ class _ParentPageState extends State<ParentPage> {
   double? progress;
 
   @override
+  void initState() {
+    super.initState();
+    _lifecycle = AppLifecycleListener(onResume: _resumed);
+  }
+
+  @override
+  void dispose() {
+    _lifecycle.dispose();
+    super.dispose();
+  }
+
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (report == null) {
@@ -188,6 +200,18 @@ class _ParentPageState extends State<ParentPage> {
 
   bool _installing = false;
 
+  /// Vrai quand Android a ouvert le réglage « installer des applis inconnues » : au retour dans l'app,
+  /// l'installation repart d'elle-même, sans retoucher « Mettre à jour » (essai sur tablette du 2026-11-15).
+  bool _awaitingPermission = false;
+  late final AppLifecycleListener _lifecycle;
+
+  void _resumed() {
+    if (_awaitingPermission && mounted && release != null) {
+      _awaitingPermission = false;
+      _install();
+    }
+  }
+
   /// La version refusée par « Plus tard » : la fenêtre ne revient pas à chaque entrée, le bandeau du haut suffit.
   static int? _declinedBuild;
 
@@ -205,9 +229,10 @@ class _ParentPageState extends State<ParentPage> {
       _installing = false;
     }
     if (!mounted) return;
+    _awaitingPermission = !ok;
     setState(() {
       progress = null;
-      updateStatus = ok ? t('Installation lancée.') : t('Installation non lancée : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis réessayez.');
+      updateStatus = ok ? t('Installation lancée.') : t('Installation en attente : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis revenez ici, elle reprendra seule.');
     });
   }
 

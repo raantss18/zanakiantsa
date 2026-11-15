@@ -14,7 +14,7 @@ const en = <String, String>{
   'Mettre à jour': 'Update',
   'Installation': 'Installation',
   'Installation lancée.': 'Installation started.',
-  'Installation non lancée : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis réessayez.': 'Installation not started: allow “install unknown apps” for Zanak’i Antsa, then try again.',
+  'Installation en attente : autorisez « installer des applis inconnues » pour Zanak’i Antsa, puis revenez ici, elle reprendra seule.': 'Installation waiting: allow “install unknown apps” for Zanak’i Antsa, then come back here and it will resume by itself.',
   'Prénom': 'First name',
   'Annuler': 'Cancel',
   'Enregistrer': 'Save',

@@ -86,10 +86,19 @@ class Updater {
     try {
       if (!trustedDownload(r.url)) return false;
       final dir = Directory('${(await getTemporaryDirectory()).path}/updates');
+      final file = File('${dir.path}/zanakiantsa-${r.build}.apk');
+      // Retour du réglage « installer des applis inconnues » : le fichier déjà vérifié est réutilisé, sans
+      // retélécharger 40 Mo (essai sur Xiaomi Pad 7 du 2026-11-15). L'empreinte est recalculée avant usage.
+      if (file.existsSync() && (r.bytes <= 0 || file.lengthSync() == r.bytes)) {
+        final hex = (await Sha256().hash(await file.readAsBytes())).bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
+        if (hex == r.sha256.toLowerCase()) {
+          progress(1);
+          return (await _channel.invokeMethod<bool>('install', {'path': file.path})) ?? false;
+        }
+      }
       // Les anciens téléchargements (environ 40 Mo par version) ne restent pas dans le cache.
       if (dir.existsSync()) dir.deleteSync(recursive: true);
       dir.createSync(recursive: true);
-      final file = File('${dir.path}/zanakiantsa-${r.build}.apk');
       final client = http.Client();
       final req = await client.send(http.Request('GET', Uri.parse(r.url))).timeout(const Duration(seconds: 30));
       if (req.statusCode != 200) {
