@@ -352,6 +352,22 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ⏳ Reste à tester : SM-X135G (pas de câble le 2026-11-14) ; paysage de la nouvelle rangée ; fin du défi du jour ;
   sauvegarde Google réellement vide ; code parent pour les plus de 10 ans ; catalogue de vidéos signé.
 
+## 2026-11-15 — Essais sur la Xiaomi Pad 7 d'Antsa (Android 16, HyperOS, sans données d'enfant)
+
+- ✅ Vérifié sur la vraie tablette : 1.1.2 → 1.1.3 par l'espace parent (la fenêtre se propose seule ; le parent accorde
+  « installer des applis inconnues » et confirme). Leçon « Lire des syllabes » finie, voix Google entendue (lecteur actif
+  ≈ 3 s), « Tu as gagné une vidéo ! », vidéo verrouillée puis lue, plein écran paysage et sortie (bouton et touche
+  retour) vers le portrait, solide 3D qui tourne au doigt, ajouter et supprimer un enfant, carte « Votre avis » (0 étoile,
+  comme le dépôt).
+- ✅ Corrigé : l'installation reprend seule au retour du réglage Android, sans retélécharger (vérifié sur l'émulateur).
+- ✅ Corrigé : « Pour toi » proposait le secondaire d'Alloprof et des leçons CM1-CM2 à 7 ans (ADR 0075, catalogue en ligne).
+- ⚠️ Vu une fois : « App not installed » à la première mise à jour par l'app, juste pendant l'analyse Play Protect ;
+  le second essai a réussi, cause non trouvée dans le journal. À surveiller si un parent le signale.
+- ⚠️ Android 16 note « background playback would be muted » pour la voix Google (simple avertissement, le son passe) :
+  à surveiller dans les prochaines versions d'Android.
+- ⏳ Reste à tester : tablette avec Family Link (8df629a, encore en 1.0.9, non touchée) ; corps humain sur vraie
+  tablette ; fin du défi du jour.
+
 ## 2026-11-14 (soir) — Revue de toute l'app : corrigé et reste à corriger
 
 - ✅ Corrigé (284 tests, pas encore essayé sur l'émulateur ni publié) : partie figée quand l'enfant a les Noirs et reprend
