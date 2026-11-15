@@ -220,7 +220,10 @@ def youngest_age(text: str) -> int | None:
 def fits_level(v: dict, c: dict, age: int) -> bool:
     """Une vidéo dont le titre vise un niveau plus avancé reste pour plus tard : gardée dès un an avant ce niveau. Sans
     niveau écrit, `sans_niveau_ages` de la chaîne s'applique (Alloprof : ses vidéos du primaire disent « Primaire »)."""
-    lo = youngest_age(f"{v['t']} {v.get('m', '')}")
+    # Le titre d'abord : les mots-clés listent souvent tous les niveaux (« #cp #ce1 … #cm2 »), le titre dit le vrai.
+    lo = youngest_age(v['t'])
+    if lo is None:
+        lo = youngest_age(v.get('m', ''))
     if lo is None:
         lo = c.get('sans_niveau_ages', c['ages'])[0]
     return age >= lo - 1
