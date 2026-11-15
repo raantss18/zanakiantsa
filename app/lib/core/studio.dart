@@ -33,6 +33,12 @@ const studioMaxActions = 600;
 /// Place dans un programme (blocs du dedans compris).
 const studioMaxBlocks = 60;
 
+/// Boucles l'une dans l'autre, au plus (au-delà, l'enfant ne s'y retrouve plus et la ligne déborde du téléphone).
+const studioMaxDepth = 4;
+
+/// Tours de boucle, au plus, même vides : 20 « répéter » vides emboîtés faisaient 4^20 tours et figeaient l'app.
+const studioMaxLoops = 5000;
+
 /// Un bloc. [n] : nombre de pas (avancer), angle (tourner), nombre de tours (répéter), couleur ou note (indice).
 class StudioBlock {
   StudioBlock(this.kind, {int? n, List<StudioBlock>? body}) : n = n ?? defaultN(kind), body = body ?? [];
@@ -45,22 +51,22 @@ class StudioBlock {
   int get size => 1 + body.fold(0, (s, b) => s + b.size);
 
   static int defaultN(StudioKind k) => switch (k) {
-        StudioKind.forward => 3,
-        StudioKind.turnLeft || StudioKind.turnRight => 90,
-        StudioKind.repeat => 4,
-        StudioKind.colour => 1,
-        _ => 0,
-      };
+    StudioKind.forward => 3,
+    StudioKind.turnLeft || StudioKind.turnRight => 90,
+    StudioKind.repeat => 4,
+    StudioKind.colour => 1,
+    _ => 0,
+  };
 
   /// Les valeurs possibles de [n], dans l'ordre des boutons − et +.
   List<int> get choices => switch (kind) {
-        StudioKind.forward => [for (var i = 1; i <= 9; i++) i],
-        StudioKind.turnLeft || StudioKind.turnRight => studioAngles,
-        StudioKind.repeat => [for (var i = 2; i <= 12; i++) i],
-        StudioKind.colour => [for (var i = 0; i < studioColours.length; i++) i],
-        StudioKind.note => [for (var i = 0; i < studioNotes.length; i++) i],
-        _ => const [],
-      };
+    StudioKind.forward => [for (var i = 1; i <= 9; i++) i],
+    StudioKind.turnLeft || StudioKind.turnRight => studioAngles,
+    StudioKind.repeat => [for (var i = 2; i <= 12; i++) i],
+    StudioKind.colour => [for (var i = 0; i < studioColours.length; i++) i],
+    StudioKind.note => [for (var i = 0; i < studioNotes.length; i++) i],
+    _ => const [],
+  };
 
   bool get hasValue => choices.isNotEmpty;
 
@@ -72,17 +78,24 @@ class StudioBlock {
 
   StudioBlock copy() => StudioBlock(kind, n: n, body: [for (final b in body) b.copy()]);
 
-  Map<String, Object> toJson() => {'k': kind.name, 'n': n, if (body.isNotEmpty) 'b': [for (final b in body) b.toJson()]};
+  Map<String, Object> toJson() => {
+    'k': kind.name,
+    'n': n,
+    if (body.isNotEmpty) 'b': [for (final b in body) b.toJson()],
+  };
 
   /// Lecture prudente : un bloc inconnu est sauté, une valeur hors liste revient à la valeur par défaut.
   static StudioBlock? fromJson(Object? j, [int depth = 0]) {
     if (j is! Map || depth > 8) return null;
     final kind = StudioKind.values.where((k) => k.name == j['k']).firstOrNull;
     if (kind == null) return null;
-    final b = StudioBlock(kind, body: [
-      if (kind == StudioKind.repeat && j['b'] is List)
-        for (final c in j['b'] as List) ?fromJson(c, depth + 1),
-    ]);
+    final b = StudioBlock(
+      kind,
+      body: [
+        if (kind == StudioKind.repeat && j['b'] is List)
+          for (final c in j['b'] as List) ?fromJson(c, depth + 1),
+      ],
+    );
     final n = j['n'];
     if (n is int && b.choices.contains(n)) b.n = n;
     return b;
@@ -144,11 +157,16 @@ StudioRun runStudio(List<StudioBlock> program) {
   final frames = <Frame>[];
   var t = Turtle.start;
   var tooLong = false;
+  var loops = 0;
 
   bool run(List<StudioBlock> blocks) {
     for (final b in blocks) {
       if (b.kind == StudioKind.repeat) {
         for (var i = 0; i < b.n; i++) {
+          if (++loops > studioMaxLoops) {
+            tooLong = true;
+            return false;
+          }
           if (!run(b.body)) return false;
         }
         continue;
@@ -196,13 +214,21 @@ class SavedProgram {
   final DateTime date;
   final List<StudioBlock> blocks;
 
-  Map<String, Object> toJson() =>
-      {'id': id, 'nom': name, 'date': date.millisecondsSinceEpoch, 'blocs': [for (final b in blocks) b.toJson()]};
+  Map<String, Object> toJson() => {
+    'id': id,
+    'nom': name,
+    'date': date.millisecondsSinceEpoch,
+    'blocs': [for (final b in blocks) b.toJson()],
+  };
 
   static SavedProgram? fromJson(Object? j) {
     if (j is! Map || j['id'] is! int || j['nom'] is! String || j['date'] is! int || j['blocs'] is! List) return null;
-    return SavedProgram(j['id'] as int, j['nom'] as String, DateTime.fromMillisecondsSinceEpoch(j['date'] as int),
-        [for (final b in j['blocs'] as List) ?StudioBlock.fromJson(b)]);
+    final date = j['date'] as int;
+    // Une date hors des bornes de DateTime ferait planter toute la liste (relecture du 2026-11-15).
+    if (date.abs() > 8640000000000000) return null;
+    return SavedProgram(j['id'] as int, j['nom'] as String, DateTime.fromMillisecondsSinceEpoch(date), [
+      for (final b in j['blocs'] as List) ?StudioBlock.fromJson(b),
+    ]);
   }
 }
 
@@ -236,31 +262,219 @@ StudioBlock _c(int i) => StudioBlock(StudioKind.colour, n: i);
 StudioBlock _note(int i) => StudioBlock(StudioKind.note, n: i);
 
 final studioIdeas = [
-  StudioIdea('1f4d0', 'Un carré', 'Quatre fois : avancer, tourner d\'un quart de tour.', () => [_rep(4, [_f(5), _r(90)])]),
-  StudioIdea('1f3c1', 'Un escalier', 'Monter une marche, puis encore, et encore.', () => [
-        _c(2),
-        _rep(4, [_f(2), _r(90), _f(2), _l(90)]),
+  StudioIdea(
+    '1f4d0',
+    'Un carré',
+    'Quatre fois : avancer, tourner d\'un quart de tour.',
+    () => [
+      _rep(4, [_f(5), _r(90)]),
+    ],
+  ),
+  StudioIdea(
+    '1f3c1',
+    'Un escalier',
+    'Monter une marche, puis encore, et encore.',
+    () => [
+      _c(2),
+      _rep(4, [_f(2), _r(90), _f(2), _l(90)]),
+    ],
+  ),
+  StudioIdea(
+    '2b50',
+    'Une étoile',
+    'Cinq branches : tourner de 144° à chaque pointe.',
+    () => [
+      _c(2),
+      _rep(5, [_f(8), _r(144)]),
+    ],
+  ),
+  StudioIdea(
+    '1f4a0',
+    'Un hexagone',
+    'Six côtés, six virages de 60° : un tour complet.',
+    () => [
+      _c(4),
+      _rep(6, [_f(4), _r(60)]),
+    ],
+  ),
+  StudioIdea(
+    '1f33c',
+    'Une fleur',
+    'Un carré, tourner un peu, et recommencer : une boucle dans une boucle.',
+    () => [
+      _c(5),
+      _rep(12, [
+        _rep(4, [_f(4), _r(90)]),
+        _r(30),
       ]),
-  StudioIdea('2b50', 'Une étoile', 'Cinq branches : tourner de 144° à chaque pointe.', () => [
-        _c(2),
-        _rep(5, [_f(8), _r(144)]),
-      ]),
-  StudioIdea('1f4a0', 'Un hexagone', 'Six côtés, six virages de 60° : un tour complet.', () => [
-        _c(4),
-        _rep(6, [_f(4), _r(60)]),
-      ]),
-  StudioIdea('1f33c', 'Une fleur', 'Un carré, tourner un peu, et recommencer : une boucle dans une boucle.', () => [
-        _c(5),
-        _rep(12, [
-          _rep(4, [_f(4), _r(90)]),
-          _r(30),
-        ]),
-      ]),
-  StudioIdea('1f3b5', 'Frère Jacques', 'Le début de la chanson, note après note. Change les notes pour en faire une autre.', () => [
-        _rep(2, [_note(0), _note(1), _note(2), _note(0)]),
-        _rep(2, [_note(2), _note(3), _note(4)]),
-      ]),
-  StudioIdea('1f483', 'La danse du robot', 'Il avance, tourne et chante à chaque coin.', () => [
-        _rep(4, [_f(4), _note(4), _r(90), _note(7)]),
-      ]),
+    ],
+  ),
+  StudioIdea(
+    '1f3b5',
+    'Frère Jacques',
+    'Le début de la chanson, note après note. Change les notes pour en faire une autre.',
+    () => [
+      _rep(2, [_note(0), _note(1), _note(2), _note(0)]),
+      _rep(2, [_note(2), _note(3), _note(4)]),
+    ],
+  ),
+  StudioIdea(
+    '1f483',
+    'La danse du robot',
+    'Il avance, tourne et chante à chaque coin.',
+    () => [
+      _rep(4, [_f(4), _note(4), _r(90), _note(7)]),
+    ],
+  ),
 ];
+
+/// Défis du robot (ADR 0077) : un dessin modèle, l'enfant écrit le programme qui le refait. Le dessin compte, pas le
+/// chemin : avancer de 4 ou deux fois de 2, dans un sens ou dans l'autre, c'est pareil ; la couleur ne compte pas.
+/// [best] : le nombre de blocs de la solution la plus courte connue (montré après la réussite, jamais imposé).
+class StudioChallenge {
+  const StudioChallenge(this.id, this.art, this.title, this.text, this.model, this.best);
+  final String id, art, title, text;
+  final List<StudioBlock> Function() model;
+  final int best;
+}
+
+/// Les points d'un dessin, un tous les quarts de pas le long de chaque trait, rangés dans une grille de 0,1 pas.
+Set<(int, int)> _drawingPoints(Iterable<Segment> segments) {
+  final pts = <(int, int)>{};
+  for (final s in segments) {
+    final len = sqrt(pow(s.x1 - s.x0, 2) + pow(s.y1 - s.y0, 2));
+    final steps = max(1, (len * 4).round());
+    for (var i = 0; i <= steps; i++) {
+      final x = s.x0 + (s.x1 - s.x0) * i / steps, y = s.y0 + (s.y1 - s.y0) * i / steps;
+      pts.add(((x * 10).round(), (y * 10).round()));
+    }
+  }
+  return pts;
+}
+
+bool _covers(Set<(int, int)> a, Set<(int, int)> b) {
+  for (final (x, y) in a) {
+    var near = false;
+    for (var dx = -1; dx <= 1 && !near; dx++) {
+      for (var dy = -1; dy <= 1 && !near; dy++) {
+        near = b.contains((x + dx, y + dy));
+      }
+    }
+    if (!near) return false;
+  }
+  return true;
+}
+
+/// Vrai si les deux programmes tracent le même dessin (au dixième de pas près, sans regarder les couleurs).
+bool sameDrawing(StudioRun a, StudioRun b) {
+  final pa = _drawingPoints(a.segments), pb = _drawingPoints(b.segments);
+  return pa.isNotEmpty && _covers(pa, pb) && _covers(pb, pa);
+}
+
+/// Du plus simple au plus difficile : une ligne, des angles droits, le crayon levé, les boucles, puis les angles des
+/// polygones et une boucle dans une boucle.
+final studioChallenges = [
+  StudioChallenge('ligne', '270f', 'Une ligne droite', 'Le robot trace un trait vers le haut.', () => [_f(6)], 1),
+  StudioChallenge(
+    'l',
+    '1f9ed',
+    'Un coin',
+    'Monter, puis tourner pour aller à droite.',
+    () => [_f(5), _r(90), _f(3)],
+    3,
+  ),
+  StudioChallenge(
+    'pointilles',
+    '2728',
+    'Deux traits',
+    'Un trait, un trou sans dessiner, puis un autre trait.',
+    () => [_f(3), StudioBlock(StudioKind.penUp), _f(2), StudioBlock(StudioKind.penDown), _f(3)],
+    5,
+  ),
+  StudioChallenge(
+    'carre',
+    '1f4d0',
+    'Un carré',
+    'Quatre côtés pareils, quatre virages pareils.',
+    () => [
+      _rep(4, [_f(5), _r(90)]),
+    ],
+    3,
+  ),
+  StudioChallenge(
+    'rectangle',
+    '1f4fa',
+    'Un rectangle',
+    'Deux grands côtés et deux petits.',
+    () => [
+      _rep(2, [_f(3), _r(90), _f(6), _r(90)]),
+    ],
+    5,
+  ),
+  StudioChallenge(
+    'escalier',
+    '1f3d4',
+    'Un escalier',
+    'Trois marches vers la droite.',
+    () => [
+      _rep(3, [_f(2), _r(90), _f(2), _l(90)]),
+    ],
+    5,
+  ),
+  StudioChallenge(
+    'triangle',
+    '1f3d5',
+    'Un triangle',
+    'Trois côtés pareils : de combien faut-il tourner ?',
+    () => [
+      _rep(3, [_f(6), _r(120)]),
+    ],
+    3,
+  ),
+  StudioChallenge(
+    'maison',
+    '1f3e0',
+    'Une maison',
+    'Des murs et un toit pointu.',
+    () => [_f(4), _r(30), _f(4), _r(120), _f(4), _r(30), _f(4), _r(90), _f(4)],
+    9,
+  ),
+  StudioChallenge(
+    'hexagone',
+    '1f4a0',
+    'Un hexagone',
+    'Six côtés pareils, et un tour complet en tout.',
+    () => [
+      _rep(6, [_f(4), _r(60)]),
+    ],
+    3,
+  ),
+  StudioChallenge(
+    'etoile',
+    '2b50',
+    'Une étoile',
+    'Cinq pointes ; le robot fait deux tours en tout.',
+    () => [
+      _rep(5, [_f(8), _r(144)]),
+    ],
+    3,
+  ),
+  StudioChallenge(
+    'moulin',
+    '1f33c',
+    'Un moulin',
+    'Un carré, tourner, et recommencer : une boucle dans une boucle.',
+    () => [
+      _rep(8, [
+        _rep(4, [_f(3), _r(90)]),
+        _r(45),
+      ]),
+    ],
+    5,
+  ),
+];
+
+/// Les défis réussis (identifiants), gardés dans le réglage `defis` de l'enfant.
+Set<String> decodeDone(String? s) => s == null || s.isEmpty ? {} : s.split(',').toSet();
+
+String encodeDone(Set<String> ids) => (ids.toList()..sort()).join(',');

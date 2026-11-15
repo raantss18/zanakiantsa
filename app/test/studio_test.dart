@@ -109,4 +109,21 @@ void main() {
       expect(File('assets/art/${i.art}.svg').existsSync(), isTrue, reason: i.title);
     }
   });
+
+  test('des « répéter » vides emboîtés ne figent pas l\'app', () {
+    var p = <StudioBlock>[];
+    for (var i = 0; i < 20; i++) {
+      p = [b(StudioKind.repeat, 4, p)];
+    }
+    final watch = Stopwatch()..start();
+    final r = runStudio(p);
+    expect(r.tooLong, isTrue);
+    expect(watch.elapsedMilliseconds, lessThan(500));
+  });
+
+  test('une date abîmée saute ce programme, pas toute la liste', () {
+    final ps = decodePrograms('[{"id":1,"nom":"x","date":9999999999999999,"blocs":[]},'
+        '{"id":2,"nom":"y","date":0,"blocs":[]}]');
+    expect(ps.single.name, 'y');
+  });
 }

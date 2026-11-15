@@ -11,6 +11,7 @@ import 'adaptive.dart';
 import 'chess_play.dart';
 import 'session.dart';
 import 'studio.dart';
+import 'studio_challenges.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -117,6 +118,8 @@ class _TopicHubState extends State<TopicHub> {
                       () => _go(const StudioPage())),
                   hubCard('1f4bb', t('Mes programmes'), t('Tes programmes enregistrés, et des idées pour commencer.'),
                       () => _go(const ProgramsPage())),
+                  hubCard('1f3c6', t('Défis du robot'), t('Un dessin en pointillés : écris le programme qui le refait.'),
+                      () => _go(const ChallengesPage())),
                 ],
                 hubCard('1f4d2', t('Mon carnet'), t('Ce que tu sais, ce qui est à revoir, et les erreurs qui reviennent.'),
                     () => _go(NotebookPage(topic: widget.topic))),

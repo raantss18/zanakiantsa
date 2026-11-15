@@ -21,6 +21,7 @@ const translatedFiles = [
   'lib/ui/theme.dart',
   'lib/ui/narrator.dart',
   'lib/ui/studio.dart',
+  'lib/ui/studio_challenges.dart',
 ];
 
 const _literal = r'''(?:'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*")''';

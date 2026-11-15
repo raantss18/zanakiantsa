@@ -10,6 +10,7 @@ import '../core/studio.dart';
 import '../l10n/l10n.dart';
 import 'adaptive.dart';
 import 'chess_play.dart';
+import 'studio_challenges.dart';
 import 'theme.dart';
 import 'universe.dart';
 
@@ -59,9 +60,12 @@ Color _colour(StudioKind k) => switch (k) {
 };
 
 class StudioPage extends StatefulWidget {
-  const StudioPage({super.key, this.saved, this.idea});
+  const StudioPage({super.key, this.saved, this.idea, this.challenge});
   final SavedProgram? saved;
   final StudioIdea? idea;
+
+  /// Un défi du robot (ADR 0077) : le dessin modèle s'affiche en pointillés.
+  final StudioChallenge? challenge;
   @override
   State<StudioPage> createState() => _StudioPageState();
 }
@@ -82,8 +86,11 @@ class _StudioPageState extends State<StudioPage> {
 
   StudioRun? lastRun;
   int shown = 0;
-  bool running = false, _stop = false;
+  bool running = false, _stop = false, _saving = false;
   String? message;
+
+  /// Le dessin modèle du défi (null hors défi).
+  late final StudioRun? model = widget.challenge == null ? null : runStudio(widget.challenge!.model());
 
   @override
   void initState() {
@@ -96,9 +103,23 @@ class _StudioPageState extends State<StudioPage> {
       program.addAll(i.build());
       name = t(i.title);
       dirty = true;
+    } else if (widget.challenge case final c?) {
+      name = t(c.title);
+      message = tf('{text} Refais le dessin en pointillés.', {'text': t(c.text)});
     }
+    // Un programme rouvert s'efface aussi bloc par bloc (« Effacer le dernier bloc » restait grisé).
+    void seed(List<StudioBlock> list) {
+      for (final b in list) {
+        added.add((list, b));
+        seed(b.body);
+      }
+    }
+
+    seed(program);
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (program.isEmpty) {
+      if (message != null) {
+        speech.say(message!);
+      } else if (program.isEmpty) {
         speech.say(
           t(
             'Écris ton programme avec les blocs, puis appuie sur le bouton vert. Le robot dessine et joue de la musique.',
@@ -128,6 +149,13 @@ class _StudioPageState extends State<StudioPage> {
   void _add(StudioKind k) {
     if (studioSize(program) >= studioMaxBlocks) {
       speech.say(t('Plus de place : utilise un bloc « répéter ».'), force: true);
+      return;
+    }
+    if (k == StudioKind.repeat && open.length >= studioMaxDepth) {
+      speech.say(
+        tf('Pas plus de {n} boucles l\'une dans l\'autre : ferme d\'abord un bloc.', {'n': studioMaxDepth}),
+        force: true,
+      );
       return;
     }
     final b = StudioBlock(k);
@@ -187,7 +215,6 @@ class _StudioPageState extends State<StudioPage> {
       shown = 0;
       running = true;
       _stop = false;
-      open.clear();
       message = null;
     });
     // Tout le programme en 7 s au plus (une note dure le temps de la jouer).
@@ -212,14 +239,39 @@ class _StudioPageState extends State<StudioPage> {
         );
       } else if (_stop) {
         message = t('Programme arrêté.');
+      } else if (widget.challenge case final c?) {
+        message = sameDrawing(r, model!)
+            ? (studioSize(program) <= c.best
+                  ? t('Bravo, c\'est le même dessin ! Et ton programme est aussi court que possible.')
+                  : tf('Bravo, c\'est le même dessin ! Idée : il peut s\'écrire avec {n} blocs seulement.', {
+                      'n': c.best,
+                    }))
+            : t('Pas encore pareil : compare ton dessin avec les pointillés, puis change un bloc.');
       } else if (r.segments.isEmpty && r.frames.every((f) => f.note == null)) {
         message = t('Le robot a bougé sans dessiner : pose le crayon, ou ajoute « avancer ».');
       }
     });
+    final c = widget.challenge;
+    if (c != null && !_stop && !r.tooLong && sameDrawing(r, model!)) {
+      app.voice.success(app.universe.id);
+      await markChallengeDone(app, c.id);
+      if (!mounted) return;
+    }
     if (message != null) speech.say(message!);
   }
 
+  /// Un seul enregistrement à la fois (deux touchers ouvraient deux fenêtres).
   Future<void> _save() async {
+    if (_saving) return;
+    setState(() => _saving = true);
+    try {
+      await _saveOnce();
+    } finally {
+      if (mounted) setState(() => _saving = false);
+    }
+  }
+
+  Future<void> _saveOnce() async {
     final all = await loadPrograms(app);
     if (!mounted) return;
     final controller = TextEditingController(text: name ?? tf('Mon programme {n}', {'n': all.length + 1}));
@@ -308,7 +360,7 @@ class _StudioPageState extends State<StudioPage> {
                     SizedBox(
                       height: 56,
                       child: FilledButton.icon(
-                        onPressed: running || program.isEmpty ? null : _save,
+                        onPressed: running || _saving || program.isEmpty ? null : _save,
                         icon: const Icon(Icons.save_rounded, size: 28),
                         label: Text(
                           t('Enregistrer'),
@@ -343,7 +395,7 @@ class _StudioPageState extends State<StudioPage> {
                         final side = min(k.maxWidth - 24, k.maxHeight * (k.maxWidth >= 600 ? 0.42 : 0.3));
                         body = Column(
                           children: [
-                            _stage(u, side),
+                            _stage(u, side, k.maxWidth),
                             const SizedBox(height: 8),
                             Expanded(child: _programPanel()),
                             const SizedBox(height: 8),
@@ -364,11 +416,13 @@ class _StudioPageState extends State<StudioPage> {
   }
 
   /// La feuille du robot, et sous elle l'état du crayon écrit (ou le message du dernier essai).
-  Widget _stage(Universe u, double side) {
+  Widget _stage(Universe u, double side, [double? textWidth]) {
     final r = lastRun;
     final frames = r == null ? const <Frame>[] : r.frames.take(shown).toList();
     final turtle = frames.isEmpty ? Turtle.start : frames.last.turtle;
-    final view = r?.view ?? (0.0, 0.0, 12.0);
+    final m = model;
+    // Pendant un défi, le cadre englobe aussi le modèle (il ne bouge pas d'un essai à l'autre).
+    final view = m != null ? StudioRun([...m.frames, ...?r?.frames], false).view : r?.view ?? (0.0, 0.0, 12.0);
     final scale = side / view.$3;
     final px = (turtle.x - view.$1) * scale + side / 2, py = (turtle.y - view.$2) * scale + side / 2;
     // Pendant l'essai, la note jouée s'écrit (le son n'est jamais la seule trace).
@@ -398,7 +452,7 @@ class _StudioPageState extends State<StudioPage> {
               Positioned.fill(
                 child: Semantics(
                   label: tf('Dessin du robot : {n} traits', {'n': frames.where((f) => f.segment != null).length}),
-                  child: CustomPaint(painter: StudioPainter(frames, view)),
+                  child: CustomPaint(painter: StudioPainter(frames, view, model: m?.segments.toList())),
                 ),
               ),
               Positioned(
@@ -426,8 +480,9 @@ class _StudioPageState extends State<StudioPage> {
           ),
         ),
         const SizedBox(height: 6),
+        // Le message prend toute la largeur en portrait : coupé à la largeur du dessin, « Bravo… » perdait sa fin.
         SizedBox(
-          width: side,
+          width: textWidth ?? side,
           child: Text(
             status,
             textAlign: TextAlign.center,
@@ -666,9 +721,12 @@ class _StudioPageState extends State<StudioPage> {
 
 /// Dessine les traits du robot sur un quadrillage léger (une case = un pas, quand les cases restent assez grandes).
 class StudioPainter extends CustomPainter {
-  StudioPainter(this.frames, this.view);
+  StudioPainter(this.frames, this.view, {this.model});
   final List<Frame> frames;
   final (double, double, double) view;
+
+  /// Le dessin modèle d'un défi, en pointillés gris (le trait plein est celui de l'enfant : jamais la couleur seule).
+  final List<Segment>? model;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -686,6 +744,22 @@ class StudioPainter extends CustomPainter {
         canvas.drawLine(Offset(0, y), Offset(side, y), grid);
       }
     }
+    if (model case final ms?) {
+      final dash = Paint()
+        ..color = const Color(0xFF8A958E)
+        ..strokeWidth = max(3, scale * 0.22)
+        ..strokeCap = StrokeCap.round;
+      final on = max(4.0, scale * 0.3);
+      for (final s in ms) {
+        final a = at(s.x0, s.y0), b = at(s.x1, s.y1);
+        final len = (b - a).distance;
+        if (len == 0) continue;
+        final dir = (b - a) / len;
+        for (var d = 0.0; d < len; d += on * 2) {
+          canvas.drawLine(a + dir * d, a + dir * min(len, d + on), dash);
+        }
+      }
+    }
     final pen = Paint()
       ..strokeWidth = max(2.5, scale * 0.16)
       ..strokeCap = StrokeCap.round;
@@ -698,7 +772,9 @@ class StudioPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(StudioPainter old) => old.frames.length != frames.length || old.view != view;
+  // Comparer les listes elles-mêmes : une couleur changée garde le même nombre de traits (aperçu resté rouge).
+  bool shouldRepaint(StudioPainter old) =>
+      !identical(old.frames, frames) || old.frames.length != frames.length || old.view != view || old.model != model;
 }
 
 /// « Mes programmes » : des idées pour commencer, puis les programmes enregistrés (aperçu du dessin, nom, date).

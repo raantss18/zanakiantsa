@@ -361,6 +361,18 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   (`bounded`, erreur de type). Vérifié sur l'émulateur : plus aucun « son ignoré ».
 - ⏳ Programmes libres sur une vraie tablette, et avec un enfant.
 
+## 2026-11-15 (nuit) — Défis du robot et relecture des programmes libres
+
+- ✅ **Défis du robot** (ADR 0077) : onze dessins modèles en pointillés (ligne → moulin) ; réussi si le dessin est le même,
+  quel que soit le chemin ; la solution la plus courte est proposée comme idée ; défis réussis gardés par enfant.
+- ✅ Corrigé après relecture : des « répéter » vides emboîtés figeaient l'app (4^20 tours) → 5000 tours au plus et
+  4 boucles emboîtées au plus ; aperçu de « Mes programmes » pas redessiné après un changement de couleur ; deux
+  fenêtres « Enregistrer » sur un double toucher ; « Effacer le dernier bloc » grisé sur un programme rouvert ; boucle
+  ouverte refermée sans rien dire au lancement ; date abîmée qui vidait toute la liste ; message coupé sous le dessin.
+- ✅ Vérifié : 313 tests ; émulateur 800 × 1340 (défi réussi puis marqué « Réussi », essai raté, limite de 4 boucles,
+  effacer un bloc d'une idée).
+- ⏳ Défis sur une vraie tablette et avec un enfant (les pointillés se voient-ils assez ? l'ordre des défis).
+
 ## 2026-11-15 — Essais sur la Xiaomi Pad 7 d'Antsa (Android 16, HyperOS, sans données d'enfant)
 
 - ✅ Vérifié sur la vraie tablette : 1.1.2 → 1.1.3 par l'espace parent (la fenêtre se propose seule ; le parent accorde
