@@ -32,6 +32,7 @@ items:
       - { texte: "Un carré de 5 cases de côté", pourquoi: "Deux côtés font 5 cases, mais les deux autres n'en font que 2 : ce n'est pas un carré." }
       - { texte: "Une ligne droite de 14 cases", pourquoi: "Les virages changent la direction à chaque côté : le chemin tourne." }
   - texte: "Le robot regarde vers la droite. Son programme :\nrépéter 3 fois [ avancer de 2 ]\npivoter à gauche\navancer de 1\nOù arrive-t-il ?"
+    figure: { type: grille, colonnes: 7, lignes: 3, robot: [0, 1], regard: droite }
     nom: "6 cases à droite, 1 case plus haut"
     explication: "La boucle fait 3 × 2 = 6 cases vers la droite. Puis il pivote à gauche : en regardant vers la droite, sa gauche est vers le haut. Il monte d'une case."
     pieges:
@@ -62,6 +63,7 @@ items:
       - { texte: "8", pourquoi: "8, c'est le nombre de rues. Il faut 4 rues pour faire un tour : 8 rues font 2 tours." }
       - { texte: "1", pourquoi: "Après la première boucle, le programme continue : la deuxième boucle refait un tour." }
   - texte: "Le robot regarde vers le haut. Son programme :\nrépéter 3 fois [ avancer de 2, pivoter à droite, pivoter à droite ]\nOù finit-il ?"
+    figure: { type: grille, colonnes: 3, lignes: 4, robot: [1, 0], regard: haut }
     nom: "2 cases plus haut, tourné vers le bas"
     explication: "Deux quarts de tour font un demi-tour. Tour 1 : il monte de 2 et se retourne. Tour 2 : il redescend de 2 et se retourne. Tour 3 : il remonte de 2 et se retourne."
     pieges:
@@ -92,6 +94,7 @@ en:
         - { texte: "A square with sides of 5 squares", pourquoi: "Two sides are 5 squares long, but the other two are only 2: it isn't a square." }
         - { texte: "A straight line 14 squares long", pourquoi: "The turns change direction at each side: the path turns." }
     - texte: "The robot is facing right. Its program:\nrepeat 3 times [ move forward 2 ]\nturn left\nmove forward 1\nWhere does it end up?"
+      figure: { type: grille, colonnes: 7, lignes: 3, robot: [0, 1], regard: droite }
       nom: "6 squares right, 1 square up"
       explication: "The loop makes 3 × 2 = 6 squares to the right. Then it turns left: facing right, its left is towards the top. It goes up one square."
       pieges:
@@ -122,6 +125,7 @@ en:
         - { texte: "8", pourquoi: "8 is the number of streets. It takes 4 streets to go round once: 8 streets make 2 trips round." }
         - { texte: "1", pourquoi: "After the first loop, the program carries on: the second loop goes round again." }
     - texte: "The robot is facing up. Its program:\nrepeat 3 times [ move forward 2, turn right, turn right ]\nWhere does it end up?"
+      figure: { type: grille, colonnes: 3, lignes: 4, robot: [1, 0], regard: haut }
       nom: "2 squares up, facing down"
       explication: "Two quarter turns make a half turn. Time 1: it goes up 2 and turns round. Time 2: it comes back down 2 and turns round. Time 3: it goes up 2 again and turns round."
       pieges:

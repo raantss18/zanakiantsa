@@ -22,6 +22,7 @@ items:
       - { texte: "20 cm", pourquoi: "20 cm, c'est le périmètre : 7 + 3 + 7 + 3, le tour du rectangle." }
       - { texte: "10 cm²", pourquoi: "7 + 3 : l'aire se calcule avec une multiplication." }
   - texte: "Quelle est l'aire d'un carré de 5 cm de côté ?"
+    figure: { type: rectangles, rectangles: [{ l: 5, h: 5, largeur: "5 cm", hauteur: "5 cm" }] }
     nom: "25 cm²"
     explication: "5 rangées de 5 carrés de 1 cm² : 5 × 5 = 25 cm²."
     pieges:
@@ -35,6 +36,7 @@ items:
       - { texte: "28 m", pourquoi: "28 m, c'est le périmètre : 8 + 6 + 8 + 6." }
       - { texte: "14 m²", pourquoi: "8 + 6 : l'aire se calcule avec une multiplication." }
   - texte: "Une surface est faite de 4 rangées de 9 carreaux de 1 cm². Quelle est son aire ?"
+    figure: { type: carreaux, forme: rectangle, etapes: [[4, 9]] }
     nom: "36 cm²"
     explication: "4 rangées de 9 carreaux : 4 × 9 = 36 carreaux, donc 36 cm²."
     pieges:
@@ -54,6 +56,7 @@ items:
       - { texte: "10", pourquoi: "Une rangée contient 10 dm², et il y a 10 rangées : 10 × 10 = 100." }
       - { texte: "1 000", pourquoi: "1 m² est un carré de 10 dm sur 10 dm : 10 × 10 = 100, pas 1 000." }
   - texte: "La figure A est un rectangle de 6 cm sur 2 cm. La figure B est un rectangle de 4 cm sur 3 cm. Laquelle a la plus grande aire ?"
+    figure: { type: rectangles, rectangles: [{ nom: A, l: 6, h: 2, largeur: "6 cm", hauteur: "2 cm" }, { nom: B, l: 4, h: 3, largeur: "4 cm", hauteur: "3 cm" }] }
     nom: "Elles ont la même aire."
     explication: "A : 6 × 2 = 12 cm². B : 4 × 3 = 12 cm². Les aires sont égales, même si les périmètres sont différents."
     pieges:
@@ -93,6 +96,7 @@ en:
         - { texte: "20 cm", pourquoi: "20 cm is the perimeter: 7 + 3 + 7 + 3, the distance around." }
         - { texte: "10 cm²", pourquoi: "7 + 3: area is worked out with a multiplication." }
     - texte: "What is the area of a square with 5 cm sides?"
+      figure: { type: rectangles, rectangles: [{ l: 5, h: 5, largeur: "5 cm", hauteur: "5 cm" }] }
       nom: "25 cm²"
       explication: "5 rows of 5 squares of 1 cm²: 5 × 5 = 25 cm²."
       pieges:
@@ -106,6 +110,7 @@ en:
         - { texte: "28 m", pourquoi: "28 m is the perimeter: 8 + 6 + 8 + 6." }
         - { texte: "14 m²", pourquoi: "8 + 6: area is worked out with a multiplication." }
     - texte: "A surface is made of 4 rows of 9 squares of 1 cm². What is its area?"
+      figure: { type: carreaux, forme: rectangle, etapes: [[4, 9]] }
       nom: "36 cm²"
       explication: "4 rows of 9 squares: 4 × 9 = 36 squares, so 36 cm²."
       pieges:
@@ -125,6 +130,7 @@ en:
         - { texte: "10", pourquoi: "One row holds 10 dm², and there are 10 rows: 10 × 10 = 100." }
         - { texte: "1,000", pourquoi: "1 m² is a square 10 dm by 10 dm: 10 × 10 = 100, not 1,000." }
     - texte: "Shape A is a 6 cm by 2 cm rectangle. Shape B is a 4 cm by 3 cm rectangle. Which has the bigger area?"
+      figure: { type: rectangles, rectangles: [{ nom: A, l: 6, h: 2, largeur: "6 cm", hauteur: "2 cm" }, { nom: B, l: 4, h: 3, largeur: "4 cm", hauteur: "3 cm" }] }
       nom: "They have the same area."
       explication: "A: 6 × 2 = 12 cm². B: 4 × 3 = 12 cm². The areas are equal, even though the perimeters are different."
       pieges:

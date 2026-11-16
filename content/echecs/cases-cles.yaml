@@ -33,6 +33,7 @@ items:
       - { texte: "3", pourquoi: "En 5e rangée, la rangée d’après compte aussi : d7, e7 et f7 s’ajoutent à d6, e6 et f6." }
       - { texte: "8", pourquoi: "Les cases clés sont sur trois colonnes seulement : celle du pion et ses deux voisines." }
   - texte: "Roi blanc en f4, pion blanc en e2, roi noir en e6. Aux Noirs. Qui gagne ?"
+    figure: { type: echiquier, fen: "8/8/4k3/8/5K2/8/4P3/8 b - - 0 1" }
     nom: "Les Blancs"
     explication: "Les cases clés du pion e2 sont d4, e4 et f4 : ton roi y est déjà. Les Blancs gagnent, même si ce sont les Noirs qui jouent."
     pieges:
@@ -81,6 +82,7 @@ en:
         - { texte: "3", pourquoi: "On the 5th rank, the next rank counts too: d7, e7 and f7 are added to d6, e6 and f6." }
         - { texte: "8", pourquoi: "The key squares lie on three files only: the pawn’s file and the two next to it." }
     - texte: "White king on f4, white pawn on e2, black king on e6. Black to play. Who wins?"
+      figure: { type: echiquier, fen: "8/8/4k3/8/5K2/8/4P3/8 b - - 0 1" }
       nom: "White"
       explication: "The key squares of the e2 pawn are d4, e4 and f4: your king is already there. White wins, even though Black has the move."
       pieges:

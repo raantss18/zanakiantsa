@@ -57,6 +57,7 @@ items:
       - { texte: "20", pourquoi: "10 + 10 : on a 10 fois 10 centièmes, c'est une multiplication." }
       - { texte: "10", pourquoi: "10 dixièmes, oui ; mais chaque dixième vaut 10 centièmes." }
   - texte: "Une bande unité est partagée en 10 parts égales. Ana colorie 3 parts, puis encore 4 parts. Quelle fraction a-t-elle coloriée ?"
+    figure: { type: bande, parts: 10, colorees: 0 }
     nom: "7/10"
     explication: "3 dixièmes + 4 dixièmes = 7 dixièmes : 7/10."
     pieges:
@@ -123,6 +124,7 @@ en:
         - { texte: "20", pourquoi: "10 + 10: there are 10 lots of 10 hundredths, so multiply." }
         - { texte: "10", pourquoi: "10 tenths, yes; but each tenth is worth 10 hundredths." }
     - texte: "A strip is split into 10 equal parts. Ana colours 3 parts, then 4 more parts. What fraction has she coloured?"
+      figure: { type: bande, parts: 10, colorees: 0 }
       nom: "7/10"
       explication: "3 tenths + 4 tenths = 7 tenths: 7/10."
       pieges:

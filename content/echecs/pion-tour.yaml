@@ -15,36 +15,42 @@ phrases:
   bravo: "Oui ! La réponse est : {bonne}."
 items:
   - texte: "Roi blanc en b6, pion blanc en a5, roi noir en a8. Aux Blancs. Quel est le résultat avec le meilleur jeu ?"
+    figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/8 w - - 0 1" }
     nom: "Nulle"
     explication: "Le roi noir est dans le coin devant le pion tour. Calculé : aucun coup blanc ne gagne."
     pieges:
       - { texte: "Les Blancs gagnent", pourquoi: "Calculé : aucun coup blanc ne gagne. Le roi noir ne peut pas être chassé du coin." }
       - { texte: "Les Noirs gagnent", pourquoi: "Un roi seul ne peut jamais faire mat : au mieux, les Noirs font nulle." }
   - texte: "Roi blanc en b6, pion blanc en a6, roi noir en a8. Aux Blancs. Que se passe-t-il si le pion va en a7 ?"
+    figure: { type: echiquier, fen: "k7/8/PK6/8/8/8/8/8 w - - 0 1" }
     nom: "Pat : le roi noir n’est pas en échec et n’a plus aucun coup"
     explication: "Le pion en a7 garde b8, ton roi garde b7 et protège le pion. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle."
     pieges:
       - { texte: "Le roi noir prend le pion", pourquoi: "Le pion en a7 est protégé par ton roi en b6 : le roi noir ne peut pas le prendre." }
       - { texte: "Échec et mat", pourquoi: "Un pion en a7 attaque b8, pas a8 : il n’y a pas d’échec. Sans échec, c’est pat." }
   - texte: "Roi blanc en b6, pion blanc en a5, roi noir en c8. Aux Noirs. Quel coup fait nulle ?"
+    figure: { type: echiquier, fen: "2k5/8/1K6/P7/8/8/8/8 b - - 0 1", noirs: true }
     nom: "Le roi va en b8"
     explication: "Le roi noir reste collé au coin a8. Calculé : c’est le seul coup qui fait nulle."
     pieges:
       - { texte: "Le roi va en d8", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
       - { texte: "Le roi va en d7", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
   - texte: "Roi blanc en a7, pion blanc en a6, roi noir en c8. Aux Noirs. Quel coup fait nulle ?"
+    figure: { type: echiquier, fen: "2k5/K7/P7/8/8/8/8/8 b - - 0 1", noirs: true }
     nom: "Le roi va en c7"
     explication: "Le roi blanc est enfermé devant son pion : il ne peut plus aller qu’en a8, et le pion est bloqué. Calculé : c’est le seul coup qui fait nulle."
     pieges:
       - { texte: "Le roi va en d8", pourquoi: "Le roi blanc sort par b7 ou b8, et le pion passe. Calculé : les Blancs gagnent." }
       - { texte: "Le roi va en d7", pourquoi: "Le roi blanc sort par b7 ou b8, et le pion passe. Calculé : les Blancs gagnent." }
   - texte: "Roi blanc en b7, pion blanc en a5, roi noir en d6. Aux Noirs. Qui gagne ?"
+    figure: { type: echiquier, fen: "8/1K6/3k4/P7/8/8/8/8 b - - 0 1" }
     nom: "Les Blancs"
     explication: "Le roi blanc en b7 interdit le coin a8 au roi noir. Calculé : roi blanc en b7 et pion en a5 ou a6, les Blancs gagnent toujours, si le pion n’est pas pris tout de suite."
     pieges:
       - { texte: "Nulle : c’est un pion tour", pourquoi: "Le pion tour fait nulle quand le roi noir atteint le coin ; ici, ton roi en b7 le lui interdit." }
       - { texte: "Nulle : les Noirs ont le trait", pourquoi: "Calculé : quel que soit le trait, les Blancs gagnent dans cette position." }
   - texte: "Roi blanc en f5, pion blanc en h5, roi noir en h8. Aux Blancs. Quel est le résultat ?"
+    figure: { type: echiquier, fen: "7k/8/8/5K1P/8/8/8/8 w - - 0 1" }
     nom: "Nulle"
     explication: "Même idée sur la colonne h : le roi noir est dans le coin devant le pion. Calculé : aucun coup blanc ne gagne."
     pieges:
@@ -63,36 +69,42 @@ en:
     bravo: "Yes! The answer is: {bonne}."
   items:
     - texte: "White king on b6, white pawn on a5, black king on a8. White to play. What is the result with best play?"
+      figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/8 w - - 0 1" }
       nom: "Draw"
       explication: "The black king is in the corner in front of the rook pawn. Computed: no White move wins."
       pieges:
         - { texte: "White wins", pourquoi: "Computed: no White move wins. The black king cannot be driven out of the corner." }
         - { texte: "Black wins", pourquoi: "A lone king can never give checkmate: at best, Black draws." }
     - texte: "White king on b6, white pawn on a6, black king on a8. White to play. What happens if the pawn goes to a7?"
+      figure: { type: echiquier, fen: "k7/8/PK6/8/8/8/8/8 w - - 0 1" }
       nom: "Stalemate: the black king is not in check and has no move"
       explication: "The pawn on a7 guards b8, your king guards b7 and protects the pawn. The black king is not in check and cannot move: stalemate, a draw."
       pieges:
         - { texte: "The black king takes the pawn", pourquoi: "The pawn on a7 is protected by your king on b6: the black king cannot take it." }
         - { texte: "Checkmate", pourquoi: "A pawn on a7 attacks b8, not a8: there is no check. No check means stalemate." }
     - texte: "White king on b6, white pawn on a5, black king on c8. Black to play. Which move draws?"
+      figure: { type: echiquier, fen: "2k5/8/1K6/P7/8/8/8/8 b - - 0 1", noirs: true }
       nom: "The king goes to b8"
       explication: "The black king stays next to the a8 corner. Computed: it is the only drawing move."
       pieges:
         - { texte: "The king goes to d8", pourquoi: "The black king moves away from the corner. Computed: White wins." }
         - { texte: "The king goes to d7", pourquoi: "The black king moves away from the corner. Computed: White wins." }
     - texte: "White king on a7, white pawn on a6, black king on c8. Black to play. Which move draws?"
+      figure: { type: echiquier, fen: "2k5/K7/P7/8/8/8/8/8 b - - 0 1", noirs: true }
       nom: "The king goes to c7"
       explication: "The white king is shut in in front of its pawn: it can only go to a8, and the pawn is blocked. Computed: it is the only drawing move."
       pieges:
         - { texte: "The king goes to d8", pourquoi: "The white king gets out via b7 or b8, and the pawn gets through. Computed: White wins." }
         - { texte: "The king goes to d7", pourquoi: "The white king gets out via b7 or b8, and the pawn gets through. Computed: White wins." }
     - texte: "White king on b7, white pawn on a5, black king on d6. Black to play. Who wins?"
+      figure: { type: echiquier, fen: "8/1K6/3k4/P7/8/8/8/8 b - - 0 1" }
       nom: "White"
       explication: "The white king on b7 keeps the black king out of the a8 corner. Computed: with the white king on b7 and the pawn on a5 or a6, White always wins, unless the pawn is taken at once."
       pieges:
         - { texte: "Draw: it is a rook pawn", pourquoi: "The rook pawn draws when the black king reaches the corner; here, your king on b7 keeps it out." }
         - { texte: "Draw: Black has the move", pourquoi: "Computed: whoever has the move, White wins in this position." }
     - texte: "White king on f5, white pawn on h5, black king on h8. White to play. What is the result?"
+      figure: { type: echiquier, fen: "7k/8/8/5K1P/8/8/8/8 w - - 0 1" }
       nom: "Draw"
       explication: "Same idea on the h-file: the black king is in the corner in front of the pawn. Computed: no White move wins."
       pieges:

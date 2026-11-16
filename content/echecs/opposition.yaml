@@ -15,30 +15,35 @@ phrases:
   bravo: "Oui ! La réponse est : {bonne}."
 items:
   - texte: "Roi blanc en e4, roi noir en e6, aux Noirs de jouer. Qui a l’opposition ?"
+    figure: { type: echiquier, fen: "8/8/4k3/8/4K3/8/8/8 b - - 0 1" }
     nom: "Les Blancs"
     explication: "Les rois sont face à face, une case entre eux, et ce sont les Noirs qui doivent jouer : ils doivent s’écarter. L’opposition est aux Blancs."
     pieges:
       - { texte: "Les Noirs", pourquoi: "Ici, avoir le trait est un désavantage : le roi noir doit céder le passage." }
       - { texte: "Personne : il faudrait que les rois se touchent", pourquoi: "Deux rois ne peuvent jamais se toucher, l’un serait en échec (article 3.9.2) : l’opposition, c’est une case entre eux." }
   - texte: "Roi blanc en d4, pion blanc en e3, roi noir en e6. Aux Blancs. Quel coup gagne ?"
+    figure: { type: echiquier, fen: "8/8/4k3/8/3K4/4P3/8/8 w - - 0 1" }
     nom: "Le roi va en e4"
     explication: "Face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent s’écarter, et ton roi avance. Calculé : c’est le seul coup qui gagne."
     pieges:
       - { texte: "Le pion va en e4", pourquoi: "Le pion avance trop tôt : le roi noir reste devant lui. Calculé : c’est nulle." }
       - { texte: "Le roi va en c5", pourquoi: "Ton roi quitte le face-à-face : le roi noir prend l’opposition. Calculé : c’est nulle." }
   - texte: "Roi blanc en d5, pion blanc en e3, roi noir en e7. Aux Blancs. Quel coup gagne ?"
+    figure: { type: echiquier, fen: "8/4k3/8/3K4/8/4P3/8/8 w - - 0 1" }
     nom: "Le roi va en e5"
     explication: "Ton roi se place face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent céder une case. Calculé : c’est le seul coup qui gagne."
     pieges:
       - { texte: "Le pion va en e4", pourquoi: "Le pion prend la case dont ton roi a besoin. Calculé : c’est nulle." }
       - { texte: "Le roi va en d4", pourquoi: "Ton roi recule : le roi noir vient en e5 ou d5 et prend l’opposition. Calculé : c’est nulle." }
   - texte: "Roi blanc en f6, pion blanc en e5, roi noir en e8. Aux Blancs. Quel coup gagne ?"
+    figure: { type: echiquier, fen: "4k3/8/5K2/4P3/8/8/8/8 w - - 0 1" }
     nom: "Le roi va en e6"
     explication: "Opposition : le roi noir doit s’écarter. S’il va en d8, ton roi va en f7, et le pion passe. Calculé : c’est le seul coup qui gagne."
     pieges:
       - { texte: "Le pion va en e6", pourquoi: "Le roi noir se place devant le pion, et c’est toi qui dois jouer. Calculé : c’est nulle." }
       - { texte: "Le roi va en g6", pourquoi: "Ton roi s’écarte du pion : le roi noir garde ses cases. Calculé : c’est nulle." }
   - texte: "Roi noir en e5, roi blanc en d3, pion blanc en d2. Aux Noirs. Quel coup fait nulle ?"
+    figure: { type: echiquier, fen: "8/8/8/4k3/8/3K4/3P4/8 b - - 0 1", noirs: true }
     nom: "Le roi va en d5"
     explication: "Face au roi blanc, une case entre eux, et c’est aux Blancs de jouer : le roi noir garde l’opposition. Calculé : c’est le seul coup qui fait nulle."
     pieges:
@@ -63,30 +68,35 @@ en:
     bravo: "Yes! The answer is: {bonne}."
   items:
     - texte: "White king on e4, black king on e6, Black to play. Who has the opposition?"
+      figure: { type: echiquier, fen: "8/8/4k3/8/4K3/8/8/8 b - - 0 1" }
       nom: "White"
       explication: "The kings are face to face, one square between them, and Black has to move: Black must step aside. White has the opposition."
       pieges:
         - { texte: "Black", pourquoi: "Here, having the move is a drawback: the black king has to give way." }
         - { texte: "Nobody: the kings would have to touch", pourquoi: "Two kings can never touch, one would be in check (Article 3.9.2): the opposition means one square between them." }
     - texte: "White king on d4, white pawn on e3, black king on e6. White to play. Which move wins?"
+      figure: { type: echiquier, fen: "8/8/4k3/8/3K4/4P3/8/8 w - - 0 1" }
       nom: "The king goes to e4"
       explication: "Facing the black king, one square between them, and Black has to move: Black must step aside, and your king moves forward. Computed: it is the only winning move."
       pieges:
         - { texte: "The pawn goes to e4", pourquoi: "The pawn moves too early: the black king stays in front of it. Computed: it is a draw." }
         - { texte: "The king goes to c5", pourquoi: "Your king leaves the face-off: the black king takes the opposition. Computed: it is a draw." }
     - texte: "White king on d5, white pawn on e3, black king on e7. White to play. Which move wins?"
+      figure: { type: echiquier, fen: "8/4k3/8/3K4/8/4P3/8/8 w - - 0 1" }
       nom: "The king goes to e5"
       explication: "Your king faces the black king, one square between them, and Black has to move: Black must give up a square. Computed: it is the only winning move."
       pieges:
         - { texte: "The pawn goes to e4", pourquoi: "The pawn takes the square your king needs. Computed: it is a draw." }
         - { texte: "The king goes to d4", pourquoi: "Your king steps back: the black king comes to e5 or d5 and takes the opposition. Computed: it is a draw." }
     - texte: "White king on f6, white pawn on e5, black king on e8. White to play. Which move wins?"
+      figure: { type: echiquier, fen: "4k3/8/5K2/4P3/8/8/8/8 w - - 0 1" }
       nom: "The king goes to e6"
       explication: "Opposition: the black king must step aside. If it goes to d8, your king goes to f7, and the pawn gets through. Computed: it is the only winning move."
       pieges:
         - { texte: "The pawn goes to e6", pourquoi: "The black king stands in front of the pawn, and you are the one who must move. Computed: it is a draw." }
         - { texte: "The king goes to g6", pourquoi: "Your king moves away from the pawn: the black king keeps its squares. Computed: it is a draw." }
     - texte: "Black king on e5, white king on d3, white pawn on d2. Black to play. Which move draws?"
+      figure: { type: echiquier, fen: "8/8/8/4k3/8/3K4/3P4/8 b - - 0 1", noirs: true }
       nom: "The king goes to d5"
       explication: "Facing the white king, one square between them, and White has to move: the black king keeps the opposition. Computed: it is the only drawing move."
       pieges:

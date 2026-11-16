@@ -4117,6 +4117,11 @@
         },
         {
           "texte": "Une bande unité est partagée en 10 parts égales. Ana colorie 3 parts, puis encore 4 parts. Quelle fraction a-t-elle coloriée ?",
+          "figure": {
+            "type": "bande",
+            "parts": 10,
+            "colorees": 0
+          },
           "nom": "7/10",
           "explication": "3 dixièmes + 4 dixièmes = 7 dixièmes : 7/10.",
           "pieges": [
@@ -4265,6 +4270,11 @@
           },
           {
             "texte": "A strip is split into 10 equal parts. Ana colours 3 parts, then 4 more parts. What fraction has she coloured?",
+            "figure": {
+              "type": "bande",
+              "parts": 10,
+              "colorees": 0
+            },
             "nom": "7/10",
             "explication": "3 tenths + 4 tenths = 7 tenths: 7/10.",
             "pieges": [
@@ -7012,6 +7022,17 @@
         },
         {
           "texte": "Quelle est l'aire d'un carré de 5 cm de côté ?",
+          "figure": {
+            "type": "rectangles",
+            "rectangles": [
+              {
+                "l": 5,
+                "h": 5,
+                "largeur": "5 cm",
+                "hauteur": "5 cm"
+              }
+            ]
+          },
           "nom": "25 cm²",
           "explication": "5 rangées de 5 carrés de 1 cm² : 5 × 5 = 25 cm².",
           "pieges": [
@@ -7047,6 +7068,16 @@
         },
         {
           "texte": "Une surface est faite de 4 rangées de 9 carreaux de 1 cm². Quelle est son aire ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "rectangle",
+            "etapes": [
+              [
+                4,
+                9
+              ]
+            ]
+          },
           "nom": "36 cm²",
           "explication": "4 rangées de 9 carreaux : 4 × 9 = 36 carreaux, donc 36 cm².",
           "pieges": [
@@ -7097,6 +7128,25 @@
         },
         {
           "texte": "La figure A est un rectangle de 6 cm sur 2 cm. La figure B est un rectangle de 4 cm sur 3 cm. Laquelle a la plus grande aire ?",
+          "figure": {
+            "type": "rectangles",
+            "rectangles": [
+              {
+                "nom": "A",
+                "l": 6,
+                "h": 2,
+                "largeur": "6 cm",
+                "hauteur": "2 cm"
+              },
+              {
+                "nom": "B",
+                "l": 4,
+                "h": 3,
+                "largeur": "4 cm",
+                "hauteur": "3 cm"
+              }
+            ]
+          },
           "nom": "Elles ont la même aire.",
           "explication": "A : 6 × 2 = 12 cm². B : 4 × 3 = 12 cm². Les aires sont égales, même si les périmètres sont différents.",
           "pieges": [
@@ -7185,6 +7235,17 @@
           },
           {
             "texte": "What is the area of a square with 5 cm sides?",
+            "figure": {
+              "type": "rectangles",
+              "rectangles": [
+                {
+                  "l": 5,
+                  "h": 5,
+                  "largeur": "5 cm",
+                  "hauteur": "5 cm"
+                }
+              ]
+            },
             "nom": "25 cm²",
             "explication": "5 rows of 5 squares of 1 cm²: 5 × 5 = 25 cm².",
             "pieges": [
@@ -7220,6 +7281,16 @@
           },
           {
             "texte": "A surface is made of 4 rows of 9 squares of 1 cm². What is its area?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "rectangle",
+              "etapes": [
+                [
+                  4,
+                  9
+                ]
+              ]
+            },
             "nom": "36 cm²",
             "explication": "4 rows of 9 squares: 4 × 9 = 36 squares, so 36 cm².",
             "pieges": [
@@ -7270,6 +7341,25 @@
           },
           {
             "texte": "Shape A is a 6 cm by 2 cm rectangle. Shape B is a 4 cm by 3 cm rectangle. Which has the bigger area?",
+            "figure": {
+              "type": "rectangles",
+              "rectangles": [
+                {
+                  "nom": "A",
+                  "l": 6,
+                  "h": 2,
+                  "largeur": "6 cm",
+                  "hauteur": "2 cm"
+                },
+                {
+                  "nom": "B",
+                  "l": 4,
+                  "h": 3,
+                  "largeur": "4 cm",
+                  "hauteur": "3 cm"
+                }
+              ]
+            },
             "nom": "They have the same area.",
             "explication": "A: 6 × 2 = 12 cm². B: 4 × 3 = 12 cm². The areas are equal, even though the perimeters are different.",
             "pieges": [
@@ -10900,6 +10990,21 @@
         },
         {
           "texte": "Tableau. Masse en kg : 2 ; 6. Prix en euros : 5 ; … Quel prix manque ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "Masse (kg)",
+                "2",
+                "6"
+              ],
+              [
+                "Prix (€)",
+                "5",
+                "…"
+              ]
+            ]
+          },
           "nom": "15 €",
           "explication": "6 kg, c'est 3 fois plus que 2 kg : 3 × 5 € = 15 €.",
           "pieges": [
@@ -11048,6 +11153,21 @@
           },
           {
             "texte": "Table. Mass in kg: 2; 6. Price in euros: 5; … Which price is missing?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "Mass (kg)",
+                  "2",
+                  "6"
+                ],
+                [
+                  "Price (€)",
+                  "5",
+                  "…"
+                ]
+              ]
+            },
             "nom": "€15",
             "explication": "6 kg is 3 times 2 kg: 3 × €5 = €15.",
             "pieges": [
@@ -18211,6 +18331,23 @@
         },
         {
           "texte": "Papillon : les droites (BM) et (CN) se coupent en A, et (BC) est parallèle à (MN). AB = 4, AM = 6, BC = 5. Combien mesure MN ?",
+          "figure": {
+            "type": "thales",
+            "papillon": true,
+            "sommets": [
+              "A",
+              "M",
+              "N",
+              "B",
+              "C"
+            ],
+            "cotes": {
+              "AB": "4",
+              "AM": "6",
+              "BC": "5",
+              "MN": "?"
+            }
+          },
           "nom": "7,5",
           "explication": "AM/AB = MN/BC, donc MN = 5 × 6/4 = 7,5.",
           "pieges": [
@@ -18392,6 +18529,23 @@
           },
           {
             "texte": "Butterfly: lines (BM) and (CN) cross at A, and (BC) is parallel to (MN). AB = 4, AM = 6, BC = 5. How long is MN?",
+            "figure": {
+              "type": "thales",
+              "papillon": true,
+              "sommets": [
+                "A",
+                "M",
+                "N",
+                "B",
+                "C"
+              ],
+              "cotes": {
+                "AB": "4",
+                "AM": "6",
+                "BC": "5",
+                "MN": "?"
+              }
+            },
             "nom": "7.5",
             "explication": "AM/AB = MN/BC, so MN = 5 × 6/4 = 7.5.",
             "pieges": [
@@ -21314,6 +21468,16 @@
         },
         {
           "texte": "Pourquoi la droite d’équation x = 3 n’a-t-elle pas d’équation réduite de la forme y = mx + p ?",
+          "figure": {
+            "type": "repere",
+            "xmin": -1,
+            "xmax": 5,
+            "ymin": -1,
+            "ymax": 5,
+            "verticales": [
+              3
+            ]
+          },
           "nom": "Elle est parallèle à l’axe des ordonnées : elle n’a pas de pente.",
           "explication": "Tous ses points ont x = 3, quel que soit y. Un vecteur directeur est u(0 ; 1) : x n’avance pas, donc on ne peut pas parler de pente.",
           "pieges": [
@@ -21460,6 +21624,16 @@
           },
           {
             "texte": "Why does the line x = 3 have no equation of the form y = mx + p?",
+            "figure": {
+              "type": "repere",
+              "xmin": -1,
+              "xmax": 5,
+              "ymin": -1,
+              "ymax": 5,
+              "verticales": [
+                3
+              ]
+            },
             "nom": "It is parallel to the y-axis: it has no gradient.",
             "explication": "All its points have x = 3, whatever y is. A direction vector is u(0, 1): x does not move, so there is no gradient.",
             "pieges": [

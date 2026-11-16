@@ -44,6 +44,7 @@ items:
       - { texte: "15", pourquoi: "Avec 15 tables, il y a 2 × 15 + 2 = 32 places : 2 places resteraient vides." }
       - { texte: "8", pourquoi: "Tu as compté 4 places par table. Collées, elles n'en ont que 2 chacune, plus les 2 bouts." }
   - texte: "Étape 1 : un carré d'un carreau. Étape 2 : un carré de 2 carreaux sur 2. Étape 3 : un carré de 3 sur 3. Combien de carreaux à l'étape 7 ?"
+    figure: { type: carreaux, forme: rectangle, etapes: [[1, 1], [2, 2], [3, 3]] }
     nom: "49"
     explication: "À l'étape 7, le carré a 7 rangées de 7 carreaux : 7 × 7 = 49."
     pieges:
@@ -56,6 +57,7 @@ items:
       - { texte: "Le numéro de l'étape, plus 5", pourquoi: "Ça marche pour l'étape 1 (1 + 5 = 6), mais pas pour l'étape 2 : 2 + 5 = 7, pas 11." }
       - { texte: "6 fois le numéro de l'étape", pourquoi: "6 × 2 = 12, pas 11. Vérifie toujours une règle sur plusieurs étapes." }
   - texte: "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 8 ?"
+    figure: { type: carreaux, forme: escalier, etapes: [1, 2, 3, 4] }
     nom: "36"
     explication: "L'étape 8 a des colonnes de 1, 2, 3… jusqu'à 8 cubes : 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36."
     pieges:
@@ -105,6 +107,7 @@ en:
         - { texte: "15", pourquoi: "With 15 tables there are 2 × 15 + 2 = 32 seats: 2 seats would stay empty." }
         - { texte: "8", pourquoi: "You counted 4 seats per table. Pushed together, they only have 2 each, plus the 2 ends." }
     - texte: "Stage 1: a square of one tile. Stage 2: a square of 2 tiles by 2. Stage 3: a square of 3 by 3. How many tiles at stage 7?"
+      figure: { type: carreaux, forme: rectangle, etapes: [[1, 1], [2, 2], [3, 3]] }
       nom: "49"
       explication: "At stage 7, the square has 7 rows of 7 tiles: 7 × 7 = 49."
       pieges:
@@ -117,6 +120,7 @@ en:
         - { texte: "The stage number, plus 5", pourquoi: "It works for stage 1 (1 + 5 = 6), but not for stage 2: 2 + 5 = 7, not 11." }
         - { texte: "6 times the stage number", pourquoi: "6 × 2 = 12, not 11. Always check a rule on several stages." }
     - texte: "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 8?"
+      figure: { type: carreaux, forme: escalier, etapes: [1, 2, 3, 4] }
       nom: "36"
       explication: "Stage 8 has columns of 1, 2, 3… up to 8 cubes: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36."
       pieges:

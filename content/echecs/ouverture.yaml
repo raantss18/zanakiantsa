@@ -15,12 +15,14 @@ phrases:
   bravo: "Oui ! La réponse est : {bonne}."
 items:
   - texte: "Quelles sont les quatre cases du centre de l’échiquier ?"
+    figure: { type: echiquier, fen: "8/8/8/8/8/8/8/8 w - - 0 1" }
     nom: "d4, e4, d5 et e5"
     explication: "L’échiquier a 8 colonnes et 8 rangées : les colonnes d et e et les rangées 4 et 5 sont au milieu."
     pieges:
       - { texte: "a1, h1, a8 et h8", pourquoi: "Ce sont les quatre coins, les cases les plus loin du centre." }
       - { texte: "c3, f3, c6 et f6", pourquoi: "Ces cases entourent le centre, mais ne sont pas au milieu." }
   - texte: "Au premier coup, lequel de ces coups de pion occupe une case du centre ?"
+    figure: { type: echiquier, fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1" }
     nom: "e2-e4"
     explication: "Au premier coup, un pion peut avancer de deux cases : e2-e4 va directement sur e4, une case du centre."
     pieges:
@@ -33,6 +35,7 @@ items:
       - { texte: "4", pourquoi: "Au bord, une partie de ses sauts sort de l’échiquier ; en c3, tous ses sauts restent dedans." }
       - { texte: "6", pourquoi: "Compte les huit sauts en L autour de c3 : aucun ne sort de l’échiquier." }
   - texte: "Les Blancs ont joué e2-e4. Quel fou blanc peut maintenant sortir ?"
+    figure: { type: echiquier, fen: "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b - - 0 1" }
     nom: "Le fou f1"
     explication: "En partant de e2, le pion ouvre la diagonale f1-a6 : le fou f1 peut sortir. Le fou c1 attend que le pion d2 bouge."
     pieges:
@@ -81,12 +84,14 @@ en:
     bravo: "Yes! The answer is: {bonne}."
   items:
     - texte: "Which are the four centre squares of the board?"
+      figure: { type: echiquier, fen: "8/8/8/8/8/8/8/8 w - - 0 1" }
       nom: "d4, e4, d5 and e5"
       explication: "The board has 8 files and 8 ranks: files d and e and ranks 4 and 5 are in the middle."
       pieges:
         - { texte: "a1, h1, a8 and h8", pourquoi: "Those are the four corners, the squares furthest from the centre." }
         - { texte: "c3, f3, c6 and f6", pourquoi: "These squares surround the centre, but they are not in the middle." }
     - texte: "On the first move, which of these pawn moves takes a centre square?"
+      figure: { type: echiquier, fen: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1" }
       nom: "e2-e4"
       explication: "On its first move a pawn may advance two squares: e2-e4 goes straight to e4, a centre square."
       pieges:
@@ -99,6 +104,7 @@ en:
         - { texte: "4", pourquoi: "On the edge, some of its jumps leave the board; on c3, all its jumps stay on it." }
         - { texte: "6", pourquoi: "Count the eight L-shaped jumps around c3: none of them leaves the board." }
     - texte: "White has played e2-e4. Which white bishop can come out now?"
+      figure: { type: echiquier, fen: "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b - - 0 1" }
       nom: "The f1 bishop"
       explication: "By leaving e2, the pawn opens the f1–a6 diagonal: the f1 bishop can come out. The c1 bishop waits for the d2 pawn to move."
       pieges:

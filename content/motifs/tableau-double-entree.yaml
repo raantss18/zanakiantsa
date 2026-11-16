@@ -18,7 +18,8 @@ phrases:
   demonstration: "{explication}"
   bravo: "Oui ! {explication}"
 items:
-  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent en bus ?"
+  - texte: "Le tableau dit comment les élèves viennent à l'école. Combien de garçons viennent en bus ?"
+    figure: { type: tableau, cases: [["", "Filles", "Garçons", "Total"], ["À pied", "34", "28", "62"], ["En bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
     nom: "21"
     explication: "La ligne « En bus » croise la colonne « Garçons » sur 21."
     pieges:
@@ -30,37 +31,43 @@ items:
     pieges:
       - { texte: "Dans la case « Total » de la ligne « En bus »", pourquoi: "Cette case compte tous les élèves qui viennent en bus, filles et garçons ensemble." }
       - { texte: "Tout en bas de la colonne « Filles »", pourquoi: "En bas de la colonne, c'est le total des filles, quel que soit leur moyen de transport." }
-  - texte: "Il manque un nombre dans le tableau :\n              Filles Garçons   Total\nÀ pied           34       …      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent à pied ?"
+  - texte: "Il manque un nombre dans le tableau. Combien de garçons viennent à pied ?"
+    figure: { type: tableau, cases: [["", "Filles", "Garçons", "Total"], ["À pied", "34", "…", "62"], ["En bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
     nom: "28"
     explication: "À pied, il y a 62 élèves en tout, dont 34 filles : 62 − 34 = 28 garçons. On vérifie : 28 + 21 = 49, le total des garçons."
     pieges:
       - { texte: "96", pourquoi: "Tu as ajouté 34 et 62. Mais 62 est déjà le total de la ligne : on cherche ce qui manque à 34 pour faire 62." }
       - { texte: "62", pourquoi: "62, c'est le total de la ligne : les garçons ne peuvent pas être aussi nombreux que filles et garçons ensemble." }
-  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien d'élèves y a-t-il en tout ?"
+  - texte: "Le tableau dit comment les élèves viennent à l'école. Combien d'élèves y a-t-il en tout ?"
+    figure: { type: tableau, cases: [["", "Filles", "Garçons", "Total"], ["À pied", "34", "28", "62"], ["En bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
     nom: "98"
     explication: "La dernière case, en bas à droite, compte tout le monde : 62 + 36 = 98, ou 49 + 49 = 98."
     pieges:
       - { texte: "49", pourquoi: "49, c'est seulement le total d'une colonne : les filles, ou les garçons." }
       - { texte: "196", pourquoi: "Tu as ajouté les totaux des lignes et ceux des colonnes : chaque élève est compté deux fois." }
-  - texte: "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nÀ pied, combien y a-t-il de filles de plus que de garçons ?"
+  - texte: "Le tableau dit comment les élèves viennent à l'école. À pied, combien y a-t-il de filles de plus que de garçons ?"
+    figure: { type: tableau, cases: [["", "Filles", "Garçons", "Total"], ["À pied", "34", "28", "62"], ["En bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
     nom: "6"
     explication: "Sur la ligne « À pied » : 34 filles et 28 garçons. 34 − 28 = 6 filles de plus."
     pieges:
       - { texte: "62", pourquoi: "62, c'est le nombre d'élèves à pied. On cherche l'écart entre filles et garçons, pas la somme." }
       - { texte: "0", pourquoi: "Il y a autant de filles que de garçons en tout (49 et 49), mais pas sur la ligne « À pied » : 34 et 28." }
-  - texte: "Les deux classes de CE2 ont choisi leur sortie :\n                 Zoo   Musée   Total\nCE2 A            14      11      25\nCE2 B             …       9      27\nTotal            32      20      52\nCombien d'élèves du CE2 B ont choisi le zoo ?"
+  - texte: "Les deux classes de CE2 ont choisi leur sortie. Combien d'élèves du CE2 B ont choisi le zoo ?"
+    figure: { type: tableau, cases: [["", "Zoo", "Musée", "Total"], ["CE2 A", "14", "11", "25"], ["CE2 B", "…", "9", "27"], ["Total", "32", "20", "52"]] }
     nom: "18"
     explication: "Le CE2 B a 27 élèves, dont 9 pour le musée : 27 − 9 = 18 pour le zoo. On vérifie : 14 + 18 = 32."
     pieges:
       - { texte: "36", pourquoi: "Tu as ajouté 27 et 9. Le total 27 contient déjà les 9 du musée : on les enlève." }
       - { texte: "14", pourquoi: "14, c'est le zoo pour le CE2 A. Regarde la ligne du CE2 B." }
-  - texte: "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140       …     230\nTotal           260     175     435\nCombien de BD ont été prêtées en février ?"
+  - texte: "La bibliothèque compte les livres prêtés. Combien de BD ont été prêtées en février ?"
+    figure: { type: tableau, cases: [["", "Contes", "BD", "Total"], ["Janvier", "120", "85", "205"], ["Février", "140", "…", "230"], ["Total", "260", "175", "435"]] }
     nom: "90"
     explication: "En février, 230 livres dont 140 contes : 230 − 140 = 90 BD. On vérifie : 85 + 90 = 175."
     pieges:
       - { texte: "370", pourquoi: "Tu as ajouté 140 et 230. Le total de février contient déjà les contes : on les enlève." }
       - { texte: "85", pourquoi: "85, ce sont les BD de janvier. Regarde la ligne « Février »." }
-  - texte: "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140      90     230\nTotal           260     175     435\nQuel mois a-t-on prêté le plus de livres ?"
+  - texte: "La bibliothèque compte les livres prêtés. Quel mois a-t-on prêté le plus de livres ?"
+    figure: { type: tableau, cases: [["", "Contes", "BD", "Total"], ["Janvier", "120", "85", "205"], ["Février", "140", "90", "230"], ["Total", "260", "175", "435"]] }
     nom: "En février"
     explication: "La colonne « Total » le dit : 205 livres en janvier, 230 en février. 230 est plus grand."
     pieges:
@@ -78,7 +85,8 @@ en:
     demonstration: "{explication}"
     bravo: "Yes! {explication}"
   items:
-    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys come by bus?"
+    - texte: "The table shows how the pupils get to school. How many boys come by bus?"
+      figure: { type: tableau, cases: [["", "Girls", "Boys", "Total"], ["On foot", "34", "28", "62"], ["By bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
       nom: "21"
       explication: "The “By bus” row crosses the “Boys” column at 21."
       pieges:
@@ -90,37 +98,43 @@ en:
       pieges:
         - { texte: "In the “Total” box of the “By bus” row", pourquoi: "That box counts everyone who comes by bus, girls and boys together." }
         - { texte: "At the very bottom of the “Girls” column", pourquoi: "At the bottom of the column is the total of girls, however they come." }
-    - texte: "One number is missing from the table:\n               Girls    Boys   Total\nOn foot          34       …      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys walk to school?"
+    - texte: "One number is missing from the table. How many boys walk to school?"
+      figure: { type: tableau, cases: [["", "Girls", "Boys", "Total"], ["On foot", "34", "…", "62"], ["By bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
       nom: "28"
       explication: "On foot, there are 62 pupils in all, including 34 girls: 62 − 34 = 28 boys. Check: 28 + 21 = 49, the total of boys."
       pieges:
         - { texte: "96", pourquoi: "You added 34 and 62. But 62 is already the row total: we look for what 34 needs to make 62." }
         - { texte: "62", pourquoi: "62 is the row total: the boys can't be as many as girls and boys together." }
-    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many pupils are there altogether?"
+    - texte: "The table shows how the pupils get to school. How many pupils are there altogether?"
+      figure: { type: tableau, cases: [["", "Girls", "Boys", "Total"], ["On foot", "34", "28", "62"], ["By bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
       nom: "98"
       explication: "The last box, bottom right, counts everyone: 62 + 36 = 98, or 49 + 49 = 98."
       pieges:
         - { texte: "49", pourquoi: "49 is only the total of one column: the girls, or the boys." }
         - { texte: "196", pourquoi: "You added the row totals and the column totals: each pupil is counted twice." }
-    - texte: "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nOn foot, how many more girls are there than boys?"
+    - texte: "The table shows how the pupils get to school. On foot, how many more girls are there than boys?"
+      figure: { type: tableau, cases: [["", "Girls", "Boys", "Total"], ["On foot", "34", "28", "62"], ["By bus", "15", "21", "36"], ["Total", "49", "49", "98"]] }
       nom: "6"
       explication: "On the “On foot” row: 34 girls and 28 boys. 34 − 28 = 6 more girls."
       pieges:
         - { texte: "62", pourquoi: "62 is the number of pupils on foot. We want the difference between girls and boys, not the sum." }
         - { texte: "0", pourquoi: "There are as many girls as boys in all (49 and 49), but not on the “On foot” row: 34 and 28." }
-    - texte: "The two classes chose their school trip:\n                 Zoo  Museum   Total\nClass A          14      11      25\nClass B           …       9      27\nTotal            32      20      52\nHow many pupils in class B chose the zoo?"
+    - texte: "The two classes chose their school trip. How many pupils in class B chose the zoo?"
+      figure: { type: tableau, cases: [["", "Zoo", "Museum", "Total"], ["Class A", "14", "11", "25"], ["Class B", "…", "9", "27"], ["Total", "32", "20", "52"]] }
       nom: "18"
       explication: "Class B has 27 pupils, 9 of them for the museum: 27 − 9 = 18 for the zoo. Check: 14 + 18 = 32."
       pieges:
         - { texte: "36", pourquoi: "You added 27 and 9. The total 27 already includes the 9 for the museum: take them away." }
         - { texte: "14", pourquoi: "14 is the zoo for class A. Look at the class B row." }
-    - texte: "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140       …     230\nTotal           260     175     435\nHow many comics were lent in February?"
+    - texte: "The library counts the books lent out. How many comics were lent in February?"
+      figure: { type: tableau, cases: [["", "Tales", "Comics", "Total"], ["January", "120", "85", "205"], ["February", "140", "…", "230"], ["Total", "260", "175", "435"]] }
       nom: "90"
       explication: "In February, 230 books, 140 of them tales: 230 − 140 = 90 comics. Check: 85 + 90 = 175."
       pieges:
         - { texte: "370", pourquoi: "You added 140 and 230. The February total already includes the tales: take them away." }
         - { texte: "85", pourquoi: "85 is the comics for January. Look at the “February” row." }
-    - texte: "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140      90     230\nTotal           260     175     435\nIn which month were the most books lent?"
+    - texte: "The library counts the books lent out. In which month were the most books lent?"
+      figure: { type: tableau, cases: [["", "Tales", "Comics", "Total"], ["January", "120", "85", "205"], ["February", "140", "90", "230"], ["Total", "260", "175", "435"]] }
       nom: "In February"
       explication: "The “Total” column says so: 205 books in January, 230 in February. 230 is bigger."
       pieges:

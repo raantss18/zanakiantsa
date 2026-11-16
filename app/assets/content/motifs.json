@@ -395,7 +395,36 @@
       },
       "items": [
         {
-          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent en bus ?",
+          "texte": "Le tableau dit comment les élèves viennent à l'école. Combien de garçons viennent en bus ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Filles",
+                "Garçons",
+                "Total"
+              ],
+              [
+                "À pied",
+                "34",
+                "28",
+                "62"
+              ],
+              [
+                "En bus",
+                "15",
+                "21",
+                "36"
+              ],
+              [
+                "Total",
+                "49",
+                "49",
+                "98"
+              ]
+            ]
+          },
           "nom": "21",
           "explication": "La ligne « En bus » croise la colonne « Garçons » sur 21.",
           "pieges": [
@@ -425,7 +454,36 @@
           ]
         },
         {
-          "texte": "Il manque un nombre dans le tableau :\n              Filles Garçons   Total\nÀ pied           34       …      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien de garçons viennent à pied ?",
+          "texte": "Il manque un nombre dans le tableau. Combien de garçons viennent à pied ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Filles",
+                "Garçons",
+                "Total"
+              ],
+              [
+                "À pied",
+                "34",
+                "…",
+                "62"
+              ],
+              [
+                "En bus",
+                "15",
+                "21",
+                "36"
+              ],
+              [
+                "Total",
+                "49",
+                "49",
+                "98"
+              ]
+            ]
+          },
           "nom": "28",
           "explication": "À pied, il y a 62 élèves en tout, dont 34 filles : 62 − 34 = 28 garçons. On vérifie : 28 + 21 = 49, le total des garçons.",
           "pieges": [
@@ -440,7 +498,36 @@
           ]
         },
         {
-          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nCombien d'élèves y a-t-il en tout ?",
+          "texte": "Le tableau dit comment les élèves viennent à l'école. Combien d'élèves y a-t-il en tout ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Filles",
+                "Garçons",
+                "Total"
+              ],
+              [
+                "À pied",
+                "34",
+                "28",
+                "62"
+              ],
+              [
+                "En bus",
+                "15",
+                "21",
+                "36"
+              ],
+              [
+                "Total",
+                "49",
+                "49",
+                "98"
+              ]
+            ]
+          },
           "nom": "98",
           "explication": "La dernière case, en bas à droite, compte tout le monde : 62 + 36 = 98, ou 49 + 49 = 98.",
           "pieges": [
@@ -455,7 +542,36 @@
           ]
         },
         {
-          "texte": "Le tableau dit comment les élèves viennent à l'école :\n              Filles Garçons   Total\nÀ pied           34      28      62\nEn bus           15      21      36\nTotal            49      49      98\nÀ pied, combien y a-t-il de filles de plus que de garçons ?",
+          "texte": "Le tableau dit comment les élèves viennent à l'école. À pied, combien y a-t-il de filles de plus que de garçons ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Filles",
+                "Garçons",
+                "Total"
+              ],
+              [
+                "À pied",
+                "34",
+                "28",
+                "62"
+              ],
+              [
+                "En bus",
+                "15",
+                "21",
+                "36"
+              ],
+              [
+                "Total",
+                "49",
+                "49",
+                "98"
+              ]
+            ]
+          },
           "nom": "6",
           "explication": "Sur la ligne « À pied » : 34 filles et 28 garçons. 34 − 28 = 6 filles de plus.",
           "pieges": [
@@ -470,7 +586,36 @@
           ]
         },
         {
-          "texte": "Les deux classes de CE2 ont choisi leur sortie :\n                 Zoo   Musée   Total\nCE2 A            14      11      25\nCE2 B             …       9      27\nTotal            32      20      52\nCombien d'élèves du CE2 B ont choisi le zoo ?",
+          "texte": "Les deux classes de CE2 ont choisi leur sortie. Combien d'élèves du CE2 B ont choisi le zoo ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Zoo",
+                "Musée",
+                "Total"
+              ],
+              [
+                "CE2 A",
+                "14",
+                "11",
+                "25"
+              ],
+              [
+                "CE2 B",
+                "…",
+                "9",
+                "27"
+              ],
+              [
+                "Total",
+                "32",
+                "20",
+                "52"
+              ]
+            ]
+          },
           "nom": "18",
           "explication": "Le CE2 B a 27 élèves, dont 9 pour le musée : 27 − 9 = 18 pour le zoo. On vérifie : 14 + 18 = 32.",
           "pieges": [
@@ -485,7 +630,36 @@
           ]
         },
         {
-          "texte": "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140       …     230\nTotal           260     175     435\nCombien de BD ont été prêtées en février ?",
+          "texte": "La bibliothèque compte les livres prêtés. Combien de BD ont été prêtées en février ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Contes",
+                "BD",
+                "Total"
+              ],
+              [
+                "Janvier",
+                "120",
+                "85",
+                "205"
+              ],
+              [
+                "Février",
+                "140",
+                "…",
+                "230"
+              ],
+              [
+                "Total",
+                "260",
+                "175",
+                "435"
+              ]
+            ]
+          },
           "nom": "90",
           "explication": "En février, 230 livres dont 140 contes : 230 − 140 = 90 BD. On vérifie : 85 + 90 = 175.",
           "pieges": [
@@ -500,7 +674,36 @@
           ]
         },
         {
-          "texte": "La bibliothèque compte les livres prêtés :\n              Contes      BD   Total\nJanvier         120      85     205\nFévrier         140      90     230\nTotal           260     175     435\nQuel mois a-t-on prêté le plus de livres ?",
+          "texte": "La bibliothèque compte les livres prêtés. Quel mois a-t-on prêté le plus de livres ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Contes",
+                "BD",
+                "Total"
+              ],
+              [
+                "Janvier",
+                "120",
+                "85",
+                "205"
+              ],
+              [
+                "Février",
+                "140",
+                "90",
+                "230"
+              ],
+              [
+                "Total",
+                "260",
+                "175",
+                "435"
+              ]
+            ]
+          },
           "nom": "En février",
           "explication": "La colonne « Total » le dit : 205 livres en janvier, 230 en février. 230 est plus grand.",
           "pieges": [
@@ -528,7 +731,36 @@
         },
         "items": [
           {
-            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys come by bus?",
+            "texte": "The table shows how the pupils get to school. How many boys come by bus?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Girls",
+                  "Boys",
+                  "Total"
+                ],
+                [
+                  "On foot",
+                  "34",
+                  "28",
+                  "62"
+                ],
+                [
+                  "By bus",
+                  "15",
+                  "21",
+                  "36"
+                ],
+                [
+                  "Total",
+                  "49",
+                  "49",
+                  "98"
+                ]
+              ]
+            },
             "nom": "21",
             "explication": "The “By bus” row crosses the “Boys” column at 21.",
             "pieges": [
@@ -558,7 +790,36 @@
             ]
           },
           {
-            "texte": "One number is missing from the table:\n               Girls    Boys   Total\nOn foot          34       …      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many boys walk to school?",
+            "texte": "One number is missing from the table. How many boys walk to school?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Girls",
+                  "Boys",
+                  "Total"
+                ],
+                [
+                  "On foot",
+                  "34",
+                  "…",
+                  "62"
+                ],
+                [
+                  "By bus",
+                  "15",
+                  "21",
+                  "36"
+                ],
+                [
+                  "Total",
+                  "49",
+                  "49",
+                  "98"
+                ]
+              ]
+            },
             "nom": "28",
             "explication": "On foot, there are 62 pupils in all, including 34 girls: 62 − 34 = 28 boys. Check: 28 + 21 = 49, the total of boys.",
             "pieges": [
@@ -573,7 +834,36 @@
             ]
           },
           {
-            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nHow many pupils are there altogether?",
+            "texte": "The table shows how the pupils get to school. How many pupils are there altogether?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Girls",
+                  "Boys",
+                  "Total"
+                ],
+                [
+                  "On foot",
+                  "34",
+                  "28",
+                  "62"
+                ],
+                [
+                  "By bus",
+                  "15",
+                  "21",
+                  "36"
+                ],
+                [
+                  "Total",
+                  "49",
+                  "49",
+                  "98"
+                ]
+              ]
+            },
             "nom": "98",
             "explication": "The last box, bottom right, counts everyone: 62 + 36 = 98, or 49 + 49 = 98.",
             "pieges": [
@@ -588,7 +878,36 @@
             ]
           },
           {
-            "texte": "The table shows how the pupils get to school:\n               Girls    Boys   Total\nOn foot          34      28      62\nBy bus           15      21      36\nTotal            49      49      98\nOn foot, how many more girls are there than boys?",
+            "texte": "The table shows how the pupils get to school. On foot, how many more girls are there than boys?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Girls",
+                  "Boys",
+                  "Total"
+                ],
+                [
+                  "On foot",
+                  "34",
+                  "28",
+                  "62"
+                ],
+                [
+                  "By bus",
+                  "15",
+                  "21",
+                  "36"
+                ],
+                [
+                  "Total",
+                  "49",
+                  "49",
+                  "98"
+                ]
+              ]
+            },
             "nom": "6",
             "explication": "On the “On foot” row: 34 girls and 28 boys. 34 − 28 = 6 more girls.",
             "pieges": [
@@ -603,7 +922,36 @@
             ]
           },
           {
-            "texte": "The two classes chose their school trip:\n                 Zoo  Museum   Total\nClass A          14      11      25\nClass B           …       9      27\nTotal            32      20      52\nHow many pupils in class B chose the zoo?",
+            "texte": "The two classes chose their school trip. How many pupils in class B chose the zoo?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Zoo",
+                  "Museum",
+                  "Total"
+                ],
+                [
+                  "Class A",
+                  "14",
+                  "11",
+                  "25"
+                ],
+                [
+                  "Class B",
+                  "…",
+                  "9",
+                  "27"
+                ],
+                [
+                  "Total",
+                  "32",
+                  "20",
+                  "52"
+                ]
+              ]
+            },
             "nom": "18",
             "explication": "Class B has 27 pupils, 9 of them for the museum: 27 − 9 = 18 for the zoo. Check: 14 + 18 = 32.",
             "pieges": [
@@ -618,7 +966,36 @@
             ]
           },
           {
-            "texte": "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140       …     230\nTotal           260     175     435\nHow many comics were lent in February?",
+            "texte": "The library counts the books lent out. How many comics were lent in February?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Tales",
+                  "Comics",
+                  "Total"
+                ],
+                [
+                  "January",
+                  "120",
+                  "85",
+                  "205"
+                ],
+                [
+                  "February",
+                  "140",
+                  "…",
+                  "230"
+                ],
+                [
+                  "Total",
+                  "260",
+                  "175",
+                  "435"
+                ]
+              ]
+            },
             "nom": "90",
             "explication": "In February, 230 books, 140 of them tales: 230 − 140 = 90 comics. Check: 85 + 90 = 175.",
             "pieges": [
@@ -633,7 +1010,36 @@
             ]
           },
           {
-            "texte": "The library counts the books lent out:\n               Tales  Comics   Total\nJanuary         120      85     205\nFebruary        140      90     230\nTotal           260     175     435\nIn which month were the most books lent?",
+            "texte": "The library counts the books lent out. In which month were the most books lent?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Tales",
+                  "Comics",
+                  "Total"
+                ],
+                [
+                  "January",
+                  "120",
+                  "85",
+                  "205"
+                ],
+                [
+                  "February",
+                  "140",
+                  "90",
+                  "230"
+                ],
+                [
+                  "Total",
+                  "260",
+                  "175",
+                  "435"
+                ]
+              ]
+            },
             "nom": "In February",
             "explication": "The “Total” column says so: 205 books in January, 230 in February. 230 is bigger.",
             "pieges": [
@@ -992,6 +1398,16 @@
         },
         {
           "texte": "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 5 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "escalier",
+            "etapes": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
           "nom": "15",
           "explication": "On ajoute 2, puis 3, puis 4 : chaque étape ajoute une colonne plus haute d'un cube que la précédente. À l'étape 5, on ajoute 5 : 10 + 5 = 15.",
           "pieges": [
@@ -1037,6 +1453,15 @@
         },
         {
           "texte": "Une figure en forme de L : étape 1, 3 carreaux ; étape 2, 5 carreaux ; étape 3, 7 carreaux. À chaque étape, on ajoute un carreau en haut et un à droite. Combien de carreaux à l'étape 4 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "l",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "9",
           "explication": "On ajoute 2 carreaux à chaque étape, un en haut et un à droite : 7 + 2 = 9.",
           "pieges": [
@@ -1133,6 +1558,16 @@
           },
           {
             "texte": "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 5?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "escalier",
+              "etapes": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
             "nom": "15",
             "explication": "You add 2, then 3, then 4: each stage adds a column one cube taller than the last one. At stage 5 you add 5: 10 + 5 = 15.",
             "pieges": [
@@ -1178,6 +1613,15 @@
           },
           {
             "texte": "An L-shaped figure: stage 1, 3 tiles; stage 2, 5 tiles; stage 3, 7 tiles. At each stage, you add one tile at the top and one on the right. How many tiles at stage 4?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "l",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "9",
             "explication": "You add 2 tiles at each stage, one at the top and one on the right: 7 + 2 = 9.",
             "pieges": [
@@ -1317,6 +1761,24 @@
         },
         {
           "texte": "Étape 1 : un carré d'un carreau. Étape 2 : un carré de 2 carreaux sur 2. Étape 3 : un carré de 3 sur 3. Combien de carreaux à l'étape 7 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "rectangle",
+            "etapes": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ]
+          },
           "nom": "49",
           "explication": "À l'étape 7, le carré a 7 rangées de 7 carreaux : 7 × 7 = 49.",
           "pieges": [
@@ -1347,6 +1809,16 @@
         },
         {
           "texte": "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 8 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "escalier",
+            "etapes": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
           "nom": "36",
           "explication": "L'étape 8 a des colonnes de 1, 2, 3… jusqu'à 8 cubes : 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36.",
           "pieges": [
@@ -1458,6 +1930,24 @@
           },
           {
             "texte": "Stage 1: a square of one tile. Stage 2: a square of 2 tiles by 2. Stage 3: a square of 3 by 3. How many tiles at stage 7?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "rectangle",
+              "etapes": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3
+                ]
+              ]
+            },
             "nom": "49",
             "explication": "At stage 7, the square has 7 rows of 7 tiles: 7 × 7 = 49.",
             "pieges": [
@@ -1488,6 +1978,16 @@
           },
           {
             "texte": "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 8?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "escalier",
+              "etapes": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
             "nom": "36",
             "explication": "Stage 8 has columns of 1, 2, 3… up to 8 cubes: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36.",
             "pieges": [
@@ -1543,7 +2043,30 @@
       },
       "items": [
         {
-          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nMardi, de combien de degrés la température a-t-elle monté entre le matin et midi ?",
+          "texte": "La classe a relevé la température. Mardi, de combien de degrés la température a-t-elle monté entre le matin et midi ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Lundi",
+                "Mardi",
+                "Mercredi"
+              ],
+              [
+                "Matin",
+                "14 °C",
+                "16 °C",
+                "13 °C"
+              ],
+              [
+                "Midi",
+                "22 °C",
+                "25 °C",
+                "20 °C"
+              ]
+            ]
+          },
           "nom": "9 degrés",
           "explication": "Mardi : 16 °C le matin, 25 °C à midi. 25 − 16 = 9 degrés de plus.",
           "pieges": [
@@ -1558,7 +2081,30 @@
           ]
         },
         {
-          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuel jour l'écart entre le matin et midi est-il le plus petit ?",
+          "texte": "La classe a relevé la température. Quel jour l'écart entre le matin et midi est-il le plus petit ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Lundi",
+                "Mardi",
+                "Mercredi"
+              ],
+              [
+                "Matin",
+                "14 °C",
+                "16 °C",
+                "13 °C"
+              ],
+              [
+                "Midi",
+                "22 °C",
+                "25 °C",
+                "20 °C"
+              ]
+            ]
+          },
           "nom": "Mercredi",
           "explication": "Lundi : 22 − 14 = 8. Mardi : 25 − 16 = 9. Mercredi : 20 − 13 = 7. Le plus petit écart est mercredi.",
           "pieges": [
@@ -1573,7 +2119,32 @@
           ]
         },
         {
-          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté la vente des jus ?",
+          "texte": "Le tableau dit ce que l'école a vendu à la kermesse. Combien a rapporté la vente des jus ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Prix",
+                "Vendus"
+              ],
+              [
+                "Jus",
+                "1,50 €",
+                "40"
+              ],
+              [
+                "Gâteau",
+                "2,00 €",
+                "35"
+              ],
+              [
+                "Crêpe",
+                "1,20 €",
+                "50"
+              ]
+            ]
+          },
           "nom": "60 €",
           "explication": "40 jus à 1,50 € : 40 × 1,50 = 60 €.",
           "pieges": [
@@ -1588,7 +2159,32 @@
           ]
         },
         {
-          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nCombien a rapporté toute la vente ?",
+          "texte": "Le tableau dit ce que l'école a vendu à la kermesse. Combien a rapporté toute la vente ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Prix",
+                "Vendus"
+              ],
+              [
+                "Jus",
+                "1,50 €",
+                "40"
+              ],
+              [
+                "Gâteau",
+                "2,00 €",
+                "35"
+              ],
+              [
+                "Crêpe",
+                "1,20 €",
+                "50"
+              ]
+            ]
+          },
           "nom": "190 €",
           "explication": "Étape 1 : jus 40 × 1,50 = 60 €, gâteaux 35 × 2 = 70 €, crêpes 50 × 1,20 = 60 €. Étape 2 : 60 + 70 + 60 = 190 €.",
           "pieges": [
@@ -1603,7 +2199,36 @@
           ]
         },
         {
-          "texte": "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48      …     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de CM2 mangent à la cantine ?",
+          "texte": "Le tableau dit où mangent les élèves de CM le midi. Combien d'élèves de CM2 mangent à la cantine ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "CM1",
+                "CM2",
+                "Total"
+              ],
+              [
+                "Cantine",
+                "48",
+                "…",
+                "93"
+              ],
+              [
+                "Maison",
+                "12",
+                "15",
+                "27"
+              ],
+              [
+                "Total",
+                "60",
+                "60",
+                "120"
+              ]
+            ]
+          },
           "nom": "45",
           "explication": "93 élèves mangent à la cantine, dont 48 de CM1 : 93 − 48 = 45. On vérifie : 45 + 15 = 60, tous les CM2.",
           "pieges": [
@@ -1618,7 +2243,36 @@
           ]
         },
         {
-          "texte": "Où mangent les élèves de CM le midi ?\n             CM1    CM2  Total\nCantine       48     45     93\nMaison        12     15     27\nTotal         60     60    120\nCombien d'élèves de plus mangent à la cantine qu'à la maison ?",
+          "texte": "Le tableau dit où mangent les élèves de CM le midi. Combien d'élèves de plus mangent à la cantine qu'à la maison ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "CM1",
+                "CM2",
+                "Total"
+              ],
+              [
+                "Cantine",
+                "48",
+                "45",
+                "93"
+              ],
+              [
+                "Maison",
+                "12",
+                "15",
+                "27"
+              ],
+              [
+                "Total",
+                "60",
+                "60",
+                "120"
+              ]
+            ]
+          },
           "nom": "66",
           "explication": "Colonne « Total » : 93 à la cantine, 27 à la maison. 93 − 27 = 66.",
           "pieges": [
@@ -1633,7 +2287,32 @@
           ]
         },
         {
-          "texte": "À la kermesse, l'école a vendu :\n            Prix   Vendus\nJus       1,50 €       40\nGâteau    2,00 €       35\nCrêpe     1,20 €       50\nQuel produit a rapporté le plus d'argent ?",
+          "texte": "Le tableau dit ce que l'école a vendu à la kermesse. Quel produit a rapporté le plus d'argent ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Prix",
+                "Vendus"
+              ],
+              [
+                "Jus",
+                "1,50 €",
+                "40"
+              ],
+              [
+                "Gâteau",
+                "2,00 €",
+                "35"
+              ],
+              [
+                "Crêpe",
+                "1,20 €",
+                "50"
+              ]
+            ]
+          },
           "nom": "Les gâteaux",
           "explication": "Gâteaux : 35 × 2 = 70 €. Jus : 40 × 1,50 = 60 €. Crêpes : 50 × 1,20 = 60 €. Les gâteaux rapportent le plus.",
           "pieges": [
@@ -1648,7 +2327,30 @@
           ]
         },
         {
-          "texte": "La classe a relevé la température :\n             Lundi     Mardi  Mercredi\nMatin       14 °C     16 °C     13 °C\nMidi        22 °C     25 °C     20 °C\nQuelle est la température la plus haute, et quand ?",
+          "texte": "La classe a relevé la température. Quelle est la température la plus haute, et quand ?",
+          "figure": {
+            "type": "tableau",
+            "cases": [
+              [
+                "",
+                "Lundi",
+                "Mardi",
+                "Mercredi"
+              ],
+              [
+                "Matin",
+                "14 °C",
+                "16 °C",
+                "13 °C"
+              ],
+              [
+                "Midi",
+                "22 °C",
+                "25 °C",
+                "20 °C"
+              ]
+            ]
+          },
           "nom": "25 °C, mardi à midi",
           "explication": "Les températures de midi sont plus hautes que celles du matin, et la plus grande est 25 °C, mardi.",
           "pieges": [
@@ -1676,7 +2378,30 @@
         },
         "items": [
           {
-            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn Tuesday, by how many degrees did the temperature rise between morning and noon?",
+            "texte": "The class recorded the temperature. On Tuesday, by how many degrees did the temperature rise between morning and noon?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday"
+                ],
+                [
+                  "Morning",
+                  "14 °C",
+                  "16 °C",
+                  "13 °C"
+                ],
+                [
+                  "Noon",
+                  "22 °C",
+                  "25 °C",
+                  "20 °C"
+                ]
+              ]
+            },
             "nom": "9 degrees",
             "explication": "Tuesday: 16 °C in the morning, 25 °C at noon. 25 − 16 = 9 degrees more.",
             "pieges": [
@@ -1691,7 +2416,30 @@
             ]
           },
           {
-            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nOn which day is the gap between morning and noon the smallest?",
+            "texte": "The class recorded the temperature. On which day is the gap between morning and noon the smallest?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday"
+                ],
+                [
+                  "Morning",
+                  "14 °C",
+                  "16 °C",
+                  "13 °C"
+                ],
+                [
+                  "Noon",
+                  "22 °C",
+                  "25 °C",
+                  "20 °C"
+                ]
+              ]
+            },
             "nom": "Wednesday",
             "explication": "Monday: 22 − 14 = 8. Tuesday: 25 − 16 = 9. Wednesday: 20 − 13 = 7. The smallest gap is on Wednesday.",
             "pieges": [
@@ -1706,7 +2454,32 @@
             ]
           },
           {
-            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did the juice sales bring in?",
+            "texte": "The table shows what the school sold at the school fair. How much did the juice sales bring in?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Price",
+                  "Sold"
+                ],
+                [
+                  "Juice",
+                  "€1.50",
+                  "40"
+                ],
+                [
+                  "Cake",
+                  "€2.00",
+                  "35"
+                ],
+                [
+                  "Pancake",
+                  "€1.20",
+                  "50"
+                ]
+              ]
+            },
             "nom": "€60",
             "explication": "40 juices at €1.50: 40 × 1.50 = €60.",
             "pieges": [
@@ -1721,7 +2494,32 @@
             ]
           },
           {
-            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nHow much did all the sales bring in?",
+            "texte": "The table shows what the school sold at the school fair. How much did all the sales bring in?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Price",
+                  "Sold"
+                ],
+                [
+                  "Juice",
+                  "€1.50",
+                  "40"
+                ],
+                [
+                  "Cake",
+                  "€2.00",
+                  "35"
+                ],
+                [
+                  "Pancake",
+                  "€1.20",
+                  "50"
+                ]
+              ]
+            },
             "nom": "€190",
             "explication": "Step 1: juice 40 × 1.50 = €60, cakes 35 × 2 = €70, pancakes 50 × 1.20 = €60. Step 2: 60 + 70 + 60 = €190.",
             "pieges": [
@@ -1736,7 +2534,36 @@
             ]
           },
           {
-            "texte": "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48       …      93\nHome           12      15      27\nTotal          60      60     120\nHow many Year 6 pupils eat at the canteen?",
+            "texte": "The table shows where the Year 5 and Year 6 pupils eat at lunchtime. How many Year 6 pupils eat at the canteen?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Year 5",
+                  "Year 6",
+                  "Total"
+                ],
+                [
+                  "Canteen",
+                  "48",
+                  "…",
+                  "93"
+                ],
+                [
+                  "Home",
+                  "12",
+                  "15",
+                  "27"
+                ],
+                [
+                  "Total",
+                  "60",
+                  "60",
+                  "120"
+                ]
+              ]
+            },
             "nom": "45",
             "explication": "93 pupils eat at the canteen, 48 of them in Year 5: 93 − 48 = 45. Check: 45 + 15 = 60, all of Year 6.",
             "pieges": [
@@ -1751,7 +2578,36 @@
             ]
           },
           {
-            "texte": "Where do the Year 5 and Year 6 pupils eat at lunchtime?\n             Year 5  Year 6   Total\nCanteen        48      45      93\nHome           12      15      27\nTotal          60      60     120\nHow many more pupils eat at the canteen than at home?",
+            "texte": "The table shows where the Year 5 and Year 6 pupils eat at lunchtime. How many more pupils eat at the canteen than at home?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Year 5",
+                  "Year 6",
+                  "Total"
+                ],
+                [
+                  "Canteen",
+                  "48",
+                  "45",
+                  "93"
+                ],
+                [
+                  "Home",
+                  "12",
+                  "15",
+                  "27"
+                ],
+                [
+                  "Total",
+                  "60",
+                  "60",
+                  "120"
+                ]
+              ]
+            },
             "nom": "66",
             "explication": "“Total” column: 93 at the canteen, 27 at home. 93 − 27 = 66.",
             "pieges": [
@@ -1766,7 +2622,32 @@
             ]
           },
           {
-            "texte": "At the school fair, the school sold:\n           Price     Sold\nJuice       €1.50       40\nCake        €2.00       35\nPancake     €1.20       50\nWhich product brought in the most money?",
+            "texte": "The table shows what the school sold at the school fair. Which product brought in the most money?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Price",
+                  "Sold"
+                ],
+                [
+                  "Juice",
+                  "€1.50",
+                  "40"
+                ],
+                [
+                  "Cake",
+                  "€2.00",
+                  "35"
+                ],
+                [
+                  "Pancake",
+                  "€1.20",
+                  "50"
+                ]
+              ]
+            },
             "nom": "The cakes",
             "explication": "Cakes: 35 × 2 = €70. Juice: 40 × 1.50 = €60. Pancakes: 50 × 1.20 = €60. The cakes bring in the most.",
             "pieges": [
@@ -1781,7 +2662,30 @@
             ]
           },
           {
-            "texte": "The class recorded the temperature:\n              Monday    Tuesday  Wednesday\nMorning       14 °C      16 °C      13 °C\nNoon          22 °C      25 °C      20 °C\nWhat is the highest temperature, and when?",
+            "texte": "The class recorded the temperature. What is the highest temperature, and when?",
+            "figure": {
+              "type": "tableau",
+              "cases": [
+                [
+                  "",
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday"
+                ],
+                [
+                  "Morning",
+                  "14 °C",
+                  "16 °C",
+                  "13 °C"
+                ],
+                [
+                  "Noon",
+                  "22 °C",
+                  "25 °C",
+                  "20 °C"
+                ]
+              ]
+            },
             "nom": "25 °C, Tuesday at noon",
             "explication": "The noon temperatures are higher than the morning ones, and the biggest is 25 °C, on Tuesday.",
             "pieges": [
@@ -1823,6 +2727,15 @@
       "items": [
         {
           "texte": "Une croix grandit : 1 carreau au centre et 4 bras. À l'étape 1, chaque bras a 1 carreau ; à l'étape 2, 2 carreaux ; à l'étape 3, 3 carreaux. Quelle règle donne le nombre de carreaux ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "croix",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "1 au centre, plus 4 fois le numéro de l'étape",
           "explication": "Le centre ne bouge pas ; les 4 bras ont chacun autant de carreaux que le numéro de l'étape. Étape 2 : 1 + 4 × 2 = 9.",
           "pieges": [
@@ -1838,6 +2751,15 @@
         },
         {
           "texte": "La même croix : 1 carreau au centre et 4 bras aussi longs que le numéro de l'étape. Combien de carreaux à l'étape 25 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "croix",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "101",
           "explication": "1 + 4 × 25 = 1 + 100 = 101 carreaux.",
           "pieges": [
@@ -1853,6 +2775,15 @@
         },
         {
           "texte": "Une croix de ce type (1 au centre, 4 bras aussi longs que le numéro de l'étape) a 61 carreaux. À quelle étape est-elle ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "croix",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "Étape 15",
           "explication": "On enlève le centre : 61 − 1 = 60 carreaux pour les 4 bras, donc 60 : 4 = 15 carreaux par bras. C'est l'étape 15.",
           "pieges": [
@@ -1868,6 +2799,15 @@
         },
         {
           "texte": "Un cadre carré creux. Étape 1 : le tour d'un carré de 3 carreaux de côté, 8 carreaux. Étape 2 : le tour d'un carré de 4 de côté, 12 carreaux. Étape 3 : le tour d'un carré de 5 de côté, 16 carreaux. Quelle structure donne le nombre de carreaux ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "cadre",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "4 bandes d'un carreau de plus que le numéro de l'étape",
           "explication": "On découpe le cadre en 4 bandes qui tournent autour du carré, sans compter les coins deux fois. Étape 1 : 4 × 2 = 8. Étape 2 : 4 × 3 = 12. Étape 3 : 4 × 4 = 16.",
           "pieges": [
@@ -1883,6 +2823,15 @@
         },
         {
           "texte": "Le même cadre carré creux (8, 12, 16 carreaux…), fait de 4 bandes d'un carreau de plus que le numéro de l'étape. Combien de carreaux à l'étape 10 ?",
+          "figure": {
+            "type": "carreaux",
+            "forme": "cadre",
+            "etapes": [
+              1,
+              2,
+              3
+            ]
+          },
           "nom": "44",
           "explication": "À l'étape 10, chaque bande a 11 carreaux : 4 × 11 = 44.",
           "pieges": [
@@ -1956,6 +2905,15 @@
         "items": [
           {
             "texte": "A cross grows: 1 tile in the centre and 4 arms. At stage 1, each arm has 1 tile; at stage 2, 2 tiles; at stage 3, 3 tiles. Which rule gives the number of tiles?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "croix",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "1 in the centre, plus 4 times the stage number",
             "explication": "The centre doesn't move; each of the 4 arms has as many tiles as the stage number. Stage 2: 1 + 4 × 2 = 9.",
             "pieges": [
@@ -1971,6 +2929,15 @@
           },
           {
             "texte": "The same cross: 1 tile in the centre and 4 arms as long as the stage number. How many tiles at stage 25?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "croix",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "101",
             "explication": "1 + 4 × 25 = 1 + 100 = 101 tiles.",
             "pieges": [
@@ -1986,6 +2953,15 @@
           },
           {
             "texte": "A cross of this kind (1 in the centre, 4 arms as long as the stage number) has 61 tiles. Which stage is it?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "croix",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "Stage 15",
             "explication": "Take away the centre: 61 − 1 = 60 tiles for the 4 arms, so 60 ÷ 4 = 15 tiles per arm. It's stage 15.",
             "pieges": [
@@ -2001,6 +2977,15 @@
           },
           {
             "texte": "A hollow square frame. Stage 1: the edge of a square 3 tiles wide, 8 tiles. Stage 2: the edge of a square 4 wide, 12 tiles. Stage 3: the edge of a square 5 wide, 16 tiles. Which structure gives the number of tiles?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "cadre",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "4 strips of one tile more than the stage number",
             "explication": "Cut the frame into 4 strips that go round the square, without counting the corners twice. Stage 1: 4 × 2 = 8. Stage 2: 4 × 3 = 12. Stage 3: 4 × 4 = 16.",
             "pieges": [
@@ -2016,6 +3001,15 @@
           },
           {
             "texte": "The same hollow square frame (8, 12, 16 tiles…), made of 4 strips of one tile more than the stage number. How many tiles at stage 10?",
+            "figure": {
+              "type": "carreaux",
+              "forme": "cadre",
+              "etapes": [
+                1,
+                2,
+                3
+              ]
+            },
             "nom": "44",
             "explication": "At stage 10, each strip has 11 tiles: 4 × 11 = 44.",
             "pieges": [

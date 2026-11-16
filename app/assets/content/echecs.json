@@ -1879,6 +1879,10 @@
       "items": [
         {
           "texte": "Quelles sont les quatre cases du centre de l’échiquier ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/8/8/8/8/8/8 w - - 0 1"
+          },
           "nom": "d4, e4, d5 et e5",
           "explication": "L’échiquier a 8 colonnes et 8 rangées : les colonnes d et e et les rangées 4 et 5 sont au milieu.",
           "pieges": [
@@ -1894,6 +1898,10 @@
         },
         {
           "texte": "Au premier coup, lequel de ces coups de pion occupe une case du centre ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"
+          },
           "nom": "e2-e4",
           "explication": "Au premier coup, un pion peut avancer de deux cases : e2-e4 va directement sur e4, une case du centre.",
           "pieges": [
@@ -1924,6 +1932,10 @@
         },
         {
           "texte": "Les Blancs ont joué e2-e4. Quel fou blanc peut maintenant sortir ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b - - 0 1"
+          },
           "nom": "Le fou f1",
           "explication": "En partant de e2, le pion ouvre la diagonale f1-a6 : le fou f1 peut sortir. Le fou c1 attend que le pion d2 bouge.",
           "pieges": [
@@ -2027,6 +2039,10 @@
         "items": [
           {
             "texte": "Which are the four centre squares of the board?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/8/8/8/8/8/8 w - - 0 1"
+            },
             "nom": "d4, e4, d5 and e5",
             "explication": "The board has 8 files and 8 ranks: files d and e and ranks 4 and 5 are in the middle.",
             "pieges": [
@@ -2042,6 +2058,10 @@
           },
           {
             "texte": "On the first move, which of these pawn moves takes a centre square?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"
+            },
             "nom": "e2-e4",
             "explication": "On its first move a pawn may advance two squares: e2-e4 goes straight to e4, a centre square.",
             "pieges": [
@@ -2072,6 +2092,10 @@
           },
           {
             "texte": "White has played e2-e4. Which white bishop can come out now?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b - - 0 1"
+            },
             "nom": "The f1 bishop",
             "explication": "By leaving e2, the pawn opens the f1–a6 diagonal: the f1 bishop can come out. The c1 bishop waits for the d2 pawn to move.",
             "pieges": [
@@ -2771,6 +2795,10 @@
       "items": [
         {
           "texte": "Roi noir en e8, roi blanc en e6, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1"
+          },
           "nom": "La tour va en a8",
           "explication": "La tour fait échec sur toute la 8e rangée. Le roi blanc garde d7, e7 et f7 : le roi noir n’a plus de case. Mat.",
           "pieges": [
@@ -2786,6 +2814,10 @@
         },
         {
           "texte": "Roi noir en h4, roi blanc en f4, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/8/8/5K1k/8/8/R7 w - - 0 1"
+          },
           "nom": "La tour va en h1",
           "explication": "La tour fait échec sur toute la colonne h. Le roi blanc garde g3, g4 et g5 : le roi noir est pris au bord. Mat.",
           "pieges": [
@@ -2801,6 +2833,10 @@
         },
         {
           "texte": "Roi noir en a8, roi blanc en b6, tour blanche en h1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/1K6/8/8/8/8/7R w - - 0 1"
+          },
           "nom": "La tour va en h8",
           "explication": "La tour fait échec sur la 8e rangée. Le roi blanc garde a7 et b7 : plus aucune case. Mat.",
           "pieges": [
@@ -2816,6 +2852,10 @@
         },
         {
           "texte": "Roi noir en a8, roi blanc en c7, tour blanche en b1. Aux Blancs. Pourquoi la tour en b7 est-elle une faute ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/2K5/8/8/8/8/8/1R6 w - - 0 1"
+          },
           "nom": "C’est pat : le roi noir ne peut plus bouger sans être en échec, partie nulle",
           "explication": "Après tour en b7, le roi noir n’est pas en échec et n’a aucun coup permis : c’est le pat, la partie est nulle. Le mat était la tour en a1.",
           "pieges": [
@@ -2904,6 +2944,10 @@
         "items": [
           {
             "texte": "Black king on e8, white king on e6, white rook on a1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "4k3/8/4K3/8/8/8/8/R7 w - - 0 1"
+            },
             "nom": "The rook goes to a8",
             "explication": "The rook gives check along the whole 8th rank. The white king guards d7, e7 and f7: the black king has no square left. Checkmate.",
             "pieges": [
@@ -2919,6 +2963,10 @@
           },
           {
             "texte": "Black king on h4, white king on f4, white rook on a1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/8/8/5K1k/8/8/R7 w - - 0 1"
+            },
             "nom": "The rook goes to h1",
             "explication": "The rook gives check along the whole h-file. The white king guards g3, g4 and g5: the black king is caught on the edge. Checkmate.",
             "pieges": [
@@ -2934,6 +2982,10 @@
           },
           {
             "texte": "Black king on a8, white king on b6, white rook on h1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/1K6/8/8/8/8/7R w - - 0 1"
+            },
             "nom": "The rook goes to h8",
             "explication": "The rook gives check along the 8th rank. The white king guards a7 and b7: no square left. Checkmate.",
             "pieges": [
@@ -2949,6 +3001,10 @@
           },
           {
             "texte": "Black king on a8, white king on c7, white rook on b1. White to play. Why is the rook to b7 a mistake?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/2K5/8/8/8/8/8/1R6 w - - 0 1"
+            },
             "nom": "It is stalemate: the black king cannot move without being in check, a draw",
             "explication": "After the rook goes to b7, the black king is not in check and has no legal move: it is stalemate, the game is drawn. The mate was the rook to a1.",
             "pieges": [
@@ -3542,6 +3598,10 @@
       "items": [
         {
           "texte": "Roi noir en h8, roi blanc en g6, dame blanche en b1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "7k/8/6K1/8/8/8/8/1Q6 w - - 0 1"
+          },
           "nom": "La dame va en b8",
           "explication": "La dame fait échec sur toute la 8e rangée et garde g8. Ton roi garde g7 et h7 : le roi noir n’a plus de case. Mat.",
           "pieges": [
@@ -3557,6 +3617,10 @@
         },
         {
           "texte": "Roi noir en a8, roi blanc en c7, dame blanche en b1. Aux Blancs. Pourquoi la dame en b6 est-elle une faute ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/2K5/8/8/8/8/8/1Q6 w - - 0 1"
+          },
           "nom": "C’est pat : le roi noir n’est pas en échec et n’a plus de case",
           "explication": "En b6, la dame garde a7 et b7 ; ton roi garde b7 et b8. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle. La dame en b7, protégée par ton roi, faisait mat.",
           "pieges": [
@@ -3572,6 +3636,10 @@
         },
         {
           "texte": "Roi noir en e8, roi blanc en e6, dame blanche en h1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "4k3/8/4K3/8/8/8/8/7Q w - - 0 1"
+          },
           "nom": "La dame va en h8",
           "explication": "La dame fait échec sur la 8e rangée et garde d8 et f8. Ton roi garde d7, e7 et f7 : mat. (La dame en a8 fait mat aussi.)",
           "pieges": [
@@ -3587,6 +3655,10 @@
         },
         {
           "texte": "Roi noir en a8, roi blanc en b6, dame blanche en c1. Aux Blancs. Quel coup fait échec et mat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/1K6/8/8/8/8/2Q5 w - - 0 1"
+          },
           "nom": "La dame va en c8",
           "explication": "La dame fait échec sur la 8e rangée et garde b8. Ton roi garde a7 et b7 : mat.",
           "pieges": [
@@ -3645,6 +3717,10 @@
         "items": [
           {
             "texte": "Black king on h8, white king on g6, white queen on b1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "7k/8/6K1/8/8/8/8/1Q6 w - - 0 1"
+            },
             "nom": "The queen goes to b8",
             "explication": "The queen gives check along the whole 8th rank and guards g8. Your king guards g7 and h7: the black king has no square left. Checkmate.",
             "pieges": [
@@ -3660,6 +3736,10 @@
           },
           {
             "texte": "Black king on a8, white king on c7, white queen on b1. White to play. Why is the queen to b6 a mistake?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/2K5/8/8/8/8/8/1Q6 w - - 0 1"
+            },
             "nom": "It is stalemate: the black king is not in check and has no square",
             "explication": "On b6, the queen guards a7 and b7; your king guards b7 and b8. The black king is not in check and cannot move: stalemate, a draw. The queen to b7, protected by your king, was checkmate.",
             "pieges": [
@@ -3675,6 +3755,10 @@
           },
           {
             "texte": "Black king on e8, white king on e6, white queen on h1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "4k3/8/4K3/8/8/8/8/7Q w - - 0 1"
+            },
             "nom": "The queen goes to h8",
             "explication": "The queen gives check along the 8th rank and guards d8 and f8. Your king guards d7, e7 and f7: checkmate. (The queen to a8 is checkmate too.)",
             "pieges": [
@@ -3690,6 +3774,10 @@
           },
           {
             "texte": "Black king on a8, white king on b6, white queen on c1. White to play. Which move gives checkmate?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/1K6/8/8/8/8/2Q5 w - - 0 1"
+            },
             "nom": "The queen goes to c8",
             "explication": "The queen gives check along the 8th rank and guards b8. Your king guards a7 and b7: checkmate.",
             "pieges": [
@@ -3761,6 +3849,10 @@
       "items": [
         {
           "texte": "Roi blanc en e4, roi noir en e6, aux Noirs de jouer. Qui a l’opposition ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/4k3/8/4K3/8/8/8 b - - 0 1"
+          },
           "nom": "Les Blancs",
           "explication": "Les rois sont face à face, une case entre eux, et ce sont les Noirs qui doivent jouer : ils doivent s’écarter. L’opposition est aux Blancs.",
           "pieges": [
@@ -3776,6 +3868,10 @@
         },
         {
           "texte": "Roi blanc en d4, pion blanc en e3, roi noir en e6. Aux Blancs. Quel coup gagne ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/4k3/8/3K4/4P3/8/8 w - - 0 1"
+          },
           "nom": "Le roi va en e4",
           "explication": "Face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent s’écarter, et ton roi avance. Calculé : c’est le seul coup qui gagne.",
           "pieges": [
@@ -3791,6 +3887,10 @@
         },
         {
           "texte": "Roi blanc en d5, pion blanc en e3, roi noir en e7. Aux Blancs. Quel coup gagne ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/4k3/8/3K4/8/4P3/8/8 w - - 0 1"
+          },
           "nom": "Le roi va en e5",
           "explication": "Ton roi se place face au roi noir, une case entre eux, et c’est aux Noirs de jouer : ils doivent céder une case. Calculé : c’est le seul coup qui gagne.",
           "pieges": [
@@ -3806,6 +3906,10 @@
         },
         {
           "texte": "Roi blanc en f6, pion blanc en e5, roi noir en e8. Aux Blancs. Quel coup gagne ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "4k3/8/5K2/4P3/8/8/8/8 w - - 0 1"
+          },
           "nom": "Le roi va en e6",
           "explication": "Opposition : le roi noir doit s’écarter. S’il va en d8, ton roi va en f7, et le pion passe. Calculé : c’est le seul coup qui gagne.",
           "pieges": [
@@ -3821,6 +3925,11 @@
         },
         {
           "texte": "Roi noir en e5, roi blanc en d3, pion blanc en d2. Aux Noirs. Quel coup fait nulle ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/8/4k3/8/3K4/3P4/8 b - - 0 1",
+            "noirs": true
+          },
           "nom": "Le roi va en d5",
           "explication": "Face au roi blanc, une case entre eux, et c’est aux Blancs de jouer : le roi noir garde l’opposition. Calculé : c’est le seul coup qui fait nulle.",
           "pieges": [
@@ -3864,6 +3973,10 @@
         "items": [
           {
             "texte": "White king on e4, black king on e6, Black to play. Who has the opposition?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/4k3/8/4K3/8/8/8 b - - 0 1"
+            },
             "nom": "White",
             "explication": "The kings are face to face, one square between them, and Black has to move: Black must step aside. White has the opposition.",
             "pieges": [
@@ -3879,6 +3992,10 @@
           },
           {
             "texte": "White king on d4, white pawn on e3, black king on e6. White to play. Which move wins?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/4k3/8/3K4/4P3/8/8 w - - 0 1"
+            },
             "nom": "The king goes to e4",
             "explication": "Facing the black king, one square between them, and Black has to move: Black must step aside, and your king moves forward. Computed: it is the only winning move.",
             "pieges": [
@@ -3894,6 +4011,10 @@
           },
           {
             "texte": "White king on d5, white pawn on e3, black king on e7. White to play. Which move wins?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/4k3/8/3K4/8/4P3/8/8 w - - 0 1"
+            },
             "nom": "The king goes to e5",
             "explication": "Your king faces the black king, one square between them, and Black has to move: Black must give up a square. Computed: it is the only winning move.",
             "pieges": [
@@ -3909,6 +4030,10 @@
           },
           {
             "texte": "White king on f6, white pawn on e5, black king on e8. White to play. Which move wins?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "4k3/8/5K2/4P3/8/8/8/8 w - - 0 1"
+            },
             "nom": "The king goes to e6",
             "explication": "Opposition: the black king must step aside. If it goes to d8, your king goes to f7, and the pawn gets through. Computed: it is the only winning move.",
             "pieges": [
@@ -3924,6 +4049,11 @@
           },
           {
             "texte": "Black king on e5, white king on d3, white pawn on d2. Black to play. Which move draws?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/8/4k3/8/3K4/3P4/8 b - - 0 1",
+              "noirs": true
+            },
             "nom": "The king goes to d5",
             "explication": "Facing the white king, one square between them, and White has to move: the black king keeps the opposition. Computed: it is the only drawing move.",
             "pieges": [
@@ -4025,6 +4155,10 @@
         },
         {
           "texte": "Roi blanc en f4, pion blanc en e2, roi noir en e6. Aux Noirs. Qui gagne ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/4k3/8/5K2/8/4P3/8 b - - 0 1"
+          },
           "nom": "Les Blancs",
           "explication": "Les cases clés du pion e2 sont d4, e4 et f4 : ton roi y est déjà. Les Blancs gagnent, même si ce sont les Noirs qui jouent.",
           "pieges": [
@@ -4128,6 +4262,10 @@
           },
           {
             "texte": "White king on f4, white pawn on e2, black king on e6. Black to play. Who wins?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/4k3/8/5K2/8/4P3/8 b - - 0 1"
+            },
             "nom": "White",
             "explication": "The key squares of the e2 pawn are d4, e4 and f4: your king is already there. White wins, even though Black has the move.",
             "pieges": [
@@ -4199,6 +4337,10 @@
       "items": [
         {
           "texte": "Roi blanc en b6, pion blanc en a5, roi noir en a8. Aux Blancs. Quel est le résultat avec le meilleur jeu ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/1K6/P7/8/8/8/8 w - - 0 1"
+          },
           "nom": "Nulle",
           "explication": "Le roi noir est dans le coin devant le pion tour. Calculé : aucun coup blanc ne gagne.",
           "pieges": [
@@ -4214,6 +4356,10 @@
         },
         {
           "texte": "Roi blanc en b6, pion blanc en a6, roi noir en a8. Aux Blancs. Que se passe-t-il si le pion va en a7 ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/PK6/8/8/8/8/8 w - - 0 1"
+          },
           "nom": "Pat : le roi noir n’est pas en échec et n’a plus aucun coup",
           "explication": "Le pion en a7 garde b8, ton roi garde b7 et protège le pion. Le roi noir n’est pas en échec et ne peut pas bouger : pat, partie nulle.",
           "pieges": [
@@ -4229,6 +4375,11 @@
         },
         {
           "texte": "Roi blanc en b6, pion blanc en a5, roi noir en c8. Aux Noirs. Quel coup fait nulle ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "2k5/8/1K6/P7/8/8/8/8 b - - 0 1",
+            "noirs": true
+          },
           "nom": "Le roi va en b8",
           "explication": "Le roi noir reste collé au coin a8. Calculé : c’est le seul coup qui fait nulle.",
           "pieges": [
@@ -4244,6 +4395,11 @@
         },
         {
           "texte": "Roi blanc en a7, pion blanc en a6, roi noir en c8. Aux Noirs. Quel coup fait nulle ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "2k5/K7/P7/8/8/8/8/8 b - - 0 1",
+            "noirs": true
+          },
           "nom": "Le roi va en c7",
           "explication": "Le roi blanc est enfermé devant son pion : il ne peut plus aller qu’en a8, et le pion est bloqué. Calculé : c’est le seul coup qui fait nulle.",
           "pieges": [
@@ -4259,6 +4415,10 @@
         },
         {
           "texte": "Roi blanc en b7, pion blanc en a5, roi noir en d6. Aux Noirs. Qui gagne ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/1K6/3k4/P7/8/8/8/8 b - - 0 1"
+          },
           "nom": "Les Blancs",
           "explication": "Le roi blanc en b7 interdit le coin a8 au roi noir. Calculé : roi blanc en b7 et pion en a5 ou a6, les Blancs gagnent toujours, si le pion n’est pas pris tout de suite.",
           "pieges": [
@@ -4274,6 +4434,10 @@
         },
         {
           "texte": "Roi blanc en f5, pion blanc en h5, roi noir en h8. Aux Blancs. Quel est le résultat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "7k/8/8/5K1P/8/8/8/8 w - - 0 1"
+          },
           "nom": "Nulle",
           "explication": "Même idée sur la colonne h : le roi noir est dans le coin devant le pion. Calculé : aucun coup blanc ne gagne.",
           "pieges": [
@@ -4302,6 +4466,10 @@
         "items": [
           {
             "texte": "White king on b6, white pawn on a5, black king on a8. White to play. What is the result with best play?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/1K6/P7/8/8/8/8 w - - 0 1"
+            },
             "nom": "Draw",
             "explication": "The black king is in the corner in front of the rook pawn. Computed: no White move wins.",
             "pieges": [
@@ -4317,6 +4485,10 @@
           },
           {
             "texte": "White king on b6, white pawn on a6, black king on a8. White to play. What happens if the pawn goes to a7?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/PK6/8/8/8/8/8 w - - 0 1"
+            },
             "nom": "Stalemate: the black king is not in check and has no move",
             "explication": "The pawn on a7 guards b8, your king guards b7 and protects the pawn. The black king is not in check and cannot move: stalemate, a draw.",
             "pieges": [
@@ -4332,6 +4504,11 @@
           },
           {
             "texte": "White king on b6, white pawn on a5, black king on c8. Black to play. Which move draws?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "2k5/8/1K6/P7/8/8/8/8 b - - 0 1",
+              "noirs": true
+            },
             "nom": "The king goes to b8",
             "explication": "The black king stays next to the a8 corner. Computed: it is the only drawing move.",
             "pieges": [
@@ -4347,6 +4524,11 @@
           },
           {
             "texte": "White king on a7, white pawn on a6, black king on c8. Black to play. Which move draws?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "2k5/K7/P7/8/8/8/8/8 b - - 0 1",
+              "noirs": true
+            },
             "nom": "The king goes to c7",
             "explication": "The white king is shut in in front of its pawn: it can only go to a8, and the pawn is blocked. Computed: it is the only drawing move.",
             "pieges": [
@@ -4362,6 +4544,10 @@
           },
           {
             "texte": "White king on b7, white pawn on a5, black king on d6. Black to play. Who wins?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/1K6/3k4/P7/8/8/8/8 b - - 0 1"
+            },
             "nom": "White",
             "explication": "The white king on b7 keeps the black king out of the a8 corner. Computed: with the white king on b7 and the pawn on a5 or a6, White always wins, unless the pawn is taken at once.",
             "pieges": [
@@ -4377,6 +4563,10 @@
           },
           {
             "texte": "White king on f5, white pawn on h5, black king on h8. White to play. What is the result?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "7k/8/8/5K1P/8/8/8/8 w - - 0 1"
+            },
             "nom": "Draw",
             "explication": "Same idea on the h-file: the black king is in the corner in front of the pawn. Computed: no White move wins.",
             "pieges": [
@@ -4418,6 +4608,10 @@
       "items": [
         {
           "texte": "Pion blanc en a5, roi blanc en b6, fou blanc en e1, roi noir en a8. Aux Blancs. Quel est le résultat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/1K6/P7/8/8/8/4B3 w - - 0 1"
+          },
           "nom": "Nulle",
           "explication": "Le fou en e1 va sur les cases noires ; a8 est blanche. Le roi noir reste dans le coin. Calculé : aucun coup blanc ne gagne.",
           "pieges": [
@@ -4433,6 +4627,10 @@
         },
         {
           "texte": "Pion blanc en a5, roi blanc en b6, fou blanc en f1, roi noir en a8. Aux Blancs. Quel est le résultat ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "k7/8/1K6/P7/8/8/8/5B2 w - - 0 1"
+          },
           "nom": "Les Blancs gagnent",
           "explication": "Le fou en f1 va sur les cases blanches, comme a8. Par exemple, le fou va en g2 : échec par la grande diagonale, et le roi noir doit quitter le coin. Calculé : gain blanc.",
           "pieges": [
@@ -4448,6 +4646,11 @@
         },
         {
           "texte": "Pion blanc en a5, roi blanc en b3, fou blanc en g1, roi noir en c7. Aux Noirs. Où va le roi noir ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/2k5/8/P7/8/1K6/8/6B1 b - - 0 1",
+            "noirs": true
+          },
           "nom": "En b8, vers le coin a8",
           "explication": "Le fou en g1 va sur les cases noires : il ne garde pas a8. Le roi noir file vers le coin, c’est nulle. Calculé : c8, b8 et b7 font nulle ; d7 et d6 perdent.",
           "pieges": [
@@ -4463,6 +4666,11 @@
         },
         {
           "texte": "Pion blanc en a5, roi blanc en c4, fou blanc en f1, roi noir en d6. Aux Noirs. Peuvent-ils faire nulle ?",
+          "figure": {
+            "type": "echiquier",
+            "fen": "8/8/3k4/P7/2K5/8/8/5B2 b - - 0 1",
+            "noirs": true
+          },
           "nom": "Non : tous les coups noirs perdent",
           "explication": "Le fou en f1 va sur les cases blanches : il peut garder a8. Calculé : chaque coup noir perd.",
           "pieges": [
@@ -4521,6 +4729,10 @@
         "items": [
           {
             "texte": "White pawn on a5, white king on b6, white bishop on e1, black king on a8. White to play. What is the result?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/1K6/P7/8/8/8/4B3 w - - 0 1"
+            },
             "nom": "Draw",
             "explication": "The bishop on e1 moves on dark squares; a8 is light. The black king stays in the corner. Computed: no White move wins.",
             "pieges": [
@@ -4536,6 +4748,10 @@
           },
           {
             "texte": "White pawn on a5, white king on b6, white bishop on f1, black king on a8. White to play. What is the result?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "k7/8/1K6/P7/8/8/8/5B2 w - - 0 1"
+            },
             "nom": "White wins",
             "explication": "The bishop on f1 moves on light squares, like a8. For example, the bishop goes to g2: check along the long diagonal, and the black king must leave the corner. Computed: White wins.",
             "pieges": [
@@ -4551,6 +4767,11 @@
           },
           {
             "texte": "White pawn on a5, white king on b3, white bishop on g1, black king on c7. Black to play. Where does the black king go?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/2k5/8/P7/8/1K6/8/6B1 b - - 0 1",
+              "noirs": true
+            },
             "nom": "To b8, towards the a8 corner",
             "explication": "The bishop on g1 moves on dark squares: it does not guard a8. The black king heads for the corner, it is a draw. Computed: c8, b8 and b7 draw; d7 and d6 lose.",
             "pieges": [
@@ -4566,6 +4787,11 @@
           },
           {
             "texte": "White pawn on a5, white king on c4, white bishop on f1, black king on d6. Black to play. Can Black draw?",
+            "figure": {
+              "type": "echiquier",
+              "fen": "8/8/3k4/P7/2K5/8/8/5B2 b - - 0 1",
+              "noirs": true
+            },
             "nom": "No: every Black move loses",
             "explication": "The bishop on f1 moves on light squares: it can guard a8. Computed: every Black move loses.",
             "pieges": [

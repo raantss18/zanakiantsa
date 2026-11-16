@@ -36,6 +36,7 @@ items:
       - { texte: "10", pourquoi: "On a enlevé AB − AM = 2 à AC : c'est le rapport qui se conserve." }
       - { texte: "16", pourquoi: "12 × 8/6 : AN est plus petit que AC, le rapport est 6/8." }
   - texte: "Papillon : les droites (BM) et (CN) se coupent en A, et (BC) est parallèle à (MN). AB = 4, AM = 6, BC = 5. Combien mesure MN ?"
+    figure: { type: thales, papillon: true, sommets: [A, M, N, B, C], cotes: { AB: "4", AM: "6", BC: "5", MN: "?" } }
     nom: "7,5"
     explication: "AM/AB = MN/BC, donc MN = 5 × 6/4 = 7,5."
     pieges:
@@ -107,6 +108,7 @@ en:
         - { texte: "10", pourquoi: "AB − AM = 2 was taken from AC: the ratio is what stays the same." }
         - { texte: "16", pourquoi: "12 × 8/6: AN is shorter than AC, the ratio is 6/8." }
     - texte: "Butterfly: lines (BM) and (CN) cross at A, and (BC) is parallel to (MN). AB = 4, AM = 6, BC = 5. How long is MN?"
+      figure: { type: thales, papillon: true, sommets: [A, M, N, B, C], cotes: { AB: "4", AM: "6", BC: "5", MN: "?" } }
       nom: "7.5"
       explication: "AM/AB = MN/BC, so MN = 5 × 6/4 = 7.5."
       pieges:

@@ -15,24 +15,28 @@ phrases:
   bravo: "Oui ! La réponse est : {bonne}."
 items:
   - texte: "Pion blanc en a5, roi blanc en b6, fou blanc en e1, roi noir en a8. Aux Blancs. Quel est le résultat ?"
+    figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/4B3 w - - 0 1" }
     nom: "Nulle"
     explication: "Le fou en e1 va sur les cases noires ; a8 est blanche. Le roi noir reste dans le coin. Calculé : aucun coup blanc ne gagne."
     pieges:
       - { texte: "Les Blancs gagnent : ils ont un fou et un pion de plus", pourquoi: "Le fou de cases noires ne garde jamais a8, une case blanche : le roi noir ne quitte pas le coin." }
       - { texte: "Les Blancs gagnent en poussant le pion", pourquoi: "Calculé : aucun coup blanc ne gagne, pousser le pion compris." }
   - texte: "Pion blanc en a5, roi blanc en b6, fou blanc en f1, roi noir en a8. Aux Blancs. Quel est le résultat ?"
+    figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/5B2 w - - 0 1" }
     nom: "Les Blancs gagnent"
     explication: "Le fou en f1 va sur les cases blanches, comme a8. Par exemple, le fou va en g2 : échec par la grande diagonale, et le roi noir doit quitter le coin. Calculé : gain blanc."
     pieges:
       - { texte: "Nulle : le roi noir est dans le coin", pourquoi: "Le coin ne protège que contre le mauvais fou ; ici, le fou attaque a8." }
       - { texte: "Nulle : un fou ne peut pas faire mat", pourquoi: "Le fou aide le pion à aller à dame ; c’est la nouvelle dame qui fera mat." }
   - texte: "Pion blanc en a5, roi blanc en b3, fou blanc en g1, roi noir en c7. Aux Noirs. Où va le roi noir ?"
+    figure: { type: echiquier, fen: "8/2k5/8/P7/8/1K6/8/6B1 b - - 0 1", noirs: true }
     nom: "En b8, vers le coin a8"
     explication: "Le fou en g1 va sur les cases noires : il ne garde pas a8. Le roi noir file vers le coin, c’est nulle. Calculé : c8, b8 et b7 font nulle ; d7 et d6 perdent."
     pieges:
       - { texte: "En d6, vers le centre", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
       - { texte: "En d7", pourquoi: "Le roi noir s’éloigne du coin. Calculé : les Blancs gagnent." }
   - texte: "Pion blanc en a5, roi blanc en c4, fou blanc en f1, roi noir en d6. Aux Noirs. Peuvent-ils faire nulle ?"
+    figure: { type: echiquier, fen: "8/8/3k4/P7/2K5/8/8/5B2 b - - 0 1", noirs: true }
     nom: "Non : tous les coups noirs perdent"
     explication: "Le fou en f1 va sur les cases blanches : il peut garder a8. Calculé : chaque coup noir perd."
     pieges:
@@ -63,24 +67,28 @@ en:
     bravo: "Yes! The answer is: {bonne}."
   items:
     - texte: "White pawn on a5, white king on b6, white bishop on e1, black king on a8. White to play. What is the result?"
+      figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/4B3 w - - 0 1" }
       nom: "Draw"
       explication: "The bishop on e1 moves on dark squares; a8 is light. The black king stays in the corner. Computed: no White move wins."
       pieges:
         - { texte: "White wins: they have an extra bishop and pawn", pourquoi: "The dark-squared bishop never guards a8, a light square: the black king does not leave the corner." }
         - { texte: "White wins by pushing the pawn", pourquoi: "Computed: no White move wins, pawn moves included." }
     - texte: "White pawn on a5, white king on b6, white bishop on f1, black king on a8. White to play. What is the result?"
+      figure: { type: echiquier, fen: "k7/8/1K6/P7/8/8/8/5B2 w - - 0 1" }
       nom: "White wins"
       explication: "The bishop on f1 moves on light squares, like a8. For example, the bishop goes to g2: check along the long diagonal, and the black king must leave the corner. Computed: White wins."
       pieges:
         - { texte: "Draw: the black king is in the corner", pourquoi: "The corner only protects against the wrong bishop; here, the bishop attacks a8." }
         - { texte: "Draw: a bishop cannot give checkmate", pourquoi: "The bishop helps the pawn to queen; the new queen gives checkmate." }
     - texte: "White pawn on a5, white king on b3, white bishop on g1, black king on c7. Black to play. Where does the black king go?"
+      figure: { type: echiquier, fen: "8/2k5/8/P7/8/1K6/8/6B1 b - - 0 1", noirs: true }
       nom: "To b8, towards the a8 corner"
       explication: "The bishop on g1 moves on dark squares: it does not guard a8. The black king heads for the corner, it is a draw. Computed: c8, b8 and b7 draw; d7 and d6 lose."
       pieges:
         - { texte: "To d6, towards the centre", pourquoi: "The black king moves away from the corner. Computed: White wins." }
         - { texte: "To d7", pourquoi: "The black king moves away from the corner. Computed: White wins." }
     - texte: "White pawn on a5, white king on c4, white bishop on f1, black king on d6. Black to play. Can Black draw?"
+      figure: { type: echiquier, fen: "8/8/3k4/P7/2K5/8/8/5B2 b - - 0 1", noirs: true }
       nom: "No: every Black move loses"
       explication: "The bishop on f1 moves on light squares: it can guard a8. Computed: every Black move loses."
       pieges:

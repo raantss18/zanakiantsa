@@ -32,6 +32,7 @@ items:
       - { texte: "16", pourquoi: "4 × 4 = 16 compte chaque carré à part. Mais deux carrés voisins partagent une allumette : on en ajoute 3 à chaque fois." }
       - { texte: "14", pourquoi: "Tu as ajouté 4. Regarde : de 4 à 7, puis de 7 à 10, on ajoute 3." }
   - texte: "Un escalier de cubes : étape 1, 1 cube ; étape 2, 3 cubes ; étape 3, 6 cubes ; étape 4, 10 cubes. Combien de cubes à l'étape 5 ?"
+    figure: { type: carreaux, forme: escalier, etapes: [1, 2, 3, 4] }
     nom: "15"
     explication: "On ajoute 2, puis 3, puis 4 : chaque étape ajoute une colonne plus haute d'un cube que la précédente. À l'étape 5, on ajoute 5 : 10 + 5 = 15."
     pieges:
@@ -50,6 +51,7 @@ items:
       - { texte: "On double à chaque étape", pourquoi: "2 × 2 = 4, mais 4 × 2 = 8, pas 6. Vérifie la règle sur toutes les étapes : on ajoute 2." }
       - { texte: "On ajoute 4 ronds à chaque étape", pourquoi: "4 est le nombre de ronds à l'étape 2, pas ce qu'on ajoute. De 2 à 4, on ajoute 2." }
   - texte: "Une figure en forme de L : étape 1, 3 carreaux ; étape 2, 5 carreaux ; étape 3, 7 carreaux. À chaque étape, on ajoute un carreau en haut et un à droite. Combien de carreaux à l'étape 4 ?"
+    figure: { type: carreaux, forme: l, etapes: [1, 2, 3] }
     nom: "9"
     explication: "On ajoute 2 carreaux à chaque étape, un en haut et un à droite : 7 + 2 = 9."
     pieges:
@@ -93,6 +95,7 @@ en:
         - { texte: "16", pourquoi: "4 × 4 = 16 counts each square on its own. But two neighbouring squares share a matchstick: you add 3 each time." }
         - { texte: "14", pourquoi: "You added 4. Look: from 4 to 7, then from 7 to 10, you add 3." }
     - texte: "A staircase of cubes: stage 1, 1 cube; stage 2, 3 cubes; stage 3, 6 cubes; stage 4, 10 cubes. How many cubes at stage 5?"
+      figure: { type: carreaux, forme: escalier, etapes: [1, 2, 3, 4] }
       nom: "15"
       explication: "You add 2, then 3, then 4: each stage adds a column one cube taller than the last one. At stage 5 you add 5: 10 + 5 = 15."
       pieges:
@@ -111,6 +114,7 @@ en:
         - { texte: "You double at each stage", pourquoi: "2 × 2 = 4, but 4 × 2 = 8, not 6. Check the rule on every stage: you add 2." }
         - { texte: "You add 4 circles at each stage", pourquoi: "4 is the number of circles at stage 2, not what you add. From 2 to 4, you add 2." }
     - texte: "An L-shaped figure: stage 1, 3 tiles; stage 2, 5 tiles; stage 3, 7 tiles. At each stage, you add one tile at the top and one on the right. How many tiles at stage 4?"
+      figure: { type: carreaux, forme: l, etapes: [1, 2, 3] }
       nom: "9"
       explication: "You add 2 tiles at each stage, one at the top and one on the right: 7 + 2 = 9."
       pieges:

@@ -645,6 +645,20 @@
       "items": [
         {
           "texte": "Le robot regarde vers la droite. Il doit aller 3 cases à droite, puis 2 cases vers le haut. Son programme :\navancer de 3\npivoter à droite\navancer de 2\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 5,
+            "lignes": 5,
+            "robot": [
+              0,
+              2
+            ],
+            "regard": "droite",
+            "but": [
+              3,
+              4
+            ]
+          },
           "nom": "Il fallait pivoter à gauche",
           "explication": "Le robot regarde vers la droite. S'il pivote à droite, il regarde vers le bas. Pour monter, il doit pivoter à gauche.",
           "pieges": [
@@ -660,6 +674,20 @@
         },
         {
           "texte": "Le robot regarde vers le haut. Il doit aller 4 cases vers le haut. Son programme :\navancer de 3\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 3,
+            "lignes": 5,
+            "robot": [
+              1,
+              0
+            ],
+            "regard": "haut",
+            "but": [
+              1,
+              4
+            ]
+          },
           "nom": "Il fallait avancer de 4",
           "explication": "Le robot regarde déjà vers le haut, il n'a pas besoin de pivoter. Mais il doit faire 4 cases, pas 3.",
           "pieges": [
@@ -675,6 +703,20 @@
         },
         {
           "texte": "Le robot regarde vers le haut. Il doit aller 2 cases vers la droite. Son programme :\navancer de 2\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 4,
+            "lignes": 3,
+            "robot": [
+              0,
+              0
+            ],
+            "regard": "haut",
+            "but": [
+              2,
+              0
+            ]
+          },
           "nom": "Il manque « pivoter à droite » au début",
           "explication": "Sans virage, le robot monte de 2 cases. Il doit d'abord pivoter à droite pour regarder vers la droite, puis avancer de 2.",
           "pieges": [
@@ -690,6 +732,20 @@
         },
         {
           "texte": "Le robot regarde vers la droite. Il doit aller 2 cases à droite, puis 3 cases vers le bas. Son programme :\navancer de 2\npivoter à droite\navancer de 2\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 4,
+            "lignes": 4,
+            "robot": [
+              0,
+              3
+            ],
+            "regard": "droite",
+            "but": [
+              2,
+              0
+            ]
+          },
           "nom": "À la fin, il fallait avancer de 3",
           "explication": "Avancer de 2 : juste. Pivoter à droite : quand on regarde vers la droite, la main droite est vers le bas, juste. Mais il faut descendre de 3 cases, pas 2.",
           "pieges": [
@@ -705,6 +761,20 @@
         },
         {
           "texte": "Le robot regarde vers le bas. Il doit aller 1 case vers le bas, puis 2 cases vers la gauche. Son programme :\navancer de 1\npivoter à gauche\navancer de 2\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 5,
+            "lignes": 3,
+            "robot": [
+              2,
+              2
+            ],
+            "regard": "bas",
+            "but": [
+              0,
+              1
+            ]
+          },
           "nom": "Il fallait pivoter à droite",
           "explication": "Quand le robot regarde vers le bas, sa main droite est du côté gauche de la feuille. Pour aller vers la gauche de la feuille, il pivote à droite.",
           "pieges": [
@@ -720,6 +790,16 @@
         },
         {
           "texte": "Le robot regarde vers le haut. Son programme :\navancer de 2\npivoter à droite\navancer de 3\nOù arrive-t-il ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 7,
+            "lignes": 4,
+            "robot": [
+              3,
+              0
+            ],
+            "regard": "haut"
+          },
           "nom": "2 cases plus haut et 3 cases à droite",
           "explication": "Il monte de 2 cases. Puis il pivote à droite : il regarde vers la droite et avance de 3 cases.",
           "pieges": [
@@ -735,6 +815,16 @@
         },
         {
           "texte": "Le robot regarde vers la droite. Son programme :\npivoter à gauche\npivoter à gauche\navancer de 2\nOù arrive-t-il ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 5,
+            "lignes": 3,
+            "robot": [
+              2,
+              0
+            ],
+            "regard": "droite"
+          },
           "nom": "2 cases à gauche du départ",
           "explication": "Un quart de tour à gauche : il regarde vers le haut. Encore un : il regarde vers la gauche. Puis il avance de 2.",
           "pieges": [
@@ -750,6 +840,20 @@
         },
         {
           "texte": "Le robot regarde vers la gauche. Il doit aller 3 cases vers le haut. Son programme :\npivoter à gauche\navancer de 3\nOù est l'erreur ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 3,
+            "lignes": 7,
+            "robot": [
+              1,
+              3
+            ],
+            "regard": "gauche",
+            "but": [
+              1,
+              6
+            ]
+          },
           "nom": "Il fallait pivoter à droite",
           "explication": "Quand le robot regarde vers la gauche, sa main droite est vers le haut de la feuille. Pivoter à gauche le ferait descendre.",
           "pieges": [
@@ -778,6 +882,20 @@
         "items": [
           {
             "texte": "The robot is facing right. It must go 3 squares right, then 2 squares up. Its program:\nmove forward 3\nturn right\nmove forward 2\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 5,
+              "lignes": 5,
+              "robot": [
+                0,
+                2
+              ],
+              "regard": "droite",
+              "but": [
+                3,
+                4
+              ]
+            },
             "nom": "It should have turned left",
             "explication": "The robot is facing right. If it turns right, it faces down. To go up, it must turn left.",
             "pieges": [
@@ -793,6 +911,20 @@
           },
           {
             "texte": "The robot is facing up. It must go 4 squares up. Its program:\nmove forward 3\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 3,
+              "lignes": 5,
+              "robot": [
+                1,
+                0
+              ],
+              "regard": "haut",
+              "but": [
+                1,
+                4
+              ]
+            },
             "nom": "It should have moved forward 4",
             "explication": "The robot is already facing up, so it doesn't need to turn. But it must move 4 squares, not 3.",
             "pieges": [
@@ -808,6 +940,20 @@
           },
           {
             "texte": "The robot is facing up. It must go 2 squares to the right. Its program:\nmove forward 2\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 4,
+              "lignes": 3,
+              "robot": [
+                0,
+                0
+              ],
+              "regard": "haut",
+              "but": [
+                2,
+                0
+              ]
+            },
             "nom": "“turn right” is missing at the start",
             "explication": "Without a turn, the robot goes up 2 squares. It must first turn right to face right, then move forward 2.",
             "pieges": [
@@ -823,6 +969,20 @@
           },
           {
             "texte": "The robot is facing right. It must go 2 squares right, then 3 squares down. Its program:\nmove forward 2\nturn right\nmove forward 2\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 4,
+              "lignes": 4,
+              "robot": [
+                0,
+                3
+              ],
+              "regard": "droite",
+              "but": [
+                2,
+                0
+              ]
+            },
             "nom": "At the end, it should have moved forward 3",
             "explication": "Move forward 2: right. Turn right: when you face right, your right hand points down, so that's right. But it must go down 3 squares, not 2.",
             "pieges": [
@@ -838,6 +998,20 @@
           },
           {
             "texte": "The robot is facing down. It must go 1 square down, then 2 squares to the left. Its program:\nmove forward 1\nturn left\nmove forward 2\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 5,
+              "lignes": 3,
+              "robot": [
+                2,
+                2
+              ],
+              "regard": "bas",
+              "but": [
+                0,
+                1
+              ]
+            },
             "nom": "It should have turned right",
             "explication": "When the robot faces down, its right hand is on the left side of the page. To go to the left of the page, it turns right.",
             "pieges": [
@@ -853,6 +1027,16 @@
           },
           {
             "texte": "The robot is facing up. Its program:\nmove forward 2\nturn right\nmove forward 3\nWhere does it end up?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 7,
+              "lignes": 4,
+              "robot": [
+                3,
+                0
+              ],
+              "regard": "haut"
+            },
             "nom": "2 squares up and 3 squares to the right",
             "explication": "It goes up 2 squares. Then it turns right: it faces right and moves forward 3 squares.",
             "pieges": [
@@ -868,6 +1052,16 @@
           },
           {
             "texte": "The robot is facing right. Its program:\nturn left\nturn left\nmove forward 2\nWhere does it end up?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 5,
+              "lignes": 3,
+              "robot": [
+                2,
+                0
+              ],
+              "regard": "droite"
+            },
             "nom": "2 squares to the left of the start",
             "explication": "One quarter turn to the left: it faces up. One more: it faces left. Then it moves forward 2.",
             "pieges": [
@@ -883,6 +1077,20 @@
           },
           {
             "texte": "The robot is facing left. It must go 3 squares up. Its program:\nturn left\nmove forward 3\nWhere is the mistake?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 3,
+              "lignes": 7,
+              "robot": [
+                1,
+                3
+              ],
+              "regard": "gauche",
+              "but": [
+                1,
+                6
+              ]
+            },
             "nom": "It should have turned right",
             "explication": "When the robot faces left, its right hand points to the top of the page. Turning left would take it down.",
             "pieges": [
@@ -1270,6 +1478,16 @@
         },
         {
           "texte": "Le robot regarde vers la droite. Son programme :\nrépéter 3 fois [ avancer de 2 ]\npivoter à gauche\navancer de 1\nOù arrive-t-il ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 7,
+            "lignes": 3,
+            "robot": [
+              0,
+              1
+            ],
+            "regard": "droite"
+          },
           "nom": "6 cases à droite, 1 case plus haut",
           "explication": "La boucle fait 3 × 2 = 6 cases vers la droite. Puis il pivote à gauche : en regardant vers la droite, sa gauche est vers le haut. Il monte d'une case.",
           "pieges": [
@@ -1345,6 +1563,16 @@
         },
         {
           "texte": "Le robot regarde vers le haut. Son programme :\nrépéter 3 fois [ avancer de 2, pivoter à droite, pivoter à droite ]\nOù finit-il ?",
+          "figure": {
+            "type": "grille",
+            "colonnes": 3,
+            "lignes": 4,
+            "robot": [
+              1,
+              0
+            ],
+            "regard": "haut"
+          },
           "nom": "2 cases plus haut, tourné vers le bas",
           "explication": "Deux quarts de tour font un demi-tour. Tour 1 : il monte de 2 et se retourne. Tour 2 : il redescend de 2 et se retourne. Tour 3 : il remonte de 2 et se retourne.",
           "pieges": [
@@ -1403,6 +1631,16 @@
           },
           {
             "texte": "The robot is facing right. Its program:\nrepeat 3 times [ move forward 2 ]\nturn left\nmove forward 1\nWhere does it end up?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 7,
+              "lignes": 3,
+              "robot": [
+                0,
+                1
+              ],
+              "regard": "droite"
+            },
             "nom": "6 squares right, 1 square up",
             "explication": "The loop makes 3 × 2 = 6 squares to the right. Then it turns left: facing right, its left is towards the top. It goes up one square.",
             "pieges": [
@@ -1478,6 +1716,16 @@
           },
           {
             "texte": "The robot is facing up. Its program:\nrepeat 3 times [ move forward 2, turn right, turn right ]\nWhere does it end up?",
+            "figure": {
+              "type": "grille",
+              "colonnes": 3,
+              "lignes": 4,
+              "robot": [
+                1,
+                0
+              ],
+              "regard": "haut"
+            },
             "nom": "2 squares up, facing down",
             "explication": "Two quarter turns make a half turn. Time 1: it goes up 2 and turns round. Time 2: it comes back down 2 and turns round. Time 3: it goes up 2 again and turns round.",
             "pieges": [

@@ -58,6 +58,7 @@ items:
       - { texte: "4", pourquoi: "2x = 4 veut dire 2 × x = 4 : on divise par 2." }
       - { texte: "1/2", pourquoi: "On divise 4 par 2, pas 2 par 4." }
   - texte: "Pourquoi la droite d’équation x = 3 n’a-t-elle pas d’équation réduite de la forme y = mx + p ?"
+    figure: { type: repere, xmin: -1, xmax: 5, ymin: -1, ymax: 5, verticales: [3] }
     nom: "Elle est parallèle à l’axe des ordonnées : elle n’a pas de pente."
     explication: "Tous ses points ont x = 3, quel que soit y. Un vecteur directeur est u(0 ; 1) : x n’avance pas, donc on ne peut pas parler de pente."
     pieges:
@@ -119,6 +120,7 @@ en:
         - { texte: "4", pourquoi: "2x = 4 means 2 × x = 4: divide by 2." }
         - { texte: "1/2", pourquoi: "Divide 4 by 2, not 2 by 4." }
     - texte: "Why does the line x = 3 have no equation of the form y = mx + p?"
+      figure: { type: repere, xmin: -1, xmax: 5, ymin: -1, ymax: 5, verticales: [3] }
       nom: "It is parallel to the y-axis: it has no gradient."
       explication: "All its points have x = 3, whatever y is. A direction vector is u(0, 1): x does not move, so there is no gradient."
       pieges:

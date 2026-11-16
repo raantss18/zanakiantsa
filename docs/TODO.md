@@ -361,6 +361,18 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   (`bounded`, erreur de type). Vérifié sur l'émulateur : plus aucun « son ignoré ».
 - ⏳ Programmes libres sur une vraie tablette, et avec un enfant.
 
+## 2026-11-16 — Figures restantes et blocage après « J'ai compris »
+
+- ✅ 6 nouveaux types de figure : quadrillage du robot, tableau, bande, motifs de carreaux, rectangles à l'échelle, échiquier
+  (+ Thalès papillon et non parallèle, droite verticale). 67 questions de plus illustrées (maths 7, échecs 27, code et
+  suites 33) ; les tableaux écrits en colonnes de texte sont devenus de vrais tableaux. Test : chaque échiquier montre les
+  pièces nommées dans le texte.
+- 🐞✅ **Bloquant en 1.1.7** : dans la version publiée, la page restait figée sur la leçon après « J'ai compris » (un
+  LayoutBuilder imbriqué, ajouté pour la bulle qui grandit, ne se recalculait plus ; invisible en mode debug). Corrigé et
+  vérifié sur l'émulateur en version publiée (trois leçons de suite) ; test `session_layout_test.dart`.
+- ⏳ À publier vite (1.1.8) avec l'accord d'Antsa. Restent sans figure : triangles d'allumettes, perles, tables mises bout à
+  bout, positions d'échecs sans rois, cartes du monde et de France.
+
 ## 2026-11-15 (nuit) — Autres boutiques (demande d'Antsa)
 
 - ✅ Obtainium (https://github.com/ImranR98/Obtainium) : bouton « Ajouter à Obtainium » et marche à suivre sur le site ;

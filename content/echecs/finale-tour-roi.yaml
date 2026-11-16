@@ -15,24 +15,28 @@ phrases:
   bravo: "Oui ! La réponse est : {bonne}."
 items:
   - texte: "Roi noir en e8, roi blanc en e6, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?"
+    figure: { type: echiquier, fen: "4k3/8/4K3/8/8/8/8/R7 w - - 0 1" }
     nom: "La tour va en a8"
     explication: "La tour fait échec sur toute la 8e rangée. Le roi blanc garde d7, e7 et f7 : le roi noir n’a plus de case. Mat."
     pieges:
       - { texte: "La tour va en a7", pourquoi: "En a7, la tour ne fait pas échec : le roi noir reste sur la 8e rangée, libre." }
       - { texte: "Le roi va en e7", pourquoi: "Deux rois ne peuvent jamais se toucher : e7 touche e8, ce coup est interdit." }
   - texte: "Roi noir en h4, roi blanc en f4, tour blanche en a1. Aux Blancs. Quel coup fait échec et mat ?"
+    figure: { type: echiquier, fen: "8/8/8/8/5K1k/8/8/R7 w - - 0 1" }
     nom: "La tour va en h1"
     explication: "La tour fait échec sur toute la colonne h. Le roi blanc garde g3, g4 et g5 : le roi noir est pris au bord. Mat."
     pieges:
       - { texte: "La tour va en a4", pourquoi: "La tour en a4 ferait échec sur la 4e rangée, mais le roi blanc en f4 lui barre le chemin : aucun échec." }
       - { texte: "La tour va en g1", pourquoi: "En g1, la tour ne fait pas échec : elle garde g3, g4, g5, que ton roi garde déjà." }
   - texte: "Roi noir en a8, roi blanc en b6, tour blanche en h1. Aux Blancs. Quel coup fait échec et mat ?"
+    figure: { type: echiquier, fen: "k7/8/1K6/8/8/8/8/7R w - - 0 1" }
     nom: "La tour va en h8"
     explication: "La tour fait échec sur la 8e rangée. Le roi blanc garde a7 et b7 : plus aucune case. Mat."
     pieges:
       - { texte: "La tour va en a1", pourquoi: "C’est un échec sur la colonne a, mais le roi noir s’échappe en b8, que personne ne garde." }
       - { texte: "La tour va en h7", pourquoi: "En h7, la tour ne fait pas échec. Le roi noir peut encore aller en b8." }
   - texte: "Roi noir en a8, roi blanc en c7, tour blanche en b1. Aux Blancs. Pourquoi la tour en b7 est-elle une faute ?"
+    figure: { type: echiquier, fen: "k7/2K5/8/8/8/8/8/1R6 w - - 0 1" }
     nom: "C’est pat : le roi noir ne peut plus bouger sans être en échec, partie nulle"
     explication: "Après tour en b7, le roi noir n’est pas en échec et n’a aucun coup permis : c’est le pat, la partie est nulle. Le mat était la tour en a1."
     pieges:
@@ -75,24 +79,28 @@ en:
     bravo: "Yes! The answer is: {bonne}."
   items:
     - texte: "Black king on e8, white king on e6, white rook on a1. White to play. Which move gives checkmate?"
+      figure: { type: echiquier, fen: "4k3/8/4K3/8/8/8/8/R7 w - - 0 1" }
       nom: "The rook goes to a8"
       explication: "The rook gives check along the whole 8th rank. The white king guards d7, e7 and f7: the black king has no square left. Checkmate."
       pieges:
         - { texte: "The rook goes to a7", pourquoi: "On a7, the rook gives no check: the black king stays on the 8th rank, free." }
         - { texte: "The king goes to e7", pourquoi: "Two kings can never touch: e7 touches e8, this move is not allowed." }
     - texte: "Black king on h4, white king on f4, white rook on a1. White to play. Which move gives checkmate?"
+      figure: { type: echiquier, fen: "8/8/8/8/5K1k/8/8/R7 w - - 0 1" }
       nom: "The rook goes to h1"
       explication: "The rook gives check along the whole h-file. The white king guards g3, g4 and g5: the black king is caught on the edge. Checkmate."
       pieges:
         - { texte: "The rook goes to a4", pourquoi: "The rook on a4 would check along the 4th rank, but the white king on f4 blocks its way: no check." }
         - { texte: "The rook goes to g1", pourquoi: "On g1, the rook gives no check: it guards g3, g4, g5, which your king already guards." }
     - texte: "Black king on a8, white king on b6, white rook on h1. White to play. Which move gives checkmate?"
+      figure: { type: echiquier, fen: "k7/8/1K6/8/8/8/8/7R w - - 0 1" }
       nom: "The rook goes to h8"
       explication: "The rook gives check along the 8th rank. The white king guards a7 and b7: no square left. Checkmate."
       pieges:
         - { texte: "The rook goes to a1", pourquoi: "It is check along the a-file, but the black king escapes to b8, which nobody guards." }
         - { texte: "The rook goes to h7", pourquoi: "On h7, the rook gives no check. The black king can still go to b8." }
     - texte: "Black king on a8, white king on c7, white rook on b1. White to play. Why is the rook to b7 a mistake?"
+      figure: { type: echiquier, fen: "k7/2K5/8/8/8/8/8/1R6 w - - 0 1" }
       nom: "It is stalemate: the black king cannot move without being in check, a draw"
       explication: "After the rook goes to b7, the black king is not in check and has no legal move: it is stalemate, the game is drawn. The mate was the rook to a1."
       pieges:

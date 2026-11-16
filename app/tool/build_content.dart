@@ -185,7 +185,10 @@ void checkEnglish(String where, Map<String, dynamic> s) {
 }
 
 /// Types de figure connus de `lib/activities/figure.dart` (QuizFigure.types).
-const figureTypes = {'triangle', 'thales', 'rectangle', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes', 'relief', 'cases'};
+const figureTypes = {
+  'triangle', 'thales', 'rectangle', 'rectangles', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes', 'relief', 'cases',
+  'grille', 'tableau', 'bande', 'carreaux', 'echiquier',
+};
 
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');

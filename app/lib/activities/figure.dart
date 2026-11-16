@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../core/game.dart';
 import '../l10n/l10n.dart';
+import '../ui/chess_play.dart';
 
 
 /// Figures dessinées par l'app pour les questions écrites (ADR 0078) : une question qui parle d'un triangle, d'une droite
@@ -28,11 +30,19 @@ import '../l10n/l10n.dart';
 /// - `relief` : carte de relief schématique (plaine, collines, montagnes) et sa légende ; `legende` [textes, du bas
 ///   vers le haut].
 /// - `cases` : une rangée de `n` cases numérotées ; `robot` (case) ; `sens` 1 (vers la droite) ou -1.
+/// - `grille` : quadrillage `colonnes` × `lignes`, `robot` [colonne, ligne] (0 en bas à gauche), `regard`, `but`.
+/// - `tableau` : `cases`, lignes du tableau (titres en première ligne et colonne) ; « … » ou « ? » : la case cherchée.
+/// - `bande` : bande unité de `parts` égales, `colorees` coloriées et hachurées.
+/// - `carreaux` : `forme` (croix, cadre, escalier, l, rangee, rectangle) et `etapes`, une figure numérotée par étape.
+/// - `rectangles` : [{nom, l, h, largeur, hauteur}] côte à côte, à l'échelle (un carré : l = h).
+/// - `echiquier` : `fen` (la position, notation FEN), `noirs` true pour voir l'échiquier du côté des Noirs.
+/// - `thales` accepte aussi `papillon: true` et `parallele: false` ; `repere`, `verticales` [x].
 class QuizFigure extends StatelessWidget {
   const QuizFigure(this.spec, {super.key});
   final Map<String, dynamic> spec;
 
-  static const types = {'triangle', 'thales', 'rectangle', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes', 'relief', 'cases'};
+  static const types = {'triangle', 'thales', 'rectangle', 'rectangles', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes',
+    'relief', 'cases', 'grille', 'tableau', 'bande', 'carreaux', 'echiquier'};
 
   /// Proportions de la zone de dessin (largeur / hauteur).
   double get aspect => switch (spec['type']) {
@@ -41,13 +51,35 @@ class QuizFigure extends StatelessWidget {
         'allumettes' => 2.6,
         'relief' => 1.7,
         'repere' => 1.25,
+        'bande' => 4.0,
+        'tableau' => _tableAspect,
+        'carreaux' => 2.4,
+        'grille' => ((spec['colonnes'] as num?) ?? 6) / ((spec['lignes'] as num?) ?? 4),
+        'rectangles' => 1.9,
         _ => 1.6,
       };
+
+  double get _tableAspect {
+    final rows = spec['cases'] as List? ?? const [];
+    final cols = rows.isEmpty ? 3 : (rows.first as List).length;
+    return (cols / max(1, rows.length) * 1.9).clamp(1.2, 3.0).toDouble();
+  }
 
   String get description => spec['type'] == 'relief' ? 'Carte de relief et sa légende' : 'Figure de la question';
 
   @override
-  Widget build(BuildContext context) => Semantics(
+  Widget build(BuildContext context) => spec['type'] == 'echiquier'
+      // La position décrite en mots (« roi noir en h8… ») sur le vrai échiquier de l'app, sans rien à toucher.
+      ? Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 360, maxHeight: 360),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: ChessBoardView(position: Position.fen(spec['fen'] as String), flipped: spec['noirs'] == true),
+            ),
+          ),
+        )
+      : Semantics(
         image: true,
         label: description,
         child: AspectRatio(
@@ -138,6 +170,16 @@ class FigurePainter extends CustomPainter {
         _relief(size);
       case 'cases':
         _cells(size);
+      case 'grille':
+        _robotGrid(size);
+      case 'tableau':
+        _table(size);
+      case 'bande':
+        _strip(size);
+      case 'carreaux':
+        _tiles(size);
+      case 'rectangles':
+        _rects(size);
     }
   }
 
@@ -219,19 +261,34 @@ class FigurePainter extends CustomPainter {
     final n = names.length == 5 ? names : ['A', 'B', 'C', 'M', 'N'];
     final pad = 40.0;
     final w = s.width - 2 * pad, h = s.height - 2 * pad;
-    final a = Offset(pad + w * 0.5, pad), b = Offset(pad, pad + h), cc = Offset(pad + w, pad + h);
+    // Papillon : A au milieu, (BM) et (CN) se croisent en A ; sinon M et N sont sur [AB] et [AC].
+    final butterfly = spec['papillon'] == true;
+    // `parallele: false` : N plus bas que M, (MN) n'est visiblement pas parallèle à (BC) (question « sont-elles parallèles ? »).
+    final parallel = spec['parallele'] != false;
+    final a = butterfly ? Offset(pad + w * 0.5, pad + h * 0.45) : Offset(pad + w * 0.5, pad);
+    final b = Offset(pad + (butterfly ? w * 0.12 : 0), pad + h), cc = Offset(pad + w * (butterfly ? 0.88 : 1), pad + h);
     const k = 0.42;
-    final m = a + (b - a) * k, nn = a + (cc - a) * k;
+    // Papillon : M en face de B, N en face de C, le petit triangle au-dessus (rapport 0,8).
+    final m = butterfly ? a + (a - b) * 0.8 : a + (b - a) * k;
+    final nn = butterfly ? a + (a - cc) * 0.8 : a + (cc - a) * (parallel ? k : 0.62);
     final at = {n[0]: a, n[1]: b, n[2]: cc, n[3]: m, n[4]: nn};
-    final centre = (a + b + cc) / 3;
+    final centre = butterfly ? a + const Offset(0, 1) : (a + b + cc) / 3;
     c.drawPath(Path()..addPolygon([a, b, cc], true), Paint()..color = fill);
     c.drawPath(Path()..addPolygon([a, b, cc], true), stroke());
+    if (butterfly) {
+      c.drawPath(Path()..addPolygon([a, m, nn], true), Paint()..color = fill);
+      c.drawPath(Path()..addPolygon([a, m, nn], true), stroke());
+    }
     c.drawLine(m, nn, stroke(3, const Color(0xFF1D4ED8)));
     for (final p in [m, nn]) {
       c.drawCircle(p, 4, Paint()..color = line);
     }
     for (final e in at.entries) {
-      if (e.value == m || e.value == nn) {
+      if (butterfly && e.value == a) {
+        label(e.key, a + const Offset(30, 0), box: false, size: 22);
+      } else if ((e.value == m || e.value == nn) && butterfly) {
+        label(e.key, e.value + Offset(e.value.dx > a.dx ? 18 : -18, -18), box: false, size: 22);
+      } else if (e.value == m || e.value == nn) {
         // M et N : à l'intérieur du triangle, juste sous le point (les longueurs s'écrivent dehors).
         label(e.key, e.value + Offset(e.value == m ? 18 : -18, 16), box: false, size: 20);
       } else {
@@ -245,7 +302,7 @@ class FigurePainter extends CustomPainter {
       // [MN] : étiquette au-dessus du segment ; les autres, vers l'extérieur.
       if ({p, q}.containsAll([m, nn])) {
         label(text(e.value), (p + q) / 2 + const Offset(0, -16));
-      } else if (p == a && (q == b || q == cc) || q == a && (p == b || p == cc)) {
+      } else if (!butterfly && (p == a && (q == b || q == cc) || q == a && (p == b || p == cc))) {
         // [AB] et [AC] entiers : l'étiquette entre M (ou N) et B (ou C), pour ne pas tomber sur M ou N.
         final far = p == a ? q : p;
         final along = a + (far - a) * 0.74;
@@ -253,6 +310,10 @@ class FigurePainter extends CustomPainter {
         n = n / n.distance;
         if ((along + n - centre).distance < (along - centre).distance) n = -n;
         label(text(e.value), along + n * 24);
+      } else if (butterfly) {
+        // Côtés du petit triangle : poussés hors de AMN ; du grand : hors de ABC.
+        final top = p.dy <= a.dy + 1 && q.dy <= a.dy + 1;
+        side(p, q, text(e.value), top ? (a + m + nn) / 3 : (a + b + cc) / 3);
       } else {
         side(p, q, text(e.value), centre);
       }
@@ -399,6 +460,12 @@ class FigurePainter extends CustomPainter {
       final m = (ab[0] as num).toDouble(), p = (ab[1] as num).toDouble();
       c.drawLine(at(xa, m * xa + p), at(xb, m * xb + p), stroke(3, const Color(0xFF1D4ED8)));
     }
+    // Droites verticales x = k (pas d'équation réduite y = mx + p).
+    for (final v in list('verticales')) {
+      final x = (v as num).toDouble();
+      c.drawLine(at(x, ya), at(x, yb), stroke(3, const Color(0xFF1D4ED8)));
+      label(_fmt(x), at(x, 0) + const Offset(12, 14), size: 16);
+    }
     c.restore();
     final pts = {for (final e in map('points').entries) e.key: at(((e.value as List)[0] as num).toDouble(), ((e.value as List)[1] as num).toDouble())};
     for (final sg in list('segments')) {
@@ -525,6 +592,170 @@ class FigurePainter extends CustomPainter {
       final dir = (spec['sens'] as num? ?? 1).toDouble();
       final tip = r.center - Offset(0, h * 0.12) + Offset(dir * min(w, h) * 0.42, 0);
       c.drawPath(Path()..moveTo(tip.dx, tip.dy)..lineTo(tip.dx - dir * 10, tip.dy - 8)..lineTo(tip.dx - dir * 10, tip.dy + 8)..close(), Paint()..color = const Color(0xFF1F5F8B));
+    }
+  }
+
+  /// Robot sur un quadrillage : `colonnes`, `lignes`, `robot` [colonne, ligne] (0 en bas à gauche), `regard` (haut, bas,
+  /// gauche, droite), `but` [colonne, ligne] facultatif (une étoile) ; jamais le chemin (ce serait la réponse).
+  void _robotGrid(Size s) {
+    final cols = (spec['colonnes'] as num? ?? 6).toInt().clamp(2, 12), rows = (spec['lignes'] as num? ?? 4).toInt().clamp(2, 10);
+    final cell = min((s.width - 16) / cols, (s.height - 16) / rows);
+    final ox = (s.width - cell * cols) / 2, oy = (s.height - cell * rows) / 2;
+    Rect at(int cx, int cy) => Rect.fromLTWH(ox + cx * cell, oy + (rows - 1 - cy) * cell, cell, cell);
+    for (var x = 0; x < cols; x++) {
+      for (var y = 0; y < rows; y++) {
+        c.drawRect(at(x, y), Paint()..color = fill);
+        c.drawRect(at(x, y), stroke(1.5, const Color(0xFF9AA6A0)));
+      }
+    }
+    final goal = spec['but'] as List?;
+    if (goal != null) {
+      final r = at((goal[0] as num).toInt(), (goal[1] as num).toInt());
+      final path = Path();
+      for (var i = 0; i < 10; i++) {
+        final rad = (i.isEven ? 0.38 : 0.16) * cell, ang = -pi / 2 + i * pi / 5;
+        final p = r.center + Offset(cos(ang), sin(ang)) * rad;
+        i == 0 ? path.moveTo(p.dx, p.dy) : path.lineTo(p.dx, p.dy);
+      }
+      c.drawPath(path..close(), Paint()..color = const Color(0xFFE08A00));
+      c.drawPath(path, stroke(1.5));
+    }
+    final rob = spec['robot'] as List?;
+    if (rob != null) {
+      final r = at((rob[0] as num).toInt(), (rob[1] as num).toInt());
+      c.drawCircle(r.center, cell * 0.3, Paint()..color = const Color(0xFF1F5F8B));
+      final dir = switch (spec['regard']) { 'bas' => const Offset(0, 1), 'gauche' => const Offset(-1, 0), 'droite' => const Offset(1, 0), _ => const Offset(0, -1) };
+      final tip = r.center + dir * cell * 0.46, side = Offset(-dir.dy, dir.dx) * cell * 0.14, base = r.center + dir * cell * 0.26;
+      c.drawPath(Path()..moveTo(tip.dx, tip.dy)..lineTo(base.dx + side.dx, base.dy + side.dy)..lineTo(base.dx - side.dx, base.dy - side.dy)..close(),
+          Paint()..color = const Color(0xFF1F5F8B));
+    }
+  }
+
+  /// Tableau : `cases`, liste de lignes ; la première ligne et la première colonne sont des titres (en gras, fond pâle).
+  /// « … » ou « ? » marque la case cherchée (encadrée).
+  void _table(Size s) {
+    final rows = [for (final r in list('cases')) [for (final v in r as List) text(v)]];
+    if (rows.isEmpty) return;
+    final ncol = rows.map((r) => r.length).reduce(max);
+    final colW = List<double>.filled(ncol, 40);
+    for (final r in rows) {
+      for (var j = 0; j < r.length; j++) {
+        colW[j] = max(colW[j], widthOf(r[j], size: 20) + 20);
+      }
+    }
+    final total = colW.reduce((a, b) => a + b);
+    final scale = min(1.0, (s.width - 8) / total);
+    final rowH = min(52.0, (s.height - 8) / rows.length);
+    final x0 = (s.width - total * scale) / 2, y0 = (s.height - rowH * rows.length) / 2;
+    var y = y0;
+    for (var i = 0; i < rows.length; i++) {
+      var x = x0;
+      for (var j = 0; j < ncol; j++) {
+        final w = colW[j] * scale;
+        final r = Rect.fromLTWH(x, y, w, rowH);
+        final head = i == 0 || j == 0;
+        final v = j < rows[i].length ? rows[i][j] : '';
+        final unknown = v == '…' || v == '?';
+        if (!(i == 0 && j == 0 && v.isEmpty)) {
+          c.drawRect(r, Paint()..color = head ? const Color(0xFFE8F1FB) : Colors.white);
+          c.drawRect(r, stroke(unknown ? 4 : 1.5, unknown ? const Color(0xFF7A1FA2) : line));
+        }
+        label(unknown ? '?' : v, r.center, size: 20 * scale.clamp(0.7, 1.0), bold: head || unknown, box: false);
+        x += w;
+      }
+      y += rowH;
+    }
+  }
+
+  /// Bande unité : `parts` égales, `colorees` parts coloriées et hachurées (la couleur n'est jamais seule), `etiquette`.
+  void _strip(Size s) {
+    final n = (spec['parts'] as num? ?? 10).toInt().clamp(1, 20), k = (spec['colorees'] as num? ?? 0).toInt().clamp(0, n);
+    final r = Rect.fromLTWH(16, s.height * 0.22, s.width - 32, s.height * 0.5);
+    final w = r.width / n;
+    for (var i = 0; i < n; i++) {
+      final cell = Rect.fromLTWH(r.left + i * w, r.top, w, r.height);
+      if (i < k) {
+        c.drawRect(cell, Paint()..color = const Color(0xFFFDE68A));
+        c.save();
+        c.clipRect(cell);
+        for (var d = -r.height; d < w; d += 8) {
+          c.drawLine(Offset(cell.left + d, cell.bottom), Offset(cell.left + d + r.height, cell.top), stroke(1.2, const Color(0xFFB45309)));
+        }
+        c.restore();
+      } else {
+        c.drawRect(cell, Paint()..color = Colors.white);
+      }
+      c.drawRect(cell, stroke(2));
+    }
+    c.drawRect(r, stroke(3));
+    if (spec['etiquette'] != null) label(text(spec['etiquette']), Offset(r.center.dx, r.bottom + 22), size: 20, box: false);
+  }
+
+  /// Motifs de carreaux, une figure par étape (`etapes`, des nombres ; pour `rectangle`, des [lignes, colonnes]) :
+  /// `forme` croix (bras de n), cadre (tour d'un carré de n + 2), escalier (marches de 1 à n), l (deux bras de n + 1),
+  /// rangee (n carreaux), rectangle (lignes × colonnes). Chaque étape est numérotée dessous.
+  void _tiles(Size s) {
+    final steps = list('etapes');
+    if (steps.isEmpty) return;
+    List<(int, int)> cells(Object st) {
+      final n = st is List ? 0 : (st as num).toInt();
+      return switch (spec['forme']) {
+        'croix' => [(0, 0), for (var i = 1; i <= n; i++) ...[(i, 0), (-i, 0), (0, i), (0, -i)]],
+        'cadre' => [for (var x = 0; x < n + 2; x++) for (var y = 0; y < n + 2; y++) if (x == 0 || y == 0 || x == n + 1 || y == n + 1) (x, y)],
+        'escalier' => [for (var x = 0; x < n; x++) for (var y = 0; y <= x; y++) (x, y)],
+        'l' => [for (var i = 0; i <= n; i++) (0, i), for (var i = 1; i <= n; i++) (i, 0)],
+        'rectangle' => [
+            for (var y = 0; y < ((st as List)[0] as num).toInt(); y++) for (var x = 0; x < (st[1] as num).toInt(); x++) (x, y)
+          ],
+        _ => [for (var i = 0; i < n; i++) (i, 0)],
+      };
+    }
+
+    final shapes = [for (final st in steps) cells(st as Object)];
+    final spans = [
+      for (final sh in shapes)
+        (sh.map((e) => e.$1).reduce(min), sh.map((e) => e.$1).reduce(max), sh.map((e) => e.$2).reduce(min), sh.map((e) => e.$2).reduce(max))
+    ];
+    final totalW = spans.fold(0, (a, sp) => a + sp.$2 - sp.$1 + 1) + shapes.length - 1;
+    final maxH = spans.map((sp) => sp.$4 - sp.$3 + 1).reduce(max);
+    final cell = min((s.width - 16) / totalW, (s.height - 40) / maxH);
+    var x = (s.width - cell * totalW) / 2;
+    final top = (s.height - 34 - cell * maxH) / 2;
+    final showNumbers = shapes.length > 1;
+    for (final (i, sh) in shapes.indexed) {
+      final sp = spans[i];
+      for (final (cx, cy) in sh) {
+        final r = Rect.fromLTWH(x + (cx - sp.$1) * cell, top + (maxH - 1 - (cy - sp.$3)) * cell, cell, cell);
+        c.drawRect(r.deflate(1), Paint()..color = const Color(0xFFFDE68A));
+        c.drawRect(r.deflate(1), stroke(1.5));
+      }
+      final w = (sp.$2 - sp.$1 + 1) * cell;
+      if (showNumbers) label('${i + 1}', Offset(x + w / 2, top + maxH * cell + 20), size: 20);
+      x += w + cell;
+    }
+  }
+
+  /// Rectangles à l'échelle, côte à côte : `rectangles` [{nom, l, h, largeur, hauteur}] (l et h : nombres, pour les
+  /// proportions ; largeur et hauteur : les textes écrits). Un carré est un rectangle de l = h.
+  void _rects(Size s) {
+    final rs = [for (final r in list('rectangles')) Map<String, dynamic>.from(r as Map)];
+    if (rs.isEmpty) return;
+    double nv(Map m, String k) => (m[k] as num? ?? 1).toDouble();
+    final sumL = rs.fold(0.0, (a, r) => a + nv(r, 'l'));
+    final maxH = rs.map((r) => nv(r, 'h')).reduce(max);
+    final gap = 70.0, padX = 50.0;
+    final unitPx = min((s.width - 2 * padX - gap * (rs.length - 1)) / sumL, (s.height - 90) / maxH);
+    var x = padX + ((s.width - 2 * padX - gap * (rs.length - 1)) - sumL * unitPx) / 2;
+    final base = s.height - 44;
+    for (final r in rs) {
+      final w = nv(r, 'l') * unitPx, h = nv(r, 'h') * unitPx;
+      final rect = Rect.fromLTWH(x, base - h, w, h);
+      c.drawRect(rect, Paint()..color = fill);
+      c.drawRect(rect, stroke());
+      label(text(r['nom']), rect.center, size: 24);
+      label(text(r['largeur']), Offset(rect.center.dx, base + 20), size: 18, box: false);
+      label(text(r['hauteur']), Offset(rect.left - 6, rect.center.dy), align: Alignment.centerRight, size: 18, box: false);
+      x += w + gap;
     }
   }
 

@@ -33,6 +33,7 @@ items:
       - { texte: "5,50 €", pourquoi: "3 + 2,5 : on paie 3 € pour chaque kilo, c'est une multiplication." }
       - { texte: "1,20 €", pourquoi: "3 ÷ 2,5 : le prix augmente avec la masse, on multiplie." }
   - texte: "Tableau. Masse en kg : 2 ; 6. Prix en euros : 5 ; … Quel prix manque ?"
+    figure: { type: tableau, cases: [["Masse (kg)", "2", "6"], ["Prix (€)", "5", "…"]] }
     nom: "15 €"
     explication: "6 kg, c'est 3 fois plus que 2 kg : 3 × 5 € = 15 €."
     pieges:
@@ -99,6 +100,7 @@ en:
         - { texte: "€5.50", pourquoi: "3 + 2.5: you pay €3 for each kilo, so multiply." }
         - { texte: "€1.20", pourquoi: "3 ÷ 2.5: the price goes up with the mass, so multiply." }
     - texte: "Table. Mass in kg: 2; 6. Price in euros: 5; … Which price is missing?"
+      figure: { type: tableau, cases: [["Mass (kg)", "2", "6"], ["Price (€)", "5", "…"]] }
       nom: "€15"
       explication: "6 kg is 3 times 2 kg: 3 × €5 = €15."
       pieges:
