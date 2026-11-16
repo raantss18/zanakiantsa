@@ -881,7 +881,16 @@ class _SessionPageState extends State<SessionPage> {
                         newSticker: app.rewards.unlockedSince(before) ? u.stickers[app.rewards.stickers - 1] : null,
                       ),
                     )
-                  : LayoutBuilder(builder: (context, box) {
+                  // Pas de LayoutBuilder ici : imbriqué dans celui de la page, il restait bloqué dans la version publiée et la
+                  // page ne passait plus à la question après « J'ai compris » (émulateur, 2026-11-16). La zone se calcule
+                  // depuis la taille de la page et la vraie hauteur de la bulle, recalculée quand le texte change.
+                  : ListenableBuilder(listenable: a, builder: (context, _) {
+                      final w = k.maxWidth - (side ? sidePanelWidth(k.maxWidth) : 0);
+                      final bubble = side
+                          ? 0.0
+                          : Narrator.heightFor(context, text: a.bandText, width: k.maxWidth, height: narratorHeight,
+                              maxHeight: max(narratorHeight, k.maxHeight * 0.4), help: a.helpText != null);
+                      final box = BoxConstraints.tight(Size(w, max(0.0, k.maxHeight - 72 - bubble)));
                       // La zone de l'activité : ce que le texte laisse (la bulle grandit avec un texte long, ADR 0078).
                       // La pastille « Nouveau / Rappel : titre » s'écrit en entier (deux lignes au plus) : coupée en « Continents et
                       // océa… », on ne savait plus de quoi parlait le rappel (capture d'Antsa, 2026-11-15).

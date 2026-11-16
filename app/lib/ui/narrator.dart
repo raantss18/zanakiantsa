@@ -27,6 +27,28 @@ class Narrator extends StatefulWidget {
   /// Hauteur jusqu'où la bulle peut grandir pour un texte long (par défaut : [height], le texte défile).
   final double? maxHeight;
 
+  /// Hauteur totale du bandeau pour [text] dans [width] (la même que celle qu'il prend à l'écran) : la page s'en sert pour
+  /// donner à l'activité la place qui reste.
+  static double heightFor(BuildContext context,
+      {required String text, required double width, required double height, double? maxHeight, bool help = false}) {
+    final l = _layout(width, height, help);
+    final base = DefaultTextStyle.of(context).style.merge(const TextStyle(fontWeight: FontWeight.w700, color: ink, height: 1.2));
+    final (_, h) = fit(text, width, height - l.extra, (maxHeight ?? height) - l.extra, base, MediaQuery.textScalerOf(context),
+        reserved: l.reserved);
+    return h + l.extra;
+  }
+
+  /// Mise en page selon la largeur : mascotte, place prise hors du texte, et hauteur ajoutée quand la mascotte est au-dessus.
+  static ({double mascot, double reserved, double extra, bool stacked, bool tight, bool narrow}) _layout(double width, double height, bool help) {
+    final narrow = width < 600;
+    final stacked = width < 380 && height >= 200;
+    final tight = width < 380;
+    final mascot = stacked ? 44.0 : tight ? 38.0 : narrow ? 52.0 : 76.0;
+    final helpIcon = help ? (tight ? 26.0 : 42.0) : 0.0;
+    final reserved = 24 + (stacked ? 0 : mascot + 8) + (tight ? 8 : narrow ? 12 : 16) + helpIcon + 52;
+    return (mascot: mascot, reserved: reserved, extra: stacked ? mascot + 6 : 0.0, stacked: stacked, tight: tight, narrow: narrow);
+  }
+
   /// Taille des lettres la plus petite permise : lisible à bout de bras sur un téléphone comme sur une tablette.
   static double minFont(double width) => width < 600 ? 19 : 21;
 
@@ -75,14 +97,11 @@ class _NarratorState extends State<Narrator> with SingleTickerProviderStateMixin
     // La place de la bulle elle-même, pas celle de l'écran (vu en paysage le 2026-11-08 : dans la colonne de côté, le texte
     // n'avait plus que ≈ 80 dp, un mot par ligne). Étroite : mascotte plus petite ; étroite et haute : mascotte au-dessus.
     return LayoutBuilder(builder: (context, box) {
-    final narrow = box.maxWidth < 600;
-    final stacked = box.maxWidth < 380 && widget.height >= 200;
-    final tight = box.maxWidth < 380;
-    final mascot = stacked ? 44.0 : tight ? 38.0 : narrow ? 52.0 : 76.0;
-    final helpIcon = widget.help ? (tight ? 26.0 : 42.0) : 0.0;
+    final l = Narrator._layout(box.maxWidth, widget.height, widget.help);
+    final narrow = l.narrow, stacked = l.stacked, tight = l.tight, mascot = l.mascot;
     final base = DefaultTextStyle.of(context).style.merge(const TextStyle(fontWeight: FontWeight.w700, color: ink, height: 1.2));
     // Ce qui n'est pas du texte sur la largeur : marges, mascotte (à côté), ampoule, bouton « Réécouter ».
-    final reserved = 24 + (stacked ? 0 : mascot + 8) + (tight ? 8 : narrow ? 12 : 16) + helpIcon + 52;
+    final reserved = l.reserved;
     final (font, height) = Narrator.fit(widget.text, box.maxWidth, widget.height - (stacked ? mascot + 6 : 0), (widget.maxHeight ?? widget.height) - (stacked ? mascot + 6 : 0),
         base, MediaQuery.textScalerOf(context), reserved: reserved);
     final style = base.copyWith(fontSize: font);
