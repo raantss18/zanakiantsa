@@ -67,6 +67,7 @@ items:
       - { texte: "À l'étape 3", pourquoi: "À l'étape 3, les deux ont 14 carreaux : B rattrape A, mais ne le dépasse pas encore." }
       - { texte: "À l'étape 2", pourquoi: "À l'étape 2, A a 12 carreaux et B 9 : B est encore derrière." }
   - texte: "Une rangée de triangles en allumettes : 1 triangle, 3 allumettes ; 2 triangles, 5 ; 3 triangles, 7. Combien de triangles fait-on avec 41 allumettes ?"
+    figure: { type: allumettes, forme: triangles, triangles: [1, 2, 3] }
     nom: "20"
     explication: "Structure : 1 allumette de départ, puis 2 par triangle. 41 − 1 = 40, et 40 : 2 = 20 triangles."
     pieges:
@@ -132,6 +133,7 @@ en:
         - { texte: "At stage 3", pourquoi: "At stage 3 both have 14 tiles: B catches up with A, but doesn't overtake it yet." }
         - { texte: "At stage 2", pourquoi: "At stage 2, A has 12 tiles and B 9: B is still behind." }
     - texte: "A row of triangles made of matchsticks: 1 triangle, 3 matchsticks; 2 triangles, 5; 3 triangles, 7. How many triangles can you make with 41 matchsticks?"
+      figure: { type: allumettes, forme: triangles, triangles: [1, 2, 3] }
       nom: "20"
       explication: "Structure: 1 starting matchstick, then 2 per triangle. 41 − 1 = 40, and 40 ÷ 2 = 20 triangles."
       pieges:

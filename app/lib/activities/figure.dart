@@ -34,6 +34,9 @@ import '../ui/chess_play.dart';
 /// - `tableau` : `cases`, lignes du tableau (titres en première ligne et colonne) ; « … » ou « ? » : la case cherchée.
 /// - `bande` : bande unité de `parts` égales, `colorees` coloriées et hachurées.
 /// - `carreaux` : `forme` (croix, cadre, escalier, l, rangee, rectangle) et `etapes`, une figure numérotée par étape.
+/// - `allumettes` avec `forme: triangles` et `triangles` [1, 2, 3] : rangées de triangles en allumettes.
+/// - `carreaux` accepte aussi `ronds` (rangée de ronds) et `tables` (tables carrées bout à bout, une place par côté libre).
+/// - `perles` : `groupes` [[1, 1], [2, 2]] : rouges (rondes) puis bleues (carrées), groupe par groupe.
 /// - `rectangles` : [{nom, l, h, largeur, hauteur}] côte à côte, à l'échelle (un carré : l = h).
 /// - `echiquier` : `fen` (la position, notation FEN), `noirs` true pour voir l'échiquier du côté des Noirs.
 /// - `thales` accepte aussi `papillon: true` et `parallele: false` ; `repere`, `verticales` [x].
@@ -42,7 +45,7 @@ class QuizFigure extends StatelessWidget {
   final Map<String, dynamic> spec;
 
   static const types = {'triangle', 'thales', 'rectangle', 'rectangles', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes',
-    'relief', 'cases', 'grille', 'tableau', 'bande', 'carreaux', 'echiquier'};
+    'relief', 'cases', 'grille', 'tableau', 'bande', 'carreaux', 'echiquier', 'perles'};
 
   /// Proportions de la zone de dessin (largeur / hauteur).
   double get aspect => switch (spec['type']) {
@@ -54,6 +57,7 @@ class QuizFigure extends StatelessWidget {
         'bande' => 4.0,
         'tableau' => _tableAspect,
         'carreaux' => 2.4,
+        'perles' => 4.0,
         'grille' => ((spec['colonnes'] as num?) ?? 6) / ((spec['lignes'] as num?) ?? 4),
         'rectangles' => 1.9,
         _ => 1.6,
@@ -180,6 +184,8 @@ class FigurePainter extends CustomPainter {
         _tiles(size);
       case 'rectangles':
         _rects(size);
+      case 'perles':
+        _beads(size);
     }
   }
 
@@ -512,6 +518,7 @@ class FigurePainter extends CustomPainter {
   }
 
   void _matches(Size s) {
+    if (spec['forme'] == 'triangles') return _matchTriangles(s);
     final steps = [for (final v in list('carres')) (v as num).toInt()];
     if (steps.isEmpty) return;
     final totalSquares = steps.fold(0, (a, b) => a + b) + steps.length - 1;
@@ -538,6 +545,72 @@ class FigurePainter extends CustomPainter {
       }
       label('${i + 1}', Offset(x + n * side / 2, y + side + 26), size: 20);
       x += (n + 1) * side;
+    }
+  }
+
+  /// Rangées de triangles en allumettes (pointe en haut, puis en bas, côtés partagés), une par étape : `triangles` [1, 2, 3].
+  void _matchTriangles(Size s) {
+    final steps = [for (final v in list('triangles')) (v as num).toInt()];
+    if (steps.isEmpty) return;
+    final halfUnits = steps.fold(0, (a, n) => a + n + 1) + steps.length - 1;
+    final side = min((s.width - 20) / max(1, halfUnits) * 2, s.height * 0.55);
+    final h = side * sqrt(3) / 2;
+    final y = s.height * 0.15;
+    final m = Paint()
+      ..color = const Color(0xFFB45309)
+      ..strokeWidth = 5
+      ..strokeCap = StrokeCap.round;
+    void stick(Offset a, Offset b) {
+      final d = (b - a) * 0.08;
+      c.drawLine(a + d, b - d, m);
+      c.drawCircle(b - d, 4, Paint()..color = const Color(0xFFDC2626));
+    }
+
+    var x = 10.0;
+    for (final (i, n) in steps.indexed) {
+      // Triangle k : pointe en haut si k pair, en bas sinon ; ils se touchent par un côté.
+      for (var k = 0; k < n; k++) {
+        final l = x + k * side / 2;
+        final up = k.isEven;
+        final a = up ? Offset(l, y + h) : Offset(l, y);
+        final b = up ? Offset(l + side, y + h) : Offset(l + side, y);
+        final apex = up ? Offset(l + side / 2, y) : Offset(l + side / 2, y + h);
+        if (k == 0) stick(a, apex);
+        stick(apex, b);
+        stick(a, b);
+      }
+      final w = (n + 1) * side / 2;
+      label('${i + 1}', Offset(x + w / 2, y + h + 26), size: 20);
+      x += w + side / 2;
+    }
+  }
+
+  /// Collier : groupes de perles (`groupes` [[2, 2], …] : nombre de rouges puis de bleues). Rouge = rond, bleu = carré :
+  /// la forme dit la couleur, jamais la couleur seule.
+  void _beads(Size s) {
+    final groups = [for (final g in list('groupes')) [for (final v in g as List) (v as num).toInt()]];
+    if (groups.isEmpty) return;
+    final total = groups.fold(0, (a, g) => a + g.fold(0, (x, y) => x + y)) + groups.length - 1;
+    final r = min((s.width - 20) / max(1, total) / 2.3, s.height * 0.22);
+    final y = s.height * 0.42;
+    c.drawLine(Offset(6, y), Offset(s.width - 6, y), stroke(2, soft));
+    var x = 10 + r;
+    for (final (gi, g) in groups.indexed) {
+      for (final (ci, n) in g.indexed) {
+        for (var k = 0; k < n; k++) {
+          final o = Offset(x, y);
+          if (ci == 0) {
+            c.drawCircle(o, r, Paint()..color = const Color(0xFFDC2626));
+            c.drawCircle(o, r, stroke(2));
+          } else {
+            final q = Rect.fromCenter(center: o, width: r * 1.8, height: r * 1.8);
+            c.drawRect(q, Paint()..color = const Color(0xFF1D4ED8));
+            c.drawRect(q, stroke(2));
+          }
+          x += r * 2.3;
+        }
+      }
+      if (gi < groups.length - 1) x += r * 2.3;
     }
   }
 
@@ -704,6 +777,8 @@ class FigurePainter extends CustomPainter {
         'cadre' => [for (var x = 0; x < n + 2; x++) for (var y = 0; y < n + 2; y++) if (x == 0 || y == 0 || x == n + 1 || y == n + 1) (x, y)],
         'escalier' => [for (var x = 0; x < n; x++) for (var y = 0; y <= x; y++) (x, y)],
         'l' => [for (var i = 0; i <= n; i++) (0, i), for (var i = 1; i <= n; i++) (i, 0)],
+        'tables' => [for (var i = 0; i < n; i++) (i, 0)],
+        'ronds' => [for (var i = 0; i < n; i++) (i, 0)],
         'rectangle' => [
             for (var y = 0; y < ((st as List)[0] as num).toInt(); y++) for (var x = 0; x < (st[1] as num).toInt(); x++) (x, y)
           ],
@@ -716,21 +791,38 @@ class FigurePainter extends CustomPainter {
       for (final sh in shapes)
         (sh.map((e) => e.$1).reduce(min), sh.map((e) => e.$1).reduce(max), sh.map((e) => e.$2).reduce(min), sh.map((e) => e.$2).reduce(max))
     ];
-    final totalW = spans.fold(0, (a, sp) => a + sp.$2 - sp.$1 + 1) + shapes.length - 1;
+    // Tables : de la place autour pour les sièges (bouts de rangée, haut et bas), et le numéro plus bas.
+    final tables = spec['forme'] == 'tables';
+    final totalW = spans.fold(0, (a, sp) => a + sp.$2 - sp.$1 + 1) + shapes.length - 1 + (tables ? 1 : 0);
     final maxH = spans.map((sp) => sp.$4 - sp.$3 + 1).reduce(max);
-    final cell = min((s.width - 16) / totalW, (s.height - 40) / maxH);
-    var x = (s.width - cell * totalW) / 2;
-    final top = (s.height - 34 - cell * maxH) / 2;
+    final room = maxH + (tables ? 1 : 0);
+    final cell = min((s.width - 16) / totalW, (s.height - 40) / room);
+    var x = (s.width - cell * totalW) / 2 + (tables ? cell * 0.5 : 0);
+    final top = (s.height - 34 - cell * room) / 2 + (tables ? cell * 0.5 : 0);
     final showNumbers = shapes.length > 1;
     for (final (i, sh) in shapes.indexed) {
       final sp = spans[i];
       for (final (cx, cy) in sh) {
         final r = Rect.fromLTWH(x + (cx - sp.$1) * cell, top + (maxH - 1 - (cy - sp.$3)) * cell, cell, cell);
+        if (spec['forme'] == 'ronds') {
+          c.drawCircle(r.center, cell * 0.38, Paint()..color = const Color(0xFFFDE68A));
+          c.drawCircle(r.center, cell * 0.38, stroke(1.5));
+          continue;
+        }
         c.drawRect(r.deflate(1), Paint()..color = const Color(0xFFFDE68A));
         c.drawRect(r.deflate(1), stroke(1.5));
+        if (spec['forme'] == 'tables') {
+          // Une place (petit rond) de chaque côté libre de la table : en haut, en bas, et aux deux bouts de la rangée.
+          final seat = Paint()..color = const Color(0xFF1D4ED8);
+          final rr = cell * 0.13;
+          c.drawCircle(Offset(r.center.dx, r.top - rr * 1.6), rr, seat);
+          c.drawCircle(Offset(r.center.dx, r.bottom + rr * 1.6), rr, seat);
+          if (cx == sp.$1) c.drawCircle(Offset(r.left - rr * 1.6, r.center.dy), rr, seat);
+          if (cx == sp.$2) c.drawCircle(Offset(r.right + rr * 1.6, r.center.dy), rr, seat);
+        }
       }
       final w = (sp.$2 - sp.$1 + 1) * cell;
-      if (showNumbers) label('${i + 1}', Offset(x + w / 2, top + maxH * cell + 20), size: 20);
+      if (showNumbers) label('${i + 1}', Offset(x + w / 2, top + maxH * cell + (tables ? cell * 0.5 : 0) + 20), size: 20);
       x += w + cell;
     }
   }

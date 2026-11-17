@@ -39,12 +39,14 @@ items:
       - { texte: "14", pourquoi: "Tu as ajouté 4, comme la dernière fois. Les ajouts grandissent : 2, 3, 4, puis 5." }
       - { texte: "20", pourquoi: "Tu as doublé 10. Mais de 6 à 10, on n'a pas doublé : regarde les ajouts, 2, 3, 4." }
   - texte: "Un collier : 1 perle rouge, 1 bleue, puis 2 rouges, 2 bleues, puis 3 rouges, 3 bleues… Combien de perles rouges dans le groupe suivant ?"
+    figure: { type: perles, groupes: [[1, 1], [2, 2], [3, 3]] }
     nom: "4"
     explication: "À chaque groupe, il y a une perle de plus de chaque couleur : 1, 2, 3, puis 4 rouges."
     pieges:
       - { texte: "3", pourquoi: "3, c'est le groupe d'avant. La suite grandit : une perle de plus à chaque groupe." }
       - { texte: "6", pourquoi: "Tu as doublé 3. On n'ajoute qu'une perle à chaque groupe : 1, 2, 3, 4." }
   - texte: "Étape 1 : 2 ronds. Étape 2 : 4 ronds. Étape 3 : 6 ronds. Quelle est la régularité ?"
+    figure: { type: carreaux, forme: ronds, etapes: [2, 4, 6] }
     nom: "On ajoute 2 ronds à chaque étape"
     explication: "De 2 à 4, puis de 4 à 6 : on ajoute 2 ronds. À l'étape 4, il y en aura 8."
     pieges:
@@ -64,6 +66,7 @@ items:
       - { texte: "6", pourquoi: "6, c'est seulement la rangée du bas. Il faut ajouter toutes les rangées." }
       - { texte: "36", pourquoi: "6 × 6 = 36 compterait 6 rangées de 6. Ici, chaque rangée a une boîte de moins." }
   - texte: "Des tables carrées mises bout à bout : 1 table, 4 places ; 2 tables, 6 places ; 3 tables, 8 places. Combien de places pour 5 tables ?"
+    figure: { type: carreaux, forme: tables, etapes: [1, 2, 3] }
     nom: "12"
     explication: "Chaque table ajoutée donne 2 places de plus : 8, puis 10 pour 4 tables, puis 12 pour 5 tables."
     pieges:
@@ -102,12 +105,14 @@ en:
         - { texte: "14", pourquoi: "You added 4, like last time. The additions grow: 2, 3, 4, then 5." }
         - { texte: "20", pourquoi: "You doubled 10. But from 6 to 10 nothing was doubled: look at the additions, 2, 3, 4." }
     - texte: "A necklace: 1 red bead, 1 blue, then 2 red, 2 blue, then 3 red, 3 blue… How many red beads in the next group?"
+      figure: { type: perles, groupes: [[1, 1], [2, 2], [3, 3]] }
       nom: "4"
       explication: "Each group has one more bead of each colour: 1, 2, 3, then 4 red."
       pieges:
         - { texte: "3", pourquoi: "3 is the group before. The pattern grows: one more bead each group." }
         - { texte: "6", pourquoi: "You doubled 3. Only one bead is added each group: 1, 2, 3, 4." }
     - texte: "Stage 1: 2 circles. Stage 2: 4 circles. Stage 3: 6 circles. What is the regularity?"
+      figure: { type: carreaux, forme: ronds, etapes: [2, 4, 6] }
       nom: "You add 2 circles at each stage"
       explication: "From 2 to 4, then from 4 to 6: you add 2 circles. At stage 4 there will be 8."
       pieges:
@@ -127,6 +132,7 @@ en:
         - { texte: "6", pourquoi: "6 is only the bottom row. You must add all the rows." }
         - { texte: "36", pourquoi: "6 × 6 = 36 would be 6 rows of 6. Here each row has one box fewer." }
     - texte: "Square tables put end to end: 1 table, 4 seats; 2 tables, 6 seats; 3 tables, 8 seats. How many seats for 5 tables?"
+      figure: { type: carreaux, forme: tables, etapes: [1, 2, 3] }
       nom: "12"
       explication: "Each extra table gives 2 more seats: 8, then 10 for 4 tables, then 12 for 5 tables."
       pieges:

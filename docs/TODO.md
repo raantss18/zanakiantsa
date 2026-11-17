@@ -370,8 +370,10 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - 🐞✅ **Bloquant en 1.1.7** : dans la version publiée, la page restait figée sur la leçon après « J'ai compris » (un
   LayoutBuilder imbriqué, ajouté pour la bulle qui grandit, ne se recalculait plus ; invisible en mode debug). Corrigé et
   vérifié sur l'émulateur en version publiée (trois leçons de suite) ; test `session_layout_test.dart`.
-- ✅ Publié en 1.1.8 (build 2034) le 2026-11-17 ; vérifié sur l'émulateur (APK signé : la leçon passe à la question). ⏳ Restent sans figure : triangles d'allumettes, perles, tables mises bout à
-  bout, positions d'échecs sans rois, cartes du monde et de France.
+- ✅ Publié en 1.1.8 (build 2034) le 2026-11-17 ; vérifié sur l'émulateur (APK signé : la leçon passe à la question). ✅ Puis (2026-11-17) : triangles d'allumettes, collier de perles
+  (rond rouge / carré bleu), rangées de ronds, tables bout à bout avec leurs places, pions seuls sur l'échiquier (règle du
+  carré) : 12 questions de plus. ⏳ Restent : cartes du monde et de France (contours Natural Earth à télécharger, accord
+  d'Antsa), pile de boîtes (le dessin donnerait la réponse).
 
 ## 2026-11-15 (nuit) — Autres boutiques (demande d'Antsa)
 
