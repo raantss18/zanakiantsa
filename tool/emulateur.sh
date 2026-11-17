@@ -31,7 +31,7 @@ serie() {  # la série de notre émulateur parmi ceux qui tournent (d'autres pro
 
 if [ "${1:-}" = --stop ]; then
   # `sync` d'abord : arrêté net, l'émulateur perdait ce qui venait d'être installé (2026-11-14).
-  s=$(serie); [ -n "$s" ] && { "$ADB" -s "$s" shell sync; sleep 2; "$ADB" -s "$s" emu kill; }; exit 0
+  s=$(serie || true); [ -n "$s" ] && { "$ADB" -s "$s" shell sync; sleep 2; "$ADB" -s "$s" emu kill; }; exit 0
 fi
 
 if ! "$EMU" -list-avds | grep -qx "$AVD"; then
@@ -43,12 +43,12 @@ if ! "$EMU" -list-avds | grep -qx "$AVD"; then
   grep -q '^hw.audioOutput' "$cfg" || echo 'hw.audioOutput=yes' >> "$cfg"
 fi
 
-s=$(serie)
+s=$(serie || true)  # aucun émulateur à nous : on le démarre (set -e arrêtait le script ici)
 if [ -z "$s" ]; then
   fen=(-no-window); [ "${1:-}" = --fenetre ] && fen=()
   # GPU logiciel : le GPU de l'ordinateur (gfxstream) fait planter l'émulateur au redémarrage de l'app (2026-11-03).
   nohup "$EMU" -avd "$AVD" -no-snapshot -no-boot-anim -gpu swiftshader_indirect "${fen[@]}" >/tmp/emulateur-$AVD.log 2>&1 &
-  for _ in $(seq 120); do s=$(serie); [ -n "$s" ] && break; sleep 2; done
+  for _ in $(seq 120); do s=$(serie || true); [ -n "$s" ] && break; sleep 2; done
 fi
 [ -n "$s" ] || { echo "l'émulateur n'a pas démarré (voir /tmp/emulateur-$AVD.log)"; exit 1; }
 "$ADB" -s "$s" wait-for-device
