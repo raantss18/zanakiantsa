@@ -127,6 +127,7 @@ void checkItems(String where, String act, List items) {
       if (it['figure'] != null) {
         final f = it['figure'];
         if (f is! Map || !figureTypes.contains(f['type'])) fail(w, 'figure : type inconnu « ${f is Map ? f['type'] : f} »');
+        if (f is Map && f['type'] == 'carte' && !mapViews.contains(f['vue'] ?? 'monde')) fail(w, 'carte : vue inconnue « ${f['vue']} »');
       }
       for (final t in traps) {
         if (t is! Map || t['texte'] is! String || t['pourquoi'] is! String) fail(w, 'piège : texte et pourquoi');
@@ -187,8 +188,11 @@ void checkEnglish(String where, Map<String, dynamic> s) {
 /// Types de figure connus de `lib/activities/figure.dart` (QuizFigure.types).
 const figureTypes = {
   'triangle', 'thales', 'rectangle', 'rectangles', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes', 'relief', 'cases',
-  'grille', 'tableau', 'bande', 'carreaux', 'echiquier', 'perles',
+  'grille', 'tableau', 'bande', 'carreaux', 'echiquier', 'perles', 'carte',
 };
+
+/// Vues de `lib/activities/carte.dart` (MapFigure.views).
+const mapViews = {'monde', 'france', 'europe', 'caraibes', 'ocean-indien', 'suez', 'ormuz', 'asie-sud-est'};
 
 final errors = <String>[];
 void fail(String where, String msg) => errors.add('$where : $msg');

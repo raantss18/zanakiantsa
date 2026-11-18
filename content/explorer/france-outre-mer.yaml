@@ -27,18 +27,21 @@ items:
       - { texte: "96 départements.", pourquoi: "96, c'est la métropole seule ; il faut ajouter les 5 d'outre-mer." }
       - { texte: "18 départements.", pourquoi: "18, c'est le nombre de régions." }
   - texte: "Sur quel continent se trouve la Guyane ?"
+    figure: { type: carte, points: [{ lon: -53, lat: 4 }] }
     nom: "L'Amérique du Sud."
     explication: "La Guyane est en Amérique du Sud, entre le Brésil et le Suriname. Elle est couverte en grande partie par la forêt amazonienne."
     pieges:
       - { texte: "L'Afrique.", pourquoi: "La Guinée est en Afrique, mais la Guyane est en Amérique du Sud." }
       - { texte: "L'Europe.", pourquoi: "La Guyane fait partie de la France, mais elle n'est pas sur le continent européen." }
   - texte: "Dans quel océan se trouve Mayotte ?"
+    figure: { type: carte, vue: ocean-indien, points: [{ lon: 45.15, lat: -12.8 }] }
     nom: "L'océan Indien."
     explication: "Mayotte est dans l'océan Indien, entre Madagascar et la côte de l'Afrique, dans l'archipel des Comores."
     pieges:
       - { texte: "L'océan Atlantique.", pourquoi: "Ce sont la Guadeloupe et la Martinique qui sont du côté de l'Atlantique, aux Antilles." }
       - { texte: "La mer Méditerranée.", pourquoi: "En Méditerranée, la grande île française est la Corse, en métropole." }
   - texte: "Où se trouvent la Guadeloupe et la Martinique ?"
+    figure: { type: carte, vue: caraibes, points: [{ lon: -61.55, lat: 16.25 }, { lon: -61.0, lat: 14.65 }] }
     nom: "Aux Antilles, dans la mer des Caraïbes."
     explication: "Ces deux îles françaises font partie des Antilles, entre l'océan Atlantique et la mer des Caraïbes."
     pieges:
@@ -51,6 +54,7 @@ items:
       - { texte: "Une station de ski.", pourquoi: "La Guyane a un climat équatorial, chaud et humide." }
       - { texte: "Aucune, c'est seulement de la forêt.", pourquoi: "La forêt couvre une grande partie de la Guyane, mais Kourou accueille un centre spatial." }
   - texte: "Pourquoi l'outre-mer donne-t-il à la France l'un des plus grands espaces maritimes du monde ?"
+    figure: { type: carte, points: [{ lon: -53, lat: 4 }, { lon: -61.3, lat: 15.5 }, { lon: -56.2, lat: 46.8 }, { lon: 55.5, lat: -21.1 }, { lon: 45.15, lat: -12.8 }, { lon: 69.4, lat: -49.3 }, { lon: 165.6, lat: -21.3 }, { lon: -149.4, lat: -17.6 }] }
     nom: "Parce que ses îles et territoires sont répartis sur tous les océans."
     explication: "Autour de chaque île, la France a des droits sur une large zone de mer : avec ses territoires dans plusieurs océans, l'ensemble est immense."
     pieges:
@@ -87,18 +91,21 @@ en:
         - { texte: "96 departments.", pourquoi: "96 is mainland France alone; add the 5 overseas ones." }
         - { texte: "18 departments.", pourquoi: "18 is the number of regions." }
     - texte: "Which continent is French Guiana on?"
+      figure: { type: carte, points: [{ lon: -53, lat: 4 }] }
       nom: "South America."
       explication: "French Guiana is in South America, between Brazil and Suriname. Much of it is covered by the Amazon rainforest."
       pieges:
         - { texte: "Africa.", pourquoi: "Guinea is in Africa, but French Guiana is in South America." }
         - { texte: "Europe.", pourquoi: "French Guiana is part of France, but it isn't on the European continent." }
     - texte: "Which ocean is Mayotte in?"
+      figure: { type: carte, vue: ocean-indien, points: [{ lon: 45.15, lat: -12.8 }] }
       nom: "The Indian Ocean."
       explication: "Mayotte is in the Indian Ocean, between Madagascar and the African coast, in the Comoros archipelago."
       pieges:
         - { texte: "The Atlantic Ocean.", pourquoi: "It's Guadeloupe and Martinique that are on the Atlantic side, in the West Indies." }
         - { texte: "The Mediterranean Sea.", pourquoi: "In the Mediterranean, the big French island is Corsica, in mainland France." }
     - texte: "Where are Guadeloupe and Martinique?"
+      figure: { type: carte, vue: caraibes, points: [{ lon: -61.55, lat: 16.25 }, { lon: -61.0, lat: 14.65 }] }
       nom: "In the West Indies, in the Caribbean Sea."
       explication: "These two French islands are part of the West Indies, between the Atlantic Ocean and the Caribbean Sea."
       pieges:
@@ -111,6 +118,7 @@ en:
         - { texte: "A ski resort.", pourquoi: "French Guiana has an equatorial climate, hot and humid." }
         - { texte: "None, it's only forest.", pourquoi: "Forest covers much of French Guiana, but Kourou has a space centre." }
     - texte: "Why do its overseas lands give France one of the biggest sea areas in the world?"
+      figure: { type: carte, points: [{ lon: -53, lat: 4 }, { lon: -61.3, lat: 15.5 }, { lon: -56.2, lat: 46.8 }, { lon: 55.5, lat: -21.1 }, { lon: 45.15, lat: -12.8 }, { lon: 69.4, lat: -49.3 }, { lon: 165.6, lat: -21.3 }, { lon: -149.4, lat: -17.6 }] }
       nom: "Because its islands and territories are spread across every ocean."
       explication: "Around each island, France has rights over a wide area of sea: with territories in several oceans, the total is huge."
       pieges:

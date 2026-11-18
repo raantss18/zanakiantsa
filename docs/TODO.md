@@ -372,8 +372,9 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   vérifié sur l'émulateur en version publiée (trois leçons de suite) ; test `session_layout_test.dart`.
 - ✅ Publié en 1.1.8 (build 2034) le 2026-11-17 ; vérifié sur l'émulateur (APK signé : la leçon passe à la question). ✅ Puis (2026-11-17) : triangles d'allumettes, collier de perles
   (rond rouge / carré bleu), rangées de ronds, tables bout à bout avec leurs places, pions seuls sur l'échiquier (règle du
-  carré) : 12 questions de plus. ⏳ Restent : cartes du monde et de France (contours Natural Earth à télécharger, accord
-  d'Antsa), pile de boîtes (le dessin donnerait la réponse).
+  carré) : 12 questions de plus. ✅ (2026-11-18, accord d'Antsa) vraies cartes Natural Earth (ADR 0079) : 23 questions
+  de géographie (continents, océans, France et ses fleuves, outre-mer, Suez, Malacca, Ormuz, mer de Chine) ; vérifié sur
+  l'émulateur en version publiée. ⏳ Reste : pile de boîtes (le dessin donnerait la réponse, laissée exprès).
 
 ## 2026-11-15 (nuit) — Autres boutiques (demande d'Antsa)
 
@@ -396,8 +397,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
 - ✅ Cours sur une page de cahier, exercices sur le décor du monde.
 - ✅ 202 questions illustrées (67 figures en maths, figures de code et de suites, images en sciences, histoire-géo,
   lecture, musique). Corrigé au passage : « J'ai compris » restait sans effet dans la version publiée (fondu du fond).
-- ⏳ Cartes : continents, océans, France, outre-mer, mers (une vingtaine de questions) attendent des contours libres
-  (Natural Earth, domaine public) — à décider avec Antsa.
+- ✅ Cartes : continents, océans, France, outre-mer, mers — 23 questions avec une vraie carte (Natural Earth, ADR 0079).
 - ⏳ Figures manquantes : robot sur quadrillage, échiquier, tableaux, papillon de Thalès, carré vu comme carré.
 
 ## 2026-11-15 (nuit) — Défis du robot et relecture des programmes libres

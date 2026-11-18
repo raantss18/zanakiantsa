@@ -15,12 +15,14 @@ phrases:
   bravo: "Oui ! {explication}"
 items:
   - texte: "Quelle est la capitale de la France ?"
+    figure: { type: carte, vue: france, points: [{ lon: 2.35, lat: 48.86, texte: "?" }] }
     nom: "Paris"
     explication: "Paris est la capitale de la France : le président de la République et le gouvernement y travaillent."
     pieges:
       - { texte: "Lyon", pourquoi: "Lyon est une grande ville de France, mais la capitale est Paris." }
       - { texte: "Marseille", pourquoi: "Marseille est une grande ville au bord de la Méditerranée, mais la capitale est Paris." }
   - texte: "Sur quel continent se trouve la France métropolitaine ?"
+    figure: { type: carte, vue: europe, pays: [FRA] }
     nom: "L'Europe"
     explication: "La France métropolitaine, celle de l'hexagone et de la Corse, est en Europe."
     pieges:
@@ -46,12 +48,14 @@ items:
       - { texte: "Par un trait bleu.", pourquoi: "Un trait bleu montre souvent un fleuve ou une rivière." }
       - { texte: "Par une flèche.", pourquoi: "Une flèche sert souvent à montrer le nord." }
   - texte: "Quelles mers et quel océan bordent la France métropolitaine ?"
+    figure: { type: carte, vue: france, textes: [{ lon: -1.6, lat: 50.1, texte: "?" }, { lon: 2.6, lat: 51.75, texte: "?" }, { lon: -4.4, lat: 45.8, texte: "?" }, { lon: 5.2, lat: 42.3, texte: "?" }] }
     nom: "La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée."
     explication: "La France métropolitaine a des côtes au nord (Manche, mer du Nord), à l'ouest (Atlantique) et au sud (Méditerranée)."
     pieges:
       - { texte: "Seulement la mer Méditerranée.", pourquoi: "La Méditerranée borde le sud ; la Manche, la mer du Nord et l'Atlantique bordent le nord et l'ouest." }
       - { texte: "L'océan Pacifique.", pourquoi: "La France métropolitaine ne touche pas le Pacifique ; seuls des territoires d'outre-mer, comme la Polynésie française, s'y trouvent." }
   - texte: "Quel est le plus long fleuve de France ?"
+    figure: { type: carte, vue: france, fleuves: [Loire, Seine, Rhône, Garonne] }
     nom: "La Loire"
     explication: "La Loire est le plus long fleuve de France : elle se jette dans l'océan Atlantique."
     pieges:
@@ -65,12 +69,14 @@ items:
       - { texte: "Le puy de Dôme, dans le Massif central.", pourquoi: "C'est un ancien volcan du Massif central, bien moins haut que le mont Blanc." }
       - { texte: "Le Vignemale, dans les Pyrénées.", pourquoi: "C'est le plus haut sommet des Pyrénées françaises, mais il est moins haut que le mont Blanc." }
   - texte: "Quel pays a une frontière avec la France métropolitaine ?"
+    figure: { type: carte, vue: france, pays: [FRA] }
     nom: "L'Espagne"
     explication: "L'Espagne est au sud-ouest de la France ; les Pyrénées marquent la frontière."
     pieges:
       - { texte: "Le Japon", pourquoi: "Le Japon est en Asie, très loin de la France." }
       - { texte: "L'Australie", pourquoi: "L'Australie est en Océanie, de l'autre côté de la Terre." }
   - texte: "Dans quelle mer se trouve l'île de Corse ?"
+    figure: { type: carte, vue: france, points: [{ lon: 9.1, lat: 42.15 }], textes: [{ lon: 6.6, lat: 42.6, texte: "?" }] }
     nom: "La mer Méditerranée"
     explication: "La Corse est une île française de la mer Méditerranée, au sud-est de la France métropolitaine."
     pieges:
@@ -89,12 +95,14 @@ en:
     bravo: "Yes! {explication}"
   items:
     - texte: "What is the capital of France?"
+      figure: { type: carte, vue: france, points: [{ lon: 2.35, lat: 48.86, texte: "?" }] }
       nom: "Paris"
       explication: "Paris is the capital of France: the President of the Republic and the government work there."
       pieges:
         - { texte: "Lyon", pourquoi: "Lyon is a big city in France, but the capital is Paris." }
         - { texte: "Marseille", pourquoi: "Marseille is a big city on the Mediterranean, but the capital is Paris." }
     - texte: "Which continent is metropolitan France on?"
+      figure: { type: carte, vue: europe, pays: [FRA] }
       nom: "Europe"
       explication: "Metropolitan France, the mainland and Corsica, is in Europe."
       pieges:
@@ -120,12 +128,14 @@ en:
         - { texte: "With a blue line.", pourquoi: "A blue line often shows a river." }
         - { texte: "With an arrow.", pourquoi: "An arrow is often used to show north." }
     - texte: "Which seas and which ocean border metropolitan France?"
+      figure: { type: carte, vue: france, textes: [{ lon: -1.6, lat: 50.1, texte: "?" }, { lon: 2.6, lat: 51.75, texte: "?" }, { lon: -4.4, lat: 45.8, texte: "?" }, { lon: 5.2, lat: 42.3, texte: "?" }] }
       nom: "The English Channel, the North Sea, the Atlantic Ocean and the Mediterranean Sea."
       explication: "Metropolitan France has coasts in the north (Channel, North Sea), the west (Atlantic) and the south (Mediterranean)."
       pieges:
         - { texte: "Only the Mediterranean Sea.", pourquoi: "The Mediterranean borders the south; the Channel, the North Sea and the Atlantic border the north and west." }
         - { texte: "The Pacific Ocean.", pourquoi: "Metropolitan France doesn't touch the Pacific; only overseas territories, such as French Polynesia, are there." }
     - texte: "What is the longest river in France?"
+      figure: { type: carte, vue: france, fleuves: [Loire, Seine, Rhône, Garonne] }
       nom: "The Loire"
       explication: "The Loire is the longest river in France: it flows into the Atlantic Ocean."
       pieges:
@@ -139,12 +149,14 @@ en:
         - { texte: "The Puy de Dôme, in the Massif Central.", pourquoi: "It's an old volcano in the Massif Central, much lower than Mont Blanc." }
         - { texte: "The Vignemale, in the Pyrenees.", pourquoi: "It's the highest peak of the French Pyrenees, but it's lower than Mont Blanc." }
     - texte: "Which country shares a border with metropolitan France?"
+      figure: { type: carte, vue: france, pays: [FRA] }
       nom: "Spain"
       explication: "Spain is to the south-west of France; the Pyrenees mark the border."
       pieges:
         - { texte: "Japan", pourquoi: "Japan is in Asia, very far from France." }
         - { texte: "Australia", pourquoi: "Australia is in Oceania, on the other side of the Earth." }
     - texte: "Which sea is the island of Corsica in?"
+      figure: { type: carte, vue: france, points: [{ lon: 9.1, lat: 42.15 }], textes: [{ lon: 6.6, lat: 42.6, texte: "?" }] }
       nom: "The Mediterranean Sea"
       explication: "Corsica is a French island in the Mediterranean Sea, to the south-east of metropolitan France."
       pieges:

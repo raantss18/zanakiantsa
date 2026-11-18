@@ -2254,6 +2254,17 @@
       "items": [
         {
           "texte": "Quelle est la capitale de la France ?",
+          "figure": {
+            "type": "carte",
+            "vue": "france",
+            "points": [
+              {
+                "lon": 2.35,
+                "lat": 48.86,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "Paris",
           "explication": "Paris est la capitale de la France : le président de la République et le gouvernement y travaillent.",
           "pieges": [
@@ -2269,6 +2280,13 @@
         },
         {
           "texte": "Sur quel continent se trouve la France métropolitaine ?",
+          "figure": {
+            "type": "carte",
+            "vue": "europe",
+            "pays": [
+              "FRA"
+            ]
+          },
           "nom": "L'Europe",
           "explication": "La France métropolitaine, celle de l'hexagone et de la Corse, est en Europe.",
           "pieges": [
@@ -2330,6 +2348,32 @@
         },
         {
           "texte": "Quelles mers et quel océan bordent la France métropolitaine ?",
+          "figure": {
+            "type": "carte",
+            "vue": "france",
+            "textes": [
+              {
+                "lon": -1.6,
+                "lat": 50.1,
+                "texte": "?"
+              },
+              {
+                "lon": 2.6,
+                "lat": 51.75,
+                "texte": "?"
+              },
+              {
+                "lon": -4.4,
+                "lat": 45.8,
+                "texte": "?"
+              },
+              {
+                "lon": 5.2,
+                "lat": 42.3,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée.",
           "explication": "La France métropolitaine a des côtes au nord (Manche, mer du Nord), à l'ouest (Atlantique) et au sud (Méditerranée).",
           "pieges": [
@@ -2345,6 +2389,16 @@
         },
         {
           "texte": "Quel est le plus long fleuve de France ?",
+          "figure": {
+            "type": "carte",
+            "vue": "france",
+            "fleuves": [
+              "Loire",
+              "Seine",
+              "Rhône",
+              "Garonne"
+            ]
+          },
           "nom": "La Loire",
           "explication": "La Loire est le plus long fleuve de France : elle se jette dans l'océan Atlantique.",
           "pieges": [
@@ -2376,6 +2430,13 @@
         },
         {
           "texte": "Quel pays a une frontière avec la France métropolitaine ?",
+          "figure": {
+            "type": "carte",
+            "vue": "france",
+            "pays": [
+              "FRA"
+            ]
+          },
           "nom": "L'Espagne",
           "explication": "L'Espagne est au sud-ouest de la France ; les Pyrénées marquent la frontière.",
           "pieges": [
@@ -2391,6 +2452,23 @@
         },
         {
           "texte": "Dans quelle mer se trouve l'île de Corse ?",
+          "figure": {
+            "type": "carte",
+            "vue": "france",
+            "points": [
+              {
+                "lon": 9.1,
+                "lat": 42.15
+              }
+            ],
+            "textes": [
+              {
+                "lon": 6.6,
+                "lat": 42.6,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "La mer Méditerranée",
           "explication": "La Corse est une île française de la mer Méditerranée, au sud-est de la France métropolitaine.",
           "pieges": [
@@ -2419,6 +2497,17 @@
         "items": [
           {
             "texte": "What is the capital of France?",
+            "figure": {
+              "type": "carte",
+              "vue": "france",
+              "points": [
+                {
+                  "lon": 2.35,
+                  "lat": 48.86,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "Paris",
             "explication": "Paris is the capital of France: the President of the Republic and the government work there.",
             "pieges": [
@@ -2434,6 +2523,13 @@
           },
           {
             "texte": "Which continent is metropolitan France on?",
+            "figure": {
+              "type": "carte",
+              "vue": "europe",
+              "pays": [
+                "FRA"
+              ]
+            },
             "nom": "Europe",
             "explication": "Metropolitan France, the mainland and Corsica, is in Europe.",
             "pieges": [
@@ -2495,6 +2591,32 @@
           },
           {
             "texte": "Which seas and which ocean border metropolitan France?",
+            "figure": {
+              "type": "carte",
+              "vue": "france",
+              "textes": [
+                {
+                  "lon": -1.6,
+                  "lat": 50.1,
+                  "texte": "?"
+                },
+                {
+                  "lon": 2.6,
+                  "lat": 51.75,
+                  "texte": "?"
+                },
+                {
+                  "lon": -4.4,
+                  "lat": 45.8,
+                  "texte": "?"
+                },
+                {
+                  "lon": 5.2,
+                  "lat": 42.3,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "The English Channel, the North Sea, the Atlantic Ocean and the Mediterranean Sea.",
             "explication": "Metropolitan France has coasts in the north (Channel, North Sea), the west (Atlantic) and the south (Mediterranean).",
             "pieges": [
@@ -2510,6 +2632,16 @@
           },
           {
             "texte": "What is the longest river in France?",
+            "figure": {
+              "type": "carte",
+              "vue": "france",
+              "fleuves": [
+                "Loire",
+                "Seine",
+                "Rhône",
+                "Garonne"
+              ]
+            },
             "nom": "The Loire",
             "explication": "The Loire is the longest river in France: it flows into the Atlantic Ocean.",
             "pieges": [
@@ -2541,6 +2673,13 @@
           },
           {
             "texte": "Which country shares a border with metropolitan France?",
+            "figure": {
+              "type": "carte",
+              "vue": "france",
+              "pays": [
+                "FRA"
+              ]
+            },
             "nom": "Spain",
             "explication": "Spain is to the south-west of France; the Pyrenees mark the border.",
             "pieges": [
@@ -2556,6 +2695,23 @@
           },
           {
             "texte": "Which sea is the island of Corsica in?",
+            "figure": {
+              "type": "carte",
+              "vue": "france",
+              "points": [
+                {
+                  "lon": 9.1,
+                  "lat": 42.15
+                }
+              ],
+              "textes": [
+                {
+                  "lon": 6.6,
+                  "lat": 42.6,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "The Mediterranean Sea",
             "explication": "Corsica is a French island in the Mediterranean Sea, to the south-east of metropolitan France.",
             "pieges": [
@@ -3579,6 +3735,9 @@
       "items": [
         {
           "texte": "Quel est le plus grand océan du monde ?",
+          "figure": {
+            "type": "carte"
+          },
           "nom": "L'océan Pacifique.",
           "explication": "Le Pacifique est le plus vaste des océans : il s'étend entre l'Asie et l'Océanie d'un côté, l'Amérique de l'autre.",
           "pieges": [
@@ -3594,6 +3753,16 @@
         },
         {
           "texte": "Quel océan sépare l'Europe et l'Afrique de l'Amérique ?",
+          "figure": {
+            "type": "carte",
+            "textes": [
+              {
+                "lon": -38,
+                "lat": 22,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "L'océan Atlantique.",
           "explication": "L'Atlantique s'étend entre l'Europe et l'Afrique à l'est, l'Amérique à l'ouest.",
           "pieges": [
@@ -3609,6 +3778,20 @@
         },
         {
           "texte": "Dans quel océan se trouve Madagascar ?",
+          "figure": {
+            "type": "carte",
+            "vue": "ocean-indien",
+            "pays": [
+              "MDG"
+            ],
+            "textes": [
+              {
+                "lon": 66,
+                "lat": -12,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "L'océan Indien.",
           "explication": "Madagascar est une grande île de l'océan Indien, à l'est de l'Afrique.",
           "pieges": [
@@ -3624,6 +3807,16 @@
         },
         {
           "texte": "Quel continent entoure le pôle Sud et est couvert de glace ?",
+          "figure": {
+            "type": "carte",
+            "textes": [
+              {
+                "lon": 20,
+                "lat": -80,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "L'Antarctique.",
           "explication": "L'Antarctique est un continent presque entièrement couvert de glace, autour du pôle Sud.",
           "pieges": [
@@ -3639,6 +3832,9 @@
         },
         {
           "texte": "Quel est le plus grand continent ?",
+          "figure": {
+            "type": "carte"
+          },
           "nom": "L'Asie.",
           "explication": "L'Asie est le continent le plus vaste et le plus peuplé.",
           "pieges": [
@@ -3654,6 +3850,12 @@
         },
         {
           "texte": "Sur quel continent se trouve l'Australie ?",
+          "figure": {
+            "type": "carte",
+            "pays": [
+              "AUS"
+            ]
+          },
           "nom": "L'Océanie.",
           "explication": "L'Océanie regroupe l'Australie, la Nouvelle-Zélande et de nombreuses îles du Pacifique.",
           "pieges": [
@@ -3669,7 +3871,10 @@
         },
         {
           "texte": "Qu'est-ce que l'équateur ?",
-          "image": "1f30d",
+          "figure": {
+            "type": "carte",
+            "equateur": "équateur"
+          },
           "nom": "Une ligne imaginaire qui partage la Terre en deux hémisphères, nord et sud.",
           "explication": "L'équateur fait le tour de la Terre à égale distance des deux pôles. Il n'est pas tracé sur le sol : on le dessine sur les cartes.",
           "pieges": [
@@ -3685,6 +3890,9 @@
         },
         {
           "texte": "Sur Terre, qu'est-ce qui occupe la plus grande surface ?",
+          "figure": {
+            "type": "carte"
+          },
           "nom": "Les océans.",
           "explication": "Les océans couvrent plus des deux tiers de la surface de la Terre. Vue de l'espace, elle paraît bleue.",
           "pieges": [
@@ -3700,6 +3908,13 @@
         },
         {
           "texte": "Sur quel continent se trouve la France métropolitaine ?",
+          "figure": {
+            "type": "carte",
+            "vue": "europe",
+            "pays": [
+              "FRA"
+            ]
+          },
           "nom": "L'Europe.",
           "explication": "La France métropolitaine est en Europe, au bord de l'Atlantique et de la Méditerranée.",
           "pieges": [
@@ -3728,6 +3943,9 @@
         "items": [
           {
             "texte": "What is the biggest ocean in the world?",
+            "figure": {
+              "type": "carte"
+            },
             "nom": "The Pacific Ocean.",
             "explication": "The Pacific is the largest ocean: it lies between Asia and Oceania on one side, and America on the other.",
             "pieges": [
@@ -3743,6 +3961,16 @@
           },
           {
             "texte": "Which ocean separates Europe and Africa from America?",
+            "figure": {
+              "type": "carte",
+              "textes": [
+                {
+                  "lon": -38,
+                  "lat": 22,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "The Atlantic Ocean.",
             "explication": "The Atlantic lies between Europe and Africa to the east, and America to the west.",
             "pieges": [
@@ -3758,6 +3986,20 @@
           },
           {
             "texte": "Which ocean is Madagascar in?",
+            "figure": {
+              "type": "carte",
+              "vue": "ocean-indien",
+              "pays": [
+                "MDG"
+              ],
+              "textes": [
+                {
+                  "lon": 66,
+                  "lat": -12,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "The Indian Ocean.",
             "explication": "Madagascar is a large island in the Indian Ocean, east of Africa.",
             "pieges": [
@@ -3773,6 +4015,16 @@
           },
           {
             "texte": "Which continent surrounds the South Pole and is covered in ice?",
+            "figure": {
+              "type": "carte",
+              "textes": [
+                {
+                  "lon": 20,
+                  "lat": -80,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "Antarctica.",
             "explication": "Antarctica is a continent almost entirely covered in ice, around the South Pole.",
             "pieges": [
@@ -3788,6 +4040,9 @@
           },
           {
             "texte": "What is the biggest continent?",
+            "figure": {
+              "type": "carte"
+            },
             "nom": "Asia.",
             "explication": "Asia is the largest and most populated continent.",
             "pieges": [
@@ -3803,6 +4058,12 @@
           },
           {
             "texte": "Which continent is Australia on?",
+            "figure": {
+              "type": "carte",
+              "pays": [
+                "AUS"
+              ]
+            },
             "nom": "Oceania.",
             "explication": "Oceania includes Australia, New Zealand and many Pacific islands.",
             "pieges": [
@@ -3818,7 +4079,10 @@
           },
           {
             "texte": "What is the equator?",
-            "image": "1f30d",
+            "figure": {
+              "type": "carte",
+              "equateur": "equator"
+            },
             "nom": "An imaginary line that splits the Earth into two hemispheres, north and south.",
             "explication": "The equator goes round the Earth halfway between the two poles. It isn't drawn on the ground: we draw it on maps.",
             "pieges": [
@@ -3834,6 +4098,9 @@
           },
           {
             "texte": "On Earth, what covers the biggest area?",
+            "figure": {
+              "type": "carte"
+            },
             "nom": "The oceans.",
             "explication": "Oceans cover more than two thirds of the Earth's surface. Seen from space, it looks blue.",
             "pieges": [
@@ -3849,6 +4116,13 @@
           },
           {
             "texte": "Which continent is mainland France on?",
+            "figure": {
+              "type": "carte",
+              "vue": "europe",
+              "pays": [
+                "FRA"
+              ]
+            },
             "nom": "Europe.",
             "explication": "Mainland France is in Europe, on the Atlantic and the Mediterranean.",
             "pieges": [
@@ -8207,6 +8481,15 @@
         },
         {
           "texte": "Sur quel continent se trouve la Guyane ?",
+          "figure": {
+            "type": "carte",
+            "points": [
+              {
+                "lon": -53,
+                "lat": 4
+              }
+            ]
+          },
           "nom": "L'Amérique du Sud.",
           "explication": "La Guyane est en Amérique du Sud, entre le Brésil et le Suriname. Elle est couverte en grande partie par la forêt amazonienne.",
           "pieges": [
@@ -8222,6 +8505,16 @@
         },
         {
           "texte": "Dans quel océan se trouve Mayotte ?",
+          "figure": {
+            "type": "carte",
+            "vue": "ocean-indien",
+            "points": [
+              {
+                "lon": 45.15,
+                "lat": -12.8
+              }
+            ]
+          },
           "nom": "L'océan Indien.",
           "explication": "Mayotte est dans l'océan Indien, entre Madagascar et la côte de l'Afrique, dans l'archipel des Comores.",
           "pieges": [
@@ -8237,6 +8530,20 @@
         },
         {
           "texte": "Où se trouvent la Guadeloupe et la Martinique ?",
+          "figure": {
+            "type": "carte",
+            "vue": "caraibes",
+            "points": [
+              {
+                "lon": -61.55,
+                "lat": 16.25
+              },
+              {
+                "lon": -61.0,
+                "lat": 14.65
+              }
+            ]
+          },
           "nom": "Aux Antilles, dans la mer des Caraïbes.",
           "explication": "Ces deux îles françaises font partie des Antilles, entre l'océan Atlantique et la mer des Caraïbes.",
           "pieges": [
@@ -8267,6 +8574,43 @@
         },
         {
           "texte": "Pourquoi l'outre-mer donne-t-il à la France l'un des plus grands espaces maritimes du monde ?",
+          "figure": {
+            "type": "carte",
+            "points": [
+              {
+                "lon": -53,
+                "lat": 4
+              },
+              {
+                "lon": -61.3,
+                "lat": 15.5
+              },
+              {
+                "lon": -56.2,
+                "lat": 46.8
+              },
+              {
+                "lon": 55.5,
+                "lat": -21.1
+              },
+              {
+                "lon": 45.15,
+                "lat": -12.8
+              },
+              {
+                "lon": 69.4,
+                "lat": -49.3
+              },
+              {
+                "lon": 165.6,
+                "lat": -21.3
+              },
+              {
+                "lon": -149.4,
+                "lat": -17.6
+              }
+            ]
+          },
           "nom": "Parce que ses îles et territoires sont répartis sur tous les océans.",
           "explication": "Autour de chaque île, la France a des droits sur une large zone de mer : avec ses territoires dans plusieurs océans, l'ensemble est immense.",
           "pieges": [
@@ -8340,6 +8684,15 @@
           },
           {
             "texte": "Which continent is French Guiana on?",
+            "figure": {
+              "type": "carte",
+              "points": [
+                {
+                  "lon": -53,
+                  "lat": 4
+                }
+              ]
+            },
             "nom": "South America.",
             "explication": "French Guiana is in South America, between Brazil and Suriname. Much of it is covered by the Amazon rainforest.",
             "pieges": [
@@ -8355,6 +8708,16 @@
           },
           {
             "texte": "Which ocean is Mayotte in?",
+            "figure": {
+              "type": "carte",
+              "vue": "ocean-indien",
+              "points": [
+                {
+                  "lon": 45.15,
+                  "lat": -12.8
+                }
+              ]
+            },
             "nom": "The Indian Ocean.",
             "explication": "Mayotte is in the Indian Ocean, between Madagascar and the African coast, in the Comoros archipelago.",
             "pieges": [
@@ -8370,6 +8733,20 @@
           },
           {
             "texte": "Where are Guadeloupe and Martinique?",
+            "figure": {
+              "type": "carte",
+              "vue": "caraibes",
+              "points": [
+                {
+                  "lon": -61.55,
+                  "lat": 16.25
+                },
+                {
+                  "lon": -61.0,
+                  "lat": 14.65
+                }
+              ]
+            },
             "nom": "In the West Indies, in the Caribbean Sea.",
             "explication": "These two French islands are part of the West Indies, between the Atlantic Ocean and the Caribbean Sea.",
             "pieges": [
@@ -8400,6 +8777,43 @@
           },
           {
             "texte": "Why do its overseas lands give France one of the biggest sea areas in the world?",
+            "figure": {
+              "type": "carte",
+              "points": [
+                {
+                  "lon": -53,
+                  "lat": 4
+                },
+                {
+                  "lon": -61.3,
+                  "lat": 15.5
+                },
+                {
+                  "lon": -56.2,
+                  "lat": 46.8
+                },
+                {
+                  "lon": 55.5,
+                  "lat": -21.1
+                },
+                {
+                  "lon": 45.15,
+                  "lat": -12.8
+                },
+                {
+                  "lon": 69.4,
+                  "lat": -49.3
+                },
+                {
+                  "lon": 165.6,
+                  "lat": -21.3
+                },
+                {
+                  "lon": -149.4,
+                  "lat": -17.6
+                }
+              ]
+            },
             "nom": "Because its islands and territories are spread across every ocean.",
             "explication": "Around each island, France has rights over a wide area of sea: with territories in several oceans, the total is huge.",
             "pieges": [
@@ -12986,6 +13400,28 @@
         },
         {
           "texte": "Quelles mers le canal de Suez relie-t-il ?",
+          "figure": {
+            "type": "carte",
+            "vue": "suez",
+            "points": [
+              {
+                "lon": 32.35,
+                "lat": 30.6
+              }
+            ],
+            "textes": [
+              {
+                "lon": 27,
+                "lat": 34.5,
+                "texte": "?"
+              },
+              {
+                "lon": 38,
+                "lat": 20.5,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "La mer Méditerranée et la mer Rouge.",
           "explication": "Le canal de Suez, en Égypte, évite le tour de l'Afrique entre l'Europe et l'Asie.",
           "pieges": [
@@ -13001,6 +13437,16 @@
         },
         {
           "texte": "Pourquoi le détroit de Malacca est-il stratégique ?",
+          "figure": {
+            "type": "carte",
+            "vue": "asie-sud-est",
+            "points": [
+              {
+                "lon": 99.7,
+                "lat": 4.2
+              }
+            ]
+          },
           "nom": "Il relie l'océan Indien à la mer de Chine méridionale, sur la grande route entre l'Asie orientale, le Moyen-Orient et l'Europe.",
           "explication": "Entre la Malaisie, Singapour et l'île indonésienne de Sumatra, c'est l'un des passages maritimes les plus fréquentés du monde.",
           "pieges": [
@@ -13016,6 +13462,16 @@
         },
         {
           "texte": "Pourquoi le détroit d'Ormuz est-il un point de passage majeur ?",
+          "figure": {
+            "type": "carte",
+            "vue": "ormuz",
+            "points": [
+              {
+                "lon": 56.4,
+                "lat": 26.5
+              }
+            ]
+          },
           "nom": "Une grande partie du pétrole exporté par les pays du golfe Arabo-Persique y passe.",
           "explication": "Il fait communiquer le golfe Arabo-Persique avec l'océan Indien ; toute menace sur ce passage inquiète les pays importateurs.",
           "pieges": [
@@ -13031,6 +13487,17 @@
         },
         {
           "texte": "Pourquoi la mer de Chine méridionale est-elle un espace de fortes tensions ?",
+          "figure": {
+            "type": "carte",
+            "vue": "asie-sud-est",
+            "textes": [
+              {
+                "lon": 113,
+                "lat": 12.5,
+                "texte": "?"
+              }
+            ]
+          },
           "nom": "Plusieurs États, dont la Chine, le Vietnam et les Philippines, s'y disputent des îles et des espaces maritimes riches en ressources.",
           "explication": "Ces rivalités touchent un espace de circulation majeur : l'enjeu est à la fois économique et stratégique.",
           "pieges": [
@@ -13167,6 +13634,28 @@
           },
           {
             "texte": "Which seas does the Suez Canal link?",
+            "figure": {
+              "type": "carte",
+              "vue": "suez",
+              "points": [
+                {
+                  "lon": 32.35,
+                  "lat": 30.6
+                }
+              ],
+              "textes": [
+                {
+                  "lon": 27,
+                  "lat": 34.5,
+                  "texte": "?"
+                },
+                {
+                  "lon": 38,
+                  "lat": 20.5,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "The Mediterranean Sea and the Red Sea.",
             "explication": "The Suez Canal, in Egypt, avoids sailing around Africa between Europe and Asia.",
             "pieges": [
@@ -13182,6 +13671,16 @@
           },
           {
             "texte": "Why is the Strait of Malacca strategic?",
+            "figure": {
+              "type": "carte",
+              "vue": "asie-sud-est",
+              "points": [
+                {
+                  "lon": 99.7,
+                  "lat": 4.2
+                }
+              ]
+            },
             "nom": "It links the Indian Ocean to the South China Sea, on the main route between East Asia, the Middle East and Europe.",
             "explication": "Between Malaysia, Singapore and the Indonesian island of Sumatra, it's one of the busiest sea passages in the world.",
             "pieges": [
@@ -13197,6 +13696,16 @@
           },
           {
             "texte": "Why is the Strait of Hormuz a major passage?",
+            "figure": {
+              "type": "carte",
+              "vue": "ormuz",
+              "points": [
+                {
+                  "lon": 56.4,
+                  "lat": 26.5
+                }
+              ]
+            },
             "nom": "A large share of the oil exported by the Persian Gulf countries passes through it.",
             "explication": "It connects the Persian Gulf with the Indian Ocean; any threat to this passage worries importing countries.",
             "pieges": [
@@ -13212,6 +13721,17 @@
           },
           {
             "texte": "Why is the South China Sea an area of strong tensions?",
+            "figure": {
+              "type": "carte",
+              "vue": "asie-sud-est",
+              "textes": [
+                {
+                  "lon": 113,
+                  "lat": 12.5,
+                  "texte": "?"
+                }
+              ]
+            },
             "nom": "Several states, including China, Vietnam and the Philippines, dispute islands and resource-rich sea areas there.",
             "explication": "These rivalries affect a major shipping area: the stakes are both economic and strategic.",
             "pieges": [

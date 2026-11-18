@@ -88,3 +88,9 @@ traducteur soit mort depuis plus de 70 ans. Dates de mort relevées sur les page
 | Victor Hugo (1885) | — | Les Contemplations ; Les Chansons des rues et des bois ; La Légende des siècles | Poèmes choisis |
 
 L’URL exacte de chaque texte est dans le champ `source` du livre (`app/assets/livres/catalogue.json`).
+
+## Cartes
+
+| Données | Licence | Source | Utilisation |
+| --- | --- | --- | --- |
+| Natural Earth v5.1.2 (pays 1:110 M et 1:50 M, fleuves 1:50 M) | domaine public | https://github.com/nvkelso/natural-earth-vector/blob/v5.1.2/LICENSE.md | `app/assets/carte/`, converti par `tool/cartes.py` (ADR 0079) |

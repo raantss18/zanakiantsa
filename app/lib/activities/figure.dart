@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../core/game.dart';
 import '../l10n/l10n.dart';
 import '../ui/chess_play.dart';
+import 'carte.dart';
 
 
 /// Figures dessinées par l'app pour les questions écrites (ADR 0078) : une question qui parle d'un triangle, d'une droite
@@ -39,13 +40,14 @@ import '../ui/chess_play.dart';
 /// - `perles` : `groupes` [[1, 1], [2, 2]] : rouges (rondes) puis bleues (carrées), groupe par groupe.
 /// - `rectangles` : [{nom, l, h, largeur, hauteur}] côte à côte, à l'échelle (un carré : l = h).
 /// - `echiquier` : `fen` (la position, notation FEN), `noirs` true pour voir l'échiquier du côté des Noirs.
+/// - `carte` : vraie carte (monde ou zoom), voir `carte.dart`.
 /// - `thales` accepte aussi `papillon: true` et `parallele: false` ; `repere`, `verticales` [x].
 class QuizFigure extends StatelessWidget {
   const QuizFigure(this.spec, {super.key});
   final Map<String, dynamic> spec;
 
   static const types = {'triangle', 'thales', 'rectangle', 'rectangles', 'cercle', 'droite', 'angle', 'repere', 'barres', 'allumettes',
-    'relief', 'cases', 'grille', 'tableau', 'bande', 'carreaux', 'echiquier', 'perles'};
+    'relief', 'cases', 'grille', 'tableau', 'bande', 'carreaux', 'echiquier', 'perles', 'carte'};
 
   /// Proportions de la zone de dessin (largeur / hauteur).
   double get aspect => switch (spec['type']) {
@@ -72,7 +74,9 @@ class QuizFigure extends StatelessWidget {
   String get description => spec['type'] == 'relief' ? 'Carte de relief et sa légende' : 'Figure de la question';
 
   @override
-  Widget build(BuildContext context) => spec['type'] == 'echiquier'
+  Widget build(BuildContext context) => spec['type'] == 'carte'
+      ? MapFigure(spec)
+      : spec['type'] == 'echiquier'
       // La position décrite en mots (« roi noir en h8… ») sur le vrai échiquier de l'app, sans rien à toucher.
       ? Center(
           child: ConstrainedBox(

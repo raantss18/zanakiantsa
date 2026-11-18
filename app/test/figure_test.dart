@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:yaml/yaml.dart';
+import 'package:zanakiantsa/activities/carte.dart';
 import 'package:zanakiantsa/activities/figure.dart';
 
 /// Figures des questions écrites (ADR 0078) : chaque figure du contenu a un type connu et se dessine sans erreur.
@@ -66,8 +67,35 @@ void main() {
     }
   });
 
+  testWidgets('chaque carte nomme des pays connus et place ses repères dans sa vue', (t) async {
+    final world = (await t.runAsync(() => MapData.load(false)))!;
+    final detail = (await t.runAsync(() => MapData.load(true)))!;
+    for (final e in specs.entries.where((e) => e.value['type'] == 'carte')) {
+      final spec = e.value;
+      expect(MapFigure.views.containsKey(spec['vue'] ?? 'monde'), isTrue, reason: e.key);
+      final box = MapFigure.views[spec['vue'] ?? 'monde'] ?? const [-180.0, -90.0, 180.0, 90.0];
+      final data = box.length == 4 && spec['vue'] != null && spec['vue'] != 'monde' ? detail : world;
+      for (final c in spec['pays'] as List? ?? const []) {
+        expect(data.countries.containsKey(c), isTrue, reason: '${e.key} : pays $c');
+      }
+      for (final f in spec['fleuves'] as List? ?? const []) {
+        expect(detail.rivers.containsKey(f), isTrue, reason: '${e.key} : fleuve $f');
+      }
+      for (final p in [...?spec['points'] as List?, ...?spec['textes'] as List?]) {
+        final lon = (p['lon'] as num).toDouble(), lat = (p['lat'] as num).toDouble();
+        expect(lon >= box[0] && lon <= box[2] && lat >= box[1] && lat <= box[3], isTrue, reason: '${e.key} : $p hors de la vue');
+      }
+    }
+  });
+
   for (final type in QuizFigure.types) {
     testWidgets('chaque figure « $type » du contenu se dessine', (t) async {
+      if (type == 'carte') {
+        await t.runAsync(() async {
+          await MapData.load(false);
+          await MapData.load(true);
+        });
+      }
       final mine = specs.entries.where((e) => e.value['type'] == type).toList();
       final all = mine.isEmpty ? [MapEntry('exemple', <String, dynamic>{'type': type})] : mine;
       for (final e in all) {

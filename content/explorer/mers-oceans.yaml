@@ -53,24 +53,28 @@ items:
       - { texte: "Grâce aux seules côtes de la France métropolitaine.", pourquoi: "La métropole n'apporte qu'une petite part ; l'essentiel vient de l'outre-mer." }
       - { texte: "Parce que la France possède la haute mer de l'Atlantique.", pourquoi: "La haute mer n'appartient à aucun État." }
   - texte: "Quelles mers le canal de Suez relie-t-il ?"
+    figure: { type: carte, vue: suez, points: [{ lon: 32.35, lat: 30.6 }], textes: [{ lon: 27, lat: 34.5, texte: "?" }, { lon: 38, lat: 20.5, texte: "?" }] }
     nom: "La mer Méditerranée et la mer Rouge."
     explication: "Le canal de Suez, en Égypte, évite le tour de l'Afrique entre l'Europe et l'Asie."
     pieges:
       - { texte: "L'océan Atlantique et l'océan Pacifique.", pourquoi: "C'est le canal de Panama, en Amérique centrale." }
       - { texte: "La mer Noire et la mer Méditerranée.", pourquoi: "Ce sont les détroits du Bosphore et des Dardanelles, en Turquie." }
   - texte: "Pourquoi le détroit de Malacca est-il stratégique ?"
+    figure: { type: carte, vue: asie-sud-est, points: [{ lon: 99.7, lat: 4.2 }] }
     nom: "Il relie l'océan Indien à la mer de Chine méridionale, sur la grande route entre l'Asie orientale, le Moyen-Orient et l'Europe."
     explication: "Entre la Malaisie, Singapour et l'île indonésienne de Sumatra, c'est l'un des passages maritimes les plus fréquentés du monde."
     pieges:
       - { texte: "Il relie l'océan Atlantique à la mer Méditerranée.", pourquoi: "C'est le détroit de Gibraltar." }
       - { texte: "Il relie la mer Méditerranée à la mer Rouge.", pourquoi: "C'est le canal de Suez." }
   - texte: "Pourquoi le détroit d'Ormuz est-il un point de passage majeur ?"
+    figure: { type: carte, vue: ormuz, points: [{ lon: 56.4, lat: 26.5 }] }
     nom: "Une grande partie du pétrole exporté par les pays du golfe Arabo-Persique y passe."
     explication: "Il fait communiquer le golfe Arabo-Persique avec l'océan Indien ; toute menace sur ce passage inquiète les pays importateurs."
     pieges:
       - { texte: "Il relie la mer Noire à la mer Méditerranée.", pourquoi: "Ce sont le Bosphore et les Dardanelles, en Turquie." }
       - { texte: "C'est le seul accès à l'océan Arctique.", pourquoi: "Ormuz est au Moyen-Orient, entre l'Iran et la péninsule Arabique, loin de l'Arctique." }
   - texte: "Pourquoi la mer de Chine méridionale est-elle un espace de fortes tensions ?"
+    figure: { type: carte, vue: asie-sud-est, textes: [{ lon: 113, lat: 12.5, texte: "?" }] }
     nom: "Plusieurs États, dont la Chine, le Vietnam et les Philippines, s'y disputent des îles et des espaces maritimes riches en ressources."
     explication: "Ces rivalités touchent un espace de circulation majeur : l'enjeu est à la fois économique et stratégique."
     pieges:
@@ -134,24 +138,28 @@ en:
         - { texte: "Thanks to the coasts of metropolitan France alone.", pourquoi: "The mainland provides only a small share; most comes from overseas." }
         - { texte: "Because France owns the high seas of the Atlantic.", pourquoi: "The high seas belong to no state." }
     - texte: "Which seas does the Suez Canal link?"
+      figure: { type: carte, vue: suez, points: [{ lon: 32.35, lat: 30.6 }], textes: [{ lon: 27, lat: 34.5, texte: "?" }, { lon: 38, lat: 20.5, texte: "?" }] }
       nom: "The Mediterranean Sea and the Red Sea."
       explication: "The Suez Canal, in Egypt, avoids sailing around Africa between Europe and Asia."
       pieges:
         - { texte: "The Atlantic Ocean and the Pacific Ocean.", pourquoi: "That's the Panama Canal, in Central America." }
         - { texte: "The Black Sea and the Mediterranean Sea.", pourquoi: "Those are the Bosphorus and Dardanelles straits, in Turkey." }
     - texte: "Why is the Strait of Malacca strategic?"
+      figure: { type: carte, vue: asie-sud-est, points: [{ lon: 99.7, lat: 4.2 }] }
       nom: "It links the Indian Ocean to the South China Sea, on the main route between East Asia, the Middle East and Europe."
       explication: "Between Malaysia, Singapore and the Indonesian island of Sumatra, it's one of the busiest sea passages in the world."
       pieges:
         - { texte: "It links the Atlantic Ocean to the Mediterranean Sea.", pourquoi: "That's the Strait of Gibraltar." }
         - { texte: "It links the Mediterranean Sea to the Red Sea.", pourquoi: "That's the Suez Canal." }
     - texte: "Why is the Strait of Hormuz a major passage?"
+      figure: { type: carte, vue: ormuz, points: [{ lon: 56.4, lat: 26.5 }] }
       nom: "A large share of the oil exported by the Persian Gulf countries passes through it."
       explication: "It connects the Persian Gulf with the Indian Ocean; any threat to this passage worries importing countries."
       pieges:
         - { texte: "It links the Black Sea to the Mediterranean Sea.", pourquoi: "Those are the Bosphorus and the Dardanelles, in Turkey." }
         - { texte: "It's the only access to the Arctic Ocean.", pourquoi: "Hormuz is in the Middle East, between Iran and the Arabian Peninsula, far from the Arctic." }
     - texte: "Why is the South China Sea an area of strong tensions?"
+      figure: { type: carte, vue: asie-sud-est, textes: [{ lon: 113, lat: 12.5, texte: "?" }] }
       nom: "Several states, including China, Vietnam and the Philippines, dispute islands and resource-rich sea areas there."
       explication: "These rivalries affect a major shipping area: the stakes are both economic and strategic."
       pieges:
