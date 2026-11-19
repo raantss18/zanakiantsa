@@ -374,7 +374,7 @@ Aucune publication tant que toute cette liste n'est pas faite et vérifiée sur 
   (rond rouge / carré bleu), rangées de ronds, tables bout à bout avec leurs places, pions seuls sur l'échiquier (règle du
   carré) : 12 questions de plus. ✅ (2026-11-18, accord d'Antsa) vraies cartes Natural Earth (ADR 0079) : 23 questions
   de géographie (continents, océans, France et ses fleuves, outre-mer, Suez, Malacca, Ormuz, mer de Chine) ; vérifié sur
-  l'émulateur en version publiée. ⏳ Reste : pile de boîtes (le dessin donnerait la réponse, laissée exprès).
+  l'émulateur en version publiée. ✅ Publié en 1.1.9 (build 2035) le 2026-11-19. ⏳ Reste : pile de boîtes (le dessin donnerait la réponse, laissée exprès).
 
 ## 2026-11-15 (nuit) — Autres boutiques (demande d'Antsa)
 
