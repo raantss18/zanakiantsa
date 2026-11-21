@@ -8,7 +8,7 @@
 - ✅ Cause trouvée : les APK étaient signés avec la clé debug Android (`CN=Android Debug`). Permissions saines.
 - ✅ Clé propre à l'app + rotation v3 (ADR 0080) dans `tool/release.sh` ; clés copiées sur le NAS. Vérifié sur l'émulateur :
   la mise à jour s'installe par-dessus la 1.1.9 sans désinstaller, progression gardée.
-- ❓ Publier la version suivante (1.2.0) pour que les tablettes passent à la nouvelle clé.
+- ✅ 1.2.0 publiée le 2026-11-21 (build 2036), signée avec la nouvelle clé ; installée par-dessus sur l'émulateur, progression gardée.
 - ⏳ Sur la tablette, après la mise à jour : relancer l'analyse Play Protect. Si l'alerte reste, « Envoyer pour analyse »
   ou recours développeur : https://support.google.com/googleplay/android-developer/contact/protectappeals
 
