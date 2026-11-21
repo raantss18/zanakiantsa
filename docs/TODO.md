@@ -3,6 +3,15 @@
 > Une seule liste, tenue à jour à chaque tâche. Statuts : ✅ fait · 🔄 en cours · ⏳ à faire · ❓ décision d'Antsa.
 > Une tâche n'est ✅ qu'après tests + essai réel sur les tablettes (`CLAUDE.md`).
 
+## 🔄 2026-11-21 — Alerte Play Protect sur une tablette (signalée par Antsa)
+
+- ✅ Cause trouvée : les APK étaient signés avec la clé debug Android (`CN=Android Debug`). Permissions saines.
+- ✅ Clé propre à l'app + rotation v3 (ADR 0080) dans `tool/release.sh` ; clés copiées sur le NAS. Vérifié sur l'émulateur :
+  la mise à jour s'installe par-dessus la 1.1.9 sans désinstaller, progression gardée.
+- ❓ Publier la version suivante (1.2.0) pour que les tablettes passent à la nouvelle clé.
+- ⏳ Sur la tablette, après la mise à jour : relancer l'analyse Play Protect. Si l'alerte reste, « Envoyer pour analyse »
+  ou recours développeur : https://support.google.com/googleplay/android-developer/contact/protectappeals
+
 ## 🔄 Après la 1.0.9 (2026-11-11) — pas encore publié
 
 - ✅ 2026-11-13 : fenêtre de classe −2/+2 (ADR 0070), vérifiée sur l'émulateur en 6e (CM1 à 4e). Petit émulateur au format de
